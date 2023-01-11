@@ -5,3 +5,5 @@ from .row import *
 from .secondderivativeelevationgrid import *
 from .terraintile import *
 from .tilecoordinates import *
+
+__all__ = ["XgafvEnum","AltEnum","FirstDerivativeElevationGrid","Row","SecondDerivativeElevationGrid","TerrainTile","TileCoordinates"]

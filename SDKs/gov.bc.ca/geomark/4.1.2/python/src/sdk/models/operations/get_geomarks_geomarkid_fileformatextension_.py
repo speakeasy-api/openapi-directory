@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -14,25 +14,25 @@ class GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum(str, Enum):
     WKT = "wkt"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDFileFormatExtensionPathParams:
-    file_format_extension: GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = field(metadata={'path_param': { 'field_name': 'fileFormatExtension', 'style': 'simple', 'explode': False }})
-    geomark_id: str = field(metadata={'path_param': { 'field_name': 'geomarkId', 'style': 'simple', 'explode': False }})
+    file_format_extension: GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'fileFormatExtension', 'style': 'simple', 'explode': False }})
+    geomark_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'geomarkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDFileFormatExtensionQueryParams:
-    srid: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'srid', 'style': 'form', 'explode': True }})
+    srid: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'srid', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDFileFormatExtensionRequest:
-    path_params: GetGeomarksGeomarkIDFileFormatExtensionPathParams = field()
-    query_params: GetGeomarksGeomarkIDFileFormatExtensionQueryParams = field()
+    path_params: GetGeomarksGeomarkIDFileFormatExtensionPathParams = dataclasses.field()
+    query_params: GetGeomarksGeomarkIDFileFormatExtensionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDFileFormatExtensionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import device as shared_device
+from ..shared import incompatibilitymessage as shared_incompatibilitymessage
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DevicePoolCompatibilityResult:
     r"""DevicePoolCompatibilityResult
     Represents a device pool compatibility result.
     """
     
-    compatible: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compatible') }})
-    device: Optional[Device] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
-    incompatibility_messages: Optional[List[IncompatibilityMessage]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('incompatibilityMessages') }})
+    compatible: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compatible') }})
+    device: Optional[shared_device.Device] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
+    incompatibility_messages: Optional[list[shared_incompatibilitymessage.IncompatibilityMessage]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('incompatibilityMessages') }})
     

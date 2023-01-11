@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import paymentpolicyresponse as shared_paymentpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPoliciesQueryParams:
-    marketplace_id: str = field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
+    marketplace_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPoliciesRequest:
-    query_params: GetPaymentPoliciesQueryParams = field()
-    security: GetPaymentPoliciesSecurity = field()
+    query_params: GetPaymentPoliciesQueryParams = dataclasses.field()
+    security: GetPaymentPoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_policy_response: Optional[shared.PaymentPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_policy_response: Optional[shared_paymentpolicyresponse.PaymentPolicyResponse] = dataclasses.field(default=None)
     

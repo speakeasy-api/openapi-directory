@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.CreateApplication"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateApplicationResponse(status_code=r.status_code, content_type=content_type)
@@ -120,7 +120,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.CreateComponent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -128,7 +128,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateComponentResponse(status_code=r.status_code, content_type=content_type)
@@ -166,7 +166,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.CreateLogPattern"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -174,7 +174,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateLogPatternResponse(status_code=r.status_code, content_type=content_type)
@@ -212,7 +212,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DeleteApplication"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -220,7 +220,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteApplicationResponse(status_code=r.status_code, content_type=content_type)
@@ -258,7 +258,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DeleteComponent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -266,7 +266,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteComponentResponse(status_code=r.status_code, content_type=content_type)
@@ -300,7 +300,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DeleteLogPattern"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -308,7 +308,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteLogPatternResponse(status_code=r.status_code, content_type=content_type)
@@ -346,7 +346,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeApplication"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -354,7 +354,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeApplicationResponse(status_code=r.status_code, content_type=content_type)
@@ -388,7 +388,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeComponent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -396,7 +396,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeComponentResponse(status_code=r.status_code, content_type=content_type)
@@ -430,7 +430,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeComponentConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -438,7 +438,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeComponentConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -472,7 +472,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeComponentConfigurationRecommendation"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -480,7 +480,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeComponentConfigurationRecommendationResponse(status_code=r.status_code, content_type=content_type)
@@ -514,7 +514,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeLogPattern"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -522,7 +522,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeLogPatternResponse(status_code=r.status_code, content_type=content_type)
@@ -556,7 +556,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeObservation"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -564,7 +564,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeObservationResponse(status_code=r.status_code, content_type=content_type)
@@ -598,7 +598,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeProblem"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -606,7 +606,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeProblemResponse(status_code=r.status_code, content_type=content_type)
@@ -640,7 +640,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.DescribeProblemObservations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -648,7 +648,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeProblemObservationsResponse(status_code=r.status_code, content_type=content_type)
@@ -682,7 +682,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListApplications"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -691,7 +691,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListApplicationsResponse(status_code=r.status_code, content_type=content_type)
@@ -721,7 +721,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListComponents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -730,7 +730,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListComponentsResponse(status_code=r.status_code, content_type=content_type)
@@ -764,7 +764,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListConfigurationHistory"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -773,7 +773,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListConfigurationHistoryResponse(status_code=r.status_code, content_type=content_type)
@@ -807,7 +807,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListLogPatternSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -816,7 +816,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListLogPatternSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -850,7 +850,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListLogPatterns"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -859,7 +859,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListLogPatternsResponse(status_code=r.status_code, content_type=content_type)
@@ -893,7 +893,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListProblems"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -902,7 +902,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListProblemsResponse(status_code=r.status_code, content_type=content_type)
@@ -936,7 +936,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.ListTagsForResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -944,7 +944,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListTagsForResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -974,7 +974,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.TagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -982,7 +982,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -1016,7 +1016,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.UntagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1024,7 +1024,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UntagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -1054,7 +1054,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.UpdateApplication"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1062,7 +1062,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateApplicationResponse(status_code=r.status_code, content_type=content_type)
@@ -1096,7 +1096,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.UpdateComponent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1104,7 +1104,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateComponentResponse(status_code=r.status_code, content_type=content_type)
@@ -1142,7 +1142,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.UpdateComponentConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1150,7 +1150,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateComponentConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -1184,7 +1184,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=EC2WindowsBarleyService.UpdateLogPattern"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1192,7 +1192,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateLogPatternResponse(status_code=r.status_code, content_type=content_type)

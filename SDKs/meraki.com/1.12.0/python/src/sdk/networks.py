@@ -30,7 +30,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/bind", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -38,7 +38,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BindNetworkResponse(status_code=r.status_code, content_type=content_type)
@@ -61,7 +61,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/devices/claim", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -69,7 +69,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ClaimNetworkDevicesResponse(status_code=r.status_code, content_type=content_type)
@@ -90,7 +90,7 @@ class Networks:
         url = utils.generate_url(base_url, "/organizations/{organizationId}/networks/combine", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -98,7 +98,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CombineOrganizationNetworksResponse(status_code=r.status_code, content_type=content_type)
@@ -121,7 +121,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/firmwareUpgrades/rollbacks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -129,7 +129,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkFirmwareUpgradesRollbackResponse(status_code=r.status_code, content_type=content_type)
@@ -152,7 +152,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/floorPlans", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -160,7 +160,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkFloorPlanResponse(status_code=r.status_code, content_type=content_type)
@@ -183,7 +183,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/groupPolicies", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -191,7 +191,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkGroupPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -214,7 +214,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/merakiAuthUsers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -222,7 +222,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkMerakiAuthUserResponse(status_code=r.status_code, content_type=content_type)
@@ -245,7 +245,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/mqttBrokers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -253,7 +253,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkMqttBrokerResponse(status_code=r.status_code, content_type=content_type)
@@ -282,13 +282,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/pii/requests", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkPiiRequestResponse(status_code=r.status_code, content_type=content_type)
@@ -311,7 +311,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/webhooks/httpServers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -319,7 +319,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkWebhooksHTTPServerResponse(status_code=r.status_code, content_type=content_type)
@@ -342,7 +342,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/webhooks/webhookTests", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -350,7 +350,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateNetworkWebhooksWebhookTestResponse(status_code=r.status_code, content_type=content_type)
@@ -373,7 +373,7 @@ class Networks:
         url = utils.generate_url(base_url, "/organizations/{organizationId}/networks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -381,7 +381,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateOrganizationNetworkResponse(status_code=r.status_code, content_type=content_type)
@@ -1732,7 +1732,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/clients/provision", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1740,7 +1740,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProvisionNetworkClientsResponse(status_code=r.status_code, content_type=content_type)
@@ -1763,7 +1763,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/devices/remove", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1771,7 +1771,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveNetworkDevicesResponse(status_code=r.status_code, content_type=content_type)
@@ -1842,13 +1842,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkResponse(status_code=r.status_code, content_type=content_type)
@@ -1871,13 +1871,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/alerts/settings", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkAlertsSettingsResponse(status_code=r.status_code, content_type=content_type)
@@ -1900,7 +1900,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/clients/{clientId}/policy", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1908,7 +1908,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkClientPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1931,7 +1931,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1939,7 +1939,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkClientSplashAuthorizationStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -1962,13 +1962,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/firmwareUpgrades", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkFirmwareUpgradesResponse(status_code=r.status_code, content_type=content_type)
@@ -1991,13 +1991,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/floorPlans/{floorPlanId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkFloorPlanResponse(status_code=r.status_code, content_type=content_type)
@@ -2020,13 +2020,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkGroupPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -2049,13 +2049,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkMerakiAuthUserResponse(status_code=r.status_code, content_type=content_type)
@@ -2078,13 +2078,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkMqttBrokerResponse(status_code=r.status_code, content_type=content_type)
@@ -2107,13 +2107,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/netflow", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkNetflowResponse(status_code=r.status_code, content_type=content_type)
@@ -2136,13 +2136,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/settings", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkSettingsResponse(status_code=r.status_code, content_type=content_type)
@@ -2165,13 +2165,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/snmp", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkSnmpResponse(status_code=r.status_code, content_type=content_type)
@@ -2194,7 +2194,7 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/syslogServers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2202,7 +2202,7 @@ class Networks:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkSyslogServersResponse(status_code=r.status_code, content_type=content_type)
@@ -2225,13 +2225,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/trafficAnalysis", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkTrafficAnalysisResponse(status_code=r.status_code, content_type=content_type)
@@ -2254,13 +2254,13 @@ class Networks:
         url = utils.generate_url(base_url, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateNetworkWebhooksHTTPServerResponse(status_code=r.status_code, content_type=content_type)

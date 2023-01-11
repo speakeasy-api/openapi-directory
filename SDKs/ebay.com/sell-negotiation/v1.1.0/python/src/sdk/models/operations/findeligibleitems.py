@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import pagedeligibleitemcollection as shared_pagedeligibleitemcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class FindEligibleItemsQueryParams:
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindEligibleItemsHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindEligibleItemsSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindEligibleItemsRequest:
-    headers: FindEligibleItemsHeaders = field()
-    query_params: FindEligibleItemsQueryParams = field()
-    security: FindEligibleItemsSecurity = field()
+    headers: FindEligibleItemsHeaders = dataclasses.field()
+    query_params: FindEligibleItemsQueryParams = dataclasses.field()
+    security: FindEligibleItemsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindEligibleItemsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paged_eligible_item_collection: Optional[shared.PagedEligibleItemCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paged_eligible_item_collection: Optional[shared_pagedeligibleitemcollection.PagedEligibleItemCollection] = dataclasses.field(default=None)
     

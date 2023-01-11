@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import badge as shared_badge
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDBadgesPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDBadgesRequest:
-    path_params: GetOfferingsOfferingIDBadgesPathParams = field()
+    path_params: GetOfferingsOfferingIDBadgesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDBadgesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    badge: Optional[shared.Badge] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    badge: Optional[shared_badge.Badge] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

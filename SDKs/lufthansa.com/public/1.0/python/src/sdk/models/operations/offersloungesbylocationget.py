@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetPathParams:
-    location: str = field(metadata={'path_param': { 'field_name': 'location', 'style': 'simple', 'explode': False }})
+    location: str = dataclasses.field(metadata={'path_param': { 'field_name': 'location', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetQueryParams:
-    cabin_class: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cabinClass', 'style': 'form', 'explode': True }})
-    lang: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    tier_code: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'tierCode', 'style': 'form', 'explode': True }})
+    cabin_class: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cabinClass', 'style': 'form', 'explode': True }})
+    lang: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    tier_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tierCode', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetRequest:
-    headers: OffersLoungesByLocationGetHeaders = field()
-    path_params: OffersLoungesByLocationGetPathParams = field()
-    query_params: OffersLoungesByLocationGetQueryParams = field()
-    security: OffersLoungesByLocationGetSecurity = field()
+    headers: OffersLoungesByLocationGetHeaders = dataclasses.field()
+    path_params: OffersLoungesByLocationGetPathParams = dataclasses.field()
+    query_params: OffersLoungesByLocationGetQueryParams = dataclasses.field()
+    security: OffersLoungesByLocationGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OffersLoungesByLocationGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    offers_lounges_by_location_get_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    offers_lounges_by_location_get_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

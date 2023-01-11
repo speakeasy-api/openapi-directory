@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,17 +19,17 @@ s = sdk.SDK()
 req = operations.WebfontsWebfontsListRequest(
     query_params=operations.WebfontsWebfontsListQueryParams(
         dollar_xgafv="2",
-        access_token="harum",
-        alt="media",
-        callback="adipisci",
-        fields="non",
-        key="voluptatem",
-        oauth_token="quia",
-        pretty_print=True,
-        quota_user="similique",
-        sort="ALPHA",
-        upload_type="id",
-        upload_protocol="cupiditate",
+        access_token="consequatur",
+        alt="json",
+        callback="at",
+        fields="omnis",
+        key="dolores",
+        oauth_token="perferendis",
+        pretty_print=False,
+        quota_user="debitis",
+        sort="STYLE",
+        upload_type="doloribus",
+        upload_protocol="fugiat",
     ),
 )
     

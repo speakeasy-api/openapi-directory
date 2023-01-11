@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tokenrequest as shared_tokenrequest
+from ..shared import tokenresponse as shared_tokenresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthTokenRequest:
-    request: Optional[shared.TokenRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_tokenrequest.TokenRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AuthTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    token_response: Optional[shared.TokenResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    token_response: Optional[shared_tokenresponse.TokenResponse] = dataclasses.field(default=None)
     

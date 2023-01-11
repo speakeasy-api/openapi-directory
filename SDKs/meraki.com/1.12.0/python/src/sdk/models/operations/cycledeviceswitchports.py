@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CycleDeviceSwitchPortsPathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CycleDeviceSwitchPortsRequestBody:
-    ports: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ports') }})
+    ports: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ports') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CycleDeviceSwitchPortsRequest:
-    path_params: CycleDeviceSwitchPortsPathParams = field()
-    request: CycleDeviceSwitchPortsRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CycleDeviceSwitchPortsPathParams = dataclasses.field()
+    request: CycleDeviceSwitchPortsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CycleDeviceSwitchPortsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cycle_device_switch_ports_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cycle_device_switch_ports_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

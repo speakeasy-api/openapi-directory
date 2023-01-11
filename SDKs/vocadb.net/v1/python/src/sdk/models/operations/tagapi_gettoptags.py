@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import tagbasecontract as shared_tagbasecontract
 
 class TagAPIGetTopTagsEntryTypeEnum(str, Enum):
     UNDEFINED = "Undefined"
@@ -24,23 +24,23 @@ class TagAPIGetTopTagsLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetTopTagsQueryParams:
-    category_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'categoryName', 'style': 'form', 'explode': True }})
-    entry_type: Optional[TagAPIGetTopTagsEntryTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'entryType', 'style': 'form', 'explode': True }})
-    lang: Optional[TagAPIGetTopTagsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    category_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categoryName', 'style': 'form', 'explode': True }})
+    entry_type: Optional[TagAPIGetTopTagsEntryTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'entryType', 'style': 'form', 'explode': True }})
+    lang: Optional[TagAPIGetTopTagsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetTopTagsRequest:
-    query_params: TagAPIGetTopTagsQueryParams = field()
+    query_params: TagAPIGetTopTagsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetTopTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    tag_base_contracts: Optional[List[shared.TagBaseContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    tag_base_contracts: Optional[list[shared_tagbasecontract.TagBaseContract]] = dataclasses.field(default=None)
     

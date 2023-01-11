@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,64 +20,66 @@ req = operations.CommentanalyzerCommentsAnalyzeRequest(
     security=operations.CommentanalyzerCommentsAnalyzeSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.CommentanalyzerCommentsAnalyzeQueryParams(
-        dollar_xgafv="1",
-        access_token="suscipit",
-        alt="media",
-        callback="omnis",
-        fields="quae",
-        key="et",
-        oauth_token="similique",
+        dollar_xgafv="2",
+        access_token="cupiditate",
+        alt="json",
+        callback="aliquid",
+        fields="et",
+        key="adipisci",
+        oauth_token="et",
         pretty_print=False,
-        quota_user="quia",
-        upload_type="at",
-        upload_protocol="voluptatibus",
+        quota_user="itaque",
+        upload_type="illum",
+        upload_protocol="voluptas",
     ),
     request=shared.AnalyzeCommentRequest(
-        client_token="repellendus",
+        client_token="a",
         comment=shared.TextEntry(
-            text="sequi",
-            type="TEXT_TYPE_UNSPECIFIED",
+            text="debitis",
+            type="PLAIN_TEXT",
         ),
-        community_id="sit",
+        community_id="molestiae",
         context=shared.Context(
             article_and_parent_comment=shared.ArticleAndParentComment(
                 article=shared.TextEntry(
-                    text="corporis",
-                    type="HTML",
+                    text="labore",
+                    type="PLAIN_TEXT",
                 ),
                 parent_comment=shared.TextEntry(
-                    text="qui",
-                    type="PLAIN_TEXT",
+                    text="consectetur",
+                    type="TEXT_TYPE_UNSPECIFIED",
                 ),
             ),
             entries=[
                 shared.TextEntry(
-                    text="quis",
+                    text="ipsam",
                     type="HTML",
+                ),
+                shared.TextEntry(
+                    text="cum",
+                    type="PLAIN_TEXT",
                 ),
             ],
         ),
         do_not_store=True,
         languages=[
-            "quae",
+            "repellat",
+            "excepturi",
+            "voluptatem",
         ],
         requested_attributes={
-            "placeat": shared.AttributeParameters(
-                score_threshold=14.100000,
-                score_type="STD_DEV_SCORE",
-            ),
-            "veniam": shared.AttributeParameters(
-                score_threshold=4.200000,
-                score_type="SCORE_TYPE_UNSPECIFIED",
+            "id": shared.AttributeParameters(
+                score_threshold=28.200001,
+                score_type="RAW",
             ),
         },
-        session_id="sed",
+        session_id="consectetur",
         span_annotations=False,
     ),
 )

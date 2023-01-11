@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetweatherzipcodeRequest(
     query_params=operations.GetweatherzipcodeQueryParams(
-        license="minus",
-        zip="ex",
+        license="illo",
+        zip="repudiandae",
     ),
 )
     
-res = s.sdk.getweatherzipcode(req)
+res = s.weather_by_zip_code.getweatherzipcode(req)
 
 if res.getweatherzipcode_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getweatherzipcode_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Weather by Zip Code
 
 * `getweatherzipcode` - Gets current weather information for a US zip code
 

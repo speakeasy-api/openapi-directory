@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AlsblRequestBodyCertificateParameters:
-    ref_no: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RefNo') }})
-    token_no: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TokenNo') }})
+    ref_no: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RefNo') }})
+    token_no: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TokenNo') }})
     
 class AlsblRequestBodyFormatEnum(str, Enum):
     PDF = "pdf"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AlsblRequestBody:
-    format: AlsblRequestBodyFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    txn_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
-    certificate_parameters: Optional[AlsblRequestBodyCertificateParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
-    consent_artifact: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
+    format: AlsblRequestBodyFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    txn_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
+    certificate_parameters: Optional[AlsblRequestBodyCertificateParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
+    consent_artifact: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlsblSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class Alsbl400ApplicationJSONErrorEnum(str, Enum):
     MISSING_PARAMETER = "missing_parameter"
@@ -46,10 +47,10 @@ class Alsbl400ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl400ApplicationJSON:
-    error: Optional[Alsbl400ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl400ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl400ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl400ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl401ApplicationJSONErrorEnum(str, Enum):
     INVALID_AUTHENTICATION = "invalid_authentication"
@@ -61,10 +62,10 @@ class Alsbl401ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl401ApplicationJSON:
-    error: Optional[Alsbl401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl401ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl401ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl404ApplicationJSONErrorEnum(str, Enum):
     RECORD_NOT_FOUND = "record_not_found"
@@ -76,10 +77,10 @@ class Alsbl404ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl404ApplicationJSON:
-    error: Optional[Alsbl404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl404ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl404ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl500ApplicationJSONErrorEnum(str, Enum):
     INTERNAL_SERVER_ERROR = "internal_server_error"
@@ -89,10 +90,10 @@ class Alsbl500ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl500ApplicationJSON:
-    error: Optional[Alsbl500ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl500ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl500ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl500ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl502ApplicationJSONErrorEnum(str, Enum):
     BAD_GATEWY = "bad_gatewy"
@@ -102,10 +103,10 @@ class Alsbl502ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl502ApplicationJSON:
-    error: Optional[Alsbl502ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl502ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl502ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl502ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl503ApplicationJSONErrorEnum(str, Enum):
     SERVICE_UNAVAILABLE = "service_unavailable"
@@ -115,10 +116,10 @@ class Alsbl503ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl503ApplicationJSON:
-    error: Optional[Alsbl503ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl503ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl503ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl503ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Alsbl504ApplicationJSONErrorEnum(str, Enum):
     GATEWAY_TIMEOUT = "gateway_timeout"
@@ -128,27 +129,27 @@ class Alsbl504ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Alsbl504ApplicationJSON:
-    error: Optional[Alsbl504ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Alsbl504ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Alsbl504ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Alsbl504ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlsblRequest:
-    security: AlsblSecurity = field()
-    request: Optional[AlsblRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AlsblSecurity = dataclasses.field()
+    request: Optional[AlsblRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlsblResponse:
-    content_type: str = field()
-    status_code: int = field()
-    alsbl_400_application_json_object: Optional[Alsbl400ApplicationJSON] = field(default=None)
-    alsbl_401_application_json_object: Optional[Alsbl401ApplicationJSON] = field(default=None)
-    alsbl_404_application_json_object: Optional[Alsbl404ApplicationJSON] = field(default=None)
-    alsbl_500_application_json_object: Optional[Alsbl500ApplicationJSON] = field(default=None)
-    alsbl_502_application_json_object: Optional[Alsbl502ApplicationJSON] = field(default=None)
-    alsbl_503_application_json_object: Optional[Alsbl503ApplicationJSON] = field(default=None)
-    alsbl_504_application_json_object: Optional[Alsbl504ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    alsbl_400_application_json_object: Optional[Alsbl400ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_401_application_json_object: Optional[Alsbl401ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_404_application_json_object: Optional[Alsbl404ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_500_application_json_object: Optional[Alsbl500ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_502_application_json_object: Optional[Alsbl502ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_503_application_json_object: Optional[Alsbl503ApplicationJSON] = dataclasses.field(default=None)
+    alsbl_504_application_json_object: Optional[Alsbl504ApplicationJSON] = dataclasses.field(default=None)
     

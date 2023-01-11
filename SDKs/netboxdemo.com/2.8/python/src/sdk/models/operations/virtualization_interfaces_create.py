@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevirtualmachineinterface as shared_writablevirtualmachineinterface
+from ..shared import virtualmachineinterface as shared_virtualmachineinterface
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesCreateRequest:
-    request: shared.WritableVirtualMachineInterfaceInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablevirtualmachineinterface.WritableVirtualMachineInterfaceInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    virtual_machine_interface: Optional[shared.VirtualMachineInterface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    virtual_machine_interface: Optional[shared_virtualmachineinterface.VirtualMachineInterface] = dataclasses.field(default=None)
     

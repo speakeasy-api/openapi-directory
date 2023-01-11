@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CecerRequestBodyCertificateParameters:
-    udf1: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UDF1') }})
+    udf1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UDF1') }})
     
 class CecerRequestBodyFormatEnum(str, Enum):
     PDF = "pdf"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CecerRequestBody:
-    format: CecerRequestBodyFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    txn_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
-    certificate_parameters: Optional[CecerRequestBodyCertificateParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
-    consent_artifact: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
+    format: CecerRequestBodyFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    txn_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
+    certificate_parameters: Optional[CecerRequestBodyCertificateParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
+    consent_artifact: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CecerSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class Cecer400ApplicationJSONErrorEnum(str, Enum):
     MISSING_PARAMETER = "missing_parameter"
@@ -45,10 +46,10 @@ class Cecer400ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer400ApplicationJSON:
-    error: Optional[Cecer400ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer400ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer400ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer400ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer401ApplicationJSONErrorEnum(str, Enum):
     INVALID_AUTHENTICATION = "invalid_authentication"
@@ -60,10 +61,10 @@ class Cecer401ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer401ApplicationJSON:
-    error: Optional[Cecer401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer401ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer401ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer404ApplicationJSONErrorEnum(str, Enum):
     RECORD_NOT_FOUND = "record_not_found"
@@ -75,10 +76,10 @@ class Cecer404ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer404ApplicationJSON:
-    error: Optional[Cecer404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer404ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer404ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer500ApplicationJSONErrorEnum(str, Enum):
     INTERNAL_SERVER_ERROR = "internal_server_error"
@@ -88,10 +89,10 @@ class Cecer500ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer500ApplicationJSON:
-    error: Optional[Cecer500ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer500ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer500ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer500ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer502ApplicationJSONErrorEnum(str, Enum):
     BAD_GATEWY = "bad_gatewy"
@@ -101,10 +102,10 @@ class Cecer502ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer502ApplicationJSON:
-    error: Optional[Cecer502ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer502ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer502ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer502ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer503ApplicationJSONErrorEnum(str, Enum):
     SERVICE_UNAVAILABLE = "service_unavailable"
@@ -114,10 +115,10 @@ class Cecer503ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer503ApplicationJSON:
-    error: Optional[Cecer503ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer503ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer503ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer503ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Cecer504ApplicationJSONErrorEnum(str, Enum):
     GATEWAY_TIMEOUT = "gateway_timeout"
@@ -127,27 +128,27 @@ class Cecer504ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cecer504ApplicationJSON:
-    error: Optional[Cecer504ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Cecer504ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Cecer504ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Cecer504ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CecerRequest:
-    security: CecerSecurity = field()
-    request: Optional[CecerRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: CecerSecurity = dataclasses.field()
+    request: Optional[CecerRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CecerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cecer_400_application_json_object: Optional[Cecer400ApplicationJSON] = field(default=None)
-    cecer_401_application_json_object: Optional[Cecer401ApplicationJSON] = field(default=None)
-    cecer_404_application_json_object: Optional[Cecer404ApplicationJSON] = field(default=None)
-    cecer_500_application_json_object: Optional[Cecer500ApplicationJSON] = field(default=None)
-    cecer_502_application_json_object: Optional[Cecer502ApplicationJSON] = field(default=None)
-    cecer_503_application_json_object: Optional[Cecer503ApplicationJSON] = field(default=None)
-    cecer_504_application_json_object: Optional[Cecer504ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cecer_400_application_json_object: Optional[Cecer400ApplicationJSON] = dataclasses.field(default=None)
+    cecer_401_application_json_object: Optional[Cecer401ApplicationJSON] = dataclasses.field(default=None)
+    cecer_404_application_json_object: Optional[Cecer404ApplicationJSON] = dataclasses.field(default=None)
+    cecer_500_application_json_object: Optional[Cecer500ApplicationJSON] = dataclasses.field(default=None)
+    cecer_502_application_json_object: Optional[Cecer502ApplicationJSON] = dataclasses.field(default=None)
+    cecer_503_application_json_object: Optional[Cecer503ApplicationJSON] = dataclasses.field(default=None)
+    cecer_504_application_json_object: Optional[Cecer504ApplicationJSON] = dataclasses.field(default=None)
     

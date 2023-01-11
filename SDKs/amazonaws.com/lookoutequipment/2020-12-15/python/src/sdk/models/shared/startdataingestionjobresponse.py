@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ingestionjobstatus_enum as shared_ingestionjobstatus_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartDataIngestionJobResponse:
-    job_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobId') }})
-    status: Optional[IngestionJobStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
+    job_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobId') }})
+    status: Optional[shared_ingestionjobstatus_enum.IngestionJobStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
     

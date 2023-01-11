@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import virtualgatewayclientpolicy as shared_virtualgatewayclientpolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VirtualGatewayBackendDefaults:
     r"""VirtualGatewayBackendDefaults
     An object that represents the default properties for a backend.
     """
     
-    client_policy: Optional[VirtualGatewayClientPolicy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientPolicy') }})
+    client_policy: Optional[shared_virtualgatewayclientpolicy.VirtualGatewayClientPolicy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientPolicy') }})
     

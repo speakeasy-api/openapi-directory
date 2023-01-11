@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import user as shared_user
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserResponseData:
-    user: User = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    user: shared_user.User = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserResponse:
-    data: UserResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: UserResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

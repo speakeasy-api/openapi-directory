@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import puteventsrequestentry as shared_puteventsrequestentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutEventsRequest:
-    entries: List[PutEventsRequestEntry] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entries') }})
+    entries: list[shared_puteventsrequestentry.PutEventsRequestEntry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entries') }})
     

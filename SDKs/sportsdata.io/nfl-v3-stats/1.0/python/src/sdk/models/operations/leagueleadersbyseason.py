@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class LeagueLeadersBySeasonColumnEnum(str, Enum):
@@ -29,22 +29,22 @@ class LeagueLeadersBySeasonPositionEnum(str, Enum):
     K = "K"
 
 
-@dataclass
+@dataclasses.dataclass
 class LeagueLeadersBySeasonPathParams:
-    column: LeagueLeadersBySeasonColumnEnum = field(metadata={'path_param': { 'field_name': 'column', 'style': 'simple', 'explode': False }})
-    format: LeagueLeadersBySeasonFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    position: LeagueLeadersBySeasonPositionEnum = field(metadata={'path_param': { 'field_name': 'position', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    column: LeagueLeadersBySeasonColumnEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'column', 'style': 'simple', 'explode': False }})
+    format: LeagueLeadersBySeasonFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    position: LeagueLeadersBySeasonPositionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'position', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LeagueLeadersBySeasonRequest:
-    path_params: LeagueLeadersBySeasonPathParams = field()
+    path_params: LeagueLeadersBySeasonPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LeagueLeadersBySeasonResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_seasons: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_seasons: Optional[list[Any]] = dataclasses.field(default=None)
     

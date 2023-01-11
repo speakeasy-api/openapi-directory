@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import capacitycommitment as shared_capacitycommitment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCapacityCommitmentsResponse:
     r"""ListCapacityCommitmentsResponse
     The response for ReservationService.ListCapacityCommitments.
     """
     
-    capacity_commitments: Optional[List[CapacityCommitment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityCommitments') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    capacity_commitments: Optional[list[shared_capacitycommitment.CapacityCommitment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityCommitments') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

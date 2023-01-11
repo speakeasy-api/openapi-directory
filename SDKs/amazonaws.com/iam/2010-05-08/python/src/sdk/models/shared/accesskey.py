@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import statustype_enum as shared_statustype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class AccessKey:
     r"""AccessKey
     <p>Contains information about an Amazon Web Services access key.</p> <p> This data type is used as a response element in the <a>CreateAccessKey</a> and <a>ListAccessKeys</a> operations. </p> <note> <p>The <code>SecretAccessKey</code> value is returned only in response to <a>CreateAccessKey</a>. You can get a secret access key only when you first create an access key; you cannot recover the secret access key later. If you lose a secret access key, you must create a new access key.</p> </note>
     """
     
-    access_key_id: str = field()
-    secret_access_key: str = field()
-    status: StatusTypeEnum = field()
-    user_name: str = field()
-    create_date: Optional[datetime] = field(default=None)
+    access_key_id: str = dataclasses.field()
+    secret_access_key: str = dataclasses.field()
+    status: shared_statustype_enum.StatusTypeEnum = dataclasses.field()
+    user_name: str = dataclasses.field()
+    create_date: Optional[datetime] = dataclasses.field(default=None)
     

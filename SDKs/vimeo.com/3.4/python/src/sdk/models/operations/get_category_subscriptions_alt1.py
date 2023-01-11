@@ -1,10 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import category as shared_category
+from ..shared import error as shared_error
 
 class GetCategorySubscriptionsAlt1DirectionEnum(str, Enum):
     ASC = "asc"
@@ -16,29 +18,29 @@ class GetCategorySubscriptionsAlt1SortEnum(str, Enum):
     NAME = "name"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCategorySubscriptionsAlt1QueryParams:
-    direction: Optional[GetCategorySubscriptionsAlt1DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[GetCategorySubscriptionsAlt1SortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetCategorySubscriptionsAlt1DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[GetCategorySubscriptionsAlt1SortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategorySubscriptionsAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategorySubscriptionsAlt1Request:
-    query_params: GetCategorySubscriptionsAlt1QueryParams = field()
-    security: GetCategorySubscriptionsAlt1Security = field()
+    query_params: GetCategorySubscriptionsAlt1QueryParams = dataclasses.field()
+    security: GetCategorySubscriptionsAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategorySubscriptionsAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    categories: Optional[List[shared.Category]] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    categories: Optional[list[shared_category.Category]] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

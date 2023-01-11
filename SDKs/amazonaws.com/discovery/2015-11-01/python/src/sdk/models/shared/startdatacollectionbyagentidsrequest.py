@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartDataCollectionByAgentIdsRequest:
-    agent_ids: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('agentIds') }})
+    agent_ids: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('agentIds') }})
     

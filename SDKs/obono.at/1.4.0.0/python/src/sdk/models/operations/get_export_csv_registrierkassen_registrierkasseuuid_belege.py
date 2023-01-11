@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegePathParams:
-    registrierkasse_uuid: str = field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
+    registrierkasse_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeQueryParams:
-    after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
-    before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
-    posten: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'posten', 'style': 'form', 'explode': True }})
+    after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
+    before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
+    posten: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'posten', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeRequest:
-    path_params: GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegePathParams = field()
-    query_params: GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeQueryParams = field()
+    path_params: GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegePathParams = dataclasses.field()
+    query_params: GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportCsvRegistrierkassenRegistrierkasseUUIDBelegeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

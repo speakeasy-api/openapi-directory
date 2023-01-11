@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateFleetResult:
-    errors: Optional[List[CreateFleetError]] = field(default=None)
-    fleet_id: Optional[str] = field(default=None)
-    instances: Optional[List[CreateFleetInstance]] = field(default=None)
+    errors: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    fleet_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    instances: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

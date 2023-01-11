@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import media as shared_media
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamMediaByTagPathParams:
-    media_tag: str = field(metadata={'path_param': { 'field_name': 'media_tag', 'style': 'simple', 'explode': False }})
-    team_key: str = field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
+    media_tag: str = dataclasses.field(metadata={'path_param': { 'field_name': 'media_tag', 'style': 'simple', 'explode': False }})
+    team_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamMediaByTagHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamMediaByTagSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamMediaByTagRequest:
-    headers: GetTeamMediaByTagHeaders = field()
-    path_params: GetTeamMediaByTagPathParams = field()
-    security: GetTeamMediaByTagSecurity = field()
+    headers: GetTeamMediaByTagHeaders = dataclasses.field()
+    path_params: GetTeamMediaByTagPathParams = dataclasses.field()
+    security: GetTeamMediaByTagSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamMediaByTagResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    media: Optional[List[shared.Media]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    media: Optional[list[shared_media.Media]] = dataclasses.field(default=None)
     

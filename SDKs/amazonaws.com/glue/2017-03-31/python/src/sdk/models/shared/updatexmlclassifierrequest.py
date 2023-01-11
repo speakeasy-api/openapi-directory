@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,13 +8,13 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateXMLClassifierRequest:
     r"""UpdateXMLClassifierRequest
     Specifies an XML classifier to be updated.
     """
     
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    classification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Classification') }})
-    row_tag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RowTag') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    classification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Classification') }})
+    row_tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RowTag') }})
     

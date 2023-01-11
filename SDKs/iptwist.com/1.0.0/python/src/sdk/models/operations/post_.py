@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import request as shared_request
+from ..shared import response as shared_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRequest:
-    request: shared.Request = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostSecurity = field()
+    request: shared_request.Request = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response: Optional[shared.Response] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response: Optional[shared_response.Response] = dataclasses.field(default=None)
     

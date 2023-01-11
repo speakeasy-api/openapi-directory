@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import session as shared_session
 
 
-@dataclass
+@dataclasses.dataclass
 class AccountGetSessionPathParams:
-    session_id: str = field(metadata={'path_param': { 'field_name': 'sessionId', 'style': 'simple', 'explode': False }})
+    session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sessionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountGetSessionSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountGetSessionRequest:
-    path_params: AccountGetSessionPathParams = field()
-    security: AccountGetSessionSecurity = field()
+    path_params: AccountGetSessionPathParams = dataclasses.field()
+    security: AccountGetSessionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountGetSessionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    session: Optional[shared.Session] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    session: Optional[shared_session.Session] = dataclasses.field(default=None)
     

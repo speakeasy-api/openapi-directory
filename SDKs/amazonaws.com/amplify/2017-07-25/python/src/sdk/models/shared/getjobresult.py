@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import job as shared_job
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetJobResult:
-    job: Job = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('job') }})
+    job: shared_job.Job = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('job') }})
     

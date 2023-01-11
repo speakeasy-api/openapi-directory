@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,13 +13,13 @@ class ConsumerInfoTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConsumerInfo:
     r"""ConsumerInfo
     `ConsumerInfo` provides information about the consumer.
     """
     
-    consumer_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consumerNumber') }})
-    project_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectNumber') }})
-    type: Optional[ConsumerInfoTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    consumer_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consumerNumber') }})
+    project_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectNumber') }})
+    type: Optional[ConsumerInfoTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

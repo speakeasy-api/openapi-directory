@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,12 +16,12 @@ class ServiceMeshMembershipSpecManagementEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ServiceMeshMembershipSpec:
     r"""ServiceMeshMembershipSpec
     **Service Mesh**: Spec for a single Membership for the servicemesh feature
     """
     
-    control_plane: Optional[ServiceMeshMembershipSpecControlPlaneEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('controlPlane') }})
-    management: Optional[ServiceMeshMembershipSpecManagementEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('management') }})
+    control_plane: Optional[ServiceMeshMembershipSpecControlPlaneEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('controlPlane') }})
+    management: Optional[ServiceMeshMembershipSpecManagementEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('management') }})
     

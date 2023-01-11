@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,95 +20,100 @@ req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
     security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="voluptas",
+        parent="aut",
     ),
     query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="rerum",
+        dollar_xgafv="1",
+        access_token="quidem",
         alt="media",
-        callback="maxime",
-        fields="rerum",
-        key="inventore",
-        oauth_token="explicabo",
+        callback="provident",
+        fields="amet",
+        key="repellendus",
+        oauth_token="dolorem",
         pretty_print=False,
-        quota_user="et",
-        upload_type="soluta",
-        upload_protocol="ab",
+        quota_user="amet",
+        upload_type="tempore",
+        upload_protocol="et",
     ),
     request=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
-                login_url="ullam",
-                password="illo",
-                username="nostrum",
+                login_url="consectetur",
+                password="dolores",
+                username="ut",
             ),
             google_account=shared.GoogleAccount(
-                password="esse",
-                username="dolorem",
+                password="nobis",
+                username="eum",
             ),
             iap_credential=shared.IapCredential(
                 iap_test_service_account_info=shared.IapTestServiceAccountInfo(
-                    target_audience_client_id="odit",
+                    target_audience_client_id="voluptatem",
                 ),
             ),
         ),
         blacklist_patterns=[
-            "voluptatum",
+            "et",
+            "quidem",
+            "incidunt",
         ],
-        display_name="tempore",
+        display_name="vel",
         export_to_security_command_center="ENABLED",
-        ignore_http_status_errors=False,
+        ignore_http_status_errors=True,
         latest_run=shared.ScanRun(
-            end_time="suscipit",
+            end_time="voluptatem",
             error_trace=shared.ScanRunErrorTrace(
-                code="AUTHENTICATION_CONFIG_ISSUE",
-                most_common_http_error_code=6560153558486064374,
+                code="SCAN_CONFIG_ISSUE",
+                most_common_http_error_code=8831363343638379985,
                 scan_config_error=shared.ScanConfigError(
-                    code="SCAN_ALREADY_RUNNING",
-                    field_name="voluptatum",
+                    code="CUSTOM_LOGIN_URL_MALFORMED",
+                    field_name="quisquam",
                 ),
             ),
-            execution_state="EXECUTION_STATE_UNSPECIFIED",
+            execution_state="QUEUED",
             has_vulnerabilities=False,
-            name="quos",
-            progress_percent=4657958053555222384,
-            result_state="ERROR",
-            start_time="commodi",
-            urls_crawled_count="et",
-            urls_tested_count="necessitatibus",
+            name="inventore",
+            progress_percent=3405258711522167072,
+            result_state="RESULT_STATE_UNSPECIFIED",
+            start_time="eos",
+            urls_crawled_count="ut",
+            urls_tested_count="voluptates",
             warning_traces=[
                 shared.ScanRunWarningTrace(
-                    code="NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN",
+                    code="TOO_MANY_FUZZ_TASKS",
                 ),
                 shared.ScanRunWarningTrace(
-                    code="BLOCKED_BY_IAP",
+                    code="INSUFFICIENT_CRAWL_RESULTS",
+                ),
+                shared.ScanRunWarningTrace(
+                    code="TOO_MANY_FUZZ_TASKS",
                 ),
             ],
         ),
-        managed_scan=False,
-        max_qps=6612788434572589531,
-        name="ratione",
-        risk_level="RISK_LEVEL_UNSPECIFIED",
+        managed_scan=True,
+        max_qps=1770746881013234414,
+        name="dolorem",
+        risk_level="NORMAL",
         schedule=shared.Schedule(
-            interval_duration_days=6888007712442229941,
-            schedule_time="itaque",
+            interval_duration_days=5951960727538493913,
+            schedule_time="mollitia",
         ),
         starting_urls=[
-            "earum",
-            "incidunt",
+            "voluptas",
+            "est",
+            "quibusdam",
         ],
         static_ip_scan=False,
         target_platforms=[
-            "CLOUD_RUN",
-            "TARGET_PLATFORM_UNSPECIFIED",
+            "APP_ENGINE",
         ],
-        user_agent="CHROME_ANDROID",
+        user_agent="CHROME_LINUX",
     ),
 )
     

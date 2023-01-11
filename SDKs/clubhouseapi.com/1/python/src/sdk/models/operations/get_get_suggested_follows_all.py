@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetSuggestedFollowsAllQueryParams:
-    in_onboarding: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'in_onboarding', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
+    in_onboarding: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'in_onboarding', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetSuggestedFollowsAllRequest:
-    query_params: GetGetSuggestedFollowsAllQueryParams = field()
+    query_params: GetGetSuggestedFollowsAllQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetSuggestedFollowsAllResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

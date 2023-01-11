@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateJobQuotaExceededException:
     r"""CreateJobQuotaExceededException
     Each account can create only a certain number of jobs per day. If you need to create more than this, please contact awsimportexport@amazon.com to explain your particular use case.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

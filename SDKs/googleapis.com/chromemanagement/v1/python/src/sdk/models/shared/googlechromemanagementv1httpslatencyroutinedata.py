@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,12 +13,12 @@ class GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleChromeManagementV1HTTPSLatencyRoutineData:
     r"""GoogleChromeManagementV1HTTPSLatencyRoutineData
     Data that describes the result of the HTTPS latency diagnostics routine, with the HTTPS requests issued to Google websites.
     """
     
-    latency: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latency') }})
-    problem: Optional[GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problem') }})
+    latency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latency') }})
+    problem: Optional[GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problem') }})
     

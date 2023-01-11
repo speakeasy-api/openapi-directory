@@ -1,38 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import describeorganizationrequest as shared_describeorganizationrequest
+from ..shared import describeorganizationresponse as shared_describeorganizationresponse
 
 class DescribeOrganizationXAmzTargetEnum(str, Enum):
     WORK_MAIL_SERVICE_DESCRIBE_ORGANIZATION = "WorkMailService.DescribeOrganization"
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeOrganizationHeaders:
-    x_amz_target: DescribeOrganizationXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: DescribeOrganizationXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeOrganizationRequest:
-    headers: DescribeOrganizationHeaders = field()
-    request: shared.DescribeOrganizationRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DescribeOrganizationHeaders = dataclasses.field()
+    request: shared_describeorganizationrequest.DescribeOrganizationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_organization_response: Optional[shared.DescribeOrganizationResponse] = field(default=None)
-    invalid_parameter_exception: Optional[Any] = field(default=None)
-    organization_not_found_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_organization_response: Optional[shared_describeorganizationresponse.DescribeOrganizationResponse] = dataclasses.field(default=None)
+    invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    organization_not_found_exception: Optional[Any] = dataclasses.field(default=None)
     

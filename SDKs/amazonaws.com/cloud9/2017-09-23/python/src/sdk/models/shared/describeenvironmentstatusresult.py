@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import environmentstatus_enum as shared_environmentstatus_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeEnvironmentStatusResult:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    status: EnvironmentStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    status: shared_environmentstatus_enum.EnvironmentStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAddSourceIdentifierToSubscriptionRequest(
     query_params=operations.GetAddSourceIdentifierToSubscriptionQueryParams(
         action="AddSourceIdentifierToSubscription",
-        source_identifier="commodi",
-        subscription_name="quidem",
+        source_identifier="ad",
+        subscription_name="ut",
         version="2013-01-10",
     ),
     headers=operations.GetAddSourceIdentifierToSubscriptionHeaders(
-        x_amz_algorithm="voluptas",
-        x_amz_content_sha256="quasi",
-        x_amz_credential="nostrum",
-        x_amz_date="voluptas",
-        x_amz_security_token="iusto",
-        x_amz_signature="esse",
-        x_amz_signed_headers="architecto",
+        x_amz_algorithm="qui",
+        x_amz_content_sha256="in",
+        x_amz_credential="ea",
+        x_amz_date="voluptate",
+        x_amz_security_token="et",
+        x_amz_signature="consequatur",
+        x_amz_signed_headers="aliquam",
     ),
 )
     
-res = s.sdk.get_add_source_identifier_to_subscription(req)
+res = s.get_add_source_identifier_to_subscription(req)
 
 if res.body is not None:
     # handle response
@@ -57,13 +56,10 @@ if res.body is not None:
 * `get_add_source_identifier_to_subscription`
 * `get_authorize_db_security_group_ingress`
 * `get_copy_db_snapshot`
-* `get_create_db_instance`
 * `get_create_db_instance_read_replica`
 * `get_create_db_parameter_group`
 * `get_create_db_security_group`
 * `get_create_db_snapshot`
-* `get_create_db_subnet_group`
-* `get_create_event_subscription`
 * `get_create_option_group`
 * `get_delete_db_instance`
 * `get_delete_db_parameter_group`
@@ -82,16 +78,12 @@ if res.body is not None:
 * `get_describe_engine_default_parameters`
 * `get_describe_event_categories`
 * `get_describe_event_subscriptions`
-* `get_describe_events`
 * `get_describe_option_group_options`
 * `get_describe_option_groups`
 * `get_describe_orderable_db_instance_options`
 * `get_describe_reserved_db_instances`
 * `get_describe_reserved_db_instances_offerings`
 * `get_list_tags_for_resource`
-* `get_modify_db_instance`
-* `get_modify_db_subnet_group`
-* `get_modify_event_subscription`
 * `get_promote_read_replica`
 * `get_purchase_reserved_db_instances_offering`
 * `get_reboot_db_instance`

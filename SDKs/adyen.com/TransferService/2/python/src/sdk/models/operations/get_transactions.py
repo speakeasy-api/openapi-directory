@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsQueryParams:
-    account_holder_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'accountHolderId', 'style': 'form', 'explode': True }})
-    balance_account_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'balanceAccountId', 'style': 'form', 'explode': True }})
-    balance_platform: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'balancePlatform', 'style': 'form', 'explode': True }})
-    created_since: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'createdSince', 'style': 'form', 'explode': True }})
-    created_until: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'createdUntil', 'style': 'form', 'explode': True }})
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    account_holder_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'accountHolderId', 'style': 'form', 'explode': True }})
+    balance_account_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'balanceAccountId', 'style': 'form', 'explode': True }})
+    balance_platform: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'balancePlatform', 'style': 'form', 'explode': True }})
+    created_since: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'createdSince', 'style': 'form', 'explode': True }})
+    created_until: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'createdUntil', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsRequest:
-    query_params: GetTransactionsQueryParams = field()
-    security: GetTransactionsSecurity = field()
+    query_params: GetTransactionsQueryParams = dataclasses.field()
+    security: GetTransactionsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rest_service_error: Optional[Any] = field(default=None)
-    transaction_search_response: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rest_service_error: Optional[Any] = dataclasses.field(default=None)
+    transaction_search_response: Optional[Any] = dataclasses.field(default=None)
     

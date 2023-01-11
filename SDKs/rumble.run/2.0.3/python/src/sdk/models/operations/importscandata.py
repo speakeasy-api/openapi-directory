@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import task as shared_task
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportScanDataPathParams:
-    site_id: str = field(metadata={'path_param': { 'field_name': 'site_id', 'style': 'simple', 'explode': False }})
+    site_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'site_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportScanDataSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportScanDataRequest:
-    path_params: ImportScanDataPathParams = field()
-    security: ImportScanDataSecurity = field()
-    request: Optional[bytes] = field(default=None, metadata={'request': { 'media_type': 'application/octet-stream' }})
+    path_params: ImportScanDataPathParams = dataclasses.field()
+    security: ImportScanDataSecurity = dataclasses.field()
+    request: Optional[bytes] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/octet-stream' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportScanDataResponse:
-    content_type: str = field()
-    status_code: int = field()
-    task: Optional[shared.Task] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    task: Optional[shared_task.Task] = dataclasses.field(default=None)
     

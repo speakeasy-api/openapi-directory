@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import knowngender as shared_knowngender
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetCelebrityInfoResponse:
-    known_gender: Optional[KnownGender] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KnownGender') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Urls') }})
+    known_gender: Optional[shared_knowngender.KnownGender] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KnownGender') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Urls') }})
     

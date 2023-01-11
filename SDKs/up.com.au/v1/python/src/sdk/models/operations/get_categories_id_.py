@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getcategoryresponse as shared_getcategoryresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesIDRequest:
-    path_params: GetCategoriesIDPathParams = field()
+    path_params: GetCategoriesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_category_response: Optional[shared.GetCategoryResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_category_response: Optional[shared_getcategoryresponse.GetCategoryResponse] = dataclasses.field(default=None)
     

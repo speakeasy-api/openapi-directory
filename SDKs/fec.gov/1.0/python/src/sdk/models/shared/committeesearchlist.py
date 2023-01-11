@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import committeesearch as shared_committeesearch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommitteeSearchList:
-    results: Optional[List[CommitteeSearch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
+    results: Optional[list[shared_committeesearch.CommitteeSearch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
     

@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import simple_user as shared_simple_user
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersListFollowedByAuthenticatedQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListFollowedByAuthenticatedRequest:
-    query_params: UsersListFollowedByAuthenticatedQueryParams = field()
+    query_params: UsersListFollowedByAuthenticatedQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListFollowedByAuthenticatedResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
     

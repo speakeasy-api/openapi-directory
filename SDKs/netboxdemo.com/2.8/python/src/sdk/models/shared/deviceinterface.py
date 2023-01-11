@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nestedcable as shared_nestedcable
+from ..shared import nesteddevice as shared_nesteddevice
+from ..shared import nestedinterface as shared_nestedinterface
+from ..shared import nestedvlan as shared_nestedvlan
 
 class DeviceInterfaceConnectionStatusLabelEnum(str, Enum):
     NOT_CONNECTED = "Not Connected"
@@ -11,10 +14,10 @@ class DeviceInterfaceConnectionStatusLabelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceInterfaceConnectionStatus:
-    label: DeviceInterfaceConnectionStatusLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: DeviceInterfaceConnectionStatusLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class DeviceInterfaceModeLabelEnum(str, Enum):
     ACCESS = "Access"
@@ -28,10 +31,10 @@ class DeviceInterfaceModeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceInterfaceMode:
-    label: DeviceInterfaceModeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: DeviceInterfaceModeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: DeviceInterfaceModeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: DeviceInterfaceModeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class DeviceInterfaceTypeLabelEnum(str, Enum):
     VIRTUAL = "Virtual"
@@ -183,32 +186,32 @@ class DeviceInterfaceTypeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceInterfaceType:
-    label: DeviceInterfaceTypeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: DeviceInterfaceTypeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: DeviceInterfaceTypeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: DeviceInterfaceTypeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceInterface:
-    device: NestedDevice = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: DeviceInterfaceType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    cable: Optional[NestedCable] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cable') }})
-    connected_endpoint: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint') }})
-    connected_endpoint_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint_type') }})
-    connection_status: Optional[DeviceInterfaceConnectionStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
-    count_ipaddresses: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count_ipaddresses') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    lag: Optional[NestedInterface] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lag') }})
-    mac_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac_address') }})
-    mgmt_only: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mgmt_only') }})
-    mode: Optional[DeviceInterfaceMode] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
-    mtu: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mtu') }})
-    tagged_vlans: Optional[List[NestedVlan]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagged_vlans') }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    untagged_vlan: Optional[NestedVlan] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('untagged_vlan') }})
+    device: shared_nesteddevice.NestedDevice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: DeviceInterfaceType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    cable: Optional[shared_nestedcable.NestedCable] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cable') }})
+    connected_endpoint: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint') }})
+    connected_endpoint_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint_type') }})
+    connection_status: Optional[DeviceInterfaceConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
+    count_ipaddresses: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count_ipaddresses') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    lag: Optional[shared_nestedinterface.NestedInterface] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lag') }})
+    mac_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac_address') }})
+    mgmt_only: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mgmt_only') }})
+    mode: Optional[DeviceInterfaceMode] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
+    mtu: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mtu') }})
+    tagged_vlans: Optional[list[shared_nestedvlan.NestedVlan]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagged_vlans') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    untagged_vlan: Optional[shared_nestedvlan.NestedVlan] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('untagged_vlan') }})
     

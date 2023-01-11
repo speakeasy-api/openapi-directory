@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,24 +19,24 @@ class GuaranteedOrderStatusEntityStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
-class GuaranteedOrderStatusInput:
-    r"""GuaranteedOrderStatusInput
-    The status settings of the guaranteed order.
-    """
-    
-    entity_pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
-    entity_status: Optional[GuaranteedOrderStatusEntityStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GuaranteedOrderStatus:
     r"""GuaranteedOrderStatus
     The status settings of the guaranteed order.
     """
     
-    config_status: Optional[GuaranteedOrderStatusConfigStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configStatus') }})
-    entity_pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
-    entity_status: Optional[GuaranteedOrderStatusEntityStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
+    config_status: Optional[GuaranteedOrderStatusConfigStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configStatus') }})
+    entity_pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
+    entity_status: Optional[GuaranteedOrderStatusEntityStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class GuaranteedOrderStatusInput:
+    r"""GuaranteedOrderStatusInput
+    The status settings of the guaranteed order.
+    """
+    
+    entity_pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
+    entity_status: Optional[GuaranteedOrderStatusEntityStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import loggroup as shared_loggroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeLogGroupsResponse:
-    log_groups: Optional[List[LogGroup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logGroups') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    log_groups: Optional[list[shared_loggroup.LogGroup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logGroups') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

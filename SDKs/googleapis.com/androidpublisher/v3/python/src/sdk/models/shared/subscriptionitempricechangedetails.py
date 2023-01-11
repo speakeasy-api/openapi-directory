@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import money as shared_money
 
 class SubscriptionItemPriceChangeDetailsPriceChangeModeEnum(str, Enum):
     PRICE_CHANGE_MODE_UNSPECIFIED = "PRICE_CHANGE_MODE_UNSPECIFIED"
@@ -18,14 +18,14 @@ class SubscriptionItemPriceChangeDetailsPriceChangeStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubscriptionItemPriceChangeDetails:
     r"""SubscriptionItemPriceChangeDetails
     Price change related information of a subscription item.
     """
     
-    expected_new_price_charge_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expectedNewPriceChargeTime') }})
-    new_price: Optional[Money] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPrice') }})
-    price_change_mode: Optional[SubscriptionItemPriceChangeDetailsPriceChangeModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priceChangeMode') }})
-    price_change_state: Optional[SubscriptionItemPriceChangeDetailsPriceChangeStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priceChangeState') }})
+    expected_new_price_charge_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expectedNewPriceChargeTime') }})
+    new_price: Optional[shared_money.Money] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPrice') }})
+    price_change_mode: Optional[SubscriptionItemPriceChangeDetailsPriceChangeModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priceChangeMode') }})
+    price_change_state: Optional[SubscriptionItemPriceChangeDetailsPriceChangeStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priceChangeState') }})
     

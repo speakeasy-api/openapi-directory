@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workflowtypeinfo as shared_workflowtypeinfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WorkflowTypeInfos:
     r"""WorkflowTypeInfos
     Contains a paginated list of information structures about workflow types.
     """
     
-    type_infos: List[WorkflowTypeInfo] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeInfos') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    type_infos: list[shared_workflowtypeinfo.WorkflowTypeInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeInfos') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

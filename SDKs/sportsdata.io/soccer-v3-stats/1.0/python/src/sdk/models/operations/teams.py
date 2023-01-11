@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class TeamsFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class TeamsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsPathParams:
-    format: TeamsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: TeamsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsRequest:
-    path_params: TeamsPathParams = field()
+    path_params: TeamsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    teams: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    teams: Optional[list[Any]] = dataclasses.field(default=None)
     

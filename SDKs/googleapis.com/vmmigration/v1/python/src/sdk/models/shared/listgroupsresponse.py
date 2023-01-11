@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import group as shared_group
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGroupsResponse:
     r"""ListGroupsResponse
     Response message for 'ListGroups' request.
     """
     
-    groups: Optional[List[Group]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    groups: Optional[list[shared_group.Group]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

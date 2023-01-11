@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AllocateStaticIp"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AllocateStaticIPResponse(status_code=r.status_code, content_type=content_type)
@@ -124,7 +124,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AttachCertificateToDistribution"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -132,7 +132,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AttachCertificateToDistributionResponse(status_code=r.status_code, content_type=content_type)
@@ -178,7 +178,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AttachDisk"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -186,7 +186,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AttachDiskResponse(status_code=r.status_code, content_type=content_type)
@@ -236,7 +236,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AttachInstancesToLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -244,7 +244,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AttachInstancesToLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -294,7 +294,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AttachLoadBalancerTlsCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -302,7 +302,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AttachLoadBalancerTLSCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -352,7 +352,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.AttachStaticIp"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -360,7 +360,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AttachStaticIPResponse(status_code=r.status_code, content_type=content_type)
@@ -410,7 +410,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CloseInstancePublicPorts"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -418,7 +418,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CloseInstancePublicPortsResponse(status_code=r.status_code, content_type=content_type)
@@ -468,7 +468,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CopySnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -476,7 +476,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CopySnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -526,7 +526,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateBucket"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -534,7 +534,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateBucketResponse(status_code=r.status_code, content_type=content_type)
@@ -572,7 +572,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateBucketAccessKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -580,7 +580,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateBucketAccessKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -622,7 +622,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -630,7 +630,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -672,7 +672,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateCloudFormationStack"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -680,7 +680,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateCloudFormationStackResponse(status_code=r.status_code, content_type=content_type)
@@ -730,7 +730,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateContactMethod"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -738,7 +738,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateContactMethodResponse(status_code=r.status_code, content_type=content_type)
@@ -784,7 +784,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateContainerService"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -792,7 +792,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateContainerServiceResponse(status_code=r.status_code, content_type=content_type)
@@ -834,7 +834,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateContainerServiceDeployment"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -842,7 +842,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateContainerServiceDeploymentResponse(status_code=r.status_code, content_type=content_type)
@@ -884,7 +884,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateContainerServiceRegistryLogin"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -892,7 +892,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateContainerServiceRegistryLoginResponse(status_code=r.status_code, content_type=content_type)
@@ -934,7 +934,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDisk"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -942,7 +942,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDiskResponse(status_code=r.status_code, content_type=content_type)
@@ -992,7 +992,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDiskFromSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1000,7 +1000,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDiskFromSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1050,7 +1050,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDiskSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1058,7 +1058,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDiskSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1108,7 +1108,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDistribution"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1116,7 +1116,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDistributionResponse(status_code=r.status_code, content_type=content_type)
@@ -1162,7 +1162,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDomain"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1170,7 +1170,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDomainResponse(status_code=r.status_code, content_type=content_type)
@@ -1220,7 +1220,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateDomainEntry"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1228,7 +1228,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDomainEntryResponse(status_code=r.status_code, content_type=content_type)
@@ -1278,7 +1278,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateInstanceSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1286,7 +1286,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateInstanceSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1336,7 +1336,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateInstances"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1344,7 +1344,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateInstancesResponse(status_code=r.status_code, content_type=content_type)
@@ -1394,7 +1394,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateInstancesFromSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1402,7 +1402,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateInstancesFromSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1452,7 +1452,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1460,7 +1460,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -1510,7 +1510,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1518,7 +1518,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1568,7 +1568,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateLoadBalancerTlsCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1576,7 +1576,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateLoadBalancerTLSCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -1626,7 +1626,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1634,7 +1634,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -1684,7 +1684,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateRelationalDatabaseFromSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1692,7 +1692,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRelationalDatabaseFromSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1742,7 +1742,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.CreateRelationalDatabaseSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1750,7 +1750,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRelationalDatabaseSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1800,7 +1800,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteAlarm"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1808,7 +1808,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteAlarmResponse(status_code=r.status_code, content_type=content_type)
@@ -1854,7 +1854,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteAutoSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1862,7 +1862,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteAutoSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -1908,7 +1908,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteBucket"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1916,7 +1916,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteBucketResponse(status_code=r.status_code, content_type=content_type)
@@ -1958,7 +1958,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteBucketAccessKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1966,7 +1966,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteBucketAccessKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -2008,7 +2008,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2016,7 +2016,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -2058,7 +2058,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteContactMethod"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2066,7 +2066,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteContactMethodResponse(status_code=r.status_code, content_type=content_type)
@@ -2112,7 +2112,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteContainerImage"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2120,7 +2120,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteContainerImageResponse(status_code=r.status_code, content_type=content_type)
@@ -2162,7 +2162,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteContainerService"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2170,7 +2170,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteContainerServiceResponse(status_code=r.status_code, content_type=content_type)
@@ -2212,7 +2212,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteDisk"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2220,7 +2220,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteDiskResponse(status_code=r.status_code, content_type=content_type)
@@ -2270,7 +2270,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteDiskSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2278,7 +2278,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteDiskSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -2328,7 +2328,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteDistribution"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2336,7 +2336,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteDistributionResponse(status_code=r.status_code, content_type=content_type)
@@ -2382,7 +2382,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteDomain"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2390,7 +2390,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteDomainResponse(status_code=r.status_code, content_type=content_type)
@@ -2440,7 +2440,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteDomainEntry"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2448,7 +2448,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteDomainEntryResponse(status_code=r.status_code, content_type=content_type)
@@ -2498,7 +2498,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteInstance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2506,7 +2506,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteInstanceResponse(status_code=r.status_code, content_type=content_type)
@@ -2556,7 +2556,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteInstanceSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2564,7 +2564,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteInstanceSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -2614,7 +2614,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2622,7 +2622,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -2672,7 +2672,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteKnownHostKeys"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2680,7 +2680,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteKnownHostKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -2730,7 +2730,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2738,7 +2738,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -2788,7 +2788,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteLoadBalancerTlsCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2796,7 +2796,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteLoadBalancerTLSCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -2846,7 +2846,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2854,7 +2854,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -2904,7 +2904,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DeleteRelationalDatabaseSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2912,7 +2912,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRelationalDatabaseSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -2962,7 +2962,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DetachCertificateFromDistribution"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2970,7 +2970,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetachCertificateFromDistributionResponse(status_code=r.status_code, content_type=content_type)
@@ -3016,7 +3016,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DetachDisk"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3024,7 +3024,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetachDiskResponse(status_code=r.status_code, content_type=content_type)
@@ -3074,7 +3074,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DetachInstancesFromLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3082,7 +3082,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetachInstancesFromLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -3132,7 +3132,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DetachStaticIp"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3140,7 +3140,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetachStaticIPResponse(status_code=r.status_code, content_type=content_type)
@@ -3190,7 +3190,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DisableAddOn"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3198,7 +3198,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisableAddOnResponse(status_code=r.status_code, content_type=content_type)
@@ -3244,7 +3244,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.DownloadDefaultKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3252,7 +3252,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DownloadDefaultKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -3302,7 +3302,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.EnableAddOn"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3310,7 +3310,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.EnableAddOnResponse(status_code=r.status_code, content_type=content_type)
@@ -3356,7 +3356,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.ExportSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3364,7 +3364,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ExportSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -3414,7 +3414,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetActiveNames"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3422,7 +3422,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetActiveNamesResponse(status_code=r.status_code, content_type=content_type)
@@ -3472,7 +3472,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetAlarms"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3480,7 +3480,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetAlarmsResponse(status_code=r.status_code, content_type=content_type)
@@ -3526,7 +3526,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetAutoSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3534,7 +3534,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetAutoSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -3580,7 +3580,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBlueprints"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3588,7 +3588,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBlueprintsResponse(status_code=r.status_code, content_type=content_type)
@@ -3638,7 +3638,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBucketAccessKeys"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3646,7 +3646,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBucketAccessKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -3688,7 +3688,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBucketBundles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3696,7 +3696,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBucketBundlesResponse(status_code=r.status_code, content_type=content_type)
@@ -3734,7 +3734,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBucketMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3742,7 +3742,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBucketMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -3784,7 +3784,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBuckets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3792,7 +3792,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBucketsResponse(status_code=r.status_code, content_type=content_type)
@@ -3834,7 +3834,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetBundles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3842,7 +3842,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBundlesResponse(status_code=r.status_code, content_type=content_type)
@@ -3892,7 +3892,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetCertificates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3900,7 +3900,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetCertificatesResponse(status_code=r.status_code, content_type=content_type)
@@ -3942,7 +3942,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetCloudFormationStackRecords"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3950,7 +3950,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetCloudFormationStackRecordsResponse(status_code=r.status_code, content_type=content_type)
@@ -4000,7 +4000,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContactMethods"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4008,7 +4008,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContactMethodsResponse(status_code=r.status_code, content_type=content_type)
@@ -4054,7 +4054,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerAPIMetadata"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4062,7 +4062,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerAPIMetadataResponse(status_code=r.status_code, content_type=content_type)
@@ -4096,7 +4096,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerImages"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4104,7 +4104,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerImagesResponse(status_code=r.status_code, content_type=content_type)
@@ -4146,7 +4146,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerLog"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4154,7 +4154,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerLogResponse(status_code=r.status_code, content_type=content_type)
@@ -4196,7 +4196,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerServiceDeployments"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4204,7 +4204,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerServiceDeploymentsResponse(status_code=r.status_code, content_type=content_type)
@@ -4246,7 +4246,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerServiceMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4254,7 +4254,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerServiceMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -4296,7 +4296,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerServicePowers"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4304,7 +4304,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerServicePowersResponse(status_code=r.status_code, content_type=content_type)
@@ -4346,7 +4346,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetContainerServices"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4354,7 +4354,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetContainerServicesResponse(status_code=r.status_code, content_type=content_type)
@@ -4396,7 +4396,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDisk"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4404,7 +4404,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDiskResponse(status_code=r.status_code, content_type=content_type)
@@ -4454,7 +4454,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDiskSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4462,7 +4462,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDiskSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -4512,7 +4512,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDiskSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4520,7 +4520,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDiskSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -4570,7 +4570,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDisks"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4578,7 +4578,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDisksResponse(status_code=r.status_code, content_type=content_type)
@@ -4628,7 +4628,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDistributionBundles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4636,7 +4636,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDistributionBundlesResponse(status_code=r.status_code, content_type=content_type)
@@ -4682,7 +4682,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDistributionLatestCacheReset"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4690,7 +4690,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDistributionLatestCacheResetResponse(status_code=r.status_code, content_type=content_type)
@@ -4736,7 +4736,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDistributionMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4744,7 +4744,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDistributionMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -4790,7 +4790,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDistributions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4798,7 +4798,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDistributionsResponse(status_code=r.status_code, content_type=content_type)
@@ -4844,7 +4844,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDomain"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4852,7 +4852,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDomainResponse(status_code=r.status_code, content_type=content_type)
@@ -4902,7 +4902,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetDomains"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4910,7 +4910,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDomainsResponse(status_code=r.status_code, content_type=content_type)
@@ -4960,7 +4960,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetExportSnapshotRecords"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4968,7 +4968,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetExportSnapshotRecordsResponse(status_code=r.status_code, content_type=content_type)
@@ -5018,7 +5018,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5026,7 +5026,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceResponse(status_code=r.status_code, content_type=content_type)
@@ -5076,7 +5076,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstanceAccessDetails"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5084,7 +5084,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceAccessDetailsResponse(status_code=r.status_code, content_type=content_type)
@@ -5134,7 +5134,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstanceMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5142,7 +5142,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -5192,7 +5192,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstancePortStates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5200,7 +5200,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstancePortStatesResponse(status_code=r.status_code, content_type=content_type)
@@ -5250,7 +5250,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstanceSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5258,7 +5258,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -5308,7 +5308,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstanceSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5316,7 +5316,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -5366,7 +5366,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstanceState"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5374,7 +5374,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceStateResponse(status_code=r.status_code, content_type=content_type)
@@ -5424,7 +5424,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetInstances"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5432,7 +5432,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstancesResponse(status_code=r.status_code, content_type=content_type)
@@ -5482,7 +5482,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5490,7 +5490,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -5540,7 +5540,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetKeyPairs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5548,7 +5548,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetKeyPairsResponse(status_code=r.status_code, content_type=content_type)
@@ -5598,7 +5598,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5606,7 +5606,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -5656,7 +5656,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetLoadBalancerMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5664,7 +5664,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetLoadBalancerMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -5714,7 +5714,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetLoadBalancerTlsCertificates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5722,7 +5722,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetLoadBalancerTLSCertificatesResponse(status_code=r.status_code, content_type=content_type)
@@ -5772,7 +5772,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetLoadBalancers"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5780,7 +5780,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetLoadBalancersResponse(status_code=r.status_code, content_type=content_type)
@@ -5830,7 +5830,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetOperation"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5838,7 +5838,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetOperationResponse(status_code=r.status_code, content_type=content_type)
@@ -5888,7 +5888,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetOperations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5896,7 +5896,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetOperationsResponse(status_code=r.status_code, content_type=content_type)
@@ -5946,7 +5946,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetOperationsForResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -5954,7 +5954,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetOperationsForResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -6004,7 +6004,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRegions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6012,7 +6012,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRegionsResponse(status_code=r.status_code, content_type=content_type)
@@ -6062,7 +6062,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6070,7 +6070,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -6120,7 +6120,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseBlueprints"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6128,7 +6128,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseBlueprintsResponse(status_code=r.status_code, content_type=content_type)
@@ -6178,7 +6178,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseBundles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6186,7 +6186,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseBundlesResponse(status_code=r.status_code, content_type=content_type)
@@ -6236,7 +6236,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseEvents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6244,7 +6244,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseEventsResponse(status_code=r.status_code, content_type=content_type)
@@ -6294,7 +6294,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseLogEvents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6302,7 +6302,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseLogEventsResponse(status_code=r.status_code, content_type=content_type)
@@ -6352,7 +6352,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseLogStreams"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6360,7 +6360,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseLogStreamsResponse(status_code=r.status_code, content_type=content_type)
@@ -6410,7 +6410,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseMasterUserPassword"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6418,7 +6418,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseMasterUserPasswordResponse(status_code=r.status_code, content_type=content_type)
@@ -6468,7 +6468,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseMetricData"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6476,7 +6476,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseMetricDataResponse(status_code=r.status_code, content_type=content_type)
@@ -6526,7 +6526,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseParameters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6534,7 +6534,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseParametersResponse(status_code=r.status_code, content_type=content_type)
@@ -6584,7 +6584,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6592,7 +6592,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -6642,7 +6642,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabaseSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6650,7 +6650,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabaseSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -6700,7 +6700,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetRelationalDatabases"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6708,7 +6708,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRelationalDatabasesResponse(status_code=r.status_code, content_type=content_type)
@@ -6758,7 +6758,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetStaticIp"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6766,7 +6766,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetStaticIPResponse(status_code=r.status_code, content_type=content_type)
@@ -6816,7 +6816,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.GetStaticIps"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6824,7 +6824,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetStaticIpsResponse(status_code=r.status_code, content_type=content_type)
@@ -6874,7 +6874,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.ImportKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6882,7 +6882,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ImportKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -6932,7 +6932,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.IsVpcPeered"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6940,7 +6940,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IsVpcPeeredResponse(status_code=r.status_code, content_type=content_type)
@@ -6990,7 +6990,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.OpenInstancePublicPorts"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -6998,7 +6998,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OpenInstancePublicPortsResponse(status_code=r.status_code, content_type=content_type)
@@ -7048,7 +7048,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.PeerVpc"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7056,7 +7056,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PeerVpcResponse(status_code=r.status_code, content_type=content_type)
@@ -7106,7 +7106,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.PutAlarm"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7114,7 +7114,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutAlarmResponse(status_code=r.status_code, content_type=content_type)
@@ -7160,7 +7160,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.PutInstancePublicPorts"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7168,7 +7168,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutInstancePublicPortsResponse(status_code=r.status_code, content_type=content_type)
@@ -7218,7 +7218,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.RebootInstance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7226,7 +7226,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RebootInstanceResponse(status_code=r.status_code, content_type=content_type)
@@ -7276,7 +7276,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.RebootRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7284,7 +7284,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RebootRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -7334,7 +7334,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.RegisterContainerImage"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7342,7 +7342,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RegisterContainerImageResponse(status_code=r.status_code, content_type=content_type)
@@ -7384,7 +7384,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.ReleaseStaticIp"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7392,7 +7392,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReleaseStaticIPResponse(status_code=r.status_code, content_type=content_type)
@@ -7442,7 +7442,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.ResetDistributionCache"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7450,7 +7450,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ResetDistributionCacheResponse(status_code=r.status_code, content_type=content_type)
@@ -7496,7 +7496,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.SendContactMethodVerification"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7504,7 +7504,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SendContactMethodVerificationResponse(status_code=r.status_code, content_type=content_type)
@@ -7550,7 +7550,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.SetIpAddressType"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7558,7 +7558,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetIPAddressTypeResponse(status_code=r.status_code, content_type=content_type)
@@ -7608,7 +7608,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.SetResourceAccessForBucket"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7616,7 +7616,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetResourceAccessForBucketResponse(status_code=r.status_code, content_type=content_type)
@@ -7658,7 +7658,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.StartInstance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7666,7 +7666,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartInstanceResponse(status_code=r.status_code, content_type=content_type)
@@ -7716,7 +7716,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.StartRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7724,7 +7724,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -7774,7 +7774,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.StopInstance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7782,7 +7782,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopInstanceResponse(status_code=r.status_code, content_type=content_type)
@@ -7832,7 +7832,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.StopRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7840,7 +7840,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -7890,7 +7890,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.TagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7898,7 +7898,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -7948,7 +7948,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.TestAlarm"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -7956,7 +7956,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TestAlarmResponse(status_code=r.status_code, content_type=content_type)
@@ -8002,7 +8002,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UnpeerVpc"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8010,7 +8010,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UnpeerVpcResponse(status_code=r.status_code, content_type=content_type)
@@ -8060,7 +8060,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UntagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8068,7 +8068,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UntagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -8118,7 +8118,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateBucket"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8126,7 +8126,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateBucketResponse(status_code=r.status_code, content_type=content_type)
@@ -8168,7 +8168,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateBucketBundle"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8176,7 +8176,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateBucketBundleResponse(status_code=r.status_code, content_type=content_type)
@@ -8218,7 +8218,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateContainerService"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8226,7 +8226,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateContainerServiceResponse(status_code=r.status_code, content_type=content_type)
@@ -8268,7 +8268,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateDistribution"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8276,7 +8276,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateDistributionResponse(status_code=r.status_code, content_type=content_type)
@@ -8322,7 +8322,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateDistributionBundle"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8330,7 +8330,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateDistributionBundleResponse(status_code=r.status_code, content_type=content_type)
@@ -8376,7 +8376,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateDomainEntry"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8384,7 +8384,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateDomainEntryResponse(status_code=r.status_code, content_type=content_type)
@@ -8434,7 +8434,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateLoadBalancerAttribute"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8442,7 +8442,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateLoadBalancerAttributeResponse(status_code=r.status_code, content_type=content_type)
@@ -8492,7 +8492,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateRelationalDatabase"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8500,7 +8500,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRelationalDatabaseResponse(status_code=r.status_code, content_type=content_type)
@@ -8550,7 +8550,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=Lightsail_20161128.UpdateRelationalDatabaseParameters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -8558,7 +8558,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRelationalDatabaseParametersResponse(status_code=r.status_code, content_type=content_type)

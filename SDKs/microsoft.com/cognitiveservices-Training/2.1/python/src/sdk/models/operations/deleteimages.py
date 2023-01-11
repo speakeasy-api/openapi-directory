@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class DeleteImagesPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImagesQueryParams:
-    image_ids: List[str] = field(metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
+    image_ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImagesHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImagesRequest:
-    headers: DeleteImagesHeaders = field()
-    path_params: DeleteImagesPathParams = field()
-    query_params: DeleteImagesQueryParams = field()
+    headers: DeleteImagesHeaders = dataclasses.field()
+    path_params: DeleteImagesPathParams = dataclasses.field()
+    query_params: DeleteImagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImagesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

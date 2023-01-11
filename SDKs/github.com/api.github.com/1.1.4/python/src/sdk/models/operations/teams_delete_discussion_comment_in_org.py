@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteDiscussionCommentInOrgPathParams:
-    comment_number: int = field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
-    discussion_number: int = field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    comment_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
+    discussion_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteDiscussionCommentInOrgRequest:
-    path_params: TeamsDeleteDiscussionCommentInOrgPathParams = field()
+    path_params: TeamsDeleteDiscussionCommentInOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteDiscussionCommentInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

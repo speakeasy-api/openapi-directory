@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CopySnapshotResult:
-    snapshot_id: Optional[str] = field(default=None)
-    tags: Optional[List[Tag]] = field(default=None)
+    snapshot_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    tags: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

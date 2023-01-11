@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class MembershipsActiveFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class MembershipsActiveFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsActivePathParams:
-    format: MembershipsActiveFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: MembershipsActiveFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsActiveRequest:
-    path_params: MembershipsActivePathParams = field()
+    path_params: MembershipsActivePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsActiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    memberships: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    memberships: Optional[list[Any]] = dataclasses.field(default=None)
     

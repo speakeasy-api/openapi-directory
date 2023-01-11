@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerGameStatsByPlayerFormatEnum(str, Enum):
@@ -10,21 +10,21 @@ class PlayerGameStatsByPlayerFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameStatsByPlayerPathParams:
-    date_: str = field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
-    format: PlayerGameStatsByPlayerFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    date_: str = dataclasses.field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
+    format: PlayerGameStatsByPlayerFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameStatsByPlayerRequest:
-    path_params: PlayerGameStatsByPlayerPathParams = field()
+    path_params: PlayerGameStatsByPlayerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameStatsByPlayerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_games: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_games: Optional[list[Any]] = dataclasses.field(default=None)
     

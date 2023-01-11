@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import personalnameparsedout as shared_personalnameparsedout
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchPersonalNameParsedOut:
-    personal_names: Optional[List[PersonalNameParsedOut]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNames') }})
+    personal_names: Optional[list[shared_personalnameparsedout.PersonalNameParsedOut]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNames') }})
     

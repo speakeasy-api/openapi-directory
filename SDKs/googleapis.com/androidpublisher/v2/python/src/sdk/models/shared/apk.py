@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import apkbinary as shared_apkbinary
 
 
-@dataclass
+@dataclasses.dataclass
 class Apk:
-    binary: Optional[ApkBinary] = field(default=None)
-    version_code: Optional[int] = field(default=None)
+    binary: Optional[shared_apkbinary.ApkBinary] = dataclasses.field(default=None)
+    version_code: Optional[int] = dataclasses.field(default=None)
     

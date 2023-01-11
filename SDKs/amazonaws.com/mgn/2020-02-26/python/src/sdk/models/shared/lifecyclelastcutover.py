@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import lifecyclelastcutoverfinalized as shared_lifecyclelastcutoverfinalized
+from ..shared import lifecyclelastcutoverinitiated as shared_lifecyclelastcutoverinitiated
+from ..shared import lifecyclelastcutoverreverted as shared_lifecyclelastcutoverreverted
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LifeCycleLastCutover:
     r"""LifeCycleLastCutover
     Lifecycle last Cutover .
     """
     
-    finalized: Optional[LifeCycleLastCutoverFinalized] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finalized') }})
-    initiated: Optional[LifeCycleLastCutoverInitiated] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('initiated') }})
-    reverted: Optional[LifeCycleLastCutoverReverted] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reverted') }})
+    finalized: Optional[shared_lifecyclelastcutoverfinalized.LifeCycleLastCutoverFinalized] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finalized') }})
+    initiated: Optional[shared_lifecyclelastcutoverinitiated.LifeCycleLastCutoverInitiated] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('initiated') }})
+    reverted: Optional[shared_lifecyclelastcutoverreverted.LifeCycleLastCutoverReverted] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reverted') }})
     

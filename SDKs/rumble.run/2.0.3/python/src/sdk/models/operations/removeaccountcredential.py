@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountCredentialPathParams:
-    credential_id: str = field(metadata={'path_param': { 'field_name': 'credential_id', 'style': 'simple', 'explode': False }})
+    credential_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'credential_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountCredentialSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountCredentialRequest:
-    path_params: RemoveAccountCredentialPathParams = field()
-    security: RemoveAccountCredentialSecurity = field()
+    path_params: RemoveAccountCredentialPathParams = dataclasses.field()
+    security: RemoveAccountCredentialSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountCredentialResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

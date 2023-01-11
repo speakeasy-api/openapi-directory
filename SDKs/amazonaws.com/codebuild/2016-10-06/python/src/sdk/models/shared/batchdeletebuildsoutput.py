@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import buildnotdeleted as shared_buildnotdeleted
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDeleteBuildsOutput:
-    builds_deleted: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buildsDeleted') }})
-    builds_not_deleted: Optional[List[BuildNotDeleted]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buildsNotDeleted') }})
+    builds_deleted: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buildsDeleted') }})
+    builds_not_deleted: Optional[list[shared_buildnotdeleted.BuildNotDeleted]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buildsNotDeleted') }})
     

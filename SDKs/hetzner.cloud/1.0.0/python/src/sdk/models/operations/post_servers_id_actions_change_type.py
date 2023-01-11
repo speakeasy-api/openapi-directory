@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeRequestBody:
-    server_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_type') }})
-    upgrade_disk: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgrade_disk') }})
+    server_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_type') }})
+    upgrade_disk: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgrade_disk') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeActionResponseActionError:
     r"""PostServersIDActionsChangeTypeActionResponseActionError
     Error message for the Action if error occurred, otherwise null
     """
     
-    code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeActionResponseActionResources:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 class PostServersIDActionsChangeTypeActionResponseActionStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -41,33 +41,33 @@ class PostServersIDActionsChangeTypeActionResponseActionStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeActionResponseAction:
-    command: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
-    error: PostServersIDActionsChangeTypeActionResponseActionError = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    finished: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    progress: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
-    resources: List[PostServersIDActionsChangeTypeActionResponseActionResources] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
-    started: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
-    status: PostServersIDActionsChangeTypeActionResponseActionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    command: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
+    error: PostServersIDActionsChangeTypeActionResponseActionError = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    finished: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    progress: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
+    resources: list[PostServersIDActionsChangeTypeActionResponseActionResources] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    started: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
+    status: PostServersIDActionsChangeTypeActionResponseActionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeActionResponse:
-    action: PostServersIDActionsChangeTypeActionResponseAction = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    action: PostServersIDActionsChangeTypeActionResponseAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeRequest:
-    path_params: PostServersIDActionsChangeTypePathParams = field()
-    request: Optional[PostServersIDActionsChangeTypeRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostServersIDActionsChangeTypePathParams = dataclasses.field()
+    request: Optional[PostServersIDActionsChangeTypeRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostServersIDActionsChangeTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    action_response: Optional[PostServersIDActionsChangeTypeActionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    action_response: Optional[PostServersIDActionsChangeTypeActionResponse] = dataclasses.field(default=None)
     

@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PrcptRequestBodyCertificateParameters:
-    full_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
-    pi_dob: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_DOB') }})
-    pi_fin_year: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_FIN_YEAR') }})
-    pi_policynbr: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_POLICYNBR') }})
+    full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
+    pi_dob: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_DOB') }})
+    pi_fin_year: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_FIN_YEAR') }})
+    pi_policynbr: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PI_POLICYNBR') }})
     
 class PrcptRequestBodyFormatEnum(str, Enum):
     PDF = "pdf"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PrcptRequestBody:
-    format: PrcptRequestBodyFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    txn_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
-    certificate_parameters: Optional[PrcptRequestBodyCertificateParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
-    consent_artifact: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
+    format: PrcptRequestBodyFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    txn_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
+    certificate_parameters: Optional[PrcptRequestBodyCertificateParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
+    consent_artifact: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PrcptSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class Prcpt400ApplicationJSONErrorEnum(str, Enum):
     MISSING_PARAMETER = "missing_parameter"
@@ -48,10 +49,10 @@ class Prcpt400ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt400ApplicationJSON:
-    error: Optional[Prcpt400ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt400ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt400ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt400ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt401ApplicationJSONErrorEnum(str, Enum):
     INVALID_AUTHENTICATION = "invalid_authentication"
@@ -63,10 +64,10 @@ class Prcpt401ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt401ApplicationJSON:
-    error: Optional[Prcpt401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt401ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt401ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt404ApplicationJSONErrorEnum(str, Enum):
     RECORD_NOT_FOUND = "record_not_found"
@@ -78,10 +79,10 @@ class Prcpt404ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt404ApplicationJSON:
-    error: Optional[Prcpt404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt404ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt404ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt500ApplicationJSONErrorEnum(str, Enum):
     INTERNAL_SERVER_ERROR = "internal_server_error"
@@ -91,10 +92,10 @@ class Prcpt500ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt500ApplicationJSON:
-    error: Optional[Prcpt500ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt500ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt500ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt500ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt502ApplicationJSONErrorEnum(str, Enum):
     BAD_GATEWY = "bad_gatewy"
@@ -104,10 +105,10 @@ class Prcpt502ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt502ApplicationJSON:
-    error: Optional[Prcpt502ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt502ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt502ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt502ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt503ApplicationJSONErrorEnum(str, Enum):
     SERVICE_UNAVAILABLE = "service_unavailable"
@@ -117,10 +118,10 @@ class Prcpt503ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt503ApplicationJSON:
-    error: Optional[Prcpt503ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt503ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt503ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt503ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Prcpt504ApplicationJSONErrorEnum(str, Enum):
     GATEWAY_TIMEOUT = "gateway_timeout"
@@ -130,27 +131,27 @@ class Prcpt504ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Prcpt504ApplicationJSON:
-    error: Optional[Prcpt504ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Prcpt504ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Prcpt504ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Prcpt504ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PrcptRequest:
-    security: PrcptSecurity = field()
-    request: Optional[PrcptRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PrcptSecurity = dataclasses.field()
+    request: Optional[PrcptRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PrcptResponse:
-    content_type: str = field()
-    status_code: int = field()
-    prcpt_400_application_json_object: Optional[Prcpt400ApplicationJSON] = field(default=None)
-    prcpt_401_application_json_object: Optional[Prcpt401ApplicationJSON] = field(default=None)
-    prcpt_404_application_json_object: Optional[Prcpt404ApplicationJSON] = field(default=None)
-    prcpt_500_application_json_object: Optional[Prcpt500ApplicationJSON] = field(default=None)
-    prcpt_502_application_json_object: Optional[Prcpt502ApplicationJSON] = field(default=None)
-    prcpt_503_application_json_object: Optional[Prcpt503ApplicationJSON] = field(default=None)
-    prcpt_504_application_json_object: Optional[Prcpt504ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    prcpt_400_application_json_object: Optional[Prcpt400ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_401_application_json_object: Optional[Prcpt401ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_404_application_json_object: Optional[Prcpt404ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_500_application_json_object: Optional[Prcpt500ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_502_application_json_object: Optional[Prcpt502ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_503_application_json_object: Optional[Prcpt503ApplicationJSON] = dataclasses.field(default=None)
+    prcpt_504_application_json_object: Optional[Prcpt504ApplicationJSON] = dataclasses.field(default=None)
     

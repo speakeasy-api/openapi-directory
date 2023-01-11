@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import productfieldvalues_enum as shared_productfieldvalues_enum
+from ..shared import productsresult as shared_productsresult
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ProductsQueryParams:
-    fields: Optional[List[shared.ProductFieldValuesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    fields: Optional[list[shared_productfieldvalues_enum.ProductFieldValuesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ProductsHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ProductsRequest:
-    headers: GetV3ProductsHeaders = field()
-    query_params: GetV3ProductsQueryParams = field()
+    headers: GetV3ProductsHeaders = dataclasses.field()
+    query_params: GetV3ProductsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ProductsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    products_result: Optional[shared.ProductsResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    products_result: Optional[shared_productsresult.ProductsResult] = dataclasses.field(default=None)
     

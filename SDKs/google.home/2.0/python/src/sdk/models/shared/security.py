@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeCastLocalAuthorizationToken:
-    api_key: str = field(metadata={'security': { 'field_name': 'cast-local-authorization-token' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'cast-local-authorization-token' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    cast_local_authorization_token: SchemeCastLocalAuthorizationToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    cast_local_authorization_token: SchemeCastLocalAuthorizationToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     

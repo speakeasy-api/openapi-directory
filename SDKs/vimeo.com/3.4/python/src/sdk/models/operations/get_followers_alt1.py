@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import user as shared_user
 
 class GetFollowersAlt1DirectionEnum(str, Enum):
     ASC = "asc"
@@ -15,23 +15,23 @@ class GetFollowersAlt1SortEnum(str, Enum):
     DATE = "date"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFollowersAlt1QueryParams:
-    direction: Optional[GetFollowersAlt1DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetFollowersAlt1SortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetFollowersAlt1DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetFollowersAlt1SortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFollowersAlt1Request:
-    query_params: GetFollowersAlt1QueryParams = field()
+    query_params: GetFollowersAlt1QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFollowersAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    users: Optional[List[shared.User]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    users: Optional[list[shared_user.User]] = dataclasses.field(default=None)
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -22,15 +22,15 @@ class GetUsersUserMobileApplicationStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserMobileApplication:
-    os: Optional[GetUsersUserMobileApplicationOsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OS') }})
-    business_user_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessUserId') }})
-    client_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientID') }})
-    device_name: Optional[GetUsersUserMobileApplicationDeviceNameEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceName') }})
-    device_os_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceOSVersion') }})
-    mobile_application_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationId') }})
-    status: Optional[GetUsersUserMobileApplicationStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    os: Optional[GetUsersUserMobileApplicationOsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OS') }})
+    business_user_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessUserId') }})
+    client_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientID') }})
+    device_name: Optional[GetUsersUserMobileApplicationDeviceNameEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceName') }})
+    device_os_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceOSVersion') }})
+    mobile_application_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationId') }})
+    status: Optional[GetUsersUserMobileApplicationStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 class GetUsersUserRoleEnum(str, Enum):
     ADMIN = "ADMIN"
@@ -47,23 +47,23 @@ class GetUsersUserStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetUsersUser:
-    email_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('emailAddress') }})
-    first_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstName') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    last_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastName') }})
-    lastlogin: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastlogin') }})
-    mobile_application_details: Optional[GetUsersUserMobileApplication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationDetails') }})
-    mobile_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileNumber') }})
-    role: Optional[GetUsersUserRoleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
-    status: Optional[GetUsersUserStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    user_cvl: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userCvl') }})
+    email_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('emailAddress') }})
+    first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstName') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastName') }})
+    lastlogin: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastlogin') }})
+    mobile_application_details: Optional[GetUsersUserMobileApplication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationDetails') }})
+    mobile_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileNumber') }})
+    role: Optional[GetUsersUserRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    status: Optional[GetUsersUserStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    user_cvl: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userCvl') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    users: Optional[List[GetUsersUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    users: Optional[list[GetUsersUser]] = dataclasses.field(default=None)
     

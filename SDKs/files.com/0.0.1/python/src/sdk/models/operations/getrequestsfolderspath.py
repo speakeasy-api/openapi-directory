@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import requestentity as shared_requestentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRequestsFoldersPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequestsFoldersPathQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    mine: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'mine', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort_by: Optional[dict[str, Any]] = field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    mine: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'mine', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequestsFoldersPathRequest:
-    path_params: GetRequestsFoldersPathPathParams = field()
-    query_params: GetRequestsFoldersPathQueryParams = field()
+    path_params: GetRequestsFoldersPathPathParams = dataclasses.field()
+    query_params: GetRequestsFoldersPathQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequestsFoldersPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    request_entities: Optional[List[shared.RequestEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    request_entities: Optional[list[shared_requestentity.RequestEntity]] = dataclasses.field(default=None)
     

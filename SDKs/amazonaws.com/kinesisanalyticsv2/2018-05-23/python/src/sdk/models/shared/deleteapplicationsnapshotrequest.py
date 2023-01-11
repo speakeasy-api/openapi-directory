@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteApplicationSnapshotRequest:
-    application_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
-    snapshot_creation_timestamp: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotCreationTimestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    snapshot_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotName') }})
+    application_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
+    snapshot_creation_timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotCreationTimestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    snapshot_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotName') }})
     

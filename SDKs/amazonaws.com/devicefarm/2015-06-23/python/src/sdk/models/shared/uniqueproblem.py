@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import problem as shared_problem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UniqueProblem:
     r"""UniqueProblem
     A collection of one or more problems, grouped by their result.
     """
     
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    problems: Optional[List[Problem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problems') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    problems: Optional[list[shared_problem.Problem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problems') }})
     

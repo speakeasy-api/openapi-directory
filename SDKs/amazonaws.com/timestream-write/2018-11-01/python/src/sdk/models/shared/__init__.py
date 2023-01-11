@@ -34,3 +34,5 @@ from .updatedatabaseresponse import *
 from .updatetablerequest import *
 from .updatetableresponse import *
 from .writerecordsrequest import *
+
+__all__ = ["CreateDatabaseRequest","CreateDatabaseResponse","CreateTableRequest","CreateTableResponse","Database","DeleteDatabaseRequest","DeleteTableRequest","DescribeDatabaseRequest","DescribeDatabaseResponse","DescribeEndpointsResponse","DescribeTableRequest","DescribeTableResponse","Dimension","DimensionValueTypeEnum","Endpoint","ListDatabasesRequest","ListDatabasesResponse","ListTablesRequest","ListTablesResponse","ListTagsForResourceRequest","ListTagsForResourceResponse","MeasureValueTypeEnum","Record","RetentionProperties","SchemeHmac","Security","Table","TableStatusEnum","Tag","TagResourceRequest","TimeUnitEnum","UntagResourceRequest","UpdateDatabaseRequest","UpdateDatabaseResponse","UpdateTableRequest","UpdateTableResponse","WriteRecordsRequest"]

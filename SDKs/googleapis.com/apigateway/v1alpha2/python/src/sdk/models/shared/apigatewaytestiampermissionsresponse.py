@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApigatewayTestIamPermissionsResponse:
     r"""ApigatewayTestIamPermissionsResponse
     Response message for `TestIamPermissions` method.
     """
     
-    permissions: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
+    permissions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
     

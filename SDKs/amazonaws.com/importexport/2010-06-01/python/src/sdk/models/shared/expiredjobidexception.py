@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ExpiredJobIDException:
     r"""ExpiredJobIDException
     Indicates that the specified job has expired out of the system.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

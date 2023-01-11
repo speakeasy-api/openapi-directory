@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import clusterlist as shared_clusterlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ClustersMessage:
     r"""ClustersMessage
     Contains the output from the <a>DescribeClusters</a> action. 
     """
     
-    clusters: Optional[List[Cluster]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    clusters: Optional[list[shared_clusterlist.ClusterList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

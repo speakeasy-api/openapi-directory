@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerSeasonRedZoneStatsInsideFiveFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class PlayerSeasonRedZoneStatsInsideFiveFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonRedZoneStatsInsideFivePathParams:
-    format: PlayerSeasonRedZoneStatsInsideFiveFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: PlayerSeasonRedZoneStatsInsideFiveFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonRedZoneStatsInsideFiveRequest:
-    path_params: PlayerSeasonRedZoneStatsInsideFivePathParams = field()
+    path_params: PlayerSeasonRedZoneStatsInsideFivePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonRedZoneStatsInsideFiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_season_red_zones: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_season_red_zones: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class S3Location:
     r"""S3Location
     The Amazon S3 artifact location for an action's artifacts.
     """
     
-    bucket: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
-    key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    bucket: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
     

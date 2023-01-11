@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import authorization as shared_authorization
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsUpdateAuthorizationPathParams:
-    authorization_id: int = field(metadata={'path_param': { 'field_name': 'authorization_id', 'style': 'simple', 'explode': False }})
+    authorization_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'authorization_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsUpdateAuthorizationRequestBody:
-    add_scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_scopes') }})
-    fingerprint: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
-    note: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
-    note_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note_url') }})
-    remove_scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remove_scopes') }})
-    scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scopes') }})
+    add_scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_scopes') }})
+    fingerprint: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
+    note: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
+    note_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note_url') }})
+    remove_scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remove_scopes') }})
+    scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scopes') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsUpdateAuthorizationRequest:
-    path_params: OauthAuthorizationsUpdateAuthorizationPathParams = field()
-    request: Optional[OauthAuthorizationsUpdateAuthorizationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: OauthAuthorizationsUpdateAuthorizationPathParams = dataclasses.field()
+    request: Optional[OauthAuthorizationsUpdateAuthorizationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsUpdateAuthorizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authorization: Optional[shared.Authorization] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authorization: Optional[shared_authorization.Authorization] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

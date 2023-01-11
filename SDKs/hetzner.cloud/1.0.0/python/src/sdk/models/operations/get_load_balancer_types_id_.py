@@ -1,72 +1,72 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceHourly:
     r"""GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceHourly
     Hourly costs for a Resource in this Location
     """
     
-    gross: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gross') }})
-    net: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('net') }})
+    gross: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gross') }})
+    net: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('net') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceMonthly:
     r"""GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceMonthly
     Monthly costs for a Resource in this Location
     """
     
-    gross: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gross') }})
-    net: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('net') }})
+    gross: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gross') }})
+    net: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('net') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePrices:
-    location: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    price_hourly: GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceHourly = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price_hourly') }})
-    price_monthly: GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceMonthly = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price_monthly') }})
+    location: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    price_hourly: GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceHourly = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price_hourly') }})
+    price_monthly: GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePricesPriceMonthly = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price_monthly') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesID200ApplicationJSONLoadBalancerType:
-    deprecated: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deprecated') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    id: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    max_assigned_certificates: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_assigned_certificates') }})
-    max_connections: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_connections') }})
-    max_services: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_services') }})
-    max_targets: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_targets') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    prices: List[GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePrices] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prices') }})
+    deprecated: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deprecated') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    id: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    max_assigned_certificates: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_assigned_certificates') }})
+    max_connections: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_connections') }})
+    max_services: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_services') }})
+    max_targets: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_targets') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    prices: list[GetLoadBalancerTypesID200ApplicationJSONLoadBalancerTypePrices] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prices') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesID200ApplicationJSON:
-    load_balancer_type: Optional[GetLoadBalancerTypesID200ApplicationJSONLoadBalancerType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('load_balancer_type') }})
+    load_balancer_type: Optional[GetLoadBalancerTypesID200ApplicationJSONLoadBalancerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('load_balancer_type') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesIDRequest:
-    path_params: GetLoadBalancerTypesIDPathParams = field()
+    path_params: GetLoadBalancerTypesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLoadBalancerTypesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_load_balancer_types_id_200_application_json_object: Optional[GetLoadBalancerTypesID200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_load_balancer_types_id_200_application_json_object: Optional[GetLoadBalancerTypesID200ApplicationJSON] = dataclasses.field(default=None)
     

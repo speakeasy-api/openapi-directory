@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -99,7 +99,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.play_by_plays = out
 
         return res
@@ -124,7 +124,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.play_by_plays = out
 
         return res

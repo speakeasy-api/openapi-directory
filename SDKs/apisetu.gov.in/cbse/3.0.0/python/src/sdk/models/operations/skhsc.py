@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SkhscRequestBodyCertificateParameters:
-    full_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
-    rollno: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rollno') }})
-    year: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('year') }})
+    full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
+    rollno: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rollno') }})
+    year: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('year') }})
     
 class SkhscRequestBodyFormatEnum(str, Enum):
     PDF = "pdf"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SkhscRequestBody:
-    format: SkhscRequestBodyFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    txn_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
-    certificate_parameters: Optional[SkhscRequestBodyCertificateParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
-    consent_artifact: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
+    format: SkhscRequestBodyFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    txn_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
+    certificate_parameters: Optional[SkhscRequestBodyCertificateParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
+    consent_artifact: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SkhscSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class Skhsc400ApplicationJSONErrorEnum(str, Enum):
     MISSING_PARAMETER = "missing_parameter"
@@ -47,10 +48,10 @@ class Skhsc400ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc400ApplicationJSON:
-    error: Optional[Skhsc400ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc400ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc400ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc400ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc401ApplicationJSONErrorEnum(str, Enum):
     INVALID_AUTHENTICATION = "invalid_authentication"
@@ -62,10 +63,10 @@ class Skhsc401ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc401ApplicationJSON:
-    error: Optional[Skhsc401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc401ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc401ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc404ApplicationJSONErrorEnum(str, Enum):
     RECORD_NOT_FOUND = "record_not_found"
@@ -77,10 +78,10 @@ class Skhsc404ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc404ApplicationJSON:
-    error: Optional[Skhsc404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc404ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc404ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc500ApplicationJSONErrorEnum(str, Enum):
     INTERNAL_SERVER_ERROR = "internal_server_error"
@@ -90,10 +91,10 @@ class Skhsc500ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc500ApplicationJSON:
-    error: Optional[Skhsc500ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc500ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc500ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc500ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc502ApplicationJSONErrorEnum(str, Enum):
     BAD_GATEWY = "bad_gatewy"
@@ -103,10 +104,10 @@ class Skhsc502ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc502ApplicationJSON:
-    error: Optional[Skhsc502ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc502ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc502ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc502ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc503ApplicationJSONErrorEnum(str, Enum):
     SERVICE_UNAVAILABLE = "service_unavailable"
@@ -116,10 +117,10 @@ class Skhsc503ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc503ApplicationJSON:
-    error: Optional[Skhsc503ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc503ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc503ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc503ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Skhsc504ApplicationJSONErrorEnum(str, Enum):
     GATEWAY_TIMEOUT = "gateway_timeout"
@@ -129,27 +130,27 @@ class Skhsc504ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Skhsc504ApplicationJSON:
-    error: Optional[Skhsc504ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Skhsc504ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Skhsc504ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Skhsc504ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SkhscRequest:
-    security: SkhscSecurity = field()
-    request: Optional[SkhscRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: SkhscSecurity = dataclasses.field()
+    request: Optional[SkhscRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SkhscResponse:
-    content_type: str = field()
-    status_code: int = field()
-    skhsc_400_application_json_object: Optional[Skhsc400ApplicationJSON] = field(default=None)
-    skhsc_401_application_json_object: Optional[Skhsc401ApplicationJSON] = field(default=None)
-    skhsc_404_application_json_object: Optional[Skhsc404ApplicationJSON] = field(default=None)
-    skhsc_500_application_json_object: Optional[Skhsc500ApplicationJSON] = field(default=None)
-    skhsc_502_application_json_object: Optional[Skhsc502ApplicationJSON] = field(default=None)
-    skhsc_503_application_json_object: Optional[Skhsc503ApplicationJSON] = field(default=None)
-    skhsc_504_application_json_object: Optional[Skhsc504ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    skhsc_400_application_json_object: Optional[Skhsc400ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_401_application_json_object: Optional[Skhsc401ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_404_application_json_object: Optional[Skhsc404ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_500_application_json_object: Optional[Skhsc500ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_502_application_json_object: Optional[Skhsc502ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_503_application_json_object: Optional[Skhsc503ApplicationJSON] = dataclasses.field(default=None)
+    skhsc_504_application_json_object: Optional[Skhsc504ApplicationJSON] = dataclasses.field(default=None)
     

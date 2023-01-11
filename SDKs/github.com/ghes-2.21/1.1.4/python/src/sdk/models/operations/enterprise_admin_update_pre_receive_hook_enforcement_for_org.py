@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import org_pre_receive_hook as shared_org_pre_receive_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    pre_receive_hook_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    pre_receive_hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody:
-    allow_downstream_configuration: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allow_downstream_configuration') }})
-    enforcement: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enforcement') }})
+    allow_downstream_configuration: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allow_downstream_configuration') }})
+    enforcement: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enforcement') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest:
-    path_params: EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams = field()
-    request: Optional[EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    org_pre_receive_hook: Optional[shared.OrgPreReceiveHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    org_pre_receive_hook: Optional[shared_org_pre_receive_hook.OrgPreReceiveHook] = dataclasses.field(default=None)
     

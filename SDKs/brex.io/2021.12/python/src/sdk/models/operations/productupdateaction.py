@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductUpdateActionPathParams:
-    action: str = field(metadata={'path_param': { 'field_name': 'action', 'style': 'simple', 'explode': False }})
-    order_id: str = field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
+    action: str = dataclasses.field(metadata={'path_param': { 'field_name': 'action', 'style': 'simple', 'explode': False }})
+    order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductUpdateActionRequestBody:
-    credits: Optional[float] = field(default=None, metadata={'form': { 'field_name': 'credits' }})
+    credits: Optional[float] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'credits' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductUpdateActionSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductUpdateActionRequest:
-    path_params: ProductUpdateActionPathParams = field()
-    security: ProductUpdateActionSecurity = field()
-    request: Optional[ProductUpdateActionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: ProductUpdateActionPathParams = dataclasses.field()
+    security: ProductUpdateActionSecurity = dataclasses.field()
+    request: Optional[ProductUpdateActionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductUpdateActionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    product_update_action_200_application_json_any: Optional[Any] = field(default=None)
-    product_update_action_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_update_action_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    product_update_action_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

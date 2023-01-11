@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,47 +20,46 @@ req = operations.MetastoreProjectsLocationsFederationsCreateRequest(
     security=operations.MetastoreProjectsLocationsFederationsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.MetastoreProjectsLocationsFederationsCreatePathParams(
-        parent="incidunt",
+        parent="quia",
     ),
     query_params=operations.MetastoreProjectsLocationsFederationsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="provident",
-        alt="json",
-        callback="mollitia",
-        federation_id="inventore",
-        fields="voluptatem",
-        key="dolorum",
-        oauth_token="est",
-        pretty_print=True,
-        quota_user="asperiores",
-        request_id="cum",
-        upload_type="odit",
-        upload_protocol="commodi",
+        dollar_xgafv="1",
+        access_token="perspiciatis",
+        alt="media",
+        callback="laudantium",
+        federation_id="eum",
+        fields="esse",
+        key="ex",
+        oauth_token="magnam",
+        pretty_print=False,
+        quota_user="fugiat",
+        request_id="vitae",
+        upload_type="suscipit",
+        upload_protocol="in",
     ),
     request=shared.FederationInput(
         backend_metastores={
-            "amet": shared.BackendMetastore(
-                metastore_type="METASTORE_TYPE_UNSPECIFIED",
-                name="quidem",
+            "praesentium": shared.BackendMetastore(
+                metastore_type="DATAPROC_METASTORE",
+                name="doloremque",
             ),
-            "omnis": shared.BackendMetastore(
+            "accusamus": shared.BackendMetastore(
                 metastore_type="METASTORE_TYPE_UNSPECIFIED",
-                name="vel",
+                name="veritatis",
             ),
         },
         labels={
-            "voluptatem": "dolorum",
-            "qui": "eos",
-            "consectetur": "debitis",
+            "rerum": "harum",
+            "dolor": "sit",
         },
-        name="enim",
-        version="et",
+        name="veniam",
+        version="vel",
     ),
 )
     
@@ -81,6 +79,7 @@ if res.operation is not None:
 * `metastore_projects_locations_federations_list` - Lists federations in a project and location.
 * `metastore_projects_locations_list` - Lists information about the supported locations for this service.
 * `metastore_projects_locations_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `metastore_projects_locations_services_alter_location` - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
 * `metastore_projects_locations_services_backups_create` - Creates a new backup in a given project and location.
 * `metastore_projects_locations_services_backups_delete` - Deletes a single backup.
 * `metastore_projects_locations_services_backups_list` - Lists backups in a service.
@@ -94,6 +93,8 @@ if res.operation is not None:
 * `metastore_projects_locations_services_metadata_imports_get` - Gets details of a single import.
 * `metastore_projects_locations_services_metadata_imports_list` - Lists imports in a service.
 * `metastore_projects_locations_services_metadata_imports_patch` - Updates a single import. Only the description field of MetadataImport is supported to be updated.
+* `metastore_projects_locations_services_move_table_to_database` - Move a table to another database.
+* `metastore_projects_locations_services_query_metadata` - Query DPMS metadata.
 * `metastore_projects_locations_services_remove_iam_policy` - Removes the attached IAM policies for a resource
 * `metastore_projects_locations_services_restore` - Restores a service from a backup.
 

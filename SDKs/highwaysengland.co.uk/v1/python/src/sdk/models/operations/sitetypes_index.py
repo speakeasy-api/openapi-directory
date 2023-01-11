@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sitetyperesponse as shared_sitetyperesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesIndexPathParams:
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesIndexRequest:
-    path_params: SiteTypesIndexPathParams = field()
+    path_params: SiteTypesIndexPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesIndexResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site_type_response: Optional[shared.SiteTypeResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site_type_response: Optional[shared_sitetyperesponse.SiteTypeResponse] = dataclasses.field(default=None)
     

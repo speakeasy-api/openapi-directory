@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,12 +13,12 @@ class GenerateRandomBytesRequestProtectionLevelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GenerateRandomBytesRequest:
     r"""GenerateRandomBytesRequest
     Request message for KeyManagementService.GenerateRandomBytes.
     """
     
-    length_bytes: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lengthBytes') }})
-    protection_level: Optional[GenerateRandomBytesRequestProtectionLevelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protectionLevel') }})
+    length_bytes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lengthBytes') }})
+    protection_level: Optional[GenerateRandomBytesRequestProtectionLevelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protectionLevel') }})
     

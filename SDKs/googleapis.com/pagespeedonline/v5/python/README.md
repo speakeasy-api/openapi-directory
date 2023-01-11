@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,33 @@ req = operations.PagespeedonlinePagespeedapiRunpagespeedRequest(
     security=operations.PagespeedonlinePagespeedapiRunpagespeedSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams(
         dollar_xgafv="2",
-        access_token="qui",
-        alt="proto",
-        callback="ut",
-        captcha_token="quisquam",
+        access_token="dolore",
+        alt="json",
+        callback="corporis",
+        captcha_token="quis",
         category=[
-            "ACCESSIBILITY",
+            "BEST_PRACTICES",
+            "PWA",
         ],
-        fields="sit",
-        key="laudantium",
-        locale="esse",
-        oauth_token="quia",
+        fields="et",
+        key="ut",
+        locale="ducimus",
+        oauth_token="porro",
         pretty_print=True,
-        quota_user="quas",
-        strategy="MOBILE",
-        upload_type="quia",
-        upload_protocol="praesentium",
-        url="ea",
-        utm_campaign="incidunt",
-        utm_source="et",
+        quota_user="fugiat",
+        strategy="STRATEGY_UNSPECIFIED",
+        upload_type="vero",
+        upload_protocol="accusantium",
+        url="pariatur",
+        utm_campaign="itaque",
+        utm_source="ipsum",
     ),
 )
     

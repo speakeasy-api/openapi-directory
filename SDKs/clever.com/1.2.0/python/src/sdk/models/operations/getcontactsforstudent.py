@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notfound as shared_notfound
+from ..shared import studentcontactsforstudentresponse as shared_studentcontactsforstudentresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetContactsForStudentPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetContactsForStudentQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetContactsForStudentRequest:
-    path_params: GetContactsForStudentPathParams = field()
-    query_params: GetContactsForStudentQueryParams = field()
+    path_params: GetContactsForStudentPathParams = dataclasses.field()
+    query_params: GetContactsForStudentQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetContactsForStudentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    not_found: Optional[shared.NotFound] = field(default=None)
-    student_contacts_for_student_response: Optional[shared.StudentContactsForStudentResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    not_found: Optional[shared_notfound.NotFound] = dataclasses.field(default=None)
+    student_contacts_for_student_response: Optional[shared_studentcontactsforstudentresponse.StudentContactsForStudentResponse] = dataclasses.field(default=None)
     

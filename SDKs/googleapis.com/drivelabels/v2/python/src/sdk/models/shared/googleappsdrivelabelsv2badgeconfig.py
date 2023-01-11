@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googletypecolor as shared_googletypecolor
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsDriveLabelsV2BadgeConfig:
     r"""GoogleAppsDriveLabelsV2BadgeConfig
     Badge status of the label.
     """
     
-    color: Optional[GoogleTypeColor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    priority_override: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priorityOverride') }})
+    color: Optional[shared_googletypecolor.GoogleTypeColor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    priority_override: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priorityOverride') }})
     

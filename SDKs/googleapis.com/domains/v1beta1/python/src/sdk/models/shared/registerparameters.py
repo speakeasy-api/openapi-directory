@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import money as shared_money
 
 class RegisterParametersAvailabilityEnum(str, Enum):
     AVAILABILITY_UNSPECIFIED = "AVAILABILITY_UNSPECIFIED"
@@ -24,15 +24,15 @@ class RegisterParametersSupportedPrivacyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegisterParameters:
     r"""RegisterParameters
     Parameters required to register a new domain.
     """
     
-    availability: Optional[RegisterParametersAvailabilityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availability') }})
-    domain_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
-    domain_notices: Optional[List[RegisterParametersDomainNoticesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainNotices') }})
-    supported_privacy: Optional[List[RegisterParametersSupportedPrivacyEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('supportedPrivacy') }})
-    yearly_price: Optional[Money] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('yearlyPrice') }})
+    availability: Optional[RegisterParametersAvailabilityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availability') }})
+    domain_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
+    domain_notices: Optional[list[RegisterParametersDomainNoticesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainNotices') }})
+    supported_privacy: Optional[list[RegisterParametersSupportedPrivacyEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('supportedPrivacy') }})
+    yearly_price: Optional[shared_money.Money] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('yearlyPrice') }})
     

@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostReviewsReviewIDPathParams:
-    review_id: str = field(metadata={'path_param': { 'field_name': 'reviewId', 'style': 'simple', 'explode': False }})
+    review_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'reviewId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostReviewsReviewIDQueryParams:
-    description: str = field(metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
-    headline: str = field(metadata={'query_param': { 'field_name': 'headline', 'style': 'form', 'explode': True }})
-    rating: int = field(metadata={'query_param': { 'field_name': 'rating', 'style': 'form', 'explode': True }})
-    user_account_id: str = field(metadata={'query_param': { 'field_name': 'userAccountId', 'style': 'form', 'explode': True }})
-    user_id: str = field(metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
-    custom_data: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
+    description: str = dataclasses.field(metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
+    headline: str = dataclasses.field(metadata={'query_param': { 'field_name': 'headline', 'style': 'form', 'explode': True }})
+    rating: int = dataclasses.field(metadata={'query_param': { 'field_name': 'rating', 'style': 'form', 'explode': True }})
+    user_account_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'userAccountId', 'style': 'form', 'explode': True }})
+    user_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    custom_data: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostReviewsReviewIDRequest:
-    path_params: PostReviewsReviewIDPathParams = field()
-    query_params: PostReviewsReviewIDQueryParams = field()
+    path_params: PostReviewsReviewIDPathParams = dataclasses.field()
+    query_params: PostReviewsReviewIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostReviewsReviewIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import employer as shared_employer
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployerPathParams:
-    employer_id: str = field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
+    employer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployerHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployerRequest:
-    headers: GetEmployerHeaders = field()
-    path_params: GetEmployerPathParams = field()
+    headers: GetEmployerHeaders = dataclasses.field()
+    path_params: GetEmployerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employer: Optional[shared.Employer] = field(default=None)
-    error_model: Optional[shared.ErrorModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employer: Optional[shared_employer.Employer] = dataclasses.field(default=None)
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
     

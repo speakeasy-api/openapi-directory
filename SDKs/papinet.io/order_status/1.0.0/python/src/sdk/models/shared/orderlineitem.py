@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -65,20 +65,20 @@ class OrderLineItemQuantitiesQuantityUomEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrderLineItemQuantities:
-    quantity_context: Optional[OrderLineItemQuantitiesQuantityContextEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityContext') }})
-    quantity_type: Optional[OrderLineItemQuantitiesQuantityTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityType') }})
-    quantity_uom: Optional[OrderLineItemQuantitiesQuantityUomEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityUOM') }})
-    quantity_value: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityValue') }})
+    quantity_context: Optional[OrderLineItemQuantitiesQuantityContextEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityContext') }})
+    quantity_type: Optional[OrderLineItemQuantitiesQuantityTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityType') }})
+    quantity_uom: Optional[OrderLineItemQuantitiesQuantityUomEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityUOM') }})
+    quantity_value: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityValue') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrderLineItem:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    order_line_item_number: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineItemNumber') }})
-    order_line_item_status: OrderLineItemOrderLineItemStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineItemStatus') }})
-    changeable: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('changeable') }})
-    quantities: Optional[List[OrderLineItemQuantities]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantities') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    order_line_item_number: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineItemNumber') }})
+    order_line_item_status: OrderLineItemOrderLineItemStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineItemStatus') }})
+    changeable: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('changeable') }})
+    quantities: Optional[list[OrderLineItemQuantities]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantities') }})
     

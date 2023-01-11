@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import controlmetadata as shared_controlmetadata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListControlsResponse:
-    control_metadata_list: Optional[List[ControlMetadata]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('controlMetadataList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    control_metadata_list: Optional[list[shared_controlmetadata.ControlMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('controlMetadataList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

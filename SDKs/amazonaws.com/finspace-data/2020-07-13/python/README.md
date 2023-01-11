@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,40 +25,40 @@ s.config_security(
     
 req = operations.CreateChangesetRequest(
     path_params=operations.CreateChangesetPathParams(
-        dataset_id="harum",
+        dataset_id="voluptatem",
     ),
     headers=operations.CreateChangesetHeaders(
-        x_amz_algorithm="ipsa",
+        x_amz_algorithm="quidem",
         x_amz_content_sha256="rerum",
-        x_amz_credential="nisi",
-        x_amz_date="maiores",
-        x_amz_security_token="non",
-        x_amz_signature="autem",
-        x_amz_signed_headers="deleniti",
+        x_amz_credential="id",
+        x_amz_date="facilis",
+        x_amz_security_token="cum",
+        x_amz_signature="occaecati",
+        x_amz_signed_headers="quia",
     ),
     request=operations.CreateChangesetRequestBody(
         change_type="REPLACE",
         format_params={
-            "consequuntur": "amet",
-            "sunt": "non",
-            "blanditiis": "omnis",
+            "ducimus": "unde",
+            "nostrum": "illo",
+            "eos": "sit",
         },
         format_type="PARQUET",
         source_params={
-            "iusto": "voluptatibus",
-            "explicabo": "iure",
-            "est": "ex",
+            "ut": "voluptatum",
+            "dolor": "sed",
+            "odio": "deserunt",
         },
         source_type="S3",
         tags={
-            "omnis": "ipsam",
-            "omnis": "quidem",
-            "id": "illum",
+            "sequi": "iure",
+            "provident": "eum",
+            "repellat": "quia",
         },
     ),
 )
     
-res = s.sdk.create_changeset(req)
+res = s.create_changeset(req)
 
 if res.create_changeset_response is not None:
     # handle response

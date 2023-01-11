@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_commentforapicontract_ as shared_partialfindresult_commentforapicontract_
 
 class CommentAPIGetCommentsEntryTypeEnum(str, Enum):
     UNDEFINED = "Undefined"
@@ -18,26 +18,26 @@ class CommentAPIGetCommentsEntryTypeEnum(str, Enum):
     VENUE = "Venue"
 
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIGetCommentsPathParams:
-    entry_type: CommentAPIGetCommentsEntryTypeEnum = field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
+    entry_type: CommentAPIGetCommentsEntryTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIGetCommentsQueryParams:
-    entry_id: int = field(metadata={'query_param': { 'field_name': 'entryId', 'style': 'form', 'explode': True }})
+    entry_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'entryId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIGetCommentsRequest:
-    path_params: CommentAPIGetCommentsPathParams = field()
-    query_params: CommentAPIGetCommentsQueryParams = field()
+    path_params: CommentAPIGetCommentsPathParams = dataclasses.field()
+    query_params: CommentAPIGetCommentsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIGetCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_comment_for_api_contract_: Optional[shared.PartialFindResultCommentForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_comment_for_api_contract_: Optional[shared_partialfindresult_commentforapicontract_.PartialFindResultCommentForAPIContract] = dataclasses.field(default=None)
     

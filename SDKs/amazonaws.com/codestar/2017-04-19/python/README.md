@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.AssociateTeamMemberRequest(
     headers=operations.AssociateTeamMemberHeaders(
-        x_amz_algorithm="sunt",
-        x_amz_content_sha256="asperiores",
-        x_amz_credential="reprehenderit",
-        x_amz_date="consectetur",
-        x_amz_security_token="sequi",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="qui",
+        x_amz_algorithm="quod",
+        x_amz_content_sha256="ut",
+        x_amz_credential="ut",
+        x_amz_date="sed",
+        x_amz_security_token="quibusdam",
+        x_amz_signature="harum",
+        x_amz_signed_headers="repudiandae",
         x_amz_target="CodeStar_20170419.AssociateTeamMember",
     ),
     request=shared.AssociateTeamMemberRequest(
-        client_request_token="enim",
-        project_id="sint",
-        project_role="qui",
+        client_request_token="molestiae",
+        project_id="rerum",
+        project_role="occaecati",
         remote_access_allowed=True,
-        user_arn="aliquid",
+        user_arn="rerum",
     ),
 )
     
-res = s.sdk.associate_team_member(req)
+res = s.associate_team_member(req)
 
 if res.associate_team_member_result is not None:
     # handle response

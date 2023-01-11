@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import report as shared_report
 
 
-@dataclass
+@dataclasses.dataclass
 class ReportsReadPathParams:
-    report_number: str = field(metadata={'path_param': { 'field_name': 'report_number', 'style': 'simple', 'explode': False }})
+    report_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_number', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReportsReadRequest:
-    path_params: ReportsReadPathParams = field()
+    path_params: ReportsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReportsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report: Optional[shared.Report] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report: Optional[shared_report.Report] = dataclasses.field(default=None)
     

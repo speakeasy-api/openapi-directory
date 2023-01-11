@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PsnocRequestBodyCertificateParameters:
-    dob: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DOB') }})
-    full_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
-    reg_num: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegNum') }})
-    uid: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UID') }})
+    dob: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DOB') }})
+    full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FullName') }})
+    reg_num: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegNum') }})
+    uid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UID') }})
     
 class PsnocRequestBodyFormatEnum(str, Enum):
     PDF = "pdf"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PsnocRequestBody:
-    format: PsnocRequestBodyFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    txn_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
-    certificate_parameters: Optional[PsnocRequestBodyCertificateParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
-    consent_artifact: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
+    format: PsnocRequestBodyFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    txn_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('txnId') }})
+    certificate_parameters: Optional[PsnocRequestBodyCertificateParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateParameters') }})
+    consent_artifact: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentArtifact') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PsnocSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class Psnoc400ApplicationJSONErrorEnum(str, Enum):
     MISSING_PARAMETER = "missing_parameter"
@@ -48,10 +49,10 @@ class Psnoc400ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc400ApplicationJSON:
-    error: Optional[Psnoc400ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc400ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc400ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc400ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc401ApplicationJSONErrorEnum(str, Enum):
     INVALID_AUTHENTICATION = "invalid_authentication"
@@ -63,10 +64,10 @@ class Psnoc401ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc401ApplicationJSON:
-    error: Optional[Psnoc401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc401ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc401ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc404ApplicationJSONErrorEnum(str, Enum):
     RECORD_NOT_FOUND = "record_not_found"
@@ -78,10 +79,10 @@ class Psnoc404ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc404ApplicationJSON:
-    error: Optional[Psnoc404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc404ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc404ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc500ApplicationJSONErrorEnum(str, Enum):
     INTERNAL_SERVER_ERROR = "internal_server_error"
@@ -91,10 +92,10 @@ class Psnoc500ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc500ApplicationJSON:
-    error: Optional[Psnoc500ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc500ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc500ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc500ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc502ApplicationJSONErrorEnum(str, Enum):
     BAD_GATEWY = "bad_gatewy"
@@ -104,10 +105,10 @@ class Psnoc502ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc502ApplicationJSON:
-    error: Optional[Psnoc502ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc502ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc502ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc502ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc503ApplicationJSONErrorEnum(str, Enum):
     SERVICE_UNAVAILABLE = "service_unavailable"
@@ -117,10 +118,10 @@ class Psnoc503ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc503ApplicationJSON:
-    error: Optional[Psnoc503ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc503ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc503ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc503ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 class Psnoc504ApplicationJSONErrorEnum(str, Enum):
     GATEWAY_TIMEOUT = "gateway_timeout"
@@ -130,27 +131,27 @@ class Psnoc504ApplicationJSONErrorDescriptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Psnoc504ApplicationJSON:
-    error: Optional[Psnoc504ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[Psnoc504ApplicationJSONErrorDescriptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
+    error: Optional[Psnoc504ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[Psnoc504ApplicationJSONErrorDescriptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorDescription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PsnocRequest:
-    security: PsnocSecurity = field()
-    request: Optional[PsnocRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PsnocSecurity = dataclasses.field()
+    request: Optional[PsnocRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PsnocResponse:
-    content_type: str = field()
-    status_code: int = field()
-    psnoc_400_application_json_object: Optional[Psnoc400ApplicationJSON] = field(default=None)
-    psnoc_401_application_json_object: Optional[Psnoc401ApplicationJSON] = field(default=None)
-    psnoc_404_application_json_object: Optional[Psnoc404ApplicationJSON] = field(default=None)
-    psnoc_500_application_json_object: Optional[Psnoc500ApplicationJSON] = field(default=None)
-    psnoc_502_application_json_object: Optional[Psnoc502ApplicationJSON] = field(default=None)
-    psnoc_503_application_json_object: Optional[Psnoc503ApplicationJSON] = field(default=None)
-    psnoc_504_application_json_object: Optional[Psnoc504ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    psnoc_400_application_json_object: Optional[Psnoc400ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_401_application_json_object: Optional[Psnoc401ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_404_application_json_object: Optional[Psnoc404ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_500_application_json_object: Optional[Psnoc500ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_502_application_json_object: Optional[Psnoc502ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_503_application_json_object: Optional[Psnoc503ApplicationJSON] = dataclasses.field(default=None)
+    psnoc_504_application_json_object: Optional[Psnoc504ApplicationJSON] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sdkkeysmodel as shared_sdkkeysmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSDKKeysPathParams:
-    config_id: str = field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
-    environment_id: str = field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
+    config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
+    environment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSDKKeysRequest:
-    path_params: GetSDKKeysPathParams = field()
+    path_params: GetSDKKeysPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSDKKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sdk_keys_model: Optional[shared.SDKKeysModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sdk_keys_model: Optional[shared_sdkkeysmodel.SDKKeysModel] = dataclasses.field(default=None)
     

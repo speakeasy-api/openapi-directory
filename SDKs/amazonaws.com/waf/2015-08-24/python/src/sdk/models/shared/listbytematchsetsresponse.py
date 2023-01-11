@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bytematchsetsummary as shared_bytematchsetsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListByteMatchSetsResponse:
-    byte_match_sets: Optional[List[ByteMatchSetSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSets') }})
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    byte_match_sets: Optional[list[shared_bytematchsetsummary.ByteMatchSetSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSets') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
     

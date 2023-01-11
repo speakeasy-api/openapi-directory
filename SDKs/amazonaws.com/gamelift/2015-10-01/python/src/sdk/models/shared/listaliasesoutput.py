@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import alias as shared_alias
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAliasesOutput:
     r"""ListAliasesOutput
     Represents the returned data in response to a request operation.
     """
     
-    aliases: Optional[List[Alias]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Aliases') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    aliases: Optional[list[shared_alias.Alias]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Aliases') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

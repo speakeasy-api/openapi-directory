@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,22 +7,22 @@ class LegacyBoxScoreFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class LegacyBoxScorePathParams:
-    format: LegacyBoxScoreFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    hometeam: str = field(metadata={'path_param': { 'field_name': 'hometeam', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
-    week: str = field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
+    format: LegacyBoxScoreFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    hometeam: str = dataclasses.field(metadata={'path_param': { 'field_name': 'hometeam', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    week: str = dataclasses.field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LegacyBoxScoreRequest:
-    path_params: LegacyBoxScorePathParams = field()
+    path_params: LegacyBoxScorePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LegacyBoxScoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_score: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_score: Optional[Any] = dataclasses.field(default=None)
     

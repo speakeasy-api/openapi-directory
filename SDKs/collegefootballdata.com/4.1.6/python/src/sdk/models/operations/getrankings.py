@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import rankingweek as shared_rankingweek
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRankingsQueryParams:
-    year: int = field(metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
-    season_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'seasonType', 'style': 'form', 'explode': True }})
-    week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'week', 'style': 'form', 'explode': True }})
+    year: int = dataclasses.field(metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    season_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'seasonType', 'style': 'form', 'explode': True }})
+    week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'week', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRankingsRequest:
-    query_params: GetRankingsQueryParams = field()
+    query_params: GetRankingsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRankingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ranking_weeks: Optional[List[shared.RankingWeek]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ranking_weeks: Optional[list[shared_rankingweek.RankingWeek]] = dataclasses.field(default=None)
     

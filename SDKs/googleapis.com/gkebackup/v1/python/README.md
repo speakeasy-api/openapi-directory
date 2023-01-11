@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,69 +20,63 @@ req = operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest(
     security=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams(
-        parent="placeat",
+        parent="explicabo",
     ),
     query_params=operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="vero",
+        dollar_xgafv="1",
+        access_token="corporis",
         alt="media",
-        backup_id="sed",
-        callback="aut",
-        fields="voluptas",
-        key="debitis",
-        oauth_token="reprehenderit",
-        pretty_print=False,
-        quota_user="maxime",
-        upload_type="et",
-        upload_protocol="sit",
+        backup_id="laboriosam",
+        callback="sed",
+        fields="blanditiis",
+        key="et",
+        oauth_token="voluptatum",
+        pretty_print=True,
+        quota_user="inventore",
+        upload_type="dolores",
+        upload_protocol="ut",
     ),
     request=shared.BackupInput(
         cluster_metadata=shared.ClusterMetadata(
-            anthos_version="voluptas",
+            anthos_version="inventore",
             backup_crd_versions={
-                "perspiciatis": "nihil",
-                "et": "est",
-                "debitis": "qui",
+                "ipsum": "consequatur",
+                "ut": "quibusdam",
+                "repellat": "odio",
             },
-            cluster="sed",
-            gke_version="animi",
-            k8s_version="rerum",
+            cluster="et",
+            gke_version="nobis",
+            k8s_version="quia",
         ),
-        delete_lock_days=303880974147249365,
-        description="provident",
+        delete_lock_days=3054520383972741130,
+        description="ipsa",
         encryption_key=shared.EncryptionKey(
-            gcp_kms_encryption_key="qui",
+            gcp_kms_encryption_key="enim",
         ),
         labels={
-            "et": "molestiae",
-            "perferendis": "vel",
+            "quibusdam": "qui",
+            "omnis": "quae",
+            "voluptatem": "nesciunt",
         },
-        retain_days=4896749636161315584,
+        retain_days=8947363127042062471,
         selected_applications=shared.NamespacedNames(
             namespaced_names=[
                 shared.NamespacedName(
-                    name="dolorem",
-                    namespace="aut",
-                ),
-                shared.NamespacedName(
-                    name="saepe",
-                    namespace="quas",
-                ),
-                shared.NamespacedName(
-                    name="repudiandae",
-                    namespace="similique",
+                    name="qui",
+                    namespace="dolores",
                 ),
             ],
         ),
         selected_namespaces=shared.Namespaces(
             namespaces=[
-                "distinctio",
+                "quod",
+                "quia",
             ],
         ),
     ),

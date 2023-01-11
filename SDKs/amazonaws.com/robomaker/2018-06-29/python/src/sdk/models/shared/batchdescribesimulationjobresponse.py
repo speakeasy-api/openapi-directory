@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import simulationjob as shared_simulationjob
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDescribeSimulationJobResponse:
-    jobs: Optional[List[SimulationJob]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobs') }})
-    unprocessed_jobs: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unprocessedJobs') }})
+    jobs: Optional[list[shared_simulationjob.SimulationJob]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobs') }})
+    unprocessed_jobs: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unprocessedJobs') }})
     

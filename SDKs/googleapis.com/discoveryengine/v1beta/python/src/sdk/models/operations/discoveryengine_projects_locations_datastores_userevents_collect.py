@@ -1,48 +1,52 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import _xgafv_enum as shared__xgafv_enum
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import googleapihttpbody as shared_googleapihttpbody
 
 
-@dataclass
+@dataclasses.dataclass
 class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams:
-    parent: str = field(metadata={'path_param': { 'field_name': 'parent', 'style': 'simple', 'explode': False }})
+    parent: str = dataclasses.field(metadata={'path_param': { 'field_name': 'parent', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams:
-    dollar_xgafv: Optional[shared.XgafvEnum] = field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
-    access_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    ets: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ets', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    upload_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
-    upload_protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
-    uri: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uri', 'style': 'form', 'explode': True }})
-    user_event: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userEvent', 'style': 'form', 'explode': True }})
+    dollar_xgafv: Optional[shared__xgafv_enum.XgafvEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    ets: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ets', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    upload_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
+    upload_protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
+    uri: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uri', 'style': 'form', 'explode': True }})
+    user_event: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userEvent', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest:
-    path_params: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams = field()
-    query_params: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams = field()
-    security: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity = field()
+    path_params: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams = dataclasses.field()
+    query_params: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams = dataclasses.field()
+    security: DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    google_api_http_body: Optional[shared.GoogleAPIHTTPBody] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    google_api_http_body: Optional[shared_googleapihttpbody.GoogleAPIHTTPBody] = dataclasses.field(default=None)
     

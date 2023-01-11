@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeCrossAccountAccessRoleResponse:
-    registered_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registeredAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    role_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roleArn') }})
-    valid: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('valid') }})
+    registered_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registeredAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    role_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roleArn') }})
+    valid: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('valid') }})
     

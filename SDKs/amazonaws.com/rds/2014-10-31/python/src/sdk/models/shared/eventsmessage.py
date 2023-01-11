@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import eventlist as shared_eventlist
 
 
-@dataclass
+@dataclasses.dataclass
 class EventsMessage:
     r"""EventsMessage
      Contains the result of a successful invocation of the <code>DescribeEvents</code> action. 
     """
     
-    events: Optional[List[Event]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    events: Optional[list[shared_eventlist.EventList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

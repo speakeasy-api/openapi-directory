@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,7 +19,7 @@ s.config_security(
     security=shared.Security(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         application_id=shared.SchemeApplicationID(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -34,11 +33,11 @@ req = operations.DeleteProxyRequest(
         ),
     ),
     headers=operations.DeleteProxyHeaders(
-        x_apideck_app_id="ut",
-        x_apideck_consumer_id="sint",
-        x_apideck_downstream_authorization="optio",
-        x_apideck_downstream_url="aut",
-        x_apideck_service_id="eos",
+        x_apideck_app_id="ullam",
+        x_apideck_consumer_id="id",
+        x_apideck_downstream_authorization="temporibus",
+        x_apideck_downstream_url="ipsam",
+        x_apideck_service_id="eum",
     ),
 )
     

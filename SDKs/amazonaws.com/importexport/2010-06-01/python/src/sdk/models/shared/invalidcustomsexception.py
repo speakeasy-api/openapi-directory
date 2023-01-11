@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class InvalidCustomsException:
     r"""InvalidCustomsException
     One or more customs parameters was invalid. Please correct and resubmit.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

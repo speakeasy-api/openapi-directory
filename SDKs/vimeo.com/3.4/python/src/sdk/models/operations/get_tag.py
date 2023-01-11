@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTagPathParams:
-    word: str = field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
+    word: str = dataclasses.field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagRequest:
-    path_params: GetTagPathParams = field()
+    path_params: GetTagPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag: Optional[shared.Tag] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag: Optional[shared_tag.Tag] = dataclasses.field(default=None)
     

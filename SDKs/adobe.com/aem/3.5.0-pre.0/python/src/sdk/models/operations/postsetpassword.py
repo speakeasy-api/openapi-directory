@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetPasswordQueryParams:
-    old: str = field(metadata={'query_param': { 'field_name': 'old', 'style': 'form', 'explode': True }})
-    plain: str = field(metadata={'query_param': { 'field_name': 'plain', 'style': 'form', 'explode': True }})
-    verify: str = field(metadata={'query_param': { 'field_name': 'verify', 'style': 'form', 'explode': True }})
+    old: str = dataclasses.field(metadata={'query_param': { 'field_name': 'old', 'style': 'form', 'explode': True }})
+    plain: str = dataclasses.field(metadata={'query_param': { 'field_name': 'plain', 'style': 'form', 'explode': True }})
+    verify: str = dataclasses.field(metadata={'query_param': { 'field_name': 'verify', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetPasswordRequest:
-    query_params: PostSetPasswordQueryParams = field()
+    query_params: PostSetPasswordQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetPasswordResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_set_password_default_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_set_password_default_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

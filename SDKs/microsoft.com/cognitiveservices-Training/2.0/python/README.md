@@ -8,39 +8,26 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CreateImagesFromDataRequest(
-    path_params=operations.CreateImagesFromDataPathParams(
-        project_id="itaque",
+req = operations.GetDomainRequest(
+    path_params=operations.GetDomainPathParams(
+        domain_id="et",
     ),
-    query_params=operations.CreateImagesFromDataQueryParams(
-        tag_ids=[
-            "minus",
-            "est",
-        ],
-    ),
-    headers=operations.CreateImagesFromDataHeaders(
-        training_key="earum",
-    ),
-    request=operations.CreateImagesFromDataRequestBody(
-        image_data=operations.CreateImagesFromDataRequestBodyImageData(
-            content="quos".encode(),
-            image_data="id",
-        ),
+    headers=operations.GetDomainHeaders(
+        training_key="mollitia",
     ),
 )
     
-res = s.sdk.create_images_from_data(req)
+res = s.domains_api.get_domain(req)
 
-if res.image_create_summary is not None:
+if res.domain is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -48,43 +35,58 @@ if res.image_create_summary is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### DomainsApi
+
+* `get_domain` - Get information about a specific domain
+* `get_domains` - Get a list of the available domains
+
+### ImageApi
 
 * `create_images_from_data` - Add the provided images to the set of training images
-* `create_project` - Create a project
-* `create_tag` - Create a tag for the project
 * `delete_image_regions` - Delete a set of image regions
 * `delete_image_tags` - Remove a set of tags from a set of images
 * `delete_images` - Delete images from the set of training images
-* `delete_iteration` - Delete a specific iteration of a project
+* `get_images_by_ids` - Get images by id for a given project iteration
+* `get_tagged_image_count` - Gets the number of images tagged with the provided {tagIds}
+* `get_tagged_images` - Get tagged images for a given project iteration
+* `get_untagged_image_count` - Gets the number of untagged images
+* `get_untagged_images` - Get untagged images for a given project iteration
+
+### ImageRegionProposalApi
+
+* `get_image_region_proposals` - Get region proposals for an image. Returns empty array if no proposals are found.
+
+### PredictionsApi
+
 * `delete_prediction` - Delete a set of predicted images and their associated prediction results
+* `quick_test_image` - Quick test an image
+* `quick_test_image_url` - Quick test an image url
+
+### ProjectApi
+
+* `create_project` - Create a project
+* `delete_iteration` - Delete a specific iteration of a project
 * `delete_project` - Delete a specific project
-* `delete_tag` - Delete a tag from the project
 * `export_iteration` - Export a trained iteration
-* `get_domain` - Get information about a specific domain
-* `get_domains` - Get a list of the available domains
 * `get_exports` - Get the list of exports for a specific iteration
 * `get_image_performance_count` - Gets the number of images tagged with the provided {tagIds} that have prediction results from
 training for the provided iteration {iterationId}
 * `get_image_performances` - Get image with its prediction for a given project iteration
-* `get_image_region_proposals` - Get region proposals for an image. Returns empty array if no proposals are found.
-* `get_images_by_ids` - Get images by id for a given project iteration
 * `get_iteration` - Get a specific iteration
 * `get_iteration_performance` - Get detailed performance information about an iteration
 * `get_iterations` - Get iterations for the project
 * `get_project` - Get a specific project
 * `get_projects` - Get your projects
-* `get_tag` - Get information about a specific tag
-* `get_tagged_image_count` - Gets the number of images tagged with the provided {tagIds}
-* `get_tagged_images` - Get tagged images for a given project iteration
-* `get_tags` - Get the tags for a given project and iteration
-* `get_untagged_image_count` - Gets the number of untagged images
-* `get_untagged_images` - Get untagged images for a given project iteration
-* `quick_test_image` - Quick test an image
-* `quick_test_image_url` - Quick test an image url
 * `train_project` - Queues project for training
 * `update_iteration` - Update a specific iteration
 * `update_project` - Update a specific project
+
+### TagsApi
+
+* `create_tag` - Create a tag for the project
+* `delete_tag` - Delete a tag from the project
+* `get_tag` - Get information about a specific tag
+* `get_tags` - Get the tags for a given project and iteration
 * `update_tag` - Update a tag
 
 <!-- End SDK Available Operations -->

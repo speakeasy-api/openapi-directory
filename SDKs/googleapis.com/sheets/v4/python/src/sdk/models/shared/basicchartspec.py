@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import basicchartaxis as shared_basicchartaxis
+from ..shared import basicchartdomain as shared_basicchartdomain
+from ..shared import basicchartseries as shared_basicchartseries
+from ..shared import datalabel as shared_datalabel
 
 class BasicChartSpecChartTypeEnum(str, Enum):
     BASIC_CHART_TYPE_UNSPECIFIED = "BASIC_CHART_TYPE_UNSPECIFIED"
@@ -36,22 +39,22 @@ class BasicChartSpecStackedTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BasicChartSpec:
     r"""BasicChartSpec
     The specification for a basic chart. See BasicChartType for the list of charts this supports.
     """
     
-    axis: Optional[List[BasicChartAxis]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('axis') }})
-    chart_type: Optional[BasicChartSpecChartTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chartType') }})
-    compare_mode: Optional[BasicChartSpecCompareModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compareMode') }})
-    domains: Optional[List[BasicChartDomain]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
-    header_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headerCount') }})
-    interpolate_nulls: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpolateNulls') }})
-    legend_position: Optional[BasicChartSpecLegendPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legendPosition') }})
-    line_smoothing: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineSmoothing') }})
-    series: Optional[List[BasicChartSeries]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('series') }})
-    stacked_type: Optional[BasicChartSpecStackedTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stackedType') }})
-    three_dimensional: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threeDimensional') }})
-    total_data_label: Optional[DataLabel] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('totalDataLabel') }})
+    axis: Optional[list[shared_basicchartaxis.BasicChartAxis]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('axis') }})
+    chart_type: Optional[BasicChartSpecChartTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chartType') }})
+    compare_mode: Optional[BasicChartSpecCompareModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compareMode') }})
+    domains: Optional[list[shared_basicchartdomain.BasicChartDomain]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
+    header_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headerCount') }})
+    interpolate_nulls: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpolateNulls') }})
+    legend_position: Optional[BasicChartSpecLegendPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legendPosition') }})
+    line_smoothing: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineSmoothing') }})
+    series: Optional[list[shared_basicchartseries.BasicChartSeries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('series') }})
+    stacked_type: Optional[BasicChartSpecStackedTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stackedType') }})
+    three_dimensional: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threeDimensional') }})
+    total_data_label: Optional[shared_datalabel.DataLabel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('totalDataLabel') }})
     

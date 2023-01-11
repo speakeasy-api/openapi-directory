@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listwebhooksresponse as shared_listwebhooksresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksQueryParams:
-    page_size_: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
+    page_size_: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksRequest:
-    query_params: GetWebhooksQueryParams = field()
+    query_params: GetWebhooksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_webhooks_response: Optional[shared.ListWebhooksResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_webhooks_response: Optional[shared_listwebhooksresponse.ListWebhooksResponse] = dataclasses.field(default=None)
     

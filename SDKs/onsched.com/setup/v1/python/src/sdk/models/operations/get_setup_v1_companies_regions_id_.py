@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import regionviewmodel as shared_regionviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CompaniesRegionsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CompaniesRegionsIDRequest:
-    path_params: GetSetupV1CompaniesRegionsIDPathParams = field()
+    path_params: GetSetupV1CompaniesRegionsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CompaniesRegionsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    region_view_model: Optional[shared.RegionViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    region_view_model: Optional[shared_regionviewmodel.RegionViewModel] = dataclasses.field(default=None)
     

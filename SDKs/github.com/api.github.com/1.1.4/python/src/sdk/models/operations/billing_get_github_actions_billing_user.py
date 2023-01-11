@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import actions_billing_usage as shared_actions_billing_usage
 
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetGithubActionsBillingUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetGithubActionsBillingUserRequest:
-    path_params: BillingGetGithubActionsBillingUserPathParams = field()
+    path_params: BillingGetGithubActionsBillingUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetGithubActionsBillingUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_billing_usage: Optional[shared.ActionsBillingUsage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_billing_usage: Optional[shared_actions_billing_usage.ActionsBillingUsage] = dataclasses.field(default=None)
     

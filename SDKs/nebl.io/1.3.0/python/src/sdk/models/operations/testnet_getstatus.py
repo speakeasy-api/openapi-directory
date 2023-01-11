@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetStatusQueryParams:
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetStatusRequest:
-    query_params: TestnetGetStatusQueryParams = field()
+    query_params: TestnetGetStatusQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_status_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_status_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

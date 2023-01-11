@@ -1,35 +1,29 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
-
-class EnterpriseAdminListPublicKeysSortEnum(str, Enum):
-    CREATED = "created"
-    UPDATED = "updated"
-    ACCESSED = "accessed"
+from ..shared import direction_enum as shared_direction_enum
+from ..shared import direction_enum1 as shared_direction_enum1
+from ..shared import enterprise_public_key as shared_enterprise_public_key
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPublicKeysQueryParams:
-    direction: Optional[shared.DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    since: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
-    sort: Optional[EnterpriseAdminListPublicKeysSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_direction_enum.DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    since: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_direction_enum1.DirectionEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPublicKeysRequest:
-    query_params: EnterpriseAdminListPublicKeysQueryParams = field()
+    query_params: EnterpriseAdminListPublicKeysQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPublicKeysResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    enterprise_public_keys: Optional[List[shared.EnterprisePublicKey]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    enterprise_public_keys: Optional[list[shared_enterprise_public_key.EnterprisePublicKey]] = dataclasses.field(default=None)
     

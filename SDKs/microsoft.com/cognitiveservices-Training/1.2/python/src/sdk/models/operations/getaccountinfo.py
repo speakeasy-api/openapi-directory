@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import account as shared_account
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountInfoHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountInfoRequest:
-    headers: GetAccountInfoHeaders = field()
+    headers: GetAccountInfoHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    account: Optional[shared.Account] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    account: Optional[shared_account.Account] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

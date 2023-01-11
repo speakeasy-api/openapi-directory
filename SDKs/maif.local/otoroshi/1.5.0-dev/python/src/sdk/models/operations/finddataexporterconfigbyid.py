@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataexporterconfig as shared_dataexporterconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class FindDataExporterConfigByIDPathParams:
-    data_exporter_config_id: str = field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
+    data_exporter_config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindDataExporterConfigByIDSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindDataExporterConfigByIDRequest:
-    path_params: FindDataExporterConfigByIDPathParams = field()
-    security: FindDataExporterConfigByIDSecurity = field()
+    path_params: FindDataExporterConfigByIDPathParams = dataclasses.field()
+    security: FindDataExporterConfigByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindDataExporterConfigByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    data_exporter_config: Optional[shared.DataExporterConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    data_exporter_config: Optional[shared_dataexporterconfig.DataExporterConfig] = dataclasses.field(default=None)
     

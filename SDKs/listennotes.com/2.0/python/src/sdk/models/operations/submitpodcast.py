@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import submitpodcastform as shared_submitpodcastform
+from ..shared import submitpodcastresponse as shared_submitpodcastresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SubmitPodcastHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubmitPodcastRequest:
-    headers: SubmitPodcastHeaders = field()
-    request: shared.SubmitPodcastForm = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    headers: SubmitPodcastHeaders = dataclasses.field()
+    request: shared_submitpodcastform.SubmitPodcastForm = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubmitPodcastResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    submit_podcast_response: Optional[shared.SubmitPodcastResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    submit_podcast_response: Optional[shared_submitpodcastresponse.SubmitPodcastResponse] = dataclasses.field(default=None)
     

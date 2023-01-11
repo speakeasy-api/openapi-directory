@@ -29,3 +29,5 @@ from .testpermissionsrequest import *
 from .testpermissionsresponse import *
 from .type import *
 from .typeslistresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","Binding","ConfigFile","Deployment","DeploymentLabelEntry","DeploymentsCancelPreviewRequest","DeploymentsListResponse","DeploymentsStopRequest","DeploymentUpdate","DeploymentUpdateLabelEntry","Expr","GlobalSetPolicyRequest","ImportFile","Manifest","ManifestsListResponse","OperationErrorErrors","OperationError","OperationStatusEnum","OperationWarningsCodeEnum","OperationWarningsData","OperationWarnings","Operation","OperationsListResponse","Policy","ResourceWarningsCodeEnum","ResourceWarningsData","ResourceWarnings","Resource","ResourceAccessControl","ResourcesListResponse","ResourceUpdateErrorErrors","ResourceUpdateError","ResourceUpdateIntentEnum","ResourceUpdateStateEnum","ResourceUpdateWarningsCodeEnum","ResourceUpdateWarningsData","ResourceUpdateWarnings","ResourceUpdate","SchemeOauth2","SchemeOauth2c","TargetConfiguration","TestPermissionsRequest","TestPermissionsResponse","Type","TypesListResponse"]

@@ -1753,14 +1753,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CloneReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCloneReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1790,14 +1790,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateConfigurationSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateConfigurationSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1827,14 +1827,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateConfigurationSetEventDestination"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateConfigurationSetEventDestinationResponse(status_code=r.status_code, content_type=content_type)
@@ -1873,14 +1873,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateConfigurationSetTrackingOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateConfigurationSetTrackingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -1910,14 +1910,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateCustomVerificationEmailTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateCustomVerificationEmailTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -1949,14 +1949,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateReceiptFilter"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateReceiptFilterResponse(status_code=r.status_code, content_type=content_type)
@@ -1983,14 +1983,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateReceiptRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateReceiptRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -2032,14 +2032,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2066,14 +2066,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -2103,14 +2103,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteConfigurationSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteConfigurationSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2134,14 +2134,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteConfigurationSetEventDestination"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteConfigurationSetEventDestinationResponse(status_code=r.status_code, content_type=content_type)
@@ -2168,14 +2168,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteConfigurationSetTrackingOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteConfigurationSetTrackingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -2202,14 +2202,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteCustomVerificationEmailTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteCustomVerificationEmailTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -2229,14 +2229,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteIdentity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteIdentityResponse(status_code=r.status_code, content_type=content_type)
@@ -2257,14 +2257,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteIdentityPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteIdentityPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -2285,14 +2285,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteReceiptFilter"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteReceiptFilterResponse(status_code=r.status_code, content_type=content_type)
@@ -2313,14 +2313,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteReceiptRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteReceiptRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -2344,14 +2344,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2375,14 +2375,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -2403,14 +2403,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteVerifiedEmailAddress"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteVerifiedEmailAddressResponse(status_code=r.status_code, content_type=content_type)
@@ -2430,14 +2430,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeActiveReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeActiveReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2458,14 +2458,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeConfigurationSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeConfigurationSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2489,14 +2489,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeReceiptRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeReceiptRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -2523,14 +2523,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2579,14 +2579,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetCustomVerificationEmailTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetCustomVerificationEmailTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -2610,14 +2610,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetIdentityDkimAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetIdentityDkimAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -2638,14 +2638,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetIdentityMailFromDomainAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetIdentityMailFromDomainAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -2666,14 +2666,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetIdentityNotificationAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetIdentityNotificationAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -2694,14 +2694,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetIdentityPolicies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetIdentityPoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -2722,14 +2722,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetIdentityVerificationAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetIdentityVerificationAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -2800,14 +2800,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -2831,14 +2831,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListConfigurationSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListConfigurationSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2859,14 +2859,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListCustomVerificationEmailTemplates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListCustomVerificationEmailTemplatesResponse(status_code=r.status_code, content_type=content_type)
@@ -2887,14 +2887,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListIdentities"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListIdentitiesResponse(status_code=r.status_code, content_type=content_type)
@@ -2915,14 +2915,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListIdentityPolicies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListIdentityPoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -2943,14 +2943,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListReceiptFilters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListReceiptFiltersResponse(status_code=r.status_code, content_type=content_type)
@@ -2971,14 +2971,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListReceiptRuleSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListReceiptRuleSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2999,14 +2999,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ListTemplates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostListTemplatesResponse(status_code=r.status_code, content_type=content_type)
@@ -3052,14 +3052,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=PutConfigurationSetDeliveryOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostPutConfigurationSetDeliveryOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -3086,14 +3086,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=PutIdentityPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostPutIdentityPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -3117,14 +3117,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ReorderReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostReorderReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3151,14 +3151,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendBounce"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendBounceResponse(status_code=r.status_code, content_type=content_type)
@@ -3182,14 +3182,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendBulkTemplatedEmail"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendBulkTemplatedEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -3228,14 +3228,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendCustomVerificationEmail"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendCustomVerificationEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -3271,14 +3271,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendEmail"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -3314,14 +3314,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendRawEmail"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendRawEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -3357,14 +3357,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SendTemplatedEmail"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSendTemplatedEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -3403,14 +3403,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetActiveReceiptRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetActiveReceiptRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3434,14 +3434,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetIdentityDkimEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetIdentityDkimEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3462,14 +3462,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetIdentityFeedbackForwardingEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetIdentityFeedbackForwardingEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3490,14 +3490,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetIdentityHeadersInNotificationsEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetIdentityHeadersInNotificationsEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3518,14 +3518,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetIdentityMailFromDomain"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetIdentityMailFromDomainResponse(status_code=r.status_code, content_type=content_type)
@@ -3546,14 +3546,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetIdentityNotificationTopic"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetIdentityNotificationTopicResponse(status_code=r.status_code, content_type=content_type)
@@ -3574,14 +3574,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetReceiptRulePosition"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetReceiptRulePositionResponse(status_code=r.status_code, content_type=content_type)
@@ -3608,14 +3608,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=TestRenderTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostTestRenderTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -3645,14 +3645,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateAccountSendingEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateAccountSendingEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3672,14 +3672,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateConfigurationSetEventDestination"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateConfigurationSetEventDestinationResponse(status_code=r.status_code, content_type=content_type)
@@ -3715,14 +3715,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateConfigurationSetReputationMetricsEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateConfigurationSetReputationMetricsEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3745,14 +3745,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateConfigurationSetSendingEnabled"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateConfigurationSetSendingEnabledResponse(status_code=r.status_code, content_type=content_type)
@@ -3775,14 +3775,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateConfigurationSetTrackingOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateConfigurationSetTrackingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -3812,14 +3812,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateCustomVerificationEmailTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateCustomVerificationEmailTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -3848,14 +3848,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateReceiptRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateReceiptRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -3894,14 +3894,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdateTemplate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdateTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -3928,14 +3928,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=VerifyDomainDkim"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostVerifyDomainDkimResponse(status_code=r.status_code, content_type=content_type)
@@ -3956,14 +3956,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=VerifyDomainIdentity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostVerifyDomainIdentityResponse(status_code=r.status_code, content_type=content_type)
@@ -3984,14 +3984,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=VerifyEmailAddress"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostVerifyEmailAddressResponse(status_code=r.status_code, content_type=content_type)
@@ -4011,14 +4011,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=VerifyEmailIdentity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostVerifyEmailIdentityResponse(status_code=r.status_code, content_type=content_type)

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetUsers200ApplicationJSON:
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_users_200_application_json_objects: Optional[List[GetUsers200ApplicationJSON]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_users_200_application_json_objects: Optional[list[GetUsers200ApplicationJSON]] = dataclasses.field(default=None)
     

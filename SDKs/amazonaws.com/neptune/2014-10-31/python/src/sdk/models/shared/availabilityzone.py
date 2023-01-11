@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AvailabilityZone:
     r"""AvailabilityZone
     Specifies an Availability Zone.
     """
     
-    name: Optional[str] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     

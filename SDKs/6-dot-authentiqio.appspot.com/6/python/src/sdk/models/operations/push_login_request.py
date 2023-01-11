@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PushLoginRequestQueryParams:
-    callback: str = field(metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    callback: str = dataclasses.field(metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PushLoginRequest200ApplicationJSON:
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PushLoginRequestRequest:
-    query_params: PushLoginRequestQueryParams = field()
-    request: bytes = field(metadata={'request': { 'media_type': 'application/jwt' }})
+    query_params: PushLoginRequestQueryParams = dataclasses.field()
+    request: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/jwt' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PushLoginRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error: Optional[Any] = field(default=None)
-    push_login_request_200_application_json_object: Optional[PushLoginRequest200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error: Optional[Any] = dataclasses.field(default=None)
+    push_login_request_200_application_json_object: Optional[PushLoginRequest200ApplicationJSON] = dataclasses.field(default=None)
     

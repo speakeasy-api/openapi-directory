@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import channel as shared_channel
+from ..shared import legacy_error as shared_legacy_error
 
 class CreateChannelRequestBodyPrivacyEnum(str, Enum):
     ANYBODY = "anybody"
@@ -12,29 +14,29 @@ class CreateChannelRequestBodyPrivacyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    privacy: CreateChannelRequestBodyPrivacyEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    privacy: CreateChannelRequestBodyPrivacyEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequest:
-    request: CreateChannelRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.channel+json' }})
-    security: CreateChannelSecurity = field()
+    request: CreateChannelRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.channel+json' }})
+    security: CreateChannelSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channel: Optional[shared.Channel] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channel: Optional[shared_channel.Channel] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

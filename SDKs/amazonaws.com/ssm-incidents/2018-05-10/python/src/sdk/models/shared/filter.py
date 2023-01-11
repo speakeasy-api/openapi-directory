@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import condition as shared_condition
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Filter:
     r"""Filter
     Filter the selection by using a condition.
     """
     
-    condition: Condition = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('condition') }})
-    key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    condition: shared_condition.Condition = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('condition') }})
+    key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
     

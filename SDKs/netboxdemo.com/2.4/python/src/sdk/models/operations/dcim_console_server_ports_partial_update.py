@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableconsoleserverport as shared_writableconsoleserverport
+from ..shared import consoleserverport as shared_consoleserverport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsPartialUpdateRequest:
-    path_params: DcimConsoleServerPortsPartialUpdatePathParams = field()
-    request: shared.WritableConsoleServerPortInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimConsoleServerPortsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writableconsoleserverport.WritableConsoleServerPortInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    console_server_port: Optional[shared.ConsoleServerPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    console_server_port: Optional[shared_consoleserverport.ConsoleServerPort] = dataclasses.field(default=None)
     

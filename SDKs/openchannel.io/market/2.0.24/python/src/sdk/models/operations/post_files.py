@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesQueryParams:
-    hash: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'hash', 'style': 'form', 'explode': True }})
-    is_private: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'isPrivate', 'style': 'form', 'explode': True }})
+    hash: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hash', 'style': 'form', 'explode': True }})
+    is_private: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isPrivate', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesRequestBodyFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesRequestBody:
-    file: PostFilesRequestBodyFile = field(metadata={'multipart_form': { 'file': True }})
+    file: PostFilesRequestBodyFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesRequest:
-    query_params: PostFilesQueryParams = field()
-    request: PostFilesRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    query_params: PostFilesQueryParams = dataclasses.field()
+    request: PostFilesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

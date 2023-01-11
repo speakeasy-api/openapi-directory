@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import event_simple as shared_event_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSimplePathParams:
-    team_key: str = field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
-    year: int = field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
+    team_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
+    year: int = dataclasses.field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSimpleHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSimpleSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSimpleRequest:
-    headers: GetTeamEventsByYearSimpleHeaders = field()
-    path_params: GetTeamEventsByYearSimplePathParams = field()
-    security: GetTeamEventsByYearSimpleSecurity = field()
+    headers: GetTeamEventsByYearSimpleHeaders = dataclasses.field()
+    path_params: GetTeamEventsByYearSimplePathParams = dataclasses.field()
+    security: GetTeamEventsByYearSimpleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSimpleResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    event_simples: Optional[List[shared.EventSimple]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_simples: Optional[list[shared_event_simple.EventSimple]] = dataclasses.field(default=None)
     

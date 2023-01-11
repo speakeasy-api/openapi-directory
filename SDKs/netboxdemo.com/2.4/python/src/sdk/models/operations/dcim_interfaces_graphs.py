@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interface as shared_interface
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesGraphsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesGraphsRequest:
-    path_params: DcimInterfacesGraphsPathParams = field()
+    path_params: DcimInterfacesGraphsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesGraphsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interface: Optional[shared.Interface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interface: Optional[shared_interface.Interface] = dataclasses.field(default=None)
     

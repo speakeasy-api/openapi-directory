@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import firstlastnamephonenumbergeoin as shared_firstlastnamephonenumbergeoin
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchFirstLastNamePhoneNumberGeoIn:
-    personal_names_with_phone_numbers: Optional[List[FirstLastNamePhoneNumberGeoIn]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNamesWithPhoneNumbers') }})
+    personal_names_with_phone_numbers: Optional[list[shared_firstlastnamephonenumbergeoin.FirstLastNamePhoneNumberGeoIn]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNamesWithPhoneNumbers') }})
     

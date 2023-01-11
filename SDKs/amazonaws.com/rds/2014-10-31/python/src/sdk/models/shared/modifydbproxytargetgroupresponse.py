@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbproxytargetgroup as shared_dbproxytargetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyDbProxyTargetGroupResponse:
-    db_proxy_target_group: Optional[DbProxyTargetGroup] = field(default=None)
+    db_proxy_target_group: Optional[shared_dbproxytargetgroup.DbProxyTargetGroup] = dataclasses.field(default=None)
     

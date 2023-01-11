@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import accesstokenvalidationrequest as shared_accesstokenvalidationrequest
+from ..shared import accesstokenresponse as shared_accesstokenresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ValidateAccessTokenHeaders:
-    authorization: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateAccessTokenRequest:
-    headers: ValidateAccessTokenHeaders = field()
-    request: shared.AccessTokenValidationRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ValidateAccessTokenHeaders = dataclasses.field()
+    request: shared_accesstokenvalidationrequest.AccessTokenValidationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateAccessTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_token_response: Optional[shared.AccessTokenResponse] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_token_response: Optional[shared_accesstokenresponse.AccessTokenResponse] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

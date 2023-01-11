@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ordertask as shared_ordertask
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderTaskPathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderTaskRequest:
-    path_params: GetOrderTaskPathParams = field()
-    security: GetOrderTaskSecurity = field()
+    path_params: GetOrderTaskPathParams = dataclasses.field()
+    security: GetOrderTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    order_task: Optional[shared.OrderTask] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    order_task: Optional[shared_ordertask.OrderTask] = dataclasses.field(default=None)
     

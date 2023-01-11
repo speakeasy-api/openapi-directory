@@ -1,14 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import destinationmodel as shared_destinationmodel
+from ..shared import metatagmodel as shared_metatagmodel
+from ..shared import snippetmodel as shared_snippetmodel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAliasModel:
-    destinations: Optional[List[DestinationModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
-    metatags: Optional[List[MetaTagModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metatags') }})
-    snippets: Optional[List[SnippetModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snippets') }})
+    destinations: Optional[list[shared_destinationmodel.DestinationModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    metatags: Optional[list[shared_metatagmodel.MetaTagModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metatags') }})
+    snippets: Optional[list[shared_snippetmodel.SnippetModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snippets') }})
     

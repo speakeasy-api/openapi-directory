@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import number_details as shared_number_details
+from ..shared import response as shared_response
+from ..shared import unauthorized as shared_unauthorized
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelANumberRequest:
-    request: shared.NumberDetails = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    request: shared_number_details.NumberDetails = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelANumberResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    response: Optional[shared.Response] = field(default=None)
-    unauthorized: Optional[shared.Unauthorized] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    response: Optional[shared_response.Response] = dataclasses.field(default=None)
+    unauthorized: Optional[shared_unauthorized.Unauthorized] = dataclasses.field(default=None)
     

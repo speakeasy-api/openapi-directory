@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import team_discussion_comment as shared_team_discussion_comment
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateDiscussionCommentInOrgPathParams:
-    comment_number: int = field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
-    discussion_number: int = field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    comment_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
+    discussion_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateDiscussionCommentInOrgRequestBody:
-    body: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateDiscussionCommentInOrgRequest:
-    path_params: TeamsUpdateDiscussionCommentInOrgPathParams = field()
-    request: Optional[TeamsUpdateDiscussionCommentInOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsUpdateDiscussionCommentInOrgPathParams = dataclasses.field()
+    request: Optional[TeamsUpdateDiscussionCommentInOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateDiscussionCommentInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_discussion_comment: Optional[shared.TeamDiscussionComment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_discussion_comment: Optional[shared_team_discussion_comment.TeamDiscussionComment] = dataclasses.field(default=None)
     

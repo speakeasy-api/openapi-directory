@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/createReplicationSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateReplicationSetResponse(status_code=r.status_code, content_type=content_type)
@@ -120,7 +120,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/createResponsePlan"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -128,7 +128,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateResponsePlanResponse(status_code=r.status_code, content_type=content_type)
@@ -174,7 +174,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/createTimelineEvent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -182,7 +182,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateTimelineEventResponse(status_code=r.status_code, content_type=content_type)
@@ -228,7 +228,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/deleteIncidentRecord"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -236,7 +236,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteIncidentRecordResponse(status_code=r.status_code, content_type=content_type)
@@ -320,7 +320,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/deleteResourcePolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -328,7 +328,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteResourcePolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -370,7 +370,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/deleteResponsePlan"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -378,7 +378,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteResponsePlanResponse(status_code=r.status_code, content_type=content_type)
@@ -416,7 +416,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/deleteTimelineEvent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -424,7 +424,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteTimelineEventResponse(status_code=r.status_code, content_type=content_type)
@@ -554,7 +554,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/getResourcePolicies#resourceArn"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -563,7 +563,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetResourcePoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -697,7 +697,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/listIncidentRecords"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -706,7 +706,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListIncidentRecordsResponse(status_code=r.status_code, content_type=content_type)
@@ -744,7 +744,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/listRelatedItems"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -753,7 +753,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRelatedItemsResponse(status_code=r.status_code, content_type=content_type)
@@ -791,7 +791,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/listReplicationSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -800,7 +800,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListReplicationSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -838,7 +838,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/listResponsePlans"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -847,7 +847,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListResponsePlansResponse(status_code=r.status_code, content_type=content_type)
@@ -930,7 +930,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/listTimelineEvents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -939,7 +939,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListTimelineEventsResponse(status_code=r.status_code, content_type=content_type)
@@ -977,7 +977,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/putResourcePolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -985,7 +985,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutResourcePolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1027,7 +1027,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/startIncident"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1035,7 +1035,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartIncidentResponse(status_code=r.status_code, content_type=content_type)
@@ -1081,7 +1081,7 @@ class SDK:
         url = utils.generate_url(base_url, "/tags/{resourceArn}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1089,7 +1089,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -1189,7 +1189,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateDeletionProtection"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1197,7 +1197,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateDeletionProtectionResponse(status_code=r.status_code, content_type=content_type)
@@ -1239,7 +1239,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateIncidentRecord"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1247,7 +1247,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateIncidentRecordResponse(status_code=r.status_code, content_type=content_type)
@@ -1293,7 +1293,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateRelatedItems"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1301,7 +1301,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRelatedItemsResponse(status_code=r.status_code, content_type=content_type)
@@ -1347,7 +1347,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateReplicationSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1355,7 +1355,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateReplicationSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1397,7 +1397,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateResponsePlan"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1405,7 +1405,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateResponsePlanResponse(status_code=r.status_code, content_type=content_type)
@@ -1451,7 +1451,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/updateTimelineEvent"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1459,7 +1459,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateTimelineEventResponse(status_code=r.status_code, content_type=content_type)

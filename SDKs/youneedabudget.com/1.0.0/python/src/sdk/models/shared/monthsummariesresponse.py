@@ -1,19 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import monthsummary as shared_monthsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MonthSummariesResponseData:
-    months: List[MonthSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('months') }})
-    server_knowledge: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_knowledge') }})
+    months: list[shared_monthsummary.MonthSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('months') }})
+    server_knowledge: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_knowledge') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MonthSummariesResponse:
-    data: MonthSummariesResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: MonthSummariesResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

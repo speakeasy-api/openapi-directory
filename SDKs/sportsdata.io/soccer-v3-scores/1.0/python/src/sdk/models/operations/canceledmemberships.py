@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,19 +7,19 @@ class CanceledMembershipsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class CanceledMembershipsPathParams:
-    format: CanceledMembershipsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: CanceledMembershipsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CanceledMembershipsRequest:
-    path_params: CanceledMembershipsPathParams = field()
+    path_params: CanceledMembershipsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CanceledMembershipsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    canceled_membership: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    canceled_membership: Optional[Any] = dataclasses.field(default=None)
     

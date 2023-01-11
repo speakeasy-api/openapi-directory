@@ -1,18 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import startsegmentdetectionfilters as shared_startsegmentdetectionfilters
+from ..shared import notificationchannel as shared_notificationchannel
+from ..shared import segmenttype_enum as shared_segmenttype_enum
+from ..shared import video as shared_video
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartSegmentDetectionRequest:
-    segment_types: List[SegmentTypeEnum] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SegmentTypes') }})
-    video: Video = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Video') }})
-    client_request_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientRequestToken') }})
-    filters: Optional[StartSegmentDetectionFilters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Filters') }})
-    job_tag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobTag') }})
-    notification_channel: Optional[NotificationChannel] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationChannel') }})
+    segment_types: list[shared_segmenttype_enum.SegmentTypeEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SegmentTypes') }})
+    video: shared_video.Video = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Video') }})
+    client_request_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientRequestToken') }})
+    filters: Optional[shared_startsegmentdetectionfilters.StartSegmentDetectionFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Filters') }})
+    job_tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobTag') }})
+    notification_channel: Optional[shared_notificationchannel.NotificationChannel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationChannel') }})
     

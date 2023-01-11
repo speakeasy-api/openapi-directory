@@ -1,0 +1,25 @@
+import dataclasses
+from datetime import date, datetime
+from marshmallow import fields
+import dateutil.parser
+from typing import Optional
+
+
+@dataclasses.dataclass
+class DbSnapshotList:
+    allocated_storage: Optional[int] = dataclasses.field(default=None)
+    availability_zone: Optional[str] = dataclasses.field(default=None)
+    db_instance_identifier: Optional[str] = dataclasses.field(default=None)
+    db_snapshot_identifier: Optional[str] = dataclasses.field(default=None)
+    engine: Optional[str] = dataclasses.field(default=None)
+    engine_version: Optional[str] = dataclasses.field(default=None)
+    instance_create_time: Optional[datetime] = dataclasses.field(default=None)
+    iops: Optional[int] = dataclasses.field(default=None)
+    license_model: Optional[str] = dataclasses.field(default=None)
+    master_username: Optional[str] = dataclasses.field(default=None)
+    port: Optional[int] = dataclasses.field(default=None)
+    snapshot_create_time: Optional[datetime] = dataclasses.field(default=None)
+    snapshot_type: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
+    vpc_id: Optional[str] = dataclasses.field(default=None)
+    

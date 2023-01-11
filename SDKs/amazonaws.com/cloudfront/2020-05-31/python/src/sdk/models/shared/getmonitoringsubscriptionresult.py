@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import monitoringsubscription as shared_monitoringsubscription
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMonitoringSubscriptionResult:
-    monitoring_subscription: Optional[MonitoringSubscription] = field(default=None)
+    monitoring_subscription: Optional[shared_monitoringsubscription.MonitoringSubscription] = dataclasses.field(default=None)
     

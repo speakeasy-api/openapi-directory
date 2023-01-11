@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,12 +25,12 @@ s.config_security(
     
 req = operations.DriverDetailsRequest(
     path_params=operations.DriverDetailsPathParams(
-        driverid="facilis",
+        driverid="dolorem",
         format="json",
     ),
 )
     
-res = s.sdk.driver_details(req)
+res = s.driver_details(req)
 
 if res.driver is not None:
     # handle response

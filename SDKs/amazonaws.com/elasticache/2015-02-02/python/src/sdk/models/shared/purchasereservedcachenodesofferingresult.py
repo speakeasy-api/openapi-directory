@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import reservedcachenode as shared_reservedcachenode
 
 
-@dataclass
+@dataclasses.dataclass
 class PurchaseReservedCacheNodesOfferingResult:
-    reserved_cache_node: Optional[ReservedCacheNode] = field(default=None)
+    reserved_cache_node: Optional[shared_reservedcachenode.ReservedCacheNode] = dataclasses.field(default=None)
     

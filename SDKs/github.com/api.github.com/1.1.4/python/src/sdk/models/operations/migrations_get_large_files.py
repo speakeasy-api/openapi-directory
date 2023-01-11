@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import porter_large_file as shared_porter_large_file
 
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetLargeFilesPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetLargeFilesRequest:
-    path_params: MigrationsGetLargeFilesPathParams = field()
+    path_params: MigrationsGetLargeFilesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetLargeFilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    porter_large_files: Optional[List[shared.PorterLargeFile]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    porter_large_files: Optional[list[shared_porter_large_file.PorterLargeFile]] = dataclasses.field(default=None)
     

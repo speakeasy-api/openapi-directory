@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudwebriskv1searchhashesresponsethreathash as shared_googlecloudwebriskv1searchhashesresponsethreathash
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudWebriskV1SearchHashesResponse:
-    negative_expire_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negativeExpireTime') }})
-    threats: Optional[List[GoogleCloudWebriskV1SearchHashesResponseThreatHash]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threats') }})
+    negative_expire_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negativeExpireTime') }})
+    threats: Optional[list[shared_googlecloudwebriskv1searchhashesresponsethreathash.GoogleCloudWebriskV1SearchHashesResponseThreatHash]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threats') }})
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import config as shared_config
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfigConfigGetHeaders:
-    authorization: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'authorization', 'style': 'simple', 'explode': False }})
+    authorization: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfigConfigGetRequest:
-    headers: ConfigConfigGetHeaders = field()
+    headers: ConfigConfigGetHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfigConfigGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config: Optional[shared.Config] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config: Optional[shared_config.Config] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

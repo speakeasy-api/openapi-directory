@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import presence as shared_presence
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPresenceByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPresenceByIDRequest:
-    path_params: GetPresenceByIDPathParams = field()
+    path_params: GetPresenceByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPresenceByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    presence: Optional[shared.Presence] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    presence: Optional[shared_presence.Presence] = dataclasses.field(default=None)
     

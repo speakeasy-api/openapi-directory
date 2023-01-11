@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import eventcategorygroup as shared_eventcategorygroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeEventCategoriesResponse:
     r"""DescribeEventCategoriesResponse
     <p/>
     """
     
-    event_category_group_list: Optional[List[EventCategoryGroup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventCategoryGroupList') }})
+    event_category_group_list: Optional[list[shared_eventcategorygroup.EventCategoryGroup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventCategoryGroupList') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.GetUserContentByDateJSONRequest(
         ),
     ),
     query_params=operations.GetUserContentByDateJSONQueryParams(
-        date_="sit",
+        date_="sed",
     ),
 )
     
-res = s.sdk.get_user_content_by_date_json(req)
+res = s.get_user_content_by_date_json(req)
 
 if res.get_user_content_by_date_json_200_application_json_object is not None:
     # handle response

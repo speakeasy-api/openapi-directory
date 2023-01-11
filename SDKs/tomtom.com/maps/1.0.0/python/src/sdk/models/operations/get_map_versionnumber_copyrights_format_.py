@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -8,25 +8,25 @@ class GetMapVersionNumberCopyrightsFormatFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsFormatPathParams:
-    format: GetMapVersionNumberCopyrightsFormatFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    version_number: int = field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
+    format: GetMapVersionNumberCopyrightsFormatFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    version_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsFormatQueryParams:
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsFormatRequest:
-    path_params: GetMapVersionNumberCopyrightsFormatPathParams = field()
-    query_params: GetMapVersionNumberCopyrightsFormatQueryParams = field()
+    path_params: GetMapVersionNumberCopyrightsFormatPathParams = dataclasses.field()
+    query_params: GetMapVersionNumberCopyrightsFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

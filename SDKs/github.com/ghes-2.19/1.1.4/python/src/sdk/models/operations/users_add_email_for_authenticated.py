@@ -1,26 +1,28 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import email as shared_email
+from ..shared import validation_error as shared_validation_error
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UsersAddEmailForAuthenticatedRequestBody1:
-    emails: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emails') }})
+    emails: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emails') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersAddEmailForAuthenticatedRequest:
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersAddEmailForAuthenticatedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    emails: Optional[List[shared.Email]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    emails: Optional[list[shared_email.Email]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

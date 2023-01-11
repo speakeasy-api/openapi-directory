@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import referencedatasource as shared_referencedatasource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddApplicationReferenceDataSourceRequest:
-    application_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
-    current_application_version_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CurrentApplicationVersionId') }})
-    reference_data_source: ReferenceDataSource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReferenceDataSource') }})
+    application_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
+    current_application_version_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CurrentApplicationVersionId') }})
+    reference_data_source: shared_referencedatasource.ReferenceDataSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReferenceDataSource') }})
     

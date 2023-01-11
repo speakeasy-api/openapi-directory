@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class SoundtrackEffectEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Soundtrack:
     r"""Soundtrack
     A music or audio file in mp3 format that plays for the duration of the rendered video or the length of the audio file, which ever is shortest.
     """
     
-    src: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
-    effect: Optional[SoundtrackEffectEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
-    volume: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
+    src: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
+    effect: Optional[SoundtrackEffectEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
+    volume: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
     

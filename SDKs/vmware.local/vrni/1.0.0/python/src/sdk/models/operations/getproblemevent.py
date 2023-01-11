@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import problemevent as shared_problemevent
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProblemEventPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProblemEventQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProblemEventSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProblemEventRequest:
-    path_params: GetProblemEventPathParams = field()
-    query_params: GetProblemEventQueryParams = field()
-    security: GetProblemEventSecurity = field()
+    path_params: GetProblemEventPathParams = dataclasses.field()
+    query_params: GetProblemEventQueryParams = dataclasses.field()
+    security: GetProblemEventSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProblemEventResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    problem_event: Optional[shared.ProblemEvent] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    problem_event: Optional[shared_problemevent.ProblemEvent] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datacatalogsummary as shared_datacatalogsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDataCatalogsOutput:
-    data_catalogs_summary: Optional[List[DataCatalogSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DataCatalogsSummary') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    data_catalogs_summary: Optional[list[shared_datacatalogsummary.DataCatalogSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DataCatalogsSummary') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

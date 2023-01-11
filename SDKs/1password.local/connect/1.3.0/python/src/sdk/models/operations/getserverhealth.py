@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import servicedependency as shared_servicedependency
 
 
 GET_SERVER_HEALTH_SERVERS = [
@@ -11,21 +11,21 @@ GET_SERVER_HEALTH_SERVERS = [
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetServerHealth200ApplicationJSON:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    version: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
-    dependencies: Optional[List[shared.ServiceDependency]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencies') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    dependencies: Optional[list[shared_servicedependency.ServiceDependency]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencies') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServerHealthRequest:
-    server_url: Optional[str] = field(default=None)
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServerHealthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_server_health_200_application_json_object: Optional[GetServerHealth200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_server_health_200_application_json_object: Optional[GetServerHealth200ApplicationJSON] = dataclasses.field(default=None)
     

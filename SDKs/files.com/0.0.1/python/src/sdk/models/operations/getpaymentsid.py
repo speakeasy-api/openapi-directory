@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import accountlineitementity as shared_accountlineitementity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsIDRequest:
-    path_params: GetPaymentsIDPathParams = field()
+    path_params: GetPaymentsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    account_line_item_entity: Optional[shared.AccountLineItemEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    account_line_item_entity: Optional[shared_accountlineitementity.AccountLineItemEntity] = dataclasses.field(default=None)
     

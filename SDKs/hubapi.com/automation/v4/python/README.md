@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,10 +25,24 @@ req = operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest(
     request=shared.BatchInputCallbackCompletionBatchRequest(
         inputs=[
             shared.CallbackCompletionBatchRequest(
-                callback_id="nam",
+                callback_id="quo",
                 output_fields={
-                    "blanditiis": "temporibus",
-                    "laborum": "quia",
+                    "dolorem": "eveniet",
+                },
+            ),
+            shared.CallbackCompletionBatchRequest(
+                callback_id="sit",
+                output_fields={
+                    "sequi": "facilis",
+                    "fugit": "eum",
+                },
+            ),
+            shared.CallbackCompletionBatchRequest(
+                callback_id="laborum",
+                output_fields={
+                    "velit": "quos",
+                    "nihil": "quisquam",
+                    "blanditiis": "ducimus",
                 },
             ),
         ],

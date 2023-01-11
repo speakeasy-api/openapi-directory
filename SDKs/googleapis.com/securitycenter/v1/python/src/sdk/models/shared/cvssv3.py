@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -52,19 +52,19 @@ class Cvssv3UserInteractionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Cvssv3:
     r"""Cvssv3
     Common Vulnerability Scoring System version 3.
     """
     
-    attack_complexity: Optional[Cvssv3AttackComplexityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackComplexity') }})
-    attack_vector: Optional[Cvssv3AttackVectorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackVector') }})
-    availability_impact: Optional[Cvssv3AvailabilityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityImpact') }})
-    base_score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseScore') }})
-    confidentiality_impact: Optional[Cvssv3ConfidentialityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidentialityImpact') }})
-    integrity_impact: Optional[Cvssv3IntegrityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('integrityImpact') }})
-    privileges_required: Optional[Cvssv3PrivilegesRequiredEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privilegesRequired') }})
-    scope: Optional[Cvssv3ScopeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
-    user_interaction: Optional[Cvssv3UserInteractionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInteraction') }})
+    attack_complexity: Optional[Cvssv3AttackComplexityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackComplexity') }})
+    attack_vector: Optional[Cvssv3AttackVectorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackVector') }})
+    availability_impact: Optional[Cvssv3AvailabilityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityImpact') }})
+    base_score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseScore') }})
+    confidentiality_impact: Optional[Cvssv3ConfidentialityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidentialityImpact') }})
+    integrity_impact: Optional[Cvssv3IntegrityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('integrityImpact') }})
+    privileges_required: Optional[Cvssv3PrivilegesRequiredEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privilegesRequired') }})
+    scope: Optional[Cvssv3ScopeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
+    user_interaction: Optional[Cvssv3UserInteractionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInteraction') }})
     

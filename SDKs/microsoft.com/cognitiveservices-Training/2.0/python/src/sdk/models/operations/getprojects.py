@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import project as shared_project
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsRequest:
-    headers: GetProjectsHeaders = field()
+    headers: GetProjectsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    projects: Optional[List[shared.Project]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    projects: Optional[list[shared_project.Project]] = dataclasses.field(default=None)
     

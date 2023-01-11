@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowtimeSearchallReadPathParams:
-    param: str = field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
+    param: str = dataclasses.field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowtimeSearchallReadRequest:
-    path_params: ShowtimeSearchallReadPathParams = field()
+    path_params: ShowtimeSearchallReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowtimeSearchallReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

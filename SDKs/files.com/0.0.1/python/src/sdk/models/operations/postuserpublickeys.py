@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import publickeyentity as shared_publickeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUserPublicKeysRequestBody:
-    public_key: str = field(metadata={'multipart_form': { 'field_name': 'public_key' }})
-    title: str = field(metadata={'multipart_form': { 'field_name': 'title' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    public_key: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'public_key' }})
+    title: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'title' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUserPublicKeysRequest:
-    request: Optional[PostUserPublicKeysRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostUserPublicKeysRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUserPublicKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_key_entity: Optional[shared.PublicKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_key_entity: Optional[shared_publickeyentity.PublicKeyEntity] = dataclasses.field(default=None)
     

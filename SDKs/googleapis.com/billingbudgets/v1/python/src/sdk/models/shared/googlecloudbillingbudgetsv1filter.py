@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudbillingbudgetsv1customperiod as shared_googlecloudbillingbudgetsv1customperiod
 
 class GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum(str, Enum):
     CALENDAR_PERIOD_UNSPECIFIED = "CALENDAR_PERIOD_UNSPECIFIED"
@@ -19,18 +19,18 @@ class GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudBillingBudgetsV1Filter:
     r"""GoogleCloudBillingBudgetsV1Filter
     A filter for a budget, limiting the scope of the cost to calculate.
     """
     
-    calendar_period: Optional[GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('calendarPeriod') }})
-    credit_types: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditTypes') }})
-    credit_types_treatment: Optional[GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditTypesTreatment') }})
-    custom_period: Optional[GoogleCloudBillingBudgetsV1CustomPeriod] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customPeriod') }})
-    labels: Optional[dict[str, List[Any]]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    projects: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projects') }})
-    services: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('services') }})
-    subaccounts: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subaccounts') }})
+    calendar_period: Optional[GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('calendarPeriod') }})
+    credit_types: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditTypes') }})
+    credit_types_treatment: Optional[GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditTypesTreatment') }})
+    custom_period: Optional[shared_googlecloudbillingbudgetsv1customperiod.GoogleCloudBillingBudgetsV1CustomPeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customPeriod') }})
+    labels: Optional[dict[str, list[Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    projects: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projects') }})
+    services: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('services') }})
+    subaccounts: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subaccounts') }})
     

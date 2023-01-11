@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import appcookiestickinesspolicy as shared_appcookiestickinesspolicy
+from ..shared import lbcookiestickinesspolicy as shared_lbcookiestickinesspolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class Policies:
     r"""Policies
     The policies for a load balancer.
     """
     
-    app_cookie_stickiness_policies: Optional[List[AppCookieStickinessPolicy]] = field(default=None)
-    lb_cookie_stickiness_policies: Optional[List[LbCookieStickinessPolicy]] = field(default=None)
-    other_policies: Optional[List[str]] = field(default=None)
+    app_cookie_stickiness_policies: Optional[list[shared_appcookiestickinesspolicy.AppCookieStickinessPolicy]] = dataclasses.field(default=None)
+    lb_cookie_stickiness_policies: Optional[list[shared_lbcookiestickinesspolicy.LbCookieStickinessPolicy]] = dataclasses.field(default=None)
+    other_policies: Optional[list[str]] = dataclasses.field(default=None)
     

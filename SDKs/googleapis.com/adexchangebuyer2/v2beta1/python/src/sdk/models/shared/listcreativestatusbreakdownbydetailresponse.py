@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import filteredbiddetailrow as shared_filteredbiddetailrow
 
 class ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum(str, Enum):
     DETAIL_TYPE_UNSPECIFIED = "DETAIL_TYPE_UNSPECIFIED"
@@ -19,13 +19,13 @@ class ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCreativeStatusBreakdownByDetailResponse:
     r"""ListCreativeStatusBreakdownByDetailResponse
     Response message for listing all details associated with a given filtered bid reason.
     """
     
-    detail_type: Optional[ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detailType') }})
-    filtered_bid_detail_rows: Optional[List[FilteredBidDetailRow]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filteredBidDetailRows') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    detail_type: Optional[ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detailType') }})
+    filtered_bid_detail_rows: Optional[list[shared_filteredbiddetailrow.FilteredBidDetailRow]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filteredBidDetailRows') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

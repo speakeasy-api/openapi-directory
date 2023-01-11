@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ImportAddress:
-    ethaddress: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ethaddress') }})
-    filename: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filename') }})
-    ok: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
+    ethaddress: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ethaddress') }})
+    filename: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filename') }})
+    ok: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
     

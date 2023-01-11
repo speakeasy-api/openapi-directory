@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import draftpick as shared_draftpick
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDraftPicksQueryParams:
-    college: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'college', 'style': 'form', 'explode': True }})
-    conference: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
-    nfl_team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'nflTeam', 'style': 'form', 'explode': True }})
-    position: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    college: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'college', 'style': 'form', 'explode': True }})
+    conference: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
+    nfl_team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nflTeam', 'style': 'form', 'explode': True }})
+    position: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDraftPicksRequest:
-    query_params: GetDraftPicksQueryParams = field()
+    query_params: GetDraftPicksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDraftPicksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    draft_picks: Optional[List[shared.DraftPick]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    draft_picks: Optional[list[shared_draftpick.DraftPick]] = dataclasses.field(default=None)
     

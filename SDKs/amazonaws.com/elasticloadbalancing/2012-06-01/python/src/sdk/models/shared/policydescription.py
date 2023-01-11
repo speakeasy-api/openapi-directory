@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import policyattributedescription as shared_policyattributedescription
 
 
-@dataclass
+@dataclasses.dataclass
 class PolicyDescription:
     r"""PolicyDescription
     Information about a policy.
     """
     
-    policy_attribute_descriptions: Optional[List[PolicyAttributeDescription]] = field(default=None)
-    policy_name: Optional[str] = field(default=None)
-    policy_type_name: Optional[str] = field(default=None)
+    policy_attribute_descriptions: Optional[list[shared_policyattributedescription.PolicyAttributeDescription]] = dataclasses.field(default=None)
+    policy_name: Optional[str] = dataclasses.field(default=None)
+    policy_type_name: Optional[str] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class NodesDeletePathParams:
-    node_id: str = field(metadata={'path_param': { 'field_name': 'node_id', 'style': 'simple', 'explode': False }})
+    node_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'node_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NodesDeleteRequest:
-    path_params: NodesDeletePathParams = field()
+    path_params: NodesDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NodesDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

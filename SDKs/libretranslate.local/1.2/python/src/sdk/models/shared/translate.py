@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Translate:
-    translated_text: Optional[Any] = field(default=None)
+    translated_text: Optional[Any] = dataclasses.field(default=None)
     

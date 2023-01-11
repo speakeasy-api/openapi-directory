@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import launchprofile as shared_launchprofile
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListLaunchProfilesResponse:
-    launch_profiles: Optional[List[LaunchProfile]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('launchProfiles') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    launch_profiles: Optional[list[shared_launchprofile.LaunchProfile]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('launchProfiles') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

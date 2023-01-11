@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import type as shared_type
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TypesListResponse:
     r"""TypesListResponse
     A response that returns all Types supported by Deployment Manager
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    types: Optional[List[Type]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('types') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    types: Optional[list[shared_type.Type]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('types') }})
     

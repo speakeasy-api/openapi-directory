@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -18,12 +18,12 @@ class ConditionValueRelativeDateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConditionValue:
     r"""ConditionValue
     The value of the condition.
     """
     
-    relative_date: Optional[ConditionValueRelativeDateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relativeDate') }})
-    user_entered_value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userEnteredValue') }})
+    relative_date: Optional[ConditionValueRelativeDateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relativeDate') }})
+    user_entered_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userEnteredValue') }})
     

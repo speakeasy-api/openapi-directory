@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeactivateUserPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeactivateUserRequest:
-    path_params: DeactivateUserPathParams = field()
-    request: Optional[bytes] = field(default=None, metadata={'request': { 'media_type': 'text/plain' }})
+    path_params: DeactivateUserPathParams = dataclasses.field()
+    request: Optional[bytes] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/plain' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeactivateUserResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

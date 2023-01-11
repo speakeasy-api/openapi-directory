@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.DomainsrdapAutnumGetRequest(
     path_params=operations.DomainsrdapAutnumGetPathParams(
-        autnum_id="aperiam",
+        autnum_id="asperiores",
     ),
     query_params=operations.DomainsrdapAutnumGetQueryParams(
-        dollar_xgafv="2",
-        access_token="modi",
-        alt="media",
-        callback="ad",
-        fields="id",
-        key="accusamus",
-        oauth_token="quasi",
+        dollar_xgafv="1",
+        access_token="debitis",
+        alt="json",
+        callback="esse",
+        fields="ad",
+        key="ea",
+        oauth_token="sint",
         pretty_print=False,
-        quota_user="deserunt",
-        upload_type="quas",
-        upload_protocol="vero",
+        quota_user="consequatur",
+        upload_type="et",
+        upload_protocol="ipsa",
     ),
 )
     

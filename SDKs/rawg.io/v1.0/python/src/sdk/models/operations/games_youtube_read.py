@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import youtube as shared_youtube
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesYoutubeReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesYoutubeReadRequest:
-    path_params: GamesYoutubeReadPathParams = field()
+    path_params: GamesYoutubeReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesYoutubeReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    youtube: Optional[shared.Youtube] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    youtube: Optional[shared_youtube.Youtube] = dataclasses.field(default=None)
     

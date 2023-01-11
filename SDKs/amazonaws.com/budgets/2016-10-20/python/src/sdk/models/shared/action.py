@@ -1,26 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actionthreshold as shared_actionthreshold
+from ..shared import actiontype_enum as shared_actiontype_enum
+from ..shared import approvalmodel_enum as shared_approvalmodel_enum
+from ..shared import definition as shared_definition
+from ..shared import notificationtype_enum as shared_notificationtype_enum
+from ..shared import actionstatus_enum as shared_actionstatus_enum
+from ..shared import subscriber as shared_subscriber
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Action:
     r"""Action
      A budget action resource. 
     """
     
-    action_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionId') }})
-    action_threshold: ActionThreshold = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionThreshold') }})
-    action_type: ActionTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionType') }})
-    approval_model: ApprovalModelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApprovalModel') }})
-    budget_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BudgetName') }})
-    definition: Definition = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Definition') }})
-    execution_role_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExecutionRoleArn') }})
-    notification_type: NotificationTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationType') }})
-    status: ActionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
-    subscribers: List[Subscriber] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Subscribers') }})
+    action_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionId') }})
+    action_threshold: shared_actionthreshold.ActionThreshold = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionThreshold') }})
+    action_type: shared_actiontype_enum.ActionTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionType') }})
+    approval_model: shared_approvalmodel_enum.ApprovalModelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApprovalModel') }})
+    budget_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BudgetName') }})
+    definition: shared_definition.Definition = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Definition') }})
+    execution_role_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExecutionRoleArn') }})
+    notification_type: shared_notificationtype_enum.NotificationTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationType') }})
+    status: shared_actionstatus_enum.ActionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
+    subscribers: list[shared_subscriber.Subscriber] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Subscribers') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import previewresponse as shared_previewresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PreviewsReadPathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PreviewsReadRequest:
-    path_params: PreviewsReadPathParams = field()
+    path_params: PreviewsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PreviewsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    preview_response: Optional[shared.PreviewResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    preview_response: Optional[shared_previewresponse.PreviewResponse] = dataclasses.field(default=None)
     

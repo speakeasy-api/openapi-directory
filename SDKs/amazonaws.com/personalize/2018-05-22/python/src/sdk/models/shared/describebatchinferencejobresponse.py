@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchinferencejob as shared_batchinferencejob
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeBatchInferenceJobResponse:
-    batch_inference_job: Optional[BatchInferenceJob] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('batchInferenceJob') }})
+    batch_inference_job: Optional[shared_batchinferencejob.BatchInferenceJob] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('batchInferenceJob') }})
     

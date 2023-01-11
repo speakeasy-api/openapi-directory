@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class InjuriesHistoricalFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class InjuriesHistoricalFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class InjuriesHistoricalPathParams:
-    format: InjuriesHistoricalFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: InjuriesHistoricalFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InjuriesHistoricalRequest:
-    path_params: InjuriesHistoricalPathParams = field()
+    path_params: InjuriesHistoricalPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class InjuriesHistoricalResponse:
-    content_type: str = field()
-    status_code: int = field()
-    injuries: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    injuries: Optional[list[Any]] = dataclasses.field(default=None)
     

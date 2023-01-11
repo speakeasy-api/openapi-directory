@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class DeleteImageRegionsPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageRegionsQueryParams:
-    region_ids: List[str] = field(metadata={'query_param': { 'field_name': 'regionIds', 'style': 'form', 'explode': False }})
+    region_ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'regionIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageRegionsHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageRegionsRequest:
-    headers: DeleteImageRegionsHeaders = field()
-    path_params: DeleteImageRegionsPathParams = field()
-    query_params: DeleteImageRegionsQueryParams = field()
+    headers: DeleteImageRegionsHeaders = dataclasses.field()
+    path_params: DeleteImageRegionsPathParams = dataclasses.field()
+    query_params: DeleteImageRegionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageRegionsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

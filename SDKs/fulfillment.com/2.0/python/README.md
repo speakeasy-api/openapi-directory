@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -18,7 +17,7 @@ from sdk.models import operations, shared
 s = sdk.SDK()
     
 req = operations.PostOauthAccessTokenRequest(
-    request="saepe",
+    request="explicabo",
 )
     
 res = s.auth.post_oauth_access_token(req)

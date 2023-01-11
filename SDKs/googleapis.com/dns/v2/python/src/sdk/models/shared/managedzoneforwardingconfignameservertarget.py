@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,10 +10,10 @@ class ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ManagedZoneForwardingConfigNameServerTarget:
-    forwarding_path: Optional[ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forwardingPath') }})
-    ipv4_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv4Address') }})
-    ipv6_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv6Address') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    forwarding_path: Optional[ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forwardingPath') }})
+    ipv4_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv4Address') }})
+    ipv6_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv6Address') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

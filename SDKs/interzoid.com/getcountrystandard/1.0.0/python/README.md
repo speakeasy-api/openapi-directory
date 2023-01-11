@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetcountrystandardRequest(
     query_params=operations.GetcountrystandardQueryParams(
-        country="ut",
-        license="magnam",
+        country="sunt",
+        license="aut",
     ),
 )
     
-res = s.sdk.getcountrystandard(req)
+res = s.country_name_standardization.getcountrystandard(req)
 
 if res.getcountrystandard_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getcountrystandard_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country Name Standardization
 
 * `getcountrystandard` - Gets country name standard
 

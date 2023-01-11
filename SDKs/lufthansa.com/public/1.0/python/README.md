@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,17 +23,17 @@ req = operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetReques
         ),
     ),
     path_params=operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams(
-        destination="nulla",
-        from_date="beatae",
-        origin="nobis",
-        product_code="ZXB",
+        destination="optio",
+        from_date="aut",
+        origin="aut",
+        product_code="FCP",
     ),
     headers=operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders(
-        accept="rerum",
+        accept="numquam",
     ),
 )
     
-res = s.sdk.cargo_get_route_from_date_product_code_by_origin_and_destination_get(req)
+res = s.cargo.cargo_get_route_from_date_product_code_by_origin_and_destination_get(req)
 
 if res.cargo_get_route_from_date_product_code_by_origin_and_destination_get_200_application_json_object is not None:
     # handle response
@@ -44,17 +43,26 @@ if res.cargo_get_route_from_date_product_code_by_origin_and_destination_get_200_
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Cargo
 
 * `cargo_get_route_from_date_product_code_by_origin_and_destination_get` - Retrieve all flights
 * `cargo_shipment_tracking_by_awb_prefix_and_awb_number_get` - Shipment Tracking
+
+### Offers
+
 * `offers_lounges_by_location_get` - Lounges
 * `offers_seatmaps_destination_date_cabin_class_by_flight_number_and_origin_get` - Seat Maps
+
+### Operations
+
 * `operations_flightstatus_arrivals_by_airport_code_and_from_date_time_get` - Flight Status at Arrival Airport
 * `operations_flightstatus_by_flight_number_and_date_get` - Flight Status
 * `operations_flightstatus_departures_by_airport_code_and_from_date_time_get` - Flight Status at Departure Airport
 * `operations_flightstatus_route_date_by_origin_and_destination_get` - Flight Status by Route
 * `operations_schedules_from_date_time_by_origin_and_destination_get` - Flight Schedules
+
+### Reference Data
+
 * `references_aircraft_by_aircraft_code_get` - Aircraft
 * `references_airlines_by_airline_code_get` - Airlines
 * `references_airports_by_airport_code_get` - Airports

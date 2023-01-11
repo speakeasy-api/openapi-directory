@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetweatherzipcodeQueryParams:
-    license: str = field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
-    zip: str = field(metadata={'query_param': { 'field_name': 'zip', 'style': 'form', 'explode': True }})
+    license: str = dataclasses.field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
+    zip: str = dataclasses.field(metadata={'query_param': { 'field_name': 'zip', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Getweatherzipcode200ApplicationJSON:
-    city: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('City') }})
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
-    credits: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
-    relative_humidity: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RelativeHumidity') }})
-    state: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('State') }})
-    temp_c: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TempC') }})
-    temp_f: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TempF') }})
-    visibility_miles: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('VisibilityMiles') }})
-    weather: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Weather') }})
-    wind_dir: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WindDir') }})
-    wind_mph: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WindMPH') }})
+    city: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('City') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
+    credits: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
+    relative_humidity: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RelativeHumidity') }})
+    state: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('State') }})
+    temp_c: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TempC') }})
+    temp_f: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TempF') }})
+    visibility_miles: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('VisibilityMiles') }})
+    weather: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Weather') }})
+    wind_dir: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WindDir') }})
+    wind_mph: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WindMPH') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetweatherzipcodeRequest:
-    query_params: GetweatherzipcodeQueryParams = field()
+    query_params: GetweatherzipcodeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetweatherzipcodeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getweatherzipcode_200_application_json_object: Optional[Getweatherzipcode200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getweatherzipcode_200_application_json_object: Optional[Getweatherzipcode200ApplicationJSON] = dataclasses.field(default=None)
     

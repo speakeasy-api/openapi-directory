@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,17 +16,17 @@ class PermissionPermissionVerbsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PermissionPermission:
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Description') }})
-    expression: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Expression') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    policy: Optional[PermissionPermissionPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Policy') }})
-    verbs: Optional[PermissionPermissionVerbsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Verbs') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Description') }})
+    expression: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Expression') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    policy: Optional[PermissionPermissionPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Policy') }})
+    verbs: Optional[PermissionPermissionVerbsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Verbs') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Permission:
-    permission: Optional[PermissionPermission] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Permission') }})
+    permission: Optional[PermissionPermission] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Permission') }})
     

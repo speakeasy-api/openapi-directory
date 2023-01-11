@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apiperiodusageout as shared_apiperiodusageout
 
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageRequest:
-    security: APIUsageSecurity = field()
+    security: APIUsageSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_period_usage_out: Optional[shared.APIPeriodUsageOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_period_usage_out: Optional[shared_apiperiodusageout.APIPeriodUsageOut] = dataclasses.field(default=None)
     

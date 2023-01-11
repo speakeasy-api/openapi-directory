@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostWalletAccountIDContractPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWalletAccountIDContractRequest:
-    path_params: PostWalletAccountIDContractPathParams = field()
+    path_params: PostWalletAccountIDContractPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWalletAccountIDContractResponse:
-    content_type: str = field()
-    status_code: int = field()
-    empty: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    empty: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -81,7 +81,7 @@ class Connections:
         url = utils.generate_url(base_url, "/vault/connections/{unified_api}/{service_id}/{resource}/config", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -89,7 +89,7 @@ class Connections:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectionSettingsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -137,7 +137,7 @@ class Connections:
         url = utils.generate_url(base_url, "/vault/connections/{unified_api}/{service_id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -145,7 +145,7 @@ class Connections:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectionsAddResponse(status_code=r.status_code, content_type=content_type)
@@ -250,7 +250,7 @@ class Connections:
         
         query_params = utils.get_query_params(request.query_params)
         
-        client = self._client
+        client = self._security_client
         
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
@@ -346,7 +346,7 @@ class Connections:
         url = utils.generate_url(base_url, "/vault/connections/{unified_api}/{service_id}/import", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -354,7 +354,7 @@ class Connections:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectionsImportResponse(status_code=r.status_code, content_type=content_type)
@@ -459,7 +459,7 @@ class Connections:
         
         query_params = utils.get_query_params(request.query_params)
         
-        client = self._client
+        client = self._security_client
         
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
@@ -509,13 +509,13 @@ class Connections:
         url = utils.generate_url(base_url, "/vault/connections/{unified_api}/{service_id}/token", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectionsTokenResponse(status_code=r.status_code, content_type=content_type)
@@ -562,7 +562,7 @@ class Connections:
         url = utils.generate_url(base_url, "/vault/connections/{unified_api}/{service_id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -570,7 +570,7 @@ class Connections:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectionsUpdateResponse(status_code=r.status_code, content_type=content_type)

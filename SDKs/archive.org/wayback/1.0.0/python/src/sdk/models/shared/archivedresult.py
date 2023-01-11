@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import snapshot as shared_snapshot
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ArchivedResult:
-    snapshot: Snapshot = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('snapshot') }})
-    timestamp: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    tag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
+    snapshot: shared_snapshot.Snapshot = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('snapshot') }})
+    timestamp: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
     

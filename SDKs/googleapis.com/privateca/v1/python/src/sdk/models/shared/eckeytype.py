@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class EcKeyTypeSignatureAlgorithmEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EcKeyType:
     r"""EcKeyType
     Describes an Elliptic Curve key that may be used in a Certificate issued from a CaPool.
     """
     
-    signature_algorithm: Optional[EcKeyTypeSignatureAlgorithmEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signatureAlgorithm') }})
+    signature_algorithm: Optional[EcKeyTypeSignatureAlgorithmEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signatureAlgorithm') }})
     

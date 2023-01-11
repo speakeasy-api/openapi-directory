@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import contactresponse as shared_contactresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ContactsUpdatePathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
-    contact_id: str = field(metadata={'path_param': { 'field_name': 'contactId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    contact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contactId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsUpdateSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsUpdateRequest:
-    path_params: ContactsUpdatePathParams = field()
-    security: ContactsUpdateSecurity = field()
+    path_params: ContactsUpdatePathParams = dataclasses.field()
+    security: ContactsUpdateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    contact_response: Optional[shared.ContactResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    contact_response: Optional[shared_contactresponse.ContactResponse] = dataclasses.field(default=None)
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import qtl as shared_qtl
 
 
-@dataclass
+@dataclasses.dataclass
 class MappedQtl:
-    chromosome: Optional[str] = field(default=None)
-    map_key: Optional[int] = field(default=None)
-    qtl: Optional[Qtl] = field(default=None)
-    start: Optional[int] = field(default=None)
-    stop: Optional[int] = field(default=None)
-    strand: Optional[str] = field(default=None)
+    chromosome: Optional[str] = dataclasses.field(default=None)
+    map_key: Optional[int] = dataclasses.field(default=None)
+    qtl: Optional[shared_qtl.Qtl] = dataclasses.field(default=None)
+    start: Optional[int] = dataclasses.field(default=None)
+    stop: Optional[int] = dataclasses.field(default=None)
+    strand: Optional[str] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rule as shared_rule
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateRuleResponse:
-    change_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
-    rule: Optional[Rule] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rule') }})
+    change_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
+    rule: Optional[shared_rule.Rule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rule') }})
     

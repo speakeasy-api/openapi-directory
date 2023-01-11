@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import nearearthobject as shared_nearearthobject
 
 
-@dataclass
+@dataclasses.dataclass
 class BrowseNearEarthObjectsQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BrowseNearEarthObjectsRequest:
-    query_params: BrowseNearEarthObjectsQueryParams = field()
+    query_params: BrowseNearEarthObjectsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BrowseNearEarthObjectsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    near_earth_object: Optional[shared.NearEarthObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    near_earth_object: Optional[shared_nearearthobject.NearEarthObject] = dataclasses.field(default=None)
     

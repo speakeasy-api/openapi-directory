@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelVideosPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
     
 class GetChannelVideosDirectionEnum(str, Enum):
     ASC = "asc"
@@ -31,28 +32,28 @@ class GetChannelVideosSortEnum(str, Enum):
     PLAYS = "plays"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelVideosQueryParams:
-    containing_uri: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'containing_uri', 'style': 'form', 'explode': True }})
-    direction: Optional[GetChannelVideosDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[GetChannelVideosFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    filter_embeddable: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'filter_embeddable', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetChannelVideosSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    containing_uri: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'containing_uri', 'style': 'form', 'explode': True }})
+    direction: Optional[GetChannelVideosDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[GetChannelVideosFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter_embeddable: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter_embeddable', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetChannelVideosSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelVideosRequest:
-    path_params: GetChannelVideosPathParams = field()
-    query_params: GetChannelVideosQueryParams = field()
+    path_params: GetChannelVideosPathParams = dataclasses.field()
+    query_params: GetChannelVideosQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelVideosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    videos: Optional[List[shared.Video]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    videos: Optional[list[shared_video.Video]] = dataclasses.field(default=None)
     

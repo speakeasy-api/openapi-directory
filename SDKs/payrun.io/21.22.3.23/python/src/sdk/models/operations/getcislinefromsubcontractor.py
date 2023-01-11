@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import cisline as shared_cisline
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCisLineFromSubContractorPathParams:
-    cis_line_id: str = field(metadata={'path_param': { 'field_name': 'CisLineId', 'style': 'simple', 'explode': False }})
-    employer_id: str = field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
-    sub_contractor_id: str = field(metadata={'path_param': { 'field_name': 'SubContractorId', 'style': 'simple', 'explode': False }})
+    cis_line_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'CisLineId', 'style': 'simple', 'explode': False }})
+    employer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
+    sub_contractor_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'SubContractorId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCisLineFromSubContractorHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCisLineFromSubContractorRequest:
-    headers: GetCisLineFromSubContractorHeaders = field()
-    path_params: GetCisLineFromSubContractorPathParams = field()
+    headers: GetCisLineFromSubContractorHeaders = dataclasses.field()
+    path_params: GetCisLineFromSubContractorPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCisLineFromSubContractorResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cis_line: Optional[shared.CisLine] = field(default=None)
-    error_model: Optional[shared.ErrorModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cis_line: Optional[shared_cisline.CisLine] = dataclasses.field(default=None)
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
     

@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import speechadaptation as shared_speechadaptation
+from ..shared import speakerdiarizationconfig as shared_speakerdiarizationconfig
+from ..shared import recognitionmetadata as shared_recognitionmetadata
+from ..shared import speechcontext as shared_speechcontext
 
 class RecognitionConfigEncodingEnum(str, Enum):
     ENCODING_UNSPECIFIED = "ENCODING_UNSPECIFIED"
@@ -18,29 +21,29 @@ class RecognitionConfigEncodingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RecognitionConfigInput:
     r"""RecognitionConfigInput
     Provides information to the recognizer that specifies how to process the request.
     """
     
-    adaptation: Optional[SpeechAdaptation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaptation') }})
-    alternative_language_codes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternativeLanguageCodes') }})
-    audio_channel_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audioChannelCount') }})
-    diarization_config: Optional[SpeakerDiarizationConfigInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diarizationConfig') }})
-    enable_automatic_punctuation: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutomaticPunctuation') }})
-    enable_separate_recognition_per_channel: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSeparateRecognitionPerChannel') }})
-    enable_spoken_emojis: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSpokenEmojis') }})
-    enable_spoken_punctuation: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSpokenPunctuation') }})
-    enable_word_confidence: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableWordConfidence') }})
-    enable_word_time_offsets: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableWordTimeOffsets') }})
-    encoding: Optional[RecognitionConfigEncodingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encoding') }})
-    language_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
-    max_alternatives: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAlternatives') }})
-    metadata: Optional[RecognitionMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    model: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
-    profanity_filter: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profanityFilter') }})
-    sample_rate_hertz: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleRateHertz') }})
-    speech_contexts: Optional[List[SpeechContext]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('speechContexts') }})
-    use_enhanced: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useEnhanced') }})
+    adaptation: Optional[shared_speechadaptation.SpeechAdaptation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaptation') }})
+    alternative_language_codes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternativeLanguageCodes') }})
+    audio_channel_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audioChannelCount') }})
+    diarization_config: Optional[shared_speakerdiarizationconfig.SpeakerDiarizationConfigInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diarizationConfig') }})
+    enable_automatic_punctuation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutomaticPunctuation') }})
+    enable_separate_recognition_per_channel: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSeparateRecognitionPerChannel') }})
+    enable_spoken_emojis: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSpokenEmojis') }})
+    enable_spoken_punctuation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSpokenPunctuation') }})
+    enable_word_confidence: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableWordConfidence') }})
+    enable_word_time_offsets: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableWordTimeOffsets') }})
+    encoding: Optional[RecognitionConfigEncodingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encoding') }})
+    language_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
+    max_alternatives: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAlternatives') }})
+    metadata: Optional[shared_recognitionmetadata.RecognitionMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    model: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
+    profanity_filter: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profanityFilter') }})
+    sample_rate_hertz: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleRateHertz') }})
+    speech_contexts: Optional[list[shared_speechcontext.SpeechContext]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('speechContexts') }})
+    use_enhanced: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useEnhanced') }})
     

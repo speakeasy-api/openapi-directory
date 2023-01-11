@@ -20,3 +20,5 @@ from .tagmarshaller import *
 from .tagmarshallerwrapped import *
 from .tagtypemarshaller import *
 from .tagtypemarshallerwrapped import *
+
+__all__ = ["Campaign","CampaignWrapped","ExtendedAttribute","Language","LanguageWrapped","MediaItem","MediaItemWrapped","MediaTypeHolder","MediaTypeHolderWrapped","Message","Meta","Pagination","Source","SourceWrapped","SyndicateMarshaller","SyndicateMarshallerWrapped","TagLanguageMarshaller","TagLanguageMarshallerWrapped","TagMarshaller","TagMarshallerWrapped","TagTypeMarshaller","TagTypeMarshallerWrapped"]

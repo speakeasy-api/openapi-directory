@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import collectionslist as shared_collectionslist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CollectionsHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CollectionsRequest:
-    headers: GetV3CollectionsHeaders = field()
+    headers: GetV3CollectionsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CollectionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    collections_list: Optional[shared.CollectionsList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    collections_list: Optional[shared_collectionslist.CollectionsList] = dataclasses.field(default=None)
     

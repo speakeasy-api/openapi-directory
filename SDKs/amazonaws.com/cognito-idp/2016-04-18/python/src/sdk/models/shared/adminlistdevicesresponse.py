@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import devicetype as shared_devicetype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdminListDevicesResponse:
     r"""AdminListDevicesResponse
     Lists the device's response, as an administrator.
     """
     
-    devices: Optional[List[DeviceType]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Devices') }})
-    pagination_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
+    devices: Optional[list[shared_devicetype.DeviceType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Devices') }})
+    pagination_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
     

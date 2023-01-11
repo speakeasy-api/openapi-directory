@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itemaccesstokeninvalidaterequest as shared_itemaccesstokeninvalidaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemAccessTokenInvalidateRequest:
-    request: shared.ItemAccessTokenInvalidateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itemaccesstokeninvalidaterequest.ItemAccessTokenInvalidateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemAccessTokenInvalidateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_access_token_invalidate_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_access_token_invalidate_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

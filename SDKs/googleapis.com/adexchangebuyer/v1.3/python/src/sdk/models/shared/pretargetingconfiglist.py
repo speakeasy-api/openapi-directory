@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pretargetingconfig as shared_pretargetingconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PretargetingConfigList:
-    items: Optional[List[PretargetingConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    items: Optional[list[shared_pretargetingconfig.PretargetingConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

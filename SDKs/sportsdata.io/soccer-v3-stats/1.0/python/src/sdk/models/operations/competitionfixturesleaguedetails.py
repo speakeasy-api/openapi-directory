@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class CompetitionFixturesLeagueDetailsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionFixturesLeagueDetailsPathParams:
-    competition: str = field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
-    format: CompetitionFixturesLeagueDetailsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    competition: str = dataclasses.field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
+    format: CompetitionFixturesLeagueDetailsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionFixturesLeagueDetailsRequest:
-    path_params: CompetitionFixturesLeagueDetailsPathParams = field()
+    path_params: CompetitionFixturesLeagueDetailsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionFixturesLeagueDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    competition_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    competition_detail: Optional[Any] = dataclasses.field(default=None)
     

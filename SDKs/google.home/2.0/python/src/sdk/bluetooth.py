@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -34,7 +34,7 @@ class Bluetooth:
         url = base_url.removesuffix("/") + "/bluetooth/discovery"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -42,14 +42,14 @@ class Bluetooth:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ChangeDiscoverabilityResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.change_discoverability_200_text_plain_object = r.content
 
         return res
 
@@ -68,7 +68,7 @@ class Bluetooth:
         url = base_url.removesuffix("/") + "/bluetooth/bond"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -76,14 +76,14 @@ class Bluetooth:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ForgetpaireddeviceResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.forgetpaireddevice_200_text_plain_object = r.content
 
         return res
 
@@ -111,7 +111,7 @@ class Bluetooth:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Example111]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Example111]])
                 res.example111s = out
 
         return res
@@ -145,7 +145,7 @@ class Bluetooth:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Example112]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Example112]])
                 res.example112s = out
 
         return res
@@ -165,7 +165,7 @@ class Bluetooth:
         url = base_url.removesuffix("/") + "/bluetooth/connect"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -173,14 +173,14 @@ class Bluetooth:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PairwithSpeakerResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.pairwith_speaker_200_text_plain_object = r.content
 
         return res
 
@@ -200,7 +200,7 @@ class Bluetooth:
         url = base_url.removesuffix("/") + "/bluetooth/scan"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -208,14 +208,14 @@ class Bluetooth:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ScanfordevicesResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.scanfordevices_200_text_plain_object = r.content
 
         return res
 

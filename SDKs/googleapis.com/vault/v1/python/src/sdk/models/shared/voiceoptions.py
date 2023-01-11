@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -12,11 +12,11 @@ class VoiceOptionsCoveredDataEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VoiceOptions:
     r"""VoiceOptions
     Additional options for Voice search
     """
     
-    covered_data: Optional[List[VoiceOptionsCoveredDataEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coveredData') }})
+    covered_data: Optional[list[VoiceOptionsCoveredDataEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coveredData') }})
     

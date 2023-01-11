@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class ParentalStatusTargetingOptionDetailsParentalStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ParentalStatusTargetingOptionDetails:
     r"""ParentalStatusTargetingOptionDetails
     Represents a targetable parental status. This will be populated in the parental_status_details field of a TargetingOption when targeting_type is `TARGETING_TYPE_PARENTAL_STATUS`.
     """
     
-    parental_status: Optional[ParentalStatusTargetingOptionDetailsParentalStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parentalStatus') }})
+    parental_status: Optional[ParentalStatusTargetingOptionDetailsParentalStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parentalStatus') }})
     

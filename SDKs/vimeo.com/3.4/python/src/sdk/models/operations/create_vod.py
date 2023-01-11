@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import on_demand_page as shared_on_demand_page
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class CreateVodRequestBodyAcceptedCurrenciesEnum(str, Enum):
     AUD = "AUD"
@@ -26,28 +26,28 @@ class CreateVodRequestBodyAcceptedCurrenciesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyBuyPrice:
-    aud: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AUD') }})
-    cad: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CAD') }})
-    chf: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CHF') }})
-    dkk: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DKK') }})
-    eur: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EUR') }})
-    gbp: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GBP') }})
-    jpy: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JPY') }})
-    krw: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KRW') }})
-    nok: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NOK') }})
-    pln: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PLN') }})
-    sek: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SEK') }})
-    usd: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
+    aud: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AUD') }})
+    cad: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CAD') }})
+    chf: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CHF') }})
+    dkk: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DKK') }})
+    eur: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EUR') }})
+    gbp: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GBP') }})
+    jpy: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JPY') }})
+    krw: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KRW') }})
+    nok: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NOK') }})
+    pln: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PLN') }})
+    sek: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SEK') }})
+    usd: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyBuy:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    download: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    price: Optional[CreateVodRequestBodyBuyPrice] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    price: Optional[CreateVodRequestBodyBuyPrice] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
     
 class CreateVodRequestBodyContentRatingEnum(str, Enum):
     DRUGS = "drugs"
@@ -59,17 +59,17 @@ class CreateVodRequestBodyContentRatingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyEpisodesBuyPrice:
-    usd: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
+    usd: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyEpisodesBuy:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    download: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    price: Optional[CreateVodRequestBodyEpisodesBuyPrice] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    price: Optional[CreateVodRequestBodyEpisodesBuyPrice] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
     
 class CreateVodRequestBodyEpisodesRentPeriodEnum(str, Enum):
     ONE_WEEK = "1 week"
@@ -83,24 +83,24 @@ class CreateVodRequestBodyEpisodesRentPeriodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyEpisodesRentPrice:
-    usd: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
+    usd: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyEpisodesRent:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    period: Optional[CreateVodRequestBodyEpisodesRentPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
-    price: Optional[CreateVodRequestBodyEpisodesRentPrice] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    period: Optional[CreateVodRequestBodyEpisodesRentPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
+    price: Optional[CreateVodRequestBodyEpisodesRentPrice] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyEpisodes:
-    buy: Optional[CreateVodRequestBodyEpisodesBuy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buy') }})
-    rent: Optional[CreateVodRequestBodyEpisodesRent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rent') }})
+    buy: Optional[CreateVodRequestBodyEpisodesBuy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buy') }})
+    rent: Optional[CreateVodRequestBodyEpisodesRent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rent') }})
     
 class CreateVodRequestBodyRentPeriodEnum(str, Enum):
     ONE_WEEK = "1 week"
@@ -114,47 +114,47 @@ class CreateVodRequestBodyRentPeriodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyRentPrice:
-    aud: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AUD') }})
-    cad: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CAD') }})
-    chf: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CHF') }})
-    dkk: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DKK') }})
-    eur: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EUR') }})
-    gbp: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GBP') }})
-    jpy: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JPY') }})
-    krw: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KRW') }})
-    nok: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NOK') }})
-    pln: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PLN') }})
-    sek: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SEK') }})
-    usd: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
+    aud: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AUD') }})
+    cad: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CAD') }})
+    chf: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CHF') }})
+    dkk: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DKK') }})
+    eur: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EUR') }})
+    gbp: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GBP') }})
+    jpy: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JPY') }})
+    krw: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KRW') }})
+    nok: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NOK') }})
+    pln: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PLN') }})
+    sek: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SEK') }})
+    usd: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodyRent:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    period: Optional[CreateVodRequestBodyRentPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
-    price: Optional[CreateVodRequestBodyRentPrice] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    period: Optional[CreateVodRequestBodyRentPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
+    price: Optional[CreateVodRequestBodyRentPrice] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodySubscriptionMonthlyPrice:
-    usd: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
+    usd: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('USD') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodySubscriptionMonthly:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    price: Optional[CreateVodRequestBodySubscriptionMonthlyPrice] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    price: Optional[CreateVodRequestBodySubscriptionMonthlyPrice] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBodySubscription:
-    monthly: Optional[CreateVodRequestBodySubscriptionMonthly] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monthly') }})
+    monthly: Optional[CreateVodRequestBodySubscriptionMonthly] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monthly') }})
     
 class CreateVodRequestBodyTypeEnum(str, Enum):
     FILM = "film"
@@ -162,30 +162,30 @@ class CreateVodRequestBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequestBody:
-    content_rating: CreateVodRequestBodyContentRatingEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_rating') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: CreateVodRequestBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    accepted_currencies: Optional[CreateVodRequestBodyAcceptedCurrenciesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accepted_currencies') }})
-    buy: Optional[CreateVodRequestBodyBuy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buy') }})
-    domain_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain_link') }})
-    episodes: Optional[CreateVodRequestBodyEpisodes] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('episodes') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    rent: Optional[CreateVodRequestBodyRent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rent') }})
-    subscription: Optional[CreateVodRequestBodySubscription] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscription') }})
+    content_rating: CreateVodRequestBodyContentRatingEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_rating') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: CreateVodRequestBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    accepted_currencies: Optional[CreateVodRequestBodyAcceptedCurrenciesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accepted_currencies') }})
+    buy: Optional[CreateVodRequestBodyBuy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buy') }})
+    domain_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain_link') }})
+    episodes: Optional[CreateVodRequestBodyEpisodes] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('episodes') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    rent: Optional[CreateVodRequestBodyRent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rent') }})
+    subscription: Optional[CreateVodRequestBodySubscription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscription') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodRequest:
-    path_params: CreateVodPathParams = field()
-    request: CreateVodRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateVodPathParams = dataclasses.field()
+    request: CreateVodRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodResponse:
-    content_type: str = field()
-    status_code: int = field()
-    on_demand_page: Optional[shared.OnDemandPage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    on_demand_page: Optional[shared_on_demand_page.OnDemandPage] = dataclasses.field(default=None)
     

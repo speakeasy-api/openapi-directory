@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import snapshot as shared_snapshot
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthorizeSnapshotAccessResult:
-    snapshot: Optional[Snapshot] = field(default=None)
+    snapshot: Optional[shared_snapshot.Snapshot] = dataclasses.field(default=None)
     

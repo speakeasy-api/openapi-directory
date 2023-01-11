@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import team_simple as shared_team_simple
+from ..shared import simple_user as shared_simple_user
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestReviewRequest:
     r"""PullRequestReviewRequest
     Pull Request Review Request
     """
     
-    teams: List[TeamSimple] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('teams') }})
-    users: List[SimpleUser] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('users') }})
+    teams: list[shared_team_simple.TeamSimple] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('teams') }})
+    users: list[shared_simple_user.SimpleUser] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('users') }})
     

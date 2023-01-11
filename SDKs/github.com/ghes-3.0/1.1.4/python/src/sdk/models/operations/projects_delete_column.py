@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsDeleteColumnPathParams:
-    column_id: int = field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
+    column_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsDeleteColumnRequest:
-    path_params: ProjectsDeleteColumnPathParams = field()
+    path_params: ProjectsDeleteColumnPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsDeleteColumnResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

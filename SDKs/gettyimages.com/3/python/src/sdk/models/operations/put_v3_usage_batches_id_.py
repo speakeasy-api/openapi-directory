@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import report_usage_batch_request as shared_report_usage_batch_request
+from ..shared import report_usage_batch_response as shared_report_usage_batch_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PutV3UsageBatchesIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutV3UsageBatchesIDRequest:
-    path_params: PutV3UsageBatchesIDPathParams = field()
-    request: Optional[shared.ReportUsageBatchRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutV3UsageBatchesIDPathParams = dataclasses.field()
+    request: Optional[shared_report_usage_batch_request.ReportUsageBatchRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutV3UsageBatchesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report_usage_batch_response: Optional[shared.ReportUsageBatchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report_usage_batch_response: Optional[shared_report_usage_batch_response.ReportUsageBatchResponse] = dataclasses.field(default=None)
     

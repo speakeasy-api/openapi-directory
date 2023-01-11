@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import documentsubmission as shared_documentsubmission
+from ..shared import documentsubmissionresult as shared_documentsubmissionresult
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDocumentSubmissionRequest:
-    request: shared.DocumentSubmission = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_documentsubmission.DocumentSubmission = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDocumentSubmissionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    document_submission_result: Optional[shared.DocumentSubmissionResult] = field(default=None)
-    error_models: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    document_submission_result: Optional[shared_documentsubmissionresult.DocumentSubmissionResult] = dataclasses.field(default=None)
+    error_models: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkWebhooksHTTPServerPathParams:
-    http_server_id: str = field(metadata={'path_param': { 'field_name': 'httpServerId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    http_server_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'httpServerId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkWebhooksHTTPServerRequest:
-    path_params: DeleteNetworkWebhooksHTTPServerPathParams = field()
+    path_params: DeleteNetworkWebhooksHTTPServerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkWebhooksHTTPServerResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

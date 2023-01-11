@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,22 +14,22 @@ class DigitalContentLabelAssignedTargetingOptionDetailsContentRatingTierEnum(str
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DigitalContentLabelAssignedTargetingOptionDetails:
     r"""DigitalContentLabelAssignedTargetingOptionDetails
     Targeting details for digital content label. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
     """
     
-    content_rating_tier: Optional[DigitalContentLabelAssignedTargetingOptionDetailsContentRatingTierEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentRatingTier') }})
-    excluded_targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
+    content_rating_tier: Optional[DigitalContentLabelAssignedTargetingOptionDetailsContentRatingTierEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentRatingTier') }})
+    excluded_targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DigitalContentLabelAssignedTargetingOptionDetailsInput:
     r"""DigitalContentLabelAssignedTargetingOptionDetailsInput
     Targeting details for digital content label. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
     """
     
-    excluded_targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
+    excluded_targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
     

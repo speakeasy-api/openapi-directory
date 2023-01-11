@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,23 @@ s.config_security(
     
 req = operations.CreateScalingPlanRequest(
     headers=operations.CreateScalingPlanHeaders(
-        x_amz_algorithm="accusantium",
-        x_amz_content_sha256="dolores",
-        x_amz_credential="et",
-        x_amz_date="quia",
-        x_amz_security_token="qui",
-        x_amz_signature="sit",
-        x_amz_signed_headers="sint",
+        x_amz_algorithm="doloribus",
+        x_amz_content_sha256="necessitatibus",
+        x_amz_credential="aliquam",
+        x_amz_date="ut",
+        x_amz_security_token="sint",
+        x_amz_signature="eos",
+        x_amz_signed_headers="officia",
         x_amz_target="AnyScaleScalingPlannerFrontendService.CreateScalingPlan",
     ),
     request=shared.CreateScalingPlanRequest(
         application_source=shared.ApplicationSource(
-            cloud_formation_stack_arn="nulla",
+            cloud_formation_stack_arn="sit",
             tag_filters=[
                 shared.TagFilter(
-                    key="qui",
+                    key="earum",
                     values=[
-                        "mollitia",
-                    ],
-                ),
-                shared.TagFilter(
-                    key="eveniet",
-                    values=[
-                        "velit",
-                        "qui",
-                        "quam",
+                        "assumenda",
                     ],
                 ),
             ],
@@ -60,96 +51,88 @@ req = operations.CreateScalingPlanRequest(
                 customized_load_metric_specification=shared.CustomizedLoadMetricSpecification(
                     dimensions=[
                         shared.MetricDimension(
-                            name="aperiam",
-                            value="vel",
-                        ),
-                        shared.MetricDimension(
-                            name="reprehenderit",
-                            value="nesciunt",
+                            name="in",
+                            value="repellendus",
                         ),
                     ],
-                    metric_name="tenetur",
-                    namespace="fugiat",
-                    statistic="Maximum",
-                    unit="dolor",
+                    metric_name="repudiandae",
+                    namespace="sed",
+                    statistic="Average",
+                    unit="cum",
                 ),
                 disable_dynamic_scaling=True,
-                max_capacity=6613185076334702367,
-                min_capacity=4780308856730821443,
+                max_capacity=2532597011683728087,
+                min_capacity=8028815005489571747,
                 predefined_load_metric_specification=shared.PredefinedLoadMetricSpecification(
-                    predefined_load_metric_type="ASGTotalCPUUtilization",
-                    resource_label="maiores",
+                    predefined_load_metric_type="ASGTotalNetworkIn",
+                    resource_label="nisi",
                 ),
-                predictive_scaling_max_capacity_behavior="SetMaxCapacityToForecastCapacity",
-                predictive_scaling_max_capacity_buffer=1597956934861151791,
-                predictive_scaling_mode="ForecastAndScale",
-                resource_id="ea",
-                scalable_dimension="dynamodb:index:WriteCapacityUnits",
+                predictive_scaling_max_capacity_behavior="SetForecastCapacityToMaxCapacity",
+                predictive_scaling_max_capacity_buffer=1940187917623811174,
+                predictive_scaling_mode="ForecastOnly",
+                resource_id="est",
+                scalable_dimension="dynamodb:index:ReadCapacityUnits",
                 scaling_policy_update_behavior="KeepExternalPolicies",
-                scheduled_action_buffer_time=430554054357218177,
-                service_namespace="rds",
+                scheduled_action_buffer_time=1713996192319931980,
+                service_namespace="autoscaling",
                 target_tracking_configurations=[
                     shared.TargetTrackingConfiguration(
                         customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
                             dimensions=[
                                 shared.MetricDimension(
-                                    name="amet",
-                                    value="consectetur",
+                                    name="voluptate",
+                                    value="ut",
                                 ),
                                 shared.MetricDimension(
-                                    name="et",
-                                    value="nesciunt",
+                                    name="inventore",
+                                    value="et",
                                 ),
                                 shared.MetricDimension(
-                                    name="ab",
-                                    value="aut",
+                                    name="enim",
+                                    value="minima",
                                 ),
                             ],
-                            metric_name="sapiente",
-                            namespace="ipsam",
-                            statistic="SampleCount",
-                            unit="placeat",
+                            metric_name="hic",
+                            namespace="cumque",
+                            statistic="Maximum",
+                            unit="quasi",
                         ),
-                        disable_scale_in=True,
-                        estimated_instance_warmup=1868051405901833186,
+                        disable_scale_in=False,
+                        estimated_instance_warmup=2432923324136795944,
                         predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
-                            predefined_scaling_metric_type="ASGAverageCPUUtilization",
-                            resource_label="minus",
+                            predefined_scaling_metric_type="EC2SpotFleetRequestAverageCPUUtilization",
+                            resource_label="nisi",
                         ),
-                        scale_in_cooldown=2071104450853766658,
-                        scale_out_cooldown=3143222963282786161,
-                        target_value=1.100000,
+                        scale_in_cooldown=4972956926970340934,
+                        scale_out_cooldown=3723469953046556180,
+                        target_value=14.100000,
                     ),
                     shared.TargetTrackingConfiguration(
                         customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
                             dimensions=[
                                 shared.MetricDimension(
-                                    name="atque",
-                                    value="praesentium",
+                                    name="quo",
+                                    value="non",
                                 ),
                                 shared.MetricDimension(
-                                    name="perferendis",
-                                    value="ab",
-                                ),
-                                shared.MetricDimension(
-                                    name="cumque",
-                                    value="minus",
+                                    name="a",
+                                    value="mollitia",
                                 ),
                             ],
-                            metric_name="quo",
-                            namespace="enim",
-                            statistic="SampleCount",
-                            unit="qui",
+                            metric_name="dolorum",
+                            namespace="at",
+                            statistic="Maximum",
+                            unit="aut",
                         ),
                         disable_scale_in=True,
-                        estimated_instance_warmup=6520533587378202877,
+                        estimated_instance_warmup=4531580916635252633,
                         predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
-                            predefined_scaling_metric_type="EC2SpotFleetRequestAverageNetworkIn",
-                            resource_label="ea",
+                            predefined_scaling_metric_type="ASGAverageNetworkIn",
+                            resource_label="labore",
                         ),
-                        scale_in_cooldown=4655744335366111445,
-                        scale_out_cooldown=316247834821120826,
-                        target_value=6.200000,
+                        scale_in_cooldown=1535639556352868980,
+                        scale_out_cooldown=8955779660177681159,
+                        target_value=74.199997,
                     ),
                 ],
             ),
@@ -157,97 +140,201 @@ req = operations.CreateScalingPlanRequest(
                 customized_load_metric_specification=shared.CustomizedLoadMetricSpecification(
                     dimensions=[
                         shared.MetricDimension(
-                            name="et",
-                            value="omnis",
-                        ),
-                        shared.MetricDimension(
-                            name="ut",
-                            value="cum",
-                        ),
-                        shared.MetricDimension(
-                            name="hic",
-                            value="qui",
+                            name="ratione",
+                            value="voluptatem",
                         ),
                     ],
-                    metric_name="cum",
-                    namespace="facilis",
-                    statistic="SampleCount",
-                    unit="molestiae",
+                    metric_name="sit",
+                    namespace="eum",
+                    statistic="Average",
+                    unit="expedita",
                 ),
                 disable_dynamic_scaling=False,
-                max_capacity=8375052942067674244,
-                min_capacity=6391372909720997418,
+                max_capacity=8872633733247291586,
+                min_capacity=2223670193668799695,
                 predefined_load_metric_specification=shared.PredefinedLoadMetricSpecification(
-                    predefined_load_metric_type="ALBTargetGroupRequestCount",
-                    resource_label="quibusdam",
+                    predefined_load_metric_type="ASGTotalCPUUtilization",
+                    resource_label="nulla",
                 ),
-                predictive_scaling_max_capacity_behavior="SetMaxCapacityAboveForecastCapacity",
-                predictive_scaling_max_capacity_buffer=4911635539947549177,
-                predictive_scaling_mode="ForecastAndScale",
-                resource_id="praesentium",
-                scalable_dimension="ecs:service:DesiredCount",
+                predictive_scaling_max_capacity_behavior="SetForecastCapacityToMaxCapacity",
+                predictive_scaling_max_capacity_buffer=8229745102967699455,
+                predictive_scaling_mode="ForecastOnly",
+                resource_id="dolor",
+                scalable_dimension="rds:cluster:ReadReplicaCount",
                 scaling_policy_update_behavior="ReplaceExternalPolicies",
-                scheduled_action_buffer_time=5702086962551646585,
-                service_namespace="dynamodb",
+                scheduled_action_buffer_time=4935670796153673020,
+                service_namespace="autoscaling",
                 target_tracking_configurations=[
                     shared.TargetTrackingConfiguration(
                         customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
                             dimensions=[
                                 shared.MetricDimension(
-                                    name="doloribus",
-                                    value="necessitatibus",
-                                ),
-                                shared.MetricDimension(
-                                    name="aliquam",
-                                    value="ut",
+                                    name="dolores",
+                                    value="quaerat",
                                 ),
                             ],
-                            metric_name="sint",
-                            namespace="eos",
-                            statistic="SampleCount",
-                            unit="vitae",
+                            metric_name="iste",
+                            namespace="harum",
+                            statistic="Maximum",
+                            unit="natus",
                         ),
                         disable_scale_in=True,
-                        estimated_instance_warmup=8708302418582466431,
+                        estimated_instance_warmup=4101734553074821155,
                         predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
-                            predefined_scaling_metric_type="ASGAverageNetworkOut",
-                            resource_label="distinctio",
+                            predefined_scaling_metric_type="EC2SpotFleetRequestAverageNetworkOut",
+                            resource_label="expedita",
                         ),
-                        scale_in_cooldown=6825038547171313815,
-                        scale_out_cooldown=580042398029885359,
+                        scale_in_cooldown=2935226858963760426,
+                        scale_out_cooldown=3585591606309161877,
+                        target_value=27.100000,
+                    ),
+                    shared.TargetTrackingConfiguration(
+                        customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
+                            dimensions=[
+                                shared.MetricDimension(
+                                    name="commodi",
+                                    value="tenetur",
+                                ),
+                                shared.MetricDimension(
+                                    name="et",
+                                    value="sed",
+                                ),
+                            ],
+                            metric_name="saepe",
+                            namespace="sit",
+                            statistic="Average",
+                            unit="voluptate",
+                        ),
+                        disable_scale_in=True,
+                        estimated_instance_warmup=4433816511744504618,
+                        predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
+                            predefined_scaling_metric_type="ALBRequestCountPerTarget",
+                            resource_label="facere",
+                        ),
+                        scale_in_cooldown=1958515401632262794,
+                        scale_out_cooldown=1608782168285273117,
+                        target_value=16.100000,
+                    ),
+                ],
+            ),
+            shared.ScalingInstruction(
+                customized_load_metric_specification=shared.CustomizedLoadMetricSpecification(
+                    dimensions=[
+                        shared.MetricDimension(
+                            name="nostrum",
+                            value="et",
+                        ),
+                        shared.MetricDimension(
+                            name="eum",
+                            value="aut",
+                        ),
+                    ],
+                    metric_name="beatae",
+                    namespace="incidunt",
+                    statistic="Average",
+                    unit="a",
+                ),
+                disable_dynamic_scaling=False,
+                max_capacity=2840221116841027537,
+                min_capacity=1450424072144671877,
+                predefined_load_metric_specification=shared.PredefinedLoadMetricSpecification(
+                    predefined_load_metric_type="ASGTotalNetworkIn",
+                    resource_label="sunt",
+                ),
+                predictive_scaling_max_capacity_behavior="SetForecastCapacityToMaxCapacity",
+                predictive_scaling_max_capacity_buffer=6039161625972230315,
+                predictive_scaling_mode="ForecastAndScale",
+                resource_id="non",
+                scalable_dimension="ec2:spot-fleet-request:TargetCapacity",
+                scaling_policy_update_behavior="KeepExternalPolicies",
+                scheduled_action_buffer_time=2363619035225420429,
+                service_namespace="autoscaling",
+                target_tracking_configurations=[
+                    shared.TargetTrackingConfiguration(
+                        customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
+                            dimensions=[
+                                shared.MetricDimension(
+                                    name="temporibus",
+                                    value="voluptas",
+                                ),
+                            ],
+                            metric_name="tempora",
+                            namespace="voluptatem",
+                            statistic="Minimum",
+                            unit="eum",
+                        ),
+                        disable_scale_in=False,
+                        estimated_instance_warmup=6050441218909099379,
+                        predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
+                            predefined_scaling_metric_type="DynamoDBWriteCapacityUtilization",
+                            resource_label="ab",
+                        ),
+                        scale_in_cooldown=279650548062880195,
+                        scale_out_cooldown=1031912478290035631,
                         target_value=93.199997,
                     ),
                     shared.TargetTrackingConfiguration(
                         customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
                             dimensions=[
                                 shared.MetricDimension(
-                                    name="repudiandae",
-                                    value="sed",
+                                    name="sit",
+                                    value="quibusdam",
+                                ),
+                                shared.MetricDimension(
+                                    name="dolore",
+                                    value="ut",
+                                ),
+                                shared.MetricDimension(
+                                    name="deserunt",
+                                    value="est",
                                 ),
                             ],
-                            metric_name="praesentium",
-                            namespace="cum",
-                            statistic="SampleCount",
-                            unit="odit",
+                            metric_name="cupiditate",
+                            namespace="culpa",
+                            statistic="Minimum",
+                            unit="veniam",
                         ),
                         disable_scale_in=False,
-                        estimated_instance_warmup=1865222027608673291,
+                        estimated_instance_warmup=692921154198776483,
                         predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
-                            predefined_scaling_metric_type="ASGAverageNetworkIn",
-                            resource_label="ratione",
+                            predefined_scaling_metric_type="ECSServiceAverageMemoryUtilization",
+                            resource_label="minus",
                         ),
-                        scale_in_cooldown=1940187917623811174,
-                        scale_out_cooldown=5802927950055087746,
-                        target_value=19.100000,
+                        scale_in_cooldown=1868821202122697832,
+                        scale_out_cooldown=5484631603520417470,
+                        target_value=95.099998,
+                    ),
+                    shared.TargetTrackingConfiguration(
+                        customized_scaling_metric_specification=shared.CustomizedScalingMetricSpecification(
+                            dimensions=[
+                                shared.MetricDimension(
+                                    name="dolor",
+                                    value="nihil",
+                                ),
+                            ],
+                            metric_name="error",
+                            namespace="sunt",
+                            statistic="SampleCount",
+                            unit="sed",
+                        ),
+                        disable_scale_in=True,
+                        estimated_instance_warmup=834755006764273154,
+                        predefined_scaling_metric_specification=shared.PredefinedScalingMetricSpecification(
+                            predefined_scaling_metric_type="ASGAverageCPUUtilization",
+                            resource_label="eaque",
+                        ),
+                        scale_in_cooldown=404459533781805632,
+                        scale_out_cooldown=8133641788294793621,
+                        target_value=99.099998,
                     ),
                 ],
             ),
         ],
-        scaling_plan_name="ea",
+        scaling_plan_name="voluptate",
     ),
 )
     
-res = s.sdk.create_scaling_plan(req)
+res = s.create_scaling_plan(req)
 
 if res.create_scaling_plan_response is not None:
     # handle response

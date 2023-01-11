@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -26,15 +26,15 @@ class EndpointTradingLocationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Endpoint:
     r"""Endpoint
     Bidder endpoint that receives bid requests.
     """
     
-    bid_protocol: Optional[EndpointBidProtocolEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bidProtocol') }})
-    maximum_qps: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumQps') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    trading_location: Optional[EndpointTradingLocationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tradingLocation') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    bid_protocol: Optional[EndpointBidProtocolEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bidProtocol') }})
+    maximum_qps: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumQps') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    trading_location: Optional[EndpointTradingLocationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tradingLocation') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

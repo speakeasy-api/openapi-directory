@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,15 +11,15 @@ class AudioAssetEffectEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AudioAsset:
     r"""AudioAsset
     The AudioAsset is used to add sound effects and audio at specific intervals on the timeline. The src must be a publicly accessible URL to an audio resource such  as an mp3 file.
     """
     
-    src: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    effect: Optional[AudioAssetEffectEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
-    trim: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trim') }})
-    volume: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
+    src: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    effect: Optional[AudioAssetEffectEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
+    trim: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trim') }})
+    volume: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
     

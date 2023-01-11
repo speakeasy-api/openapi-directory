@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,12 +21,12 @@ req = operations.GetV1CategoryListOutputFormatRequest(
         output_format="xml",
     ),
     query_params=operations.GetV1CategoryListOutputFormatQueryParams(
-        api_key="necessitatibus",
+        api_key="beatae",
         type="user",
     ),
 )
     
-res = s.sdk.get_v1_category_list_output_format_(req)
+res = s.get_v1_category_list_output_format_(req)
 
 if res.body is not None:
     # handle response
@@ -40,8 +39,8 @@ if res.body is not None:
 ### SDK SDK
 
 * `get_v1_category_list_output_format_` - Return the law categories for a given category type.
-* `get_v1_id_output_format_` - Fetch the details of a specific law given the law's ID.
 * `get_v1_pocs_output_format_` - Get the points of contact for a given jurisdiction.
+* `get_v1_id_output_format_` - Fetch the details of a specific law given the law's ID.
 * `transportation_incentives_laws` - Return a full list of laws and incentives that match your query.
 
 <!-- End SDK Available Operations -->

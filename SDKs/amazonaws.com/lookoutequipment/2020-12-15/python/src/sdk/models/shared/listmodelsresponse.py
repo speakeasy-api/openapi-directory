@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import modelsummary as shared_modelsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListModelsResponse:
-    model_summaries: Optional[List[ModelSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ModelSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    model_summaries: Optional[list[shared_modelsummary.ModelSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ModelSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

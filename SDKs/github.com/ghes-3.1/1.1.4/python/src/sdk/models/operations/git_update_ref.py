@@ -1,37 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import git_ref as shared_git_ref
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GitUpdateRefPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    ref: str = field(metadata={'path_param': { 'field_name': 'ref', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    ref: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ref', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GitUpdateRefRequestBody:
-    sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
-    force: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('force') }})
+    sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    force: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('force') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitUpdateRefRequest:
-    path_params: GitUpdateRefPathParams = field()
-    request: Optional[GitUpdateRefRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: GitUpdateRefPathParams = dataclasses.field()
+    request: Optional[GitUpdateRefRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitUpdateRefResponse:
-    content_type: str = field()
-    status_code: int = field()
-    git_ref: Optional[shared.GitRef] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    git_ref: Optional[shared_git_ref.GitRef] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

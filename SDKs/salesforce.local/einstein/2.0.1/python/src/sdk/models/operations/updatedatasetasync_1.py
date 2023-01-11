@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataset as shared_dataset
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDatasetAsync1RequestBody:
-    data: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
-    model_id: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'modelId' }})
+    data: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
+    model_id: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'modelId' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDatasetAsync1Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDatasetAsync1Request:
-    security: UpdateDatasetAsync1Security = field()
-    request: Optional[UpdateDatasetAsync1RequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UpdateDatasetAsync1Security = dataclasses.field()
+    request: Optional[UpdateDatasetAsync1RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDatasetAsync1Response:
-    content_type: str = field()
-    status_code: int = field()
-    dataset: Optional[shared.Dataset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dataset: Optional[shared_dataset.Dataset] = dataclasses.field(default=None)
     

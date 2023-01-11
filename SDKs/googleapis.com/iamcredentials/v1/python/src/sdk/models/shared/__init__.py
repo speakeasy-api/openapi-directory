@@ -9,3 +9,5 @@ from .signblobrequest import *
 from .signblobresponse import *
 from .signjwtrequest import *
 from .signjwtresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","GenerateAccessTokenRequest","GenerateAccessTokenResponse","GenerateIDTokenRequest","GenerateIDTokenResponse","SchemeOauth2","SchemeOauth2c","SignBlobRequest","SignBlobResponse","SignJwtRequest","SignJwtResponse"]

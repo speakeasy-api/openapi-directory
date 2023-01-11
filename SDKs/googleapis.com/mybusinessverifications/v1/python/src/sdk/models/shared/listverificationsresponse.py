@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import verification as shared_verification
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListVerificationsResponse:
     r"""ListVerificationsResponse
     Response message for Verifications.ListVerifications.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    verifications: Optional[List[Verification]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verifications') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    verifications: Optional[list[shared_verification.Verification]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verifications') }})
     

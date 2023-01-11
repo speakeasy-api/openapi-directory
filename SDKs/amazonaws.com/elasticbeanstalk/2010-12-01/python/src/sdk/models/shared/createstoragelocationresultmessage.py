@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateStorageLocationResultMessage:
     r"""CreateStorageLocationResultMessage
     Results of a <a>CreateStorageLocationResult</a> call.
     """
     
-    s3_bucket: Optional[str] = field(default=None)
+    s3_bucket: Optional[str] = dataclasses.field(default=None)
     

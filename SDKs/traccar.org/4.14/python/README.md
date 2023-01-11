@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,7 +26,7 @@ s.config_security(
     
 req = operations.DeleteAttributesComputedIDRequest(
     path_params=operations.DeleteAttributesComputedIDPathParams(
-        id=8186267910158351880,
+        id=2678697441367098673,
     ),
 )
     

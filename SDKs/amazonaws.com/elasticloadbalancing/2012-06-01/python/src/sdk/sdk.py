@@ -700,14 +700,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AddTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAddTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -737,14 +737,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ApplySecurityGroupsToLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostApplySecurityGroupsToLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -774,14 +774,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AttachLoadBalancerToSubnets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAttachLoadBalancerToSubnetsResponse(status_code=r.status_code, content_type=content_type)
@@ -814,14 +814,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ConfigureHealthCheck"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostConfigureHealthCheckResponse(status_code=r.status_code, content_type=content_type)
@@ -845,14 +845,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateAppCookieStickinessPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateAppCookieStickinessPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -885,14 +885,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateLBCookieStickinessPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateLbCookieStickinessPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -925,14 +925,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -989,14 +989,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateLoadBalancerListeners"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateLoadBalancerListenersResponse(status_code=r.status_code, content_type=content_type)
@@ -1032,14 +1032,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateLoadBalancerPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateLoadBalancerPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1075,14 +1075,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1103,14 +1103,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteLoadBalancerListeners"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteLoadBalancerListenersResponse(status_code=r.status_code, content_type=content_type)
@@ -1134,14 +1134,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteLoadBalancerPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteLoadBalancerPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1168,14 +1168,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeregisterInstancesFromLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeregisterInstancesFromLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1202,14 +1202,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeAccountLimits"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeAccountLimitsResponse(status_code=r.status_code, content_type=content_type)
@@ -1230,14 +1230,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeInstanceHealth"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeInstanceHealthResponse(status_code=r.status_code, content_type=content_type)
@@ -1264,14 +1264,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeLoadBalancerAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeLoadBalancerAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -1298,14 +1298,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeLoadBalancerPolicies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeLoadBalancerPoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -1332,14 +1332,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeLoadBalancerPolicyTypes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeLoadBalancerPolicyTypesResponse(status_code=r.status_code, content_type=content_type)
@@ -1363,14 +1363,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeLoadBalancers"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeLoadBalancersResponse(status_code=r.status_code, content_type=content_type)
@@ -1397,14 +1397,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -1428,14 +1428,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DetachLoadBalancerFromSubnets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDetachLoadBalancerFromSubnetsResponse(status_code=r.status_code, content_type=content_type)
@@ -1462,14 +1462,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DisableAvailabilityZonesForLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDisableAvailabilityZonesForLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1496,14 +1496,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=EnableAvailabilityZonesForLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostEnableAvailabilityZonesForLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1527,14 +1527,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyLoadBalancerAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyLoadBalancerAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -1564,14 +1564,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RegisterInstancesWithLoadBalancer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRegisterInstancesWithLoadBalancerResponse(status_code=r.status_code, content_type=content_type)
@@ -1598,14 +1598,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RemoveTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRemoveTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -1629,14 +1629,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetLoadBalancerListenerSSLCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetLoadBalancerListenerSslCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -1672,14 +1672,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetLoadBalancerPoliciesForBackendServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetLoadBalancerPoliciesForBackendServerResponse(status_code=r.status_code, content_type=content_type)
@@ -1709,14 +1709,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=SetLoadBalancerPoliciesOfListener"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSetLoadBalancerPoliciesOfListenerResponse(status_code=r.status_code, content_type=content_type)

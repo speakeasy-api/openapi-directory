@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import data as shared_data
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchData:
-    data: Optional[Data] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    template: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('template') }})
+    data: Optional[shared_data.Data] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    template: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('template') }})
     

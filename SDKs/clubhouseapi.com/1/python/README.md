@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetCheckForUpdateRequest(
     query_params=operations.GetCheckForUpdateQueryParams(
-        is_testflight=5600163302665965753,
+        is_testflight=7806412736464655250,
     ),
 )
     
-res = s.sdk.get_check_for_update(req)
+res = s.get_check_for_update(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,10 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import channel as shared_channel
+from ..shared import legacy_error as shared_legacy_error
 
 class GetChannelsDirectionEnum(str, Enum):
     ASC = "asc"
@@ -21,25 +22,25 @@ class GetChannelsSortEnum(str, Enum):
     VIDEOS = "videos"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelsQueryParams:
-    direction: Optional[GetChannelsDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[GetChannelsFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetChannelsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetChannelsDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[GetChannelsFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetChannelsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelsRequest:
-    query_params: GetChannelsQueryParams = field()
+    query_params: GetChannelsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channels: Optional[List[shared.Channel]] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channels: Optional[list[shared_channel.Channel]] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

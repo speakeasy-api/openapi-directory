@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
@@ -7,23 +7,23 @@ CONFIRM_PAYMENT3_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmPayment3RequestBody:
-    api_key_l1: str = field(metadata={'form': { 'field_name': 'apiKey_l1' }})
-    api_key_l2: str = field(metadata={'form': { 'field_name': 'apiKey_l2' }})
-    confirm_payment: str = field(metadata={'form': { 'field_name': 'confirmPayment' }})
-    payment_id: int = field(metadata={'form': { 'field_name': 'paymentID' }})
-    transaction_id: str = field(metadata={'form': { 'field_name': 'transaction_id' }})
+    api_key_l1: str = dataclasses.field(metadata={'form': { 'field_name': 'apiKey_l1' }})
+    api_key_l2: str = dataclasses.field(metadata={'form': { 'field_name': 'apiKey_l2' }})
+    confirm_payment: str = dataclasses.field(metadata={'form': { 'field_name': 'confirmPayment' }})
+    payment_id: int = dataclasses.field(metadata={'form': { 'field_name': 'paymentID' }})
+    transaction_id: str = dataclasses.field(metadata={'form': { 'field_name': 'transaction_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmPayment3Request:
-    request: Optional[ConfirmPayment3RequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    server_url: Optional[str] = field(default=None)
+    request: Optional[ConfirmPayment3RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmPayment3Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

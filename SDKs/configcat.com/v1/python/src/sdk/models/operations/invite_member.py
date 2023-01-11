@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import invitemembersrequest as shared_invitemembersrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class InviteMemberPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InviteMemberRequests:
-    invite_members_request: Optional[shared.InviteMembersRequest] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    invite_members_request1: Optional[shared.InviteMembersRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    invite_members_request2: Optional[shared.InviteMembersRequest] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    invite_members_request: Optional[shared_invitemembersrequest.InviteMembersRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    invite_members_request1: Optional[shared_invitemembersrequest.InviteMembersRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    invite_members_request2: Optional[shared_invitemembersrequest.InviteMembersRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InviteMemberRequest:
-    path_params: InviteMemberPathParams = field()
-    request: InviteMemberRequests = field()
+    path_params: InviteMemberPathParams = dataclasses.field()
+    request: InviteMemberRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class InviteMemberResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MgetInfoPathParams:
-    info_array: List[str] = field(metadata={'path_param': { 'field_name': 'infoArray', 'style': 'simple', 'explode': False }})
+    info_array: list[str] = dataclasses.field(metadata={'path_param': { 'field_name': 'infoArray', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MgetInfoRequest:
-    path_params: MgetInfoPathParams = field()
+    path_params: MgetInfoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MgetInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    mget_info_200_application_json_objects: Optional[List[dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    mget_info_200_application_json_objects: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

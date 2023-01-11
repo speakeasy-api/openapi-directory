@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import track as shared_track
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TracksListResponse:
     r"""TracksListResponse
     Response listing all tracks.
     """
     
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    tracks: Optional[List[Track]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tracks') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    tracks: Optional[list[shared_track.Track]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tracks') }})
     

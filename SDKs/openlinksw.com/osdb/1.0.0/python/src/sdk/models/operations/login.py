@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import loginresponse as shared_loginresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class LoginResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    login_response: Optional[shared.LoginResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    login_response: Optional[shared_loginresponse.LoginResponse] = dataclasses.field(default=None)
     

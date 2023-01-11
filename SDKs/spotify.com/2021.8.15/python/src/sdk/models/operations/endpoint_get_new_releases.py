@@ -1,36 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
+from ..shared import newreleasesobject as shared_newreleasesobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetNewReleasesQueryParams:
-    country: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    country: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetNewReleasesHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetNewReleasesSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetNewReleasesRequest:
-    headers: EndpointGetNewReleasesHeaders = field()
-    query_params: EndpointGetNewReleasesQueryParams = field()
-    security: EndpointGetNewReleasesSecurity = field()
+    headers: EndpointGetNewReleasesHeaders = dataclasses.field()
+    query_params: EndpointGetNewReleasesQueryParams = dataclasses.field()
+    security: EndpointGetNewReleasesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetNewReleasesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
-    new_releases_object: Optional[shared.NewReleasesObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
+    new_releases_object: Optional[shared_newreleasesobject.NewReleasesObject] = dataclasses.field(default=None)
     

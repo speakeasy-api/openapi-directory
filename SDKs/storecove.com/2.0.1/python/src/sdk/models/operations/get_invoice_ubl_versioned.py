@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -14,21 +14,21 @@ class GetInvoiceUblVersionedPackagingEnum(str, Enum):
     UBL = "ubl"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblVersionedPathParams:
-    guid: str = field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
-    package_version: GetInvoiceUblVersionedPackageVersionEnum = field(metadata={'path_param': { 'field_name': 'package_version', 'style': 'simple', 'explode': False }})
-    packaging: GetInvoiceUblVersionedPackagingEnum = field(metadata={'path_param': { 'field_name': 'packaging', 'style': 'simple', 'explode': False }})
+    guid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
+    package_version: GetInvoiceUblVersionedPackageVersionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'package_version', 'style': 'simple', 'explode': False }})
+    packaging: GetInvoiceUblVersionedPackagingEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'packaging', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblVersionedRequest:
-    path_params: GetInvoiceUblVersionedPathParams = field()
+    path_params: GetInvoiceUblVersionedPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblVersionedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    purchase_invoice_ubl: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    purchase_invoice_ubl: Optional[Any] = dataclasses.field(default=None)
     

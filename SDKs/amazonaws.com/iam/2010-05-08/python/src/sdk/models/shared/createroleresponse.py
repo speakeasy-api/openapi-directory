@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import role as shared_role
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateRoleResponse:
     r"""CreateRoleResponse
     Contains the response to a successful <a>CreateRole</a> request. 
     """
     
-    role: Role = field()
+    role: shared_role.Role = dataclasses.field()
     

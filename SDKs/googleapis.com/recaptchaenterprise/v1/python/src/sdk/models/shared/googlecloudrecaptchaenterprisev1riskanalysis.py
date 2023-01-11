@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -14,12 +14,12 @@ class GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecaptchaenterpriseV1RiskAnalysis:
     r"""GoogleCloudRecaptchaenterpriseV1RiskAnalysis
     Risk analysis result for an event.
     """
     
-    reasons: Optional[List[GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reasons') }})
-    score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
+    reasons: Optional[list[GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reasons') }})
+    score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
     

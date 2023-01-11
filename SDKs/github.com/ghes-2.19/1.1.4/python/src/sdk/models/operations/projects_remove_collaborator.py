@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsRemoveCollaboratorPathParams:
-    project_id: int = field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    project_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProjectsRemoveCollaborator415ApplicationJSON:
-    documentation_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsRemoveCollaboratorRequest:
-    path_params: ProjectsRemoveCollaboratorPathParams = field()
+    path_params: ProjectsRemoveCollaboratorPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsRemoveCollaboratorResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    projects_remove_collaborator_415_application_json_object: Optional[ProjectsRemoveCollaborator415ApplicationJSON] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    projects_remove_collaborator_415_application_json_object: Optional[ProjectsRemoveCollaborator415ApplicationJSON] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

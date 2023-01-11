@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TestRenderTemplateResponse:
-    rendered_template: Optional[str] = field(default=None)
+    rendered_template: Optional[str] = dataclasses.field(default=None)
     

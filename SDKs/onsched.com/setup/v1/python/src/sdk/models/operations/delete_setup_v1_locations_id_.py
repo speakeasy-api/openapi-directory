@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import locationviewmodel as shared_locationviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDRequest:
-    path_params: DeleteSetupV1LocationsIDPathParams = field()
+    path_params: DeleteSetupV1LocationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    location_view_model: Optional[shared.LocationViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    location_view_model: Optional[shared_locationviewmodel.LocationViewModel] = dataclasses.field(default=None)
     

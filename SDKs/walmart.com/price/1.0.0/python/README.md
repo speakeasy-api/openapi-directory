@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,19 +26,19 @@ s.config_security(
     
 req = operations.OptCapProgramInPriceRequest(
     headers=operations.OptCapProgramInPriceHeaders(
-        authorization="sunt",
-        wm_consumer_channel_type="vel",
-        wm_qos_correlation_id="molestiae",
-        wm_sec_access_token="aut",
-        wm_svc_name="nesciunt",
+        authorization="et",
+        wm_consumer_channel_type="ab",
+        wm_qos_correlation_id="qui",
+        wm_sec_access_token="inventore",
+        wm_svc_name="et",
     ),
     request=operations.OptCapProgramInPriceRequestBody(
-        subsidy_enrolled=True,
-        subsidy_preference=True,
+        subsidy_enrolled=False,
+        subsidy_preference=False,
     ),
 )
     
-res = s.sdk.opt_cap_program_in_price(req)
+res = s.prices.opt_cap_program_in_price(req)
 
 if res.opt_cap_program_in_price_200_application_json_object is not None:
     # handle response
@@ -49,7 +48,7 @@ if res.opt_cap_program_in_price_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Prices
 
 * `opt_cap_program_in_price` - Set up CAP SKU All
 * `price_bulk_uploads` - Update bulk prices (Multiple)

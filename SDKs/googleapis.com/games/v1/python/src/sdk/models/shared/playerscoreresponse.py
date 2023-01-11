@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import playerscore as shared_playerscore
 
 class PlayerScoreResponseBeatenScoreTimeSpansEnum(str, Enum):
     SCORE_TIME_SPAN_UNSPECIFIED = "SCORE_TIME_SPAN_UNSPECIFIED"
@@ -13,16 +13,16 @@ class PlayerScoreResponseBeatenScoreTimeSpansEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PlayerScoreResponse:
     r"""PlayerScoreResponse
     A list of leaderboard entry resources.
     """
     
-    beaten_score_time_spans: Optional[List[PlayerScoreResponseBeatenScoreTimeSpansEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beatenScoreTimeSpans') }})
-    formatted_score: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('formattedScore') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    leaderboard_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leaderboardId') }})
-    score_tag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scoreTag') }})
-    unbeaten_scores: Optional[List[PlayerScore]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unbeatenScores') }})
+    beaten_score_time_spans: Optional[list[PlayerScoreResponseBeatenScoreTimeSpansEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beatenScoreTimeSpans') }})
+    formatted_score: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('formattedScore') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    leaderboard_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leaderboardId') }})
+    score_tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scoreTag') }})
+    unbeaten_scores: Optional[list[shared_playerscore.PlayerScore]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unbeatenScores') }})
     

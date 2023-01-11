@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import thirdpartyjob as shared_thirdpartyjob
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PollForThirdPartyJobsOutput:
     r"""PollForThirdPartyJobsOutput
     Represents the output of a <code>PollForThirdPartyJobs</code> action.
     """
     
-    jobs: Optional[List[ThirdPartyJob]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobs') }})
+    jobs: Optional[list[shared_thirdpartyjob.ThirdPartyJob]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobs') }})
     

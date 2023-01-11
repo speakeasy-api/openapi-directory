@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import payout as shared_payout
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutPathParams:
-    payout_id: str = field(metadata={'path_param': { 'field_name': 'payout_Id', 'style': 'simple', 'explode': False }})
+    payout_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payout_Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutRequest:
-    path_params: GetPayoutPathParams = field()
-    security: GetPayoutSecurity = field()
+    path_params: GetPayoutPathParams = dataclasses.field()
+    security: GetPayoutSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payout: Optional[shared.Payout] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payout: Optional[shared_payout.Payout] = dataclasses.field(default=None)
     

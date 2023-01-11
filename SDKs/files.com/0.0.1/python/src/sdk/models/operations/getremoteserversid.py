@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import remoteserverentity as shared_remoteserverentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRemoteServersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRemoteServersIDRequest:
-    path_params: GetRemoteServersIDPathParams = field()
+    path_params: GetRemoteServersIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRemoteServersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    remote_server_entity: Optional[shared.RemoteServerEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    remote_server_entity: Optional[shared_remoteserverentity.RemoteServerEntity] = dataclasses.field(default=None)
     

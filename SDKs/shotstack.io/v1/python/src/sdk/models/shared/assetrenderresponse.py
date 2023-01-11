@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import assetresponsedata as shared_assetresponsedata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AssetRenderResponse:
     r"""AssetRenderResponse
     The response returned by the Serve API [get asset by render id](#get-asset-by-render-id) request. The response  is an array of asset resources, including video, image, audio, thumbnail and poster image. The response follows  the [json:api](https://jsonapi.org/) specification.
     """
     
-    data: Optional[List[AssetResponseData]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[list[shared_assetresponsedata.AssetResponseData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

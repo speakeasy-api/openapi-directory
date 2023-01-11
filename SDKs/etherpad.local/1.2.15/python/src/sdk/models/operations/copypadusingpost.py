@@ -1,59 +1,59 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPostQueryParams:
-    destination_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'destinationID', 'style': 'form', 'explode': True }})
-    force: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'force', 'style': 'form', 'explode': True }})
-    source_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sourceID', 'style': 'form', 'explode': True }})
+    destination_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'destinationID', 'style': 'form', 'explode': True }})
+    force: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'force', 'style': 'form', 'explode': True }})
+    source_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceID', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPost200ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPost400ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPost401ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPost500ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPostRequest:
-    query_params: CopyPadUsingPostQueryParams = field()
+    query_params: CopyPadUsingPostQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CopyPadUsingPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    copy_pad_using_post_200_application_json_object: Optional[CopyPadUsingPost200ApplicationJSON] = field(default=None)
-    copy_pad_using_post_400_application_json_object: Optional[CopyPadUsingPost400ApplicationJSON] = field(default=None)
-    copy_pad_using_post_401_application_json_object: Optional[CopyPadUsingPost401ApplicationJSON] = field(default=None)
-    copy_pad_using_post_500_application_json_object: Optional[CopyPadUsingPost500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    copy_pad_using_post_200_application_json_object: Optional[CopyPadUsingPost200ApplicationJSON] = dataclasses.field(default=None)
+    copy_pad_using_post_400_application_json_object: Optional[CopyPadUsingPost400ApplicationJSON] = dataclasses.field(default=None)
+    copy_pad_using_post_401_application_json_object: Optional[CopyPadUsingPost401ApplicationJSON] = dataclasses.field(default=None)
+    copy_pad_using_post_500_application_json_object: Optional[CopyPadUsingPost500ApplicationJSON] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,16 +23,16 @@ req = operations.PostEventsV3SendRequest(
         ),
     ),
     request=shared.BehavioralEventHTTPCompletionRequest(
-        email="eius",
-        event_name="sunt",
-        object_id="architecto",
-        occurred_at="1999-06-08T10:12:56Z",
+        email="impedit",
+        event_name="fugiat",
+        object_id="qui",
+        occurred_at="1972-12-01T08:46:03Z",
         properties={
-            "aut": "provident",
-            "a": "unde",
-            "fugit": "voluptas",
+            "est": "ipsam",
+            "veniam": "eos",
+            "reprehenderit": "deleniti",
         },
-        utk="esse",
+        utk="quia",
     ),
 )
     

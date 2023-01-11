@@ -1,19 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import webhookdeliverylogresource as shared_webhookdeliverylogresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWebhookDeliveryLogsResponseLinks:
-    next: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
-    prev: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
+    next: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
+    prev: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWebhookDeliveryLogsResponse:
     r"""ListWebhookDeliveryLogsResponse
     Successful response to get all delivery logs for a webhook. This returns
@@ -22,6 +21,6 @@ class ListWebhookDeliveryLogsResponse:
     
     """
     
-    data: List[WebhookDeliveryLogResource] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    links: ListWebhookDeliveryLogsResponseLinks = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    data: list[shared_webhookdeliverylogresource.WebhookDeliveryLogResource] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    links: ListWebhookDeliveryLogsResponseLinks = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     

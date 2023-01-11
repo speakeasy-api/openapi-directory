@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -23,10 +23,10 @@ class PagesHTTPSCertificateStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PagesHTTPSCertificate:
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    domains: List[Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
-    state: PagesHTTPSCertificateStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    expires_at: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires_at'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    domains: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
+    state: PagesHTTPSCertificateStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    expires_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires_at'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

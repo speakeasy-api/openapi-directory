@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePipelineVariableForWorkspacePathParams:
-    variable_uuid: str = field(metadata={'path_param': { 'field_name': 'variable_uuid', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    variable_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'variable_uuid', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePipelineVariableForWorkspaceRequest:
-    path_params: DeletePipelineVariableForWorkspacePathParams = field()
+    path_params: DeletePipelineVariableForWorkspacePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePipelineVariableForWorkspaceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

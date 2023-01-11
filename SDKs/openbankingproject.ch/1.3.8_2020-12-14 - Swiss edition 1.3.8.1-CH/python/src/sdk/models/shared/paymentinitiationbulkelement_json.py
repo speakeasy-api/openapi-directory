@@ -1,13 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import chargebearer_enum as shared_chargebearer_enum
+from ..shared import accountreference16_ch as shared_accountreference16_ch
+from ..shared import address as shared_address
+from ..shared import creditoragent7_ch as shared_creditoragent7_ch
+from ..shared import amount as shared_amount
+from ..shared import exchangerateinformation1 as shared_exchangerateinformation1
+from ..shared import purposecode_enum as shared_purposecode_enum
+from ..shared import remittanceinformationstructured as shared_remittanceinformationstructured
+from ..shared import externalservicelevel1code_enum as shared_externalservicelevel1code_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaymentInitiationBulkElementJSON:
     r"""PaymentInitiationBulkElementJSON
     Generic body for a bulk payment initation entry.
@@ -94,26 +102,26 @@ class PaymentInitiationBulkElementJSON:
     
     """
     
-    creditor_account: AccountReference16Ch = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAccount') }})
-    creditor_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorName') }})
-    debtor_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('debtorName') }})
-    end_to_end_identification: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endToEndIdentification') }})
-    charge_bearer: Optional[ChargeBearerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chargeBearer') }})
-    creditor_address: Optional[Address] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAddress') }})
-    creditor_agent: Optional[CreditorAgent7Ch] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAgent') }})
-    creditor_agent_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAgentName') }})
-    creditor_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorId') }})
-    creditor_name_and_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorNameAndAddress') }})
-    debtor_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debtorId') }})
-    equivalent_amount: Optional[Amount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('equivalentAmount') }})
-    exchange_rate_information: Optional[ExchangeRateInformation1] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeRateInformation') }})
-    instructed_amount: Optional[Amount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instructedAmount') }})
-    intermediary_agent: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('intermediaryAgent') }})
-    purpose_code: Optional[PurposeCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purposeCode') }})
-    remittance_information_structured: Optional[RemittanceInformationStructured] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remittanceInformationStructured') }})
-    remittance_information_unstructured: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remittanceInformationUnstructured') }})
-    service_level: Optional[ExternalServiceLevel1CodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceLevel') }})
-    transaction_currency: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionCurrency') }})
-    ultimate_creditor: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ultimateCreditor') }})
-    ultimate_debtor: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ultimateDebtor') }})
+    creditor_account: shared_accountreference16_ch.AccountReference16Ch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAccount') }})
+    creditor_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorName') }})
+    debtor_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('debtorName') }})
+    end_to_end_identification: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endToEndIdentification') }})
+    charge_bearer: Optional[shared_chargebearer_enum.ChargeBearerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chargeBearer') }})
+    creditor_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAddress') }})
+    creditor_agent: Optional[shared_creditoragent7_ch.CreditorAgent7Ch] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAgent') }})
+    creditor_agent_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorAgentName') }})
+    creditor_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorId') }})
+    creditor_name_and_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditorNameAndAddress') }})
+    debtor_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debtorId') }})
+    equivalent_amount: Optional[shared_amount.Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('equivalentAmount') }})
+    exchange_rate_information: Optional[shared_exchangerateinformation1.ExchangeRateInformation1] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeRateInformation') }})
+    instructed_amount: Optional[shared_amount.Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instructedAmount') }})
+    intermediary_agent: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('intermediaryAgent') }})
+    purpose_code: Optional[shared_purposecode_enum.PurposeCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purposeCode') }})
+    remittance_information_structured: Optional[shared_remittanceinformationstructured.RemittanceInformationStructured] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remittanceInformationStructured') }})
+    remittance_information_unstructured: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remittanceInformationUnstructured') }})
+    service_level: Optional[shared_externalservicelevel1code_enum.ExternalServiceLevel1CodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceLevel') }})
+    transaction_currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionCurrency') }})
+    ultimate_creditor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ultimateCreditor') }})
+    ultimate_debtor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ultimateDebtor') }})
     

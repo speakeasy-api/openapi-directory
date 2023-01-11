@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -15,19 +15,19 @@ class APIRequestActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIRequestActor:
-    account: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    jti: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jti') }})
-    request_ip: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestIp') }})
-    user_agent: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userAgent') }})
+    account: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    jti: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jti') }})
+    request_ip: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestIp') }})
+    user_agent: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userAgent') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIRequestResourceItem:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class APIRequestResourceTypeEnum(str, Enum):
     ITEM = "ITEM"
@@ -35,18 +35,18 @@ class APIRequestResourceTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIRequestResourceVault:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIRequestResource:
-    item: Optional[APIRequestResourceItem] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
-    item_version: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemVersion') }})
-    type: Optional[APIRequestResourceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    vault: Optional[APIRequestResourceVault] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vault') }})
+    item: Optional[APIRequestResourceItem] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
+    item_version: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemVersion') }})
+    type: Optional[APIRequestResourceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    vault: Optional[APIRequestResourceVault] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vault') }})
     
 class APIRequestResultEnum(str, Enum):
     SUCCESS = "SUCCESS"
@@ -54,16 +54,16 @@ class APIRequestResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIRequest:
     r"""APIRequest
     Represents a request that was made to the API. Including what Token was used and what resource was accessed.
     """
     
-    action: Optional[APIRequestActionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    actor: Optional[APIRequestActor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actor') }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    resource: Optional[APIRequestResource] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
-    result: Optional[APIRequestResultEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
-    timestamp: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    action: Optional[APIRequestActionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    actor: Optional[APIRequestActor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actor') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    resource: Optional[APIRequestResource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
+    result: Optional[APIRequestResultEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    timestamp: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

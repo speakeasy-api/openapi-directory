@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteScimGroupFromEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    scim_group_id: str = field(metadata={'path_param': { 'field_name': 'scim_group_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    scim_group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scim_group_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteScimGroupFromEnterpriseRequest:
-    path_params: EnterpriseAdminDeleteScimGroupFromEnterprisePathParams = field()
+    path_params: EnterpriseAdminDeleteScimGroupFromEnterprisePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteScimGroupFromEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

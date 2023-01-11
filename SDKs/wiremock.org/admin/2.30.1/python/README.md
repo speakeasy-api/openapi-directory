@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -45,8 +44,8 @@ if res.get_admin_requests_unmatched_near_misses_200_application_json_object is n
 * `delete_admin_requests` - Delete all requests in journal
 * `delete_admin_requests_request_id_` - Delete request by ID
 * `get_admin_requests` - Get all requests in journal
-* `get_admin_requests_request_id_` - Get request by ID
 * `get_admin_requests_unmatched` - Find unmatched requests
+* `get_admin_requests_request_id_` - Get request by ID
 * `post_admin_requests_count` - Count requests by criteria
 * `post_admin_requests_find` - Find requests by criteria
 * `post_admin_requests_remove` - Remove requests by criteria

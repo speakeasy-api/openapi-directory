@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,35 +18,34 @@ s = sdk.SDK()
     
 req = operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest(
     path_params=operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams(
-        parent="repellat",
+        parent="at",
     ),
     query_params=operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="hic",
-        alt="json",
-        callback="molestiae",
-        fields="ratione",
-        key="voluptate",
-        oauth_token="accusamus",
-        pretty_print=True,
-        quota_user="exercitationem",
-        upload_type="sed",
-        upload_protocol="velit",
+        dollar_xgafv="2",
+        access_token="et",
+        alt="media",
+        callback="sint",
+        fields="vel",
+        key="culpa",
+        oauth_token="fuga",
+        pretty_print=False,
+        quota_user="cumque",
+        upload_type="debitis",
+        upload_protocol="optio",
     ),
     request=shared.GoogleSearchIdeahubV1betaIdeaActivity(
         ideas=[
-            "modi",
-            "a",
-            "ea",
+            "placeat",
+            "nihil",
         ],
-        name="nihil",
+        name="quia",
         topics=[
-            "quis",
-            "quos",
-            "repellendus",
+            "voluptas",
+            "impedit",
+            "earum",
         ],
-        type="TYPE_UNSPECIFIED",
-        uri="reiciendis",
+        type="POST_DRAFTED",
+        uri="quia",
     ),
 )
     

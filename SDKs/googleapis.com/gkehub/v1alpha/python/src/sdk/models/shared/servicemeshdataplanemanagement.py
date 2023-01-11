@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import servicemeshstatusdetails as shared_servicemeshstatusdetails
 
 class ServiceMeshDataPlaneManagementStateEnum(str, Enum):
     LIFECYCLE_STATE_UNSPECIFIED = "LIFECYCLE_STATE_UNSPECIFIED"
@@ -17,12 +17,12 @@ class ServiceMeshDataPlaneManagementStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ServiceMeshDataPlaneManagement:
     r"""ServiceMeshDataPlaneManagement
     Status of data plane management. Only reported per-member.
     """
     
-    details: Optional[List[ServiceMeshStatusDetails]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
-    state: Optional[ServiceMeshDataPlaneManagementStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    details: Optional[list[shared_servicemeshstatusdetails.ServiceMeshStatusDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
+    state: Optional[ServiceMeshDataPlaneManagementStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     

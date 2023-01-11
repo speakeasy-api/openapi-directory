@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,12 +8,12 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateRepoPermissionsInOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 class TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum(str, Enum):
     PULL = "pull"
@@ -24,19 +24,19 @@ class TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateRepoPermissionsInOrgRequestBody:
-    permission: Optional[TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permission') }})
+    permission: Optional[TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permission') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateRepoPermissionsInOrgRequest:
-    path_params: TeamsAddOrUpdateRepoPermissionsInOrgPathParams = field()
-    request: Optional[TeamsAddOrUpdateRepoPermissionsInOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsAddOrUpdateRepoPermissionsInOrgPathParams = dataclasses.field()
+    request: Optional[TeamsAddOrUpdateRepoPermissionsInOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateRepoPermissionsInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import activationresponse as shared_activationresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDActivationsPathParams:
-    content_id: str = field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
+    content_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDActivationsRequest:
-    path_params: GetCoursesContentIDActivationsPathParams = field()
+    path_params: GetCoursesContentIDActivationsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDActivationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    activation_response: Optional[shared.ActivationResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    activation_response: Optional[shared_activationresponse.ActivationResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,35 +25,35 @@ s.config_security(
     
 req = operations.AddTagsToCertificateRequest(
     headers=operations.AddTagsToCertificateHeaders(
-        x_amz_algorithm="ratione",
-        x_amz_content_sha256="quisquam",
-        x_amz_credential="explicabo",
-        x_amz_date="ea",
-        x_amz_security_token="maxime",
-        x_amz_signature="eum",
-        x_amz_signed_headers="perferendis",
+        x_amz_algorithm="mollitia",
+        x_amz_content_sha256="inventore",
+        x_amz_credential="delectus",
+        x_amz_date="ipsa",
+        x_amz_security_token="animi",
+        x_amz_signature="animi",
+        x_amz_signed_headers="ut",
         x_amz_target="CertificateManager.AddTagsToCertificate",
     ),
     request=shared.AddTagsToCertificateRequest(
-        certificate_arn="rerum",
+        certificate_arn="fuga",
         tags=[
             shared.Tag(
-                key="quis",
-                value="cumque",
+                key="sed",
+                value="et",
             ),
             shared.Tag(
-                key="minima",
-                value="necessitatibus",
+                key="consequuntur",
+                value="non",
             ),
             shared.Tag(
-                key="est",
-                value="quis",
+                key="cupiditate",
+                value="provident",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags_to_certificate(req)
+res = s.add_tags_to_certificate(req)
 
 if res.status_code == 200:
     # handle response

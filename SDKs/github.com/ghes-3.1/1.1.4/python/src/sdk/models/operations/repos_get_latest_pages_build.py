@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import page_build as shared_page_build
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetLatestPagesBuildPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetLatestPagesBuildRequest:
-    path_params: ReposGetLatestPagesBuildPathParams = field()
+    path_params: ReposGetLatestPagesBuildPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetLatestPagesBuildResponse:
-    content_type: str = field()
-    status_code: int = field()
-    page_build: Optional[shared.PageBuild] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    page_build: Optional[shared_page_build.PageBuild] = dataclasses.field(default=None)
     

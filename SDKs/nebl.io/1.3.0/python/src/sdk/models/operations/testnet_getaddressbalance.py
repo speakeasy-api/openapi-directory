@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressBalancePathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressBalanceRequest:
-    path_params: TestnetGetAddressBalancePathParams = field()
+    path_params: TestnetGetAddressBalancePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressBalanceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_address_balance_response: Optional[float] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_address_balance_response: Optional[float] = dataclasses.field(default=None)
     

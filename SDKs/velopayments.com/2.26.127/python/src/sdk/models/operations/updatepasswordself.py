@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import selfupdatepasswordrequest as shared_selfupdatepasswordrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePasswordSelfRequest:
-    request: shared.SelfUpdatePasswordRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_selfupdatepasswordrequest.SelfUpdatePasswordRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePasswordSelfResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

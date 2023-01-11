@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,26 @@ s.config_security(
     
 req = operations.AddApplicationCloudWatchLoggingOptionRequest(
     headers=operations.AddApplicationCloudWatchLoggingOptionHeaders(
-        x_amz_algorithm="asperiores",
-        x_amz_content_sha256="amet",
-        x_amz_credential="cupiditate",
-        x_amz_date="nisi",
-        x_amz_security_token="nihil",
-        x_amz_signature="dolorem",
-        x_amz_signed_headers="impedit",
+        x_amz_algorithm="provident",
+        x_amz_content_sha256="voluptatem",
+        x_amz_credential="veniam",
+        x_amz_date="aspernatur",
+        x_amz_security_token="sed",
+        x_amz_signature="voluptatem",
+        x_amz_signed_headers="numquam",
         x_amz_target="KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption",
     ),
     request=shared.AddApplicationCloudWatchLoggingOptionRequest(
-        application_name="iste",
+        application_name="et",
         cloud_watch_logging_option=shared.CloudWatchLoggingOption(
-            log_stream_arn="soluta",
+            log_stream_arn="nulla",
         ),
-        conditional_token="ut",
-        current_application_version_id=7456969667962586618,
+        conditional_token="nulla",
+        current_application_version_id=8361513412454442989,
     ),
 )
     
-res = s.sdk.add_application_cloud_watch_logging_option(req)
+res = s.add_application_cloud_watch_logging_option(req)
 
 if res.add_application_cloud_watch_logging_option_response is not None:
     # handle response

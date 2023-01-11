@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import api_key_info as shared_api_key_info
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIInfoItemQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIInfoItemRequest:
-    query_params: GetAPIInfoItemQueryParams = field()
+    query_params: GetAPIInfoItemQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIInfoItemResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key_info: Optional[shared.APIKeyInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key_info: Optional[shared_api_key_info.APIKeyInfo] = dataclasses.field(default=None)
     

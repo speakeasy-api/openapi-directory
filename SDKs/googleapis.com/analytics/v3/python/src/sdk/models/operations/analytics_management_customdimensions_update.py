@@ -1,48 +1,52 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import customdimension as shared_customdimension
+from ..shared import customdimension as shared_customdimension
 
 
-@dataclass
+@dataclasses.dataclass
 class AnalyticsManagementCustomDimensionsUpdatePathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
-    custom_dimension_id: str = field(metadata={'path_param': { 'field_name': 'customDimensionId', 'style': 'simple', 'explode': False }})
-    web_property_id: str = field(metadata={'path_param': { 'field_name': 'webPropertyId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    custom_dimension_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'customDimensionId', 'style': 'simple', 'explode': False }})
+    web_property_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'webPropertyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AnalyticsManagementCustomDimensionsUpdateQueryParams:
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    ignore_custom_data_source_links: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'ignoreCustomDataSourceLinks', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    user_ip: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    ignore_custom_data_source_links: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ignoreCustomDataSourceLinks', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    user_ip: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AnalyticsManagementCustomDimensionsUpdateSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AnalyticsManagementCustomDimensionsUpdateRequest:
-    path_params: AnalyticsManagementCustomDimensionsUpdatePathParams = field()
-    query_params: AnalyticsManagementCustomDimensionsUpdateQueryParams = field()
-    security: AnalyticsManagementCustomDimensionsUpdateSecurity = field()
-    request: Optional[shared.CustomDimensionInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AnalyticsManagementCustomDimensionsUpdatePathParams = dataclasses.field()
+    query_params: AnalyticsManagementCustomDimensionsUpdateQueryParams = dataclasses.field()
+    security: AnalyticsManagementCustomDimensionsUpdateSecurity = dataclasses.field()
+    request: Optional[shared_customdimension.CustomDimensionInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AnalyticsManagementCustomDimensionsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    custom_dimension: Optional[shared.CustomDimension] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    custom_dimension: Optional[shared_customdimension.CustomDimension] = dataclasses.field(default=None)
     

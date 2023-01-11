@@ -1,27 +1,29 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeletePathParams:
-    team_id: str = field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteRequest:
-    path_params: TeamsDeletePathParams = field()
-    security: TeamsDeleteSecurity = field()
+    path_params: TeamsDeletePathParams = dataclasses.field()
+    security: TeamsDeleteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

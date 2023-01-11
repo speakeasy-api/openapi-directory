@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -28,13 +28,13 @@ class MessageTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Message:
     r"""Message
     Message details. Describe the attribute that a message should have. Without specified message attributes, no message will be sent by default.
     """
     
-    new_job_state: Optional[MessageNewJobStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newJobState') }})
-    new_task_state: Optional[MessageNewTaskStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newTaskState') }})
-    type: Optional[MessageTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    new_job_state: Optional[MessageNewJobStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newJobState') }})
+    new_task_state: Optional[MessageNewTaskStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newTaskState') }})
+    type: Optional[MessageTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

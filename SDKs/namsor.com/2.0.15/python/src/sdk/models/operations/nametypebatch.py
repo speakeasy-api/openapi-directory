@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchnamein as shared_batchnamein
+from ..shared import batchpropernouncategorizedout as shared_batchpropernouncategorizedout
 
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeBatchRequest:
-    security: NameTypeBatchSecurity = field()
-    request: Optional[shared.BatchNameIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: NameTypeBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchnamein.BatchNameIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_proper_noun_categorized_out: Optional[shared.BatchProperNounCategorizedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_proper_noun_categorized_out: Optional[shared_batchpropernouncategorizedout.BatchProperNounCategorizedOut] = dataclasses.field(default=None)
     

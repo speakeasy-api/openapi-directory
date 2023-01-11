@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basicmodelstatsresp as shared_basicmodelstatsresp
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAvgSalePriceSalePriceGetQueryParams:
-    brand_name: str = field(metadata={'query_param': { 'field_name': 'brandName', 'style': 'form', 'explode': True }})
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
-    region_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
+    brand_name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'brandName', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    region_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAvgSalePriceSalePriceGetRequest:
-    query_params: GetAvgSalePriceSalePriceGetQueryParams = field()
+    query_params: GetAvgSalePriceSalePriceGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAvgSalePriceSalePriceGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_model_stats_resp: Optional[shared.BasicModelStatsResp] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_model_stats_resp: Optional[shared_basicmodelstatsresp.BasicModelStatsResp] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

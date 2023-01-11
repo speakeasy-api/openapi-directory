@@ -1,40 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotValuePathParams:
-    investor_id: str = field(metadata={'path_param': { 'field_name': 'investor_id', 'style': 'simple', 'explode': False }})
+    investor_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'investor_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotValueHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotValueSecurity:
-    api_secret_key: shared.SchemeAPISecretKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_secret_key: shared_security.SchemeAPISecretKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotValueRequest:
-    headers: GetTotalPotValueHeaders = field()
-    path_params: GetTotalPotValuePathParams = field()
-    security: GetTotalPotValueSecurity = field()
+    headers: GetTotalPotValueHeaders = dataclasses.field()
+    path_params: GetTotalPotValuePathParams = dataclasses.field()
+    security: GetTotalPotValueSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotValueResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_total_pot_value_200_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_400_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_401_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_403_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_404_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_429_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_value_500_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_total_pot_value_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_403_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_404_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_value_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

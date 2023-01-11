@@ -1,16 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import log as shared_log
+from ..shared import links as shared_links
+from ..shared import meta as shared_meta
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLogsResponse:
-    data: List[Log] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    status_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
-    links: Optional[Links] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
-    meta: Optional[Meta] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    data: list[shared_log.Log] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status_code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
+    links: Optional[shared_links.Links] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    meta: Optional[shared_meta.Meta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     

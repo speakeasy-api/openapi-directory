@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import subscriptionresponse as shared_subscriptionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDPathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
-    subscription_id: int = field(metadata={'path_param': { 'field_name': 'subscriptionId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    subscription_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'subscriptionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDRequest:
-    path_params: GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDPathParams = field()
-    security: GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDSecurity = field()
+    path_params: GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDPathParams = dataclasses.field()
+    security: GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    subscription_response: Optional[shared.SubscriptionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    subscription_response: Optional[shared_subscriptionresponse.SubscriptionResponse] = dataclasses.field(default=None)
     

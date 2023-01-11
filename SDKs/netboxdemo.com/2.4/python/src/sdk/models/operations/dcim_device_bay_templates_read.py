@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import devicebaytemplate as shared_devicebaytemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesReadRequest:
-    path_params: DcimDeviceBayTemplatesReadPathParams = field()
+    path_params: DcimDeviceBayTemplatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_bay_template: Optional[shared.DeviceBayTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_bay_template: Optional[shared_devicebaytemplate.DeviceBayTemplate] = dataclasses.field(default=None)
     

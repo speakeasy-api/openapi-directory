@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,43 +25,81 @@ s.config_security(
     
 req = operations.CreateLifecyclePolicyRequest(
     headers=operations.CreateLifecyclePolicyHeaders(
-        x_amz_algorithm="dolores",
-        x_amz_content_sha256="magni",
-        x_amz_credential="inventore",
-        x_amz_date="qui",
-        x_amz_security_token="ab",
-        x_amz_signature="accusantium",
-        x_amz_signed_headers="aliquam",
+        x_amz_algorithm="doloremque",
+        x_amz_content_sha256="nulla",
+        x_amz_credential="et",
+        x_amz_date="ut",
+        x_amz_security_token="praesentium",
+        x_amz_signature="labore",
+        x_amz_signed_headers="accusamus",
     ),
     request=operations.CreateLifecyclePolicyRequestBody(
-        description="rem",
-        execution_role_arn="et",
+        description="aut",
+        execution_role_arn="alias",
         policy_details=operations.CreateLifecyclePolicyRequestBodyPolicyDetails(
             actions=[
                 shared.Action(
                     cross_region_copy=[
                         shared.CrossRegionCopyAction(
                             encryption_configuration=shared.EncryptionConfiguration(
-                                cmk_arn="odit",
+                                cmk_arn="voluptatem",
                                 encrypted=False,
                             ),
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=3380463478881091391,
-                                interval_unit="YEARS",
+                                interval=5320768077586043095,
+                                interval_unit="DAYS",
                             ),
-                            target="at",
+                            target="nostrum",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="adipisci",
+                                encrypted=True,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=6537984888763423894,
+                                interval_unit="WEEKS",
+                            ),
+                            target="delectus",
                         ),
                     ],
-                    name="consequuntur",
+                    name="tenetur",
+                ),
+                shared.Action(
+                    cross_region_copy=[
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="quia",
+                                encrypted=True,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=8697756961697963853,
+                                interval_unit="YEARS",
+                            ),
+                            target="nostrum",
+                        ),
+                        shared.CrossRegionCopyAction(
+                            encryption_configuration=shared.EncryptionConfiguration(
+                                cmk_arn="autem",
+                                encrypted=True,
+                            ),
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=4506911669298280718,
+                                interval_unit="YEARS",
+                            ),
+                            target="molestias",
+                        ),
+                    ],
+                    name="nihil",
                 ),
             ],
             event_source=shared.EventSource(
                 parameters=shared.EventParameters(
-                    description_regex="libero",
+                    description_regex="consequatur",
                     event_type="shareSnapshot",
                     snapshot_owner=[
-                        "sunt",
-                        "animi",
+                        "quae",
+                        "natus",
                     ],
                 ),
                 type="MANAGED_CWE",
@@ -74,134 +111,139 @@ req = operations.CreateLifecyclePolicyRequest(
             policy_type="EBS_SNAPSHOT_MANAGEMENT",
             resource_locations=[
                 "OUTPOST",
-                "OUTPOST",
-                "OUTPOST",
+                "CLOUD",
             ],
             resource_types=[
+                "INSTANCE",
+                "INSTANCE",
                 "INSTANCE",
             ],
             schedules=[
                 shared.Schedule(
-                    copy_tags=True,
+                    copy_tags=False,
                     create_rule=shared.CreateRule(
-                        cron_expression="nemo",
-                        interval=339904168827147199,
+                        cron_expression="sapiente",
+                        interval=4642672273651120892,
                         interval_unit="HOURS",
-                        location="OUTPOST_LOCAL",
+                        location="CLOUD",
                         times=[
-                            "soluta",
-                            "enim",
+                            "quo",
                         ],
                     ),
                     cross_region_copy_rules=[
                         shared.CrossRegionCopyRule(
-                            cmk_arn="quia",
+                            cmk_arn="ratione",
                             copy_tags=False,
                             deprecate_rule=shared.CrossRegionCopyDeprecateRule(
-                                interval=4899267286538832296,
-                                interval_unit="WEEKS",
+                                interval=6134675409536001115,
+                                interval_unit="DAYS",
                             ),
-                            encrypted=False,
+                            encrypted=True,
                             retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=2134753628428172799,
-                                interval_unit="WEEKS",
+                                interval=1000668831263546934,
+                                interval_unit="MONTHS",
                             ),
-                            target="adipisci",
+                            target="aut",
+                            target_region="minima",
+                        ),
+                        shared.CrossRegionCopyRule(
+                            cmk_arn="at",
+                            copy_tags=True,
+                            deprecate_rule=shared.CrossRegionCopyDeprecateRule(
+                                interval=127225875950264235,
+                                interval_unit="YEARS",
+                            ),
+                            encrypted=True,
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=1325682419092169393,
+                                interval_unit="MONTHS",
+                            ),
+                            target="accusantium",
                             target_region="qui",
                         ),
                         shared.CrossRegionCopyRule(
-                            cmk_arn="iste",
+                            cmk_arn="ea",
                             copy_tags=True,
                             deprecate_rule=shared.CrossRegionCopyDeprecateRule(
-                                interval=3655015297049830863,
-                                interval_unit="WEEKS",
-                            ),
-                            encrypted=False,
-                            retain_rule=shared.CrossRegionCopyRetainRule(
-                                interval=2492105853915103689,
+                                interval=8037355963908866572,
                                 interval_unit="MONTHS",
                             ),
-                            target="dolores",
-                            target_region="molestias",
+                            encrypted=True,
+                            retain_rule=shared.CrossRegionCopyRetainRule(
+                                interval=5643905309582698835,
+                                interval_unit="MONTHS",
+                            ),
+                            target="vero",
+                            target_region="quis",
                         ),
                     ],
                     deprecate_rule=shared.DeprecateRule(
-                        count=3173788743379359755,
-                        interval=5360372200248054638,
-                        interval_unit="YEARS",
+                        count=3816780269387027271,
+                        interval=3292878388625507251,
+                        interval_unit="WEEKS",
                     ),
                     fast_restore_rule=shared.FastRestoreRule(
                         availability_zones=[
-                            "ullam",
-                            "corrupti",
+                            "vitae",
+                            "nesciunt",
+                            "fugit",
                         ],
-                        count=6840482267185682142,
-                        interval=6532707090448363858,
-                        interval_unit="YEARS",
-                    ),
-                    name="magnam",
-                    retain_rule=shared.RetainRule(
-                        count=2074335382148546383,
-                        interval=4970678582028186613,
+                        count=2502521760373555910,
+                        interval=4666865012529559949,
                         interval_unit="DAYS",
+                    ),
+                    name="magni",
+                    retain_rule=shared.RetainRule(
+                        count=5403100475415031532,
+                        interval=500970383850890347,
+                        interval_unit="MONTHS",
                     ),
                     share_rules=[
                         shared.ShareRule(
                             target_accounts=[
-                                "vel",
-                                "veniam",
+                                "qui",
                             ],
-                            unshare_interval=2856735946593628957,
-                            unshare_interval_unit="WEEKS",
+                            unshare_interval=4416889129261804116,
+                            unshare_interval_unit="YEARS",
                         ),
                     ],
                     tags_to_add=[
                         shared.Tag(
-                            key="cumque",
-                            value="ipsam",
+                            key="doloribus",
+                            value="accusantium",
                         ),
                         shared.Tag(
-                            key="consequatur",
-                            value="a",
+                            key="explicabo",
+                            value="rem",
                         ),
                         shared.Tag(
-                            key="ullam",
-                            value="dolor",
+                            key="corporis",
+                            value="pariatur",
                         ),
                     ],
                     variable_tags=[
                         shared.Tag(
-                            key="ducimus",
-                            value="in",
-                        ),
-                        shared.Tag(
-                            key="enim",
-                            value="iusto",
+                            key="quisquam",
+                            value="animi",
                         ),
                     ],
                 ),
             ],
             target_tags=[
                 shared.Tag(
-                    key="deleniti",
-                    value="consectetur",
-                ),
-                shared.Tag(
-                    key="dolores",
-                    value="voluptate",
+                    key="beatae",
+                    value="iste",
                 ),
             ],
         ),
-        state="ENABLED",
+        state="DISABLED",
         tags={
-            "reiciendis": "aut",
-            "unde": "saepe",
-            "ratione": "autem",
+            "corporis": "quo",
         },
     ),
 )
     
-res = s.sdk.create_lifecycle_policy(req)
+res = s.create_lifecycle_policy(req)
 
 if res.create_lifecycle_policy_response is not None:
     # handle response

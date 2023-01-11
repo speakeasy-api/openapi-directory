@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -11,8 +11,8 @@ class WeightUnitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Weight:
-    unit: WeightUnitEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
-    weight: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('weight') }})
+    unit: WeightUnitEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
+    weight: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('weight') }})
     

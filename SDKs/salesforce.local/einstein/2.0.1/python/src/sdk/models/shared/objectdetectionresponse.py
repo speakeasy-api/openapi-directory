@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import detectionresult as shared_detectionresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ObjectDetectionResponse:
-    object: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
-    probabilities: Optional[List[DetectionResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('probabilities') }})
-    sample_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleId') }})
+    object: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
+    probabilities: Optional[list[shared_detectionresult.DetectionResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('probabilities') }})
+    sample_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleId') }})
     

@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import collection as shared_collection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CollectionList:
     r"""CollectionList
     Collections List
     """
     
-    collections: List[Collection] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collections') }})
-    sum: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
+    collections: list[shared_collection.Collection] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collections') }})
+    sum: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
     

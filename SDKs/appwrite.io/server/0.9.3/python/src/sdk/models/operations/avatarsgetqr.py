@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetQrQueryParams:
-    text: str = field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
-    download: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'download', 'style': 'form', 'explode': True }})
-    margin: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'margin', 'style': 'form', 'explode': True }})
-    size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
+    text: str = dataclasses.field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'download', 'style': 'form', 'explode': True }})
+    margin: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'margin', 'style': 'form', 'explode': True }})
+    size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetQrSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetQrRequest:
-    query_params: AvatarsGetQrQueryParams = field()
-    security: AvatarsGetQrSecurity = field()
+    query_params: AvatarsGetQrQueryParams = dataclasses.field()
+    security: AvatarsGetQrSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetQrResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

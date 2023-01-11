@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class FeatureDependency:
-    feature_name: str = field()
-    version: str = field()
+    feature_name: str = dataclasses.field()
+    version: str = dataclasses.field()
     

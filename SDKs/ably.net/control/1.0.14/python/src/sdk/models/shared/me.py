@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MeAccount:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MeToken:
-    capabilities: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilities') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    capabilities: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilities') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MeUser:
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Me:
-    account: Optional[MeAccount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    token: Optional[MeToken] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
-    user: Optional[MeUser] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    account: Optional[MeAccount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    token: Optional[MeToken] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
+    user: Optional[MeUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
     

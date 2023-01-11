@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import cell as shared_cell
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Row:
     r"""Row
     Row representation.
     """
     
-    cells: Optional[List[Cell]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cells') }})
+    cells: Optional[list[shared_cell.Cell]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cells') }})
     

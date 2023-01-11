@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import marketingeventupdaterequestparams as shared_marketingeventupdaterequestparams
+from ..shared import marketingeventpublicdefaultresponse as shared_marketingeventpublicdefaultresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchMarketingV3MarketingEventsEventsExternalEventIDUpdatePathParams:
-    external_event_id: str = field(metadata={'path_param': { 'field_name': 'externalEventId', 'style': 'simple', 'explode': False }})
+    external_event_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'externalEventId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateQueryParams:
-    external_account_id: str = field(metadata={'query_param': { 'field_name': 'externalAccountId', 'style': 'form', 'explode': True }})
+    external_account_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'externalAccountId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity:
-    hapikey: Optional[shared.SchemeHapikey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    oauth2_legacy: Optional[shared.SchemeOauth2Legacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    private_apps_legacy: Optional[shared.SchemePrivateAppsLegacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_legacy: Optional[shared_security.SchemeOauth2Legacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    private_apps_legacy: Optional[shared_security.SchemePrivateAppsLegacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateRequest:
-    path_params: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdatePathParams = field()
-    query_params: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateQueryParams = field()
-    request: shared.MarketingEventUpdateRequestParams = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity = field()
+    path_params: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdatePathParams = dataclasses.field()
+    query_params: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateQueryParams = dataclasses.field()
+    request: shared_marketingeventupdaterequestparams.MarketingEventUpdateRequestParams = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    marketing_event_public_default_response: Optional[shared.MarketingEventPublicDefaultResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    marketing_event_public_default_response: Optional[shared_marketingeventpublicdefaultresponse.MarketingEventPublicDefaultResponse] = dataclasses.field(default=None)
     

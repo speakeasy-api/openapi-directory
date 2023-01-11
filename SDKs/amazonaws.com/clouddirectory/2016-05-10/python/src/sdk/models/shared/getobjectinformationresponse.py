@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import schemafacet as shared_schemafacet
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetObjectInformationResponse:
-    object_identifier: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ObjectIdentifier') }})
-    schema_facets: Optional[List[SchemaFacet]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaFacets') }})
+    object_identifier: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ObjectIdentifier') }})
+    schema_facets: Optional[list[shared_schemafacet.SchemaFacet]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaFacets') }})
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourceservertype as shared_resourceservertype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateResourceServerResponse:
-    resource_server: ResourceServerType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceServer') }})
+    resource_server: shared_resourceservertype.ResourceServerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceServer') }})
     

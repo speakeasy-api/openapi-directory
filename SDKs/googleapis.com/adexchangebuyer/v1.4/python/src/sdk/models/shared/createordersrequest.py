@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import proposal as shared_proposal
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrdersRequest:
-    proposals: Optional[List[Proposal]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proposals') }})
-    web_property_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webPropertyCode') }})
+    proposals: Optional[list[shared_proposal.Proposal]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proposals') }})
+    web_property_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webPropertyCode') }})
     

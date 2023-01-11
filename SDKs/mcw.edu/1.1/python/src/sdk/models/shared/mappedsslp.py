@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import sslp as shared_sslp
 
 
-@dataclass
+@dataclasses.dataclass
 class MappedSslp:
-    chromosome: Optional[str] = field(default=None)
-    map_key: Optional[int] = field(default=None)
-    sslp: Optional[Sslp] = field(default=None)
-    start: Optional[int] = field(default=None)
-    stop: Optional[int] = field(default=None)
-    strand: Optional[str] = field(default=None)
+    chromosome: Optional[str] = dataclasses.field(default=None)
+    map_key: Optional[int] = dataclasses.field(default=None)
+    sslp: Optional[shared_sslp.Sslp] = dataclasses.field(default=None)
+    start: Optional[int] = dataclasses.field(default=None)
+    stop: Optional[int] = dataclasses.field(default=None)
+    strand: Optional[str] = dataclasses.field(default=None)
     

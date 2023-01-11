@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,25 +26,25 @@ s.config_security(
 req = operations.GetAttachInstancesRequest(
     query_params=operations.GetAttachInstancesQueryParams(
         action="AttachInstances",
-        auto_scaling_group_name="distinctio",
+        auto_scaling_group_name="eum",
         instance_ids=[
-            "nemo",
-            "aut",
+            "ut",
+            "similique",
         ],
         version="2011-01-01",
     ),
     headers=operations.GetAttachInstancesHeaders(
-        x_amz_algorithm="in",
-        x_amz_content_sha256="voluptatem",
-        x_amz_credential="velit",
-        x_amz_date="consequuntur",
-        x_amz_security_token="est",
-        x_amz_signature="dignissimos",
-        x_amz_signed_headers="hic",
+        x_amz_algorithm="praesentium",
+        x_amz_content_sha256="ipsa",
+        x_amz_credential="ipsa",
+        x_amz_date="rerum",
+        x_amz_security_token="iure",
+        x_amz_signature="rem",
+        x_amz_signed_headers="dolore",
     ),
 )
     
-res = s.sdk.get_attach_instances(req)
+res = s.get_attach_instances(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,29 +6,31 @@ from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import dashfragmentselectortype_enum as shared_dashfragmentselectortype_enum
+from ..shared import dashtimestamprange as shared_dashtimestamprange
+from ..shared import getdashstreamingsessionurloutput as shared_getdashstreamingsessionurloutput
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDashStreamingSessionURLHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDashStreamingSessionURLRequestBodyDashFragmentSelector:
     r"""GetDashStreamingSessionURLRequestBodyDashFragmentSelector
     Contains the range of timestamps for the requested media, and the source of the timestamps. 
     """
     
-    fragment_selector_type: Optional[shared.DashFragmentSelectorTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FragmentSelectorType') }})
-    timestamp_range: Optional[shared.DashTimestampRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimestampRange') }})
+    fragment_selector_type: Optional[shared_dashfragmentselectortype_enum.DashFragmentSelectorTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FragmentSelectorType') }})
+    timestamp_range: Optional[shared_dashtimestamprange.DashTimestampRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimestampRange') }})
     
 class GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum(str, Enum):
     ALWAYS = "ALWAYS"
@@ -45,35 +47,35 @@ class GetDashStreamingSessionURLRequestBodyPlaybackModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDashStreamingSessionURLRequestBody:
-    dash_fragment_selector: Optional[GetDashStreamingSessionURLRequestBodyDashFragmentSelector] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DASHFragmentSelector') }})
-    display_fragment_number: Optional[GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayFragmentNumber') }})
-    display_fragment_timestamp: Optional[GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayFragmentTimestamp') }})
-    expires: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Expires') }})
-    max_manifest_fragment_results: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MaxManifestFragmentResults') }})
-    playback_mode: Optional[GetDashStreamingSessionURLRequestBodyPlaybackModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlaybackMode') }})
-    stream_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamARN') }})
-    stream_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamName') }})
+    dash_fragment_selector: Optional[GetDashStreamingSessionURLRequestBodyDashFragmentSelector] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DASHFragmentSelector') }})
+    display_fragment_number: Optional[GetDashStreamingSessionURLRequestBodyDisplayFragmentNumberEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayFragmentNumber') }})
+    display_fragment_timestamp: Optional[GetDashStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayFragmentTimestamp') }})
+    expires: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Expires') }})
+    max_manifest_fragment_results: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MaxManifestFragmentResults') }})
+    playback_mode: Optional[GetDashStreamingSessionURLRequestBodyPlaybackModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlaybackMode') }})
+    stream_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamARN') }})
+    stream_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamName') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDashStreamingSessionURLRequest:
-    headers: GetDashStreamingSessionURLHeaders = field()
-    request: GetDashStreamingSessionURLRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetDashStreamingSessionURLHeaders = dataclasses.field()
+    request: GetDashStreamingSessionURLRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDashStreamingSessionURLResponse:
-    content_type: str = field()
-    status_code: int = field()
-    client_limit_exceeded_exception: Optional[Any] = field(default=None)
-    get_dash_streaming_session_url_output: Optional[shared.GetDashStreamingSessionURLOutput] = field(default=None)
-    invalid_argument_exception: Optional[Any] = field(default=None)
-    invalid_codec_private_data_exception: Optional[Any] = field(default=None)
-    missing_codec_private_data_exception: Optional[Any] = field(default=None)
-    no_data_retention_exception: Optional[Any] = field(default=None)
-    not_authorized_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    unsupported_stream_media_type_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    client_limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    get_dash_streaming_session_url_output: Optional[shared_getdashstreamingsessionurloutput.GetDashStreamingSessionURLOutput] = dataclasses.field(default=None)
+    invalid_argument_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_codec_private_data_exception: Optional[Any] = dataclasses.field(default=None)
+    missing_codec_private_data_exception: Optional[Any] = dataclasses.field(default=None)
+    no_data_retention_exception: Optional[Any] = dataclasses.field(default=None)
+    not_authorized_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    unsupported_stream_media_type_exception: Optional[Any] = dataclasses.field(default=None)
     

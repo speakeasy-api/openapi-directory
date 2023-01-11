@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import customavailabilityzonelist as shared_customavailabilityzonelist
 
 
-@dataclass
+@dataclasses.dataclass
 class CustomAvailabilityZoneMessage:
-    custom_availability_zones: Optional[List[CustomAvailabilityZone]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    custom_availability_zones: Optional[list[shared_customavailabilityzonelist.CustomAvailabilityZoneList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

@@ -1,15 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import _xgafv_enum as shared__xgafv_enum
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import getdailymetricstimeseriesresponse as shared_getdailymetricstimeseriesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     
 class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum(str, Enum):
     DAILY_METRIC_UNKNOWN = "DAILY_METRIC_UNKNOWN"
@@ -35,42 +37,42 @@ class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntity
     SUNDAY = "SUNDAY"
 
 
-@dataclass
+@dataclasses.dataclass
 class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams:
-    dollar_xgafv: Optional[shared.XgafvEnum] = field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
-    access_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    daily_metric: Optional[BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum] = field(default=None, metadata={'query_param': { 'field_name': 'dailyMetric', 'style': 'form', 'explode': True }})
-    daily_range_end_date_day: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.day', 'style': 'form', 'explode': True }})
-    daily_range_end_date_month: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.month', 'style': 'form', 'explode': True }})
-    daily_range_end_date_year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.year', 'style': 'form', 'explode': True }})
-    daily_range_start_date_day: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.day', 'style': 'form', 'explode': True }})
-    daily_range_start_date_month: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.month', 'style': 'form', 'explode': True }})
-    daily_range_start_date_year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.year', 'style': 'form', 'explode': True }})
-    daily_sub_entity_type_day_of_week: Optional[BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum] = field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.dayOfWeek', 'style': 'form', 'explode': True }})
-    daily_sub_entity_type_time_of_day_hours: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.hours', 'style': 'form', 'explode': True }})
-    daily_sub_entity_type_time_of_day_minutes: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.minutes', 'style': 'form', 'explode': True }})
-    daily_sub_entity_type_time_of_day_nanos: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.nanos', 'style': 'form', 'explode': True }})
-    daily_sub_entity_type_time_of_day_seconds: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.seconds', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    upload_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
-    upload_protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
+    dollar_xgafv: Optional[shared__xgafv_enum.XgafvEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    daily_metric: Optional[BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyMetric', 'style': 'form', 'explode': True }})
+    daily_range_end_date_day: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.day', 'style': 'form', 'explode': True }})
+    daily_range_end_date_month: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.month', 'style': 'form', 'explode': True }})
+    daily_range_end_date_year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.endDate.year', 'style': 'form', 'explode': True }})
+    daily_range_start_date_day: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.day', 'style': 'form', 'explode': True }})
+    daily_range_start_date_month: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.month', 'style': 'form', 'explode': True }})
+    daily_range_start_date_year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailyRange.startDate.year', 'style': 'form', 'explode': True }})
+    daily_sub_entity_type_day_of_week: Optional[BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.dayOfWeek', 'style': 'form', 'explode': True }})
+    daily_sub_entity_type_time_of_day_hours: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.hours', 'style': 'form', 'explode': True }})
+    daily_sub_entity_type_time_of_day_minutes: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.minutes', 'style': 'form', 'explode': True }})
+    daily_sub_entity_type_time_of_day_nanos: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.nanos', 'style': 'form', 'explode': True }})
+    daily_sub_entity_type_time_of_day_seconds: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dailySubEntityType.timeOfDay.seconds', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    upload_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
+    upload_protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest:
-    path_params: BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams = field()
-    query_params: BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams = field()
+    path_params: BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams = dataclasses.field()
+    query_params: BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_daily_metrics_time_series_response: Optional[shared.GetDailyMetricsTimeSeriesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_daily_metrics_time_series_response: Optional[shared_getdailymetricstimeseriesresponse.GetDailyMetricsTimeSeriesResponse] = dataclasses.field(default=None)
     

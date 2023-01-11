@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,8 +8,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateHitReviewStatusRequest:
-    hit_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('HITId') }})
-    revert: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Revert') }})
+    hit_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('HITId') }})
+    revert: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Revert') }})
     

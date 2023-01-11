@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,8 +7,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEvaluationInput:
-    evaluation_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationId') }})
-    evaluation_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationName') }})
+    evaluation_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationId') }})
+    evaluation_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationName') }})
     

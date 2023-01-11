@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import file as shared_file
 
 
-@dataclass
+@dataclasses.dataclass
 class StorageCreateFileRequestBody:
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
-    read: Optional[List[str]] = field(default=None, metadata={'multipart_form': { 'field_name': 'read' }})
-    write: Optional[List[str]] = field(default=None, metadata={'multipart_form': { 'field_name': 'write' }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
+    read: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'read', 'json': True }})
+    write: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'write', 'json': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageCreateFileSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageCreateFileRequest:
-    security: StorageCreateFileSecurity = field()
-    request: Optional[StorageCreateFileRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: StorageCreateFileSecurity = dataclasses.field()
+    request: Optional[StorageCreateFileRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageCreateFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file: Optional[shared.File] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file: Optional[shared_file.File] = dataclasses.field(default=None)
     

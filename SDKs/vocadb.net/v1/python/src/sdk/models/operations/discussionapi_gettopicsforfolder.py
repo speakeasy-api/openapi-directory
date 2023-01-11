@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import discussiontopiccontract as shared_discussiontopiccontract
 
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIGetTopicsForFolderPathParams:
-    folder_id: int = field(metadata={'path_param': { 'field_name': 'folderId', 'style': 'simple', 'explode': False }})
+    folder_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'folderId', 'style': 'simple', 'explode': False }})
     
 class DiscussionAPIGetTopicsForFolderFieldsEnum(str, Enum):
     NONE = "None"
@@ -17,21 +17,21 @@ class DiscussionAPIGetTopicsForFolderFieldsEnum(str, Enum):
     ALL = "All"
 
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIGetTopicsForFolderQueryParams:
-    fields: Optional[DiscussionAPIGetTopicsForFolderFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields: Optional[DiscussionAPIGetTopicsForFolderFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIGetTopicsForFolderRequest:
-    path_params: DiscussionAPIGetTopicsForFolderPathParams = field()
-    query_params: DiscussionAPIGetTopicsForFolderQueryParams = field()
+    path_params: DiscussionAPIGetTopicsForFolderPathParams = dataclasses.field()
+    query_params: DiscussionAPIGetTopicsForFolderQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIGetTopicsForFolderResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    discussion_topic_contracts: Optional[List[shared.DiscussionTopicContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    discussion_topic_contracts: Optional[list[shared_discussiontopiccontract.DiscussionTopicContract]] = dataclasses.field(default=None)
     

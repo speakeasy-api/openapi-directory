@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -33,7 +32,7 @@ req = operations.GetAuthRequest(
     ),
 )
     
-res = s.sdk.get_auth(req)
+res = s.auth.get_auth(req)
 
 if res.auth_result is not None:
     # handle response
@@ -43,10 +42,20 @@ if res.auth_result is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### auth
 
 * `get_auth` - Request a JWT access token using your obono username and password.
+
+### beleg
+
+* `add_beleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
+* `create_abschluss` - Generates an `Abschlussbeleg`.
+* `get_beleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+* `get_belege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
 * `get_belege_beleg_uuid_` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+
+### export
+
 * `get_export_csv_registrierkassen_registrierkasse_uuid_belege`
 * `get_export_dep131_registrierkassen_registrierkasse_uuid_belege`
 * `get_export_dep7_registrierkassen_registrierkasse_uuid_belege`
@@ -56,12 +65,14 @@ if res.auth_result is not None:
 * `get_export_qr_belege_beleg_uuid_`
 * `get_export_thermal_print_belege_beleg_uuid_`
 * `get_export_xls_registrierkassen_registrierkasse_uuid_belege`
-* `add_beleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
-* `create_abschluss` - Generates an `Abschlussbeleg`.
-* `get_beleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
-* `get_belege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
-* `get_dep` - Generates a DEP file.
+
+### monatsbelege
+
 * `get_monatsbelege` - Returns a list of `Monatsbelege`.
+
+### registrierkasse
+
+* `get_dep` - Generates a DEP file.
 * `get_registrierkasse` - Returns information about a particular `Registrierkasse`.
 
 <!-- End SDK Available Operations -->

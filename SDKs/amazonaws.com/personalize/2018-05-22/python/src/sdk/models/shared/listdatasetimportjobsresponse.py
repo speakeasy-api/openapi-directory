@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datasetimportjobsummary as shared_datasetimportjobsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDatasetImportJobsResponse:
-    dataset_import_jobs: Optional[List[DatasetImportJobSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasetImportJobs') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    dataset_import_jobs: Optional[list[shared_datasetimportjobsummary.DatasetImportJobSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasetImportJobs') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

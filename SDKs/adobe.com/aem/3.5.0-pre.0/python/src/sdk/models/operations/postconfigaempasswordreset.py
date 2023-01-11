@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigAemPasswordResetQueryParams:
-    pwdreset_authorizables: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'pwdreset.authorizables', 'style': 'form', 'explode': True }})
-    pwdreset_authorizables_at_type_hint: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'pwdreset.authorizables@TypeHint', 'style': 'form', 'explode': True }})
+    pwdreset_authorizables: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pwdreset.authorizables', 'style': 'form', 'explode': True }})
+    pwdreset_authorizables_at_type_hint: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pwdreset.authorizables@TypeHint', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigAemPasswordResetRequest:
-    query_params: PostConfigAemPasswordResetQueryParams = field()
+    query_params: PostConfigAemPasswordResetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigAemPasswordResetResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,8 +8,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ModelsPackageUpdate:
-    advisory: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advisory') }})
-    evra: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('evra') }})
+    advisory: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advisory') }})
+    evra: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('evra') }})
     

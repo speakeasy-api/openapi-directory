@@ -1,19 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import codesigningcertificatechain as shared_codesigningcertificatechain
+from ..shared import codesigningsignature as shared_codesigningsignature
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CustomCodeSigning:
     r"""CustomCodeSigning
     Describes a custom method used to code sign a file.
     """
     
-    certificate_chain: Optional[CodeSigningCertificateChain] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateChain') }})
-    hash_algorithm: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hashAlgorithm') }})
-    signature: Optional[CodeSigningSignature] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signature') }})
-    signature_algorithm: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signatureAlgorithm') }})
+    certificate_chain: Optional[shared_codesigningcertificatechain.CodeSigningCertificateChain] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateChain') }})
+    hash_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hashAlgorithm') }})
+    signature: Optional[shared_codesigningsignature.CodeSigningSignature] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signature') }})
+    signature_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('signatureAlgorithm') }})
     

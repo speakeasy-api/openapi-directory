@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class MailExportOptionsExportFormatEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MailExportOptions:
     r"""MailExportOptions
     Options for Gmail exports.
     """
     
-    export_format: Optional[MailExportOptionsExportFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exportFormat') }})
-    show_confidential_mode_content: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('showConfidentialModeContent') }})
-    use_new_export: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useNewExport') }})
+    export_format: Optional[MailExportOptionsExportFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exportFormat') }})
+    show_confidential_mode_content: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('showConfidentialModeContent') }})
+    use_new_export: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useNewExport') }})
     

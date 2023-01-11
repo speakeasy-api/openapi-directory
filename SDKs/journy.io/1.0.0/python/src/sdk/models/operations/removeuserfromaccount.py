@@ -1,147 +1,171 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccountPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccountRequestBody:
     r"""RemoveUserFromAccountRequestBody
     The user being added/removed from the account
     """
     
-    user_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
+    user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount201ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount201ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount201ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount201ApplicationJSON
+    The object was created
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount201ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount400ApplicationJSONErrorsParameters:
     r"""RemoveUserFromAccount400ApplicationJSONErrorsParameters
     All query-, header- and path- parameters that seemed incorrect
     """
     
-    header: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
-    path: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    query: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
+    header: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
+    path: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    query: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount400ApplicationJSONErrors:
     r"""RemoveUserFromAccount400ApplicationJSONErrors
     Map that sums up all received values that seemed incorrect
     """
     
-    fields: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fields') }})
-    parameters: Optional[RemoveUserFromAccount400ApplicationJSONErrorsParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    fields: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fields') }})
+    parameters: Optional[RemoveUserFromAccount400ApplicationJSONErrorsParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount400ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount400ApplicationJSON:
-    errors: RemoveUserFromAccount400ApplicationJSONErrors = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount400ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount400ApplicationJSON
+    Specify the fields and/ or parameters that had errors
+    """
+    
+    errors: RemoveUserFromAccount400ApplicationJSONErrors = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount400ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount401ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount401ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount401ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount401ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount401ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount403ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount403ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount403ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount403ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount403ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount429ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount429ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount429ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount429ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount429ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount500ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccount500ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: RemoveUserFromAccount500ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""RemoveUserFromAccount500ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: RemoveUserFromAccount500ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccountRequest:
-    path_params: RemoveUserFromAccountPathParams = field()
-    request: RemoveUserFromAccountRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RemoveUserFromAccountPathParams = dataclasses.field()
+    request: RemoveUserFromAccountRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveUserFromAccountResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    remove_user_from_account_201_application_json_object: Optional[RemoveUserFromAccount201ApplicationJSON] = field(default=None)
-    remove_user_from_account_400_application_json_object: Optional[RemoveUserFromAccount400ApplicationJSON] = field(default=None)
-    remove_user_from_account_401_application_json_object: Optional[RemoveUserFromAccount401ApplicationJSON] = field(default=None)
-    remove_user_from_account_403_application_json_object: Optional[RemoveUserFromAccount403ApplicationJSON] = field(default=None)
-    remove_user_from_account_429_application_json_object: Optional[RemoveUserFromAccount429ApplicationJSON] = field(default=None)
-    remove_user_from_account_500_application_json_object: Optional[RemoveUserFromAccount500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    remove_user_from_account_201_application_json_object: Optional[RemoveUserFromAccount201ApplicationJSON] = dataclasses.field(default=None)
+    remove_user_from_account_400_application_json_object: Optional[RemoveUserFromAccount400ApplicationJSON] = dataclasses.field(default=None)
+    remove_user_from_account_401_application_json_object: Optional[RemoveUserFromAccount401ApplicationJSON] = dataclasses.field(default=None)
+    remove_user_from_account_403_application_json_object: Optional[RemoveUserFromAccount403ApplicationJSON] = dataclasses.field(default=None)
+    remove_user_from_account_429_application_json_object: Optional[RemoveUserFromAccount429ApplicationJSON] = dataclasses.field(default=None)
+    remove_user_from_account_500_application_json_object: Optional[RemoveUserFromAccount500ApplicationJSON] = dataclasses.field(default=None)
     

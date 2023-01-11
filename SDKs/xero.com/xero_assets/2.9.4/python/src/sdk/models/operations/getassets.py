@@ -1,7 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import assetstatusqueryparam_enum as shared_assetstatusqueryparam_enum
+from ..shared import security as shared_security
+from ..shared import assets as shared_assets
 
 class GetAssetsOrderByEnum(str, Enum):
     ASSET_TYPE = "AssetType"
@@ -17,36 +19,36 @@ class GetAssetsSortDirectionEnum(str, Enum):
     DESC = "desc"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsQueryParams:
-    status: shared.AssetStatusQueryParamEnum = field(metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    filter_by: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filterBy', 'style': 'form', 'explode': True }})
-    order_by: Optional[GetAssetsOrderByEnum] = field(default=None, metadata={'query_param': { 'field_name': 'orderBy', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
-    sort_direction: Optional[GetAssetsSortDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sortDirection', 'style': 'form', 'explode': True }})
+    status: shared_assetstatusqueryparam_enum.AssetStatusQueryParamEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    filter_by: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filterBy', 'style': 'form', 'explode': True }})
+    order_by: Optional[GetAssetsOrderByEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'orderBy', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    sort_direction: Optional[GetAssetsSortDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDirection', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsRequest:
-    headers: GetAssetsHeaders = field()
-    query_params: GetAssetsQueryParams = field()
-    security: GetAssetsSecurity = field()
+    headers: GetAssetsHeaders = dataclasses.field()
+    query_params: GetAssetsQueryParams = dataclasses.field()
+    security: GetAssetsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    assets: Optional[shared.Assets] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    assets: Optional[shared_assets.Assets] = dataclasses.field(default=None)
     

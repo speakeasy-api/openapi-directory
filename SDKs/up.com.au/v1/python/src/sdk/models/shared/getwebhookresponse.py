@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import webhookresource as shared_webhookresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetWebhookResponse:
     r"""GetWebhookResponse
     Successful response to get a single webhook.
     
     """
     
-    data: WebhookResource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: shared_webhookresource.WebhookResource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

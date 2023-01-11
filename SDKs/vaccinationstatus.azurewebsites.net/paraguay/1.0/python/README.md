@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,16 +18,16 @@ s = sdk.SDK()
     
 req = operations.GetVaccineStatusRequest(
     headers=operations.GetVaccineStatusHeaders(
-        accept="aut",
-        authorization="sit",
-        content_type="aut",
+        accept="suscipit",
+        authorization="aliquid",
+        content_type="distinctio",
     ),
     request=shared.VaccineStatusRequest(
-        documento="exercitationem",
+        documento="ut",
     ),
 )
     
-res = s.sdk.get_vaccine_status(req)
+res = s.paraguay_api.get_vaccine_status(req)
 
 if res.vaccine_response is not None:
     # handle response
@@ -38,7 +37,7 @@ if res.vaccine_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Paraguay-api
 
 * `get_vaccine_status` - return vaccine status from Paraguay
 

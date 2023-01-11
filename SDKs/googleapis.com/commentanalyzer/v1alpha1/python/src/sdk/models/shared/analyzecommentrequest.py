@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import textentry as shared_textentry
+from ..shared import context as shared_context
+from ..shared import attributeparameters as shared_attributeparameters
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AnalyzeCommentRequest:
     r"""AnalyzeCommentRequest
     The comment analysis request message.
     """
     
-    client_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
-    comment: Optional[TextEntry] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
-    community_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communityId') }})
-    context: Optional[Context] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
-    do_not_store: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doNotStore') }})
-    languages: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
-    requested_attributes: Optional[dict[str, AttributeParameters]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestedAttributes') }})
-    session_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionId') }})
-    span_annotations: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spanAnnotations') }})
+    client_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
+    comment: Optional[shared_textentry.TextEntry] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
+    community_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communityId') }})
+    context: Optional[shared_context.Context] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
+    do_not_store: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doNotStore') }})
+    languages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
+    requested_attributes: Optional[dict[str, shared_attributeparameters.AttributeParameters]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestedAttributes') }})
+    session_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionId') }})
+    span_annotations: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spanAnnotations') }})
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDemoteSiteAdministratorPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDemoteSiteAdministratorRequest:
-    path_params: EnterpriseAdminDemoteSiteAdministratorPathParams = field()
+    path_params: EnterpriseAdminDemoteSiteAdministratorPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDemoteSiteAdministratorResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,13 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timeperiod as shared_timeperiod
+from ..shared import error as shared_error
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FreeBusyCalendar:
-    busy: Optional[List[TimePeriod]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('busy') }})
-    errors: Optional[List[Error]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    r"""FreeBusyCalendar
+    Free/busy expansions for a single calendar.
+    """
+    
+    busy: Optional[list[shared_timeperiod.TimePeriod]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('busy') }})
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

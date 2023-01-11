@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,30 +25,33 @@ s.config_security(
     
 req = operations.BatchAssociateClientDeviceWithCoreDeviceRequest(
     path_params=operations.BatchAssociateClientDeviceWithCoreDevicePathParams(
-        core_device_thing_name="tempore",
+        core_device_thing_name="libero",
     ),
     headers=operations.BatchAssociateClientDeviceWithCoreDeviceHeaders(
         x_amz_algorithm="saepe",
-        x_amz_content_sha256="aut",
-        x_amz_credential="est",
-        x_amz_date="odit",
-        x_amz_security_token="et",
-        x_amz_signature="debitis",
-        x_amz_signed_headers="voluptates",
+        x_amz_content_sha256="et",
+        x_amz_credential="corporis",
+        x_amz_date="a",
+        x_amz_security_token="illum",
+        x_amz_signature="numquam",
+        x_amz_signed_headers="dolores",
     ),
     request=operations.BatchAssociateClientDeviceWithCoreDeviceRequestBody(
         entries=[
             shared.AssociateClientDeviceWithCoreDeviceEntry(
-                thing_name="odio",
+                thing_name="voluptatibus",
             ),
             shared.AssociateClientDeviceWithCoreDeviceEntry(
-                thing_name="molestiae",
+                thing_name="sint",
+            ),
+            shared.AssociateClientDeviceWithCoreDeviceEntry(
+                thing_name="expedita",
             ),
         ],
     ),
 )
     
-res = s.sdk.batch_associate_client_device_with_core_device(req)
+res = s.batch_associate_client_device_with_core_device(req)
 
 if res.batch_associate_client_device_with_core_device_response is not None:
     # handle response

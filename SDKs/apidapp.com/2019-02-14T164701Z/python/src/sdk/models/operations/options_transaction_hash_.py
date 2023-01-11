@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionsTransactionHashPathParams:
-    hash: str = field(metadata={'path_param': { 'field_name': 'hash', 'style': 'simple', 'explode': False }})
+    hash: str = dataclasses.field(metadata={'path_param': { 'field_name': 'hash', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OptionsTransactionHashRequest:
-    path_params: OptionsTransactionHashPathParams = field()
+    path_params: OptionsTransactionHashPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OptionsTransactionHashResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    empty: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    empty: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dataset as shared_dataset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DatasetList:
-    data: Optional[List[Dataset]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    object: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
+    data: Optional[list[shared_dataset.Dataset]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    object: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
     

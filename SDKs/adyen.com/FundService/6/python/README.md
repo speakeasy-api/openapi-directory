@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,10 +23,10 @@ req = operations.PostAccountHolderBalanceRequest(
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="dolor",
+    request="dolores",
 )
     
-res = s.sdk.post_account_holder_balance(req)
+res = s.general.post_account_holder_balance(req)
 
 if res.account_holder_balance_response is not None:
     # handle response
@@ -37,7 +36,7 @@ if res.account_holder_balance_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `post_account_holder_balance` - Retrieve the balance(s) of an account holder.
 * `post_account_holder_transaction_list` - Retrieve a list of transactions.

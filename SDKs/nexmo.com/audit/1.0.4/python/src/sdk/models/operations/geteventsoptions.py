@@ -1,24 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import auditeventtypesresp as shared_auditeventtypesresp
+from ..shared import errorforbidden as shared_errorforbidden
+from ..shared import errorunauthorized as shared_errorunauthorized
+from ..shared import nocontent as shared_nocontent
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsOptionsSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsOptionsRequest:
-    security: GetEventsOptionsSecurity = field()
+    security: GetEventsOptionsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsOptionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    audit_event_types_resp: Optional[shared.AuditEventTypesResp] = field(default=None)
-    error_forbidden: Optional[shared.ErrorForbidden] = field(default=None)
-    error_unauthorized: Optional[shared.ErrorUnauthorized] = field(default=None)
-    no_content: Optional[shared.NoContent] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    audit_event_types_resp: Optional[shared_auditeventtypesresp.AuditEventTypesResp] = dataclasses.field(default=None)
+    error_forbidden: Optional[shared_errorforbidden.ErrorForbidden] = dataclasses.field(default=None)
+    error_unauthorized: Optional[shared_errorunauthorized.ErrorUnauthorized] = dataclasses.field(default=None)
+    no_content: Optional[shared_nocontent.NoContent] = dataclasses.field(default=None)
     

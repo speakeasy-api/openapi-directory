@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import productviewsummary as shared_productviewsummary
+from ..shared import provisioningartifact as shared_provisioningartifact
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeProductViewOutput:
-    product_view_summary: Optional[ProductViewSummary] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProductViewSummary') }})
-    provisioning_artifacts: Optional[List[ProvisioningArtifact]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisioningArtifacts') }})
+    product_view_summary: Optional[shared_productviewsummary.ProductViewSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProductViewSummary') }})
+    provisioning_artifacts: Optional[list[shared_provisioningartifact.ProvisioningArtifact]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisioningArtifacts') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,15 +10,15 @@ class FsCommandPositionOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FsCommand:
     r"""FsCommand
     FsCommand.
     """
     
-    left: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('left') }})
-    position_option: Optional[FsCommandPositionOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('positionOption') }})
-    top: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('top') }})
-    window_height: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('windowHeight') }})
-    window_width: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('windowWidth') }})
+    left: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('left') }})
+    position_option: Optional[FsCommandPositionOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('positionOption') }})
+    top: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('top') }})
+    window_height: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('windowHeight') }})
+    window_width: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('windowWidth') }})
     

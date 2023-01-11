@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.ClaimDevicesByClaimCodeRequest(
     path_params=operations.ClaimDevicesByClaimCodePathParams(
-        claim_code="est",
+        claim_code="amet",
     ),
     headers=operations.ClaimDevicesByClaimCodeHeaders(
-        x_amz_algorithm="beatae",
-        x_amz_content_sha256="odio",
-        x_amz_credential="blanditiis",
-        x_amz_date="voluptatem",
-        x_amz_security_token="ea",
-        x_amz_signature="eum",
-        x_amz_signed_headers="at",
+        x_amz_algorithm="inventore",
+        x_amz_content_sha256="reprehenderit",
+        x_amz_credential="autem",
+        x_amz_date="tenetur",
+        x_amz_security_token="facilis",
+        x_amz_signature="aut",
+        x_amz_signed_headers="est",
     ),
 )
     
-res = s.sdk.claim_devices_by_claim_code(req)
+res = s.claim_devices_by_claim_code(req)
 
 if res.claim_devices_by_claim_code_response is not None:
     # handle response

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,30 +21,30 @@ req = operations.OsloginUsersGetLoginProfileRequest(
         option1=operations.OsloginUsersGetLoginProfileSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.OsloginUsersGetLoginProfilePathParams(
-        name="rerum",
+        name="id",
     ),
     query_params=operations.OsloginUsersGetLoginProfileQueryParams(
         dollar_xgafv="2",
-        access_token="magnam",
-        alt="json",
-        callback="tempora",
-        fields="explicabo",
-        key="velit",
-        oauth_token="et",
-        pretty_print=True,
-        project_id="autem",
-        quota_user="nam",
-        system_id="voluptatem",
-        upload_type="saepe",
-        upload_protocol="harum",
-        view="BASIC",
+        access_token="nulla",
+        alt="proto",
+        callback="molestias",
+        fields="nemo",
+        key="provident",
+        oauth_token="in",
+        pretty_print=False,
+        project_id="et",
+        quota_user="eaque",
+        system_id="a",
+        upload_type="odit",
+        upload_protocol="velit",
+        view="SECURITY_KEY",
     ),
 )
     

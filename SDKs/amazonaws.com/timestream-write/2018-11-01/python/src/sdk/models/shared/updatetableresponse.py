@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import table as shared_table
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTableResponse:
-    table: Optional[Table] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Table') }})
+    table: Optional[shared_table.Table] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Table') }})
     

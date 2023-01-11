@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timesheet as shared_timesheet
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TimesheetObject:
-    timesheet: Optional[Timesheet] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Timesheet') }})
+    timesheet: Optional[shared_timesheet.Timesheet] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Timesheet') }})
     

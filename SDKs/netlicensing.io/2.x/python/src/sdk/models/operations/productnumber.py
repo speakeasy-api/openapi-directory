@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductNumberPathParams:
-    product_number: str = field(metadata={'path_param': { 'field_name': 'productNumber', 'style': 'simple', 'explode': False }})
+    product_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductNumberSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductNumberRequest:
-    path_params: ProductNumberPathParams = field()
-    security: ProductNumberSecurity = field()
+    path_params: ProductNumberPathParams = dataclasses.field()
+    security: ProductNumberSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductNumberResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awsiamattachedmanagedpolicy as shared_awsiamattachedmanagedpolicy
+from ..shared import awsiamgrouppolicy as shared_awsiamgrouppolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AwsIamGroupDetails:
     r"""AwsIamGroupDetails
     Contains details about an IAM group.
     """
     
-    attached_managed_policies: Optional[List[AwsIamAttachedManagedPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AttachedManagedPolicies') }})
-    create_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CreateDate') }})
-    group_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupId') }})
-    group_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupName') }})
-    group_policy_list: Optional[List[AwsIamGroupPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupPolicyList') }})
-    path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Path') }})
+    attached_managed_policies: Optional[list[shared_awsiamattachedmanagedpolicy.AwsIamAttachedManagedPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AttachedManagedPolicies') }})
+    create_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CreateDate') }})
+    group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupId') }})
+    group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupName') }})
+    group_policy_list: Optional[list[shared_awsiamgrouppolicy.AwsIamGroupPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupPolicyList') }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Path') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GlobalpageloadRequest(
     query_params=operations.GlobalpageloadQueryParams(
-        license="nesciunt",
-        origin="repellendus",
-        url="aspernatur",
+        license="iure",
+        origin="vero",
+        url="quidem",
     ),
 )
     
-res = s.sdk.globalpageload(req)
+res = s.page_load_performance_time.globalpageload(req)
 
 if res.globalpageload_200_application_json_object is not None:
     # handle response
@@ -35,7 +34,7 @@ if res.globalpageload_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Page Load Performance Time
 
 * `globalpageload` - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
 

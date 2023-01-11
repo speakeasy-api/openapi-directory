@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SuggestedEditsProposingUserBadgeCounts:
-    bronze: Optional[int] = field(default=None)
-    gold: Optional[int] = field(default=None)
-    silver: Optional[int] = field(default=None)
+    bronze: Optional[int] = dataclasses.field(default=None)
+    gold: Optional[int] = dataclasses.field(default=None)
+    silver: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class SuggestedEditsProposingUser:
-    accept_rate: Optional[int] = field(default=None)
-    badge_counts: Optional[SuggestedEditsProposingUserBadgeCounts] = field(default=None)
-    display_name: Optional[str] = field(default=None)
-    link: Optional[str] = field(default=None)
-    profile_image: Optional[str] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    user_id: Optional[int] = field(default=None)
-    user_type: Optional[str] = field(default=None)
+    accept_rate: Optional[int] = dataclasses.field(default=None)
+    badge_counts: Optional[SuggestedEditsProposingUserBadgeCounts] = dataclasses.field(default=None)
+    display_name: Optional[str] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    profile_image: Optional[str] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
+    user_type: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class SuggestedEdits:
-    approval_date: Optional[int] = field(default=None)
-    body: Optional[str] = field(default=None)
-    comment: Optional[str] = field(default=None)
-    creation_date: Optional[int] = field(default=None)
-    post_id: Optional[int] = field(default=None)
-    post_type: Optional[str] = field(default=None)
-    proposing_user: Optional[SuggestedEditsProposingUser] = field(default=None)
-    rejection_date: Optional[int] = field(default=None)
-    suggested_edit_id: Optional[int] = field(default=None)
-    tags: Optional[List[Any]] = field(default=None)
-    title: Optional[str] = field(default=None)
+    approval_date: Optional[int] = dataclasses.field(default=None)
+    body: Optional[str] = dataclasses.field(default=None)
+    comment: Optional[str] = dataclasses.field(default=None)
+    creation_date: Optional[int] = dataclasses.field(default=None)
+    post_id: Optional[int] = dataclasses.field(default=None)
+    post_type: Optional[str] = dataclasses.field(default=None)
+    proposing_user: Optional[SuggestedEditsProposingUser] = dataclasses.field(default=None)
+    rejection_date: Optional[int] = dataclasses.field(default=None)
+    suggested_edit_id: Optional[int] = dataclasses.field(default=None)
+    tags: Optional[list[Any]] = dataclasses.field(default=None)
+    title: Optional[str] = dataclasses.field(default=None)
     

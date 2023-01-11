@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import targethealthdescription as shared_targethealthdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeTargetHealthOutput:
-    target_health_descriptions: Optional[List[TargetHealthDescription]] = field(default=None)
+    target_health_descriptions: Optional[list[shared_targethealthdescription.TargetHealthDescription]] = dataclasses.field(default=None)
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import keygroupconfig as shared_keygroupconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetKeyGroupConfigResult:
-    key_group_config: Optional[KeyGroupConfig] = field(default=None)
+    key_group_config: Optional[shared_keygroupconfig.KeyGroupConfig] = dataclasses.field(default=None)
     

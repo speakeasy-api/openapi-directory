@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import groupkind as shared_groupkind
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClusterResourceRestoreScope:
     r"""ClusterResourceRestoreScope
     Identifies the cluster-scoped resources to restore from the Backup.
     """
     
-    selected_group_kinds: Optional[List[GroupKind]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selectedGroupKinds') }})
+    selected_group_kinds: Optional[list[shared_groupkind.GroupKind]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selectedGroupKinds') }})
     

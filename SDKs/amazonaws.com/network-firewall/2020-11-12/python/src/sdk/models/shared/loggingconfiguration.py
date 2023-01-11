@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import logdestinationconfig as shared_logdestinationconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LoggingConfiguration:
     r"""LoggingConfiguration
     Defines how AWS Network Firewall performs logging for a <a>Firewall</a>. 
     """
     
-    log_destination_configs: List[LogDestinationConfig] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LogDestinationConfigs') }})
+    log_destination_configs: list[shared_logdestinationconfig.LogDestinationConfig] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LogDestinationConfigs') }})
     

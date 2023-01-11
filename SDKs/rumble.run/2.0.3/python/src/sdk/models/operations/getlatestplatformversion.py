@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import componentversion as shared_componentversion
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLatestPlatformVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    component_version: Optional[shared.ComponentVersion] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    component_version: Optional[shared_componentversion.ComponentVersion] = dataclasses.field(default=None)
     

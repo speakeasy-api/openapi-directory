@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBodyDestinations:
-    ip: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
-    default: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('default') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    ip: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
+    default: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('default') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody:
-    destinations: Optional[List[UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBodyDestinations]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    destinations: Optional[list[UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBodyDestinations]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest:
-    path_params: UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams = field()
-    request: Optional[UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkApplianceConnectivityMonitoringDestinationsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_appliance_connectivity_monitoring_destinations_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_appliance_connectivity_monitoring_destinations_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

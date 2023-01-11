@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -34,13 +34,13 @@ class DoubleVerifyVideoViewabilityVideoViewableRateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DoubleVerifyVideoViewability:
     r"""DoubleVerifyVideoViewability
     Details of DoubleVerify video viewability settings.
     """
     
-    player_impression_rate: Optional[DoubleVerifyVideoViewabilityPlayerImpressionRateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playerImpressionRate') }})
-    video_iab: Optional[DoubleVerifyVideoViewabilityVideoIabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoIab') }})
-    video_viewable_rate: Optional[DoubleVerifyVideoViewabilityVideoViewableRateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoViewableRate') }})
+    player_impression_rate: Optional[DoubleVerifyVideoViewabilityPlayerImpressionRateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playerImpressionRate') }})
+    video_iab: Optional[DoubleVerifyVideoViewabilityVideoIabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoIab') }})
+    video_viewable_rate: Optional[DoubleVerifyVideoViewabilityVideoViewableRateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoViewableRate') }})
     

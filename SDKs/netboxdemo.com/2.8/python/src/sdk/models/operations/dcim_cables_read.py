@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import cable as shared_cable
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesReadRequest:
-    path_params: DcimCablesReadPathParams = field()
+    path_params: DcimCablesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cable: Optional[shared.Cable] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cable: Optional[shared_cable.Cable] = dataclasses.field(default=None)
     

@@ -8,3 +8,5 @@ from .getclicksmodel import *
 from .metatagmodel import *
 from .security import *
 from .snippetmodel import *
+
+__all__ = ["AliasModel","ClickModel","CreateAliasModel","CreateAliasResponseModel","DestinationModel","GetAliasesModel","GetClicksModel","MetaTagModel","SchemeAPIKeyAuth","SnippetModel"]

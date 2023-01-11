@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hreftype as shared_hreftype
+from ..shared import transactions as shared_transactions
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountReport:
     r"""AccountReport
     JSON based account report.
@@ -20,8 +21,8 @@ class AccountReport:
     
     """
     
-    links: dict[str, HrefType] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
-    booked: Optional[List[Transactions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('booked') }})
-    information: Optional[List[Transactions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('information') }})
-    pending: Optional[List[Transactions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pending') }})
+    links: dict[str, shared_hreftype.HrefType] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
+    booked: Optional[list[shared_transactions.Transactions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('booked') }})
+    information: Optional[list[shared_transactions.Transactions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('information') }})
+    pending: Optional[list[shared_transactions.Transactions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pending') }})
     

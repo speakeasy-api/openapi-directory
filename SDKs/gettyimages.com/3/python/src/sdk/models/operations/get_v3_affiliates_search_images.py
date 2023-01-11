@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import affiliatesearchstyle_enum as shared_affiliatesearchstyle_enum
+from ..shared import affiliateimagesearchresponse as shared_affiliateimagesearchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchImagesQueryParams:
-    phrase: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
-    style: Optional[shared.AffiliateSearchStyleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'style', 'style': 'form', 'explode': True }})
+    phrase: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
+    style: Optional[shared_affiliatesearchstyle_enum.AffiliateSearchStyleEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'style', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchImagesHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchImagesRequest:
-    headers: GetV3AffiliatesSearchImagesHeaders = field()
-    query_params: GetV3AffiliatesSearchImagesQueryParams = field()
+    headers: GetV3AffiliatesSearchImagesHeaders = dataclasses.field()
+    query_params: GetV3AffiliatesSearchImagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchImagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    affiliate_image_search_response: Optional[shared.AffiliateImageSearchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    affiliate_image_search_response: Optional[shared_affiliateimagesearchresponse.AffiliateImageSearchResponse] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFlowLogsIntegrationTemplateResult:
-    result: Optional[str] = field(default=None)
+    result: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

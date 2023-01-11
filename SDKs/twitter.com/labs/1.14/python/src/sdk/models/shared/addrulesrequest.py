@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rulenoid as shared_rulenoid
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddRulesRequest:
-    add: List[RuleNoID] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
+    add: list[shared_rulenoid.RuleNoID] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
     

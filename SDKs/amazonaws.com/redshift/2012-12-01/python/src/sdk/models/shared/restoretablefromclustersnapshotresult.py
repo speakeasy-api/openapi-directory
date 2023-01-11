@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import tablerestorestatus as shared_tablerestorestatus
 
 
-@dataclass
+@dataclasses.dataclass
 class RestoreTableFromClusterSnapshotResult:
-    table_restore_status: Optional[TableRestoreStatus] = field(default=None)
+    table_restore_status: Optional[shared_tablerestorestatus.TableRestoreStatus] = dataclasses.field(default=None)
     

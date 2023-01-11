@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import call as shared_call
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CallHoldPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CallHoldRequest:
-    path_params: CallHoldPathParams = field()
+    path_params: CallHoldPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CallHoldResponse:
-    content_type: str = field()
-    status_code: int = field()
-    call: Optional[shared.Call] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    call: Optional[shared_call.Call] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

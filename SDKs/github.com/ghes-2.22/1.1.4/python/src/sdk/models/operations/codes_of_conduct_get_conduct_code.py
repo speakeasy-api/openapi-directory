@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import code_of_conduct as shared_code_of_conduct
 
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetConductCodePathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetConductCode415ApplicationJSON:
-    documentation_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetConductCodeRequest:
-    path_params: CodesOfConductGetConductCodePathParams = field()
+    path_params: CodesOfConductGetConductCodePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetConductCodeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    code_of_conduct: Optional[shared.CodeOfConduct] = field(default=None)
-    codes_of_conduct_get_conduct_code_415_application_json_object: Optional[CodesOfConductGetConductCode415ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    code_of_conduct: Optional[shared_code_of_conduct.CodeOfConduct] = dataclasses.field(default=None)
+    codes_of_conduct_get_conduct_code_415_application_json_object: Optional[CodesOfConductGetConductCode415ApplicationJSON] = dataclasses.field(default=None)
     

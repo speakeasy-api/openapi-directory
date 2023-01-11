@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
-from . import *
+from ..shared import predictivescalingmetricspecification as shared_predictivescalingmetricspecification
 
 
-@dataclass
+@dataclasses.dataclass
 class LoadForecast:
     r"""LoadForecast
     A <code>GetPredictiveScalingForecast</code> call returns the load forecast for a predictive scaling policy. This structure includes the data points for that load forecast, along with the timestamps of those data points and the metric specification. 
     """
     
-    metric_specification: PredictiveScalingMetricSpecification = field()
-    timestamps: List[datetime] = field()
-    values: List[float] = field()
+    metric_specification: shared_predictivescalingmetricspecification.PredictiveScalingMetricSpecification = dataclasses.field()
+    timestamps: list[datetime] = dataclasses.field()
+    values: list[float] = dataclasses.field()
     

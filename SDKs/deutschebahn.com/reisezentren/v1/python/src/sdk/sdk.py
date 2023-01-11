@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -66,7 +66,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TravelCenter]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TravelCenter]])
                 res.travel_center_list = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -76,33 +76,6 @@ class SDK:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.Error])
                 res.error = out
-
-        return res
-
-    
-    def get_reisezentren_id_(self, request: operations.GetReisezentrenIDRequest) -> operations.GetReisezentrenIDResponse:
-        r"""Get information about a specific station
-        Get information about a specific station
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/reisezentren/{id}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetReisezentrenIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
 
         return res
 
@@ -153,6 +126,33 @@ class SDK:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.TravelCenter])
                 res.travel_center = out
+
+        return res
+
+    
+    def get_reisezentren_id_(self, request: operations.GetReisezentrenIDRequest) -> operations.GetReisezentrenIDResponse:
+        r"""Get information about a specific station
+        Get information about a specific station
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/reisezentren/{id}", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetReisezentrenIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
 
         return res
 

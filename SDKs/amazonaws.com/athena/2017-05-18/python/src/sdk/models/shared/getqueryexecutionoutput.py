@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import queryexecution as shared_queryexecution
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetQueryExecutionOutput:
-    query_execution: Optional[QueryExecution] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QueryExecution') }})
+    query_execution: Optional[shared_queryexecution.QueryExecution] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QueryExecution') }})
     

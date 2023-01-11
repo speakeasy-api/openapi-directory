@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import offer as shared_offer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SendOfferToInterestedBuyersCollectionResponse:
     r"""SendOfferToInterestedBuyersCollectionResponse
     The response object returned from a SendOfferToInterestedBuyers request.
     """
     
-    offers: Optional[List[Offer]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offers') }})
+    offers: Optional[list[shared_offer.Offer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offers') }})
     

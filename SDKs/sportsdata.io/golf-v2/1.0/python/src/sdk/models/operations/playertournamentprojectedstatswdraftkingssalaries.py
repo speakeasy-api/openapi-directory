@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams:
-    format: PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    tournamentid: str = field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
+    format: PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    tournamentid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerTournamentProjectedStatsWDraftkingsSalariesRequest:
-    path_params: PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams = field()
+    path_params: PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerTournamentProjectedStatsWDraftkingsSalariesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_tournament_projections: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_tournament_projections: Optional[list[Any]] = dataclasses.field(default=None)
     

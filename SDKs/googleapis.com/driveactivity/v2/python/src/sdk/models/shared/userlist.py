@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import singleuser as shared_singleuser
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserList:
     r"""UserList
     Wrapper for UserList Field value.
     """
     
-    values: Optional[List[SingleUser]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    values: Optional[list[shared_singleuser.SingleUser]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     

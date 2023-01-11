@@ -1,55 +1,55 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class ImagesPathParams:
-    query: str = field(metadata={'path_param': { 'field_name': 'query', 'style': 'simple', 'explode': False }})
+    query: str = dataclasses.field(metadata={'path_param': { 'field_name': 'query', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Images200ApplicationJSONImageResultsImage:
-    alt: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alt') }})
-    src: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
+    alt: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alt') }})
+    src: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Images200ApplicationJSONImageResultsLink:
-    domain: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    domain: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Images200ApplicationJSONImageResults:
-    image: Optional[Images200ApplicationJSONImageResultsImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
-    link: Optional[Images200ApplicationJSONImageResultsLink] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    image: Optional[Images200ApplicationJSONImageResultsImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
+    link: Optional[Images200ApplicationJSONImageResultsLink] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Images200ApplicationJSON:
-    answers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answers') }})
-    image_results: Optional[List[Images200ApplicationJSONImageResults]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image_results') }})
-    results: Optional[List[dict[str, Any]]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
-    total: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    answers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answers') }})
+    image_results: Optional[list[Images200ApplicationJSONImageResults]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image_results') }})
+    results: Optional[list[dict[str, Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
+    total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImagesRequest:
-    path_params: ImagesPathParams = field()
+    path_params: ImagesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ImagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    images_200_application_json_object: Optional[Images200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    images_200_application_json_object: Optional[Images200ApplicationJSON] = dataclasses.field(default=None)
     

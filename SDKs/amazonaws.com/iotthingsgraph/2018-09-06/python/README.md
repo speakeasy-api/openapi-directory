@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AssociateEntityToThingRequest(
     headers=operations.AssociateEntityToThingHeaders(
-        x_amz_algorithm="adipisci",
-        x_amz_content_sha256="ut",
-        x_amz_credential="et",
-        x_amz_date="vel",
-        x_amz_security_token="dolores",
-        x_amz_signature="iste",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="impedit",
+        x_amz_content_sha256="est",
+        x_amz_credential="dolor",
+        x_amz_date="facilis",
+        x_amz_security_token="ut",
+        x_amz_signature="tenetur",
+        x_amz_signed_headers="voluptatibus",
         x_amz_target="IotThingsGraphFrontEndService.AssociateEntityToThing",
     ),
     request=shared.AssociateEntityToThingRequest(
-        entity_id="dolorum",
-        namespace_version=4016723412169243643,
-        thing_name="ducimus",
+        entity_id="cupiditate",
+        namespace_version=6514906014667812376,
+        thing_name="in",
     ),
 )
     
-res = s.sdk.associate_entity_to_thing(req)
+res = s.associate_entity_to_thing(req)
 
 if res.associate_entity_to_thing_response is not None:
     # handle response

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostJmxRepositoryPathParams:
-    action: str = field(metadata={'path_param': { 'field_name': 'action', 'style': 'simple', 'explode': False }})
+    action: str = dataclasses.field(metadata={'path_param': { 'field_name': 'action', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostJmxRepositoryRequest:
-    path_params: PostJmxRepositoryPathParams = field()
+    path_params: PostJmxRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostJmxRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

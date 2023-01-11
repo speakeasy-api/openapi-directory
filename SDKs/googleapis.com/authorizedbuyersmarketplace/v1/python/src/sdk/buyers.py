@@ -54,14 +54,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:subscribe", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse(status_code=r.status_code, content_type=content_type)
@@ -83,14 +83,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{auctionPackage}:subscribeClients", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse(status_code=r.status_code, content_type=content_type)
@@ -112,14 +112,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:unsubscribe", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse(status_code=r.status_code, content_type=content_type)
@@ -141,14 +141,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{auctionPackage}:unsubscribeClients", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse(status_code=r.status_code, content_type=content_type)
@@ -170,14 +170,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{parent}/clients", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -224,14 +224,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:activate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse(status_code=r.status_code, content_type=content_type)
@@ -253,14 +253,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{parent}/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -282,14 +282,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:deactivate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse(status_code=r.status_code, content_type=content_type)
@@ -361,14 +361,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{deal}:addCreative", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse(status_code=r.status_code, content_type=content_type)
@@ -415,14 +415,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:pause", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse(status_code=r.status_code, content_type=content_type)
@@ -444,14 +444,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:resume", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse(status_code=r.status_code, content_type=content_type)
@@ -473,14 +473,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{deal}:setReadyToServe", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse(status_code=r.status_code, content_type=content_type)
@@ -502,14 +502,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}:accept", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse(status_code=r.status_code, content_type=content_type)
@@ -531,14 +531,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{proposal}:addNote", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse(status_code=r.status_code, content_type=content_type)
@@ -560,14 +560,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{proposal}:cancelNegotiation", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse(status_code=r.status_code, content_type=content_type)
@@ -589,14 +589,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{parent}/deals:batchUpdate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -643,14 +643,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -697,14 +697,14 @@ class Buyers:
         url = utils.generate_url(base_url, "/v1/{buyer}/proposals:sendRfp", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse(status_code=r.status_code, content_type=content_type)

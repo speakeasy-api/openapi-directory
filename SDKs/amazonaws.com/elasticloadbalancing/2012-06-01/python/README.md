@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,24 +26,26 @@ s.config_security(
 req = operations.GetApplySecurityGroupsToLoadBalancerRequest(
     query_params=operations.GetApplySecurityGroupsToLoadBalancerQueryParams(
         action="ApplySecurityGroupsToLoadBalancer",
-        load_balancer_name="cumque",
+        load_balancer_name="molestias",
         security_groups=[
-            "adipisci",
+            "fugiat",
+            "cumque",
+            "ad",
         ],
         version="2012-06-01",
     ),
     headers=operations.GetApplySecurityGroupsToLoadBalancerHeaders(
-        x_amz_algorithm="accusantium",
-        x_amz_content_sha256="exercitationem",
-        x_amz_credential="doloremque",
-        x_amz_date="et",
-        x_amz_security_token="perspiciatis",
-        x_amz_signature="suscipit",
-        x_amz_signed_headers="inventore",
+        x_amz_algorithm="officiis",
+        x_amz_content_sha256="sit",
+        x_amz_credential="atque",
+        x_amz_date="ad",
+        x_amz_security_token="ab",
+        x_amz_signature="dolores",
+        x_amz_signed_headers="delectus",
     ),
 )
     
-res = s.sdk.get_apply_security_groups_to_load_balancer(req)
+res = s.get_apply_security_groups_to_load_balancer(req)
 
 if res.body is not None:
     # handle response

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import automationentity as shared_automationentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationsIDRequest:
-    path_params: GetAutomationsIDPathParams = field()
+    path_params: GetAutomationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    automation_entity: Optional[shared.AutomationEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    automation_entity: Optional[shared_automationentity.AutomationEntity] = dataclasses.field(default=None)
     

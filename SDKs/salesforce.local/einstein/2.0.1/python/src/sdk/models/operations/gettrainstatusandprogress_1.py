@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import trainresponse as shared_trainresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainStatusAndProgress1PathParams:
-    model_id: str = field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
+    model_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainStatusAndProgress1Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainStatusAndProgress1Request:
-    path_params: GetTrainStatusAndProgress1PathParams = field()
-    security: GetTrainStatusAndProgress1Security = field()
+    path_params: GetTrainStatusAndProgress1PathParams = dataclasses.field()
+    security: GetTrainStatusAndProgress1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainStatusAndProgress1Response:
-    content_type: str = field()
-    status_code: int = field()
-    train_response: Optional[shared.TrainResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    train_response: Optional[shared_trainresponse.TrainResponse] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import activitylistitem as shared_activitylistitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListActivitiesOutput:
-    activities: List[ActivityListItem] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('activities') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    activities: list[shared_activitylistitem.ActivityListItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('activities') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

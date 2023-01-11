@@ -4,3 +4,5 @@ from .httpbody import *
 from .link import *
 from .notice import *
 from .rdapresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","HTTPBody","Link","Notice","RdapResponse"]

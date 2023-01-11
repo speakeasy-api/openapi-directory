@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import predictedpoints as shared_predictedpoints
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPredictedPointsQueryParams:
-    distance: int = field(metadata={'query_param': { 'field_name': 'distance', 'style': 'form', 'explode': True }})
-    down: int = field(metadata={'query_param': { 'field_name': 'down', 'style': 'form', 'explode': True }})
+    distance: int = dataclasses.field(metadata={'query_param': { 'field_name': 'distance', 'style': 'form', 'explode': True }})
+    down: int = dataclasses.field(metadata={'query_param': { 'field_name': 'down', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPredictedPointsRequest:
-    query_params: GetPredictedPointsQueryParams = field()
+    query_params: GetPredictedPointsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPredictedPointsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    predicted_points: Optional[List[shared.PredictedPoints]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    predicted_points: Optional[list[shared_predictedpoints.PredictedPoints]] = dataclasses.field(default=None)
     

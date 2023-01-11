@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResetUserPasswordRequest:
-    directory_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
-    new_password: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('NewPassword') }})
-    user_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserName') }})
+    directory_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
+    new_password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('NewPassword') }})
+    user_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserName') }})
     

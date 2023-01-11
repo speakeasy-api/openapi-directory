@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import arearesponse as shared_arearesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class AreasGetPathParams:
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AreasGetRequest:
-    path_params: AreasGetPathParams = field()
+    path_params: AreasGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AreasGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    area_response: Optional[shared.AreaResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    area_response: Optional[shared_arearesponse.AreaResponse] = dataclasses.field(default=None)
     

@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.CancelKeyDeletion"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CancelKeyDeletionResponse(status_code=r.status_code, content_type=content_type)
@@ -116,7 +116,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ConnectCustomKeyStore"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -124,7 +124,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ConnectCustomKeyStoreResponse(status_code=r.status_code, content_type=content_type)
@@ -166,7 +166,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.CreateAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -174,7 +174,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -222,7 +222,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.CreateCustomKeyStore"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -230,7 +230,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateCustomKeyStoreResponse(status_code=r.status_code, content_type=content_type)
@@ -280,7 +280,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.CreateGrant"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -288,7 +288,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGrantResponse(status_code=r.status_code, content_type=content_type)
@@ -342,7 +342,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.CreateKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -350,7 +350,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -412,7 +412,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.Decrypt"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -420,7 +420,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DecryptResponse(status_code=r.status_code, content_type=content_type)
@@ -482,7 +482,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DeleteAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -490,7 +490,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -526,7 +526,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DeleteCustomKeyStore"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -534,7 +534,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteCustomKeyStoreResponse(status_code=r.status_code, content_type=content_type)
@@ -572,7 +572,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DeleteImportedKeyMaterial"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -580,7 +580,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteImportedKeyMaterialResponse(status_code=r.status_code, content_type=content_type)
@@ -624,7 +624,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DescribeCustomKeyStores"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -632,7 +632,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeCustomKeyStoresResponse(status_code=r.status_code, content_type=content_type)
@@ -666,7 +666,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DescribeKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -674,7 +674,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -712,7 +712,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DisableKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -720,7 +720,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisableKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -760,7 +760,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DisableKeyRotation"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -768,7 +768,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisableKeyRotationResponse(status_code=r.status_code, content_type=content_type)
@@ -816,7 +816,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.DisconnectCustomKeyStore"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -824,7 +824,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisconnectCustomKeyStoreResponse(status_code=r.status_code, content_type=content_type)
@@ -858,7 +858,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.EnableKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -866,7 +866,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.EnableKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -910,7 +910,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.EnableKeyRotation"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -918,7 +918,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.EnableKeyRotationResponse(status_code=r.status_code, content_type=content_type)
@@ -966,7 +966,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.Encrypt"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -974,7 +974,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.EncryptResponse(status_code=r.status_code, content_type=content_type)
@@ -1028,7 +1028,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GenerateDataKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1036,7 +1036,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GenerateDataKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -1090,7 +1090,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GenerateDataKeyPair"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1098,7 +1098,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GenerateDataKeyPairResponse(status_code=r.status_code, content_type=content_type)
@@ -1156,7 +1156,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GenerateDataKeyPairWithoutPlaintext"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1164,7 +1164,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GenerateDataKeyPairWithoutPlaintextResponse(status_code=r.status_code, content_type=content_type)
@@ -1222,7 +1222,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GenerateDataKeyWithoutPlaintext"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1230,7 +1230,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GenerateDataKeyWithoutPlaintextResponse(status_code=r.status_code, content_type=content_type)
@@ -1284,7 +1284,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GenerateRandom"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1292,7 +1292,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GenerateRandomResponse(status_code=r.status_code, content_type=content_type)
@@ -1330,7 +1330,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GetKeyPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1338,7 +1338,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetKeyPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1380,7 +1380,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GetKeyRotationStatus"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1388,7 +1388,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetKeyRotationStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -1434,7 +1434,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GetParametersForImport"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1442,7 +1442,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetParametersForImportResponse(status_code=r.status_code, content_type=content_type)
@@ -1488,7 +1488,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.GetPublicKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1496,7 +1496,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetPublicKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -1558,7 +1558,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ImportKeyMaterial"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1566,7 +1566,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ImportKeyMaterialResponse(status_code=r.status_code, content_type=content_type)
@@ -1628,7 +1628,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListAliases"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1637,7 +1637,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListAliasesResponse(status_code=r.status_code, content_type=content_type)
@@ -1679,7 +1679,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListGrants"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1688,7 +1688,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListGrantsResponse(status_code=r.status_code, content_type=content_type)
@@ -1738,7 +1738,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListKeyPolicies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1747,7 +1747,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListKeyPoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -1789,7 +1789,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListKeys"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1798,7 +1798,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -1832,7 +1832,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListResourceTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1840,7 +1840,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListResourceTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -1878,7 +1878,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ListRetirableGrants"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1886,7 +1886,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRetirableGrantsResponse(status_code=r.status_code, content_type=content_type)
@@ -1928,7 +1928,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.PutKeyPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1936,7 +1936,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutKeyPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1988,7 +1988,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ReEncrypt"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1996,7 +1996,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReEncryptResponse(status_code=r.status_code, content_type=content_type)
@@ -2058,7 +2058,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ReplicateKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2066,7 +2066,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReplicateKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -2128,7 +2128,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.RetireGrant"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2136,7 +2136,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RetireGrantResponse(status_code=r.status_code, content_type=content_type)
@@ -2184,7 +2184,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.RevokeGrant"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2192,7 +2192,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RevokeGrantResponse(status_code=r.status_code, content_type=content_type)
@@ -2236,7 +2236,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.ScheduleKeyDeletion"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2244,7 +2244,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ScheduleKeyDeletionResponse(status_code=r.status_code, content_type=content_type)
@@ -2286,7 +2286,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.Sign"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2294,7 +2294,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SignResponse(status_code=r.status_code, content_type=content_type)
@@ -2348,7 +2348,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.TagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2356,7 +2356,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -2400,7 +2400,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.UntagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2408,7 +2408,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UntagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -2448,7 +2448,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.UpdateAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2456,7 +2456,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -2496,7 +2496,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.UpdateCustomKeyStore"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2504,7 +2504,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateCustomKeyStoreResponse(status_code=r.status_code, content_type=content_type)
@@ -2558,7 +2558,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.UpdateKeyDescription"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2566,7 +2566,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateKeyDescriptionResponse(status_code=r.status_code, content_type=content_type)
@@ -2606,7 +2606,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.UpdatePrimaryRegion"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2614,7 +2614,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdatePrimaryRegionResponse(status_code=r.status_code, content_type=content_type)
@@ -2658,7 +2658,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=TrentService.Verify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2666,7 +2666,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.VerifyResponse(status_code=r.status_code, content_type=content_type)

@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Resources:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.resource_wrappeds = out
         elif r.status_code == 400:
             pass

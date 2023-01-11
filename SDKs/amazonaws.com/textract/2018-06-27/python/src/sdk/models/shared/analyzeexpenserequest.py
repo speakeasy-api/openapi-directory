@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import document as shared_document
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AnalyzeExpenseRequest:
-    document: Document = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Document') }})
+    document: shared_document.Document = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Document') }})
     

@@ -54,7 +54,7 @@ class SDK:
         url = utils.generate_url(base_url, "/publish/v2/attractions/{id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -62,7 +62,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchAttractionResponse(status_code=r.status_code, content_type=content_type)
@@ -84,7 +84,7 @@ class SDK:
         url = utils.generate_url(base_url, "/publish/v2/events/{id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -92,7 +92,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchEventResponse(status_code=r.status_code, content_type=content_type)
@@ -114,7 +114,7 @@ class SDK:
         url = utils.generate_url(base_url, "/publish/v2/venues/{id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -122,7 +122,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchVenueResponse(status_code=r.status_code, content_type=content_type)
@@ -144,7 +144,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/publish/v2/attractions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -152,7 +152,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishAttractionResponse(status_code=r.status_code, content_type=content_type)
@@ -174,7 +174,7 @@ class SDK:
         url = utils.generate_url(base_url, "/publish/v2/attractions/{id}/videos", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -182,7 +182,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishAttractionVideosResponse(status_code=r.status_code, content_type=content_type)
@@ -204,7 +204,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/publish/v2/entitlements"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -212,7 +212,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishEntitlementsResponse(status_code=r.status_code, content_type=content_type)
@@ -234,7 +234,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/publish/v2/events"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -242,7 +242,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishEventResponse(status_code=r.status_code, content_type=content_type)
@@ -264,7 +264,7 @@ class SDK:
         url = utils.generate_url(base_url, "/publish/v2/events/{id}/videos", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -272,7 +272,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishEventVideosResponse(status_code=r.status_code, content_type=content_type)
@@ -294,7 +294,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/publish/v2/extensions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -302,7 +302,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishExtensionResponse(status_code=r.status_code, content_type=content_type)
@@ -324,7 +324,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/publish/v2/venues"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -332,7 +332,7 @@ class SDK:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PublishVenueResponse(status_code=r.status_code, content_type=content_type)

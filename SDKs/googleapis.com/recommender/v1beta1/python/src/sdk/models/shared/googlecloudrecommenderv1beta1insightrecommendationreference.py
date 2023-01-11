@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecommenderV1beta1InsightRecommendationReference:
     r"""GoogleCloudRecommenderV1beta1InsightRecommendationReference
     Reference to an associated recommendation.
     """
     
-    recommendation: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendation') }})
+    recommendation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendation') }})
     

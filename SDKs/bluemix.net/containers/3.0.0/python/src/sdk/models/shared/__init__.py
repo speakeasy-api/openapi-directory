@@ -8,3 +8,5 @@ from .getfilesharedetails import *
 from .imagedetail import *
 from .namespace import *
 from .route import *
+
+__all__ = ["Certificate","ContainersGroupsNameOrIDMaproutePostInfo","ContainersGroupsPostCreatedInfo","Fileshare","FileshareParam","FileshareUsage","GetFileshareDetails","ImageDetailConfig","ImageDetail","Namespace","Route"]

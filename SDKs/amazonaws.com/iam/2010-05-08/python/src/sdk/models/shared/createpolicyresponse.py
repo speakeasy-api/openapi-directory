@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import policy as shared_policy
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatePolicyResponse:
     r"""CreatePolicyResponse
     Contains the response to a successful <a>CreatePolicy</a> request. 
     """
     
-    policy: Optional[Policy] = field(default=None)
+    policy: Optional[shared_policy.Policy] = dataclasses.field(default=None)
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import member as shared_member
 
 
-@dataclass
+@dataclasses.dataclass
 class PutWorkspaceIDMembersIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    workspace_id: str = field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    workspace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutWorkspaceIDMembersIDSecurity:
-    bearer: shared.SchemeBearer = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    bearer: shared_security.SchemeBearer = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutWorkspaceIDMembersIDRequest:
-    path_params: PutWorkspaceIDMembersIDPathParams = field()
-    security: PutWorkspaceIDMembersIDSecurity = field()
-    request: Optional[shared.Member] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutWorkspaceIDMembersIDPathParams = dataclasses.field()
+    security: PutWorkspaceIDMembersIDSecurity = dataclasses.field()
+    request: Optional[shared_member.Member] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutWorkspaceIDMembersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

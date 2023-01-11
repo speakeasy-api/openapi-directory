@@ -1,9 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class CreateClientVpnRouteResultStatus:
+    r"""CreateClientVpnRouteResultStatus
+    The current state of the route.
+    """
+    
+    code: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    message: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class CreateClientVpnRouteResult:
-    status: Optional[ClientVpnRouteStatus] = field(default=None)
+    status: Optional[CreateClientVpnRouteResultStatus] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.CreateCliTokenRequest(
     path_params=operations.CreateCliTokenPathParams(
-        name="quia",
+        name="nostrum",
     ),
     headers=operations.CreateCliTokenHeaders(
-        x_amz_algorithm="laboriosam",
-        x_amz_content_sha256="non",
-        x_amz_credential="distinctio",
-        x_amz_date="vel",
-        x_amz_security_token="est",
-        x_amz_signature="incidunt",
-        x_amz_signed_headers="aut",
+        x_amz_algorithm="sed",
+        x_amz_content_sha256="qui",
+        x_amz_credential="enim",
+        x_amz_date="corporis",
+        x_amz_security_token="dolorem",
+        x_amz_signature="quos",
+        x_amz_signed_headers="quibusdam",
     ),
 )
     
-res = s.sdk.create_cli_token(req)
+res = s.create_cli_token(req)
 
 if res.create_cli_token_response is not None:
     # handle response

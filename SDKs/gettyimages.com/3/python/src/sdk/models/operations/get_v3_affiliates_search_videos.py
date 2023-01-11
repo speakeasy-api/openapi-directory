@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import affiliatevideosearchresponse as shared_affiliatevideosearchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchVideosQueryParams:
-    phrase: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
+    phrase: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchVideosHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchVideosRequest:
-    headers: GetV3AffiliatesSearchVideosHeaders = field()
-    query_params: GetV3AffiliatesSearchVideosQueryParams = field()
+    headers: GetV3AffiliatesSearchVideosHeaders = dataclasses.field()
+    query_params: GetV3AffiliatesSearchVideosQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AffiliatesSearchVideosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    affiliate_video_search_response: Optional[shared.AffiliateVideoSearchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    affiliate_video_search_response: Optional[shared_affiliatevideosearchresponse.AffiliateVideoSearchResponse] = dataclasses.field(default=None)
     

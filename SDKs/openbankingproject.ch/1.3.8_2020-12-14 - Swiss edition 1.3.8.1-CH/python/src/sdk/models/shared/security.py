@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeBearerAuthOAuth:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    bearer_auth_o_auth: Optional[SchemeBearerAuthOAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth_o_auth: Optional[SchemeBearerAuthOAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     

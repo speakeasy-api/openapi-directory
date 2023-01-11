@@ -1,5 +1,6 @@
 from ._xgafv_enum import *
 from .alt_enum import *
+from .altermetadataresourcelocationrequest import *
 from .auditconfig import *
 from .auditlogconfig import *
 from .auxiliaryversionconfig import *
@@ -29,9 +30,11 @@ from .metadataexport import *
 from .metadataimport import *
 from .metadataintegration import *
 from .metadatamanagementactivity import *
+from .movetabletodatabaserequest import *
 from .networkconfig import *
 from .operation import *
 from .policy import *
+from .querymetadatarequest import *
 from .removeiampolicyresponse import *
 from .restore import *
 from .restoreservicerequest import *
@@ -43,3 +46,5 @@ from .status import *
 from .telemetryconfig import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","AlterMetadataResourceLocationRequest","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","AuxiliaryVersionConfig","AuxiliaryVersionConfigInput","BackendMetastoreMetastoreTypeEnum","BackendMetastore","BackupStateEnum","Backup","BackupInput","Binding","Consumer","ConsumerInput","DatabaseDumpDatabaseTypeEnum","DatabaseDumpTypeEnum","DatabaseDump","DataCatalogConfig","DataplexConfig","EncryptionConfig","ExportMetadataRequestDatabaseDumpTypeEnum","ExportMetadataRequest","Expr","FederationStateEnum","Federation","FederationInput","HiveMetastoreConfigEndpointProtocolEnum","HiveMetastoreConfig","HiveMetastoreConfigInput","KerberosConfig","Lake","ListBackupsResponse","ListFederationsResponse","ListLocationsResponse","ListMetadataImportsResponse","ListOperationsResponse","ListServicesResponse","Location","MaintenanceWindowDayOfWeekEnum","MaintenanceWindow","MetadataExportDatabaseDumpTypeEnum","MetadataExportStateEnum","MetadataExport","MetadataImportStateEnum","MetadataImport","MetadataImportInput","MetadataIntegration","MetadataManagementActivity","MoveTableToDatabaseRequest","NetworkConfig","NetworkConfigInput","Operation","Policy","QueryMetadataRequest","RemoveIamPolicyResponse","RestoreStateEnum","RestoreTypeEnum","Restore","RestoreServiceRequestRestoreTypeEnum","RestoreServiceRequest","Secret","SchemeOauth2","SchemeOauth2c","ServiceDatabaseTypeEnum","ServiceReleaseChannelEnum","ServiceStateEnum","ServiceTierEnum","Service","ServiceInput","SetIamPolicyRequest","Status","TelemetryConfigLogFormatEnum","TelemetryConfig","TestIamPermissionsRequest","TestIamPermissionsResponse"]

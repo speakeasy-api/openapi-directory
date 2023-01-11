@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,12 +17,12 @@ class DoubleVerifyFraudInvalidTrafficAvoidedFraudOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DoubleVerifyFraudInvalidTraffic:
     r"""DoubleVerifyFraudInvalidTraffic
     DoubleVerify Fraud & Invalid Traffic settings.
     """
     
-    avoid_insufficient_option: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('avoidInsufficientOption') }})
-    avoided_fraud_option: Optional[DoubleVerifyFraudInvalidTrafficAvoidedFraudOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('avoidedFraudOption') }})
+    avoid_insufficient_option: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('avoidInsufficientOption') }})
+    avoided_fraud_option: Optional[DoubleVerifyFraudInvalidTrafficAvoidedFraudOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('avoidedFraudOption') }})
     

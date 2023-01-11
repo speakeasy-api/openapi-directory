@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import badrequest as shared_badrequest
+from ..shared import clusterresponse as shared_clusterresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetClusterSolutionPathParams:
-    job_id: str = field(metadata={'path_param': { 'field_name': 'jobId', 'style': 'simple', 'explode': False }})
+    job_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jobId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetClusterSolution404ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClusterSolutionRequest:
-    path_params: GetClusterSolutionPathParams = field()
+    path_params: GetClusterSolutionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClusterSolutionResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    bad_request: Optional[shared.BadRequest] = field(default=None)
-    cluster_response: Optional[shared.ClusterResponse] = field(default=None)
-    get_cluster_solution_404_application_json_object: Optional[GetClusterSolution404ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bad_request: Optional[shared_badrequest.BadRequest] = dataclasses.field(default=None)
+    cluster_response: Optional[shared_clusterresponse.ClusterResponse] = dataclasses.field(default=None)
+    get_cluster_solution_404_application_json_object: Optional[GetClusterSolution404ApplicationJSON] = dataclasses.field(default=None)
     

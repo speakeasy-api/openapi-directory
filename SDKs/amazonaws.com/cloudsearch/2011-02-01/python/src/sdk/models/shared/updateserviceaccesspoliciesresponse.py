@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import accesspoliciesstatus as shared_accesspoliciesstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateServiceAccessPoliciesResponse:
     r"""UpdateServiceAccessPoliciesResponse
     A response message that contains the status of updated access policies.
     """
     
-    access_policies: AccessPoliciesStatus = field()
+    access_policies: shared_accesspoliciesstatus.AccessPoliciesStatus = dataclasses.field()
     

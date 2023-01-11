@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,16 +18,16 @@ s = sdk.SDK()
     
 req = operations.RetrievePrefixPricingRequest(
     path_params=operations.RetrievePrefixPricingPathParams(
-        type="pariatur",
+        type="ab",
     ),
     query_params=operations.RetrievePrefixPricingQueryParams(
-        api_key="asperiores",
-        api_secret="dolorem",
-        prefix="quae",
+        api_key="illo",
+        api_secret="exercitationem",
+        prefix="id",
     ),
 )
     
-res = s.sdk.retrieve_prefix_pricing(req)
+res = s.pricing.retrieve_prefix_pricing(req)
 
 if res.pricing_countries_response is not None:
     # handle response
@@ -38,7 +37,7 @@ if res.pricing_countries_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pricing
 
 * `retrieve_prefix_pricing` - Retrieve outbound pricing for a specific dialing prefix.
 * `retrieve_pricing_all_countries` - Retrieve outbound pricing for all countries.

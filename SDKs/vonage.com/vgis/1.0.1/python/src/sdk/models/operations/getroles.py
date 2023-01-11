@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import call as shared_call
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRolesPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRolesRequest:
-    path_params: GetRolesPathParams = field()
+    path_params: GetRolesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRolesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    calls: Optional[List[shared.Call]] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    calls: Optional[list[shared_call.Call]] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

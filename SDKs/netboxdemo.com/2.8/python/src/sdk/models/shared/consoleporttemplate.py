@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nesteddevicetype as shared_nesteddevicetype
 
 class ConsolePortTemplateTypeLabelEnum(str, Enum):
     DE_9 = "DE-9"
@@ -37,17 +37,17 @@ class ConsolePortTemplateTypeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConsolePortTemplateType:
-    label: ConsolePortTemplateTypeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: ConsolePortTemplateTypeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: ConsolePortTemplateTypeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: ConsolePortTemplateTypeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConsolePortTemplate:
-    device_type: NestedDeviceType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: Optional[ConsolePortTemplateType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    device_type: shared_nesteddevicetype.NestedDeviceType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: Optional[ConsolePortTemplateType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

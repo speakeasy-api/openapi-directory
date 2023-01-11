@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import picture as shared_picture
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatePicturePathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePictureSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePictureRequest:
-    path_params: CreatePicturePathParams = field()
-    security: CreatePictureSecurity = field()
+    path_params: CreatePicturePathParams = dataclasses.field()
+    security: CreatePictureSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePictureResponse:
-    content_type: str = field()
-    status_code: int = field()
-    picture: Optional[shared.Picture] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    picture: Optional[shared_picture.Picture] = dataclasses.field(default=None)
     

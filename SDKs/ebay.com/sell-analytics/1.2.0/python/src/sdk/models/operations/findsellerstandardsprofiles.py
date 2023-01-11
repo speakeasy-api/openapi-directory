@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import findsellerstandardsprofilesresponse as shared_findsellerstandardsprofilesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class FindSellerStandardsProfilesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindSellerStandardsProfilesRequest:
-    security: FindSellerStandardsProfilesSecurity = field()
+    security: FindSellerStandardsProfilesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindSellerStandardsProfilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    find_seller_standards_profiles_response: Optional[shared.FindSellerStandardsProfilesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    find_seller_standards_profiles_response: Optional[shared_findsellerstandardsprofilesresponse.FindSellerStandardsProfilesResponse] = dataclasses.field(default=None)
     

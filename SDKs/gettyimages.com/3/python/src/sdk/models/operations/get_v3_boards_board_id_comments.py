@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import commentslist as shared_commentslist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDCommentsPathParams:
-    board_id: str = field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
+    board_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDCommentsRequest:
-    path_params: GetV3BoardsBoardIDCommentsPathParams = field()
+    path_params: GetV3BoardsBoardIDCommentsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    comments_list: Optional[shared.CommentsList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    comments_list: Optional[shared_commentslist.CommentsList] = dataclasses.field(default=None)
     

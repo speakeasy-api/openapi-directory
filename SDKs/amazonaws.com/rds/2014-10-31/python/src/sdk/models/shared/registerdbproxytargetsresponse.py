@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbproxytarget as shared_dbproxytarget
 
 
-@dataclass
+@dataclasses.dataclass
 class RegisterDbProxyTargetsResponse:
-    db_proxy_targets: Optional[List[DbProxyTarget]] = field(default=None)
+    db_proxy_targets: Optional[list[shared_dbproxytarget.DbProxyTarget]] = dataclasses.field(default=None)
     

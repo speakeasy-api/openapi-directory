@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
+from ..shared import onev2_1apps_1percent_7bapp_idpercent_7d_1deployments_post_responses_200_content_application_1json_schema as shared_onev2_1apps_1percent_7bapp_idpercent_7d_1deployments_post_responses_200_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDeploymentPathParams:
-    app_id: str = field(default=None, metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
-    deployment_id: str = field(default=None, metadata={'path_param': { 'field_name': 'deployment_id', 'style': 'simple', 'explode': False }})
-    
-
-@dataclass
-class GetDeploymentRequest:
-    path_params: GetDeploymentPathParams = field(default=None)
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    deployment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'deployment_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDeployment401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class GetDeploymentRequest:
+    path_params: GetDeploymentPathParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
 class GetDeploymentResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    get_deployment_401_application_json_object: Optional[GetDeployment401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
-    onev2_1apps_1_percent_7_bapp_id_percent_7_d_1deployments_post_responses_200_content_application_1json_schema: Optional[shared.Onev21apps1Percent7BappIDPercent7D1deploymentsPostResponses200ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_deployment_401_application_json_object: Optional[GetDeployment401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
+    onev2_1apps_1_percent_7_bapp_id_percent_7_d_1deployments_post_responses_200_content_application_1json_schema: Optional[shared_onev2_1apps_1percent_7bapp_idpercent_7d_1deployments_post_responses_200_content_application_1json_schema.Onev21apps1Percent7BappIDPercent7D1deploymentsPostResponses200ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

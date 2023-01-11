@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import pre_receive_hook as shared_pre_receive_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookPathParams:
-    pre_receive_hook_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
+    pre_receive_hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookRequest:
-    path_params: EnterpriseAdminGetPreReceiveHookPathParams = field()
+    path_params: EnterpriseAdminGetPreReceiveHookPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pre_receive_hook: Optional[shared.PreReceiveHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pre_receive_hook: Optional[shared_pre_receive_hook.PreReceiveHook] = dataclasses.field(default=None)
     

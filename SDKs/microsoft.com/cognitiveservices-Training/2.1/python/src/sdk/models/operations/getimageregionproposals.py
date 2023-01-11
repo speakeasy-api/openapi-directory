@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imageregionproposal as shared_imageregionproposal
 
 
-@dataclass
+@dataclasses.dataclass
 class GetImageRegionProposalsPathParams:
-    image_id: str = field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImageRegionProposalsHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImageRegionProposalsRequest:
-    headers: GetImageRegionProposalsHeaders = field()
-    path_params: GetImageRegionProposalsPathParams = field()
+    headers: GetImageRegionProposalsHeaders = dataclasses.field()
+    path_params: GetImageRegionProposalsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImageRegionProposalsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    image_region_proposal: Optional[shared.ImageRegionProposal] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    image_region_proposal: Optional[shared_imageregionproposal.ImageRegionProposal] = dataclasses.field(default=None)
     

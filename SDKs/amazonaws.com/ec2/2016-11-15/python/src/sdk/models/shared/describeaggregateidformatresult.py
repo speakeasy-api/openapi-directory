@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAggregateIDFormatResult:
-    statuses: Optional[List[IDFormat]] = field(default=None)
-    use_long_ids_aggregated: Optional[bool] = field(default=None)
+    statuses: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    use_long_ids_aggregated: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

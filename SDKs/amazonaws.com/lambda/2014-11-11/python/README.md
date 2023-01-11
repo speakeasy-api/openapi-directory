@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,27 @@ s.config_security(
     
 req = operations.AddEventSourceRequest(
     headers=operations.AddEventSourceHeaders(
-        x_amz_algorithm="odit",
-        x_amz_content_sha256="dolor",
-        x_amz_credential="voluptatibus",
-        x_amz_date="aut",
-        x_amz_security_token="repellendus",
-        x_amz_signature="et",
-        x_amz_signed_headers="sunt",
+        x_amz_algorithm="ipsum",
+        x_amz_content_sha256="omnis",
+        x_amz_credential="error",
+        x_amz_date="reprehenderit",
+        x_amz_security_token="explicabo",
+        x_amz_signature="aut",
+        x_amz_signed_headers="eum",
     ),
     request=operations.AddEventSourceRequestBody(
-        batch_size=4853637501029258723,
-        event_source="voluptatem",
-        function_name="natus",
+        batch_size=6380244943489637684,
+        event_source="ratione",
+        function_name="labore",
         parameters={
-            "incidunt": "voluptatem",
-            "omnis": "illum",
+            "saepe": "libero",
+            "nobis": "ut",
         },
-        role="eligendi",
+        role="accusamus",
     ),
 )
     
-res = s.sdk.add_event_source(req)
+res = s.add_event_source(req)
 
 if res.event_source_configuration is not None:
     # handle response

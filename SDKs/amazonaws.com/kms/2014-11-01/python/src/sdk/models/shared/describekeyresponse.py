@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keymetadata as shared_keymetadata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeKeyResponse:
-    key_metadata: Optional[KeyMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeyMetadata') }})
+    key_metadata: Optional[shared_keymetadata.KeyMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeyMetadata') }})
     

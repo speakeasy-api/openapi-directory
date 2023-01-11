@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import obparty2 as shared_obparty2
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ObReadDataParty3:
-    party: Optional[List[ObParty2]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Party') }})
+    party: Optional[list[shared_obparty2.ObParty2]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Party') }})
     

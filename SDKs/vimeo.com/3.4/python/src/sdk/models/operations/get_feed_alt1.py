@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import activity_3_1 as shared_activity_3_1
 
 class GetFeedAlt1TypeEnum(str, Enum):
     APPEARS = "appears"
@@ -18,28 +19,28 @@ class GetFeedAlt1TypeEnum(str, Enum):
     UPLOADS = "uploads"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedAlt1QueryParams:
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    type: Optional[GetFeedAlt1TypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    type: Optional[GetFeedAlt1TypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedAlt1Request:
-    query_params: GetFeedAlt1QueryParams = field()
-    security: GetFeedAlt1Security = field()
+    query_params: GetFeedAlt1QueryParams = dataclasses.field()
+    security: GetFeedAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    activity_3_1s: Optional[List[shared.Activity31]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    activity_3_1s: Optional[list[shared_activity_3_1.Activity31]] = dataclasses.field(default=None)
     

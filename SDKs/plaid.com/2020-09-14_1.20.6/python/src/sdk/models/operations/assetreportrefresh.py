@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import assetreportrefreshrequest as shared_assetreportrefreshrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class AssetReportRefreshRequest:
-    request: shared.AssetReportRefreshRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_assetreportrefreshrequest.AssetReportRefreshRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AssetReportRefreshResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_report_refresh_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_report_refresh_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

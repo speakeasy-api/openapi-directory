@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_ratedsongforuserforapicontract_ as shared_partialfindresult_ratedsongforuserforapicontract_
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetRatedSongsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class UserAPIGetRatedSongsArtistGroupingEnum(str, Enum):
     AND = "And"
@@ -68,38 +68,38 @@ class UserAPIGetRatedSongsSortEnum(str, Enum):
     RATING_DATE = "RatingDate"
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetRatedSongsQueryParams:
-    advanced_filters: Optional[List[Any]] = field(default=None, metadata={'query_param': { 'field_name': 'advancedFilters', 'style': 'form', 'explode': True }})
-    artist_grouping: Optional[UserAPIGetRatedSongsArtistGroupingEnum] = field(default=None, metadata={'query_param': { 'field_name': 'artistGrouping', 'style': 'form', 'explode': True }})
-    artist_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'artistId', 'style': 'form', 'explode': True }})
-    child_voicebanks: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'childVoicebanks', 'style': 'form', 'explode': True }})
-    fields: Optional[UserAPIGetRatedSongsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    group_by_rating: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'groupByRating', 'style': 'form', 'explode': True }})
-    lang: Optional[UserAPIGetRatedSongsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[UserAPIGetRatedSongsNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    pv_services: Optional[UserAPIGetRatedSongsPvServicesEnum] = field(default=None, metadata={'query_param': { 'field_name': 'pvServices', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    rating: Optional[UserAPIGetRatedSongsRatingEnum] = field(default=None, metadata={'query_param': { 'field_name': 'rating', 'style': 'form', 'explode': True }})
-    song_list_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'songListId', 'style': 'form', 'explode': True }})
-    sort: Optional[UserAPIGetRatedSongsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    tag_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
-    tag_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
+    advanced_filters: Optional[list[Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'advancedFilters', 'style': 'form', 'explode': True }})
+    artist_grouping: Optional[UserAPIGetRatedSongsArtistGroupingEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artistGrouping', 'style': 'form', 'explode': True }})
+    artist_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artistId', 'style': 'form', 'explode': True }})
+    child_voicebanks: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'childVoicebanks', 'style': 'form', 'explode': True }})
+    fields: Optional[UserAPIGetRatedSongsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    group_by_rating: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'groupByRating', 'style': 'form', 'explode': True }})
+    lang: Optional[UserAPIGetRatedSongsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[UserAPIGetRatedSongsNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    pv_services: Optional[UserAPIGetRatedSongsPvServicesEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pvServices', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    rating: Optional[UserAPIGetRatedSongsRatingEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rating', 'style': 'form', 'explode': True }})
+    song_list_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'songListId', 'style': 'form', 'explode': True }})
+    sort: Optional[UserAPIGetRatedSongsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    tag_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
+    tag_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetRatedSongsRequest:
-    path_params: UserAPIGetRatedSongsPathParams = field()
-    query_params: UserAPIGetRatedSongsQueryParams = field()
+    path_params: UserAPIGetRatedSongsPathParams = dataclasses.field()
+    query_params: UserAPIGetRatedSongsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetRatedSongsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_rated_song_for_user_for_api_contract_: Optional[shared.PartialFindResultRatedSongForUserForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_rated_song_for_user_for_api_contract_: Optional[shared_partialfindresult_ratedsongforuserforapicontract_.PartialFindResultRatedSongForUserForAPIContract] = dataclasses.field(default=None)
     

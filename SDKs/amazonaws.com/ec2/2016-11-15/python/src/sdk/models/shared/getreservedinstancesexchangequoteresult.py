@@ -1,24 +1,42 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup:
+    r"""GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup
+    The cost associated with the Reserved Instance.
+    """
+    
+    hourly_price: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    remaining_total_value: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    remaining_upfront_value: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
+class GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup:
+    r"""GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup
+    The cost associated with the Reserved Instance.
+    """
+    
+    hourly_price: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    remaining_total_value: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    remaining_upfront_value: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class GetReservedInstancesExchangeQuoteResult:
     r"""GetReservedInstancesExchangeQuoteResult
     Contains the output of GetReservedInstancesExchangeQuote.
     """
     
-    currency_code: Optional[str] = field(default=None)
-    is_valid_exchange: Optional[bool] = field(default=None)
-    output_reserved_instances_will_expire_at: Optional[datetime] = field(default=None)
-    payment_due: Optional[str] = field(default=None)
-    reserved_instance_value_rollup: Optional[ReservationValue] = field(default=None)
-    reserved_instance_value_set: Optional[List[ReservedInstanceReservationValue]] = field(default=None)
-    target_configuration_value_rollup: Optional[ReservationValue] = field(default=None)
-    target_configuration_value_set: Optional[List[TargetReservationValue]] = field(default=None)
-    validation_failure_reason: Optional[str] = field(default=None)
+    currency_code: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    is_valid_exchange: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    output_reserved_instances_will_expire_at: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    payment_due: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    reserved_instance_value_rollup: Optional[GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup] = dataclasses.field(default=None)
+    reserved_instance_value_set: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    target_configuration_value_rollup: Optional[GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup] = dataclasses.field(default=None)
+    target_configuration_value_set: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    validation_failure_reason: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

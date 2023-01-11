@@ -1,29 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import four_hundred_and_oneresponse as shared_four_hundred_and_oneresponse
+from ..shared import waaccountresponse as shared_waaccountresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWaAccountPathParams:
-    external_id: str = field(metadata={'path_param': { 'field_name': 'external_id', 'style': 'simple', 'explode': False }})
+    external_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'external_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWaAccountSecurity:
-    basic_auth: Optional[shared.SchemeBasicAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    bearer_auth: Optional[shared.SchemeBearerAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    basic_auth: Optional[shared_security.SchemeBasicAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    bearer_auth: Optional[shared_security.SchemeBearerAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWaAccountRequest:
-    path_params: GetWaAccountPathParams = field()
-    security: GetWaAccountSecurity = field()
+    path_params: GetWaAccountPathParams = dataclasses.field()
+    security: GetWaAccountSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWaAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    four_hundred_and_one_response: Optional[shared.FourHundredAndOneResponse] = field(default=None)
-    wa_account_response: Optional[shared.WaAccountResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred_and_one_response: Optional[shared_four_hundred_and_oneresponse.FourHundredAndOneResponse] = dataclasses.field(default=None)
+    wa_account_response: Optional[shared_waaccountresponse.WaAccountResponse] = dataclasses.field(default=None)
     

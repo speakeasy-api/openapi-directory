@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetaddressmatchRequest(
     query_params=operations.GetaddressmatchQueryParams(
-        address="omnis",
-        license="dicta",
+        address="qui",
+        license="blanditiis",
     ),
 )
     
-res = s.sdk.getaddressmatch(req)
+res = s.street_address_similarity_key.getaddressmatch(req)
 
 if res.getaddressmatch_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getaddressmatch_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Street Address Similarity Key
 
 * `getaddressmatch` - Gets a similarity key for matching purposes for address data
 

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ipsetsummary as shared_ipsetsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListIPSetsResponse:
-    ip_sets: Optional[List[IPSetSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IPSets') }})
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    ip_sets: Optional[list[shared_ipsetsummary.IPSetSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IPSets') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
     

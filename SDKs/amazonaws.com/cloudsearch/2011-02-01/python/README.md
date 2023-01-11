@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,21 +26,21 @@ s.config_security(
 req = operations.GetCreateDomainRequest(
     query_params=operations.GetCreateDomainQueryParams(
         action="CreateDomain",
-        domain_name="omnis",
+        domain_name="illo",
         version="2011-02-01",
     ),
     headers=operations.GetCreateDomainHeaders(
-        x_amz_algorithm="animi",
-        x_amz_content_sha256="cum",
-        x_amz_credential="occaecati",
-        x_amz_date="ea",
-        x_amz_security_token="architecto",
-        x_amz_signature="esse",
-        x_amz_signed_headers="explicabo",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="aut",
+        x_amz_credential="eum",
+        x_amz_date="mollitia",
+        x_amz_security_token="praesentium",
+        x_amz_signature="inventore",
+        x_amz_signed_headers="adipisci",
     ),
 )
     
-res = s.sdk.get_create_domain(req)
+res = s.get_create_domain(req)
 
 if res.body is not None:
     # handle response

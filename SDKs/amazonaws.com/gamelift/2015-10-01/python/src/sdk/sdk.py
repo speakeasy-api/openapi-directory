@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.AcceptMatch"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AcceptMatchResponse(status_code=r.status_code, content_type=content_type)
@@ -112,7 +112,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ClaimGameServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -120,7 +120,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ClaimGameServerResponse(status_code=r.status_code, content_type=content_type)
@@ -166,7 +166,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -174,7 +174,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -220,7 +220,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateBuild"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -228,7 +228,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateBuildResponse(status_code=r.status_code, content_type=content_type)
@@ -270,7 +270,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateFleet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -278,7 +278,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateFleetResponse(status_code=r.status_code, content_type=content_type)
@@ -328,7 +328,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateFleetLocations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -336,7 +336,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateFleetLocationsResponse(status_code=r.status_code, content_type=content_type)
@@ -378,7 +378,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -386,7 +386,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -428,7 +428,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateGameSession"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -436,7 +436,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGameSessionResponse(status_code=r.status_code, content_type=content_type)
@@ -498,7 +498,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateGameSessionQueue"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -506,7 +506,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGameSessionQueueResponse(status_code=r.status_code, content_type=content_type)
@@ -552,7 +552,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateMatchmakingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -560,7 +560,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateMatchmakingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -606,7 +606,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateMatchmakingRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -614,7 +614,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateMatchmakingRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -652,7 +652,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreatePlayerSession"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -660,7 +660,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreatePlayerSessionResponse(status_code=r.status_code, content_type=content_type)
@@ -710,7 +710,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreatePlayerSessions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -718,7 +718,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreatePlayerSessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -768,7 +768,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateScript"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -776,7 +776,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateScriptResponse(status_code=r.status_code, content_type=content_type)
@@ -818,7 +818,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateVpcPeeringAuthorization"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -826,7 +826,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateVpcPeeringAuthorizationResponse(status_code=r.status_code, content_type=content_type)
@@ -864,7 +864,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.CreateVpcPeeringConnection"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -872,7 +872,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateVpcPeeringConnectionResponse(status_code=r.status_code, content_type=content_type)
@@ -910,7 +910,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -918,7 +918,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -958,7 +958,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteBuild"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -966,7 +966,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteBuildResponse(status_code=r.status_code, content_type=content_type)
@@ -1006,7 +1006,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteFleet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1014,7 +1014,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteFleetResponse(status_code=r.status_code, content_type=content_type)
@@ -1058,7 +1058,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteFleetLocations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1066,7 +1066,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteFleetLocationsResponse(status_code=r.status_code, content_type=content_type)
@@ -1104,7 +1104,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1112,7 +1112,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -1150,7 +1150,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteGameSessionQueue"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1158,7 +1158,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteGameSessionQueueResponse(status_code=r.status_code, content_type=content_type)
@@ -1200,7 +1200,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteMatchmakingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1208,7 +1208,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteMatchmakingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -1250,7 +1250,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteMatchmakingRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1258,7 +1258,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteMatchmakingRuleSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1300,7 +1300,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteScalingPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1308,7 +1308,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteScalingPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1344,7 +1344,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteScript"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1352,7 +1352,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteScriptResponse(status_code=r.status_code, content_type=content_type)
@@ -1392,7 +1392,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteVpcPeeringAuthorization"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1400,7 +1400,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteVpcPeeringAuthorizationResponse(status_code=r.status_code, content_type=content_type)
@@ -1438,7 +1438,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeleteVpcPeeringConnection"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1446,7 +1446,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteVpcPeeringConnectionResponse(status_code=r.status_code, content_type=content_type)
@@ -1484,7 +1484,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DeregisterGameServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1492,7 +1492,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeregisterGameServerResponse(status_code=r.status_code, content_type=content_type)
@@ -1528,7 +1528,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1536,7 +1536,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -1574,7 +1574,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeBuild"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1582,7 +1582,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeBuildResponse(status_code=r.status_code, content_type=content_type)
@@ -1620,7 +1620,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeEC2InstanceLimits"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1628,7 +1628,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeEc2InstanceLimitsResponse(status_code=r.status_code, content_type=content_type)
@@ -1662,7 +1662,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1671,7 +1671,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -1709,7 +1709,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetCapacity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1718,7 +1718,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetCapacityResponse(status_code=r.status_code, content_type=content_type)
@@ -1756,7 +1756,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetEvents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1765,7 +1765,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetEventsResponse(status_code=r.status_code, content_type=content_type)
@@ -1803,7 +1803,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetLocationAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1812,7 +1812,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetLocationAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -1850,7 +1850,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetLocationCapacity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1858,7 +1858,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetLocationCapacityResponse(status_code=r.status_code, content_type=content_type)
@@ -1896,7 +1896,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetLocationUtilization"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1904,7 +1904,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetLocationUtilizationResponse(status_code=r.status_code, content_type=content_type)
@@ -1942,7 +1942,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetPortSettings"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1950,7 +1950,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetPortSettingsResponse(status_code=r.status_code, content_type=content_type)
@@ -1988,7 +1988,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeFleetUtilization"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1997,7 +1997,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeFleetUtilizationResponse(status_code=r.status_code, content_type=content_type)
@@ -2035,7 +2035,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2043,7 +2043,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameServerResponse(status_code=r.status_code, content_type=content_type)
@@ -2081,7 +2081,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2089,7 +2089,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -2127,7 +2127,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameServerInstances"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2136,7 +2136,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameServerInstancesResponse(status_code=r.status_code, content_type=content_type)
@@ -2174,7 +2174,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameSessionDetails"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2183,7 +2183,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameSessionDetailsResponse(status_code=r.status_code, content_type=content_type)
@@ -2225,7 +2225,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameSessionPlacement"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2233,7 +2233,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameSessionPlacementResponse(status_code=r.status_code, content_type=content_type)
@@ -2271,7 +2271,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameSessionQueues"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2280,7 +2280,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameSessionQueuesResponse(status_code=r.status_code, content_type=content_type)
@@ -2318,7 +2318,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeGameSessions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2327,7 +2327,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeGameSessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -2369,7 +2369,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeInstances"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2378,7 +2378,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeInstancesResponse(status_code=r.status_code, content_type=content_type)
@@ -2416,7 +2416,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeMatchmaking"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2424,7 +2424,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeMatchmakingResponse(status_code=r.status_code, content_type=content_type)
@@ -2458,7 +2458,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeMatchmakingConfigurations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2467,7 +2467,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeMatchmakingConfigurationsResponse(status_code=r.status_code, content_type=content_type)
@@ -2501,7 +2501,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeMatchmakingRuleSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2510,7 +2510,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeMatchmakingRuleSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2548,7 +2548,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribePlayerSessions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2557,7 +2557,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribePlayerSessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -2595,7 +2595,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeRuntimeConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2603,7 +2603,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeRuntimeConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -2641,7 +2641,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeScalingPolicies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2650,7 +2650,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeScalingPoliciesResponse(status_code=r.status_code, content_type=content_type)
@@ -2688,7 +2688,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeScript"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2696,7 +2696,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeScriptResponse(status_code=r.status_code, content_type=content_type)
@@ -2734,7 +2734,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeVpcPeeringAuthorizations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2742,7 +2742,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeVpcPeeringAuthorizationsResponse(status_code=r.status_code, content_type=content_type)
@@ -2776,7 +2776,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.DescribeVpcPeeringConnections"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2784,7 +2784,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeVpcPeeringConnectionsResponse(status_code=r.status_code, content_type=content_type)
@@ -2822,7 +2822,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.GetGameSessionLogUrl"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2830,7 +2830,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetGameSessionLogURLResponse(status_code=r.status_code, content_type=content_type)
@@ -2868,7 +2868,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.GetInstanceAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2876,7 +2876,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInstanceAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -2914,7 +2914,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListAliases"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2923,7 +2923,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListAliasesResponse(status_code=r.status_code, content_type=content_type)
@@ -2957,7 +2957,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListBuilds"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2966,7 +2966,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListBuildsResponse(status_code=r.status_code, content_type=content_type)
@@ -3000,7 +3000,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListFleets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3009,7 +3009,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListFleetsResponse(status_code=r.status_code, content_type=content_type)
@@ -3047,7 +3047,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListGameServerGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3056,7 +3056,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListGameServerGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -3090,7 +3090,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListGameServers"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3099,7 +3099,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListGameServersResponse(status_code=r.status_code, content_type=content_type)
@@ -3133,7 +3133,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListScripts"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3142,7 +3142,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListScriptsResponse(status_code=r.status_code, content_type=content_type)
@@ -3176,7 +3176,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ListTagsForResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3184,7 +3184,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListTagsForResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3222,7 +3222,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.PutScalingPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3230,7 +3230,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutScalingPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -3268,7 +3268,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.RegisterGameServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3276,7 +3276,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RegisterGameServerResponse(status_code=r.status_code, content_type=content_type)
@@ -3318,7 +3318,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.RequestUploadCredentials"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3326,7 +3326,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RequestUploadCredentialsResponse(status_code=r.status_code, content_type=content_type)
@@ -3364,7 +3364,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ResolveAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3372,7 +3372,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ResolveAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -3414,7 +3414,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ResumeGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3422,7 +3422,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ResumeGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -3460,7 +3460,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.SearchGameSessions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3469,7 +3469,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SearchGameSessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -3511,7 +3511,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StartFleetActions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3519,7 +3519,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartFleetActionsResponse(status_code=r.status_code, content_type=content_type)
@@ -3557,7 +3557,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StartGameSessionPlacement"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3565,7 +3565,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartGameSessionPlacementResponse(status_code=r.status_code, content_type=content_type)
@@ -3603,7 +3603,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StartMatchBackfill"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3611,7 +3611,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartMatchBackfillResponse(status_code=r.status_code, content_type=content_type)
@@ -3649,7 +3649,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StartMatchmaking"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3657,7 +3657,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartMatchmakingResponse(status_code=r.status_code, content_type=content_type)
@@ -3695,7 +3695,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StopFleetActions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3703,7 +3703,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopFleetActionsResponse(status_code=r.status_code, content_type=content_type)
@@ -3741,7 +3741,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StopGameSessionPlacement"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3749,7 +3749,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopGameSessionPlacementResponse(status_code=r.status_code, content_type=content_type)
@@ -3787,7 +3787,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.StopMatchmaking"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3795,7 +3795,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopMatchmakingResponse(status_code=r.status_code, content_type=content_type)
@@ -3833,7 +3833,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.SuspendGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3841,7 +3841,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SuspendGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -3879,7 +3879,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.TagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3887,7 +3887,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3925,7 +3925,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UntagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3933,7 +3933,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UntagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3971,7 +3971,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateAlias"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3979,7 +3979,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAliasResponse(status_code=r.status_code, content_type=content_type)
@@ -4017,7 +4017,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateBuild"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4025,7 +4025,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateBuildResponse(status_code=r.status_code, content_type=content_type)
@@ -4063,7 +4063,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateFleetAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4071,7 +4071,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateFleetAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -4121,7 +4121,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateFleetCapacity"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4129,7 +4129,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateFleetCapacityResponse(status_code=r.status_code, content_type=content_type)
@@ -4179,7 +4179,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateFleetPortSettings"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4187,7 +4187,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateFleetPortSettingsResponse(status_code=r.status_code, content_type=content_type)
@@ -4237,7 +4237,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateGameServer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4245,7 +4245,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGameServerResponse(status_code=r.status_code, content_type=content_type)
@@ -4283,7 +4283,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateGameServerGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4291,7 +4291,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGameServerGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4329,7 +4329,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateGameSession"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4337,7 +4337,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGameSessionResponse(status_code=r.status_code, content_type=content_type)
@@ -4383,7 +4383,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateGameSessionQueue"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4391,7 +4391,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGameSessionQueueResponse(status_code=r.status_code, content_type=content_type)
@@ -4429,7 +4429,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateMatchmakingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4437,7 +4437,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateMatchmakingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -4475,7 +4475,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateRuntimeConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4483,7 +4483,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRuntimeConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -4525,7 +4525,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.UpdateScript"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4533,7 +4533,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateScriptResponse(status_code=r.status_code, content_type=content_type)
@@ -4571,7 +4571,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=GameLift.ValidateMatchmakingRuleSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4579,7 +4579,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ValidateMatchmakingRuleSetResponse(status_code=r.status_code, content_type=content_type)

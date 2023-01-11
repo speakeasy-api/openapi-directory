@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class QueryStringCacheKeys:
     r"""QueryStringCacheKeys
     A complex type that contains information about the query string parameters that you want CloudFront to use for caching for a cache behavior. 
     """
     
-    quantity: int = field()
-    items: Optional[List[str]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

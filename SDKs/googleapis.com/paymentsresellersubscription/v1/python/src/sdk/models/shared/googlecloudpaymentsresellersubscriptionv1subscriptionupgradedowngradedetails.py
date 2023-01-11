@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetai
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails:
     r"""GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
     Details about the previous subscription that this new subscription upgrades/downgrades from.
     """
     
-    billing_cycle_spec: Optional[GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billingCycleSpec') }})
-    previous_subscription_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previousSubscriptionId') }})
+    billing_cycle_spec: Optional[GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetailsBillingCycleSpecEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billingCycleSpec') }})
+    previous_subscription_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previousSubscriptionId') }})
     

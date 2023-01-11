@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import describeserviceresponse as shared_describeserviceresponse
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeServicePathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeServiceRequest:
-    path_params: DescribeServicePathParams = field()
+    path_params: DescribeServicePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeServiceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_service_response: Optional[shared.DescribeServiceResponse] = field(default=None)
-    error_model: Optional[shared.ErrorModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_service_response: Optional[shared_describeserviceresponse.DescribeServiceResponse] = dataclasses.field(default=None)
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
     

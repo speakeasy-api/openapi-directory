@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import payoremailoptoutrequest as shared_payoremailoptoutrequest
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PayorEmailOptOutPathParams:
-    payor_id: str = field(metadata={'path_param': { 'field_name': 'payorId', 'style': 'simple', 'explode': False }})
+    payor_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payorId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorEmailOptOutRequest:
-    path_params: PayorEmailOptOutPathParams = field()
-    request: shared.PayorEmailOptOutRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PayorEmailOptOutPathParams = dataclasses.field()
+    request: shared_payoremailoptoutrequest.PayorEmailOptOutRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorEmailOptOutResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

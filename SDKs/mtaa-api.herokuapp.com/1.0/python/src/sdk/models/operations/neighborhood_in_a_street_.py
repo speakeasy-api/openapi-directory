@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class NeighborhoodInAStreetPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
-    district: str = field(metadata={'path_param': { 'field_name': 'district', 'style': 'simple', 'explode': False }})
-    region: str = field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
-    street: str = field(metadata={'path_param': { 'field_name': 'street', 'style': 'simple', 'explode': False }})
-    ward: str = field(metadata={'path_param': { 'field_name': 'ward', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    district: str = dataclasses.field(metadata={'path_param': { 'field_name': 'district', 'style': 'simple', 'explode': False }})
+    region: str = dataclasses.field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
+    street: str = dataclasses.field(metadata={'path_param': { 'field_name': 'street', 'style': 'simple', 'explode': False }})
+    ward: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ward', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NeighborhoodInAStreetRequest:
-    path_params: NeighborhoodInAStreetPathParams = field()
+    path_params: NeighborhoodInAStreetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NeighborhoodInAStreetResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

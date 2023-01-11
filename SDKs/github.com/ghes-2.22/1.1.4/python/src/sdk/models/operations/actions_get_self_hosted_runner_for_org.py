@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import runner_no_labels as shared_runner_no_labels
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    runner_id: int = field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    runner_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForOrgRequest:
-    path_params: ActionsGetSelfHostedRunnerForOrgPathParams = field()
+    path_params: ActionsGetSelfHostedRunnerForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_no_labels: Optional[shared.RunnerNoLabels] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_no_labels: Optional[shared_runner_no_labels.RunnerNoLabels] = dataclasses.field(default=None)
     

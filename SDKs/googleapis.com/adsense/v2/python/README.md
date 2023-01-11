@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,34 +20,34 @@ req = operations.AdsenseAccountsAdclientsAdunitsCreateRequest(
     security=operations.AdsenseAccountsAdclientsAdunitsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AdsenseAccountsAdclientsAdunitsCreatePathParams(
-        parent="itaque",
+        parent="fuga",
     ),
     query_params=operations.AdsenseAccountsAdclientsAdunitsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="quis",
-        alt="media",
-        callback="quis",
-        fields="qui",
-        key="molestias",
-        oauth_token="dignissimos",
+        access_token="ex",
+        alt="json",
+        callback="eius",
+        fields="consequuntur",
+        key="et",
+        oauth_token="sit",
         pretty_print=False,
-        quota_user="officia",
-        upload_type="sed",
-        upload_protocol="temporibus",
+        quota_user="natus",
+        upload_type="illo",
+        upload_protocol="impedit",
     ),
     request=shared.AdUnitInput(
         content_ads_settings=shared.ContentAdsSettings(
-            size="ullam",
-            type="ARTICLE",
+            size="molestiae",
+            type="FEED",
         ),
-        display_name="illo",
-        state="ACTIVE",
+        display_name="et",
+        state="STATE_UNSPECIFIED",
     ),
 )
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class UserAPIPostRefreshEntryEditEntryTypeEnum(str, Enum):
@@ -16,19 +16,19 @@ class UserAPIPostRefreshEntryEditEntryTypeEnum(str, Enum):
     VENUE = "Venue"
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostRefreshEntryEditQueryParams:
-    entry_id: int = field(metadata={'query_param': { 'field_name': 'entryId', 'style': 'form', 'explode': True }})
-    entry_type: UserAPIPostRefreshEntryEditEntryTypeEnum = field(metadata={'query_param': { 'field_name': 'entryType', 'style': 'form', 'explode': True }})
+    entry_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'entryId', 'style': 'form', 'explode': True }})
+    entry_type: UserAPIPostRefreshEntryEditEntryTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'entryType', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostRefreshEntryEditRequest:
-    query_params: UserAPIPostRefreshEntryEditQueryParams = field()
+    query_params: UserAPIPostRefreshEntryEditQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostRefreshEntryEditResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

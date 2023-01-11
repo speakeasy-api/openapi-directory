@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import node_full as shared_node_full
 
 
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatusPathParams:
-    node_id: str = field(metadata={'path_param': { 'field_name': 'nodeId', 'style': 'simple', 'explode': False }})
+    node_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'nodeId', 'style': 'simple', 'explode': False }})
     
 class ChangePendingNodeStatusRequestBodyStatusEnum(str, Enum):
     ACCEPTED = "accepted"
@@ -16,22 +16,22 @@ class ChangePendingNodeStatusRequestBodyStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatusRequestBody:
-    status: Optional[ChangePendingNodeStatusRequestBodyStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: Optional[ChangePendingNodeStatusRequestBodyStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 class ChangePendingNodeStatus200ApplicationJSONActionEnum(str, Enum):
     CHANGE_PENDING_NODE_STATUS = "changePendingNodeStatus"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatus200ApplicationJSONData:
     r"""ChangePendingNodeStatus200ApplicationJSONData
     Information about the node
     """
     
-    nodes: List[shared.NodeFull] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodes') }})
+    nodes: list[shared_node_full.NodeFull] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodes') }})
     
 class ChangePendingNodeStatus200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -39,22 +39,22 @@ class ChangePendingNodeStatus200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatus200ApplicationJSON:
-    action: ChangePendingNodeStatus200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ChangePendingNodeStatus200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ChangePendingNodeStatus200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ChangePendingNodeStatus200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ChangePendingNodeStatus200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ChangePendingNodeStatus200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatusRequest:
-    path_params: ChangePendingNodeStatusPathParams = field()
-    request: Optional[ChangePendingNodeStatusRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ChangePendingNodeStatusPathParams = dataclasses.field()
+    request: Optional[ChangePendingNodeStatusRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChangePendingNodeStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    change_pending_node_status_200_application_json_object: Optional[ChangePendingNodeStatus200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    change_pending_node_status_200_application_json_object: Optional[ChangePendingNodeStatus200ApplicationJSON] = dataclasses.field(default=None)
     

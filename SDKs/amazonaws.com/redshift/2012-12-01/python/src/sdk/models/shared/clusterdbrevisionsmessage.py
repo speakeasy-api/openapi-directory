@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import clusterdbrevisionslist as shared_clusterdbrevisionslist
 
 
-@dataclass
+@dataclasses.dataclass
 class ClusterDbRevisionsMessage:
-    cluster_db_revisions: Optional[List[ClusterDbRevision]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    cluster_db_revisions: Optional[list[shared_clusterdbrevisionslist.ClusterDbRevisionsList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

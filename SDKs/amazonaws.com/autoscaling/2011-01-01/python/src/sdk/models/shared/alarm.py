@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Alarm:
     r"""Alarm
     Describes an alarm.
     """
     
-    alarm_arn: Optional[str] = field(default=None)
-    alarm_name: Optional[str] = field(default=None)
+    alarm_arn: Optional[str] = dataclasses.field(default=None)
+    alarm_name: Optional[str] = dataclasses.field(default=None)
     

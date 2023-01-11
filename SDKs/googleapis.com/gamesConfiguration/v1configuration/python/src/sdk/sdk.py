@@ -5,7 +5,6 @@ import requests
 from . import utils
 
 from .achievementconfigurations import AchievementConfigurations
-from .imageconfigurations import ImageConfigurations
 from .leaderboardconfigurations import LeaderboardConfigurations
 
 
@@ -17,7 +16,6 @@ SERVERS = [
 class SDK:
     r"""SDK Documentation: https://developers.google.com/games/"""
     achievement_configurations: AchievementConfigurations
-    image_configurations: ImageConfigurations
     leaderboard_configurations: LeaderboardConfigurations
 
     _client: requests.Session
@@ -51,15 +49,6 @@ class SDK:
     def _init_sdks(self):
         
         self.achievement_configurations = AchievementConfigurations(
-            self._client,
-            self._security_client,
-            self._server_url,
-            self._language,
-            self._sdk_version,
-            self._gen_version
-        )
-        
-        self.image_configurations = ImageConfigurations(
             self._client,
             self._security_client,
             self._server_url,

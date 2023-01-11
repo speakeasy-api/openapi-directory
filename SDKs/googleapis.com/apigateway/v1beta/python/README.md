@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,98 +20,107 @@ req = operations.ApigatewayProjectsLocationsApisConfigsCreateRequest(
     security=operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams(
-        parent="illo",
+        parent="similique",
     ),
     query_params=operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams(
         dollar_xgafv="1",
-        access_token="omnis",
+        access_token="minus",
         alt="media",
-        api_config_id="incidunt",
-        callback="qui",
-        fields="occaecati",
-        key="exercitationem",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="nam",
-        upload_type="maxime",
-        upload_protocol="ut",
+        api_config_id="fuga",
+        callback="reiciendis",
+        fields="et",
+        key="repudiandae",
+        oauth_token="minima",
+        pretty_print=True,
+        quota_user="corporis",
+        upload_type="iusto",
+        upload_protocol="qui",
     ),
     request=shared.ApigatewayAPIConfigInput(
-        display_name="quod",
+        display_name="quaerat",
         gateway_config=shared.ApigatewayGatewayConfig(
             backend_config=shared.ApigatewayBackendConfig(
-                google_service_account="velit",
+                google_service_account="sed",
             ),
         ),
-        gateway_service_account="est",
+        gateway_service_account="autem",
         grpc_services=[
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="omnis",
-                    path="est",
+                    contents="quia",
+                    path="et",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="molestias",
-                        path="voluptas",
+                        contents="fugiat",
+                        path="consequatur",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="pariatur",
+                        path="et",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="voluptas",
+                        path="non",
                     ),
                 ],
             ),
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="doloribus",
-                    path="aspernatur",
+                    contents="minima",
+                    path="nihil",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="debitis",
-                        path="optio",
-                    ),
-                    shared.ApigatewayAPIConfigFile(
                         contents="impedit",
-                        path="soluta",
+                        path="ipsum",
                     ),
+                ],
+            ),
+            shared.ApigatewayAPIConfigGrpcServiceDefinition(
+                file_descriptor_set=shared.ApigatewayAPIConfigFile(
+                    contents="cum",
+                    path="similique",
+                ),
+                source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="rerum",
-                        path="quae",
+                        contents="ab",
+                        path="ut",
                     ),
                 ],
             ),
         ],
         labels={
-            "dolor": "voluptates",
+            "asperiores": "natus",
+            "dolor": "harum",
         },
         managed_service_configs=[
             shared.ApigatewayAPIConfigFile(
+                contents="nesciunt",
+                path="porro",
+            ),
+            shared.ApigatewayAPIConfigFile(
                 contents="ut",
-                path="nam",
-            ),
-            shared.ApigatewayAPIConfigFile(
-                contents="quo",
-                path="pariatur",
-            ),
-            shared.ApigatewayAPIConfigFile(
-                contents="qui",
-                path="ipsum",
+                path="quo",
             ),
         ],
         openapi_documents=[
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
-                    contents="quia",
-                    path="blanditiis",
+                    contents="id",
+                    path="officiis",
                 ),
             ),
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
-                    contents="qui",
-                    path="facere",
+                    contents="nulla",
+                    path="aut",
                 ),
             ),
         ],

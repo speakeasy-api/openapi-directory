@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,28 +25,32 @@ s.config_security(
     
 req = operations.AssociateNodeRequest(
     headers=operations.AssociateNodeHeaders(
-        x_amz_algorithm="labore",
-        x_amz_content_sha256="maxime",
-        x_amz_credential="eaque",
-        x_amz_date="sed",
-        x_amz_security_token="ut",
-        x_amz_signature="expedita",
-        x_amz_signed_headers="modi",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="rem",
+        x_amz_credential="quas",
+        x_amz_date="animi",
+        x_amz_security_token="saepe",
+        x_amz_signature="harum",
+        x_amz_signed_headers="animi",
         x_amz_target="OpsWorksCM_V2016_11_01.AssociateNode",
     ),
     request=shared.AssociateNodeRequest(
         engine_attributes=[
             shared.EngineAttribute(
-                name="doloribus",
-                value="quibusdam",
+                name="optio",
+                value="amet",
+            ),
+            shared.EngineAttribute(
+                name="eaque",
+                value="qui",
             ),
         ],
-        node_name="pariatur",
-        server_name="sint",
+        node_name="et",
+        server_name="ex",
     ),
 )
     
-res = s.sdk.associate_node(req)
+res = s.associate_node(req)
 
 if res.associate_node_response is not None:
     # handle response

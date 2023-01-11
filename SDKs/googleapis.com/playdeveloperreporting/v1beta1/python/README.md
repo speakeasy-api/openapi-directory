@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,23 +18,23 @@ s = sdk.SDK()
     
 req = operations.PlaydeveloperreportingAnomaliesListRequest(
     path_params=operations.PlaydeveloperreportingAnomaliesListPathParams(
-        parent="tempore",
+        parent="quasi",
     ),
     query_params=operations.PlaydeveloperreportingAnomaliesListQueryParams(
-        dollar_xgafv="2",
-        access_token="quisquam",
+        dollar_xgafv="1",
+        access_token="recusandae",
         alt="media",
-        callback="aliquam",
-        fields="illo",
-        filter="voluptatem",
-        key="itaque",
-        oauth_token="magnam",
-        page_size=8228784539784114503,
-        page_token="eum",
+        callback="eos",
+        fields="ut",
+        filter="est",
+        key="aut",
+        oauth_token="voluptatem",
+        page_size=4790505383503673118,
+        page_token="voluptatibus",
         pretty_print=True,
-        quota_user="et",
-        upload_type="quos",
-        upload_protocol="eius",
+        quota_user="quod",
+        upload_type="nihil",
+        upload_protocol="maxime",
     ),
 )
     

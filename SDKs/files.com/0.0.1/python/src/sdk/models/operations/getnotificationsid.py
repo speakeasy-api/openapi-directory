@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notificationentity as shared_notificationentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNotificationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNotificationsIDRequest:
-    path_params: GetNotificationsIDPathParams = field()
+    path_params: GetNotificationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNotificationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    notification_entity: Optional[shared.NotificationEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    notification_entity: Optional[shared_notificationentity.NotificationEntity] = dataclasses.field(default=None)
     

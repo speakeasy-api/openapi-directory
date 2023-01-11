@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import rackrole as shared_rackrole
+from ..shared import rackrole as shared_rackrole
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackRolesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackRolesUpdateRequest:
-    path_params: DcimRackRolesUpdatePathParams = field()
-    request: shared.RackRoleInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimRackRolesUpdatePathParams = dataclasses.field()
+    request: shared_rackrole.RackRoleInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackRolesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack_role: Optional[shared.RackRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack_role: Optional[shared_rackrole.RackRole] = dataclasses.field(default=None)
     

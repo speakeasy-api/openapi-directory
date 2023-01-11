@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getcollectionresponse as shared_getcollectionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsOnePathParams:
-    ecosystem_id: str = field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    ecosystem_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsOneRequest:
-    path_params: CollectionsOnePathParams = field()
+    path_params: CollectionsOnePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsOneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_collection_response: Optional[shared.GetCollectionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_collection_response: Optional[shared_getcollectionresponse.GetCollectionResponse] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getregionsresponse as shared_getregionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsRequest:
-    headers: GetRegionsHeaders = field()
+    headers: GetRegionsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_regions_response: Optional[shared.GetRegionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_regions_response: Optional[shared_getregionsresponse.GetRegionsResponse] = dataclasses.field(default=None)
     

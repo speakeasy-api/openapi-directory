@@ -1,61 +1,68 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import antennadownlinkconfig as shared_antennadownlinkconfig
+from ..shared import antennadownlinkdemoddecodeconfig as shared_antennadownlinkdemoddecodeconfig
+from ..shared import antennauplinkconfig as shared_antennauplinkconfig
+from ..shared import dataflowendpointconfig as shared_dataflowendpointconfig
+from ..shared import s3recordingconfig as shared_s3recordingconfig
+from ..shared import trackingconfig as shared_trackingconfig
+from ..shared import uplinkechoconfig as shared_uplinkechoconfig
+from ..shared import configidresponse as shared_configidresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateConfigRequestBodyConfigData:
     r"""CreateConfigRequestBodyConfigData
     <p>Object containing the parameters of a <code>Config</code>.</p> <p>See the subtype definitions for what each type of <code>Config</code> contains.</p>
     """
     
-    antenna_downlink_config: Optional[shared.AntennaDownlinkConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaDownlinkConfig') }})
-    antenna_downlink_demod_decode_config: Optional[shared.AntennaDownlinkDemodDecodeConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaDownlinkDemodDecodeConfig') }})
-    antenna_uplink_config: Optional[shared.AntennaUplinkConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaUplinkConfig') }})
-    dataflow_endpoint_config: Optional[shared.DataflowEndpointConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataflowEndpointConfig') }})
-    s3_recording_config: Optional[shared.S3RecordingConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3RecordingConfig') }})
-    tracking_config: Optional[shared.TrackingConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trackingConfig') }})
-    uplink_echo_config: Optional[shared.UplinkEchoConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uplinkEchoConfig') }})
+    antenna_downlink_config: Optional[shared_antennadownlinkconfig.AntennaDownlinkConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaDownlinkConfig') }})
+    antenna_downlink_demod_decode_config: Optional[shared_antennadownlinkdemoddecodeconfig.AntennaDownlinkDemodDecodeConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaDownlinkDemodDecodeConfig') }})
+    antenna_uplink_config: Optional[shared_antennauplinkconfig.AntennaUplinkConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('antennaUplinkConfig') }})
+    dataflow_endpoint_config: Optional[shared_dataflowendpointconfig.DataflowEndpointConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataflowEndpointConfig') }})
+    s3_recording_config: Optional[shared_s3recordingconfig.S3RecordingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3RecordingConfig') }})
+    tracking_config: Optional[shared_trackingconfig.TrackingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trackingConfig') }})
+    uplink_echo_config: Optional[shared_uplinkechoconfig.UplinkEchoConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uplinkEchoConfig') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateConfigRequestBody:
-    config_data: CreateConfigRequestBodyConfigData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('configData') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    tags: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    config_data: CreateConfigRequestBodyConfigData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('configData') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    tags: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigRequest:
-    headers: CreateConfigHeaders = field()
-    request: CreateConfigRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateConfigHeaders = dataclasses.field()
+    request: CreateConfigRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_id_response: Optional[shared.ConfigIDResponse] = field(default=None)
-    dependency_exception: Optional[Any] = field(default=None)
-    invalid_parameter_exception: Optional[Any] = field(default=None)
-    resource_limit_exceeded_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_id_response: Optional[shared_configidresponse.ConfigIDResponse] = dataclasses.field(default=None)
+    dependency_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.PostAuthRequest(
     query_params=operations.PostAuthQueryParams(
-        client_id="magnam",
-        client_secret="ducimus",
+        client_id="qui",
+        client_secret="sapiente",
     ),
 )
     
-res = s.sdk.post_auth(req)
+res = s.post_auth(req)
 
 if res.authentication_token_response is not None:
     # handle response

@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import address as shared_address
+from ..shared import geocoordinates as shared_geocoordinates
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Location:
-    address: Optional[Address] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
-    geo_coordinates: Optional[GeoCoordinates] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoCoordinates') }})
+    address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
+    geo_coordinates: Optional[shared_geocoordinates.GeoCoordinates] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoCoordinates') }})
     

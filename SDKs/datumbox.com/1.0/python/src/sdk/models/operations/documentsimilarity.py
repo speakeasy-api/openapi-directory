@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DocumentSimilarityRequestBody:
-    api_key: str = field(metadata={'form': { 'field_name': 'api_key' }})
-    copy: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'copy' }})
-    original: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'original' }})
+    api_key: str = dataclasses.field(metadata={'form': { 'field_name': 'api_key' }})
+    copy: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'copy' }})
+    original: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'original' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DocumentSimilarityRequest:
-    request: Optional[DocumentSimilarityRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    request: Optional[DocumentSimilarityRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DocumentSimilarityResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -24,13 +24,13 @@ class ParentEntityFilterFilterTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ParentEntityFilter:
     r"""ParentEntityFilter
     A filtering option that filters on selected file types belonging to a chosen set of filter entities.
     """
     
-    file_type: Optional[List[ParentEntityFilterFileTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fileType') }})
-    filter_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterIds') }})
-    filter_type: Optional[ParentEntityFilterFilterTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterType') }})
+    file_type: Optional[list[ParentEntityFilterFileTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fileType') }})
+    filter_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterIds') }})
+    filter_type: Optional[ParentEntityFilterFilterTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterType') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,15 +18,15 @@ s = sdk.SDK()
     
 req = operations.FacetsRequest(
     query_params=operations.FacetsQueryParams(
-        count=4235475187788933053,
-        end_date="2001-05-23",
-        facet_filters="et",
-        search_terms="omnis",
-        sort_keys="score,,desc",
+        count=1284135809095201652,
+        end_date="1980-04-14",
+        facet_filters="sed",
+        search_terms="cupiditate",
+        sort_keys="temporal_duration,,desc",
         source="ADE",
-        spatial="cupiditate",
-        start_date="2021-07-14",
-        start_index=985406917587383961,
+        spatial="repellendus",
+        start_date="2004-02-29",
+        start_index=2871197063775501498,
     ),
 )
     

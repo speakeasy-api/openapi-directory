@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import statement as shared_statement
 
 class ListResponseErrorCodeEnum(str, Enum):
     ERROR_CODE_UNSPECIFIED = "ERROR_CODE_UNSPECIFIED"
@@ -20,14 +20,14 @@ class ListResponseErrorCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListResponse:
     r"""ListResponse
     Response message for the List call.
     """
     
-    debug_string: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debugString') }})
-    error_code: Optional[List[ListResponseErrorCodeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorCode') }})
-    max_age: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAge') }})
-    statements: Optional[List[Statement]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statements') }})
+    debug_string: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debugString') }})
+    error_code: Optional[list[ListResponseErrorCodeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorCode') }})
+    max_age: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAge') }})
+    statements: Optional[list[shared_statement.Statement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statements') }})
     

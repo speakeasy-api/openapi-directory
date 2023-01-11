@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import minimal_repository as shared_minimal_repository
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposListPublicQueryParams:
-    since: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    since: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListPublicRequest:
-    query_params: ReposListPublicQueryParams = field()
+    query_params: ReposListPublicQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListPublicResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    minimal_repositories: Optional[List[shared.MinimalRepository]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    minimal_repositories: Optional[list[shared_minimal_repository.MinimalRepository]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

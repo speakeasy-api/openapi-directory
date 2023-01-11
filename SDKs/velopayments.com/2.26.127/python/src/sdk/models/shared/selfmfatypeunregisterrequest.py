@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -10,7 +10,7 @@ class SelfMfaTypeUnregisterRequestMfaTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SelfMfaTypeUnregisterRequest:
-    mfa_type: SelfMfaTypeUnregisterRequestMfaTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mfaType') }})
+    mfa_type: SelfMfaTypeUnregisterRequestMfaTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mfaType') }})
     

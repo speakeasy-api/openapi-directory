@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,30 @@ req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
     security=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams(
-        parent="ea",
+        parent="nostrum",
     ),
     query_params=operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="atque",
-        alt="json",
-        callback="praesentium",
-        fields="consequatur",
-        key="cupiditate",
-        oauth_token="deserunt",
-        pretty_print=True,
-        quota_user="rem",
-        upload_type="vel",
-        upload_protocol="temporibus",
+        access_token="est",
+        alt="media",
+        callback="omnis",
+        fields="exercitationem",
+        key="at",
+        oauth_token="vitae",
+        pretty_print=False,
+        quota_user="vel",
+        upload_type="ab",
+        upload_protocol="provident",
     ),
     request=shared.AccessLevel(
         basic=shared.BasicLevel(
-            combining_function="AND",
+            combining_function="OR",
             conditions=[
                 shared.Condition(
                     device_policy=shared.DevicePolicy(
@@ -54,140 +53,58 @@ req = operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest(
                         allowed_encryption_statuses=[
                             "UNENCRYPTED",
                             "ENCRYPTION_UNSUPPORTED",
-                            "ENCRYPTION_UNSUPPORTED",
                         ],
                         os_constraints=[
                             shared.OsConstraint(
-                                minimum_version="nisi",
+                                minimum_version="aspernatur",
+                                os_type="OS_UNSPECIFIED",
+                                require_verified_chrome_os=True,
+                            ),
+                            shared.OsConstraint(
+                                minimum_version="unde",
                                 os_type="DESKTOP_MAC",
                                 require_verified_chrome_os=True,
                             ),
                             shared.OsConstraint(
-                                minimum_version="deleniti",
-                                os_type="DESKTOP_LINUX",
-                                require_verified_chrome_os=False,
+                                minimum_version="est",
+                                os_type="DESKTOP_MAC",
+                                require_verified_chrome_os=True,
                             ),
                         ],
                         require_admin_approval=False,
                         require_corp_owned=False,
-                        require_screenlock=False,
+                        require_screenlock=True,
                     ),
                     ip_subnetworks=[
-                        "itaque",
-                        "nihil",
-                        "cum",
+                        "at",
+                        "repellendus",
                     ],
                     members=[
-                        "excepturi",
-                    ],
-                    negate=False,
-                    regions=[
-                        "et",
-                        "accusamus",
-                        "tempore",
-                    ],
-                    required_access_levels=[
-                        "et",
-                        "omnis",
-                    ],
-                ),
-                shared.Condition(
-                    device_policy=shared.DevicePolicy(
-                        allowed_device_management_levels=[
-                            "BASIC",
-                            "COMPLETE",
-                            "BASIC",
-                        ],
-                        allowed_encryption_statuses=[
-                            "ENCRYPTION_UNSUPPORTED",
-                        ],
-                        os_constraints=[
-                            shared.OsConstraint(
-                                minimum_version="architecto",
-                                os_type="DESKTOP_LINUX",
-                                require_verified_chrome_os=False,
-                            ),
-                        ],
-                        require_admin_approval=True,
-                        require_corp_owned=False,
-                        require_screenlock=False,
-                    ),
-                    ip_subnetworks=[
-                        "architecto",
-                    ],
-                    members=[
-                        "autem",
+                        "sequi",
                     ],
                     negate=True,
                     regions=[
-                        "aut",
-                        "dignissimos",
+                        "ipsam",
                     ],
                     required_access_levels=[
-                        "quo",
-                    ],
-                ),
-                shared.Condition(
-                    device_policy=shared.DevicePolicy(
-                        allowed_device_management_levels=[
-                            "MANAGEMENT_UNSPECIFIED",
-                        ],
-                        allowed_encryption_statuses=[
-                            "UNENCRYPTED",
-                        ],
-                        os_constraints=[
-                            shared.OsConstraint(
-                                minimum_version="voluptas",
-                                os_type="IOS",
-                                require_verified_chrome_os=False,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="praesentium",
-                                os_type="DESKTOP_MAC",
-                                require_verified_chrome_os=False,
-                            ),
-                            shared.OsConstraint(
-                                minimum_version="et",
-                                os_type="DESKTOP_MAC",
-                                require_verified_chrome_os=True,
-                            ),
-                        ],
-                        require_admin_approval=True,
-                        require_corp_owned=True,
-                        require_screenlock=False,
-                    ),
-                    ip_subnetworks=[
-                        "aut",
-                        "sunt",
-                        "harum",
-                    ],
-                    members=[
-                        "nihil",
-                    ],
-                    negate=True,
-                    regions=[
-                        "sunt",
-                        "sapiente",
-                    ],
-                    required_access_levels=[
-                        "saepe",
-                        "ad",
-                        "cum",
+                        "ut",
+                        "deleniti",
+                        "ea",
                     ],
                 ),
             ],
         ),
         custom=shared.CustomLevel(
             expr=shared.Expr(
-                description="corrupti",
-                expression="et",
-                location="omnis",
-                title="tenetur",
+                description="laborum",
+                expression="eligendi",
+                location="dolores",
+                title="qui",
             ),
         ),
-        description="qui",
-        name="nisi",
-        title="consequatur",
+        description="ea",
+        name="nihil",
+        title="dolorem",
     ),
 )
     

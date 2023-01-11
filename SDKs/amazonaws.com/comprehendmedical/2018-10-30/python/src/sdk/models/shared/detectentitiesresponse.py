@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import entity as shared_entity
+from ..shared import unmappedattribute as shared_unmappedattribute
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectEntitiesResponse:
-    entities: List[Entity] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entities') }})
-    model_version: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ModelVersion') }})
-    pagination_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
-    unmapped_attributes: Optional[List[UnmappedAttribute]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnmappedAttributes') }})
+    entities: list[shared_entity.Entity] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entities') }})
+    model_version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ModelVersion') }})
+    pagination_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
+    unmapped_attributes: Optional[list[shared_unmappedattribute.UnmappedAttribute]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnmappedAttributes') }})
     

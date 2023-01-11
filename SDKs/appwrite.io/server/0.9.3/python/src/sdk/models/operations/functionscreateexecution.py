@@ -1,38 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import execution as shared_execution
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateExecutionPathParams:
-    function_id: str = field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
+    function_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateExecutionRequestBody:
-    data: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateExecutionSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateExecutionRequest:
-    path_params: FunctionsCreateExecutionPathParams = field()
-    security: FunctionsCreateExecutionSecurity = field()
-    request: Optional[FunctionsCreateExecutionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: FunctionsCreateExecutionPathParams = dataclasses.field()
+    security: FunctionsCreateExecutionSecurity = dataclasses.field()
+    request: Optional[FunctionsCreateExecutionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateExecutionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    execution: Optional[shared.Execution] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    execution: Optional[shared_execution.Execution] = dataclasses.field(default=None)
     

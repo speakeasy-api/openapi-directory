@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import api_status_app_version as shared_api_status_app_version
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIStatus:
-    android: APIStatusAppVersion = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('android') }})
-    current_season: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('current_season') }})
-    down_events: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('down_events') }})
-    ios: APIStatusAppVersion = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ios') }})
-    is_datafeed_down: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('is_datafeed_down') }})
-    max_season: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_season') }})
+    android: shared_api_status_app_version.APIStatusAppVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('android') }})
+    current_season: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('current_season') }})
+    down_events: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('down_events') }})
+    ios: shared_api_status_app_version.APIStatusAppVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ios') }})
+    is_datafeed_down: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('is_datafeed_down') }})
+    max_season: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_season') }})
     

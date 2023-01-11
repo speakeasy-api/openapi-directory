@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import channel as shared_channel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3AssetChangesChannelsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channels: Optional[List[shared.Channel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channels: Optional[list[shared_channel.Channel]] = dataclasses.field(default=None)
     

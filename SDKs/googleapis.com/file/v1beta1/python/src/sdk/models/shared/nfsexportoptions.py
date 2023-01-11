@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -16,15 +16,15 @@ class NfsExportOptionsSquashModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NfsExportOptions:
     r"""NfsExportOptions
     NFS export options specifications.
     """
     
-    access_mode: Optional[NfsExportOptionsAccessModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessMode') }})
-    anon_gid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('anonGid') }})
-    anon_uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('anonUid') }})
-    ip_ranges: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipRanges') }})
-    squash_mode: Optional[NfsExportOptionsSquashModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('squashMode') }})
+    access_mode: Optional[NfsExportOptionsAccessModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessMode') }})
+    anon_gid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('anonGid') }})
+    anon_uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('anonUid') }})
+    ip_ranges: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipRanges') }})
+    squash_mode: Optional[NfsExportOptionsSquashModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('squashMode') }})
     

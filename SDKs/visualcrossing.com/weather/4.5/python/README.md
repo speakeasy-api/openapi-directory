@@ -8,29 +8,33 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest(
-    query_params=operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryParams(
-        aggregate_hours="totam",
-        allow_asynch=False,
-        content_type="asperiores",
-        key="ut",
-        locations="ex",
-        send_as_datasource=False,
+req = operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest(
+    query_params=operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams(
+        aggregate_hours="nisi",
+        allow_asynch=True,
+        collect_station_contributions=True,
+        content_type="similique",
+        end_date_time="fuga",
+        include_normals=True,
+        key="sapiente",
+        locations="nam",
+        max_distance="facere",
+        max_stations="cupiditate",
         short_column_names=True,
-        unit_group="fugiat",
+        start_date_time="qui",
+        unit_group="sunt",
     ),
 )
     
-res = s.sdk.get_visual_crossing_web_services_rest_services_weatherdata_forecast(req)
+res = s.historical_weather.get_visual_crossing_web_services_rest_services_weatherdata_history(req)
 
 if res.status_code == 200:
     # handle response
@@ -40,10 +44,13 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Historical Weather
+
+* `get_visual_crossing_web_services_rest_services_weatherdata_history` - Retrieves hourly or daily historical weather records.
+
+### Weather Forecast
 
 * `get_visual_crossing_web_services_rest_services_weatherdata_forecast` - Weather Forecast API
-* `get_visual_crossing_web_services_rest_services_weatherdata_history` - Retrieves hourly or daily historical weather records.
 
 <!-- End SDK Available Operations -->
 

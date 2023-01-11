@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import ipaddressentity as shared_ipaddressentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesRequest:
-    query_params: GetIPAddressesQueryParams = field()
+    query_params: GetIPAddressesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ip_address_entities: Optional[List[shared.IPAddressEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ip_address_entities: Optional[list[shared_ipaddressentity.IPAddressEntity]] = dataclasses.field(default=None)
     

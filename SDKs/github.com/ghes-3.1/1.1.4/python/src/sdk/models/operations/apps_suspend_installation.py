@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsSuspendInstallationPathParams:
-    installation_id: int = field(metadata={'path_param': { 'field_name': 'installation_id', 'style': 'simple', 'explode': False }})
+    installation_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'installation_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsSuspendInstallationRequest:
-    path_params: AppsSuspendInstallationPathParams = field()
+    path_params: AppsSuspendInstallationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsSuspendInstallationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import circuit as shared_circuit
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitsReadRequest:
-    path_params: CircuitsCircuitsReadPathParams = field()
+    path_params: CircuitsCircuitsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    circuit: Optional[shared.Circuit] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    circuit: Optional[shared_circuit.Circuit] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import flowtemplatesummary as shared_flowtemplatesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchFlowTemplatesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    summaries: Optional[List[FlowTemplateSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    summaries: Optional[list[shared_flowtemplatesummary.FlowTemplateSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summaries') }})
     

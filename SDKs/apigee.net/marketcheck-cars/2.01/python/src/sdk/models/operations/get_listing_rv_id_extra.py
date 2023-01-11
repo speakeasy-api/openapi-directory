@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import listingextraattributes as shared_listingextraattributes
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingRvIDExtraPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingRvIDExtraQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingRvIDExtraRequest:
-    path_params: GetListingRvIDExtraPathParams = field()
-    query_params: GetListingRvIDExtraQueryParams = field()
+    path_params: GetListingRvIDExtraPathParams = dataclasses.field()
+    query_params: GetListingRvIDExtraQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingRvIDExtraResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    listing_extra_attributes: Optional[shared.ListingExtraAttributes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    listing_extra_attributes: Optional[shared_listingextraattributes.ListingExtraAttributes] = dataclasses.field(default=None)
     

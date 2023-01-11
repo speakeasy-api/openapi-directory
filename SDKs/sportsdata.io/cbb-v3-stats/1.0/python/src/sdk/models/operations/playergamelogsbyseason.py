@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerGameLogsBySeasonFormatEnum(str, Enum):
@@ -7,22 +7,22 @@ class PlayerGameLogsBySeasonFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameLogsBySeasonPathParams:
-    format: PlayerGameLogsBySeasonFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    numberofgames: str = field(metadata={'path_param': { 'field_name': 'numberofgames', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: PlayerGameLogsBySeasonFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    numberofgames: str = dataclasses.field(metadata={'path_param': { 'field_name': 'numberofgames', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameLogsBySeasonRequest:
-    path_params: PlayerGameLogsBySeasonPathParams = field()
+    path_params: PlayerGameLogsBySeasonPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerGameLogsBySeasonResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_games: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_games: Optional[list[Any]] = dataclasses.field(default=None)
     

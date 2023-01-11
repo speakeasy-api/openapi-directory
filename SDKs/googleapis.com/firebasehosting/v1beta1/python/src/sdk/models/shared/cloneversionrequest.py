@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pathfilter as shared_pathfilter
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CloneVersionRequest:
-    exclude: Optional[PathFilter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exclude') }})
-    finalize: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finalize') }})
-    include: Optional[PathFilter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
-    source_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceVersion') }})
+    exclude: Optional[shared_pathfilter.PathFilter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exclude') }})
+    finalize: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finalize') }})
+    include: Optional[shared_pathfilter.PathFilter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
+    source_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceVersion') }})
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gdatacompositemedia as shared_gdatacompositemedia
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GdataDiffDownloadResponse:
     r"""GdataDiffDownloadResponse
     gdata
     """
     
-    object_location: Optional[GdataCompositeMedia] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectLocation') }})
+    object_location: Optional[shared_gdatacompositemedia.GdataCompositeMedia] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectLocation') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import distributionlist as shared_distributionlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListDistributionsByRealtimeLogConfigResult:
-    distribution_list: Optional[DistributionList] = field(default=None)
+    distribution_list: Optional[shared_distributionlist.DistributionList] = dataclasses.field(default=None)
     

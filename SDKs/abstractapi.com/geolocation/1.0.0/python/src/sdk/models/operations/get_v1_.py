@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import inline_response_200 as shared_inline_response_200
 
 
 GET_V1__SERVERS = [
@@ -8,22 +8,22 @@ GET_V1__SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV1QueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    ip_address: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ip_address', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    ip_address: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ip_address', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV1Request:
-    query_params: GetV1QueryParams = field()
-    server_url: Optional[str] = field(default=None)
+    query_params: GetV1QueryParams = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV1Response:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_200: Optional[shared.InlineResponse200] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_200: Optional[shared_inline_response_200.InlineResponse200] = dataclasses.field(default=None)
     

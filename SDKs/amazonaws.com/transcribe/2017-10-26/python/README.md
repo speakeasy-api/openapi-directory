@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,89 +25,88 @@ s.config_security(
     
 req = operations.CreateCallAnalyticsCategoryRequest(
     headers=operations.CreateCallAnalyticsCategoryHeaders(
-        x_amz_algorithm="nobis",
-        x_amz_content_sha256="necessitatibus",
-        x_amz_credential="sit",
-        x_amz_date="minima",
-        x_amz_security_token="sint",
-        x_amz_signature="voluptatum",
-        x_amz_signed_headers="in",
+        x_amz_algorithm="dolorem",
+        x_amz_content_sha256="quos",
+        x_amz_credential="deleniti",
+        x_amz_date="commodi",
+        x_amz_security_token="nobis",
+        x_amz_signature="ea",
+        x_amz_signed_headers="aspernatur",
         x_amz_target="Transcribe.CreateCallAnalyticsCategory",
     ),
     request=shared.CreateCallAnalyticsCategoryRequest(
-        category_name="sint",
+        category_name="et",
         rules=[
             shared.Rule(
                 interruption_filter=shared.InterruptionFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=5112847521852491111,
-                        first=9066531866989888037,
-                        last=8591367330895586193,
-                        start_time=8554633155131254918,
+                        end_time=6415833391072357588,
+                        first=3572998533988533354,
+                        last=186115592639377320,
+                        start_time=8371597839286912540,
                     ),
-                    negate=False,
-                    participant_role="CUSTOMER",
+                    negate=True,
+                    participant_role="AGENT",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=548920835639829848,
-                        first=8896873407592968713,
-                        last=4331457503922561740,
-                        start_percentage=6503471214168128428,
+                        end_percentage=1737084578504854227,
+                        first=4072567731903858704,
+                        last=4237085410032209086,
+                        start_percentage=3111927870552615307,
                     ),
-                    threshold=1611122744689441508,
+                    threshold=5810679218075794205,
                 ),
                 non_talk_time_filter=shared.NonTalkTimeFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=4660955790970932673,
-                        first=3342685118662395877,
-                        last=2291230178030447149,
-                        start_time=7016791748015600340,
+                        end_time=4375415044152406675,
+                        first=6065226614949015610,
+                        last=5255522860651016346,
+                        start_time=4904486519077315581,
                     ),
                     negate=False,
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=1992443270753785053,
-                        first=1976051185898035910,
-                        last=1818415603160825641,
-                        start_percentage=6199324781541953639,
+                        end_percentage=8950864482110226516,
+                        first=635778494545269976,
+                        last=732909964824197774,
+                        start_percentage=3574948044123775516,
                     ),
-                    threshold=8260330288597738611,
+                    threshold=8837983961987368305,
                 ),
                 sentiment_filter=shared.SentimentFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=4604726166308333701,
-                        first=3904959679002859803,
-                        last=2479749284676595074,
-                        start_time=5679422250428121759,
+                        end_time=5910514474348776200,
+                        first=6822908827298521697,
+                        last=6724775564262686261,
+                        start_time=448293307772452745,
                     ),
-                    negate=True,
-                    participant_role="CUSTOMER",
+                    negate=False,
+                    participant_role="AGENT",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=3353722794698886839,
-                        first=2914775900405348494,
-                        last=502403389146556131,
-                        start_percentage=242395787493867852,
+                        end_percentage=5824651986652714030,
+                        first=6131616903038811778,
+                        last=4594817126626365342,
+                        start_percentage=5909463814165818777,
                     ),
                     sentiments=[
-                        "NEGATIVE",
                         "MIXED",
                     ],
                 ),
                 transcript_filter=shared.TranscriptFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=967267725031621866,
-                        first=2208301086835921951,
-                        last=633697944315790879,
-                        start_time=3422064738534861846,
+                        end_time=4757942231363494366,
+                        first=6398098165847865044,
+                        last=8555143277468378870,
+                        start_time=2953219465361743600,
                     ),
                     negate=True,
                     participant_role="AGENT",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=3625585094652647255,
-                        first=5055426411805064244,
-                        last=8858313994804781107,
-                        start_percentage=1513134852503741179,
+                        end_percentage=9094254215425192755,
+                        first=8700678006278600136,
+                        last=4987874047483574799,
+                        start_percentage=1867551380647168719,
                     ),
                     targets=[
-                        "accusantium",
+                        "voluptas",
                     ],
                     transcript_filter_type="EXACT",
                 ),
@@ -116,77 +114,152 @@ req = operations.CreateCallAnalyticsCategoryRequest(
             shared.Rule(
                 interruption_filter=shared.InterruptionFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=7125241773315148533,
-                        first=1468837794741711077,
-                        last=2214011053113931459,
-                        start_time=5374795006375433277,
+                        end_time=1354945883733857766,
+                        first=2429851522834465117,
+                        last=4014337987995578881,
+                        start_time=2407209082118264778,
                     ),
-                    negate=True,
+                    negate=False,
                     participant_role="CUSTOMER",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=7424948807662580944,
-                        first=6460737378073047685,
-                        last=1752625050475367828,
-                        start_percentage=5240284290571592368,
+                        end_percentage=8059088005692139324,
+                        first=1616693811299928439,
+                        last=6166181411057100347,
+                        start_percentage=7028536834256048015,
                     ),
-                    threshold=8520036234026697246,
+                    threshold=1174564792239911455,
                 ),
                 non_talk_time_filter=shared.NonTalkTimeFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=8830599137710403571,
-                        first=1588297527028220372,
-                        last=842310474408359308,
-                        start_time=8161614694984277638,
+                        end_time=2323166218679581466,
+                        first=7469748512072958204,
+                        last=7765873993746785792,
+                        start_time=7182270801018086339,
                     ),
                     negate=False,
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=498062244375343662,
-                        first=5205376558963411784,
-                        last=7409742966167503346,
-                        start_percentage=5266676331517298008,
+                        end_percentage=3252394919724459204,
+                        first=4839093639110720179,
+                        last=6513358929122907454,
+                        start_percentage=7230693517838244503,
                     ),
-                    threshold=9138572064484930537,
+                    threshold=6854478643425791986,
                 ),
                 sentiment_filter=shared.SentimentFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=6687938420670924103,
-                        first=5733011801104656323,
-                        last=6848149104322516630,
-                        start_time=8735932067059293336,
+                        end_time=4432917687975454065,
+                        first=3838103805727716046,
+                        last=5088282042390589507,
+                        start_time=7067021397838106794,
                     ),
                     negate=False,
-                    participant_role="CUSTOMER",
+                    participant_role="AGENT",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=8209202154438861827,
-                        first=1375460254637238916,
-                        last=5269112052122541663,
-                        start_percentage=1589574292723170221,
+                        end_percentage=6950814023290779017,
+                        first=2685439770505515950,
+                        last=301785877603363027,
+                        start_percentage=3728036883544637968,
                     ),
                     sentiments=[
-                        "NEUTRAL",
                         "MIXED",
-                        "POSITIVE",
                     ],
                 ),
                 transcript_filter=shared.TranscriptFilter(
                     absolute_time_range=shared.AbsoluteTimeRange(
-                        end_time=3630973581834087525,
-                        first=1829556787825643552,
-                        last=7808682057497433609,
-                        start_time=7349903160678998265,
+                        end_time=1058936719184805791,
+                        first=9128763404757230253,
+                        last=8358558923616582182,
+                        start_time=6209843430664353487,
+                    ),
+                    negate=True,
+                    participant_role="AGENT",
+                    relative_time_range=shared.RelativeTimeRange(
+                        end_percentage=777632575137638028,
+                        first=1039248335667233226,
+                        last=1768953860407738737,
+                        start_percentage=2732151556483902484,
+                    ),
+                    targets=[
+                        "alias",
+                        "id",
+                        "in",
+                    ],
+                    transcript_filter_type="EXACT",
+                ),
+            ),
+            shared.Rule(
+                interruption_filter=shared.InterruptionFilter(
+                    absolute_time_range=shared.AbsoluteTimeRange(
+                        end_time=8981508418491254011,
+                        first=2670592554296272629,
+                        last=4609291726380021962,
+                        start_time=2838559931627351935,
                     ),
                     negate=False,
                     participant_role="CUSTOMER",
                     relative_time_range=shared.RelativeTimeRange(
-                        end_percentage=4295981913159720682,
-                        first=4756842064992291098,
-                        last=4533488582174557333,
-                        start_percentage=6894329672744535763,
+                        end_percentage=3011457315831140961,
+                        first=7813841376088152101,
+                        last=5646368466189309592,
+                        start_percentage=7279099440217309754,
+                    ),
+                    threshold=8291728496659502847,
+                ),
+                non_talk_time_filter=shared.NonTalkTimeFilter(
+                    absolute_time_range=shared.AbsoluteTimeRange(
+                        end_time=3616220076055127616,
+                        first=1889402167586546675,
+                        last=6631662835676981989,
+                        start_time=2489959074308973683,
+                    ),
+                    negate=True,
+                    relative_time_range=shared.RelativeTimeRange(
+                        end_percentage=3935710304177491303,
+                        first=3594503320079042333,
+                        last=5067957230603510300,
+                        start_percentage=4613481507084047686,
+                    ),
+                    threshold=8645490517459002672,
+                ),
+                sentiment_filter=shared.SentimentFilter(
+                    absolute_time_range=shared.AbsoluteTimeRange(
+                        end_time=6183506943487606482,
+                        first=7653920585589605553,
+                        last=6151577229671946683,
+                        start_time=26606651514557410,
+                    ),
+                    negate=False,
+                    participant_role="AGENT",
+                    relative_time_range=shared.RelativeTimeRange(
+                        end_percentage=3166852158880406779,
+                        first=927782600915074395,
+                        last=2541103059884869503,
+                        start_percentage=9089901266438170756,
+                    ),
+                    sentiments=[
+                        "POSITIVE",
+                        "NEGATIVE",
+                    ],
+                ),
+                transcript_filter=shared.TranscriptFilter(
+                    absolute_time_range=shared.AbsoluteTimeRange(
+                        end_time=6741667782486366789,
+                        first=2142001216773853386,
+                        last=58572451421529771,
+                        start_time=8036607006448114164,
+                    ),
+                    negate=True,
+                    participant_role="AGENT",
+                    relative_time_range=shared.RelativeTimeRange(
+                        end_percentage=3450701776215534863,
+                        first=5317553351886277283,
+                        last=3848007284071124204,
+                        start_percentage=8598532481109664405,
                     ),
                     targets=[
-                        "nam",
-                        "dolores",
-                        "id",
+                        "non",
+                        "rerum",
+                        "repellat",
                     ],
                     transcript_filter_type="EXACT",
                 ),
@@ -195,7 +268,7 @@ req = operations.CreateCallAnalyticsCategoryRequest(
     ),
 )
     
-res = s.sdk.create_call_analytics_category(req)
+res = s.create_call_analytics_category(req)
 
 if res.create_call_analytics_category_response is not None:
     # handle response

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import accountquotalist as shared_accountquotalist
 
 
-@dataclass
+@dataclasses.dataclass
 class AccountAttributesMessage:
     r"""AccountAttributesMessage
     Data returned by the <b>DescribeAccountAttributes</b> action.
     """
     
-    account_quotas: Optional[List[AccountQuota]] = field(default=None)
+    account_quotas: Optional[list[shared_accountquotalist.AccountQuotaList]] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class HeadCommercialCreditCardsHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
-    if_none_match: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_none_match: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class HeadCommercialCreditCardsRequest:
-    headers: HeadCommercialCreditCardsHeaders = field()
+    headers: HeadCommercialCreditCardsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class HeadCommercialCreditCardsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    no_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    no_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

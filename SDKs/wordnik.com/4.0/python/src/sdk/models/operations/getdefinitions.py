@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDefinitionsPathParams:
-    word: str = field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
+    word: str = dataclasses.field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
     
 class GetDefinitionsIncludeTagsEnum(str, Enum):
     FALSE = "false"
@@ -45,25 +45,25 @@ class GetDefinitionsUseCanonicalEnum(str, Enum):
     TRUE = "true"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDefinitionsQueryParams:
-    include_related: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'includeRelated', 'style': 'form', 'explode': True }})
-    include_tags: Optional[GetDefinitionsIncludeTagsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'includeTags', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    part_of_speech: Optional[GetDefinitionsPartOfSpeechEnum] = field(default=None, metadata={'query_param': { 'field_name': 'partOfSpeech', 'style': 'form', 'explode': True }})
-    source_dictionaries: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'sourceDictionaries', 'style': 'form', 'explode': False }})
-    use_canonical: Optional[GetDefinitionsUseCanonicalEnum] = field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
+    include_related: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeRelated', 'style': 'form', 'explode': True }})
+    include_tags: Optional[GetDefinitionsIncludeTagsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeTags', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    part_of_speech: Optional[GetDefinitionsPartOfSpeechEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'partOfSpeech', 'style': 'form', 'explode': True }})
+    source_dictionaries: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceDictionaries', 'style': 'form', 'explode': False }})
+    use_canonical: Optional[GetDefinitionsUseCanonicalEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDefinitionsRequest:
-    path_params: GetDefinitionsPathParams = field()
-    query_params: GetDefinitionsQueryParams = field()
+    path_params: GetDefinitionsPathParams = dataclasses.field()
+    query_params: GetDefinitionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDefinitionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

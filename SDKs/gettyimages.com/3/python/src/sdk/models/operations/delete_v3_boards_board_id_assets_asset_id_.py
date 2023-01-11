@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3BoardsBoardIDAssetsAssetIDPathParams:
-    asset_id: str = field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
-    board_id: str = field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
+    asset_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
+    board_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3BoardsBoardIDAssetsAssetIDRequest:
-    path_params: DeleteV3BoardsBoardIDAssetsAssetIDPathParams = field()
+    path_params: DeleteV3BoardsBoardIDAssetsAssetIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3BoardsBoardIDAssetsAssetIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

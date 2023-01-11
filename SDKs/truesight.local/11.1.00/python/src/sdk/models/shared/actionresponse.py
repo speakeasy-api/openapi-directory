@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionResponse:
     r"""ActionResponse
     The object encapsulating the output of an operation affecting the PATROL Agent.
     """
     
-    psl_output: Optional[str] = field(default=None)
+    psl_output: Optional[str] = dataclasses.field(default=None)
     

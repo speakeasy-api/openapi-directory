@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configuration_status as shared_configuration_status
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetConfigurationStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    configuration_status: Optional[shared.ConfigurationStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    configuration_status: Optional[shared_configuration_status.ConfigurationStatus] = dataclasses.field(default=None)
     

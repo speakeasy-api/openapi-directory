@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import playersearchresult as shared_playersearchresult
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSearchQueryParams:
-    search_term: str = field(metadata={'query_param': { 'field_name': 'searchTerm', 'style': 'form', 'explode': True }})
-    position: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    search_term: str = dataclasses.field(metadata={'query_param': { 'field_name': 'searchTerm', 'style': 'form', 'explode': True }})
+    position: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSearchRequest:
-    query_params: PlayerSearchQueryParams = field()
+    query_params: PlayerSearchQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSearchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_search_results: Optional[List[shared.PlayerSearchResult]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_search_results: Optional[list[shared_playersearchresult.PlayerSearchResult]] = dataclasses.field(default=None)
     

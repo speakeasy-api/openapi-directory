@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import customkeystoreslistentry as shared_customkeystoreslistentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeCustomKeyStoresResponse:
-    custom_key_stores: Optional[List[CustomKeyStoresListEntry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomKeyStores') }})
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
-    truncated: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Truncated') }})
+    custom_key_stores: Optional[list[shared_customkeystoreslistentry.CustomKeyStoresListEntry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomKeyStores') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    truncated: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Truncated') }})
     

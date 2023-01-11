@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import personsingle as shared_personsingle
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatorsReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatorsReadRequest:
-    path_params: CreatorsReadPathParams = field()
+    path_params: CreatorsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatorsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    person_single: Optional[shared.PersonSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    person_single: Optional[shared_personsingle.PersonSingle] = dataclasses.field(default=None)
     

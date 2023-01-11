@@ -1,19 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dynamiclinkinfo as shared_dynamiclinkinfo
+from ..shared import suffix as shared_suffix
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateShortDynamicLinkRequest:
     r"""CreateShortDynamicLinkRequest
     Request to create a short Dynamic Link.
     """
     
-    dynamic_link_info: Optional[DynamicLinkInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dynamicLinkInfo') }})
-    long_dynamic_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('longDynamicLink') }})
-    sdk_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sdkVersion') }})
-    suffix: Optional[Suffix] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suffix') }})
+    dynamic_link_info: Optional[shared_dynamiclinkinfo.DynamicLinkInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dynamicLinkInfo') }})
+    long_dynamic_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('longDynamicLink') }})
+    sdk_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sdkVersion') }})
+    suffix: Optional[shared_suffix.Suffix] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suffix') }})
     

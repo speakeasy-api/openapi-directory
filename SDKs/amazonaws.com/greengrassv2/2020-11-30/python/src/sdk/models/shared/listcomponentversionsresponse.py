@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import componentversionlistitem as shared_componentversionlistitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListComponentVersionsResponse:
-    component_versions: Optional[List[ComponentVersionListItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('componentVersions') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    component_versions: Optional[list[shared_componentversionlistitem.ComponentVersionListItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('componentVersions') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

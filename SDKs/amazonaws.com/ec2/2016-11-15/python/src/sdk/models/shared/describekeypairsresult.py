@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeKeyPairsResult:
-    key_pairs: Optional[List[KeyPairInfo]] = field(default=None)
+    key_pairs: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

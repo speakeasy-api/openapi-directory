@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tracklist as shared_tracklist
 
 
-@dataclass
+@dataclasses.dataclass
 class TrackListMessage:
-    maintenance_tracks: Optional[List[MaintenanceTrack]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    maintenance_tracks: Optional[list[shared_tracklist.TrackList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

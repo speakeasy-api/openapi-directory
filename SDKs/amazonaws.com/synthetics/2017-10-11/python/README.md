@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,58 +25,57 @@ s.config_security(
     
 req = operations.CreateCanaryRequest(
     headers=operations.CreateCanaryHeaders(
-        x_amz_algorithm="totam",
-        x_amz_content_sha256="et",
-        x_amz_credential="ea",
-        x_amz_date="labore",
-        x_amz_security_token="quasi",
-        x_amz_signature="eaque",
-        x_amz_signed_headers="velit",
+        x_amz_algorithm="dolore",
+        x_amz_content_sha256="animi",
+        x_amz_credential="odio",
+        x_amz_date="officia",
+        x_amz_security_token="odio",
+        x_amz_signature="est",
+        x_amz_signed_headers="sunt",
     ),
     request=operations.CreateCanaryRequestBody(
-        artifact_s3_location="ullam",
+        artifact_s3_location="corrupti",
         code=operations.CreateCanaryRequestBodyCode(
-            handler="cum",
-            s3_bucket="quibusdam",
-            s3_key="magnam",
-            s3_version="quisquam",
-            zip_file="est",
+            handler="perspiciatis",
+            s3_bucket="accusamus",
+            s3_key="iusto",
+            s3_version="aut",
+            zip_file="illo",
         ),
-        execution_role_arn="necessitatibus",
-        failure_retention_period_in_days=1883586445759992609,
-        name="dolores",
+        execution_role_arn="molestiae",
+        failure_retention_period_in_days=8359892027431733351,
+        name="aliquid",
         run_config=operations.CreateCanaryRequestBodyRunConfig(
             active_tracing=True,
             environment_variables={
-                "quia": "sit",
+                "non": "dicta",
             },
-            memory_in_mb=481029704797432436,
-            timeout_in_seconds=1255680169419955780,
+            memory_in_mb=2347781137780074665,
+            timeout_in_seconds=5418904646391934224,
         ),
-        runtime_version="possimus",
+        runtime_version="inventore",
         schedule=operations.CreateCanaryRequestBodySchedule(
-            duration_in_seconds=7670254550561242779,
-            expression="facere",
+            duration_in_seconds=6457110019065774024,
+            expression="voluptatibus",
         ),
-        success_retention_period_in_days=611493464268025959,
+        success_retention_period_in_days=6642582187036167272,
         tags={
-            "hic": "praesentium",
-            "omnis": "qui",
+            "perferendis": "impedit",
         },
         vpc_config=operations.CreateCanaryRequestBodyVpcConfig(
             security_group_ids=[
-                "magni",
+                "sunt",
+                "in",
             ],
             subnet_ids=[
-                "nam",
-                "quia",
-                "cum",
+                "laudantium",
+                "reiciendis",
             ],
         ),
     ),
 )
     
-res = s.sdk.create_canary(req)
+res = s.create_canary(req)
 
 if res.create_canary_response is not None:
     # handle response

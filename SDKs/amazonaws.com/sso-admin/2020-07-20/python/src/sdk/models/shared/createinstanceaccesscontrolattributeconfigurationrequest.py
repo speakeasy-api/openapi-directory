@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import instanceaccesscontrolattributeconfiguration as shared_instanceaccesscontrolattributeconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateInstanceAccessControlAttributeConfigurationRequest:
-    instance_access_control_attribute_configuration: InstanceAccessControlAttributeConfiguration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceAccessControlAttributeConfiguration') }})
-    instance_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceArn') }})
+    instance_access_control_attribute_configuration: shared_instanceaccesscontrolattributeconfiguration.InstanceAccessControlAttributeConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceAccessControlAttributeConfiguration') }})
+    instance_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceArn') }})
     

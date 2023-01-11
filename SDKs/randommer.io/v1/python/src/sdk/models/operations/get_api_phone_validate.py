@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIPhoneValidateQueryParams:
-    telephone: str = field(metadata={'query_param': { 'field_name': 'telephone', 'style': 'form', 'explode': True }})
-    country_code: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'CountryCode', 'style': 'form', 'explode': True }})
+    telephone: str = dataclasses.field(metadata={'query_param': { 'field_name': 'telephone', 'style': 'form', 'explode': True }})
+    country_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'CountryCode', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIPhoneValidateHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIPhoneValidateRequest:
-    headers: GetAPIPhoneValidateHeaders = field()
-    query_params: GetAPIPhoneValidateQueryParams = field()
+    headers: GetAPIPhoneValidateHeaders = dataclasses.field()
+    query_params: GetAPIPhoneValidateQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIPhoneValidateResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

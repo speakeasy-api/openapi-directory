@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum(str, Enum):
     WAN1 = "wan1"
@@ -29,15 +29,15 @@ class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass
     Performance class setting for this uplink preference rule
     """
     
-    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    builtin_performance_class_name: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtinPerformanceClassName') }})
-    custom_performance_class_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customPerformanceClassId') }})
+    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    builtin_performance_class_name: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClassBuiltinPerformanceClassNameEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtinPerformanceClassName') }})
+    custom_performance_class_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customPerformanceClassId') }})
     
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum(str, Enum):
     WAN1 = "wan1"
@@ -53,18 +53,18 @@ class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination
     Destination of this custom type traffic filter
     """
     
-    cidr: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
-    fqdn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fqdn') }})
-    host: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    network: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    vlan: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
+    cidr: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
+    fqdn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fqdn') }})
+    host: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    vlan: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
     
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum(str, Enum):
     TCP = "tcp"
@@ -74,46 +74,46 @@ class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource
     Source of this custom type traffic filter
     """
     
-    cidr: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
-    host: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    network: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    vlan: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
+    cidr: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
+    host: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    vlan: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue
     Value object of this traffic filter
     """
     
-    destination: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    protocol: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
-    source: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    destination: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    protocol: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
+    source: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValueSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters:
-    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    value: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    value: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFiltersValue = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences:
-    preferred_uplink: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferredUplink') }})
-    traffic_filters: List[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trafficFilters') }})
-    fail_over_criterion: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failOverCriterion') }})
-    performance_class: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceClass') }})
+    preferred_uplink: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPreferredUplinkEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferredUplink') }})
+    traffic_filters: list[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesTrafficFilters] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trafficFilters') }})
+    fail_over_criterion: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesFailOverCriterionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failOverCriterion') }})
+    performance_class: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferencesPerformanceClass] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceClass') }})
     
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum(str, Enum):
     WAN1 = "wan1"
@@ -124,14 +124,14 @@ class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination
     Destination of this custom type traffic filter
     """
     
-    cidr: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    cidr: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
     
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum(str, Enum):
     TCP = "tcp"
@@ -140,63 +140,63 @@ class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource
     Source of this custom type traffic filter
     """
     
-    cidr: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
-    host: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    vlan: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
+    cidr: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cidr') }})
+    host: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    vlan: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue:
     r"""UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue
     Value object of this traffic filter
     """
     
-    destination: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
-    source: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
-    protocol: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
+    destination: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueDestination = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
+    source: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    protocol: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValueProtocolEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters:
-    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    value: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    type: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    value: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFiltersValue = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences:
-    preferred_uplink: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferredUplink') }})
-    traffic_filters: List[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trafficFilters') }})
+    preferred_uplink: UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesPreferredUplinkEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferredUplink') }})
+    traffic_filters: list[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferencesTrafficFilters] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trafficFilters') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody:
-    active_active_auto_vpn_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeActiveAutoVpnEnabled') }})
-    default_uplink: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultUplink') }})
-    load_balancing_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancingEnabled') }})
-    vpn_traffic_uplink_preferences: Optional[List[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnTrafficUplinkPreferences') }})
-    wan_traffic_uplink_preferences: Optional[List[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wanTrafficUplinkPreferences') }})
+    active_active_auto_vpn_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeActiveAutoVpnEnabled') }})
+    default_uplink: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyDefaultUplinkEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultUplink') }})
+    load_balancing_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancingEnabled') }})
+    vpn_traffic_uplink_preferences: Optional[list[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyVpnTrafficUplinkPreferences]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnTrafficUplinkPreferences') }})
+    wan_traffic_uplink_preferences: Optional[list[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBodyWanTrafficUplinkPreferences]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wanTrafficUplinkPreferences') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest:
-    path_params: UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams = field()
-    request: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_appliance_traffic_shaping_uplink_selection_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_appliance_traffic_shaping_uplink_selection_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

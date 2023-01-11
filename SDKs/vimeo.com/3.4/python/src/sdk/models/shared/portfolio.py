@@ -1,40 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PortfolioMetadataConnectionsVideos:
     r"""PortfolioMetadataConnectionsVideos
     Information about the videos contained within this portfolio.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PortfolioMetadataConnections:
     r"""PortfolioMetadataConnections
     A list of resource URIs related to the album.
     """
     
-    videos: PortfolioMetadataConnectionsVideos = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    videos: PortfolioMetadataConnectionsVideos = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PortfolioMetadata:
     r"""PortfolioMetadata
     Metadata about the album.
     """
     
-    connections: PortfolioMetadataConnections = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
+    connections: PortfolioMetadataConnections = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
     
 class PortfolioSortEnum(str, Enum):
     ALPHABETICAL = "alphabetical"
@@ -44,14 +43,14 @@ class PortfolioSortEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Portfolio:
-    created_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    metadata: PortfolioMetadata = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    modified_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('modified_time') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    sort: PortfolioSortEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    created_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    metadata: PortfolioMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    modified_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('modified_time') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    sort: PortfolioSortEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     

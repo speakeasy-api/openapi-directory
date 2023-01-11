@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import applicationdescription as shared_applicationdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationDescriptionsMessage:
     r"""ApplicationDescriptionsMessage
     Result message containing a list of application descriptions.
     """
     
-    applications: Optional[List[ApplicationDescription]] = field(default=None)
+    applications: Optional[list[shared_applicationdescription.ApplicationDescription]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,13 +26,13 @@ s.config_security(
     
 req = operations.AccessAddRequest(
     path_params=operations.AccessAddPathParams(
-        agents="quo",
-        mask="odit",
-        user="ducimus",
+        agents="quas",
+        mask="qui",
+        user="ut",
     ),
 )
     
-res = s.sdk.access_add(req)
+res = s.access.access_add(req)
 
 if res.access_add_200_application_json_string is not None:
     # handle response
@@ -43,7 +42,7 @@ if res.access_add_200_application_json_string is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Access
 
 * `access_add` - Adds/Overwrites the user entry in the access control database.
 * `access_del` - Clears a users entry from access control database.
@@ -56,8 +55,9 @@ if res.access_add_200_application_json_string is not None:
 * `access_save` - Saves current access control data in specified file.
 * `access_set_acldb` - Allows setting the name of the current access control database.
 * `access_set_enabled` - Allows the user to enable/disable the access control check.
-* `add` - Add an entry to a table.
-* `add_daemon_timer_script` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+
+### Agent
+
 * `add_ipalias` - Adds a new ipalias for the agent.
 * `add_timer_script` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `agent_remove` - Remove the current agent.
@@ -69,79 +69,76 @@ if res.access_add_200_application_json_string is not None:
 * `agent_store_persists` - This command can be used as a predicate to ascertain the persistence of a given variable.
 * `agent_store_set` - These commands allow the creation of a new variable, or changing an existing value.
 * `agent_store_unset` - Deletes a variable which is currently defined.
-* `cfg_load` - Load the lab configuration file file.
-* `cfg_new` - Clear the lab configuration.
-* `cfg_save` - Save the lab configuration.
-* `cfg_saveas` - Save the lab configuration in file.
-* `del_daemon_timer_script` - Remove a timer script from the execution list.
 * `del_ipalias` - Deletes an existing ipalias from the agent.
 * `del_timer_script` - Remove a timer script from the execution list.
-* `eval_value` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
 * `from_add` - Add a source address that the agent will accept messages from.
 * `from_del` - delete a source address that the agent will accept messages from.
 * `from_list` - List the source addresses that the agent will accept messages from.
-* `get_active_data_list` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
-* `get_active_list` - The list of {agentnum} that are currently active (running or paused).
 * `get_agent_state` - current running state of the agent
-* `get_cfg_file_changed` - This predicate indicates if the currently loaded agent configuration file has changed.
-* `get_cfgfile` - The currently loaded lab configuration file for the particular user.
 * `get_changed` - has the agent value space changed?
-* `get_changed_config_list` - The list of {agentnum} for which a configurable parameter changed.
-* `get_changed_state_list` - The list of {agentnum state} for which the state changed.
-* `get_clients` - The number of clients currently connected to the daemon.
 * `get_config_changed` - has the lab configuration changed?
-* `get_configured_list` - The list of {agentnum} that are currently configured.
-* `get_daemon_protocols` - The set of protocols supported by the Simulator.
 * `get_delay` - one-way transit delay in msec.
 * `get_drops` - drop rate (every N-th PDU). 0 means no drops.
 * `get_host` - host address of the agent.
-* `get_info` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
 * `get_inform_timeout` - timeout in seconds for retransmitting INFORM PDUs.
-* `get_instances` - Display the MIB object instances for the specified object.
 * `get_interface` - network interface card for the agent.
-* `get_interfaces` - The set of network interfaces that can be used for simulations.
-* `get_last` - The last configured agent instance.
-* `get_log` - The current log file for the Simulator.
 * `get_mask` - subnet mask of the agent.
-* `get_max` - The maximum number of agent instances.
-* `get_mib` - Return the MIB that defines the specified object.
 * `get_mibs` - set of MIBs, simulations and scenarios
-* `get_name` - Return the symbolic name of the specified object identifier.
-* `get_netaddr` - The network address of the host where the MIMIC simulator is running.
-* `get_netdev` - The default network device to be used for agent addresses.
 * `get_number_starts` - number of starts for the agent.
-* `get_objects` - Display the MIB objects below the current position
-* `get_oid` - Return the numeric OID of the specified object.
 * `get_oiddir` - MIB directory of the agent.
 * `get_owner` - owner of the agent.
 * `get_pdusize` - maximum PDU size.
 * `get_port` - port number
 * `get_privdir` - private directory of the agent.
-* `get_product` - The product number that is licensed.
 * `get_protocols` - protocols supported by agent
 * `get_read_community` - read community string
-* `get_return` - The return mode.
 * `get_scen` - first scenario name
 * `get_sim` - first simulation name
 * `get_starttime` - relative start time
-* `get_state` - Get the state of a MIB object object.
 * `get_state_changed` - has the agent state changed?
 * `get_statistics` - current statistics of the agent instance
 * `get_trace` - SNMP PDU tracing
 * `get_validate` - SNMP SET validation policy.
-* `get_value` - Get a variable in the Value Space.
-* `get_variables` - Display the variables for the specified instance instance for the specified MIB object object
-* `get_version` - The version of the MIMIC command interface.
 * `get_write_community` - write community string
 * `halt` - Halt the current agent.
-* `list_daemon_timer_scripts` - List the timer scripts currently running along with the their intervals.
 * `list_ipaliases` - Lists all the additional ipaliases configured for the agent.
 * `list_timer_scripts` - List the timer scripts currently running along with the their intervals.
-* `mget_info` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
-* `mset_value` - Set multiple variables in the Value Space.
-* `munset_value` - Unset multiple variables in the Value Space
 * `new` - Add an agent.
 * `pause_now` - Pause the current agent.
+* `protocol_get_config` - Returns the protocol's configuration.
+* `reload` - Reload the current agent.
+* `resume` - Resume the current agent.
+* `save` - Save agent MIB values.
+* `set_delay` - one-way transit delay in msec
+* `set_drops` - drop rate (every N-th PDU)
+* `set_host` - host address of the agent.
+* `set_inform_timeout` - timeout in seconds for retransmitting INFORM PDUs
+* `set_interface` - network interface card for the agent
+* `set_mask` - subnet mask of the agent.
+* `set_mibs` - set of MIBs, simulations and scenarios
+* `set_oiddir` - MIB directory of the agent.
+* `set_owner` - owner of the agent
+* `set_pdusize` - maximum PDU size
+* `set_port` - port number
+* `set_privdir` - private directory of the agent.
+* `set_protocols` - protocols supported by agent as a comma-separated list
+* `set_read_community` - read community string
+* `set_starttime` - relative start time
+* `set_trace` - SNMP PDU tracing
+* `set_validate` - SNMP SET validation policy
+* `set_write_community` - write community string
+* `start` - Start the current agent.
+* `start_ipalias` - Starts an existing ipalias for the agent.
+* `status_ipalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
+* `stop` - Show the agent's primary IP address
+* `stop_ipalias` - Stops an existing ipalias for the agent.
+* `trap_config_add` - Add a trap destination to the set of destinations.
+* `trap_config_del` - Remove a trap destination from the set of destinations.
+* `trap_config_list` - List the set of trap destinations for this agent instance.
+* `trap_list` - List the outstanding asynchronous traps for this agent instance.
+
+### COAP
+
 * `protocol_coap_get_args` - Show the agent's COAP argument structure
 * `protocol_coap_get_config` - Show the agent's COAP configuration
 * `protocol_coap_get_statistics` - Show the agent's COAP statistics
@@ -149,6 +146,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_coap_get_trace` - Show the agent's COAP traffic tracing
 * `protocol_coap_set_config` - Set the agent's COAP configuration
 * `protocol_coap_set_trace` - Set the agent's COAP traffic tracing
+
+### DHCP
+
 * `protocol_dhcp_get_args` - Show the agent's DHCP argument structure
 * `protocol_dhcp_get_config` - Show the agent's DHCP configuration
 * `protocol_dhcp_get_statistics` - Show the agent's DHCP statistics
@@ -157,7 +157,51 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_dhcp_params` - Show the parameters configured by the server in its DHCP-OFFER message
 * `protocol_dhcp_set_config` - Set the agent's DHCP configuration
 * `protocol_dhcp_set_trace` - Set the agent's DHCP traffic tracing
-* `protocol_get_config` - Returns the protocol's configuration.
+
+### Daemon
+
+* `add_daemon_timer_script` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
+* `cfg_load` - Load the lab configuration file file.
+* `cfg_new` - Clear the lab configuration.
+* `cfg_save` - Save the lab configuration.
+* `cfg_saveas` - Save the lab configuration in file.
+* `del_daemon_timer_script` - Remove a timer script from the execution list.
+* `get_active_data_list` - The list of {agentnum {statistics}} for agents that are currently active and whose statistics have changed since the last invocation of this command.
+* `get_active_list` - The list of {agentnum} that are currently active (running or paused).
+* `get_cfg_file_changed` - This predicate indicates if the currently loaded agent configuration file has changed.
+* `get_cfgfile` - The currently loaded lab configuration file for the particular user.
+* `get_changed_config_list` - The list of {agentnum} for which a configurable parameter changed.
+* `get_changed_state_list` - The list of {agentnum state} for which the state changed.
+* `get_clients` - The number of clients currently connected to the daemon.
+* `get_configured_list` - The list of {agentnum} that are currently configured.
+* `get_daemon_protocols` - The set of protocols supported by the Simulator.
+* `get_interfaces` - The set of network interfaces that can be used for simulations.
+* `get_last` - The last configured agent instance.
+* `get_log` - The current log file for the Simulator.
+* `get_max` - The maximum number of agent instances.
+* `get_netaddr` - The network address of the host where the MIMIC simulator is running.
+* `get_netdev` - The default network device to be used for agent addresses.
+* `get_product` - The product number that is licensed.
+* `get_return` - The return mode.
+* `get_version` - The version of the MIMIC command interface.
+* `list_daemon_timer_scripts` - List the timer scripts currently running along with the their intervals.
+* `mget_info` - Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
+* `set_log` - The current log file for the Simulator.
+* `set_netdev` - The network address of the host where the MIMIC simulator is running.
+* `start_all_agents` - Start MIMIC.
+* `stop_all_agents` - Stop MIMIC.
+* `store_exists` - This command can be used as a predicate to ascertain the existence of a given variable.
+* `store_get` - Fetches the value associated with a variable.
+* `store_list` - This command will return the list of variables in the said scope.
+* `store_lreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
+* `store_persists` - This command can be used as a predicate to ascertain the persistence of a given variable.
+* `store_save` - This operation flushes all global objects which need to be made persistent to disk.
+* `store_set` - Set the variable store for the global storage
+* `store_unset` - Deletes a variable which is currently defined.
+* `terminate` - Terminate the MIMIC daemon.
+
+### IPMI
+
 * `protocol_ipmi_get_args` - Show the agent's IPMI argument structure
 * `protocol_ipmi_get_attr` - Show the outgoing message's attributes
 * `protocol_ipmi_get_config` - Show the agent's IPMI configuration
@@ -167,6 +211,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_ipmi_set_attr` - Set the outgoing message's attributes
 * `protocol_ipmi_set_config` - Set the agent's IPMI configuration
 * `protocol_ipmi_set_trace` - Set the agent's IPMI traffic tracing
+
+### MQTT
+
 * `protocol_mqtt_client_get_protstate` - Show the agent's MQTT TCP connection state
 * `protocol_mqtt_client_get_state` - Show the agent's MQTT state
 * `protocol_mqtt_client_message_card` - Show the agent's current messages' cardinality
@@ -199,6 +246,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_mqtt_get_trace` - Show the agent's MQTT traffic tracing
 * `protocol_mqtt_set_config` - Set the agent's MQTT configuration
 * `protocol_mqtt_set_trace` - Set the agent's MQTT traffic tracing
+
+### NETFLOW
+
 * `protocol_netflow_change_attr` - Change NETFLOW export attributes
 * `protocol_netflow_change_dfs` - Change NETFLOW data export interval
 * `protocol_netflow_change_tfs` - Change NETFLOW template export interval
@@ -215,6 +265,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_netflow_set_config` - Set the agent's NETFLOW configuration
 * `protocol_netflow_set_file_name` - Swap NETFLOW configuration file
 * `protocol_netflow_set_trace` - Set the agent's NETFLOW traffic tracing
+
+### PROXY
+
 * `protocol_proxy_get_args` - Show the agent's PROXY argument structure
 * `protocol_proxy_get_config` - Show the agent's PROXY configuration
 * `protocol_proxy_get_statistics` - Show the agent's PROXY statistics
@@ -228,6 +281,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_proxy_port_stop` - Stop additional target
 * `protocol_proxy_set_config` - Set the agent's PROXY configuration
 * `protocol_proxy_set_trace` - Set the agent's PROXY traffic tracing
+
+### SFLOW
+
 * `protocol_sflow_get_args` - Show the agent's SFLOW argument structure
 * `protocol_sflow_get_config` - Show the agent's SFLOW configuration
 * `protocol_sflow_get_statistics` - Show the agent's SFLOW statistics
@@ -238,6 +294,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_sflow_resume` - Resuming traffic
 * `protocol_sflow_set_config` - Set the agent's SFLOW configuration
 * `protocol_sflow_set_trace` - Set the agent's SFLOW traffic tracing
+
+### SNMPTCP
+
 * `protocol_snmptcp_get_args` - Show the agent's SNMPTCP argument structure
 * `protocol_snmptcp_get_config` - Show the agent's SNMPTCP configuration
 * `protocol_snmptcp_get_statistics` - Show the agent's SNMPTCP statistics
@@ -249,6 +308,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_snmptcp_ipalias_list` - List all IP aliases on the agent and the simulator host
 * `protocol_snmptcp_set_config` - Set the agent's SNMPTCP configuration
 * `protocol_snmptcp_set_trace` - Set the agent's SNMPTCP traffic tracing
+
+### SNMPv3
+
 * `protocol_snmpv3_access_add` - Adds a new access entry with the specified parameters.
 * `protocol_snmpv3_access_clear` - Clears all access entries.
 * `protocol_snmpv3_access_del` - Deletes the specified access entry.
@@ -275,6 +337,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_snmpv3_view_clear` - Clears all view entries.
 * `protocol_snmpv3_view_del` - Deletes the specified view entry.
 * `protocol_snmpv3_view_list` - Returns the current view entries as an array of strings.
+
+### SSH
+
 * `protocol_ssh_get_args` - Show the agent's SSH argument structure
 * `protocol_ssh_get_config` - Show the agent's SSH configuration
 * `protocol_ssh_get_statistics` - Show the agent's SSH statistics
@@ -286,6 +351,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_ssh_ipalias_list` - List all IP aliases on the agent and the simulator host
 * `protocol_ssh_set_config` - Set the agent's SSH configuration
 * `protocol_ssh_set_trace` - Set the agent's SSH traffic tracing
+
+### SYSLOG
+
 * `protocol_syslog_get_args` - Show the agent's SYSLOG argument structure
 * `protocol_syslog_get_attr` - Show the outgoing message's attributes
 * `protocol_syslog_get_config` - Show the agent's SYSLOG configuration
@@ -296,6 +364,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_syslog_set_attr` - Set the outgoing message's attributes
 * `protocol_syslog_set_config` - Set the agent's SYSLOG configuration
 * `protocol_syslog_set_trace` - Set the agent's SYSLOG traffic tracing
+
+### TELNET
+
 * `protocol_telnet_connection_logon` - Changes the connection's current logon.
 * `protocol_telnet_connection_request` - Executes the command asynchronously .
 * `protocol_telnet_connection_signal` - Triggers the asynchronous signal event with the specified signal name
@@ -316,6 +387,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_telnet_server_get_users` - Show the agent's TELNET users
 * `protocol_telnet_set_config` - Set the agent's TELNET configuration
 * `protocol_telnet_set_trace` - Set the agent's TELNET traffic tracing
+
+### TFTP
+
 * `protocol_tftp_get_args` - Show the agent's TFTP argument structure
 * `protocol_tftp_get_config` - Show the agent's TFTP configuration
 * `protocol_tftp_get_statistics` - Show the agent's TFTP statistics
@@ -330,6 +404,9 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_tftp_session_write` - Create a read session to upload srcfile to server
 * `protocol_tftp_set_config` - Set the agent's TFTP configuration
 * `protocol_tftp_set_trace` - Set the agent's TFTP traffic tracing
+
+### TOD
+
 * `protocol_tod_get_args` - Show the agent's TOD argument structure
 * `protocol_tod_get_config` - Show the agent's TOD configuration
 * `protocol_tod_get_statistics` - Show the agent's TOD statistics
@@ -338,6 +415,30 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_tod_gettime` - Retrieve TOD time
 * `protocol_tod_set_config` - Set the agent's TOD configuration
 * `protocol_tod_set_trace` - Set the agent's TOD traffic tracing
+
+### Valuespace
+
+* `add` - Add an entry to a table.
+* `eval_value` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
+* `get_info` - Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
+* `get_instances` - Display the MIB object instances for the specified object.
+* `get_mib` - Return the MIB that defines the specified object.
+* `get_name` - Return the symbolic name of the specified object identifier.
+* `get_objects` - Display the MIB objects below the current position
+* `get_oid` - Return the numeric OID of the specified object.
+* `get_state` - Get the state of a MIB object object.
+* `get_value` - Get a variable in the Value Space.
+* `get_variables` - Display the variables for the specified instance instance for the specified MIB object object
+* `mset_value` - Set multiple variables in the Value Space.
+* `munset_value` - Unset multiple variables in the Value Space
+* `remove` - Remove an entry from a table.
+* `set_state` - Set the state of a MIB object object
+* `set_value` - Set a variable in the Value Space.
+* `split_oid` - Split the numerical OID into the object OID and instance OID.
+* `unset_value` - Unset a variable in the Value Space in order to free its memory.
+
+### WEB
+
 * `protocol_web_get_args` - Show the agent's WEB argument structure
 * `protocol_web_get_config` - Show the agent's WEB configuration
 * `protocol_web_get_statistics` - Show the agent's WEB statistics
@@ -351,54 +452,6 @@ if res.access_add_200_application_json_string is not None:
 * `protocol_web_port_stop` - Stop the agent's WEB port
 * `protocol_web_set_config` - Set the agent's WEB configuration
 * `protocol_web_set_trace` - Set the agent's WEB traffic tracing
-* `reload` - Reload the current agent.
-* `remove` - Remove an entry from a table.
-* `resume` - Resume the current agent.
-* `save` - Save agent MIB values.
-* `set_delay` - one-way transit delay in msec
-* `set_drops` - drop rate (every N-th PDU)
-* `set_host` - host address of the agent.
-* `set_inform_timeout` - timeout in seconds for retransmitting INFORM PDUs
-* `set_interface` - network interface card for the agent
-* `set_log` - The current log file for the Simulator.
-* `set_mask` - subnet mask of the agent.
-* `set_mibs` - set of MIBs, simulations and scenarios
-* `set_netdev` - The network address of the host where the MIMIC simulator is running.
-* `set_oiddir` - MIB directory of the agent.
-* `set_owner` - owner of the agent
-* `set_pdusize` - maximum PDU size
-* `set_port` - port number
-* `set_privdir` - private directory of the agent.
-* `set_protocols` - protocols supported by agent as a comma-separated list
-* `set_read_community` - read community string
-* `set_starttime` - relative start time
-* `set_state` - Set the state of a MIB object object
-* `set_trace` - SNMP PDU tracing
-* `set_validate` - SNMP SET validation policy
-* `set_value` - Set a variable in the Value Space.
-* `set_write_community` - write community string
-* `split_oid` - Split the numerical OID into the object OID and instance OID.
-* `start` - Start the current agent.
-* `start_all_agents` - Start MIMIC.
-* `start_ipalias` - Starts an existing ipalias for the agent.
-* `status_ipalias` - Returns the status (0=down, 1=up) of an existing ipalias for the agent.
-* `stop` - Show the agent's primary IP address
-* `stop_all_agents` - Stop MIMIC.
-* `stop_ipalias` - Stops an existing ipalias for the agent.
-* `store_exists` - This command can be used as a predicate to ascertain the existence of a given variable.
-* `store_get` - Fetches the value associated with a variable.
-* `store_list` - This command will return the list of variables in the said scope.
-* `store_lreplace` - These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
-* `store_persists` - This command can be used as a predicate to ascertain the persistence of a given variable.
-* `store_save` - This operation flushes all global objects which need to be made persistent to disk.
-* `store_set` - Set the variable store for the global storage
-* `store_unset` - Deletes a variable which is currently defined.
-* `terminate` - Terminate the MIMIC daemon.
-* `trap_config_add` - Add a trap destination to the set of destinations.
-* `trap_config_del` - Remove a trap destination from the set of destinations.
-* `trap_config_list` - List the set of trap destinations for this agent instance.
-* `trap_list` - List the outstanding asynchronous traps for this agent instance.
-* `unset_value` - Unset a variable in the Value Space in order to free its memory.
 
 <!-- End SDK Available Operations -->
 

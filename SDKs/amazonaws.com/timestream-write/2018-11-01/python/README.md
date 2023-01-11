@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,32 +25,36 @@ s.config_security(
     
 req = operations.CreateDatabaseRequest(
     headers=operations.CreateDatabaseHeaders(
-        x_amz_algorithm="saepe",
-        x_amz_content_sha256="dignissimos",
-        x_amz_credential="laboriosam",
-        x_amz_date="enim",
-        x_amz_security_token="natus",
-        x_amz_signature="nesciunt",
-        x_amz_signed_headers="reiciendis",
+        x_amz_algorithm="omnis",
+        x_amz_content_sha256="accusantium",
+        x_amz_credential="architecto",
+        x_amz_date="omnis",
+        x_amz_security_token="porro",
+        x_amz_signature="ut",
+        x_amz_signed_headers="eius",
         x_amz_target="Timestream_20181101.CreateDatabase",
     ),
     request=shared.CreateDatabaseRequest(
-        database_name="sit",
-        kms_key_id="explicabo",
+        database_name="beatae",
+        kms_key_id="quia",
         tags=[
             shared.Tag(
-                key="quisquam",
-                value="sapiente",
+                key="id",
+                value="dolorem",
             ),
             shared.Tag(
-                key="maxime",
-                value="porro",
+                key="et",
+                value="quibusdam",
+            ),
+            shared.Tag(
+                key="cupiditate",
+                value="eaque",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_database(req)
+res = s.create_database(req)
 
 if res.create_database_response is not None:
     # handle response

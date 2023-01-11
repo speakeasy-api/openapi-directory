@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import restrictionchange as shared_restrictionchange
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SettingsChange:
     r"""SettingsChange
     Information about settings changes.
     """
     
-    restriction_changes: Optional[List[RestrictionChange]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictionChanges') }})
+    restriction_changes: Optional[list[shared_restrictionchange.RestrictionChange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictionChanges') }})
     

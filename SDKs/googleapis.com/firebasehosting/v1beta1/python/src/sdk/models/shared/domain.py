@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,7 +6,8 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import domainredirect as shared_domainredirect
+from ..shared import domainprovisioning as shared_domainprovisioning
 
 class DomainStatusEnum(str, Enum):
     DOMAIN_STATUS_UNSPECIFIED = "DOMAIN_STATUS_UNSPECIFIED"
@@ -17,16 +18,16 @@ class DomainStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Domain:
     r"""Domain
     The intended behavior and status information of a domain.
     """
     
-    domain_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
-    domain_redirect: Optional[DomainRedirect] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainRedirect') }})
-    provisioning: Optional[DomainProvisioning] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provisioning') }})
-    site: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('site') }})
-    status: Optional[DomainStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    domain_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
+    domain_redirect: Optional[shared_domainredirect.DomainRedirect] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainRedirect') }})
+    provisioning: Optional[shared_domainprovisioning.DomainProvisioning] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provisioning') }})
+    site: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('site') }})
+    status: Optional[DomainStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
     

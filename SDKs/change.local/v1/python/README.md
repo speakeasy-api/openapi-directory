@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,15 +24,15 @@ req = operations.GetAPIV1DonationsCarbonCalculateRequest(
         ),
     ),
     query_params=operations.GetAPIV1DonationsCarbonCalculateQueryParams(
-        destination_address=24.200001,
-        distance_mi=76.199997,
-        origin_address=3.200000,
-        transportation_method="truck",
-        weight_lb=79.199997,
+        destination_address=90.199997,
+        distance_mi=69.199997,
+        origin_address=7.100000,
+        transportation_method="air",
+        weight_lb=88.199997,
     ),
 )
     
-res = s.sdk.get_api_v1_donations_carbon_calculate(req)
+res = s.get_api_v1_donations_carbon_calculate(req)
 
 if res.status_code == 200:
     # handle response

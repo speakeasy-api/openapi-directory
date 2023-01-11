@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,30 +15,30 @@ class GetHypermediaEnum(str, Enum):
     NO = "no"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetQueryParams:
-    content_type: Optional[GetContentTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'content-type', 'style': 'form', 'explode': True }})
-    hypermedia: Optional[GetHypermediaEnum] = field(default=None, metadata={'query_param': { 'field_name': 'hypermedia', 'style': 'form', 'explode': True }})
+    content_type: Optional[GetContentTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'content-type', 'style': 'form', 'explode': True }})
+    hypermedia: Optional[GetHypermediaEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hypermedia', 'style': 'form', 'explode': True }})
     
 class Get200ApplicationJSONStatusEnum(str, Enum):
     OK = "OK"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Get200ApplicationJSON:
-    status: Optional[Get200ApplicationJSONStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: Optional[Get200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequest:
-    query_params: GetQueryParams = field()
+    query_params: GetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_200_application_json_object: Optional[Get200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    get_200_application_json_object: Optional[Get200ApplicationJSON] = dataclasses.field(default=None)
     

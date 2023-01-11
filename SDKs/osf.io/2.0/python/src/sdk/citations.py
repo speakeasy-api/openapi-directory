@@ -1,0 +1,86 @@
+import requests
+from sdk.models import operations
+from . import utils
+
+class Citations:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def citations_styles_list(self) -> operations.CitationsStylesListResponse:
+        r"""List all citation styles
+        
+        A paginated list of all standard citation styles available for rendering citations.
+        #### Returns
+        Returns a JSON object containing `data` and `links` keys.
+        
+        The `data` key contains an array of 10 citation styles. Each resource in the array is a separate citation syle and contains the full representation of the citation style object.
+        
+        The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+        
+        This request should never return an error.
+        #### Filtering
+        You can optionally request that the response only include citation styles that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/citations/styles/?filter[title]=open.
+        
+        Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/citations/styles/"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.CitationsStylesListResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def citations_styles_read(self, request: operations.CitationsStylesReadRequest) -> operations.CitationsStylesReadResponse:
+        r"""Retrieve a citation style
+        Retrieves the details of a citation style.
+        #### Returns
+        Returns a JSON object with a `data` key containing the representation of the requested citation style, if the request is successful.
+        
+        If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/citations/styles/{style_id}/", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.CitationsStylesReadResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    

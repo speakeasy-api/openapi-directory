@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteChangelogPathParams:
-    slug: str = field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
+    slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteChangelogSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteChangelogRequest:
-    path_params: DeleteChangelogPathParams = field()
-    security: DeleteChangelogSecurity = field()
+    path_params: DeleteChangelogPathParams = dataclasses.field()
+    security: DeleteChangelogSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteChangelogResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

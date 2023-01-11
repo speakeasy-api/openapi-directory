@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -11,15 +11,15 @@ class AptRepositoryArchiveTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AptRepository:
     r"""AptRepository
     Represents a single Apt package repository. This repository is added to a repo file that is stored at `/etc/apt/sources.list.d/google_osconfig.list`.
     """
     
-    archive_type: Optional[AptRepositoryArchiveTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('archiveType') }})
-    components: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('components') }})
-    distribution: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distribution') }})
-    gpg_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gpgKey') }})
-    uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    archive_type: Optional[AptRepositoryArchiveTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('archiveType') }})
+    components: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('components') }})
+    distribution: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distribution') }})
+    gpg_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gpgKey') }})
+    uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     

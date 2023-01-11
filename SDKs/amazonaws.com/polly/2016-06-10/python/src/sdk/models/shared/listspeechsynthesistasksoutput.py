@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import synthesistask as shared_synthesistask
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSpeechSynthesisTasksOutput:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    synthesis_tasks: Optional[List[SynthesisTask]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SynthesisTasks') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    synthesis_tasks: Optional[list[shared_synthesistask.SynthesisTask]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SynthesisTasks') }})
     

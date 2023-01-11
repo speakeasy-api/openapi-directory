@@ -1,10 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import metricgranularitytype as shared_metricgranularitytype
+from ..shared import metriccollectiontype as shared_metriccollectiontype
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeMetricCollectionTypesAnswer:
-    granularities: Optional[List[MetricGranularityType]] = field(default=None)
-    metrics: Optional[List[MetricCollectionType]] = field(default=None)
+    granularities: Optional[list[shared_metricgranularitytype.MetricGranularityType]] = dataclasses.field(default=None)
+    metrics: Optional[list[shared_metriccollectiontype.MetricCollectionType]] = dataclasses.field(default=None)
     

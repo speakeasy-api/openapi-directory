@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import jobinfo as shared_jobinfo
 
 
-@dataclass
+@dataclasses.dataclass
 class GetThirdPartyJobInfoPathParams:
-    job_id: str = field(metadata={'path_param': { 'field_name': 'JobId', 'style': 'simple', 'explode': False }})
+    job_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'JobId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetThirdPartyJobInfoHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetThirdPartyJobInfoRequest:
-    headers: GetThirdPartyJobInfoHeaders = field()
-    path_params: GetThirdPartyJobInfoPathParams = field()
+    headers: GetThirdPartyJobInfoHeaders = dataclasses.field()
+    path_params: GetThirdPartyJobInfoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetThirdPartyJobInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    job_info: Optional[shared.JobInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    job_info: Optional[shared_jobinfo.JobInfo] = dataclasses.field(default=None)
     

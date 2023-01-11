@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import coach as shared_coach
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCoachesQueryParams:
-    first_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'firstName', 'style': 'form', 'explode': True }})
-    last_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lastName', 'style': 'form', 'explode': True }})
-    max_year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxYear', 'style': 'form', 'explode': True }})
-    min_year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'minYear', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    first_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'firstName', 'style': 'form', 'explode': True }})
+    last_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lastName', 'style': 'form', 'explode': True }})
+    max_year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxYear', 'style': 'form', 'explode': True }})
+    min_year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'minYear', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoachesRequest:
-    query_params: GetCoachesQueryParams = field()
+    query_params: GetCoachesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoachesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    coaches: Optional[List[shared.Coach]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    coaches: Optional[list[shared_coach.Coach]] = dataclasses.field(default=None)
     

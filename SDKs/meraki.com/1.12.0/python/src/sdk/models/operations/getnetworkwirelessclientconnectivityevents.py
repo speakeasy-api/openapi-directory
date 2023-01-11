@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkWirelessClientConnectivityEventsPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 class GetNetworkWirelessClientConnectivityEventsBandEnum(str, Enum):
     TWO_4 = "2.4"
@@ -30,31 +30,31 @@ class GetNetworkWirelessClientConnectivityEventsTypesEnum(str, Enum):
     STICKY = "sticky"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkWirelessClientConnectivityEventsQueryParams:
-    band: Optional[GetNetworkWirelessClientConnectivityEventsBandEnum] = field(default=None, metadata={'query_param': { 'field_name': 'band', 'style': 'form', 'explode': True }})
-    device_serial: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'deviceSerial', 'style': 'form', 'explode': True }})
-    ending_before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'endingBefore', 'style': 'form', 'explode': True }})
-    included_severities: Optional[List[GetNetworkWirelessClientConnectivityEventsIncludedSeveritiesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'includedSeverities', 'style': 'form', 'explode': False }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'perPage', 'style': 'form', 'explode': True }})
-    ssid_number: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'ssidNumber', 'style': 'form', 'explode': True }})
-    starting_after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'startingAfter', 'style': 'form', 'explode': True }})
-    t0: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
-    t1: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 't1', 'style': 'form', 'explode': True }})
-    timespan: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
-    types: Optional[List[GetNetworkWirelessClientConnectivityEventsTypesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'types', 'style': 'form', 'explode': False }})
+    band: Optional[GetNetworkWirelessClientConnectivityEventsBandEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'band', 'style': 'form', 'explode': True }})
+    device_serial: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deviceSerial', 'style': 'form', 'explode': True }})
+    ending_before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endingBefore', 'style': 'form', 'explode': True }})
+    included_severities: Optional[list[GetNetworkWirelessClientConnectivityEventsIncludedSeveritiesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includedSeverities', 'style': 'form', 'explode': False }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'perPage', 'style': 'form', 'explode': True }})
+    ssid_number: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ssidNumber', 'style': 'form', 'explode': True }})
+    starting_after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startingAfter', 'style': 'form', 'explode': True }})
+    t0: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
+    t1: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 't1', 'style': 'form', 'explode': True }})
+    timespan: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
+    types: Optional[list[GetNetworkWirelessClientConnectivityEventsTypesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'types', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkWirelessClientConnectivityEventsRequest:
-    path_params: GetNetworkWirelessClientConnectivityEventsPathParams = field()
-    query_params: GetNetworkWirelessClientConnectivityEventsQueryParams = field()
+    path_params: GetNetworkWirelessClientConnectivityEventsPathParams = dataclasses.field()
+    query_params: GetNetworkWirelessClientConnectivityEventsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkWirelessClientConnectivityEventsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_network_wireless_client_connectivity_events_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_network_wireless_client_connectivity_events_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

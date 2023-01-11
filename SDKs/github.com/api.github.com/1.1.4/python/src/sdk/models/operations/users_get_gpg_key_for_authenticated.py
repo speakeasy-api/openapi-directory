@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import gpg_key as shared_gpg_key
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetGpgKeyForAuthenticatedPathParams:
-    gpg_key_id: int = field(metadata={'path_param': { 'field_name': 'gpg_key_id', 'style': 'simple', 'explode': False }})
+    gpg_key_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'gpg_key_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetGpgKeyForAuthenticatedRequest:
-    path_params: UsersGetGpgKeyForAuthenticatedPathParams = field()
+    path_params: UsersGetGpgKeyForAuthenticatedPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetGpgKeyForAuthenticatedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    gpg_key: Optional[shared.GpgKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    gpg_key: Optional[shared_gpg_key.GpgKey] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PutConsumerV1AppointmentsIDNoshowPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutConsumerV1AppointmentsIDNoshowRequests:
-    appointment_no_show_model: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    appointment_no_show_model1: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    appointment_no_show_model2: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    appointment_no_show_model3: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    appointment_no_show_model: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    appointment_no_show_model1: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    appointment_no_show_model2: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    appointment_no_show_model3: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutConsumerV1AppointmentsIDNoshowRequest:
-    path_params: PutConsumerV1AppointmentsIDNoshowPathParams = field()
-    request: Optional[PutConsumerV1AppointmentsIDNoshowRequests] = field(default=None)
+    path_params: PutConsumerV1AppointmentsIDNoshowPathParams = dataclasses.field()
+    request: Optional[PutConsumerV1AppointmentsIDNoshowRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PutConsumerV1AppointmentsIDNoshowResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

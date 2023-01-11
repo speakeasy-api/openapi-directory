@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import orderstatus_enum as shared_orderstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAccountsAccountOrdersCustomerOrderIDPathParams:
-    customer_order_id: str = field(metadata={'path_param': { 'field_name': 'CustomerOrderId', 'style': 'simple', 'explode': False }})
-    account: str = field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
+    customer_order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'CustomerOrderId', 'style': 'simple', 'explode': False }})
+    account: str = dataclasses.field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSON:
-    customer_order_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomerOrderId') }})
-    order_qty: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrderQty') }})
-    order_type: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrderType') }})
-    price: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Price') }})
-    side: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Side') }})
-    status: Optional[shared.OrderStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
-    symbol: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Symbol') }})
-    warning: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Warning') }})
+    customer_order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomerOrderId') }})
+    order_qty: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrderQty') }})
+    order_type: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrderType') }})
+    price: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Price') }})
+    side: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Side') }})
+    status: Optional[shared_orderstatus_enum.OrderStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
+    symbol: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Symbol') }})
+    warning: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Warning') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAccountsAccountOrdersCustomerOrderIDRequest:
-    path_params: DeleteAccountsAccountOrdersCustomerOrderIDPathParams = field()
+    path_params: DeleteAccountsAccountOrdersCustomerOrderIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAccountsAccountOrdersCustomerOrderIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_accounts_account_orders_customer_order_id_200_application_json_objects: Optional[List[DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSON]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_accounts_account_orders_customer_order_id_200_application_json_objects: Optional[list[DeleteAccountsAccountOrdersCustomerOrderID200ApplicationJSON]] = dataclasses.field(default=None)
     

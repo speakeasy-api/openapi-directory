@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import originprotocolpolicy_enum as shared_originprotocolpolicy_enum
+from ..shared import originsslprotocols as shared_originsslprotocols
 
 
-@dataclass
+@dataclasses.dataclass
 class CustomOriginConfig:
     r"""CustomOriginConfig
     A customer origin.
     """
     
-    http_port: int = field()
-    https_port: int = field()
-    origin_protocol_policy: OriginProtocolPolicyEnum = field()
-    origin_ssl_protocols: Optional[OriginSslProtocols] = field(default=None)
+    http_port: int = dataclasses.field()
+    https_port: int = dataclasses.field()
+    origin_protocol_policy: shared_originprotocolpolicy_enum.OriginProtocolPolicyEnum = dataclasses.field()
+    origin_ssl_protocols: Optional[shared_originsslprotocols.OriginSslProtocols] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,31 @@ s.config_security(
     
 req = operations.CreateParallelDataRequest(
     headers=operations.CreateParallelDataHeaders(
-        x_amz_algorithm="tempora",
-        x_amz_content_sha256="quaerat",
-        x_amz_credential="vel",
-        x_amz_date="dolor",
-        x_amz_security_token="nisi",
-        x_amz_signature="unde",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="ut",
+        x_amz_credential="sapiente",
+        x_amz_date="laborum",
+        x_amz_security_token="dolor",
+        x_amz_signature="accusamus",
+        x_amz_signed_headers="pariatur",
         x_amz_target="AWSShineFrontendService_20170701.CreateParallelData",
     ),
     request=shared.CreateParallelDataRequest(
-        client_token="eum",
-        description="quae",
+        client_token="eos",
+        description="ut",
         encryption_key=shared.EncryptionKey(
-            id="distinctio",
+            id="animi",
             type="KMS",
         ),
-        name="sed",
+        name="eum",
         parallel_data_config=shared.ParallelDataConfig(
             format="TMX",
-            s3_uri="autem",
+            s3_uri="maiores",
         ),
     ),
 )
     
-res = s.sdk.create_parallel_data(req)
+res = s.create_parallel_data(req)
 
 if res.create_parallel_data_response is not None:
     # handle response

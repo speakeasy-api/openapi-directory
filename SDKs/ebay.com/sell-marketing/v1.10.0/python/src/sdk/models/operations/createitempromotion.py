@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import itempromotion as shared_itempromotion
+from ..shared import baseresponse as shared_baseresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateItemPromotionSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateItemPromotionRequest:
-    security: CreateItemPromotionSecurity = field()
-    request: Optional[shared.ItemPromotion] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateItemPromotionSecurity = dataclasses.field()
+    request: Optional[shared_itempromotion.ItemPromotion] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateItemPromotionResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    base_response: Optional[shared.BaseResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    base_response: Optional[shared_baseresponse.BaseResponse] = dataclasses.field(default=None)
     

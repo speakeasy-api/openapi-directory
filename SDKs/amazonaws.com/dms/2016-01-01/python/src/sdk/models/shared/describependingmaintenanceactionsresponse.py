@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcependingmaintenanceactions as shared_resourcependingmaintenanceactions
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribePendingMaintenanceActionsResponse:
     r"""DescribePendingMaintenanceActionsResponse
     <p/>
     """
     
-    marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
-    pending_maintenance_actions: Optional[List[ResourcePendingMaintenanceActions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PendingMaintenanceActions') }})
+    marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
+    pending_maintenance_actions: Optional[list[shared_resourcependingmaintenanceactions.ResourcePendingMaintenanceActions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PendingMaintenanceActions') }})
     

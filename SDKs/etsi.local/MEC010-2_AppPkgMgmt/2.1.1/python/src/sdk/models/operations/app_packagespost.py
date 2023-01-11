@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import createapppkg as shared_createapppkg
+from ..shared import apppkginfo as shared_apppkginfo
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppPackagesPostRequest:
-    request: shared.CreateAppPkg = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_createapppkg.CreateAppPkg = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPackagesPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    app_pkg_infos: Optional[List[shared.AppPkgInfo]] = field(default=None)
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    app_pkg_infos: Optional[list[shared_apppkginfo.AppPkgInfo]] = dataclasses.field(default=None)
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

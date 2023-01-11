@@ -1,15 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecommenderV1beta1ValueMatcher:
-    r"""GoogleCloudRecommenderV1beta1ValueMatcher
-    Contains various matching options for values for a GCP resource field.
-    """
-    
-    matches_pattern: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchesPattern') }})
+    matches_pattern: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchesPattern') }})
     

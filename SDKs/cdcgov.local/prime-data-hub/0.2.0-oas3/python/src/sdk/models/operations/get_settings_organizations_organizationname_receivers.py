@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import receiver as shared_receiver
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameReceiversPathParams:
-    organization_name: str = field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
+    organization_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameReceiversSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameReceiversRequest:
-    path_params: GetSettingsOrganizationsOrganizationNameReceiversPathParams = field()
-    security: GetSettingsOrganizationsOrganizationNameReceiversSecurity = field()
+    path_params: GetSettingsOrganizationsOrganizationNameReceiversPathParams = dataclasses.field()
+    security: GetSettingsOrganizationsOrganizationNameReceiversSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameReceiversResponse:
-    content_type: str = field()
-    status_code: int = field()
-    receivers: Optional[List[shared.Receiver]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    receivers: Optional[list[shared_receiver.Receiver]] = dataclasses.field(default=None)
     

@@ -1,7 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_hook_events as shared_paginated_hook_events
 
 class GetHookEventsSubjectTypeSubjectTypeEnum(str, Enum):
     WORKSPACE = "workspace"
@@ -10,28 +13,28 @@ class GetHookEventsSubjectTypeSubjectTypeEnum(str, Enum):
     TEAM = "team"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHookEventsSubjectTypePathParams:
-    subject_type: GetHookEventsSubjectTypeSubjectTypeEnum = field(metadata={'path_param': { 'field_name': 'subject_type', 'style': 'simple', 'explode': False }})
+    subject_type: GetHookEventsSubjectTypeSubjectTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'subject_type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHookEventsSubjectTypeSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHookEventsSubjectTypeRequest:
-    path_params: GetHookEventsSubjectTypePathParams = field()
-    security: GetHookEventsSubjectTypeSecurity = field()
+    path_params: GetHookEventsSubjectTypePathParams = dataclasses.field()
+    security: GetHookEventsSubjectTypeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHookEventsSubjectTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_hook_events: Optional[shared.PaginatedHookEvents] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_hook_events: Optional[shared_paginated_hook_events.PaginatedHookEvents] = dataclasses.field(default=None)
     

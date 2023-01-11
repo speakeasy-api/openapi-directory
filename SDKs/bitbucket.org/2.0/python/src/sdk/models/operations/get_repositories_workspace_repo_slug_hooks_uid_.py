@@ -1,32 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugHooksUIDPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    uid: str = field(metadata={'path_param': { 'field_name': 'uid', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'uid', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugHooksUIDRequest:
-    path_params: GetRepositoriesWorkspaceRepoSlugHooksUIDPathParams = field()
-    security: GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity = field()
+    path_params: GetRepositoriesWorkspaceRepoSlugHooksUIDPathParams = dataclasses.field()
+    security: GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugHooksUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    webhook_subscription: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    webhook_subscription: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

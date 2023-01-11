@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import group_mapping as shared_group_mapping
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsForOrgQueryParams:
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsForOrgRequest:
-    path_params: TeamsListIdpGroupsForOrgPathParams = field()
-    query_params: TeamsListIdpGroupsForOrgQueryParams = field()
+    path_params: TeamsListIdpGroupsForOrgPathParams = dataclasses.field()
+    query_params: TeamsListIdpGroupsForOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsForOrgResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    group_mapping: Optional[shared.GroupMapping] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_mapping: Optional[shared_group_mapping.GroupMapping] = dataclasses.field(default=None)
     

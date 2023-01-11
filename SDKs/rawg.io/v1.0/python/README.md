@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.CreatorRolesListRequest(
     query_params=operations.CreatorRolesListQueryParams(
-        page=7348434050736803316,
-        page_size=8602515491234131430,
+        page=2137558395804455772,
+        page_size=1857343205555021854,
     ),
 )
     
-res = s.sdk.creator_roles_list(req)
+res = s.creator_roles.creator_roles_list(req)
 
 if res.creator_roles_list_200_application_json_object is not None:
     # handle response
@@ -34,13 +33,22 @@ if res.creator_roles_list_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### creator-roles
 
 * `creator_roles_list` - Get a list of creator positions (jobs).
+
+### creators
+
 * `creators_list` - Get a list of game creators.
 * `creators_read` - Get details of the creator.
+
+### developers
+
 * `developers_list` - Get a list of game developers.
 * `developers_read` - Get details of the developer.
+
+### games
+
 * `games_achievements_read` - Get a list of game achievements.
 * `games_additions_list` - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
 * `games_development_team_list` - Get a list of individual creators that were part of the development team.
@@ -55,15 +63,30 @@ if res.creator_roles_list_200_application_json_object is not None:
 * `games_suggested_read` - Get a list of visually similar games, available only for business and enterprise API users.
 * `games_twitch_read` - Get streams on Twitch associated with the game, available only for business and enterprise API users.
 * `games_youtube_read` - Get videos from YouTube associated with the game, available only for business and enterprise API users.
+
+### genres
+
 * `genres_list` - Get a list of video game genres.
 * `genres_read` - Get details of the genre.
+
+### platforms
+
 * `platforms_list` - Get a list of video game platforms.
 * `platforms_lists_parents_list` - Get a list of parent platforms.
 * `platforms_read` - Get details of the platform.
+
+### publishers
+
 * `publishers_list` - Get a list of video game publishers.
 * `publishers_read` - Get details of the publisher.
+
+### stores
+
 * `stores_list` - Get a list of video game storefronts.
 * `stores_read` - Get details of the store.
+
+### tags
+
 * `tags_list` - Get a list of tags.
 * `tags_read` - Get details of the tag.
 

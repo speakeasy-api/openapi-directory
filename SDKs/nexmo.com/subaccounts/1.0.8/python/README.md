@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,11 +24,11 @@ req = operations.CreateSubAccountRequest(
         ),
     ),
     path_params=operations.CreateSubAccountPathParams(
-        api_key="quae",
+        api_key="sed",
     ),
     request=shared.NewSubaccountRequest(
-        name="soluta",
-        secret="molestiae",
+        name="et",
+        secret="quos",
         use_primary_account_balance=False,
     ),
 )

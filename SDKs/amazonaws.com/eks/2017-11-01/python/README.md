@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,51 +25,45 @@ s.config_security(
     
 req = operations.AssociateEncryptionConfigRequest(
     path_params=operations.AssociateEncryptionConfigPathParams(
-        name="temporibus",
+        name="sint",
     ),
     headers=operations.AssociateEncryptionConfigHeaders(
-        x_amz_algorithm="nemo",
-        x_amz_content_sha256="ea",
-        x_amz_credential="vero",
-        x_amz_date="debitis",
-        x_amz_security_token="vitae",
-        x_amz_signature="illo",
-        x_amz_signed_headers="dolor",
+        x_amz_algorithm="ratione",
+        x_amz_content_sha256="sed",
+        x_amz_credential="placeat",
+        x_amz_date="ut",
+        x_amz_security_token="ipsam",
+        x_amz_signature="aut",
+        x_amz_signed_headers="cum",
     ),
     request=operations.AssociateEncryptionConfigRequestBody(
         client_request_token="aut",
         encryption_config=[
             shared.EncryptionConfig(
                 provider=shared.Provider(
-                    key_arn="iusto",
+                    key_arn="dolore",
                 ),
                 resources=[
-                    "voluptas",
-                    "quod",
+                    "quis",
+                    "in",
+                    "velit",
                 ],
             ),
             shared.EncryptionConfig(
                 provider=shared.Provider(
-                    key_arn="maxime",
+                    key_arn="eligendi",
                 ),
                 resources=[
-                    "eligendi",
-                ],
-            ),
-            shared.EncryptionConfig(
-                provider=shared.Provider(
-                    key_arn="dolorum",
-                ),
-                resources=[
-                    "magni",
-                    "nostrum",
+                    "quaerat",
+                    "dolorem",
+                    "deserunt",
                 ],
             ),
         ],
     ),
 )
     
-res = s.sdk.associate_encryption_config(req)
+res = s.associate_encryption_config(req)
 
 if res.associate_encryption_config_response is not None:
     # handle response

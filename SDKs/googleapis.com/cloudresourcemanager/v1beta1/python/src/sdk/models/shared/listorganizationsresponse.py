@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import organization as shared_organization
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListOrganizationsResponse:
     r"""ListOrganizationsResponse
     The response returned from the `ListOrganizations` method.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    organizations: Optional[List[Organization]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    organizations: Optional[list[shared_organization.Organization]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations') }})
     

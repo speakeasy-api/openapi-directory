@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoFromChannelPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoFromChannelSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoFromChannelRequest:
-    path_params: DeleteVideoFromChannelPathParams = field()
-    security: DeleteVideoFromChannelSecurity = field()
+    path_params: DeleteVideoFromChannelPathParams = dataclasses.field()
+    security: DeleteVideoFromChannelSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoFromChannelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

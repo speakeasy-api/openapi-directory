@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class PlaylistItemStatusPrivacyStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PlaylistItemStatus:
     r"""PlaylistItemStatus
     Information about the playlist item's privacy status.
     """
     
-    privacy_status: Optional[PlaylistItemStatusPrivacyStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
+    privacy_status: Optional[PlaylistItemStatusPrivacyStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
     

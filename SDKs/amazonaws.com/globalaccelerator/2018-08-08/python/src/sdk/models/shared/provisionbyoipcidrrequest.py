@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import cidrauthorizationcontext as shared_cidrauthorizationcontext
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProvisionByoipCidrRequest:
-    cidr: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Cidr') }})
-    cidr_authorization_context: CidrAuthorizationContext = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CidrAuthorizationContext') }})
+    cidr: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Cidr') }})
+    cidr_authorization_context: shared_cidrauthorizationcontext.CidrAuthorizationContext = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CidrAuthorizationContext') }})
     

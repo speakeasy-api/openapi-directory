@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import installation as shared_installation
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsQueryParams:
-    outdated: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'outdated', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    since: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    outdated: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outdated', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    since: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsRequest:
-    query_params: AppsListInstallationsQueryParams = field()
+    query_params: AppsListInstallationsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    installations: Optional[List[shared.Installation]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    installations: Optional[list[shared_installation.Installation]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,128 +25,103 @@ s.config_security(
     
 req = operations.CreateExperimentTemplateRequest(
     headers=operations.CreateExperimentTemplateHeaders(
-        x_amz_algorithm="facere",
-        x_amz_content_sha256="deserunt",
-        x_amz_credential="illo",
-        x_amz_date="tempore",
-        x_amz_security_token="velit",
-        x_amz_signature="corporis",
-        x_amz_signed_headers="quidem",
+        x_amz_algorithm="rem",
+        x_amz_content_sha256="perspiciatis",
+        x_amz_credential="molestias",
+        x_amz_date="repellendus",
+        x_amz_security_token="doloremque",
+        x_amz_signature="doloremque",
+        x_amz_signed_headers="consectetur",
     ),
     request=operations.CreateExperimentTemplateRequestBody(
         actions={
-            "officiis": shared.CreateExperimentTemplateActionInput(
-                action_id="veniam",
-                description="ducimus",
+            "et": shared.CreateExperimentTemplateActionInput(
+                action_id="ut",
+                description="eaque",
                 parameters={
-                    "nobis": "aliquam",
-                    "qui": "debitis",
+                    "dolorem": "nulla",
+                    "nam": "velit",
                 },
                 start_after=[
-                    "consequatur",
-                    "iusto",
-                    "assumenda",
+                    "culpa",
                 ],
                 targets={
-                    "distinctio": "ut",
+                    "qui": "impedit",
+                    "culpa": "voluptatibus",
+                    "consequuntur": "sapiente",
+                },
+            ),
+            "sint": shared.CreateExperimentTemplateActionInput(
+                action_id="et",
+                description="fuga",
+                parameters={
+                    "quidem": "reiciendis",
+                },
+                start_after=[
+                    "quas",
+                    "pariatur",
+                    "omnis",
+                ],
+                targets={
+                    "soluta": "qui",
+                    "aut": "et",
                 },
             ),
         },
-        client_token="ut",
-        description="expedita",
-        role_arn="repellendus",
+        client_token="omnis",
+        description="et",
+        role_arn="architecto",
         stop_conditions=[
             shared.CreateExperimentTemplateStopConditionInput(
-                source="exercitationem",
-                value="nihil",
-            ),
-            shared.CreateExperimentTemplateStopConditionInput(
-                source="perferendis",
-                value="odit",
+                source="dolorem",
+                value="recusandae",
             ),
         ],
         tags={
-            "dolore": "aliquam",
-            "soluta": "accusantium",
+            "ut": "ab",
         },
         targets={
-            "aut": shared.CreateExperimentTemplateTargetInput(
+            "ut": shared.CreateExperimentTemplateTargetInput(
                 filters=[
                     shared.ExperimentTemplateTargetInputFilter(
-                        path="ex",
+                        path="molestiae",
                         values=[
-                            "nihil",
-                            "et",
-                            "deleniti",
-                        ],
-                    ),
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="minima",
-                        values=[
-                            "omnis",
+                            "aut",
+                            "sequi",
                             "eum",
                         ],
                     ),
                     shared.ExperimentTemplateTargetInputFilter(
-                        path="error",
+                        path="iusto",
                         values=[
-                            "sed",
-                            "ipsa",
-                            "explicabo",
-                        ],
-                    ),
-                ],
-                resource_arns=[
-                    "corporis",
-                    "modi",
-                ],
-                resource_tags={
-                    "odio": "expedita",
-                },
-                resource_type="aliquid",
-                selection_mode="ipsum",
-            ),
-            "saepe": shared.CreateExperimentTemplateTargetInput(
-                filters=[
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="atque",
-                        values=[
-                            "suscipit",
-                        ],
-                    ),
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="architecto",
-                        values=[
-                            "ipsa",
-                            "quos",
-                        ],
-                    ),
-                    shared.ExperimentTemplateTargetInputFilter(
-                        path="voluptas",
-                        values=[
-                            "a",
-                            "iusto",
+                            "sunt",
+                            "ea",
                             "et",
                         ],
                     ),
+                    shared.ExperimentTemplateTargetInputFilter(
+                        path="officiis",
+                        values=[
+                            "delectus",
+                        ],
+                    ),
                 ],
                 resource_arns=[
-                    "voluptas",
-                    "nisi",
-                    "quia",
+                    "esse",
+                    "ut",
                 ],
                 resource_tags={
-                    "corporis": "omnis",
-                    "dolores": "expedita",
+                    "deserunt": "ut",
+                    "in": "maiores",
                 },
-                resource_type="enim",
-                selection_mode="quo",
+                resource_type="iure",
+                selection_mode="qui",
             ),
         },
     ),
 )
     
-res = s.sdk.create_experiment_template(req)
+res = s.create_experiment_template(req)
 
 if res.create_experiment_template_response is not None:
     # handle response

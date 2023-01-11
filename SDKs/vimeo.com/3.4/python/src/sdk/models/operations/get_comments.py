@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import comment as shared_comment
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCommentsPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 class GetCommentsDirectionEnum(str, Enum):
     ASC = "asc"
     DESC = "desc"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCommentsQueryParams:
-    direction: Optional[GetCommentsDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    direction: Optional[GetCommentsDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCommentsRequest:
-    path_params: GetCommentsPathParams = field()
-    query_params: GetCommentsQueryParams = field()
+    path_params: GetCommentsPathParams = dataclasses.field()
+    query_params: GetCommentsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    comments: Optional[List[shared.Comment]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    comments: Optional[list[shared_comment.Comment]] = dataclasses.field(default=None)
     

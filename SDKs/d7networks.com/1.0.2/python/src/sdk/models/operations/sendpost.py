@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import sendsmsrequest as shared_sendsmsrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class SendPostHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendPostRequest:
-    headers: SendPostHeaders = field()
-    request: shared.SendSmsRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SendPostHeaders = dataclasses.field()
+    request: shared_sendsmsrequest.SendSmsRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    send_post_500_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    send_post_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

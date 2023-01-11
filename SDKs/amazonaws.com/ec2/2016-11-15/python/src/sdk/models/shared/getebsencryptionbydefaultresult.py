@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEbsEncryptionByDefaultResult:
-    ebs_encryption_by_default: Optional[bool] = field(default=None)
+    ebs_encryption_by_default: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,15 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import searchfacetsresponse as shared_searchfacetsresponse
+from ..shared import relatedsearch as shared_relatedsearch
+from ..shared import editorialvideosearchitem as shared_editorialvideosearchitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EditorialVideoSearchResults:
-    facets: Optional[SearchFacetsResponse] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('facets') }})
-    related_searches: Optional[List[RelatedSearch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('related_searches') }})
-    result_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result_count') }})
-    videos: Optional[List[EditorialVideoSearchItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    facets: Optional[shared_searchfacetsresponse.SearchFacetsResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('facets') }})
+    related_searches: Optional[list[shared_relatedsearch.RelatedSearch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('related_searches') }})
+    result_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result_count') }})
+    videos: Optional[list[shared_editorialvideosearchitem.EditorialVideoSearchItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
     

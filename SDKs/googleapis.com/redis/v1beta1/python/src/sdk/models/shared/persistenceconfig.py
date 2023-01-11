@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,26 +18,26 @@ class PersistenceConfigRdbSnapshotPeriodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PersistenceConfigInput:
     r"""PersistenceConfigInput
     Configuration of the persistence functionality.
     """
     
-    persistence_mode: Optional[PersistenceConfigPersistenceModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistenceMode') }})
-    rdb_snapshot_period: Optional[PersistenceConfigRdbSnapshotPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotPeriod') }})
-    rdb_snapshot_start_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotStartTime') }})
+    persistence_mode: Optional[PersistenceConfigPersistenceModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistenceMode') }})
+    rdb_snapshot_period: Optional[PersistenceConfigRdbSnapshotPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotPeriod') }})
+    rdb_snapshot_start_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotStartTime') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PersistenceConfig:
     r"""PersistenceConfig
     Configuration of the persistence functionality.
     """
     
-    persistence_mode: Optional[PersistenceConfigPersistenceModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistenceMode') }})
-    rdb_next_snapshot_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbNextSnapshotTime') }})
-    rdb_snapshot_period: Optional[PersistenceConfigRdbSnapshotPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotPeriod') }})
-    rdb_snapshot_start_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotStartTime') }})
+    persistence_mode: Optional[PersistenceConfigPersistenceModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistenceMode') }})
+    rdb_next_snapshot_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbNextSnapshotTime') }})
+    rdb_snapshot_period: Optional[PersistenceConfigRdbSnapshotPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotPeriod') }})
+    rdb_snapshot_start_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rdbSnapshotStartTime') }})
     

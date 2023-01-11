@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabletenant as shared_writabletenant
+from ..shared import tenant as shared_tenant
 
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantsCreateRequest:
-    request: shared.WritableTenantInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writabletenant.WritableTenantInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tenant: Optional[shared.Tenant] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tenant: Optional[shared_tenant.Tenant] = dataclasses.field(default=None)
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import targetproject as shared_targetproject
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTargetProjectsResponse:
     r"""ListTargetProjectsResponse
     Response message for 'ListTargetProjects' call.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    target_projects: Optional[List[TargetProject]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetProjects') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    target_projects: Optional[list[shared_targetproject.TargetProject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetProjects') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

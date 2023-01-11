@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class CustomVoiceParamsReportedUsageEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CustomVoiceParams:
     r"""CustomVoiceParams
     Description of the custom voice to be synthesized.
     """
     
-    model: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
-    reported_usage: Optional[CustomVoiceParamsReportedUsageEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportedUsage') }})
+    model: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
+    reported_usage: Optional[CustomVoiceParamsReportedUsageEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportedUsage') }})
     

@@ -21,3 +21,5 @@ from .serviceaccount import *
 from .status import *
 from .virtualmachine import *
 from .volume import *
+
+__all__ = ["XgafvEnum","Accelerator","Action","AltEnum","Disk","ExistingDisk","ListLocationsResponse","ListOperationsResponse","Location","Mount","Network","NfsMount","Operation","PersistentDisk","Pipeline","Resources","RunPipelineRequest","Secret","SchemeOauth2","SchemeOauth2c","ServiceAccount","Status","VirtualMachine","Volume"]

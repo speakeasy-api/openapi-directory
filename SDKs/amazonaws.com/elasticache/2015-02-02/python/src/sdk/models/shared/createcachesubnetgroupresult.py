@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cachesubnetgroup as shared_cachesubnetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateCacheSubnetGroupResult:
-    cache_subnet_group: Optional[CacheSubnetGroup] = field(default=None)
+    cache_subnet_group: Optional[shared_cachesubnetgroup.CacheSubnetGroup] = dataclasses.field(default=None)
     

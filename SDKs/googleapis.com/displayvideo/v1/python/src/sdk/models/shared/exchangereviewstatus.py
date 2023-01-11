@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -83,12 +83,12 @@ class ExchangeReviewStatusStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExchangeReviewStatus:
     r"""ExchangeReviewStatus
     Exchange review status for the creative.
     """
     
-    exchange: Optional[ExchangeReviewStatusExchangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
-    status: Optional[ExchangeReviewStatusStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    exchange: Optional[ExchangeReviewStatusExchangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
+    status: Optional[ExchangeReviewStatusStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

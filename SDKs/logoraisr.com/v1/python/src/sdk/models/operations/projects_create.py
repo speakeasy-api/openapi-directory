@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import projectrequest as shared_projectrequest
+from ..shared import projectresponse as shared_projectresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsCreateRequest:
-    request: shared.ProjectRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_projectrequest.ProjectRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project_response: Optional[shared.ProjectResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project_response: Optional[shared_projectresponse.ProjectResponse] = dataclasses.field(default=None)
     

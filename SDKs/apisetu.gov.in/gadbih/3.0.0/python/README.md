@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.CtcerRequest(
     security=operations.CtcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.CtcerRequestBody(
         certificate_parameters=operations.CtcerRequestBodyCertificateParameters(
-            ref_no="qui",
-            token_no="nobis",
+            ref_no="corporis",
+            token_no="accusantium",
         ),
-        consent_artifact="reprehenderit",
+        consent_artifact="eaque",
         format="pdf",
-        txn_id="aliquid",
+        txn_id="quidem",
     ),
 )
     
-res = s.sdk.ctcer(req)
+res = s.ap_is.ctcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ctcer` - Caste Certificate
 * `ewcer` - Economically Weaker Section Certificate

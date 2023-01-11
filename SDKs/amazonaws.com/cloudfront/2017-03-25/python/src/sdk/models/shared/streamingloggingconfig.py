@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class StreamingLoggingConfig:
     r"""StreamingLoggingConfig
     A complex type that controls whether access logs are written for this streaming distribution.
     """
     
-    bucket: str = field()
-    enabled: bool = field()
-    prefix: str = field()
+    bucket: str = dataclasses.field()
+    enabled: bool = dataclasses.field()
+    prefix: str = dataclasses.field()
     

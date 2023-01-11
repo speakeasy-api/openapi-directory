@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBarcodeEncodeQueryParams:
-    number: str = field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
-    barcodeformat: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'barcodeformat', 'style': 'form', 'explode': True }})
-    outputformat: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'outputformat', 'style': 'form', 'explode': True }})
-    totalheight: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'totalheight', 'style': 'form', 'explode': True }})
-    widthfactor: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'widthfactor', 'style': 'form', 'explode': True }})
+    number: str = dataclasses.field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
+    barcodeformat: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'barcodeformat', 'style': 'form', 'explode': True }})
+    outputformat: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputformat', 'style': 'form', 'explode': True }})
+    totalheight: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'totalheight', 'style': 'form', 'explode': True }})
+    widthfactor: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'widthfactor', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBarcodeEncodeSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBarcodeEncodeRequest:
-    query_params: GetBarcodeEncodeQueryParams = field()
-    security: GetBarcodeEncodeSecurity = field()
+    query_params: GetBarcodeEncodeQueryParams = dataclasses.field()
+    security: GetBarcodeEncodeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBarcodeEncodeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import scanfordevicesrequest as shared_scanfordevicesrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ScanfordevicesRequest:
-    request: shared.ScanfordevicesRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_scanfordevicesrequest.ScanfordevicesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScanfordevicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scanfordevices_200_text_plain_object: Optional[str] = dataclasses.field(default=None)
     

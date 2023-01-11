@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import image as shared_image
 
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesByIdsPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesByIdsQueryParams:
-    image_ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
-    iteration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
+    image_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
+    iteration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesByIdsHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesByIdsRequest:
-    headers: GetImagesByIdsHeaders = field()
-    path_params: GetImagesByIdsPathParams = field()
-    query_params: GetImagesByIdsQueryParams = field()
+    headers: GetImagesByIdsHeaders = dataclasses.field()
+    path_params: GetImagesByIdsPathParams = dataclasses.field()
+    query_params: GetImagesByIdsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesByIdsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    images: Optional[List[shared.Image]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    images: Optional[list[shared_image.Image]] = dataclasses.field(default=None)
     

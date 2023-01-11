@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SplitNetworkPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SplitNetworkRequest:
-    path_params: SplitNetworkPathParams = field()
+    path_params: SplitNetworkPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SplitNetworkResponse:
-    content_type: str = field()
-    status_code: int = field()
-    split_network_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    split_network_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

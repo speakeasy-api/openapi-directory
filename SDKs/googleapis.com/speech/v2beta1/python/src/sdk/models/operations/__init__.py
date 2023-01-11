@@ -1,2 +1,4 @@
 from .speech_projects_locations_operations_get import *
 from .speech_projects_locations_operations_list import *
+
+__all__ = ["SpeechProjectsLocationsOperationsGetPathParams","SpeechProjectsLocationsOperationsGetQueryParams","SpeechProjectsLocationsOperationsGetSecurity","SpeechProjectsLocationsOperationsGetRequest","SpeechProjectsLocationsOperationsGetResponse","SpeechProjectsLocationsOperationsListPathParams","SpeechProjectsLocationsOperationsListQueryParams","SpeechProjectsLocationsOperationsListSecurity","SpeechProjectsLocationsOperationsListRequest","SpeechProjectsLocationsOperationsListResponse"]

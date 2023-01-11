@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import durationfieldtype as shared_durationfieldtype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DateTimeFieldType:
-    duration_type: Optional[DurationFieldType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('durationType') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    range_duration_type: Optional[DurationFieldType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rangeDurationType') }})
+    duration_type: Optional[shared_durationfieldtype.DurationFieldType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('durationType') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    range_duration_type: Optional[shared_durationfieldtype.DurationFieldType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rangeDurationType') }})
     

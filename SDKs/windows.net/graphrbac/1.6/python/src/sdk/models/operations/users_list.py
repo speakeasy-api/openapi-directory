@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import grapherror as shared_grapherror
+from ..shared import userlistresult as shared_userlistresult
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersListPathParams:
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
-    dollar_expand: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': '$expand', 'style': 'form', 'explode': True }})
-    dollar_filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': '$filter', 'style': 'form', 'explode': True }})
-    dollar_top: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': '$top', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    dollar_expand: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$expand', 'style': 'form', 'explode': True }})
+    dollar_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$filter', 'style': 'form', 'explode': True }})
+    dollar_top: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$top', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListRequest:
-    path_params: UsersListPathParams = field()
-    query_params: UsersListQueryParams = field()
+    path_params: UsersListPathParams = dataclasses.field()
+    query_params: UsersListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph_error: Optional[shared.GraphError] = field(default=None)
-    user_list_result: Optional[shared.UserListResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
+    user_list_result: Optional[shared_userlistresult.UserListResult] = dataclasses.field(default=None)
     

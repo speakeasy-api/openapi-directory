@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getblockrequest as shared_getblockrequest
+from ..shared import getblock as shared_getblock
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockRequest:
-    headers: GetBlockHeaders = field()
-    request: shared.GetBlockRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetBlockHeaders = dataclasses.field()
+    request: shared_getblockrequest.GetBlockRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_block: Optional[shared.GetBlock] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_block: Optional[shared_getblock.GetBlock] = dataclasses.field(default=None)
     

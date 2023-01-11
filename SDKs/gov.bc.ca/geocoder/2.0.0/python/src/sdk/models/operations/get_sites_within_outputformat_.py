@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -12,9 +12,9 @@ class GetSitesWithinOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesWithinOutputFormatPathParams:
-    output_format: GetSitesWithinOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    output_format: GetSitesWithinOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 class GetSitesWithinOutputFormatLocationDescriptorEnum(str, Enum):
     ANY = "any"
@@ -25,26 +25,26 @@ class GetSitesWithinOutputFormatLocationDescriptorEnum(str, Enum):
     ROUTING_POINT = "routingPoint"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesWithinOutputFormatQueryParams:
-    bbox: str = field(metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
-    brief: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
-    exclude_units: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'excludeUnits', 'style': 'form', 'explode': True }})
-    location_descriptor: Optional[GetSitesWithinOutputFormatLocationDescriptorEnum] = field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    only_civic: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'onlyCivic', 'style': 'form', 'explode': True }})
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
-    set_back: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
+    bbox: str = dataclasses.field(metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
+    brief: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
+    exclude_units: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeUnits', 'style': 'form', 'explode': True }})
+    location_descriptor: Optional[GetSitesWithinOutputFormatLocationDescriptorEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    only_civic: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'onlyCivic', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    set_back: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesWithinOutputFormatRequest:
-    path_params: GetSitesWithinOutputFormatPathParams = field()
-    query_params: GetSitesWithinOutputFormatQueryParams = field()
+    path_params: GetSitesWithinOutputFormatPathParams = dataclasses.field()
+    query_params: GetSitesWithinOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesWithinOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

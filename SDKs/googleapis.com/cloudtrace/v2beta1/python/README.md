@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,32 +21,32 @@ req = operations.CloudtraceProjectsTraceSinksCreateRequest(
         option1=operations.CloudtraceProjectsTraceSinksCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudtraceProjectsTraceSinksCreatePathParams(
-        parent="deserunt",
+        parent="tenetur",
     ),
     query_params=operations.CloudtraceProjectsTraceSinksCreateQueryParams(
         dollar_xgafv="1",
-        access_token="omnis",
+        access_token="natus",
         alt="media",
-        callback="ut",
-        fields="id",
-        key="voluptatem",
-        oauth_token="qui",
+        callback="culpa",
+        fields="consectetur",
+        key="iure",
+        oauth_token="ab",
         pretty_print=False,
-        quota_user="ipsa",
-        upload_type="placeat",
-        upload_protocol="cumque",
+        quota_user="quibusdam",
+        upload_type="ad",
+        upload_protocol="dolor",
     ),
     request=shared.TraceSinkInput(
-        name="facilis",
+        name="aut",
         output_config=shared.OutputConfig(
-            destination="veniam",
+            destination="odit",
         ),
     ),
 )

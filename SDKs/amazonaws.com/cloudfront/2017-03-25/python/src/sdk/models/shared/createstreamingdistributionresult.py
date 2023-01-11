@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import streamingdistribution as shared_streamingdistribution
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateStreamingDistributionResult:
     r"""CreateStreamingDistributionResult
     The returned result of the corresponding request.
     """
     
-    streaming_distribution: Optional[StreamingDistribution] = field(default=None)
+    streaming_distribution: Optional[shared_streamingdistribution.StreamingDistribution] = dataclasses.field(default=None)
     

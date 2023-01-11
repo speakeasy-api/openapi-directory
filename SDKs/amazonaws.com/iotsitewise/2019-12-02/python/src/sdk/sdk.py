@@ -66,7 +66,7 @@ class SDK:
         url = utils.generate_url(base_url, "/assets/{assetId}/associate", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssociateAssetsResponse(status_code=r.status_code, content_type=content_type)
@@ -118,7 +118,7 @@ class SDK:
         url = utils.generate_url(base_url, "/projects/{projectId}/assets/associate", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -126,7 +126,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BatchAssociateProjectAssetsResponse(status_code=r.status_code, content_type=content_type)
@@ -168,7 +168,7 @@ class SDK:
         url = utils.generate_url(base_url, "/projects/{projectId}/assets/disassociate", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -176,7 +176,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BatchDisassociateProjectAssetsResponse(status_code=r.status_code, content_type=content_type)
@@ -214,7 +214,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/properties"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -222,7 +222,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BatchPutAssetPropertyValueResponse(status_code=r.status_code, content_type=content_type)
@@ -272,7 +272,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/access-policies"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -280,7 +280,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateAccessPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -322,7 +322,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/assets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -330,7 +330,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateAssetResponse(status_code=r.status_code, content_type=content_type)
@@ -380,7 +380,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/asset-models"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -388,7 +388,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateAssetModelResponse(status_code=r.status_code, content_type=content_type)
@@ -438,7 +438,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/dashboards"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -446,7 +446,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateDashboardResponse(status_code=r.status_code, content_type=content_type)
@@ -488,7 +488,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/20200301/gateways"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -496,7 +496,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGatewayResponse(status_code=r.status_code, content_type=content_type)
@@ -538,7 +538,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/portals"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -546,7 +546,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreatePortalResponse(status_code=r.status_code, content_type=content_type)
@@ -588,7 +588,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/projects"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -596,7 +596,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateProjectResponse(status_code=r.status_code, content_type=content_type)
@@ -1437,7 +1437,7 @@ class SDK:
         url = utils.generate_url(base_url, "/assets/{assetId}/disassociate", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1445,7 +1445,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisassociateAssetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2115,7 +2115,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/configuration/account/encryption"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2123,7 +2123,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutDefaultEncryptionConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -2165,7 +2165,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/logging"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2173,7 +2173,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutLoggingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -2215,7 +2215,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/configuration/account/storage"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2223,7 +2223,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutStorageConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -2273,7 +2273,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/tags#resourceArn"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2282,7 +2282,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -2390,7 +2390,7 @@ class SDK:
         url = utils.generate_url(base_url, "/access-policies/{accessPolicyId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2398,7 +2398,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAccessPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -2436,7 +2436,7 @@ class SDK:
         url = utils.generate_url(base_url, "/assets/{assetId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2444,7 +2444,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAssetResponse(status_code=r.status_code, content_type=content_type)
@@ -2490,7 +2490,7 @@ class SDK:
         url = utils.generate_url(base_url, "/asset-models/{assetModelId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2498,7 +2498,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAssetModelResponse(status_code=r.status_code, content_type=content_type)
@@ -2548,7 +2548,7 @@ class SDK:
         url = utils.generate_url(base_url, "/assets/{assetId}/properties/{propertyId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2556,7 +2556,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateAssetPropertyResponse(status_code=r.status_code, content_type=content_type)
@@ -2596,7 +2596,7 @@ class SDK:
         url = utils.generate_url(base_url, "/dashboards/{dashboardId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2604,7 +2604,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateDashboardResponse(status_code=r.status_code, content_type=content_type)
@@ -2642,7 +2642,7 @@ class SDK:
         url = utils.generate_url(base_url, "/20200301/gateways/{gatewayId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2650,7 +2650,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGatewayResponse(status_code=r.status_code, content_type=content_type)
@@ -2690,7 +2690,7 @@ class SDK:
         url = utils.generate_url(base_url, "/20200301/gateways/{gatewayId}/capability", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2698,7 +2698,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGatewayCapabilityConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -2744,7 +2744,7 @@ class SDK:
         url = utils.generate_url(base_url, "/portals/{portalId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2752,7 +2752,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdatePortalResponse(status_code=r.status_code, content_type=content_type)
@@ -2794,7 +2794,7 @@ class SDK:
         url = utils.generate_url(base_url, "/projects/{projectId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2802,7 +2802,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateProjectResponse(status_code=r.status_code, content_type=content_type)

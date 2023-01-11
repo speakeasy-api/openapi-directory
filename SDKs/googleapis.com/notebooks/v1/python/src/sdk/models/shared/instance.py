@@ -1,12 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import acceleratorconfig as shared_acceleratorconfig
+from ..shared import containerimage as shared_containerimage
+from ..shared import disk as shared_disk
+from ..shared import reservationaffinity as shared_reservationaffinity
+from ..shared import shieldedinstanceconfig as shared_shieldedinstanceconfig
+from ..shared import upgradehistoryentry as shared_upgradehistoryentry
+from ..shared import vmimage as shared_vmimage
 
 class InstanceBootDiskTypeEnum(str, Enum):
     DISK_TYPE_UNSPECIFIED = "DISK_TYPE_UNSPECIFIED"
@@ -48,84 +54,84 @@ class InstanceStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Instance:
     r"""Instance
     The definition of a notebook instance.
     """
     
-    accelerator_config: Optional[AcceleratorConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('acceleratorConfig') }})
-    boot_disk_size_gb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskSizeGb') }})
-    boot_disk_type: Optional[InstanceBootDiskTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskType') }})
-    can_ip_forward: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canIpForward') }})
-    container_image: Optional[ContainerImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    creator: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creator') }})
-    custom_gpu_driver_path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customGpuDriverPath') }})
-    data_disk_size_gb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskSizeGb') }})
-    data_disk_type: Optional[InstanceDataDiskTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskType') }})
-    disk_encryption: Optional[InstanceDiskEncryptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskEncryption') }})
-    disks: Optional[List[Disk]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disks') }})
-    install_gpu_driver: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('installGpuDriver') }})
-    instance_owners: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceOwners') }})
-    kms_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kmsKey') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    machine_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
-    metadata: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    network: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
-    nic_type: Optional[InstanceNicTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nicType') }})
-    no_proxy_access: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noProxyAccess') }})
-    no_public_ip: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noPublicIp') }})
-    no_remove_data_disk: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noRemoveDataDisk') }})
-    post_startup_script: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postStartupScript') }})
-    proxy_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proxyUri') }})
-    reservation_affinity: Optional[ReservationAffinity] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservationAffinity') }})
-    service_account: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccount') }})
-    service_account_scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccountScopes') }})
-    shielded_instance_config: Optional[ShieldedInstanceConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shieldedInstanceConfig') }})
-    state: Optional[InstanceStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    subnet: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subnet') }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
-    upgrade_history: Optional[List[UpgradeHistoryEntry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgradeHistory') }})
-    vm_image: Optional[VMImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmImage') }})
+    accelerator_config: Optional[shared_acceleratorconfig.AcceleratorConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('acceleratorConfig') }})
+    boot_disk_size_gb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskSizeGb') }})
+    boot_disk_type: Optional[InstanceBootDiskTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskType') }})
+    can_ip_forward: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canIpForward') }})
+    container_image: Optional[shared_containerimage.ContainerImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    creator: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creator') }})
+    custom_gpu_driver_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customGpuDriverPath') }})
+    data_disk_size_gb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskSizeGb') }})
+    data_disk_type: Optional[InstanceDataDiskTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskType') }})
+    disk_encryption: Optional[InstanceDiskEncryptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskEncryption') }})
+    disks: Optional[list[shared_disk.Disk]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disks') }})
+    install_gpu_driver: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('installGpuDriver') }})
+    instance_owners: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceOwners') }})
+    kms_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kmsKey') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    machine_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
+    metadata: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    nic_type: Optional[InstanceNicTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nicType') }})
+    no_proxy_access: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noProxyAccess') }})
+    no_public_ip: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noPublicIp') }})
+    no_remove_data_disk: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noRemoveDataDisk') }})
+    post_startup_script: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postStartupScript') }})
+    proxy_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proxyUri') }})
+    reservation_affinity: Optional[shared_reservationaffinity.ReservationAffinity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservationAffinity') }})
+    service_account: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccount') }})
+    service_account_scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccountScopes') }})
+    shielded_instance_config: Optional[shared_shieldedinstanceconfig.ShieldedInstanceConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shieldedInstanceConfig') }})
+    state: Optional[InstanceStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    subnet: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subnet') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    upgrade_history: Optional[list[shared_upgradehistoryentry.UpgradeHistoryEntry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgradeHistory') }})
+    vm_image: Optional[shared_vmimage.VMImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmImage') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InstanceInput:
     r"""InstanceInput
     The definition of a notebook instance.
     """
     
-    accelerator_config: Optional[AcceleratorConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('acceleratorConfig') }})
-    boot_disk_size_gb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskSizeGb') }})
-    boot_disk_type: Optional[InstanceBootDiskTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskType') }})
-    can_ip_forward: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canIpForward') }})
-    container_image: Optional[ContainerImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
-    custom_gpu_driver_path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customGpuDriverPath') }})
-    data_disk_size_gb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskSizeGb') }})
-    data_disk_type: Optional[InstanceDataDiskTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskType') }})
-    disk_encryption: Optional[InstanceDiskEncryptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskEncryption') }})
-    install_gpu_driver: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('installGpuDriver') }})
-    instance_owners: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceOwners') }})
-    kms_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kmsKey') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    machine_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
-    metadata: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    network: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
-    nic_type: Optional[InstanceNicTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nicType') }})
-    no_proxy_access: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noProxyAccess') }})
-    no_public_ip: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noPublicIp') }})
-    no_remove_data_disk: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noRemoveDataDisk') }})
-    post_startup_script: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postStartupScript') }})
-    reservation_affinity: Optional[ReservationAffinity] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservationAffinity') }})
-    service_account: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccount') }})
-    service_account_scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccountScopes') }})
-    shielded_instance_config: Optional[ShieldedInstanceConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shieldedInstanceConfig') }})
-    subnet: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subnet') }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    upgrade_history: Optional[List[UpgradeHistoryEntry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgradeHistory') }})
-    vm_image: Optional[VMImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmImage') }})
+    accelerator_config: Optional[shared_acceleratorconfig.AcceleratorConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('acceleratorConfig') }})
+    boot_disk_size_gb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskSizeGb') }})
+    boot_disk_type: Optional[InstanceBootDiskTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootDiskType') }})
+    can_ip_forward: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canIpForward') }})
+    container_image: Optional[shared_containerimage.ContainerImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
+    custom_gpu_driver_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customGpuDriverPath') }})
+    data_disk_size_gb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskSizeGb') }})
+    data_disk_type: Optional[InstanceDataDiskTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataDiskType') }})
+    disk_encryption: Optional[InstanceDiskEncryptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskEncryption') }})
+    install_gpu_driver: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('installGpuDriver') }})
+    instance_owners: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceOwners') }})
+    kms_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kmsKey') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    machine_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
+    metadata: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    nic_type: Optional[InstanceNicTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nicType') }})
+    no_proxy_access: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noProxyAccess') }})
+    no_public_ip: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noPublicIp') }})
+    no_remove_data_disk: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noRemoveDataDisk') }})
+    post_startup_script: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postStartupScript') }})
+    reservation_affinity: Optional[shared_reservationaffinity.ReservationAffinity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservationAffinity') }})
+    service_account: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccount') }})
+    service_account_scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceAccountScopes') }})
+    shielded_instance_config: Optional[shared_shieldedinstanceconfig.ShieldedInstanceConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shieldedInstanceConfig') }})
+    subnet: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subnet') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    upgrade_history: Optional[list[shared_upgradehistoryentry.UpgradeHistoryEntry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('upgradeHistory') }})
+    vm_image: Optional[shared_vmimage.VMImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmImage') }})
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datasetactiontype_enum as shared_datasetactiontype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DatasetActionSummary:
     r"""DatasetActionSummary
     Information about the action that automatically creates the dataset's contents.
     """
     
-    action_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionName') }})
-    action_type: Optional[DatasetActionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionType') }})
+    action_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionName') }})
+    action_type: Optional[shared_datasetactiontype_enum.DatasetActionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionType') }})
     

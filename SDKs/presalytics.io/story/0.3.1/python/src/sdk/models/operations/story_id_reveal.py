@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDRevealPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDRevealRequest:
-    path_params: StoryIDRevealPathParams = field()
+    path_params: StoryIDRevealPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDRevealResponse:
-    content_type: str = field()
-    status_code: int = field()
-    login_button: Optional[str] = field(default=None)
-    problem_detail: Optional[Any] = field(default=None)
-    reveal_js_presenation: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    login_button: Optional[str] = dataclasses.field(default=None)
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    reveal_js_presenation: Optional[str] = dataclasses.field(default=None)
     

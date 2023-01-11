@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.DeleteSettingsOrganizationsOrganizationNameRequest(
         ),
     ),
     path_params=operations.DeleteSettingsOrganizationsOrganizationNamePathParams(
-        organization_name="ab",
+        organization_name="voluptas",
     ),
 )
     
-res = s.sdk.delete_settings_organizations_organization_name_(req)
+res = s.delete_settings_organizations_organization_name_(req)
 
 if res.organization is not None:
     # handle response

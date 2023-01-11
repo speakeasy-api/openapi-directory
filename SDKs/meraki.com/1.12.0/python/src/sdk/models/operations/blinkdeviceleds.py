@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class BlinkDeviceLedsPathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BlinkDeviceLedsRequestBody:
-    duration: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('duration') }})
-    duty: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('duty') }})
-    period: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
+    duration: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('duration') }})
+    duty: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('duty') }})
+    period: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BlinkDeviceLedsRequest:
-    path_params: BlinkDeviceLedsPathParams = field()
-    request: Optional[BlinkDeviceLedsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: BlinkDeviceLedsPathParams = dataclasses.field()
+    request: Optional[BlinkDeviceLedsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BlinkDeviceLedsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    blink_device_leds_202_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    blink_device_leds_202_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

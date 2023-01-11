@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,32 +25,32 @@ s.config_security(
     
 req = operations.AssociateFirewallRuleGroupRequest(
     headers=operations.AssociateFirewallRuleGroupHeaders(
-        x_amz_algorithm="aliquam",
-        x_amz_content_sha256="quibusdam",
-        x_amz_credential="laboriosam",
-        x_amz_date="totam",
-        x_amz_security_token="atque",
-        x_amz_signature="corrupti",
-        x_amz_signed_headers="quibusdam",
+        x_amz_algorithm="ut",
+        x_amz_content_sha256="non",
+        x_amz_credential="nulla",
+        x_amz_date="numquam",
+        x_amz_security_token="quia",
+        x_amz_signature="fugiat",
+        x_amz_signed_headers="laboriosam",
         x_amz_target="Route53Resolver.AssociateFirewallRuleGroup",
     ),
     request=shared.AssociateFirewallRuleGroupRequest(
-        creator_request_id="placeat",
-        firewall_rule_group_id="ut",
+        creator_request_id="nam",
+        firewall_rule_group_id="delectus",
         mutation_protection="ENABLED",
-        name="et",
-        priority=7289028574483297393,
+        name="incidunt",
+        priority=7383927136453695366,
         tags=[
             shared.Tag(
-                key="optio",
-                value="autem",
+                key="iste",
+                value="fuga",
             ),
         ],
-        vpc_id="laudantium",
+        vpc_id="at",
     ),
 )
     
-res = s.sdk.associate_firewall_rule_group(req)
+res = s.associate_firewall_rule_group(req)
 
 if res.associate_firewall_rule_group_response is not None:
     # handle response

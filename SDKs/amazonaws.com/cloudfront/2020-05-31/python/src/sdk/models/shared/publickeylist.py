@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import publickeysummarylist as shared_publickeysummarylist
 
 
-@dataclass
+@dataclasses.dataclass
 class PublicKeyList:
     r"""PublicKeyList
     A list of public keys that you can use with <a href=\"https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html\">signed URLs and signed cookies</a>, or with <a href=\"https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html\">field-level encryption</a>.
     """
     
-    max_items: int = field()
-    quantity: int = field()
-    items: Optional[List[PublicKeySummary]] = field(default=None)
-    next_marker: Optional[str] = field(default=None)
+    max_items: int = dataclasses.field()
+    quantity: int = dataclasses.field()
+    items: Optional[list[shared_publickeysummarylist.PublicKeySummaryList]] = dataclasses.field(default=None)
+    next_marker: Optional[str] = dataclasses.field(default=None)
     

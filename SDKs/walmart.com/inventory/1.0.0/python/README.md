@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,19 +26,19 @@ s.config_security(
     
 req = operations.GetInventoryRequest(
     query_params=operations.GetInventoryQueryParams(
-        ship_node="excepturi",
-        sku="repellat",
+        ship_node="eligendi",
+        sku="vel",
     ),
     headers=operations.GetInventoryHeaders(
-        authorization="placeat",
-        wm_consumer_channel_type="neque",
-        wm_qos_correlation_id="autem",
-        wm_sec_access_token="voluptas",
-        wm_svc_name="aut",
+        authorization="ea",
+        wm_consumer_channel_type="ullam",
+        wm_qos_correlation_id="molestiae",
+        wm_sec_access_token="eligendi",
+        wm_svc_name="consequuntur",
     ),
 )
     
-res = s.sdk.get_inventory(req)
+res = s.inventory.get_inventory(req)
 
 if res.get_inventory_200_application_json_object is not None:
     # handle response
@@ -49,7 +48,7 @@ if res.get_inventory_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Inventory
 
 * `get_inventory` - Inventory
 * `get_multi_node_inventory_for_all_sku_and_all_ship_nodes` - Multiple Item Inventory for All Ship Nodes

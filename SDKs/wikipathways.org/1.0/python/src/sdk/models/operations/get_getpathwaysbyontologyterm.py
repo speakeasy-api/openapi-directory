@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,19 +11,19 @@ class GetGetPathwaysByOntologyTermFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwaysByOntologyTermQueryParams:
-    term: str = field(metadata={'query_param': { 'field_name': 'term', 'style': 'form', 'explode': True }})
-    format: Optional[GetGetPathwaysByOntologyTermFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    term: str = dataclasses.field(metadata={'query_param': { 'field_name': 'term', 'style': 'form', 'explode': True }})
+    format: Optional[GetGetPathwaysByOntologyTermFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwaysByOntologyTermRequest:
-    query_params: GetGetPathwaysByOntologyTermQueryParams = field()
+    query_params: GetGetPathwaysByOntologyTermQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwaysByOntologyTermResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

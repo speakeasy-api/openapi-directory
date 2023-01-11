@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GenerateOrganizationsAccessReportResponse:
-    job_id: Optional[str] = field(default=None)
+    job_id: Optional[str] = dataclasses.field(default=None)
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import base_gist as shared_base_gist
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GistsListStarredQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    since: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    since: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsListStarredRequest:
-    query_params: GistsListStarredQueryParams = field()
+    query_params: GistsListStarredQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsListStarredResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    base_gists: Optional[List[shared.BaseGist]] = field(default=None)
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    base_gists: Optional[list[shared_base_gist.BaseGist]] = dataclasses.field(default=None)
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

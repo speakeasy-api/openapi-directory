@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import servicecalendarviewmodel as shared_servicecalendarviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDCalendarPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDCalendarQueryParams:
-    location_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
+    location_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDCalendarRequest:
-    path_params: GetSetupV1ServicesIDCalendarPathParams = field()
-    query_params: GetSetupV1ServicesIDCalendarQueryParams = field()
+    path_params: GetSetupV1ServicesIDCalendarPathParams = dataclasses.field()
+    query_params: GetSetupV1ServicesIDCalendarQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDCalendarResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_calendar_view_model: Optional[shared.ServiceCalendarViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_calendar_view_model: Optional[shared_servicecalendarviewmodel.ServiceCalendarViewModel] = dataclasses.field(default=None)
     

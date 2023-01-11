@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import node_add as shared_node_add
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateNodesQueryParams:
-    node_parameters: Optional[List[shared.NodeAdd]] = field(default=None, metadata={'query_param': { 'field_name': 'Node parameters', 'serialization': 'json' }})
+    node_parameters: Optional[list[shared_node_add.NodeAdd]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'Node parameters', 'serialization': 'json' }})
     
 class CreateNodes200ApplicationJSONActionEnum(str, Enum):
     CREATE_NODES = "createNodes"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateNodes200ApplicationJSONData:
-    created: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
-    failed: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('failed') }})
+    created: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
+    failed: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('failed') }})
     
 class CreateNodes200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -26,21 +26,21 @@ class CreateNodes200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateNodes200ApplicationJSON:
-    action: CreateNodes200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: CreateNodes200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: CreateNodes200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: CreateNodes200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: CreateNodes200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: CreateNodes200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateNodesRequest:
-    query_params: CreateNodesQueryParams = field()
+    query_params: CreateNodesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateNodesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_nodes_200_application_json_object: Optional[CreateNodes200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_nodes_200_application_json_object: Optional[CreateNodes200ApplicationJSON] = dataclasses.field(default=None)
     

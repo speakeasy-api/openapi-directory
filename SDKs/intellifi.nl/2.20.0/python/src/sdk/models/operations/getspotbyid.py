@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import spotget as shared_spotget
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotByIDRequest:
-    path_params: GetSpotByIDPathParams = field()
+    path_params: GetSpotByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    spot_get: Optional[shared.SpotGet] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    spot_get: Optional[shared_spotget.SpotGet] = dataclasses.field(default=None)
     

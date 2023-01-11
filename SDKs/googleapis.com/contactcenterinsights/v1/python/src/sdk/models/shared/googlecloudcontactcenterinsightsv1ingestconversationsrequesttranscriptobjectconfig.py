@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObje
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig:
     r"""GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig
     Configuration for processing transcript objects.
     """
     
-    medium: Optional[GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('medium') }})
+    medium: Optional[GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('medium') }})
     

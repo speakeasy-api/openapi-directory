@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import volumeconfiguration as shared_volumeconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VolumeRecommendationOption:
     r"""VolumeRecommendationOption
     Describes a recommendation option for an Amazon Elastic Block Store (Amazon EBS) instance.
     """
     
-    configuration: Optional[VolumeConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
-    performance_risk: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceRisk') }})
-    rank: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rank') }})
+    configuration: Optional[shared_volumeconfiguration.VolumeConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
+    performance_risk: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceRisk') }})
+    rank: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rank') }})
     

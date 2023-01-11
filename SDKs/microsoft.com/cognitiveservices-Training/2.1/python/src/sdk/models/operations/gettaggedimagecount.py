@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTaggedImageCountPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaggedImageCountQueryParams:
-    iteration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
-    tag_ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
+    iteration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
+    tag_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaggedImageCountHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaggedImageCountRequest:
-    headers: GetTaggedImageCountHeaders = field()
-    path_params: GetTaggedImageCountPathParams = field()
-    query_params: GetTaggedImageCountQueryParams = field()
+    headers: GetTaggedImageCountHeaders = dataclasses.field()
+    path_params: GetTaggedImageCountPathParams = dataclasses.field()
+    query_params: GetTaggedImageCountQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaggedImageCountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_tagged_image_count_200_application_json_int32_integer: Optional[int] = field(default=None)
-    get_tagged_image_count_200_text_json_int32_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    get_tagged_image_count_200_application_json_int32_integer: Optional[int] = dataclasses.field(default=None)
+    get_tagged_image_count_200_text_json_int32_integer: Optional[int] = dataclasses.field(default=None)
     

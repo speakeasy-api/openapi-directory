@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.SslcrRequest(
     security=operations.SslcrSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.SslcrRequestBody(
         certificate_parameters=operations.SslcrRequestBodyCertificateParameters(
-            dob="eaque",
-            full_name="suscipit",
-            uid="labore",
-            regno="voluptatum",
-            year="quisquam",
+            dob="enim",
+            full_name="minima",
+            uid="incidunt",
+            regno="excepturi",
+            year="autem",
         ),
-        consent_artifact="pariatur",
+        consent_artifact="similique",
         format="pdf",
-        txn_id="incidunt",
+        txn_id="soluta",
     ),
 )
     
-res = s.sdk.sslcr(req)
+res = s.ap_is.sslcr(req)
 
 if res.status_code == 200:
     # handle response
@@ -50,7 +49,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `sslcr` - Class X School Leaving Certificate
 

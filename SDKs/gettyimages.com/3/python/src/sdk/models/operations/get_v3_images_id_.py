@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import imagedetailfieldvalues_enum as shared_imagedetailfieldvalues_enum
+from ..shared import imagesdetailresults as shared_imagesdetailresults
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDQueryParams:
-    fields: Optional[List[shared.ImageDetailFieldValuesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    fields: Optional[list[shared_imagedetailfieldvalues_enum.ImageDetailFieldValuesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDRequest:
-    headers: GetV3ImagesIDHeaders = field()
-    path_params: GetV3ImagesIDPathParams = field()
-    query_params: GetV3ImagesIDQueryParams = field()
+    headers: GetV3ImagesIDHeaders = dataclasses.field()
+    path_params: GetV3ImagesIDPathParams = dataclasses.field()
+    query_params: GetV3ImagesIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    images_detail_results: Optional[shared.ImagesDetailResults] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    images_detail_results: Optional[shared_imagesdetailresults.ImagesDetailResults] = dataclasses.field(default=None)
     

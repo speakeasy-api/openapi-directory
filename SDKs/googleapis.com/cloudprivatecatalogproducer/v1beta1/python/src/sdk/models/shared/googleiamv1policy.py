@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleiamv1auditconfig as shared_googleiamv1auditconfig
+from ..shared import googleiamv1binding as shared_googleiamv1binding
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleIamV1Policy:
     r"""GoogleIamV1Policy
     An Identity and Access Management (IAM) policy, which specifies access
@@ -74,8 +75,8 @@ class GoogleIamV1Policy:
     [IAM documentation](https://cloud.google.com/iam/docs/).
     """
     
-    audit_configs: Optional[List[GoogleIamV1AuditConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auditConfigs') }})
-    bindings: Optional[List[GoogleIamV1Binding]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bindings') }})
-    etag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('etag') }})
-    version: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    audit_configs: Optional[list[shared_googleiamv1auditconfig.GoogleIamV1AuditConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auditConfigs') }})
+    bindings: Optional[list[shared_googleiamv1binding.GoogleIamV1Binding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bindings') }})
+    etag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('etag') }})
+    version: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

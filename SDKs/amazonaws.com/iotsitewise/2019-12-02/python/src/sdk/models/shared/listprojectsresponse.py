@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import projectsummary as shared_projectsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListProjectsResponse:
-    project_summaries: List[ProjectSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    project_summaries: list[shared_projectsummary.ProjectSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

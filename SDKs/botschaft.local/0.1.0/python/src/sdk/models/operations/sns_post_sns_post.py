@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import snsmessagerequest as shared_snsmessagerequest
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class SnsPostSnsPostHeaders:
-    authorization: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'authorization', 'style': 'simple', 'explode': False }})
+    authorization: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SnsPostSnsPostRequest:
-    headers: SnsPostSnsPostHeaders = field()
-    request: shared.SnsMessageRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SnsPostSnsPostHeaders = dataclasses.field()
+    request: shared_snsmessagerequest.SnsMessageRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SnsPostSnsPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    sns_post_sns_post_200_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    sns_post_sns_post_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

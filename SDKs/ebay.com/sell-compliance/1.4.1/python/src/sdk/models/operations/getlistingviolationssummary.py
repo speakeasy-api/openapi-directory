@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import compliancesummary as shared_compliancesummary
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingViolationsSummaryQueryParams:
-    compliance_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'compliance_type', 'style': 'form', 'explode': True }})
+    compliance_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'compliance_type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingViolationsSummaryHeaders:
-    x_ebay_c_marketplace_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingViolationsSummarySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingViolationsSummaryRequest:
-    headers: GetListingViolationsSummaryHeaders = field()
-    query_params: GetListingViolationsSummaryQueryParams = field()
-    security: GetListingViolationsSummarySecurity = field()
+    headers: GetListingViolationsSummaryHeaders = dataclasses.field()
+    query_params: GetListingViolationsSummaryQueryParams = dataclasses.field()
+    security: GetListingViolationsSummarySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingViolationsSummaryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    compliance_summary: Optional[shared.ComplianceSummary] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    compliance_summary: Optional[shared_compliancesummary.ComplianceSummary] = dataclasses.field(default=None)
     

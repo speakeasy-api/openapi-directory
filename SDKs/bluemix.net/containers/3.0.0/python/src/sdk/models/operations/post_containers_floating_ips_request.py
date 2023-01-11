@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsRequestHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsRequestRequest:
-    headers: PostContainersFloatingIpsRequestHeaders = field()
+    headers: PostContainersFloatingIpsRequestHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_containers_floating_ips_request_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_containers_floating_ips_request_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

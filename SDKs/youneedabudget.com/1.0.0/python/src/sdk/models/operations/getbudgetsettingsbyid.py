@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import budgetsettingsresponse as shared_budgetsettingsresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetSettingsByIDPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetSettingsByIDRequest:
-    path_params: GetBudgetSettingsByIDPathParams = field()
+    path_params: GetBudgetSettingsByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetSettingsByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    budget_settings_response: Optional[shared.BudgetSettingsResponse] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    budget_settings_response: Optional[shared_budgetsettingsresponse.BudgetSettingsResponse] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

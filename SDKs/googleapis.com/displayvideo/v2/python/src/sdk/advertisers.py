@@ -29,14 +29,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/assets", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersAssetsUploadResponse(status_code=r.status_code, content_type=content_type)
@@ -83,14 +83,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/campaigns", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersCampaignsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -212,14 +212,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersCampaignsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -291,14 +291,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/channels", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersChannelsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -345,14 +345,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/channels/{channelId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersChannelsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -374,14 +374,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse(status_code=r.status_code, content_type=content_type)
@@ -453,14 +453,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse(status_code=r.status_code, content_type=content_type)
@@ -482,14 +482,14 @@ class Advertisers:
         url = base_url.removesuffix("/") + "/v2/advertisers"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -511,14 +511,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/creatives", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersCreativesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -615,14 +615,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersCreativesPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -669,14 +669,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}:editAssignedTargetingOptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -723,14 +723,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/insertionOrders", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -852,14 +852,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -881,14 +881,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1035,14 +1035,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems:bulkEditAssignedTargetingOptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -1086,17 +1086,17 @@ class Advertisers:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, "/v2/advertisers/{advertisersId}/lineItems:bulkUpdate", request.path_params)
+        url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsBulkUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -1118,14 +1118,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1172,14 +1172,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}:duplicate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsDuplicateResponse(status_code=r.status_code, content_type=content_type)
@@ -1201,14 +1201,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems:generateDefault", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse(status_code=r.status_code, content_type=content_type)
@@ -1280,14 +1280,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -1309,14 +1309,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1463,14 +1463,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse(status_code=r.status_code, content_type=content_type)
@@ -1492,14 +1492,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1571,14 +1571,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/locationLists", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLocationListsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1625,14 +1625,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersLocationListsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -1654,14 +1654,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersManualTriggersActivateResponse(status_code=r.status_code, content_type=content_type)
@@ -1683,14 +1683,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/manualTriggers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersManualTriggersCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1712,14 +1712,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse(status_code=r.status_code, content_type=content_type)
@@ -1791,14 +1791,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersManualTriggersPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -1820,14 +1820,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1874,14 +1874,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse(status_code=r.status_code, content_type=content_type)
@@ -1953,14 +1953,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse(status_code=r.status_code, content_type=content_type)
@@ -1982,14 +1982,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -2011,14 +2011,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -2040,14 +2040,14 @@ class Advertisers:
         url = utils.generate_url(base_url, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse(status_code=r.status_code, content_type=content_type)

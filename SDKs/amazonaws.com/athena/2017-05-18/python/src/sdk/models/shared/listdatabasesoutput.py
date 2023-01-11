@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import database as shared_database
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDatabasesOutput:
-    database_list: Optional[List[Database]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatabaseList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    database_list: Optional[list[shared_database.Database]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatabaseList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

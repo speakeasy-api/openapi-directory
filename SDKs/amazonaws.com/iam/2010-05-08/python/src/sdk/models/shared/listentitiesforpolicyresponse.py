@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import policygroup as shared_policygroup
+from ..shared import policyrole as shared_policyrole
+from ..shared import policyuser as shared_policyuser
 
 
-@dataclass
+@dataclasses.dataclass
 class ListEntitiesForPolicyResponse:
     r"""ListEntitiesForPolicyResponse
     Contains the response to a successful <a>ListEntitiesForPolicy</a> request. 
     """
     
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
-    policy_groups: Optional[List[PolicyGroup]] = field(default=None)
-    policy_roles: Optional[List[PolicyRole]] = field(default=None)
-    policy_users: Optional[List[PolicyUser]] = field(default=None)
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    policy_groups: Optional[list[shared_policygroup.PolicyGroup]] = dataclasses.field(default=None)
+    policy_roles: Optional[list[shared_policyrole.PolicyRole]] = dataclasses.field(default=None)
+    policy_users: Optional[list[shared_policyuser.PolicyUser]] = dataclasses.field(default=None)
     

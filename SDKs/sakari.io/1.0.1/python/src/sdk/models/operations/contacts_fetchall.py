@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import contactsresponse as shared_contactsresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ContactsFetchAllPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsFetchAllQueryParams:
-    email: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
-    first_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'firstName', 'style': 'form', 'explode': True }})
-    last_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lastName', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    mobile: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'mobile', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    tags: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
+    first_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'firstName', 'style': 'form', 'explode': True }})
+    last_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lastName', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    mobile: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'mobile', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    tags: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsFetchAllSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsFetchAllRequest:
-    path_params: ContactsFetchAllPathParams = field()
-    query_params: ContactsFetchAllQueryParams = field()
-    security: ContactsFetchAllSecurity = field()
+    path_params: ContactsFetchAllPathParams = dataclasses.field()
+    query_params: ContactsFetchAllQueryParams = dataclasses.field()
+    security: ContactsFetchAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ContactsFetchAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    contacts_response: Optional[shared.ContactsResponse] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    contacts_response: Optional[shared_contactsresponse.ContactsResponse] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

@@ -29,14 +29,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/authorizedCertificates", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsAuthorizedCertificatesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -133,14 +133,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsAuthorizedCertificatesPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -187,14 +187,14 @@ class Apps:
         url = base_url.removesuffix("/") + "/v1beta/apps"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -216,14 +216,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/domainMappings", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsDomainMappingsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -320,14 +320,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/domainMappings/{domainMappingsId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsDomainMappingsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -349,14 +349,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/firewall/ingressRules:batchUpdate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsFirewallIngressRulesBatchUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -378,14 +378,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/firewall/ingressRules", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsFirewallIngressRulesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -482,14 +482,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/firewall/ingressRules/{ingressRulesId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsFirewallIngressRulesPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -636,14 +636,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -665,14 +665,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}:repair", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsRepairResponse(status_code=r.status_code, content_type=content_type)
@@ -769,14 +769,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/services/{servicesId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsServicesPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -798,14 +798,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/services/{servicesId}/versions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsServicesVersionsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -877,14 +877,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}:debug", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsServicesVersionsInstancesDebugResponse(status_code=r.status_code, content_type=content_type)
@@ -1006,14 +1006,14 @@ class Apps:
         url = utils.generate_url(base_url, "/v1beta/apps/{appsId}/services/{servicesId}/versions/{versionsId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AppengineAppsServicesVersionsPatchResponse(status_code=r.status_code, content_type=content_type)

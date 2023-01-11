@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import certificatelist as shared_certificatelist
 
 
-@dataclass
+@dataclasses.dataclass
 class CertificateMessage:
-    certificates: Optional[List[Certificate]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    certificates: Optional[list[shared_certificatelist.CertificateList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationHeaders:
-    x_readme_version: str = field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
+    x_readme_version: str = dataclasses.field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationRequestBodySpec:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    spec: str = field(metadata={'multipart_form': { 'field_name': 'spec' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    spec: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'spec' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationRequestBody:
-    spec: Optional[UploadAPISpecificationRequestBodySpec] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    spec: Optional[UploadAPISpecificationRequestBodySpec] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationRequest:
-    headers: UploadAPISpecificationHeaders = field()
-    request: UploadAPISpecificationRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: UploadAPISpecificationSecurity = field()
+    headers: UploadAPISpecificationHeaders = dataclasses.field()
+    request: UploadAPISpecificationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UploadAPISpecificationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadAPISpecificationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

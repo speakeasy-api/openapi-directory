@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,96 +20,83 @@ req = operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest(
     security=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams(
-        parent="dolorum",
+        parent="in",
     ),
     query_params=operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="repellendus",
-        alt="json",
-        callback="commodi",
-        delivery_pipeline_id="illo",
-        fields="qui",
-        key="vel",
-        oauth_token="aliquam",
+        dollar_xgafv="2",
+        access_token="rerum",
+        alt="proto",
+        callback="vero",
+        delivery_pipeline_id="et",
+        fields="dolor",
+        key="quibusdam",
+        oauth_token="sit",
         pretty_print=True,
-        quota_user="necessitatibus",
-        request_id="omnis",
-        upload_type="inventore",
-        upload_protocol="nihil",
+        quota_user="eum",
+        request_id="natus",
+        upload_type="ipsa",
+        upload_protocol="et",
         validate_only=False,
     ),
     request=shared.DeliveryPipelineInput(
         annotations={
-            "mollitia": "et",
-            "impedit": "cupiditate",
-            "ut": "earum",
+            "sapiente": "iure",
         },
         condition=shared.PipelineCondition(
             pipeline_ready_condition=shared.PipelineReadyCondition(
                 status=True,
-                update_time="atque",
+                update_time="omnis",
             ),
             targets_present_condition=shared.TargetsPresentCondition(
                 missing_targets=[
-                    "aut",
-                    "itaque",
-                    "praesentium",
+                    "fugit",
                 ],
                 status=True,
-                update_time="corrupti",
+                update_time="inventore",
             ),
         ),
-        description="pariatur",
-        etag="ex",
+        description="a",
+        etag="laboriosam",
         labels={
-            "similique": "natus",
+            "voluptates": "laborum",
+            "eligendi": "est",
         },
-        name="omnis",
+        name="inventore",
         serial_pipeline=shared.SerialPipeline(
             stages=[
                 shared.Stage(
                     profiles=[
-                        "corrupti",
+                        "sapiente",
                     ],
                     strategy=shared.Strategy(
                         standard=shared.Standard(
                             verify=False,
                         ),
                     ),
-                    target_id="aut",
+                    target_id="aliquam",
                 ),
                 shared.Stage(
                     profiles=[
-                        "et",
-                        "eos",
+                        "dolores",
+                        "vel",
+                        "cumque",
                     ],
                     strategy=shared.Strategy(
                         standard=shared.Standard(
-                            verify=False,
+                            verify=True,
                         ),
                     ),
-                    target_id="voluptatem",
-                ),
-                shared.Stage(
-                    profiles=[
-                        "deserunt",
-                    ],
-                    strategy=shared.Strategy(
-                        standard=shared.Standard(
-                            verify=False,
-                        ),
-                    ),
-                    target_id="aspernatur",
+                    target_id="nihil",
                 ),
             ],
         ),
-        suspended=False,
+        suspended=True,
     ),
 )
     

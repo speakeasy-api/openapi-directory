@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -47,13 +47,13 @@ class GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSecuritySafebrowsingV4ThreatListDescriptor:
     r"""GoogleSecuritySafebrowsingV4ThreatListDescriptor
     Describes an individual threat list. A list is defined by three parameters: the type of threat posed, the type of platform targeted by the threat, and the type of entries in the list.
     """
     
-    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
-    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
-    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
+    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
+    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
+    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
     

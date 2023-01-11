@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReportTaskPathParams:
-    report_task_id: str = field(metadata={'path_param': { 'field_name': 'report_task_id', 'style': 'simple', 'explode': False }})
+    report_task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReportTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReportTaskRequest:
-    path_params: DeleteReportTaskPathParams = field()
-    security: DeleteReportTaskSecurity = field()
+    path_params: DeleteReportTaskPathParams = dataclasses.field()
+    security: DeleteReportTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReportTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

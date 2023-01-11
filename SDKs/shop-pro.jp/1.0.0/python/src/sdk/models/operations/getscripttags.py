@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScriptTagsSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 class GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum(str, Enum):
     ALL = "all"
@@ -21,29 +21,29 @@ class GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetScriptTags200ApplicationJSONScriptTags:
-    display_scope: Optional[GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('display_scope') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    make_date: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('make_date') }})
-    src: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
-    update_date: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('update_date') }})
+    display_scope: Optional[GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('display_scope') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    make_date: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('make_date') }})
+    src: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('src') }})
+    update_date: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('update_date') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetScriptTags200ApplicationJSON:
-    script_tags: Optional[List[GetScriptTags200ApplicationJSONScriptTags]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('script_tags') }})
+    script_tags: Optional[list[GetScriptTags200ApplicationJSONScriptTags]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('script_tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScriptTagsRequest:
-    security: GetScriptTagsSecurity = field()
+    security: GetScriptTagsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScriptTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_script_tags_200_application_json_object: Optional[GetScriptTags200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_script_tags_200_application_json_object: Optional[GetScriptTags200ApplicationJSON] = dataclasses.field(default=None)
     

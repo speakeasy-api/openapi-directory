@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,18 +19,17 @@ s = sdk.SDK()
 req = operations.GetRequest(
     query_params=operations.GetQueryParams(
         addon=[
-            "continent",
-            "city",
+            "country",
         ],
         format="json",
-        ip="placeat",
-        key="sint",
-        lang="ko",
-        package="WS7",
+        ip="exercitationem",
+        key="tempora",
+        lang="ru",
+        package="WS4",
     ),
 )
     
-res = s.sdk.get_(req)
+res = s.get_(req)
 
 if res.get_200_application_json_string is not None:
     # handle response

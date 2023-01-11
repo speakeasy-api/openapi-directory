@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class MembershipsRecentlyChangedFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class MembershipsRecentlyChangedFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsRecentlyChangedPathParams:
-    days: str = field(metadata={'path_param': { 'field_name': 'days', 'style': 'simple', 'explode': False }})
-    format: MembershipsRecentlyChangedFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    days: str = dataclasses.field(metadata={'path_param': { 'field_name': 'days', 'style': 'simple', 'explode': False }})
+    format: MembershipsRecentlyChangedFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsRecentlyChangedRequest:
-    path_params: MembershipsRecentlyChangedPathParams = field()
+    path_params: MembershipsRecentlyChangedPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsRecentlyChangedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    memberships: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    memberships: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateImageResult:
-    image_id: Optional[str] = field(default=None)
+    image_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

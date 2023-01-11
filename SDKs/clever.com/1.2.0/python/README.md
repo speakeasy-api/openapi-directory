@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,15 +23,15 @@ s.config_security(
     )
 )
     
-req = operations.GetAdminsForDistrictRequest(
-    path_params=operations.GetAdminsForDistrictPathParams(
-        id="nisi",
+req = operations.GetContactRequest(
+    path_params=operations.GetContactPathParams(
+        id="similique",
     ),
 )
     
-res = s.sdk.get_admins_for_district(req)
+res = s.contacts.get_contact(req)
 
-if res.district_admins_response is not None:
+if res.student_contact_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -40,52 +39,73 @@ if res.district_admins_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Contacts
 
-* `get_admins_for_district` - Returns the admins for a district
 * `get_contact` - Returns a specific student contact
 * `get_contacts` - Returns a list of student contacts
-* `get_contacts_for_student` - Returns the contacts for a student
-* `get_district` - Returns a specific district
+* `get_district_for_student_contact` - Returns the district for a student contact
+* `get_student_for_contact` - Returns the student for a student contact
+
+### District Admins
+
 * `get_district_admin` - Returns a specific district admin
 * `get_district_admins` - Returns a list of district admins
-* `get_district_for_school` - Returns the district for a school
-* `get_district_for_section` - Returns the district for a section
-* `get_district_for_student` - Returns the district for a student
-* `get_district_for_student_contact` - Returns the district for a student contact
-* `get_district_for_teacher` - Returns the district for a teacher
+
+### Districts
+
+* `get_admins_for_district` - Returns the admins for a district
+* `get_district` - Returns a specific district
 * `get_district_status` - Returns the status of the district
 * `get_districts` - Returns a list of districts
-* `get_grade_levels_for_teacher` - Returns the grade levels for sections a teacher teaches
-* `get_school` - Returns a specific school
+* `get_schools_for_district` - Returns the schools for a district
+* `get_sections_for_district` - Returns the sections for a district
+* `get_students_for_district` - Returns the students for a district
+* `get_teachers_for_district` - Returns the teachers for a district
+
+### School Admins
+
 * `get_school_admin` - Returns a specific school admin
 * `get_school_admins` - Returns a list of school admins
-* `get_school_for_section` - Returns the school for a section
-* `get_school_for_student` - Returns the primary school for a student
-* `get_school_for_teacher` - Retrieves school info for a teacher.
-* `get_schools` - Returns a list of schools
-* `get_schools_for_district` - Returns the schools for a district
 * `get_schools_for_school_admin` - Returns the schools for a school admin
+
+### Schools
+
+* `get_district_for_school` - Returns the district for a school
+* `get_school` - Returns a specific school
+* `get_schools` - Returns a list of schools
+* `get_sections_for_school` - Returns the sections for a school
+* `get_students_for_school` - Returns the students for a school
+* `get_teachers_for_school` - Returns the teachers for a school
+
+### Sections
+
+* `get_district_for_section` - Returns the district for a section
+* `get_school_for_section` - Returns the school for a section
 * `get_section` - Returns a specific section
 * `get_sections` - Returns a list of sections
-* `get_sections_for_district` - Returns the sections for a district
-* `get_sections_for_school` - Returns the sections for a school
-* `get_sections_for_student` - Returns the sections for a student
-* `get_sections_for_teacher` - Returns the sections for a teacher
-* `get_student` - Returns a specific student
-* `get_student_for_contact` - Returns the student for a student contact
-* `get_students` - Returns a list of students
-* `get_students_for_district` - Returns the students for a district
-* `get_students_for_school` - Returns the students for a school
 * `get_students_for_section` - Returns the students for a section
+* `get_teacher_for_section` - Returns the primary teacher for a section
+* `get_teachers_for_section` - Returns the teachers for a section
+
+### Students
+
+* `get_contacts_for_student` - Returns the contacts for a student
+* `get_district_for_student` - Returns the district for a student
+* `get_school_for_student` - Returns the primary school for a student
+* `get_sections_for_student` - Returns the sections for a student
+* `get_student` - Returns a specific student
+* `get_students` - Returns a list of students
+* `get_teachers_for_student` - Returns the teachers for a student
+
+### Teachers
+
+* `get_district_for_teacher` - Returns the district for a teacher
+* `get_grade_levels_for_teacher` - Returns the grade levels for sections a teacher teaches
+* `get_school_for_teacher` - Retrieves school info for a teacher.
+* `get_sections_for_teacher` - Returns the sections for a teacher
 * `get_students_for_teacher` - Returns the students for a teacher
 * `get_teacher` - Returns a specific teacher
-* `get_teacher_for_section` - Returns the primary teacher for a section
 * `get_teachers` - Returns a list of teachers
-* `get_teachers_for_district` - Returns the teachers for a district
-* `get_teachers_for_school` - Returns the teachers for a school
-* `get_teachers_for_section` - Returns the teachers for a section
-* `get_teachers_for_student` - Returns the teachers for a student
 
 <!-- End SDK Available Operations -->
 

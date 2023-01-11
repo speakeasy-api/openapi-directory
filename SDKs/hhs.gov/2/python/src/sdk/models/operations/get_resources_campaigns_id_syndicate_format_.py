@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import syndicatemarshallerwrapped as shared_syndicatemarshallerwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDSyndicateFormatPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDSyndicateFormatQueryParams:
-    display_method: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'displayMethod', 'style': 'form', 'explode': False }})
+    display_method: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'displayMethod', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDSyndicateFormatRequest:
-    path_params: GetResourcesCampaignsIDSyndicateFormatPathParams = field()
-    query_params: GetResourcesCampaignsIDSyndicateFormatQueryParams = field()
+    path_params: GetResourcesCampaignsIDSyndicateFormatPathParams = dataclasses.field()
+    query_params: GetResourcesCampaignsIDSyndicateFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDSyndicateFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    syndicate_marshaller_wrapped: Optional[shared.SyndicateMarshallerWrapped] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    syndicate_marshaller_wrapped: Optional[shared_syndicatemarshallerwrapped.SyndicateMarshallerWrapped] = dataclasses.field(default=None)
     

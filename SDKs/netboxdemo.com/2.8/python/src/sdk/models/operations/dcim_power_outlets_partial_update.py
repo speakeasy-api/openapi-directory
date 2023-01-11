@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablepoweroutlet as shared_writablepoweroutlet
+from ..shared import poweroutlet as shared_poweroutlet
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletsPartialUpdateRequest:
-    path_params: DcimPowerOutletsPartialUpdatePathParams = field()
-    request: shared.WritablePowerOutletInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimPowerOutletsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablepoweroutlet.WritablePowerOutletInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_outlet: Optional[shared.PowerOutlet] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_outlet: Optional[shared_poweroutlet.PowerOutlet] = dataclasses.field(default=None)
     

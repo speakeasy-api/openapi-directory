@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getorder as shared_getorder
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersOrderIDPathParams:
-    order_id: str = field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
+    order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersOrderIDRequest:
-    path_params: GetOrdersOrderIDPathParams = field()
+    path_params: GetOrdersOrderIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersOrderIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_order: Optional[shared.GetOrder] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_order: Optional[shared_getorder.GetOrder] = dataclasses.field(default=None)
     

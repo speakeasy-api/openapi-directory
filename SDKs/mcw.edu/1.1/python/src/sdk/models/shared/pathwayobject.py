@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PathwayObject:
-    acc_id: Optional[str] = field(default=None)
-    id: Optional[str] = field(default=None)
-    obj_desc: Optional[str] = field(default=None)
-    obj_name: Optional[str] = field(default=None)
-    type_id: Optional[int] = field(default=None)
-    type_name: Optional[str] = field(default=None)
-    url: Optional[str] = field(default=None)
-    xdb_key: Optional[int] = field(default=None)
+    acc_id: Optional[str] = dataclasses.field(default=None)
+    id: Optional[str] = dataclasses.field(default=None)
+    obj_desc: Optional[str] = dataclasses.field(default=None)
+    obj_name: Optional[str] = dataclasses.field(default=None)
+    type_id: Optional[int] = dataclasses.field(default=None)
+    type_name: Optional[str] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
+    xdb_key: Optional[int] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,14 +18,14 @@ s = sdk.SDK()
     
 req = operations.AppDgetRequest(
     path_params=operations.AppDgetPathParams(
-        app_d_id="qui",
+        app_d_id="ut",
     ),
     query_params=operations.AppDgetQueryParams(
-        all_fields="rerum",
-        exclude_default="in",
-        exclude_fields="pariatur",
-        fields="illum",
-        filter="fugiat",
+        all_fields="sit",
+        exclude_default="accusamus",
+        exclude_fields="beatae",
+        fields="rerum",
+        filter="aspernatur",
     ),
 )
     
@@ -56,6 +55,7 @@ if res.body is not None:
 * `individual_subscription_delete` - Deletes the individual subscription to notifications about application package changes in MEO.
 * `individual_subscription_get` - Used to represent an individual subscription to notifications about application package changes.
 * `subscriptions_get` - used to retrieve the information of subscriptions to individual application package resource in MEO
+* `subscriptions_post` - Subscribe to notifications about on-boarding an application package
 
 ### app-pkgm-notifications
 

@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apikey as shared_apikey
 
 
-@dataclass
+@dataclasses.dataclass
 class RotateKeySecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RotateKeyRequest:
-    security: RotateKeySecurity = field()
+    security: RotateKeySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RotateKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key: Optional[shared.APIKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key: Optional[shared_apikey.APIKey] = dataclasses.field(default=None)
     

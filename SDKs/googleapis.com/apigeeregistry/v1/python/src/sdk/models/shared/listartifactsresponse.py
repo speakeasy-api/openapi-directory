@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import artifact as shared_artifact
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListArtifactsResponse:
     r"""ListArtifactsResponse
     Response message for ListArtifacts.
     """
     
-    artifacts: Optional[List[Artifact]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artifacts') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    artifacts: Optional[list[shared_artifact.Artifact]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artifacts') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

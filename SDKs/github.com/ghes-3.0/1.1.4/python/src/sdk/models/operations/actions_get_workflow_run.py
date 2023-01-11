@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import workflow_run as shared_workflow_run
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowRunPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    run_id: int = field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    run_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowRunRequest:
-    path_params: ActionsGetWorkflowRunPathParams = field()
+    path_params: ActionsGetWorkflowRunPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowRunResponse:
-    content_type: str = field()
-    status_code: int = field()
-    workflow_run: Optional[shared.WorkflowRun] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    workflow_run: Optional[shared_workflow_run.WorkflowRun] = dataclasses.field(default=None)
     

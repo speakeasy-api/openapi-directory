@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Any,Optional
 from enum import Enum
-from . import *
+from ..shared import scheduledactionstate_enum as shared_scheduledactionstate_enum
+from ..shared import scheduledactiontype as shared_scheduledactiontype
 
 
-@dataclass
+@dataclasses.dataclass
 class ScheduledAction:
     r"""ScheduledAction
     Describes a scheduled action. You can use a scheduled action to trigger some Amazon Redshift API operations on a schedule. For information about which API operations can be scheduled, see <a>ScheduledActionType</a>. 
     """
     
-    end_time: Optional[datetime] = field(default=None)
-    iam_role: Optional[str] = field(default=None)
-    next_invocations: Optional[List[datetime]] = field(default=None)
-    schedule: Optional[str] = field(default=None)
-    scheduled_action_description: Optional[str] = field(default=None)
-    scheduled_action_name: Optional[str] = field(default=None)
-    start_time: Optional[datetime] = field(default=None)
-    state: Optional[ScheduledActionStateEnum] = field(default=None)
-    target_action: Optional[ScheduledActionType] = field(default=None)
+    end_time: Optional[datetime] = dataclasses.field(default=None)
+    iam_role: Optional[str] = dataclasses.field(default=None)
+    next_invocations: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
+    schedule: Optional[str] = dataclasses.field(default=None)
+    scheduled_action_description: Optional[str] = dataclasses.field(default=None)
+    scheduled_action_name: Optional[str] = dataclasses.field(default=None)
+    start_time: Optional[datetime] = dataclasses.field(default=None)
+    state: Optional[shared_scheduledactionstate_enum.ScheduledActionStateEnum] = dataclasses.field(default=None)
+    target_action: Optional[shared_scheduledactiontype.ScheduledActionType] = dataclasses.field(default=None)
     

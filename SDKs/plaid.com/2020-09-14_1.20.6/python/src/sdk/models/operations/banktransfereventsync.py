@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import banktransfereventsyncrequest as shared_banktransfereventsyncrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class BankTransferEventSyncRequest:
-    request: shared.BankTransferEventSyncRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_banktransfereventsyncrequest.BankTransferEventSyncRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BankTransferEventSyncResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bank_transfer_event_sync_response: Optional[dict[str, Any]] = field(default=None)
-    error: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bank_transfer_event_sync_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MediaTabularExtractsheetQueryParams:
-    entryid: str = field(metadata={'query_param': { 'field_name': 'entryid', 'style': 'form', 'explode': True }})
-    output: str = field(metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
-    arg1: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'arg1', 'style': 'form', 'explode': True }})
+    entryid: str = dataclasses.field(metadata={'query_param': { 'field_name': 'entryid', 'style': 'form', 'explode': True }})
+    output: str = dataclasses.field(metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
+    arg1: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'arg1', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MediaTabularExtractsheetRequest:
-    query_params: MediaTabularExtractsheetQueryParams = field()
+    query_params: MediaTabularExtractsheetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MediaTabularExtractsheetResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

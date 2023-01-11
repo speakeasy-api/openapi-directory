@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import cloudwatchloggingoption as shared_cloudwatchloggingoption
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddApplicationCloudWatchLoggingOptionRequest:
-    application_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
-    cloud_watch_logging_option: CloudWatchLoggingOption = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchLoggingOption') }})
-    current_application_version_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CurrentApplicationVersionId') }})
+    application_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
+    cloud_watch_logging_option: shared_cloudwatchloggingoption.CloudWatchLoggingOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchLoggingOption') }})
+    current_application_version_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CurrentApplicationVersionId') }})
     

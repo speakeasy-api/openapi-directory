@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,16 +25,16 @@ s.config_security(
     
 req = operations.AddNotificationChannelsRequest(
     path_params=operations.AddNotificationChannelsPathParams(
-        profiling_group_name="blanditiis",
+        profiling_group_name="deleniti",
     ),
     headers=operations.AddNotificationChannelsHeaders(
-        x_amz_algorithm="placeat",
-        x_amz_content_sha256="odio",
-        x_amz_credential="autem",
-        x_amz_date="eligendi",
-        x_amz_security_token="animi",
-        x_amz_signature="est",
-        x_amz_signed_headers="voluptas",
+        x_amz_algorithm="corporis",
+        x_amz_content_sha256="voluptas",
+        x_amz_credential="architecto",
+        x_amz_date="et",
+        x_amz_security_token="eum",
+        x_amz_signature="vero",
+        x_amz_signed_headers="totam",
     ),
     request=operations.AddNotificationChannelsRequestBody(
         channels=[
@@ -44,23 +43,14 @@ req = operations.AddNotificationChannelsRequest(
                     "AnomalyDetection",
                     "AnomalyDetection",
                 ],
-                id="voluptate",
-                uri="quaerat",
-            ),
-            shared.Channel(
-                event_publishers=[
-                    "AnomalyDetection",
-                    "AnomalyDetection",
-                    "AnomalyDetection",
-                ],
-                id="nihil",
-                uri="magni",
+                id="explicabo",
+                uri="consequatur",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_notification_channels(req)
+res = s.add_notification_channels(req)
 
 if res.add_notification_channels_response is not None:
     # handle response

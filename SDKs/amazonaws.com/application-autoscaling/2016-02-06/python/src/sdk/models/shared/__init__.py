@@ -35,3 +35,5 @@ from .stepadjustment import *
 from .stepscalingpolicyconfiguration import *
 from .suspendedstate import *
 from .targettrackingscalingpolicyconfiguration import *
+
+__all__ = ["AdjustmentTypeEnum","Alarm","CustomizedMetricSpecification","DeleteScalingPolicyRequest","DeleteScheduledActionRequest","DeregisterScalableTargetRequest","DescribeScalableTargetsRequest","DescribeScalableTargetsResponse","DescribeScalingActivitiesRequest","DescribeScalingActivitiesResponse","DescribeScalingPoliciesRequest","DescribeScalingPoliciesResponse","DescribeScheduledActionsRequest","DescribeScheduledActionsResponse","MetricAggregationTypeEnum","MetricDimension","MetricStatisticEnum","MetricTypeEnum","PolicyTypeEnum","PredefinedMetricSpecification","PutScalingPolicyRequest","PutScalingPolicyResponse","PutScheduledActionRequest","RegisterScalableTargetRequest","ScalableDimensionEnum","ScalableTarget","ScalableTargetAction","ScalingActivity","ScalingActivityStatusCodeEnum","ScalingPolicy","ScheduledAction","SchemeHmac","Security","ServiceNamespaceEnum","StepAdjustment","StepScalingPolicyConfiguration","SuspendedState","TargetTrackingScalingPolicyConfiguration"]

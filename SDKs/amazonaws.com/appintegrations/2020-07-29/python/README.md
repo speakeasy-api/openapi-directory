@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,29 +25,31 @@ s.config_security(
     
 req = operations.CreateEventIntegrationRequest(
     headers=operations.CreateEventIntegrationHeaders(
-        x_amz_algorithm="ullam",
-        x_amz_content_sha256="architecto",
-        x_amz_credential="architecto",
-        x_amz_date="beatae",
-        x_amz_security_token="consequatur",
-        x_amz_signature="veniam",
-        x_amz_signed_headers="hic",
+        x_amz_algorithm="asperiores",
+        x_amz_content_sha256="voluptatem",
+        x_amz_credential="hic",
+        x_amz_date="doloribus",
+        x_amz_security_token="corrupti",
+        x_amz_signature="nemo",
+        x_amz_signed_headers="architecto",
     ),
     request=operations.CreateEventIntegrationRequestBody(
-        client_token="beatae",
-        description="veritatis",
-        event_bridge_bus="architecto",
+        client_token="neque",
+        description="autem",
+        event_bridge_bus="saepe",
         event_filter=operations.CreateEventIntegrationRequestBodyEventFilter(
-            source="voluptas",
+            source="voluptatem",
         ),
-        name="voluptatibus",
+        name="error",
         tags={
-            "consectetur": "modi",
+            "in": "mollitia",
+            "autem": "distinctio",
+            "consequuntur": "autem",
         },
     ),
 )
     
-res = s.sdk.create_event_integration(req)
+res = s.create_event_integration(req)
 
 if res.create_event_integration_response is not None:
     # handle response

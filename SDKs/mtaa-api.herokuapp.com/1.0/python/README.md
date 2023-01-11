@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.DistrictsInARegionRequest(
     path_params=operations.DistrictsInARegionPathParams(
-        country="quibusdam",
-        region="ab",
+        country="qui",
+        region="sit",
     ),
 )
     
-res = s.sdk.districts_in_a_region(req)
+res = s.districts_in_region.districts_in_a_region(req)
 
 if res.status_code == 200:
     # handle response
@@ -34,13 +33,25 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Districts in region
 
 * `districts_in_a_region` - Returns all districts in region
-* `tanzania_regions` - Returns all regions present in Tanzania
-* `wards_in_a_district` - Returns all wards in a district
-* `neighborhood_in_a_street_` - Returns all neighborhood in a street
+
+### Streets in a ward
+
 * `streets_in_a_ward` - Returns all streets in a ward
+
+### Tanzania regions
+
+* `tanzania_regions` - Returns all regions present in Tanzania
+
+### Wards in a district
+
+* `wards_in_a_district` - Returns all wards in a district
+
+### neighborhood in a street
+
+* `neighborhood_in_a_street_` - Returns all neighborhood in a street
 
 <!-- End SDK Available Operations -->
 

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIPostReportPathParams:
-    event_id: int = field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
+    event_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
     
 class ReleaseEventAPIPostReportReportTypeEnum(str, Enum):
     INVALID_INFO = "InvalidInfo"
@@ -13,21 +13,21 @@ class ReleaseEventAPIPostReportReportTypeEnum(str, Enum):
     OTHER = "Other"
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIPostReportQueryParams:
-    notes: str = field(metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
-    report_type: ReleaseEventAPIPostReportReportTypeEnum = field(metadata={'query_param': { 'field_name': 'reportType', 'style': 'form', 'explode': True }})
-    version_number: int = field(metadata={'query_param': { 'field_name': 'versionNumber', 'style': 'form', 'explode': True }})
+    notes: str = dataclasses.field(metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
+    report_type: ReleaseEventAPIPostReportReportTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'reportType', 'style': 'form', 'explode': True }})
+    version_number: int = dataclasses.field(metadata={'query_param': { 'field_name': 'versionNumber', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIPostReportRequest:
-    path_params: ReleaseEventAPIPostReportPathParams = field()
-    query_params: ReleaseEventAPIPostReportQueryParams = field()
+    path_params: ReleaseEventAPIPostReportPathParams = dataclasses.field()
+    query_params: ReleaseEventAPIPostReportQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIPostReportResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

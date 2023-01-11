@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyInvalidationsInProgress:
     r"""TooManyInvalidationsInProgress
     You have exceeded the maximum number of allowable InProgress invalidation batch requests, or invalidation objects.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import listsourceaccountresponse as shared_listsourceaccountresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSourceAccountsQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
-    payor_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
-    physical_account_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'physicalAccountName', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    payor_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
+    physical_account_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'physicalAccountName', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSourceAccountsRequest:
-    query_params: GetSourceAccountsQueryParams = field()
+    query_params: GetSourceAccountsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSourceAccountsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_source_account_response: Optional[shared.ListSourceAccountResponse] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_source_account_response: Optional[shared_listsourceaccountresponse.ListSourceAccountResponse] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import nametype_enum as shared_nametype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameQueryParams:
-    name_type: shared.NameTypeEnum = field(metadata={'query_param': { 'field_name': 'nameType', 'style': 'form', 'explode': True }})
-    quantity: int = field(metadata={'query_param': { 'field_name': 'quantity', 'style': 'form', 'explode': True }})
+    name_type: shared_nametype_enum.NameTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'nameType', 'style': 'form', 'explode': True }})
+    quantity: int = dataclasses.field(metadata={'query_param': { 'field_name': 'quantity', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameRequest:
-    headers: GetAPINameHeaders = field()
-    query_params: GetAPINameQueryParams = field()
+    headers: GetAPINameHeaders = dataclasses.field()
+    query_params: GetAPINameQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

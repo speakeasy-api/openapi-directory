@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -37,14 +37,14 @@ class MeasurementPartnerWrappingDataTagWrappingModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MeasurementPartnerWrappingData:
     r"""MeasurementPartnerWrappingData
     Placement tag wrapping
     """
     
-    link_status: Optional[MeasurementPartnerWrappingDataLinkStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkStatus') }})
-    measurement_partner: Optional[MeasurementPartnerWrappingDataMeasurementPartnerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('measurementPartner') }})
-    tag_wrapping_mode: Optional[MeasurementPartnerWrappingDataTagWrappingModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagWrappingMode') }})
-    wrapped_tag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wrappedTag') }})
+    link_status: Optional[MeasurementPartnerWrappingDataLinkStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkStatus') }})
+    measurement_partner: Optional[MeasurementPartnerWrappingDataMeasurementPartnerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('measurementPartner') }})
+    tag_wrapping_mode: Optional[MeasurementPartnerWrappingDataTagWrappingModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagWrappingMode') }})
+    wrapped_tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wrappedTag') }})
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import createwebhookrequest as shared_createwebhookrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookV1Request:
-    request: Optional[shared.CreateWebhookRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_createwebhookrequest.CreateWebhookRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookV1Response:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

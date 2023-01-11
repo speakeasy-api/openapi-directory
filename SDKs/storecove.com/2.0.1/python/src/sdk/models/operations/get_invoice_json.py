@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceJSONPathParams:
-    guid: str = field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
+    guid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceJSONQueryParams:
-    pmv: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'pmv', 'style': 'form', 'explode': True }})
+    pmv: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pmv', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceJSONRequest:
-    path_params: GetInvoiceJSONPathParams = field()
-    query_params: GetInvoiceJSONQueryParams = field()
+    path_params: GetInvoiceJSONPathParams = dataclasses.field()
+    query_params: GetInvoiceJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    purchase_invoice: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    purchase_invoice: Optional[Any] = dataclasses.field(default=None)
     

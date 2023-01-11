@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits:
     r"""UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits
     The uplink bandwidth settings for the pricing plan.
     """
     
-    limit_down: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitDown') }})
-    limit_up: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitUp') }})
+    limit_down: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitDown') }})
+    limit_up: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitUp') }})
     
 class UpdateNetworkWirelessBillingRequestBodyPlansTimeLimitEnum(str, Enum):
     ONE_HOUR = "1 hour"
@@ -31,30 +31,30 @@ class UpdateNetworkWirelessBillingRequestBodyPlansTimeLimitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingRequestBodyPlans:
-    bandwidth_limits: UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandwidthLimits') }})
-    price: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
-    time_limit: UpdateNetworkWirelessBillingRequestBodyPlansTimeLimitEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeLimit') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    bandwidth_limits: UpdateNetworkWirelessBillingRequestBodyPlansBandwidthLimits = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandwidthLimits') }})
+    price: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('price') }})
+    time_limit: UpdateNetworkWirelessBillingRequestBodyPlansTimeLimitEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeLimit') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingRequestBody:
-    currency: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
-    plans: Optional[List[UpdateNetworkWirelessBillingRequestBodyPlans]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plans') }})
+    currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
+    plans: Optional[list[UpdateNetworkWirelessBillingRequestBodyPlans]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plans') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingRequest:
-    path_params: UpdateNetworkWirelessBillingPathParams = field()
-    request: Optional[UpdateNetworkWirelessBillingRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkWirelessBillingPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkWirelessBillingRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessBillingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_wireless_billing_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_wireless_billing_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

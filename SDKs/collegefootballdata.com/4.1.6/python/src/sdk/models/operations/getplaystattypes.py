@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import playstattype as shared_playstattype
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPlayStatTypesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    play_stat_types: Optional[List[shared.PlayStatType]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    play_stat_types: Optional[list[shared_playstattype.PlayStatType]] = dataclasses.field(default=None)
     

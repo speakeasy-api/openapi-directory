@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import executiontype_enum as shared_executiontype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExecuteBudgetActionResponse:
-    account_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountId') }})
-    action_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionId') }})
-    budget_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BudgetName') }})
-    execution_type: ExecutionTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExecutionType') }})
+    account_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountId') }})
+    action_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ActionId') }})
+    budget_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BudgetName') }})
+    execution_type: shared_executiontype_enum.ExecutionTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExecutionType') }})
     

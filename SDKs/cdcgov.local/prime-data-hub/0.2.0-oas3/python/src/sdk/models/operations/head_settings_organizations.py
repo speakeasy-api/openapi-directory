@@ -1,21 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class HeadSettingsOrganizationsSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class HeadSettingsOrganizationsRequest:
-    security: HeadSettingsOrganizationsSecurity = field()
+    security: HeadSettingsOrganizationsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class HeadSettingsOrganizationsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
     

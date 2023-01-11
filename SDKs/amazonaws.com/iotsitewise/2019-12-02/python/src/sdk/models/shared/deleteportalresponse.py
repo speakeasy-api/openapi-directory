@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import portalstatus as shared_portalstatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeletePortalResponse:
-    portal_status: PortalStatus = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portalStatus') }})
+    portal_status: shared_portalstatus.PortalStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portalStatus') }})
     

@@ -1,64 +1,65 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDropletRequestBodySingleDropletRequest:
-    backups: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'backups' }})
-    image: Any = field(default=None, metadata={'dataclasses_json': { 'field_name': 'image' }})
-    ipv6: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'ipv6' }})
-    monitoring: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'monitoring' }})
-    name: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'name' }})
-    private_networking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'private_networking' }})
-    region: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'region' }})
-    size: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'size' }})
-    ssh_keys: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'ssh_keys' }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'tags' }})
-    user_data: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'user_data' }})
-    vpc_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'vpc_uuid' }})
-    with_droplet_agent: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'with_droplet_agent' }})
+    image: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    region: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('region') }})
+    size: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    backups: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backups') }})
+    ipv6: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv6') }})
+    monitoring: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitoring') }})
+    private_networking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_networking') }})
+    ssh_keys: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssh_keys') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    user_data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_data') }})
+    vpc_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpc_uuid') }})
+    with_droplet_agent: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('with_droplet_agent') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDropletRequestBodyMultipleDropletRequest:
-    backups: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'backups' }})
-    image: Any = field(default=None, metadata={'dataclasses_json': { 'field_name': 'image' }})
-    ipv6: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'ipv6' }})
-    monitoring: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'monitoring' }})
-    names: List[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'names' }})
-    private_networking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'private_networking' }})
-    region: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'region' }})
-    size: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'size' }})
-    ssh_keys: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'ssh_keys' }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'tags' }})
-    user_data: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'user_data' }})
-    vpc_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'vpc_uuid' }})
-    with_droplet_agent: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'with_droplet_agent' }})
-    
-
-@dataclass
-class CreateDropletRequest:
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    image: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
+    names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('names') }})
+    region: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('region') }})
+    size: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    backups: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backups') }})
+    ipv6: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipv6') }})
+    monitoring: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitoring') }})
+    private_networking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_networking') }})
+    ssh_keys: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssh_keys') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    user_data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_data') }})
+    vpc_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpc_uuid') }})
+    with_droplet_agent: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('with_droplet_agent') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDroplet401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class CreateDropletRequest:
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    
+
+@dataclasses.dataclass
 class CreateDropletResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    create_droplet_202_application_json_one_of: Optional[Any] = field(default=None)
-    create_droplet_401_application_json_object: Optional[CreateDroplet401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_droplet_202_application_json_one_of: Optional[Any] = dataclasses.field(default=None)
+    create_droplet_401_application_json_object: Optional[CreateDroplet401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

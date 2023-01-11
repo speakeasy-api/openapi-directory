@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,13 +19,13 @@ s = sdk.SDK()
 req = operations.GetRequest(
     query_params=operations.GetQueryParams(
         format="xml",
-        ip="id",
-        key="ut",
-        package="dolorum",
+        ip="fuga",
+        key="repudiandae",
+        package="quisquam",
     ),
 )
     
-res = s.sdk.get_(req)
+res = s.get_(req)
 
 if res.get_200_text_html_string is not None:
     # handle response

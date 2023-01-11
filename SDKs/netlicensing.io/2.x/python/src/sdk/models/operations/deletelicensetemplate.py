@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseTemplatePathParams:
-    license_template_number: str = field(metadata={'path_param': { 'field_name': 'licenseTemplateNumber', 'style': 'simple', 'explode': False }})
+    license_template_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licenseTemplateNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseTemplateQueryParams:
-    force_cascade: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'forceCascade', 'style': 'form', 'explode': True }})
+    force_cascade: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'forceCascade', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseTemplateSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseTemplateRequest:
-    path_params: DeleteLicenseTemplatePathParams = field()
-    query_params: DeleteLicenseTemplateQueryParams = field()
-    security: DeleteLicenseTemplateSecurity = field()
+    path_params: DeleteLicenseTemplatePathParams = dataclasses.field()
+    query_params: DeleteLicenseTemplateQueryParams = dataclasses.field()
+    security: DeleteLicenseTemplateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

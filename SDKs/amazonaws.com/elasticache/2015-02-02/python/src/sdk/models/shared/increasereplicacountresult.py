@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import replicationgroup as shared_replicationgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class IncreaseReplicaCountResult:
-    replication_group: Optional[ReplicationGroup] = field(default=None)
+    replication_group: Optional[shared_replicationgroup.ReplicationGroup] = dataclasses.field(default=None)
     

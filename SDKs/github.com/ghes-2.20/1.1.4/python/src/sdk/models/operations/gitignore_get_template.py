@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gitignore_template as shared_gitignore_template
 
 
-@dataclass
+@dataclasses.dataclass
 class GitignoreGetTemplatePathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitignoreGetTemplateRequest:
-    path_params: GitignoreGetTemplatePathParams = field()
+    path_params: GitignoreGetTemplatePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GitignoreGetTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    gitignore_template: Optional[shared.GitignoreTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    gitignore_template: Optional[shared_gitignore_template.GitignoreTemplate] = dataclasses.field(default=None)
     

@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseePathParams:
-    licensee_number: str = field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
+    licensee_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeQueryParams:
-    force_cascade: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'forceCascade', 'style': 'form', 'explode': True }})
+    force_cascade: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'forceCascade', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeRequest:
-    path_params: DeleteLicenseePathParams = field()
-    query_params: DeleteLicenseeQueryParams = field()
-    security: DeleteLicenseeSecurity = field()
+    path_params: DeleteLicenseePathParams = dataclasses.field()
+    query_params: DeleteLicenseeQueryParams = dataclasses.field()
+    security: DeleteLicenseeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

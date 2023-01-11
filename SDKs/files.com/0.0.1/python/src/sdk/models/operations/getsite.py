@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import siteentity as shared_siteentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site_entity: Optional[shared.SiteEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site_entity: Optional[shared_siteentity.SiteEntity] = dataclasses.field(default=None)
     

@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import updateuserschedulerequest as shared_updateuserschedulerequest
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSchedulePathParams:
-    schedule_id: str = field(metadata={'path_param': { 'field_name': 'schedule_id', 'style': 'simple', 'explode': False }})
+    schedule_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schedule_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScheduleSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScheduleRequest:
-    path_params: UpdateSchedulePathParams = field()
-    request: shared.UpdateUserScheduleRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateScheduleSecurity = field()
+    path_params: UpdateSchedulePathParams = dataclasses.field()
+    request: shared_updateuserschedulerequest.UpdateUserScheduleRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateScheduleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScheduleResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

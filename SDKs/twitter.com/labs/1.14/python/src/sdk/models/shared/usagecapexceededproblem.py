@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,15 +14,15 @@ class UsageCapExceededProblemScopeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UsageCapExceededProblem:
     r"""UsageCapExceededProblem
     A problem that indicates that a usage cap has been exceeded.
     """
     
-    detail: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    period: Optional[UsageCapExceededProblemPeriodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
-    scope: Optional[UsageCapExceededProblemScopeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
+    detail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    period: Optional[UsageCapExceededProblemPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
+    scope: Optional[UsageCapExceededProblemScopeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
     

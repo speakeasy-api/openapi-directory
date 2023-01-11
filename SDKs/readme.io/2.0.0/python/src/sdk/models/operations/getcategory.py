@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoryPathParams:
-    slug: str = field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
+    slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoryHeaders:
-    x_readme_version: str = field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
+    x_readme_version: str = dataclasses.field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategorySecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoryRequest:
-    headers: GetCategoryHeaders = field()
-    path_params: GetCategoryPathParams = field()
-    security: GetCategorySecurity = field()
+    headers: GetCategoryHeaders = dataclasses.field()
+    path_params: GetCategoryPathParams = dataclasses.field()
+    security: GetCategorySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

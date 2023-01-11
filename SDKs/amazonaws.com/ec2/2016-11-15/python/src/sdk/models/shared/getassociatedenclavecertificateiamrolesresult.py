@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociatedEnclaveCertificateIamRolesResult:
-    associated_roles: Optional[List[AssociatedRole]] = field(default=None)
+    associated_roles: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

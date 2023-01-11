@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import firewallrulegroupmetadata as shared_firewallrulegroupmetadata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFirewallRuleGroupsResponse:
-    firewall_rule_groups: Optional[List[FirewallRuleGroupMetadata]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirewallRuleGroups') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    firewall_rule_groups: Optional[list[shared_firewallrulegroupmetadata.FirewallRuleGroupMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirewallRuleGroups') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

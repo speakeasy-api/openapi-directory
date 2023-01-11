@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -72,32 +72,32 @@ class WellnessWeightMachineExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Wellness:
     r"""Wellness
     Guest facilities at the property to promote or maintain health, beauty, and fitness.
     """
     
-    doctor_on_call: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doctorOnCall') }})
-    doctor_on_call_exception: Optional[WellnessDoctorOnCallExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doctorOnCallException') }})
-    elliptical_machine: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ellipticalMachine') }})
-    elliptical_machine_exception: Optional[WellnessEllipticalMachineExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ellipticalMachineException') }})
-    fitness_center: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fitnessCenter') }})
-    fitness_center_exception: Optional[WellnessFitnessCenterExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fitnessCenterException') }})
-    free_fitness_center: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeFitnessCenter') }})
-    free_fitness_center_exception: Optional[WellnessFreeFitnessCenterExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeFitnessCenterException') }})
-    free_weights: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWeights') }})
-    free_weights_exception: Optional[WellnessFreeWeightsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWeightsException') }})
-    massage: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('massage') }})
-    massage_exception: Optional[WellnessMassageExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('massageException') }})
-    salon: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salon') }})
-    salon_exception: Optional[WellnessSalonExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salonException') }})
-    sauna: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sauna') }})
-    sauna_exception: Optional[WellnessSaunaExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('saunaException') }})
-    spa: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spa') }})
-    spa_exception: Optional[WellnessSpaExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spaException') }})
-    treadmill: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treadmill') }})
-    treadmill_exception: Optional[WellnessTreadmillExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treadmillException') }})
-    weight_machine: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weightMachine') }})
-    weight_machine_exception: Optional[WellnessWeightMachineExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weightMachineException') }})
+    doctor_on_call: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doctorOnCall') }})
+    doctor_on_call_exception: Optional[WellnessDoctorOnCallExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doctorOnCallException') }})
+    elliptical_machine: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ellipticalMachine') }})
+    elliptical_machine_exception: Optional[WellnessEllipticalMachineExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ellipticalMachineException') }})
+    fitness_center: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fitnessCenter') }})
+    fitness_center_exception: Optional[WellnessFitnessCenterExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fitnessCenterException') }})
+    free_fitness_center: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeFitnessCenter') }})
+    free_fitness_center_exception: Optional[WellnessFreeFitnessCenterExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeFitnessCenterException') }})
+    free_weights: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWeights') }})
+    free_weights_exception: Optional[WellnessFreeWeightsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWeightsException') }})
+    massage: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('massage') }})
+    massage_exception: Optional[WellnessMassageExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('massageException') }})
+    salon: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salon') }})
+    salon_exception: Optional[WellnessSalonExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salonException') }})
+    sauna: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sauna') }})
+    sauna_exception: Optional[WellnessSaunaExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('saunaException') }})
+    spa: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spa') }})
+    spa_exception: Optional[WellnessSpaExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spaException') }})
+    treadmill: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treadmill') }})
+    treadmill_exception: Optional[WellnessTreadmillExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treadmillException') }})
+    weight_machine: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weightMachine') }})
+    weight_machine_exception: Optional[WellnessWeightMachineExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weightMachineException') }})
     

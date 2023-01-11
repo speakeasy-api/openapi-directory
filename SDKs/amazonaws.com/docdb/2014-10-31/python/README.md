@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAddSourceIdentifierToSubscriptionRequest(
     query_params=operations.GetAddSourceIdentifierToSubscriptionQueryParams(
         action="AddSourceIdentifierToSubscription",
-        source_identifier="molestias",
-        subscription_name="molestias",
+        source_identifier="aliquam",
+        subscription_name="non",
         version="2014-10-31",
     ),
     headers=operations.GetAddSourceIdentifierToSubscriptionHeaders(
-        x_amz_algorithm="animi",
-        x_amz_content_sha256="nesciunt",
-        x_amz_credential="nihil",
-        x_amz_date="aspernatur",
-        x_amz_security_token="hic",
-        x_amz_signature="vitae",
-        x_amz_signed_headers="libero",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="velit",
+        x_amz_credential="totam",
+        x_amz_date="ab",
+        x_amz_security_token="consequuntur",
+        x_amz_signature="commodi",
+        x_amz_signed_headers="fugiat",
     ),
 )
     
-res = s.sdk.get_add_source_identifier_to_subscription(req)
+res = s.get_add_source_identifier_to_subscription(req)
 
 if res.body is not None:
     # handle response
@@ -66,11 +65,7 @@ if res.body is not None:
 * `get_delete_global_cluster` - <p>Deletes a global cluster. The primary and secondary clusters must already be detached or deleted before attempting to delete a global cluster.</p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>
 * `get_describe_db_cluster_snapshot_attributes` - <p>Returns a list of cluster snapshot attribute names and values for a manual DB cluster snapshot.</p> <p>When you share snapshots with other accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the <code>restore</code> attribute and a list of IDs for the accounts that are authorized to copy or restore the manual cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then the manual cluster snapshot is public and can be copied or restored by all accounts.</p>
 * `get_failover_db_cluster` - <p>Forces a failover for a cluster.</p> <p>A failover for a cluster promotes one of the Amazon DocumentDB replicas (read-only instances) in the cluster to be the primary instance (the cluster writer).</p> <p>If the primary instance fails, Amazon DocumentDB automatically fails over to an Amazon DocumentDB replica, if one exists. You can force a failover when you want to simulate a failure of a primary instance for testing.</p>
-* `get_modify_db_cluster` - Modifies a setting for an Amazon DocumentDB cluster. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. 
-* `get_modify_db_cluster_snapshot_attribute` - <p>Adds an attribute and values to, or removes an attribute and values from, a manual cluster snapshot.</p> <p>To share a manual cluster snapshot with other accounts, specify <code>restore</code> as the <code>AttributeName</code>, and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the accounts that are authorized to restore the manual cluster snapshot. Use the value <code>all</code> to make the manual cluster snapshot public, which means that it can be copied or restored by all accounts. Do not add the <code>all</code> value for any manual cluster snapshots that contain private information that you don't want available to all accounts. If a manual cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this case.</p>
 * `get_modify_db_instance` - Modifies settings for an instance. You can change one or more database configuration parameters by specifying these parameters and the new values in the request.
-* `get_modify_db_subnet_group` - Modifies an existing subnet group. subnet groups must contain at least one subnet in at least two Availability Zones in the Region.
-* `get_modify_event_subscription` - Modifies an existing Amazon DocumentDB event notification subscription.
 * `get_modify_global_cluster` - <p>Modify a setting for an Amazon DocumentDB global cluster. You can change one or more configuration parameters (for example: deletion protection), or the global cluster identifier by specifying these parameters and the new values in the request.</p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>
 * `get_reboot_db_instance` - <p>You might need to reboot your instance, usually for maintenance reasons. For example, if you make certain changes, or if you change the cluster parameter group that is associated with the instance, you must reboot the instance for the changes to take effect. </p> <p>Rebooting an instance restarts the database engine service. Rebooting an instance results in a momentary outage, during which the instance status is set to <i>rebooting</i>. </p>
 * `get_remove_from_global_cluster` - <p>Detaches an Amazon DocumentDB secondary cluster from a global cluster. The cluster becomes a standalone cluster with read-write capability instead of being read-only and receiving data from a primary in a different region. </p> <note> <p>This action only applies to Amazon DocumentDB clusters.</p> </note>

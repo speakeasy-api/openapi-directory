@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientResubscribePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    sub_num: int = field(metadata={'path_param': { 'field_name': 'subNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    sub_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'subNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientResubscribeRequest:
-    path_params: ProtocolMqttClientResubscribePathParams = field()
+    path_params: ProtocolMqttClientResubscribePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientResubscribeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_mqtt_client_resubscribe_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_mqtt_client_resubscribe_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

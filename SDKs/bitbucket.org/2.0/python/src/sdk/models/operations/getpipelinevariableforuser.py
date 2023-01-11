@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariableForUserPathParams:
-    selected_user: str = field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
-    variable_uuid: str = field(metadata={'path_param': { 'field_name': 'variable_uuid', 'style': 'simple', 'explode': False }})
+    selected_user: str = dataclasses.field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
+    variable_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'variable_uuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariableForUserRequest:
-    path_params: GetPipelineVariableForUserPathParams = field()
+    path_params: GetPipelineVariableForUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariableForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    pipeline_variable: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    pipeline_variable: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ListFeatureValuesQueryParams:
-    description: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
-    language: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'language', 'style': 'form', 'explode': True }})
-    type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
+    language: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'language', 'style': 'form', 'explode': True }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFeatureValuesRequest:
-    query_params: ListFeatureValuesQueryParams = field()
+    query_params: ListFeatureValuesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFeatureValuesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_feature_values_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_feature_values_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

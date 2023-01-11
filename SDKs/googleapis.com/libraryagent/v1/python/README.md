@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.LibraryagentShelvesBooksBorrowRequest(
     security=operations.LibraryagentShelvesBooksBorrowSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.LibraryagentShelvesBooksBorrowPathParams(
-        name="tempora",
+        name="illum",
     ),
     query_params=operations.LibraryagentShelvesBooksBorrowQueryParams(
         dollar_xgafv="2",
-        access_token="eos",
-        alt="media",
-        callback="accusantium",
-        fields="doloremque",
-        key="accusamus",
-        oauth_token="rerum",
-        pretty_print=False,
-        quota_user="voluptates",
-        upload_type="sequi",
-        upload_protocol="neque",
+        access_token="dolor",
+        alt="json",
+        callback="in",
+        fields="facere",
+        key="tempore",
+        oauth_token="non",
+        pretty_print=True,
+        quota_user="voluptas",
+        upload_type="quidem",
+        upload_protocol="totam",
     ),
 )
     

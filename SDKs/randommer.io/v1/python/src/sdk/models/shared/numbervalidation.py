@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NumberValidation:
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
-    number: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
+    number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
     

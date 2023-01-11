@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.ClassroomCoursesAliasesCreateRequest(
     security=operations.ClassroomCoursesAliasesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ClassroomCoursesAliasesCreatePathParams(
-        course_id="et",
+        course_id="eveniet",
     ),
     query_params=operations.ClassroomCoursesAliasesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="qui",
-        alt="json",
-        callback="sapiente",
-        fields="consectetur",
-        key="distinctio",
-        oauth_token="explicabo",
-        pretty_print=False,
-        quota_user="est",
-        upload_type="enim",
-        upload_protocol="facere",
+        access_token="magni",
+        alt="media",
+        callback="quo",
+        fields="minima",
+        key="qui",
+        oauth_token="dolores",
+        pretty_print=True,
+        quota_user="cumque",
+        upload_type="ad",
+        upload_protocol="facilis",
     ),
     request=shared.CourseAlias(
-        alias="voluptatem",
+        alias="magnam",
     ),
 )
     

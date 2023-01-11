@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPISpecPathParams:
-    api: str = field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    api: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPISpecQueryParams:
-    api_spec_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_spec_id', 'style': 'form', 'explode': True }})
+    api_spec_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_spec_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPISpecRequest:
-    path_params: RegistryCreateAPISpecPathParams = field()
-    query_params: RegistryCreateAPISpecQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RegistryCreateAPISpecPathParams = dataclasses.field()
+    query_params: RegistryCreateAPISpecQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPISpecResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_spec: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_spec: Optional[Any] = dataclasses.field(default=None)
     

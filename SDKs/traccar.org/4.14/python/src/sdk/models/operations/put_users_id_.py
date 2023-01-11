@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class PutUsersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUsersIDRequest:
-    path_params: PutUsersIDPathParams = field()
-    request: shared.User = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutUsersIDPathParams = dataclasses.field()
+    request: shared_user.User = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUsersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user: Optional[shared.User] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user: Optional[shared_user.User] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,169 +21,122 @@ req = operations.FormsFormsBatchUpdateRequest(
         option1=operations.FormsFormsBatchUpdateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FormsFormsBatchUpdatePathParams(
-        form_id="blanditiis",
+        form_id="excepturi",
     ),
     query_params=operations.FormsFormsBatchUpdateQueryParams(
         dollar_xgafv="2",
-        access_token="doloremque",
+        access_token="nam",
         alt="proto",
-        callback="nulla",
-        fields="est",
-        key="fuga",
-        oauth_token="inventore",
-        pretty_print=False,
-        quota_user="dolorem",
-        upload_type="quos",
-        upload_protocol="similique",
+        callback="nam",
+        fields="eaque",
+        key="eos",
+        oauth_token="voluptas",
+        pretty_print=True,
+        quota_user="repudiandae",
+        upload_type="tempora",
+        upload_protocol="iusto",
     ),
     request=shared.BatchUpdateFormRequestInput(
-        include_form_in_response=True,
+        include_form_in_response=False,
         requests=[
             shared.RequestInput(
                 create_item=shared.CreateItemRequestInput(
                     item=shared.ItemInput(
-                        description="accusantium",
+                        description="culpa",
                         image_item=shared.ImageItemInput(
                             image=shared.ImageInput(
-                                alt_text="blanditiis",
+                                alt_text="illo",
                                 properties=shared.MediaProperties(
-                                    alignment="LEFT",
-                                    width=6367668452330419632,
+                                    alignment="RIGHT",
+                                    width=5957235253040447645,
                                 ),
-                                source_uri="harum",
+                                source_uri="enim",
                             ),
                         ),
-                        item_id="id",
+                        item_id="sint",
                         page_break_item={
-                            "commodi": "voluptas",
+                            "totam": "numquam",
+                            "sunt": "placeat",
+                            "reprehenderit": "et",
                         },
                         question_group_item=shared.QuestionGroupItemInput(
                             grid=shared.GridInput(
                                 columns=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
-                                            go_to_action="RESTART_FORM",
-                                            go_to_section_id="doloribus",
+                                            go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                            go_to_section_id="possimus",
                                             image=shared.ImageInput(
-                                                alt_text="nulla",
-                                                properties=shared.MediaProperties(
-                                                    alignment="CENTER",
-                                                    width=3887418951089824439,
-                                                ),
-                                                source_uri="alias",
-                                            ),
-                                            is_other=True,
-                                            value="voluptatem",
-                                        ),
-                                        shared.OptionInput(
-                                            go_to_action="SUBMIT_FORM",
-                                            go_to_section_id="dolores",
-                                            image=shared.ImageInput(
-                                                alt_text="dicta",
-                                                properties=shared.MediaProperties(
-                                                    alignment="CENTER",
-                                                    width=2571576639404732481,
-                                                ),
-                                                source_uri="ut",
-                                            ),
-                                            is_other=False,
-                                            value="vel",
-                                        ),
-                                        shared.OptionInput(
-                                            go_to_action="NEXT_SECTION",
-                                            go_to_section_id="ut",
-                                            image=shared.ImageInput(
-                                                alt_text="provident",
+                                                alt_text="ipsa",
                                                 properties=shared.MediaProperties(
                                                     alignment="ALIGNMENT_UNSPECIFIED",
-                                                    width=3210642949273039304,
+                                                    width=5216207456531997314,
                                                 ),
-                                                source_uri="sit",
+                                                source_uri="facilis",
                                             ),
                                             is_other=False,
-                                            value="delectus",
+                                            value="voluptatem",
                                         ),
                                     ],
-                                    shuffle=False,
-                                    type="DROP_DOWN",
+                                    shuffle=True,
+                                    type="CHOICE_TYPE_UNSPECIFIED",
                                 ),
                                 shuffle_questions=False,
                             ),
                             image=shared.ImageInput(
-                                alt_text="quo",
+                                alt_text="incidunt",
                                 properties=shared.MediaProperties(
-                                    alignment="RIGHT",
-                                    width=1612920053756266126,
+                                    alignment="CENTER",
+                                    width=5904184528855340306,
                                 ),
-                                source_uri="vitae",
+                                source_uri="quia",
                             ),
                             questions=[
                                 shared.QuestionInput(
                                     choice_question=shared.ChoiceQuestionInput(
                                         options=[
                                             shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="reiciendis",
+                                                go_to_action="NEXT_SECTION",
+                                                go_to_section_id="cum",
                                                 image=shared.ImageInput(
-                                                    alt_text="velit",
+                                                    alt_text="exercitationem",
                                                     properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=2152318449603758279,
+                                                        alignment="RIGHT",
+                                                        width=6763426041370573843,
                                                     ),
-                                                    source_uri="enim",
+                                                    source_uri="rem",
                                                 ),
                                                 is_other=False,
                                                 value="et",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="RESTART_FORM",
-                                                go_to_section_id="vitae",
-                                                image=shared.ImageInput(
-                                                    alt_text="asperiores",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=2887366195971768826,
-                                                    ),
-                                                    source_uri="quibusdam",
-                                                ),
-                                                is_other=True,
-                                                value="totam",
                                             ),
                                         ],
                                         shuffle=False,
                                         type="CHECKBOX",
                                     ),
                                     date_question=shared.DateQuestion(
-                                        include_time=False,
-                                        include_year=True,
+                                        include_time=True,
+                                        include_year=False,
                                     ),
                                     file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="unde",
-                                        max_file_size="facilis",
-                                        max_files=5917731321530822737,
+                                        folder_id="qui",
+                                        max_file_size="ipsum",
+                                        max_files=6209797462097021572,
                                         types=[
-                                            "VIDEO",
-                                            "SPREADSHEET",
+                                            "FILE_TYPE_UNSPECIFIED",
                                         ],
                                     ),
                                     grading=shared.Grading(
                                         correct_answers=shared.CorrectAnswers(
                                             answers=[
                                                 shared.CorrectAnswer(
-                                                    value="qui",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="voluptas",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="quo",
+                                                    value="dolorum",
                                                 ),
                                             ],
                                         ),
@@ -192,69 +144,69 @@ req = operations.FormsFormsBatchUpdateRequest(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="sit",
-                                                        uri="doloribus",
+                                                        display_text="optio",
+                                                        uri="est",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="et",
-                                                        youtube_uri="eveniet",
+                                                        display_text="doloribus",
+                                                        youtube_uri="voluptatem",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="fuga",
+                                                        uri="occaecati",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="dolores",
+                                                        youtube_uri="dolores",
                                                     ),
                                                 ),
                                             ],
-                                            text="assumenda",
+                                            text="voluptatibus",
                                         ),
-                                        point_value=5793950756465005265,
+                                        point_value=1666936004246765880,
                                         when_right=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="illum",
-                                                        uri="rem",
+                                                        display_text="quo",
+                                                        uri="voluptatum",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="voluptatem",
-                                                        youtube_uri="est",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="sunt",
-                                                        uri="quo",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="voluptatum",
-                                                        youtube_uri="doloremque",
+                                                        display_text="autem",
+                                                        youtube_uri="dolorem",
                                                     ),
                                                 ),
                                             ],
-                                            text="ut",
+                                            text="ullam",
                                         ),
                                         when_wrong=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="et",
-                                                        uri="reiciendis",
+                                                        display_text="est",
+                                                        uri="assumenda",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="eveniet",
-                                                        youtube_uri="et",
+                                                        display_text="ducimus",
+                                                        youtube_uri="alias",
                                                     ),
                                                 ),
                                             ],
                                             text="quia",
                                         ),
                                     ),
-                                    question_id="dicta",
+                                    question_id="nemo",
                                     required=False,
                                     row_question=shared.RowQuestion(
-                                        title="voluptas",
+                                        title="molestiae",
                                     ),
                                     scale_question=shared.ScaleQuestion(
-                                        high=8588093541192860205,
-                                        high_label="accusantium",
-                                        low=2750849625064778423,
-                                        low_label="sapiente",
+                                        high=3820748145283803134,
+                                        high_label="eveniet",
+                                        low=7675516864857828933,
+                                        low_label="velit",
                                     ),
                                     text_question=shared.TextQuestion(
                                         paragraph=True,
@@ -267,75 +219,40 @@ req = operations.FormsFormsBatchUpdateRequest(
                                     choice_question=shared.ChoiceQuestionInput(
                                         options=[
                                             shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="autem",
+                                                go_to_action="RESTART_FORM",
+                                                go_to_section_id="vitae",
                                                 image=shared.ImageInput(
-                                                    alt_text="ad",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=1530206793438036833,
-                                                    ),
-                                                    source_uri="esse",
-                                                ),
-                                                is_other=True,
-                                                value="quia",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="cupiditate",
-                                                image=shared.ImageInput(
-                                                    alt_text="qui",
+                                                    alt_text="repellendus",
                                                     properties=shared.MediaProperties(
                                                         alignment="LEFT",
-                                                        width=4166502192664085675,
+                                                        width=8395489463148176251,
                                                     ),
-                                                    source_uri="dolorum",
+                                                    source_uri="dolorem",
                                                 ),
-                                                is_other=True,
-                                                value="doloribus",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="NEXT_SECTION",
-                                                go_to_section_id="eum",
-                                                image=shared.ImageInput(
-                                                    alt_text="fuga",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=3699705278671025332,
-                                                    ),
-                                                    source_uri="assumenda",
-                                                ),
-                                                is_other=True,
-                                                value="magni",
+                                                is_other=False,
+                                                value="quibusdam",
                                             ),
                                         ],
                                         shuffle=False,
-                                        type="CHOICE_TYPE_UNSPECIFIED",
+                                        type="DROP_DOWN",
                                     ),
                                     date_question=shared.DateQuestion(
                                         include_time=False,
                                         include_year=False,
                                     ),
                                     file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="voluptas",
-                                        max_file_size="et",
-                                        max_files=5065495399618875749,
+                                        folder_id="dolor",
+                                        max_file_size="accusantium",
+                                        max_files=3817978110620240451,
                                         types=[
-                                            "IMAGE",
-                                            "FILE_TYPE_UNSPECIFIED",
+                                            "ANY",
                                         ],
                                     ),
                                     grading=shared.Grading(
                                         correct_answers=shared.CorrectAnswers(
                                             answers=[
                                                 shared.CorrectAnswer(
-                                                    value="ullam",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="rerum",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="animi",
+                                                    value="temporibus",
                                                 ),
                                             ],
                                         ),
@@ -343,109 +260,99 @@ req = operations.FormsFormsBatchUpdateRequest(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="ea",
-                                                        uri="nihil",
+                                                        display_text="eaque",
+                                                        uri="necessitatibus",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="suscipit",
-                                                        youtube_uri="vel",
+                                                        display_text="ut",
+                                                        youtube_uri="aliquam",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="commodi",
-                                                        uri="sint",
+                                                        display_text="illo",
+                                                        uri="eveniet",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="nobis",
-                                                        youtube_uri="voluptatem",
+                                                        display_text="dolore",
+                                                        youtube_uri="assumenda",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="eligendi",
-                                                        uri="ratione",
+                                                        display_text="molestiae",
+                                                        uri="accusantium",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="exercitationem",
-                                                        youtube_uri="rerum",
+                                                        display_text="saepe",
+                                                        youtube_uri="harum",
                                                     ),
                                                 ),
                                             ],
-                                            text="voluptatem",
+                                            text="ipsum",
                                         ),
-                                        point_value=6630029552617051383,
+                                        point_value=2915901289068470124,
                                         when_right=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="sunt",
-                                                        uri="ullam",
+                                                        display_text="velit",
+                                                        uri="aliquid",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="similique",
-                                                        youtube_uri="nam",
+                                                        display_text="nesciunt",
+                                                        youtube_uri="ipsum",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
                                                         display_text="enim",
-                                                        uri="est",
+                                                        uri="voluptatem",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="voluptas",
-                                                        youtube_uri="et",
+                                                        display_text="sunt",
+                                                        youtube_uri="rerum",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="adipisci",
+                                                        uri="nobis",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="quaerat",
+                                                        youtube_uri="itaque",
                                                     ),
                                                 ),
                                             ],
-                                            text="et",
+                                            text="magni",
                                         ),
                                         when_wrong=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="dolorem",
-                                                        uri="sit",
+                                                        display_text="voluptatem",
+                                                        uri="numquam",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="id",
-                                                        youtube_uri="a",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="nulla",
-                                                        uri="blanditiis",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="sit",
-                                                        youtube_uri="perspiciatis",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="corporis",
-                                                        uri="recusandae",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="delectus",
-                                                        youtube_uri="eos",
+                                                        display_text="qui",
+                                                        youtube_uri="modi",
                                                     ),
                                                 ),
                                             ],
-                                            text="iure",
+                                            text="quo",
                                         ),
                                     ),
-                                    question_id="culpa",
+                                    question_id="qui",
                                     required=False,
                                     row_question=shared.RowQuestion(
-                                        title="aut",
+                                        title="est",
                                     ),
                                     scale_question=shared.ScaleQuestion(
-                                        high=8883499301485783187,
-                                        high_label="nesciunt",
-                                        low=8592792957227080212,
-                                        low_label="ut",
+                                        high=5865443877907118803,
+                                        high_label="odit",
+                                        low=1986826379788998642,
+                                        low_label="nesciunt",
                                     ),
                                     text_question=shared.TextQuestion(
                                         paragraph=True,
@@ -458,61 +365,54 @@ req = operations.FormsFormsBatchUpdateRequest(
                                     choice_question=shared.ChoiceQuestionInput(
                                         options=[
                                             shared.OptionInput(
-                                                go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="iste",
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="odit",
                                                 image=shared.ImageInput(
-                                                    alt_text="et",
+                                                    alt_text="eaque",
                                                     properties=shared.MediaProperties(
-                                                        alignment="ALIGNMENT_UNSPECIFIED",
-                                                        width=3385703925298031216,
+                                                        alignment="CENTER",
+                                                        width=7990513867378522665,
                                                     ),
-                                                    source_uri="quam",
+                                                    source_uri="pariatur",
                                                 ),
-                                                is_other=True,
-                                                value="eos",
+                                                is_other=False,
+                                                value="occaecati",
                                             ),
                                             shared.OptionInput(
                                                 go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="incidunt",
+                                                go_to_section_id="magnam",
                                                 image=shared.ImageInput(
-                                                    alt_text="odio",
+                                                    alt_text="officia",
                                                     properties=shared.MediaProperties(
-                                                        alignment="LEFT",
-                                                        width=4538443254300990071,
+                                                        alignment="CENTER",
+                                                        width=162448567943149512,
                                                     ),
-                                                    source_uri="error",
+                                                    source_uri="nulla",
                                                 ),
-                                                is_other=False,
-                                                value="beatae",
+                                                is_other=True,
+                                                value="mollitia",
                                             ),
                                         ],
-                                        shuffle=True,
-                                        type="RADIO",
+                                        shuffle=False,
+                                        type="DROP_DOWN",
                                     ),
                                     date_question=shared.DateQuestion(
                                         include_time=True,
-                                        include_year=False,
+                                        include_year=True,
                                     ),
                                     file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="quia",
-                                        max_file_size="facilis",
-                                        max_files=7651563257997919332,
+                                        folder_id="rerum",
+                                        max_file_size="iusto",
+                                        max_files=6633480755866894140,
                                         types=[
                                             "DRAWING",
-                                            "PRESENTATION",
                                         ],
                                     ),
                                     grading=shared.Grading(
                                         correct_answers=shared.CorrectAnswers(
                                             answers=[
                                                 shared.CorrectAnswer(
-                                                    value="autem",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="at",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="sed",
+                                                    value="sit",
                                                 ),
                                             ],
                                         ),
@@ -520,72 +420,102 @@ req = operations.FormsFormsBatchUpdateRequest(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="reprehenderit",
-                                                        uri="ea",
+                                                        display_text="est",
+                                                        uri="possimus",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="dolorem",
-                                                        youtube_uri="autem",
+                                                        display_text="a",
+                                                        youtube_uri="quia",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="illum",
+                                                        uri="aut",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="non",
+                                                        youtube_uri="id",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="sit",
+                                                        uri="autem",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="consequatur",
+                                                        youtube_uri="ex",
                                                     ),
                                                 ),
                                             ],
-                                            text="nisi",
+                                            text="ut",
                                         ),
-                                        point_value=1293501408407461825,
+                                        point_value=5480375390911046644,
                                         when_right=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="repudiandae",
-                                                        uri="non",
+                                                        display_text="consequuntur",
+                                                        uri="maxime",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="aut",
-                                                        youtube_uri="ut",
+                                                        display_text="enim",
+                                                        youtube_uri="reprehenderit",
                                                     ),
                                                 ),
-                                            ],
-                                            text="ea",
-                                        ),
-                                        when_wrong=shared.Feedback(
-                                            material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="necessitatibus",
-                                                        uri="est",
+                                                        display_text="pariatur",
+                                                        uri="quidem",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="ut",
-                                                        youtube_uri="voluptas",
+                                                        display_text="nesciunt",
+                                                        youtube_uri="voluptatum",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
                                                         display_text="voluptatem",
-                                                        uri="et",
+                                                        uri="quo",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="consequatur",
-                                                        youtube_uri="odit",
+                                                        display_text="officia",
+                                                        youtube_uri="laborum",
                                                     ),
                                                 ),
                                             ],
-                                            text="unde",
+                                            text="molestiae",
+                                        ),
+                                        when_wrong=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="et",
+                                                        uri="sunt",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="eaque",
+                                                        youtube_uri="a",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="eum",
                                         ),
                                     ),
-                                    question_id="omnis",
+                                    question_id="dolor",
                                     required=False,
                                     row_question=shared.RowQuestion(
-                                        title="iusto",
+                                        title="quibusdam",
                                     ),
                                     scale_question=shared.ScaleQuestion(
-                                        high=178528086225314371,
-                                        high_label="autem",
-                                        low=5523822080997069527,
-                                        low_label="similique",
+                                        high=5761866984619171230,
+                                        high_label="qui",
+                                        low=5137159008829106321,
+                                        low_label="illum",
                                     ),
                                     text_question=shared.TextQuestion(
-                                        paragraph=False,
+                                        paragraph=True,
                                     ),
                                     time_question=shared.TimeQuestion(
                                         duration=True,
@@ -595,66 +525,54 @@ req = operations.FormsFormsBatchUpdateRequest(
                         ),
                         question_item=shared.QuestionItemInput(
                             image=shared.ImageInput(
-                                alt_text="libero",
+                                alt_text="voluptas",
                                 properties=shared.MediaProperties(
-                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                    width=4671827097790621909,
+                                    alignment="RIGHT",
+                                    width=7246159010282780364,
                                 ),
-                                source_uri="voluptatum",
+                                source_uri="explicabo",
                             ),
                             question=shared.QuestionInput(
                                 choice_question=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
                                             go_to_action="RESTART_FORM",
-                                            go_to_section_id="officia",
+                                            go_to_section_id="repudiandae",
                                             image=shared.ImageInput(
-                                                alt_text="architecto",
+                                                alt_text="aut",
                                                 properties=shared.MediaProperties(
-                                                    alignment="LEFT",
-                                                    width=2100143270353897595,
+                                                    alignment="RIGHT",
+                                                    width=1044388166266659590,
                                                 ),
-                                                source_uri="in",
+                                                source_uri="est",
                                             ),
                                             is_other=False,
-                                            value="beatae",
-                                        ),
-                                        shared.OptionInput(
-                                            go_to_action="RESTART_FORM",
-                                            go_to_section_id="beatae",
-                                            image=shared.ImageInput(
-                                                alt_text="voluptate",
-                                                properties=shared.MediaProperties(
-                                                    alignment="CENTER",
-                                                    width=6160806195183941617,
-                                                ),
-                                                source_uri="sequi",
-                                            ),
-                                            is_other=True,
-                                            value="ipsam",
+                                            value="saepe",
                                         ),
                                     ],
-                                    shuffle=True,
-                                    type="DROP_DOWN",
+                                    shuffle=False,
+                                    type="RADIO",
                                 ),
                                 date_question=shared.DateQuestion(
-                                    include_time=False,
+                                    include_time=True,
                                     include_year=True,
                                 ),
                                 file_upload_question=shared.FileUploadQuestion(
-                                    folder_id="dolores",
+                                    folder_id="laudantium",
                                     max_file_size="voluptas",
-                                    max_files=3821450622976919731,
+                                    max_files=5614125164593907723,
                                     types=[
-                                        "ANY",
-                                        "DRAWING",
+                                        "SPREADSHEET",
                                     ],
                                 ),
                                 grading=shared.Grading(
                                     correct_answers=shared.CorrectAnswers(
                                         answers=[
                                             shared.CorrectAnswer(
-                                                value="eum",
+                                                value="aut",
+                                            ),
+                                            shared.CorrectAnswer(
+                                                value="corrupti",
                                             ),
                                         ],
                                     ),
@@ -662,78 +580,68 @@ req = operations.FormsFormsBatchUpdateRequest(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="suscipit",
-                                                    uri="excepturi",
+                                                    display_text="quia",
+                                                    uri="expedita",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="laborum",
-                                                    youtube_uri="iure",
+                                                    display_text="aliquam",
+                                                    youtube_uri="omnis",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="inventore",
+                                                    uri="molestiae",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="provident",
+                                                    youtube_uri="omnis",
                                                 ),
                                             ),
                                         ],
-                                        text="reprehenderit",
+                                        text="in",
                                     ),
-                                    point_value=4401454000593110478,
+                                    point_value=3226251313657051547,
                                     when_right=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
+                                                    display_text="similique",
+                                                    uri="vitae",
+                                                ),
+                                                video=shared.VideoLink(
                                                     display_text="et",
-                                                    uri="quo",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="reprehenderit",
-                                                    youtube_uri="repellendus",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="vero",
-                                                    uri="eveniet",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="omnis",
-                                                    youtube_uri="delectus",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="quasi",
-                                                    uri="voluptates",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="eligendi",
-                                                    youtube_uri="sint",
+                                                    youtube_uri="sed",
                                                 ),
                                             ),
                                         ],
-                                        text="deserunt",
+                                        text="et",
                                     ),
                                     when_wrong=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="ut",
-                                                    uri="omnis",
+                                                    display_text="occaecati",
+                                                    uri="sit",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="assumenda",
-                                                    youtube_uri="earum",
+                                                    display_text="qui",
+                                                    youtube_uri="ab",
                                                 ),
                                             ),
                                         ],
-                                        text="eum",
+                                        text="molestiae",
                                     ),
                                 ),
-                                question_id="ut",
-                                required=True,
+                                question_id="temporibus",
+                                required=False,
                                 row_question=shared.RowQuestion(
-                                    title="sit",
+                                    title="est",
                                 ),
                                 scale_question=shared.ScaleQuestion(
-                                    high=3773208962586552143,
-                                    high_label="architecto",
-                                    low=5512792728107327134,
+                                    high=6870934446930668172,
+                                    high_label="nihil",
+                                    low=4185226959274560889,
                                     low_label="et",
                                 ),
                                 text_question=shared.TextQuestion(
@@ -745,82 +653,93 @@ req = operations.FormsFormsBatchUpdateRequest(
                             ),
                         ),
                         text_item={
-                            "et": "consequatur",
-                            "molestiae": "corrupti",
-                            "veniam": "dolorem",
+                            "consequuntur": "harum",
                         },
-                        title="magnam",
+                        title="quia",
                         video_item=shared.VideoItem(
-                            caption="est",
+                            caption="et",
                             video=shared.Video(
                                 properties=shared.MediaProperties(
-                                    alignment="CENTER",
-                                    width=6220347428525113494,
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=2056511701185686311,
                                 ),
-                                youtube_uri="sunt",
+                                youtube_uri="molestiae",
                             ),
                         ),
                     ),
                     location=shared.Location(
-                        index=6539930946701384664,
+                        index=4484629303885010162,
                     ),
                 ),
                 delete_item=shared.DeleteItemRequest(
                     location=shared.Location(
-                        index=1979148960994744380,
+                        index=7549812975827625294,
                     ),
                 ),
                 move_item=shared.MoveItemRequest(
                     new_location=shared.Location(
-                        index=5006807331309778843,
+                        index=946926892329068097,
                     ),
                     original_location=shared.Location(
-                        index=7842360832936955031,
+                        index=786010621093031029,
                     ),
                 ),
                 update_form_info=shared.UpdateFormInfoRequestInput(
                     info=shared.InfoInput(
-                        description="quam",
-                        title="quas",
+                        description="iusto",
+                        title="cumque",
                     ),
-                    update_mask="id",
+                    update_mask="doloribus",
                 ),
                 update_item=shared.UpdateItemRequestInput(
                     item=shared.ItemInput(
-                        description="consectetur",
+                        description="et",
                         image_item=shared.ImageItemInput(
                             image=shared.ImageInput(
-                                alt_text="in",
+                                alt_text="excepturi",
                                 properties=shared.MediaProperties(
                                     alignment="LEFT",
-                                    width=1189604837382641522,
+                                    width=3903123008775225897,
                                 ),
-                                source_uri="sed",
+                                source_uri="quia",
                             ),
                         ),
-                        item_id="velit",
+                        item_id="quibusdam",
                         page_break_item={
-                            "recusandae": "commodi",
-                            "eius": "dolore",
-                            "a": "et",
+                            "placeat": "itaque",
+                            "impedit": "placeat",
                         },
                         question_group_item=shared.QuestionGroupItemInput(
                             grid=shared.GridInput(
                                 columns=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
-                                            go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                            go_to_section_id="excepturi",
+                                            go_to_action="NEXT_SECTION",
+                                            go_to_section_id="sapiente",
                                             image=shared.ImageInput(
-                                                alt_text="est",
+                                                alt_text="non",
                                                 properties=shared.MediaProperties(
                                                     alignment="ALIGNMENT_UNSPECIFIED",
-                                                    width=6462757265347799921,
+                                                    width=7367726222752759855,
                                                 ),
-                                                source_uri="nam",
+                                                source_uri="fuga",
                                             ),
                                             is_other=True,
-                                            value="aut",
+                                            value="itaque",
+                                        ),
+                                        shared.OptionInput(
+                                            go_to_action="NEXT_SECTION",
+                                            go_to_section_id="ex",
+                                            image=shared.ImageInput(
+                                                alt_text="nulla",
+                                                properties=shared.MediaProperties(
+                                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                                    width=4572307398381366198,
+                                                ),
+                                                source_uri="voluptatem",
+                                            ),
+                                            is_other=False,
+                                            value="odit",
                                         ),
                                     ],
                                     shuffle=False,
@@ -829,73 +748,73 @@ req = operations.FormsFormsBatchUpdateRequest(
                                 shuffle_questions=True,
                             ),
                             image=shared.ImageInput(
-                                alt_text="sed",
+                                alt_text="qui",
                                 properties=shared.MediaProperties(
-                                    alignment="RIGHT",
-                                    width=6847449149842679249,
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=6962205432734655004,
                                 ),
-                                source_uri="ut",
+                                source_uri="unde",
                             ),
                             questions=[
                                 shared.QuestionInput(
                                     choice_question=shared.ChoiceQuestionInput(
                                         options=[
                                             shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="animi",
+                                                go_to_action="RESTART_FORM",
+                                                go_to_section_id="consequuntur",
                                                 image=shared.ImageInput(
-                                                    alt_text="nam",
+                                                    alt_text="et",
                                                     properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=1656220335320334169,
+                                                        alignment="LEFT",
+                                                        width=8197701673791452827,
                                                     ),
-                                                    source_uri="ipsa",
+                                                    source_uri="et",
                                                 ),
                                                 is_other=False,
-                                                value="consequatur",
+                                                value="ratione",
                                             ),
                                             shared.OptionInput(
-                                                go_to_action="NEXT_SECTION",
-                                                go_to_section_id="hic",
+                                                go_to_action="RESTART_FORM",
+                                                go_to_section_id="quaerat",
                                                 image=shared.ImageInput(
-                                                    alt_text="veritatis",
+                                                    alt_text="architecto",
                                                     properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=4692652398842461517,
+                                                        alignment="ALIGNMENT_UNSPECIFIED",
+                                                        width=3587361837763582304,
                                                     ),
-                                                    source_uri="vel",
+                                                    source_uri="officiis",
                                                 ),
                                                 is_other=False,
-                                                value="odit",
+                                                value="sed",
                                             ),
                                         ],
                                         shuffle=False,
-                                        type="CHECKBOX",
+                                        type="CHOICE_TYPE_UNSPECIFIED",
                                     ),
                                     date_question=shared.DateQuestion(
                                         include_time=True,
                                         include_year=True,
                                     ),
                                     file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="nisi",
-                                        max_file_size="nulla",
-                                        max_files=5203196856441168768,
+                                        folder_id="voluptate",
+                                        max_file_size="quo",
+                                        max_files=2055354745482287093,
                                         types=[
                                             "DRAWING",
-                                            "ANY",
+                                            "PDF",
                                         ],
                                     ),
                                     grading=shared.Grading(
                                         correct_answers=shared.CorrectAnswers(
                                             answers=[
                                                 shared.CorrectAnswer(
-                                                    value="et",
+                                                    value="exercitationem",
                                                 ),
                                                 shared.CorrectAnswer(
-                                                    value="dignissimos",
+                                                    value="exercitationem",
                                                 ),
                                                 shared.CorrectAnswer(
-                                                    value="deleniti",
+                                                    value="est",
                                                 ),
                                             ],
                                         ),
@@ -903,418 +822,79 @@ req = operations.FormsFormsBatchUpdateRequest(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="id",
-                                                        uri="sunt",
+                                                        display_text="nobis",
+                                                        uri="sit",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="cum",
-                                                        youtube_uri="totam",
+                                                        display_text="non",
+                                                        youtube_uri="commodi",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="magni",
-                                                        uri="nihil",
+                                                        display_text="deserunt",
+                                                        uri="in",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="et",
-                                                        youtube_uri="omnis",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="quidem",
-                                        ),
-                                        point_value=6248192047454816017,
-                                        when_right=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="natus",
-                                                        uri="eos",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="fugiat",
-                                                        youtube_uri="numquam",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="aut",
-                                                        uri="vitae",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="est",
-                                                        youtube_uri="exercitationem",
+                                                        display_text="eos",
+                                                        youtube_uri="veritatis",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
                                                         display_text="vel",
-                                                        uri="facere",
+                                                        uri="est",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="quidem",
-                                                        youtube_uri="quibusdam",
+                                                        display_text="id",
+                                                        youtube_uri="aliquid",
                                                     ),
                                                 ),
                                             ],
-                                            text="atque",
+                                            text="et",
+                                        ),
+                                        point_value=7410477207101213861,
+                                        when_right=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="vel",
+                                                        uri="est",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="minus",
+                                                        youtube_uri="dolores",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="ea",
                                         ),
                                         when_wrong=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="blanditiis",
+                                                        display_text="nulla",
                                                         uri="voluptatem",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="porro",
-                                                        youtube_uri="facilis",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="sed",
-                                                        uri="velit",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="alias",
-                                                        youtube_uri="aut",
+                                                        display_text="consequatur",
+                                                        youtube_uri="nihil",
                                                     ),
                                                 ),
                                             ],
-                                            text="ut",
+                                            text="reprehenderit",
                                         ),
                                     ),
-                                    question_id="quos",
-                                    required=False,
-                                    row_question=shared.RowQuestion(
-                                        title="sint",
-                                    ),
-                                    scale_question=shared.ScaleQuestion(
-                                        high=801817451213174076,
-                                        high_label="dignissimos",
-                                        low=275454291619330931,
-                                        low_label="veniam",
-                                    ),
-                                    text_question=shared.TextQuestion(
-                                        paragraph=False,
-                                    ),
-                                    time_question=shared.TimeQuestion(
-                                        duration=True,
-                                    ),
-                                ),
-                                shared.QuestionInput(
-                                    choice_question=shared.ChoiceQuestionInput(
-                                        options=[
-                                            shared.OptionInput(
-                                                go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="inventore",
-                                                image=shared.ImageInput(
-                                                    alt_text="qui",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=6107520683097591435,
-                                                    ),
-                                                    source_uri="deleniti",
-                                                ),
-                                                is_other=False,
-                                                value="enim",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="NEXT_SECTION",
-                                                go_to_section_id="corporis",
-                                                image=shared.ImageInput(
-                                                    alt_text="consequuntur",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="LEFT",
-                                                        width=8651789405403534555,
-                                                    ),
-                                                    source_uri="reprehenderit",
-                                                ),
-                                                is_other=True,
-                                                value="recusandae",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="excepturi",
-                                                image=shared.ImageInput(
-                                                    alt_text="dicta",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=8057753338657320320,
-                                                    ),
-                                                    source_uri="doloremque",
-                                                ),
-                                                is_other=True,
-                                                value="sint",
-                                            ),
-                                        ],
-                                        shuffle=False,
-                                        type="DROP_DOWN",
-                                    ),
-                                    date_question=shared.DateQuestion(
-                                        include_time=False,
-                                        include_year=True,
-                                    ),
-                                    file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="iusto",
-                                        max_file_size="ad",
-                                        max_files=7642023032564939253,
-                                        types=[
-                                            "PDF",
-                                            "PDF",
-                                        ],
-                                    ),
-                                    grading=shared.Grading(
-                                        correct_answers=shared.CorrectAnswers(
-                                            answers=[
-                                                shared.CorrectAnswer(
-                                                    value="corporis",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="sit",
-                                                ),
-                                            ],
-                                        ),
-                                        general_feedback=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="quod",
-                                                        uri="in",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="dolorum",
-                                                        youtube_uri="maiores",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="enim",
-                                                        uri="a",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="laborum",
-                                                        youtube_uri="rem",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="quod",
-                                        ),
-                                        point_value=6042383883184959595,
-                                        when_right=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="aperiam",
-                                                        uri="quia",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="inventore",
-                                                        youtube_uri="et",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="eaque",
-                                                        uri="ipsam",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="harum",
-                                                        youtube_uri="officiis",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="nihil",
-                                        ),
-                                        when_wrong=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="voluptas",
-                                                        uri="quisquam",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="commodi",
-                                                        youtube_uri="nemo",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="qui",
-                                                        uri="fugiat",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="libero",
-                                                        youtube_uri="temporibus",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="quia",
-                                                        uri="quia",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="atque",
-                                                        youtube_uri="numquam",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="optio",
-                                        ),
-                                    ),
-                                    question_id="facilis",
+                                    question_id="et",
                                     required=True,
                                     row_question=shared.RowQuestion(
-                                        title="praesentium",
+                                        title="quis",
                                     ),
                                     scale_question=shared.ScaleQuestion(
-                                        high=6763466000682211643,
-                                        high_label="aut",
-                                        low=7272010138611573249,
-                                        low_label="ex",
-                                    ),
-                                    text_question=shared.TextQuestion(
-                                        paragraph=False,
-                                    ),
-                                    time_question=shared.TimeQuestion(
-                                        duration=True,
-                                    ),
-                                ),
-                                shared.QuestionInput(
-                                    choice_question=shared.ChoiceQuestionInput(
-                                        options=[
-                                            shared.OptionInput(
-                                                go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="saepe",
-                                                image=shared.ImageInput(
-                                                    alt_text="quia",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=4414318418295938773,
-                                                    ),
-                                                    source_uri="occaecati",
-                                                ),
-                                                is_other=True,
-                                                value="rerum",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="sed",
-                                                image=shared.ImageInput(
-                                                    alt_text="quae",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=758257384443612395,
-                                                    ),
-                                                    source_uri="qui",
-                                                ),
-                                                is_other=False,
-                                                value="enim",
-                                            ),
-                                        ],
-                                        shuffle=True,
-                                        type="DROP_DOWN",
-                                    ),
-                                    date_question=shared.DateQuestion(
-                                        include_time=True,
-                                        include_year=False,
-                                    ),
-                                    file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="pariatur",
-                                        max_file_size="est",
-                                        max_files=9208331929374984741,
-                                        types=[
-                                            "DOCUMENT",
-                                            "DOCUMENT",
-                                        ],
-                                    ),
-                                    grading=shared.Grading(
-                                        correct_answers=shared.CorrectAnswers(
-                                            answers=[
-                                                shared.CorrectAnswer(
-                                                    value="numquam",
-                                                ),
-                                            ],
-                                        ),
-                                        general_feedback=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="voluptatum",
-                                                        uri="eius",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="non",
-                                                        youtube_uri="eius",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="enim",
-                                                        uri="vero",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="tempora",
-                                                        youtube_uri="ut",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="quis",
-                                        ),
-                                        point_value=6062147289734863254,
-                                        when_right=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="porro",
-                                                        uri="quia",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="ea",
-                                                        youtube_uri="quia",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="consectetur",
-                                                        uri="laborum",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="eius",
-                                                        youtube_uri="laborum",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="est",
-                                        ),
-                                        when_wrong=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="fuga",
-                                                        uri="mollitia",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="dolorem",
-                                                        youtube_uri="aut",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="quis",
-                                        ),
-                                    ),
-                                    question_id="consequatur",
-                                    required=False,
-                                    row_question=shared.RowQuestion(
-                                        title="consequatur",
-                                    ),
-                                    scale_question=shared.ScaleQuestion(
-                                        high=8210529933496229801,
-                                        high_label="autem",
-                                        low=7828292705907165979,
-                                        low_label="quae",
+                                        high=8953467996875231721,
+                                        high_label="incidunt",
+                                        low=9050574501002808175,
+                                        low_label="et",
                                     ),
                                     text_question=shared.TextQuestion(
                                         paragraph=True,
@@ -1327,57 +907,58 @@ req = operations.FormsFormsBatchUpdateRequest(
                         ),
                         question_item=shared.QuestionItemInput(
                             image=shared.ImageInput(
-                                alt_text="dolore",
+                                alt_text="qui",
                                 properties=shared.MediaProperties(
-                                    alignment="RIGHT",
-                                    width=850750828655117372,
+                                    alignment="CENTER",
+                                    width=1417670661413372909,
                                 ),
-                                source_uri="voluptatem",
+                                source_uri="et",
                             ),
                             question=shared.QuestionInput(
                                 choice_question=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
-                                            go_to_action="RESTART_FORM",
-                                            go_to_section_id="rerum",
+                                            go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                            go_to_section_id="vero",
                                             image=shared.ImageInput(
-                                                alt_text="cupiditate",
+                                                alt_text="quod",
                                                 properties=shared.MediaProperties(
-                                                    alignment="LEFT",
-                                                    width=5756585499102476017,
+                                                    alignment="CENTER",
+                                                    width=4897836300033647809,
                                                 ),
-                                                source_uri="nesciunt",
+                                                source_uri="vitae",
                                             ),
                                             is_other=True,
-                                            value="enim",
+                                            value="ipsa",
                                         ),
                                         shared.OptionInput(
                                             go_to_action="NEXT_SECTION",
-                                            go_to_section_id="illum",
+                                            go_to_section_id="deleniti",
                                             image=shared.ImageInput(
-                                                alt_text="dolores",
+                                                alt_text="et",
                                                 properties=shared.MediaProperties(
-                                                    alignment="CENTER",
-                                                    width=2379224937811426956,
+                                                    alignment="RIGHT",
+                                                    width=5325954453643726336,
                                                 ),
-                                                source_uri="voluptas",
+                                                source_uri="omnis",
                                             ),
                                             is_other=True,
-                                            value="nobis",
+                                            value="voluptas",
                                         ),
                                     ],
                                     shuffle=False,
-                                    type="DROP_DOWN",
+                                    type="CHOICE_TYPE_UNSPECIFIED",
                                 ),
                                 date_question=shared.DateQuestion(
                                     include_time=True,
-                                    include_year=True,
+                                    include_year=False,
                                 ),
                                 file_upload_question=shared.FileUploadQuestion(
-                                    folder_id="reiciendis",
-                                    max_file_size="et",
-                                    max_files=5845488839485666092,
+                                    folder_id="quisquam",
+                                    max_file_size="deleniti",
+                                    max_files=5074577177741311407,
                                     types=[
+                                        "PDF",
                                         "DOCUMENT",
                                     ],
                                 ),
@@ -1385,7 +966,7 @@ req = operations.FormsFormsBatchUpdateRequest(
                                     correct_answers=shared.CorrectAnswers(
                                         answers=[
                                             shared.CorrectAnswer(
-                                                value="unde",
+                                                value="ea",
                                             ),
                                         ],
                                     ),
@@ -1393,102 +974,102 @@ req = operations.FormsFormsBatchUpdateRequest(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="commodi",
-                                                    uri="nihil",
+                                                    display_text="ipsum",
+                                                    uri="qui",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="sapiente",
-                                                    youtube_uri="aut",
+                                                    display_text="culpa",
+                                                    youtube_uri="fugit",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="eaque",
+                                                    uri="dolorem",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="in",
+                                                    youtube_uri="voluptas",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="suscipit",
+                                                    uri="hic",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="qui",
+                                                    youtube_uri="eaque",
                                                 ),
                                             ),
                                         ],
-                                        text="ut",
+                                        text="hic",
                                     ),
-                                    point_value=651842762692709901,
+                                    point_value=3496638185594162888,
                                     when_right=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="facilis",
-                                                    uri="vel",
+                                                    display_text="inventore",
+                                                    uri="molestias",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="qui",
-                                                    youtube_uri="aliquid",
+                                                    display_text="quisquam",
+                                                    youtube_uri="et",
                                                 ),
                                             ),
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="rem",
-                                                    uri="totam",
+                                                    display_text="in",
+                                                    uri="eveniet",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="nisi",
-                                                    youtube_uri="voluptatem",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="rerum",
-                                                    uri="praesentium",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="id",
-                                                    youtube_uri="unde",
+                                                    display_text="excepturi",
+                                                    youtube_uri="ea",
                                                 ),
                                             ),
                                         ],
-                                        text="nihil",
+                                        text="incidunt",
                                     ),
                                     when_wrong=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="alias",
-                                                    uri="vel",
+                                                    display_text="itaque",
+                                                    uri="voluptatem",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="repellendus",
-                                                    youtube_uri="accusamus",
+                                                    display_text="ut",
+                                                    youtube_uri="assumenda",
                                                 ),
                                             ),
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="recusandae",
-                                                    uri="laborum",
+                                                    display_text="consequatur",
+                                                    uri="voluptas",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="error",
-                                                    youtube_uri="est",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="voluptatem",
-                                                    uri="quos",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="ad",
-                                                    youtube_uri="nesciunt",
+                                                    display_text="ipsum",
+                                                    youtube_uri="perferendis",
                                                 ),
                                             ),
                                         ],
-                                        text="rerum",
+                                        text="ipsa",
                                     ),
                                 ),
-                                question_id="ex",
+                                question_id="ad",
                                 required=False,
                                 row_question=shared.RowQuestion(
-                                    title="repellat",
+                                    title="et",
                                 ),
                                 scale_question=shared.ScaleQuestion(
-                                    high=4438357356669671294,
-                                    high_label="dolores",
-                                    low=2534242627986890109,
-                                    low_label="pariatur",
+                                    high=688601391891949515,
+                                    high_label="deleniti",
+                                    low=366547234416597184,
+                                    low_label="dignissimos",
                                 ),
                                 text_question=shared.TextQuestion(
-                                    paragraph=False,
+                                    paragraph=True,
                                 ),
                                 time_question=shared.TimeQuestion(
                                     duration=False,
@@ -1496,26 +1077,26 @@ req = operations.FormsFormsBatchUpdateRequest(
                             ),
                         ),
                         text_item={
-                            "odit": "in",
-                            "distinctio": "dicta",
-                            "quibusdam": "soluta",
+                            "dolores": "voluptatem",
+                            "sed": "quo",
+                            "et": "enim",
                         },
-                        title="nobis",
+                        title="sunt",
                         video_item=shared.VideoItem(
-                            caption="aut",
+                            caption="vero",
                             video=shared.Video(
                                 properties=shared.MediaProperties(
                                     alignment="ALIGNMENT_UNSPECIFIED",
-                                    width=8665362823887570236,
+                                    width=9044678696486910108,
                                 ),
-                                youtube_uri="dignissimos",
+                                youtube_uri="qui",
                             ),
                         ),
                     ),
                     location=shared.Location(
-                        index=2036648715124287558,
+                        index=6323061704059267708,
                     ),
-                    update_mask="nihil",
+                    update_mask="voluptatum",
                 ),
                 update_settings=shared.UpdateSettingsRequest(
                     settings=shared.FormSettings(
@@ -1523,504 +1104,87 @@ req = operations.FormsFormsBatchUpdateRequest(
                             is_quiz=False,
                         ),
                     ),
-                    update_mask="omnis",
+                    update_mask="corporis",
                 ),
             ),
             shared.RequestInput(
                 create_item=shared.CreateItemRequestInput(
                     item=shared.ItemInput(
-                        description="quam",
+                        description="fugiat",
                         image_item=shared.ImageItemInput(
                             image=shared.ImageInput(
-                                alt_text="neque",
+                                alt_text="dolor",
                                 properties=shared.MediaProperties(
-                                    alignment="CENTER",
-                                    width=1399167766426409286,
+                                    alignment="LEFT",
+                                    width=88593726215372726,
                                 ),
-                                source_uri="occaecati",
+                                source_uri="quo",
                             ),
                         ),
-                        item_id="dolorum",
+                        item_id="aliquid",
                         page_break_item={
-                            "ut": "provident",
-                            "ut": "ab",
-                            "dolores": "qui",
+                            "veniam": "hic",
+                            "id": "neque",
                         },
                         question_group_item=shared.QuestionGroupItemInput(
                             grid=shared.GridInput(
                                 columns=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
-                                            go_to_action="NEXT_SECTION",
-                                            go_to_section_id="et",
+                                            go_to_action="RESTART_FORM",
+                                            go_to_section_id="suscipit",
                                             image=shared.ImageInput(
-                                                alt_text="autem",
+                                                alt_text="dolores",
                                                 properties=shared.MediaProperties(
                                                     alignment="RIGHT",
-                                                    width=268300614933297997,
+                                                    width=5180088980873498341,
                                                 ),
-                                                source_uri="quia",
+                                                source_uri="non",
                                             ),
-                                            is_other=False,
-                                            value="quaerat",
+                                            is_other=True,
+                                            value="enim",
+                                        ),
+                                        shared.OptionInput(
+                                            go_to_action="RESTART_FORM",
+                                            go_to_section_id="nihil",
+                                            image=shared.ImageInput(
+                                                alt_text="sit",
+                                                properties=shared.MediaProperties(
+                                                    alignment="CENTER",
+                                                    width=6117250528098108154,
+                                                ),
+                                                source_uri="est",
+                                            ),
+                                            is_other=True,
+                                            value="eius",
                                         ),
                                         shared.OptionInput(
                                             go_to_action="SUBMIT_FORM",
-                                            go_to_section_id="nihil",
+                                            go_to_section_id="non",
                                             image=shared.ImageInput(
-                                                alt_text="nesciunt",
+                                                alt_text="et",
                                                 properties=shared.MediaProperties(
-                                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                                    width=3835150745734257540,
+                                                    alignment="LEFT",
+                                                    width=7563239524073315732,
                                                 ),
-                                                source_uri="voluptas",
+                                                source_uri="reprehenderit",
                                             ),
                                             is_other=True,
-                                            value="aliquid",
+                                            value="voluptatum",
                                         ),
                                     ],
-                                    shuffle=False,
-                                    type="RADIO",
+                                    shuffle=True,
+                                    type="CHECKBOX",
                                 ),
                                 shuffle_questions=False,
                             ),
                             image=shared.ImageInput(
-                                alt_text="sunt",
+                                alt_text="suscipit",
                                 properties=shared.MediaProperties(
-                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                    width=2254311656624673200,
+                                    alignment="RIGHT",
+                                    width=5439376411238478891,
                                 ),
-                                source_uri="dolores",
-                            ),
-                            questions=[
-                                shared.QuestionInput(
-                                    choice_question=shared.ChoiceQuestionInput(
-                                        options=[
-                                            shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="officiis",
-                                                image=shared.ImageInput(
-                                                    alt_text="ut",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="LEFT",
-                                                        width=439427798654126173,
-                                                    ),
-                                                    source_uri="et",
-                                                ),
-                                                is_other=True,
-                                                value="possimus",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="omnis",
-                                                image=shared.ImageInput(
-                                                    alt_text="ipsum",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="LEFT",
-                                                        width=516302766014943732,
-                                                    ),
-                                                    source_uri="quia",
-                                                ),
-                                                is_other=False,
-                                                value="hic",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                                go_to_section_id="quis",
-                                                image=shared.ImageInput(
-                                                    alt_text="commodi",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="RIGHT",
-                                                        width=5509880878158274266,
-                                                    ),
-                                                    source_uri="qui",
-                                                ),
-                                                is_other=True,
-                                                value="labore",
-                                            ),
-                                        ],
-                                        shuffle=False,
-                                        type="RADIO",
-                                    ),
-                                    date_question=shared.DateQuestion(
-                                        include_time=False,
-                                        include_year=False,
-                                    ),
-                                    file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="quae",
-                                        max_file_size="quisquam",
-                                        max_files=8456188321711004307,
-                                        types=[
-                                            "AUDIO",
-                                        ],
-                                    ),
-                                    grading=shared.Grading(
-                                        correct_answers=shared.CorrectAnswers(
-                                            answers=[
-                                                shared.CorrectAnswer(
-                                                    value="qui",
-                                                ),
-                                            ],
-                                        ),
-                                        general_feedback=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="nisi",
-                                                        uri="nesciunt",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="hic",
-                                                        youtube_uri="molestiae",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="qui",
-                                                        uri="qui",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="voluptatum",
-                                                        youtube_uri="et",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="quia",
-                                                        uri="numquam",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="est",
-                                                        youtube_uri="itaque",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="corrupti",
-                                        ),
-                                        point_value=3000746524723787116,
-                                        when_right=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="qui",
-                                                        uri="consequuntur",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="non",
-                                                        youtube_uri="ipsum",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="illo",
-                                                        uri="eius",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="voluptates",
-                                                        youtube_uri="ipsa",
-                                                    ),
-                                                ),
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="maxime",
-                                                        uri="dolor",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="ut",
-                                                        youtube_uri="corporis",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="adipisci",
-                                        ),
-                                        when_wrong=shared.Feedback(
-                                            material=[
-                                                shared.ExtraMaterial(
-                                                    link=shared.TextLink(
-                                                        display_text="et",
-                                                        uri="laboriosam",
-                                                    ),
-                                                    video=shared.VideoLink(
-                                                        display_text="sed",
-                                                        youtube_uri="esse",
-                                                    ),
-                                                ),
-                                            ],
-                                            text="est",
-                                        ),
-                                    ),
-                                    question_id="in",
-                                    required=True,
-                                    row_question=shared.RowQuestion(
-                                        title="itaque",
-                                    ),
-                                    scale_question=shared.ScaleQuestion(
-                                        high=3952804402930949344,
-                                        high_label="iste",
-                                        low=537559002373622411,
-                                        low_label="aspernatur",
-                                    ),
-                                    text_question=shared.TextQuestion(
-                                        paragraph=False,
-                                    ),
-                                    time_question=shared.TimeQuestion(
-                                        duration=False,
-                                    ),
-                                ),
-                            ],
-                        ),
-                        question_item=shared.QuestionItemInput(
-                            image=shared.ImageInput(
-                                alt_text="voluptas",
-                                properties=shared.MediaProperties(
-                                    alignment="LEFT",
-                                    width=5500847719944379584,
-                                ),
-                                source_uri="enim",
-                            ),
-                            question=shared.QuestionInput(
-                                choice_question=shared.ChoiceQuestionInput(
-                                    options=[
-                                        shared.OptionInput(
-                                            go_to_action="RESTART_FORM",
-                                            go_to_section_id="velit",
-                                            image=shared.ImageInput(
-                                                alt_text="eveniet",
-                                                properties=shared.MediaProperties(
-                                                    alignment="LEFT",
-                                                    width=4868780682979768935,
-                                                ),
-                                                source_uri="et",
-                                            ),
-                                            is_other=False,
-                                            value="laudantium",
-                                        ),
-                                        shared.OptionInput(
-                                            go_to_action="GO_TO_ACTION_UNSPECIFIED",
-                                            go_to_section_id="facere",
-                                            image=shared.ImageInput(
-                                                alt_text="quis",
-                                                properties=shared.MediaProperties(
-                                                    alignment="LEFT",
-                                                    width=3267167517764434498,
-                                                ),
-                                                source_uri="perferendis",
-                                            ),
-                                            is_other=True,
-                                            value="perferendis",
-                                        ),
-                                    ],
-                                    shuffle=False,
-                                    type="CHECKBOX",
-                                ),
-                                date_question=shared.DateQuestion(
-                                    include_time=True,
-                                    include_year=False,
-                                ),
-                                file_upload_question=shared.FileUploadQuestion(
-                                    folder_id="consequatur",
-                                    max_file_size="quia",
-                                    max_files=5367116013832584196,
-                                    types=[
-                                        "SPREADSHEET",
-                                        "IMAGE",
-                                        "PDF",
-                                    ],
-                                ),
-                                grading=shared.Grading(
-                                    correct_answers=shared.CorrectAnswers(
-                                        answers=[
-                                            shared.CorrectAnswer(
-                                                value="enim",
-                                            ),
-                                            shared.CorrectAnswer(
-                                                value="aspernatur",
-                                            ),
-                                        ],
-                                    ),
-                                    general_feedback=shared.Feedback(
-                                        material=[
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="et",
-                                                    uri="aliquid",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="totam",
-                                                    youtube_uri="alias",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="omnis",
-                                                    uri="veritatis",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="qui",
-                                                    youtube_uri="explicabo",
-                                                ),
-                                            ),
-                                        ],
-                                        text="nemo",
-                                    ),
-                                    point_value=2779401446688930153,
-                                    when_right=shared.Feedback(
-                                        material=[
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="qui",
-                                                    uri="incidunt",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="qui",
-                                                    youtube_uri="hic",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="dolore",
-                                                    uri="impedit",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="pariatur",
-                                                    youtube_uri="sapiente",
-                                                ),
-                                            ),
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="aperiam",
-                                                    uri="maiores",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="libero",
-                                                    youtube_uri="dolores",
-                                                ),
-                                            ),
-                                        ],
-                                        text="et",
-                                    ),
-                                    when_wrong=shared.Feedback(
-                                        material=[
-                                            shared.ExtraMaterial(
-                                                link=shared.TextLink(
-                                                    display_text="ut",
-                                                    uri="quo",
-                                                ),
-                                                video=shared.VideoLink(
-                                                    display_text="voluptatem",
-                                                    youtube_uri="saepe",
-                                                ),
-                                            ),
-                                        ],
-                                        text="et",
-                                    ),
-                                ),
-                                question_id="doloribus",
-                                required=False,
-                                row_question=shared.RowQuestion(
-                                    title="nisi",
-                                ),
-                                scale_question=shared.ScaleQuestion(
-                                    high=6735860509974746170,
-                                    high_label="molestiae",
-                                    low=8966535707411915449,
-                                    low_label="nostrum",
-                                ),
-                                text_question=shared.TextQuestion(
-                                    paragraph=True,
-                                ),
-                                time_question=shared.TimeQuestion(
-                                    duration=True,
-                                ),
-                            ),
-                        ),
-                        text_item={
-                            "consectetur": "temporibus",
-                        },
-                        title="doloribus",
-                        video_item=shared.VideoItem(
-                            caption="id",
-                            video=shared.Video(
-                                properties=shared.MediaProperties(
-                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                    width=4574488806323159478,
-                                ),
-                                youtube_uri="quam",
-                            ),
-                        ),
-                    ),
-                    location=shared.Location(
-                        index=968779009543895434,
-                    ),
-                ),
-                delete_item=shared.DeleteItemRequest(
-                    location=shared.Location(
-                        index=4344127675164179706,
-                    ),
-                ),
-                move_item=shared.MoveItemRequest(
-                    new_location=shared.Location(
-                        index=1360592974098936303,
-                    ),
-                    original_location=shared.Location(
-                        index=2049647356036480613,
-                    ),
-                ),
-                update_form_info=shared.UpdateFormInfoRequestInput(
-                    info=shared.InfoInput(
-                        description="omnis",
-                        title="et",
-                    ),
-                    update_mask="a",
-                ),
-                update_item=shared.UpdateItemRequestInput(
-                    item=shared.ItemInput(
-                        description="voluptatem",
-                        image_item=shared.ImageItemInput(
-                            image=shared.ImageInput(
-                                alt_text="voluptas",
-                                properties=shared.MediaProperties(
-                                    alignment="CENTER",
-                                    width=6033405793850872069,
-                                ),
-                                source_uri="dolorum",
-                            ),
-                        ),
-                        item_id="qui",
-                        page_break_item={
-                            "sunt": "natus",
-                        },
-                        question_group_item=shared.QuestionGroupItemInput(
-                            grid=shared.GridInput(
-                                columns=shared.ChoiceQuestionInput(
-                                    options=[
-                                        shared.OptionInput(
-                                            go_to_action="RESTART_FORM",
-                                            go_to_section_id="reiciendis",
-                                            image=shared.ImageInput(
-                                                alt_text="temporibus",
-                                                properties=shared.MediaProperties(
-                                                    alignment="RIGHT",
-                                                    width=4343310699711623317,
-                                                ),
-                                                source_uri="voluptatum",
-                                            ),
-                                            is_other=True,
-                                            value="et",
-                                        ),
-                                    ],
-                                    shuffle=True,
-                                    type="RADIO",
-                                ),
-                                shuffle_questions=True,
-                            ),
-                            image=shared.ImageInput(
-                                alt_text="labore",
-                                properties=shared.MediaProperties(
-                                    alignment="CENTER",
-                                    width=7314412807888287943,
-                                ),
-                                source_uri="deserunt",
+                                source_uri="quis",
                             ),
                             questions=[
                                 shared.QuestionInput(
@@ -2028,70 +1192,39 @@ req = operations.FormsFormsBatchUpdateRequest(
                                         options=[
                                             shared.OptionInput(
                                                 go_to_action="SUBMIT_FORM",
-                                                go_to_section_id="omnis",
+                                                go_to_section_id="perferendis",
                                                 image=shared.ImageInput(
-                                                    alt_text="explicabo",
+                                                    alt_text="nihil",
                                                     properties=shared.MediaProperties(
                                                         alignment="CENTER",
-                                                        width=3902172864118496445,
+                                                        width=7545576744530829002,
                                                     ),
-                                                    source_uri="qui",
-                                                ),
-                                                is_other=False,
-                                                value="ut",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="NEXT_SECTION",
-                                                go_to_section_id="quis",
-                                                image=shared.ImageInput(
-                                                    alt_text="adipisci",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="CENTER",
-                                                        width=5725741911587581094,
-                                                    ),
-                                                    source_uri="facere",
-                                                ),
-                                                is_other=False,
-                                                value="et",
-                                            ),
-                                            shared.OptionInput(
-                                                go_to_action="RESTART_FORM",
-                                                go_to_section_id="temporibus",
-                                                image=shared.ImageInput(
-                                                    alt_text="cum",
-                                                    properties=shared.MediaProperties(
-                                                        alignment="ALIGNMENT_UNSPECIFIED",
-                                                        width=7429771695958355309,
-                                                    ),
-                                                    source_uri="non",
+                                                    source_uri="sint",
                                                 ),
                                                 is_other=True,
-                                                value="adipisci",
+                                                value="cupiditate",
                                             ),
                                         ],
                                         shuffle=False,
-                                        type="RADIO",
+                                        type="CHOICE_TYPE_UNSPECIFIED",
                                     ),
                                     date_question=shared.DateQuestion(
                                         include_time=True,
                                         include_year=False,
                                     ),
                                     file_upload_question=shared.FileUploadQuestion(
-                                        folder_id="error",
-                                        max_file_size="eum",
-                                        max_files=1721042829193643249,
+                                        folder_id="illo",
+                                        max_file_size="quos",
+                                        max_files=2899654982963752788,
                                         types=[
-                                            "PDF",
+                                            "FILE_TYPE_UNSPECIFIED",
                                         ],
                                     ),
                                     grading=shared.Grading(
                                         correct_answers=shared.CorrectAnswers(
                                             answers=[
                                                 shared.CorrectAnswer(
-                                                    value="esse",
-                                                ),
-                                                shared.CorrectAnswer(
-                                                    value="sint",
+                                                    value="aliquid",
                                                 ),
                                             ],
                                         ),
@@ -2099,79 +1232,276 @@ req = operations.FormsFormsBatchUpdateRequest(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="libero",
-                                                        uri="nostrum",
+                                                        display_text="perspiciatis",
+                                                        uri="vitae",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="sit",
-                                                        youtube_uri="autem",
+                                                        display_text="praesentium",
+                                                        youtube_uri="dolorum",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="totam",
-                                                        uri="cumque",
+                                                        display_text="fugit",
+                                                        uri="molestiae",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="error",
-                                                        youtube_uri="enim",
+                                                        display_text="quisquam",
+                                                        youtube_uri="soluta",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="incidunt",
+                                                        uri="dolorum",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="et",
+                                                        youtube_uri="accusamus",
                                                     ),
                                                 ),
                                             ],
-                                            text="recusandae",
+                                            text="asperiores",
                                         ),
-                                        point_value=6516567359299810617,
+                                        point_value=4106289850966672887,
                                         when_right=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="ab",
-                                                        uri="fugiat",
+                                                        display_text="doloremque",
+                                                        uri="rerum",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="cumque",
-                                                        youtube_uri="nesciunt",
+                                                        display_text="voluptas",
+                                                        youtube_uri="placeat",
                                                     ),
                                                 ),
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="voluptatem",
-                                                        uri="consequatur",
+                                                        display_text="non",
+                                                        uri="sit",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="nemo",
-                                                        youtube_uri="dolor",
+                                                        display_text="quasi",
+                                                        youtube_uri="est",
                                                     ),
                                                 ),
                                             ],
-                                            text="reprehenderit",
+                                            text="rerum",
                                         ),
                                         when_wrong=shared.Feedback(
                                             material=[
                                                 shared.ExtraMaterial(
                                                     link=shared.TextLink(
-                                                        display_text="velit",
-                                                        uri="libero",
+                                                        display_text="error",
+                                                        uri="distinctio",
                                                     ),
                                                     video=shared.VideoLink(
-                                                        display_text="omnis",
-                                                        youtube_uri="sint",
+                                                        display_text="veritatis",
+                                                        youtube_uri="quia",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="aut",
+                                                        uri="sunt",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="et",
+                                                        youtube_uri="voluptates",
                                                     ),
                                                 ),
                                             ],
-                                            text="enim",
+                                            text="quas",
                                         ),
                                     ),
-                                    question_id="magnam",
-                                    required=True,
+                                    question_id="laudantium",
+                                    required=False,
                                     row_question=shared.RowQuestion(
-                                        title="quibusdam",
+                                        title="ut",
                                     ),
                                     scale_question=shared.ScaleQuestion(
-                                        high=3728600122260743258,
-                                        high_label="rerum",
-                                        low=462211148961836771,
-                                        low_label="atque",
+                                        high=3263690433409999503,
+                                        high_label="voluptatum",
+                                        low=6361659954382257494,
+                                        low_label="dolores",
+                                    ),
+                                    text_question=shared.TextQuestion(
+                                        paragraph=True,
+                                    ),
+                                    time_question=shared.TimeQuestion(
+                                        duration=False,
+                                    ),
+                                ),
+                                shared.QuestionInput(
+                                    choice_question=shared.ChoiceQuestionInput(
+                                        options=[
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="aut",
+                                                image=shared.ImageInput(
+                                                    alt_text="nihil",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="LEFT",
+                                                        width=3103391951678280545,
+                                                    ),
+                                                    source_uri="voluptatibus",
+                                                ),
+                                                is_other=False,
+                                                value="placeat",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="dicta",
+                                                image=shared.ImageInput(
+                                                    alt_text="saepe",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="LEFT",
+                                                        width=4356673887652401753,
+                                                    ),
+                                                    source_uri="ad",
+                                                ),
+                                                is_other=False,
+                                                value="assumenda",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="necessitatibus",
+                                                image=shared.ImageInput(
+                                                    alt_text="ipsam",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="RIGHT",
+                                                        width=2856014996737323438,
+                                                    ),
+                                                    source_uri="minima",
+                                                ),
+                                                is_other=True,
+                                                value="et",
+                                            ),
+                                        ],
+                                        shuffle=False,
+                                        type="CHOICE_TYPE_UNSPECIFIED",
+                                    ),
+                                    date_question=shared.DateQuestion(
+                                        include_time=False,
+                                        include_year=False,
+                                    ),
+                                    file_upload_question=shared.FileUploadQuestion(
+                                        folder_id="ut",
+                                        max_file_size="sapiente",
+                                        max_files=1514036909471249240,
+                                        types=[
+                                            "DOCUMENT",
+                                        ],
+                                    ),
+                                    grading=shared.Grading(
+                                        correct_answers=shared.CorrectAnswers(
+                                            answers=[
+                                                shared.CorrectAnswer(
+                                                    value="consequuntur",
+                                                ),
+                                                shared.CorrectAnswer(
+                                                    value="cumque",
+                                                ),
+                                            ],
+                                        ),
+                                        general_feedback=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="voluptatibus",
+                                                        uri="dignissimos",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="explicabo",
+                                                        youtube_uri="qui",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="illo",
+                                                        uri="qui",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="saepe",
+                                                        youtube_uri="et",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="est",
+                                                        uri="cupiditate",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="fugiat",
+                                                        youtube_uri="hic",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="dolore",
+                                        ),
+                                        point_value=761681772947384450,
+                                        when_right=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="cumque",
+                                                        uri="at",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="enim",
+                                                        youtube_uri="blanditiis",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="nobis",
+                                        ),
+                                        when_wrong=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="et",
+                                                        uri="est",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="voluptatum",
+                                                        youtube_uri="numquam",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="accusamus",
+                                                        uri="ipsum",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="nulla",
+                                                        youtube_uri="beatae",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="quia",
+                                                        uri="repellat",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="laboriosam",
+                                                        youtube_uri="id",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="nesciunt",
+                                        ),
+                                    ),
+                                    question_id="et",
+                                    required=False,
+                                    row_question=shared.RowQuestion(
+                                        title="rerum",
+                                    ),
+                                    scale_question=shared.ScaleQuestion(
+                                        high=7741424580029192409,
+                                        high_label="maiores",
+                                        low=8928639399317573263,
+                                        low_label="voluptatibus",
                                     ),
                                     text_question=shared.TextQuestion(
                                         paragraph=False,
@@ -2184,71 +1514,53 @@ req = operations.FormsFormsBatchUpdateRequest(
                         ),
                         question_item=shared.QuestionItemInput(
                             image=shared.ImageInput(
-                                alt_text="officiis",
+                                alt_text="voluptas",
                                 properties=shared.MediaProperties(
-                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                    width=3290097293778856843,
+                                    alignment="RIGHT",
+                                    width=7242125167972479197,
                                 ),
-                                source_uri="animi",
+                                source_uri="ipsam",
                             ),
                             question=shared.QuestionInput(
                                 choice_question=shared.ChoiceQuestionInput(
                                     options=[
                                         shared.OptionInput(
-                                            go_to_action="SUBMIT_FORM",
-                                            go_to_section_id="similique",
+                                            go_to_action="RESTART_FORM",
+                                            go_to_section_id="animi",
                                             image=shared.ImageInput(
-                                                alt_text="est",
+                                                alt_text="tempora",
                                                 properties=shared.MediaProperties(
-                                                    alignment="CENTER",
-                                                    width=5642624655095294941,
+                                                    alignment="LEFT",
+                                                    width=2502422371121148578,
                                                 ),
-                                                source_uri="repudiandae",
+                                                source_uri="enim",
                                             ),
-                                            is_other=True,
-                                            value="occaecati",
-                                        ),
-                                        shared.OptionInput(
-                                            go_to_action="SUBMIT_FORM",
-                                            go_to_section_id="magni",
-                                            image=shared.ImageInput(
-                                                alt_text="quia",
-                                                properties=shared.MediaProperties(
-                                                    alignment="ALIGNMENT_UNSPECIFIED",
-                                                    width=5480166450521866676,
-                                                ),
-                                                source_uri="ea",
-                                            ),
-                                            is_other=True,
-                                            value="ab",
+                                            is_other=False,
+                                            value="eligendi",
                                         ),
                                     ],
                                     shuffle=True,
-                                    type="CHOICE_TYPE_UNSPECIFIED",
+                                    type="CHECKBOX",
                                 ),
                                 date_question=shared.DateQuestion(
-                                    include_time=False,
+                                    include_time=True,
                                     include_year=True,
                                 ),
                                 file_upload_question=shared.FileUploadQuestion(
-                                    folder_id="laudantium",
-                                    max_file_size="repellat",
-                                    max_files=1606274492688274719,
+                                    folder_id="amet",
+                                    max_file_size="iure",
+                                    max_files=8908933058541040043,
                                     types=[
                                         "SPREADSHEET",
+                                        "FILE_TYPE_UNSPECIFIED",
+                                        "ANY",
                                     ],
                                 ),
                                 grading=shared.Grading(
                                     correct_answers=shared.CorrectAnswers(
                                         answers=[
                                             shared.CorrectAnswer(
-                                                value="necessitatibus",
-                                            ),
-                                            shared.CorrectAnswer(
-                                                value="repellat",
-                                            ),
-                                            shared.CorrectAnswer(
-                                                value="sint",
+                                                value="vel",
                                             ),
                                         ],
                                     ),
@@ -2256,69 +1568,69 @@ req = operations.FormsFormsBatchUpdateRequest(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="sit",
-                                                    uri="deleniti",
+                                                    display_text="nulla",
+                                                    uri="ut",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="quidem",
-                                                    youtube_uri="porro",
+                                                    display_text="distinctio",
+                                                    youtube_uri="vero",
                                                 ),
                                             ),
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="rerum",
-                                                    uri="aut",
+                                                    display_text="odit",
+                                                    uri="ullam",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="quibusdam",
-                                                    youtube_uri="adipisci",
+                                                    display_text="aperiam",
+                                                    youtube_uri="magnam",
                                                 ),
                                             ),
                                         ],
-                                        text="aut",
+                                        text="placeat",
                                     ),
-                                    point_value=4922008057303996057,
+                                    point_value=2120445231226701489,
                                     when_right=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="error",
-                                                    uri="debitis",
+                                                    display_text="id",
+                                                    uri="molestias",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="alias",
-                                                    youtube_uri="totam",
+                                                    display_text="qui",
+                                                    youtube_uri="est",
                                                 ),
                                             ),
                                         ],
-                                        text="fugit",
+                                        text="rerum",
                                     ),
                                     when_wrong=shared.Feedback(
                                         material=[
                                             shared.ExtraMaterial(
                                                 link=shared.TextLink(
-                                                    display_text="fugiat",
-                                                    uri="necessitatibus",
+                                                    display_text="officia",
+                                                    uri="est",
                                                 ),
                                                 video=shared.VideoLink(
-                                                    display_text="provident",
-                                                    youtube_uri="voluptatem",
+                                                    display_text="quis",
+                                                    youtube_uri="atque",
                                                 ),
                                             ),
                                         ],
-                                        text="voluptas",
+                                        text="facilis",
                                     ),
                                 ),
-                                question_id="pariatur",
+                                question_id="dolor",
                                 required=False,
                                 row_question=shared.RowQuestion(
-                                    title="et",
+                                    title="est",
                                 ),
                                 scale_question=shared.ScaleQuestion(
-                                    high=8817418480462070721,
-                                    high_label="quasi",
-                                    low=7515202337069457673,
-                                    low_label="reiciendis",
+                                    high=4711560240118737073,
+                                    high_label="voluptates",
+                                    low=7230506922334944628,
+                                    low_label="quae",
                                 ),
                                 text_question=shared.TextQuestion(
                                     paragraph=False,
@@ -2329,26 +1641,622 @@ req = operations.FormsFormsBatchUpdateRequest(
                             ),
                         ),
                         text_item={
-                            "nobis": "ad",
-                            "ducimus": "deleniti",
-                            "nisi": "ut",
+                            "qui": "voluptatem",
+                            "aliquam": "in",
+                            "voluptatem": "quidem",
                         },
-                        title="aut",
+                        title="enim",
                         video_item=shared.VideoItem(
-                            caption="porro",
+                            caption="reiciendis",
                             video=shared.Video(
                                 properties=shared.MediaProperties(
-                                    alignment="RIGHT",
-                                    width=7655475005574756872,
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=889544995983468983,
                                 ),
-                                youtube_uri="aut",
+                                youtube_uri="voluptatem",
                             ),
                         ),
                     ),
                     location=shared.Location(
-                        index=8723596352842335158,
+                        index=2223047520548567431,
                     ),
-                    update_mask="laudantium",
+                ),
+                delete_item=shared.DeleteItemRequest(
+                    location=shared.Location(
+                        index=3348966372786221659,
+                    ),
+                ),
+                move_item=shared.MoveItemRequest(
+                    new_location=shared.Location(
+                        index=2749871343573526204,
+                    ),
+                    original_location=shared.Location(
+                        index=4879057540074143363,
+                    ),
+                ),
+                update_form_info=shared.UpdateFormInfoRequestInput(
+                    info=shared.InfoInput(
+                        description="officiis",
+                        title="in",
+                    ),
+                    update_mask="pariatur",
+                ),
+                update_item=shared.UpdateItemRequestInput(
+                    item=shared.ItemInput(
+                        description="ipsam",
+                        image_item=shared.ImageItemInput(
+                            image=shared.ImageInput(
+                                alt_text="voluptatibus",
+                                properties=shared.MediaProperties(
+                                    alignment="CENTER",
+                                    width=8684346162108043215,
+                                ),
+                                source_uri="rerum",
+                            ),
+                        ),
+                        item_id="eos",
+                        page_break_item={
+                            "nisi": "dolorum",
+                        },
+                        question_group_item=shared.QuestionGroupItemInput(
+                            grid=shared.GridInput(
+                                columns=shared.ChoiceQuestionInput(
+                                    options=[
+                                        shared.OptionInput(
+                                            go_to_action="RESTART_FORM",
+                                            go_to_section_id="molestiae",
+                                            image=shared.ImageInput(
+                                                alt_text="consequatur",
+                                                properties=shared.MediaProperties(
+                                                    alignment="LEFT",
+                                                    width=7039557166284870016,
+                                                ),
+                                                source_uri="nesciunt",
+                                            ),
+                                            is_other=True,
+                                            value="iste",
+                                        ),
+                                    ],
+                                    shuffle=True,
+                                    type="CHECKBOX",
+                                ),
+                                shuffle_questions=False,
+                            ),
+                            image=shared.ImageInput(
+                                alt_text="mollitia",
+                                properties=shared.MediaProperties(
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=9142426412757149730,
+                                ),
+                                source_uri="sed",
+                            ),
+                            questions=[
+                                shared.QuestionInput(
+                                    choice_question=shared.ChoiceQuestionInput(
+                                        options=[
+                                            shared.OptionInput(
+                                                go_to_action="NEXT_SECTION",
+                                                go_to_section_id="sunt",
+                                                image=shared.ImageInput(
+                                                    alt_text="qui",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="RIGHT",
+                                                        width=8170578607294733011,
+                                                    ),
+                                                    source_uri="est",
+                                                ),
+                                                is_other=False,
+                                                value="rerum",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="NEXT_SECTION",
+                                                go_to_section_id="et",
+                                                image=shared.ImageInput(
+                                                    alt_text="voluptas",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="CENTER",
+                                                        width=5105243335541987909,
+                                                    ),
+                                                    source_uri="nostrum",
+                                                ),
+                                                is_other=False,
+                                                value="nostrum",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="eveniet",
+                                                image=shared.ImageInput(
+                                                    alt_text="mollitia",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="CENTER",
+                                                        width=3128172611915983385,
+                                                    ),
+                                                    source_uri="aperiam",
+                                                ),
+                                                is_other=False,
+                                                value="culpa",
+                                            ),
+                                        ],
+                                        shuffle=True,
+                                        type="DROP_DOWN",
+                                    ),
+                                    date_question=shared.DateQuestion(
+                                        include_time=False,
+                                        include_year=False,
+                                    ),
+                                    file_upload_question=shared.FileUploadQuestion(
+                                        folder_id="error",
+                                        max_file_size="magnam",
+                                        max_files=8276063308289136081,
+                                        types=[
+                                            "AUDIO",
+                                            "AUDIO",
+                                            "ANY",
+                                        ],
+                                    ),
+                                    grading=shared.Grading(
+                                        correct_answers=shared.CorrectAnswers(
+                                            answers=[
+                                                shared.CorrectAnswer(
+                                                    value="vero",
+                                                ),
+                                                shared.CorrectAnswer(
+                                                    value="eligendi",
+                                                ),
+                                            ],
+                                        ),
+                                        general_feedback=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="rerum",
+                                                        uri="aspernatur",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="est",
+                                                        youtube_uri="placeat",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="pariatur",
+                                                        uri="corrupti",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="cumque",
+                                                        youtube_uri="enim",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="quisquam",
+                                        ),
+                                        point_value=182088582836242343,
+                                        when_right=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="ipsam",
+                                                        uri="non",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="sed",
+                                                        youtube_uri="reprehenderit",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="vero",
+                                                        uri="facilis",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="debitis",
+                                                        youtube_uri="animi",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="ut",
+                                        ),
+                                        when_wrong=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="expedita",
+                                                        uri="sunt",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="animi",
+                                                        youtube_uri="unde",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="maiores",
+                                                        uri="cupiditate",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="labore",
+                                                        youtube_uri="illo",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="laboriosam",
+                                                        uri="laboriosam",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="necessitatibus",
+                                                        youtube_uri="ut",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="veritatis",
+                                        ),
+                                    ),
+                                    question_id="suscipit",
+                                    required=True,
+                                    row_question=shared.RowQuestion(
+                                        title="pariatur",
+                                    ),
+                                    scale_question=shared.ScaleQuestion(
+                                        high=8546715417534629051,
+                                        high_label="velit",
+                                        low=1563571726729279920,
+                                        low_label="quia",
+                                    ),
+                                    text_question=shared.TextQuestion(
+                                        paragraph=True,
+                                    ),
+                                    time_question=shared.TimeQuestion(
+                                        duration=False,
+                                    ),
+                                ),
+                                shared.QuestionInput(
+                                    choice_question=shared.ChoiceQuestionInput(
+                                        options=[
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="odio",
+                                                image=shared.ImageInput(
+                                                    alt_text="possimus",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="ALIGNMENT_UNSPECIFIED",
+                                                        width=6097213320097576614,
+                                                    ),
+                                                    source_uri="nostrum",
+                                                ),
+                                                is_other=False,
+                                                value="ut",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="SUBMIT_FORM",
+                                                go_to_section_id="commodi",
+                                                image=shared.ImageInput(
+                                                    alt_text="quas",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="LEFT",
+                                                        width=1600523615376828944,
+                                                    ),
+                                                    source_uri="eaque",
+                                                ),
+                                                is_other=True,
+                                                value="nostrum",
+                                            ),
+                                            shared.OptionInput(
+                                                go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                                go_to_section_id="commodi",
+                                                image=shared.ImageInput(
+                                                    alt_text="vel",
+                                                    properties=shared.MediaProperties(
+                                                        alignment="RIGHT",
+                                                        width=7074246751230988091,
+                                                    ),
+                                                    source_uri="provident",
+                                                ),
+                                                is_other=False,
+                                                value="ab",
+                                            ),
+                                        ],
+                                        shuffle=False,
+                                        type="CHECKBOX",
+                                    ),
+                                    date_question=shared.DateQuestion(
+                                        include_time=False,
+                                        include_year=False,
+                                    ),
+                                    file_upload_question=shared.FileUploadQuestion(
+                                        folder_id="amet",
+                                        max_file_size="qui",
+                                        max_files=5386515303982219896,
+                                        types=[
+                                            "FILE_TYPE_UNSPECIFIED",
+                                            "SPREADSHEET",
+                                        ],
+                                    ),
+                                    grading=shared.Grading(
+                                        correct_answers=shared.CorrectAnswers(
+                                            answers=[
+                                                shared.CorrectAnswer(
+                                                    value="explicabo",
+                                                ),
+                                                shared.CorrectAnswer(
+                                                    value="autem",
+                                                ),
+                                            ],
+                                        ),
+                                        general_feedback=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="iste",
+                                                        uri="accusantium",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="similique",
+                                                        youtube_uri="corrupti",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="quasi",
+                                        ),
+                                        point_value=3522719736874828776,
+                                        when_right=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="omnis",
+                                                        uri="ipsam",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="quis",
+                                                        youtube_uri="maiores",
+                                                    ),
+                                                ),
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="fugiat",
+                                                        uri="ut",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="tenetur",
+                                                        youtube_uri="aspernatur",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="sit",
+                                        ),
+                                        when_wrong=shared.Feedback(
+                                            material=[
+                                                shared.ExtraMaterial(
+                                                    link=shared.TextLink(
+                                                        display_text="quaerat",
+                                                        uri="omnis",
+                                                    ),
+                                                    video=shared.VideoLink(
+                                                        display_text="non",
+                                                        youtube_uri="quia",
+                                                    ),
+                                                ),
+                                            ],
+                                            text="ducimus",
+                                        ),
+                                    ),
+                                    question_id="sed",
+                                    required=True,
+                                    row_question=shared.RowQuestion(
+                                        title="nobis",
+                                    ),
+                                    scale_question=shared.ScaleQuestion(
+                                        high=3617057307217831165,
+                                        high_label="quam",
+                                        low=5463472236838707364,
+                                        low_label="ut",
+                                    ),
+                                    text_question=shared.TextQuestion(
+                                        paragraph=False,
+                                    ),
+                                    time_question=shared.TimeQuestion(
+                                        duration=True,
+                                    ),
+                                ),
+                            ],
+                        ),
+                        question_item=shared.QuestionItemInput(
+                            image=shared.ImageInput(
+                                alt_text="dolores",
+                                properties=shared.MediaProperties(
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=7048387579217796344,
+                                ),
+                                source_uri="vitae",
+                            ),
+                            question=shared.QuestionInput(
+                                choice_question=shared.ChoiceQuestionInput(
+                                    options=[
+                                        shared.OptionInput(
+                                            go_to_action="NEXT_SECTION",
+                                            go_to_section_id="est",
+                                            image=shared.ImageInput(
+                                                alt_text="nulla",
+                                                properties=shared.MediaProperties(
+                                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                                    width=1467499827457805916,
+                                                ),
+                                                source_uri="ut",
+                                            ),
+                                            is_other=True,
+                                            value="enim",
+                                        ),
+                                        shared.OptionInput(
+                                            go_to_action="GO_TO_ACTION_UNSPECIFIED",
+                                            go_to_section_id="a",
+                                            image=shared.ImageInput(
+                                                alt_text="enim",
+                                                properties=shared.MediaProperties(
+                                                    alignment="CENTER",
+                                                    width=6880590033955052934,
+                                                ),
+                                                source_uri="aut",
+                                            ),
+                                            is_other=False,
+                                            value="modi",
+                                        ),
+                                    ],
+                                    shuffle=False,
+                                    type="DROP_DOWN",
+                                ),
+                                date_question=shared.DateQuestion(
+                                    include_time=False,
+                                    include_year=False,
+                                ),
+                                file_upload_question=shared.FileUploadQuestion(
+                                    folder_id="et",
+                                    max_file_size="sed",
+                                    max_files=7613510986129691238,
+                                    types=[
+                                        "IMAGE",
+                                        "SPREADSHEET",
+                                        "AUDIO",
+                                    ],
+                                ),
+                                grading=shared.Grading(
+                                    correct_answers=shared.CorrectAnswers(
+                                        answers=[
+                                            shared.CorrectAnswer(
+                                                value="voluptatem",
+                                            ),
+                                            shared.CorrectAnswer(
+                                                value="molestias",
+                                            ),
+                                            shared.CorrectAnswer(
+                                                value="dolorem",
+                                            ),
+                                        ],
+                                    ),
+                                    general_feedback=shared.Feedback(
+                                        material=[
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="neque",
+                                                    uri="ea",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="at",
+                                                    youtube_uri="aut",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="dolores",
+                                                    uri="omnis",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="minima",
+                                                    youtube_uri="non",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="expedita",
+                                                    uri="quaerat",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="ex",
+                                                    youtube_uri="dicta",
+                                                ),
+                                            ),
+                                        ],
+                                        text="minus",
+                                    ),
+                                    point_value=2643189024539766149,
+                                    when_right=shared.Feedback(
+                                        material=[
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="et",
+                                                    uri="unde",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="corrupti",
+                                                    youtube_uri="vitae",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="sapiente",
+                                                    uri="eos",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="omnis",
+                                                    youtube_uri="sit",
+                                                ),
+                                            ),
+                                        ],
+                                        text="aliquam",
+                                    ),
+                                    when_wrong=shared.Feedback(
+                                        material=[
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="qui",
+                                                    uri="aut",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="voluptates",
+                                                    youtube_uri="id",
+                                                ),
+                                            ),
+                                            shared.ExtraMaterial(
+                                                link=shared.TextLink(
+                                                    display_text="atque",
+                                                    uri="velit",
+                                                ),
+                                                video=shared.VideoLink(
+                                                    display_text="quo",
+                                                    youtube_uri="consectetur",
+                                                ),
+                                            ),
+                                        ],
+                                        text="qui",
+                                    ),
+                                ),
+                                question_id="quis",
+                                required=False,
+                                row_question=shared.RowQuestion(
+                                    title="fugit",
+                                ),
+                                scale_question=shared.ScaleQuestion(
+                                    high=374777448867330334,
+                                    high_label="alias",
+                                    low=5337615963840977653,
+                                    low_label="delectus",
+                                ),
+                                text_question=shared.TextQuestion(
+                                    paragraph=False,
+                                ),
+                                time_question=shared.TimeQuestion(
+                                    duration=False,
+                                ),
+                            ),
+                        ),
+                        text_item={
+                            "nostrum": "corporis",
+                        },
+                        title="itaque",
+                        video_item=shared.VideoItem(
+                            caption="esse",
+                            video=shared.Video(
+                                properties=shared.MediaProperties(
+                                    alignment="ALIGNMENT_UNSPECIFIED",
+                                    width=4559575525210067934,
+                                ),
+                                youtube_uri="omnis",
+                            ),
+                        ),
+                    ),
+                    location=shared.Location(
+                        index=8988803565249739725,
+                    ),
+                    update_mask="consequatur",
                 ),
                 update_settings=shared.UpdateSettingsRequest(
                     settings=shared.FormSettings(
@@ -2356,13 +2264,13 @@ req = operations.FormsFormsBatchUpdateRequest(
                             is_quiz=False,
                         ),
                     ),
-                    update_mask="et",
+                    update_mask="enim",
                 ),
             ),
         ],
         write_control=shared.WriteControl(
-            required_revision_id="eius",
-            target_revision_id="qui",
+            required_revision_id="nam",
+            target_revision_id="eligendi",
         ),
     ),
 )

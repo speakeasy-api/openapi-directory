@@ -1,15 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectVideosAlt1PathParams:
-    project_id: float = field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
+    project_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     
 class GetProjectVideosAlt1DirectionEnum(str, Enum):
     ASC = "asc"
@@ -23,30 +25,30 @@ class GetProjectVideosAlt1SortEnum(str, Enum):
     LAST_USER_ACTION_EVENT_DATE = "last_user_action_event_date"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectVideosAlt1QueryParams:
-    direction: Optional[GetProjectVideosAlt1DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[GetProjectVideosAlt1SortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetProjectVideosAlt1DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[GetProjectVideosAlt1SortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectVideosAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectVideosAlt1Request:
-    path_params: GetProjectVideosAlt1PathParams = field()
-    query_params: GetProjectVideosAlt1QueryParams = field()
-    security: GetProjectVideosAlt1Security = field()
+    path_params: GetProjectVideosAlt1PathParams = dataclasses.field()
+    query_params: GetProjectVideosAlt1QueryParams = dataclasses.field()
+    security: GetProjectVideosAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectVideosAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    videos: Optional[List[shared.Video]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    videos: Optional[list[shared_video.Video]] = dataclasses.field(default=None)
     

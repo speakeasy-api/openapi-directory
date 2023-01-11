@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Endpoint:
-    address: Optional[str] = field(default=None)
-    port: Optional[int] = field(default=None)
+    address: Optional[str] = dataclasses.field(default=None)
+    port: Optional[int] = dataclasses.field(default=None)
     

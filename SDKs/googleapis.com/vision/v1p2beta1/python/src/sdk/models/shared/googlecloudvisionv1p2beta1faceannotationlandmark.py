@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudvisionv1p2beta1position as shared_googlecloudvisionv1p2beta1position
 
 class GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum(str, Enum):
     UNKNOWN_LANDMARK = "UNKNOWN_LANDMARK"
@@ -46,12 +46,12 @@ class GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVisionV1p2beta1FaceAnnotationLandmark:
     r"""GoogleCloudVisionV1p2beta1FaceAnnotationLandmark
     A face-specific landmark (for example, a face feature).
     """
     
-    position: Optional[GoogleCloudVisionV1p2beta1Position] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
-    type: Optional[GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    position: Optional[shared_googlecloudvisionv1p2beta1position.GoogleCloudVisionV1p2beta1Position] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
+    type: Optional[GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

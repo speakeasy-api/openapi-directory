@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,43 +25,41 @@ s.config_security(
     
 req = operations.AnalyzeDocumentRequest(
     headers=operations.AnalyzeDocumentHeaders(
-        x_amz_algorithm="molestias",
-        x_amz_content_sha256="autem",
-        x_amz_credential="iure",
-        x_amz_date="expedita",
-        x_amz_security_token="nesciunt",
-        x_amz_signature="eaque",
-        x_amz_signed_headers="corrupti",
+        x_amz_algorithm="repellendus",
+        x_amz_content_sha256="corrupti",
+        x_amz_credential="ex",
+        x_amz_date="voluptatum",
+        x_amz_security_token="voluptas",
+        x_amz_signature="et",
+        x_amz_signed_headers="doloribus",
         x_amz_target="Textract.AnalyzeDocument",
     ),
     request=shared.AnalyzeDocumentRequest(
         document=shared.Document(
-            bytes="quos",
+            bytes="sunt",
             s3_object=shared.S3Object(
-                bucket="eius",
-                name="impedit",
-                version="unde",
+                bucket="et",
+                name="ea",
+                version="deserunt",
             ),
         ),
         feature_types=[
+            "TABLES",
             "FORMS",
-            "TABLES",
-            "TABLES",
         ],
         human_loop_config=shared.HumanLoopConfig(
             data_attributes=shared.HumanLoopDataAttributes(
                 content_classifiers=[
                     "FreeOfAdultContent",
-                    "FreeOfAdultContent",
                 ],
             ),
-            flow_definition_arn="deserunt",
-            human_loop_name="corporis",
+            flow_definition_arn="magnam",
+            human_loop_name="dicta",
         ),
     ),
 )
     
-res = s.sdk.analyze_document(req)
+res = s.analyze_document(req)
 
 if res.analyze_document_response is not None:
     # handle response

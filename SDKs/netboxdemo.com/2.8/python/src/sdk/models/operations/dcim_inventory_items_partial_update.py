@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableinventoryitem as shared_writableinventoryitem
+from ..shared import inventoryitem as shared_inventoryitem
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsPartialUpdateRequest:
-    path_params: DcimInventoryItemsPartialUpdatePathParams = field()
-    request: shared.WritableInventoryItemInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimInventoryItemsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writableinventoryitem.WritableInventoryItemInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inventory_item: Optional[shared.InventoryItem] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inventory_item: Optional[shared_inventoryitem.InventoryItem] = dataclasses.field(default=None)
     

@@ -1,38 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import picture as shared_picture
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoThumbnailAlt1PathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVideoThumbnailAlt1RequestBody:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    time: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('time') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('time') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoThumbnailAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoThumbnailAlt1Request:
-    path_params: CreateVideoThumbnailAlt1PathParams = field()
-    security: CreateVideoThumbnailAlt1Security = field()
-    request: Optional[CreateVideoThumbnailAlt1RequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.picture+json' }})
+    path_params: CreateVideoThumbnailAlt1PathParams = dataclasses.field()
+    security: CreateVideoThumbnailAlt1Security = dataclasses.field()
+    request: Optional[CreateVideoThumbnailAlt1RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.picture+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoThumbnailAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    picture: Optional[shared.Picture] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    picture: Optional[shared_picture.Picture] = dataclasses.field(default=None)
     

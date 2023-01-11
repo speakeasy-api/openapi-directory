@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import on_demand_page as shared_on_demand_page
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGenreVodsPathParams:
-    genre_id: str = field(metadata={'path_param': { 'field_name': 'genre_id', 'style': 'simple', 'explode': False }})
+    genre_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'genre_id', 'style': 'simple', 'explode': False }})
     
 class GetGenreVodsDirectionEnum(str, Enum):
     ASC = "asc"
@@ -27,25 +27,25 @@ class GetGenreVodsSortEnum(str, Enum):
     VIDEOS = "videos"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGenreVodsQueryParams:
-    direction: Optional[GetGenreVodsDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[GetGenreVodsFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetGenreVodsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetGenreVodsDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[GetGenreVodsFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetGenreVodsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenreVodsRequest:
-    path_params: GetGenreVodsPathParams = field()
-    query_params: GetGenreVodsQueryParams = field()
+    path_params: GetGenreVodsPathParams = dataclasses.field()
+    query_params: GetGenreVodsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenreVodsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    on_demand_pages: Optional[List[shared.OnDemandPage]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    on_demand_pages: Optional[list[shared_on_demand_page.OnDemandPage]] = dataclasses.field(default=None)
     

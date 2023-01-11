@@ -1,19 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workflowexecutionfilter as shared_workflowexecutionfilter
+from ..shared import executiontimefilter as shared_executiontimefilter
+from ..shared import tagfilter as shared_tagfilter
+from ..shared import workflowtypefilter as shared_workflowtypefilter
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListOpenWorkflowExecutionsInput:
-    domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
-    start_time_filter: ExecutionTimeFilter = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTimeFilter') }})
-    execution_filter: Optional[WorkflowExecutionFilter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('executionFilter') }})
-    maximum_page_size: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumPageSize') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    reverse_order: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reverseOrder') }})
-    tag_filter: Optional[TagFilter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagFilter') }})
-    type_filter: Optional[WorkflowTypeFilter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeFilter') }})
+    domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
+    start_time_filter: shared_executiontimefilter.ExecutionTimeFilter = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTimeFilter') }})
+    execution_filter: Optional[shared_workflowexecutionfilter.WorkflowExecutionFilter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('executionFilter') }})
+    maximum_page_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumPageSize') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    reverse_order: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reverseOrder') }})
+    tag_filter: Optional[shared_tagfilter.TagFilter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagFilter') }})
+    type_filter: Optional[shared_workflowtypefilter.WorkflowTypeFilter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeFilter') }})
     

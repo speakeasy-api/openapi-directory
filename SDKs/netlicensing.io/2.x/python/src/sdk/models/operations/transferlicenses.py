@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class TransferLicensesPathParams:
-    licensee_number: str = field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
+    licensee_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TransferLicensesRequestBody:
-    source_licensee_number: str = field(metadata={'form': { 'field_name': 'sourceLicenseeNumber' }})
+    source_licensee_number: str = dataclasses.field(metadata={'form': { 'field_name': 'sourceLicenseeNumber' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TransferLicensesSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TransferLicensesRequest:
-    path_params: TransferLicensesPathParams = field()
-    request: TransferLicensesRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: TransferLicensesSecurity = field()
+    path_params: TransferLicensesPathParams = dataclasses.field()
+    request: TransferLicensesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: TransferLicensesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TransferLicensesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

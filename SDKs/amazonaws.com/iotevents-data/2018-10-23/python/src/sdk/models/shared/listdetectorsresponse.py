@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import detectorsummary as shared_detectorsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDetectorsResponse:
-    detector_summaries: Optional[List[DetectorSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectorSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    detector_summaries: Optional[list[shared_detectorsummary.DetectorSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectorSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

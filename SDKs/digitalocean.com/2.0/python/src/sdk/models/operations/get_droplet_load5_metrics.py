@@ -1,36 +1,33 @@
-from dataclasses import dataclass, field
-from typing import Any,Enum,List,Optional
+import dataclasses
+from typing import Any,Optional
+from enum import Enum
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDropletLoad5MetricsQueryParams:
-    end: str = field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
-    host_id: str = field(default=None, metadata={'query_param': { 'field_name': 'host_id', 'style': 'form', 'explode': True }})
-    start: str = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    
-
-@dataclass
-class GetDropletLoad5MetricsRequest:
-    query_params: GetDropletLoad5MetricsQueryParams = field(default=None)
+    end: str = dataclasses.field(metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
+    host_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'host_id', 'style': 'form', 'explode': True }})
+    start: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDropletLoad5Metrics200ApplicationJSONDataResult:
-    metric: dict[str, str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'metric' }})
-    values: List[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'values' }})
+    metric: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metric') }})
+    values: list[list[Any]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     
 class GetDropletLoad5Metrics200ApplicationJSONDataResultTypeEnum(str, Enum):
     MATRIX = "matrix"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDropletLoad5Metrics200ApplicationJSONData:
-    result: List[GetDropletLoad5Metrics200ApplicationJSONDataResult] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'result' }})
-    result_type: GetDropletLoad5Metrics200ApplicationJSONDataResultTypeEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'resultType' }})
+    result: list[GetDropletLoad5Metrics200ApplicationJSONDataResult] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    result_type: GetDropletLoad5Metrics200ApplicationJSONDataResultTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resultType') }})
     
 class GetDropletLoad5Metrics200ApplicationJSONStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -38,26 +35,31 @@ class GetDropletLoad5Metrics200ApplicationJSONStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDropletLoad5Metrics200ApplicationJSON:
-    data: GetDropletLoad5Metrics200ApplicationJSONData = field(default=None, metadata={'dataclasses_json': { 'field_name': 'data' }})
-    status: GetDropletLoad5Metrics200ApplicationJSONStatusEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'status' }})
+    data: GetDropletLoad5Metrics200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    status: GetDropletLoad5Metrics200ApplicationJSONStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDropletLoad5Metrics401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class GetDropletLoad5MetricsRequest:
+    query_params: GetDropletLoad5MetricsQueryParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
 class GetDropletLoad5MetricsResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    get_droplet_load5_metrics_200_application_json_object: Optional[GetDropletLoad5Metrics200ApplicationJSON] = field(default=None)
-    get_droplet_load5_metrics_401_application_json_object: Optional[GetDropletLoad5Metrics401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_droplet_load5_metrics_200_application_json_object: Optional[GetDropletLoad5Metrics200ApplicationJSON] = dataclasses.field(default=None)
+    get_droplet_load5_metrics_401_application_json_object: Optional[GetDropletLoad5Metrics401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

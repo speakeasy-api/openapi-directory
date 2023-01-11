@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2inspectresult as shared_googleprivacydlpv2inspectresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2InspectContentResponse:
     r"""GooglePrivacyDlpV2InspectContentResponse
     Results of inspecting an item.
     """
     
-    result: Optional[GooglePrivacyDlpV2InspectResult] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    result: Optional[shared_googleprivacydlpv2inspectresult.GooglePrivacyDlpV2InspectResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsUsersListPathParams:
-    institution_id: str = field(metadata={'path_param': { 'field_name': 'institution_id', 'style': 'simple', 'explode': False }})
+    institution_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'institution_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsUsersListRequest:
-    path_params: InstitutionsUsersListPathParams = field()
+    path_params: InstitutionsUsersListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsUsersListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

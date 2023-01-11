@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clusterconfiguration as shared_clusterconfiguration
+from ..shared import clustercustomer as shared_clustercustomer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClusterRequest:
-    configuration: Optional[ClusterConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
-    customers: Optional[List[ClusterCustomer]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customers') }})
+    configuration: Optional[shared_clusterconfiguration.ClusterConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
+    customers: Optional[list[shared_clustercustomer.ClusterCustomer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customers') }})
     

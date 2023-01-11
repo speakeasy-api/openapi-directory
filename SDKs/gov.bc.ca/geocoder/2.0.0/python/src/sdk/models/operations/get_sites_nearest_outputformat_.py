@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -12,9 +12,9 @@ class GetSitesNearestOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesNearestOutputFormatPathParams:
-    output_format: GetSitesNearestOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    output_format: GetSitesNearestOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 class GetSitesNearestOutputFormatLocationDescriptorEnum(str, Enum):
     ANY = "any"
@@ -25,26 +25,26 @@ class GetSitesNearestOutputFormatLocationDescriptorEnum(str, Enum):
     ROUTING_POINT = "routingPoint"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesNearestOutputFormatQueryParams:
-    point: str = field(metadata={'query_param': { 'field_name': 'point', 'style': 'form', 'explode': True }})
-    brief: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
-    exclude_units: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'excludeUnits', 'style': 'form', 'explode': True }})
-    location_descriptor: Optional[GetSitesNearestOutputFormatLocationDescriptorEnum] = field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
-    max_distance: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxDistance', 'style': 'form', 'explode': True }})
-    only_civic: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'onlyCivic', 'style': 'form', 'explode': True }})
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
-    set_back: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
+    point: str = dataclasses.field(metadata={'query_param': { 'field_name': 'point', 'style': 'form', 'explode': True }})
+    brief: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
+    exclude_units: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeUnits', 'style': 'form', 'explode': True }})
+    location_descriptor: Optional[GetSitesNearestOutputFormatLocationDescriptorEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
+    max_distance: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxDistance', 'style': 'form', 'explode': True }})
+    only_civic: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'onlyCivic', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    set_back: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesNearestOutputFormatRequest:
-    path_params: GetSitesNearestOutputFormatPathParams = field()
-    query_params: GetSitesNearestOutputFormatQueryParams = field()
+    path_params: GetSitesNearestOutputFormatPathParams = dataclasses.field()
+    query_params: GetSitesNearestOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesNearestOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

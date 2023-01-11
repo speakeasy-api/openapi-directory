@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudvisionv1p1beta1annotatefilerequest as shared_googlecloudvisionv1p1beta1annotatefilerequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest:
     r"""GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest
     A list of requests to annotate files using the BatchAnnotateFiles API.
     """
     
-    parent: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
-    requests: Optional[List[GoogleCloudVisionV1p1beta1AnnotateFileRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requests') }})
+    parent: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
+    requests: Optional[list[shared_googlecloudvisionv1p1beta1annotatefilerequest.GoogleCloudVisionV1p1beta1AnnotateFileRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requests') }})
     

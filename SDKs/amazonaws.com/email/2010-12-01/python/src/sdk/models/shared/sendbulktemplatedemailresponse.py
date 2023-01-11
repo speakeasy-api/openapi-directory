@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import bulkemaildestinationstatus as shared_bulkemaildestinationstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class SendBulkTemplatedEmailResponse:
-    status: List[BulkEmailDestinationStatus] = field()
+    status: list[shared_bulkemaildestinationstatus.BulkEmailDestinationStatus] = dataclasses.field()
     

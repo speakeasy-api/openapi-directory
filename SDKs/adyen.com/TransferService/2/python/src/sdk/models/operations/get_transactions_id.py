@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDRequest:
-    path_params: GetTransactionsIDPathParams = field()
-    security: GetTransactionsIDSecurity = field()
+    path_params: GetTransactionsIDPathParams = dataclasses.field()
+    security: GetTransactionsIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rest_service_error: Optional[Any] = field(default=None)
-    transaction: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rest_service_error: Optional[Any] = dataclasses.field(default=None)
+    transaction: Optional[Any] = dataclasses.field(default=None)
     

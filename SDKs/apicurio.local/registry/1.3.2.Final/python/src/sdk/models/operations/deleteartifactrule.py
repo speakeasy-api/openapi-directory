@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import error as shared_error
 
 class DeleteArtifactRuleRuleEnum(str, Enum):
     VALIDITY = "VALIDITY"
     COMPATIBILITY = "COMPATIBILITY"
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteArtifactRulePathParams:
-    artifact_id: str = field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
-    rule: DeleteArtifactRuleRuleEnum = field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
+    artifact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
+    rule: DeleteArtifactRuleRuleEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteArtifactRuleRequest:
-    path_params: DeleteArtifactRulePathParams = field()
+    path_params: DeleteArtifactRulePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteArtifactRuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

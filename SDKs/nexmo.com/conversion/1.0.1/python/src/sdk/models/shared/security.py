@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'api_key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'api_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPISecret:
-    api_key: str = field(metadata={'security': { 'field_name': 'api_secret' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'api_secret' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecurityOption1:
-    api_key: SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    api_secret: SchemeAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_secret: SchemeAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPISig:
-    api_key: str = field(metadata={'security': { 'field_name': 'sig' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'sig' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecurityOption2:
-    api_key: SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    api_sig: SchemeAPISig = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_sig: SchemeAPISig = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    option1: Optional[SecurityOption1] = field(default=None, metadata={'security': { 'option': True }})
-    option2: Optional[SecurityOption2] = field(default=None, metadata={'security': { 'option': True }})
+    option1: Optional[SecurityOption1] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option2: Optional[SecurityOption2] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
     

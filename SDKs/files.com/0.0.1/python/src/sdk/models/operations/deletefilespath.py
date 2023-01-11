@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFilesPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFilesPathQueryParams:
-    recursive: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'recursive', 'style': 'form', 'explode': True }})
+    recursive: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'recursive', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFilesPathRequest:
-    path_params: DeleteFilesPathPathParams = field()
-    query_params: DeleteFilesPathQueryParams = field()
+    path_params: DeleteFilesPathPathParams = dataclasses.field()
+    query_params: DeleteFilesPathQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFilesPathResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

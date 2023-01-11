@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
+from ..shared import transportdependency as shared_transportdependency
 
 
-@dataclass
+@dataclasses.dataclass
 class ServiceDependency:
-    ser_name: str = field()
-    version: str = field()
-    requested_permissions: Optional[List[str]] = field(default=None)
-    ser_category: Optional[Any] = field(default=None)
-    ser_transport_dependencies: Optional[List[TransportDependency]] = field(default=None)
+    ser_name: str = dataclasses.field()
+    version: str = dataclasses.field()
+    requested_permissions: Optional[list[str]] = dataclasses.field(default=None)
+    ser_category: Optional[Any] = dataclasses.field(default=None)
+    ser_transport_dependencies: Optional[list[shared_transportdependency.TransportDependency]] = dataclasses.field(default=None)
     

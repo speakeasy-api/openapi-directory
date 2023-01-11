@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ req = operations.GetStatusRequest(
         ),
     ),
     headers=operations.GetStatusHeaders(
-        if_modified_since="officia",
+        if_modified_since="et",
     ),
 )
     

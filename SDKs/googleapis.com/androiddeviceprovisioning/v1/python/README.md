@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,30 +18,30 @@ s = sdk.SDK()
     
 req = operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest(
     path_params=operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams(
-        parent="ut",
+        parent="aut",
     ),
     query_params=operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="doloribus",
+        dollar_xgafv="2",
+        access_token="consequatur",
         alt="proto",
-        callback="excepturi",
-        fields="repellendus",
-        key="nihil",
-        oauth_token="quasi",
+        callback="asperiores",
+        fields="placeat",
+        key="iure",
+        oauth_token="aut",
         pretty_print=False,
-        quota_user="ut",
-        upload_type="dolorem",
-        upload_protocol="quis",
+        quota_user="voluptatem",
+        upload_type="quia",
+        upload_protocol="ut",
     ),
     request=shared.ConfigurationInput(
-        company_name="aut",
-        configuration_name="qui",
-        contact_email="laborum",
-        contact_phone="quod",
-        custom_message="eius",
-        dpc_extras="officia",
-        dpc_resource_path="inventore",
-        is_default=True,
+        company_name="quisquam",
+        configuration_name="sit",
+        contact_email="ratione",
+        contact_phone="aperiam",
+        custom_message="tenetur",
+        dpc_extras="quia",
+        dpc_resource_path="ut",
+        is_default=False,
     ),
 )
     

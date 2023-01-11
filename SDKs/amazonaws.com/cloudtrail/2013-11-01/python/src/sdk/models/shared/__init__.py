@@ -47,3 +47,5 @@ from .trail import *
 from .trailinfo import *
 from .updatetrailrequest import *
 from .updatetrailresponse import *
+
+__all__ = ["AddTagsRequest","AdvancedEventSelector","AdvancedFieldSelector","CreateTrailRequest","CreateTrailResponse","DataResource","DeleteTrailRequest","DescribeTrailsRequest","DescribeTrailsResponse","Event","EventCategoryEnum","EventSelector","GetEventSelectorsRequest","GetEventSelectorsResponse","GetInsightSelectorsRequest","GetInsightSelectorsResponse","GetTrailRequest","GetTrailResponse","GetTrailStatusRequest","GetTrailStatusResponse","InsightSelector","InsightTypeEnum","ListPublicKeysRequest","ListPublicKeysResponse","ListTagsRequest","ListTagsResponse","ListTrailsRequest","ListTrailsResponse","LookupAttribute","LookupAttributeKeyEnum","LookupEventsRequest","LookupEventsResponse","PublicKey","PutEventSelectorsRequest","PutEventSelectorsResponse","PutInsightSelectorsRequest","PutInsightSelectorsResponse","ReadWriteTypeEnum","RemoveTagsRequest","Resource","ResourceTag","SchemeHmac","Security","StartLoggingRequest","StopLoggingRequest","Tag","Trail","TrailInfo","UpdateTrailRequest","UpdateTrailResponse"]

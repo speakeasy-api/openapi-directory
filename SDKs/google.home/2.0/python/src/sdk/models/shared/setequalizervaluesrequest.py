@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import highshelf1 as shared_highshelf1
+from ..shared import lowshelf1 as shared_lowshelf1
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetEqualizerValuesRequest:
-    high_shelf: HighShelf1 = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('high_shelf') }})
-    low_shelf: LowShelf1 = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('low_shelf') }})
+    high_shelf: shared_highshelf1.HighShelf1 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('high_shelf') }})
+    low_shelf: shared_lowshelf1.LowShelf1 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('low_shelf') }})
     

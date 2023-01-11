@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TargetDescription:
     r"""TargetDescription
     Information about a target.
     """
     
-    id: str = field()
-    availability_zone: Optional[str] = field(default=None)
-    port: Optional[int] = field(default=None)
+    id: str = dataclasses.field()
+    availability_zone: Optional[str] = dataclasses.field(default=None)
+    port: Optional[int] = dataclasses.field(default=None)
     

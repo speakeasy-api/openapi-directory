@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowingPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class GetUserFollowingDirectionEnum(str, Enum):
     ASC = "asc"
@@ -23,25 +23,25 @@ class GetUserFollowingSortEnum(str, Enum):
     DATE = "date"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowingQueryParams:
-    direction: Optional[GetUserFollowingDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[GetUserFollowingFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetUserFollowingSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetUserFollowingDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[GetUserFollowingFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetUserFollowingSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowingRequest:
-    path_params: GetUserFollowingPathParams = field()
-    query_params: GetUserFollowingQueryParams = field()
+    path_params: GetUserFollowingPathParams = dataclasses.field()
+    query_params: GetUserFollowingQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    users: Optional[List[shared.User]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    users: Optional[list[shared_user.User]] = dataclasses.field(default=None)
     

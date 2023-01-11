@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import environmentaccountconnection as shared_environmentaccountconnection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironmentAccountConnectionOutput:
-    environment_account_connection: Optional[EnvironmentAccountConnection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentAccountConnection') }})
+    environment_account_connection: Optional[shared_environmentaccountconnection.EnvironmentAccountConnection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentAccountConnection') }})
     

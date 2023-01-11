@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import domainstatus as shared_domainstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDomainsResponse:
     r"""DescribeDomainsResponse
     A response message that contains the status of one or more domains.
     """
     
-    domain_status_list: List[DomainStatus] = field()
+    domain_status_list: list[shared_domainstatus.DomainStatus] = dataclasses.field()
     

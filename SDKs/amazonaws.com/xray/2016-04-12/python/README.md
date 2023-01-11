@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,28 @@ s.config_security(
     
 req = operations.BatchGetTracesRequest(
     query_params=operations.BatchGetTracesQueryParams(
-        next_token="autem",
+        next_token="ut",
     ),
     headers=operations.BatchGetTracesHeaders(
-        x_amz_algorithm="aliquam",
-        x_amz_content_sha256="beatae",
-        x_amz_credential="atque",
-        x_amz_date="enim",
-        x_amz_security_token="facere",
-        x_amz_signature="est",
-        x_amz_signed_headers="quod",
+        x_amz_algorithm="possimus",
+        x_amz_content_sha256="iusto",
+        x_amz_credential="illum",
+        x_amz_date="ex",
+        x_amz_security_token="eos",
+        x_amz_signature="asperiores",
+        x_amz_signed_headers="dicta",
     ),
     request=operations.BatchGetTracesRequestBody(
-        next_token="tempore",
+        next_token="sunt",
         trace_ids=[
-            "ullam",
+            "omnis",
+            "nobis",
+            "et",
         ],
     ),
 )
     
-res = s.sdk.batch_get_traces(req)
+res = s.batch_get_traces(req)
 
 if res.batch_get_traces_result is not None:
     # handle response

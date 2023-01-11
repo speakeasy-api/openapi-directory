@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import creativespecification as shared_creativespecification
 
 class CreativeRestrictionsCreativeFormatEnum(str, Enum):
     CREATIVE_FORMAT_UNSPECIFIED = "CREATIVE_FORMAT_UNSPECIFIED"
@@ -18,13 +18,13 @@ class CreativeRestrictionsSkippableAdTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeRestrictions:
     r"""CreativeRestrictions
     Represents creative restrictions associated to Programmatic Guaranteed/ Preferred Deal in Ad Manager. This doesn't apply to Private Auction and AdX Preferred Deals.
     """
     
-    creative_format: Optional[CreativeRestrictionsCreativeFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
-    creative_specifications: Optional[List[CreativeSpecification]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeSpecifications') }})
-    skippable_ad_type: Optional[CreativeRestrictionsSkippableAdTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippableAdType') }})
+    creative_format: Optional[CreativeRestrictionsCreativeFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
+    creative_specifications: Optional[list[shared_creativespecification.CreativeSpecification]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeSpecifications') }})
+    skippable_ad_type: Optional[CreativeRestrictionsSkippableAdTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippableAdType') }})
     

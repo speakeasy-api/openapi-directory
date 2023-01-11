@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import createservicemetricstaskrequest as shared_createservicemetricstaskrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateCustomerServiceMetricTaskHeaders:
-    accept_language: str = field(metadata={'header': { 'field_name': 'accept-language', 'style': 'simple', 'explode': False }})
+    accept_language: str = dataclasses.field(metadata={'header': { 'field_name': 'accept-language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCustomerServiceMetricTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCustomerServiceMetricTaskRequest:
-    headers: CreateCustomerServiceMetricTaskHeaders = field()
-    request: shared.CreateServiceMetricsTaskRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateCustomerServiceMetricTaskSecurity = field()
+    headers: CreateCustomerServiceMetricTaskHeaders = dataclasses.field()
+    request: shared_createservicemetricstaskrequest.CreateServiceMetricsTaskRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateCustomerServiceMetricTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCustomerServiceMetricTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

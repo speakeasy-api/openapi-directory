@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import mfaoptiontype as shared_mfaoptiontype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetUserSettingsRequest:
     r"""SetUserSettingsRequest
     Represents the request to set user settings.
     """
     
-    access_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessToken') }})
-    mfa_options: List[MfaOptionType] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MFAOptions') }})
+    access_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessToken') }})
+    mfa_options: list[shared_mfaoptiontype.MfaOptionType] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MFAOptions') }})
     

@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayDeveloperDeveloperIDAccountsPathParams:
-    developer_id: str = field(metadata={'path_param': { 'field_name': 'developerId', 'style': 'simple', 'explode': False }})
+    developer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'developerId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayDeveloperDeveloperIDAccountsQueryParams:
-    redirect_url: str = field(metadata={'query_param': { 'field_name': 'redirectUrl', 'style': 'form', 'explode': True }})
+    redirect_url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'redirectUrl', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayDeveloperDeveloperIDAccountsRequest:
-    path_params: PostStripeGatewayDeveloperDeveloperIDAccountsPathParams = field()
-    query_params: PostStripeGatewayDeveloperDeveloperIDAccountsQueryParams = field()
+    path_params: PostStripeGatewayDeveloperDeveloperIDAccountsPathParams = dataclasses.field()
+    query_params: PostStripeGatewayDeveloperDeveloperIDAccountsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayDeveloperDeveloperIDAccountsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

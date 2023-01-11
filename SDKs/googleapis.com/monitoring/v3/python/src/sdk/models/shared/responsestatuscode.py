@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,12 +15,12 @@ class ResponseStatusCodeStatusClassEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResponseStatusCode:
     r"""ResponseStatusCode
     A status to accept. Either a status code class like \"2xx\", or an integer status code like \"200\".
     """
     
-    status_class: Optional[ResponseStatusCodeStatusClassEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusClass') }})
-    status_value: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusValue') }})
+    status_class: Optional[ResponseStatusCodeStatusClassEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusClass') }})
+    status_value: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusValue') }})
     

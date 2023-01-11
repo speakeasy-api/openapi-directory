@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import jobdata as shared_jobdata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class JobDetails:
     r"""JobDetails
     Represents information about the details of a job.
     """
     
-    account_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
-    data: Optional[JobData] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
+    data: Optional[shared_jobdata.JobData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     

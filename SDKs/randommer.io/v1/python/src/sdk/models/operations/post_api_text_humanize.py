@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import textdto as shared_textdto
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAPITextHumanizeHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPITextHumanizeRequests:
-    text_dto: Optional[shared.TextDto] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    text_dto1: Optional[shared.TextDto] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    text_dto2: Optional[shared.TextDto] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    text_dto3: Optional[shared.TextDto] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    text_dto: Optional[shared_textdto.TextDto] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    text_dto1: Optional[shared_textdto.TextDto] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    text_dto2: Optional[shared_textdto.TextDto] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    text_dto3: Optional[shared_textdto.TextDto] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPITextHumanizeRequest:
-    headers: PostAPITextHumanizeHeaders = field()
-    request: PostAPITextHumanizeRequests = field()
+    headers: PostAPITextHumanizeHeaders = dataclasses.field()
+    request: PostAPITextHumanizeRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPITextHumanizeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

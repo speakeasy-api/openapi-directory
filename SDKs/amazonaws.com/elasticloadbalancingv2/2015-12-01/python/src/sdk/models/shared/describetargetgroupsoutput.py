@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import targetgroup as shared_targetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeTargetGroupsOutput:
-    next_marker: Optional[str] = field(default=None)
-    target_groups: Optional[List[TargetGroup]] = field(default=None)
+    next_marker: Optional[str] = dataclasses.field(default=None)
+    target_groups: Optional[list[shared_targetgroup.TargetGroup]] = dataclasses.field(default=None)
     

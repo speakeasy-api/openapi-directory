@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import server as shared_server
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    server: Optional[shared.Server] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    server: Optional[shared_server.Server] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import activitytype as shared_activitytype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UndeprecateActivityTypeInput:
-    activity_type: ActivityType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('activityType') }})
-    domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
+    activity_type: shared_activitytype.ActivityType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('activityType') }})
+    domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
     

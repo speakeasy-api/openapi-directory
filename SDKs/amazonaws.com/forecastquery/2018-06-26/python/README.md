@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,28 +25,27 @@ s.config_security(
     
 req = operations.QueryForecastRequest(
     headers=operations.QueryForecastHeaders(
-        x_amz_algorithm="maiores",
-        x_amz_content_sha256="repellendus",
-        x_amz_credential="repellendus",
-        x_amz_date="error",
-        x_amz_security_token="ea",
-        x_amz_signature="fugit",
-        x_amz_signed_headers="est",
+        x_amz_algorithm="quo",
+        x_amz_content_sha256="vero",
+        x_amz_credential="incidunt",
+        x_amz_date="vel",
+        x_amz_security_token="exercitationem",
+        x_amz_signature="laudantium",
+        x_amz_signed_headers="sed",
         x_amz_target="AmazonForecastRuntime.QueryForecast",
     ),
     request=shared.QueryForecastRequest(
-        end_date="aut",
+        end_date="dolore",
         filters={
-            "nam": "molestias",
-            "et": "cumque",
+            "qui": "omnis",
         },
-        forecast_arn="aut",
-        next_token="deserunt",
-        start_date="voluptatem",
+        forecast_arn="modi",
+        next_token="occaecati",
+        start_date="dolor",
     ),
 )
     
-res = s.sdk.query_forecast(req)
+res = s.query_forecast(req)
 
 if res.query_forecast_response is not None:
     # handle response

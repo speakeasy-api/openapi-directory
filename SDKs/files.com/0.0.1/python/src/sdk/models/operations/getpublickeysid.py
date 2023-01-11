@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import publickeyentity as shared_publickeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysIDRequest:
-    path_params: GetPublicKeysIDPathParams = field()
+    path_params: GetPublicKeysIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_key_entity: Optional[shared.PublicKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_key_entity: Optional[shared_publickeyentity.PublicKeyEntity] = dataclasses.field(default=None)
     

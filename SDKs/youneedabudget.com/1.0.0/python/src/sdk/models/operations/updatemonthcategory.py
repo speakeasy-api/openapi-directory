@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import savemonthcategorywrapper as shared_savemonthcategorywrapper
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import savecategoryresponse as shared_savecategoryresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMonthCategoryPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
-    category_id: str = field(metadata={'path_param': { 'field_name': 'category_id', 'style': 'simple', 'explode': False }})
-    month: date = field(metadata={'path_param': { 'field_name': 'month', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'category_id', 'style': 'simple', 'explode': False }})
+    month: date = dataclasses.field(metadata={'path_param': { 'field_name': 'month', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMonthCategoryRequest:
-    path_params: UpdateMonthCategoryPathParams = field()
-    request: shared.SaveMonthCategoryWrapper = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateMonthCategoryPathParams = dataclasses.field()
+    request: shared_savemonthcategorywrapper.SaveMonthCategoryWrapper = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMonthCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    save_category_response: Optional[shared.SaveCategoryResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    save_category_response: Optional[shared_savecategoryresponse.SaveCategoryResponse] = dataclasses.field(default=None)
     

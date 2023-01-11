@@ -1,20 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
-
-class RestoreArchiveArchiveRestoreKindEnum(str, Enum):
-    LATEST_ARCHIVE = "latestArchive"
-    LATEST_COMMIT = "latestCommit"
-    ARCHIVE_ID = "archive ID"
+from ..shared import archive_kind_enum as shared_archive_kind_enum
+from ..shared import archive_kind_enum1 as shared_archive_kind_enum1
 
 
-@dataclass
+@dataclasses.dataclass
 class RestoreArchivePathParams:
-    archive_kind: shared.ArchiveKindEnum = field(metadata={'path_param': { 'field_name': 'archiveKind', 'style': 'simple', 'explode': False }})
-    archive_restore_kind: RestoreArchiveArchiveRestoreKindEnum = field(metadata={'path_param': { 'field_name': 'archiveRestoreKind', 'style': 'simple', 'explode': False }})
+    archive_kind: shared_archive_kind_enum.ArchiveKindEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'archiveKind', 'style': 'simple', 'explode': False }})
+    archive_restore_kind: shared_archive_kind_enum1.ArchiveKindEnum1 = dataclasses.field(metadata={'path_param': { 'field_name': 'archiveRestoreKind', 'style': 'simple', 'explode': False }})
     
 class RestoreArchive200ApplicationJSONActionEnum(str, Enum):
     RESTORE_FULL_LATEST_ARCHIVE = "restoreFullLatestArchive"
@@ -35,13 +31,13 @@ class RestoreArchive200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RestoreArchive200ApplicationJSONData:
-    directive: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directive') }})
-    full: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('full') }})
-    groups: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
-    parameters: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
-    rules: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
+    directive: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directive') }})
+    full: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('full') }})
+    groups: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    parameters: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    rules: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
     
 class RestoreArchive200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -49,21 +45,21 @@ class RestoreArchive200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RestoreArchive200ApplicationJSON:
-    action: RestoreArchive200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: RestoreArchive200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: RestoreArchive200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: RestoreArchive200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: RestoreArchive200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: RestoreArchive200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RestoreArchiveRequest:
-    path_params: RestoreArchivePathParams = field()
+    path_params: RestoreArchivePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RestoreArchiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    restore_archive_200_application_json_object: Optional[RestoreArchive200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    restore_archive_200_application_json_object: Optional[RestoreArchive200ApplicationJSON] = dataclasses.field(default=None)
     

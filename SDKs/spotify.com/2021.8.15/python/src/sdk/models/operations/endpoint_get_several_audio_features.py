@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import audiofeaturesarrayobject as shared_audiofeaturesarrayobject
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralAudioFeaturesQueryParams:
-    ids: str = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    ids: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralAudioFeaturesHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralAudioFeaturesSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralAudioFeaturesRequest:
-    headers: EndpointGetSeveralAudioFeaturesHeaders = field()
-    query_params: EndpointGetSeveralAudioFeaturesQueryParams = field()
-    security: EndpointGetSeveralAudioFeaturesSecurity = field()
+    headers: EndpointGetSeveralAudioFeaturesHeaders = dataclasses.field()
+    query_params: EndpointGetSeveralAudioFeaturesQueryParams = dataclasses.field()
+    security: EndpointGetSeveralAudioFeaturesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralAudioFeaturesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    audio_features_array_object: Optional[shared.AudioFeaturesArrayObject] = field(default=None)
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    audio_features_array_object: Optional[shared_audiofeaturesarrayobject.AudioFeaturesArrayObject] = dataclasses.field(default=None)
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

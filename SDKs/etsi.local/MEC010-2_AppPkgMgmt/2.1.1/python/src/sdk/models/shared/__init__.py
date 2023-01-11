@@ -9,6 +9,7 @@ from .apppkginfo_links import *
 from .apppkginfomodifications import *
 from .apppkgnotification import *
 from .apppkgnotification_links import *
+from .apppkgsubscription import *
 from .apppkgsubscriptioninfo import *
 from .apppkgsubscriptioninfo_links import *
 from .apppkgsubscriptionlinklist import *
@@ -38,3 +39,5 @@ from .transportssupported import *
 from .tunnelinfo import *
 from .tunneltype_enum import *
 from .usagestate_enum import *
+
+__all__ = ["ActionEnum","AppD","AppExternalCpd","AppPkgNotificationTypeEnum","AppPkgOperationalStateEnum","AppPkgSubscriptionTypeEnum","AppPkgInfo","AppPkgInfoLinks","AppPkgInfoModificationsOperationStateEnum","AppPkgInfoModifications","AppPkgNotificationOperationalStateEnum","AppPkgNotification","AppPkgNotificationLinks","AppPkgSubscription","AppPkgSubscriptionInfo","AppPkgSubscriptionInfoLinks","AppPkgSubscriptionLinkList","AppPkgSubscriptionLinkListLinks","Checksum","CreateAppPkg","DNSRuleDescriptor","FeatureDependency","FilterTypeEnum","InterfaceDescriptor","InterfaceTypeEnum","IPAddressTypeEnum","LatencyDescriptor","LinkType","OnboardingStateEnum","ProblemDetails","ServiceDependency","ServiceDescriptor","SubscriptionsAppPkgSubscription","SubsctiptionTypeAppPkgEnum","TimeStamp","TrafficFilter","TrafficRuleDescriptor","TransportDependency","TransportDescriptor","TransportsSupported","TunnelInfo","TunnelTypeEnum","UsageStateEnum"]

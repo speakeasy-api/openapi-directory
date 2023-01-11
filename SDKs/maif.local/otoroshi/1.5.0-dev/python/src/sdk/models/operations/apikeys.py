@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import apikey as shared_apikey
 
 
-@dataclass
+@dataclasses.dataclass
 class APIKeysPathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeysSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeysRequest:
-    path_params: APIKeysPathParams = field()
-    security: APIKeysSecurity = field()
+    path_params: APIKeysPathParams = dataclasses.field()
+    security: APIKeysSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_keys: Optional[List[shared.APIKey]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_keys: Optional[list[shared_apikey.APIKey]] = dataclasses.field(default=None)
     

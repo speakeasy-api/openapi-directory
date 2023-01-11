@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import feed as shared_feed
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetFeedsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    feed: Optional[shared.Feed] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    feed: Optional[shared_feed.Feed] = dataclasses.field(default=None)
     

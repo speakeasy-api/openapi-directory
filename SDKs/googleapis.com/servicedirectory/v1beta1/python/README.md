@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.ServicedirectoryProjectsLocationsListRequest(
     security=operations.ServicedirectoryProjectsLocationsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ServicedirectoryProjectsLocationsListPathParams(
-        name="magni",
+        name="dolor",
     ),
     query_params=operations.ServicedirectoryProjectsLocationsListQueryParams(
-        dollar_xgafv="1",
-        access_token="quo",
+        dollar_xgafv="2",
+        access_token="dolores",
         alt="proto",
-        callback="et",
-        fields="debitis",
-        filter="expedita",
-        key="fuga",
-        oauth_token="dolorem",
-        page_size=7205155292772889070,
-        page_token="voluptate",
-        pretty_print=False,
-        quota_user="dolorem",
-        upload_type="voluptas",
-        upload_protocol="molestias",
+        callback="ut",
+        fields="et",
+        filter="nisi",
+        key="quo",
+        oauth_token="dolores",
+        page_size=2675157406275008310,
+        page_token="et",
+        pretty_print=True,
+        quota_user="recusandae",
+        upload_type="animi",
+        upload_protocol="cumque",
     ),
 )
     

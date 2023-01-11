@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import importexport as shared_importexport
 
 
-@dataclass
+@dataclasses.dataclass
 class FullExportSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FullExportRequest:
-    security: FullExportSecurity = field()
+    security: FullExportSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FullExportResponse:
-    content_type: str = field()
-    status_code: int = field()
-    import_export: Optional[shared.ImportExport] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    import_export: Optional[shared_importexport.ImportExport] = dataclasses.field(default=None)
     

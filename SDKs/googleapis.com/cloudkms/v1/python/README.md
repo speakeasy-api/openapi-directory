@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,57 +21,41 @@ req = operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest(
         option1=operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams(
-        parent="quidem",
+        parent="autem",
     ),
     query_params=operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="dolores",
-        alt="media",
-        callback="illo",
-        ekm_connection_id="nobis",
-        fields="in",
-        key="consequuntur",
-        oauth_token="unde",
-        pretty_print=True,
-        quota_user="debitis",
-        upload_type="velit",
-        upload_protocol="id",
+        dollar_xgafv="1",
+        access_token="aut",
+        alt="proto",
+        callback="excepturi",
+        ekm_connection_id="temporibus",
+        fields="eum",
+        key="qui",
+        oauth_token="quidem",
+        pretty_print=False,
+        quota_user="sint",
+        upload_type="aliquam",
+        upload_protocol="fugit",
     ),
     request=shared.EkmConnectionInput(
-        etag="occaecati",
+        etag="consequatur",
         service_resolvers=[
             shared.ServiceResolverInput(
-                endpoint_filter="perferendis",
-                hostname="sed",
+                endpoint_filter="est",
+                hostname="dolores",
                 server_certificates=[
                     shared.CertificateInput(
-                        raw_der="ipsam",
-                    ),
-                    shared.CertificateInput(
-                        raw_der="molestiae",
-                    ),
-                    shared.CertificateInput(
-                        raw_der="mollitia",
+                        raw_der="sit",
                     ),
                 ],
-                service_directory_service="omnis",
-            ),
-            shared.ServiceResolverInput(
-                endpoint_filter="quaerat",
-                hostname="eligendi",
-                server_certificates=[
-                    shared.CertificateInput(
-                        raw_der="cum",
-                    ),
-                ],
-                service_directory_service="doloribus",
+                service_directory_service="corrupti",
             ),
         ],
     ),

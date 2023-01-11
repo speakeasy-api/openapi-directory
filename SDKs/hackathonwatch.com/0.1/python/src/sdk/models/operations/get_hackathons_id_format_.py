@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHackathonsIDFormatPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHackathonsIDFormatRequest:
-    path_params: GetHackathonsIDFormatPathParams = field()
+    path_params: GetHackathonsIDFormatPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHackathonsIDFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

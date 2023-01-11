@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeHostReservationOfferingsResult:
-    next_token: Optional[str] = field(default=None)
-    offering_set: Optional[List[HostOffering]] = field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    offering_set: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

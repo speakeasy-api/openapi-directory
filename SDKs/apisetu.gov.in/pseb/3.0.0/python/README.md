@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.CemstRequest(
     security=operations.CemstSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.CemstRequestBody(
         certificate_parameters=operations.CemstRequestBodyCertificateParameters(
-            full_name="modi",
-            uid="animi",
-            rollno="unde",
-            year="ullam",
+            full_name="atque",
+            uid="quo",
+            rollno="esse",
+            year="consequatur",
         ),
-        consent_artifact="assumenda",
+        consent_artifact="nostrum",
         format="pdf",
-        txn_id="sequi",
+        txn_id="debitis",
     ),
 )
     
-res = s.sdk.cemst(req)
+res = s.ap_is.cemst(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cemst` - Class VIII Marksheet
 * `cfmst` - Class V Marksheet

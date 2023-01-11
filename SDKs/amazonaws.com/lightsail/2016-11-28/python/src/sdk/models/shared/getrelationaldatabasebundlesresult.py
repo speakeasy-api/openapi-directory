@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import relationaldatabasebundle as shared_relationaldatabasebundle
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRelationalDatabaseBundlesResult:
-    bundles: Optional[List[RelationalDatabaseBundle]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bundles') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    bundles: Optional[list[shared_relationaldatabasebundle.RelationalDatabaseBundle]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bundles') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

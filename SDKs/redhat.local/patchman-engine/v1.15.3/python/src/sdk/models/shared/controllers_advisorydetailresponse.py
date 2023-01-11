@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import controllers_advisorydetailitem as shared_controllers_advisorydetailitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ControllersAdvisoryDetailResponse:
-    data: Optional[ControllersAdvisoryDetailItem] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[shared_controllers_advisorydetailitem.ControllersAdvisoryDetailItem] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

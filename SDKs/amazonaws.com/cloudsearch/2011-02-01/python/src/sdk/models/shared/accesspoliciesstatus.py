@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class AccessPoliciesStatus:
     r"""AccessPoliciesStatus
     A <code>PolicyDocument</code> that specifies access policies for the search domain's services, and the current status of those policies.
     """
     
-    options: str = field()
-    status: OptionStatus = field()
+    options: str = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

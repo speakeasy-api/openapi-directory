@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import ipaddress as shared_ipaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamIPAddressesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamIPAddressesReadRequest:
-    path_params: IpamIPAddressesReadPathParams = field()
+    path_params: IpamIPAddressesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamIPAddressesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ip_address: Optional[shared.IPAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ip_address: Optional[shared_ipaddress.IPAddress] = dataclasses.field(default=None)
     

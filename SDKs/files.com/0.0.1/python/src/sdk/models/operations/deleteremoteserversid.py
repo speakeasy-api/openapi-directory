@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRemoteServersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRemoteServersIDRequest:
-    path_params: DeleteRemoteServersIDPathParams = field()
+    path_params: DeleteRemoteServersIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRemoteServersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import inputconfiguration as shared_inputconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartApplicationRequest:
     r"""StartApplicationRequest
     <p/>
     """
     
-    application_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
-    input_configurations: List[InputConfiguration] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputConfigurations') }})
+    application_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationName') }})
+    input_configurations: list[shared_inputconfiguration.InputConfiguration] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputConfigurations') }})
     

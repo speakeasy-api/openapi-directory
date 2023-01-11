@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -164,7 +164,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersAdvisoryInlineItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersAdvisoryInlineItem]])
                 res.controllers_advisory_inline_items = out
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
@@ -192,7 +192,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersSystemInlineItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersSystemInlineItem]])
                 res.controllers_system_inline_items = out
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
@@ -220,7 +220,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersPackageSystemItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersPackageSystemItem]])
                 res.controllers_package_system_items = out
 
         return res
@@ -246,7 +246,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersPackageItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersPackageItem]])
                 res.controllers_package_items = out
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
@@ -274,7 +274,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersSystemAdvisoriesDbLookup]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersSystemAdvisoriesDbLookup]])
                 res.controllers_system_advisories_db_lookups = out
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
@@ -302,7 +302,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersSystemPackageInline]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersSystemPackageInline]])
                 res.controllers_system_package_inlines = out
 
         return res
@@ -328,7 +328,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ControllersSystemInlineItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ControllersSystemInlineItem]])
                 res.controllers_system_inline_items = out
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
@@ -554,7 +554,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/api/patch/v1/views/advisories/systems"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -562,7 +562,7 @@ class SDK:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ViewAdvisoriesSystemsResponse(status_code=r.status_code, content_type=content_type)
@@ -585,7 +585,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/api/patch/v1/views/systems/advisories"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -593,7 +593,7 @@ class SDK:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ViewSystemsAdvisoriesResponse(status_code=r.status_code, content_type=content_type)

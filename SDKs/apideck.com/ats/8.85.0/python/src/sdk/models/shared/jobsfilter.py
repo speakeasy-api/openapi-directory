@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class JobsFilter:
-    job_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'job_id' }})
+    job_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'job_id' }})
     

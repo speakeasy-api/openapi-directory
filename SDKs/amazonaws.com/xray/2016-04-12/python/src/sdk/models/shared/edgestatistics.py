@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import errorstatistics as shared_errorstatistics
+from ..shared import faultstatistics as shared_faultstatistics
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EdgeStatistics:
     r"""EdgeStatistics
     Response statistics for an edge.
     """
     
-    error_statistics: Optional[ErrorStatistics] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorStatistics') }})
-    fault_statistics: Optional[FaultStatistics] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FaultStatistics') }})
-    ok_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OkCount') }})
-    total_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalCount') }})
-    total_response_time: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResponseTime') }})
+    error_statistics: Optional[shared_errorstatistics.ErrorStatistics] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorStatistics') }})
+    fault_statistics: Optional[shared_faultstatistics.FaultStatistics] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FaultStatistics') }})
+    ok_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OkCount') }})
+    total_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalCount') }})
+    total_response_time: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResponseTime') }})
     

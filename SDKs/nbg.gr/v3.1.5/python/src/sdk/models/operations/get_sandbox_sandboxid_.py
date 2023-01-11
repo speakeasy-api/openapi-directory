@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import sandbox as shared_sandbox
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSandboxSandboxIDPathParams:
-    sandbox_id: str = field(metadata={'path_param': { 'field_name': 'sandboxId', 'style': 'simple', 'explode': False }})
+    sandbox_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sandboxId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSandboxSandboxIDSecurity:
-    authorization_code_token: shared.SchemeAuthorizationCodeToken = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    authorization_code_token: shared_security.SchemeAuthorizationCodeToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSandboxSandboxIDRequest:
-    path_params: GetSandboxSandboxIDPathParams = field()
-    security: GetSandboxSandboxIDSecurity = field()
+    path_params: GetSandboxSandboxIDPathParams = dataclasses.field()
+    security: GetSandboxSandboxIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSandboxSandboxIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    sandbox: Optional[shared.Sandbox] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    sandbox: Optional[shared_sandbox.Sandbox] = dataclasses.field(default=None)
     

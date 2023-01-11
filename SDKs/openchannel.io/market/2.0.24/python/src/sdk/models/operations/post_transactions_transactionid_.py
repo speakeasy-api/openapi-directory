@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostTransactionsTransactionIDPathParams:
-    transaction_id: str = field(metadata={'path_param': { 'field_name': 'transactionId', 'style': 'simple', 'explode': False }})
+    transaction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transactionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTransactionsTransactionIDQueryParams:
-    custom_data: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
+    custom_data: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTransactionsTransactionIDRequest:
-    path_params: PostTransactionsTransactionIDPathParams = field()
-    query_params: PostTransactionsTransactionIDQueryParams = field()
+    path_params: PostTransactionsTransactionIDPathParams = dataclasses.field()
+    query_params: PostTransactionsTransactionIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTransactionsTransactionIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import createpayee_2 as shared_createpayee_2
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePayeesRequest2Input:
-    payees: List[CreatePayee2Input] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('payees') }})
-    payor_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('payorId') }})
+    payees: list[shared_createpayee_2.CreatePayee2Input] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('payees') }})
+    payor_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('payorId') }})
     

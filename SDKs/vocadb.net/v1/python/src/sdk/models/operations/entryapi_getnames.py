@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 
 class EntryAPIGetNamesNameMatchModeEnum(str, Enum):
@@ -10,24 +10,24 @@ class EntryAPIGetNamesNameMatchModeEnum(str, Enum):
     WORDS = "Words"
 
 
-@dataclass
+@dataclasses.dataclass
 class EntryAPIGetNamesQueryParams:
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[EntryAPIGetNamesNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[EntryAPIGetNamesNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EntryAPIGetNamesRequest:
-    query_params: EntryAPIGetNamesQueryParams = field()
+    query_params: EntryAPIGetNamesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EntryAPIGetNamesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    entry_api_get_names_200_application_json_strings: Optional[List[str]] = field(default=None)
-    entry_api_get_names_200_application_jsonp_strings: Optional[List[str]] = field(default=None)
-    entry_api_get_names_200_text_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    entry_api_get_names_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
+    entry_api_get_names_200_application_jsonp_strings: Optional[list[str]] = dataclasses.field(default=None)
+    entry_api_get_names_200_text_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FollowUsersAlt1RequestBody:
-    users: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('users') }})
+    users: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('users') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FollowUsersAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FollowUsersAlt1Request:
-    request: FollowUsersAlt1RequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: FollowUsersAlt1Security = field()
+    request: FollowUsersAlt1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: FollowUsersAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FollowUsersAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

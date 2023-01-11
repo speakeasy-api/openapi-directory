@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyDistributions:
     r"""TooManyDistributions
     Processing your request would cause you to exceed the maximum number of distributions allowed.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

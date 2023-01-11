@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -38,26 +38,26 @@ class AeAssessmentAeAssessmentAssessmentResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AeAssessmentAeAssessment:
-    age: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Age') }})
-    assessment_code: Optional[AeAssessmentAeAssessmentAssessmentCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentCode') }})
-    assessment_date: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    assessment_event: Optional[AeAssessmentAeAssessmentAssessmentEventEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentEvent') }})
-    assessment_override: Optional[AeAssessmentAeAssessmentAssessmentOverrideEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentOverride') }})
-    assessment_result: Optional[AeAssessmentAeAssessmentAssessmentResultEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentResult') }})
-    is_member_of_alternative_pension_scheme: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IsMemberOfAlternativePensionScheme') }})
-    opt_out_window_end_date: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptOutWindowEndDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    qualifying_earnings: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QualifyingEarnings') }})
-    reenrolment_date: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReenrolmentDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    state_pension_age: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatePensionAge') }})
-    state_pension_date: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatePensionDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    tax_period: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaxPeriod') }})
-    tax_year: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaxYear') }})
+    age: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Age') }})
+    assessment_code: Optional[AeAssessmentAeAssessmentAssessmentCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentCode') }})
+    assessment_date: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    assessment_event: Optional[AeAssessmentAeAssessmentAssessmentEventEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentEvent') }})
+    assessment_override: Optional[AeAssessmentAeAssessmentAssessmentOverrideEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentOverride') }})
+    assessment_result: Optional[AeAssessmentAeAssessmentAssessmentResultEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AssessmentResult') }})
+    is_member_of_alternative_pension_scheme: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IsMemberOfAlternativePensionScheme') }})
+    opt_out_window_end_date: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptOutWindowEndDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    qualifying_earnings: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QualifyingEarnings') }})
+    reenrolment_date: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReenrolmentDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    state_pension_age: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatePensionAge') }})
+    state_pension_date: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatePensionDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    tax_period: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaxPeriod') }})
+    tax_year: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaxYear') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AeAssessment:
-    ae_assessment: Optional[AeAssessmentAeAssessment] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AEAssessment') }})
+    ae_assessment: Optional[AeAssessmentAeAssessment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AEAssessment') }})
     

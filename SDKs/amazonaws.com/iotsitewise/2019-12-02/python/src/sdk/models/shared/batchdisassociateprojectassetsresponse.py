@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import asseterrordetails as shared_asseterrordetails
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDisassociateProjectAssetsResponse:
-    errors: Optional[List[AssetErrorDetails]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    errors: Optional[list[shared_asseterrordetails.AssetErrorDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

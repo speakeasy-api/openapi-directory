@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevirtualchassis as shared_writablevirtualchassis
+from ..shared import virtualchassis as shared_virtualchassis
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimVirtualChassisUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimVirtualChassisUpdateRequest:
-    path_params: DcimVirtualChassisUpdatePathParams = field()
-    request: shared.WritableVirtualChassisInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimVirtualChassisUpdatePathParams = dataclasses.field()
+    request: shared_writablevirtualchassis.WritableVirtualChassisInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimVirtualChassisUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    virtual_chassis: Optional[shared.VirtualChassis] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    virtual_chassis: Optional[shared_virtualchassis.VirtualChassis] = dataclasses.field(default=None)
     

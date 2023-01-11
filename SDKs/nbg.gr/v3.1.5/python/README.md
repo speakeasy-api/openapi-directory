@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.DeleteAccountAccessConsentsConsentIDRequest(
     security=operations.DeleteAccountAccessConsentsConsentIDSecurity(
         client_credentials_token=shared.SchemeClientCredentialsToken(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     path_params=operations.DeleteAccountAccessConsentsConsentIDPathParams(
-        consent_id="at",
+        consent_id="vel",
     ),
     headers=operations.DeleteAccountAccessConsentsConsentIDHeaders(
-        sandbox_id="voluptate",
-        x_customer_user_agent="molestiae",
-        x_fapi_auth_date="mollitia",
-        x_fapi_customer_ip_address="consequatur",
-        x_fapi_interaction_id="harum",
+        sandbox_id="aut",
+        x_customer_user_agent="quos",
+        x_fapi_auth_date="non",
+        x_fapi_customer_ip_address="culpa",
+        x_fapi_interaction_id="sit",
     ),
 )
     
-res = s.sdk.delete_account_access_consents_consent_id_(req)
+res = s.account_access.delete_account_access_consents_consent_id_(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,29 +47,56 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AccountAccess
 
 * `delete_account_access_consents_consent_id_` - Delete Account Access Consents
-* `delete_sandbox_sandbox_id_` - Delete Sandbox
 * `get_account_access_consents_consent_id_` - Get Account Access Consents
+* `post_account_access_consents` - Create Account Access Consents
+
+### Accounts
+
 * `get_accounts` - Get Accounts
 * `get_accounts_account_id_` - Get Accounts
+
+### Balances
+
 * `get_accounts_account_id_balances` - Get Balances
+
+### Beneficiaries
+
 * `get_accounts_account_id_beneficiaries` - Get Beneficiaries
+
+### Parties
+
 * `get_accounts_account_id_parties` - Get Parties
 * `get_accounts_account_id_party` - Get Party
+* `get_party` - Get Party
+
+### Sandbox
+
+* `delete_sandbox_sandbox_id_` - Delete Sandbox
+* `get_sandbox_sandbox_id_` - Export Sandbox
+* `post_sandbox` - Create Sandbox
+* `put_sandbox` - Import Sandbox
+
+### ScheduledPayments
+
 * `get_accounts_account_id_scheduled_payments` - Get Scheduled Payments
+
+### StandingOrders
+
 * `get_accounts_account_id_standing_orders` - Get Standing Orders
+
+### Statements
+
 * `get_accounts_account_id_statements` - Get Statements
 * `get_accounts_account_id_statements_statement_id_` - Get Statements
 * `get_accounts_account_id_statements_statement_id_file` - Get Statements
+
+### Transactions
+
 * `get_accounts_account_id_statements_statement_id_transactions` - Get Transactions
 * `get_accounts_account_id_transactions` - Get Transactions
-* `get_party` - Get Party
-* `get_sandbox_sandbox_id_` - Export Sandbox
-* `post_account_access_consents` - Create Account Access Consents
-* `post_sandbox` - Create Sandbox
-* `put_sandbox` - Import Sandbox
 
 <!-- End SDK Available Operations -->
 

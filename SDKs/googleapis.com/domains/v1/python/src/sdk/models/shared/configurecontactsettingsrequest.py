@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import contactsettings as shared_contactsettings
 
 class ConfigureContactSettingsRequestContactNoticesEnum(str, Enum):
     CONTACT_NOTICE_UNSPECIFIED = "CONTACT_NOTICE_UNSPECIFIED"
@@ -14,14 +14,14 @@ class ConfigureContactSettingsRequestContactNoticesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigureContactSettingsRequest:
     r"""ConfigureContactSettingsRequest
     Request for the `ConfigureContactSettings` method.
     """
     
-    contact_notices: Optional[List[ConfigureContactSettingsRequestContactNoticesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactNotices') }})
-    contact_settings: Optional[ContactSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactSettings') }})
-    update_mask: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateMask') }})
-    validate_only: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validateOnly') }})
+    contact_notices: Optional[list[ConfigureContactSettingsRequestContactNoticesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactNotices') }})
+    contact_settings: Optional[shared_contactsettings.ContactSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactSettings') }})
+    update_mask: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateMask') }})
+    validate_only: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validateOnly') }})
     

@@ -1,60 +1,64 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reaction_rollup as shared_reaction_rollup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamDiscussionSimpleUser:
-    avatar_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
-    events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
-    followers_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
-    following_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
-    gists_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
-    gravatar_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
-    html_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    login: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
-    node_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
-    organizations_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
-    received_events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
-    repos_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
-    site_admin: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
-    starred_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
-    subscriptions_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    starred_at: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_at') }})
+    r"""TeamDiscussionSimpleUser
+    Simple User
+    """
+    
+    avatar_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
+    events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
+    followers_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
+    following_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
+    gists_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
+    gravatar_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
+    html_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    login: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
+    node_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
+    organizations_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
+    received_events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
+    repos_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
+    site_admin: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
+    starred_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
+    subscriptions_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    starred_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_at') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamDiscussion:
     r"""TeamDiscussion
     A team discussion is a persistent record of a free-form conversation within a team.
     """
     
-    author: TeamDiscussionSimpleUser = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('author') }})
-    body: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
-    body_html: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_html') }})
-    body_version: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_version') }})
-    comments_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments_count') }})
-    comments_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments_url') }})
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    html_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
-    last_edited_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_edited_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    node_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
-    number: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
-    pinned: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pinned') }})
-    private: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private') }})
-    team_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_url') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    updated_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    reactions: Optional[ReactionRollup] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reactions') }})
+    author: TeamDiscussionSimpleUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('author') }})
+    body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    body_html: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_html') }})
+    body_version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_version') }})
+    comments_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments_count') }})
+    comments_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments_url') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    html_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
+    last_edited_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_edited_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    node_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
+    number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    pinned: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pinned') }})
+    private: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private') }})
+    team_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_url') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    reactions: Optional[shared_reaction_rollup.ReactionRollup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reactions') }})
     

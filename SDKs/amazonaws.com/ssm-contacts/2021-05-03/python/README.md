@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,26 @@ s.config_security(
     
 req = operations.AcceptPageRequest(
     headers=operations.AcceptPageHeaders(
-        x_amz_algorithm="at",
-        x_amz_content_sha256="repellat",
-        x_amz_credential="placeat",
-        x_amz_date="accusantium",
-        x_amz_security_token="sunt",
-        x_amz_signature="at",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="vitae",
+        x_amz_content_sha256="quasi",
+        x_amz_credential="ipsum",
+        x_amz_date="incidunt",
+        x_amz_security_token="vitae",
+        x_amz_signature="animi",
+        x_amz_signed_headers="eos",
         x_amz_target="SSMContacts.AcceptPage",
     ),
     request=shared.AcceptPageRequest(
-        accept_code="consequatur",
-        accept_code_validation="IGNORE",
-        accept_type="READ",
-        contact_channel_id="quia",
-        note="eaque",
-        page_id="et",
+        accept_code="aperiam",
+        accept_code_validation="ENFORCE",
+        accept_type="DELIVERED",
+        contact_channel_id="in",
+        note="eum",
+        page_id="quibusdam",
     ),
 )
     
-res = s.sdk.accept_page(req)
+res = s.accept_page(req)
 
 if res.accept_page_result is not None:
     # handle response

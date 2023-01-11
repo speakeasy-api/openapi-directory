@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class VoiceQueryParams:
-    text: str = field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
-    to: str = field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
-    from_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
-    xml: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'xml', 'style': 'form', 'explode': True }})
+    text: str = dataclasses.field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
+    to: str = dataclasses.field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
+    from_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
+    xml: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'xml', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VoiceRequest:
-    query_params: VoiceQueryParams = field()
+    query_params: VoiceQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VoiceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    voice_200_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    voice_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

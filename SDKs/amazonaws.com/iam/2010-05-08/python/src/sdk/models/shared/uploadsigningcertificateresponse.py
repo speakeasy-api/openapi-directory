@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import signingcertificate as shared_signingcertificate
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadSigningCertificateResponse:
     r"""UploadSigningCertificateResponse
     Contains the response to a successful <a>UploadSigningCertificate</a> request. 
     """
     
-    certificate: SigningCertificate = field()
+    certificate: shared_signingcertificate.SigningCertificate = dataclasses.field()
     

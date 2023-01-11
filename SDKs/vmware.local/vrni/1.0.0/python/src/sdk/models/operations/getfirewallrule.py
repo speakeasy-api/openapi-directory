@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import basefirewallrule as shared_basefirewallrule
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallRulePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallRuleQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallRuleSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallRuleRequest:
-    path_params: GetFirewallRulePathParams = field()
-    query_params: GetFirewallRuleQueryParams = field()
-    security: GetFirewallRuleSecurity = field()
+    path_params: GetFirewallRulePathParams = dataclasses.field()
+    query_params: GetFirewallRuleQueryParams = dataclasses.field()
+    security: GetFirewallRuleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallRuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    base_firewall_rule: Optional[shared.BaseFirewallRule] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    base_firewall_rule: Optional[shared_basefirewallrule.BaseFirewallRule] = dataclasses.field(default=None)
     

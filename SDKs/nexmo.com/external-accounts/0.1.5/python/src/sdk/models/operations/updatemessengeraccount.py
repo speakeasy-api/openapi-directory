@@ -1,73 +1,76 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import four_hundred_and_oneresponse as shared_four_hundred_and_oneresponse
+from ..shared import four_hundred_and_threeresponse as shared_four_hundred_and_threeresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccountPathParams:
-    external_id: str = field(metadata={'path_param': { 'field_name': 'external_id', 'style': 'simple', 'explode': False }})
+    external_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'external_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccountRequestBody:
-    access_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
-    applications: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    applications: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccountSecurity:
-    basic_auth: Optional[shared.SchemeBasicAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    bearer_auth: Optional[shared.SchemeBearerAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    basic_auth: Optional[shared_security.SchemeBasicAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    bearer_auth: Optional[shared_security.SchemeBearerAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccount200ApplicationJSON:
-    access_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
-    api_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key') }})
-    external_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_id') }})
-    provider: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
-    applications: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    access_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    api_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key') }})
+    external_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_id') }})
+    provider: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
+    applications: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccount400ApplicationJSONInvalidParams:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccount400ApplicationJSON:
-    detail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    instance: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
-    invalid_params: Optional[List[UpdateMessengerAccount400ApplicationJSONInvalidParams]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invalid_params') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    instance: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
+    invalid_params: Optional[list[UpdateMessengerAccount400ApplicationJSONInvalidParams]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invalid_params') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccountRequest:
-    path_params: UpdateMessengerAccountPathParams = field()
-    request: UpdateMessengerAccountRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateMessengerAccountSecurity = field()
+    path_params: UpdateMessengerAccountPathParams = dataclasses.field()
+    request: UpdateMessengerAccountRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateMessengerAccountSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateMessengerAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    four_hundred_and_one_response: Optional[shared.FourHundredAndOneResponse] = field(default=None)
-    four_hundred_and_three_response: Optional[shared.FourHundredAndThreeResponse] = field(default=None)
-    update_messenger_account_200_application_json_object: Optional[UpdateMessengerAccount200ApplicationJSON] = field(default=None)
-    update_messenger_account_400_application_json_object: Optional[UpdateMessengerAccount400ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred_and_one_response: Optional[shared_four_hundred_and_oneresponse.FourHundredAndOneResponse] = dataclasses.field(default=None)
+    four_hundred_and_three_response: Optional[shared_four_hundred_and_threeresponse.FourHundredAndThreeResponse] = dataclasses.field(default=None)
+    update_messenger_account_200_application_json_object: Optional[UpdateMessengerAccount200ApplicationJSON] = dataclasses.field(default=None)
+    update_messenger_account_400_application_json_object: Optional[UpdateMessengerAccount400ApplicationJSON] = dataclasses.field(default=None)
     

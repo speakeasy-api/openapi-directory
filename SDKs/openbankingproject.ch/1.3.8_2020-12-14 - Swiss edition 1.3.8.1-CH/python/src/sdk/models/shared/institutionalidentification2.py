@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InstitutionalIdentification2:
     r"""InstitutionalIdentification2
     Institiutional identification of a bank (Clearing System Member ID)
@@ -12,6 +12,6 @@ class InstitutionalIdentification2:
     
     """
     
-    clearing_system_id_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clearingSystemIdCode') }})
-    clearing_system_member_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clearingSystemMemberId') }})
+    clearing_system_id_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clearingSystemIdCode') }})
+    clearing_system_member_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clearingSystemMemberId') }})
     

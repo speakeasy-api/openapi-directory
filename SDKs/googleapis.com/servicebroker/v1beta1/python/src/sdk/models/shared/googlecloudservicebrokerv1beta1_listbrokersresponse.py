@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import googlecloudservicebrokerv1beta1_broker as shared_googlecloudservicebrokerv1beta1_broker
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudServicebrokerV1beta1ListBrokersResponse:
     r"""GoogleCloudServicebrokerV1beta1ListBrokersResponse
     The response for the `ListBrokers()` method.
     """
     
-    brokers: Optional[List[GoogleCloudServicebrokerV1beta1Broker]] = field(default=None)
-    next_page_token: Optional[str] = field(default=None)
+    brokers: Optional[list[shared_googlecloudservicebrokerv1beta1_broker.GoogleCloudServicebrokerV1beta1Broker]] = dataclasses.field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,13 +6,13 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import runner_groups_org as shared_runner_groups_org
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsUpdateSelfHostedRunnerGroupForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    runner_group_id: int = field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    runner_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
     
 class ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum(str, Enum):
     SELECTED = "selected"
@@ -21,21 +21,21 @@ class ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum(str, Enu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    visibility: Optional[ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    visibility: Optional[ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsUpdateSelfHostedRunnerGroupForOrgRequest:
-    path_params: ActionsUpdateSelfHostedRunnerGroupForOrgPathParams = field()
-    request: Optional[ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActionsUpdateSelfHostedRunnerGroupForOrgPathParams = dataclasses.field()
+    request: Optional[ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsUpdateSelfHostedRunnerGroupForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_groups_org: Optional[shared.RunnerGroupsOrg] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_groups_org: Optional[shared_runner_groups_org.RunnerGroupsOrg] = dataclasses.field(default=None)
     

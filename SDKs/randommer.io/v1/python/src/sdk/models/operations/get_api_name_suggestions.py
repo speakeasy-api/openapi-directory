@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameSuggestionsQueryParams:
-    starting_words: str = field(metadata={'query_param': { 'field_name': 'startingWords', 'style': 'form', 'explode': True }})
+    starting_words: str = dataclasses.field(metadata={'query_param': { 'field_name': 'startingWords', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameSuggestionsHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameSuggestionsRequest:
-    headers: GetAPINameSuggestionsHeaders = field()
-    query_params: GetAPINameSuggestionsQueryParams = field()
+    headers: GetAPINameSuggestionsHeaders = dataclasses.field()
+    query_params: GetAPINameSuggestionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPINameSuggestionsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

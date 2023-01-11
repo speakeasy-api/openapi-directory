@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -17,12 +17,12 @@ class GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEn
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudEssentialcontactsV1SendTestMessageRequest:
     r"""GoogleCloudEssentialcontactsV1SendTestMessageRequest
     Request message for the SendTestMessage method.
     """
     
-    contacts: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contacts') }})
-    notification_category: Optional[GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationCategory') }})
+    contacts: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contacts') }})
+    notification_category: Optional[GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationCategory') }})
     

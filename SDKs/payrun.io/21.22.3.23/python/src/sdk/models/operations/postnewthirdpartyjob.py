@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import thirdpartyjobinstruction as shared_thirdpartyjobinstruction
+from ..shared import errormodel as shared_errormodel
+from ..shared import link as shared_link
 
 
-@dataclass
+@dataclasses.dataclass
 class PostNewThirdPartyJobHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostNewThirdPartyJobRequest:
-    headers: PostNewThirdPartyJobHeaders = field()
-    request: shared.ThirdPartyJobInstruction = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PostNewThirdPartyJobHeaders = dataclasses.field()
+    request: shared_thirdpartyjobinstruction.ThirdPartyJobInstruction = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostNewThirdPartyJobResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    link: Optional[shared.Link] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    link: Optional[shared_link.Link] = dataclasses.field(default=None)
     

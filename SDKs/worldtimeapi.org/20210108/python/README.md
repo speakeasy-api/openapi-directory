@@ -8,16 +8,15 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-res = s.sdk.get_ip()
+res = s.get_ip()
 
 if res.date_time_json_response is not None:
     # handle response
@@ -30,17 +29,17 @@ if res.date_time_json_response is not None:
 ### SDK SDK
 
 * `get_ip` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* `get_ip_txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `get_ip_ipv4_` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `get_ip_ipv4_txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `get_ip_txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `get_timezone` - a listing of all timezones.
+* `get_timezone_txt` - a listing of all timezones.
 * `get_timezone_area_` - a listing of all timezones available for that area.
+* `get_timezone_area_txt` - a listing of all timezones available for that area.
 * `get_timezone_area_location_` - request the current time for a timezone.
+* `get_timezone_area_location_txt` - request the current time for a timezone.
 * `get_timezone_area_location_region_` - request the current time for a timezone.
 * `get_timezone_area_location_region_txt` - request the current time for a timezone.
-* `get_timezone_area_location_txt` - request the current time for a timezone.
-* `get_timezone_area_txt` - a listing of all timezones available for that area.
-* `get_timezone_txt` - a listing of all timezones.
 
 <!-- End SDK Available Operations -->
 

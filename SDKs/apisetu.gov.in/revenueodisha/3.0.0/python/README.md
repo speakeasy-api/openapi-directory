@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.RdcerRequest(
     security=operations.RdcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.RdcerRequestBody(
         certificate_parameters=operations.RdcerRequestBodyCertificateParameters(
-            dob="velit",
-            full_name="sit",
-            regdno="non",
-            uid="enim",
+            dob="ut",
+            full_name="molestiae",
+            regdno="rem",
+            uid="totam",
         ),
-        consent_artifact="reprehenderit",
+        consent_artifact="culpa",
         format="pdf",
-        txn_id="voluptates",
+        txn_id="eos",
     ),
 )
     
-res = s.sdk.rdcer(req)
+res = s.ap_is.rdcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `rdcer` - Copy of Registered Deed
 * `ror1b` - Records of Rights

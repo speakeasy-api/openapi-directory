@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import landlordaccountingmodel as shared_landlordaccountingmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetAccountsPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetAccountsQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetAccountsRequest:
-    path_params: LandlordControllerGetAccountsPathParams = field()
-    query_params: LandlordControllerGetAccountsQueryParams = field()
+    path_params: LandlordControllerGetAccountsPathParams = dataclasses.field()
+    query_params: LandlordControllerGetAccountsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetAccountsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    landlord_accounting_model: Optional[shared.LandlordAccountingModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    landlord_accounting_model: Optional[shared_landlordaccountingmodel.LandlordAccountingModel] = dataclasses.field(default=None)
     

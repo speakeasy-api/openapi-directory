@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import event as shared_event
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportEventsJSONQueryParams:
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportEventsJSONSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportEventsJSONRequest:
-    query_params: ExportEventsJSONQueryParams = field()
-    security: ExportEventsJSONSecurity = field()
+    query_params: ExportEventsJSONQueryParams = dataclasses.field()
+    security: ExportEventsJSONSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportEventsJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    events: Optional[List[shared.Event]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    events: Optional[list[shared_event.Event]] = dataclasses.field(default=None)
     

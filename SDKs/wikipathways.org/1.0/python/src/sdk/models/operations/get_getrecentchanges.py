@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,19 +11,19 @@ class GetGetRecentChangesFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetRecentChangesQueryParams:
-    timestamp: str = field(metadata={'query_param': { 'field_name': 'timestamp', 'style': 'form', 'explode': True }})
-    format: Optional[GetGetRecentChangesFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    timestamp: str = dataclasses.field(metadata={'query_param': { 'field_name': 'timestamp', 'style': 'form', 'explode': True }})
+    format: Optional[GetGetRecentChangesFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetRecentChangesRequest:
-    query_params: GetGetRecentChangesQueryParams = field()
+    query_params: GetGetRecentChangesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetRecentChangesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

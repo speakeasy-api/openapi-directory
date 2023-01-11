@@ -1,0 +1,35 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.AdcrdRequest(
+    security=operations.AdcrdSecurity(
+        api_key=shared.SchemeAPIKey(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+        client_id=shared.SchemeClientID(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    ),
+    request=operations.AdcrdRequestBody(
+        certificate_parameters=operations.AdcrdRequestBodyCertificateParameters(
+            application_no="natus",
+            dob="autem",
+            exam_year="incidunt",
+            full_name="neque",
+        ),
+        consent_artifact="itaque",
+        format="pdf",
+        txn_id="saepe",
+    ),
+)
+    
+res = s.ap_is.adcrd(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

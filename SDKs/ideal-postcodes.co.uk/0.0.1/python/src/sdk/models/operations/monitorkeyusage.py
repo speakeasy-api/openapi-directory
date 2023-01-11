@@ -1,38 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import errorresponseschema as shared_errorresponseschema
+from ..shared import keyusageresponseschema as shared_keyusageresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class MonitorKeyUsagePathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MonitorKeyUsageQueryParams:
-    end: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
-    licensee: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'licensee', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    tags: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
+    end: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
+    licensee: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'licensee', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    tags: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MonitorKeyUsageSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MonitorKeyUsageRequest:
-    path_params: MonitorKeyUsagePathParams = field()
-    query_params: MonitorKeyUsageQueryParams = field()
-    security: MonitorKeyUsageSecurity = field()
+    path_params: MonitorKeyUsagePathParams = dataclasses.field()
+    query_params: MonitorKeyUsageQueryParams = dataclasses.field()
+    security: MonitorKeyUsageSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MonitorKeyUsageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_schema: Optional[shared.ErrorResponseSchema] = field(default=None)
-    key_usage_response_schema: Optional[shared.KeyUsageResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_schema: Optional[shared_errorresponseschema.ErrorResponseSchema] = dataclasses.field(default=None)
+    key_usage_response_schema: Optional[shared_keyusageresponseschema.KeyUsageResponseSchema] = dataclasses.field(default=None)
     

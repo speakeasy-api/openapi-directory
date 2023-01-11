@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import connecttowi_finetworkrequest as shared_connecttowi_finetworkrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ConnecttoWiFiNetworkRequest:
-    request: shared.ConnecttoWiFiNetworkRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_connecttowi_finetworkrequest.ConnecttoWiFiNetworkRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnecttoWiFiNetworkResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

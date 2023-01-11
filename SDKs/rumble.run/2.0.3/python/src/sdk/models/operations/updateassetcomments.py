@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import assetcomments as shared_assetcomments
+from ..shared import asset as shared_asset
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetCommentsPathParams:
-    asset_id: str = field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
+    asset_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetCommentsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetCommentsRequest:
-    path_params: UpdateAssetCommentsPathParams = field()
-    request: shared.AssetComments = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateAssetCommentsSecurity = field()
+    path_params: UpdateAssetCommentsPathParams = dataclasses.field()
+    request: shared_assetcomments.AssetComments = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateAssetCommentsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset: Optional[shared.Asset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset: Optional[shared_asset.Asset] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import usagesnapshotentity as shared_usagesnapshotentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUsageSnapshotsQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsageSnapshotsRequest:
-    query_params: GetUsageSnapshotsQueryParams = field()
+    query_params: GetUsageSnapshotsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsageSnapshotsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    usage_snapshot_entities: Optional[List[shared.UsageSnapshotEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    usage_snapshot_entities: Optional[list[shared_usagesnapshotentity.UsageSnapshotEntity]] = dataclasses.field(default=None)
     

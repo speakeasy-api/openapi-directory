@@ -8,34 +8,30 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CreateMessengerAccountRequest(
-    security=operations.CreateMessengerAccountSecurity(
+req = operations.GetAllAccountsRequest(
+    security=operations.GetAllAccountsSecurity(
         bearer_auth=shared.SchemeBearerAuth(
             authorization="Bearer YOUR_BEARER_TOKEN_HERE",
         ),
     ),
-    request=operations.CreateMessengerAccountRequestBody(
-        access_token="ut",
-        applications=[
-            "doloremque",
-        ],
-        external_id="dicta",
-        name="aut",
+    query_params=operations.GetAllAccountsQueryParams(
+        page_number=2026501706608884453,
+        page_size=8487117128927338036,
+        provider="whatsapp",
     ),
 )
     
-res = s.sdk.create_messenger_account(req)
+res = s.account.get_all_accounts(req)
 
-if res.messenger_account_response is not None:
+if res.get_all_accounts_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -43,17 +39,29 @@ if res.messenger_account_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account
+
+* `get_all_accounts` - Retrieve all accounts you own
+
+### Application
+
+* `link_application` - Link application to an account
+* `unli_without_applicationnk_application` - Unlink application from an account
+
+### Facebook Messenger
 
 * `create_messenger_account` - Create a Messenger account
 * `delete_messenger_account` - Delete a Messenger account
-* `get_all_accounts` - Retrieve all accounts you own
 * `get_messenger_account` - Retrieve a Messenger account
-* `get_vsm_account` - Retrieve a Viber Service Message account
-* `get_wa_account` - Retrieve a Whatsapp account
-* `link_application` - Link application to an account
-* `unli_without_applicationnk_application` - Unlink application from an account
 * `update_messenger_account` - Update a Messenger account
+
+### Viber Service Message
+
+* `get_vsm_account` - Retrieve a Viber Service Message account
+
+### WhatsApp
+
+* `get_wa_account` - Retrieve a Whatsapp account
 
 <!-- End SDK Available Operations -->
 

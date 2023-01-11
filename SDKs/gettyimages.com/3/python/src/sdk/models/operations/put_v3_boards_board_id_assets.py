@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import boardasset as shared_boardasset
+from ..shared import addboardassetsresult as shared_addboardassetsresult
 
 
-@dataclass
+@dataclasses.dataclass
 class PutV3BoardsBoardIDAssetsPathParams:
-    board_id: str = field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
+    board_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutV3BoardsBoardIDAssetsRequest:
-    path_params: PutV3BoardsBoardIDAssetsPathParams = field()
-    request: Optional[List[shared.BoardAsset]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutV3BoardsBoardIDAssetsPathParams = dataclasses.field()
+    request: Optional[list[shared_boardasset.BoardAsset]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutV3BoardsBoardIDAssetsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    add_board_assets_result: Optional[shared.AddBoardAssetsResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    add_board_assets_result: Optional[shared_addboardassetsresult.AddBoardAssetsResult] = dataclasses.field(default=None)
     

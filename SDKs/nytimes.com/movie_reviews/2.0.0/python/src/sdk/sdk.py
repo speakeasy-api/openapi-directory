@@ -76,28 +76,6 @@ class SDK:
         return res
 
     
-    def get_reviews_resource_type_json(self, request: operations.GetReviewsResourceTypeJSONRequest) -> operations.GetReviewsResourceTypeJSONResponse:
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/reviews/{resource-type}.json", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetReviewsResourceTypeJSONResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.GetReviewsResourceTypeJSON200ApplicationJSON])
-                res.get_reviews_resource_type_json_200_application_json_object = out
-
-        return res
-
-    
     def get_reviews_search_json(self, request: operations.GetReviewsSearchJSONRequest) -> operations.GetReviewsSearchJSONResponse:
         base_url = self._server_url
         
@@ -116,6 +94,28 @@ class SDK:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[operations.GetReviewsSearchJSON200ApplicationJSON])
                 res.get_reviews_search_json_200_application_json_object = out
+
+        return res
+
+    
+    def get_reviews_resource_type_json(self, request: operations.GetReviewsResourceTypeJSONRequest) -> operations.GetReviewsResourceTypeJSONResponse:
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/reviews/{resource-type}.json", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetReviewsResourceTypeJSONResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetReviewsResourceTypeJSON200ApplicationJSON])
+                res.get_reviews_resource_type_json_200_application_json_object = out
 
         return res
 

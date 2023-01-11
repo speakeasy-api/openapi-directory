@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import ssh_key as shared_ssh_key
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminAddAuthorizedSSHKeyRequestBody:
-    authorized_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorized_key') }})
+    authorized_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorized_key') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminAddAuthorizedSSHKeyRequest:
-    request: Optional[EnterpriseAdminAddAuthorizedSSHKeyRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[EnterpriseAdminAddAuthorizedSSHKeyRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminAddAuthorizedSSHKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ssh_keys: Optional[List[shared.SSHKey]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ssh_keys: Optional[list[shared_ssh_key.SSHKey]] = dataclasses.field(default=None)
     

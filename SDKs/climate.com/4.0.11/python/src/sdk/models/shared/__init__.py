@@ -9,3 +9,5 @@ from .upload import *
 from .uploadstatus import *
 from .uploadstatuses import *
 from .uploadstatusquery import *
+
+__all__ = ["BoundariesQuery","ErrorError","Error","FarmOrganizationTypeEnum","ResourceOwner","ScoutingObservationLocationDisplayColorEnum","ScoutingObservationStatusEnum","ScoutingObservationTimespanEnum","ScoutingObservation","ScoutingTag","SchemeAPIKey","SchemeOauth2AuthorizationCode","UploadContentTypeEnum","Upload","UploadStatusStatusEnum","UploadStatus","UploadStatuses","UploadStatusQuery"]

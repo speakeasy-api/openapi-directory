@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import crawledurl as shared_crawledurl
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCrawledUrlsResponse:
     r"""ListCrawledUrlsResponse
     Response for the `ListCrawledUrls` method.
     """
     
-    crawled_urls: Optional[List[CrawledURL]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crawledUrls') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    crawled_urls: Optional[list[shared_crawledurl.CrawledURL]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crawledUrls') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

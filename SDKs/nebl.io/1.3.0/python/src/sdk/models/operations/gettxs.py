@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gettxsresponse as shared_gettxsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTxsQueryParams:
-    address: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'address', 'style': 'form', 'explode': True }})
-    block: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'block', 'style': 'form', 'explode': True }})
-    page_num: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'pageNum', 'style': 'form', 'explode': True }})
+    address: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'address', 'style': 'form', 'explode': True }})
+    block: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'block', 'style': 'form', 'explode': True }})
+    page_num: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageNum', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTxsRequest:
-    query_params: GetTxsQueryParams = field()
+    query_params: GetTxsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTxsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_txs_response: Optional[shared.GetTxsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_txs_response: Optional[shared_gettxsresponse.GetTxsResponse] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,37 +20,37 @@ req = operations.ReportsActivitiesListRequest(
     security=operations.ReportsActivitiesListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ReportsActivitiesListPathParams(
-        application_name="calendar",
-        user_key="eum",
+        application_name="keep",
+        user_key="molestiae",
     ),
     query_params=operations.ReportsActivitiesListQueryParams(
-        dollar_xgafv="2",
-        access_token="id",
-        actor_ip_address="sed",
-        alt="media",
-        callback="et",
-        customer_id="est",
-        end_time="voluptatibus",
-        event_name="aliquam",
-        fields="architecto",
-        filters="nihil",
-        group_id_filter="rerum",
-        key="inventore",
-        max_results=2591322304424753360,
-        oauth_token="aut",
-        org_unit_id="quia",
-        page_token="aliquam",
-        pretty_print=False,
-        quota_user="dolorem",
-        start_time="est",
-        upload_type="soluta",
-        upload_protocol="occaecati",
+        dollar_xgafv="1",
+        access_token="sit",
+        actor_ip_address="aut",
+        alt="json",
+        callback="expedita",
+        customer_id="nihil",
+        end_time="incidunt",
+        event_name="est",
+        fields="nostrum",
+        filters="esse",
+        group_id_filter="dolores",
+        key="ut",
+        max_results=2825598413902487513,
+        oauth_token="id",
+        org_unit_id="consequuntur",
+        page_token="magni",
+        pretty_print=True,
+        quota_user="doloremque",
+        start_time="iure",
+        upload_type="maiores",
+        upload_protocol="dolor",
     ),
 )
     

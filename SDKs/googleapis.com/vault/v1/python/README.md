@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,34 +20,34 @@ req = operations.VaultMattersAddPermissionsRequest(
     security=operations.VaultMattersAddPermissionsSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.VaultMattersAddPermissionsPathParams(
-        matter_id="reiciendis",
+        matter_id="ut",
     ),
     query_params=operations.VaultMattersAddPermissionsQueryParams(
         dollar_xgafv="1",
-        access_token="illum",
-        alt="proto",
-        callback="totam",
-        fields="aspernatur",
-        key="beatae",
-        oauth_token="occaecati",
-        pretty_print=False,
-        quota_user="repellat",
-        upload_type="totam",
-        upload_protocol="amet",
+        access_token="sit",
+        alt="json",
+        callback="doloremque",
+        fields="facere",
+        key="voluptatum",
+        oauth_token="possimus",
+        pretty_print=True,
+        quota_user="rem",
+        upload_type="praesentium",
+        upload_protocol="at",
     ),
     request=shared.AddMatterPermissionsRequest(
         cc_me=False,
         matter_permission=shared.MatterPermission(
-            account_id="aliquam",
+            account_id="non",
             role="COLLABORATOR",
         ),
-        send_emails=False,
+        send_emails=True,
     ),
 )
     

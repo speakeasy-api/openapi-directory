@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,14 +10,14 @@ class ConnectionExceptionProblemConnectionIssueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConnectionExceptionProblem:
     r"""ConnectionExceptionProblem
     A problem that indicates something is wrong with the connection
     """
     
-    detail: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    connection_issue: Optional[ConnectionExceptionProblemConnectionIssueEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_issue') }})
+    detail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    connection_issue: Optional[ConnectionExceptionProblemConnectionIssueEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_issue') }})
     

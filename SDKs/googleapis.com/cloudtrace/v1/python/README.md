@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,103 +21,70 @@ req = operations.CloudtraceProjectsPatchTracesRequest(
         option1=operations.CloudtraceProjectsPatchTracesSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudtraceProjectsPatchTracesPathParams(
-        project_id="aut",
+        project_id="enim",
     ),
     query_params=operations.CloudtraceProjectsPatchTracesQueryParams(
         dollar_xgafv="2",
-        access_token="est",
-        alt="media",
-        callback="qui",
-        fields="eius",
-        key="officia",
-        oauth_token="similique",
-        pretty_print=False,
-        quota_user="blanditiis",
-        upload_type="itaque",
-        upload_protocol="velit",
+        access_token="quibusdam",
+        alt="proto",
+        callback="harum",
+        fields="aliquid",
+        key="voluptatum",
+        oauth_token="doloremque",
+        pretty_print=True,
+        quota_user="dolorum",
+        upload_type="vel",
+        upload_protocol="quibusdam",
     ),
     request=shared.Traces(
         traces=[
             shared.Trace(
-                project_id="mollitia",
+                project_id="ullam",
                 spans=[
                     shared.TraceSpan(
-                        end_time="consectetur",
-                        kind="SPAN_KIND_UNSPECIFIED",
-                        labels={
-                            "accusantium": "et",
-                            "blanditiis": "quia",
-                        },
-                        name="hic",
-                        parent_span_id="nulla",
-                        span_id="quis",
-                        start_time="laboriosam",
-                    ),
-                    shared.TraceSpan(
-                        end_time="soluta",
+                        end_time="hic",
                         kind="RPC_SERVER",
                         labels={
-                            "omnis": "repellat",
-                            "ut": "sint",
-                            "velit": "quos",
+                            "modi": "sapiente",
                         },
-                        name="deleniti",
-                        parent_span_id="quasi",
-                        span_id="asperiores",
+                        name="voluptatem",
+                        parent_span_id="maiores",
+                        span_id="ipsum",
+                        start_time="natus",
+                    ),
+                    shared.TraceSpan(
+                        end_time="omnis",
+                        kind="SPAN_KIND_UNSPECIFIED",
+                        labels={
+                            "nam": "recusandae",
+                            "et": "nostrum",
+                            "repellat": "dolor",
+                        },
+                        name="rem",
+                        parent_span_id="et",
+                        span_id="ducimus",
+                        start_time="et",
+                    ),
+                    shared.TraceSpan(
+                        end_time="nam",
+                        kind="RPC_SERVER",
+                        labels={
+                            "beatae": "nisi",
+                        },
+                        name="corrupti",
+                        parent_span_id="id",
+                        span_id="cum",
                         start_time="voluptas",
                     ),
-                    shared.TraceSpan(
-                        end_time="ipsum",
-                        kind="RPC_CLIENT",
-                        labels={
-                            "iusto": "et",
-                            "qui": "quibusdam",
-                            "vero": "sunt",
-                        },
-                        name="non",
-                        parent_span_id="quae",
-                        span_id="architecto",
-                        start_time="labore",
-                    ),
                 ],
-                trace_id="quo",
-            ),
-            shared.Trace(
-                project_id="harum",
-                spans=[
-                    shared.TraceSpan(
-                        end_time="et",
-                        kind="SPAN_KIND_UNSPECIFIED",
-                        labels={
-                            "ut": "dignissimos",
-                            "omnis": "quae",
-                            "nisi": "sapiente",
-                        },
-                        name="necessitatibus",
-                        parent_span_id="voluptatem",
-                        span_id="tempora",
-                        start_time="sed",
-                    ),
-                    shared.TraceSpan(
-                        end_time="non",
-                        kind="RPC_SERVER",
-                        labels={
-                            "in": "voluptas",
-                        },
-                        name="reiciendis",
-                        parent_span_id="reiciendis",
-                        span_id="sit",
-                        start_time="vel",
-                    ),
-                ],
-                trace_id="omnis",
+                trace_id="iusto",
             ),
         ],
     ),

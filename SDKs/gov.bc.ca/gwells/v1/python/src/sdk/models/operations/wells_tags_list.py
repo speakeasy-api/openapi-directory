@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import welltagsearch as shared_welltagsearch
 
 
-@dataclass
+@dataclasses.dataclass
 class WellsTagsListQueryParams:
-    ordering: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    ordering: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsTagsListRequest:
-    query_params: WellsTagsListQueryParams = field()
+    query_params: WellsTagsListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsTagsListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    well_tag_searches: Optional[List[shared.WellTagSearch]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    well_tag_searches: Optional[list[shared_welltagsearch.WellTagSearch]] = dataclasses.field(default=None)
     

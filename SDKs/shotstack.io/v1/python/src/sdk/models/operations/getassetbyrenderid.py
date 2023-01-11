@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import assetrenderresponse as shared_assetrenderresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetByRenderIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetByRenderIDSecurity:
-    developer_key: shared.SchemeDeveloperKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    developer_key: shared_security.SchemeDeveloperKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetByRenderIDRequest:
-    path_params: GetAssetByRenderIDPathParams = field()
-    security: GetAssetByRenderIDSecurity = field()
+    path_params: GetAssetByRenderIDPathParams = dataclasses.field()
+    security: GetAssetByRenderIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetByRenderIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_render_response: Optional[shared.AssetRenderResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_render_response: Optional[shared_assetrenderresponse.AssetRenderResponse] = dataclasses.field(default=None)
     

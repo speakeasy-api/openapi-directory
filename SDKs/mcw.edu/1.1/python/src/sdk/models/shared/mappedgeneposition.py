@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MappedGenePosition:
-    chromosome: Optional[str] = field(default=None)
-    map_key: Optional[int] = field(default=None)
-    rgd_id: Optional[int] = field(default=None)
-    start: Optional[int] = field(default=None)
-    stop: Optional[int] = field(default=None)
-    strand: Optional[str] = field(default=None)
-    symbol: Optional[str] = field(default=None)
+    chromosome: Optional[str] = dataclasses.field(default=None)
+    map_key: Optional[int] = dataclasses.field(default=None)
+    rgd_id: Optional[int] = dataclasses.field(default=None)
+    start: Optional[int] = dataclasses.field(default=None)
+    stop: Optional[int] = dataclasses.field(default=None)
+    strand: Optional[str] = dataclasses.field(default=None)
+    symbol: Optional[str] = dataclasses.field(default=None)
     

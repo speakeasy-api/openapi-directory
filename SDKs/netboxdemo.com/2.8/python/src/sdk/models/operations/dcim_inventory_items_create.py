@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableinventoryitem as shared_writableinventoryitem
+from ..shared import inventoryitem as shared_inventoryitem
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsCreateRequest:
-    request: shared.WritableInventoryItemInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableinventoryitem.WritableInventoryItemInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inventory_item: Optional[shared.InventoryItem] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inventory_item: Optional[shared_inventoryitem.InventoryItem] = dataclasses.field(default=None)
     

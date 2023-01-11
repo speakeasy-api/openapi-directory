@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import personname as shared_personname
 
 
-@dataclass
+@dataclasses.dataclass
 class DrillersNamesListQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DrillersNamesListRequest:
-    query_params: DrillersNamesListQueryParams = field()
+    query_params: DrillersNamesListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrillersNamesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    person_names: Optional[List[shared.PersonName]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    person_names: Optional[list[shared_personname.PersonName]] = dataclasses.field(default=None)
     

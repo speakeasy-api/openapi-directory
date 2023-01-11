@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notfound as shared_notfound
+from ..shared import sectionresponse as shared_sectionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionRequest:
-    path_params: GetSectionPathParams = field()
+    path_params: GetSectionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    not_found: Optional[shared.NotFound] = field(default=None)
-    section_response: Optional[shared.SectionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    not_found: Optional[shared_notfound.NotFound] = dataclasses.field(default=None)
+    section_response: Optional[shared_sectionresponse.SectionResponse] = dataclasses.field(default=None)
     

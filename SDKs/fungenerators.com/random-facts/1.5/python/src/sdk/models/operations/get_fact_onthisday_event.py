@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFactOnthisdayEventQueryParams:
-    day: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'day', 'style': 'form', 'explode': True }})
-    month: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'month', 'style': 'form', 'explode': True }})
+    day: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'day', 'style': 'form', 'explode': True }})
+    month: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'month', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactOnthisdayEventSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactOnthisdayEventRequest:
-    query_params: GetFactOnthisdayEventQueryParams = field()
-    security: GetFactOnthisdayEventSecurity = field()
+    query_params: GetFactOnthisdayEventQueryParams = dataclasses.field()
+    security: GetFactOnthisdayEventSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactOnthisdayEventResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

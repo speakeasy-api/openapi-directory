@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.AndroidpublisherPurchasesCancelRequest(
     security=operations.AndroidpublisherPurchasesCancelSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AndroidpublisherPurchasesCancelPathParams(
-        package_name="a",
-        subscription_id="sint",
-        token="velit",
+        package_name="eius",
+        subscription_id="aut",
+        token="itaque",
     ),
     query_params=operations.AndroidpublisherPurchasesCancelQueryParams(
         alt="json",
-        fields="incidunt",
-        key="reiciendis",
-        oauth_token="velit",
-        pretty_print=True,
-        quota_user="in",
-        user_ip="quas",
+        fields="qui",
+        key="earum",
+        oauth_token="temporibus",
+        pretty_print=False,
+        quota_user="ullam",
+        user_ip="et",
     ),
 )
     

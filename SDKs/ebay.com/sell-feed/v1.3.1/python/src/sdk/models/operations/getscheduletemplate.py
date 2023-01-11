@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import scheduletemplateresponse as shared_scheduletemplateresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplatePathParams:
-    schedule_template_id: str = field(metadata={'path_param': { 'field_name': 'schedule_template_id', 'style': 'simple', 'explode': False }})
+    schedule_template_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schedule_template_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplateSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplateRequest:
-    path_params: GetScheduleTemplatePathParams = field()
-    security: GetScheduleTemplateSecurity = field()
+    path_params: GetScheduleTemplatePathParams = dataclasses.field()
+    security: GetScheduleTemplateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    schedule_template_response: Optional[shared.ScheduleTemplateResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    schedule_template_response: Optional[shared_scheduletemplateresponse.ScheduleTemplateResponse] = dataclasses.field(default=None)
     

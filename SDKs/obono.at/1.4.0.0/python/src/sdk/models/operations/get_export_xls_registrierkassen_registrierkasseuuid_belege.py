@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegePathParams:
-    registrierkasse_uuid: str = field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
+    registrierkasse_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeQueryParams:
-    after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
-    before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
+    after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
+    before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeRequest:
-    path_params: GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegePathParams = field()
-    query_params: GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeQueryParams = field()
+    path_params: GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegePathParams = dataclasses.field()
+    query_params: GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportXlsRegistrierkassenRegistrierkasseUUIDBelegeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

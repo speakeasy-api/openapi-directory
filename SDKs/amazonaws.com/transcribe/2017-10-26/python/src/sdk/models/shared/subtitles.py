@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import subtitleformat_enum as shared_subtitleformat_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Subtitles:
     r"""Subtitles
     Generate subtitles for your batch transcription job.
     """
     
-    formats: Optional[List[SubtitleFormatEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Formats') }})
+    formats: Optional[list[shared_subtitleformat_enum.SubtitleFormatEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Formats') }})
     

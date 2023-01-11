@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class Tag:
     r"""Tag
     A key-value pair associated with a CloudWatch resource.
     """
     
-    key: str = field()
-    value: str = field()
+    key: str = dataclasses.field()
+    value: str = dataclasses.field()
     

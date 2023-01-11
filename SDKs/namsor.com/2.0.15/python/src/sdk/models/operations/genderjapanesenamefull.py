@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnamegenderedout as shared_personalnamegenderedout
 
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNameFullPathParams:
-    japanese_name: str = field(metadata={'path_param': { 'field_name': 'japaneseName', 'style': 'simple', 'explode': False }})
+    japanese_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNameFullSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNameFullRequest:
-    path_params: GenderJapaneseNameFullPathParams = field()
-    security: GenderJapaneseNameFullSecurity = field()
+    path_params: GenderJapaneseNameFullPathParams = dataclasses.field()
+    security: GenderJapaneseNameFullSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNameFullResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_gendered_out: Optional[shared.PersonalNameGenderedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_gendered_out: Optional[shared_personalnamegenderedout.PersonalNameGenderedOut] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import storesingle as shared_storesingle
 
 
-@dataclass
+@dataclasses.dataclass
 class StoresReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoresReadRequest:
-    path_params: StoresReadPathParams = field()
+    path_params: StoresReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoresReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    store_single: Optional[shared.StoreSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    store_single: Optional[shared_storesingle.StoreSingle] = dataclasses.field(default=None)
     

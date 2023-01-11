@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metricpolicy as shared_metricpolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutMetricPolicyInput:
-    container_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ContainerName') }})
-    metric_policy: MetricPolicy = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MetricPolicy') }})
+    container_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ContainerName') }})
+    metric_policy: shared_metricpolicy.MetricPolicy = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MetricPolicy') }})
     

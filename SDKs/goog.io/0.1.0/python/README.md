@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.CrawlRequest(
     path_params=operations.CrawlPathParams(
-        query="deleniti",
+        query="maiores",
     ),
 )
     
-res = s.sdk.crawl(req)
+res = s.crawl(req)
 
 if res.crawl_200_application_json_object is not None:
     # handle response

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import lineitemassignedtargetingoption as shared_lineitemassignedtargetingoption
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BulkListAssignedTargetingOptionsResponse:
-    line_item_assigned_targeting_options: Optional[List[LineItemAssignedTargetingOption]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineItemAssignedTargetingOptions') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    line_item_assigned_targeting_options: Optional[list[shared_lineitemassignedtargetingoption.LineItemAssignedTargetingOption]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineItemAssignedTargetingOptions') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

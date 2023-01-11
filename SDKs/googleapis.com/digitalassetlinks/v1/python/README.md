@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,92 +18,67 @@ s = sdk.SDK()
     
 req = operations.DigitalassetlinksAssetlinksBulkCheckRequest(
     query_params=operations.DigitalassetlinksAssetlinksBulkCheckQueryParams(
-        dollar_xgafv="1",
-        access_token="nesciunt",
-        alt="proto",
-        callback="et",
-        fields="qui",
-        key="voluptatem",
-        oauth_token="aliquam",
+        dollar_xgafv="2",
+        access_token="ut",
+        alt="media",
+        callback="quisquam",
+        fields="quae",
+        key="eum",
+        oauth_token="qui",
         pretty_print=True,
-        quota_user="voluptatem",
-        upload_type="quidem",
-        upload_protocol="enim",
+        quota_user="vel",
+        upload_type="minima",
+        upload_protocol="qui",
     ),
     request=shared.BulkCheckRequest(
-        allow_google_internal_data_sources=False,
-        default_relation="enim",
+        allow_google_internal_data_sources=True,
+        default_relation="dolor",
         default_source=shared.Asset(
             android_app=shared.AndroidAppAsset(
                 certificate=shared.CertificateInfo(
-                    sha256_fingerprint="porro",
+                    sha256_fingerprint="earum",
                 ),
-                package_name="voluptatem",
+                package_name="asperiores",
             ),
             web=shared.WebAsset(
-                site="et",
+                site="minima",
             ),
         ),
         default_target=shared.Asset(
             android_app=shared.AndroidAppAsset(
                 certificate=shared.CertificateInfo(
-                    sha256_fingerprint="consequatur",
+                    sha256_fingerprint="dolores",
                 ),
-                package_name="totam",
+                package_name="vitae",
             ),
             web=shared.WebAsset(
-                site="eius",
+                site="et",
             ),
         ),
-        skip_cache_lookup=False,
+        skip_cache_lookup=True,
         statements=[
             shared.StatementTemplate(
-                relation="pariatur",
+                relation="quo",
                 source=shared.Asset(
                     android_app=shared.AndroidAppAsset(
                         certificate=shared.CertificateInfo(
-                            sha256_fingerprint="ipsam",
+                            sha256_fingerprint="dignissimos",
                         ),
-                        package_name="voluptatibus",
+                        package_name="quo",
                     ),
                     web=shared.WebAsset(
-                        site="nesciunt",
+                        site="sint",
                     ),
                 ),
                 target=shared.Asset(
                     android_app=shared.AndroidAppAsset(
                         certificate=shared.CertificateInfo(
-                            sha256_fingerprint="quo",
+                            sha256_fingerprint="sit",
                         ),
-                        package_name="rerum",
+                        package_name="ducimus",
                     ),
                     web=shared.WebAsset(
-                        site="eos",
-                    ),
-                ),
-            ),
-            shared.StatementTemplate(
-                relation="distinctio",
-                source=shared.Asset(
-                    android_app=shared.AndroidAppAsset(
-                        certificate=shared.CertificateInfo(
-                            sha256_fingerprint="nisi",
-                        ),
-                        package_name="dolorum",
-                    ),
-                    web=shared.WebAsset(
-                        site="velit",
-                    ),
-                ),
-                target=shared.Asset(
-                    android_app=shared.AndroidAppAsset(
-                        certificate=shared.CertificateInfo(
-                            sha256_fingerprint="dolor",
-                        ),
-                        package_name="molestiae",
-                    ),
-                    web=shared.WebAsset(
-                        site="consequatur",
+                        site="quo",
                     ),
                 ),
             ),

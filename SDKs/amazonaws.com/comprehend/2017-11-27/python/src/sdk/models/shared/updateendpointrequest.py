@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,8 +7,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEndpointRequest:
-    desired_inference_units: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DesiredInferenceUnits') }})
-    endpoint_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointArn') }})
+    desired_inference_units: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DesiredInferenceUnits') }})
+    endpoint_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointArn') }})
     

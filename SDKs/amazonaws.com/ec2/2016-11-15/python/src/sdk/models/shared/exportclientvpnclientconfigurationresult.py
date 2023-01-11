@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportClientVpnClientConfigurationResult:
-    client_configuration: Optional[str] = field(default=None)
+    client_configuration: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,15 +12,15 @@ class GradeHistoryGradeChangeTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GradeHistory:
     r"""GradeHistory
     The history of each grade on this submission.
     """
     
-    actor_user_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actorUserId') }})
-    grade_change_type: Optional[GradeHistoryGradeChangeTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gradeChangeType') }})
-    grade_timestamp: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gradeTimestamp') }})
-    max_points: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxPoints') }})
-    points_earned: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pointsEarned') }})
+    actor_user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actorUserId') }})
+    grade_change_type: Optional[GradeHistoryGradeChangeTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gradeChangeType') }})
+    grade_timestamp: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gradeTimestamp') }})
+    max_points: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxPoints') }})
+    points_earned: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pointsEarned') }})
     

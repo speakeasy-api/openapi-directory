@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tableversion as shared_tableversion
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetTableVersionResponse:
-    table_version: Optional[TableVersion] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableVersion') }})
+    table_version: Optional[shared_tableversion.TableVersion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableVersion') }})
     

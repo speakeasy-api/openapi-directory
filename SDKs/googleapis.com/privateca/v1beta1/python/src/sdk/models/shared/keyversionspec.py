@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,12 +17,12 @@ class KeyVersionSpecAlgorithmEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class KeyVersionSpec:
     r"""KeyVersionSpec
     A Cloud KMS key configuration that a CertificateAuthority will use.
     """
     
-    algorithm: Optional[KeyVersionSpecAlgorithmEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
-    cloud_kms_key_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudKmsKeyVersion') }})
+    algorithm: Optional[KeyVersionSpecAlgorithmEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
+    cloud_kms_key_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudKmsKeyVersion') }})
     

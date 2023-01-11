@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -56,13 +56,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -98,13 +98,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsCreateReplyForReviewCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -140,13 +140,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsCreateReviewResponse(status_code=r.status_code, content_type=content_type)
@@ -185,13 +185,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsCreateReviewCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -286,13 +286,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsDismissReviewResponse(status_code=r.status_code, content_type=content_type)
@@ -445,7 +445,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PullRequestSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PullRequestSimple]])
                 res.pull_request_simples = out
         elif r.status_code == 304:
             pass
@@ -480,7 +480,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReviewComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReviewComment]])
                 res.review_comments = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -513,7 +513,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Commit]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Commit]])
                 res.commits = out
 
         return res
@@ -542,7 +542,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DiffEntry]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DiffEntry]])
                 res.diff_entries = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -607,7 +607,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PullRequestReviewComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PullRequestReviewComment]])
                 res.pull_request_review_comments = out
 
         return res
@@ -636,7 +636,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PullRequestReviewComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PullRequestReviewComment]])
                 res.pull_request_review_comments = out
 
         return res
@@ -665,7 +665,7 @@ class Pulls:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PullRequestReview]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PullRequestReview]])
                 res.pull_request_reviews = out
 
         return res
@@ -682,13 +682,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/merge", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsMergeResponse(status_code=r.status_code, content_type=content_type)
@@ -731,13 +731,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsRemoveRequestedReviewersResponse(status_code=r.status_code, content_type=content_type)
@@ -765,13 +765,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsRequestReviewersResponse(status_code=r.status_code, content_type=content_type)
@@ -800,13 +800,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsSubmitReviewResponse(status_code=r.status_code, content_type=content_type)
@@ -842,13 +842,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -880,13 +880,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/update-branch", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsUpdateBranchResponse(status_code=r.status_code, content_type=content_type)
@@ -922,13 +922,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsUpdateReviewResponse(status_code=r.status_code, content_type=content_type)
@@ -956,13 +956,13 @@ class Pulls:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PullsUpdateReviewCommentResponse(status_code=r.status_code, content_type=content_type)

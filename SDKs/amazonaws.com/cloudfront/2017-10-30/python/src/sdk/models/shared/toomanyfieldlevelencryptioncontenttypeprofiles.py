@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyFieldLevelEncryptionContentTypeProfiles:
     r"""TooManyFieldLevelEncryptionContentTypeProfiles
     The maximum number of content type profiles for field-level encryption have been created.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

@@ -20,3 +20,5 @@ from .verify import *
 from .verifylocationrequest import *
 from .verifylocationresponse import *
 from .voiceofmerchantstate import *
+
+__all__ = ["XgafvEnum","AddressVerificationData","AltEnum","CompleteVerificationRequest","CompleteVerificationResponse","ComplyWithGuidelinesRecommendationReasonEnum","ComplyWithGuidelines","EmailVerificationData","FetchVerificationOptionsRequest","FetchVerificationOptionsResponse","GenerateVerificationTokenRequest","GenerateVerificationTokenResponse","ListVerificationsResponse","Location","PostalAddress","ServiceBusinessContext","VerificationMethodEnum","VerificationStateEnum","Verification","VerificationOptionVerificationMethodEnum","VerificationOption","VerificationToken","Verify","VerifyLocationRequestMethodEnum","VerifyLocationRequest","VerifyLocationResponse","VoiceOfMerchantState"]

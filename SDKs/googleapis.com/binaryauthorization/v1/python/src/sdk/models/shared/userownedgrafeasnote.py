@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attestorpublickey as shared_attestorpublickey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserOwnedGrafeasNoteInput:
     r"""UserOwnedGrafeasNoteInput
     An user owned Grafeas note references a Grafeas Attestation.Authority Note created by the user.
     """
     
-    note_reference: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noteReference') }})
-    public_keys: Optional[List[AttestorPublicKey]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKeys') }})
+    note_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noteReference') }})
+    public_keys: Optional[list[shared_attestorpublickey.AttestorPublicKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKeys') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserOwnedGrafeasNote:
     r"""UserOwnedGrafeasNote
     An user owned Grafeas note references a Grafeas Attestation.Authority Note created by the user.
     """
     
-    delegation_service_account_email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delegationServiceAccountEmail') }})
-    note_reference: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noteReference') }})
-    public_keys: Optional[List[AttestorPublicKey]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKeys') }})
+    delegation_service_account_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delegationServiceAccountEmail') }})
+    note_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noteReference') }})
+    public_keys: Optional[list[shared_attestorpublickey.AttestorPublicKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKeys') }})
     

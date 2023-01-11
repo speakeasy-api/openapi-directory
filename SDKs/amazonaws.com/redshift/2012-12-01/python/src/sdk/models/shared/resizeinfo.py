@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ResizeInfo:
     r"""ResizeInfo
     Describes a resize operation.
     """
     
-    allow_cancel_resize: Optional[bool] = field(default=None)
-    resize_type: Optional[str] = field(default=None)
+    allow_cancel_resize: Optional[bool] = dataclasses.field(default=None)
+    resize_type: Optional[str] = dataclasses.field(default=None)
     

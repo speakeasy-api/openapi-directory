@@ -1,10 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import video as shared_video
 
 class SearchVideosDirectionEnum(str, Enum):
     ASC = "asc"
@@ -36,28 +38,28 @@ class SearchVideosSortEnum(str, Enum):
     RELEVANT = "relevant"
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchVideosQueryParams:
-    query: str = field(metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    direction: Optional[SearchVideosDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[SearchVideosFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    links: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'links', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[SearchVideosSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    uris: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uris', 'style': 'form', 'explode': True }})
+    query: str = dataclasses.field(metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    direction: Optional[SearchVideosDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[SearchVideosFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    links: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'links', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[SearchVideosSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    uris: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uris', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchVideosRequest:
-    query_params: SearchVideosQueryParams = field()
+    query_params: SearchVideosQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchVideosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    videos: Optional[List[shared.Video]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    videos: Optional[list[shared_video.Video]] = dataclasses.field(default=None)
     

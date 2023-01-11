@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import language as shared_language
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LanguageList:
     r"""LanguageList
     Languages List
     """
     
-    languages: List[Language] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
-    sum: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
+    languages: list[shared_language.Language] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
+    sum: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
     

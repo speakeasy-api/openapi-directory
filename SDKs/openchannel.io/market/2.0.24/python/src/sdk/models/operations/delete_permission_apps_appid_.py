@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionAppsAppIDPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionAppsAppIDQueryParams:
-    user_id: str = field(metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    user_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionAppsAppIDRequest:
-    path_params: DeletePermissionAppsAppIDPathParams = field()
-    query_params: DeletePermissionAppsAppIDQueryParams = field()
+    path_params: DeletePermissionAppsAppIDPathParams = dataclasses.field()
+    query_params: DeletePermissionAppsAppIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionAppsAppIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

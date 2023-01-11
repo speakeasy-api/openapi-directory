@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkCameraQualityRetentionProfilePathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    quality_retention_profile_id: str = field(metadata={'path_param': { 'field_name': 'qualityRetentionProfileId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    quality_retention_profile_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'qualityRetentionProfileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkCameraQualityRetentionProfileRequest:
-    path_params: DeleteNetworkCameraQualityRetentionProfilePathParams = field()
+    path_params: DeleteNetworkCameraQualityRetentionProfilePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkCameraQualityRetentionProfileResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

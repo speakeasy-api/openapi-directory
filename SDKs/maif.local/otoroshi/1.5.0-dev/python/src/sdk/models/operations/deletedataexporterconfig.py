@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deleted as shared_deleted
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataExporterConfigPathParams:
-    data_exporter_config_id: str = field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
+    data_exporter_config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataExporterConfigSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataExporterConfigRequest:
-    path_params: DeleteDataExporterConfigPathParams = field()
-    security: DeleteDataExporterConfigSecurity = field()
+    path_params: DeleteDataExporterConfigPathParams = dataclasses.field()
+    security: DeleteDataExporterConfigSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataExporterConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deleted: Optional[shared.Deleted] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deleted: Optional[shared_deleted.Deleted] = dataclasses.field(default=None)
     

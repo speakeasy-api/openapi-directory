@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import authenticatecognitoactionconditionalbehaviorenum_enum as shared_authenticatecognitoactionconditionalbehaviorenum_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthenticateCognitoActionConfig:
     r"""AuthenticateCognitoActionConfig
     Request parameters to use when integrating with Amazon Cognito to authenticate users.
     """
     
-    user_pool_arn: str = field()
-    user_pool_client_id: str = field()
-    user_pool_domain: str = field()
-    authentication_request_extra_params: Optional[dict[str, str]] = field(default=None)
-    on_unauthenticated_request: Optional[AuthenticateCognitoActionConditionalBehaviorEnumEnum] = field(default=None)
-    scope: Optional[str] = field(default=None)
-    session_cookie_name: Optional[str] = field(default=None)
-    session_timeout: Optional[int] = field(default=None)
+    user_pool_arn: str = dataclasses.field()
+    user_pool_client_id: str = dataclasses.field()
+    user_pool_domain: str = dataclasses.field()
+    authentication_request_extra_params: Optional[dict[str, str]] = dataclasses.field(default=None)
+    on_unauthenticated_request: Optional[shared_authenticatecognitoactionconditionalbehaviorenum_enum.AuthenticateCognitoActionConditionalBehaviorEnumEnum] = dataclasses.field(default=None)
+    scope: Optional[str] = dataclasses.field(default=None)
+    session_cookie_name: Optional[str] = dataclasses.field(default=None)
+    session_timeout: Optional[int] = dataclasses.field(default=None)
     

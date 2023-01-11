@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import soa as shared_soa
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PrivateDNSPropertiesMutable:
     r"""PrivateDNSPropertiesMutable
     DNS properties for the private DNS namespace.
     """
     
-    soa: Soa = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SOA') }})
+    soa: shared_soa.Soa = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SOA') }})
     

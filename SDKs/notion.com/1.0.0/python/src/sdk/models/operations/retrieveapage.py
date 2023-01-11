@@ -1,226 +1,226 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPagePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONParent:
-    database_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('database_id') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    database_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('database_id') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesAuthorMultiSelect:
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesAuthor:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    multi_select: Optional[List[RetrieveAPage200ApplicationJSONPropertiesAuthorMultiSelect]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multi_select') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    multi_select: Optional[list[RetrieveAPage200ApplicationJSONPropertiesAuthorMultiSelect]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multi_select') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesLink:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesNameTitleAnnotations:
-    bold: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bold') }})
-    code: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    italic: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('italic') }})
-    strikethrough: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('strikethrough') }})
-    underline: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('underline') }})
+    bold: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bold') }})
+    code: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    italic: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('italic') }})
+    strikethrough: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('strikethrough') }})
+    underline: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('underline') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesNameTitleText:
-    content: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    link: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    content: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    link: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesNameTitle:
-    annotations: Optional[RetrieveAPage200ApplicationJSONPropertiesNameTitleAnnotations] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotations') }})
-    href: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
-    plain_text: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plain_text') }})
-    text: Optional[RetrieveAPage200ApplicationJSONPropertiesNameTitleText] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    annotations: Optional[RetrieveAPage200ApplicationJSONPropertiesNameTitleAnnotations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotations') }})
+    href: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    plain_text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plain_text') }})
+    text: Optional[RetrieveAPage200ApplicationJSONPropertiesNameTitleText] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesName:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    title: Optional[List[RetrieveAPage200ApplicationJSONPropertiesNameTitle]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    title: Optional[list[RetrieveAPage200ApplicationJSONPropertiesNameTitle]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesPublisherSelect:
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesPublisher:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    select: Optional[RetrieveAPage200ApplicationJSONPropertiesPublisherSelect] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    select: Optional[RetrieveAPage200ApplicationJSONPropertiesPublisherSelect] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDateDate:
-    end: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
-    start: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
+    end: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
+    start: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDate:
-    date_: Optional[RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDateDate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    date_: Optional[RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDateDate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesRead:
-    checkbox: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checkbox') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    checkbox: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checkbox') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesStatusSelect:
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesStatus:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    select: Optional[RetrieveAPage200ApplicationJSONPropertiesStatusSelect] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    select: Optional[RetrieveAPage200ApplicationJSONPropertiesStatusSelect] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesSummaryTextAnnotations:
-    bold: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bold') }})
-    code: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    italic: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('italic') }})
-    strikethrough: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('strikethrough') }})
-    underline: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('underline') }})
+    bold: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bold') }})
+    code: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    italic: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('italic') }})
+    strikethrough: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('strikethrough') }})
+    underline: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('underline') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesSummaryTextText:
-    content: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    link: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    content: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    link: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesSummaryText:
-    annotations: Optional[RetrieveAPage200ApplicationJSONPropertiesSummaryTextAnnotations] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotations') }})
-    href: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
-    plain_text: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plain_text') }})
-    text: Optional[RetrieveAPage200ApplicationJSONPropertiesSummaryTextText] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    annotations: Optional[RetrieveAPage200ApplicationJSONPropertiesSummaryTextAnnotations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotations') }})
+    href: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    plain_text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plain_text') }})
+    text: Optional[RetrieveAPage200ApplicationJSONPropertiesSummaryTextText] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesSummary:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    text: Optional[List[RetrieveAPage200ApplicationJSONPropertiesSummaryText]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    text: Optional[list[RetrieveAPage200ApplicationJSONPropertiesSummaryText]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesTypeSelect:
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONPropertiesType:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    select: Optional[RetrieveAPage200ApplicationJSONPropertiesTypeSelect] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    select: Optional[RetrieveAPage200ApplicationJSONPropertiesTypeSelect] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('select') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSONProperties:
-    author: Optional[RetrieveAPage200ApplicationJSONPropertiesAuthor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Author') }})
-    link: Optional[RetrieveAPage200ApplicationJSONPropertiesLink] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Link') }})
-    name: Optional[RetrieveAPage200ApplicationJSONPropertiesName] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    publisher: Optional[RetrieveAPage200ApplicationJSONPropertiesPublisher] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Publisher') }})
-    publishing_release_date: Optional[RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Publishing/Release Date') }})
-    read: Optional[RetrieveAPage200ApplicationJSONPropertiesRead] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Read') }})
-    status: Optional[RetrieveAPage200ApplicationJSONPropertiesStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
-    summary: Optional[RetrieveAPage200ApplicationJSONPropertiesSummary] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Summary') }})
-    type: Optional[RetrieveAPage200ApplicationJSONPropertiesType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
+    author: Optional[RetrieveAPage200ApplicationJSONPropertiesAuthor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Author') }})
+    link: Optional[RetrieveAPage200ApplicationJSONPropertiesLink] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Link') }})
+    name: Optional[RetrieveAPage200ApplicationJSONPropertiesName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    publisher: Optional[RetrieveAPage200ApplicationJSONPropertiesPublisher] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Publisher') }})
+    publishing_release_date: Optional[RetrieveAPage200ApplicationJSONPropertiesPublishingReleaseDate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Publishing/Release Date') }})
+    read: Optional[RetrieveAPage200ApplicationJSONPropertiesRead] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Read') }})
+    status: Optional[RetrieveAPage200ApplicationJSONPropertiesStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
+    summary: Optional[RetrieveAPage200ApplicationJSONPropertiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Summary') }})
+    type: Optional[RetrieveAPage200ApplicationJSONPropertiesType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPage200ApplicationJSON:
-    archived: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('archived') }})
-    created_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    last_edited_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_edited_time') }})
-    object: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
-    parent: Optional[RetrieveAPage200ApplicationJSONParent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
-    properties: Optional[RetrieveAPage200ApplicationJSONProperties] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
+    archived: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('archived') }})
+    created_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    last_edited_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_edited_time') }})
+    object: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
+    parent: Optional[RetrieveAPage200ApplicationJSONParent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
+    properties: Optional[RetrieveAPage200ApplicationJSONProperties] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPageRequest:
-    path_params: RetrieveAPagePathParams = field()
+    path_params: RetrieveAPagePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveAPageResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    retrieve_a_page_200_application_json_object: Optional[RetrieveAPage200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    retrieve_a_page_200_application_json_object: Optional[RetrieveAPage200ApplicationJSON] = dataclasses.field(default=None)
     

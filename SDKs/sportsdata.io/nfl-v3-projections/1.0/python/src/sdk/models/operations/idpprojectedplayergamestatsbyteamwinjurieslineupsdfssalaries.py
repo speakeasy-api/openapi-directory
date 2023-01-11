@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum(str, Enum):
@@ -7,22 +7,22 @@ class IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum(str
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams:
-    format: IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
-    team: str = field(metadata={'path_param': { 'field_name': 'team', 'style': 'simple', 'explode': False }})
-    week: str = field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
+    format: IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    team: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team', 'style': 'simple', 'explode': False }})
+    week: str = dataclasses.field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest:
-    path_params: IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams = field()
+    path_params: IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_game_projections: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_game_projections: Optional[list[Any]] = dataclasses.field(default=None)
     

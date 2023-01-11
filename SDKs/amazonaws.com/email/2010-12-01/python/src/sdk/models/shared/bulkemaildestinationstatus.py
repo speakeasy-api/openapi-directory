@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import bulkemailstatus_enum as shared_bulkemailstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class BulkEmailDestinationStatus:
     r"""BulkEmailDestinationStatus
     An object that contains the response from the <code>SendBulkTemplatedEmail</code> operation.
     """
     
-    error: Optional[str] = field(default=None)
-    message_id: Optional[str] = field(default=None)
-    status: Optional[BulkEmailStatusEnum] = field(default=None)
+    error: Optional[str] = dataclasses.field(default=None)
+    message_id: Optional[str] = dataclasses.field(default=None)
+    status: Optional[shared_bulkemailstatus_enum.BulkEmailStatusEnum] = dataclasses.field(default=None)
     

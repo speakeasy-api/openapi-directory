@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import stateviewmodel as shared_stateviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersStatesQueryParams:
-    country: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
+    country: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersStatesRequest:
-    query_params: GetConsumerV1CustomersStatesQueryParams = field()
+    query_params: GetConsumerV1CustomersStatesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersStatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    state_view_models: Optional[List[shared.StateViewModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    state_view_models: Optional[list[shared_stateviewmodel.StateViewModel]] = dataclasses.field(default=None)
     

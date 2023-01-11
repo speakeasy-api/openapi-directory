@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import grapherror as shared_grapherror
+from ..shared import passwordcredentiallistresult as shared_passwordcredentiallistresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListPasswordCredentialsPathParams:
-    object_id: str = field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListPasswordCredentialsQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListPasswordCredentialsRequest:
-    path_params: ServicePrincipalsListPasswordCredentialsPathParams = field()
-    query_params: ServicePrincipalsListPasswordCredentialsQueryParams = field()
+    path_params: ServicePrincipalsListPasswordCredentialsPathParams = dataclasses.field()
+    query_params: ServicePrincipalsListPasswordCredentialsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListPasswordCredentialsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph_error: Optional[shared.GraphError] = field(default=None)
-    password_credential_list_result: Optional[shared.PasswordCredentialListResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
+    password_credential_list_result: Optional[shared_passwordcredentiallistresult.PasswordCredentialListResult] = dataclasses.field(default=None)
     

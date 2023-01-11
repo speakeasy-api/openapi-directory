@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountassignmentoperationstatus as shared_accountassignmentoperationstatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeAccountAssignmentCreationStatusResponse:
-    account_assignment_creation_status: Optional[AccountAssignmentOperationStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountAssignmentCreationStatus') }})
+    account_assignment_creation_status: Optional[shared_accountassignmentoperationstatus.AccountAssignmentOperationStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountAssignmentCreationStatus') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class SslSettingsSslManagementTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SslSettings:
     r"""SslSettings
     SSL configuration for a DomainMapping resource.
     """
     
-    certificate_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateId') }})
-    pending_managed_certificate_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pendingManagedCertificateId') }})
-    ssl_management_type: Optional[SslSettingsSslManagementTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sslManagementType') }})
+    certificate_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateId') }})
+    pending_managed_certificate_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pendingManagedCertificateId') }})
+    ssl_management_type: Optional[SslSettingsSslManagementTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sslManagementType') }})
     

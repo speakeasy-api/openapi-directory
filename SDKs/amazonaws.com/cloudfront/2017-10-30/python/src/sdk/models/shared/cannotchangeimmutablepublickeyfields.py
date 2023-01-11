@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CannotChangeImmutablePublicKeyFields:
     r"""CannotChangeImmutablePublicKeyFields
     You can't change the value of a public key.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

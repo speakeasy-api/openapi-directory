@@ -1,19 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import indexfieldtype_enum as shared_indexfieldtype_enum
+from ..shared import literaloptions as shared_literaloptions
+from ..shared import sourceattribute as shared_sourceattribute
+from ..shared import textoptions as shared_textoptions
+from ..shared import uintoptions as shared_uintoptions
 
 
-@dataclass
+@dataclasses.dataclass
 class IndexField:
     r"""IndexField
     Defines a field in the index, including its name, type, and the source of its data. The <code>IndexFieldType</code> indicates which of the options will be present. It is invalid to specify options for a type other than the <code>IndexFieldType</code>.
     """
     
-    index_field_name: str = field()
-    index_field_type: IndexFieldTypeEnum = field()
-    literal_options: Optional[LiteralOptions] = field(default=None)
-    source_attributes: Optional[List[SourceAttribute]] = field(default=None)
-    text_options: Optional[TextOptions] = field(default=None)
-    u_int_options: Optional[UIntOptions] = field(default=None)
+    index_field_name: str = dataclasses.field()
+    index_field_type: shared_indexfieldtype_enum.IndexFieldTypeEnum = dataclasses.field()
+    literal_options: Optional[shared_literaloptions.LiteralOptions] = dataclasses.field(default=None)
+    source_attributes: Optional[list[shared_sourceattribute.SourceAttribute]] = dataclasses.field(default=None)
+    text_options: Optional[shared_textoptions.TextOptions] = dataclasses.field(default=None)
+    u_int_options: Optional[shared_uintoptions.UIntOptions] = dataclasses.field(default=None)
     

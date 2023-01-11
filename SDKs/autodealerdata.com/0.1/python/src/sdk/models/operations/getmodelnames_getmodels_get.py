@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import modelresp as shared_modelresp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetModelNamesGetModelsGetQueryParams:
-    brand_name: str = field(metadata={'query_param': { 'field_name': 'brandName', 'style': 'form', 'explode': True }})
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    brand_name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'brandName', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetModelNamesGetModelsGetRequest:
-    query_params: GetModelNamesGetModelsGetQueryParams = field()
+    query_params: GetModelNamesGetModelsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetModelNamesGetModelsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    model_resp: Optional[shared.ModelResp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    model_resp: Optional[shared_modelresp.ModelResp] = dataclasses.field(default=None)
     

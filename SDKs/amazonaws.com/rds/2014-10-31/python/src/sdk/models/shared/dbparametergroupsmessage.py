@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbparametergrouplist as shared_dbparametergrouplist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbParameterGroupsMessage:
     r"""DbParameterGroupsMessage
      Contains the result of a successful invocation of the <code>DescribeDBParameterGroups</code> action. 
     """
     
-    db_parameter_groups: Optional[List[DbParameterGroup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_parameter_groups: Optional[list[shared_dbparametergrouplist.DbParameterGroupList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

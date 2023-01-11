@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionRequestBody:
-    delete: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delete') }})
+    delete: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delete') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionActionResponseActionError:
     r"""PostImagesIDActionsChangeProtectionActionResponseActionError
     Error message for the Action if error occurred, otherwise null
     """
     
-    code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionActionResponseActionResources:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 class PostImagesIDActionsChangeProtectionActionResponseActionStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -40,33 +40,33 @@ class PostImagesIDActionsChangeProtectionActionResponseActionStatusEnum(str, Enu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionActionResponseAction:
-    command: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
-    error: PostImagesIDActionsChangeProtectionActionResponseActionError = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    finished: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    progress: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
-    resources: List[PostImagesIDActionsChangeProtectionActionResponseActionResources] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
-    started: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
-    status: PostImagesIDActionsChangeProtectionActionResponseActionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    command: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
+    error: PostImagesIDActionsChangeProtectionActionResponseActionError = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    finished: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    progress: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
+    resources: list[PostImagesIDActionsChangeProtectionActionResponseActionResources] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    started: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
+    status: PostImagesIDActionsChangeProtectionActionResponseActionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionActionResponse:
-    action: PostImagesIDActionsChangeProtectionActionResponseAction = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    action: PostImagesIDActionsChangeProtectionActionResponseAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionRequest:
-    path_params: PostImagesIDActionsChangeProtectionPathParams = field()
-    request: Optional[PostImagesIDActionsChangeProtectionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostImagesIDActionsChangeProtectionPathParams = dataclasses.field()
+    request: Optional[PostImagesIDActionsChangeProtectionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostImagesIDActionsChangeProtectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    action_response: Optional[PostImagesIDActionsChangeProtectionActionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    action_response: Optional[PostImagesIDActionsChangeProtectionActionResponse] = dataclasses.field(default=None)
     

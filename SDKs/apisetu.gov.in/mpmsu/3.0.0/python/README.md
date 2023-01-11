@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.MicerRequest(
     security=operations.MicerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.MicerRequestBody(
         certificate_parameters=operations.MicerRequestBodyCertificateParameters(
-            appno="eaque",
-            date_of_birth="nemo",
-            enrolno="corrupti",
-            rollno="sunt",
+            appno="sapiente",
+            date_of_birth="iure",
+            enrolno="assumenda",
+            rollno="dolore",
         ),
-        consent_artifact="ipsa",
+        consent_artifact="nobis",
         format="pdf",
-        txn_id="eos",
+        txn_id="qui",
     ),
 )
     
-res = s.sdk.micer(req)
+res = s.ap_is.micer(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `micer` - Migration Certificate
 * `pvcer` - Provisional Certificate

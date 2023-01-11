@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,14 +23,14 @@ req = operations.GetCharityOrgRequest(
         ),
     ),
     path_params=operations.GetCharityOrgPathParams(
-        charity_org_id="sapiente",
+        charity_org_id="et",
     ),
     headers=operations.GetCharityOrgHeaders(
-        x_ebay_c_marketplace_id="qui",
+        x_ebay_c_marketplace_id="maxime",
     ),
 )
     
-res = s.sdk.get_charity_org(req)
+res = s.charity_org.get_charity_org(req)
 
 if res.charity_org is not None:
     # handle response
@@ -41,7 +40,7 @@ if res.charity_org is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### charity_org
 
 * `get_charity_org` - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID. The call returns the full details for the charitable organization that matches the specified ID.
 * `get_charity_org_by_legacy_id` - This call allows users to retrieve the details for a specific charitable organization using its legacy charity ID, which has also been referred to as the charity number, external ID, and PayPal Giving Fund ID. The legacy charity ID&nbsp;is separate from eBay&rsquo;s generic charity ID.

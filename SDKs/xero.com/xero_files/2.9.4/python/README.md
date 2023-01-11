@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,16 +23,16 @@ req = operations.CreateFileAssociationRequest(
         ),
     ),
     path_params=operations.CreateFileAssociationPathParams(
-        file_id="molestiae",
+        file_id="at",
     ),
     headers=operations.CreateFileAssociationHeaders(
-        xero_tenant_id="voluptatem",
+        xero_tenant_id="consequatur",
     ),
     request=shared.Association(
-        file_id="est",
-        object_group="Invoice",
-        object_id="eaque",
-        object_type="Unknown",
+        file_id="maxime",
+        object_group="Payment",
+        object_id="nam",
+        object_type="Current",
     ),
 )
     

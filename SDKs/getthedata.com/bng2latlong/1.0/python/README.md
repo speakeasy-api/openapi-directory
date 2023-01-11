@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetBng2latlongEastingNorthingRequest(
     path_params=operations.GetBng2latlongEastingNorthingPathParams(
-        easting=5561808368852659813,
-        northing=1590752966597604705,
+        easting=7711782718440894490,
+        northing=2018122545907442435,
     ),
 )
     
-res = s.sdk.get_bng2latlong_easting_northing_(req)
+res = s.get_bng2latlong_easting_northing_(req)
 
 if res.get_bng2latlong_easting_northing_200_application_json_object is not None:
     # handle response

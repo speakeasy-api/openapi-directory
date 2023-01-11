@@ -1,41 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import categoryobject as shared_categoryobject
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategoryPathParams:
-    category_id: str = field(metadata={'path_param': { 'field_name': 'category_id', 'style': 'simple', 'explode': False }})
+    category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'category_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategoryQueryParams:
-    country: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
-    locale: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'locale', 'style': 'form', 'explode': True }})
+    country: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
+    locale: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locale', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategoryHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategorySecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategoryRequest:
-    headers: EndpointGetACategoryHeaders = field()
-    path_params: EndpointGetACategoryPathParams = field()
-    query_params: EndpointGetACategoryQueryParams = field()
-    security: EndpointGetACategorySecurity = field()
+    headers: EndpointGetACategoryHeaders = dataclasses.field()
+    path_params: EndpointGetACategoryPathParams = dataclasses.field()
+    query_params: EndpointGetACategoryQueryParams = dataclasses.field()
+    security: EndpointGetACategorySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetACategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    category_object: Optional[shared.CategoryObject] = field(default=None)
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    category_object: Optional[shared_categoryobject.CategoryObject] = dataclasses.field(default=None)
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

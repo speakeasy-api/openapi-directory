@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,113 +20,115 @@ req = operations.ApigatewayProjectsLocationsApisConfigsCreateRequest(
     security=operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams(
-        parent="et",
+        parent="sint",
     ),
     query_params=operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="odit",
+        dollar_xgafv="1",
+        access_token="a",
         alt="media",
-        api_config_id="repellat",
-        callback="voluptatum",
-        fields="consequatur",
-        key="provident",
-        oauth_token="laboriosam",
+        api_config_id="eveniet",
+        callback="perferendis",
+        fields="numquam",
+        key="assumenda",
+        oauth_token="vitae",
         pretty_print=True,
-        quota_user="dignissimos",
-        upload_type="quos",
-        upload_protocol="reiciendis",
+        quota_user="a",
+        upload_type="mollitia",
+        upload_protocol="ut",
     ),
     request=shared.ApigatewayAPIConfigInput(
-        display_name="omnis",
-        gateway_service_account="quis",
+        display_name="consequatur",
+        gateway_service_account="repellat",
         grpc_services=[
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="velit",
-                    path="in",
+                    contents="repellendus",
+                    path="alias",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="at",
-                        path="molestiae",
+                        contents="blanditiis",
+                        path="pariatur",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="odio",
-                        path="ipsam",
+                        contents="ipsam",
+                        path="veritatis",
+                    ),
+                    shared.ApigatewayAPIConfigFile(
+                        contents="voluptatem",
+                        path="ullam",
                     ),
                 ],
             ),
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="eos",
-                    path="eos",
+                    contents="quasi",
+                    path="deleniti",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="et",
-                        path="maxime",
-                    ),
-                    shared.ApigatewayAPIConfigFile(
-                        contents="similique",
-                        path="esse",
-                    ),
-                    shared.ApigatewayAPIConfigFile(
-                        contents="quo",
-                        path="et",
+                        contents="sit",
+                        path="assumenda",
                     ),
                 ],
             ),
             shared.ApigatewayAPIConfigGrpcServiceDefinition(
                 file_descriptor_set=shared.ApigatewayAPIConfigFile(
-                    contents="a",
-                    path="commodi",
+                    contents="quo",
+                    path="ipsum",
                 ),
                 source=[
                     shared.ApigatewayAPIConfigFile(
-                        contents="qui",
-                        path="et",
+                        contents="laudantium",
+                        path="aperiam",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="maxime",
-                        path="beatae",
+                        contents="eos",
+                        path="qui",
                     ),
                     shared.ApigatewayAPIConfigFile(
-                        contents="doloremque",
-                        path="omnis",
+                        contents="perspiciatis",
+                        path="quod",
                     ),
                 ],
             ),
         ],
         labels={
-            "asperiores": "nulla",
+            "aliquam": "aut",
+            "laborum": "voluptatem",
+            "enim": "non",
         },
         managed_service_configs=[
             shared.ApigatewayAPIConfigFile(
-                contents="velit",
-                path="et",
+                contents="saepe",
+                path="dolores",
             ),
             shared.ApigatewayAPIConfigFile(
-                contents="velit",
-                path="et",
+                contents="dolorum",
+                path="ab",
+            ),
+            shared.ApigatewayAPIConfigFile(
+                contents="earum",
+                path="nihil",
             ),
         ],
         openapi_documents=[
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
-                    contents="voluptas",
-                    path="ab",
+                    contents="consectetur",
+                    path="ut",
                 ),
             ),
             shared.ApigatewayAPIConfigOpenAPIDocument(
                 document=shared.ApigatewayAPIConfigFile(
-                    contents="sed",
-                    path="qui",
+                    contents="qui",
+                    path="deleniti",
                 ),
             ),
         ],

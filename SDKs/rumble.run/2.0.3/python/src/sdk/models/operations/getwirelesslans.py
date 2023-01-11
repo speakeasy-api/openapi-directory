@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import wireless as shared_wireless
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLaNsQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLaNsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLaNsRequest:
-    query_params: GetWirelessLaNsQueryParams = field()
-    security: GetWirelessLaNsSecurity = field()
+    query_params: GetWirelessLaNsQueryParams = dataclasses.field()
+    security: GetWirelessLaNsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLaNsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    wirelesses: Optional[List[shared.Wireless]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    wirelesses: Optional[list[shared_wireless.Wireless]] = dataclasses.field(default=None)
     

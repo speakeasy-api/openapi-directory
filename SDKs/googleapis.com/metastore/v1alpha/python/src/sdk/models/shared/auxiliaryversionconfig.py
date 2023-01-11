@@ -1,30 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import networkconfig as shared_networkconfig
+from ..shared import networkconfig as shared_networkconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuxiliaryVersionConfig:
-    r"""AuxiliaryVersionConfig
-    Configuration information for the auxiliary service versions.
-    """
-    
-    config_overrides: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configOverrides') }})
-    network_config: Optional[NetworkConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkConfig') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    config_overrides: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configOverrides') }})
+    network_config: Optional[shared_networkconfig.NetworkConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkConfig') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuxiliaryVersionConfigInput:
-    r"""AuxiliaryVersionConfigInput
-    Configuration information for the auxiliary service versions.
-    """
-    
-    config_overrides: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configOverrides') }})
-    network_config: Optional[NetworkConfigInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkConfig') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    config_overrides: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configOverrides') }})
+    network_config: Optional[shared_networkconfig.NetworkConfigInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkConfig') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

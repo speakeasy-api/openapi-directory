@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import colorstyle as shared_colorstyle
 
 class ThemeColorPairColorTypeEnum(str, Enum):
     THEME_COLOR_TYPE_UNSPECIFIED = "THEME_COLOR_TYPE_UNSPECIFIED"
@@ -19,12 +19,12 @@ class ThemeColorPairColorTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ThemeColorPair:
     r"""ThemeColorPair
     A pair mapping a spreadsheet theme color type to the concrete color it represents.
     """
     
-    color: Optional[ColorStyle] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    color_type: Optional[ThemeColorPairColorTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('colorType') }})
+    color: Optional[shared_colorstyle.ColorStyle] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    color_type: Optional[ThemeColorPairColorTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('colorType') }})
     

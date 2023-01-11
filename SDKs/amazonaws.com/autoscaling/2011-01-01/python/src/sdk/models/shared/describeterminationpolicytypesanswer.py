@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeTerminationPolicyTypesAnswer:
-    termination_policy_types: Optional[List[str]] = field(default=None)
+    termination_policy_types: Optional[list[str]] = dataclasses.field(default=None)
     

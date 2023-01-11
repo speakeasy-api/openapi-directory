@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -99,7 +99,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.dfs_slates = out
 
         return res
@@ -123,7 +123,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.injuries = out
 
         return res
@@ -147,7 +147,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.injuries = out
 
         return res
@@ -195,7 +195,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.news = out
 
         return res
@@ -219,7 +219,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.news = out
 
         return res
@@ -243,7 +243,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.news = out
 
         return res
@@ -291,7 +291,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.player_seasons = out
 
         return res
@@ -315,7 +315,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.player_tournament_projections = out
 
         return res
@@ -363,7 +363,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.players = out
 
         return res
@@ -387,7 +387,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.tournaments = out
 
         return res
@@ -411,7 +411,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
+                out = utils.unmarshal_json(r.text, Optional[list[Any]])
                 res.tournaments = out
 
         return res

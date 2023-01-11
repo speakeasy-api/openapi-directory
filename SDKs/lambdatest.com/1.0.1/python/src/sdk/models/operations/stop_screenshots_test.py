@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class StopScreenshotsTestPathParams:
-    test_id: str = field(metadata={'path_param': { 'field_name': 'test_id', 'style': 'simple', 'explode': False }})
+    test_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'test_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StopScreenshotsTestSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StopScreenshotsTestRequest:
-    path_params: StopScreenshotsTestPathParams = field()
-    security: StopScreenshotsTestSecurity = field()
+    path_params: StopScreenshotsTestPathParams = dataclasses.field()
+    security: StopScreenshotsTestSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StopScreenshotsTestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied: Optional[Any] = field(default=None)
-    forbidden: Optional[Any] = field(default=None)
-    stop_screenshot_not_found: Optional[Any] = field(default=None)
-    stop_screenshot_success: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied: Optional[Any] = dataclasses.field(default=None)
+    forbidden: Optional[Any] = dataclasses.field(default=None)
+    stop_screenshot_not_found: Optional[Any] = dataclasses.field(default=None)
+    stop_screenshot_success: Optional[Any] = dataclasses.field(default=None)
     

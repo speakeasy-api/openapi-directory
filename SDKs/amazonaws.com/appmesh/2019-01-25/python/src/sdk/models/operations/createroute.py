@@ -1,77 +1,81 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import grpcroute as shared_grpcroute
+from ..shared import httproute as shared_httproute
+from ..shared import tcproute as shared_tcproute
+from ..shared import tagref as shared_tagref
+from ..shared import createrouteoutput as shared_createrouteoutput
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateRoutePathParams:
-    mesh_name: str = field(metadata={'path_param': { 'field_name': 'meshName', 'style': 'simple', 'explode': False }})
-    virtual_router_name: str = field(metadata={'path_param': { 'field_name': 'virtualRouterName', 'style': 'simple', 'explode': False }})
+    mesh_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'meshName', 'style': 'simple', 'explode': False }})
+    virtual_router_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'virtualRouterName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateRouteQueryParams:
-    mesh_owner: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'meshOwner', 'style': 'form', 'explode': True }})
+    mesh_owner: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'meshOwner', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateRouteHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateRouteRequestBodySpec:
     r"""CreateRouteRequestBodySpec
     An object that represents a route specification. Specify one route type.
     """
     
-    grpc_route: Optional[shared.GrpcRoute] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('grpcRoute') }})
-    http2_route: Optional[shared.HTTPRoute] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('http2Route') }})
-    http_route: Optional[shared.HTTPRoute] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpRoute') }})
-    priority: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priority') }})
-    tcp_route: Optional[shared.TCPRoute] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tcpRoute') }})
+    grpc_route: Optional[shared_grpcroute.GrpcRoute] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('grpcRoute') }})
+    http2_route: Optional[shared_httproute.HTTPRoute] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('http2Route') }})
+    http_route: Optional[shared_httproute.HTTPRoute] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpRoute') }})
+    priority: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priority') }})
+    tcp_route: Optional[shared_tcproute.TCPRoute] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tcpRoute') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateRouteRequestBody:
-    route_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('routeName') }})
-    spec: CreateRouteRequestBodySpec = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
-    client_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
-    tags: Optional[List[shared.TagRef]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    route_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('routeName') }})
+    spec: CreateRouteRequestBodySpec = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
+    client_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
+    tags: Optional[list[shared_tagref.TagRef]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateRouteRequest:
-    headers: CreateRouteHeaders = field()
-    path_params: CreateRoutePathParams = field()
-    query_params: CreateRouteQueryParams = field()
-    request: CreateRouteRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateRouteHeaders = dataclasses.field()
+    path_params: CreateRoutePathParams = dataclasses.field()
+    query_params: CreateRouteQueryParams = dataclasses.field()
+    request: CreateRouteRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateRouteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bad_request_exception: Optional[Any] = field(default=None)
-    conflict_exception: Optional[Any] = field(default=None)
-    create_route_output: Optional[shared.CreateRouteOutput] = field(default=None)
-    forbidden_exception: Optional[Any] = field(default=None)
-    internal_server_error_exception: Optional[Any] = field(default=None)
-    limit_exceeded_exception: Optional[Any] = field(default=None)
-    not_found_exception: Optional[Any] = field(default=None)
-    service_unavailable_exception: Optional[Any] = field(default=None)
-    too_many_requests_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bad_request_exception: Optional[Any] = dataclasses.field(default=None)
+    conflict_exception: Optional[Any] = dataclasses.field(default=None)
+    create_route_output: Optional[shared_createrouteoutput.CreateRouteOutput] = dataclasses.field(default=None)
+    forbidden_exception: Optional[Any] = dataclasses.field(default=None)
+    internal_server_error_exception: Optional[Any] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    service_unavailable_exception: Optional[Any] = dataclasses.field(default=None)
+    too_many_requests_exception: Optional[Any] = dataclasses.field(default=None)
     

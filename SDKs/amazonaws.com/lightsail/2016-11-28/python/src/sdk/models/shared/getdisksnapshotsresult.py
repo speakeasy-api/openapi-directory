@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import disksnapshot as shared_disksnapshot
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDiskSnapshotsResult:
-    disk_snapshots: Optional[List[DiskSnapshot]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskSnapshots') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    disk_snapshots: Optional[list[shared_disksnapshot.DiskSnapshot]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskSnapshots') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

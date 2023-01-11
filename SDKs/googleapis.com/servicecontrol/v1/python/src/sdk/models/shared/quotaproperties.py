@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class QuotaPropertiesQuotaModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QuotaProperties:
     r"""QuotaProperties
     Represents the properties needed for quota operations.
     """
     
-    quota_mode: Optional[QuotaPropertiesQuotaModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quotaMode') }})
+    quota_mode: Optional[QuotaPropertiesQuotaModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quotaMode') }})
     

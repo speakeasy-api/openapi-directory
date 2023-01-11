@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import responsemetadata as shared_responsemetadata
+from ..shared import tenant as shared_tenant
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTenantsResponse:
     r"""ListTenantsResponse
     The List tenants response object.
     """
     
-    metadata: Optional[ResponseMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    tenants: Optional[List[Tenant]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tenants') }})
+    metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    tenants: Optional[list[shared_tenant.Tenant]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tenants') }})
     

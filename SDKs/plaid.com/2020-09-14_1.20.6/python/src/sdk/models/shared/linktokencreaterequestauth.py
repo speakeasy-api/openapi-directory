@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -8,11 +8,11 @@ class LinkTokenCreateRequestAuthFlowTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LinkTokenCreateRequestAuth:
     r"""LinkTokenCreateRequestAuth
     Specifies options for initializing Link for use with the Auth product. This field is currently only required if using the Flexible Auth product (currently in closed beta).
     """
     
-    flow_type: LinkTokenCreateRequestAuthFlowTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('flow_type') }})
+    flow_type: LinkTokenCreateRequestAuthFlowTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('flow_type') }})
     

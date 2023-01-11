@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import tagresponse as shared_tagresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTagPathParams:
-    tag_gid: str = field(metadata={'path_param': { 'field_name': 'tag_gid', 'style': 'simple', 'explode': False }})
+    tag_gid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tag_gid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    opt_fields: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'opt_fields', 'style': 'form', 'explode': False }})
-    opt_pretty: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'opt_pretty', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    opt_fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'opt_fields', 'style': 'form', 'explode': False }})
+    opt_pretty: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'opt_pretty', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetTag200ApplicationJSON:
-    data: Optional[shared.TagResponse] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[shared_tagresponse.TagResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagRequest:
-    path_params: GetTagPathParams = field()
-    query_params: GetTagQueryParams = field()
+    path_params: GetTagPathParams = dataclasses.field()
+    query_params: GetTagQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    get_tag_200_application_json_object: Optional[GetTag200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    get_tag_200_application_json_object: Optional[GetTag200ApplicationJSON] = dataclasses.field(default=None)
     

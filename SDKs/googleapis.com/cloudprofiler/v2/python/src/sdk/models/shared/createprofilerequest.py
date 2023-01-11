@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deployment as shared_deployment
 
 class CreateProfileRequestProfileTypeEnum(str, Enum):
     PROFILE_TYPE_UNSPECIFIED = "PROFILE_TYPE_UNSPECIFIED"
@@ -17,12 +17,12 @@ class CreateProfileRequestProfileTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateProfileRequest:
     r"""CreateProfileRequest
     CreateProfileRequest describes a profile resource online creation request. The deployment field must be populated. The profile_type specifies the list of profile types supported by the agent. The creation call will hang until a profile of one of these types needs to be collected. 
     """
     
-    deployment: Optional[Deployment] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployment') }})
-    profile_type: Optional[List[CreateProfileRequestProfileTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profileType') }})
+    deployment: Optional[shared_deployment.Deployment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployment') }})
+    profile_type: Optional[list[CreateProfileRequestProfileTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profileType') }})
     

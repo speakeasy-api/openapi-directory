@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import taginstance as shared_taginstance
 
 
-@dataclass
+@dataclasses.dataclass
 class PutUserTagsTagIDShowsShowIDPathParams:
-    show_id: int = field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
-    tag_id: int = field(metadata={'path_param': { 'field_name': 'tag_id', 'style': 'simple', 'explode': False }})
+    show_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
+    tag_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'tag_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserTagsTagIDShowsShowIDRequest:
-    path_params: PutUserTagsTagIDShowsShowIDPathParams = field()
+    path_params: PutUserTagsTagIDShowsShowIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserTagsTagIDShowsShowIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_instance: Optional[shared.TagInstance] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_instance: Optional[shared_taginstance.TagInstance] = dataclasses.field(default=None)
     

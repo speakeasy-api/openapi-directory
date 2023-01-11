@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dominantlanguage as shared_dominantlanguage
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectDominantLanguageResponse:
-    languages: Optional[List[DominantLanguage]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Languages') }})
+    languages: Optional[list[shared_dominantlanguage.DominantLanguage]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Languages') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.AssociateAssetsRequest(
     path_params=operations.AssociateAssetsPathParams(
-        asset_id="quis",
+        asset_id="labore",
     ),
     headers=operations.AssociateAssetsHeaders(
-        x_amz_algorithm="dolor",
-        x_amz_content_sha256="esse",
-        x_amz_credential="doloremque",
-        x_amz_date="omnis",
-        x_amz_security_token="et",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="voluptatem",
+        x_amz_algorithm="cupiditate",
+        x_amz_content_sha256="unde",
+        x_amz_credential="cupiditate",
+        x_amz_date="odio",
+        x_amz_security_token="rerum",
+        x_amz_signature="placeat",
+        x_amz_signed_headers="nostrum",
     ),
     request=operations.AssociateAssetsRequestBody(
-        child_asset_id="consectetur",
-        client_token="est",
-        hierarchy_id="ducimus",
+        child_asset_id="repellat",
+        client_token="earum",
+        hierarchy_id="eum",
     ),
 )
     
-res = s.sdk.associate_assets(req)
+res = s.associate_assets(req)
 
 if res.status_code == 200:
     # handle response

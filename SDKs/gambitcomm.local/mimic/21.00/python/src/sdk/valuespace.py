@@ -1,0 +1,506 @@
+import requests
+from typing import Optional
+from sdk.models import operations
+from . import utils
+
+class Valuespace:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def add(self, request: operations.AddRequest) -> operations.AddResponse:
+        r"""Add an entry to a table.
+        The object needs to specify the MIB object with the INDEX clause, usually an object whose name ends with Entry.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/add/{object}/{instance}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("POST", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AddResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.add_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def eval_value(self, request: operations.EvalValueRequest) -> operations.EvalValueResponse:
+        r"""Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
+        Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/eval/{object}/{instance}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.EvalValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.eval_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_info(self, request: operations.GetInfoRequest) -> operations.GetInfoResponse:
+        r"""Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
+        Return the syntactical information for the specified object, such as type, size, range, enumerations, and ACCESS.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/info/{object}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetInfoResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_info_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_instances(self, request: operations.GetInstancesRequest) -> operations.GetInstancesResponse:
+        r"""Display the MIB object instances for the specified object.
+        This enables MIB browsing of the MIB on the current agent.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/instances/{object}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetInstancesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
+                res.get_instances_200_application_json_strings = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_mib(self, request: operations.GetMibRequest) -> operations.GetMibResponse:
+        r"""Return the MIB that defines the specified object.
+        This will only return a MIB name if the object is unmistakeably defined in a MIB.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/mib/{object}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetMibResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_mib_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_name(self, request: operations.GetNameRequest) -> operations.GetNameResponse:
+        r"""Return the symbolic name of the specified object identifier.
+        Return the symbolic name of the specified object identifier.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/name/{OID}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetNameResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_name_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_objects(self, request: operations.GetObjectsRequest) -> operations.GetObjectsResponse:
+        r"""Display the MIB objects below the current position
+        This command is similar to the ls or dir operating system commands to list filesystem directories.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/list/{OID}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetObjectsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
+                res.get_objects_200_application_json_strings = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_oid(self, request: operations.GetOidRequest) -> operations.GetOidResponse:
+        r"""Return the numeric OID of the specified object.
+        Return the numeric OID of the specified object.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/oid/{object}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetOidResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_oid_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_state(self, request: operations.GetStateRequest) -> operations.GetStateResponse:
+        r"""Get the state of a MIB object object.
+        To disable traversal into a MIB object and any subtree underneath, set the state to 0, else set the state to 1.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/state/get/{object}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetStateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_state_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_value(self, request: operations.GetValueRequest) -> operations.GetValueResponse:
+        r"""Get a variable in the Value Space.
+        Get a variable in the Value Space.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/get/{object}/{instance}/{variable}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.get_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_variables(self, request: operations.GetVariablesRequest) -> operations.GetVariablesResponse:
+        r"""Display the variables for the specified instance instance for the specified MIB object object
+        This enables variable browsing of the MIB on the current agent.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/variables/{object}/{instance}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetVariablesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
+                res.get_variables_200_application_json_strings = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def mset_value(self, request: operations.MsetValueRequest) -> operations.MsetValueResponse:
+        r"""Set multiple variables in the Value Space.
+        This is a performance optimization of the mimic value set command, to be used when many variables are to be set.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/mset", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MsetValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.mset_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def munset_value(self, request: operations.MunsetValueRequest) -> operations.MunsetValueResponse:
+        r"""Unset multiple variables in the Value Space
+        This is a performance optimization of the mimic value unset command, to be used when many variables are to be unset.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/munset", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MunsetValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.munset_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def remove(self, request: operations.RemoveRequest) -> operations.RemoveResponse:
+        r"""Remove an entry from a table.
+        The object needs to specify the MIB object with the INDEX clause, usually an object whose name ends with Entry.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/remove/{object}/{instance}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.RemoveResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.remove_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def set_state(self, request: operations.SetStateRequest) -> operations.SetStateResponse:
+        r"""Set the state of a MIB object object
+        To disable traversal into a MIB object and any subtree underneath, set the state to 0, else set the state to 1.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/state/set/{object}/{state}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.SetStateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.set_state_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def set_value(self, request: operations.SetValueRequest) -> operations.SetValueResponse:
+        r"""Set a variable in the Value Space.
+        NOTE to set a binary string value, specify a string starting with \\x followed by pairs of hexadecimal digits, eg. \"\\x 01 23 45\". This command also assigns SNMP PDU action scripts for GET* and SET requests on a MIB object. The instance parameter must be 0. The following variables enable actions, g - The specified TCL script will be run on GET or GETNEXT requests. It has to exist under the simulation directory. s - The specified script will be run on SET requests. It has to exist under the simulation directory. This command also controls advanced trap generation functionality. The following variables control trap generation r, tu, c - These variables together represent the rate settings for the trap. r and tu is the actual per second rate and c represents the total duration in seconds for which the trap is sent. As soon as the c variable is set, the trap generation begins, for this reason it should be the last variable set for a particular trap. The following variables have to be set before setting the c variable to modify the behavior of the generated trap(s). OBJECT - An object name when used as a variable is looked up during the trap send and the value of that variable is included in the PDU. OBJECT.i - This type of variable will be used to assign an optional instance for the specified object in the traps varbind. The value of this variable identifies the index. e.g. The commands below will send ifIndex.2 with a value of 5 in the linkUp trap PDU. i - This variable is used to specify any extra version specific information to the trap generation code. Here is what it can be used to represent for various SNMP versions SNMPv1 - [community_string][,[enterprise][,agent_addr]] SNMPv2c - community_string SNMPv2 - source_party,destination_party,context SNMPv3 - user_name,context v - This variable lets the user override the version of the PDU being generated. The possible values are - \"1\", \"2c\", \"2\" and \"3\". o - This variable is used for traps that need extra variables to be added to the PDU along with the ones defined in the MIB as its variables. This lets the user force extra objects (along with instances if needed). All variables to be sent need to be assigned to the o variable. O - To omit any variables which are defined in the MIB you can use the O (capital o) variable. This needs to be set to the list of OIDs of the variable bindings in the order defined in the MIB. ip - The variable ip is used for generating the trap from the N-th IP alias address. a - This variable associates an action script to the trap or INFORM request. The action script specified in the value of this variable has to exist in the simulation directory. It will be executed before each instance of the trap is sent out. I - This optional variable controls the generation of INFORM PDUs. An INFORM is sent only if the variable is non-zero, else a TRAP is generated. R, T, E - This variable associates an action script to the INFORM request. The action script specified in the value of this variable has to exist in the simulation directory. The action script associated with the R variable will be executed on receiving a INFORM RESPONSE, the one associated with the T variable on a timeout (ie. no response), the one associated with the E variable on a report PDU. eid.IP-ADDRESS.PORT - control variable allows to configure message authoritative engine id for the destination specified by IP-ADDRESS and optionally by PORT. eb.IP-ADDRESS.PORT - control variable allows to configure message authoritative engine boots. et.IP-ADDRESS.PORT - control variable allows to configure message authoritative engine time.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/set/{object}/{instance}/{variable}", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.SetValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.set_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def split_oid(self, request: operations.SplitOidRequest) -> operations.SplitOidResponse:
+        r"""Split the numerical OID into the object OID and instance OID.
+        This is useful if you have an OID which is a combination of object and instance.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/split/{OID}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.SplitOidResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
+                res.split_oid_200_application_json_strings = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def unset_value(self, request: operations.UnsetValueRequest) -> operations.UnsetValueResponse:
+        r"""Unset a variable in the Value Space in order to free its memory.
+        Only variables that have previously been set can be unset.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/mimic/agent/{agentNum}/value/unset/{object}/{instance}/{variable}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UnsetValueResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                res.unset_value_200_application_json_string = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    

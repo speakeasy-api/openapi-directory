@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAuth:
-    password: str = field(metadata={'security': { 'field_name': 'password' }})
-    username: str = field(metadata={'security': { 'field_name': 'username' }})
+    password: str = dataclasses.field(metadata={'security': { 'field_name': 'password' }})
+    username: str = dataclasses.field(metadata={'security': { 'field_name': 'username' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    auth: SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    auth: SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -28,13 +28,13 @@ class PatientWaitTimeServiceEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientWaitTime:
     r"""PatientWaitTime
     Expected wait times for new and established patients for a given health care service
     """
     
-    service: PatientWaitTimeServiceEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
-    established: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('established') }})
-    new: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new') }})
+    service: PatientWaitTimeServiceEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
+    established: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('established') }})
+    new: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new') }})
     

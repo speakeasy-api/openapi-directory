@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import requestentity as shared_requestentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostRequestsRequestBody:
-    destination: str = field(metadata={'multipart_form': { 'field_name': 'destination' }})
-    path: str = field(metadata={'multipart_form': { 'field_name': 'path' }})
-    group_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'group_ids' }})
-    user_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
+    destination: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'destination' }})
+    path: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'path' }})
+    group_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'group_ids' }})
+    user_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRequestsRequest:
-    request: PostRequestsRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostRequestsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRequestsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    request_entity: Optional[shared.RequestEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    request_entity: Optional[shared_requestentity.RequestEntity] = dataclasses.field(default=None)
     

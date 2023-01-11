@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import employee as shared_employee
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeePathParams:
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeRequest:
-    path_params: GetEmployeePathParams = field()
-    security: GetEmployeeSecurity = field()
+    path_params: GetEmployeePathParams = dataclasses.field()
+    security: GetEmployeeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employees: Optional[List[shared.Employee]] = field(default=None)
-    errors: Optional[List[shared.Error]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employees: Optional[list[shared_employee.Employee]] = dataclasses.field(default=None)
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
     

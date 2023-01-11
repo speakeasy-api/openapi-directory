@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionRestrictionRegex:
     r"""OptionRestrictionRegex
     A regular expression representing a restriction on a string configuration option value.
     """
     
-    label: Optional[str] = field(default=None)
-    pattern: Optional[str] = field(default=None)
+    label: Optional[str] = dataclasses.field(default=None)
+    pattern: Optional[str] = dataclasses.field(default=None)
     

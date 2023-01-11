@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsWebchannelsWebchannelIDPathParams:
-    webchannel_id: int = field(metadata={'path_param': { 'field_name': 'webchannel_id', 'style': 'simple', 'explode': False }})
+    webchannel_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'webchannel_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsWebchannelsWebchannelIDRequest:
-    path_params: DeleteUserFollowsWebchannelsWebchannelIDPathParams = field()
+    path_params: DeleteUserFollowsWebchannelsWebchannelIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsWebchannelsWebchannelIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

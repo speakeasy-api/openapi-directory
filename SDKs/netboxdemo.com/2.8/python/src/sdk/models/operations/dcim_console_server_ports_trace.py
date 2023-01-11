@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import consoleserverport as shared_consoleserverport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsTracePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsTraceRequest:
-    path_params: DcimConsoleServerPortsTracePathParams = field()
+    path_params: DcimConsoleServerPortsTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortsTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    console_server_port: Optional[shared.ConsoleServerPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    console_server_port: Optional[shared_consoleserverport.ConsoleServerPort] = dataclasses.field(default=None)
     

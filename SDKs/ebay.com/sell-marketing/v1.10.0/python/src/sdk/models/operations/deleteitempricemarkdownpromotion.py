@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemPriceMarkdownPromotionPathParams:
-    promotion_id: str = field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
+    promotion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemPriceMarkdownPromotionSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemPriceMarkdownPromotionRequest:
-    path_params: DeleteItemPriceMarkdownPromotionPathParams = field()
-    security: DeleteItemPriceMarkdownPromotionSecurity = field()
+    path_params: DeleteItemPriceMarkdownPromotionPathParams = dataclasses.field()
+    security: DeleteItemPriceMarkdownPromotionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemPriceMarkdownPromotionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

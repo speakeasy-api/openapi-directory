@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkInsightsAnalysisResult:
-    network_insights_analysis_id: Optional[str] = field(default=None)
+    network_insights_analysis_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

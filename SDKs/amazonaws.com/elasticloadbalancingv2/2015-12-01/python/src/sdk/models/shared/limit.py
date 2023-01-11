@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Limit:
     r"""Limit
     Information about an Elastic Load Balancing resource limit for your Amazon Web Services account.
     """
     
-    max: Optional[str] = field(default=None)
-    name: Optional[str] = field(default=None)
+    max: Optional[str] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelMandateByUUIDPathParams:
-    mandate_uuid: str = field(metadata={'path_param': { 'field_name': 'mandateUuid', 'style': 'simple', 'explode': False }})
+    mandate_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'mandateUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelMandateByUUIDRequest:
-    path_params: CancelMandateByUUIDPathParams = field()
+    path_params: CancelMandateByUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelMandateByUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

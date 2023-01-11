@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import productviewdetail as shared_productviewdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchProductsAsAdminOutput:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    product_view_details: Optional[List[ProductViewDetail]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProductViewDetails') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    product_view_details: Optional[list[shared_productviewdetail.ProductViewDetail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProductViewDetails') }})
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
 
 
-@dataclass
+@dataclasses.dataclass
 class FilesPatchPathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'file_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FilesPatchRequest:
-    path_params: FilesPatchPathParams = field()
-    request: dict[str, Any] = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: FilesPatchPathParams = dataclasses.field()
+    request: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FilesPatchResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

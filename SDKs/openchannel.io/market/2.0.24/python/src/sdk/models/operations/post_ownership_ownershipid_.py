@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostOwnershipOwnershipIDPathParams:
-    ownership_id: str = field(metadata={'path_param': { 'field_name': 'ownershipId', 'style': 'simple', 'explode': False }})
+    ownership_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownershipId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOwnershipOwnershipIDQueryParams:
-    custom_data: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
-    expires: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'expires', 'style': 'form', 'explode': True }})
+    custom_data: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'customData', 'style': 'form', 'explode': True }})
+    expires: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'expires', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOwnershipOwnershipIDRequest:
-    path_params: PostOwnershipOwnershipIDPathParams = field()
-    query_params: PostOwnershipOwnershipIDQueryParams = field()
+    path_params: PostOwnershipOwnershipIDPathParams = dataclasses.field()
+    query_params: PostOwnershipOwnershipIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOwnershipOwnershipIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

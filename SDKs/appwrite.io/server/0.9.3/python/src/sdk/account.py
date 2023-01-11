@@ -30,13 +30,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/recovery"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountCreateRecoveryResponse(status_code=r.status_code, content_type=content_type)
@@ -62,13 +62,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/verification"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountCreateVerificationResponse(status_code=r.status_code, content_type=content_type)
@@ -286,13 +286,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/email"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdateEmailResponse(status_code=r.status_code, content_type=content_type)
@@ -315,13 +315,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/name"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdateNameResponse(status_code=r.status_code, content_type=content_type)
@@ -344,13 +344,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/password"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdatePasswordResponse(status_code=r.status_code, content_type=content_type)
@@ -373,13 +373,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/prefs"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdatePrefsResponse(status_code=r.status_code, content_type=content_type)
@@ -404,13 +404,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/recovery"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdateRecoveryResponse(status_code=r.status_code, content_type=content_type)
@@ -433,13 +433,13 @@ class Account:
         url = base_url.removesuffix("/") + "/account/verification"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountUpdateVerificationResponse(status_code=r.status_code, content_type=content_type)

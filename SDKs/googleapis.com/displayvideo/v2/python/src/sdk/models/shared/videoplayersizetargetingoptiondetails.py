@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,11 +13,11 @@ class VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VideoPlayerSizeTargetingOptionDetails:
     r"""VideoPlayerSizeTargetingOptionDetails
     Represents a targetable video player size. This will be populated in the video_player_size_details field when targeting_type is `TARGETING_TYPE_VIDEO_PLAYER_SIZE`.
     """
     
-    video_player_size: Optional[VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoPlayerSize') }})
+    video_player_size: Optional[VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoPlayerSize') }})
     

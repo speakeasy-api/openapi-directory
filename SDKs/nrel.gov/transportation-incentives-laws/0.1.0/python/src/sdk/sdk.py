@@ -68,30 +68,6 @@ class SDK:
         return res
 
     
-    def get_v1_id_output_format_(self, request: operations.GetV1IDOutputFormatRequest) -> operations.GetV1IDOutputFormatResponse:
-        r"""Fetch the details of a specific law given the law's ID.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/v1/{id}.{output_format}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetV1IDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-
-        return res
-
-    
     def get_v1_pocs_output_format_(self, request: operations.GetV1PocsOutputFormatRequest) -> operations.GetV1PocsOutputFormatResponse:
         r"""Get the points of contact for a given jurisdiction.
         """
@@ -108,6 +84,30 @@ class SDK:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetV1PocsOutputFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_v1_id_output_format_(self, request: operations.GetV1IDOutputFormatRequest) -> operations.GetV1IDOutputFormatResponse:
+        r"""Fetch the details of a specific law given the law's ID.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1/{id}.{output_format}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetV1IDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):

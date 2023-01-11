@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import transactionsummaryresponse as shared_transactionsummaryresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionSummaryQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionSummarySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionSummaryRequest:
-    query_params: GetTransactionSummaryQueryParams = field()
-    security: GetTransactionSummarySecurity = field()
+    query_params: GetTransactionSummaryQueryParams = dataclasses.field()
+    security: GetTransactionSummarySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionSummaryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    transaction_summary_response: Optional[shared.TransactionSummaryResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    transaction_summary_response: Optional[shared_transactionsummaryresponse.TransactionSummaryResponse] = dataclasses.field(default=None)
     

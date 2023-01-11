@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,38 +25,38 @@ s.config_security(
     
 req = operations.AddTagsToResourceRequest(
     headers=operations.AddTagsToResourceHeaders(
-        x_amz_algorithm="a",
-        x_amz_content_sha256="tempore",
-        x_amz_credential="veniam",
-        x_amz_date="consequatur",
-        x_amz_security_token="corporis",
-        x_amz_signature="est",
-        x_amz_signed_headers="iure",
+        x_amz_algorithm="laborum",
+        x_amz_content_sha256="ex",
+        x_amz_credential="ad",
+        x_amz_date="voluptatem",
+        x_amz_security_token="accusantium",
+        x_amz_signature="et",
+        x_amz_signed_headers="sunt",
         x_amz_target="AmazonDMSv20160101.AddTagsToResource",
     ),
     request=shared.AddTagsToResourceMessage(
-        resource_arn="est",
+        resource_arn="quidem",
         tags=[
             shared.Tag(
-                key="consequatur",
-                resource_arn="non",
-                value="nulla",
+                key="iure",
+                resource_arn="incidunt",
+                value="iusto",
             ),
             shared.Tag(
-                key="inventore",
-                resource_arn="reprehenderit",
-                value="quos",
+                key="voluptatibus",
+                resource_arn="voluptates",
+                value="quia",
             ),
             shared.Tag(
-                key="saepe",
-                resource_arn="aperiam",
-                value="est",
+                key="tenetur",
+                resource_arn="et",
+                value="rerum",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags_to_resource(req)
+res = s.add_tags_to_resource(req)
 
 if res.add_tags_to_resource_response is not None:
     # handle response

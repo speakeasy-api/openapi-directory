@@ -1,33 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import taxrateupdaterequest as shared_taxrateupdaterequest
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import taxrate as shared_taxrate
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaxRatePathParams:
-    tax_rate_uuid: str = field(metadata={'path_param': { 'field_name': 'taxRateUuid', 'style': 'simple', 'explode': False }})
+    tax_rate_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'taxRateUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaxRateSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaxRateRequest:
-    path_params: UpdateTaxRatePathParams = field()
-    request: shared.TaxRateUpdateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateTaxRateSecurity = field()
+    path_params: UpdateTaxRatePathParams = dataclasses.field()
+    request: shared_taxrateupdaterequest.TaxRateUpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateTaxRateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaxRateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    tax_rate: Optional[shared.TaxRate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    tax_rate: Optional[shared_taxrate.TaxRate] = dataclasses.field(default=None)
     

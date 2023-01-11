@@ -1,11 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import availabilityzone as shared_availabilityzone
+from ..shared import ipaddresstype_enum as shared_ipaddresstype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class SetSubnetsOutput:
-    availability_zones: Optional[List[AvailabilityZone]] = field(default=None)
-    ip_address_type: Optional[IPAddressTypeEnum] = field(default=None)
+    availability_zones: Optional[list[shared_availabilityzone.AvailabilityZone]] = dataclasses.field(default=None)
+    ip_address_type: Optional[shared_ipaddresstype_enum.IPAddressTypeEnum] = dataclasses.field(default=None)
     

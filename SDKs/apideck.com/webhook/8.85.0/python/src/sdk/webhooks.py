@@ -21,8 +21,8 @@ class Webhooks:
 
     
     def webhooks_add(self, request: operations.WebhooksAddRequest) -> operations.WebhooksAddResponse:
-        r"""Create webhook
-        Create webhook
+        r"""Create webhook subscription
+        Create a webhook subscription to receive events
         """
         
         base_url = self._server_url
@@ -30,7 +30,7 @@ class Webhooks:
         url = base_url.removesuffix("/") + "/webhook/webhooks"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -38,7 +38,7 @@ class Webhooks:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhooksAddResponse(status_code=r.status_code, content_type=content_type)
@@ -76,8 +76,8 @@ class Webhooks:
 
     
     def webhooks_all(self, request: operations.WebhooksAllRequest) -> operations.WebhooksAllResponse:
-        r"""List webhooks
-        List webhooks
+        r"""List webhook subscriptions
+        List all webhook subscriptions
         """
         
         base_url = self._server_url
@@ -127,8 +127,8 @@ class Webhooks:
 
     
     def webhooks_delete(self, request: operations.WebhooksDeleteRequest) -> operations.WebhooksDeleteResponse:
-        r"""Delete webhook
-        Delete webhook
+        r"""Delete webhook subscription
+        Delete a webhook subscription
         """
         
         base_url = self._server_url
@@ -186,7 +186,7 @@ class Webhooks:
         url = utils.generate_url(base_url, "/webhook/webhooks/{id}/execute/{serviceId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -194,7 +194,7 @@ class Webhooks:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhooksExecuteResponse(status_code=r.status_code, content_type=content_type)
@@ -232,8 +232,8 @@ class Webhooks:
 
     
     def webhooks_one(self, request: operations.WebhooksOneRequest) -> operations.WebhooksOneResponse:
-        r"""Get webhook
-        Get webhook
+        r"""Get webhook subscription
+        Get the webhook subscription details
         """
         
         base_url = self._server_url
@@ -291,7 +291,7 @@ class Webhooks:
         url = utils.generate_url(base_url, "/webhook/w/{id}/{serviceId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -300,7 +300,7 @@ class Webhooks:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhooksResolveResponse(status_code=r.status_code, content_type=content_type)
@@ -347,7 +347,7 @@ class Webhooks:
         url = utils.generate_url(base_url, "/webhook/webhooks/{id}/x/{serviceId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -356,7 +356,7 @@ class Webhooks:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhooksShortExecuteResponse(status_code=r.status_code, content_type=content_type)
@@ -394,8 +394,8 @@ class Webhooks:
 
     
     def webhooks_update(self, request: operations.WebhooksUpdateRequest) -> operations.WebhooksUpdateResponse:
-        r"""Update webhook
-        Update webhook
+        r"""Update webhook subscription
+        Update a webhook subscription
         """
         
         base_url = self._server_url
@@ -403,7 +403,7 @@ class Webhooks:
         url = utils.generate_url(base_url, "/webhook/webhooks/{id}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -411,7 +411,7 @@ class Webhooks:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhooksUpdateResponse(status_code=r.status_code, content_type=content_type)

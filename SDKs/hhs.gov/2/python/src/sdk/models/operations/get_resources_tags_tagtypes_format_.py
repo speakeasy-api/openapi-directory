@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import tagtypemarshallerwrapped as shared_tagtypemarshallerwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagTypesFormatPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagTypesFormatRequest:
-    path_params: GetResourcesTagsTagTypesFormatPathParams = field()
+    path_params: GetResourcesTagsTagTypesFormatPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagTypesFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_type_marshaller_wrappeds: Optional[List[shared.TagTypeMarshallerWrapped]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_type_marshaller_wrappeds: Optional[list[shared_tagtypemarshallerwrapped.TagTypeMarshallerWrapped]] = dataclasses.field(default=None)
     

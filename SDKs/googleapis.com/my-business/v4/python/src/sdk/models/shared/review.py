@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,7 +6,8 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reviewreply as shared_reviewreply
+from ..shared import reviewer as shared_reviewer
 
 class ReviewStarRatingEnum(str, Enum):
     STAR_RATING_UNSPECIFIED = "STAR_RATING_UNSPECIFIED"
@@ -18,18 +19,18 @@ class ReviewStarRatingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Review:
     r"""Review
     Output only. Represents a review for a location.
     """
     
-    comment: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    review_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewId') }})
-    review_reply: Optional[ReviewReply] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewReply') }})
-    reviewer: Optional[Reviewer] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewer') }})
-    star_rating: Optional[ReviewStarRatingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starRating') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    review_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewId') }})
+    review_reply: Optional[shared_reviewreply.ReviewReply] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewReply') }})
+    reviewer: Optional[shared_reviewer.Reviewer] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reviewer') }})
+    star_rating: Optional[ReviewStarRatingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starRating') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
     

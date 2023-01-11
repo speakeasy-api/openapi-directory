@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.GetRawMessageContentRequest(
     path_params=operations.GetRawMessageContentPathParams(
-        message_id="neque",
+        message_id="quibusdam",
     ),
     headers=operations.GetRawMessageContentHeaders(
-        x_amz_algorithm="non",
-        x_amz_content_sha256="expedita",
-        x_amz_credential="veniam",
-        x_amz_date="quos",
-        x_amz_security_token="natus",
-        x_amz_signature="porro",
-        x_amz_signed_headers="dolorem",
+        x_amz_algorithm="vero",
+        x_amz_content_sha256="ea",
+        x_amz_credential="doloremque",
+        x_amz_date="maxime",
+        x_amz_security_token="aperiam",
+        x_amz_signature="ut",
+        x_amz_signed_headers="illum",
     ),
 )
     
-res = s.sdk.get_raw_message_content(req)
+res = s.get_raw_message_content(req)
 
 if res.get_raw_message_content_response is not None:
     # handle response

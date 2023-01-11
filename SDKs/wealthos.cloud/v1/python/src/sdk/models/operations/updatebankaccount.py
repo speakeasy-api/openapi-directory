@@ -1,45 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBankAccountPathParams:
-    bank_account_id: str = field(metadata={'path_param': { 'field_name': 'bank_account_id', 'style': 'simple', 'explode': False }})
+    bank_account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'bank_account_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBankAccountHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBankAccountSecurity:
-    api_secret_key: shared.SchemeAPISecretKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_secret_key: shared_security.SchemeAPISecretKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBankAccountRequest:
-    headers: UpdateBankAccountHeaders = field()
-    path_params: UpdateBankAccountPathParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateBankAccountSecurity = field()
+    headers: UpdateBankAccountHeaders = dataclasses.field()
+    path_params: UpdateBankAccountPathParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateBankAccountSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBankAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_bank_account_201_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_400_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_401_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_403_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_404_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_409_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_429_application_json_any: Optional[Any] = field(default=None)
-    update_bank_account_500_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_bank_account_201_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_403_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_404_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_409_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    update_bank_account_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

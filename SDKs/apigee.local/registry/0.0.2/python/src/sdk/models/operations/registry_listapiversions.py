@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryListAPIVersionsPathParams:
-    api: str = field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    api: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryListAPIVersionsQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page_size: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
-    page_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page_token', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page_size: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
+    page_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryListAPIVersionsRequest:
-    path_params: RegistryListAPIVersionsPathParams = field()
-    query_params: RegistryListAPIVersionsQueryParams = field()
+    path_params: RegistryListAPIVersionsPathParams = dataclasses.field()
+    query_params: RegistryListAPIVersionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryListAPIVersionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_api_versions_response: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_api_versions_response: Optional[Any] = dataclasses.field(default=None)
     

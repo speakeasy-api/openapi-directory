@@ -1,0 +1,8 @@
+import dataclasses
+from enum import Enum
+
+class UserChannelEnumChannelStatusEnum(str, Enum):
+    JOINED = "joined"
+    INVITED = "invited"
+    NOT_PARTICIPATING = "not_participating"
+

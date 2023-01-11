@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itempublictokencreaterequest as shared_itempublictokencreaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemCreatePublicTokenRequest:
-    request: shared.ItemPublicTokenCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itempublictokencreaterequest.ItemPublicTokenCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemCreatePublicTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_public_token_create_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_public_token_create_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

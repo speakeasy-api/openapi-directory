@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceNetworkACLAssociationResult:
-    new_association_id: Optional[str] = field(default=None)
+    new_association_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import license_info as shared_license_info
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetLicenseInformationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    license_info: Optional[shared.LicenseInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    license_info: Optional[shared_license_info.LicenseInfo] = dataclasses.field(default=None)
     

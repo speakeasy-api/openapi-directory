@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.GetSearchRequest(
         ),
     ),
     query_params=operations.GetSearchQueryParams(
-        q="dignissimos",
+        q="magnam",
     ),
 )
     
-res = s.sdk.get_search(req)
+res = s.rating.get_search(req)
 
 if res.get_search_200_application_json_any is not None:
     # handle response
@@ -38,7 +37,7 @@ if res.get_search_200_application_json_any is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### rating
 
 * `get_search` - List all company ESG Ratings
 

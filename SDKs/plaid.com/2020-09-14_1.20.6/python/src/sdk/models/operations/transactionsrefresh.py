@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import transactionsrefreshrequest as shared_transactionsrefreshrequest
+from ..shared import transactionsrefreshresponse as shared_transactionsrefreshresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TransactionsRefreshRequest:
-    request: shared.TransactionsRefreshRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_transactionsrefreshrequest.TransactionsRefreshRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TransactionsRefreshResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    transactions_refresh_response: Optional[shared.TransactionsRefreshResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    transactions_refresh_response: Optional[shared_transactionsrefreshresponse.TransactionsRefreshResponse] = dataclasses.field(default=None)
     

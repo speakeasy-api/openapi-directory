@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import city as shared_city
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CitiesListResponse:
     r"""CitiesListResponse
     City List Response
     """
     
-    cities: Optional[List[City]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cities') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    cities: Optional[list[shared_city.City]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cities') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import introspection as shared_introspection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthIntrospectSecurity:
-    jwtsa: shared.SchemeJwtsa = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    jwtsa: shared_security.SchemeJwtsa = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthIntrospectRequest:
-    security: GetAuthIntrospectSecurity = field()
+    security: GetAuthIntrospectSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthIntrospectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    introspection: Optional[shared.Introspection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    introspection: Optional[shared_introspection.Introspection] = dataclasses.field(default=None)
     

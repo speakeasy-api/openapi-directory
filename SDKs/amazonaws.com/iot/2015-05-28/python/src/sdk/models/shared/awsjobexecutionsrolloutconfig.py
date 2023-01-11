@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awsjobexponentialrolloutrate as shared_awsjobexponentialrolloutrate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AwsJobExecutionsRolloutConfig:
     r"""AwsJobExecutionsRolloutConfig
     Configuration for the rollout of OTA updates.
     """
     
-    exponential_rate: Optional[AwsJobExponentialRolloutRate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exponentialRate') }})
-    maximum_per_minute: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumPerMinute') }})
+    exponential_rate: Optional[shared_awsjobexponentialrolloutrate.AwsJobExponentialRolloutRate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exponentialRate') }})
+    maximum_per_minute: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maximumPerMinute') }})
     

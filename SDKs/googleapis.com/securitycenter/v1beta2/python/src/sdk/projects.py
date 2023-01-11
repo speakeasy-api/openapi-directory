@@ -21,7 +21,7 @@ class Projects:
 
     
     def securitycenter_projects_locations_clusters_get_container_threat_detection_settings(self, request: operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest) -> operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse:
-        r"""Get the ContainerThreatDetectionSettings resource.
+        r"""Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
         """
         
         base_url = self._server_url
@@ -54,14 +54,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1beta2/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse(status_code=r.status_code, content_type=content_type)
@@ -75,7 +75,7 @@ class Projects:
 
     
     def securitycenter_projects_web_security_scanner_settings_calculate(self, request: operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest) -> operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse:
-        r"""Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings.
+        r"""Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
         """
         
         base_url = self._server_url

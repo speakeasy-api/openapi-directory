@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import customavailabilityzone as shared_customavailabilityzone
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteCustomAvailabilityZoneResult:
-    custom_availability_zone: Optional[CustomAvailabilityZone] = field(default=None)
+    custom_availability_zone: Optional[shared_customavailabilityzone.CustomAvailabilityZone] = dataclasses.field(default=None)
     

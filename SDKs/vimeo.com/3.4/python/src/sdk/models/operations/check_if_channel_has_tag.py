@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class CheckIfChannelHasTagPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    word: str = field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    word: str = dataclasses.field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CheckIfChannelHasTagRequest:
-    path_params: CheckIfChannelHasTagPathParams = field()
+    path_params: CheckIfChannelHasTagPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CheckIfChannelHasTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

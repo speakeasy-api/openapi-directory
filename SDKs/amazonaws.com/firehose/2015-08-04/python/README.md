@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,66 +25,52 @@ s.config_security(
     
 req = operations.CreateDeliveryStreamRequest(
     headers=operations.CreateDeliveryStreamHeaders(
-        x_amz_algorithm="similique",
-        x_amz_content_sha256="qui",
-        x_amz_credential="sint",
-        x_amz_date="rerum",
-        x_amz_security_token="quibusdam",
-        x_amz_signature="voluptas",
-        x_amz_signed_headers="molestiae",
+        x_amz_algorithm="repellendus",
+        x_amz_content_sha256="cupiditate",
+        x_amz_credential="natus",
+        x_amz_date="molestiae",
+        x_amz_security_token="nesciunt",
+        x_amz_signature="consectetur",
+        x_amz_signed_headers="iure",
         x_amz_target="Firehose_20150804.CreateDeliveryStream",
     ),
     request=shared.CreateDeliveryStreamInput(
         delivery_stream_encryption_configuration_input=shared.DeliveryStreamEncryptionConfigurationInput(
-            key_arn="qui",
-            key_type="CUSTOMER_MANAGED_CMK",
+            key_arn="sit",
+            key_type="AWS_OWNED_CMK",
         ),
-        delivery_stream_name="voluptatem",
+        delivery_stream_name="est",
         delivery_stream_type="KinesisStreamAsSource",
         elasticsearch_destination_configuration=shared.ElasticsearchDestinationConfiguration(
             buffering_hints=shared.ElasticsearchBufferingHints(
-                interval_in_seconds=6578415627818878087,
-                size_in_m_bs=629304298923764233,
+                interval_in_seconds=4913775816691860455,
+                size_in_m_bs=6388634623525659448,
             ),
             cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                enabled=True,
-                log_group_name="quia",
-                log_stream_name="nisi",
+                enabled=False,
+                log_group_name="est",
+                log_stream_name="necessitatibus",
             ),
-            cluster_endpoint="sunt",
-            domain_arn="magni",
-            index_name="voluptates",
-            index_rotation_period="OneHour",
+            cluster_endpoint="ut",
+            domain_arn="iusto",
+            index_name="expedita",
+            index_rotation_period="NoRotation",
             processing_configuration=shared.ProcessingConfiguration(
-                enabled=True,
+                enabled=False,
                 processors=[
                     shared.Processor(
                         parameters=[
                             shared.ProcessorParameter(
-                                parameter_name="NumberOfRetries",
-                                parameter_value="maxime",
+                                parameter_name="BufferSizeInMBs",
+                                parameter_value="atque",
                             ),
-                            shared.ProcessorParameter(
-                                parameter_name="NumberOfRetries",
-                                parameter_value="sapiente",
-                            ),
-                        ],
-                        type="RecordDeAggregation",
-                    ),
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="LambdaArn",
-                                parameter_value="pariatur",
-                            ),
-                        ],
-                        type="RecordDeAggregation",
-                    ),
-                    shared.Processor(
-                        parameters=[
                             shared.ProcessorParameter(
                                 parameter_name="MetadataExtractionQuery",
                                 parameter_value="aut",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="LambdaArn",
+                                parameter_value="ut",
                             ),
                         ],
                         type="MetadataExtraction",
@@ -93,48 +78,360 @@ req = operations.CreateDeliveryStreamRequest(
                 ],
             ),
             retry_options=shared.ElasticsearchRetryOptions(
-                duration_in_seconds=5154647024511087326,
+                duration_in_seconds=7832808625612860727,
             ),
-            role_arn="impedit",
+            role_arn="ducimus",
             s3_backup_mode="FailedDocumentsOnly",
             s3_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="impedit",
+                bucket_arn="optio",
                 buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=1212380349897105523,
-                    size_in_m_bs=5558489343982008411,
+                    interval_in_seconds=3730549494198104687,
+                    size_in_m_bs=7173580319038902782,
                 ),
                 cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
                     enabled=True,
-                    log_group_name="aut",
-                    log_stream_name="qui",
+                    log_group_name="autem",
+                    log_stream_name="tenetur",
                 ),
-                compression_format="UNCOMPRESSED",
+                compression_format="Snappy",
                 encryption_configuration=shared.EncryptionConfiguration(
                     kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="at",
+                        awskms_key_arn="repellat",
                     ),
                     no_encryption_config="NoEncryption",
                 ),
-                error_output_prefix="qui",
-                prefix="ducimus",
-                role_arn="facere",
+                error_output_prefix="modi",
+                prefix="tempore",
+                role_arn="repellendus",
             ),
-            type_name="excepturi",
+            type_name="asperiores",
             vpc_configuration=shared.VpcConfiguration(
-                role_arn="sit",
+                role_arn="molestiae",
                 security_group_ids=[
-                    "omnis",
-                    "iusto",
-                    "adipisci",
+                    "reprehenderit",
+                    "non",
+                    "quis",
                 ],
                 subnet_ids=[
-                    "porro",
-                    "qui",
-                    "hic",
+                    "mollitia",
+                    "sequi",
                 ],
             ),
         ),
         extended_s3_destination_configuration=shared.ExtendedS3DestinationConfiguration(
+            bucket_arn="maxime",
+            buffering_hints=shared.BufferingHints(
+                interval_in_seconds=4008341877940571090,
+                size_in_m_bs=1527626489101312024,
+            ),
+            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                enabled=True,
+                log_group_name="ea",
+                log_stream_name="in",
+            ),
+            compression_format="UNCOMPRESSED",
+            data_format_conversion_configuration=shared.DataFormatConversionConfiguration(
+                enabled=False,
+                input_format_configuration=shared.InputFormatConfiguration(
+                    deserializer=shared.Deserializer(
+                        hive_json_ser_de=shared.HiveJSONSerDe(
+                            timestamp_formats=[
+                                "eveniet",
+                            ],
+                        ),
+                        open_x_json_ser_de=shared.OpenXJSONSerDe(
+                            case_insensitive=True,
+                            column_to_json_key_mappings={
+                                "repudiandae": "aspernatur",
+                                "consequuntur": "in",
+                                "quam": "harum",
+                            },
+                            convert_dots_in_json_keys_to_underscores=True,
+                        ),
+                    ),
+                ),
+                output_format_configuration=shared.OutputFormatConfiguration(
+                    serializer=shared.Serializer(
+                        orc_ser_de=shared.OrcSerDe(
+                            block_size_bytes=6227322861960617195,
+                            bloom_filter_columns=[
+                                "neque",
+                                "quia",
+                                "qui",
+                            ],
+                            bloom_filter_false_positive_probability=11.100000,
+                            compression="NONE",
+                            dictionary_key_threshold=72.199997,
+                            enable_padding=True,
+                            format_version="V0_11",
+                            padding_tolerance=27.200001,
+                            row_index_stride=4790355136803249341,
+                            stripe_size_bytes=1509612718786048821,
+                        ),
+                        parquet_ser_de=shared.ParquetSerDe(
+                            block_size_bytes=1558267707881136306,
+                            compression="GZIP",
+                            enable_dictionary_compression=False,
+                            max_padding_bytes=5155336118319790528,
+                            page_size_bytes=8551026195547362653,
+                            writer_version="V2",
+                        ),
+                    ),
+                ),
+                schema_configuration=shared.SchemaConfiguration(
+                    catalog_id="quia",
+                    database_name="corporis",
+                    region="laboriosam",
+                    role_arn="hic",
+                    table_name="porro",
+                    version_id="atque",
+                ),
+            ),
+            dynamic_partitioning_configuration=shared.DynamicPartitioningConfiguration(
+                enabled=True,
+                retry_options=shared.RetryOptions(
+                    duration_in_seconds=3668410904791842109,
+                ),
+            ),
+            encryption_configuration=shared.EncryptionConfiguration(
+                kms_encryption_config=shared.KmsEncryptionConfig(
+                    awskms_key_arn="beatae",
+                ),
+                no_encryption_config="NoEncryption",
+            ),
+            error_output_prefix="sunt",
+            prefix="sequi",
+            processing_configuration=shared.ProcessingConfiguration(
+                enabled=False,
+                processors=[
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="BufferSizeInMBs",
+                                parameter_value="id",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="MetadataExtractionQuery",
+                                parameter_value="quis",
+                            ),
+                        ],
+                        type="Lambda",
+                    ),
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="RoleArn",
+                                parameter_value="similique",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="BufferIntervalInSeconds",
+                                parameter_value="deserunt",
+                            ),
+                        ],
+                        type="MetadataExtraction",
+                    ),
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="MetadataExtractionQuery",
+                                parameter_value="est",
+                            ),
+                        ],
+                        type="Lambda",
+                    ),
+                ],
+            ),
+            role_arn="quia",
+            s3_backup_configuration=shared.S3DestinationConfiguration(
+                bucket_arn="animi",
+                buffering_hints=shared.BufferingHints(
+                    interval_in_seconds=4543644223830212662,
+                    size_in_m_bs=186512558197545847,
+                ),
+                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                    enabled=True,
+                    log_group_name="harum",
+                    log_stream_name="ipsa",
+                ),
+                compression_format="UNCOMPRESSED",
+                encryption_configuration=shared.EncryptionConfiguration(
+                    kms_encryption_config=shared.KmsEncryptionConfig(
+                        awskms_key_arn="nisi",
+                    ),
+                    no_encryption_config="NoEncryption",
+                ),
+                error_output_prefix="non",
+                prefix="autem",
+                role_arn="deleniti",
+            ),
+            s3_backup_mode="Enabled",
+        ),
+        http_endpoint_destination_configuration=shared.HTTPEndpointDestinationConfiguration(
+            buffering_hints=shared.HTTPEndpointBufferingHints(
+                interval_in_seconds=889179140112191969,
+                size_in_m_bs=8217887369224743077,
+            ),
+            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                enabled=False,
+                log_group_name="sunt",
+                log_stream_name="non",
+            ),
+            endpoint_configuration=shared.HTTPEndpointConfiguration(
+                access_key="blanditiis",
+                name="omnis",
+                url="impedit",
+            ),
+            processing_configuration=shared.ProcessingConfiguration(
+                enabled=False,
+                processors=[
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="MetadataExtractionQuery",
+                                parameter_value="iure",
+                            ),
+                        ],
+                        type="Lambda",
+                    ),
+                ],
+            ),
+            request_configuration=shared.HTTPEndpointRequestConfiguration(
+                common_attributes=[
+                    shared.HTTPEndpointCommonAttribute(
+                        attribute_name="in",
+                        attribute_value="est",
+                    ),
+                ],
+                content_encoding="NONE",
+            ),
+            retry_options=shared.HTTPEndpointRetryOptions(
+                duration_in_seconds=7407954097840616519,
+            ),
+            role_arn="omnis",
+            s3_backup_mode="FailedDataOnly",
+            s3_configuration=shared.S3DestinationConfiguration(
+                bucket_arn="id",
+                buffering_hints=shared.BufferingHints(
+                    interval_in_seconds=2986343076357446094,
+                    size_in_m_bs=9138926896528054305,
+                ),
+                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                    enabled=True,
+                    log_group_name="sint",
+                    log_stream_name="rerum",
+                ),
+                compression_format="Snappy",
+                encryption_configuration=shared.EncryptionConfiguration(
+                    kms_encryption_config=shared.KmsEncryptionConfig(
+                        awskms_key_arn="voluptas",
+                    ),
+                    no_encryption_config="NoEncryption",
+                ),
+                error_output_prefix="ut",
+                prefix="qui",
+                role_arn="aperiam",
+            ),
+        ),
+        kinesis_stream_source_configuration=shared.KinesisStreamSourceConfiguration(
+            kinesis_stream_arn="voluptatem",
+            role_arn="sit",
+        ),
+        redshift_destination_configuration=shared.RedshiftDestinationConfiguration(
+            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                enabled=False,
+                log_group_name="ea",
+                log_stream_name="quod",
+            ),
+            cluster_jdbcurl="quia",
+            copy_command=shared.CopyCommand(
+                copy_options="nisi",
+                data_table_columns="sunt",
+                data_table_name="magni",
+            ),
+            password="voluptates",
+            processing_configuration=shared.ProcessingConfiguration(
+                enabled=True,
+                processors=[
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="RoleArn",
+                                parameter_value="minus",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="JsonParsingEngine",
+                                parameter_value="eum",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="MetadataExtractionQuery",
+                                parameter_value="nostrum",
+                            ),
+                        ],
+                        type="Lambda",
+                    ),
+                    shared.Processor(
+                        parameters=[
+                            shared.ProcessorParameter(
+                                parameter_name="Delimiter",
+                                parameter_value="laborum",
+                            ),
+                        ],
+                        type="Lambda",
+                    ),
+                ],
+            ),
+            retry_options=shared.RedshiftRetryOptions(
+                duration_in_seconds=3378553292571641863,
+            ),
+            role_arn="aut",
+            s3_backup_configuration=shared.S3DestinationConfiguration(
+                bucket_arn="et",
+                buffering_hints=shared.BufferingHints(
+                    interval_in_seconds=5154647024511087326,
+                    size_in_m_bs=3283561951860873060,
+                ),
+                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                    enabled=True,
+                    log_group_name="impedit",
+                    log_stream_name="voluptas",
+                ),
+                compression_format="GZIP",
+                encryption_configuration=shared.EncryptionConfiguration(
+                    kms_encryption_config=shared.KmsEncryptionConfig(
+                        awskms_key_arn="rerum",
+                    ),
+                    no_encryption_config="NoEncryption",
+                ),
+                error_output_prefix="qui",
+                prefix="temporibus",
+                role_arn="at",
+            ),
+            s3_backup_mode="Enabled",
+            s3_configuration=shared.S3DestinationConfiguration(
+                bucket_arn="qui",
+                buffering_hints=shared.BufferingHints(
+                    interval_in_seconds=6255246750626858445,
+                    size_in_m_bs=3462742284048348632,
+                ),
+                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
+                    enabled=False,
+                    log_group_name="sit",
+                    log_stream_name="porro",
+                ),
+                compression_format="ZIP",
+                encryption_configuration=shared.EncryptionConfiguration(
+                    kms_encryption_config=shared.KmsEncryptionConfig(
+                        awskms_key_arn="iusto",
+                    ),
+                    no_encryption_config="NoEncryption",
+                ),
+                error_output_prefix="aut",
+                prefix="porro",
+                role_arn="qui",
+            ),
+            username="hic",
+        ),
+        s3_destination_configuration=shared.CreateDeliveryStreamInputS3DestinationConfiguration(
             bucket_arn="qui",
             buffering_hints=shared.BufferingHints(
                 interval_in_seconds=302431697846476833,
@@ -146,409 +443,85 @@ req = operations.CreateDeliveryStreamRequest(
                 log_stream_name="corporis",
             ),
             compression_format="UNCOMPRESSED",
-            data_format_conversion_configuration=shared.DataFormatConversionConfiguration(
-                enabled=True,
-                input_format_configuration=shared.InputFormatConfiguration(
-                    deserializer=shared.Deserializer(
-                        hive_json_ser_de=shared.HiveJSONSerDe(
-                            timestamp_formats=[
-                                "eos",
-                            ],
-                        ),
-                        open_x_json_ser_de=shared.OpenXJSONSerDe(
-                            case_insensitive=False,
-                            column_to_json_key_mappings={
-                                "pariatur": "quia",
-                                "ut": "non",
-                                "incidunt": "amet",
-                            },
-                            convert_dots_in_json_keys_to_underscores=True,
-                        ),
-                    ),
-                ),
-                output_format_configuration=shared.OutputFormatConfiguration(
-                    serializer=shared.Serializer(
-                        orc_ser_de=shared.OrcSerDe(
-                            block_size_bytes=4715415415208881714,
-                            bloom_filter_columns=[
-                                "et",
-                            ],
-                            bloom_filter_false_positive_probability=48.099998,
-                            compression="SNAPPY",
-                            dictionary_key_threshold=13.100000,
-                            enable_padding=False,
-                            format_version="V0_12",
-                            padding_tolerance=3.200000,
-                            row_index_stride=8804245330105064885,
-                            stripe_size_bytes=5200220478374960164,
-                        ),
-                        parquet_ser_de=shared.ParquetSerDe(
-                            block_size_bytes=3540212452975936931,
-                            compression="SNAPPY",
-                            enable_dictionary_compression=False,
-                            max_padding_bytes=6149503483789461316,
-                            page_size_bytes=5146907401748638884,
-                            writer_version="V2",
-                        ),
-                    ),
-                ),
-                schema_configuration=shared.SchemaConfiguration(
-                    catalog_id="nulla",
-                    database_name="veritatis",
-                    region="inventore",
-                    role_arn="quibusdam",
-                    table_name="iure",
-                    version_id="sed",
-                ),
-            ),
-            dynamic_partitioning_configuration=shared.DynamicPartitioningConfiguration(
-                enabled=True,
-                retry_options=shared.RetryOptions(
-                    duration_in_seconds=7453829831130001732,
-                ),
-            ),
             encryption_configuration=shared.EncryptionConfiguration(
                 kms_encryption_config=shared.KmsEncryptionConfig(
-                    awskms_key_arn="perspiciatis",
+                    awskms_key_arn="qui",
                 ),
                 no_encryption_config="NoEncryption",
             ),
-            error_output_prefix="repellendus",
-            prefix="doloremque",
-            processing_configuration=shared.ProcessingConfiguration(
-                enabled=False,
-                processors=[
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="JsonParsingEngine",
-                                parameter_value="ut",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="Delimiter",
-                                parameter_value="est",
-                            ),
-                        ],
-                        type="AppendDelimiterToRecord",
-                    ),
-                ],
-            ),
-            role_arn="nulla",
-            s3_backup_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="nam",
-                buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=5980218927686995302,
-                    size_in_m_bs=6676097175831879369,
-                ),
-                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                    enabled=True,
-                    log_group_name="in",
-                    log_stream_name="qui",
-                ),
-                compression_format="HADOOP_SNAPPY",
-                encryption_configuration=shared.EncryptionConfiguration(
-                    kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="culpa",
-                    ),
-                    no_encryption_config="NoEncryption",
-                ),
-                error_output_prefix="consequuntur",
-                prefix="sapiente",
-                role_arn="sint",
-            ),
-            s3_backup_mode="Disabled",
-        ),
-        http_endpoint_destination_configuration=shared.HTTPEndpointDestinationConfiguration(
-            buffering_hints=shared.HTTPEndpointBufferingHints(
-                interval_in_seconds=6071620159778852694,
-                size_in_m_bs=6405337431099235057,
-            ),
-            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                enabled=True,
-                log_group_name="reiciendis",
-                log_stream_name="laboriosam",
-            ),
-            endpoint_configuration=shared.HTTPEndpointConfiguration(
-                access_key="quas",
-                name="pariatur",
-                url="omnis",
-            ),
-            processing_configuration=shared.ProcessingConfiguration(
-                enabled=False,
-                processors=[
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="NumberOfRetries",
-                                parameter_value="et",
-                            ),
-                        ],
-                        type="Lambda",
-                    ),
-                ],
-            ),
-            request_configuration=shared.HTTPEndpointRequestConfiguration(
-                common_attributes=[
-                    shared.HTTPEndpointCommonAttribute(
-                        attribute_name="architecto",
-                        attribute_value="ab",
-                    ),
-                ],
-                content_encoding="GZIP",
-            ),
-            retry_options=shared.HTTPEndpointRetryOptions(
-                duration_in_seconds=4382912841328830023,
-            ),
-            role_arn="dolorum",
-            s3_backup_mode="AllData",
-            s3_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="ab",
-                buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=8121013771046774981,
-                    size_in_m_bs=5490904861257136288,
-                ),
-                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                    enabled=False,
-                    log_group_name="molestiae",
-                    log_stream_name="explicabo",
-                ),
-                compression_format="ZIP",
-                encryption_configuration=shared.EncryptionConfiguration(
-                    kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="sequi",
-                    ),
-                    no_encryption_config="NoEncryption",
-                ),
-                error_output_prefix="iusto",
-                prefix="sed",
-                role_arn="sunt",
-            ),
-        ),
-        kinesis_stream_source_configuration=shared.KinesisStreamSourceConfiguration(
-            kinesis_stream_arn="ea",
-            role_arn="et",
-        ),
-        redshift_destination_configuration=shared.RedshiftDestinationConfiguration(
-            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                enabled=False,
-                log_group_name="placeat",
-                log_stream_name="delectus",
-            ),
-            cluster_jdbcurl="harum",
-            copy_command=shared.CopyCommand(
-                copy_options="esse",
-                data_table_columns="ut",
-                data_table_name="autem",
-            ),
-            password="deserunt",
-            processing_configuration=shared.ProcessingConfiguration(
-                enabled=True,
-                processors=[
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="JsonParsingEngine",
-                                parameter_value="qui",
-                            ),
-                        ],
-                        type="AppendDelimiterToRecord",
-                    ),
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="JsonParsingEngine",
-                                parameter_value="id",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="RoleArn",
-                                parameter_value="dicta",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="BufferSizeInMBs",
-                                parameter_value="facere",
-                            ),
-                        ],
-                        type="Lambda",
-                    ),
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="MetadataExtractionQuery",
-                                parameter_value="voluptas",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="LambdaArn",
-                                parameter_value="error",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="Delimiter",
-                                parameter_value="quisquam",
-                            ),
-                        ],
-                        type="MetadataExtraction",
-                    ),
-                ],
-            ),
-            retry_options=shared.RedshiftRetryOptions(
-                duration_in_seconds=2557891904236039253,
-            ),
-            role_arn="earum",
-            s3_backup_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="alias",
-                buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=7965745375182332691,
-                    size_in_m_bs=5748165741887468100,
-                ),
-                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                    enabled=False,
-                    log_group_name="quas",
-                    log_stream_name="magni",
-                ),
-                compression_format="Snappy",
-                encryption_configuration=shared.EncryptionConfiguration(
-                    kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="quaerat",
-                    ),
-                    no_encryption_config="NoEncryption",
-                ),
-                error_output_prefix="voluptas",
-                prefix="quia",
-                role_arn="facere",
-            ),
-            s3_backup_mode="Disabled",
-            s3_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="accusantium",
-                buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=1323204938732774615,
-                    size_in_m_bs=5565193274474087313,
-                ),
-                cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                    enabled=False,
-                    log_group_name="vero",
-                    log_stream_name="incidunt",
-                ),
-                compression_format="ZIP",
-                encryption_configuration=shared.EncryptionConfiguration(
-                    kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="exercitationem",
-                    ),
-                    no_encryption_config="NoEncryption",
-                ),
-                error_output_prefix="sed",
-                prefix="laborum",
-                role_arn="dolore",
-            ),
-            username="aut",
-        ),
-        s3_destination_configuration=shared.S3DestinationConfiguration(
-            bucket_arn="qui",
-            buffering_hints=shared.BufferingHints(
-                interval_in_seconds=4826954324203959027,
-                size_in_m_bs=7231345445733472582,
-            ),
-            cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                enabled=False,
-                log_group_name="dolor",
-                log_stream_name="et",
-            ),
-            compression_format="ZIP",
-            encryption_configuration=shared.EncryptionConfiguration(
-                kms_encryption_config=shared.KmsEncryptionConfig(
-                    awskms_key_arn="quia",
-                ),
-                no_encryption_config="NoEncryption",
-            ),
-            error_output_prefix="dolorem",
-            prefix="accusamus",
-            role_arn="ut",
+            error_output_prefix="eos",
+            prefix="maiores",
+            role_arn="rerum",
         ),
         splunk_destination_configuration=shared.SplunkDestinationConfiguration(
             cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
-                enabled=False,
-                log_group_name="molestias",
-                log_stream_name="fuga",
+                enabled=True,
+                log_group_name="quia",
+                log_stream_name="ut",
             ),
-            hec_acknowledgment_timeout_in_seconds=7261364281194389892,
-            hec_endpoint="quisquam",
+            hec_acknowledgment_timeout_in_seconds=3987231774246520401,
+            hec_endpoint="incidunt",
             hec_endpoint_type="Event",
-            hec_token="recusandae",
+            hec_token="voluptatem",
             processing_configuration=shared.ProcessingConfiguration(
-                enabled=False,
+                enabled=True,
                 processors=[
                     shared.Processor(
                         parameters=[
                             shared.ProcessorParameter(
                                 parameter_name="JsonParsingEngine",
-                                parameter_value="voluptates",
+                                parameter_value="pariatur",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="BufferSizeInMBs",
+                                parameter_value="cupiditate",
+                            ),
+                            shared.ProcessorParameter(
+                                parameter_name="BufferSizeInMBs",
+                                parameter_value="reiciendis",
                             ),
                         ],
                         type="AppendDelimiterToRecord",
-                    ),
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="Delimiter",
-                                parameter_value="modi",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="LambdaArn",
-                                parameter_value="similique",
-                            ),
-                            shared.ProcessorParameter(
-                                parameter_name="LambdaArn",
-                                parameter_value="quisquam",
-                            ),
-                        ],
-                        type="RecordDeAggregation",
-                    ),
-                    shared.Processor(
-                        parameters=[
-                            shared.ProcessorParameter(
-                                parameter_name="BufferSizeInMBs",
-                                parameter_value="in",
-                            ),
-                        ],
-                        type="RecordDeAggregation",
                     ),
                 ],
             ),
             retry_options=shared.SplunkRetryOptions(
-                duration_in_seconds=1695190711954742810,
+                duration_in_seconds=6871627712247884748,
             ),
             s3_backup_mode="AllEvents",
             s3_configuration=shared.S3DestinationConfiguration(
-                bucket_arn="ut",
+                bucket_arn="error",
                 buffering_hints=shared.BufferingHints(
-                    interval_in_seconds=8497553995622639232,
-                    size_in_m_bs=2184858033223372269,
+                    interval_in_seconds=5200220478374960164,
+                    size_in_m_bs=3540212452975936931,
                 ),
                 cloud_watch_logging_options=shared.CloudWatchLoggingOptions(
                     enabled=True,
-                    log_group_name="numquam",
-                    log_stream_name="et",
+                    log_group_name="eveniet",
+                    log_stream_name="ut",
                 ),
-                compression_format="GZIP",
+                compression_format="Snappy",
                 encryption_configuration=shared.EncryptionConfiguration(
                     kms_encryption_config=shared.KmsEncryptionConfig(
-                        awskms_key_arn="ducimus",
+                        awskms_key_arn="sit",
                     ),
                     no_encryption_config="NoEncryption",
                 ),
-                error_output_prefix="et",
-                prefix="nam",
-                role_arn="tenetur",
+                error_output_prefix="veritatis",
+                prefix="inventore",
+                role_arn="quibusdam",
             ),
         ),
         tags=[
             shared.Tag(
-                key="id",
-                value="ab",
+                key="sed",
+                value="dolores",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_delivery_stream(req)
+res = s.create_delivery_stream(req)
 
 if res.create_delivery_stream_output is not None:
     # handle response

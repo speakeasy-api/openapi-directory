@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import onedirectdebits_get_responses_200_content_application_1json_schema_properties_directdebits_items as shared_onedirectdebits_get_responses_200_content_application_1json_schema_properties_directdebits_items
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitByUUIDPathParams:
-    direct_debit_uuid: str = field(metadata={'path_param': { 'field_name': 'directDebitUuid', 'style': 'simple', 'explode': False }})
+    direct_debit_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'directDebitUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitByUUIDRequest:
-    path_params: GetDirectDebitByUUIDPathParams = field()
+    path_params: GetDirectDebitByUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitByUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    onedirectdebits_get_responses_200_content_application_1json_schema_properties_directdebits_items: Optional[shared.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    onedirectdebits_get_responses_200_content_application_1json_schema_properties_directdebits_items: Optional[shared_onedirectdebits_get_responses_200_content_application_1json_schema_properties_directdebits_items.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems] = dataclasses.field(default=None)
     

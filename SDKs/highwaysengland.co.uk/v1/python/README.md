@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.AreasGetRequest(
     path_params=operations.AreasGetPathParams(
-        version="quo",
+        version="voluptas",
     ),
 )
     
-res = s.sdk.areas_get(req)
+res = s.areas.areas_get(req)
 
 if res.area_response is not None:
     # handle response
@@ -33,18 +32,30 @@ if res.area_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Areas
 
 * `areas_get` - Returns list of areas
 * `get_v_version_areas_area_ids_` - Returns details of selected area
-* `get_v_version_reports_start_date_to_end_date_report_type_` - Gets the daily report.
-* `get_v_version_sites_site_ids_` - Get selected sites
+
+### Quality
+
 * `quality_get_daily_data_quality_for_site` - Get Site DailyQuality
 * `quality_get_overall_data_quality_for_sites` - Get Site OverallQuality
+
+### Reports
+
 * `reports_index` - Gets the daily report.
+* `get_v_version_reports_start_date_to_end_date_report_type_` - Gets the daily report.
+
+### SiteTypes
+
 * `site_types_get_sites_for_public_facing_api` - Returns the layer metadata for the LayerId specified.
 * `site_types_index` - Return list of site types
+
+### Sites
+
 * `sites_index` - Get a list of sites
+* `get_v_version_sites_site_ids_` - Get selected sites
 
 <!-- End SDK Available Operations -->
 

@@ -1,20 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import errordetails as shared_errordetails
+from ..shared import jobstatustype_enum as shared_jobstatustype_enum
+from ..shared import accessadvisorusagegranularitytype_enum as shared_accessadvisorusagegranularitytype_enum
+from ..shared import servicelastaccessed as shared_servicelastaccessed
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServiceLastAccessedDetailsResponse:
-    job_completion_date: datetime = field()
-    job_creation_date: datetime = field()
-    job_status: JobStatusTypeEnum = field()
-    services_last_accessed: List[ServiceLastAccessed] = field()
-    error: Optional[ErrorDetails] = field(default=None)
-    is_truncated: Optional[bool] = field(default=None)
-    job_type: Optional[AccessAdvisorUsageGranularityTypeEnum] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    job_completion_date: datetime = dataclasses.field()
+    job_creation_date: datetime = dataclasses.field()
+    job_status: shared_jobstatustype_enum.JobStatusTypeEnum = dataclasses.field()
+    services_last_accessed: list[shared_servicelastaccessed.ServiceLastAccessed] = dataclasses.field()
+    error: Optional[shared_errordetails.ErrorDetails] = dataclasses.field(default=None)
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    job_type: Optional[shared_accessadvisorusagegranularitytype_enum.AccessAdvisorUsageGranularityTypeEnum] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

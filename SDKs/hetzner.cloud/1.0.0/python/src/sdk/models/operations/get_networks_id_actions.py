@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class GetNetworksIDActionsSortParameterSortEnum(str, Enum):
     ID = "id"
@@ -35,28 +35,28 @@ class GetNetworksIDActionsStatusParameterStatusEnum(str, Enum):
     ERROR = "error"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsQueryParams:
-    sort: Optional[GetNetworksIDActionsSortParameterSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    status: Optional[GetNetworksIDActionsStatusParameterStatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    sort: Optional[GetNetworksIDActionsSortParameterSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    status: Optional[GetNetworksIDActionsStatusParameterStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponseActionError:
     r"""GetNetworksIDActionsActionsResponseActionError
     Error message for the Action if error occurred, otherwise null
     """
     
-    code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponseActionResources:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 class GetNetworksIDActionsActionsResponseActionStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -65,51 +65,51 @@ class GetNetworksIDActionsActionsResponseActionStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponseAction:
-    command: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
-    error: GetNetworksIDActionsActionsResponseActionError = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    finished: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    progress: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
-    resources: List[GetNetworksIDActionsActionsResponseActionResources] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
-    started: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
-    status: GetNetworksIDActionsActionsResponseActionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    command: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
+    error: GetNetworksIDActionsActionsResponseActionError = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    finished: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    progress: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
+    resources: list[GetNetworksIDActionsActionsResponseActionResources] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    started: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
+    status: GetNetworksIDActionsActionsResponseActionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponseMetaPagination:
-    last_page: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_page') }})
-    next_page: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next_page') }})
-    page: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
-    per_page: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('per_page') }})
-    previous_page: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous_page') }})
-    total_entries: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_entries') }})
+    last_page: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_page') }})
+    next_page: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next_page') }})
+    page: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
+    per_page: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('per_page') }})
+    previous_page: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous_page') }})
+    total_entries: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_entries') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponseMeta:
-    pagination: GetNetworksIDActionsActionsResponseMetaPagination = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pagination') }})
+    pagination: GetNetworksIDActionsActionsResponseMetaPagination = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pagination') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsActionsResponse:
-    actions: List[GetNetworksIDActionsActionsResponseAction] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
-    meta: Optional[GetNetworksIDActionsActionsResponseMeta] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    actions: list[GetNetworksIDActionsActionsResponseAction] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
+    meta: Optional[GetNetworksIDActionsActionsResponseMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsRequest:
-    path_params: GetNetworksIDActionsPathParams = field()
-    query_params: GetNetworksIDActionsQueryParams = field()
+    path_params: GetNetworksIDActionsPathParams = dataclasses.field()
+    query_params: GetNetworksIDActionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworksIDActionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_response: Optional[GetNetworksIDActionsActionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_response: Optional[GetNetworksIDActionsActionsResponse] = dataclasses.field(default=None)
     

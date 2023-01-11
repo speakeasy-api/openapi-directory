@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import git_ref as shared_git_ref
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateRefPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GitCreateRefRequestBody:
-    ref: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
-    sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
-    key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    ref: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
+    sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateRefRequest:
-    path_params: GitCreateRefPathParams = field()
-    request: Optional[GitCreateRefRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: GitCreateRefPathParams = dataclasses.field()
+    request: Optional[GitCreateRefRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateRefResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    git_ref: Optional[shared.GitRef] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    git_ref: Optional[shared_git_ref.GitRef] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

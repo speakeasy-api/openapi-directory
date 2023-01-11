@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accesspreviewsummary as shared_accesspreviewsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAccessPreviewsResponse:
-    access_previews: List[AccessPreviewSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessPreviews') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    access_previews: list[shared_accesspreviewsummary.AccessPreviewSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessPreviews') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

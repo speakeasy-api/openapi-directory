@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import grapherror as shared_grapherror
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsRemoveOwnerPathParams:
-    application_object_id: str = field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
-    owner_object_id: str = field(metadata={'path_param': { 'field_name': 'ownerObjectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    application_object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
+    owner_object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownerObjectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsRemoveOwnerQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsRemoveOwnerRequest:
-    path_params: ApplicationsRemoveOwnerPathParams = field()
-    query_params: ApplicationsRemoveOwnerQueryParams = field()
+    path_params: ApplicationsRemoveOwnerPathParams = dataclasses.field()
+    query_params: ApplicationsRemoveOwnerQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsRemoveOwnerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph_error: Optional[shared.GraphError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
     

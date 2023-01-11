@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAddSourceIdentifierToSubscriptionRequest(
     query_params=operations.GetAddSourceIdentifierToSubscriptionQueryParams(
         action="AddSourceIdentifierToSubscription",
-        source_identifier="iusto",
-        subscription_name="laudantium",
+        source_identifier="occaecati",
+        subscription_name="omnis",
         version="2014-09-01",
     ),
     headers=operations.GetAddSourceIdentifierToSubscriptionHeaders(
-        x_amz_algorithm="ea",
-        x_amz_content_sha256="qui",
-        x_amz_credential="aut",
-        x_amz_date="sapiente",
-        x_amz_security_token="exercitationem",
-        x_amz_signature="consequatur",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="qui",
+        x_amz_content_sha256="quia",
+        x_amz_credential="laboriosam",
+        x_amz_date="non",
+        x_amz_security_token="distinctio",
+        x_amz_signature="vel",
+        x_amz_signed_headers="est",
     ),
 )
     
-res = s.sdk.get_add_source_identifier_to_subscription(req)
+res = s.get_add_source_identifier_to_subscription(req)
 
 if res.body is not None:
     # handle response
@@ -64,9 +63,6 @@ if res.body is not None:
 * `get_delete_event_subscription`
 * `get_delete_option_group`
 * `get_download_db_log_file_portion`
-* `get_modify_db_instance`
-* `get_modify_db_subnet_group`
-* `get_modify_event_subscription`
 * `get_promote_read_replica`
 * `get_reboot_db_instance`
 * `get_remove_source_identifier_from_subscription`

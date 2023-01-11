@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest:
     r"""GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest
     Request message for CatalogRejoin method.
     """
     
-    user_event_rejoin_scope: Optional[GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userEventRejoinScope') }})
+    user_event_rejoin_scope: Optional[GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userEventRejoinScope') }})
     

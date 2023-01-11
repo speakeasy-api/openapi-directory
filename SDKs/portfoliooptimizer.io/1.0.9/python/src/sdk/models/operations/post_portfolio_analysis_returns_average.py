@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios:
-    portfolio_values: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioValues') }})
+    portfolio_values: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioValues') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverageRequestBody:
-    portfolios: List[PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    portfolios: list[PostPortfolioAnalysisReturnsAverageRequestBodyPortfolios] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios:
-    portfolio_average_return: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioAverageReturn') }})
+    portfolio_average_return: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioAverageReturn') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverage200ApplicationJSON:
-    portfolios: List[PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    portfolios: list[PostPortfolioAnalysisReturnsAverage200ApplicationJSONPortfolios] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverageRequest:
-    request: PostPortfolioAnalysisReturnsAverageRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostPortfolioAnalysisReturnsAverageRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioAnalysisReturnsAverageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_portfolio_analysis_returns_average_200_application_json_object: Optional[PostPortfolioAnalysisReturnsAverage200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_portfolio_analysis_returns_average_200_application_json_object: Optional[PostPortfolioAnalysisReturnsAverage200ApplicationJSON] = dataclasses.field(default=None)
     

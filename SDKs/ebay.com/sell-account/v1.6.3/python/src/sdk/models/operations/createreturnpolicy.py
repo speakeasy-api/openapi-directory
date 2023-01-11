@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import returnpolicyrequest as shared_returnpolicyrequest
+from ..shared import setreturnpolicyresponse as shared_setreturnpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateReturnPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateReturnPolicyRequest:
-    request: shared.ReturnPolicyRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateReturnPolicySecurity = field()
+    request: shared_returnpolicyrequest.ReturnPolicyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateReturnPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateReturnPolicyResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    set_return_policy_response: Optional[shared.SetReturnPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_return_policy_response: Optional[shared_setreturnpolicyresponse.SetReturnPolicyResponse] = dataclasses.field(default=None)
     

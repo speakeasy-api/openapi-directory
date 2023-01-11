@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,37 +20,37 @@ req = operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest
     security=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams(
-        name="culpa",
+        name="esse",
     ),
     query_params=operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams(
-        dollar_xgafv="2",
-        access_token="itaque",
-        alt="proto",
-        callback="eum",
-        fields="earum",
-        key="praesentium",
-        oauth_token="id",
+        dollar_xgafv="1",
+        access_token="rerum",
+        alt="json",
+        callback="voluptatem",
+        fields="harum",
+        key="qui",
+        oauth_token="quos",
         pretty_print=True,
-        quota_user="incidunt",
-        upload_type="temporibus",
-        upload_protocol="cupiditate",
+        quota_user="sunt",
+        upload_type="maiores",
+        upload_protocol="et",
     ),
     request=shared.GenerateAccessTokenRequest(
         delegates=[
-            "possimus",
-            "alias",
-            "est",
-        ],
-        lifetime="voluptates",
-        scope=[
-            "error",
+            "eligendi",
+            "tenetur",
             "et",
+        ],
+        lifetime="consectetur",
+        scope=[
+            "quas",
+            "consequuntur",
         ],
     ),
 )

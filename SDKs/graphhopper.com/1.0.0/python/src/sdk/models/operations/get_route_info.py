@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import inforesponse as shared_inforesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRouteInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    info_response: Optional[shared.InfoResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    info_response: Optional[shared_inforesponse.InfoResponse] = dataclasses.field(default=None)
     

@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import userhalresponse as shared_userhalresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UserCtrlGetUserByIDPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserCtrlGetUserByIDSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserCtrlGetUserByIDRequest:
-    path_params: UserCtrlGetUserByIDPathParams = field()
-    security: UserCtrlGetUserByIDSecurity = field()
+    path_params: UserCtrlGetUserByIDPathParams = dataclasses.field()
+    security: UserCtrlGetUserByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserCtrlGetUserByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    user_hal_response: Optional[shared.UserHalResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    user_hal_response: Optional[shared_userhalresponse.UserHalResponse] = dataclasses.field(default=None)
     

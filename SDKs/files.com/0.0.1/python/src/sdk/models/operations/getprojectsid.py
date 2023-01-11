@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import projectentity as shared_projectentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsIDRequest:
-    path_params: GetProjectsIDPathParams = field()
+    path_params: GetProjectsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project_entity: Optional[shared.ProjectEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project_entity: Optional[shared_projectentity.ProjectEntity] = dataclasses.field(default=None)
     

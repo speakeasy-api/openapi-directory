@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -25,12 +25,12 @@ class GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudAssetV1p4beta1AnalysisState:
     r"""GoogleCloudAssetV1p4beta1AnalysisState
     Represents the detailed state of an entity under analysis, such as a resource, an identity or an access.
     """
     
-    cause: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cause') }})
-    code: Optional[GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    cause: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cause') }})
+    code: Optional[GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
     

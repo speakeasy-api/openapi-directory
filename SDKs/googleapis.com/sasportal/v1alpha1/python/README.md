@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.SasportalCustomersListRequest(
     security=operations.SasportalCustomersListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.SasportalCustomersListQueryParams(
-        dollar_xgafv="2",
-        access_token="explicabo",
-        alt="media",
-        callback="ducimus",
-        fields="explicabo",
-        key="voluptas",
-        oauth_token="non",
-        page_size=1559748410318463885,
-        page_token="quae",
-        pretty_print=False,
-        quota_user="voluptas",
-        upload_type="voluptates",
-        upload_protocol="magnam",
+        dollar_xgafv="1",
+        access_token="tempore",
+        alt="proto",
+        callback="dolorem",
+        fields="voluptas",
+        key="omnis",
+        oauth_token="nulla",
+        page_size=6149356500451182273,
+        page_token="ab",
+        pretty_print=True,
+        quota_user="natus",
+        upload_type="ipsum",
+        upload_protocol="sed",
     ),
 )
     

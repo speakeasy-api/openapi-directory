@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevirtualmachineinterface as shared_writablevirtualmachineinterface
+from ..shared import virtualmachineinterface as shared_virtualmachineinterface
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesPartialUpdateRequest:
-    path_params: VirtualizationInterfacesPartialUpdatePathParams = field()
-    request: shared.WritableVirtualMachineInterfaceInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: VirtualizationInterfacesPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablevirtualmachineinterface.WritableVirtualMachineInterfaceInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    virtual_machine_interface: Optional[shared.VirtualMachineInterface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    virtual_machine_interface: Optional[shared_virtualmachineinterface.VirtualMachineInterface] = dataclasses.field(default=None)
     

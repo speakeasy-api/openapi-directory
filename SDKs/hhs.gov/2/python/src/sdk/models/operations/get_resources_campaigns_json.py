@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import campaignwrapped as shared_campaignwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsJSONQueryParams:
-    max: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': False }})
+    max: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsJSONRequest:
-    query_params: GetResourcesCampaignsJSONQueryParams = field()
+    query_params: GetResourcesCampaignsJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    campaign_wrapped: Optional[shared.CampaignWrapped] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    campaign_wrapped: Optional[shared_campaignwrapped.CampaignWrapped] = dataclasses.field(default=None)
     

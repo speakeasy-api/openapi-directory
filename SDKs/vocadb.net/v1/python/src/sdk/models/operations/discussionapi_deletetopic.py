@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIDeleteTopicPathParams:
-    topic_id: int = field(metadata={'path_param': { 'field_name': 'topicId', 'style': 'simple', 'explode': False }})
+    topic_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'topicId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIDeleteTopicRequest:
-    path_params: DiscussionAPIDeleteTopicPathParams = field()
+    path_params: DiscussionAPIDeleteTopicPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DiscussionAPIDeleteTopicResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

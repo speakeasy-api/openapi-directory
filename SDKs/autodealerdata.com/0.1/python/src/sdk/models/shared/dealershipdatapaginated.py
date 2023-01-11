@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dealershipdata as shared_dealershipdata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DealershipDataPaginated:
-    dealers: List[DealershipData] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealers') }})
-    max_pages: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxPages') }})
-    page: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
+    dealers: list[shared_dealershipdata.DealershipData] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealers') }})
+    max_pages: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxPages') }})
+    page: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
     

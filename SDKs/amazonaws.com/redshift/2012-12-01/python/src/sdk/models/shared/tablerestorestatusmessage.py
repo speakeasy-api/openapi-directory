@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tablerestorestatuslist as shared_tablerestorestatuslist
 
 
-@dataclass
+@dataclasses.dataclass
 class TableRestoreStatusMessage:
     r"""TableRestoreStatusMessage
     <p/>
     """
     
-    marker: Optional[str] = field(default=None)
-    table_restore_status_details: Optional[List[TableRestoreStatus]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    table_restore_status_details: Optional[list[shared_tablerestorestatuslist.TableRestoreStatusList]] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,28 +7,28 @@ class GetStatsSeriesPeriodFieldsPeriodEnum(str, Enum):
     MONTH = "month"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStatsSeriesPeriodFieldsPathParams:
-    fields: str = field(metadata={'path_param': { 'field_name': 'fields', 'style': 'simple', 'explode': False }})
-    period: GetStatsSeriesPeriodFieldsPeriodEnum = field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
+    fields: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fields', 'style': 'simple', 'explode': False }})
+    period: GetStatsSeriesPeriodFieldsPeriodEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatsSeriesPeriodFieldsQueryParams:
-    end: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    end: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatsSeriesPeriodFieldsRequest:
-    path_params: GetStatsSeriesPeriodFieldsPathParams = field()
-    query_params: GetStatsSeriesPeriodFieldsQueryParams = field()
+    path_params: GetStatsSeriesPeriodFieldsPathParams = dataclasses.field()
+    query_params: GetStatsSeriesPeriodFieldsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatsSeriesPeriodFieldsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

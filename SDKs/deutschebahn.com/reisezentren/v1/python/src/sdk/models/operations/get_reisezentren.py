@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import travelcenter as shared_travelcenter
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenQueryParams:
-    name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenRequest:
-    query_params: GetReisezentrenQueryParams = field()
+    query_params: GetReisezentrenQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    travel_center_list: Optional[List[shared.TravelCenter]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    travel_center_list: Optional[list[shared_travelcenter.TravelCenter]] = dataclasses.field(default=None)
     

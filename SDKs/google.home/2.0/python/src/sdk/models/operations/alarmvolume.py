@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import alarmvolumerequest as shared_alarmvolumerequest
+from ..shared import getvolume as shared_getvolume
 
 
-@dataclass
+@dataclasses.dataclass
 class AlarmVolumeRequest:
-    request: shared.AlarmVolumeRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_alarmvolumerequest.AlarmVolumeRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlarmVolumeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getvolume: Optional[shared.Getvolume] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getvolume: Optional[shared_getvolume.Getvolume] = dataclasses.field(default=None)
     

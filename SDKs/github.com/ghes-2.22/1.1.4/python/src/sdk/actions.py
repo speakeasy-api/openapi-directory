@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -207,13 +207,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/secrets/{secret_name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsCreateOrUpdateOrgSecretResponse(status_code=r.status_code, content_type=content_type)
@@ -313,13 +313,13 @@ class Actions:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsCreateOrUpdateRepoSecretResponse(status_code=r.status_code, content_type=content_type)
@@ -492,13 +492,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/runner-groups", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -526,13 +526,13 @@ class Actions:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsCreateWorkflowDispatchResponse(status_code=r.status_code, content_type=content_type)
@@ -1317,7 +1317,7 @@ class Actions:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.RunnerApplication]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.RunnerApplication]])
                 res.runner_applications = out
 
         return res
@@ -1345,7 +1345,7 @@ class Actions:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.RunnerApplication]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.RunnerApplication]])
                 res.runner_applications = out
 
         return res
@@ -1701,13 +1701,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -1729,13 +1729,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsSetSelectedReposForOrgSecretResponse(status_code=r.status_code, content_type=content_type)
@@ -1758,13 +1758,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -1787,13 +1787,13 @@ class Actions:
         url = utils.generate_url(base_url, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse(status_code=r.status_code, content_type=content_type)

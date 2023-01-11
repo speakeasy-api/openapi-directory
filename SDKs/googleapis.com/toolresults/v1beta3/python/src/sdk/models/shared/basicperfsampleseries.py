@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -36,13 +36,13 @@ class BasicPerfSampleSeriesSampleSeriesLabelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BasicPerfSampleSeries:
     r"""BasicPerfSampleSeries
     Encapsulates the metadata for basic sample series represented by a line chart
     """
     
-    perf_metric_type: Optional[BasicPerfSampleSeriesPerfMetricTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfMetricType') }})
-    perf_unit: Optional[BasicPerfSampleSeriesPerfUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfUnit') }})
-    sample_series_label: Optional[BasicPerfSampleSeriesSampleSeriesLabelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleSeriesLabel') }})
+    perf_metric_type: Optional[BasicPerfSampleSeriesPerfMetricTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfMetricType') }})
+    perf_unit: Optional[BasicPerfSampleSeriesPerfUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfUnit') }})
+    sample_series_label: Optional[BasicPerfSampleSeriesSampleSeriesLabelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleSeriesLabel') }})
     

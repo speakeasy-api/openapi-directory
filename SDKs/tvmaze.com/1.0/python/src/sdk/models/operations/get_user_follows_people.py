@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import personfollow as shared_personfollow
 
 class GetUserFollowsPeopleEmbedEnum(str, Enum):
     PERSON = "person"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeopleQueryParams:
-    embed: Optional[GetUserFollowsPeopleEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetUserFollowsPeopleEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeopleRequest:
-    query_params: GetUserFollowsPeopleQueryParams = field()
+    query_params: GetUserFollowsPeopleQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeopleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    person_follows: Optional[List[shared.PersonFollow]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    person_follows: Optional[list[shared_personfollow.PersonFollow]] = dataclasses.field(default=None)
     

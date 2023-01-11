@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import deleteregistrypolicyresponse as shared_deleteregistrypolicyresponse
 
 class DeleteRegistryPolicyXAmzTargetEnum(str, Enum):
     AMAZON_EC2_CONTAINER_REGISTRY_V20150921_DELETE_REGISTRY_POLICY = "AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy"
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRegistryPolicyHeaders:
-    x_amz_target: DeleteRegistryPolicyXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: DeleteRegistryPolicyXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRegistryPolicyRequest:
-    headers: DeleteRegistryPolicyHeaders = field()
-    request: dict[str, Any] = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DeleteRegistryPolicyHeaders = dataclasses.field()
+    request: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRegistryPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_registry_policy_response: Optional[shared.DeleteRegistryPolicyResponse] = field(default=None)
-    invalid_parameter_exception: Optional[Any] = field(default=None)
-    registry_policy_not_found_exception: Optional[Any] = field(default=None)
-    server_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_registry_policy_response: Optional[shared_deleteregistrypolicyresponse.DeleteRegistryPolicyResponse] = dataclasses.field(default=None)
+    invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    registry_policy_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    server_exception: Optional[Any] = dataclasses.field(default=None)
     

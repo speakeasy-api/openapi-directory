@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,30 +7,30 @@ class GetTagsTagTopAskersPeriodPeriodEnum(str, Enum):
     MONTH = "month"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsTagTopAskersPeriodPathParams:
-    period: GetTagsTagTopAskersPeriodPeriodEnum = field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
-    tag: str = field(metadata={'path_param': { 'field_name': 'tag', 'style': 'simple', 'explode': False }})
+    period: GetTagsTagTopAskersPeriodPeriodEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
+    tag: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tag', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsTagTopAskersPeriodQueryParams:
-    site: str = field(metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    pagesize: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
+    site: str = dataclasses.field(metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    pagesize: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsTagTopAskersPeriodRequest:
-    path_params: GetTagsTagTopAskersPeriodPathParams = field()
-    query_params: GetTagsTagTopAskersPeriodQueryParams = field()
+    path_params: GetTagsTagTopAskersPeriodPathParams = dataclasses.field()
+    query_params: GetTagsTagTopAskersPeriodQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsTagTopAskersPeriodResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

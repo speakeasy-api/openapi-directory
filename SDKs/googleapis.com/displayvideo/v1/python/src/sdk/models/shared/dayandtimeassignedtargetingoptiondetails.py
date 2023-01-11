@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -21,14 +21,14 @@ class DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DayAndTimeAssignedTargetingOptionDetails:
     r"""DayAndTimeAssignedTargetingOptionDetails
     Representation of a segment of time defined on a specific day of the week and with a start and end time. The time represented by `start_hour` must be before the time represented by `end_hour`.
     """
     
-    day_of_week: Optional[DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfWeek') }})
-    end_hour: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endHour') }})
-    start_hour: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startHour') }})
-    time_zone_resolution: Optional[DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeZoneResolution') }})
+    day_of_week: Optional[DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfWeek') }})
+    end_hour: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endHour') }})
+    start_hour: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startHour') }})
+    time_zone_resolution: Optional[DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeZoneResolution') }})
     

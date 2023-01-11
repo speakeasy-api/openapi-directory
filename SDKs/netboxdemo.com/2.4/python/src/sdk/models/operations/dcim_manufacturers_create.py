@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import manufacturer as shared_manufacturer
+from ..shared import manufacturer as shared_manufacturer
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimManufacturersCreateRequest:
-    request: shared.ManufacturerInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_manufacturer.ManufacturerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimManufacturersCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    manufacturer: Optional[shared.Manufacturer] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    manufacturer: Optional[shared_manufacturer.Manufacturer] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actionsummary as shared_actionsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListActionsResponse:
-    actions: Optional[List[ActionSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    actions: Optional[list[shared_actionsummary.ActionSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

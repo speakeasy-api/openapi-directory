@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StartInstancesResult:
-    starting_instances: Optional[List[InstanceStateChange]] = field(default=None)
+    starting_instances: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,51 +1,56 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import savingsplanofferingratefilterelement as shared_savingsplanofferingratefilterelement
+from ..shared import savingsplanproducttype_enum as shared_savingsplanproducttype_enum
+from ..shared import savingsplanpaymentoption_enum as shared_savingsplanpaymentoption_enum
+from ..shared import savingsplantype_enum as shared_savingsplantype_enum
+from ..shared import savingsplanrateservicecode_enum as shared_savingsplanrateservicecode_enum
+from ..shared import describesavingsplansofferingratesresponse as shared_describesavingsplansofferingratesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSavingsPlansOfferingRatesHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeSavingsPlansOfferingRatesRequestBody:
-    filters: Optional[List[shared.SavingsPlanOfferingRateFilterElement]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filters') }})
-    max_results: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxResults') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    operations: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
-    products: Optional[List[shared.SavingsPlanProductTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
-    savings_plan_offering_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanOfferingIds') }})
-    savings_plan_payment_options: Optional[List[shared.SavingsPlanPaymentOptionEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanPaymentOptions') }})
-    savings_plan_types: Optional[List[shared.SavingsPlanTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanTypes') }})
-    service_codes: Optional[List[shared.SavingsPlanRateServiceCodeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceCodes') }})
-    usage_types: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('usageTypes') }})
+    filters: Optional[list[shared_savingsplanofferingratefilterelement.SavingsPlanOfferingRateFilterElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filters') }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxResults') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    operations: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
+    products: Optional[list[shared_savingsplanproducttype_enum.SavingsPlanProductTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
+    savings_plan_offering_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanOfferingIds') }})
+    savings_plan_payment_options: Optional[list[shared_savingsplanpaymentoption_enum.SavingsPlanPaymentOptionEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanPaymentOptions') }})
+    savings_plan_types: Optional[list[shared_savingsplantype_enum.SavingsPlanTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanTypes') }})
+    service_codes: Optional[list[shared_savingsplanrateservicecode_enum.SavingsPlanRateServiceCodeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceCodes') }})
+    usage_types: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('usageTypes') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSavingsPlansOfferingRatesRequest:
-    headers: DescribeSavingsPlansOfferingRatesHeaders = field()
-    request: DescribeSavingsPlansOfferingRatesRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DescribeSavingsPlansOfferingRatesHeaders = dataclasses.field()
+    request: DescribeSavingsPlansOfferingRatesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSavingsPlansOfferingRatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_savings_plans_offering_rates_response: Optional[shared.DescribeSavingsPlansOfferingRatesResponse] = field(default=None)
-    internal_server_exception: Optional[Any] = field(default=None)
-    validation_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_savings_plans_offering_rates_response: Optional[shared_describesavingsplansofferingratesresponse.DescribeSavingsPlansOfferingRatesResponse] = dataclasses.field(default=None)
+    internal_server_exception: Optional[Any] = dataclasses.field(default=None)
+    validation_exception: Optional[Any] = dataclasses.field(default=None)
     

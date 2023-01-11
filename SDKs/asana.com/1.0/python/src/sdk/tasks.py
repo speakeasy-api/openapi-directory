@@ -31,7 +31,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/addDependencies", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -40,7 +40,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddDependenciesForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -87,7 +87,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/addDependents", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -96,7 +96,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddDependentsForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -145,7 +145,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/addFollowers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -154,7 +154,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddFollowersForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -210,7 +210,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/addProject", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -219,7 +219,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddProjectForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -262,7 +262,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/addTag", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -271,7 +271,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddTagForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -314,7 +314,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/subtasks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -323,7 +323,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateSubtaskForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -372,7 +372,7 @@ class Tasks:
         url = base_url.removesuffix("/") + "/tasks"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -381,7 +381,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -475,7 +475,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/duplicate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -484,7 +484,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DuplicateTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -953,7 +953,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/removeDependencies", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -962,7 +962,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveDependenciesForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1009,7 +1009,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/removeDependents", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1018,7 +1018,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveDependentsForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1065,7 +1065,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/removeFollowers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1074,7 +1074,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveFollowerForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1120,7 +1120,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/removeProject", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1129,7 +1129,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveProjectForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1172,7 +1172,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/removeTag", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1181,7 +1181,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveTagForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1301,7 +1301,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}/setParent", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1310,7 +1310,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetParentForTaskResponse(status_code=r.status_code, content_type=content_type)
@@ -1361,7 +1361,7 @@ class Tasks:
         url = utils.generate_url(base_url, "/tasks/{task_gid}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1370,7 +1370,7 @@ class Tasks:
         
         client = self._security_client
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateTaskResponse(status_code=r.status_code, content_type=content_type)

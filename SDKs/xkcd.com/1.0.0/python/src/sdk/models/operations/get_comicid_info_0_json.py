@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetComicIDInfo0JSONPathParams:
-    comic_id: float = field(metadata={'path_param': { 'field_name': 'comicId', 'style': 'simple', 'explode': False }})
+    comic_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'comicId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetComicIDInfo0JSONRequest:
-    path_params: GetComicIDInfo0JSONPathParams = field()
+    path_params: GetComicIDInfo0JSONPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetComicIDInfo0JSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

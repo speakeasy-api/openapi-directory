@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import zone_stats as shared_zone_stats
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsItemPathParams:
-    zone: str = field(metadata={'path_param': { 'field_name': 'zone', 'style': 'simple', 'explode': False }})
+    zone: str = dataclasses.field(metadata={'path_param': { 'field_name': 'zone', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsItemQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsItemRequest:
-    path_params: GetStatisticsItemPathParams = field()
-    query_params: GetStatisticsItemQueryParams = field()
+    path_params: GetStatisticsItemPathParams = dataclasses.field()
+    query_params: GetStatisticsItemQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsItemResponse:
-    content_type: str = field()
-    status_code: int = field()
-    zone_stats: Optional[shared.ZoneStats] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    zone_stats: Optional[shared_zone_stats.ZoneStats] = dataclasses.field(default=None)
     

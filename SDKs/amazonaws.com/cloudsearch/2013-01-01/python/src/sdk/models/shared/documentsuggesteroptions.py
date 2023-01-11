@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import suggesterfuzzymatching_enum as shared_suggesterfuzzymatching_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class DocumentSuggesterOptions:
     r"""DocumentSuggesterOptions
     Options for a search suggester.
     """
     
-    source_field: str = field()
-    fuzzy_matching: Optional[SuggesterFuzzyMatchingEnum] = field(default=None)
-    sort_expression: Optional[str] = field(default=None)
+    source_field: str = dataclasses.field()
+    fuzzy_matching: Optional[shared_suggesterfuzzymatching_enum.SuggesterFuzzyMatchingEnum] = dataclasses.field(default=None)
+    sort_expression: Optional[str] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,9 +18,9 @@ s = sdk.SDK()
     
 req = operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest(
     path_params=operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams(
-        org="assumenda",
-        repository_id=7918731088610992086,
-        runner_group_id=6900500405322802316,
+        org="nesciunt",
+        repository_id=7730506967756216044,
+        runner_group_id=4427521111619747928,
     ),
 )
     

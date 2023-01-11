@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminRequestsRequestIDPathParams:
-    request_id: str = field(metadata={'path_param': { 'field_name': 'requestId', 'style': 'simple', 'explode': False }})
+    request_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'requestId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminRequestsRequestIDRequest:
-    path_params: DeleteAdminRequestsRequestIDPathParams = field()
+    path_params: DeleteAdminRequestsRequestIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminRequestsRequestIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

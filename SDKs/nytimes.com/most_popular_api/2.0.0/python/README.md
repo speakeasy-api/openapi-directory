@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,12 +23,12 @@ req = operations.GetMostemailedSectionTimePeriodJSONRequest(
         ),
     ),
     path_params=operations.GetMostemailedSectionTimePeriodJSONPathParams(
-        section="Magazine",
-        time_period="1",
+        section="Arts",
+        time_period="7",
     ),
 )
     
-res = s.sdk.get_mostemailed_section_time_period_json(req)
+res = s.get_mostemailed_section_time_period_json(req)
 
 if res.get_mostemailed_section_time_period_json_200_application_json_object is not None:
     # handle response

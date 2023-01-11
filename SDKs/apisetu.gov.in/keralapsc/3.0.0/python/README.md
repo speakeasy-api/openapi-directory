@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.OtcerRequest(
     security=operations.OtcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.OtcerRequestBody(
         certificate_parameters=operations.OtcerRequestBodyCertificateParameters(
-            dob="iste",
-            full_name="molestiae",
-            uid="ea",
+            dob="voluptates",
+            full_name="sit",
+            uid="aut",
         ),
-        consent_artifact="non",
+        consent_artifact="et",
         format="pdf",
-        txn_id="aliquam",
+        txn_id="fuga",
     ),
 )
     
-res = s.sdk.otcer(req)
+res = s.ap_is.otcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `otcer` - OTV Certificate
 

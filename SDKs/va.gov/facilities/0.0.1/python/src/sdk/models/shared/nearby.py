@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nearbyattributes as shared_nearbyattributes
 
 class NearbyTypeEnum(str, Enum):
     NEARBY_FACILITY = "NearbyFacility"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Nearby:
     r"""Nearby
     JSON API-compliant object describing a nearby VA facility
     """
     
-    attributes: NearbyAttributes = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: NearbyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    attributes: shared_nearbyattributes.NearbyAttributes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: NearbyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

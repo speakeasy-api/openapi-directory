@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,13 +15,13 @@ class GoogleFirestoreAdminV1beta2IndexFieldOrderEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleFirestoreAdminV1beta2IndexField:
     r"""GoogleFirestoreAdminV1beta2IndexField
     A field in an index. The field_path describes which field is indexed, the value_mode describes how the field value is indexed.
     """
     
-    array_config: Optional[GoogleFirestoreAdminV1beta2IndexFieldArrayConfigEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('arrayConfig') }})
-    field_path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldPath') }})
-    order: Optional[GoogleFirestoreAdminV1beta2IndexFieldOrderEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('order') }})
+    array_config: Optional[GoogleFirestoreAdminV1beta2IndexFieldArrayConfigEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('arrayConfig') }})
+    field_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldPath') }})
+    order: Optional[GoogleFirestoreAdminV1beta2IndexFieldOrderEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('order') }})
     

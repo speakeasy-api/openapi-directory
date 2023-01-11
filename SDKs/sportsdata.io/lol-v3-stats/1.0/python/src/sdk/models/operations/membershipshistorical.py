@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class MembershipsHistoricalFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class MembershipsHistoricalFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsHistoricalPathParams:
-    format: MembershipsHistoricalFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: MembershipsHistoricalFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsHistoricalRequest:
-    path_params: MembershipsHistoricalPathParams = field()
+    path_params: MembershipsHistoricalPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsHistoricalResponse:
-    content_type: str = field()
-    status_code: int = field()
-    memberships: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    memberships: Optional[list[Any]] = dataclasses.field(default=None)
     

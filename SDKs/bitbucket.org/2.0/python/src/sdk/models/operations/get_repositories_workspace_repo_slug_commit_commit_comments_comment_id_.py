@@ -1,32 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDPathParams:
-    comment_id: int = field(metadata={'path_param': { 'field_name': 'comment_id', 'style': 'simple', 'explode': False }})
-    commit: str = field(metadata={'path_param': { 'field_name': 'commit', 'style': 'simple', 'explode': False }})
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    comment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_id', 'style': 'simple', 'explode': False }})
+    commit: str = dataclasses.field(metadata={'path_param': { 'field_name': 'commit', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDRequest:
-    path_params: GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDPathParams = field()
-    security: GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity = field()
+    path_params: GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDPathParams = dataclasses.field()
+    security: GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    commit_comment: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    commit_comment: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

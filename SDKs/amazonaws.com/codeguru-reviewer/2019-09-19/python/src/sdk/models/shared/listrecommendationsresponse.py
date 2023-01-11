@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recommendationsummary as shared_recommendationsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRecommendationsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    recommendation_summaries: Optional[List[RecommendationSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecommendationSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    recommendation_summaries: Optional[list[shared_recommendationsummary.RecommendationSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecommendationSummaries') }})
     

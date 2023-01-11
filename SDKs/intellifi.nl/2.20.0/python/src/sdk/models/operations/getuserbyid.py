@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserByIDSecurity:
-    cookie_sid: shared.SchemeCookieSid = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
+    cookie_sid: shared_security.SchemeCookieSid = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserByIDRequest:
-    path_params: GetUserByIDPathParams = field()
-    security: GetUserByIDSecurity = field()
+    path_params: GetUserByIDPathParams = dataclasses.field()
+    security: GetUserByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserByIDResponseOutput:
-    content_type: str = field()
-    status_code: int = field()
-    user: Optional[shared.UserOutput] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user: Optional[shared_user.UserOutput] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getgenresresponse as shared_getgenresresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGenresQueryParams:
-    top_level_only: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'top_level_only', 'style': 'form', 'explode': True }})
+    top_level_only: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'top_level_only', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenresHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenresRequest:
-    headers: GetGenresHeaders = field()
-    query_params: GetGenresQueryParams = field()
+    headers: GetGenresHeaders = dataclasses.field()
+    query_params: GetGenresQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenresResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_genres_response: Optional[shared.GetGenresResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_genres_response: Optional[shared_getgenresresponse.GetGenresResponse] = dataclasses.field(default=None)
     

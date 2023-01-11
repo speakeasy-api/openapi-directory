@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import two_hundredresult as shared_two_hundredresult
+from ..shared import four_hundred as shared_four_hundred
+from ..shared import four_hundred_and_four as shared_four_hundred_and_four
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPolicyModulePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPolicyModuleQueryParams:
-    pretty: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'pretty', 'style': 'form', 'explode': True }})
+    pretty: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pretty', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPolicyModuleRequest:
-    path_params: GetPolicyModulePathParams = field()
-    query_params: GetPolicyModuleQueryParams = field()
+    path_params: GetPolicyModulePathParams = dataclasses.field()
+    query_params: GetPolicyModuleQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPolicyModuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    two_hundred_result: Optional[shared.TwoHundredResult] = field(default=None)
-    four_hundred: Optional[shared.FourHundred] = field(default=None)
-    four_hundred_and_four: Optional[shared.FourHundredAndFour] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    two_hundred_result: Optional[shared_two_hundredresult.TwoHundredResult] = dataclasses.field(default=None)
+    four_hundred: Optional[shared_four_hundred.FourHundred] = dataclasses.field(default=None)
+    four_hundred_and_four: Optional[shared_four_hundred_and_four.FourHundredAndFour] = dataclasses.field(default=None)
     

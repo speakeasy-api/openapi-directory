@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import payslipobject as shared_payslipobject
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayslipPathParams:
-    payslip_id: str = field(metadata={'path_param': { 'field_name': 'PayslipID', 'style': 'simple', 'explode': False }})
+    payslip_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PayslipID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayslipHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayslipSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayslipRequest:
-    headers: GetPayslipHeaders = field()
-    path_params: GetPayslipPathParams = field()
-    security: GetPayslipSecurity = field()
+    headers: GetPayslipHeaders = dataclasses.field()
+    path_params: GetPayslipPathParams = dataclasses.field()
+    security: GetPayslipSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayslipResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payslip_object: Optional[shared.PayslipObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payslip_object: Optional[shared_payslipobject.PayslipObject] = dataclasses.field(default=None)
     

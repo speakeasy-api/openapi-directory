@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import albumforapicontract as shared_albumforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetAlbumsPathParams:
-    event_id: int = field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
+    event_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
     
 class ReleaseEventAPIGetAlbumsFieldsEnum(str, Enum):
     NONE = "None"
@@ -30,22 +30,22 @@ class ReleaseEventAPIGetAlbumsLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetAlbumsQueryParams:
-    fields: Optional[ReleaseEventAPIGetAlbumsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[ReleaseEventAPIGetAlbumsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[ReleaseEventAPIGetAlbumsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[ReleaseEventAPIGetAlbumsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetAlbumsRequest:
-    path_params: ReleaseEventAPIGetAlbumsPathParams = field()
-    query_params: ReleaseEventAPIGetAlbumsQueryParams = field()
+    path_params: ReleaseEventAPIGetAlbumsPathParams = dataclasses.field()
+    query_params: ReleaseEventAPIGetAlbumsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetAlbumsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album_for_api_contracts: Optional[List[shared.AlbumForAPIContract]] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album_for_api_contracts: Optional[list[shared_albumforapicontract.AlbumForAPIContract]] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

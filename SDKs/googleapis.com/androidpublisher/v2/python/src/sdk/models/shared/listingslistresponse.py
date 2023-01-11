@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import listing as shared_listing
 
 
-@dataclass
+@dataclasses.dataclass
 class ListingsListResponse:
-    kind: Optional[str] = field(default=None)
-    listings: Optional[List[Listing]] = field(default=None)
+    kind: Optional[str] = dataclasses.field(default=None)
+    listings: Optional[list[shared_listing.Listing]] = dataclasses.field(default=None)
     

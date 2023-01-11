@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workspacesummary as shared_workspacesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWorkspacesResponse:
     r"""ListWorkspacesResponse
     Represents the output of a ListWorkspaces operation.
     """
     
-    workspaces: List[WorkspaceSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workspaces') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    workspaces: list[shared_workspacesummary.WorkspaceSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workspaces') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

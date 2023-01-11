@@ -29,14 +29,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/alertPolicies", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsAlertPoliciesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -83,14 +83,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/collectdTimeSeries", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsCollectdTimeSeriesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -112,14 +112,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/groups", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsGroupsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -191,14 +191,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsGroupsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -220,14 +220,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/metricDescriptors", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsMetricDescriptorsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -324,14 +324,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/notificationChannels", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsNotificationChannelsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -353,14 +353,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}:getVerificationCode", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsNotificationChannelsGetVerificationCodeResponse(status_code=r.status_code, content_type=content_type)
@@ -407,14 +407,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}:sendVerificationCode", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsNotificationChannelsSendVerificationCodeResponse(status_code=r.status_code, content_type=content_type)
@@ -436,14 +436,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}:verify", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsNotificationChannelsVerifyResponse(status_code=r.status_code, content_type=content_type)
@@ -452,6 +452,60 @@ class Projects:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.NotificationChannel])
                 res.notification_channel = out
+
+        return res
+
+    
+    def monitoring_projects_snoozes_create(self, request: operations.MonitoringProjectsSnoozesCreateRequest) -> operations.MonitoringProjectsSnoozesCreateResponse:
+        r"""Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/{parent}/snoozes", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MonitoringProjectsSnoozesCreateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Snooze])
+                res.snooze = out
+
+        return res
+
+    
+    def monitoring_projects_snoozes_list(self, request: operations.MonitoringProjectsSnoozesListRequest) -> operations.MonitoringProjectsSnoozesListResponse:
+        r"""Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/{parent}/snoozes", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MonitoringProjectsSnoozesListResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ListSnoozesResponse])
+                res.list_snoozes_response = out
 
         return res
 
@@ -465,14 +519,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/timeSeries", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsTimeSeriesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -494,14 +548,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/timeSeries:createService", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsTimeSeriesCreateServiceResponse(status_code=r.status_code, content_type=content_type)
@@ -548,14 +602,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{name}/timeSeries:query", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsTimeSeriesQueryResponse(status_code=r.status_code, content_type=content_type)
@@ -577,14 +631,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v3/{parent}/uptimeCheckConfigs", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MonitoringProjectsUptimeCheckConfigsCreateResponse(status_code=r.status_code, content_type=content_type)

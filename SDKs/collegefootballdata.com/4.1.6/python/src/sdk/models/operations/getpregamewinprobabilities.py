@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import pregamewp as shared_pregamewp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPregameWinProbabilitiesQueryParams:
-    season_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'seasonType', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'week', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    season_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'seasonType', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'week', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPregameWinProbabilitiesRequest:
-    query_params: GetPregameWinProbabilitiesQueryParams = field()
+    query_params: GetPregameWinProbabilitiesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPregameWinProbabilitiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pregame_wps: Optional[List[shared.PregameWp]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pregame_wps: Optional[list[shared_pregamewp.PregameWp]] = dataclasses.field(default=None)
     

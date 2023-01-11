@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class RevokeRefreshTokenV2PathParams:
-    token: str = field(metadata={'path_param': { 'field_name': 'token', 'style': 'simple', 'explode': False }})
+    token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RevokeRefreshTokenV2Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RevokeRefreshTokenV2Request:
-    path_params: RevokeRefreshTokenV2PathParams = field()
-    security: RevokeRefreshTokenV2Security = field()
+    path_params: RevokeRefreshTokenV2PathParams = dataclasses.field()
+    security: RevokeRefreshTokenV2Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RevokeRefreshTokenV2Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ingredientobject as shared_ingredientobject
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodIngredientSearchPhpQueryParams:
-    find: str = field(metadata={'query_param': { 'field_name': 'find', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    find: str = dataclasses.field(metadata={'query_param': { 'field_name': 'find', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodIngredientSearchPhpSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodIngredientSearchPhpRequest:
-    query_params: GetFoodIngredientSearchPhpQueryParams = field()
-    security: GetFoodIngredientSearchPhpSecurity = field()
+    query_params: GetFoodIngredientSearchPhpQueryParams = dataclasses.field()
+    security: GetFoodIngredientSearchPhpSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodIngredientSearchPhpResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ingredient_object: Optional[shared.IngredientObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ingredient_object: Optional[shared_ingredientobject.IngredientObject] = dataclasses.field(default=None)
     

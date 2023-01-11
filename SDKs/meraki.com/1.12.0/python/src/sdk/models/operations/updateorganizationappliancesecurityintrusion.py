@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateOrganizationApplianceSecurityIntrusionPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules:
-    rule_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleId') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    rule_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleId') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateOrganizationApplianceSecurityIntrusionRequestBody:
-    allowed_rules: List[UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedRules') }})
+    allowed_rules: list[UpdateOrganizationApplianceSecurityIntrusionRequestBodyAllowedRules] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedRules') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateOrganizationApplianceSecurityIntrusionRequest:
-    path_params: UpdateOrganizationApplianceSecurityIntrusionPathParams = field()
-    request: UpdateOrganizationApplianceSecurityIntrusionRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateOrganizationApplianceSecurityIntrusionPathParams = dataclasses.field()
+    request: UpdateOrganizationApplianceSecurityIntrusionRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateOrganizationApplianceSecurityIntrusionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_organization_appliance_security_intrusion_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_organization_appliance_security_intrusion_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

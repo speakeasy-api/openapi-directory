@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablepowerfeed as shared_writablepowerfeed
+from ..shared import powerfeed as shared_powerfeed
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsPartialUpdateRequest:
-    path_params: DcimPowerFeedsPartialUpdatePathParams = field()
-    request: shared.WritablePowerFeedInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimPowerFeedsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablepowerfeed.WritablePowerFeedInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_feed: Optional[shared.PowerFeed] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_feed: Optional[shared_powerfeed.PowerFeed] = dataclasses.field(default=None)
     

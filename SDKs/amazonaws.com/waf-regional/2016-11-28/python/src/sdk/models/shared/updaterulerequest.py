@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ruleupdate as shared_ruleupdate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateRuleRequest:
-    change_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
-    rule_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleId') }})
-    updates: List[RuleUpdate] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Updates') }})
+    change_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
+    rule_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleId') }})
+    updates: list[shared_ruleupdate.RuleUpdate] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Updates') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,28 +20,28 @@ req = operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListRequest(
     security=operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListPathParams(
-        parent="quo",
+        parent="quae",
     ),
     query_params=operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListQueryParams(
-        dollar_xgafv="1",
-        access_token="totam",
-        alt="media",
-        callback="sunt",
-        fields="enim",
-        key="qui",
-        oauth_token="deleniti",
-        page_size=5518598320821928085,
-        page_token="est",
-        pretty_print=True,
-        quota_user="tenetur",
-        upload_type="cumque",
-        upload_protocol="reprehenderit",
+        dollar_xgafv="2",
+        access_token="recusandae",
+        alt="json",
+        callback="maxime",
+        fields="et",
+        key="sunt",
+        oauth_token="assumenda",
+        page_size=6827229980722297647,
+        page_token="similique",
+        pretty_print=False,
+        quota_user="est",
+        upload_type="harum",
+        upload_protocol="consequatur",
     ),
 )
     

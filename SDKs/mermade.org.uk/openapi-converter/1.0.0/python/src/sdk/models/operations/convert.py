@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -9,23 +9,23 @@ class ConvertRequestBodyValidateEnum(str, Enum):
     ON = "on"
 
 
-@dataclass
+@dataclasses.dataclass
 class ConvertRequestBody:
-    filename: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
-    source: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
-    validate: Optional[ConvertRequestBodyValidateEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'validate' }})
+    filename: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
+    source: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
+    validate: Optional[ConvertRequestBodyValidateEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'validate' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConvertRequest:
-    request: Optional[ConvertRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[ConvertRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConvertResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    convert_200_application_json_any: Optional[Any] = field(default=None)
-    convert_400_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    convert_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    convert_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

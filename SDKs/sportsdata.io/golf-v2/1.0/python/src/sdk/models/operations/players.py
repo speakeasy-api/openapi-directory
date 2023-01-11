@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayersFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class PlayersFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayersPathParams:
-    format: PlayersFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: PlayersFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayersRequest:
-    path_params: PlayersPathParams = field()
+    path_params: PlayersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    players: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    players: Optional[list[Any]] = dataclasses.field(default=None)
     

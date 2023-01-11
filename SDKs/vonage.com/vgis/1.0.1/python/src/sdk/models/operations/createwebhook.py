@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import webhookcreate as shared_webhookcreate
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import webhook as shared_webhook
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookRequest:
-    request: shared.WebhookCreate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_webhookcreate.WebhookCreate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    webhook: Optional[shared.Webhook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None)
     

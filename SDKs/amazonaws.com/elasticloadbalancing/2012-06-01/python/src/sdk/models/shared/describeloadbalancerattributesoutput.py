@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import loadbalancerattributes as shared_loadbalancerattributes
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeLoadBalancerAttributesOutput:
     r"""DescribeLoadBalancerAttributesOutput
     Contains the output of DescribeLoadBalancerAttributes.
     """
     
-    load_balancer_attributes: Optional[LoadBalancerAttributes] = field(default=None)
+    load_balancer_attributes: Optional[shared_loadbalancerattributes.LoadBalancerAttributes] = dataclasses.field(default=None)
     

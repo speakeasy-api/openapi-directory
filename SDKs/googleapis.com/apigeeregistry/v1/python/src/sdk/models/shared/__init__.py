@@ -28,3 +28,5 @@ from .status import *
 from .tagapispecrevisionrequest import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","API","APIInput","APIDeployment","APIDeploymentInput","APISpecInput","APISpec","APIVersion","APIVersionInput","ArtifactInput","Artifact","Binding","ConfigInput","Expr","HTTPBody","InstanceInput","ListAPIDeploymentsResponse","ListAPISpecRevisionsResponse","ListAPISpecsResponse","ListApisResponse","ListAPIVersionsResponse","ListArtifactsResponse","ListLocationsResponse","ListOperationsResponse","Location","Operation","Policy","RollbackAPISpecRequest","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","TagAPISpecRevisionRequest","TestIamPermissionsRequest","TestIamPermissionsResponse"]

@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeDeveloperHapikey:
-    api_key: str = field(metadata={'security': { 'field_name': 'hapikey' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'hapikey' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeHapikey:
-    api_key: str = field(metadata={'security': { 'field_name': 'hapikey' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'hapikey' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeOauth2Legacy:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemePrivateAppsLegacy:
-    api_key: str = field(metadata={'security': { 'field_name': 'private-app-legacy' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'private-app-legacy' }})
     

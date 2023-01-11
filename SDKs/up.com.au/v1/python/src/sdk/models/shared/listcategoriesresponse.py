@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import categoryresource as shared_categoryresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCategoriesResponse:
     r"""ListCategoriesResponse
     Successful response to get all categories and their ancestry. The
@@ -14,5 +13,5 @@ class ListCategoriesResponse:
     
     """
     
-    data: List[CategoryResource] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: list[shared_categoryresource.CategoryResource] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import marketplacenote as shared_marketplacenote
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddOrderNotesRequest:
-    notes: Optional[List[MarketplaceNote]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notes') }})
+    notes: Optional[list[shared_marketplacenote.MarketplaceNote]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notes') }})
     

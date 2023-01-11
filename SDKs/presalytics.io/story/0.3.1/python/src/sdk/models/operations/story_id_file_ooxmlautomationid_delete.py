@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidDeletePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    ooxml_automation_id: str = field(metadata={'path_param': { 'field_name': 'ooxml_automation_id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    ooxml_automation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ooxml_automation_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidDeleteRequest:
-    path_params: StoryIDFileOoxmlautomationidDeletePathParams = field()
+    path_params: StoryIDFileOoxmlautomationidDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

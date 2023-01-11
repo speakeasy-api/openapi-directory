@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesCsvQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesCsvSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesCsvRequest:
-    query_params: ExportServicesCsvQueryParams = field()
-    security: ExportServicesCsvSecurity = field()
+    query_params: ExportServicesCsvQueryParams = dataclasses.field()
+    security: ExportServicesCsvSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesCsvResponse:
-    content_type: str = field()
-    status_code: int = field()
-    export_services_csv_200_text_csv_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    export_services_csv_200_text_csv_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

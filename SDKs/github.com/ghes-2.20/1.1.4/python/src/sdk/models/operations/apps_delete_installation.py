@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteInstallationPathParams:
-    installation_id: int = field(metadata={'path_param': { 'field_name': 'installation_id', 'style': 'simple', 'explode': False }})
+    installation_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'installation_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteInstallationHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteInstallationRequest:
-    headers: AppsDeleteInstallationHeaders = field()
-    path_params: AppsDeleteInstallationPathParams = field()
+    headers: AppsDeleteInstallationHeaders = dataclasses.field()
+    path_params: AppsDeleteInstallationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteInstallationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

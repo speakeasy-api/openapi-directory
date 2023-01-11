@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workerpool as shared_workerpool
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWorkerPoolsResponse:
     r"""ListWorkerPoolsResponse
     Response containing existing `WorkerPools`.
     """
     
-    worker_pools: Optional[List[WorkerPool]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerPools') }})
+    worker_pools: Optional[list[shared_workerpool.WorkerPool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerPools') }})
     

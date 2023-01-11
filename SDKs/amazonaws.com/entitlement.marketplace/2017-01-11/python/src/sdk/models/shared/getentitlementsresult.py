@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import entitlement as shared_entitlement
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetEntitlementsResult:
     r"""GetEntitlementsResult
     The GetEntitlementsRequest contains results from the GetEntitlements operation.
     """
     
-    entitlements: Optional[List[Entitlement]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entitlements') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    entitlements: Optional[list[shared_entitlement.Entitlement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entitlements') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

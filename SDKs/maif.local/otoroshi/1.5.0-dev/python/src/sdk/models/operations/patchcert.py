@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import patch as shared_patch
+from ..shared import certificate as shared_certificate
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchCertPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchCertSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchCertRequest:
-    path_params: PatchCertPathParams = field()
-    security: PatchCertSecurity = field()
-    request: Optional[List[shared.Patch]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchCertPathParams = dataclasses.field()
+    security: PatchCertSecurity = dataclasses.field()
+    request: Optional[list[shared_patch.Patch]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchCertResponse:
-    content_type: str = field()
-    status_code: int = field()
-    certificate: Optional[shared.Certificate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    certificate: Optional[shared_certificate.Certificate] = dataclasses.field(default=None)
     

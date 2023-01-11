@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReturnPolicyPathParams:
-    return_policy_id: str = field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
+    return_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReturnPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReturnPolicyRequest:
-    path_params: DeleteReturnPolicyPathParams = field()
-    security: DeleteReturnPolicySecurity = field()
+    path_params: DeleteReturnPolicyPathParams = dataclasses.field()
+    security: DeleteReturnPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteReturnPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

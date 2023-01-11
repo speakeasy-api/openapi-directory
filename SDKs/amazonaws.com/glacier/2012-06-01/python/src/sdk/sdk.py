@@ -144,7 +144,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/tags#operation=add", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -153,7 +153,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddTagsToVaultResponse(status_code=r.status_code, content_type=content_type)
@@ -753,7 +753,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/jobs", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -761,7 +761,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InitiateJobResponse(status_code=r.status_code, content_type=content_type)
@@ -848,7 +848,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/lock-policy", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -856,7 +856,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InitiateVaultLockResponse(status_code=r.status_code, content_type=content_type)
@@ -1181,7 +1181,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/tags#operation=remove", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1190,7 +1190,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveTagsFromVaultResponse(status_code=r.status_code, content_type=content_type)
@@ -1226,7 +1226,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/policies/data-retrieval", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1234,7 +1234,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetDataRetrievalPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1266,7 +1266,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/access-policy", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1274,7 +1274,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetVaultAccessPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1310,7 +1310,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/notification-configuration", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1318,7 +1318,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SetVaultNotificationsResponse(status_code=r.status_code, content_type=content_type)
@@ -1354,7 +1354,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/archives", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1362,7 +1362,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UploadArchiveResponse(status_code=r.status_code, content_type=content_type)
@@ -1404,7 +1404,7 @@ class SDK:
         url = utils.generate_url(base_url, "/{accountId}/vaults/{vaultName}/multipart-uploads/{uploadId}", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1412,7 +1412,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UploadMultipartPartResponse(status_code=r.status_code, content_type=content_type)

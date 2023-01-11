@@ -1,0 +1,28 @@
+import dataclasses
+from typing import Optional
+from ..shared import clienterrorresponse as shared_clienterrorresponse
+from ..shared import onlineszamlastatus as shared_onlineszamlastatus
+from ..shared import servererrorresponse as shared_servererrorresponse
+from ..shared import validationerrorresponse as shared_validationerrorresponse
+
+
+@dataclasses.dataclass
+class GetOnlineSzamlaStatusPathParams:
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    
+
+@dataclasses.dataclass
+class GetOnlineSzamlaStatusRequest:
+    path_params: GetOnlineSzamlaStatusPathParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
+class GetOnlineSzamlaStatusResponse:
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    client_error_response: Optional[shared_clienterrorresponse.ClientErrorResponse] = dataclasses.field(default=None)
+    online_szamla_status: Optional[shared_onlineszamlastatus.OnlineSzamlaStatus] = dataclasses.field(default=None)
+    server_error_response: Optional[shared_servererrorresponse.ServerErrorResponse] = dataclasses.field(default=None)
+    validation_error_response: Optional[shared_validationerrorresponse.ValidationErrorResponse] = dataclasses.field(default=None)
+    

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import functionconfiguration as shared_functionconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateFunctionResponse:
-    function_configuration: Optional[FunctionConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionConfiguration') }})
+    function_configuration: Optional[shared_functionconfiguration.FunctionConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionConfiguration') }})
     

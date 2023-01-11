@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import googlecloudprivatecatalogproducerv1beta1product as shared_googlecloudprivatecatalogproducerv1beta1product
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse:
-    next_page_token: Optional[str] = field(default=None)
-    products: Optional[List[GoogleCloudPrivatecatalogproducerV1beta1Product]] = field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
+    products: Optional[list[shared_googlecloudprivatecatalogproducerv1beta1product.GoogleCloudPrivatecatalogproducerV1beta1Product]] = dataclasses.field(default=None)
     

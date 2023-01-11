@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -23,14 +23,14 @@ class PerformanceGoalPerformanceGoalTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PerformanceGoal:
     r"""PerformanceGoal
     Settings that control the performance goal of a campaign or insertion order.
     """
     
-    performance_goal_amount_micros: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalAmountMicros') }})
-    performance_goal_percentage_micros: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalPercentageMicros') }})
-    performance_goal_string: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalString') }})
-    performance_goal_type: Optional[PerformanceGoalPerformanceGoalTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalType') }})
+    performance_goal_amount_micros: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalAmountMicros') }})
+    performance_goal_percentage_micros: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalPercentageMicros') }})
+    performance_goal_string: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalString') }})
+    performance_goal_type: Optional[PerformanceGoalPerformanceGoalTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalType') }})
     

@@ -1,21 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bucket as shared_bucket
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserPageLoadMetricV5:
-    r"""UserPageLoadMetricV5
-    A CrUX metric object for a single metric and form factor.
-    """
-    
-    category: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
-    distributions: Optional[List[Bucket]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distributions') }})
-    form_factor: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('formFactor') }})
-    median: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('median') }})
-    metric_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricId') }})
-    percentile: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percentile') }})
+    category: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    distributions: Optional[list[shared_bucket.Bucket]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distributions') }})
+    form_factor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('formFactor') }})
+    median: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('median') }})
+    metric_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricId') }})
+    percentile: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percentile') }})
     

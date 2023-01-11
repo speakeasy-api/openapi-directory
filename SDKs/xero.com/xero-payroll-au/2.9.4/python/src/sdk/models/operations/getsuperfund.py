@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import superfunds as shared_superfunds
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSuperfundPathParams:
-    super_fund_id: str = field(metadata={'path_param': { 'field_name': 'SuperFundID', 'style': 'simple', 'explode': False }})
+    super_fund_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'SuperFundID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSuperfundHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSuperfundSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSuperfundRequest:
-    headers: GetSuperfundHeaders = field()
-    path_params: GetSuperfundPathParams = field()
-    security: GetSuperfundSecurity = field()
+    headers: GetSuperfundHeaders = dataclasses.field()
+    path_params: GetSuperfundPathParams = dataclasses.field()
+    security: GetSuperfundSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSuperfundResponse:
-    content_type: str = field()
-    status_code: int = field()
-    super_funds: Optional[shared.SuperFunds] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    super_funds: Optional[shared_superfunds.SuperFunds] = dataclasses.field(default=None)
     

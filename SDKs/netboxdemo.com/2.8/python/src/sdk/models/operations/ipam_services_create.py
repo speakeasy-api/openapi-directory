@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableservice as shared_writableservice
+from ..shared import service as shared_service
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesCreateRequest:
-    request: shared.WritableServiceInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableservice.WritableServiceInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service: Optional[shared.Service] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service: Optional[shared_service.Service] = dataclasses.field(default=None)
     

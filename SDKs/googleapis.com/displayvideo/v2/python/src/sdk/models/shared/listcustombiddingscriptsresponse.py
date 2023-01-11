@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import custombiddingscript as shared_custombiddingscript
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCustomBiddingScriptsResponse:
-    custom_bidding_scripts: Optional[List[CustomBiddingScript]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customBiddingScripts') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    custom_bidding_scripts: Optional[list[shared_custombiddingscript.CustomBiddingScript]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customBiddingScripts') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

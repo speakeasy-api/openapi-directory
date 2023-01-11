@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tag as shared_tag
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AllocateHostedConnectionRequest:
-    bandwidth: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandwidth') }})
-    connection_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionId') }})
-    connection_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionName') }})
-    owner_account: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ownerAccount') }})
-    vlan: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
-    tags: Optional[List[Tag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    bandwidth: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandwidth') }})
+    connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionId') }})
+    connection_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionName') }})
+    owner_account: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ownerAccount') }})
+    vlan: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlan') }})
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     

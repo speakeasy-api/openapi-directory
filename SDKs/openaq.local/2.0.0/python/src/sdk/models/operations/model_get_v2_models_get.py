@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import openaqresult as shared_openaqresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ModelGetV2ModelsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    open_aq_result: Optional[shared.OpenAqResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    open_aq_result: Optional[shared_openaqresult.OpenAqResult] = dataclasses.field(default=None)
     

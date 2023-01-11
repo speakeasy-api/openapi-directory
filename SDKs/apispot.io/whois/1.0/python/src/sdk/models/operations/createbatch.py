@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -15,27 +15,27 @@ class CreateBatchRequestBodyOptionsFormatEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateBatchRequestBodyOptions:
-    format: Optional[CreateBatchRequestBodyOptionsFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    format: Optional[CreateBatchRequestBodyOptionsFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateBatchRequestBody:
-    domains: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
-    operation: CreateBatchRequestBodyOperationEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
-    options: Optional[CreateBatchRequestBodyOptions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    domains: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
+    operation: CreateBatchRequestBodyOperationEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
+    options: Optional[CreateBatchRequestBodyOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateBatchRequest:
-    request: CreateBatchRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: CreateBatchRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch: Optional[Any] = dataclasses.field(default=None)
     

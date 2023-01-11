@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import versionresponse as shared_versionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionRequest:
-    security: GetVersionSecurity = field()
+    security: GetVersionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    version_response: Optional[shared.VersionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    version_response: Optional[shared_versionresponse.VersionResponse] = dataclasses.field(default=None)
     

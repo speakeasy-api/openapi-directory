@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKeyHeader:
-    api_key: str = field(metadata={'security': { 'field_name': 'Ocp-Apim-Subscription-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'Ocp-Apim-Subscription-Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKeyQuery:
-    api_key: str = field(metadata={'security': { 'field_name': 'key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    api_key_header: Optional[SchemeAPIKeyHeader] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    api_key_query: Optional[SchemeAPIKeyQuery] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key_header: Optional[SchemeAPIKeyHeader] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_query: Optional[SchemeAPIKeyQuery] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import anomalydetectorsummary as shared_anomalydetectorsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAnomalyDetectorsResponse:
-    anomaly_detector_summary_list: Optional[List[AnomalyDetectorSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AnomalyDetectorSummaryList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    anomaly_detector_summary_list: Optional[list[shared_anomalydetectorsummary.AnomalyDetectorSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AnomalyDetectorSummaryList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

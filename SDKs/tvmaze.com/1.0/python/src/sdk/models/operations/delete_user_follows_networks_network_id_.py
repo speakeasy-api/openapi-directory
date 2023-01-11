@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsNetworksNetworkIDPathParams:
-    network_id: int = field(metadata={'path_param': { 'field_name': 'network_id', 'style': 'simple', 'explode': False }})
+    network_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'network_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsNetworksNetworkIDRequest:
-    path_params: DeleteUserFollowsNetworksNetworkIDPathParams = field()
+    path_params: DeleteUserFollowsNetworksNetworkIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserFollowsNetworksNetworkIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

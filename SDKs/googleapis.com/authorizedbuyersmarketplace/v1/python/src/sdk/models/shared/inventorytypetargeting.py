@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -12,11 +12,11 @@ class InventoryTypeTargetingInventoryTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InventoryTypeTargeting:
     r"""InventoryTypeTargeting
     Targeting of the inventory types a bid request can originate from.
     """
     
-    inventory_types: Optional[List[InventoryTypeTargetingInventoryTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inventoryTypes') }})
+    inventory_types: Optional[list[InventoryTypeTargetingInventoryTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inventoryTypes') }})
     

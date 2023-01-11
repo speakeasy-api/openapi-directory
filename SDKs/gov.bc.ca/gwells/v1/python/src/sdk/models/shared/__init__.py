@@ -30,3 +30,5 @@ from .wateruse import *
 from .welldetail import *
 from .welllist import *
 from .welltagsearch import *
+
+__all__ = ["ApplicationList","ApplicationStatusCode","Aquifer","AquiferDemand","AquiferMaterial","AquiferProductivity","AquiferSerializerBasic","AquiferSubtype","AquiferVulnerability","Casing","CityList","DecommissionDescription","LinerPerforation","LithologyDescription","Organization","OrganizationList","OrganizationNameList","PersonBasic","PersonList","PersonName","Qualification","QualityConcern","RegistrationsList","RegistrationsNumber","Screen","SchemeBearer","Security","Subactivity","SurveyPageEnum","Survey","WaterUse","WellDetail","WellList","WellTagSearch"]

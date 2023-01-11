@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.RetrieveNeoFeedTodayRequest(
     query_params=operations.RetrieveNeoFeedTodayQueryParams(
-        detailed=True,
+        detailed=False,
     ),
 )
     

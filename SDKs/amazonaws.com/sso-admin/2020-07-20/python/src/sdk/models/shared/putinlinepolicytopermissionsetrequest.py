@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutInlinePolicyToPermissionSetRequest:
-    inline_policy: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InlinePolicy') }})
-    instance_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceArn') }})
-    permission_set_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PermissionSetArn') }})
+    inline_policy: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InlinePolicy') }})
+    instance_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InstanceArn') }})
+    permission_set_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PermissionSetArn') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import vrf as shared_vrf
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsReadRequest:
-    path_params: IpamVrfsReadPathParams = field()
+    path_params: IpamVrfsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vrf: Optional[shared.Vrf] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vrf: Optional[shared_vrf.Vrf] = dataclasses.field(default=None)
     

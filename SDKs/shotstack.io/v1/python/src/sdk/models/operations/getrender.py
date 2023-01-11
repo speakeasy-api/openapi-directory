@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import renderresponse as shared_renderresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRenderPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRenderSecurity:
-    developer_key: shared.SchemeDeveloperKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    developer_key: shared_security.SchemeDeveloperKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRenderRequest:
-    path_params: GetRenderPathParams = field()
-    security: GetRenderSecurity = field()
+    path_params: GetRenderPathParams = dataclasses.field()
+    security: GetRenderSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRenderResponse:
-    content_type: str = field()
-    status_code: int = field()
-    render_response: Optional[shared.RenderResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    render_response: Optional[shared_renderresponse.RenderResponse] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody:
-    selected_repository_ids: List[int] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('selected_repository_ids') }})
+    selected_repository_ids: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('selected_repository_ids') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest:
-    path_params: ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams = field()
-    request: Optional[ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams = dataclasses.field()
+    request: Optional[ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

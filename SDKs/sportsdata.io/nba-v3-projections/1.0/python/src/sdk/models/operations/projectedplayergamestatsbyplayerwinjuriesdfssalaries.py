@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -10,21 +10,21 @@ class ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams:
-    date_: str = field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
-    format: ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    date_: str = dataclasses.field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
+    format: ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest:
-    path_params: ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams = field()
+    path_params: ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_game_projection: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_game_projection: Optional[Any] = dataclasses.field(default=None)
     

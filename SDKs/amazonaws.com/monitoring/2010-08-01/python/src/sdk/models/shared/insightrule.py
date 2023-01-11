@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class InsightRule:
     r"""InsightRule
     This structure contains the definition for a Contributor Insights rule.
     """
     
-    definition: str = field()
-    name: str = field()
-    schema: str = field()
-    state: str = field()
+    definition: str = dataclasses.field()
+    name: str = dataclasses.field()
+    schema: str = dataclasses.field()
+    state: str = dataclasses.field()
     

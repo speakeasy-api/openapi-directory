@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemePsuoAuth2Security:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeTppoAuth2Security:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     

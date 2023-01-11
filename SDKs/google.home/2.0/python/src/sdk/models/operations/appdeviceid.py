@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import appdeviceidrequest as shared_appdeviceidrequest
+from ..shared import example11 as shared_example11
 
 
-@dataclass
+@dataclasses.dataclass
 class AppDeviceIDRequest:
-    request: shared.AppDeviceIDRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_appdeviceidrequest.AppDeviceIDRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppDeviceIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example11: Optional[shared.Example11] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example11: Optional[shared_example11.Example11] = dataclasses.field(default=None)
     

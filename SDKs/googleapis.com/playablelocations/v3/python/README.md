@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,46 +19,36 @@ s = sdk.SDK()
 req = operations.PlayablelocationsLogImpressionsRequest(
     query_params=operations.PlayablelocationsLogImpressionsQueryParams(
         dollar_xgafv="1",
-        access_token="similique",
-        alt="proto",
-        callback="quos",
-        fields="modi",
-        key="qui",
-        oauth_token="et",
+        access_token="voluptatibus",
+        alt="media",
+        callback="mollitia",
+        fields="adipisci",
+        key="aut",
+        oauth_token="eaque",
         pretty_print=True,
-        quota_user="beatae",
-        upload_type="magnam",
-        upload_protocol="corrupti",
+        quota_user="ut",
+        upload_type="explicabo",
+        upload_protocol="impedit",
     ),
     request=shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest(
         client_info=shared.GoogleMapsUnityClientInfo(
-            api_client="deleniti",
-            application_id="aliquam",
-            application_version="sapiente",
-            device_model="vel",
-            language_code="voluptatibus",
-            operating_system="ea",
-            operating_system_build="pariatur",
+            api_client="quia",
+            application_id="quia",
+            application_version="odit",
+            device_model="nihil",
+            language_code="beatae",
+            operating_system="corporis",
+            operating_system_build="voluptas",
             platform="LINUX",
         ),
         impressions=[
             shared.GoogleMapsPlayablelocationsV3Impression(
-                game_object_type=6459860170856422486,
-                impression_type="INTERACTED",
-                location_name="sequi",
-            ),
-            shared.GoogleMapsPlayablelocationsV3Impression(
-                game_object_type=952114635225685287,
-                impression_type="PRESENTED",
-                location_name="et",
-            ),
-            shared.GoogleMapsPlayablelocationsV3Impression(
-                game_object_type=3381277656453164920,
-                impression_type="INTERACTED",
-                location_name="et",
+                game_object_type=9144622778787384569,
+                impression_type="IMPRESSION_TYPE_UNSPECIFIED",
+                location_name="impedit",
             ),
         ],
-        request_id="fugiat",
+        request_id="odit",
     ),
 )
     

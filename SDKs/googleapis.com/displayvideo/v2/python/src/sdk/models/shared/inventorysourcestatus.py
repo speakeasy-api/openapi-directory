@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -27,26 +27,26 @@ class InventorySourceStatusSellerStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
-class InventorySourceStatusInput:
-    r"""InventorySourceStatusInput
-    The status related settings of the inventory source.
-    """
-    
-    entity_pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
-    entity_status: Optional[InventorySourceStatusEntityStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InventorySourceStatus:
     r"""InventorySourceStatus
     The status related settings of the inventory source.
     """
     
-    config_status: Optional[InventorySourceStatusConfigStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configStatus') }})
-    entity_pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
-    entity_status: Optional[InventorySourceStatusEntityStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
-    seller_pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellerPauseReason') }})
-    seller_status: Optional[InventorySourceStatusSellerStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellerStatus') }})
+    config_status: Optional[InventorySourceStatusConfigStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configStatus') }})
+    entity_pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
+    entity_status: Optional[InventorySourceStatusEntityStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
+    seller_pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellerPauseReason') }})
+    seller_status: Optional[InventorySourceStatusSellerStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellerStatus') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class InventorySourceStatusInput:
+    r"""InventorySourceStatusInput
+    The status related settings of the inventory source.
+    """
+    
+    entity_pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityPauseReason') }})
+    entity_status: Optional[InventorySourceStatusEntityStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entityStatus') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import clustersecuritygroup as shared_clustersecuritygroup
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthorizeClusterSecurityGroupIngressResult:
-    cluster_security_group: Optional[ClusterSecurityGroup] = field(default=None)
+    cluster_security_group: Optional[shared_clustersecuritygroup.ClusterSecurityGroup] = dataclasses.field(default=None)
     

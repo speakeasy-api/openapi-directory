@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import eventfilter as shared_eventfilter
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DisjunctiveMatchStatement:
     r"""DisjunctiveMatchStatement
     DisjunctiveMatchStatement that OR's all contained filters.
     """
     
-    event_filters: Optional[List[EventFilter]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventFilters') }})
+    event_filters: Optional[list[shared_eventfilter.EventFilter]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventFilters') }})
     

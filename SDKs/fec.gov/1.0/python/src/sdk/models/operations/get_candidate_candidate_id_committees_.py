@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import committeedetailpage as shared_committeedetailpage
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCandidateCandidateIDCommitteesPathParams:
-    candidate_id: str = field(metadata={'path_param': { 'field_name': 'candidate_id', 'style': 'simple', 'explode': False }})
+    candidate_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'candidate_id', 'style': 'simple', 'explode': False }})
     
 class GetCandidateCandidateIDCommitteesCommitteeTypeEnum(str, Enum):
     UNKNOWN = ""
@@ -60,32 +60,32 @@ class GetCandidateCandidateIDCommitteesOrganizationTypeEnum(str, Enum):
     W = "W"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCandidateCandidateIDCommitteesQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    committee_type: Optional[List[GetCandidateCandidateIDCommitteesCommitteeTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'committee_type', 'style': 'form', 'explode': True }})
-    cycle: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'cycle', 'style': 'form', 'explode': True }})
-    designation: Optional[List[GetCandidateCandidateIDCommitteesDesignationEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'designation', 'style': 'form', 'explode': True }})
-    filing_frequency: Optional[List[GetCandidateCandidateIDCommitteesFilingFrequencyEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'filing_frequency', 'style': 'form', 'explode': True }})
-    organization_type: Optional[List[GetCandidateCandidateIDCommitteesOrganizationTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'organization_type', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    sort_hide_null: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_hide_null', 'style': 'form', 'explode': True }})
-    sort_null_only: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_null_only', 'style': 'form', 'explode': True }})
-    sort_nulls_last: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_nulls_last', 'style': 'form', 'explode': True }})
-    year: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    committee_type: Optional[list[GetCandidateCandidateIDCommitteesCommitteeTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'committee_type', 'style': 'form', 'explode': True }})
+    cycle: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cycle', 'style': 'form', 'explode': True }})
+    designation: Optional[list[GetCandidateCandidateIDCommitteesDesignationEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'designation', 'style': 'form', 'explode': True }})
+    filing_frequency: Optional[list[GetCandidateCandidateIDCommitteesFilingFrequencyEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filing_frequency', 'style': 'form', 'explode': True }})
+    organization_type: Optional[list[GetCandidateCandidateIDCommitteesOrganizationTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'organization_type', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    sort_hide_null: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_hide_null', 'style': 'form', 'explode': True }})
+    sort_null_only: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_null_only', 'style': 'form', 'explode': True }})
+    sort_nulls_last: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_nulls_last', 'style': 'form', 'explode': True }})
+    year: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCandidateCandidateIDCommitteesRequest:
-    path_params: GetCandidateCandidateIDCommitteesPathParams = field()
-    query_params: GetCandidateCandidateIDCommitteesQueryParams = field()
+    path_params: GetCandidateCandidateIDCommitteesPathParams = dataclasses.field()
+    query_params: GetCandidateCandidateIDCommitteesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCandidateCandidateIDCommitteesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    committee_detail_page: Optional[shared.CommitteeDetailPage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    committee_detail_page: Optional[shared_committeedetailpage.CommitteeDetailPage] = dataclasses.field(default=None)
     

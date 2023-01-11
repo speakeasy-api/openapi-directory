@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupPathParams:
-    md5: str = field(metadata={'path_param': { 'field_name': 'md5', 'style': 'simple', 'explode': False }})
+    md5: str = dataclasses.field(metadata={'path_param': { 'field_name': 'md5', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupRequest:
-    path_params: GetLookupPathParams = field()
+    path_params: GetLookupPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

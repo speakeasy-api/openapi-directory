@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import validation_error_simple as shared_validation_error_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsCreateFromManifestPathParams:
-    code: str = field(metadata={'path_param': { 'field_name': 'code', 'style': 'simple', 'explode': False }})
+    code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'code', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsCreateFromManifestRequest:
-    path_params: AppsCreateFromManifestPathParams = field()
-    request: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AppsCreateFromManifestPathParams = dataclasses.field()
+    request: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsCreateFromManifestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    git_hub_app: Optional[dict[str, Any]] = field(default=None)
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    validation_error_simple: Optional[shared.ValidationErrorSimple] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    git_hub_app: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    validation_error_simple: Optional[shared_validation_error_simple.ValidationErrorSimple] = dataclasses.field(default=None)
     

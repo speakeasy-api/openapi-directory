@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
-from sdk.models import shared
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetApodQueryParams:
-    date_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
-    hd: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'hd', 'style': 'form', 'explode': True }})
+    date_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
+    hd: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hd', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApodSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApodRequest:
-    query_params: GetApodQueryParams = field()
-    security: GetApodSecurity = field()
+    query_params: GetApodQueryParams = dataclasses.field()
+    security: GetApodSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApodResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_apod_200_application_json_anies: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_apod_200_application_json_anies: Optional[list[Any]] = dataclasses.field(default=None)
     

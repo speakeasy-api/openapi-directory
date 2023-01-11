@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import generatorrecipe as shared_generatorrecipe
 
 class FieldPurposeEnum(str, Enum):
     UNKNOWN = ""
@@ -13,9 +13,9 @@ class FieldPurposeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FieldSection:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class FieldTypeEnum(str, Enum):
     STRING = "STRING"
@@ -29,28 +29,28 @@ class FieldTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
-class Field:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: FieldTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    entropy: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entropy') }})
-    generate: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generate') }})
-    label: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    purpose: Optional[FieldPurposeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
-    recipe: Optional[GeneratorRecipe] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipe') }})
-    section: Optional[FieldSection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+@dataclasses.dataclass
+class FieldInput:
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: FieldTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    generate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generate') }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    purpose: Optional[FieldPurposeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
+    recipe: Optional[shared_generatorrecipe.GeneratorRecipe] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipe') }})
+    section: Optional[FieldSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
-class FieldInput:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: FieldTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    generate: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generate') }})
-    label: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    purpose: Optional[FieldPurposeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
-    recipe: Optional[GeneratorRecipe] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipe') }})
-    section: Optional[FieldSection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+@dataclasses.dataclass
+class Field:
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: FieldTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    entropy: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entropy') }})
+    generate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generate') }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    purpose: Optional[FieldPurposeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
+    recipe: Optional[shared_generatorrecipe.GeneratorRecipe] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipe') }})
+    section: Optional[FieldSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

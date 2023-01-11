@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBatchPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBatchRequest:
-    path_params: GetBatchPathParams = field()
+    path_params: GetBatchPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountquota as shared_accountquota
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeAccountAttributesResponse:
     r"""DescribeAccountAttributesResponse
     <p/>
     """
     
-    account_quotas: Optional[List[AccountQuota]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountQuotas') }})
-    unique_account_identifier: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UniqueAccountIdentifier') }})
+    account_quotas: Optional[list[shared_accountquota.AccountQuota]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountQuotas') }})
+    unique_account_identifier: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UniqueAccountIdentifier') }})
     

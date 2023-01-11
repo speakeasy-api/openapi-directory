@@ -11,3 +11,5 @@ from .pdfwritestringoptions import *
 from .pdfwritestringrequestdto import *
 from .security import *
 from .wkhtmltopdfrequestdto import *
+
+__all__ = ["ErrorResponseDto","FontDtoInput","FoRequestDto","FoTransformRequestDto","PdfConcatenationRequestDto","PdfMetadataDto","PdfResponseDto","PdfToImageOptions","PdfToImageRequestDto","PdfWriteStringOptionsInput","PdfWriteStringRequestDtoInput","SchemeOAuth2","Security","WkHTMLToPdfRequestDto"]

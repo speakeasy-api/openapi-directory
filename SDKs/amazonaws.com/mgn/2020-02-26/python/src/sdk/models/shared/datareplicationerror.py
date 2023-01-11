@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datareplicationerrorstring_enum as shared_datareplicationerrorstring_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DataReplicationError:
     r"""DataReplicationError
     Error in data replication.
     """
     
-    error: Optional[DataReplicationErrorStringEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    raw_error: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rawError') }})
+    error: Optional[shared_datareplicationerrorstring_enum.DataReplicationErrorStringEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    raw_error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rawError') }})
     

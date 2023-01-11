@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ordersearchpagedcollection as shared_ordersearchpagedcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersQueryParams:
-    field_groups: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fieldGroups', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    order_ids: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'orderIds', 'style': 'form', 'explode': True }})
+    field_groups: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fieldGroups', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    order_ids: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'orderIds', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersRequest:
-    query_params: GetOrdersQueryParams = field()
-    security: GetOrdersSecurity = field()
+    query_params: GetOrdersQueryParams = dataclasses.field()
+    security: GetOrdersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrdersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    order_search_paged_collection: Optional[shared.OrderSearchPagedCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    order_search_paged_collection: Optional[shared_ordersearchpagedcollection.OrderSearchPagedCollection] = dataclasses.field(default=None)
     

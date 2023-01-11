@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import datasourcelistresponse as shared_datasourcelistresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ListCheckpointFirewallsSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListCheckpointFirewallsRequest:
-    security: ListCheckpointFirewallsSecurity = field()
+    security: ListCheckpointFirewallsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListCheckpointFirewallsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    data_source_list_response: Optional[shared.DataSourceListResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    data_source_list_response: Optional[shared_datasourcelistresponse.DataSourceListResponse] = dataclasses.field(default=None)
     

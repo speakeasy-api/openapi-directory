@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest(
     path_params=operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionPathParams(
-        file_format_extension="kmz",
-        geomark_id="repellat",
+        file_format_extension="shpz",
+        geomark_id="quia",
     ),
     query_params=operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionQueryParams(
-        srid=7267726663042679943,
+        srid=1068448084495713022,
     ),
 )
     

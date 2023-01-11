@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocumentsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocuments401ApplicationJSON:
-    error: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
+    error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocuments404ApplicationJSON:
-    error: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
+    error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocuments500ApplicationJSON:
-    error: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
+    error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_description') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocumentsRequest:
-    security: GetListOfSelfUploadedDocumentsSecurity = field()
+    security: GetListOfSelfUploadedDocumentsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListOfSelfUploadedDocumentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_list_of_self_uploaded_documents_401_application_json_object: Optional[GetListOfSelfUploadedDocuments401ApplicationJSON] = field(default=None)
-    get_list_of_self_uploaded_documents_404_application_json_object: Optional[GetListOfSelfUploadedDocuments404ApplicationJSON] = field(default=None)
-    get_list_of_self_uploaded_documents_500_application_json_object: Optional[GetListOfSelfUploadedDocuments500ApplicationJSON] = field(default=None)
-    sample: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_list_of_self_uploaded_documents_401_application_json_object: Optional[GetListOfSelfUploadedDocuments401ApplicationJSON] = dataclasses.field(default=None)
+    get_list_of_self_uploaded_documents_404_application_json_object: Optional[GetListOfSelfUploadedDocuments404ApplicationJSON] = dataclasses.field(default=None)
+    get_list_of_self_uploaded_documents_500_application_json_object: Optional[GetListOfSelfUploadedDocuments500ApplicationJSON] = dataclasses.field(default=None)
+    sample: Optional[Any] = dataclasses.field(default=None)
     

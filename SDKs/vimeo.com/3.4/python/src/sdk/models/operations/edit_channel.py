@@ -1,14 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import channel as shared_channel
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class EditChannelPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
     
 class EditChannelRequestBodyPrivacyEnum(str, Enum):
     ANYBODY = "anybody"
@@ -17,30 +19,30 @@ class EditChannelRequestBodyPrivacyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EditChannelRequestBody:
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    privacy: Optional[EditChannelRequestBodyPrivacyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    privacy: Optional[EditChannelRequestBodyPrivacyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditChannelSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditChannelRequest:
-    path_params: EditChannelPathParams = field()
-    security: EditChannelSecurity = field()
-    request: Optional[EditChannelRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.channel+json' }})
+    path_params: EditChannelPathParams = dataclasses.field()
+    security: EditChannelSecurity = dataclasses.field()
+    request: Optional[EditChannelRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.channel+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditChannelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channel: Optional[shared.Channel] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channel: Optional[shared_channel.Channel] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

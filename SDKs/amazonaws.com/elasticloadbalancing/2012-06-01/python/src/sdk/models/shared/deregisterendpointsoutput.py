@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import instance as shared_instance
 
 
-@dataclass
+@dataclasses.dataclass
 class DeregisterEndPointsOutput:
     r"""DeregisterEndPointsOutput
     Contains the output of DeregisterInstancesFromLoadBalancer.
     """
     
-    instances: Optional[List[Instance]] = field(default=None)
+    instances: Optional[list[shared_instance.Instance]] = dataclasses.field(default=None)
     

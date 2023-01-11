@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -20,9 +20,9 @@ class PlanDataServiceThatProvisionedThePlanEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PlanData:
-    amount: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
-    plan: Optional[PlanDataTypeOfPlanBasedOnTheSourceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plan') }})
-    source: Optional[PlanDataServiceThatProvisionedThePlanEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    amount: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    plan: Optional[PlanDataTypeOfPlanBasedOnTheSourceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plan') }})
+    source: Optional[PlanDataServiceThatProvisionedThePlanEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
     

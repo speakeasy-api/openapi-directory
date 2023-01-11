@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbinstanceautomatedbackuplist as shared_dbinstanceautomatedbackuplist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbInstanceAutomatedBackupMessage:
     r"""DbInstanceAutomatedBackupMessage
      Contains the result of a successful invocation of the <code>DescribeDBInstanceAutomatedBackups</code> action. 
     """
     
-    db_instance_automated_backups: Optional[List[DbInstanceAutomatedBackup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_instance_automated_backups: Optional[list[shared_dbinstanceautomatedbackuplist.DbInstanceAutomatedBackupList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

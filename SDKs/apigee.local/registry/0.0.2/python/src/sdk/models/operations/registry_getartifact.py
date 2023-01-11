@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetArtifactPathParams:
-    artifact: str = field(metadata={'path_param': { 'field_name': 'artifact', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    artifact: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artifact', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetArtifactRequest:
-    path_params: RegistryGetArtifactPathParams = field()
+    path_params: RegistryGetArtifactPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetArtifactResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artifact: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artifact: Optional[Any] = dataclasses.field(default=None)
     

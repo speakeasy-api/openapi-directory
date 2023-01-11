@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.AssociateWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssociateWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -116,7 +116,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateByteMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -124,7 +124,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateByteMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -170,7 +170,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateGeoMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -178,7 +178,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateGeoMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -224,7 +224,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateIPSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -232,7 +232,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateIPSetResponse(status_code=r.status_code, content_type=content_type)
@@ -278,7 +278,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateRateBasedRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -286,7 +286,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRateBasedRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -340,7 +340,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateRegexMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -348,7 +348,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRegexMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -386,7 +386,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateRegexPatternSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -394,7 +394,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRegexPatternSetResponse(status_code=r.status_code, content_type=content_type)
@@ -432,7 +432,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -440,7 +440,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -494,7 +494,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateRuleGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -502,7 +502,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateRuleGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -552,7 +552,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateSizeConstraintSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -560,7 +560,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateSizeConstraintSetResponse(status_code=r.status_code, content_type=content_type)
@@ -606,7 +606,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateSqlInjectionMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -614,7 +614,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateSQLInjectionMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -660,7 +660,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -668,7 +668,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -726,7 +726,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateWebACLMigrationStack"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -734,7 +734,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateWebACLMigrationStackResponse(status_code=r.status_code, content_type=content_type)
@@ -776,7 +776,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.CreateXssMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -784,7 +784,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateXSSMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -830,7 +830,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteByteMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -838,7 +838,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteByteMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -884,7 +884,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteGeoMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -892,7 +892,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteGeoMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -938,7 +938,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteIPSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -946,7 +946,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteIPSetResponse(status_code=r.status_code, content_type=content_type)
@@ -992,7 +992,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteLoggingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1000,7 +1000,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteLoggingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -1034,7 +1034,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeletePermissionPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1042,7 +1042,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeletePermissionPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1076,7 +1076,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteRateBasedRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1084,7 +1084,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRateBasedRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -1138,7 +1138,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteRegexMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1146,7 +1146,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRegexMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1192,7 +1192,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteRegexPatternSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1200,7 +1200,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRegexPatternSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1246,7 +1246,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1254,7 +1254,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -1308,7 +1308,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteRuleGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1316,7 +1316,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteRuleGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -1370,7 +1370,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteSizeConstraintSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1378,7 +1378,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteSizeConstraintSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1424,7 +1424,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteSqlInjectionMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1432,7 +1432,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteSQLInjectionMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1478,7 +1478,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1486,7 +1486,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -1540,7 +1540,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DeleteXssMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1548,7 +1548,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DeleteXSSMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1594,7 +1594,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.DisassociateWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1602,7 +1602,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DisassociateWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -1640,7 +1640,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetByteMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1648,7 +1648,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetByteMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1682,7 +1682,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetChangeToken"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1690,7 +1690,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetChangeTokenResponse(status_code=r.status_code, content_type=content_type)
@@ -1716,7 +1716,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetChangeTokenStatus"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1724,7 +1724,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetChangeTokenStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -1754,7 +1754,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetGeoMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1762,7 +1762,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetGeoMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1796,7 +1796,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetIPSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1804,7 +1804,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetIPSetResponse(status_code=r.status_code, content_type=content_type)
@@ -1838,7 +1838,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetLoggingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1846,7 +1846,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetLoggingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -1876,7 +1876,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetPermissionPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1884,7 +1884,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetPermissionPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -1914,7 +1914,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRateBasedRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1922,7 +1922,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRateBasedRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -1956,7 +1956,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRateBasedRuleManagedKeys"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1964,7 +1964,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRateBasedRuleManagedKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -2002,7 +2002,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRegexMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2010,7 +2010,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRegexMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2044,7 +2044,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRegexPatternSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2052,7 +2052,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRegexPatternSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2086,7 +2086,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2094,7 +2094,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -2128,7 +2128,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetRuleGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2136,7 +2136,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetRuleGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -2166,7 +2166,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetSampledRequests"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2174,7 +2174,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetSampledRequestsResponse(status_code=r.status_code, content_type=content_type)
@@ -2204,7 +2204,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetSizeConstraintSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2212,7 +2212,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetSizeConstraintSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2246,7 +2246,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetSqlInjectionMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2254,7 +2254,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetSQLInjectionMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2288,7 +2288,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2296,7 +2296,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -2330,7 +2330,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetWebACLForResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2338,7 +2338,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetWebACLForResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -2380,7 +2380,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.GetXssMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2388,7 +2388,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetXSSMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -2422,7 +2422,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListActivatedRulesInRuleGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2430,7 +2430,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListActivatedRulesInRuleGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -2464,7 +2464,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListByteMatchSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2472,7 +2472,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListByteMatchSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2502,7 +2502,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListGeoMatchSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2510,7 +2510,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListGeoMatchSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2540,7 +2540,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListIPSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2548,7 +2548,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListIPSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2578,7 +2578,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListLoggingConfigurations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2586,7 +2586,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListLoggingConfigurationsResponse(status_code=r.status_code, content_type=content_type)
@@ -2620,7 +2620,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListRateBasedRules"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2628,7 +2628,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRateBasedRulesResponse(status_code=r.status_code, content_type=content_type)
@@ -2658,7 +2658,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListRegexMatchSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2666,7 +2666,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRegexMatchSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2696,7 +2696,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListRegexPatternSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2704,7 +2704,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRegexPatternSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2734,7 +2734,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListResourcesForWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2742,7 +2742,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListResourcesForWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -2780,7 +2780,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListRuleGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2788,7 +2788,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRuleGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -2814,7 +2814,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListRules"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2822,7 +2822,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRulesResponse(status_code=r.status_code, content_type=content_type)
@@ -2852,7 +2852,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListSizeConstraintSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2860,7 +2860,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListSizeConstraintSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2890,7 +2890,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListSqlInjectionMatchSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2898,7 +2898,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListSQLInjectionMatchSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -2928,7 +2928,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListSubscribedRuleGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2936,7 +2936,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListSubscribedRuleGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -2966,7 +2966,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListTagsForResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2974,7 +2974,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListTagsForResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3020,7 +3020,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListWebACLs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3028,7 +3028,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListWebAcLsResponse(status_code=r.status_code, content_type=content_type)
@@ -3058,7 +3058,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.ListXssMatchSets"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3066,7 +3066,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListXSSMatchSetsResponse(status_code=r.status_code, content_type=content_type)
@@ -3096,7 +3096,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.PutLoggingConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3104,7 +3104,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutLoggingConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -3142,7 +3142,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.PutPermissionPolicy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3150,7 +3150,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutPermissionPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -3188,7 +3188,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.TagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3196,7 +3196,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3246,7 +3246,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UntagResource"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3254,7 +3254,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UntagResourceResponse(status_code=r.status_code, content_type=content_type)
@@ -3300,7 +3300,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateByteMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3308,7 +3308,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateByteMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3362,7 +3362,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateGeoMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3370,7 +3370,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateGeoMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3428,7 +3428,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateIPSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3436,7 +3436,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateIPSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3494,7 +3494,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateRateBasedRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3502,7 +3502,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRateBasedRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -3560,7 +3560,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateRegexMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3568,7 +3568,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRegexMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3622,7 +3622,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateRegexPatternSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3630,7 +3630,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRegexPatternSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3684,7 +3684,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateRule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3692,7 +3692,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRuleResponse(status_code=r.status_code, content_type=content_type)
@@ -3750,7 +3750,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateRuleGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3758,7 +3758,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateRuleGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -3808,7 +3808,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateSizeConstraintSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3816,7 +3816,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateSizeConstraintSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3874,7 +3874,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateSqlInjectionMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3882,7 +3882,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateSQLInjectionMatchSetResponse(status_code=r.status_code, content_type=content_type)
@@ -3936,7 +3936,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateWebACL"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -3944,7 +3944,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateWebACLResponse(status_code=r.status_code, content_type=content_type)
@@ -4006,7 +4006,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=AWSWAF_Regional_20161128.UpdateXssMatchSet"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -4014,7 +4014,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateXSSMatchSetResponse(status_code=r.status_code, content_type=content_type)

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import actionnotificationexportentity as shared_actionnotificationexportentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportsIDRequest:
-    path_params: GetActionNotificationExportsIDPathParams = field()
+    path_params: GetActionNotificationExportsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    action_notification_export_entity: Optional[shared.ActionNotificationExportEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    action_notification_export_entity: Optional[shared_actionnotificationexportentity.ActionNotificationExportEntity] = dataclasses.field(default=None)
     

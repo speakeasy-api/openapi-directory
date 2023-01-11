@@ -5,3 +5,5 @@ from .listingrecommendation import *
 from .marketingrecommendation import *
 from .pagedlistingrecommendationcollection import *
 from .security import *
+
+__all__ = ["Ad","BidPercentages","FindListingRecommendationRequest","ListingRecommendation","MarketingRecommendation","PagedListingRecommendationCollection","SchemeAPIAuth"]

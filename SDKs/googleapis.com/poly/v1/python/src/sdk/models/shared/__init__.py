@@ -11,3 +11,5 @@ from .presentationparams import *
 from .quaternion import *
 from .remixinfo import *
 from .userasset import *
+
+__all__ = ["XgafvEnum","AltEnum","AssetLicenseEnum","AssetVisibilityEnum","Asset","File","Format","FormatComplexity","ListAssetsResponse","ListLikedAssetsResponse","ListUserAssetsResponse","PresentationParamsColorSpaceEnum","PresentationParams","Quaternion","RemixInfo","UserAsset"]

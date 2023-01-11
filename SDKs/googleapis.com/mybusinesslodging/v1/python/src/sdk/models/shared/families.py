@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -30,18 +30,18 @@ class FamiliesKidsFriendlyExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Families:
     r"""Families
     Services and amenities for families and young guests.
     """
     
-    babysitting: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('babysitting') }})
-    babysitting_exception: Optional[FamiliesBabysittingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('babysittingException') }})
-    kids_activities: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsActivities') }})
-    kids_activities_exception: Optional[FamiliesKidsActivitiesExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsActivitiesException') }})
-    kids_club: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsClub') }})
-    kids_club_exception: Optional[FamiliesKidsClubExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsClubException') }})
-    kids_friendly: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsFriendly') }})
-    kids_friendly_exception: Optional[FamiliesKidsFriendlyExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsFriendlyException') }})
+    babysitting: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('babysitting') }})
+    babysitting_exception: Optional[FamiliesBabysittingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('babysittingException') }})
+    kids_activities: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsActivities') }})
+    kids_activities_exception: Optional[FamiliesKidsActivitiesExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsActivitiesException') }})
+    kids_club: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsClub') }})
+    kids_club_exception: Optional[FamiliesKidsClubExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsClubException') }})
+    kids_friendly: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsFriendly') }})
+    kids_friendly_exception: Optional[FamiliesKidsFriendlyExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kidsFriendlyException') }})
     

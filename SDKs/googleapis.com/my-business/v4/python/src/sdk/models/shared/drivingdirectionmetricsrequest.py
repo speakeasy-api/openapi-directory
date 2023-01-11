@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class DrivingDirectionMetricsRequestNumDaysEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DrivingDirectionMetricsRequest:
     r"""DrivingDirectionMetricsRequest
     A request for driving direction insights.
     """
     
-    language_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
-    num_days: Optional[DrivingDirectionMetricsRequestNumDaysEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numDays') }})
+    language_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
+    num_days: Optional[DrivingDirectionMetricsRequestNumDaysEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numDays') }})
     

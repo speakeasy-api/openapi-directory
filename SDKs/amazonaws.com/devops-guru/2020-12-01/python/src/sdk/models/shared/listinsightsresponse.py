@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import proactiveinsightsummary as shared_proactiveinsightsummary
+from ..shared import reactiveinsightsummary as shared_reactiveinsightsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListInsightsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    proactive_insights: Optional[List[ProactiveInsightSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProactiveInsights') }})
-    reactive_insights: Optional[List[ReactiveInsightSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReactiveInsights') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    proactive_insights: Optional[list[shared_proactiveinsightsummary.ProactiveInsightSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProactiveInsights') }})
+    reactive_insights: Optional[list[shared_reactiveinsightsummary.ReactiveInsightSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReactiveInsights') }})
     

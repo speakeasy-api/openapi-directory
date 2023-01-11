@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import summaryreportresponse as shared_summaryreportresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPromotionSummaryReportQueryParams:
-    marketplace_id: str = field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
+    marketplace_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPromotionSummaryReportSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPromotionSummaryReportRequest:
-    query_params: GetPromotionSummaryReportQueryParams = field()
-    security: GetPromotionSummaryReportSecurity = field()
+    query_params: GetPromotionSummaryReportQueryParams = dataclasses.field()
+    security: GetPromotionSummaryReportSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPromotionSummaryReportResponse:
-    content_type: str = field()
-    status_code: int = field()
-    summary_report_response: Optional[shared.SummaryReportResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    summary_report_response: Optional[shared_summaryreportresponse.SummaryReportResponse] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AcknowledgeJobRequest(
     headers=operations.AcknowledgeJobHeaders(
-        x_amz_algorithm="vitae",
-        x_amz_content_sha256="excepturi",
-        x_amz_credential="ut",
-        x_amz_date="totam",
-        x_amz_security_token="blanditiis",
-        x_amz_signature="voluptatibus",
-        x_amz_signed_headers="sint",
+        x_amz_algorithm="qui",
+        x_amz_content_sha256="numquam",
+        x_amz_credential="et",
+        x_amz_date="ut",
+        x_amz_security_token="soluta",
+        x_amz_signature="minima",
+        x_amz_signed_headers="fugit",
         x_amz_target="CodePipeline_20150709.AcknowledgeJob",
     ),
     request=shared.AcknowledgeJobInput(
-        job_id="fugiat",
-        nonce="adipisci",
+        job_id="et",
+        nonce="autem",
     ),
 )
     
-res = s.sdk.acknowledge_job(req)
+res = s.acknowledge_job(req)
 
 if res.acknowledge_job_output is not None:
     # handle response

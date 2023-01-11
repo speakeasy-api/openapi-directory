@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import offeringuser as shared_offeringuser
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersMarkerEmailMarksPathParams:
-    marker_email: str = field(metadata={'path_param': { 'field_name': 'markerEmail', 'style': 'simple', 'explode': False }})
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    marker_email: str = dataclasses.field(metadata={'path_param': { 'field_name': 'markerEmail', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersMarkerEmailMarksRequest:
-    path_params: GetOfferingsOfferingIDUsersMarkerEmailMarksPathParams = field()
+    path_params: GetOfferingsOfferingIDUsersMarkerEmailMarksPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersMarkerEmailMarksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    offering_users: Optional[List[shared.OfferingUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    offering_users: Optional[list[shared_offeringuser.OfferingUser]] = dataclasses.field(default=None)
     

@@ -1,13 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_repositories as shared_paginated_repositories
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugForksPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 class GetRepositoriesWorkspaceRepoSlugForksRoleEnum(str, Enum):
     ADMIN = "admin"
@@ -16,30 +19,30 @@ class GetRepositoriesWorkspaceRepoSlugForksRoleEnum(str, Enum):
     OWNER = "owner"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugForksQueryParams:
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    role: Optional[GetRepositoriesWorkspaceRepoSlugForksRoleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    role: Optional[GetRepositoriesWorkspaceRepoSlugForksRoleEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugForksSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugForksRequest:
-    path_params: GetRepositoriesWorkspaceRepoSlugForksPathParams = field()
-    query_params: GetRepositoriesWorkspaceRepoSlugForksQueryParams = field()
-    security: GetRepositoriesWorkspaceRepoSlugForksSecurity = field()
+    path_params: GetRepositoriesWorkspaceRepoSlugForksPathParams = dataclasses.field()
+    query_params: GetRepositoriesWorkspaceRepoSlugForksQueryParams = dataclasses.field()
+    security: GetRepositoriesWorkspaceRepoSlugForksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugForksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_repositories: Optional[shared.PaginatedRepositories] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_repositories: Optional[shared_paginated_repositories.PaginatedRepositories] = dataclasses.field(default=None)
     

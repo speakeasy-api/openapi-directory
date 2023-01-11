@@ -1,42 +1,45 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import file as shared_file
 
 
-@dataclass
+@dataclasses.dataclass
 class StorageUpdateFilePathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StorageUpdateFileRequestBody:
-    read: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('read') }})
-    write: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('write') }})
+    read: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('read') }})
+    write: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('write') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageUpdateFileSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageUpdateFileRequest:
-    path_params: StorageUpdateFilePathParams = field()
-    security: StorageUpdateFileSecurity = field()
-    request: Optional[StorageUpdateFileRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: StorageUpdateFilePathParams = dataclasses.field()
+    security: StorageUpdateFileSecurity = dataclasses.field()
+    request: Optional[StorageUpdateFileRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageUpdateFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file: Optional[shared.File] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file: Optional[shared_file.File] = dataclasses.field(default=None)
     

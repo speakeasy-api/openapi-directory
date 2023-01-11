@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,11 +15,11 @@ class GooglePrivacyDlpV2TimePartConfigPartToExtractEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2TimePartConfig:
     r"""GooglePrivacyDlpV2TimePartConfig
     For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
     """
     
-    part_to_extract: Optional[GooglePrivacyDlpV2TimePartConfigPartToExtractEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('partToExtract') }})
+    part_to_extract: Optional[GooglePrivacyDlpV2TimePartConfigPartToExtractEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('partToExtract') }})
     

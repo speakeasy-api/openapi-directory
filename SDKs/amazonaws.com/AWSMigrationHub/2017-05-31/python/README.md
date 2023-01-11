@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,27 @@ s.config_security(
     
 req = operations.AssociateCreatedArtifactRequest(
     headers=operations.AssociateCreatedArtifactHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="consequatur",
-        x_amz_credential="dolor",
-        x_amz_date="commodi",
-        x_amz_security_token="error",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="consectetur",
+        x_amz_algorithm="vel",
+        x_amz_content_sha256="vel",
+        x_amz_credential="placeat",
+        x_amz_date="qui",
+        x_amz_security_token="nisi",
+        x_amz_signature="quis",
+        x_amz_signed_headers="adipisci",
         x_amz_target="AWSMigrationHub.AssociateCreatedArtifact",
     ),
     request=shared.AssociateCreatedArtifactRequest(
         created_artifact=shared.CreatedArtifact(
-            description="ut",
-            name="laboriosam",
+            description="rerum",
+            name="et",
         ),
         dry_run=True,
-        migration_task_name="a",
-        progress_update_stream="soluta",
+        migration_task_name="numquam",
+        progress_update_stream="laborum",
     ),
 )
     
-res = s.sdk.associate_created_artifact(req)
+res = s.associate_created_artifact(req)
 
 if res.associate_created_artifact_result is not None:
     # handle response

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import processorauthgetrequest as shared_processorauthgetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorAuthGetRequest:
-    request: shared.ProcessorAuthGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_processorauthgetrequest.ProcessorAuthGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorAuthGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    processor_auth_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    processor_auth_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

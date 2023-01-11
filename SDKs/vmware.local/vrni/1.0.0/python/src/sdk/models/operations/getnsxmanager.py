@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import baseentity as shared_baseentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxManagerPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxManagerQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxManagerSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxManagerRequest:
-    path_params: GetNsxManagerPathParams = field()
-    query_params: GetNsxManagerQueryParams = field()
-    security: GetNsxManagerSecurity = field()
+    path_params: GetNsxManagerPathParams = dataclasses.field()
+    query_params: GetNsxManagerQueryParams = dataclasses.field()
+    security: GetNsxManagerSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxManagerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    base_entity: Optional[shared.BaseEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    base_entity: Optional[shared_baseentity.BaseEntity] = dataclasses.field(default=None)
     

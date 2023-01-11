@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,29 @@ s.config_security(
     
 req = operations.AddProfileKeyRequest(
     path_params=operations.AddProfileKeyPathParams(
-        domain_name="nisi",
+        domain_name="rem",
     ),
     headers=operations.AddProfileKeyHeaders(
-        x_amz_algorithm="sit",
-        x_amz_content_sha256="est",
-        x_amz_credential="rerum",
-        x_amz_date="quisquam",
-        x_amz_security_token="dolor",
-        x_amz_signature="itaque",
-        x_amz_signed_headers="reiciendis",
+        x_amz_algorithm="laudantium",
+        x_amz_content_sha256="corporis",
+        x_amz_credential="qui",
+        x_amz_date="adipisci",
+        x_amz_security_token="qui",
+        x_amz_signature="iste",
+        x_amz_signed_headers="minima",
     ),
     request=operations.AddProfileKeyRequestBody(
-        key_name="expedita",
-        profile_id="itaque",
+        key_name="blanditiis",
+        profile_id="sit",
         values=[
-            "voluptatum",
+            "earum",
+            "fugiat",
+            "dolores",
         ],
     ),
 )
     
-res = s.sdk.add_profile_key(req)
+res = s.add_profile_key(req)
 
 if res.add_profile_key_response is not None:
     # handle response

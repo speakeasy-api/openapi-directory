@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import directconnectgatewayassociation as shared_directconnectgatewayassociation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteDirectConnectGatewayAssociationResult:
-    direct_connect_gateway_association: Optional[DirectConnectGatewayAssociation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGatewayAssociation') }})
+    direct_connect_gateway_association: Optional[shared_directconnectgatewayassociation.DirectConnectGatewayAssociation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGatewayAssociation') }})
     

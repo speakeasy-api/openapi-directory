@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import taskobject as shared_taskobject
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PollForTaskOutput:
     r"""PollForTaskOutput
     Contains the output of PollForTask.
     """
     
-    task_object: Optional[TaskObject] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taskObject') }})
+    task_object: Optional[shared_taskobject.TaskObject] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taskObject') }})
     

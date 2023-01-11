@@ -29,14 +29,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1/{parent}/environments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ComposerProjectsLocationsEnvironmentsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -74,6 +74,35 @@ class Projects:
         return res
 
     
+    def composer_projects_locations_environments_load_snapshot(self, request: operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest) -> operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse:
+        r"""Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1/{environment}:loadSnapshot", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Operation])
+                res.operation = out
+
+        return res
+
+    
     def composer_projects_locations_environments_patch(self, request: operations.ComposerProjectsLocationsEnvironmentsPatchRequest) -> operations.ComposerProjectsLocationsEnvironmentsPatchResponse:
         r"""Update an environment.
         """
@@ -83,17 +112,46 @@ class Projects:
         url = utils.generate_url(base_url, "/v1/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ComposerProjectsLocationsEnvironmentsPatchResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Operation])
+                res.operation = out
+
+        return res
+
+    
+    def composer_projects_locations_environments_save_snapshot(self, request: operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest) -> operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse:
+        r"""Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1/{environment}:saveSnapshot", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeKey2:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Api-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Api-Key' }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import role as shared_role
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamRolesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRolesReadRequest:
-    path_params: IpamRolesReadPathParams = field()
+    path_params: IpamRolesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRolesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    role: Optional[shared.Role] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    role: Optional[shared_role.Role] = dataclasses.field(default=None)
     

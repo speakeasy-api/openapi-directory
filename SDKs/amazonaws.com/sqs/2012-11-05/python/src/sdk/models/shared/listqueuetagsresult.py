@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ListQueueTagsResult:
-    tags: Optional[dict[str, str]] = field(default=None)
+    tags: Optional[dict[str, str]] = dataclasses.field(default=None)
     

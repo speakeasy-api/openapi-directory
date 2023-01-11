@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsDeleteSelfHostedRunnerFromOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    runner_id: int = field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    runner_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsDeleteSelfHostedRunnerFromOrgRequest:
-    path_params: ActionsDeleteSelfHostedRunnerFromOrgPathParams = field()
+    path_params: ActionsDeleteSelfHostedRunnerFromOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsDeleteSelfHostedRunnerFromOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

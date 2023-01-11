@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,79 +25,69 @@ s.config_security(
     
 req = operations.CreateAppRequest(
     headers=operations.CreateAppHeaders(
-        x_amz_algorithm="distinctio",
-        x_amz_content_sha256="delectus",
-        x_amz_credential="rerum",
-        x_amz_date="dolore",
-        x_amz_security_token="repellat",
-        x_amz_signature="velit",
-        x_amz_signed_headers="officia",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="id",
+        x_amz_credential="ipsum",
+        x_amz_date="aut",
+        x_amz_security_token="perspiciatis",
+        x_amz_signature="et",
+        x_amz_signed_headers="vero",
     ),
     request=operations.CreateAppRequestBody(
-        access_token="modi",
+        access_token="voluptatem",
         auto_branch_creation_config=operations.CreateAppRequestBodyAutoBranchCreationConfig(
-            basic_auth_credentials="sunt",
-            build_spec="voluptas",
-            enable_auto_build=False,
+            basic_auth_credentials="ex",
+            build_spec="magni",
+            enable_auto_build=True,
             enable_basic_auth=True,
-            enable_performance_mode=True,
+            enable_performance_mode=False,
             enable_pull_request_preview=False,
             environment_variables={
-                "autem": "corporis",
+                "non": "nam",
+                "beatae": "quae",
+                "qui": "magni",
             },
-            framework="dicta",
-            pull_request_environment_name="rem",
+            framework="minus",
+            pull_request_environment_name="sit",
             stage="BETA",
         ),
         auto_branch_creation_patterns=[
-            "nisi",
+            "iusto",
         ],
-        basic_auth_credentials="recusandae",
-        build_spec="qui",
-        custom_headers="minus",
+        basic_auth_credentials="quia",
+        build_spec="repudiandae",
+        custom_headers="debitis",
         custom_rules=[
             shared.CustomRule(
-                condition="rerum",
-                source="ut",
-                status="rem",
-                target="eos",
-            ),
-            shared.CustomRule(
-                condition="et",
-                source="reiciendis",
-                status="aspernatur",
-                target="praesentium",
-            ),
-            shared.CustomRule(
-                condition="porro",
-                source="nihil",
-                status="adipisci",
-                target="consequatur",
+                condition="odit",
+                source="enim",
+                status="ut",
+                target="non",
             ),
         ],
-        description="illum",
+        description="nihil",
         enable_auto_branch_creation=False,
         enable_basic_auth=True,
         enable_branch_auto_build=True,
-        enable_branch_auto_deletion=True,
+        enable_branch_auto_deletion=False,
         environment_variables={
-            "est": "quo",
-            "vero": "alias",
-            "totam": "deserunt",
+            "perferendis": "id",
+            "autem": "hic",
+            "voluptatem": "omnis",
         },
-        iam_service_role_arn="eius",
-        name="repellat",
-        oauth_token="beatae",
+        iam_service_role_arn="libero",
+        name="qui",
+        oauth_token="omnis",
         platform="WEB",
-        repository="totam",
+        repository="nostrum",
         tags={
-            "et": "magni",
-            "necessitatibus": "et",
+            "sit": "repellat",
+            "quo": "dolorum",
         },
     ),
 )
     
-res = s.sdk.create_app(req)
+res = s.create_app(req)
 
 if res.create_app_result is not None:
     # handle response

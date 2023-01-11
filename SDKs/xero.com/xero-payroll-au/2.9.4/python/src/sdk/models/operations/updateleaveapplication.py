@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import leaveapplication as shared_leaveapplication
+from ..shared import leaveapplications as shared_leaveapplications
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLeaveApplicationPathParams:
-    leave_application_id: str = field(metadata={'path_param': { 'field_name': 'LeaveApplicationID', 'style': 'simple', 'explode': False }})
+    leave_application_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'LeaveApplicationID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLeaveApplicationHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLeaveApplicationSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLeaveApplicationRequest:
-    headers: UpdateLeaveApplicationHeaders = field()
-    path_params: UpdateLeaveApplicationPathParams = field()
-    request: List[shared.LeaveApplicationInput] = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateLeaveApplicationSecurity = field()
+    headers: UpdateLeaveApplicationHeaders = dataclasses.field()
+    path_params: UpdateLeaveApplicationPathParams = dataclasses.field()
+    request: list[shared_leaveapplication.LeaveApplicationInput] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateLeaveApplicationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLeaveApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    leave_applications: Optional[shared.LeaveApplications] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    leave_applications: Optional[shared_leaveapplications.LeaveApplications] = dataclasses.field(default=None)
     

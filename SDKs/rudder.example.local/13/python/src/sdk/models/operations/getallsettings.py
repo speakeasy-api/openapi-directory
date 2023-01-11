@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -9,13 +9,13 @@ class GetAllSettings200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAllSettings200ApplicationJSONData:
     r"""GetAllSettings200ApplicationJSONData
     Information about the setting
     """
     
-    settings: Any = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
+    settings: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
     
 class GetAllSettings200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -23,16 +23,16 @@ class GetAllSettings200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAllSettings200ApplicationJSON:
-    action: GetAllSettings200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: GetAllSettings200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: GetAllSettings200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: GetAllSettings200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: GetAllSettings200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: GetAllSettings200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllSettingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_all_settings_200_application_json_object: Optional[GetAllSettings200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_all_settings_200_application_json_object: Optional[GetAllSettings200ApplicationJSON] = dataclasses.field(default=None)
     

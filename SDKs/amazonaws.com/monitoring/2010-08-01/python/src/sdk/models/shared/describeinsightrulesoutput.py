@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import insightrule as shared_insightrule
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeInsightRulesOutput:
-    insight_rules: Optional[List[InsightRule]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    insight_rules: Optional[list[shared_insightrule.InsightRule]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

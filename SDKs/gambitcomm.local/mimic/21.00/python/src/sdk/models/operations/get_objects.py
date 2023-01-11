@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetObjectsPathParams:
-    oid: str = field(metadata={'path_param': { 'field_name': 'OID', 'style': 'simple', 'explode': False }})
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    oid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'OID', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetObjectsRequest:
-    path_params: GetObjectsPathParams = field()
+    path_params: GetObjectsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetObjectsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_objects_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_objects_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

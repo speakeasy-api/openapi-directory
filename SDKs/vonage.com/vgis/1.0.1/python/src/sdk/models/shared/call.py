@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -28,20 +28,20 @@ class CallTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Call:
-    account_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
-    direction: CallDirectionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('direction') }})
-    duration: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('duration') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    phone_number: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phoneNumber') }})
-    start_time: date = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    state: CallStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    type: CallTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    uci_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uciId') }})
-    user_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
-    answer_time: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answerTime'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    caller_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callerId') }})
-    end_time: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    external_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalId') }})
+    account_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
+    direction: CallDirectionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('direction') }})
+    duration: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('duration') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    phone_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phoneNumber') }})
+    start_time: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    state: CallStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    type: CallTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    uci_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uciId') }})
+    user_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
+    answer_time: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answerTime'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    caller_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callerId') }})
+    end_time: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalId') }})
     

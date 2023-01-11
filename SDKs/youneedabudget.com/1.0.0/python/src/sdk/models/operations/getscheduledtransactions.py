@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import scheduledtransactionsresponse as shared_scheduledtransactionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduledTransactionsPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduledTransactionsQueryParams:
-    last_knowledge_of_server: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
+    last_knowledge_of_server: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduledTransactionsRequest:
-    path_params: GetScheduledTransactionsPathParams = field()
-    query_params: GetScheduledTransactionsQueryParams = field()
+    path_params: GetScheduledTransactionsPathParams = dataclasses.field()
+    query_params: GetScheduledTransactionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduledTransactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    scheduled_transactions_response: Optional[shared.ScheduledTransactionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    scheduled_transactions_response: Optional[shared_scheduledtransactionsresponse.ScheduledTransactionsResponse] = dataclasses.field(default=None)
     

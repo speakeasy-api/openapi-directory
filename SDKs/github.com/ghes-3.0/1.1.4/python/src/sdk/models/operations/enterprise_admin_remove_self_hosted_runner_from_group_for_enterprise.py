@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    runner_group_id: int = field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
-    runner_id: int = field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    runner_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
+    runner_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest:
-    path_params: EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams = field()
+    path_params: EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

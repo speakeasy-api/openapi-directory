@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import file as shared_file
 
 
-@dataclass
+@dataclasses.dataclass
 class GetItemFilesPathParams:
-    item_uuid: str = field(metadata={'path_param': { 'field_name': 'itemUuid', 'style': 'simple', 'explode': False }})
-    vault_uuid: str = field(metadata={'path_param': { 'field_name': 'vaultUuid', 'style': 'simple', 'explode': False }})
+    item_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'itemUuid', 'style': 'simple', 'explode': False }})
+    vault_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vaultUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemFilesQueryParams:
-    inline_files: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'inline_files', 'style': 'form', 'explode': True }})
+    inline_files: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'inline_files', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemFilesSecurity:
-    connect_token: shared.SchemeConnectToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    connect_token: shared_security.SchemeConnectToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemFilesRequest:
-    path_params: GetItemFilesPathParams = field()
-    query_params: GetItemFilesQueryParams = field()
-    security: GetItemFilesSecurity = field()
+    path_params: GetItemFilesPathParams = dataclasses.field()
+    query_params: GetItemFilesQueryParams = dataclasses.field()
+    security: GetItemFilesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemFilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    files: Optional[List[shared.File]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    files: Optional[list[shared_file.File]] = dataclasses.field(default=None)
     

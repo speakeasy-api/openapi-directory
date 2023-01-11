@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import locationviewmodel as shared_locationviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsBulkRequests:
-    locations_input_model: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    locations_input_model1: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    locations_input_model2: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    locations_input_model3: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    locations_input_model: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    locations_input_model1: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    locations_input_model2: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    locations_input_model3: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsBulkRequest:
-    request: Optional[PostSetupV1LocationsBulkRequests] = field(default=None)
+    request: Optional[PostSetupV1LocationsBulkRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsBulkResponse:
-    content_type: str = field()
-    status_code: int = field()
-    location_view_models: Optional[List[shared.LocationViewModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    location_view_models: Optional[list[shared_locationviewmodel.LocationViewModel]] = dataclasses.field(default=None)
     

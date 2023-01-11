@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2value as shared_googleprivacydlpv2value
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2ValueFrequency:
     r"""GooglePrivacyDlpV2ValueFrequency
     A value of a field, including its frequency.
     """
     
-    count: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    value: Optional[GooglePrivacyDlpV2Value] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    count: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    value: Optional[shared_googleprivacydlpv2value.GooglePrivacyDlpV2Value] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

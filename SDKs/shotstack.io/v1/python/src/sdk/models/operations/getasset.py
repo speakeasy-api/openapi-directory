@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import assetresponse as shared_assetresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetSecurity:
-    developer_key: shared.SchemeDeveloperKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    developer_key: shared_security.SchemeDeveloperKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetRequest:
-    path_params: GetAssetPathParams = field()
-    security: GetAssetSecurity = field()
+    path_params: GetAssetPathParams = dataclasses.field()
+    security: GetAssetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_response: Optional[shared.AssetResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_response: Optional[shared_assetresponse.AssetResponse] = dataclasses.field(default=None)
     

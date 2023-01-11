@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,27 +7,27 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceSwitchWarmSparePathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceSwitchWarmSpareRequestBody:
-    enabled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    spare_serial: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spareSerial') }})
+    enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    spare_serial: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spareSerial') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceSwitchWarmSpareRequest:
-    path_params: UpdateDeviceSwitchWarmSparePathParams = field()
-    request: UpdateDeviceSwitchWarmSpareRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateDeviceSwitchWarmSparePathParams = dataclasses.field()
+    request: UpdateDeviceSwitchWarmSpareRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceSwitchWarmSpareResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_device_switch_warm_spare_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_device_switch_warm_spare_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

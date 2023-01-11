@@ -1,20 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import registryalias as shared_registryalias
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Registry:
     r"""Registry
     The details of a public registry.
     """
     
-    aliases: List[RegistryAlias] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('aliases') }})
-    registry_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryArn') }})
-    registry_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryId') }})
-    registry_uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryUri') }})
-    verified: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('verified') }})
+    aliases: list[shared_registryalias.RegistryAlias] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('aliases') }})
+    registry_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryArn') }})
+    registry_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryId') }})
+    registry_uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryUri') }})
+    verified: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('verified') }})
     

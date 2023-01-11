@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest(
     security=operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams(
-        resource="exercitationem",
+        resource="ea",
     ),
     query_params=operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="dicta",
-        alt="media",
-        callback="aperiam",
-        fields="et",
-        key="eveniet",
-        oauth_token="totam",
-        page_size=4490375488917455613,
-        page_token="ex",
+        dollar_xgafv="2",
+        access_token="ad",
+        alt="proto",
+        callback="quod",
+        fields="similique",
+        key="cupiditate",
+        oauth_token="error",
+        page_size=757289501571609051,
+        page_token="aut",
         pretty_print=True,
-        query="deserunt",
-        quota_user="excepturi",
-        upload_type="non",
-        upload_protocol="tempora",
+        query="magnam",
+        quota_user="suscipit",
+        upload_type="earum",
+        upload_protocol="ut",
     ),
 )
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.AppsactivityActivitiesListRequest(
     security=operations.AppsactivityActivitiesListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.AppsactivityActivitiesListQueryParams(
         alt="json",
-        drive_ancestor_id="nihil",
-        drive_file_id="incidunt",
-        fields="dolore",
-        grouping_strategy="driveUi",
-        key="labore",
-        oauth_token="dolorum",
-        page_size=5236289225202148670,
-        page_token="quos",
-        pretty_print=True,
-        quota_user="aut",
-        source="voluptatum",
+        drive_ancestor_id="et",
+        drive_file_id="eveniet",
+        fields="corrupti",
+        grouping_strategy="none",
+        key="itaque",
+        oauth_token="fugiat",
+        page_size=9061303465946652355,
+        page_token="quod",
+        pretty_print=False,
+        quota_user="pariatur",
+        source="aut",
         user_id="et",
-        user_ip="quae",
+        user_ip="eum",
     ),
 )
     

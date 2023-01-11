@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import directive as shared_directive
 
 class ListDirectives200ApplicationJSONActionEnum(str, Enum):
     LIST_DIRECTIVES = "listDirectives"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDirectives200ApplicationJSONData:
-    directives: List[shared.Directive] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
+    directives: list[shared_directive.Directive] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
     
 class ListDirectives200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -20,16 +20,16 @@ class ListDirectives200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDirectives200ApplicationJSON:
-    action: ListDirectives200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ListDirectives200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ListDirectives200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ListDirectives200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ListDirectives200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ListDirectives200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListDirectivesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_directives_200_application_json_object: Optional[ListDirectives200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_directives_200_application_json_object: Optional[ListDirectives200ApplicationJSON] = dataclasses.field(default=None)
     

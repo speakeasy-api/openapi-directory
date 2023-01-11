@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import gamestorefull as shared_gamestorefull
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesStoresListPathParams:
-    game_pk: str = field(metadata={'path_param': { 'field_name': 'game_pk', 'style': 'simple', 'explode': False }})
+    game_pk: str = dataclasses.field(metadata={'path_param': { 'field_name': 'game_pk', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesStoresListQueryParams:
-    ordering: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
+    ordering: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ordering', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GamesStoresList200ApplicationJSON:
-    count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    results: List[shared.GameStoreFull] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
-    next: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
-    previous: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous') }})
+    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    results: list[shared_gamestorefull.GameStoreFull] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
+    next: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
+    previous: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesStoresListRequest:
-    path_params: GamesStoresListPathParams = field()
-    query_params: GamesStoresListQueryParams = field()
+    path_params: GamesStoresListPathParams = dataclasses.field()
+    query_params: GamesStoresListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesStoresListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    games_stores_list_200_application_json_object: Optional[GamesStoresList200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    games_stores_list_200_application_json_object: Optional[GamesStoresList200ApplicationJSON] = dataclasses.field(default=None)
     

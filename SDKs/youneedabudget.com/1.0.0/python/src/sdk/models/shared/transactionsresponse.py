@@ -1,19 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import transactiondetail as shared_transactiondetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TransactionsResponseData:
-    server_knowledge: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_knowledge') }})
-    transactions: List[TransactionDetail] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
+    server_knowledge: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('server_knowledge') }})
+    transactions: list[shared_transactiondetail.TransactionDetail] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TransactionsResponse:
-    data: TransactionsResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: TransactionsResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

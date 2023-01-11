@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,11 +26,11 @@ s.config_security(
 req = operations.PlayByPlayRequest(
     path_params=operations.PlayByPlayPathParams(
         format="XML",
-        gameid="aliquam",
+        gameid="perspiciatis",
     ),
 )
     
-res = s.sdk.play_by_play(req)
+res = s.play_by_play(req)
 
 if res.play_by_play is not None:
     # handle response

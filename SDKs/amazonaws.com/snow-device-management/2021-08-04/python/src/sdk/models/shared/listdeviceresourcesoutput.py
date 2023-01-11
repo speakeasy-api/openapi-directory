@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcesummary as shared_resourcesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDeviceResourcesOutput:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    resources: Optional[List[ResourceSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    resources: Optional[list[shared_resourcesummary.ResourceSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
     

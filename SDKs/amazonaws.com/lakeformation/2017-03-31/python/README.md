@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,121 +25,88 @@ s.config_security(
     
 req = operations.AddLfTagsToResourceRequest(
     headers=operations.AddLfTagsToResourceHeaders(
-        x_amz_algorithm="laudantium",
-        x_amz_content_sha256="fuga",
-        x_amz_credential="doloribus",
-        x_amz_date="quasi",
-        x_amz_security_token="et",
-        x_amz_signature="laboriosam",
-        x_amz_signed_headers="debitis",
+        x_amz_algorithm="velit",
+        x_amz_content_sha256="maiores",
+        x_amz_credential="sunt",
+        x_amz_date="et",
+        x_amz_security_token="est",
+        x_amz_signature="reprehenderit",
+        x_amz_signed_headers="totam",
         x_amz_target="AWSLakeFormation.AddLFTagsToResource",
     ),
     request=shared.AddLfTagsToResourceRequest(
-        catalog_id="minus",
+        catalog_id="voluptas",
         lf_tags=[
             shared.LfTagPair(
-                catalog_id="magnam",
-                tag_key="similique",
+                catalog_id="consequatur",
+                tag_key="veritatis",
                 tag_values=[
-                    "voluptatem",
-                ],
-            ),
-            shared.LfTagPair(
-                catalog_id="officia",
-                tag_key="iure",
-                tag_values=[
-                    "consequatur",
-                    "aut",
-                ],
-            ),
-            shared.LfTagPair(
-                catalog_id="nobis",
-                tag_key="vero",
-                tag_values=[
-                    "enim",
-                    "sequi",
+                    "et",
+                    "nisi",
+                    "cupiditate",
                 ],
             ),
         ],
         resource=shared.Resource(
             catalog={
-                "voluptas": "aliquid",
-                "maiores": "velit",
-                "modi": "voluptatem",
+                "quos": "et",
             },
             data_location=shared.DataLocationResource(
-                catalog_id="optio",
-                resource_arn="doloremque",
+                catalog_id="perspiciatis",
+                resource_arn="quo",
             ),
             database=shared.DatabaseResource(
-                catalog_id="cum",
-                name="necessitatibus",
+                catalog_id="nulla",
+                name="modi",
             ),
             lf_tag=shared.LfTagKeyResource(
-                catalog_id="illum",
-                tag_key="enim",
+                catalog_id="est",
+                tag_key="impedit",
                 tag_values=[
-                    "ratione",
+                    "qui",
+                    "ut",
                 ],
             ),
             lf_tag_policy=shared.LfTagPolicyResource(
-                catalog_id="quasi",
+                catalog_id="possimus",
                 expression=[
                     shared.LfTag(
-                        tag_key="sapiente",
+                        tag_key="iusto",
                         tag_values=[
-                            "omnis",
-                            "accusamus",
-                            "et",
-                        ],
-                    ),
-                    shared.LfTag(
-                        tag_key="accusamus",
-                        tag_values=[
-                            "enim",
-                        ],
-                    ),
-                    shared.LfTag(
-                        tag_key="in",
-                        tag_values=[
-                            "rerum",
-                            "in",
-                            "perspiciatis",
+                            "qui",
                         ],
                     ),
                 ],
-                resource_type="DATABASE",
+                resource_type="TABLE",
             ),
             table=shared.TableResource(
-                catalog_id="asperiores",
-                database_name="fugit",
-                name="in",
+                catalog_id="totam",
+                database_name="at",
+                name="aliquam",
                 table_wildcard={
-                    "saepe": "veritatis",
+                    "inventore": "esse",
+                    "consectetur": "cumque",
+                    "fugit": "qui",
                 },
             ),
             table_with_columns=shared.TableWithColumnsResource(
-                catalog_id="nulla",
+                catalog_id="quia",
                 column_names=[
-                    "ipsum",
-                    "aliquid",
-                    "iure",
+                    "incidunt",
                 ],
                 column_wildcard=shared.ColumnWildcard(
                     excluded_column_names=[
-                        "maiores",
-                        "fugit",
-                        "qui",
+                        "neque",
                     ],
                 ),
-                database_name="natus",
-                name="molestiae",
+                database_name="alias",
+                name="tempore",
             ),
         ),
     ),
 )
     
-res = s.sdk.add_lf_tags_to_resource(req)
+res = s.add_lf_tags_to_resource(req)
 
 if res.add_lf_tags_to_resource_response is not None:
     # handle response

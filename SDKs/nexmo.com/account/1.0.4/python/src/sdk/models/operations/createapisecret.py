@@ -1,31 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createsecretrequest as shared_createsecretrequest
+from ..shared import errorapikeynotfound as shared_errorapikeynotfound
+from ..shared import secretinfo as shared_secretinfo
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPISecretPathParams:
-    api_key: str = field(metadata={'path_param': { 'field_name': 'api_key', 'style': 'simple', 'explode': False }})
+    api_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPISecretSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPISecretRequest:
-    path_params: CreateAPISecretPathParams = field()
-    request: shared.CreateSecretRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAPISecretSecurity = field()
+    path_params: CreateAPISecretPathParams = dataclasses.field()
+    request: shared_createsecretrequest.CreateSecretRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAPISecretSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPISecretResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_api_key_not_found: Optional[shared.ErrorAPIKeyNotFound] = field(default=None)
-    create_api_secret_400_application_json_any: Optional[Any] = field(default=None)
-    create_api_secret_401_application_json_any: Optional[Any] = field(default=None)
-    secret_info: Optional[shared.SecretInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_api_key_not_found: Optional[shared_errorapikeynotfound.ErrorAPIKeyNotFound] = dataclasses.field(default=None)
+    create_api_secret_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    create_api_secret_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    secret_info: Optional[shared_secretinfo.SecretInfo] = dataclasses.field(default=None)
     

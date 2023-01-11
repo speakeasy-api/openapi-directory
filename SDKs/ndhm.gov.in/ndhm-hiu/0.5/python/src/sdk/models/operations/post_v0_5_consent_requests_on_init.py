@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import consentrequestinitresponse as shared_consentrequestinitresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
 POST_V0_5_CONSENT_REQUESTS_ON_INIT_SERVERS = [
@@ -8,29 +9,29 @@ POST_V0_5_CONSENT_REQUESTS_ON_INIT_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05ConsentRequestsOnInitHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_hiu_id: str = field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_hiu_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05ConsentRequestsOnInitRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    consent_request_init_response: Optional[shared.ConsentRequestInitResponse] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    consent_request_init_response: Optional[shared_consentrequestinitresponse.ConsentRequestInitResponse] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05ConsentRequestsOnInitRequest:
-    headers: PostV05ConsentRequestsOnInitHeaders = field()
-    request: PostV05ConsentRequestsOnInitRequests = field()
-    server_url: Optional[str] = field(default=None)
+    headers: PostV05ConsentRequestsOnInitHeaders = dataclasses.field()
+    request: PostV05ConsentRequestsOnInitRequests = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05ConsentRequestsOnInitResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

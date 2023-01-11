@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,15 +26,15 @@ s.config_security(
 req = operations.GetSearchVersionNumberAdditionalDataExtRequest(
     path_params=operations.GetSearchVersionNumberAdditionalDataExtPathParams(
         ext="json",
-        version_number=3763609783641361390,
+        version_number=8970735356862830699,
     ),
     query_params=operations.GetSearchVersionNumberAdditionalDataExtQueryParams(
-        geometries="voluptas",
-        geometries_zoom=3744373318943545361,
+        geometries="temporibus",
+        geometries_zoom=8570098006048428261,
     ),
 )
     
-res = s.sdk.get_search_version_number_additional_data_ext_(req)
+res = s.additional_data.get_search_version_number_additional_data_ext_(req)
 
 if res.status_code == 200:
     # handle response
@@ -45,26 +44,38 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Additional Data
 
 * `get_search_version_number_additional_data_ext_` - Additional Data
+
+### Filters
+
+* `get_search_version_number_geometry_filter_ext_` - Geometry Filter
+* `get_search_version_number_routed_filter_position_heading_ext_` - Routed Filter
+* `post_search_version_number_geometry_filter_ext_` - Geometry Filter
+* `post_search_version_number_routed_filter_position_heading_ext_` - Routed Filter
+
+### Geocoding
+
+* `get_search_version_number_geocode_query_ext_` - Geocode
+* `get_search_version_number_structured_geocode_ext_` - Structured Geocode
+
+### Reverse Geocoding
+
+* `get_search_version_number_reverse_geocode_cross_street_position_ext_` - Cross Street lookup
+* `get_search_version_number_reverse_geocode_position_ext_` - Reverse Geocode
+
+### Search
+
 * `get_search_version_number_c_s_category_ext_` - Low Bandwith Category Search
 * `get_search_version_number_category_search_query_ext_` - Category Search
-* `get_search_version_number_geocode_query_ext_` - Geocode
-* `get_search_version_number_geometry_filter_ext_` - Geometry Filter
 * `get_search_version_number_geometry_search_query_ext_` - Geometry Search
 * `get_search_version_number_nearby_search_ext_` - Nearby Search
 * `get_search_version_number_poi_search_query_ext_` - Points of Interest Search
-* `get_search_version_number_reverse_geocode_cross_street_position_ext_` - Cross Street lookup
-* `get_search_version_number_reverse_geocode_position_ext_` - Reverse Geocode
-* `get_search_version_number_routed_filter_position_heading_ext_` - Routed Filter
 * `get_search_version_number_routed_search_query_position_heading_ext_` - Routed Search
 * `get_search_version_number_s_query_ext_` - Low bandwith Search
 * `get_search_version_number_search_query_ext_` - Fuzzy Search
-* `get_search_version_number_structured_geocode_ext_` - Structured Geocode
-* `post_search_version_number_geometry_filter_ext_` - Geometry Filter
 * `post_search_version_number_geometry_search_query_ext_` - Geometry Search
-* `post_search_version_number_routed_filter_position_heading_ext_` - Routed Filter
 * `post_search_version_number_search_along_route_query_ext_` - Along Route Search
 
 <!-- End SDK Available Operations -->

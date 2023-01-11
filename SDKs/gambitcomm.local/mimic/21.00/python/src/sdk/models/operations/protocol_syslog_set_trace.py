@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogSetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    enable_or_not: str = field(metadata={'path_param': { 'field_name': 'enableOrNot', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    enable_or_not: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enableOrNot', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogSetTraceRequest:
-    path_params: ProtocolSyslogSetTracePathParams = field()
+    path_params: ProtocolSyslogSetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogSetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_syslog_set_trace_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_syslog_set_trace_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

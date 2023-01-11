@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,29 @@ s.config_security(
     
 req = operations.BatchExecuteStatementRequest(
     headers=operations.BatchExecuteStatementHeaders(
-        x_amz_algorithm="iusto",
-        x_amz_content_sha256="dolores",
-        x_amz_credential="nobis",
-        x_amz_date="itaque",
-        x_amz_security_token="nobis",
-        x_amz_signature="sequi",
-        x_amz_signed_headers="esse",
+        x_amz_algorithm="inventore",
+        x_amz_content_sha256="est",
+        x_amz_credential="dolor",
+        x_amz_date="animi",
+        x_amz_security_token="rerum",
+        x_amz_signature="sit",
+        x_amz_signed_headers="et",
         x_amz_target="RedshiftData.BatchExecuteStatement",
     ),
     request=shared.BatchExecuteStatementInput(
-        cluster_identifier="sint",
-        database="et",
-        db_user="sequi",
-        secret_arn="perferendis",
+        cluster_identifier="eos",
+        database="accusantium",
+        db_user="minima",
+        secret_arn="qui",
         sqls=[
-            "ut",
-            "soluta",
-            "voluptatem",
+            "est",
         ],
-        statement_name="adipisci",
+        statement_name="tempora",
         with_event=False,
     ),
 )
     
-res = s.sdk.batch_execute_statement(req)
+res = s.batch_execute_statement(req)
 
 if res.batch_execute_statement_output is not None:
     # handle response

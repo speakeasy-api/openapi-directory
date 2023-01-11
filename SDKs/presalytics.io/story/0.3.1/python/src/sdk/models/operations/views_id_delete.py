@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDDeletePathParams:
-    view_id: str = field(metadata={'path_param': { 'field_name': 'view_id', 'style': 'simple', 'explode': False }})
+    view_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'view_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDDeleteRequest:
-    path_params: ViewsIDDeletePathParams = field()
+    path_params: ViewsIDDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import payorcreateapikeyrequest as shared_payorcreateapikeyrequest
+from ..shared import payorcreateapikeyresponse as shared_payorcreateapikeyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PayorCreateAPIKeyRequestPathParams:
-    application_id: str = field(metadata={'path_param': { 'field_name': 'applicationId', 'style': 'simple', 'explode': False }})
-    payor_id: str = field(metadata={'path_param': { 'field_name': 'payorId', 'style': 'simple', 'explode': False }})
+    application_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'applicationId', 'style': 'simple', 'explode': False }})
+    payor_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payorId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorCreateAPIKeyRequestRequest:
-    path_params: PayorCreateAPIKeyRequestPathParams = field()
-    request: shared.PayorCreateAPIKeyRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PayorCreateAPIKeyRequestPathParams = dataclasses.field()
+    request: shared_payorcreateapikeyrequest.PayorCreateAPIKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorCreateAPIKeyRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payor_create_api_key_response: Optional[shared.PayorCreateAPIKeyResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payor_create_api_key_response: Optional[shared_payorcreateapikeyresponse.PayorCreateAPIKeyResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

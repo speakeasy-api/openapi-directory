@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import reserveddbinstancesofferinglist as shared_reserveddbinstancesofferinglist
 
 
-@dataclass
+@dataclasses.dataclass
 class ReservedDbInstancesOfferingMessage:
-    marker: Optional[str] = field(default=None)
-    reserved_db_instances_offerings: Optional[List[ReservedDbInstancesOffering]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    reserved_db_instances_offerings: Optional[list[shared_reserveddbinstancesofferinglist.ReservedDbInstancesOfferingList]] = dataclasses.field(default=None)
     

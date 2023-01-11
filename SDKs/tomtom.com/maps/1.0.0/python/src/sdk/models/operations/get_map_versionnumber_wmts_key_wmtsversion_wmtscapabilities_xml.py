@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum(str, Enum):
     ONE_0_0 = "1.0.0"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLPathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
-    version_number: int = field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
-    wmts_version: GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum = field(metadata={'path_param': { 'field_name': 'wmtsVersion', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    version_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
+    wmts_version: GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLWmtsVersionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'wmtsVersion', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLRequest:
-    path_params: GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLPathParams = field()
+    path_params: GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXMLResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

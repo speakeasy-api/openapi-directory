@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import manage_event as shared_manage_event
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDEventsPostPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDEventsPostRequest:
-    path_params: StoryIDEventsPostPathParams = field()
-    request: shared.ManageEvent = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: StoryIDEventsPostPathParams = dataclasses.field()
+    request: shared_manage_event.ManageEvent = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDEventsPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    story_id_events_post_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    story_id_events_post_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

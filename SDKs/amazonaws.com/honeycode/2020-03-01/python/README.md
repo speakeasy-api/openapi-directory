@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,46 @@ s.config_security(
     
 req = operations.BatchCreateTableRowsRequest(
     path_params=operations.BatchCreateTableRowsPathParams(
-        table_id="nobis",
-        workbook_id="iste",
+        table_id="praesentium",
+        workbook_id="et",
     ),
     headers=operations.BatchCreateTableRowsHeaders(
-        x_amz_algorithm="pariatur",
-        x_amz_content_sha256="expedita",
-        x_amz_credential="impedit",
-        x_amz_date="rerum",
-        x_amz_security_token="reiciendis",
-        x_amz_signature="in",
-        x_amz_signed_headers="assumenda",
+        x_amz_algorithm="ratione",
+        x_amz_content_sha256="est",
+        x_amz_credential="in",
+        x_amz_date="corporis",
+        x_amz_security_token="dolores",
+        x_amz_signature="perferendis",
+        x_amz_signed_headers="laboriosam",
     ),
     request=operations.BatchCreateTableRowsRequestBody(
-        client_request_token="modi",
+        client_request_token="numquam",
         rows_to_create=[
             shared.CreateRowData(
-                batch_item_id="vel",
+                batch_item_id="aperiam",
                 cells_to_create={
-                    "beatae": shared.CellInput(
-                        fact="consectetur",
+                    "velit": shared.CellInput(
+                        fact="possimus",
+                    ),
+                    "hic": shared.CellInput(
+                        fact="quis",
+                    ),
+                    "sunt": shared.CellInput(
+                        fact="quo",
+                    ),
+                },
+            ),
+            shared.CreateRowData(
+                batch_item_id="eveniet",
+                cells_to_create={
+                    "reiciendis": shared.CellInput(
+                        fact="non",
+                    ),
+                    "dolor": shared.CellInput(
+                        fact="maiores",
+                    ),
+                    "itaque": shared.CellInput(
+                        fact="pariatur",
                     ),
                 },
             ),
@@ -53,7 +72,7 @@ req = operations.BatchCreateTableRowsRequest(
     ),
 )
     
-res = s.sdk.batch_create_table_rows(req)
+res = s.batch_create_table_rows(req)
 
 if res.batch_create_table_rows_result is not None:
     # handle response

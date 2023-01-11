@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import crawler as shared_crawler
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetCrawlerResponse:
-    crawler: Optional[Crawler] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawler') }})
+    crawler: Optional[shared_crawler.Crawler] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawler') }})
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import container as shared_container
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListContainersOutput:
-    containers: List[Container] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Containers') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    containers: list[shared_container.Container] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Containers') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

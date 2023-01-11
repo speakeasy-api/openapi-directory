@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -35,31 +35,31 @@ class PostGeomarksNewRequestBodyResultFormatEnum(str, Enum):
     WKT = "wkt"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostGeomarksNewRequestBody:
-    allow_overlap: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'allowOverlap' }})
-    body: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'body' }})
-    buffer_cap: Optional[PostGeomarksNewRequestBodyBufferCapEnum] = field(default=None, metadata={'form': { 'field_name': 'bufferCap' }})
-    buffer_join: Optional[PostGeomarksNewRequestBodyBufferJoinEnum] = field(default=None, metadata={'form': { 'field_name': 'bufferJoin' }})
-    buffer_metres: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'bufferMetres' }})
-    buffer_mitre_limit: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'bufferMitreLimit' }})
-    buffer_segments: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'bufferSegments' }})
-    callback: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'callback' }})
-    failure_redirect_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'failureRedirectUrl' }})
-    format: Optional[PostGeomarksNewRequestBodyFormatEnum] = field(default=None, metadata={'form': { 'field_name': 'format' }})
-    multiple: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'multiple' }})
-    redirect_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'redirectUrl' }})
-    result_format: Optional[PostGeomarksNewRequestBodyResultFormatEnum] = field(default=None, metadata={'form': { 'field_name': 'resultFormat' }})
-    srid: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'srid' }})
+    allow_overlap: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'allowOverlap' }})
+    body: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'body' }})
+    buffer_cap: Optional[PostGeomarksNewRequestBodyBufferCapEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'bufferCap' }})
+    buffer_join: Optional[PostGeomarksNewRequestBodyBufferJoinEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'bufferJoin' }})
+    buffer_metres: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'bufferMetres' }})
+    buffer_mitre_limit: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'bufferMitreLimit' }})
+    buffer_segments: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'bufferSegments' }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'callback' }})
+    failure_redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'failureRedirectUrl' }})
+    format: Optional[PostGeomarksNewRequestBodyFormatEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'format' }})
+    multiple: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'multiple' }})
+    redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'redirectUrl' }})
+    result_format: Optional[PostGeomarksNewRequestBodyResultFormatEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'resultFormat' }})
+    srid: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'srid' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostGeomarksNewRequest:
-    request: Optional[PostGeomarksNewRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    request: Optional[PostGeomarksNewRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostGeomarksNewResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import paginationlinks as shared_paginationlinks
+from ..shared import orderheader as shared_orderheader
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListOfOrders:
-    links: Optional[PaginationLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
-    orders: Optional[List[OrderHeader]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orders') }})
+    links: Optional[shared_paginationlinks.PaginationLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    orders: Optional[list[shared_orderheader.OrderHeader]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orders') }})
     

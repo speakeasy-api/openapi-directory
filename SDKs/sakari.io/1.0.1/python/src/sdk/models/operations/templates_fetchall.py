@@ -1,36 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import templatesresponse as shared_templatesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesFetchAllPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesFetchAllQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesFetchAllSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesFetchAllRequest:
-    path_params: TemplatesFetchAllPathParams = field()
-    query_params: TemplatesFetchAllQueryParams = field()
-    security: TemplatesFetchAllSecurity = field()
+    path_params: TemplatesFetchAllPathParams = dataclasses.field()
+    query_params: TemplatesFetchAllQueryParams = dataclasses.field()
+    security: TemplatesFetchAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesFetchAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    templates_response: Optional[shared.TemplatesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    templates_response: Optional[shared_templatesresponse.TemplatesResponse] = dataclasses.field(default=None)
     

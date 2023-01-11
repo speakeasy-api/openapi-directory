@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,12 +10,12 @@ class BackupRetentionSettingsRetentionUnitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BackupRetentionSettings:
     r"""BackupRetentionSettings
     We currently only support backup retention by specifying the number of backups we will retain.
     """
     
-    retained_backups: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retainedBackups') }})
-    retention_unit: Optional[BackupRetentionSettingsRetentionUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retentionUnit') }})
+    retained_backups: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retainedBackups') }})
+    retention_unit: Optional[BackupRetentionSettingsRetentionUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retentionUnit') }})
     

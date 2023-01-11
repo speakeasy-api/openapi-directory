@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dataset as shared_dataset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDatasetsResponse:
     r"""ListDatasetsResponse
     Returned for a successful ListDatasets request.
     """
     
-    count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Count') }})
-    datasets: Optional[List[Dataset]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Datasets') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Count') }})
+    datasets: Optional[list[shared_dataset.Dataset]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Datasets') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

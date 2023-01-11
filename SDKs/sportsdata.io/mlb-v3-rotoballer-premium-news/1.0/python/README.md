@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -30,7 +29,7 @@ req = operations.PremiumNewsRequest(
     ),
 )
     
-res = s.sdk.premium_news(req)
+res = s.premium_news(req)
 
 if res.news is not None:
     # handle response

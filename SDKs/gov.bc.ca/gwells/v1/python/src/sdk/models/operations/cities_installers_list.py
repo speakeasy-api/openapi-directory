@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import citylist as shared_citylist
 
 
-@dataclass
+@dataclasses.dataclass
 class CitiesInstallersListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    city_lists: Optional[List[shared.CityList]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    city_lists: Optional[list[shared_citylist.CityList]] = dataclasses.field(default=None)
     

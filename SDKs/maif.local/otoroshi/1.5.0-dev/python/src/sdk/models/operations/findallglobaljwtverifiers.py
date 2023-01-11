@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import globaljwtverifier as shared_globaljwtverifier
 
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalJwtVerifiersSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalJwtVerifiersRequest:
-    security: FindAllGlobalJwtVerifiersSecurity = field()
+    security: FindAllGlobalJwtVerifiersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalJwtVerifiersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_jwt_verifiers: Optional[List[shared.GlobalJwtVerifier]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_jwt_verifiers: Optional[list[shared_globaljwtverifier.GlobalJwtVerifier]] = dataclasses.field(default=None)
     

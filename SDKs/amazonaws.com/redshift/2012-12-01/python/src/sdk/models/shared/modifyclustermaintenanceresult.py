@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cluster as shared_cluster
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyClusterMaintenanceResult:
-    cluster: Optional[Cluster] = field(default=None)
+    cluster: Optional[shared_cluster.Cluster] = dataclasses.field(default=None)
     

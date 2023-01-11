@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import servercertificatemetadata as shared_servercertificatemetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class ListServerCertificatesResponse:
     r"""ListServerCertificatesResponse
     Contains the response to a successful <a>ListServerCertificates</a> request. 
     """
     
-    server_certificate_metadata_list: List[ServerCertificateMetadata] = field()
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    server_certificate_metadata_list: list[shared_servercertificatemetadata.ServerCertificateMetadata] = dataclasses.field()
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

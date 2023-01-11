@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TagResourcesInput:
-    resource_arn_list: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceARNList') }})
-    tags: dict[str, str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Tags') }})
+    resource_arn_list: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceARNList') }})
+    tags: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Tags') }})
     

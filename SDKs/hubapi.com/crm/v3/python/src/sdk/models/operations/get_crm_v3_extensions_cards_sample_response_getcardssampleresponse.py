@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import integratorcardpayloadresponse as shared_integratorcardpayloadresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    integrator_card_payload_response: Optional[shared.IntegratorCardPayloadResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    integrator_card_payload_response: Optional[shared_integratorcardpayloadresponse.IntegratorCardPayloadResponse] = dataclasses.field(default=None)
     

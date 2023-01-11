@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import four_hundred as shared_four_hundred
+from ..shared import four_hundred_and_four as shared_four_hundred_and_four
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSimpleQueryQueryParams:
-    pretty: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'pretty', 'style': 'form', 'explode': True }})
+    pretty: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pretty', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSimpleQueryRequest:
-    query_params: PostSimpleQueryQueryParams = field()
-    request: dict[str, Any] = field(metadata={'request': { 'media_type': 'application/json' }})
+    query_params: PostSimpleQueryQueryParams = dataclasses.field()
+    request: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSimpleQueryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    four_hundred: Optional[shared.FourHundred] = field(default=None)
-    four_hundred_and_four: Optional[shared.FourHundredAndFour] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred: Optional[shared_four_hundred.FourHundred] = dataclasses.field(default=None)
+    four_hundred_and_four: Optional[shared_four_hundred_and_four.FourHundredAndFour] = dataclasses.field(default=None)
     

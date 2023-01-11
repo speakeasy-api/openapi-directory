@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import assessmentgrouprequired as shared_assessmentgrouprequired
+from ..shared import assessmentgroupresponse as shared_assessmentgroupresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDGroupsPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDGroupsRequest:
-    path_params: PostOfferingsOfferingIDGroupsPathParams = field()
-    request: shared.AssessmentGroupRequired = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostOfferingsOfferingIDGroupsPathParams = dataclasses.field()
+    request: shared_assessmentgrouprequired.AssessmentGroupRequired = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDGroupsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    assessment_group_response: Optional[shared.AssessmentGroupResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    assessment_group_response: Optional[shared_assessmentgroupresponse.AssessmentGroupResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pullresponse as shared_pullresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullBatchResponse:
     r"""PullBatchResponse
     Response for the PullBatch method.
     """
     
-    pull_responses: Optional[List[PullResponse]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullResponses') }})
+    pull_responses: Optional[list[shared_pullresponse.PullResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullResponses') }})
     

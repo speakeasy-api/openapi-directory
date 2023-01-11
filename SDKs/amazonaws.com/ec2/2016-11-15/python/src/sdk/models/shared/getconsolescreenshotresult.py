@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsoleScreenshotResult:
-    image_data: Optional[str] = field(default=None)
-    instance_id: Optional[str] = field(default=None)
+    image_data: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    instance_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

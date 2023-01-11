@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class VpcAccessConnectorEgressSettingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VpcAccessConnector:
     r"""VpcAccessConnector
     VPC access connector specification.
     """
     
-    egress_setting: Optional[VpcAccessConnectorEgressSettingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('egressSetting') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    egress_setting: Optional[VpcAccessConnectorEgressSettingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('egressSetting') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

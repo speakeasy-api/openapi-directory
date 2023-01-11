@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class OsBrowsersQueryParams:
-    os: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'os', 'style': 'form', 'explode': True }})
+    os: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'os', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OsBrowsersSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OsBrowsersRequest:
-    query_params: OsBrowsersQueryParams = field()
-    security: OsBrowsersSecurity = field()
+    query_params: OsBrowsersQueryParams = dataclasses.field()
+    security: OsBrowsersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OsBrowsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied: Optional[Any] = field(default=None)
-    os_browsers: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied: Optional[Any] = dataclasses.field(default=None)
+    os_browsers: Optional[Any] = dataclasses.field(default=None)
     

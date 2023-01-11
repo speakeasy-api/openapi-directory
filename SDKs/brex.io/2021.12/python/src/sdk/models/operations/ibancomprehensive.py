@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class IbanComprehensiveRequestBody:
-    iban_number: str = field(metadata={'form': { 'field_name': 'ibanNumber' }})
+    iban_number: str = dataclasses.field(metadata={'form': { 'field_name': 'ibanNumber' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IbanComprehensiveSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IbanComprehensiveRequest:
-    request: IbanComprehensiveRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: IbanComprehensiveSecurity = field()
+    request: IbanComprehensiveRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: IbanComprehensiveSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IbanComprehensiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    iban_comprehensive_default_application_json_any: Optional[Any] = field(default=None)
-    oneapi_1v1_1iban_verification_1check_iban_post_responses_200_content_application_1json_schema: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    iban_comprehensive_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    oneapi_1v1_1iban_verification_1check_iban_post_responses_200_content_application_1json_schema: Optional[Any] = dataclasses.field(default=None)
     

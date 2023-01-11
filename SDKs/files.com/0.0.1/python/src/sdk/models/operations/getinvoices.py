@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import accountlineitementity as shared_accountlineitementity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoicesQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoicesRequest:
-    query_params: GetInvoicesQueryParams = field()
+    query_params: GetInvoicesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    account_line_item_entities: Optional[List[shared.AccountLineItemEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    account_line_item_entities: Optional[list[shared_accountlineitementity.AccountLineItemEntity]] = dataclasses.field(default=None)
     

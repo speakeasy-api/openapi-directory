@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import autoscalinginstancedetails as shared_autoscalinginstancedetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AutoScalingInstancesType:
-    auto_scaling_instances: Optional[List[AutoScalingInstanceDetails]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    auto_scaling_instances: Optional[list[shared_autoscalinginstancedetails.AutoScalingInstanceDetails]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

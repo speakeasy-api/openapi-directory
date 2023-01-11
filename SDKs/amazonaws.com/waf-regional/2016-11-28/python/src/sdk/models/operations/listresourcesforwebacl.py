@@ -1,40 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import listresourcesforwebaclrequest as shared_listresourcesforwebaclrequest
+from ..shared import listresourcesforwebaclresponse as shared_listresourcesforwebaclresponse
 
 class ListResourcesForWebAclxAmzTargetEnum(str, Enum):
     AWSWAF_REGIONAL_20161128_LIST_RESOURCES_FOR_WEB_ACL = "AWSWAF_Regional_20161128.ListResourcesForWebACL"
 
 
-@dataclass
+@dataclasses.dataclass
 class ListResourcesForWebACLHeaders:
-    x_amz_target: ListResourcesForWebAclxAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: ListResourcesForWebAclxAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListResourcesForWebACLRequest:
-    headers: ListResourcesForWebACLHeaders = field()
-    request: shared.ListResourcesForWebACLRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ListResourcesForWebACLHeaders = dataclasses.field()
+    request: shared_listresourcesforwebaclrequest.ListResourcesForWebACLRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListResourcesForWebACLResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_resources_for_web_acl_response: Optional[shared.ListResourcesForWebACLResponse] = field(default=None)
-    waf_internal_error_exception: Optional[Any] = field(default=None)
-    waf_invalid_account_exception: Optional[Any] = field(default=None)
-    waf_invalid_parameter_exception: Optional[Any] = field(default=None)
-    waf_nonexistent_item_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_resources_for_web_acl_response: Optional[shared_listresourcesforwebaclresponse.ListResourcesForWebACLResponse] = dataclasses.field(default=None)
+    waf_internal_error_exception: Optional[Any] = dataclasses.field(default=None)
+    waf_invalid_account_exception: Optional[Any] = dataclasses.field(default=None)
+    waf_invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    waf_nonexistent_item_exception: Optional[Any] = dataclasses.field(default=None)
     

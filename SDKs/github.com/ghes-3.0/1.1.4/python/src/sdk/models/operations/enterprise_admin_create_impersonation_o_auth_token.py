@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import authorization as shared_authorization
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateImpersonationOAuthTokenPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateImpersonationOAuthTokenRequestBody:
-    scopes: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scopes') }})
+    scopes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scopes') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateImpersonationOAuthTokenRequest:
-    path_params: EnterpriseAdminCreateImpersonationOAuthTokenPathParams = field()
-    request: Optional[EnterpriseAdminCreateImpersonationOAuthTokenRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminCreateImpersonationOAuthTokenPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminCreateImpersonationOAuthTokenRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateImpersonationOAuthTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authorization: Optional[shared.Authorization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authorization: Optional[shared_authorization.Authorization] = dataclasses.field(default=None)
     

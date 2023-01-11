@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,12 +8,12 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ShipmentCancellation:
     r"""ShipmentCancellation
     This type defines a shipment cancellation by the date and time the cancellation request was made and the current status of the request.
     """
     
-    cancellation_requested_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationRequestedDate') }})
-    cancellation_status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationStatus') }})
+    cancellation_requested_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationRequestedDate') }})
+    cancellation_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationStatus') }})
     

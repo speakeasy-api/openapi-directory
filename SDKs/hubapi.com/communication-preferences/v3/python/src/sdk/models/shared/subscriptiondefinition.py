@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,16 +8,16 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubscriptionDefinition:
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('createdAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    is_active: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isActive') }})
-    is_default: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isDefault') }})
-    is_internal: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isInternal') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    updated_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updatedAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    communication_method: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communicationMethod') }})
-    purpose: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('createdAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    is_active: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isActive') }})
+    is_default: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isDefault') }})
+    is_internal: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('isInternal') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updatedAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    communication_method: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communicationMethod') }})
+    purpose: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('purpose') }})
     

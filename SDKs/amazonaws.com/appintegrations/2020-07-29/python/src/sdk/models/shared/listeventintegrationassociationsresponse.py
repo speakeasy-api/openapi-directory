@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import eventintegrationassociation as shared_eventintegrationassociation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListEventIntegrationAssociationsResponse:
-    event_integration_associations: Optional[List[EventIntegrationAssociation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventIntegrationAssociations') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    event_integration_associations: Optional[list[shared_eventintegrationassociation.EventIntegrationAssociation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventIntegrationAssociations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

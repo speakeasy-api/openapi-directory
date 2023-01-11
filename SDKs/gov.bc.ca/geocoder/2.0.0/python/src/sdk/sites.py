@@ -91,6 +91,30 @@ class Sites:
         return res
 
     
+    def get_sites_within_output_format_(self, request: operations.GetSitesWithinOutputFormatRequest) -> operations.GetSitesWithinOutputFormatResponse:
+        r"""Find sites in a geographic area
+        Represents sites within a given area
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/sites/within.{outputFormat}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetSitesWithinOutputFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+
+        return res
+
+    
     def get_sites_site_id_output_format_(self, request: operations.GetSitesSiteIDOutputFormatRequest) -> operations.GetSitesSiteIDOutputFormatResponse:
         r"""Get a site by its unique ID
         Represents an individual site
@@ -132,30 +156,6 @@ class Sites:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetSitesSiteIDSubsitesOutputFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
-    
-    def get_sites_within_output_format_(self, request: operations.GetSitesWithinOutputFormatRequest) -> operations.GetSitesWithinOutputFormatResponse:
-        r"""Find sites in a geographic area
-        Represents sites within a given area
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/sites/within.{outputFormat}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetSitesWithinOutputFormatResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             pass

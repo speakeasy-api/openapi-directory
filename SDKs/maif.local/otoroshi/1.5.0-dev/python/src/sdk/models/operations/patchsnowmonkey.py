@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import group as shared_group
+from ..shared import snowmonkeyconfig as shared_snowmonkeyconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchSnowMonkeySecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchSnowMonkeyRequest:
-    security: PatchSnowMonkeySecurity = field()
-    request: Optional[shared.Group] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PatchSnowMonkeySecurity = dataclasses.field()
+    request: Optional[shared_group.Group] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchSnowMonkeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    snow_monkey_config: Optional[shared.SnowMonkeyConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    snow_monkey_config: Optional[shared_snowmonkeyconfig.SnowMonkeyConfig] = dataclasses.field(default=None)
     

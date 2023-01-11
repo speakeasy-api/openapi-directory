@@ -1,27 +1,29 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetFaviconQueryParams:
-    url: str = field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
+    url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetFaviconSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetFaviconRequest:
-    query_params: AvatarsGetFaviconQueryParams = field()
-    security: AvatarsGetFaviconSecurity = field()
+    query_params: AvatarsGetFaviconQueryParams = dataclasses.field()
+    security: AvatarsGetFaviconSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AvatarsGetFaviconResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

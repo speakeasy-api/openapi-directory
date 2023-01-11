@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import profilinggroupdescription as shared_profilinggroupdescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeProfilingGroupResponse:
     r"""DescribeProfilingGroupResponse
     The structure representing the describeProfilingGroupResponse.
     """
     
-    profiling_group: ProfilingGroupDescription = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('profilingGroup') }})
+    profiling_group: shared_profilinggroupdescription.ProfilingGroupDescription = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('profilingGroup') }})
     

@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import groupuserentity as shared_groupuserentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsGroupIDUsersPathParams:
-    group_id: int = field(metadata={'path_param': { 'field_name': 'group_id', 'style': 'simple', 'explode': False }})
+    group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'group_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsGroupIDUsersQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsGroupIDUsersRequest:
-    path_params: GetGroupsGroupIDUsersPathParams = field()
-    query_params: GetGroupsGroupIDUsersQueryParams = field()
+    path_params: GetGroupsGroupIDUsersPathParams = dataclasses.field()
+    query_params: GetGroupsGroupIDUsersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsGroupIDUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group_user_entities: Optional[List[shared.GroupUserEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_user_entities: Optional[list[shared_groupuserentity.GroupUserEntity]] = dataclasses.field(default=None)
     

@@ -1,31 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import node_composition_enum as shared_node_composition_enum
+from ..shared import node_query as shared_node_query
+from ..shared import node_where as shared_node_where
+from ..shared import node_full as shared_node_full
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAcceptedNodesQueryParams:
-    composition: Optional[shared.NodeCompositionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'composition', 'style': 'form', 'explode': True }})
-    include: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
-    query: Optional[shared.NodeQuery] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'serialization': 'json' }})
-    select: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'select', 'style': 'form', 'explode': True }})
-    where: Optional[List[shared.NodeWhere]] = field(default=None, metadata={'query_param': { 'field_name': 'where', 'serialization': 'json' }})
+    composition: Optional[shared_node_composition_enum.NodeCompositionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'composition', 'style': 'form', 'explode': True }})
+    include: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    query: Optional[shared_node_query.NodeQuery] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'serialization': 'json' }})
+    select: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'select', 'style': 'form', 'explode': True }})
+    where: Optional[list[shared_node_where.NodeWhere]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'where', 'serialization': 'json' }})
     
 class ListAcceptedNodes200ApplicationJSONActionEnum(str, Enum):
     LIST_ACCEPTED_NODES = "listAcceptedNodes"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAcceptedNodes200ApplicationJSONData:
     r"""ListAcceptedNodes200ApplicationJSONData
     Information about the nodes
     """
     
-    nodes: List[shared.NodeFull] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodes') }})
+    nodes: list[shared_node_full.NodeFull] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodes') }})
     
 class ListAcceptedNodes200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -33,21 +36,21 @@ class ListAcceptedNodes200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAcceptedNodes200ApplicationJSON:
-    action: ListAcceptedNodes200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ListAcceptedNodes200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ListAcceptedNodes200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ListAcceptedNodes200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ListAcceptedNodes200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ListAcceptedNodes200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListAcceptedNodesRequest:
-    query_params: ListAcceptedNodesQueryParams = field()
+    query_params: ListAcceptedNodesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListAcceptedNodesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_accepted_nodes_200_application_json_object: Optional[ListAcceptedNodes200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_accepted_nodes_200_application_json_object: Optional[ListAcceptedNodes200ApplicationJSON] = dataclasses.field(default=None)
     

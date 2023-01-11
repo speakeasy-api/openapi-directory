@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,12 +19,12 @@ class ThirdPartyVendorConfigVendorEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ThirdPartyVendorConfig:
     r"""ThirdPartyVendorConfig
     Settings that control how third-party measurement vendors are configured.
     """
     
-    placement_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('placementId') }})
-    vendor: Optional[ThirdPartyVendorConfigVendorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vendor') }})
+    placement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('placementId') }})
+    vendor: Optional[ThirdPartyVendorConfigVendorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vendor') }})
     

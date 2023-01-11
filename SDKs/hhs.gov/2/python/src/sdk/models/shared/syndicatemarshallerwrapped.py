@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import meta as shared_meta
+from ..shared import syndicatemarshaller as shared_syndicatemarshaller
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SyndicateMarshallerWrapped:
-    callback: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callback') }})
-    meta: Optional[Meta] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
-    results: Optional[List[SyndicateMarshaller]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callback') }})
+    meta: Optional[shared_meta.Meta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    results: Optional[list[shared_syndicatemarshaller.SyndicateMarshaller]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
     

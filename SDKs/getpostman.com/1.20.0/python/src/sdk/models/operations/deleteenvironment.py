@@ -1,49 +1,49 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironmentPathParams:
-    environment_uid: str = field(metadata={'path_param': { 'field_name': 'environment_uid', 'style': 'simple', 'explode': False }})
+    environment_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environment_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironment200ApplicationJSONEnvironment:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironment200ApplicationJSON:
-    environment: Optional[DeleteEnvironment200ApplicationJSONEnvironment] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
+    environment: Optional[DeleteEnvironment200ApplicationJSONEnvironment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironment404ApplicationJSONError:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironment404ApplicationJSON:
-    error: Optional[DeleteEnvironment404ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[DeleteEnvironment404ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironmentRequest:
-    path_params: DeleteEnvironmentPathParams = field()
+    path_params: DeleteEnvironmentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEnvironmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_environment_200_application_json_object: Optional[DeleteEnvironment200ApplicationJSON] = field(default=None)
-    delete_environment_404_application_json_object: Optional[DeleteEnvironment404ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_environment_200_application_json_object: Optional[DeleteEnvironment200ApplicationJSON] = dataclasses.field(default=None)
+    delete_environment_404_application_json_object: Optional[DeleteEnvironment404ApplicationJSON] = dataclasses.field(default=None)
     

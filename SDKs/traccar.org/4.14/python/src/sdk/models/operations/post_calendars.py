@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import calendar as shared_calendar
 
 
-@dataclass
+@dataclasses.dataclass
 class PostCalendarsRequest:
-    request: shared.Calendar = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_calendar.Calendar = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCalendarsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    calendar: Optional[shared.Calendar] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    calendar: Optional[shared_calendar.Calendar] = dataclasses.field(default=None)
     

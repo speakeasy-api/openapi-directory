@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class NumberSubmittedAttributesExceeded:
     r"""NumberSubmittedAttributesExceeded
     Too many attributes exist in a single call.
     """
     
-    box_usage: Optional[float] = field(default=None)
+    box_usage: Optional[float] = dataclasses.field(default=None)
     

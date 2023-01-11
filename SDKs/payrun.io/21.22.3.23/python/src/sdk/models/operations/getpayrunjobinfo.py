@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import jobinfo as shared_jobinfo
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunJobInfoPathParams:
-    job_id: str = field(metadata={'path_param': { 'field_name': 'JobId', 'style': 'simple', 'explode': False }})
+    job_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'JobId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunJobInfoHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunJobInfoRequest:
-    headers: GetPayRunJobInfoHeaders = field()
-    path_params: GetPayRunJobInfoPathParams = field()
+    headers: GetPayRunJobInfoHeaders = dataclasses.field()
+    path_params: GetPayRunJobInfoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunJobInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    job_info: Optional[shared.JobInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    job_info: Optional[shared_jobinfo.JobInfo] = dataclasses.field(default=None)
     

@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import currentlyplayingobject as shared_currentlyplayingobject
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetTheUsersCurrentlyPlayingTrackQueryParams:
-    market: str = field(metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
-    additional_types: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'additional_types', 'style': 'form', 'explode': True }})
+    market: str = dataclasses.field(metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    additional_types: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'additional_types', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetTheUsersCurrentlyPlayingTrackHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetTheUsersCurrentlyPlayingTrackSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetTheUsersCurrentlyPlayingTrackRequest:
-    headers: EndpointGetTheUsersCurrentlyPlayingTrackHeaders = field()
-    query_params: EndpointGetTheUsersCurrentlyPlayingTrackQueryParams = field()
-    security: EndpointGetTheUsersCurrentlyPlayingTrackSecurity = field()
+    headers: EndpointGetTheUsersCurrentlyPlayingTrackHeaders = dataclasses.field()
+    query_params: EndpointGetTheUsersCurrentlyPlayingTrackQueryParams = dataclasses.field()
+    security: EndpointGetTheUsersCurrentlyPlayingTrackSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetTheUsersCurrentlyPlayingTrackResponse:
-    content_type: str = field()
-    status_code: int = field()
-    currently_playing_object: Optional[shared.CurrentlyPlayingObject] = field(default=None)
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    currently_playing_object: Optional[shared_currentlyplayingobject.CurrentlyPlayingObject] = dataclasses.field(default=None)
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_releaseeventseriesforapicontract_ as shared_partialfindresult_releaseeventseriesforapicontract_
 
 class ReleaseEventSeriesAPIGetListFieldsEnum(str, Enum):
     NONE = "None"
@@ -26,26 +26,26 @@ class ReleaseEventSeriesAPIGetListNameMatchModeEnum(str, Enum):
     WORDS = "Words"
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventSeriesAPIGetListQueryParams:
-    fields: Optional[ReleaseEventSeriesAPIGetListFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    lang: Optional[ReleaseEventSeriesAPIGetListLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[ReleaseEventSeriesAPIGetListNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    fields: Optional[ReleaseEventSeriesAPIGetListFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    lang: Optional[ReleaseEventSeriesAPIGetListLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[ReleaseEventSeriesAPIGetListNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventSeriesAPIGetListRequest:
-    query_params: ReleaseEventSeriesAPIGetListQueryParams = field()
+    query_params: ReleaseEventSeriesAPIGetListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventSeriesAPIGetListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_release_event_series_for_api_contract_: Optional[shared.PartialFindResultReleaseEventSeriesForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_release_event_series_for_api_contract_: Optional[shared_partialfindresult_releaseeventseriesforapicontract_.PartialFindResultReleaseEventSeriesForAPIContract] = dataclasses.field(default=None)
     

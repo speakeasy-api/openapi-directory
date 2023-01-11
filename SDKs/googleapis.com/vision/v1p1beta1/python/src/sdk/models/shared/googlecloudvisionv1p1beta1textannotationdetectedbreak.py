@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,12 +14,12 @@ class GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreak:
     r"""GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreak
     Detected start or end of a structural component.
     """
     
-    is_prefix: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isPrefix') }})
-    type: Optional[GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    is_prefix: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isPrefix') }})
+    type: Optional[GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

@@ -8,40 +8,31 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.AllFaresRequest(
-    security=operations.AllFaresSecurity(
+req = operations.BaggageTripAndContactRequest(
+    security=operations.BaggageTripAndContactSecurity(
         auth=shared.SchemeAuth(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
-    query_params=operations.AllFaresQueryParams(
-        cabin_class="vitae",
-        catalogues="fugiat",
-        destination="enim",
-        fare_family="et",
-        origin="aspernatur",
-        return_date="fuga",
-        trackingid="odit",
-        travel_date="voluptas",
-        travelers="voluptas",
+    path_params=operations.BaggageTripAndContactPathParams(
+        search_id="quo",
     ),
-    headers=operations.AllFaresHeaders(
-        accept="facilis",
+    headers=operations.BaggageTripAndContactHeaders(
+        accept="rerum",
     ),
 )
     
-res = s.sdk.all_fares(req)
+res = s.baggage.baggage_trip_and_contact(req)
 
-if res.all_fares_200_application_json_string is not None:
+if res.baggage_trip_and_contact_200_application_json_string is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -49,11 +40,13 @@ if res.all_fares_200_application_json_string is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Baggage
+
+* `baggage_trip_and_contact` - Baggage Trip and Contact
+
+### Offers
 
 * `all_fares` - All Fares
-* `auto_check_in` - Auto Check-In
-* `baggage_trip_and_contact` - Baggage Trip and Contact
 * `best_fares` - Best Fares
 * `deep_links` - Deep Links
 * `fares` - Fares
@@ -63,10 +56,23 @@ if res.all_fares_200_application_json_string is not None:
 * `lowest_fares` - Lowest Fares
 * `ond_route` - OND Route
 * `ond_status` - OND Status
-* `orders` - Orders
-* `price_offers` - Price Offers
-* `seat_details` - Seat Details
 * `top_ond` - Top OND
+
+### Orders
+
+* `orders` - Orders
+
+### Preflight
+
+* `auto_check_in` - Auto Check-In
+
+### Promotions
+
+* `price_offers` - Price Offers
+
+### Reference Data
+
+* `seat_details` - Seat Details
 
 <!-- End SDK Available Operations -->
 

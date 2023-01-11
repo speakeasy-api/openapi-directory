@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysIDRequestBody:
-    labels: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    labels: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysID200ApplicationJSONSSHKey:
-    created: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
-    fingerprint: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    labels: dict[str, str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    public_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_key') }})
+    created: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
+    fingerprint: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    public_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_key') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysID200ApplicationJSON:
-    ssh_key: PutSSHKeysID200ApplicationJSONSSHKey = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssh_key') }})
+    ssh_key: PutSSHKeysID200ApplicationJSONSSHKey = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssh_key') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysIDRequest:
-    path_params: PutSSHKeysIDPathParams = field()
-    request: Optional[PutSSHKeysIDRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutSSHKeysIDPathParams = dataclasses.field()
+    request: Optional[PutSSHKeysIDRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSSHKeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    put_ssh_keys_id_200_application_json_object: Optional[PutSSHKeysID200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    put_ssh_keys_id_200_application_json_object: Optional[PutSSHKeysID200ApplicationJSON] = dataclasses.field(default=None)
     

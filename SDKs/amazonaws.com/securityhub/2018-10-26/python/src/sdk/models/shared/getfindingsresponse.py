@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awssecurityfinding as shared_awssecurityfinding
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFindingsResponse:
-    findings: List[AwsSecurityFinding] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Findings') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    findings: list[shared_awssecurityfinding.AwsSecurityFinding] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Findings') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

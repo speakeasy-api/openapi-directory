@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesURLQueryParams:
-    url: str = field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
-    is_private: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'isPrivate', 'style': 'form', 'explode': True }})
+    url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
+    is_private: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isPrivate', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesURLRequest:
-    query_params: PostFilesURLQueryParams = field()
+    query_params: PostFilesURLQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFilesURLResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

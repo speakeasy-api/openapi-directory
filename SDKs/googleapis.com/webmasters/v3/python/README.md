@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,64 +21,68 @@ req = operations.WebmastersSearchanalyticsQueryRequest(
         option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.WebmastersSearchanalyticsQueryPathParams(
-        site_url="aut",
+        site_url="non",
     ),
     query_params=operations.WebmastersSearchanalyticsQueryQueryParams(
         alt="json",
-        fields="et",
-        key="exercitationem",
-        oauth_token="omnis",
+        fields="eos",
+        key="aut",
+        oauth_token="dolores",
         pretty_print=True,
-        quota_user="magnam",
-        user_ip="necessitatibus",
+        quota_user="beatae",
+        user_ip="aliquid",
     ),
     request=shared.SearchAnalyticsQueryRequest(
-        aggregation_type="sunt",
-        data_state="quia",
+        aggregation_type="adipisci",
+        data_state="nostrum",
         dimension_filter_groups=[
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
-                        dimension="quia",
-                        expression="consectetur",
-                        operator="doloremque",
+                        dimension="aut",
+                        expression="cumque",
+                        operator="et",
                     ),
                 ],
-                group_type="sit",
+                group_type="atque",
             ),
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
-                        dimension="voluptatum",
-                        expression="modi",
-                        operator="id",
+                        dimension="nobis",
+                        expression="doloribus",
+                        operator="veniam",
                     ),
                     shared.APIDimensionFilter(
-                        dimension="laboriosam",
-                        expression="qui",
-                        operator="voluptas",
+                        dimension="rem",
+                        expression="pariatur",
+                        operator="totam",
+                    ),
+                    shared.APIDimensionFilter(
+                        dimension="error",
+                        expression="et",
+                        operator="dolore",
                     ),
                 ],
-                group_type="exercitationem",
+                group_type="corporis",
             ),
         ],
         dimensions=[
-            "quaerat",
-            "aspernatur",
-            "animi",
+            "blanditiis",
+            "vitae",
         ],
-        end_date="voluptatem",
-        row_limit=2546119660664386404,
-        search_type="maiores",
-        start_date="aliquid",
-        start_row=8414654423399060815,
+        end_date="ullam",
+        row_limit=5161140233781953582,
+        search_type="dolorem",
+        start_date="ea",
+        start_row=940405060983898307,
     ),
 )
     

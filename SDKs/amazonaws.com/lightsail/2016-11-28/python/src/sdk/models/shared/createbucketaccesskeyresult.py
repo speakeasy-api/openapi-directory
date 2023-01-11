@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accesskey as shared_accesskey
+from ..shared import operation as shared_operation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateBucketAccessKeyResult:
-    access_key: Optional[AccessKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessKey') }})
-    operations: Optional[List[Operation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
+    access_key: Optional[shared_accesskey.AccessKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessKey') }})
+    operations: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
     

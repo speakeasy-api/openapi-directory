@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,36 +25,50 @@ s.config_security(
     
 req = operations.PutEventsRequest(
     headers=operations.PutEventsHeaders(
-        x_amz_algorithm="soluta",
-        x_amz_content_sha256="vel",
-        x_amz_credential="fuga",
-        x_amz_date="ut",
-        x_amz_security_token="non",
-        x_amz_signature="nulla",
-        x_amz_signed_headers="numquam",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="est",
+        x_amz_credential="id",
+        x_amz_date="voluptatem",
+        x_amz_security_token="fuga",
+        x_amz_signature="aperiam",
+        x_amz_signed_headers="facilis",
     ),
     request=operations.PutEventsRequestBody(
         event_list=[
             shared.Event(
-                event_id="fugiat",
-                event_type="laboriosam",
-                event_value=3.200000,
+                event_id="atque",
+                event_type="recusandae",
+                event_value=44.099998,
                 impression=[
-                    "recusandae",
+                    "atque",
+                    "iure",
+                    "qui",
                 ],
-                item_id="incidunt",
-                properties="delectus",
-                recommendation_id="qui",
-                sent_at="1997-07-06T12:52:50Z",
+                item_id="voluptas",
+                properties="sunt",
+                recommendation_id="ratione",
+                sent_at="2013-10-07T01:00:59Z",
+            ),
+            shared.Event(
+                event_id="excepturi",
+                event_type="vel",
+                event_value=63.099998,
+                impression=[
+                    "sapiente",
+                ],
+                item_id="officia",
+                properties="id",
+                recommendation_id="voluptatibus",
+                sent_at="1995-07-01T12:28:08Z",
             ),
         ],
-        session_id="fuga",
-        tracking_id="at",
-        user_id="ex",
+        session_id="dolor",
+        tracking_id="itaque",
+        user_id="veritatis",
     ),
 )
     
-res = s.sdk.put_events(req)
+res = s.put_events(req)
 
 if res.status_code == 200:
     # handle response

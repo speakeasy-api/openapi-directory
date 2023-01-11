@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import task as shared_task
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTaskPathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaskRequest:
-    path_params: GetTaskPathParams = field()
-    security: GetTaskSecurity = field()
+    path_params: GetTaskPathParams = dataclasses.field()
+    security: GetTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    task: Optional[shared.Task] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    task: Optional[shared_task.Task] = dataclasses.field(default=None)
     

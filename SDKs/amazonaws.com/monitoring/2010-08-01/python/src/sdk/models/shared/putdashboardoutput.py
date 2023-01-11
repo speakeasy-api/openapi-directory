@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dashboardvalidationmessage as shared_dashboardvalidationmessage
 
 
-@dataclass
+@dataclasses.dataclass
 class PutDashboardOutput:
-    dashboard_validation_messages: Optional[List[DashboardValidationMessage]] = field(default=None)
+    dashboard_validation_messages: Optional[list[shared_dashboardvalidationmessage.DashboardValidationMessage]] = dataclasses.field(default=None)
     

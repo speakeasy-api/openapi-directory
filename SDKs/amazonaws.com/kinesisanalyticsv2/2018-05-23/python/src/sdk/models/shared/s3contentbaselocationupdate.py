@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,12 +8,12 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class S3ContentBaseLocationUpdate:
     r"""S3ContentBaseLocationUpdate
     The information required to update the S3 base location that holds the application.
     """
     
-    bucket_arn_update: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BucketARNUpdate') }})
-    base_path_update: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BasePathUpdate') }})
+    bucket_arn_update: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BucketARNUpdate') }})
+    base_path_update: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BasePathUpdate') }})
     

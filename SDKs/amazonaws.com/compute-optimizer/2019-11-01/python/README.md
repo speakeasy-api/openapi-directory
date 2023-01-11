@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,13 +25,13 @@ s.config_security(
     
 req = operations.DescribeRecommendationExportJobsRequest(
     headers=operations.DescribeRecommendationExportJobsHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="ut",
-        x_amz_credential="sed",
-        x_amz_date="quibusdam",
-        x_amz_security_token="harum",
-        x_amz_signature="repudiandae",
-        x_amz_signed_headers="similique",
+        x_amz_algorithm="itaque",
+        x_amz_content_sha256="corrupti",
+        x_amz_credential="voluptatem",
+        x_amz_date="quasi",
+        x_amz_security_token="repellat",
+        x_amz_signature="rem",
+        x_amz_signed_headers="nisi",
         x_amz_target="ComputeOptimizerService.DescribeRecommendationExportJobs",
     ),
     request=shared.DescribeRecommendationExportJobsRequest(
@@ -40,29 +39,22 @@ req = operations.DescribeRecommendationExportJobsRequest(
             shared.JobFilter(
                 name="JobStatus",
                 values=[
-                    "rerum",
-                ],
-            ),
-            shared.JobFilter(
-                name="JobStatus",
-                values=[
-                    "cumque",
-                    "accusamus",
-                    "voluptates",
+                    "soluta",
+                    "laudantium",
                 ],
             ),
         ],
         job_ids=[
-            "inventore",
-            "quibusdam",
-            "minima",
+            "eaque",
+            "ex",
+            "cum",
         ],
-        max_results=8170362699033353861,
-        next_token="adipisci",
+        max_results=7436471626629558277,
+        next_token="sunt",
     ),
 )
     
-res = s.sdk.describe_recommendation_export_jobs(req)
+res = s.describe_recommendation_export_jobs(req)
 
 if res.describe_recommendation_export_jobs_response is not None:
     # handle response

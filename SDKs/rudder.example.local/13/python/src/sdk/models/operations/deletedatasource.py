@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import datasource as shared_datasource
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataSourcePathParams:
-    datasource_id: str = field(metadata={'path_param': { 'field_name': 'datasourceId', 'style': 'simple', 'explode': False }})
+    datasource_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'datasourceId', 'style': 'simple', 'explode': False }})
     
 class DeleteDataSource200ApplicationJSONActionEnum(str, Enum):
     DELETE_DATA_SOURCE = "deleteDataSource"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteDataSource200ApplicationJSONData:
-    datasources: List[shared.Datasource] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasources') }})
+    datasources: list[shared_datasource.Datasource] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasources') }})
     
 class DeleteDataSource200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class DeleteDataSource200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteDataSource200ApplicationJSON:
-    action: DeleteDataSource200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: DeleteDataSource200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: DeleteDataSource200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: DeleteDataSource200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: DeleteDataSource200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: DeleteDataSource200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataSourceRequest:
-    path_params: DeleteDataSourcePathParams = field()
+    path_params: DeleteDataSourcePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDataSourceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_data_source_200_application_json_object: Optional[DeleteDataSource200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_data_source_200_application_json_object: Optional[DeleteDataSource200ApplicationJSON] = dataclasses.field(default=None)
     

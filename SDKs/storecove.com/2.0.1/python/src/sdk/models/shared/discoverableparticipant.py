@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -15,15 +15,15 @@ class DiscoverableParticipantDocumentTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DiscoverableParticipant:
     r"""DiscoverableParticipant
     A participant to be discovered.
     """
     
-    identifier: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identifier') }})
-    scheme: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scheme') }})
-    document_types: Optional[List[DiscoverableParticipantDocumentTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentTypes') }})
-    meta_scheme: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metaScheme') }})
-    network: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    identifier: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identifier') }})
+    scheme: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scheme') }})
+    document_types: Optional[list[DiscoverableParticipantDocumentTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentTypes') }})
+    meta_scheme: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metaScheme') }})
+    network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
     

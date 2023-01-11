@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AccessSavePathParams:
-    filename: str = field(metadata={'path_param': { 'field_name': 'filename', 'style': 'simple', 'explode': False }})
+    filename: str = dataclasses.field(metadata={'path_param': { 'field_name': 'filename', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccessSaveRequest:
-    path_params: AccessSavePathParams = field()
+    path_params: AccessSavePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AccessSaveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_save_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_save_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

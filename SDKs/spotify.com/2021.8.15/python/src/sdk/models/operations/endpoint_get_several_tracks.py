@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
+from ..shared import tracksobject as shared_tracksobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralTracksQueryParams:
-    ids: str = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
-    market: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    ids: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    market: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralTracksHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralTracksSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralTracksRequest:
-    headers: EndpointGetSeveralTracksHeaders = field()
-    query_params: EndpointGetSeveralTracksQueryParams = field()
-    security: EndpointGetSeveralTracksSecurity = field()
+    headers: EndpointGetSeveralTracksHeaders = dataclasses.field()
+    query_params: EndpointGetSeveralTracksQueryParams = dataclasses.field()
+    security: EndpointGetSeveralTracksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetSeveralTracksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
-    tracks_object: Optional[shared.TracksObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
+    tracks_object: Optional[shared_tracksobject.TracksObject] = dataclasses.field(default=None)
     

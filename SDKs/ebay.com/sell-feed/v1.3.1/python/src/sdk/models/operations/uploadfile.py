@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import formdatacontentdisposition as shared_formdatacontentdisposition
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadFilePathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileRequest:
-    path_params: UploadFilePathParams = field()
-    security: UploadFileSecurity = field()
-    request: Optional[shared.FormDataContentDisposition] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: UploadFilePathParams = dataclasses.field()
+    security: UploadFileSecurity = dataclasses.field()
+    request: Optional[shared_formdatacontentdisposition.FormDataContentDisposition] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    upload_file_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    upload_file_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

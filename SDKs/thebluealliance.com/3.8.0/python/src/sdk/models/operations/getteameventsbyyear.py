@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import event as shared_event
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearPathParams:
-    team_key: str = field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
-    year: int = field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
+    team_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
+    year: int = dataclasses.field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearRequest:
-    headers: GetTeamEventsByYearHeaders = field()
-    path_params: GetTeamEventsByYearPathParams = field()
-    security: GetTeamEventsByYearSecurity = field()
+    headers: GetTeamEventsByYearHeaders = dataclasses.field()
+    path_params: GetTeamEventsByYearPathParams = dataclasses.field()
+    security: GetTeamEventsByYearSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventsByYearResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    events: Optional[List[shared.Event]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    events: Optional[list[shared_event.Event]] = dataclasses.field(default=None)
     

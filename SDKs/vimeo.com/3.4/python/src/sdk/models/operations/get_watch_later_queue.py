@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWatchLaterQueuePathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class GetWatchLaterQueueDirectionEnum(str, Enum):
     ASC = "asc"
@@ -27,32 +28,32 @@ class GetWatchLaterQueueSortEnum(str, Enum):
     PLAYS = "plays"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWatchLaterQueueQueryParams:
-    direction: Optional[GetWatchLaterQueueDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    filter: Optional[GetWatchLaterQueueFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    filter_embeddable: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'filter_embeddable', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetWatchLaterQueueSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetWatchLaterQueueDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    filter: Optional[GetWatchLaterQueueFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter_embeddable: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter_embeddable', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetWatchLaterQueueSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWatchLaterQueueSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWatchLaterQueueRequest:
-    path_params: GetWatchLaterQueuePathParams = field()
-    query_params: GetWatchLaterQueueQueryParams = field()
-    security: GetWatchLaterQueueSecurity = field()
+    path_params: GetWatchLaterQueuePathParams = dataclasses.field()
+    query_params: GetWatchLaterQueueQueryParams = dataclasses.field()
+    security: GetWatchLaterQueueSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWatchLaterQueueResponse:
-    content_type: str = field()
-    status_code: int = field()
-    videos: Optional[List[shared.Video]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    videos: Optional[list[shared_video.Video]] = dataclasses.field(default=None)
     

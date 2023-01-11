@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import certificate as shared_certificate
 
 
-@dataclass
+@dataclasses.dataclass
 class OneCertPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OneCertSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OneCertRequest:
-    path_params: OneCertPathParams = field()
-    security: OneCertSecurity = field()
+    path_params: OneCertPathParams = dataclasses.field()
+    security: OneCertSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OneCertResponse:
-    content_type: str = field()
-    status_code: int = field()
-    certificate: Optional[shared.Certificate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    certificate: Optional[shared_certificate.Certificate] = dataclasses.field(default=None)
     

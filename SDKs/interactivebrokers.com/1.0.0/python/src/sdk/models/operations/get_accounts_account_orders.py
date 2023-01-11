@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import orderstate as shared_orderstate
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountsAccountOrdersPathParams:
-    account: str = field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
+    account: str = dataclasses.field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountsAccountOrdersRequest:
-    path_params: GetAccountsAccountOrdersPathParams = field()
+    path_params: GetAccountsAccountOrdersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountsAccountOrdersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    order_states: Optional[List[shared.OrderState]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    order_states: Optional[list[shared_orderstate.OrderState]] = dataclasses.field(default=None)
     

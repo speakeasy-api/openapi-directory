@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import settingmetadata as shared_settingmetadata
+from ..shared import customconfiguration as shared_customconfiguration
+from ..shared import standardhl7configuration as shared_standardhl7configuration
 
 class ReceiverJurisdictionalFiltersMatchFieldsEnum(str, Enum):
     FACILITY_OR_PATIENT_ADDRESS = "FACILITY_OR_PATIENT_ADDRESS"
@@ -13,15 +15,15 @@ class ReceiverJurisdictionalFiltersMatchFieldsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReceiverJurisdictionalFilters:
     r"""ReceiverJurisdictionalFilters
     A single filter
     """
     
-    does_not_match: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doesNotMatch') }})
-    match_fields: Optional[ReceiverJurisdictionalFiltersMatchFieldsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchFields') }})
-    match_values: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchValues') }})
+    does_not_match: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('doesNotMatch') }})
+    match_fields: Optional[ReceiverJurisdictionalFiltersMatchFieldsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchFields') }})
+    match_values: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchValues') }})
     
 class ReceiverTimingFrequencyEnum(str, Enum):
     REAL_TIME = "REAL_TIME"
@@ -30,44 +32,44 @@ class ReceiverTimingFrequencyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReceiverTiming:
     r"""ReceiverTiming
     When the report is sent if not immediately
     """
     
-    frequency: ReceiverTimingFrequencyEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequency') }})
-    daily_at: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyAt') }})
+    frequency: ReceiverTimingFrequencyEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequency') }})
+    daily_at: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyAt') }})
     
 
 @dataclass_json
-@dataclass
-class ReceiverInput:
-    r"""ReceiverInput
-    A receiver of reports from the data hub
-    """
-    
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    timing: ReceiverTiming = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timing') }})
-    topic: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
-    jurisdictional_filters: Optional[List[ReceiverJurisdictionalFilters]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jurisdictionalFilters') }})
-    translations: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('translations') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Receiver:
     r"""Receiver
     A receiver of reports from the data hub
     """
     
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    timing: ReceiverTiming = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timing') }})
-    topic: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
-    jurisdictional_filters: Optional[List[ReceiverJurisdictionalFilters]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jurisdictionalFilters') }})
-    meta: Optional[SettingMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
-    organization_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizationName') }})
-    translations: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('translations') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    timing: ReceiverTiming = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timing') }})
+    topic: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
+    jurisdictional_filters: Optional[list[ReceiverJurisdictionalFilters]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jurisdictionalFilters') }})
+    meta: Optional[shared_settingmetadata.SettingMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    organization_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizationName') }})
+    translations: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('translations') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class ReceiverInput:
+    r"""ReceiverInput
+    A receiver of reports from the data hub
+    """
+    
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    timing: ReceiverTiming = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timing') }})
+    topic: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
+    jurisdictional_filters: Optional[list[ReceiverJurisdictionalFilters]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jurisdictionalFilters') }})
+    translations: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('translations') }})
     

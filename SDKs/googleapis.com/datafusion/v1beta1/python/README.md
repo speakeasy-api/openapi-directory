@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,81 +20,75 @@ req = operations.DatafusionProjectsLocationsInstancesCreateRequest(
     security=operations.DatafusionProjectsLocationsInstancesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DatafusionProjectsLocationsInstancesCreatePathParams(
-        parent="qui",
+        parent="voluptate",
     ),
     query_params=operations.DatafusionProjectsLocationsInstancesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="delectus",
-        alt="json",
-        callback="et",
-        fields="consequuntur",
-        instance_id="itaque",
-        key="architecto",
-        oauth_token="magni",
+        dollar_xgafv="1",
+        access_token="earum",
+        alt="media",
+        callback="velit",
+        fields="assumenda",
+        instance_id="nemo",
+        key="ipsam",
+        oauth_token="sed",
         pretty_print=False,
-        quota_user="maiores",
-        upload_type="ut",
-        upload_protocol="qui",
+        quota_user="pariatur",
+        upload_type="qui",
+        upload_protocol="excepturi",
     ),
     request=shared.InstanceInput(
         accelerators=[
             shared.Accelerator(
-                accelerator_type="HEALTHCARE",
-            ),
-            shared.Accelerator(
-                accelerator_type="CDC",
-            ),
-            shared.Accelerator(
-                accelerator_type="HEALTHCARE",
+                accelerator_type="ACCELERATOR_TYPE_UNSPECIFIED",
             ),
         ],
         available_version=[
             shared.Version(
                 available_features=[
-                    "eum",
-                    "sapiente",
-                    "culpa",
+                    "quasi",
+                    "minus",
+                    "optio",
                 ],
                 default_version=False,
-                type="TYPE_PREVIEW",
-                version_number="ex",
+                type="TYPE_UNSPECIFIED",
+                version_number="et",
             ),
         ],
         crypto_key_config=shared.CryptoKeyConfig(
-            key_reference="dolor",
+            key_reference="recusandae",
         ),
-        dataproc_service_account="ut",
-        description="saepe",
-        display_name="nesciunt",
+        dataproc_service_account="pariatur",
+        description="pariatur",
+        display_name="earum",
         enable_rbac=True,
-        enable_stackdriver_logging=False,
-        enable_stackdriver_monitoring=True,
+        enable_stackdriver_logging=True,
+        enable_stackdriver_monitoring=False,
         event_publish_config=shared.EventPublishConfig(
             enabled=True,
-            topic="dignissimos",
+            topic="architecto",
         ),
         labels={
-            "et": "repellendus",
-            "et": "nemo",
+            "similique": "et",
+            "itaque": "voluptates",
         },
         network_config=shared.NetworkConfig(
-            ip_allocation="maxime",
-            network="iure",
+            ip_allocation="minima",
+            network="placeat",
         ),
         options={
-            "molestias": "pariatur",
-            "omnis": "eius",
+            "illo": "odio",
+            "officia": "tenetur",
         },
         private_instance=False,
-        type="TYPE_UNSPECIFIED",
-        version="omnis",
-        zone="quia",
+        type="BASIC",
+        version="nostrum",
+        zone="est",
     ),
 )
     

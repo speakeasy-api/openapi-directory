@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateArtifactPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateArtifactQueryParams:
-    artifact_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'artifact_id', 'style': 'form', 'explode': True }})
+    artifact_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artifact_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateArtifactRequest:
-    path_params: RegistryCreateArtifactPathParams = field()
-    query_params: RegistryCreateArtifactQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RegistryCreateArtifactPathParams = dataclasses.field()
+    query_params: RegistryCreateArtifactQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateArtifactResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artifact: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artifact: Optional[Any] = dataclasses.field(default=None)
     

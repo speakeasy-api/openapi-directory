@@ -1,44 +1,45 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import district_list as shared_district_list
+from ..shared import webcast as shared_webcast
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Event:
-    end_date: date = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_date'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    event_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_code') }})
-    event_type: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type') }})
-    event_type_string: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type_string') }})
-    key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    start_date: date = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_date'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    year: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('year') }})
-    address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
-    city: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('city') }})
-    country: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
-    district: Optional[DistrictList] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('district') }})
-    division_keys: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('division_keys') }})
-    first_event_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_event_code') }})
-    first_event_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_event_id') }})
-    gmaps_place_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmaps_place_id') }})
-    gmaps_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmaps_url') }})
-    lat: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lat') }})
-    lng: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lng') }})
-    location_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location_name') }})
-    parent_event_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent_event_key') }})
-    playoff_type: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_type') }})
-    playoff_type_string: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_type_string') }})
-    postal_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postal_code') }})
-    short_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('short_name') }})
-    state_prov: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state_prov') }})
-    timezone: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timezone') }})
-    webcasts: Optional[List[Webcast]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webcasts') }})
-    website: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('website') }})
-    week: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('week') }})
+    end_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_date'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    event_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_code') }})
+    event_type: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type') }})
+    event_type_string: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type_string') }})
+    key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    start_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_date'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    year: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('year') }})
+    address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
+    city: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('city') }})
+    country: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
+    district: Optional[shared_district_list.DistrictList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('district') }})
+    division_keys: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('division_keys') }})
+    first_event_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_event_code') }})
+    first_event_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_event_id') }})
+    gmaps_place_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmaps_place_id') }})
+    gmaps_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmaps_url') }})
+    lat: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lat') }})
+    lng: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lng') }})
+    location_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location_name') }})
+    parent_event_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent_event_key') }})
+    playoff_type: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_type') }})
+    playoff_type_string: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_type_string') }})
+    postal_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postal_code') }})
+    short_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('short_name') }})
+    state_prov: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state_prov') }})
+    timezone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timezone') }})
+    webcasts: Optional[list[shared_webcast.Webcast]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webcasts') }})
+    website: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('website') }})
+    week: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('week') }})
     

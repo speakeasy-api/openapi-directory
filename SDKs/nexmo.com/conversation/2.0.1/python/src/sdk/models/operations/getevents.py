@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import event_retrieved as shared_event_retrieved
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsPathParams:
-    conversation_id: str = field(metadata={'path_param': { 'field_name': 'conversation_id', 'style': 'simple', 'explode': False }})
+    conversation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'conversation_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsRequest:
-    path_params: GetEventsPathParams = field()
+    path_params: GetEventsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    event_retrieveds: Optional[List[shared.EventRetrieved]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_retrieveds: Optional[list[shared_event_retrieved.EventRetrieved]] = dataclasses.field(default=None)
     

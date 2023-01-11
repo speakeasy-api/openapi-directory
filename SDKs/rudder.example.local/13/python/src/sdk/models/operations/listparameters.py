@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import parameter as shared_parameter
 
 class ListParameters200ApplicationJSONActionEnum(str, Enum):
     LIST_PARAMETERS = "listParameters"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListParameters200ApplicationJSONData:
     r"""ListParameters200ApplicationJSONData
     Parameters
     """
     
-    parameters: List[shared.Parameter] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    parameters: list[shared_parameter.Parameter] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
     
 class ListParameters200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -24,16 +24,16 @@ class ListParameters200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListParameters200ApplicationJSON:
-    action: ListParameters200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ListParameters200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ListParameters200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ListParameters200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ListParameters200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ListParameters200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListParametersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_parameters_200_application_json_object: Optional[ListParameters200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_parameters_200_application_json_object: Optional[ListParameters200ApplicationJSON] = dataclasses.field(default=None)
     

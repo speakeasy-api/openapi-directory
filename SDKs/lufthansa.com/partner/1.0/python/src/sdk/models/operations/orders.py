@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class OrdersPathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    order_id: str = field(metadata={'path_param': { 'field_name': 'orderID', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orderID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrdersHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrdersSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrdersRequest:
-    headers: OrdersHeaders = field()
-    path_params: OrdersPathParams = field()
-    security: OrdersSecurity = field()
+    headers: OrdersHeaders = dataclasses.field()
+    path_params: OrdersPathParams = dataclasses.field()
+    security: OrdersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrdersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    orders_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    orders_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

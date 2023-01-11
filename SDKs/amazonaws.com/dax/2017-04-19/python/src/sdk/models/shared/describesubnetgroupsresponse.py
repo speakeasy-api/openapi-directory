@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import subnetgroup as shared_subnetgroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeSubnetGroupsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    subnet_groups: Optional[List[SubnetGroup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SubnetGroups') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    subnet_groups: Optional[list[shared_subnetgroup.SubnetGroup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SubnetGroups') }})
     

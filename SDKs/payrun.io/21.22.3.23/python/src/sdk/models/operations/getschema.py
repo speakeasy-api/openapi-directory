@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSchemaPathParams:
-    dto_data_type: str = field(metadata={'path_param': { 'field_name': 'DtoDataType', 'style': 'simple', 'explode': False }})
+    dto_data_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'DtoDataType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchemaHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchemaRequest:
-    headers: GetSchemaHeaders = field()
-    path_params: GetSchemaPathParams = field()
+    headers: GetSchemaHeaders = dataclasses.field()
+    path_params: GetSchemaPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchemaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    get_schema_200_application_json_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    get_schema_200_application_json_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

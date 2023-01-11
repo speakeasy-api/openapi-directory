@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 
 
-@dataclass
+@dataclasses.dataclass
 class Range:
     r"""Range
     Specifies one range of days or times to exclude from use for training an anomaly detection model.
     """
     
-    end_time: datetime = field()
-    start_time: datetime = field()
+    end_time: datetime = dataclasses.field()
+    start_time: datetime = dataclasses.field()
     

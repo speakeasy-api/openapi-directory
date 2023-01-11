@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PulsarDataExporterConfig:
     r"""PulsarDataExporterConfig
     The configuration for kafka access
     """
     
-    namespace: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('namespace') }})
-    tenant: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tenant') }})
-    topic: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
-    uri: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    namespace: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('namespace') }})
+    tenant: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tenant') }})
+    topic: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topic') }})
+    uri: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     

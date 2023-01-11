@@ -1,54 +1,58 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import four_hundred_and_oneresponse as shared_four_hundred_and_oneresponse
+from ..shared import four_hundred_and_threeresponse as shared_four_hundred_and_threeresponse
+from ..shared import messengeraccountresponse as shared_messengeraccountresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccountRequestBody:
-    access_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
-    external_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_id') }})
-    applications: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    access_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    external_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_id') }})
+    applications: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccountSecurity:
-    basic_auth: Optional[shared.SchemeBasicAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    bearer_auth: Optional[shared.SchemeBearerAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    basic_auth: Optional[shared_security.SchemeBasicAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    bearer_auth: Optional[shared_security.SchemeBearerAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccount400ApplicationJSONInvalidParams:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccount400ApplicationJSON:
-    detail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    instance: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
-    invalid_params: Optional[List[CreateMessengerAccount400ApplicationJSONInvalidParams]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invalid_params') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    instance: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
+    invalid_params: Optional[list[CreateMessengerAccount400ApplicationJSONInvalidParams]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invalid_params') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccountRequest:
-    request: CreateMessengerAccountRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateMessengerAccountSecurity = field()
+    request: CreateMessengerAccountRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateMessengerAccountSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateMessengerAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    four_hundred_and_one_response: Optional[shared.FourHundredAndOneResponse] = field(default=None)
-    four_hundred_and_three_response: Optional[shared.FourHundredAndThreeResponse] = field(default=None)
-    create_messenger_account_400_application_json_object: Optional[CreateMessengerAccount400ApplicationJSON] = field(default=None)
-    messenger_account_response: Optional[shared.MessengerAccountResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred_and_one_response: Optional[shared_four_hundred_and_oneresponse.FourHundredAndOneResponse] = dataclasses.field(default=None)
+    four_hundred_and_three_response: Optional[shared_four_hundred_and_threeresponse.FourHundredAndThreeResponse] = dataclasses.field(default=None)
+    create_messenger_account_400_application_json_object: Optional[CreateMessengerAccount400ApplicationJSON] = dataclasses.field(default=None)
+    messenger_account_response: Optional[shared_messengeraccountresponse.MessengerAccountResponse] = dataclasses.field(default=None)
     

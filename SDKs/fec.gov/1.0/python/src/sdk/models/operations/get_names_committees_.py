@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import committeesearchlist as shared_committeesearchlist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesCommitteesQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    q: List[str] = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    q: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesCommitteesRequest:
-    query_params: GetNamesCommitteesQueryParams = field()
+    query_params: GetNamesCommitteesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesCommitteesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    committee_search_list: Optional[shared.CommitteeSearchList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    committee_search_list: Optional[shared_committeesearchlist.CommitteeSearchList] = dataclasses.field(default=None)
     

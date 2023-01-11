@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetProfileRequest(
     query_params=operations.GetProfileQueryParams(
-        id="sed",
-        service="optio",
+        id="inventore",
+        service="quia",
     ),
 )
     
-res = s.sdk.get_profile(req)
+res = s.get_profile(req)
 
 if res.status_code == 200:
     # handle response

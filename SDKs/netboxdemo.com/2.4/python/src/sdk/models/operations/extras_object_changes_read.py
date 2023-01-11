@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import objectchange as shared_objectchange
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasObjectChangesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasObjectChangesReadRequest:
-    path_params: ExtrasObjectChangesReadPathParams = field()
+    path_params: ExtrasObjectChangesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasObjectChangesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    object_change: Optional[shared.ObjectChange] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    object_change: Optional[shared_objectchange.ObjectChange] = dataclasses.field(default=None)
     

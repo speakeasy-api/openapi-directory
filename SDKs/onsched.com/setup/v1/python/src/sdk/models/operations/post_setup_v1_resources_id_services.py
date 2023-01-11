@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import resourceviewmodel as shared_resourceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesIDServicesPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesIDServicesRequests:
-    strings: Optional[List[str]] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    strings1: Optional[List[str]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    strings2: Optional[List[str]] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    strings3: Optional[List[str]] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    strings: Optional[list[str]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    strings1: Optional[list[str]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    strings2: Optional[list[str]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    strings3: Optional[list[str]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesIDServicesRequest:
-    path_params: PostSetupV1ResourcesIDServicesPathParams = field()
-    request: Optional[PostSetupV1ResourcesIDServicesRequests] = field(default=None)
+    path_params: PostSetupV1ResourcesIDServicesPathParams = dataclasses.field()
+    request: Optional[PostSetupV1ResourcesIDServicesRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesIDServicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_view_model: Optional[shared.ResourceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_view_model: Optional[shared_resourceviewmodel.ResourceViewModel] = dataclasses.field(default=None)
     

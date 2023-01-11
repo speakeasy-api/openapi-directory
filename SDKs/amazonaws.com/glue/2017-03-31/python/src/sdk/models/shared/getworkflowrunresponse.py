@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workflowrun as shared_workflowrun
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetWorkflowRunResponse:
-    run: Optional[WorkflowRun] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Run') }})
+    run: Optional[shared_workflowrun.WorkflowRun] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Run') }})
     

@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import token as shared_token
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountCreateVerificationRequestBody:
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCreateVerificationSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCreateVerificationRequest:
-    security: AccountCreateVerificationSecurity = field()
-    request: Optional[AccountCreateVerificationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AccountCreateVerificationSecurity = dataclasses.field()
+    request: Optional[AccountCreateVerificationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCreateVerificationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    token: Optional[shared.Token] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    token: Optional[shared_token.Token] = dataclasses.field(default=None)
     

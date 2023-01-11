@@ -38,3 +38,5 @@ from .uploadaptartifactmediaresponse import *
 from .uploadkfpartifactmediaresponse import *
 from .uploadyumartifactmediaresponse import *
 from .version import *
+
+__all__ = ["XgafvEnum","AltEnum","Binding","DockerImage","Expr","GoogleDevtoolsArtifactregistryV1File","HashTypeEnum","Hash","ImportAptArtifactsGcsSource","ImportAptArtifactsRequest","ImportYumArtifactsGcsSource","ImportYumArtifactsRequest","ListDockerImagesResponse","ListFilesResponse","ListLocationsResponse","ListMavenArtifactsResponse","ListNpmPackagesResponse","ListPackagesResponse","ListPythonPackagesResponse","ListRepositoriesResponse","ListTagsResponse","ListVersionsResponse","Location","MavenArtifact","MavenRepositoryConfigVersionPolicyEnum","MavenRepositoryConfig","NpmPackage","Operation","Package","Policy","PythonPackage","RepositoryFormatEnum","Repository","RepositoryInput","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","Tag","TestIamPermissionsRequest","TestIamPermissionsResponse","UploadAptArtifactMediaResponse","UploadKfpArtifactMediaResponse","UploadYumArtifactMediaResponse","Version"]

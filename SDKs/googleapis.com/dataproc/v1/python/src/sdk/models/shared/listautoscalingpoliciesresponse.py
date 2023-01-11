@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import autoscalingpolicy as shared_autoscalingpolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAutoscalingPoliciesResponse:
     r"""ListAutoscalingPoliciesResponse
     A response to a request to list autoscaling policies in a project.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    policies: Optional[List[AutoscalingPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    policies: Optional[list[shared_autoscalingpolicy.AutoscalingPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,76 +20,76 @@ req = operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest(
     security=operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="quibusdam",
+        parent="qui",
     ),
     query_params=operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="possimus",
+        access_token="rerum",
         alt="media",
-        callback="nihil",
-        connection_profile_id="est",
-        fields="quos",
-        key="sint",
-        oauth_token="facilis",
-        pretty_print=False,
-        quota_user="ipsa",
-        request_id="officia",
-        upload_type="in",
-        upload_protocol="nihil",
+        callback="dolor",
+        connection_profile_id="exercitationem",
+        fields="inventore",
+        key="voluptate",
+        oauth_token="excepturi",
+        pretty_print=True,
+        quota_user="aut",
+        request_id="et",
+        upload_type="ipsam",
+        upload_protocol="odit",
     ),
     request=shared.ConnectionProfileInput(
-        display_name="illo",
+        display_name="repudiandae",
         forward_ssh_connectivity=shared.ForwardSSHTunnelConnectivity(
-            hostname="quos",
-            password="facere",
-            port=9197929128000679882,
-            private_key="consequatur",
-            username="magnam",
+            hostname="repellat",
+            password="voluptatum",
+            port=3174294702629569041,
+            private_key="provident",
+            username="laboriosam",
         ),
         gcs_profile=shared.GcsProfile(
-            bucket_name="aliquid",
-            root_path="in",
+            bucket_name="placeat",
+            root_path="dignissimos",
         ),
         labels={
-            "vitae": "praesentium",
-            "dolorum": "fugit",
+            "reiciendis": "omnis",
         },
         mysql_profile=shared.MysqlProfileInput(
-            hostname="molestiae",
-            password="quisquam",
-            port=4830508113816580991,
+            hostname="quis",
+            password="quis",
+            port=2818121241612799699,
             ssl_config=shared.MysqlSslConfigInput(
-                ca_certificate="incidunt",
-                client_certificate="dolorum",
-                client_key="et",
+                ca_certificate="in",
+                client_certificate="at",
+                client_key="at",
             ),
-            username="accusamus",
+            username="molestiae",
         ),
         no_connectivity={
-            "necessitatibus": "animi",
+            "ipsam": "eos",
         },
         oracle_profile=shared.OracleProfile(
             connection_attributes={
-                "rerum": "voluptas",
+                "quia": "et",
+                "maxime": "similique",
+                "esse": "quo",
             },
-            database_service="placeat",
-            hostname="non",
-            password="sit",
-            port=3924871608859186553,
-            username="est",
+            database_service="et",
+            hostname="a",
+            password="commodi",
+            port=6029522833312950284,
+            username="qui",
         ),
         private_connectivity=shared.PrivateConnectivity(
-            private_connection_name="rerum",
+            private_connection_name="et",
         ),
         static_service_ip_connectivity={
-            "error": "distinctio",
-            "veritatis": "quia",
+            "beatae": "doloremque",
         },
     ),
 )

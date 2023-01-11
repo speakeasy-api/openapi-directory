@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -13,14 +13,14 @@ class IPReputationReputationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IPReputation:
     r"""IPReputation
     IP Reputation information for a set of IPs in a specific reputation category.
     """
     
-    ip_count: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipCount') }})
-    num_ips: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numIps') }})
-    reputation: Optional[IPReputationReputationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reputation') }})
-    sample_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleIps') }})
+    ip_count: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipCount') }})
+    num_ips: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numIps') }})
+    reputation: Optional[IPReputationReputationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reputation') }})
+    sample_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sampleIps') }})
     

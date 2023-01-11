@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.KeysAPICurrentRequest(
     path_params=operations.KeysAPICurrentPathParams(
-        serial="reiciendis",
+        serial="eum",
     ),
 )
     
-res = s.sdk.keys_api_current(req)
+res = s.keys_api.keys_api_current(req)
 
 if res.keys_api_current_200_application_json_one_of is not None:
     # handle response
@@ -33,12 +32,15 @@ if res.keys_api_current_200_application_json_one_of is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### KeysApi
 
 * `keys_api_current`
 * `keys_api_custom`
 * `keys_api_expiry`
 * `keys_api_find`
+
+### ProductsApi
+
 * `products_api_count`
 * `products_api_delete_product`
 * `products_api_delete_product2`
@@ -47,6 +49,9 @@ if res.keys_api_current_200_application_json_one_of is not None:
 * `products_api_patch_product`
 * `products_api_patch_product2`
 * `products_api_save`
+
+### SubscriptionsApi
+
 * `subscriptions_api_count`
 * `subscriptions_api_delete_subscription`
 * `subscriptions_api_delete_subscription2`

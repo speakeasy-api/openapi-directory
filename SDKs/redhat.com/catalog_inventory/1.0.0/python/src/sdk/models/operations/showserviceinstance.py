@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import serviceinstance as shared_serviceinstance
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInstancePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInstanceRequest:
-    path_params: ShowServiceInstancePathParams = field()
+    path_params: ShowServiceInstancePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInstanceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    service_instance: Optional[shared.ServiceInstance] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    service_instance: Optional[shared_serviceinstance.ServiceInstance] = dataclasses.field(default=None)
     

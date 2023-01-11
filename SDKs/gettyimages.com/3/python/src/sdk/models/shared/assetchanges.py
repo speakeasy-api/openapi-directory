@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import changedassetdetail as shared_changedassetdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AssetChanges:
-    change_set_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('change_set_id') }})
-    changed_assets: Optional[List[ChangedAssetDetail]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('changed_assets') }})
+    change_set_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('change_set_id') }})
+    changed_assets: Optional[list[shared_changedassetdetail.ChangedAssetDetail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('changed_assets') }})
     

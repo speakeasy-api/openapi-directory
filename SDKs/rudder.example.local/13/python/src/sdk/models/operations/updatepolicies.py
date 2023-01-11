@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -15,9 +15,9 @@ class UpdatePolicies200ApplicationJSONDataPoliciesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdatePolicies200ApplicationJSONData:
-    policies: UpdatePolicies200ApplicationJSONDataPoliciesEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    policies: UpdatePolicies200ApplicationJSONDataPoliciesEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
     
 class UpdatePolicies200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,16 +25,16 @@ class UpdatePolicies200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdatePolicies200ApplicationJSON:
-    action: UpdatePolicies200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: UpdatePolicies200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: UpdatePolicies200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: UpdatePolicies200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: UpdatePolicies200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: UpdatePolicies200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_policies_200_application_json_object: Optional[UpdatePolicies200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_policies_200_application_json_object: Optional[UpdatePolicies200ApplicationJSON] = dataclasses.field(default=None)
     

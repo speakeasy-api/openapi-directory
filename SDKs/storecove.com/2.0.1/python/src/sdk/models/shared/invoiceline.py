@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import additionalitemproperty as shared_additionalitemproperty
+from ..shared import delivery as shared_delivery
+from ..shared import tax as shared_tax
 
 class InvoiceLineQuantityUnitCodeEnum(str, Enum):
     TEN = "10"
@@ -2486,26 +2488,26 @@ class InvoiceLineQuantityUnitCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InvoiceLine:
-    amount_excluding_vat: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amountExcludingVat') }})
-    accounting_cost: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountingCost') }})
-    additional_item_properties: Optional[List[AdditionalItemProperty]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalItemProperties') }})
-    allowance_charge: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowanceCharge') }})
-    buyers_item_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buyersItemIdentification') }})
-    delivery: Optional[Delivery] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delivery') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    invoice_period: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invoicePeriod') }})
-    item_price: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemPrice') }})
-    line_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineId') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    order_line_reference_line_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineReferenceLineId') }})
-    quantity: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantity') }})
-    quantity_unit_code: Optional[InvoiceLineQuantityUnitCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityUnitCode') }})
-    sellers_item_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellersItemIdentification') }})
-    standard_item_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentification') }})
-    standard_item_identification_scheme_agency_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentificationSchemeAgencyId') }})
-    standard_item_identification_scheme_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentificationSchemeId') }})
-    tax: Optional[Tax] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tax') }})
-    taxes_duties_fees: Optional[List[Tax]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxes_duties_fees') }})
+    amount_excluding_vat: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amountExcludingVat') }})
+    accounting_cost: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountingCost') }})
+    additional_item_properties: Optional[list[shared_additionalitemproperty.AdditionalItemProperty]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalItemProperties') }})
+    allowance_charge: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowanceCharge') }})
+    buyers_item_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buyersItemIdentification') }})
+    delivery: Optional[shared_delivery.Delivery] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delivery') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    invoice_period: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invoicePeriod') }})
+    item_price: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemPrice') }})
+    line_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineId') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    order_line_reference_line_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orderLineReferenceLineId') }})
+    quantity: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantity') }})
+    quantity_unit_code: Optional[InvoiceLineQuantityUnitCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quantityUnitCode') }})
+    sellers_item_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sellersItemIdentification') }})
+    standard_item_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentification') }})
+    standard_item_identification_scheme_agency_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentificationSchemeAgencyId') }})
+    standard_item_identification_scheme_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('standardItemIdentificationSchemeId') }})
+    tax: Optional[shared_tax.Tax] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tax') }})
+    taxes_duties_fees: Optional[list[shared_tax.Tax]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxes_duties_fees') }})
     

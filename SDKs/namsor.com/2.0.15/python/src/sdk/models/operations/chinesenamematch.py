@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import namematchedout as shared_namematchedout
 
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchPathParams:
-    chinese_given_name_latin: str = field(metadata={'path_param': { 'field_name': 'chineseGivenNameLatin', 'style': 'simple', 'explode': False }})
-    chinese_name: str = field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
-    chinese_surname_latin: str = field(metadata={'path_param': { 'field_name': 'chineseSurnameLatin', 'style': 'simple', 'explode': False }})
+    chinese_given_name_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chineseGivenNameLatin', 'style': 'simple', 'explode': False }})
+    chinese_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
+    chinese_surname_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chineseSurnameLatin', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchRequest:
-    path_params: ChineseNameMatchPathParams = field()
-    security: ChineseNameMatchSecurity = field()
+    path_params: ChineseNameMatchPathParams = dataclasses.field()
+    security: ChineseNameMatchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    name_matched_out: Optional[shared.NameMatchedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    name_matched_out: Optional[shared_namematchedout.NameMatchedOut] = dataclasses.field(default=None)
     

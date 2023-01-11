@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV1RequestBodyFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV1RequestBodyImage:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image: str = field(metadata={'multipart_form': { 'field_name': 'image' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'image' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV1RequestBody:
-    file: AddImageWatermarkV1RequestBodyFile = field(metadata={'multipart_form': { 'file': True }})
-    image: AddImageWatermarkV1RequestBodyImage = field(metadata={'multipart_form': { 'file': True }})
-    margin: Optional[float] = field(default=None, metadata={'multipart_form': { 'field_name': 'margin' }})
-    transparency: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'transparency' }})
+    file: AddImageWatermarkV1RequestBodyFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
+    image: AddImageWatermarkV1RequestBodyImage = dataclasses.field(metadata={'multipart_form': { 'file': True }})
+    margin: Optional[float] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'margin' }})
+    transparency: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'transparency' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV14XxApplicationProblemPlusJSON:
-    errors: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    errors: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV1Request:
-    request: AddImageWatermarkV1RequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: AddImageWatermarkV1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddImageWatermarkV1Response:
-    content_type: str = field()
-    status_code: int = field()
-    add_image_watermark_v1_200_application_pdf_binary_string: Optional[bytes] = field(default=None)
-    add_image_watermark_v1_4_xx_application_problem_plus_json_object: Optional[AddImageWatermarkV14XxApplicationProblemPlusJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    add_image_watermark_v1_200_application_pdf_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    add_image_watermark_v1_4_xx_application_problem_plus_json_object: Optional[AddImageWatermarkV14XxApplicationProblemPlusJSON] = dataclasses.field(default=None)
     

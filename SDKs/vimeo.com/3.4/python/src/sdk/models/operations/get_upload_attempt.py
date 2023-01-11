@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import upload_attempt as shared_upload_attempt
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUploadAttemptPathParams:
-    upload: float = field(metadata={'path_param': { 'field_name': 'upload', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    upload: float = dataclasses.field(metadata={'path_param': { 'field_name': 'upload', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUploadAttemptSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUploadAttemptRequest:
-    path_params: GetUploadAttemptPathParams = field()
-    security: GetUploadAttemptSecurity = field()
+    path_params: GetUploadAttemptPathParams = dataclasses.field()
+    security: GetUploadAttemptSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUploadAttemptResponse:
-    content_type: str = field()
-    status_code: int = field()
-    upload_attempt: Optional[shared.UploadAttempt] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    upload_attempt: Optional[shared_upload_attempt.UploadAttempt] = dataclasses.field(default=None)
     

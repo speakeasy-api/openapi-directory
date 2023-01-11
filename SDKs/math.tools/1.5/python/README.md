@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,9 +23,9 @@ req = operations.GetNumbersBaseRequest(
         ),
     ),
     query_params=operations.GetNumbersBaseQueryParams(
-        from_=728171767558320508,
-        number=4202576256773833716,
-        to=7402369184756779626,
+        from_=8887604974755521055,
+        number=5888790884940999119,
+        to=8807121313158431121,
     ),
 )
     

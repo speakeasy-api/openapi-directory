@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DisablePathParams:
-    disabled: bool = field(metadata={'path_param': { 'field_name': 'disabled', 'style': 'simple', 'explode': False }})
-    source: str = field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
+    disabled: bool = dataclasses.field(metadata={'path_param': { 'field_name': 'disabled', 'style': 'simple', 'explode': False }})
+    source: str = dataclasses.field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DisableRequest:
-    path_params: DisablePathParams = field()
+    path_params: DisablePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DisableResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

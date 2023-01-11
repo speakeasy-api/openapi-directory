@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnameparsedout as shared_personalnameparsedout
 
 
-@dataclass
+@dataclasses.dataclass
 class ParseChineseNamePathParams:
-    chinese_name: str = field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
+    chinese_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseChineseNameSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseChineseNameRequest:
-    path_params: ParseChineseNamePathParams = field()
-    security: ParseChineseNameSecurity = field()
+    path_params: ParseChineseNamePathParams = dataclasses.field()
+    security: ParseChineseNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseChineseNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_parsed_out: Optional[shared.PersonalNameParsedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_parsed_out: Optional[shared_personalnameparsedout.PersonalNameParsedOut] = dataclasses.field(default=None)
     

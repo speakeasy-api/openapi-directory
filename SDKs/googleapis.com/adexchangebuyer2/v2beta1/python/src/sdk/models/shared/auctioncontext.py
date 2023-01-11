@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -10,11 +10,11 @@ class AuctionContextAuctionTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuctionContext:
     r"""AuctionContext
     Output only. The auction type the restriction applies to.
     """
     
-    auction_types: Optional[List[AuctionContextAuctionTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auctionTypes') }})
+    auction_types: Optional[list[AuctionContextAuctionTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auctionTypes') }})
     

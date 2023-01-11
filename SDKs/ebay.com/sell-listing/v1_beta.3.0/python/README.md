@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,60 +23,59 @@ req = operations.CreateItemDraftRequest(
         ),
     ),
     headers=operations.CreateItemDraftHeaders(
-        content_language="placeat",
-        x_ebay_c_marketplace_id="cum",
+        content_language="sit",
+        x_ebay_c_marketplace_id="voluptas",
     ),
     request=shared.ItemDraft(
-        category_id="qui",
+        category_id="sint",
         charity=shared.Charity(
-            charity_id="laudantium",
-            donation_percentage="perspiciatis",
+            charity_id="voluptate",
+            donation_percentage="aperiam",
         ),
-        condition="enim",
-        format="deleniti",
+        condition="aut",
+        format="unde",
         pricing_summary=shared.PricingSummary(
             auction_reserve_price=shared.Amount(
-                currency="rerum",
+                currency="dolorem",
                 value="aspernatur",
             ),
             auction_start_price=shared.Amount(
-                currency="dicta",
-                value="veritatis",
+                currency="quia",
+                value="autem",
             ),
             price=shared.Amount(
-                currency="unde",
-                value="consequatur",
+                currency="facere",
+                value="at",
             ),
         ),
         product=shared.Product(
             aspects=[
                 shared.Aspect(
-                    name="est",
+                    name="qui",
                     values=[
-                        "quia",
-                        "occaecati",
+                        "modi",
                     ],
                 ),
                 shared.Aspect(
-                    name="veritatis",
+                    name="debitis",
                     values=[
-                        "voluptates",
-                        "at",
+                        "fugiat",
+                        "perferendis",
                     ],
                 ),
             ],
-            brand="repellendus",
-            description="fuga",
-            epid="sequi",
+            brand="soluta",
+            description="aut",
+            epid="nihil",
             image_urls=[
-                "ratione",
+                "voluptates",
             ],
-            title="ipsam",
+            title="quasi",
         ),
     ),
 )
     
-res = s.sdk.create_item_draft(req)
+res = s.item_draft.create_item_draft(req)
 
 if res.item_draft_response is not None:
     # handle response
@@ -87,7 +85,7 @@ if res.item_draft_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### item_draft
 
 * `create_item_draft` - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
 

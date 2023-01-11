@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itemapplicationscopesupdaterequest as shared_itemapplicationscopesupdaterequest
+from ..shared import itemapplicationscopesupdateresponse as shared_itemapplicationscopesupdateresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemApplicationScopesUpdateRequest:
-    request: shared.ItemApplicationScopesUpdateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itemapplicationscopesupdaterequest.ItemApplicationScopesUpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemApplicationScopesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    item_application_scopes_update_response: Optional[shared.ItemApplicationScopesUpdateResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    item_application_scopes_update_response: Optional[shared_itemapplicationscopesupdateresponse.ItemApplicationScopesUpdateResponse] = dataclasses.field(default=None)
     

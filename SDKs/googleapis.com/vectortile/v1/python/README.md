@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,41 +18,40 @@ s = sdk.SDK()
     
 req = operations.VectortileTerraintilesGetRequest(
     path_params=operations.VectortileTerraintilesGetPathParams(
-        name="ut",
+        name="aut",
     ),
     query_params=operations.VectortileTerraintilesGetQueryParams(
         dollar_xgafv="2",
-        access_token="non",
-        alt="media",
-        altitude_precision_centimeters=4899281184932557888,
-        callback="suscipit",
-        client_info_api_client="sed",
-        client_info_application_id="rerum",
-        client_info_application_version="sapiente",
-        client_info_device_model="explicabo",
-        client_info_operating_system="velit",
-        client_info_platform="IOS",
+        access_token="impedit",
+        alt="proto",
+        altitude_precision_centimeters=8709645707623077778,
+        callback="placeat",
+        client_info_api_client="quis",
+        client_info_application_id="temporibus",
+        client_info_application_version="repudiandae",
+        client_info_device_model="quam",
+        client_info_operating_system="deleniti",
+        client_info_platform="WINDOWS",
         client_info_user_id="et",
-        enable_modeled_volumes=True,
+        enable_modeled_volumes=False,
         enable_political_features=True,
-        enable_private_roads=False,
+        enable_private_roads=True,
         enable_unclipped_buildings=True,
-        fields="sit",
-        key="dignissimos",
-        language_code="debitis",
-        max_elevation_resolution_cells=8877279036952564902,
-        min_elevation_resolution_cells=4651328896432160141,
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="sequi",
-        region_code="accusamus",
+        fields="placeat",
+        key="voluptates",
+        language_code="at",
+        max_elevation_resolution_cells=8449147394238145881,
+        min_elevation_resolution_cells=6525754203162737448,
+        oauth_token="ullam",
+        pretty_print=True,
+        quota_user="sint",
+        region_code="rerum",
         terrain_formats=[
             "TERRAIN_FORMAT_UNKNOWN",
             "SECOND_DERIVATIVE",
-            "TERRAIN_FORMAT_UNKNOWN",
         ],
-        upload_type="totam",
-        upload_protocol="blanditiis",
+        upload_type="impedit",
+        upload_protocol="amet",
     ),
 )
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,35 +18,33 @@ s = sdk.SDK()
     
 req = operations.KgsearchEntitiesSearchRequest(
     query_params=operations.KgsearchEntitiesSearchQueryParams(
-        dollar_xgafv="2",
-        access_token="veritatis",
-        alt="media",
-        callback="consequuntur",
-        fields="et",
+        dollar_xgafv="1",
+        access_token="ut",
+        alt="json",
+        callback="dolore",
+        fields="nihil",
         ids=[
-            "non",
-            "velit",
-            "quis",
+            "saepe",
+            "illum",
         ],
-        indent=True,
-        key="cumque",
+        indent=False,
+        key="atque",
         languages=[
+            "ipsum",
+            "ut",
             "et",
-            "commodi",
-            "architecto",
         ],
-        limit=8648365507474237258,
-        oauth_token="perspiciatis",
+        limit=8686164055761658444,
+        oauth_token="assumenda",
         prefix=True,
         pretty_print=False,
-        query="fugit",
-        quota_user="aspernatur",
+        query="sed",
+        quota_user="ducimus",
         types=[
-            "veniam",
-            "eos",
+            "id",
         ],
-        upload_type="et",
-        upload_protocol="nobis",
+        upload_type="enim",
+        upload_protocol="quia",
     ),
 )
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,58 +20,77 @@ req = operations.TranslateProjectsLocationsBatchTranslateDocumentRequest(
     security=operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams(
-        parent="nihil",
+        parent="assumenda",
     ),
     query_params=operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams(
         dollar_xgafv="2",
-        access_token="sequi",
+        access_token="cumque",
         alt="media",
-        callback="et",
-        fields="eveniet",
-        key="molestiae",
-        oauth_token="velit",
-        pretty_print=False,
-        quota_user="corrupti",
-        upload_type="molestiae",
-        upload_protocol="molestias",
+        callback="assumenda",
+        fields="voluptatem",
+        key="harum",
+        oauth_token="natus",
+        pretty_print=True,
+        quota_user="corporis",
+        upload_type="asperiores",
+        upload_protocol="dignissimos",
     ),
     request=shared.BatchTranslateDocumentRequest(
         format_conversions={
-            "saepe": "omnis",
-            "quos": "sunt",
-            "aut": "sit",
+            "mollitia": "iste",
         },
         glossaries={
-            "adipisci": shared.TranslateTextGlossaryConfig(
-                glossary="repudiandae",
+            "a": shared.TranslateTextGlossaryConfig(
+                glossary="sed",
                 ignore_case=False,
+            ),
+            "dignissimos": shared.TranslateTextGlossaryConfig(
+                glossary="doloremque",
+                ignore_case=True,
+            ),
+            "quia": shared.TranslateTextGlossaryConfig(
+                glossary="quia",
+                ignore_case=True,
             ),
         },
         input_configs=[
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="totam",
+                    input_uri="occaecati",
+                ),
+            ),
+            shared.BatchDocumentInputConfig(
+                gcs_source=shared.GcsSource(
+                    input_uri="ullam",
+                ),
+            ),
+            shared.BatchDocumentInputConfig(
+                gcs_source=shared.GcsSource(
+                    input_uri="quo",
                 ),
             ),
         ],
         models={
-            "nesciunt": "fuga",
+            "quia": "et",
+            "quos": "quae",
+            "est": "necessitatibus",
         },
         output_config=shared.BatchDocumentOutputConfig(
             gcs_destination=shared.GcsDestination(
-                output_uri_prefix="dolor",
+                output_uri_prefix="velit",
             ),
         ),
-        source_language_code="voluptatem",
+        source_language_code="harum",
         target_language_codes=[
-            "vel",
-            "ut",
+            "ipsum",
+            "autem",
+            "cumque",
         ],
     ),
 )

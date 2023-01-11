@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import activity_and_identity as shared_activity_and_identity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostWorkspaceIDActivitiesPathParams:
-    workspace_id: str = field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
+    workspace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWorkspaceIDActivitiesSecurity:
-    bearer: shared.SchemeBearer = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    bearer: shared_security.SchemeBearer = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWorkspaceIDActivitiesRequest:
-    path_params: PostWorkspaceIDActivitiesPathParams = field()
-    security: PostWorkspaceIDActivitiesSecurity = field()
-    request: Optional[shared.ActivityAndIdentity] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostWorkspaceIDActivitiesPathParams = dataclasses.field()
+    security: PostWorkspaceIDActivitiesSecurity = dataclasses.field()
+    request: Optional[shared_activity_and_identity.ActivityAndIdentity] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWorkspaceIDActivitiesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

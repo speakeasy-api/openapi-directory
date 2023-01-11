@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,11 +17,11 @@ class LoggingConfigDriverLogLevelsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LoggingConfig:
     r"""LoggingConfig
     The runtime logging config of the job.
     """
     
-    driver_log_levels: Optional[dict[str, LoggingConfigDriverLogLevelsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('driverLogLevels') }})
+    driver_log_levels: Optional[dict[str, LoggingConfigDriverLogLevelsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('driverLogLevels') }})
     

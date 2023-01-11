@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import application as shared_application
 
 
-@dataclass
+@dataclasses.dataclass
 class GetApplicationPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApplicationSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApplicationRequest:
-    path_params: GetApplicationPathParams = field()
-    security: GetApplicationSecurity = field()
+    path_params: GetApplicationPathParams = dataclasses.field()
+    security: GetApplicationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    application: Optional[shared.Application] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    application: Optional[shared_application.Application] = dataclasses.field(default=None)
     

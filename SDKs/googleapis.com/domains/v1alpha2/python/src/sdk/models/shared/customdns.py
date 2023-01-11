@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dsrecord as shared_dsrecord
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CustomDNS:
     r"""CustomDNS
     Configuration for an arbitrary DNS provider.
     """
     
-    ds_records: Optional[List[DsRecord]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dsRecords') }})
-    name_servers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nameServers') }})
+    ds_records: Optional[list[shared_dsrecord.DsRecord]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dsRecords') }})
+    name_servers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nameServers') }})
     

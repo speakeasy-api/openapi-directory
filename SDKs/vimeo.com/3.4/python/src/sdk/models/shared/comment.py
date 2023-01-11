@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import picture as shared_picture
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentMetadataConnectionsReplies:
     r"""CommentMetadataConnectionsReplies
     Information about this comment's replies.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentMetadataConnections:
-    replies: CommentMetadataConnectionsReplies = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('replies') }})
+    replies: CommentMetadataConnectionsReplies = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('replies') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentMetadata:
-    connections: CommentMetadataConnections = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
+    connections: CommentMetadataConnections = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
     
 class CommentTypeEnum(str, Enum):
     VIDEO = "video"
@@ -48,335 +48,335 @@ class CommentUserAccountEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsAlbums:
     r"""CommentUserMetadataConnectionsAlbums
     Information about the albums created by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsAppearances:
     r"""CommentUserMetadataConnectionsAppearances
     Information about the appearances of this user in other videos.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsBlock:
     r"""CommentUserMetadataConnectionsBlock
     Information on the users that the current user has blocked. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsCategories:
     r"""CommentUserMetadataConnectionsCategories
     Information about this user's followed categories.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsChannels:
     r"""CommentUserMetadataConnectionsChannels
     Information about this user's subscribed channels.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsFeed:
     r"""CommentUserMetadataConnectionsFeed
     Information about this user's feed.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsFolders:
     r"""CommentUserMetadataConnectionsFolders
     Information about this user's folders.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsFollowers:
     r"""CommentUserMetadataConnectionsFollowers
     Information about the user's followers.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsFollowing:
     r"""CommentUserMetadataConnectionsFollowing
     Information about the users that the current user is following.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsGroups:
     r"""CommentUserMetadataConnectionsGroups
     Information about the groups created by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsLikes:
     r"""CommentUserMetadataConnectionsLikes
     Information about the videos that this user has liked.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsModeratedChannels:
     r"""CommentUserMetadataConnectionsModeratedChannels
     Information about the channels that this user moderates.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsPictures:
     r"""CommentUserMetadataConnectionsPictures
     Information about this user's portraits.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsPortfolios:
     r"""CommentUserMetadataConnectionsPortfolios
     Information about this user's portfolios.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsRecommendedChannels:
     r"""CommentUserMetadataConnectionsRecommendedChannels
     A collection of recommended channels for the current user to follow. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsRecommendedUsers:
     r"""CommentUserMetadataConnectionsRecommendedUsers
     A Collection of recommended users for the current user to follow. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsShared:
     r"""CommentUserMetadataConnectionsShared
     Information about the videos that have been shared with this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsVideos:
     r"""CommentUserMetadataConnectionsVideos
     Information about the videos uploaded by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsWatchedVideos:
     r"""CommentUserMetadataConnectionsWatchedVideos
     Information about the videos that this user has watched.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnectionsWatchlater:
     r"""CommentUserMetadataConnectionsWatchlater
     Information about the videos that this user wants to watch later.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataConnections:
     r"""CommentUserMetadataConnections
     The list of resource URIs related to the user.
     """
     
-    albums: CommentUserMetadataConnectionsAlbums = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('albums') }})
-    appearances: CommentUserMetadataConnectionsAppearances = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appearances') }})
-    block: CommentUserMetadataConnectionsBlock = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
-    categories: CommentUserMetadataConnectionsCategories = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('categories') }})
-    channels: CommentUserMetadataConnectionsChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channels') }})
-    feed: CommentUserMetadataConnectionsFeed = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed') }})
-    folders: CommentUserMetadataConnectionsFolders = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folders') }})
-    followers: CommentUserMetadataConnectionsFollowers = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
-    following: CommentUserMetadataConnectionsFollowing = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
-    groups: CommentUserMetadataConnectionsGroups = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
-    likes: CommentUserMetadataConnectionsLikes = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('likes') }})
-    moderated_channels: CommentUserMetadataConnectionsModeratedChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('moderated_channels') }})
-    pictures: CommentUserMetadataConnectionsPictures = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
-    portfolios: CommentUserMetadataConnectionsPortfolios = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
-    recommended_channels: CommentUserMetadataConnectionsRecommendedChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_channels') }})
-    recommended_users: CommentUserMetadataConnectionsRecommendedUsers = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_users') }})
-    shared: CommentUserMetadataConnectionsShared = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('shared') }})
-    videos: CommentUserMetadataConnectionsVideos = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
-    watched_videos: CommentUserMetadataConnectionsWatchedVideos = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watched_videos') }})
-    watchlater: CommentUserMetadataConnectionsWatchlater = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
+    albums: CommentUserMetadataConnectionsAlbums = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('albums') }})
+    appearances: CommentUserMetadataConnectionsAppearances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appearances') }})
+    block: CommentUserMetadataConnectionsBlock = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
+    categories: CommentUserMetadataConnectionsCategories = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('categories') }})
+    channels: CommentUserMetadataConnectionsChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channels') }})
+    feed: CommentUserMetadataConnectionsFeed = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed') }})
+    folders: CommentUserMetadataConnectionsFolders = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folders') }})
+    followers: CommentUserMetadataConnectionsFollowers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
+    following: CommentUserMetadataConnectionsFollowing = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
+    groups: CommentUserMetadataConnectionsGroups = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    likes: CommentUserMetadataConnectionsLikes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('likes') }})
+    moderated_channels: CommentUserMetadataConnectionsModeratedChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('moderated_channels') }})
+    pictures: CommentUserMetadataConnectionsPictures = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
+    portfolios: CommentUserMetadataConnectionsPortfolios = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    recommended_channels: CommentUserMetadataConnectionsRecommendedChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_channels') }})
+    recommended_users: CommentUserMetadataConnectionsRecommendedUsers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_users') }})
+    shared: CommentUserMetadataConnectionsShared = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('shared') }})
+    videos: CommentUserMetadataConnectionsVideos = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    watched_videos: CommentUserMetadataConnectionsWatchedVideos = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watched_videos') }})
+    watchlater: CommentUserMetadataConnectionsWatchlater = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataInteractionsAddPrivacyUser:
-    options: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataInteractionsBlock:
     r"""CommentUserMetadataInteractionsBlock
     Information related to the block status of this user.
     """
     
-    added: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
-    added_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added_time') }})
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    added: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
+    added_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added_time') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataInteractionsFollow:
     r"""CommentUserMetadataInteractionsFollow
     Information related to the followed status of this user.
     """
     
-    added: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    added: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataInteractionsReport:
     r"""CommentUserMetadataInteractionsReport
     Information regarding where and how to report a user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    reason: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    reason: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadataInteractions:
-    block: CommentUserMetadataInteractionsBlock = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
-    follow: CommentUserMetadataInteractionsFollow = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('follow') }})
-    report: CommentUserMetadataInteractionsReport = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('report') }})
-    add_privacy_user: Optional[CommentUserMetadataInteractionsAddPrivacyUser] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_privacy_user') }})
+    block: CommentUserMetadataInteractionsBlock = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
+    follow: CommentUserMetadataInteractionsFollow = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('follow') }})
+    report: CommentUserMetadataInteractionsReport = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('report') }})
+    add_privacy_user: Optional[CommentUserMetadataInteractionsAddPrivacyUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_privacy_user') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserMetadata:
     r"""CommentUserMetadata
     The user's metadata.
     """
     
-    connections: CommentUserMetadataConnections = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
-    interactions: CommentUserMetadataInteractions = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interactions') }})
+    connections: CommentUserMetadataConnections = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
+    interactions: CommentUserMetadataInteractions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interactions') }})
     
 class CommentUserPreferencesVideosPrivacyCommentsEnum(str, Enum):
     ANYBODY = "anybody"
@@ -399,50 +399,50 @@ class CommentUserPreferencesVideosPrivacyViewEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserPreferencesVideosPrivacy:
-    add: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
-    comments: Optional[CommentUserPreferencesVideosPrivacyCommentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
-    download: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    embed: Optional[CommentUserPreferencesVideosPrivacyEmbedEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
-    view: Optional[CommentUserPreferencesVideosPrivacyViewEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
+    add: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
+    comments: Optional[CommentUserPreferencesVideosPrivacyCommentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    embed: Optional[CommentUserPreferencesVideosPrivacyEmbedEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
+    view: Optional[CommentUserPreferencesVideosPrivacyViewEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserPreferencesVideos:
-    privacy: Optional[CommentUserPreferencesVideosPrivacy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    privacy: Optional[CommentUserPreferencesVideosPrivacy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserPreferences:
-    videos: Optional[CommentUserPreferencesVideos] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    videos: Optional[CommentUserPreferencesVideos] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserUploadQuotaLifetime:
     r"""CommentUserUploadQuotaLifetime
     Information about the user's lifetime upload usage.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserUploadQuotaPeriodic:
     r"""CommentUserUploadQuotaPeriodic
     Information about the user's usage for the current period.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    reset_date: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reset_date') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    reset_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reset_date') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 class CommentUserUploadQuotaSpaceShowingEnum(str, Enum):
     LIFETIME = "lifetime"
@@ -450,70 +450,70 @@ class CommentUserUploadQuotaSpaceShowingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserUploadQuotaSpace:
     r"""CommentUserUploadQuotaSpace
     Information about the user's upload space remaining for the current period.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    showing: CommentUserUploadQuotaSpaceShowingEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('showing') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    showing: CommentUserUploadQuotaSpaceShowingEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('showing') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserUploadQuota:
     r"""CommentUserUploadQuota
     Appears only when the user has upload access and is looking at their own user record.
     """
     
-    lifetime: CommentUserUploadQuotaLifetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifetime') }})
-    periodic: CommentUserUploadQuotaPeriodic = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('periodic') }})
-    space: CommentUserUploadQuotaSpace = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
+    lifetime: CommentUserUploadQuotaLifetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifetime') }})
+    periodic: CommentUserUploadQuotaPeriodic = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('periodic') }})
+    space: CommentUserUploadQuotaSpace = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUserWebsites:
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentUser:
     r"""CommentUser
     The user who posted the comment.
     """
     
-    account: CommentUserAccountEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    bio: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
-    created_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    location: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    metadata: CommentUserMetadata = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    pictures: Picture = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
-    resource_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
-    upload_quota: CommentUserUploadQuota = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload_quota') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
-    websites: List[CommentUserWebsites] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('websites') }})
-    content_filter: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_filter') }})
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    preferences: Optional[CommentUserPreferences] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferences') }})
+    account: CommentUserAccountEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    bio: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
+    created_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    location: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    metadata: CommentUserMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    pictures: shared_picture.Picture = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
+    resource_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
+    upload_quota: CommentUserUploadQuota = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload_quota') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    websites: list[CommentUserWebsites] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('websites') }})
+    content_filter: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_filter') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    preferences: Optional[CommentUserPreferences] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferences') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Comment:
-    created_on: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_on') }})
-    metadata: CommentMetadata = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    resource_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
-    type: CommentTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
-    user: CommentUser = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    created_on: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_on') }})
+    metadata: CommentMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    resource_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    type: CommentTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    user: CommentUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
     

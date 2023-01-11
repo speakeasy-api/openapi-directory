@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import voicetemplateresponse as shared_voicetemplateresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetVoiceTemplateResponse:
-    voice_template_response: VoiceTemplateResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceTemplateResponse') }})
+    voice_template_response: shared_voicetemplateresponse.VoiceTemplateResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceTemplateResponse') }})
     

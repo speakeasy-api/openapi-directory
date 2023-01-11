@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import customroutingendpointdescription as shared_customroutingendpointdescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddCustomRoutingEndpointsResponse:
-    endpoint_descriptions: Optional[List[CustomRoutingEndpointDescription]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointDescriptions') }})
-    endpoint_group_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointGroupArn') }})
+    endpoint_descriptions: Optional[list[shared_customroutingendpointdescription.CustomRoutingEndpointDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointDescriptions') }})
+    endpoint_group_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointGroupArn') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceblockviewmodel as shared_resourceblockviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesBlocksIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesBlocksIDRequest:
-    path_params: GetSetupV1ResourcesBlocksIDPathParams = field()
+    path_params: GetSetupV1ResourcesBlocksIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesBlocksIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_block_view_model: Optional[shared.ResourceBlockViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_block_view_model: Optional[shared_resourceblockviewmodel.ResourceBlockViewModel] = dataclasses.field(default=None)
     

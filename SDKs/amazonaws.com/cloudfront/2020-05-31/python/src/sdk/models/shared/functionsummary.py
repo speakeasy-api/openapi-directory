@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import functionconfig as shared_functionconfig
+from ..shared import functionmetadata as shared_functionmetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionSummary:
     r"""FunctionSummary
     Contains configuration information and metadata about a CloudFront function.
     """
     
-    function_config: FunctionConfig = field()
-    function_metadata: FunctionMetadata = field()
-    name: str = field()
-    status: Optional[str] = field(default=None)
+    function_config: shared_functionconfig.FunctionConfig = dataclasses.field()
+    function_metadata: shared_functionmetadata.FunctionMetadata = dataclasses.field()
+    name: str = dataclasses.field()
+    status: Optional[str] = dataclasses.field(default=None)
     

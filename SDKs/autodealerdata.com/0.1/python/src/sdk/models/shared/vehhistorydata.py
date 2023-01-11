@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import vehhistory as shared_vehhistory
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VehHistoryData:
-    data: List[VehHistory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    vin: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('vin') }})
+    data: list[shared_vehhistory.VehHistory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    vin: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('vin') }})
     

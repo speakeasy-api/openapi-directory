@@ -1,0 +1,23 @@
+import dataclasses
+from typing import Optional
+from enum import Enum
+from ..shared import cachenodetypespecificvaluelist as shared_cachenodetypespecificvaluelist
+from ..shared import changetype_enum as shared_changetype_enum
+
+
+@dataclasses.dataclass
+class CacheNodeTypeSpecificParametersList:
+    r"""CacheNodeTypeSpecificParametersList
+    A parameter that has a different value for each cache node type it is applied to. For example, in a Redis cluster, a <code>cache.m1.large</code> cache node type would have a larger <code>maxmemory</code> value than a <code>cache.m1.small</code> type.
+    """
+    
+    allowed_values: Optional[str] = dataclasses.field(default=None)
+    cache_node_type_specific_values: Optional[list[shared_cachenodetypespecificvaluelist.CacheNodeTypeSpecificValueList]] = dataclasses.field(default=None)
+    change_type: Optional[shared_changetype_enum.ChangeTypeEnum] = dataclasses.field(default=None)
+    data_type: Optional[str] = dataclasses.field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    is_modifiable: Optional[bool] = dataclasses.field(default=None)
+    minimum_engine_version: Optional[str] = dataclasses.field(default=None)
+    parameter_name: Optional[str] = dataclasses.field(default=None)
+    source: Optional[str] = dataclasses.field(default=None)
+    

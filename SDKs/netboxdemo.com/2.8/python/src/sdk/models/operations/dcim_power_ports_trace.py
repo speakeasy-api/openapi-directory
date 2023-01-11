@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import powerport as shared_powerport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortsTracePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortsTraceRequest:
-    path_params: DcimPowerPortsTracePathParams = field()
+    path_params: DcimPowerPortsTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortsTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_port: Optional[shared.PowerPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_port: Optional[shared_powerport.PowerPort] = dataclasses.field(default=None)
     

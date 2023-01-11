@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.CheckDomainRequest(
     path_params=operations.CheckDomainPathParams(
-        domain="at",
+        domain="porro",
     ),
 )
     
-res = s.sdk.check_domain(req)
+res = s.check_domain(req)
 
 if res.check_domain_200_application_json_object is not None:
     # handle response

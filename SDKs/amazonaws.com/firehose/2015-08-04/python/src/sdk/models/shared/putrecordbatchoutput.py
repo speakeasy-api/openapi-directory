@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import putrecordbatchresponseentry as shared_putrecordbatchresponseentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutRecordBatchOutput:
-    failed_put_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FailedPutCount') }})
-    request_responses: List[PutRecordBatchResponseEntry] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestResponses') }})
-    encrypted: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Encrypted') }})
+    failed_put_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FailedPutCount') }})
+    request_responses: list[shared_putrecordbatchresponseentry.PutRecordBatchResponseEntry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestResponses') }})
+    encrypted: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Encrypted') }})
     

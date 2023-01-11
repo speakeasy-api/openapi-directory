@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleclouddiscoveryenginev1betadocument as shared_googleclouddiscoveryenginev1betadocument
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudDiscoveryengineV1betaListDocumentsResponse:
     r"""GoogleCloudDiscoveryengineV1betaListDocumentsResponse
     Response message for DocumentService.ListDocuments method.
     """
     
-    documents: Optional[List[GoogleCloudDiscoveryengineV1betaDocument]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documents') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    documents: Optional[list[shared_googleclouddiscoveryenginev1betadocument.GoogleCloudDiscoveryengineV1betaDocument]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documents') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AppExternalCpd:
-    inherited_attributes: dict[str, Any] = field()
-    virtual_network_interface_requirements: Optional[List[str]] = field(default=None)
+    inherited_attributes: dict[str, Any] = dataclasses.field()
+    virtual_network_interface_requirements: Optional[list[str]] = dataclasses.field(default=None)
     

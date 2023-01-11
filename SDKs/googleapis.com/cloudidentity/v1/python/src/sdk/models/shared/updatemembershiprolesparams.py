@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import membershiprole1 as shared_membershiprole1
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMembershipRolesParams:
     r"""UpdateMembershipRolesParams
     The details of an update to a `MembershipRole`.
     """
     
-    field_mask: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldMask') }})
-    membership_role: Optional[MembershipRole1] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipRole') }})
+    field_mask: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldMask') }})
+    membership_role: Optional[shared_membershiprole1.MembershipRole1] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipRole') }})
     

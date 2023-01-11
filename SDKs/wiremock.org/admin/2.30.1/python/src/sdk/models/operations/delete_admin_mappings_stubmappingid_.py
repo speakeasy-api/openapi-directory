@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminMappingsStubMappingIDPathParams:
-    stub_mapping_id: str = field(metadata={'path_param': { 'field_name': 'stubMappingId', 'style': 'simple', 'explode': False }})
+    stub_mapping_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'stubMappingId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminMappingsStubMappingIDRequest:
-    path_params: DeleteAdminMappingsStubMappingIDPathParams = field()
+    path_params: DeleteAdminMappingsStubMappingIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdminMappingsStubMappingIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

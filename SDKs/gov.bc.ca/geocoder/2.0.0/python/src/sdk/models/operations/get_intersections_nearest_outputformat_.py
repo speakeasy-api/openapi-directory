@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -12,28 +12,28 @@ class GetIntersectionsNearestOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsNearestOutputFormatPathParams:
-    output_format: GetIntersectionsNearestOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    output_format: GetIntersectionsNearestOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsNearestOutputFormatQueryParams:
-    point: str = field(metadata={'query_param': { 'field_name': 'point', 'style': 'form', 'explode': True }})
-    max_degree: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxDegree', 'style': 'form', 'explode': True }})
-    max_distance: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxDistance', 'style': 'form', 'explode': True }})
-    min_degree: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'minDegree', 'style': 'form', 'explode': True }})
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    point: str = dataclasses.field(metadata={'query_param': { 'field_name': 'point', 'style': 'form', 'explode': True }})
+    max_degree: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxDegree', 'style': 'form', 'explode': True }})
+    max_distance: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxDistance', 'style': 'form', 'explode': True }})
+    min_degree: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'minDegree', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsNearestOutputFormatRequest:
-    path_params: GetIntersectionsNearestOutputFormatPathParams = field()
-    query_params: GetIntersectionsNearestOutputFormatQueryParams = field()
+    path_params: GetIntersectionsNearestOutputFormatPathParams = dataclasses.field()
+    query_params: GetIntersectionsNearestOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsNearestOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

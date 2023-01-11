@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import oauth2permissiongrantlistresult as shared_oauth2permissiongrantlistresult
 
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantListPathParams:
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantListQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
-    dollar_filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': '$filter', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    dollar_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantListRequest:
-    path_params: OAuth2PermissionGrantListPathParams = field()
-    query_params: OAuth2PermissionGrantListQueryParams = field()
+    path_params: OAuth2PermissionGrantListPathParams = dataclasses.field()
+    query_params: OAuth2PermissionGrantListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    o_auth2_permission_grant_list_result: Optional[shared.OAuth2PermissionGrantListResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    o_auth2_permission_grant_list_result: Optional[shared_oauth2permissiongrantlistresult.OAuth2PermissionGrantListResult] = dataclasses.field(default=None)
     

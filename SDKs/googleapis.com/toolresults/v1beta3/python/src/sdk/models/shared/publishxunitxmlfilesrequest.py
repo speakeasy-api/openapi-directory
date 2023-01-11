@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import filereference as shared_filereference
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PublishXunitXMLFilesRequest:
     r"""PublishXunitXMLFilesRequest
     Request message for StepService.PublishXunitXmlFiles.
     """
     
-    xunit_xml_files: Optional[List[FileReference]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('xunitXmlFiles') }})
+    xunit_xml_files: Optional[list[shared_filereference.FileReference]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('xunitXmlFiles') }})
     

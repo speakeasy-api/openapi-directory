@@ -1,20 +1,14 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import endpointitemresponse as shared_endpointitemresponse
+from ..shared import eventitemresponse as shared_eventitemresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ItemResponse:
-    r"""ItemResponse
-    Provides information about the results of a request to create or update an endpoint that's associated with an event.
-    """
-    
-    endpoint_item_response: Optional[EndpointItemResponse] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointItemResponse') }})
-    events_item_response: Optional[dict[str, EventItemResponse]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventsItemResponse') }})
+    endpoint_item_response: Optional[shared_endpointitemresponse.EndpointItemResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndpointItemResponse') }})
+    events_item_response: Optional[dict[str, shared_eventitemresponse.EventItemResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventsItemResponse') }})
     

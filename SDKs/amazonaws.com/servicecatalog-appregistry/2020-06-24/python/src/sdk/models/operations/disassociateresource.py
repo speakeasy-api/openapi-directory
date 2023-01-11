@@ -1,44 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import disassociateresourceresponse as shared_disassociateresourceresponse
 
 class DisassociateResourceResourceTypeEnum(str, Enum):
     CFN_STACK = "CFN_STACK"
 
 
-@dataclass
+@dataclasses.dataclass
 class DisassociateResourcePathParams:
-    application: str = field(metadata={'path_param': { 'field_name': 'application', 'style': 'simple', 'explode': False }})
-    resource: str = field(metadata={'path_param': { 'field_name': 'resource', 'style': 'simple', 'explode': False }})
-    resource_type: DisassociateResourceResourceTypeEnum = field(metadata={'path_param': { 'field_name': 'resourceType', 'style': 'simple', 'explode': False }})
+    application: str = dataclasses.field(metadata={'path_param': { 'field_name': 'application', 'style': 'simple', 'explode': False }})
+    resource: str = dataclasses.field(metadata={'path_param': { 'field_name': 'resource', 'style': 'simple', 'explode': False }})
+    resource_type: DisassociateResourceResourceTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'resourceType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DisassociateResourceHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DisassociateResourceRequest:
-    headers: DisassociateResourceHeaders = field()
-    path_params: DisassociateResourcePathParams = field()
+    headers: DisassociateResourceHeaders = dataclasses.field()
+    path_params: DisassociateResourcePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DisassociateResourceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    disassociate_resource_response: Optional[shared.DisassociateResourceResponse] = field(default=None)
-    internal_server_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    disassociate_resource_response: Optional[shared_disassociateresourceresponse.DisassociateResourceResponse] = dataclasses.field(default=None)
+    internal_server_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
     

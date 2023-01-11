@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableprefix as shared_writableprefix
+from ..shared import prefix as shared_prefix
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesCreateRequest:
-    request: shared.WritablePrefixInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableprefix.WritablePrefixInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    prefix: Optional[shared.Prefix] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    prefix: Optional[shared_prefix.Prefix] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import synonymoptionsstatus as shared_synonymoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSynonymOptionsResponse:
     r"""DescribeSynonymOptionsResponse
     A response message that contains the synonym options for a search domain.
     """
     
-    synonyms: SynonymOptionsStatus = field()
+    synonyms: shared_synonymoptionsstatus.SynonymOptionsStatus = dataclasses.field()
     

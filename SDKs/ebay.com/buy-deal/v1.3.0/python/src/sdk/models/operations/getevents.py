@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import eventsearchresponse as shared_eventsearchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsQueryParams:
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsRequest:
-    headers: GetEventsHeaders = field()
-    query_params: GetEventsQueryParams = field()
-    security: GetEventsSecurity = field()
+    headers: GetEventsHeaders = dataclasses.field()
+    query_params: GetEventsQueryParams = dataclasses.field()
+    security: GetEventsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    event_search_response: Optional[shared.EventSearchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_search_response: Optional[shared_eventsearchresponse.EventSearchResponse] = dataclasses.field(default=None)
     

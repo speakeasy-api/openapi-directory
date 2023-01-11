@@ -1,28 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ClaimNetworkDevicesPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClaimNetworkDevicesRequestBody:
-    serials: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serials') }})
+    serials: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serials') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClaimNetworkDevicesRequest:
-    path_params: ClaimNetworkDevicesPathParams = field()
-    request: ClaimNetworkDevicesRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ClaimNetworkDevicesPathParams = dataclasses.field()
+    request: ClaimNetworkDevicesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClaimNetworkDevicesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

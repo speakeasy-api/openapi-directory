@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import cache_post_request as shared_cache_post_request
 
 
-@dataclass
+@dataclasses.dataclass
 class CachePostRequest:
-    request: shared.CachePostRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_cache_post_request.CachePostRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CachePostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

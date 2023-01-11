@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BasicYarnAutoscalingConfig:
     r"""BasicYarnAutoscalingConfig
     Basic autoscaling configurations for YARN.
     """
     
-    graceful_decommission_timeout: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gracefulDecommissionTimeout') }})
-    scale_down_factor: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleDownFactor') }})
-    scale_down_min_worker_fraction: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleDownMinWorkerFraction') }})
-    scale_up_factor: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleUpFactor') }})
-    scale_up_min_worker_fraction: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleUpMinWorkerFraction') }})
+    graceful_decommission_timeout: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gracefulDecommissionTimeout') }})
+    scale_down_factor: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleDownFactor') }})
+    scale_down_min_worker_fraction: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleDownMinWorkerFraction') }})
+    scale_up_factor: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleUpFactor') }})
+    scale_up_min_worker_fraction: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleUpMinWorkerFraction') }})
     

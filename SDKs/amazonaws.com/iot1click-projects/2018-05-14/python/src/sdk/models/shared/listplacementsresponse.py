@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import placementsummary as shared_placementsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPlacementsResponse:
-    placements: List[PlacementSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('placements') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    placements: list[shared_placementsummary.PlacementSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('placements') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

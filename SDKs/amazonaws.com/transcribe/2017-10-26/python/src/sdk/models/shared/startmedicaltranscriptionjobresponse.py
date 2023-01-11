@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import medicaltranscriptionjob as shared_medicaltranscriptionjob
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartMedicalTranscriptionJobResponse:
-    medical_transcription_job: Optional[MedicalTranscriptionJob] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MedicalTranscriptionJob') }})
+    medical_transcription_job: Optional[shared_medicaltranscriptionjob.MedicalTranscriptionJob] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MedicalTranscriptionJob') }})
     

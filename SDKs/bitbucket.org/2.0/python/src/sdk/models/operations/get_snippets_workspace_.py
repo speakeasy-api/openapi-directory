@@ -1,12 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_snippets as shared_paginated_snippets
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsWorkspacePathParams:
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 class GetSnippetsWorkspaceRoleEnum(str, Enum):
     OWNER = "owner"
@@ -14,29 +17,29 @@ class GetSnippetsWorkspaceRoleEnum(str, Enum):
     MEMBER = "member"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsWorkspaceQueryParams:
-    role: Optional[GetSnippetsWorkspaceRoleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
+    role: Optional[GetSnippetsWorkspaceRoleEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsWorkspaceSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsWorkspaceRequest:
-    path_params: GetSnippetsWorkspacePathParams = field()
-    query_params: GetSnippetsWorkspaceQueryParams = field()
-    security: GetSnippetsWorkspaceSecurity = field()
+    path_params: GetSnippetsWorkspacePathParams = dataclasses.field()
+    query_params: GetSnippetsWorkspaceQueryParams = dataclasses.field()
+    security: GetSnippetsWorkspaceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsWorkspaceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_snippets: Optional[shared.PaginatedSnippets] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_snippets: Optional[shared_paginated_snippets.PaginatedSnippets] = dataclasses.field(default=None)
     

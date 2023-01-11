@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ s.config_security(
     )
 )
     
-res = s.sdk.cases_general_stats_list()
+res = s.cases.cases_general_stats_list()
 
 if res.general_stats is not None:
     # handle response
@@ -34,10 +33,13 @@ if res.general_stats is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cases
 
 * `cases_general_stats_list` - Get the general stats
 * `cases_search` - search a country
+
+### docs
+
 * `docs_list`
 
 <!-- End SDK Available Operations -->

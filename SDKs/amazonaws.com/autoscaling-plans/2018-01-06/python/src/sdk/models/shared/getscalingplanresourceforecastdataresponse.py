@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datapoint as shared_datapoint
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetScalingPlanResourceForecastDataResponse:
-    datapoints: List[Datapoint] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Datapoints') }})
+    datapoints: list[shared_datapoint.Datapoint] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Datapoints') }})
     

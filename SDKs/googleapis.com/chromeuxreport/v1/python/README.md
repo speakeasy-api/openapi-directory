@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,28 +18,26 @@ s = sdk.SDK()
     
 req = operations.ChromeuxreportRecordsQueryRecordRequest(
     query_params=operations.ChromeuxreportRecordsQueryRecordQueryParams(
-        dollar_xgafv="1",
-        access_token="quia",
+        dollar_xgafv="2",
+        access_token="alias",
         alt="json",
-        callback="et",
-        fields="itaque",
-        key="delectus",
-        oauth_token="eos",
-        pretty_print=True,
-        quota_user="placeat",
-        upload_type="facere",
-        upload_protocol="aperiam",
+        callback="officia",
+        fields="laborum",
+        key="ipsum",
+        oauth_token="quod",
+        pretty_print=False,
+        quota_user="optio",
+        upload_type="praesentium",
+        upload_protocol="pariatur",
     ),
     request=shared.QueryRequest(
-        effective_connection_type="minus",
-        form_factor="ALL_FORM_FACTORS",
+        effective_connection_type="dolorem",
+        form_factor="PHONE",
         metrics=[
-            "omnis",
-            "voluptatum",
-            "voluptas",
+            "reiciendis",
         ],
-        origin="rerum",
-        url="ut",
+        origin="explicabo",
+        url="illo",
     ),
 )
     

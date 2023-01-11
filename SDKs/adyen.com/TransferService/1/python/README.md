@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -23,10 +22,10 @@ req = operations.PostTransfersRequest(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
-    request="unde",
+    request="aut",
 )
     
-res = s.sdk.post_transfers(req)
+res = s.general.post_transfers(req)
 
 if res.transfer_old is not None:
     # handle response
@@ -36,7 +35,7 @@ if res.transfer_old is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `post_transfers` - Transfer funds.
 

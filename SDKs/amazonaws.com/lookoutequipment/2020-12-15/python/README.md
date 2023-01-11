@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,36 +25,32 @@ s.config_security(
     
 req = operations.CreateDatasetRequest(
     headers=operations.CreateDatasetHeaders(
-        x_amz_algorithm="atque",
-        x_amz_content_sha256="vel",
-        x_amz_credential="itaque",
-        x_amz_date="ut",
-        x_amz_security_token="ut",
-        x_amz_signature="unde",
-        x_amz_signed_headers="aut",
+        x_amz_algorithm="voluptas",
+        x_amz_content_sha256="est",
+        x_amz_credential="voluptates",
+        x_amz_date="repellat",
+        x_amz_security_token="eligendi",
+        x_amz_signature="adipisci",
+        x_amz_signed_headers="sit",
         x_amz_target="AWSLookoutEquipmentFrontendService.CreateDataset",
     ),
     request=shared.CreateDatasetRequest(
-        client_token="maiores",
-        dataset_name="repellendus",
+        client_token="atque",
+        dataset_name="odio",
         dataset_schema=shared.DatasetSchema(
-            inline_data_schema="ducimus",
+            inline_data_schema="quam",
         ),
-        server_side_kms_key_id="repudiandae",
+        server_side_kms_key_id="ut",
         tags=[
             shared.Tag(
-                key="et",
-                value="rem",
-            ),
-            shared.Tag(
-                key="quas",
-                value="animi",
+                key="voluptas",
+                value="in",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_dataset(req)
+res = s.create_dataset(req)
 
 if res.create_dataset_response is not None:
     # handle response

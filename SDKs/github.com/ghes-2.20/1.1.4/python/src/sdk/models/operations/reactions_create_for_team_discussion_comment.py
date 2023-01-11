@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import reaction as shared_reaction
 
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsCreateForTeamDiscussionCommentPathParams:
-    comment_number: int = field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
-    discussion_number: int = field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    comment_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
+    discussion_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsCreateForTeamDiscussionCommentHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 class ReactionsCreateForTeamDiscussionCommentRequestBodyContentEnum(str, Enum):
     PLUS_1 = "+1"
@@ -29,21 +29,21 @@ class ReactionsCreateForTeamDiscussionCommentRequestBodyContentEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReactionsCreateForTeamDiscussionCommentRequestBody:
-    content: ReactionsCreateForTeamDiscussionCommentRequestBodyContentEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    content: ReactionsCreateForTeamDiscussionCommentRequestBodyContentEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsCreateForTeamDiscussionCommentRequest:
-    headers: ReactionsCreateForTeamDiscussionCommentHeaders = field()
-    path_params: ReactionsCreateForTeamDiscussionCommentPathParams = field()
-    request: Optional[ReactionsCreateForTeamDiscussionCommentRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: ReactionsCreateForTeamDiscussionCommentHeaders = dataclasses.field()
+    path_params: ReactionsCreateForTeamDiscussionCommentPathParams = dataclasses.field()
+    request: Optional[ReactionsCreateForTeamDiscussionCommentRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsCreateForTeamDiscussionCommentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    reaction: Optional[shared.Reaction] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reaction: Optional[shared_reaction.Reaction] = dataclasses.field(default=None)
     

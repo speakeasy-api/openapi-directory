@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTextPronunciationsPathParams:
-    word: str = field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
+    word: str = dataclasses.field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
     
 class GetTextPronunciationsSourceDictionaryEnum(str, Enum):
     AHD = "ahd"
@@ -27,23 +27,23 @@ class GetTextPronunciationsUseCanonicalEnum(str, Enum):
     TRUE = "true"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTextPronunciationsQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    source_dictionary: Optional[GetTextPronunciationsSourceDictionaryEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sourceDictionary', 'style': 'form', 'explode': True }})
-    type_format: Optional[GetTextPronunciationsTypeFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'typeFormat', 'style': 'form', 'explode': True }})
-    use_canonical: Optional[GetTextPronunciationsUseCanonicalEnum] = field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    source_dictionary: Optional[GetTextPronunciationsSourceDictionaryEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceDictionary', 'style': 'form', 'explode': True }})
+    type_format: Optional[GetTextPronunciationsTypeFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'typeFormat', 'style': 'form', 'explode': True }})
+    use_canonical: Optional[GetTextPronunciationsUseCanonicalEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTextPronunciationsRequest:
-    path_params: GetTextPronunciationsPathParams = field()
-    query_params: GetTextPronunciationsQueryParams = field()
+    path_params: GetTextPronunciationsPathParams = dataclasses.field()
+    query_params: GetTextPronunciationsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTextPronunciationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

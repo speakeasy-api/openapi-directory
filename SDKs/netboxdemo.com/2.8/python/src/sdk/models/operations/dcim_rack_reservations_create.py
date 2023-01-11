@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablerackreservation as shared_writablerackreservation
+from ..shared import rackreservation as shared_rackreservation
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackReservationsCreateRequest:
-    request: shared.WritableRackReservationInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablerackreservation.WritableRackReservationInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackReservationsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack_reservation: Optional[shared.RackReservation] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack_reservation: Optional[shared_rackreservation.RackReservation] = dataclasses.field(default=None)
     

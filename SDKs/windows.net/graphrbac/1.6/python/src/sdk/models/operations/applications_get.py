@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import grapherror as shared_grapherror
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsGetPathParams:
-    application_object_id: str = field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    application_object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsGetQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsGetRequest:
-    path_params: ApplicationsGetPathParams = field()
-    query_params: ApplicationsGetQueryParams = field()
+    path_params: ApplicationsGetPathParams = dataclasses.field()
+    query_params: ApplicationsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    application: Optional[dict[str, dict[str, Any]]] = field(default=None)
-    graph_error: Optional[shared.GraphError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    application: Optional[dict[str, dict[str, Any]]] = dataclasses.field(default=None)
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
     

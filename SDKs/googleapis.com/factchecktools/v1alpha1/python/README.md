@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,24 +18,24 @@ s = sdk.SDK()
     
 req = operations.FactchecktoolsClaimsSearchRequest(
     query_params=operations.FactchecktoolsClaimsSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="esse",
-        alt="media",
-        callback="minima",
-        fields="optio",
-        key="rerum",
-        language_code="excepturi",
-        max_age_days=1785559331512169032,
-        oauth_token="nesciunt",
-        offset=5635357500975081959,
-        page_size=1009413278852092536,
-        page_token="labore",
-        pretty_print=True,
-        query="explicabo",
-        quota_user="quidem",
-        review_publisher_site_filter="officiis",
-        upload_type="ullam",
-        upload_protocol="ut",
+        dollar_xgafv="2",
+        access_token="porro",
+        alt="json",
+        callback="eos",
+        fields="voluptatibus",
+        key="et",
+        language_code="voluptatum",
+        max_age_days=531498979884209372,
+        oauth_token="est",
+        offset=718631122271686376,
+        page_size=2768331678206913841,
+        page_token="quo",
+        pretty_print=False,
+        query="in",
+        quota_user="sint",
+        review_publisher_site_filter="et",
+        upload_type="sapiente",
+        upload_protocol="harum",
     ),
 )
     

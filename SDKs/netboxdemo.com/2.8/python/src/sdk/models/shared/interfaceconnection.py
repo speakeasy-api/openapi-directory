@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nestedinterface as shared_nestedinterface
 
 class InterfaceConnectionConnectionStatusLabelEnum(str, Enum):
     NOT_CONNECTED = "Not Connected"
@@ -11,16 +11,16 @@ class InterfaceConnectionConnectionStatusLabelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InterfaceConnectionConnectionStatus:
-    label: InterfaceConnectionConnectionStatusLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: InterfaceConnectionConnectionStatusLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InterfaceConnection:
-    interface_b: NestedInterface = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_b') }})
-    connection_status: Optional[InterfaceConnectionConnectionStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
-    interface_a: Optional[NestedInterface] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_a') }})
+    interface_b: shared_nestedinterface.NestedInterface = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_b') }})
+    connection_status: Optional[InterfaceConnectionConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
+    interface_a: Optional[shared_nestedinterface.NestedInterface] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_a') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rearport as shared_rearport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsTracePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsTraceRequest:
-    path_params: DcimRearPortsTracePathParams = field()
+    path_params: DcimRearPortsTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rear_port: Optional[shared.RearPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rear_port: Optional[shared_rearport.RearPort] = dataclasses.field(default=None)
     

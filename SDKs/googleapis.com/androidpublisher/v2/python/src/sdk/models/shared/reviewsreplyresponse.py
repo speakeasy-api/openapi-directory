@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import reviewreplyresult as shared_reviewreplyresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ReviewsReplyResponse:
-    result: Optional[ReviewReplyResult] = field(default=None)
+    result: Optional[shared_reviewreplyresult.ReviewReplyResult] = dataclasses.field(default=None)
     

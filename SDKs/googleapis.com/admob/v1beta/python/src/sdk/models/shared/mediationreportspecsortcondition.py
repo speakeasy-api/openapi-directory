@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -40,13 +40,13 @@ class MediationReportSpecSortConditionOrderEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MediationReportSpecSortCondition:
     r"""MediationReportSpecSortCondition
     Sorting direction to be applied on a dimension or a metric.
     """
     
-    dimension: Optional[MediationReportSpecSortConditionDimensionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimension') }})
-    metric: Optional[MediationReportSpecSortConditionMetricEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metric') }})
-    order: Optional[MediationReportSpecSortConditionOrderEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('order') }})
+    dimension: Optional[MediationReportSpecSortConditionDimensionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimension') }})
+    metric: Optional[MediationReportSpecSortConditionMetricEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metric') }})
+    order: Optional[MediationReportSpecSortConditionOrderEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('order') }})
     

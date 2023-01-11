@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import sandbox as shared_sandbox
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSandboxRequests:
-    sandbox: Optional[shared.Sandbox] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    sandbox1: Optional[shared.Sandbox] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    sandbox: Optional[shared_sandbox.Sandbox] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    sandbox1: Optional[shared_sandbox.Sandbox] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSandboxSecurity:
-    authorization_code_token: shared.SchemeAuthorizationCodeToken = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    authorization_code_token: shared_security.SchemeAuthorizationCodeToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSandboxRequest:
-    security: PutSandboxSecurity = field()
-    request: Optional[PutSandboxRequests] = field(default=None)
+    security: PutSandboxSecurity = dataclasses.field()
+    request: Optional[PutSandboxRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSandboxResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

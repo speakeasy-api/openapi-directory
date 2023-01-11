@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum(str, En
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecaptchaenterpriseV1TestingOptions:
     r"""GoogleCloudRecaptchaenterpriseV1TestingOptions
     Options for user acceptance testing.
     """
     
-    testing_challenge: Optional[GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testingChallenge') }})
-    testing_score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testingScore') }})
+    testing_challenge: Optional[GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testingChallenge') }})
+    testing_score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testingScore') }})
     

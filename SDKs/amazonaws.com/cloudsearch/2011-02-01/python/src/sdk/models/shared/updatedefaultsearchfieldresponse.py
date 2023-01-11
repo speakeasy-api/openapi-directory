@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import defaultsearchfieldstatus as shared_defaultsearchfieldstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDefaultSearchFieldResponse:
     r"""UpdateDefaultSearchFieldResponse
     A response message that contains the status of an updated default search field.
     """
     
-    default_search_field: DefaultSearchFieldStatus = field()
+    default_search_field: shared_defaultsearchfieldstatus.DefaultSearchFieldStatus = dataclasses.field()
     

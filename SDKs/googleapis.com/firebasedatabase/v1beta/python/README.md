@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,33 +21,33 @@ req = operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest(
         option1=operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams(
-        parent="velit",
+        parent="molestiae",
     ),
     query_params=operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="odit",
-        alt="json",
-        callback="debitis",
-        database_id="totam",
-        fields="recusandae",
-        key="quia",
-        oauth_token="id",
-        pretty_print=False,
-        quota_user="amet",
-        upload_type="sint",
-        upload_protocol="qui",
+        access_token="facere",
+        alt="media",
+        callback="aut",
+        database_id="cumque",
+        fields="sint",
+        key="repellendus",
+        oauth_token="cumque",
+        pretty_print=True,
+        quota_user="asperiores",
+        upload_type="ut",
+        upload_protocol="quia",
         validate_only=False,
     ),
     request=shared.DatabaseInstanceInput(
-        name="porro",
-        type="USER_DATABASE",
+        name="impedit",
+        type="DATABASE_INSTANCE_TYPE_UNSPECIFIED",
     ),
 )
     

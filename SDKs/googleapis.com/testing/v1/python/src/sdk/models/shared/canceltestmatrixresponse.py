@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,11 +19,11 @@ class CancelTestMatrixResponseTestStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CancelTestMatrixResponse:
     r"""CancelTestMatrixResponse
     Response containing the current state of the specified test matrix.
     """
     
-    test_state: Optional[CancelTestMatrixResponseTestStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testState') }})
+    test_state: Optional[CancelTestMatrixResponseTestStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('testState') }})
     

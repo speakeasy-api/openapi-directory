@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import mediaitemwrapped as shared_mediaitemwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesUserMediaListsIDJSONPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesUserMediaListsIDJSONQueryParams:
-    display_method: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'displayMethod', 'style': 'form', 'explode': False }})
+    display_method: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'displayMethod', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesUserMediaListsIDJSONRequest:
-    path_params: GetResourcesUserMediaListsIDJSONPathParams = field()
-    query_params: GetResourcesUserMediaListsIDJSONQueryParams = field()
+    path_params: GetResourcesUserMediaListsIDJSONPathParams = dataclasses.field()
+    query_params: GetResourcesUserMediaListsIDJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesUserMediaListsIDJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    media_item_wrappeds: Optional[List[shared.MediaItemWrapped]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    media_item_wrappeds: Optional[list[shared_mediaitemwrapped.MediaItemWrapped]] = dataclasses.field(default=None)
     

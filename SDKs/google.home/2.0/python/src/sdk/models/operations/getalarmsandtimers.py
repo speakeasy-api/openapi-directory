@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import example18 as shared_example18
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAlarmsandTimersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example18: Optional[shared.Example18] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example18: Optional[shared_example18.Example18] = dataclasses.field(default=None)
     

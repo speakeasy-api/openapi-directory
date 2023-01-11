@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AccountSettingsRequest:
-    dr_call_back_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'drCallBackUrl' }})
-    mo_call_back_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'moCallBackUrl' }})
+    dr_call_back_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'drCallBackUrl' }})
+    mo_call_back_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'moCallBackUrl' }})
     

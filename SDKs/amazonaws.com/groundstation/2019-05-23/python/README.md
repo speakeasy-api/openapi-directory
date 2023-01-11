@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.CancelContactRequest(
     path_params=operations.CancelContactPathParams(
-        contact_id="error",
+        contact_id="repudiandae",
     ),
     headers=operations.CancelContactHeaders(
-        x_amz_algorithm="dolores",
-        x_amz_content_sha256="non",
-        x_amz_credential="aspernatur",
-        x_amz_date="rem",
-        x_amz_security_token="vel",
-        x_amz_signature="eum",
-        x_amz_signed_headers="at",
+        x_amz_algorithm="quo",
+        x_amz_content_sha256="omnis",
+        x_amz_credential="adipisci",
+        x_amz_date="praesentium",
+        x_amz_security_token="qui",
+        x_amz_signature="ipsam",
+        x_amz_signed_headers="in",
     ),
 )
     
-res = s.sdk.cancel_contact(req)
+res = s.cancel_contact(req)
 
 if res.contact_id_response is not None:
     # handle response

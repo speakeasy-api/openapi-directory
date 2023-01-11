@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clientcertauthsettings as shared_clientcertauthsettings
+from ..shared import certificatetype_enum as shared_certificatetype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegisterCertificateRequest:
-    certificate_data: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CertificateData') }})
-    directory_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
-    client_cert_auth_settings: Optional[ClientCertAuthSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientCertAuthSettings') }})
-    type: Optional[CertificateTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
+    certificate_data: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CertificateData') }})
+    directory_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
+    client_cert_auth_settings: Optional[shared_clientcertauthsettings.ClientCertAuthSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientCertAuthSettings') }})
+    type: Optional[shared_certificatetype_enum.CertificateTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
     

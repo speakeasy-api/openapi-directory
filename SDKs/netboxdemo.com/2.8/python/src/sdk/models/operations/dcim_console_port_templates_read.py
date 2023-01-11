@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import consoleporttemplate as shared_consoleporttemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesReadRequest:
-    path_params: DcimConsolePortTemplatesReadPathParams = field()
+    path_params: DcimConsolePortTemplatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    console_port_template: Optional[shared.ConsolePortTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    console_port_template: Optional[shared_consoleporttemplate.ConsolePortTemplate] = dataclasses.field(default=None)
     

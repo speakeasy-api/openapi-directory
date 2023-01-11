@@ -1,12 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import on_demand_promotion as shared_on_demand_promotion
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPromotionsPathParams:
-    ondemand_id: float = field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
+    ondemand_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
     
 class GetVodPromotionsFilterEnum(str, Enum):
     BATCH = "batch"
@@ -15,29 +17,29 @@ class GetVodPromotionsFilterEnum(str, Enum):
     VIP = "vip"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPromotionsQueryParams:
-    filter: GetVodPromotionsFilterEnum = field(metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    filter: GetVodPromotionsFilterEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPromotionsSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPromotionsRequest:
-    path_params: GetVodPromotionsPathParams = field()
-    query_params: GetVodPromotionsQueryParams = field()
-    security: GetVodPromotionsSecurity = field()
+    path_params: GetVodPromotionsPathParams = dataclasses.field()
+    query_params: GetVodPromotionsQueryParams = dataclasses.field()
+    security: GetVodPromotionsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPromotionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    on_demand_promotion: Optional[shared.OnDemandPromotion] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    on_demand_promotion: Optional[shared_on_demand_promotion.OnDemandPromotion] = dataclasses.field(default=None)
     

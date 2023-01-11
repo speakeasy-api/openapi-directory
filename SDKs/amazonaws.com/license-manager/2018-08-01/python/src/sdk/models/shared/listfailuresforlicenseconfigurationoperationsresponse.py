@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import licenseoperationfailure as shared_licenseoperationfailure
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFailuresForLicenseConfigurationOperationsResponse:
-    license_operation_failure_list: Optional[List[LicenseOperationFailure]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LicenseOperationFailureList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    license_operation_failure_list: Optional[list[shared_licenseoperationfailure.LicenseOperationFailure]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LicenseOperationFailureList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

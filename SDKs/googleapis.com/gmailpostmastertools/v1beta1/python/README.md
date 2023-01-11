@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.GmailpostmastertoolsDomainsListRequest(
     security=operations.GmailpostmastertoolsDomainsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.GmailpostmastertoolsDomainsListQueryParams(
-        dollar_xgafv="2",
-        access_token="consequuntur",
+        dollar_xgafv="1",
+        access_token="modi",
         alt="media",
-        callback="non",
-        fields="et",
-        key="inventore",
-        oauth_token="aperiam",
-        page_size=3317451075473742802,
-        page_token="dolores",
+        callback="et",
+        fields="officia",
+        key="aperiam",
+        oauth_token="inventore",
+        page_size=1881660267005961452,
+        page_token="quia",
         pretty_print=True,
-        quota_user="voluptatum",
-        upload_type="nisi",
-        upload_protocol="similique",
+        quota_user="vel",
+        upload_type="repellat",
+        upload_protocol="eum",
     ),
 )
     

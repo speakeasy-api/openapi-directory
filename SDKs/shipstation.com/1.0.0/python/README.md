@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,15 +19,14 @@ s = sdk.SDK()
 req = operations.CreateANewQuestionRequest(
     request=operations.CreateANewQuestionRequestBody(
         choices=[
-            "eaque",
-            "ullam",
-            "quod",
+            "excepturi",
+            "cumque",
         ],
-        question="quae",
+        question="et",
     ),
 )
     
-res = s.sdk.create_a_new_question(req)
+res = s.create_a_new_question(req)
 
 if res.status_code == 200:
     # handle response

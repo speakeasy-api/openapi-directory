@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,8 +17,8 @@ class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancella
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest:
-    cancel_immediately: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancelImmediately') }})
-    cancellation_reason: Optional[GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationReason') }})
+    cancel_immediately: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancelImmediately') }})
+    cancellation_reason: Optional[GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancellationReason') }})
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import servicemetricstask as shared_servicemetricstask
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricTaskPathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricTaskRequest:
-    path_params: GetCustomerServiceMetricTaskPathParams = field()
-    security: GetCustomerServiceMetricTaskSecurity = field()
+    path_params: GetCustomerServiceMetricTaskPathParams = dataclasses.field()
+    security: GetCustomerServiceMetricTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_metrics_task: Optional[shared.ServiceMetricsTask] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_metrics_task: Optional[shared_servicemetricstask.ServiceMetricsTask] = dataclasses.field(default=None)
     

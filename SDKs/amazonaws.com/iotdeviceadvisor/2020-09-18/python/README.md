@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,42 +25,34 @@ s.config_security(
     
 req = operations.CreateSuiteDefinitionRequest(
     headers=operations.CreateSuiteDefinitionHeaders(
-        x_amz_algorithm="autem",
-        x_amz_content_sha256="qui",
-        x_amz_credential="est",
-        x_amz_date="est",
-        x_amz_security_token="consequatur",
-        x_amz_signature="quia",
-        x_amz_signed_headers="ad",
+        x_amz_algorithm="quia",
+        x_amz_content_sha256="cupiditate",
+        x_amz_credential="sed",
+        x_amz_date="maxime",
+        x_amz_security_token="expedita",
+        x_amz_signature="consequatur",
+        x_amz_signed_headers="excepturi",
     ),
     request=operations.CreateSuiteDefinitionRequestBody(
         suite_definition_configuration=operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration(
-            device_permission_role_arn="nemo",
+            device_permission_role_arn="ut",
             devices=[
                 shared.DeviceUnderTest(
-                    certificate_arn="neque",
-                    thing_arn="totam",
-                ),
-                shared.DeviceUnderTest(
-                    certificate_arn="dolores",
-                    thing_arn="labore",
-                ),
-                shared.DeviceUnderTest(
-                    certificate_arn="cupiditate",
-                    thing_arn="unde",
+                    certificate_arn="sit",
+                    thing_arn="aliquid",
                 ),
             ],
-            intended_for_qualification=True,
-            root_group="odio",
-            suite_definition_name="rerum",
+            intended_for_qualification=False,
+            root_group="itaque",
+            suite_definition_name="fuga",
         ),
         tags={
-            "nostrum": "repellat",
+            "accusantium": "vel",
         },
     ),
 )
     
-res = s.sdk.create_suite_definition(req)
+res = s.create_suite_definition(req)
 
 if res.create_suite_definition_response is not None:
     # handle response

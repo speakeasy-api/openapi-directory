@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import team_repository as shared_team_repository
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForRepoLegacyPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForRepoLegacyRequest:
-    path_params: TeamsCheckPermissionsForRepoLegacyPathParams = field()
+    path_params: TeamsCheckPermissionsForRepoLegacyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForRepoLegacyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_repository: Optional[shared.TeamRepository] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_repository: Optional[shared_team_repository.TeamRepository] = dataclasses.field(default=None)
     

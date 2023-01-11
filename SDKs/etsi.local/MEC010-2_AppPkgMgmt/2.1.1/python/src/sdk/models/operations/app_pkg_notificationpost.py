@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apppkgnotification as shared_apppkgnotification
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgNotificationPostRequest:
-    request: shared.AppPkgNotification = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_apppkgnotification.AppPkgNotification = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgNotificationPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

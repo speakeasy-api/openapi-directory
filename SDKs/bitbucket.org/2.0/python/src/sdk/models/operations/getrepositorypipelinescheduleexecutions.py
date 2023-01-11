@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import paginated_pipeline_schedule_executions as shared_paginated_pipeline_schedule_executions
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineScheduleExecutionsPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    schedule_uuid: str = field(metadata={'path_param': { 'field_name': 'schedule_uuid', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    schedule_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'schedule_uuid', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineScheduleExecutionsRequest:
-    path_params: GetRepositoryPipelineScheduleExecutionsPathParams = field()
+    path_params: GetRepositoryPipelineScheduleExecutionsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineScheduleExecutionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_pipeline_schedule_executions: Optional[shared.PaginatedPipelineScheduleExecutions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_pipeline_schedule_executions: Optional[shared_paginated_pipeline_schedule_executions.PaginatedPipelineScheduleExecutions] = dataclasses.field(default=None)
     

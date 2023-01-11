@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAuthStartRequestBody:
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    email_confirmation: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email_confirmation') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    email_confirmation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email_confirmation') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAuthStart200ApplicationJSON:
-    confirm_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirm_url') }})
-    token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
+    confirm_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirm_url') }})
+    token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAuthStartRequest:
-    request: PostAuthStartRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostAuthStartRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAuthStartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_auth_start_200_application_json_object: Optional[PostAuthStart200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_auth_start_200_application_json_object: Optional[PostAuthStart200ApplicationJSON] = dataclasses.field(default=None)
     

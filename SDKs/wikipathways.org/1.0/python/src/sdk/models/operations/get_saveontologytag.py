@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,23 +11,23 @@ class GetSaveOntologyTagFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSaveOntologyTagQueryParams:
-    auth: str = field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
-    pw_id: str = field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
-    term: str = field(metadata={'query_param': { 'field_name': 'term', 'style': 'form', 'explode': True }})
-    term_id: str = field(metadata={'query_param': { 'field_name': 'termId', 'style': 'form', 'explode': True }})
-    user: str = field(metadata={'query_param': { 'field_name': 'user', 'style': 'form', 'explode': True }})
-    format: Optional[GetSaveOntologyTagFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    auth: str = dataclasses.field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
+    pw_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
+    term: str = dataclasses.field(metadata={'query_param': { 'field_name': 'term', 'style': 'form', 'explode': True }})
+    term_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'termId', 'style': 'form', 'explode': True }})
+    user: str = dataclasses.field(metadata={'query_param': { 'field_name': 'user', 'style': 'form', 'explode': True }})
+    format: Optional[GetSaveOntologyTagFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSaveOntologyTagRequest:
-    query_params: GetSaveOntologyTagQueryParams = field()
+    query_params: GetSaveOntologyTagQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSaveOntologyTagResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

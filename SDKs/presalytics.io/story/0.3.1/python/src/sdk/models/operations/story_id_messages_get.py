@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDMessagesGetPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDMessagesGetRequest:
-    path_params: StoryIDMessagesGetPathParams = field()
+    path_params: StoryIDMessagesGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDMessagesGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    messages: Optional[List[Any]] = field(default=None)
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    messages: Optional[list[Any]] = dataclasses.field(default=None)
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

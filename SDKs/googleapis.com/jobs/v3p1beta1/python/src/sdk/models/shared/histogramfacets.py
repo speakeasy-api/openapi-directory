@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import compensationhistogramrequest as shared_compensationhistogramrequest
+from ..shared import customattributehistogramrequest as shared_customattributehistogramrequest
 
 class HistogramFacetsSimpleHistogramFacetsEnum(str, Enum):
     SEARCH_TYPE_UNSPECIFIED = "SEARCH_TYPE_UNSPECIFIED"
@@ -26,13 +27,13 @@ class HistogramFacetsSimpleHistogramFacetsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HistogramFacets:
     r"""HistogramFacets
     Input only. Histogram facets to be specified in SearchJobsRequest.
     """
     
-    compensation_histogram_facets: Optional[List[CompensationHistogramRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compensationHistogramFacets') }})
-    custom_attribute_histogram_facets: Optional[List[CustomAttributeHistogramRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customAttributeHistogramFacets') }})
-    simple_histogram_facets: Optional[List[HistogramFacetsSimpleHistogramFacetsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('simpleHistogramFacets') }})
+    compensation_histogram_facets: Optional[list[shared_compensationhistogramrequest.CompensationHistogramRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compensationHistogramFacets') }})
+    custom_attribute_histogram_facets: Optional[list[shared_customattributehistogramrequest.CustomAttributeHistogramRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customAttributeHistogramFacets') }})
+    simple_histogram_facets: Optional[list[HistogramFacetsSimpleHistogramFacetsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('simpleHistogramFacets') }})
     

@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import provider as shared_provider
+from ..shared import provider as shared_provider
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersCreateRequest:
-    request: shared.ProviderInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_provider.ProviderInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    provider: Optional[shared.Provider] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    provider: Optional[shared_provider.Provider] = dataclasses.field(default=None)
     

@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nestedcable as shared_nestedcable
+from ..shared import nesteddevice as shared_nesteddevice
+from ..shared import nestedpowerport as shared_nestedpowerport
 
 class PowerOutletConnectionStatusLabelEnum(str, Enum):
     NOT_CONNECTED = "Not Connected"
@@ -11,10 +13,10 @@ class PowerOutletConnectionStatusLabelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletConnectionStatus:
-    label: PowerOutletConnectionStatusLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: PowerOutletConnectionStatusLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class PowerOutletFeedLegLabelEnum(str, Enum):
     A = "A"
@@ -28,10 +30,10 @@ class PowerOutletFeedLegValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletFeedLeg:
-    label: PowerOutletFeedLegLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: PowerOutletFeedLegValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: PowerOutletFeedLegLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: PowerOutletFeedLegValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class PowerOutletTypeLabelEnum(str, Enum):
     C5 = "C5"
@@ -171,25 +173,25 @@ class PowerOutletTypeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletType:
-    label: PowerOutletTypeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: PowerOutletTypeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: PowerOutletTypeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: PowerOutletTypeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutlet:
-    device: NestedDevice = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    cable: Optional[NestedCable] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cable') }})
-    connected_endpoint: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint') }})
-    connected_endpoint_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint_type') }})
-    connection_status: Optional[PowerOutletConnectionStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    feed_leg: Optional[PowerOutletFeedLeg] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    power_port: Optional[NestedPowerPort] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    type: Optional[PowerOutletType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    device: shared_nesteddevice.NestedDevice = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    cable: Optional[shared_nestedcable.NestedCable] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cable') }})
+    connected_endpoint: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint') }})
+    connected_endpoint_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connected_endpoint_type') }})
+    connection_status: Optional[PowerOutletConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    feed_leg: Optional[PowerOutletFeedLeg] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    power_port: Optional[shared_nestedpowerport.NestedPowerPort] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    type: Optional[PowerOutletType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

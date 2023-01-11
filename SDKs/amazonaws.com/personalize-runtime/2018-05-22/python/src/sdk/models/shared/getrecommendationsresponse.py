@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import predicteditem as shared_predicteditem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRecommendationsResponse:
-    item_list: Optional[List[PredictedItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemList') }})
-    recommendation_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendationId') }})
+    item_list: Optional[list[shared_predicteditem.PredictedItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itemList') }})
+    recommendation_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendationId') }})
     

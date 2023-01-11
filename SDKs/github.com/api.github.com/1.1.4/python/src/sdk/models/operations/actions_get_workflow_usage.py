@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import workflow_usage as shared_workflow_usage
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowUsagePathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    workflow_id: Any = field(metadata={'path_param': { 'field_name': 'workflow_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    workflow_id: Any = dataclasses.field(metadata={'path_param': { 'field_name': 'workflow_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowUsageRequest:
-    path_params: ActionsGetWorkflowUsagePathParams = field()
+    path_params: ActionsGetWorkflowUsagePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetWorkflowUsageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    workflow_usage: Optional[shared.WorkflowUsage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    workflow_usage: Optional[shared_workflow_usage.WorkflowUsage] = dataclasses.field(default=None)
     

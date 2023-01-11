@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import globalreplicationgroup as shared_globalreplicationgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class RebalanceSlotsInGlobalReplicationGroupResult:
-    global_replication_group: Optional[GlobalReplicationGroup] = field(default=None)
+    global_replication_group: Optional[shared_globalreplicationgroup.GlobalReplicationGroup] = dataclasses.field(default=None)
     

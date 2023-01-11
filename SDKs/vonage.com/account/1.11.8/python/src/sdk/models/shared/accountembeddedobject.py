@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import account as shared_account
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountEmbeddedObject:
     r"""AccountEmbeddedObject
     Account object
     """
     
-    data: Optional[Account] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[shared_account.Account] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

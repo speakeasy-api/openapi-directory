@@ -1,0 +1,44 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        hmac=shared.SchemeHmac(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.GetEntitlementsRequest(
+    headers=operations.GetEntitlementsHeaders(
+        x_amz_algorithm="fugit",
+        x_amz_content_sha256="cumque",
+        x_amz_credential="corporis",
+        x_amz_date="adipisci",
+        x_amz_security_token="aliquid",
+        x_amz_signature="accusantium",
+        x_amz_signed_headers="exercitationem",
+        x_amz_target="AWSMPEntitlementService.GetEntitlements",
+    ),
+    request=shared.GetEntitlementsRequest(
+        filter={
+            "perspiciatis": [
+                "inventore",
+                "voluptatem",
+            ],
+        },
+        max_results=2441923158078746440,
+        next_token="ut",
+        product_code="ullam",
+    ),
+)
+    
+res = s.get_entitlements(req)
+
+if res.get_entitlements_result is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

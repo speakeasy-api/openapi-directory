@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsShowQueryParams:
-    id: str = field(metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsShowSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsShowRequest:
-    query_params: GetAPIV1DonationsShowQueryParams = field()
-    security: GetAPIV1DonationsShowSecurity = field()
+    query_params: GetAPIV1DonationsShowQueryParams = dataclasses.field()
+    security: GetAPIV1DonationsShowSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsShowResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

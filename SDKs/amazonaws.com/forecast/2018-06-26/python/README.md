@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,42 +25,54 @@ s.config_security(
     
 req = operations.CreateDatasetRequest(
     headers=operations.CreateDatasetHeaders(
-        x_amz_algorithm="odio",
-        x_amz_content_sha256="est",
-        x_amz_credential="adipisci",
-        x_amz_date="quo",
-        x_amz_security_token="rerum",
-        x_amz_signature="error",
-        x_amz_signed_headers="suscipit",
+        x_amz_algorithm="voluptatem",
+        x_amz_content_sha256="quia",
+        x_amz_credential="voluptas",
+        x_amz_date="maxime",
+        x_amz_security_token="error",
+        x_amz_signature="exercitationem",
+        x_amz_signed_headers="quisquam",
         x_amz_target="AmazonForecast.CreateDataset",
     ),
     request=shared.CreateDatasetRequest(
-        data_frequency="minus",
-        dataset_name="ullam",
-        dataset_type="RELATED_TIME_SERIES",
-        domain="EC2_CAPACITY",
+        data_frequency="quaerat",
+        dataset_name="earum",
+        dataset_type="TARGET_TIME_SERIES",
+        domain="CUSTOM",
         encryption_config=shared.EncryptionConfig(
-            kms_key_arn="et",
-            role_arn="nobis",
+            kms_key_arn="ut",
+            role_arn="ut",
         ),
         schema=shared.Schema(
             attributes=[
                 shared.SchemaAttribute(
-                    attribute_name="eius",
-                    attribute_type="geolocation",
+                    attribute_name="magni",
+                    attribute_type="timestamp",
+                ),
+                shared.SchemaAttribute(
+                    attribute_name="quaerat",
+                    attribute_type="timestamp",
+                ),
+                shared.SchemaAttribute(
+                    attribute_name="voluptas",
+                    attribute_type="float",
                 ),
             ],
         ),
         tags=[
             shared.Tag(
-                key="est",
-                value="in",
+                key="sed",
+                value="accusantium",
+            ),
+            shared.Tag(
+                key="repellat",
+                value="quam",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_dataset(req)
+res = s.create_dataset(req)
 
 if res.create_dataset_response is not None:
     # handle response

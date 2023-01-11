@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,17 +18,17 @@ s = sdk.SDK()
     
 req = operations.CreateAMapRequest(
     query_params=operations.CreateAMapQueryParams(
-        app_token="dolorum",
-        constraint="praesentium",
-        entity_id="sunt",
-        variable="rerum",
+        app_token="voluptatum",
+        constraint="unde",
+        entity_id="unde",
+        variable="error",
     ),
     headers=operations.CreateAMapHeaders(
-        x_app_token="assumenda",
+        x_app_token="ut",
     ),
 )
     
-res = s.sdk.create_a_map(req)
+res = s.create_a_map(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,2 +1,4 @@
 from .academiccertificateschema import *
 from .security import *
+
+__all__ = ["AcademicCertificateSchemaCertificateDataExamination","AcademicCertificateSchemaCertificateDataPerformanceSubjects","AcademicCertificateSchemaCertificateDataPerformance","AcademicCertificateSchemaCertificateDataSchool","AcademicCertificateSchemaCertificateData","AcademicCertificateSchemaIssuedByOrganizationAddress","AcademicCertificateSchemaIssuedByOrganization","AcademicCertificateSchemaIssuedBy","AcademicCertificateSchemaIssuedToPersonAddress","AcademicCertificateSchemaIssuedToPersonPhoto","AcademicCertificateSchemaIssuedToPerson","AcademicCertificateSchemaIssuedTo","AcademicCertificateSchema","SchemeAPIKey","SchemeClientID"]

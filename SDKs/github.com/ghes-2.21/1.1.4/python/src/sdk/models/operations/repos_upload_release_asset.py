@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import release_asset as shared_release_asset
 
 
 REPOS_UPLOAD_RELEASE_ASSET_SERVERS = [
@@ -8,30 +8,30 @@ REPOS_UPLOAD_RELEASE_ASSET_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposUploadReleaseAssetPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    release_id: int = field(metadata={'path_param': { 'field_name': 'release_id', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    release_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'release_id', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposUploadReleaseAssetQueryParams:
-    label: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'label', 'style': 'form', 'explode': True }})
-    name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'label', 'style': 'form', 'explode': True }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposUploadReleaseAssetRequest:
-    path_params: ReposUploadReleaseAssetPathParams = field()
-    query_params: ReposUploadReleaseAssetQueryParams = field()
-    request: Optional[str] = field(default=None, metadata={'request': { 'media_type': '*/*' }})
-    server_url: Optional[str] = field(default=None)
+    path_params: ReposUploadReleaseAssetPathParams = dataclasses.field()
+    query_params: ReposUploadReleaseAssetQueryParams = dataclasses.field()
+    request: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': '*/*' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposUploadReleaseAssetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    release_asset: Optional[shared.ReleaseAsset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    release_asset: Optional[shared_release_asset.ReleaseAsset] = dataclasses.field(default=None)
     

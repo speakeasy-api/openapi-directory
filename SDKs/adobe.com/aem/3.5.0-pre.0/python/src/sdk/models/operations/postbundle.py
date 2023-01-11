@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostBundlePathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBundleQueryParams:
-    action: str = field(metadata={'query_param': { 'field_name': 'action', 'style': 'form', 'explode': True }})
+    action: str = dataclasses.field(metadata={'query_param': { 'field_name': 'action', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBundleRequest:
-    path_params: PostBundlePathParams = field()
-    query_params: PostBundleQueryParams = field()
+    path_params: PostBundlePathParams = dataclasses.field()
+    query_params: PostBundleQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBundleResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

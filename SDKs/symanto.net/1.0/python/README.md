@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -30,19 +29,19 @@ req = operations.CommunicationRequest(
     ),
     request=[
         shared.Post(
-            id="ducimus",
-            language="provident",
-            text="illo",
+            id="atque",
+            language="tenetur",
+            text="sed",
         ),
         shared.Post(
-            id="voluptate",
-            language="quas",
-            text="et",
+            id="non",
+            language="saepe",
+            text="eum",
         ),
     ],
 )
     
-res = s.sdk.communication(req)
+res = s.text_analysis.communication(req)
 
 if res.prediction_results is not None:
     # handle response
@@ -52,7 +51,7 @@ if res.prediction_results is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Text Analysis
 
 * `communication` - Communication & Tonality
 * `ekman_emotion` - Emotion Analysis

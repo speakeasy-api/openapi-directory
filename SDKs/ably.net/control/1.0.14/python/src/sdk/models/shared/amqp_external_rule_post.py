@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rule_source as shared_rule_source
 
 class AmqpExternalRulePostRequestModeEnum(str, Enum):
     SINGLE = "single"
@@ -13,30 +13,30 @@ class AmqpExternalRulePostRuleTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AmqpExternalRulePostTargetHeaders:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AmqpExternalRulePostTarget:
-    mandatory_route: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandatoryRoute') }})
-    persistent_messages: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistentMessages') }})
-    routing_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('routingKey') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    enveloped: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enveloped') }})
-    format: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    headers: Optional[List[AmqpExternalRulePostTargetHeaders]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headers') }})
-    message_ttl: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('messageTtl') }})
+    mandatory_route: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandatoryRoute') }})
+    persistent_messages: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('persistentMessages') }})
+    routing_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('routingKey') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    enveloped: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enveloped') }})
+    format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    headers: Optional[list[AmqpExternalRulePostTargetHeaders]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headers') }})
+    message_ttl: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('messageTtl') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AmqpExternalRulePost:
-    request_mode: AmqpExternalRulePostRequestModeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestMode') }})
-    rule_type: AmqpExternalRulePostRuleTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleType') }})
-    source: RuleSource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
-    target: AmqpExternalRulePostTarget = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
+    request_mode: AmqpExternalRulePostRequestModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestMode') }})
+    rule_type: AmqpExternalRulePostRuleTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleType') }})
+    source: shared_rule_source.RuleSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    target: AmqpExternalRulePostTarget = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
     

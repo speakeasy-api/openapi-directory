@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import usergrouppendingchanges as shared_usergrouppendingchanges
 
 
-@dataclass
+@dataclasses.dataclass
 class UserGroup:
-    arn: Optional[str] = field(default=None)
-    engine: Optional[str] = field(default=None)
-    pending_changes: Optional[UserGroupPendingChanges] = field(default=None)
-    replication_groups: Optional[List[str]] = field(default=None)
-    status: Optional[str] = field(default=None)
-    user_group_id: Optional[str] = field(default=None)
-    user_ids: Optional[List[str]] = field(default=None)
+    arn: Optional[str] = dataclasses.field(default=None)
+    engine: Optional[str] = dataclasses.field(default=None)
+    pending_changes: Optional[shared_usergrouppendingchanges.UserGroupPendingChanges] = dataclasses.field(default=None)
+    replication_groups: Optional[list[str]] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
+    user_group_id: Optional[str] = dataclasses.field(default=None)
+    user_ids: Optional[list[str]] = dataclasses.field(default=None)
     

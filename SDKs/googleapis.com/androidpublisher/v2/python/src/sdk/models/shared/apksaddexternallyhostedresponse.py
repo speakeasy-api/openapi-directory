@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import externallyhostedapk as shared_externallyhostedapk
 
 
-@dataclass
+@dataclasses.dataclass
 class ApksAddExternallyHostedResponse:
-    externally_hosted_apk: Optional[ExternallyHostedApk] = field(default=None)
+    externally_hosted_apk: Optional[shared_externallyhostedapk.ExternallyHostedApk] = dataclasses.field(default=None)
     

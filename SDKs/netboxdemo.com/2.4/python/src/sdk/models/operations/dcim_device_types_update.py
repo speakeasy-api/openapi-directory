@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabledevicetype as shared_writabledevicetype
+from ..shared import devicetype as shared_devicetype
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceTypesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceTypesUpdateRequest:
-    path_params: DcimDeviceTypesUpdatePathParams = field()
-    request: shared.WritableDeviceTypeInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimDeviceTypesUpdatePathParams = dataclasses.field()
+    request: shared_writabledevicetype.WritableDeviceTypeInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceTypesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_type: Optional[shared.DeviceType] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_type: Optional[shared_devicetype.DeviceType] = dataclasses.field(default=None)
     

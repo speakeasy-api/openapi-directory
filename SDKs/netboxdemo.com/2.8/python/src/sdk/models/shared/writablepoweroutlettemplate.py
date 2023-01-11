@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -79,11 +79,11 @@ class WritablePowerOutletTemplateTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WritablePowerOutletTemplateInput:
-    device_type: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    feed_leg: Optional[WritablePowerOutletTemplateFeedLegEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
-    power_port: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
-    type: Optional[WritablePowerOutletTemplateTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    device_type: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    feed_leg: Optional[WritablePowerOutletTemplateFeedLegEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
+    power_port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
+    type: Optional[WritablePowerOutletTemplateTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

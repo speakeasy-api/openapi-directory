@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class BoxScoresDeltaVFormatEnum(str, Enum):
@@ -12,23 +12,23 @@ class BoxScoresDeltaVPlayerstoincludeEnum(str, Enum):
     IDP = "idp"
 
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresDeltaVPathParams:
-    format: BoxScoresDeltaVFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    minutes: str = field(metadata={'path_param': { 'field_name': 'minutes', 'style': 'simple', 'explode': False }})
-    playerstoinclude: BoxScoresDeltaVPlayerstoincludeEnum = field(metadata={'path_param': { 'field_name': 'playerstoinclude', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
-    week: str = field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
+    format: BoxScoresDeltaVFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    minutes: str = dataclasses.field(metadata={'path_param': { 'field_name': 'minutes', 'style': 'simple', 'explode': False }})
+    playerstoinclude: BoxScoresDeltaVPlayerstoincludeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'playerstoinclude', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    week: str = dataclasses.field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresDeltaVRequest:
-    path_params: BoxScoresDeltaVPathParams = field()
+    path_params: BoxScoresDeltaVPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresDeltaVResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_score_v3s: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_score_v3s: Optional[list[Any]] = dataclasses.field(default=None)
     

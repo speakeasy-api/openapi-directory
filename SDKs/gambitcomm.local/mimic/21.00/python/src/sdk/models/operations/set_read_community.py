@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetReadCommunityPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    read: str = field(metadata={'path_param': { 'field_name': 'read', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    read: str = dataclasses.field(metadata={'path_param': { 'field_name': 'read', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetReadCommunityRequest:
-    path_params: SetReadCommunityPathParams = field()
+    path_params: SetReadCommunityPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SetReadCommunityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_read_community_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_read_community_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

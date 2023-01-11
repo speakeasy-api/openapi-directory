@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevrf as shared_writablevrf
+from ..shared import vrf as shared_vrf
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsCreateRequest:
-    request: shared.WritableVrfInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablevrf.WritableVrfInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vrf: Optional[shared.Vrf] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vrf: Optional[shared_vrf.Vrf] = dataclasses.field(default=None)
     

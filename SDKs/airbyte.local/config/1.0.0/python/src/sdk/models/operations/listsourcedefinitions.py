@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sourcedefinitionreadlist as shared_sourcedefinitionreadlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSourceDefinitionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    source_definition_read_list: Optional[shared.SourceDefinitionReadList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    source_definition_read_list: Optional[shared_sourcedefinitionreadlist.SourceDefinitionReadList] = dataclasses.field(default=None)
     

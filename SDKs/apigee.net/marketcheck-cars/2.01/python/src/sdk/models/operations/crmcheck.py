@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import crmresponse as shared_crmresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class CrmCheckPathParams:
-    vin: str = field(metadata={'path_param': { 'field_name': 'vin', 'style': 'simple', 'explode': False }})
+    vin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vin', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CrmCheckQueryParams:
-    sale_date: str = field(metadata={'query_param': { 'field_name': 'sale_date', 'style': 'form', 'explode': True }})
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    sale_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'sale_date', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CrmCheckRequest:
-    path_params: CrmCheckPathParams = field()
-    query_params: CrmCheckQueryParams = field()
+    path_params: CrmCheckPathParams = dataclasses.field()
+    query_params: CrmCheckQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CrmCheckResponse:
-    content_type: str = field()
-    status_code: int = field()
-    crm_response: Optional[shared.CrmResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    crm_response: Optional[shared_crmresponse.CrmResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

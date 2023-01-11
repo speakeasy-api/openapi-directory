@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 class PostProjectUsernameProjectSSHKeyContentTypeEnum(str, Enum):
     APPLICATION_JSON = "application/json"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyHeaders:
-    content_type: PostProjectUsernameProjectSSHKeyContentTypeEnum = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    content_type: PostProjectUsernameProjectSSHKeyContentTypeEnum = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyRequestBody:
-    hostname: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostname') }})
-    private_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_key') }})
+    hostname: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostname') }})
+    private_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_key') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyDefaultApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyRequest:
-    headers: PostProjectUsernameProjectSSHKeyHeaders = field()
-    path_params: PostProjectUsernameProjectSSHKeyPathParams = field()
-    request: PostProjectUsernameProjectSSHKeyRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PostProjectUsernameProjectSSHKeyHeaders = dataclasses.field()
+    path_params: PostProjectUsernameProjectSSHKeyPathParams = dataclasses.field()
+    request: PostProjectUsernameProjectSSHKeyRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectSSHKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_project_username_project_ssh_key_default_application_json_object: Optional[PostProjectUsernameProjectSSHKeyDefaultApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_project_username_project_ssh_key_default_application_json_object: Optional[PostProjectUsernameProjectSSHKeyDefaultApplicationJSON] = dataclasses.field(default=None)
     

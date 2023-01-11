@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import georestriction as shared_georestriction
 
 
-@dataclass
+@dataclasses.dataclass
 class Restrictions:
     r"""Restrictions
     A complex type that identifies ways in which you want to restrict distribution of your content.
     """
     
-    geo_restriction: GeoRestriction = field()
+    geo_restriction: shared_georestriction.GeoRestriction = dataclasses.field()
     

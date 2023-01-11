@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -9,9 +9,9 @@ class GetRuleTree200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRuleTree200ApplicationJSONData:
-    rule_categories: dict[str, Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleCategories') }})
+    rule_categories: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleCategories') }})
     
 class GetRuleTree200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -19,16 +19,16 @@ class GetRuleTree200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRuleTree200ApplicationJSON:
-    action: GetRuleTree200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: GetRuleTree200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: GetRuleTree200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: GetRuleTree200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: GetRuleTree200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: GetRuleTree200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRuleTreeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_rule_tree_200_application_json_object: Optional[GetRuleTree200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_rule_tree_200_application_json_object: Optional[GetRuleTree200ApplicationJSON] = dataclasses.field(default=None)
     

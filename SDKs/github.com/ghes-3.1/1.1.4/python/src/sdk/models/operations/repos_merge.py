@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import commit as shared_commit
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposMergePathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposMergeRequestBody:
-    base: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('base') }})
-    head: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head') }})
-    commit_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commit_message') }})
+    base: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('base') }})
+    head: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head') }})
+    commit_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commit_message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposMergeRequest:
-    path_params: ReposMergePathParams = field()
-    request: Optional[ReposMergeRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ReposMergePathParams = dataclasses.field()
+    request: Optional[ReposMergeRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposMergeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    commit: Optional[shared.Commit] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    commit: Optional[shared_commit.Commit] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

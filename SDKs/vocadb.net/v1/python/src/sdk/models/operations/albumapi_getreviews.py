@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import albumreviewcontract as shared_albumreviewcontract
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetReviewsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetReviewsQueryParams:
-    language_code: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'languageCode', 'style': 'form', 'explode': True }})
+    language_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'languageCode', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetReviewsRequest:
-    path_params: AlbumAPIGetReviewsPathParams = field()
-    query_params: AlbumAPIGetReviewsQueryParams = field()
+    path_params: AlbumAPIGetReviewsPathParams = dataclasses.field()
+    query_params: AlbumAPIGetReviewsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetReviewsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album_review_contracts: Optional[List[shared.AlbumReviewContract]] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album_review_contracts: Optional[list[shared_albumreviewcontract.AlbumReviewContract]] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

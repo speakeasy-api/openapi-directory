@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerLogoutPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerLogoutQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerLogoutRequest:
-    path_params: SessionControllerLogoutPathParams = field()
-    query_params: SessionControllerLogoutQueryParams = field()
+    path_params: SessionControllerLogoutPathParams = dataclasses.field()
+    query_params: SessionControllerLogoutQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerLogoutResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

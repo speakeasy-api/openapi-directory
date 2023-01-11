@@ -1,39 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import _xgafv_enum as shared__xgafv_enum
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import googlecloudpaymentsresellersubscriptionv1extendsubscriptionrequest as shared_googlecloudpaymentsresellersubscriptionv1extendsubscriptionrequest
+from ..shared import googlecloudpaymentsresellersubscriptionv1extendsubscriptionresponse as shared_googlecloudpaymentsresellersubscriptionv1extendsubscriptionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PaymentsresellersubscriptionPartnersSubscriptionsExtendPathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PaymentsresellersubscriptionPartnersSubscriptionsExtendQueryParams:
-    dollar_xgafv: Optional[shared.XgafvEnum] = field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
-    access_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    upload_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
-    upload_protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
+    dollar_xgafv: Optional[shared__xgafv_enum.XgafvEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    upload_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
+    upload_protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest:
-    path_params: PaymentsresellersubscriptionPartnersSubscriptionsExtendPathParams = field()
-    query_params: PaymentsresellersubscriptionPartnersSubscriptionsExtendQueryParams = field()
-    request: Optional[shared.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PaymentsresellersubscriptionPartnersSubscriptionsExtendPathParams = dataclasses.field()
+    query_params: PaymentsresellersubscriptionPartnersSubscriptionsExtendQueryParams = dataclasses.field()
+    request: Optional[shared_googlecloudpaymentsresellersubscriptionv1extendsubscriptionrequest.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse:
-    content_type: str = field()
-    status_code: int = field()
-    google_cloud_payments_reseller_subscription_v1_extend_subscription_response: Optional[shared.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    google_cloud_payments_reseller_subscription_v1_extend_subscription_response: Optional[shared_googlecloudpaymentsresellersubscriptionv1extendsubscriptionresponse.GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse] = dataclasses.field(default=None)
     

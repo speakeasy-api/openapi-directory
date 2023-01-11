@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import beleg as shared_beleg
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeBelegUUIDPathParams:
-    beleg_uuid: str = field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
+    beleg_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeBelegUUIDRequest:
-    path_params: GetBelegeBelegUUIDPathParams = field()
+    path_params: GetBelegeBelegUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeBelegUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    beleg: Optional[shared.Beleg] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    beleg: Optional[shared_beleg.Beleg] = dataclasses.field(default=None)
     

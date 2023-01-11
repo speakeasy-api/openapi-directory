@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,15 +10,15 @@ class ClientForbiddenProblemReasonEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClientForbiddenProblem:
     r"""ClientForbiddenProblem
     A problem that indicates your client is forbidden from making this request.
     """
     
-    detail: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    reason: Optional[ClientForbiddenProblemReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
-    registration_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registration_url') }})
+    detail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    reason: Optional[ClientForbiddenProblemReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    registration_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registration_url') }})
     

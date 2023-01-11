@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import episodefull as shared_episodefull
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeByIDQueryParams:
-    show_transcript: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'show_transcript', 'style': 'form', 'explode': False }})
+    show_transcript: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'show_transcript', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeByIDHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeByIDRequest:
-    headers: GetEpisodeByIDHeaders = field()
-    path_params: GetEpisodeByIDPathParams = field()
-    query_params: GetEpisodeByIDQueryParams = field()
+    headers: GetEpisodeByIDHeaders = dataclasses.field()
+    path_params: GetEpisodeByIDPathParams = dataclasses.field()
+    query_params: GetEpisodeByIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeByIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    episode_full: Optional[shared.EpisodeFull] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    episode_full: Optional[shared_episodefull.EpisodeFull] = dataclasses.field(default=None)
     

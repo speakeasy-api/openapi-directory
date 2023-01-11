@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import scalingpolicy as shared_scalingpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class PoliciesType:
-    next_token: Optional[str] = field(default=None)
-    scaling_policies: Optional[List[ScalingPolicy]] = field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
+    scaling_policies: Optional[list[shared_scalingpolicy.ScalingPolicy]] = dataclasses.field(default=None)
     

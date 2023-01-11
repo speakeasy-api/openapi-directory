@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class VatLevelTwoPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatLevelTwoRequestBody:
-    vat_number: str = field(metadata={'form': { 'field_name': 'vatNumber' }})
-    confirmation: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'confirmation' }})
+    vat_number: str = dataclasses.field(metadata={'form': { 'field_name': 'vatNumber' }})
+    confirmation: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'confirmation' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatLevelTwoSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatLevelTwoRequest:
-    path_params: VatLevelTwoPathParams = field()
-    request: VatLevelTwoRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: VatLevelTwoSecurity = field()
+    path_params: VatLevelTwoPathParams = dataclasses.field()
+    request: VatLevelTwoRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: VatLevelTwoSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VatLevelTwoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vat_level_two_200_application_json_any: Optional[Any] = field(default=None)
-    vat_level_two_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vat_level_two_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    vat_level_two_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

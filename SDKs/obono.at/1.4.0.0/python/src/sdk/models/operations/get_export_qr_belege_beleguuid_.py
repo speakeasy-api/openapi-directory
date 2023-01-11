@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportQrBelegeBelegUUIDPathParams:
-    beleg_uuid: str = field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
+    beleg_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportQrBelegeBelegUUIDRequest:
-    path_params: GetExportQrBelegeBelegUUIDPathParams = field()
+    path_params: GetExportQrBelegeBelegUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportQrBelegeBelegUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

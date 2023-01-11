@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connectorsummary as shared_connectorsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListConnectorsResponse:
-    connectors: Optional[List[ConnectorSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectors') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    connectors: Optional[list[shared_connectorsummary.ConnectorSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectors') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

@@ -1,1 +1,3 @@
 from .travelimpactmodel_flights_computeflightemissions import *
+
+__all__ = ["TravelimpactmodelFlightsComputeFlightEmissionsQueryParams","TravelimpactmodelFlightsComputeFlightEmissionsRequest","TravelimpactmodelFlightsComputeFlightEmissionsResponse"]

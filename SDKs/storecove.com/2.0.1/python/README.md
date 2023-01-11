@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,9 +25,9 @@ s.config_security(
     
 req = operations.CreateAdministrationRequest(
     path_params=operations.CreateAdministrationPathParams(
-        legal_entity_id=6289420334362467367,
+        legal_entity_id=3526217757577307766,
     ),
-    request="cum",
+    request="sit",
 )
     
 res = s.administrations.create_administration(req)

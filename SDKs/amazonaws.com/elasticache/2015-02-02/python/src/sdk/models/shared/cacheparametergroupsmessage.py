@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import cacheparametergrouplist as shared_cacheparametergrouplist
 
 
-@dataclass
+@dataclasses.dataclass
 class CacheParameterGroupsMessage:
     r"""CacheParameterGroupsMessage
     Represents the output of a <code>DescribeCacheParameterGroups</code> operation.
     """
     
-    cache_parameter_groups: Optional[List[CacheParameterGroup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    cache_parameter_groups: Optional[list[shared_cacheparametergrouplist.CacheParameterGroupList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

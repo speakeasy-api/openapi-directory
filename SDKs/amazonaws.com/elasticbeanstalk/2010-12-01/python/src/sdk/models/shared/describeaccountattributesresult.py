@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import resourcequotas as shared_resourcequotas
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAccountAttributesResult:
-    resource_quotas: Optional[ResourceQuotas] = field(default=None)
+    resource_quotas: Optional[shared_resourcequotas.ResourceQuotas] = dataclasses.field(default=None)
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class StandingsFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class StandingsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class StandingsPathParams:
-    format: StandingsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    roundid: str = field(metadata={'path_param': { 'field_name': 'roundid', 'style': 'simple', 'explode': False }})
+    format: StandingsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    roundid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'roundid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StandingsRequest:
-    path_params: StandingsPathParams = field()
+    path_params: StandingsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StandingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    standings: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    standings: Optional[list[Any]] = dataclasses.field(default=None)
     

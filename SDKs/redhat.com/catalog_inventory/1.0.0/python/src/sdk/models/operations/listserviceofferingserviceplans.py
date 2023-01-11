@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import serviceplanscollection as shared_serviceplanscollection
 
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceOfferingServicePlansPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceOfferingServicePlansQueryParams:
-    filter: Optional[dict[str, Any]] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'deepObject', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    sort_by: Optional[dict[str, Any]] = field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'deepObject', 'explode': True }})
+    filter: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'deepObject', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    sort_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'deepObject', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceOfferingServicePlansRequest:
-    path_params: ListServiceOfferingServicePlansPathParams = field()
-    query_params: ListServiceOfferingServicePlansQueryParams = field()
+    path_params: ListServiceOfferingServicePlansPathParams = dataclasses.field()
+    query_params: ListServiceOfferingServicePlansQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceOfferingServicePlansResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    service_plans_collection: Optional[shared.ServicePlansCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    service_plans_collection: Optional[shared_serviceplanscollection.ServicePlansCollection] = dataclasses.field(default=None)
     

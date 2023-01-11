@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBadgeQueryParams:
-    url: str = field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
+    url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBadgeRequest:
-    query_params: GetBadgeQueryParams = field()
+    query_params: GetBadgeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBadgeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

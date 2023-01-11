@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getsyncresponse as shared_getsyncresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSyncResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_sync_response: Optional[shared.GetSyncResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_sync_response: Optional[shared_getsyncresponse.GetSyncResponse] = dataclasses.field(default=None)
     

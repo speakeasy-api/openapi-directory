@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,12 +8,12 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateAgentRequest:
     r"""UpdateAgentRequest
     UpdateAgentRequest
     """
     
-    agent_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AgentArn') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    agent_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AgentArn') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
     

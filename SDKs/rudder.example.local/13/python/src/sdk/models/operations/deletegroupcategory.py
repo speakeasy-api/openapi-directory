@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import group_category as shared_group_category
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupCategoryPathParams:
-    group_category_id: str = field(metadata={'path_param': { 'field_name': 'groupCategoryId', 'style': 'simple', 'explode': False }})
+    group_category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupCategoryId', 'style': 'simple', 'explode': False }})
     
 class DeleteGroupCategory200ApplicationJSONActionEnum(str, Enum):
     DELETE_GROUP_CATEGORY = "DeleteGroupCategory"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupCategory200ApplicationJSONData:
-    group_categories: List[shared.GroupCategory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
+    group_categories: list[shared_group_category.GroupCategory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
     
 class DeleteGroupCategory200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class DeleteGroupCategory200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupCategory200ApplicationJSON:
-    action: DeleteGroupCategory200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: DeleteGroupCategory200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: DeleteGroupCategory200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: DeleteGroupCategory200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: DeleteGroupCategory200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: DeleteGroupCategory200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupCategoryRequest:
-    path_params: DeleteGroupCategoryPathParams = field()
+    path_params: DeleteGroupCategoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_group_category_200_application_json_object: Optional[DeleteGroupCategory200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_group_category_200_application_json_object: Optional[DeleteGroupCategory200ApplicationJSON] = dataclasses.field(default=None)
     

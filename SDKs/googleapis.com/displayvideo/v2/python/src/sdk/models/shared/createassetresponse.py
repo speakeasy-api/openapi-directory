@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import asset as shared_asset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAssetResponse:
     r"""CreateAssetResponse
     A response message for CreateAsset.
     """
     
-    asset: Optional[Asset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
+    asset: Optional[shared_asset.Asset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
     

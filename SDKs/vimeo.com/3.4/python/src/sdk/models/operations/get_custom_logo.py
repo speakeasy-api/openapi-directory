@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import picture as shared_picture
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomLogoPathParams:
-    logo_id: float = field(metadata={'path_param': { 'field_name': 'logo_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    logo_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'logo_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomLogoRequest:
-    path_params: GetCustomLogoPathParams = field()
+    path_params: GetCustomLogoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomLogoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    picture: Optional[shared.Picture] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    picture: Optional[shared_picture.Picture] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersRegistrationsListPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersRegistrationsListRequest:
-    path_params: UsersRegistrationsListPathParams = field()
+    path_params: UsersRegistrationsListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersRegistrationsListResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

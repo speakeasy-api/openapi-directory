@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.LabrpRequest(
     security=operations.LabrpSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.LabrpRequestBody(
         certificate_parameters=operations.LabrpRequestBodyCertificateParameters(
-            full_name="repellendus",
-            reportdate="ducimus",
-            uhid="sunt",
+            full_name="ipsum",
+            reportdate="rem",
+            uhid="consequuntur",
         ),
-        consent_artifact="rerum",
+        consent_artifact="aliquam",
         format="pdf",
-        txn_id="recusandae",
+        txn_id="fuga",
     ),
 )
     
-res = s.sdk.labrp(req)
+res = s.ap_is.labrp(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `labrp` - Clinical Laboratory Report
 

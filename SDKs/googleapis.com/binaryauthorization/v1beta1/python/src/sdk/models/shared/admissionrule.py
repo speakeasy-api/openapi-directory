@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -17,13 +17,9 @@ class AdmissionRuleEvaluationModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdmissionRule:
-    r"""AdmissionRule
-    An admission rule specifies either that all container images used in a pod creation request must be attested to by one or more attestors, that all pod creations will be allowed, or that all pod creations will be denied. Images matching an admission allowlist pattern are exempted from admission rules and will never block a pod creation.
-    """
-    
-    enforcement_mode: Optional[AdmissionRuleEnforcementModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enforcementMode') }})
-    evaluation_mode: Optional[AdmissionRuleEvaluationModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluationMode') }})
-    require_attestations_by: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requireAttestationsBy') }})
+    enforcement_mode: Optional[AdmissionRuleEnforcementModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enforcementMode') }})
+    evaluation_mode: Optional[AdmissionRuleEvaluationModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluationMode') }})
+    require_attestations_by: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requireAttestationsBy') }})
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import renderingenginetype_enum as shared_renderingenginetype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RenderingEngine:
     r"""RenderingEngine
     Information about a rendering engine.
     """
     
-    name: Optional[RenderingEngineTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    name: Optional[shared_renderingenginetype_enum.RenderingEngineTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

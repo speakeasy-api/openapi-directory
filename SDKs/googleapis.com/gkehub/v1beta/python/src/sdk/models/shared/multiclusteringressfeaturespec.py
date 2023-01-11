@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class MultiClusterIngressFeatureSpecBillingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MultiClusterIngressFeatureSpec:
     r"""MultiClusterIngressFeatureSpec
     **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
     """
     
-    billing: Optional[MultiClusterIngressFeatureSpecBillingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing') }})
-    config_membership: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configMembership') }})
+    billing: Optional[MultiClusterIngressFeatureSpecBillingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing') }})
+    config_membership: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configMembership') }})
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import perfsample as shared_perfsample
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchCreatePerfSamplesRequest:
     r"""BatchCreatePerfSamplesRequest
     The request must provide up to a maximum of 5000 samples to be created; a larger sample size will cause an INVALID_ARGUMENT error
     """
     
-    perf_samples: Optional[List[PerfSample]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfSamples') }})
+    perf_samples: Optional[list[shared_perfsample.PerfSample]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfSamples') }})
     

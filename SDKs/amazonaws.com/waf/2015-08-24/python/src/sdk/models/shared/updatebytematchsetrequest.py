@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bytematchsetupdate as shared_bytematchsetupdate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateByteMatchSetRequest:
-    byte_match_set_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSetId') }})
-    change_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
-    updates: List[ByteMatchSetUpdate] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Updates') }})
+    byte_match_set_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSetId') }})
+    change_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
+    updates: list[shared_bytematchsetupdate.ByteMatchSetUpdate] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Updates') }})
     

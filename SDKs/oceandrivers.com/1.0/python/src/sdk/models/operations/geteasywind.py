@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEasywindPathParams:
-    easywind_id: str = field(metadata={'path_param': { 'field_name': 'easywindId', 'style': 'simple', 'explode': False }})
+    easywind_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'easywindId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEasywindQueryParams:
-    period: str = field(metadata={'query_param': { 'field_name': 'period', 'style': 'form', 'explode': True }})
+    period: str = dataclasses.field(metadata={'query_param': { 'field_name': 'period', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEasywindRequest:
-    path_params: GetEasywindPathParams = field()
-    query_params: GetEasywindQueryParams = field()
+    path_params: GetEasywindPathParams = dataclasses.field()
+    query_params: GetEasywindQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEasywindResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

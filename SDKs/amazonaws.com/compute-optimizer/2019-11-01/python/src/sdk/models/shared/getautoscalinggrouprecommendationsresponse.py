@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import autoscalinggrouprecommendation as shared_autoscalinggrouprecommendation
+from ..shared import getrecommendationerror as shared_getrecommendationerror
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAutoScalingGroupRecommendationsResponse:
-    auto_scaling_group_recommendations: Optional[List[AutoScalingGroupRecommendation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('autoScalingGroupRecommendations') }})
-    errors: Optional[List[GetRecommendationError]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    auto_scaling_group_recommendations: Optional[list[shared_autoscalinggrouprecommendation.AutoScalingGroupRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('autoScalingGroupRecommendations') }})
+    errors: Optional[list[shared_getrecommendationerror.GetRecommendationError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

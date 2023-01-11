@@ -29,14 +29,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{parent}/customers", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -83,14 +83,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:claim", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse(status_code=r.status_code, content_type=content_type)
@@ -112,14 +112,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:claimAsync", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse(status_code=r.status_code, content_type=content_type)
@@ -141,14 +141,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:findByIdentifier", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse(status_code=r.status_code, content_type=content_type)
@@ -170,14 +170,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:findByOwner", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse(status_code=r.status_code, content_type=content_type)
@@ -224,14 +224,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{metadataOwnerId}/devices/{deviceId}/metadata", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse(status_code=r.status_code, content_type=content_type)
@@ -253,14 +253,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:unclaim", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse(status_code=r.status_code, content_type=content_type)
@@ -282,14 +282,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:unclaimAsync", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse(status_code=r.status_code, content_type=content_type)
@@ -311,14 +311,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/partners/{partnerId}/devices:updateMetadataAsync", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse(status_code=r.status_code, content_type=content_type)

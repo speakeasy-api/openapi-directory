@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import getrandompasswordrequest as shared_getrandompasswordrequest
+from ..shared import getrandompasswordresponse as shared_getrandompasswordresponse
 
 class GetRandomPasswordXAmzTargetEnum(str, Enum):
     SECRETSMANAGER_GET_RANDOM_PASSWORD = "secretsmanager.GetRandomPassword"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRandomPasswordHeaders:
-    x_amz_target: GetRandomPasswordXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: GetRandomPasswordXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRandomPasswordRequest:
-    headers: GetRandomPasswordHeaders = field()
-    request: shared.GetRandomPasswordRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetRandomPasswordHeaders = dataclasses.field()
+    request: shared_getrandompasswordrequest.GetRandomPasswordRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRandomPasswordResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_random_password_response: Optional[shared.GetRandomPasswordResponse] = field(default=None)
-    internal_service_error: Optional[Any] = field(default=None)
-    invalid_parameter_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_random_password_response: Optional[shared_getrandompasswordresponse.GetRandomPasswordResponse] = dataclasses.field(default=None)
+    internal_service_error: Optional[Any] = dataclasses.field(default=None)
+    invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,41 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import imagetolineswithlocationresult as shared_imagetolineswithlocationresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationHeaders:
-    language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
-    preprocessing: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
+    language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
+    preprocessing: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationRequestBody:
-    image_file: ImageOcrImageLinesWithLocationRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: ImageOcrImageLinesWithLocationRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationRequest:
-    headers: ImageOcrImageLinesWithLocationHeaders = field()
-    request: ImageOcrImageLinesWithLocationRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: ImageOcrImageLinesWithLocationSecurity = field()
+    headers: ImageOcrImageLinesWithLocationHeaders = dataclasses.field()
+    request: ImageOcrImageLinesWithLocationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: ImageOcrImageLinesWithLocationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrImageLinesWithLocationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    image_to_lines_with_location_result: Optional[shared.ImageToLinesWithLocationResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    image_to_lines_with_location_result: Optional[shared_imagetolineswithlocationresult.ImageToLinesWithLocationResult] = dataclasses.field(default=None)
     

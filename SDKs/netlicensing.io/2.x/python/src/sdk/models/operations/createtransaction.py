@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class CreateTransactionRequestBodySourceEnum(str, Enum):
     SHOP = "SHOP"
@@ -15,33 +15,33 @@ class CreateTransactionRequestBodyStatusEnum(str, Enum):
     PENDING = "PENDING"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionRequestBody:
-    active: bool = field(metadata={'form': { 'field_name': 'active' }})
-    source: CreateTransactionRequestBodySourceEnum = field(metadata={'form': { 'field_name': 'source' }})
-    status: CreateTransactionRequestBodyStatusEnum = field(metadata={'form': { 'field_name': 'status' }})
-    date_closed: Optional[datetime] = field(default=None, metadata={'form': { 'field_name': 'dateClosed' }})
-    date_created: Optional[datetime] = field(default=None, metadata={'form': { 'field_name': 'dateCreated' }})
-    licensee_number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'licenseeNumber' }})
-    number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'number' }})
-    payment_method: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'paymentMethod' }})
+    active: bool = dataclasses.field(metadata={'form': { 'field_name': 'active' }})
+    source: CreateTransactionRequestBodySourceEnum = dataclasses.field(metadata={'form': { 'field_name': 'source' }})
+    status: CreateTransactionRequestBodyStatusEnum = dataclasses.field(metadata={'form': { 'field_name': 'status' }})
+    date_closed: Optional[datetime] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'dateClosed' }})
+    date_created: Optional[datetime] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'dateCreated' }})
+    licensee_number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licenseeNumber' }})
+    number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'number' }})
+    payment_method: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'paymentMethod' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionRequest:
-    security: CreateTransactionSecurity = field()
-    request: Optional[CreateTransactionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: CreateTransactionSecurity = dataclasses.field()
+    request: Optional[CreateTransactionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

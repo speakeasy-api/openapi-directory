@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import match as shared_match
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventMatchesPathParams:
-    event_key: str = field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
-    team_key: str = field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
+    event_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
+    team_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventMatchesHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventMatchesSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventMatchesRequest:
-    headers: GetTeamEventMatchesHeaders = field()
-    path_params: GetTeamEventMatchesPathParams = field()
-    security: GetTeamEventMatchesSecurity = field()
+    headers: GetTeamEventMatchesHeaders = dataclasses.field()
+    path_params: GetTeamEventMatchesPathParams = dataclasses.field()
+    security: GetTeamEventMatchesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamEventMatchesResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    matches: Optional[List[shared.Match]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    matches: Optional[list[shared_match.Match]] = dataclasses.field(default=None)
     

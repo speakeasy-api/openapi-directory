@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExpressionForTaxonUsingGetPathParams:
-    taxon_id: str = field(metadata={'path_param': { 'field_name': 'taxonId', 'style': 'simple', 'explode': False }})
+    taxon_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'taxonId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExpressionForTaxonUsingGetRequest:
-    path_params: GetExpressionForTaxonUsingGetPathParams = field()
+    path_params: GetExpressionForTaxonUsingGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExpressionForTaxonUsingGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

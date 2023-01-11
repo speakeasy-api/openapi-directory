@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listtagsresponse as shared_listtagsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsQueryParams:
-    page_size_: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
+    page_size_: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsRequest:
-    query_params: GetTagsQueryParams = field()
+    query_params: GetTagsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_tags_response: Optional[shared.ListTagsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_tags_response: Optional[shared_listtagsresponse.ListTagsResponse] = dataclasses.field(default=None)
     

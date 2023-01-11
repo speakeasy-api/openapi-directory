@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,12 +23,12 @@ req = operations.GetVeteranStatusRequest(
         ),
     ),
     request=shared.VeteranStatusRequest(
-        birth_date="aliquid",
-        first_name="inventore",
-        gender="M",
-        last_name="quas",
-        middle_name="architecto",
-        ssn="eos",
+        birth_date="et",
+        first_name="aliquid",
+        gender="F",
+        last_name="provident",
+        middle_name="deleniti",
+        ssn="suscipit",
     ),
 )
     

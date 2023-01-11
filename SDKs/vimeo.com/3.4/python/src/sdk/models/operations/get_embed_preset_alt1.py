@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import presets as shared_presets
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetAlt1PathParams:
-    preset_id: float = field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
+    preset_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetAlt1Request:
-    path_params: GetEmbedPresetAlt1PathParams = field()
+    path_params: GetEmbedPresetAlt1PathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    presets: Optional[shared.Presets] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    presets: Optional[shared_presets.Presets] = dataclasses.field(default=None)
     

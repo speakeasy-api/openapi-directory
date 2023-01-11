@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import version as shared_version
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateVersionPathParams:
-    version_id: str = field(metadata={'path_param': { 'field_name': 'versionId', 'style': 'simple', 'explode': False }})
+    version_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'versionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateVersionSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateVersionRequest:
-    path_params: UpdateVersionPathParams = field()
-    request: shared.Version = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateVersionSecurity = field()
+    path_params: UpdateVersionPathParams = dataclasses.field()
+    request: shared_version.Version = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateVersionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

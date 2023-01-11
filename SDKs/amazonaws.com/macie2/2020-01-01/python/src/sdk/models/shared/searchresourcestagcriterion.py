@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import searchresourcescomparator_enum as shared_searchresourcescomparator_enum
+from ..shared import searchresourcestagcriterionpair as shared_searchresourcestagcriterionpair
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchResourcesTagCriterion:
     r"""SearchResourcesTagCriterion
     Specifies a tag-based filter condition that determines which Amazon Web Services resources are included or excluded from the query results.
     """
     
-    comparator: Optional[SearchResourcesComparatorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comparator') }})
-    tag_values: Optional[List[SearchResourcesTagCriterionPair]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagValues') }})
+    comparator: Optional[shared_searchresourcescomparator_enum.SearchResourcesComparatorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comparator') }})
+    tag_values: Optional[list[shared_searchresourcestagcriterionpair.SearchResourcesTagCriterionPair]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tagValues') }})
     

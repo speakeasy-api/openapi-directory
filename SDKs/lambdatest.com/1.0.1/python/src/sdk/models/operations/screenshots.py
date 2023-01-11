@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import screenshot_details as shared_screenshot_details
 
 
-@dataclass
+@dataclasses.dataclass
 class ScreenshotsPathParams:
-    test_id: str = field(metadata={'path_param': { 'field_name': 'test_id', 'style': 'simple', 'explode': False }})
+    test_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'test_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScreenshotsSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScreenshotsRequest:
-    path_params: ScreenshotsPathParams = field()
-    security: ScreenshotsSecurity = field()
+    path_params: ScreenshotsPathParams = dataclasses.field()
+    security: ScreenshotsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScreenshotsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied: Optional[Any] = field(default=None)
-    forbidden: Optional[Any] = field(default=None)
-    screenshot_details: Optional[shared.ScreenshotDetails] = field(default=None)
-    screenshot_not_found: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied: Optional[Any] = dataclasses.field(default=None)
+    forbidden: Optional[Any] = dataclasses.field(default=None)
+    screenshot_details: Optional[shared_screenshot_details.ScreenshotDetails] = dataclasses.field(default=None)
+    screenshot_not_found: Optional[Any] = dataclasses.field(default=None)
     

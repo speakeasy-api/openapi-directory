@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,36 +25,28 @@ s.config_security(
     
 req = operations.AddTagsRequest(
     headers=operations.AddTagsHeaders(
-        x_amz_algorithm="qui",
-        x_amz_content_sha256="et",
-        x_amz_credential="ex",
-        x_amz_date="adipisci",
-        x_amz_security_token="ipsum",
-        x_amz_signature="placeat",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="dolorem",
+        x_amz_content_sha256="facere",
+        x_amz_credential="magnam",
+        x_amz_date="aut",
+        x_amz_security_token="eum",
+        x_amz_signature="facilis",
+        x_amz_signed_headers="perferendis",
         x_amz_target="AmazonML_20141212.AddTags",
     ),
     request=shared.AddTagsInput(
-        resource_id="sed",
-        resource_type="DataSource",
+        resource_id="ut",
+        resource_type="MLModel",
         tags=[
             shared.Tag(
-                key="atque",
-                value="expedita",
-            ),
-            shared.Tag(
-                key="quo",
-                value="facere",
-            ),
-            shared.Tag(
-                key="perferendis",
-                value="voluptate",
+                key="ut",
+                value="ut",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags(req)
+res = s.add_tags(req)
 
 if res.add_tags_output is not None:
     # handle response

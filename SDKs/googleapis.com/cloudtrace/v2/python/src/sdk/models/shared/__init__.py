@@ -17,3 +17,5 @@ from .status import *
 from .timeevent import *
 from .timeevents import *
 from .truncatablestring import *
+
+__all__ = ["XgafvEnum","AltEnum","Annotation","Attributes","AttributeValue","BatchWriteSpansRequest","LinkTypeEnum","Link","Links","MessageEventTypeEnum","MessageEvent","Module","SchemeOauth2","SchemeOauth2c","SpanSpanKindEnum","Span","StackFrame","StackFrames","StackTrace","Status","TimeEvent","TimeEvents","TruncatableString"]

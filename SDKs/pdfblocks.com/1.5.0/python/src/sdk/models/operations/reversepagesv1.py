@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ReversePagesV1RequestBodyFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReversePagesV1RequestBody:
-    file: ReversePagesV1RequestBodyFile = field(metadata={'multipart_form': { 'file': True }})
+    file: ReversePagesV1RequestBodyFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReversePagesV14XxApplicationProblemPlusJSON:
-    errors: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    errors: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReversePagesV1Request:
-    request: ReversePagesV1RequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: ReversePagesV1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReversePagesV1Response:
-    content_type: str = field()
-    status_code: int = field()
-    reverse_pages_v1_200_application_pdf_binary_string: Optional[bytes] = field(default=None)
-    reverse_pages_v1_4_xx_application_problem_plus_json_object: Optional[ReversePagesV14XxApplicationProblemPlusJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reverse_pages_v1_200_application_pdf_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    reverse_pages_v1_4_xx_application_problem_plus_json_object: Optional[ReversePagesV14XxApplicationProblemPlusJSON] = dataclasses.field(default=None)
     

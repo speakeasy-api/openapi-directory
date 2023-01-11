@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import speechmarktype_enum as shared_speechmarktype_enum
+from ..shared import startspeechsynthesistaskoutput as shared_startspeechsynthesistaskoutput
 
 
-@dataclass
+@dataclasses.dataclass
 class StartSpeechSynthesisTaskHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 class StartSpeechSynthesisTaskRequestBodyEngineEnum(str, Enum):
     STANDARD = "standard"
@@ -135,43 +136,43 @@ class StartSpeechSynthesisTaskRequestBodyVoiceIDEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartSpeechSynthesisTaskRequestBody:
-    output_format: StartSpeechSynthesisTaskRequestBodyOutputFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputFormat') }})
-    output_s3_bucket_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputS3BucketName') }})
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
-    voice_id: StartSpeechSynthesisTaskRequestBodyVoiceIDEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceId') }})
-    engine: Optional[StartSpeechSynthesisTaskRequestBodyEngineEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Engine') }})
-    language_code: Optional[StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
-    lexicon_names: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LexiconNames') }})
-    output_s3_key_prefix: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputS3KeyPrefix') }})
-    sample_rate: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SampleRate') }})
-    sns_topic_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnsTopicArn') }})
-    speech_mark_types: Optional[List[shared.SpeechMarkTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SpeechMarkTypes') }})
-    text_type: Optional[StartSpeechSynthesisTaskRequestBodyTextTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextType') }})
+    output_format: StartSpeechSynthesisTaskRequestBodyOutputFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputFormat') }})
+    output_s3_bucket_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputS3BucketName') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
+    voice_id: StartSpeechSynthesisTaskRequestBodyVoiceIDEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceId') }})
+    engine: Optional[StartSpeechSynthesisTaskRequestBodyEngineEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Engine') }})
+    language_code: Optional[StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
+    lexicon_names: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LexiconNames') }})
+    output_s3_key_prefix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputS3KeyPrefix') }})
+    sample_rate: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SampleRate') }})
+    sns_topic_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnsTopicArn') }})
+    speech_mark_types: Optional[list[shared_speechmarktype_enum.SpeechMarkTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SpeechMarkTypes') }})
+    text_type: Optional[StartSpeechSynthesisTaskRequestBodyTextTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextType') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartSpeechSynthesisTaskRequest:
-    headers: StartSpeechSynthesisTaskHeaders = field()
-    request: StartSpeechSynthesisTaskRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: StartSpeechSynthesisTaskHeaders = dataclasses.field()
+    request: StartSpeechSynthesisTaskRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartSpeechSynthesisTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    engine_not_supported_exception: Optional[Any] = field(default=None)
-    invalid_s3_bucket_exception: Optional[Any] = field(default=None)
-    invalid_s3_key_exception: Optional[Any] = field(default=None)
-    invalid_sample_rate_exception: Optional[Any] = field(default=None)
-    invalid_sns_topic_arn_exception: Optional[Any] = field(default=None)
-    invalid_ssml_exception: Optional[Any] = field(default=None)
-    language_not_supported_exception: Optional[Any] = field(default=None)
-    lexicon_not_found_exception: Optional[Any] = field(default=None)
-    marks_not_supported_for_format_exception: Optional[Any] = field(default=None)
-    service_failure_exception: Optional[Any] = field(default=None)
-    ssml_marks_not_supported_for_text_type_exception: Optional[Any] = field(default=None)
-    start_speech_synthesis_task_output: Optional[shared.StartSpeechSynthesisTaskOutput] = field(default=None)
-    text_length_exceeded_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    engine_not_supported_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_s3_bucket_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_s3_key_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_sample_rate_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_sns_topic_arn_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_ssml_exception: Optional[Any] = dataclasses.field(default=None)
+    language_not_supported_exception: Optional[Any] = dataclasses.field(default=None)
+    lexicon_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    marks_not_supported_for_format_exception: Optional[Any] = dataclasses.field(default=None)
+    service_failure_exception: Optional[Any] = dataclasses.field(default=None)
+    ssml_marks_not_supported_for_text_type_exception: Optional[Any] = dataclasses.field(default=None)
+    start_speech_synthesis_task_output: Optional[shared_startspeechsynthesistaskoutput.StartSpeechSynthesisTaskOutput] = dataclasses.field(default=None)
+    text_length_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
     

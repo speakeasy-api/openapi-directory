@@ -1,24 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import veteranstatusrequest as shared_veteranstatusrequest
+from ..shared import apierror as shared_apierror
+from ..shared import authorizationerror as shared_authorizationerror
+from ..shared import veteranstatusconfirmation as shared_veteranstatusconfirmation
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVeteranStatusSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVeteranStatusRequest:
-    request: shared.VeteranStatusRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: GetVeteranStatusSecurity = field()
+    request: shared_veteranstatusrequest.VeteranStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: GetVeteranStatusSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVeteranStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    authorization_error: Optional[shared.AuthorizationError] = field(default=None)
-    veteran_status_confirmation: Optional[shared.VeteranStatusConfirmation] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    authorization_error: Optional[shared_authorizationerror.AuthorizationError] = dataclasses.field(default=None)
+    veteran_status_confirmation: Optional[shared_veteranstatusconfirmation.VeteranStatusConfirmation] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ req = operations.DeleteWebhooksV3AppIDSettingsClearRequest(
         ),
     ),
     path_params=operations.DeleteWebhooksV3AppIDSettingsClearPathParams(
-        app_id=4545634859653222470,
+        app_id=7370411566566390215,
     ),
 )
     

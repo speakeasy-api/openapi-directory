@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import locationinputmodel as shared_locationinputmodel
+from ..shared import locationviewmodel as shared_locationviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsRequests:
-    location_input_model: Optional[shared.LocationInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    location_input_model1: Optional[shared.LocationInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    location_input_model2: Optional[shared.LocationInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    location_input_model3: Optional[shared.LocationInputModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    location_input_model: Optional[shared_locationinputmodel.LocationInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    location_input_model1: Optional[shared_locationinputmodel.LocationInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    location_input_model2: Optional[shared_locationinputmodel.LocationInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    location_input_model3: Optional[shared_locationinputmodel.LocationInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsRequest:
-    request: Optional[PostSetupV1LocationsRequests] = field(default=None)
+    request: Optional[PostSetupV1LocationsRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    location_view_model: Optional[shared.LocationViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    location_view_model: Optional[shared_locationviewmodel.LocationViewModel] = dataclasses.field(default=None)
     

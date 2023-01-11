@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.GetArticlesearchJSONRequest(
     query_params=operations.GetArticlesearchJSONQueryParams(
-        begin_date="sequi",
-        end_date="voluptate",
-        facet_field="atque",
-        facet_filter=False,
-        fl="labore",
-        fq="quia",
-        hl=True,
-        page=5713960080592200897,
-        q="dolor",
-        sort="oldest",
+        begin_date="distinctio",
+        end_date="tempora",
+        facet_field="accusamus",
+        facet_filter=True,
+        fl="magni",
+        fq="dolorem",
+        hl=False,
+        page=5846039825160295552,
+        q="nesciunt",
+        sort="newest",
     ),
 )
     
-res = s.sdk.get_articlesearch_json(req)
+res = s.stories.get_articlesearch_json(req)
 
 if res.get_articlesearch_json_200_application_json_object is not None:
     # handle response
@@ -49,7 +48,7 @@ if res.get_articlesearch_json_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `get_articlesearch_json` - Article Search
 

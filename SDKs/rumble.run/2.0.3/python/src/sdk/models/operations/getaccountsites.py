@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountSitesQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountSitesSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountSitesRequest:
-    query_params: GetAccountSitesQueryParams = field()
-    security: GetAccountSitesSecurity = field()
+    query_params: GetAccountSitesQueryParams = dataclasses.field()
+    security: GetAccountSitesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountSitesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sites: Optional[List[shared.Site]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sites: Optional[list[shared_site.Site]] = dataclasses.field(default=None)
     

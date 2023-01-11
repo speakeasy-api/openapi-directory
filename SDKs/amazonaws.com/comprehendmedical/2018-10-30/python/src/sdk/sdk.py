@@ -66,7 +66,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeEntitiesDetectionV2JobResponse(status_code=r.status_code, content_type=content_type)
@@ -112,7 +112,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DescribeICD10CMInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -120,7 +120,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeIcd10CmInferenceJobResponse(status_code=r.status_code, content_type=content_type)
@@ -158,7 +158,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DescribePHIDetectionJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -166,7 +166,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribePhiDetectionJobResponse(status_code=r.status_code, content_type=content_type)
@@ -204,7 +204,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DescribeRxNormInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -212,7 +212,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DescribeRxNormInferenceJobResponse(status_code=r.status_code, content_type=content_type)
@@ -250,7 +250,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DetectEntities"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -258,7 +258,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetectEntitiesResponse(status_code=r.status_code, content_type=content_type)
@@ -304,7 +304,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DetectEntitiesV2"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -312,7 +312,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetectEntitiesV2Response(status_code=r.status_code, content_type=content_type)
@@ -358,7 +358,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.DetectPHI"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -366,7 +366,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DetectPhiResponse(status_code=r.status_code, content_type=content_type)
@@ -412,7 +412,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.InferICD10CM"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -420,7 +420,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InferIcd10CmResponse(status_code=r.status_code, content_type=content_type)
@@ -466,7 +466,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.InferRxNorm"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -474,7 +474,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InferRxNormResponse(status_code=r.status_code, content_type=content_type)
@@ -520,7 +520,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.ListEntitiesDetectionV2Jobs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -528,7 +528,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListEntitiesDetectionV2JobsResponse(status_code=r.status_code, content_type=content_type)
@@ -566,7 +566,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.ListICD10CMInferenceJobs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -574,7 +574,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListIcd10CmInferenceJobsResponse(status_code=r.status_code, content_type=content_type)
@@ -612,7 +612,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.ListPHIDetectionJobs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -620,7 +620,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListPhiDetectionJobsResponse(status_code=r.status_code, content_type=content_type)
@@ -658,7 +658,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.ListRxNormInferenceJobs"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -666,7 +666,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ListRxNormInferenceJobsResponse(status_code=r.status_code, content_type=content_type)
@@ -704,7 +704,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StartEntitiesDetectionV2Job"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -712,7 +712,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartEntitiesDetectionV2JobResponse(status_code=r.status_code, content_type=content_type)
@@ -750,7 +750,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StartICD10CMInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -758,7 +758,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartIcd10CmInferenceJobResponse(status_code=r.status_code, content_type=content_type)
@@ -796,7 +796,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StartPHIDetectionJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -804,7 +804,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartPhiDetectionJobResponse(status_code=r.status_code, content_type=content_type)
@@ -842,7 +842,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StartRxNormInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -850,7 +850,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StartRxNormInferenceJobResponse(status_code=r.status_code, content_type=content_type)
@@ -888,7 +888,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StopEntitiesDetectionV2Job"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -896,7 +896,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopEntitiesDetectionV2JobResponse(status_code=r.status_code, content_type=content_type)
@@ -930,7 +930,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StopICD10CMInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -938,7 +938,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopIcd10CmInferenceJobResponse(status_code=r.status_code, content_type=content_type)
@@ -972,7 +972,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StopPHIDetectionJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -980,7 +980,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopPhiDetectionJobResponse(status_code=r.status_code, content_type=content_type)
@@ -1014,7 +1014,7 @@ class SDK:
         url = base_url.removesuffix("/") + "/#X-Amz-Target=ComprehendMedical_20181030.StopRxNormInferenceJob"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1022,7 +1022,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.StopRxNormInferenceJobResponse(status_code=r.status_code, content_type=content_type)

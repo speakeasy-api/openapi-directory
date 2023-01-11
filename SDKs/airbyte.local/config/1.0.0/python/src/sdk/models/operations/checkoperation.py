@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import operatorconfiguration as shared_operatorconfiguration
+from ..shared import checkoperationread as shared_checkoperationread
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
 
 
-@dataclass
+@dataclasses.dataclass
 class CheckOperationRequest:
-    request: shared.OperatorConfiguration = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_operatorconfiguration.OperatorConfiguration = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CheckOperationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    check_operation_read: Optional[shared.CheckOperationRead] = field(default=None)
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    check_operation_read: Optional[shared_checkoperationread.CheckOperationRead] = dataclasses.field(default=None)
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
     

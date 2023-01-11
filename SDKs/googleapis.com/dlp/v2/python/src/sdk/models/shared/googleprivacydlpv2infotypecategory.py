@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -66,13 +66,13 @@ class GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2InfoTypeCategory:
     r"""GooglePrivacyDlpV2InfoTypeCategory
     Classification of infoTypes to organize them according to geographic location, industry, and data type.
     """
     
-    industry_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('industryCategory') }})
-    location_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationCategory') }})
-    type_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeCategory') }})
+    industry_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('industryCategory') }})
+    location_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationCategory') }})
+    type_category: Optional[GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeCategory') }})
     

@@ -1,24 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportImageResult:
-    architecture: Optional[str] = field(default=None)
-    description: Optional[str] = field(default=None)
-    encrypted: Optional[bool] = field(default=None)
-    hypervisor: Optional[str] = field(default=None)
-    image_id: Optional[str] = field(default=None)
-    import_task_id: Optional[str] = field(default=None)
-    kms_key_id: Optional[str] = field(default=None)
-    license_specifications: Optional[List[ImportImageLicenseConfigurationResponse]] = field(default=None)
-    license_type: Optional[str] = field(default=None)
-    platform: Optional[str] = field(default=None)
-    progress: Optional[str] = field(default=None)
-    snapshot_details: Optional[List[SnapshotDetail]] = field(default=None)
-    status: Optional[str] = field(default=None)
-    status_message: Optional[str] = field(default=None)
-    tags: Optional[List[Tag]] = field(default=None)
-    usage_operation: Optional[str] = field(default=None)
+    architecture: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    description: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    encrypted: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    hypervisor: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    image_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    import_task_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    kms_key_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    license_specifications: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    license_type: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    platform: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    progress: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    snapshot_details: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    status: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    status_message: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    tags: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    usage_operation: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

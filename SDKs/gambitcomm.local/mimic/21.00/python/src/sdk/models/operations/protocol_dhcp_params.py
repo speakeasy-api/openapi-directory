@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpParamsPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpParamsRequest:
-    path_params: ProtocolDhcpParamsPathParams = field()
+    path_params: ProtocolDhcpParamsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpParamsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_dhcp_params_200_application_json_objects: Optional[List[dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_dhcp_params_200_application_json_objects: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

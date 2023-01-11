@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import describeapplicationversionrequest as shared_describeapplicationversionrequest
+from ..shared import describeapplicationversionresponse as shared_describeapplicationversionresponse
 
 class DescribeApplicationVersionXAmzTargetEnum(str, Enum):
     KINESIS_ANALYTICS_20180523_DESCRIBE_APPLICATION_VERSION = "KinesisAnalytics_20180523.DescribeApplicationVersion"
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeApplicationVersionHeaders:
-    x_amz_target: DescribeApplicationVersionXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: DescribeApplicationVersionXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeApplicationVersionRequest:
-    headers: DescribeApplicationVersionHeaders = field()
-    request: shared.DescribeApplicationVersionRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DescribeApplicationVersionHeaders = dataclasses.field()
+    request: shared_describeapplicationversionrequest.DescribeApplicationVersionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeApplicationVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_application_version_response: Optional[shared.DescribeApplicationVersionResponse] = field(default=None)
-    invalid_argument_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    unsupported_operation_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_application_version_response: Optional[shared_describeapplicationversionresponse.DescribeApplicationVersionResponse] = dataclasses.field(default=None)
+    invalid_argument_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    unsupported_operation_exception: Optional[Any] = dataclasses.field(default=None)
     

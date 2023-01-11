@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1LocationsIDServicesPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1LocationsIDServicesQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1LocationsIDServicesRequest:
-    path_params: GetSetupV1LocationsIDServicesPathParams = field()
-    query_params: GetSetupV1LocationsIDServicesQueryParams = field()
+    path_params: GetSetupV1LocationsIDServicesPathParams = dataclasses.field()
+    query_params: GetSetupV1LocationsIDServicesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1LocationsIDServicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    business_service_list_view_model: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    business_service_list_view_model: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

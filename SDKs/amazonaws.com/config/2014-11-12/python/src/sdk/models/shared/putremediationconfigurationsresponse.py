@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import failedremediationbatch as shared_failedremediationbatch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutRemediationConfigurationsResponse:
-    failed_batches: Optional[List[FailedRemediationBatch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FailedBatches') }})
+    failed_batches: Optional[list[shared_failedremediationbatch.FailedRemediationBatch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FailedBatches') }})
     

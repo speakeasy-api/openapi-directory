@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import key as shared_key
+from ..shared import responsedefaultresource as shared_responsedefaultresource
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateKeyPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateKeySecurity:
-    cookie_sid: shared.SchemeCookieSid = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
+    cookie_sid: shared_security.SchemeCookieSid = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateKeyRequest:
-    path_params: UpdateKeyPathParams = field()
-    request: shared.KeyInput = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateKeySecurity = field()
+    path_params: UpdateKeyPathParams = dataclasses.field()
+    request: shared_key.KeyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateKeySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_default_resource: Optional[shared.ResponseDefaultResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_default_resource: Optional[shared_responsedefaultresource.ResponseDefaultResource] = dataclasses.field(default=None)
     

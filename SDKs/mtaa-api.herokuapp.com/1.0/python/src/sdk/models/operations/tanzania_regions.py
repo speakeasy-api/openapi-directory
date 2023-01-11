@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class TanzaniaRegionsPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TanzaniaRegionsRequest:
-    path_params: TanzaniaRegionsPathParams = field()
+    path_params: TanzaniaRegionsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TanzaniaRegionsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

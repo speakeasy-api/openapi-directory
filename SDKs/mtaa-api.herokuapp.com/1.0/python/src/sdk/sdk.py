@@ -1,10 +1,14 @@
 
 
 import requests
-from sdk.models import operations
+
 from . import utils
 
-
+from .districts_in_region import DistrictsInRegion
+from .streets_in_a_ward import StreetsInAWard
+from .tanzania_regions import TanzaniaRegions
+from .wards_in_a_district import WardsInADistrict
+from .neighborhood_in_a_street import NeighborhoodInAStreet
 
 
 SERVERS = [
@@ -14,6 +18,11 @@ SERVERS = [
 
 class SDK:
     
+    districts_in_region: DistrictsInRegion
+    streets_in_a_ward: StreetsInAWard
+    tanzania_regions: TanzaniaRegions
+    wards_in_a_district: WardsInADistrict
+    neighborhood_in_a_street: NeighborhoodInAStreet
 
     _client: requests.Session
     _security_client: requests.Session
@@ -26,7 +35,7 @@ class SDK:
     def __init__(self) -> None:
         self._client = requests.Session()
         self._security_client = requests.Session()
-        
+        self._init_sdks()
 
 
     def config_server_url(self, server_url: str, params: dict[str, str]):
@@ -35,135 +44,59 @@ class SDK:
         else:
             self._server_url = server_url
 
-        
+        self._init_sdks()
     
 
     def config_client(self, client: requests.Session):
         self._client = client
-        
+        self._init_sdks()
     
     
+    def _init_sdks(self):
+        
+        self.districts_in_region = DistrictsInRegion(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.streets_in_a_ward = StreetsInAWard(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.tanzania_regions = TanzaniaRegions(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.wards_in_a_district = WardsInADistrict(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.neighborhood_in_a_street = NeighborhoodInAStreet(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
     
-    def districts_in_a_region(self, request: operations.DistrictsInARegionRequest) -> operations.DistrictsInARegionResponse:
-        r"""Returns all districts in region
-        Returns a post code and all districts in a specified region
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{country}/{region}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DistrictsInARegionResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def tanzania_regions(self, request: operations.TanzaniaRegionsRequest) -> operations.TanzaniaRegionsResponse:
-        r"""Returns all regions present in Tanzania
-        Fetches all regions present in Tanzania and then return a response as json
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{country}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.TanzaniaRegionsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
-    
-    def wards_in_a_district(self, request: operations.WardsInADistrictRequest) -> operations.WardsInADistrictResponse:
-        r"""Returns all wards in a district
-        Returns all wards in a  specified district and district postcode
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{country}/{region}/{district}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.WardsInADistrictResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def neighborhood_in_a_street_(self, request: operations.NeighborhoodInAStreetRequest) -> operations.NeighborhoodInAStreetResponse:
-        r"""Returns all neighborhood in a street
-        Returns all neighborhood in a specified street
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{country}/{region}/{district}/{ward}/{street}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.NeighborhoodInAStreetResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def streets_in_a_ward(self, request: operations.StreetsInAWardRequest) -> operations.StreetsInAWardResponse:
-        r"""Returns all streets in a ward
-        Returns all streets in a specified ward and ward postcode
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{country}/{region}/{district}/{ward}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.StreetsInAWardResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
     

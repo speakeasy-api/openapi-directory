@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import filecommententity as shared_filecommententity
 
 
-@dataclass
+@dataclasses.dataclass
 class FileCommentListForPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileCommentListForPathQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileCommentListForPathRequest:
-    path_params: FileCommentListForPathPathParams = field()
-    query_params: FileCommentListForPathQueryParams = field()
+    path_params: FileCommentListForPathPathParams = dataclasses.field()
+    query_params: FileCommentListForPathQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FileCommentListForPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_comment_entities: Optional[List[shared.FileCommentEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_comment_entities: Optional[list[shared_filecommententity.FileCommentEntity]] = dataclasses.field(default=None)
     

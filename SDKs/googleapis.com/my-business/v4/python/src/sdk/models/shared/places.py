@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import placeinfo as shared_placeinfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Places:
     r"""Places
     Defines the union of areas represented by a set of places.
     """
     
-    place_infos: Optional[List[PlaceInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('placeInfos') }})
+    place_infos: Optional[list[shared_placeinfo.PlaceInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('placeInfos') }})
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import standardsprofile as shared_standardsprofile
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSellerStandardsProfilePathParams:
-    cycle: str = field(metadata={'path_param': { 'field_name': 'cycle', 'style': 'simple', 'explode': False }})
-    program: str = field(metadata={'path_param': { 'field_name': 'program', 'style': 'simple', 'explode': False }})
+    cycle: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cycle', 'style': 'simple', 'explode': False }})
+    program: str = dataclasses.field(metadata={'path_param': { 'field_name': 'program', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSellerStandardsProfileSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSellerStandardsProfileRequest:
-    path_params: GetSellerStandardsProfilePathParams = field()
-    security: GetSellerStandardsProfileSecurity = field()
+    path_params: GetSellerStandardsProfilePathParams = dataclasses.field()
+    security: GetSellerStandardsProfileSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSellerStandardsProfileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    standards_profile: Optional[shared.StandardsProfile] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    standards_profile: Optional[shared_standardsprofile.StandardsProfile] = dataclasses.field(default=None)
     

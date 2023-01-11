@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import documentservicewarning as shared_documentservicewarning
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadDocumentsResponse:
     r"""UploadDocumentsResponse
     Contains the response to an <code>UploadDocuments</code> request.
     """
     
-    adds: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adds') }})
-    deletes: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletes') }})
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    warnings: Optional[List[DocumentServiceWarning]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnings') }})
+    adds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adds') }})
+    deletes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletes') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    warnings: Optional[list[shared_documentservicewarning.DocumentServiceWarning]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnings') }})
     

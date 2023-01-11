@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateComponentRequest:
-    component_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComponentName') }})
-    resource_group_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceGroupName') }})
-    resource_list: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceList') }})
+    component_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComponentName') }})
+    resource_group_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceGroupName') }})
+    resource_list: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceList') }})
     

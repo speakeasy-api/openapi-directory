@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
-from . import *
+from ..shared import functionruntime_enum as shared_functionruntime_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionConfig:
     r"""FunctionConfig
     Contains configuration information about a CloudFront function.
     """
     
-    comment: str = field()
-    runtime: FunctionRuntimeEnum = field()
+    comment: str = dataclasses.field()
+    runtime: shared_functionruntime_enum.FunctionRuntimeEnum = dataclasses.field()
     

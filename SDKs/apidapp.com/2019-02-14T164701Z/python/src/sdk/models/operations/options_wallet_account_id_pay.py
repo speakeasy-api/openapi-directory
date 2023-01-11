@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionsWalletAccountIDPayPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OptionsWalletAccountIDPayRequest:
-    path_params: OptionsWalletAccountIDPayPathParams = field()
+    path_params: OptionsWalletAccountIDPayPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OptionsWalletAccountIDPayResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    empty: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    empty: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

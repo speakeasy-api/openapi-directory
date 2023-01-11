@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import domainassociation as shared_domainassociation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDomainAssociationResult:
     r"""GetDomainAssociationResult
      The result structure for the get domain association request. 
     """
     
-    domain_association: DomainAssociation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainAssociation') }})
+    domain_association: shared_domainassociation.DomainAssociation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainAssociation') }})
     

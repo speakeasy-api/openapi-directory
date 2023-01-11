@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RequestSpotFleetResponse:
     r"""RequestSpotFleetResponse
     Contains the output of RequestSpotFleet.
     """
     
-    spot_fleet_request_id: Optional[str] = field(default=None)
+    spot_fleet_request_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,0 +1,33 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        json_web_token_auth=shared.SchemeJSONWebTokenAuth(
+            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
+        ),
+    )
+)
+    
+req = operations.MergeTemplateRequest(
+    query_params=operations.MergeTemplateQueryParams(
+        format="zip",
+        name="neque",
+        output="base64",
+        template_id=8124352784887915603,
+    ),
+    request=shared.Data(
+        id=7762150201625547768,
+        name="possimus",
+    ),
+)
+    
+res = s.documents.merge_template(req)
+
+if res.merge_template_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

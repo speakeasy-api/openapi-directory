@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import scheduletemplatecollection as shared_scheduletemplatecollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplatesQueryParams:
-    feed_type: str = field(metadata={'query_param': { 'field_name': 'feed_type', 'style': 'form', 'explode': True }})
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    feed_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'feed_type', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplatesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplatesRequest:
-    query_params: GetScheduleTemplatesQueryParams = field()
-    security: GetScheduleTemplatesSecurity = field()
+    query_params: GetScheduleTemplatesQueryParams = dataclasses.field()
+    security: GetScheduleTemplatesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScheduleTemplatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    schedule_template_collection: Optional[shared.ScheduleTemplateCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    schedule_template_collection: Optional[shared_scheduletemplatecollection.ScheduleTemplateCollection] = dataclasses.field(default=None)
     

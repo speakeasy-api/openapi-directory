@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import transportdescriptor as shared_transportdescriptor
 
 
-@dataclass
+@dataclasses.dataclass
 class TransportDependency:
-    labels: List[str] = field()
-    serializers: List[str] = field()
-    transport: TransportDescriptor = field()
+    labels: list[str] = dataclasses.field()
+    serializers: list[str] = dataclasses.field()
+    transport: shared_transportdescriptor.TransportDescriptor = dataclasses.field()
     

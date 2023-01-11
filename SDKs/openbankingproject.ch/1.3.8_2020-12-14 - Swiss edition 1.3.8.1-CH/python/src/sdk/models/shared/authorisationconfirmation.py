@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthorisationConfirmation:
     r"""AuthorisationConfirmation
     Content of the body of an authorisation confirmation request
     
     """
     
-    confirmation_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmationCode') }})
+    confirmation_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmationCode') }})
     

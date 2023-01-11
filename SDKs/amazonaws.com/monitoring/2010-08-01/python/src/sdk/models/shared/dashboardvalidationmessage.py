@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DashboardValidationMessage:
     r"""DashboardValidationMessage
     An error or warning for the operation.
     """
     
-    data_path: Optional[str] = field(default=None)
-    message: Optional[str] = field(default=None)
+    data_path: Optional[str] = dataclasses.field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

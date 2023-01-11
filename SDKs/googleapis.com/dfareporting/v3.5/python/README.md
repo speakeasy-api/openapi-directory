@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.DfareportingAccountActiveAdSummariesGetRequest(
     security=operations.DfareportingAccountActiveAdSummariesGetSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DfareportingAccountActiveAdSummariesGetPathParams(
-        profile_id="aliquam",
-        summary_account_id="cumque",
+        profile_id="qui",
+        summary_account_id="ipsum",
     ),
     query_params=operations.DfareportingAccountActiveAdSummariesGetQueryParams(
-        dollar_xgafv="1",
-        access_token="enim",
+        dollar_xgafv="2",
+        access_token="quia",
         alt="media",
-        callback="nobis",
-        fields="quo",
-        key="et",
-        oauth_token="est",
-        pretty_print=True,
-        quota_user="numquam",
-        upload_type="accusamus",
-        upload_protocol="ipsum",
+        callback="qui",
+        fields="facere",
+        key="est",
+        oauth_token="necessitatibus",
+        pretty_print=False,
+        quota_user="aut",
+        upload_type="laborum",
+        upload_protocol="sunt",
     ),
 )
     

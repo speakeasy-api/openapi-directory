@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import agentstate as shared_agentstate
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChangedStateListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    agent_states: Optional[List[shared.AgentState]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    agent_states: Optional[list[shared_agentstate.AgentState]] = dataclasses.field(default=None)
     

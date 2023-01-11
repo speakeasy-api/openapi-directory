@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,10 +8,10 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateSecretVersionStageRequest:
-    secret_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SecretId') }})
-    version_stage: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VersionStage') }})
-    move_to_version_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MoveToVersionId') }})
-    remove_from_version_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RemoveFromVersionId') }})
+    secret_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SecretId') }})
+    version_stage: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VersionStage') }})
+    move_to_version_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MoveToVersionId') }})
+    remove_from_version_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RemoveFromVersionId') }})
     

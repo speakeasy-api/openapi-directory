@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import landlordprofitlossmodel as shared_landlordprofitlossmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetProfitLossReportPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetProfitLossReportQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetProfitLossReportRequest:
-    path_params: LandlordControllerGetProfitLossReportPathParams = field()
-    query_params: LandlordControllerGetProfitLossReportQueryParams = field()
+    path_params: LandlordControllerGetProfitLossReportPathParams = dataclasses.field()
+    query_params: LandlordControllerGetProfitLossReportQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetProfitLossReportResponse:
-    content_type: str = field()
-    status_code: int = field()
-    landlord_profit_loss_model: Optional[shared.LandlordProfitLossModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    landlord_profit_loss_model: Optional[shared_landlordprofitlossmodel.LandlordProfitLossModel] = dataclasses.field(default=None)
     

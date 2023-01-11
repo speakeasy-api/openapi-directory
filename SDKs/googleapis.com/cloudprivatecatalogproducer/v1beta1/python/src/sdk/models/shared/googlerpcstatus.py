@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleRPCStatus:
     r"""GoogleRPCStatus
     The `Status` type defines a logical error model that is suitable for
@@ -14,7 +14,7 @@ class GoogleRPCStatus:
     [API Design Guide](https://cloud.google.com/apis/design/errors).
     """
     
-    code: Optional[int] = field(default=None)
-    details: Optional[List[dict[str, Any]]] = field(default=None)
-    message: Optional[str] = field(default=None)
+    code: Optional[int] = dataclasses.field(default=None)
+    details: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

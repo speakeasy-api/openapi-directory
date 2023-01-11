@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import salestaxbase as shared_salestaxbase
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrReplaceSalesTaxPathParams:
-    country_code: str = field(metadata={'path_param': { 'field_name': 'countryCode', 'style': 'simple', 'explode': False }})
-    jurisdiction_id: str = field(metadata={'path_param': { 'field_name': 'jurisdictionId', 'style': 'simple', 'explode': False }})
+    country_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryCode', 'style': 'simple', 'explode': False }})
+    jurisdiction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jurisdictionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrReplaceSalesTaxSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrReplaceSalesTaxRequest:
-    path_params: CreateOrReplaceSalesTaxPathParams = field()
-    request: shared.SalesTaxBase = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateOrReplaceSalesTaxSecurity = field()
+    path_params: CreateOrReplaceSalesTaxPathParams = dataclasses.field()
+    request: shared_salestaxbase.SalesTaxBase = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateOrReplaceSalesTaxSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrReplaceSalesTaxResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

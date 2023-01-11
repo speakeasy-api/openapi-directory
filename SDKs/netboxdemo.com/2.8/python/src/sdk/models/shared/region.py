@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nestedregion as shared_nestedregion
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Region:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    slug: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('slug') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    parent: Optional[NestedRegion] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
-    site_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_count') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    slug: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('slug') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    parent: Optional[shared_nestedregion.NestedRegion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
+    site_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_count') }})
     

@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import certificateproviderinstance as shared_certificateproviderinstance
+from ..shared import googlecloudnetworksecurityv1grpcendpoint as shared_googlecloudnetworksecurityv1grpcendpoint
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ValidationCa:
     r"""ValidationCa
     Specification of ValidationCA. Defines the mechanism to obtain the Certificate Authority certificate to validate the peer certificate.
     """
     
-    certificate_provider_instance: Optional[CertificateProviderInstance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateProviderInstance') }})
-    grpc_endpoint: Optional[GoogleCloudNetworksecurityV1GrpcEndpoint] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('grpcEndpoint') }})
+    certificate_provider_instance: Optional[shared_certificateproviderinstance.CertificateProviderInstance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateProviderInstance') }})
+    grpc_endpoint: Optional[shared_googlecloudnetworksecurityv1grpcendpoint.GoogleCloudNetworksecurityV1GrpcEndpoint] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('grpcEndpoint') }})
     

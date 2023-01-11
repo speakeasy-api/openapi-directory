@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import traffic as shared_traffic
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ViewTraffic:
     r"""ViewTraffic
     View Traffic
     """
     
-    count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    uniques: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniques') }})
-    views: List[Traffic] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('views') }})
+    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    uniques: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniques') }})
+    views: list[shared_traffic.Traffic] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('views') }})
     

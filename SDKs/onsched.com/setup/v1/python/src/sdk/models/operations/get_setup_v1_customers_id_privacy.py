@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CustomersIDPrivacyPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CustomersIDPrivacyRequest:
-    path_params: GetSetupV1CustomersIDPrivacyPathParams = field()
+    path_params: GetSetupV1CustomersIDPrivacyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CustomersIDPrivacyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    customer_privacy_view_model: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    customer_privacy_view_model: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AllocateHostsResult:
     r"""AllocateHostsResult
     Contains the output of AllocateHosts.
     """
     
-    host_ids: Optional[List[str]] = field(default=None)
+    host_ids: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import application as shared_application
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveApplicationPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveApplicationQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    api_secret: str = field(metadata={'query_param': { 'field_name': 'api_secret', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_secret: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_secret', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveApplicationRequest:
-    path_params: RetrieveApplicationPathParams = field()
-    query_params: RetrieveApplicationQueryParams = field()
+    path_params: RetrieveApplicationPathParams = dataclasses.field()
+    query_params: RetrieveApplicationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    application: Optional[shared.Application] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    application: Optional[shared_application.Application] = dataclasses.field(default=None)
     

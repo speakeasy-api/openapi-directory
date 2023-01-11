@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams:
-    interface_id: str = field(metadata={'path_param': { 'field_name': 'interfaceId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    switch_stack_id: str = field(metadata={'path_param': { 'field_name': 'switchStackId', 'style': 'simple', 'explode': False }})
+    interface_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'interfaceId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    switch_stack_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'switchStackId', 'style': 'simple', 'explode': False }})
     
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum(str, Enum):
     THIRTY_MINUTES = "30 minutes"
@@ -35,11 +35,11 @@ class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions:
-    code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    type: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    type: UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptionsTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDNSNameserversOptionEnum(str, Enum):
     GOOGLE_PUBLIC_DNS = "googlePublicDns"
@@ -48,46 +48,46 @@ class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDNSNameserversOptio
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIPAssignments:
-    ip: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
-    mac: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    ip: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
+    mac: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIPRanges:
-    end: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
-    start: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
-    comment: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
+    end: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
+    start: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
+    comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody:
-    boot_file_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootFileName') }})
-    boot_next_server: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootNextServer') }})
-    boot_options_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootOptionsEnabled') }})
-    dhcp_lease_time: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpLeaseTime') }})
-    dhcp_mode: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpMode') }})
-    dhcp_options: Optional[List[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpOptions') }})
-    dhcp_relay_server_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpRelayServerIps') }})
-    dns_custom_nameservers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsCustomNameservers') }})
-    dns_nameservers_option: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDNSNameserversOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsNameserversOption') }})
-    fixed_ip_assignments: Optional[List[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIPAssignments]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fixedIpAssignments') }})
-    reserved_ip_ranges: Optional[List[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIPRanges]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservedIpRanges') }})
+    boot_file_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootFileName') }})
+    boot_next_server: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootNextServer') }})
+    boot_options_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootOptionsEnabled') }})
+    dhcp_lease_time: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpLeaseTimeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpLeaseTime') }})
+    dhcp_mode: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpMode') }})
+    dhcp_options: Optional[list[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDhcpOptions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpOptions') }})
+    dhcp_relay_server_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dhcpRelayServerIps') }})
+    dns_custom_nameservers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsCustomNameservers') }})
+    dns_nameservers_option: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyDNSNameserversOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsNameserversOption') }})
+    fixed_ip_assignments: Optional[list[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyFixedIPAssignments]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fixedIpAssignments') }})
+    reserved_ip_ranges: Optional[list[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBodyReservedIPRanges]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reservedIpRanges') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest:
-    path_params: UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams = field()
-    request: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_switch_stack_routing_interface_dhcp_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_switch_stack_routing_interface_dhcp_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import datashare as shared_datashare
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDataSharesResult:
-    data_shares: Optional[List[DataShare]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    data_shares: Optional[list[shared_datashare.DataShare]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

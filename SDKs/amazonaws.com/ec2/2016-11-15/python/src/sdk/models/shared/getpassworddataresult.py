@@ -1,13 +1,10 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPasswordDataResult:
-    instance_id: Optional[str] = field(default=None)
-    password_data: Optional[str] = field(default=None)
-    timestamp: Optional[datetime] = field(default=None)
+    instance_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    password_data: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    timestamp: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

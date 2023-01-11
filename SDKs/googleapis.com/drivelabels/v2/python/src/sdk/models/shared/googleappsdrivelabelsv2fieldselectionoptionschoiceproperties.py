@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleappsdrivelabelsv2badgeconfig as shared_googleappsdrivelabelsv2badgeconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties:
     r"""GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceProperties
     Basic properties of the choice.
     """
     
-    badge_config: Optional[GoogleAppsDriveLabelsV2BadgeConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('badgeConfig') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    insert_before_choice: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('insertBeforeChoice') }})
+    badge_config: Optional[shared_googleappsdrivelabelsv2badgeconfig.GoogleAppsDriveLabelsV2BadgeConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('badgeConfig') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    insert_before_choice: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('insertBeforeChoice') }})
     

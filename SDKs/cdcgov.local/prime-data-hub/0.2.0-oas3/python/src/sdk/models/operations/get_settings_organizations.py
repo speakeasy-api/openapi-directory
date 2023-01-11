@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsRequest:
-    security: GetSettingsOrganizationsSecurity = field()
+    security: GetSettingsOrganizationsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    organizations: Optional[List[shared.Organization]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organizations: Optional[list[shared_organization.Organization]] = dataclasses.field(default=None)
     

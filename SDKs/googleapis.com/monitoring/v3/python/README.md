@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,33 +21,33 @@ req = operations.MonitoringProjectsAlertPoliciesCreateRequest(
         option1=operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.MonitoringProjectsAlertPoliciesCreatePathParams(
-        name="veritatis",
+        name="repellendus",
     ),
     query_params=operations.MonitoringProjectsAlertPoliciesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="ut",
-        alt="json",
-        callback="atque",
-        fields="molestiae",
-        key="sed",
-        oauth_token="incidunt",
+        dollar_xgafv="2",
+        access_token="omnis",
+        alt="proto",
+        callback="voluptas",
+        fields="corporis",
+        key="vero",
+        oauth_token="sed",
         pretty_print=False,
-        quota_user="facere",
-        upload_type="nemo",
-        upload_protocol="et",
+        quota_user="molestiae",
+        upload_type="rerum",
+        upload_protocol="exercitationem",
     ),
     request=shared.AlertPolicy(
         alert_strategy=shared.AlertStrategy(
-            auto_close="molestiae",
+            auto_close="nesciunt",
             notification_rate_limit=shared.NotificationRateLimit(
-                period="molestiae",
+                period="omnis",
             ),
         ),
         combiner="COMBINE_UNSPECIFIED",
@@ -57,109 +56,225 @@ req = operations.MonitoringProjectsAlertPoliciesCreateRequest(
                 condition_absent=shared.MetricAbsence(
                     aggregations=[
                         shared.Aggregation(
-                            alignment_period="autem",
+                            alignment_period="praesentium",
+                            cross_series_reducer="REDUCE_STDDEV",
+                            group_by_fields=[
+                                "magni",
+                                "quibusdam",
+                                "assumenda",
+                            ],
+                            per_series_aligner="ALIGN_PERCENT_CHANGE",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="minus",
                             cross_series_reducer="REDUCE_SUM",
                             group_by_fields=[
-                                "culpa",
-                                "facilis",
+                                "corporis",
+                                "quaerat",
                             ],
-                            per_series_aligner="ALIGN_MAX",
+                            per_series_aligner="ALIGN_SUM",
                         ),
                     ],
-                    duration="voluptates",
-                    filter="in",
+                    duration="qui",
+                    filter="ab",
                     trigger=shared.Trigger(
-                        count=1708228167426671314,
-                        percent=58.099998,
+                        count=4629249652007334892,
+                        percent=87.099998,
                     ),
                 ),
                 condition_matched_log=shared.LogMatch(
-                    filter="accusamus",
+                    filter="enim",
                     label_extractors={
-                        "debitis": "dolorem",
-                        "cumque": "est",
-                        "eum": "blanditiis",
+                        "ut": "expedita",
+                        "quo": "beatae",
+                        "maxime": "vel",
                     },
                 ),
                 condition_monitoring_query_language=shared.MonitoringQueryLanguageCondition(
-                    duration="alias",
-                    evaluation_missing_data="EVALUATION_MISSING_DATA_ACTIVE",
-                    query="ratione",
+                    duration="eum",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_NO_OP",
+                    query="sed",
                     trigger=shared.Trigger(
-                        count=5591437500593183472,
-                        percent=2.200000,
+                        count=3440003813319565983,
+                        percent=43.200001,
                     ),
                 ),
                 condition_threshold=shared.MetricThreshold(
                     aggregations=[
                         shared.Aggregation(
-                            alignment_period="ea",
-                            cross_series_reducer="REDUCE_PERCENTILE_99",
+                            alignment_period="voluptas",
+                            cross_series_reducer="REDUCE_MIN",
                             group_by_fields=[
-                                "doloremque",
+                                "voluptatem",
+                                "et",
                             ],
-                            per_series_aligner="ALIGN_MIN",
+                            per_series_aligner="ALIGN_NEXT_OLDER",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="maiores",
+                            cross_series_reducer="REDUCE_PERCENTILE_95",
+                            group_by_fields=[
+                                "ullam",
+                            ],
+                            per_series_aligner="ALIGN_COUNT_FALSE",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="dolores",
+                            cross_series_reducer="REDUCE_NONE",
+                            group_by_fields=[
+                                "rerum",
+                                "id",
+                            ],
+                            per_series_aligner="ALIGN_MEAN",
                         ),
                     ],
-                    comparison="COMPARISON_GT",
+                    comparison="COMPARISON_NE",
                     denominator_aggregations=[
                         shared.Aggregation(
-                            alignment_period="at",
-                            cross_series_reducer="REDUCE_MAX",
+                            alignment_period="earum",
+                            cross_series_reducer="REDUCE_PERCENTILE_95",
                             group_by_fields=[
-                                "sed",
+                                "explicabo",
                             ],
-                            per_series_aligner="ALIGN_PERCENTILE_50",
+                            per_series_aligner="ALIGN_PERCENTILE_99",
                         ),
                     ],
-                    denominator_filter="sed",
-                    duration="ratione",
-                    evaluation_missing_data="EVALUATION_MISSING_DATA_NO_OP",
-                    filter="qui",
-                    threshold_value=13.200000,
+                    denominator_filter="eaque",
+                    duration="perferendis",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_ACTIVE",
+                    filter="neque",
+                    forecast_options=shared.ForecastOptions(
+                        forecast_horizon="ullam",
+                    ),
+                    threshold_value=33.099998,
                     trigger=shared.Trigger(
-                        count=8314654574762670608,
-                        percent=48.099998,
+                        count=383869393711336780,
+                        percent=97.099998,
                     ),
                 ),
-                display_name="officia",
-                name="voluptatem",
+                display_name="consequatur",
+                name="enim",
+            ),
+            shared.Condition(
+                condition_absent=shared.MetricAbsence(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="architecto",
+                            cross_series_reducer="REDUCE_PERCENTILE_99",
+                            group_by_fields=[
+                                "quod",
+                                "corporis",
+                            ],
+                            per_series_aligner="ALIGN_MAX",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="necessitatibus",
+                            cross_series_reducer="REDUCE_COUNT_FALSE",
+                            group_by_fields=[
+                                "non",
+                                "eligendi",
+                            ],
+                            per_series_aligner="ALIGN_PERCENTILE_05",
+                        ),
+                    ],
+                    duration="ipsum",
+                    filter="eos",
+                    trigger=shared.Trigger(
+                        count=960635814650371739,
+                        percent=58.200001,
+                    ),
+                ),
+                condition_matched_log=shared.LogMatch(
+                    filter="sint",
+                    label_extractors={
+                        "ut": "quis",
+                    },
+                ),
+                condition_monitoring_query_language=shared.MonitoringQueryLanguageCondition(
+                    duration="ab",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_NO_OP",
+                    query="nam",
+                    trigger=shared.Trigger(
+                        count=3985253464228977593,
+                        percent=5.200000,
+                    ),
+                ),
+                condition_threshold=shared.MetricThreshold(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="qui",
+                            cross_series_reducer="REDUCE_MIN",
+                            group_by_fields=[
+                                "dolores",
+                                "officia",
+                                "eligendi",
+                            ],
+                            per_series_aligner="ALIGN_STDDEV",
+                        ),
+                    ],
+                    comparison="COMPARISON_GE",
+                    denominator_aggregations=[
+                        shared.Aggregation(
+                            alignment_period="aut",
+                            cross_series_reducer="REDUCE_PERCENTILE_05",
+                            group_by_fields=[
+                                "ab",
+                                "inventore",
+                                "deleniti",
+                            ],
+                            per_series_aligner="ALIGN_SUM",
+                        ),
+                    ],
+                    denominator_filter="ut",
+                    duration="vitae",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_INACTIVE",
+                    filter="totam",
+                    forecast_options=shared.ForecastOptions(
+                        forecast_horizon="omnis",
+                    ),
+                    threshold_value=67.099998,
+                    trigger=shared.Trigger(
+                        count=1280576806753042404,
+                        percent=72.099998,
+                    ),
+                ),
+                display_name="perspiciatis",
+                name="occaecati",
             ),
         ],
         creation_record=shared.MutationRecord(
-            mutate_time="recusandae",
-            mutated_by="consequatur",
+            mutate_time="iusto",
+            mutated_by="eius",
         ),
-        display_name="consequuntur",
+        display_name="voluptatem",
         documentation=shared.Documentation(
-            content="odio",
-            mime_type="ex",
+            content="laboriosam",
+            mime_type="magni",
         ),
-        enabled=False,
+        enabled=True,
         mutation_record=shared.MutationRecord(
-            mutate_time="doloremque",
-            mutated_by="assumenda",
+            mutate_time="exercitationem",
+            mutated_by="maiores",
         ),
-        name="cum",
+        name="et",
         notification_channels=[
-            "sit",
+            "quo",
+            "magni",
         ],
         user_labels={
-            "et": "sed",
+            "omnis": "consectetur",
+            "accusamus": "non",
         },
         validity=shared.Status(
-            code=8696428194438146774,
+            code=5237954261915984455,
             details=[
                 {
-                    "laudantium": "ipsum",
-                },
-                {
-                    "dolorem": "excepturi",
-                    "sunt": "vero",
-                    "provident": "totam",
+                    "facere": "architecto",
+                    "delectus": "ipsam",
+                    "repudiandae": "illo",
                 },
             ],
-            message="voluptate",
+            message="saepe",
         ),
     ),
 )
@@ -192,6 +307,8 @@ if res.alert_policy is not None:
 * `monitoring_projects_notification_channels_list` - Lists the notification channels that have been created for the project.
 * `monitoring_projects_notification_channels_send_verification_code` - Causes a verification code to be delivered to the channel. The code can then be supplied in VerifyNotificationChannel to verify the channel.
 * `monitoring_projects_notification_channels_verify` - Verifies a NotificationChannel by proving receipt of the code delivered to the channel as a result of calling SendNotificationChannelVerificationCode.
+* `monitoring_projects_snoozes_create` - Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
+* `monitoring_projects_snoozes_list` - Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
 * `monitoring_projects_time_series_create` - Creates or adds data to one or more time series. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response.
 * `monitoring_projects_time_series_create_service` - Creates or adds data to one or more service time series. A service time series is a time series for a metric from a Google Cloud service. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response. This endpoint rejects writes to user-defined metrics. This method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
 * `monitoring_projects_time_series_list` - Lists time series that match a filter.

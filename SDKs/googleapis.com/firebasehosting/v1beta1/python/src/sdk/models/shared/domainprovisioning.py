@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import certdnschallenge as shared_certdnschallenge
+from ..shared import certhttpchallenge as shared_certhttpchallenge
 
 class DomainProvisioningCertStatusEnum(str, Enum):
     CERT_STATUS_UNSPECIFIED = "CERT_STATUS_UNSPECIFIED"
@@ -24,18 +25,18 @@ class DomainProvisioningDNSStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DomainProvisioning:
     r"""DomainProvisioning
     The current certificate provisioning status information for a domain.
     """
     
-    cert_challenge_discovered_txt: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeDiscoveredTxt') }})
-    cert_challenge_dns: Optional[CertDNSChallenge] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeDns') }})
-    cert_challenge_http: Optional[CertHTTPChallenge] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeHttp') }})
-    cert_status: Optional[DomainProvisioningCertStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certStatus') }})
-    discovered_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discoveredIps') }})
-    dns_fetch_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsFetchTime') }})
-    dns_status: Optional[DomainProvisioningDNSStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsStatus') }})
-    expected_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expectedIps') }})
+    cert_challenge_discovered_txt: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeDiscoveredTxt') }})
+    cert_challenge_dns: Optional[shared_certdnschallenge.CertDNSChallenge] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeDns') }})
+    cert_challenge_http: Optional[shared_certhttpchallenge.CertHTTPChallenge] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certChallengeHttp') }})
+    cert_status: Optional[DomainProvisioningCertStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certStatus') }})
+    discovered_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discoveredIps') }})
+    dns_fetch_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsFetchTime') }})
+    dns_status: Optional[DomainProvisioningDNSStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsStatus') }})
+    expected_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expectedIps') }})
     

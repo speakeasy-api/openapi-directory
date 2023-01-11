@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountreference16_ch as shared_accountreference16_ch
+from ..shared import amount as shared_amount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfirmationOfFunds:
     r"""ConfirmationOfFunds
     JSON Request body for the \"Confirmation of funds service\".
@@ -40,8 +41,8 @@ class ConfirmationOfFunds:
     
     """
     
-    account: AccountReference16Ch = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    instructed_amount: Amount = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instructedAmount') }})
-    card_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardNumber') }})
-    payee: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payee') }})
+    account: shared_accountreference16_ch.AccountReference16Ch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    instructed_amount: shared_amount.Amount = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instructedAmount') }})
+    card_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardNumber') }})
+    payee: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payee') }})
     

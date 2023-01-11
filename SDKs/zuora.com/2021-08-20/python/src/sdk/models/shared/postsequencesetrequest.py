@@ -1,0 +1,21 @@
+import dataclasses
+from typing import Optional
+from dataclasses_json import dataclass_json
+from sdk import utils
+from ..shared import creditmemoentityprefix as shared_creditmemoentityprefix
+from ..shared import debitmemoentityprefix as shared_debitmemoentityprefix
+from ..shared import invoiceentityprefix as shared_invoiceentityprefix
+from ..shared import paymententityprefix as shared_paymententityprefix
+from ..shared import refundentityprefix as shared_refundentityprefix
+
+
+@dataclass_json
+@dataclasses.dataclass
+class PostSequenceSetRequest:
+    credit_memo: shared_creditmemoentityprefix.CreditMemoEntityPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditMemo') }})
+    debit_memo: shared_debitmemoentityprefix.DebitMemoEntityPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('debitMemo') }})
+    invoice: shared_invoiceentityprefix.InvoiceEntityPrefix = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('invoice') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    payment: Optional[shared_paymententityprefix.PaymentEntityPrefix] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payment') }})
+    refund: Optional[shared_refundentityprefix.RefundEntityPrefix] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refund') }})
+    

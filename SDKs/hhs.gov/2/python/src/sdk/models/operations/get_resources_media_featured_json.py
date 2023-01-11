@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import mediaitem as shared_mediaitem
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaFeaturedJSONQueryParams:
-    max: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': False }})
+    max: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaFeaturedJSONRequest:
-    query_params: GetResourcesMediaFeaturedJSONQueryParams = field()
+    query_params: GetResourcesMediaFeaturedJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaFeaturedJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    media_items: Optional[List[shared.MediaItem]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    media_items: Optional[list[shared_mediaitem.MediaItem]] = dataclasses.field(default=None)
     

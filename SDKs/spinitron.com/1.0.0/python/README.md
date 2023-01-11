@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,17 +25,17 @@ s.config_security(
     
 req = operations.GetPersonasRequest(
     query_params=operations.GetPersonasQueryParams(
-        count=5306988050669204383,
+        count=2825906764813013527,
         expand=[
-            "quo",
-            "dicta",
+            "sit",
         ],
         fields=[
-            "omnis",
-            "fugit",
+            "dolor",
+            "voluptatem",
+            "illo",
         ],
-        name="eos",
-        page=7149139835524661956,
+        name="et",
+        page=39748128132020036,
     ),
 )
     

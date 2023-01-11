@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,9 +23,9 @@ req = operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest(
         ),
     ),
     request=shared.IdentificationTokenGenerationRequest(
-        email="harum",
-        first_name="ratione",
-        last_name="ad",
+        email="similique",
+        first_name="ullam",
+        last_name="qui",
     ),
 )
     

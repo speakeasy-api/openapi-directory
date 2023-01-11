@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import branch_with_protection as shared_branch_with_protection
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposRenameBranchPathParams:
-    branch: str = field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposRenameBranchRequestBody:
-    new_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_name') }})
+    new_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposRenameBranchRequest:
-    path_params: ReposRenameBranchPathParams = field()
-    request: Optional[ReposRenameBranchRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ReposRenameBranchPathParams = dataclasses.field()
+    request: Optional[ReposRenameBranchRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposRenameBranchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    branch_with_protection: Optional[shared.BranchWithProtection] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    branch_with_protection: Optional[shared_branch_with_protection.BranchWithProtection] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

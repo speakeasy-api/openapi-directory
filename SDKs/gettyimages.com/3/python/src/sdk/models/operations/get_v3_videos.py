@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import videodetailfieldvalues_enum as shared_videodetailfieldvalues_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3VideosQueryParams:
-    fields: Optional[List[shared.VideoDetailFieldValuesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
-    ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
+    fields: Optional[list[shared_videodetailfieldvalues_enum.VideoDetailFieldValuesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3VideosHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3VideosRequest:
-    headers: GetV3VideosHeaders = field()
-    query_params: GetV3VideosQueryParams = field()
+    headers: GetV3VideosHeaders = dataclasses.field()
+    query_params: GetV3VideosQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3VideosResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

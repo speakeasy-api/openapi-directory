@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbclusterlist as shared_dbclusterlist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbClusterMessage:
     r"""DbClusterMessage
     Represents the output of <a>DescribeDBClusters</a>.
     """
     
-    db_clusters: Optional[List[DbCluster]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_clusters: Optional[list[shared_dbclusterlist.DbClusterList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PagespeedAPIImageV4PageRect:
-    height: Optional[int] = field(default=None)
-    left: Optional[int] = field(default=None)
-    top: Optional[int] = field(default=None)
-    width: Optional[int] = field(default=None)
+    height: Optional[int] = dataclasses.field(default=None)
+    left: Optional[int] = dataclasses.field(default=None)
+    top: Optional[int] = dataclasses.field(default=None)
+    width: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PagespeedAPIImageV4:
-    data: Optional[str] = field(default=None)
-    height: Optional[int] = field(default=None)
-    key: Optional[str] = field(default=None)
-    mime_type: Optional[str] = field(default=None)
-    page_rect: Optional[PagespeedAPIImageV4PageRect] = field(default=None)
-    width: Optional[int] = field(default=None)
+    data: Optional[str] = dataclasses.field(default=None)
+    height: Optional[int] = dataclasses.field(default=None)
+    key: Optional[str] = dataclasses.field(default=None)
+    mime_type: Optional[str] = dataclasses.field(default=None)
+    page_rect: Optional[PagespeedAPIImageV4PageRect] = dataclasses.field(default=None)
+    width: Optional[int] = dataclasses.field(default=None)
     

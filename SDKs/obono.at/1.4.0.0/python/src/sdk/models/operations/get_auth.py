@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import authresult as shared_authresult
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthRequest:
-    security: GetAuthSecurity = field()
+    security: GetAuthSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    auth_result: Optional[shared.AuthResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    auth_result: Optional[shared_authresult.AuthResult] = dataclasses.field(default=None)
     

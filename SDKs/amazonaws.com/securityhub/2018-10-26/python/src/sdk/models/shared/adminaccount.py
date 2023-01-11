@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import adminstatus_enum as shared_adminstatus_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdminAccount:
     r"""AdminAccount
     Represents a Security Hub administrator account designated by an organization management account.
     """
     
-    account_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountId') }})
-    status: Optional[AdminStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
+    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccountId') }})
+    status: Optional[shared_adminstatus_enum.AdminStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Status') }})
     

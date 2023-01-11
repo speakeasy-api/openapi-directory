@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import returnpolicy as shared_returnpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyByNameQueryParams:
-    marketplace_id: str = field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
-    name: str = field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    marketplace_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
+    name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyByNameSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyByNameRequest:
-    query_params: GetReturnPolicyByNameQueryParams = field()
-    security: GetReturnPolicyByNameSecurity = field()
+    query_params: GetReturnPolicyByNameQueryParams = dataclasses.field()
+    security: GetReturnPolicyByNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyByNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    return_policy: Optional[shared.ReturnPolicy] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    return_policy: Optional[shared_returnpolicy.ReturnPolicy] = dataclasses.field(default=None)
     

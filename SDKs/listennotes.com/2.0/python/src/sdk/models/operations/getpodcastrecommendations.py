@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getpodcastrecommendationsresponse as shared_getpodcastrecommendationsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastRecommendationsPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastRecommendationsQueryParams:
-    safe_mode: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'safe_mode', 'style': 'form', 'explode': True }})
+    safe_mode: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'safe_mode', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastRecommendationsHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastRecommendationsRequest:
-    headers: GetPodcastRecommendationsHeaders = field()
-    path_params: GetPodcastRecommendationsPathParams = field()
-    query_params: GetPodcastRecommendationsQueryParams = field()
+    headers: GetPodcastRecommendationsHeaders = dataclasses.field()
+    path_params: GetPodcastRecommendationsPathParams = dataclasses.field()
+    query_params: GetPodcastRecommendationsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastRecommendationsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_podcast_recommendations_response: Optional[shared.GetPodcastRecommendationsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_podcast_recommendations_response: Optional[shared_getpodcastrecommendationsresponse.GetPodcastRecommendationsResponse] = dataclasses.field(default=None)
     

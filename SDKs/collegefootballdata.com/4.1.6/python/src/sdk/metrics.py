@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GamePpa]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GamePpa]])
                 res.game_ppas = out
         elif r.status_code == 400:
             pass
@@ -68,7 +68,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerGamePpa]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerGamePpa]])
                 res.player_game_ppas = out
         elif r.status_code == 400:
             pass
@@ -96,7 +96,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerSeasonPpa]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerSeasonPpa]])
                 res.player_season_ppas = out
         elif r.status_code == 400:
             pass
@@ -124,7 +124,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PredictedPoints]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PredictedPoints]])
                 res.predicted_points = out
         elif r.status_code == 400:
             pass
@@ -152,7 +152,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PregameWp]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PregameWp]])
                 res.pregame_wps = out
         elif r.status_code == 400:
             pass
@@ -180,7 +180,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamPpa]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamPpa]])
                 res.team_ppas = out
         elif r.status_code == 400:
             pass
@@ -208,7 +208,7 @@ class Metrics:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayWp]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayWp]])
                 res.play_wps = out
         elif r.status_code == 400:
             pass

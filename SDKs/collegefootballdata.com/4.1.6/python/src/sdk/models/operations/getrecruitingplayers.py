@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import recruit as shared_recruit
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingPlayersQueryParams:
-    classification: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'classification', 'style': 'form', 'explode': True }})
-    position: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
-    state: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    classification: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'classification', 'style': 'form', 'explode': True }})
+    position: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'position', 'style': 'form', 'explode': True }})
+    state: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingPlayersRequest:
-    query_params: GetRecruitingPlayersQueryParams = field()
+    query_params: GetRecruitingPlayersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingPlayersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    recruits: Optional[List[shared.Recruit]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    recruits: Optional[list[shared_recruit.Recruit]] = dataclasses.field(default=None)
     

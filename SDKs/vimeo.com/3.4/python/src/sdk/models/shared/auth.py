@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import api_app as shared_api_app
+from ..shared import user as shared_user
 
 class AuthTokenTypeEnum(str, Enum):
     BEARER = "bearer"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Auth:
-    access_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
-    app: APIApp = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
-    scope: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
-    token_type: AuthTokenTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token_type') }})
-    expires_on: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires_on') }})
-    refresh_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refresh_token') }})
-    user: Optional[User] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    access_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    app: shared_api_app.APIApp = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
+    scope: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
+    token_type: AuthTokenTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token_type') }})
+    expires_on: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires_on') }})
+    refresh_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refresh_token') }})
+    user: Optional[shared_user.User] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,31 +20,31 @@ req = operations.CloudshellOperationsCancelRequest(
     security=operations.CloudshellOperationsCancelSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CloudshellOperationsCancelPathParams(
-        name="et",
+        name="sed",
     ),
     query_params=operations.CloudshellOperationsCancelQueryParams(
         dollar_xgafv="1",
-        access_token="totam",
+        access_token="consequatur",
         alt="json",
-        callback="et",
-        fields="aspernatur",
-        key="perspiciatis",
-        oauth_token="ut",
-        pretty_print=False,
-        quota_user="qui",
-        upload_type="neque",
-        upload_protocol="possimus",
+        callback="eos",
+        fields="quibusdam",
+        key="eos",
+        oauth_token="hic",
+        pretty_print=True,
+        quota_user="voluptas",
+        upload_type="repellendus",
+        upload_protocol="non",
     ),
     request={
-        "voluptatem": "amet",
-        "sit": "eos",
-        "eos": "mollitia",
+        "dolor": "sit",
+        "sint": "nemo",
+        "necessitatibus": "ducimus",
     },
 )
     

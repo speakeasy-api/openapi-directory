@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,31 @@ s.config_security(
     
 req = operations.AcceptDirectConnectGatewayAssociationProposalRequest(
     headers=operations.AcceptDirectConnectGatewayAssociationProposalHeaders(
-        x_amz_algorithm="autem",
-        x_amz_content_sha256="est",
-        x_amz_credential="soluta",
-        x_amz_date="laudantium",
-        x_amz_security_token="quia",
-        x_amz_signature="eaque",
-        x_amz_signed_headers="ex",
+        x_amz_algorithm="eaque",
+        x_amz_content_sha256="nihil",
+        x_amz_credential="labore",
+        x_amz_date="minima",
+        x_amz_security_token="iure",
+        x_amz_signature="ipsam",
+        x_amz_signed_headers="quia",
         x_amz_target="OvertureService.AcceptDirectConnectGatewayAssociationProposal",
     ),
     request=shared.AcceptDirectConnectGatewayAssociationProposalRequest(
-        associated_gateway_owner_account="vel",
-        direct_connect_gateway_id="sunt",
+        associated_gateway_owner_account="dolor",
+        direct_connect_gateway_id="nostrum",
         override_allowed_prefixes_to_direct_connect_gateway=[
             shared.RouteFilterPrefix(
-                cidr="nulla",
+                cidr="ut",
             ),
             shared.RouteFilterPrefix(
-                cidr="ipsa",
+                cidr="neque",
             ),
         ],
-        proposal_id="ipsum",
+        proposal_id="pariatur",
     ),
 )
     
-res = s.sdk.accept_direct_connect_gateway_association_proposal(req)
+res = s.accept_direct_connect_gateway_association_proposal(req)
 
 if res.accept_direct_connect_gateway_association_proposal_result is not None:
     # handle response

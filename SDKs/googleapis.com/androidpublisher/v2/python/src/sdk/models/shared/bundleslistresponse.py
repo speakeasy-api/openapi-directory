@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import bundle as shared_bundle
 
 
-@dataclass
+@dataclasses.dataclass
 class BundlesListResponse:
-    bundles: Optional[List[Bundle]] = field(default=None)
-    kind: Optional[str] = field(default=None)
+    bundles: Optional[list[shared_bundle.Bundle]] = dataclasses.field(default=None)
+    kind: Optional[str] = dataclasses.field(default=None)
     

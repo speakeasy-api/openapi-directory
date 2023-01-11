@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import solutionstackdescription as shared_solutionstackdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAvailableSolutionStacksResultMessage:
     r"""ListAvailableSolutionStacksResultMessage
     A list of available AWS Elastic Beanstalk solution stacks.
     """
     
-    solution_stack_details: Optional[List[SolutionStackDescription]] = field(default=None)
-    solution_stacks: Optional[List[str]] = field(default=None)
+    solution_stack_details: Optional[list[shared_solutionstackdescription.SolutionStackDescription]] = dataclasses.field(default=None)
+    solution_stacks: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAdvSecurityToken:
-    api_key: str = field(metadata={'security': { 'field_name': 'ADVICEment API Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'ADVICEment API Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeXRapidAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'RapidAPI.com API Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'RapidAPI.com API Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    adv_security_token: Optional[SchemeAdvSecurityToken] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    x_rapid_api_key: Optional[SchemeXRapidAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    adv_security_token: Optional[SchemeAdvSecurityToken] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_rapid_api_key: Optional[SchemeXRapidAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     

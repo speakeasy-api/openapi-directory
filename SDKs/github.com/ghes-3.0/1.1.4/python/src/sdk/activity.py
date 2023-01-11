@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -276,7 +276,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -305,7 +305,7 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Thread]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Thread]])
                 res.threads = out
         elif r.status_code == 304:
             pass
@@ -346,7 +346,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -373,7 +373,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
         elif r.status_code == 304:
             pass
@@ -409,7 +409,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
         elif r.status_code == 301:
             if utils.match_content_type(content_type, "application/json"):
@@ -449,7 +449,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -475,7 +475,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -502,7 +502,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -528,7 +528,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -554,7 +554,7 @@ class Activity:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
 
         return res
@@ -583,7 +583,7 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Thread]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Thread]])
                 res.threads = out
 
         return res
@@ -614,10 +614,10 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Repository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Repository]])
                 res.repositories = out
             if utils.match_content_type(content_type, "application/vnd.github.v3.star+json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.StarredRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.StarredRepository]])
                 res.starred_repositories = out
         elif r.status_code == 304:
             pass
@@ -687,7 +687,7 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
 
         return res
@@ -751,7 +751,7 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
         elif r.status_code == 304:
             pass
@@ -790,7 +790,7 @@ class Activity:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -807,13 +807,13 @@ class Activity:
         url = base_url.removesuffix("/") + "/notifications"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActivityMarkNotificationsAsReadResponse(status_code=r.status_code, content_type=content_type)
@@ -849,13 +849,13 @@ class Activity:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/notifications", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActivityMarkRepoNotificationsAsReadResponse(status_code=r.status_code, content_type=content_type)
@@ -910,13 +910,13 @@ class Activity:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/subscription", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActivitySetRepoSubscriptionResponse(status_code=r.status_code, content_type=content_type)
@@ -944,13 +944,13 @@ class Activity:
         url = utils.generate_url(base_url, "/notifications/threads/{thread_id}/subscription", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ActivitySetThreadSubscriptionResponse(status_code=r.status_code, content_type=content_type)

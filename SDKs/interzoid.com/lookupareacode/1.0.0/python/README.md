@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetareacodeRequest(
     query_params=operations.GetareacodeQueryParams(
-        areacode="exercitationem",
-        license="inventore",
+        areacode="minima",
+        license="in",
     ),
 )
     
-res = s.sdk.getareacode(req)
+res = s.area_code_information.getareacode(req)
 
 if res.getareacode_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getareacode_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Area Code Information
 
 * `getareacode` - Gets telephone area code information
 

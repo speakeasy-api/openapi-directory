@@ -1,19 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import locationruleupdate as shared_locationruleupdate
+from ..shared import responsedefaultresource as shared_responsedefaultresource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddLocationRuleRequest:
-    request: shared.LocationRuleUpdate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_locationruleupdate.LocationRuleUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddLocationRuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_default_resource: Optional[shared.ResponseDefaultResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_default_resource: Optional[shared_responsedefaultresource.ResponseDefaultResource] = dataclasses.field(default=None)
     

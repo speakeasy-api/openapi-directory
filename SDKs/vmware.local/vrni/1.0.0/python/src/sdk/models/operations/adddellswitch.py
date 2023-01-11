@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dellswitchdatasourcerequest as shared_dellswitchdatasourcerequest
+from ..shared import apierror as shared_apierror
+from ..shared import dellswitchdatasource as shared_dellswitchdatasource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddDellSwitchSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddDellSwitchRequest:
-    security: AddDellSwitchSecurity = field()
-    request: Optional[shared.DellSwitchDataSourceRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AddDellSwitchSecurity = dataclasses.field()
+    request: Optional[shared_dellswitchdatasourcerequest.DellSwitchDataSourceRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddDellSwitchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    dell_switch_data_source: Optional[shared.DellSwitchDataSource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    dell_switch_data_source: Optional[shared_dellswitchdatasource.DellSwitchDataSource] = dataclasses.field(default=None)
     

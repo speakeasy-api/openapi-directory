@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import listingstructurepolicy as shared_listingstructurepolicy
+from ..shared import error as shared_error
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListingStructurePolicyResponse:
-    listing_structure_policies: Optional[List[ListingStructurePolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('listingStructurePolicies') }})
-    warnings: Optional[List[Error]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnings') }})
+    listing_structure_policies: Optional[list[shared_listingstructurepolicy.ListingStructurePolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('listingStructurePolicies') }})
+    warnings: Optional[list[shared_error.Error]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnings') }})
     

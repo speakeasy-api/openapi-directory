@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.ChangeServerLifeCycleStateRequest(
     headers=operations.ChangeServerLifeCycleStateHeaders(
-        x_amz_algorithm="molestiae",
-        x_amz_content_sha256="id",
-        x_amz_credential="quia",
-        x_amz_date="dolor",
-        x_amz_security_token="sit",
-        x_amz_signature="non",
-        x_amz_signed_headers="sed",
+        x_amz_algorithm="natus",
+        x_amz_content_sha256="corrupti",
+        x_amz_credential="quis",
+        x_amz_date="consequatur",
+        x_amz_security_token="tenetur",
+        x_amz_signature="alias",
+        x_amz_signed_headers="similique",
     ),
     request=operations.ChangeServerLifeCycleStateRequestBody(
         life_cycle=operations.ChangeServerLifeCycleStateRequestBodyLifeCycle(
-            state="READY_FOR_CUTOVER",
+            state="READY_FOR_TEST",
         ),
-        source_server_id="architecto",
+        source_server_id="fugit",
     ),
 )
     
-res = s.sdk.change_server_life_cycle_state(req)
+res = s.change_server_life_cycle_state(req)
 
 if res.source_server is not None:
     # handle response

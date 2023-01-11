@@ -1,66 +1,66 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import ext_enum as shared_ext_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams:
-    ext: shared.ExtEnum = field(metadata={'path_param': { 'field_name': 'ext', 'style': 'simple', 'explode': False }})
-    heading: float = field(metadata={'path_param': { 'field_name': 'heading', 'style': 'simple', 'explode': False }})
-    position: str = field(metadata={'path_param': { 'field_name': 'position', 'style': 'simple', 'explode': False }})
-    version_number: int = field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
+    ext: shared_ext_enum.ExtEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'ext', 'style': 'simple', 'explode': False }})
+    heading: float = dataclasses.field(metadata={'path_param': { 'field_name': 'heading', 'style': 'simple', 'explode': False }})
+    position: str = dataclasses.field(metadata={'path_param': { 'field_name': 'position', 'style': 'simple', 'explode': False }})
+    version_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams:
-    routing_timeout: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'routingTimeout', 'style': 'form', 'explode': True }})
+    routing_timeout: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'routingTimeout', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress:
-    freeform_address: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeformAddress') }})
+    freeform_address: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeformAddress') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPoi:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition:
-    lat: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lat') }})
-    lon: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lon') }})
+    lat: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lat') }})
+    lon: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lon') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiList:
-    address: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
-    poi: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPoi] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poi') }})
-    position: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
+    address: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('address') }})
+    poi: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPoi] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poi') }})
+    position: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiListPosition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody:
-    poi_list: Optional[List[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiList]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poiList') }})
+    poi_list: Optional[list[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBodyPoiList]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poiList') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest:
-    path_params: PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams = field()
-    query_params: PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams = field()
-    request: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams = dataclasses.field()
+    query_params: PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams = dataclasses.field()
+    request: Optional[PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

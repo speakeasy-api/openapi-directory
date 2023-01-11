@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,30 @@ req = operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest(
     security=operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ChromemanagementCustomersAppsCountChromeAppRequestsPathParams(
-        customer="vel",
+        customer="sed",
     ),
     query_params=operations.ChromemanagementCustomersAppsCountChromeAppRequestsQueryParams(
-        dollar_xgafv="1",
-        access_token="esse",
-        alt="json",
-        callback="ab",
-        fields="vitae",
-        key="labore",
-        oauth_token="nemo",
-        order_by="atque",
-        org_unit_id="vel",
-        page_size=5104981729836945890,
-        page_token="nostrum",
+        dollar_xgafv="2",
+        access_token="ut",
+        alt="media",
+        callback="nulla",
+        fields="ipsa",
+        key="quia",
+        oauth_token="veniam",
+        order_by="cumque",
+        org_unit_id="quae",
+        page_size=7705353118515142715,
+        page_token="est",
         pretty_print=True,
-        quota_user="in",
-        upload_type="recusandae",
-        upload_protocol="ut",
+        quota_user="dolore",
+        upload_type="odit",
+        upload_protocol="ipsum",
     ),
 )
     
@@ -69,6 +68,7 @@ if res.google_chrome_management_v1_count_chrome_app_requests_response is not Non
 * `chromemanagement_customers_reports_find_installed_app_devices` - Generate report of devices that have a specified app installed.
 * `chromemanagement_customers_telemetry_devices_get` - Get telemetry device.
 * `chromemanagement_customers_telemetry_devices_list` - List all telemetry devices.
+* `chromemanagement_customers_telemetry_events_list` - List telemetry events.
 
 <!-- End SDK Available Operations -->
 

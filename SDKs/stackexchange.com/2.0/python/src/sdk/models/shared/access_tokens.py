@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AccessTokens:
-    access_token: Optional[str] = field(default=None)
-    account_id: Optional[int] = field(default=None)
-    expires_on_date: Optional[int] = field(default=None)
-    scope: Optional[List[Any]] = field(default=None)
+    access_token: Optional[str] = dataclasses.field(default=None)
+    account_id: Optional[int] = dataclasses.field(default=None)
+    expires_on_date: Optional[int] = dataclasses.field(default=None)
+    scope: Optional[list[Any]] = dataclasses.field(default=None)
     

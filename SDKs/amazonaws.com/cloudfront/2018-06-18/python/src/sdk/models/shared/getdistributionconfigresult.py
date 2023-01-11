@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import distributionconfig as shared_distributionconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributionConfigResult:
     r"""GetDistributionConfigResult
     The returned result of the corresponding request.
     """
     
-    distribution_config: Optional[DistributionConfig] = field(default=None)
+    distribution_config: Optional[shared_distributionconfig.DistributionConfig] = dataclasses.field(default=None)
     

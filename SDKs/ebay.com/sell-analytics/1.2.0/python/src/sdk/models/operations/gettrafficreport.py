@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import report as shared_report
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTrafficReportQueryParams:
-    dimension: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'dimension', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    metric: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'metric', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    dimension: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dimension', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    metric: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'metric', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrafficReportSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrafficReportRequest:
-    query_params: GetTrafficReportQueryParams = field()
-    security: GetTrafficReportSecurity = field()
+    query_params: GetTrafficReportQueryParams = dataclasses.field()
+    security: GetTrafficReportSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrafficReportResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report: Optional[shared.Report] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report: Optional[shared_report.Report] = dataclasses.field(default=None)
     

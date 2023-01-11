@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import secretrole as shared_secretrole
+from ..shared import secretrole as shared_secretrole
 
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretRolesCreateRequest:
-    request: shared.SecretRoleInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_secretrole.SecretRoleInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretRolesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    secret_role: Optional[shared.SecretRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    secret_role: Optional[shared_secretrole.SecretRole] = dataclasses.field(default=None)
     

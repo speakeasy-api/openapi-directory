@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2jobtrigger as shared_googleprivacydlpv2jobtrigger
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2ListJobTriggersResponse:
     r"""GooglePrivacyDlpV2ListJobTriggersResponse
     Response message for ListJobTriggers.
     """
     
-    job_triggers: Optional[List[GooglePrivacyDlpV2JobTrigger]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobTriggers') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    job_triggers: Optional[list[shared_googleprivacydlpv2jobtrigger.GooglePrivacyDlpV2JobTrigger]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobTriggers') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

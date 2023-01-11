@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionPurchasesDeferResponse:
-    new_expiry_time_millis: Optional[str] = field(default=None)
+    new_expiry_time_millis: Optional[str] = dataclasses.field(default=None)
     

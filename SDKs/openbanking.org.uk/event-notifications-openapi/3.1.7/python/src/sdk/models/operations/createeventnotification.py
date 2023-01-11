@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateEventNotificationHeaders:
-    x_fapi_financial_id: str = field(metadata={'header': { 'field_name': 'x-fapi-financial-id', 'style': 'simple', 'explode': False }})
-    x_fapi_interaction_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'x-fapi-interaction-id', 'style': 'simple', 'explode': False }})
+    x_fapi_financial_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-fapi-financial-id', 'style': 'simple', 'explode': False }})
+    x_fapi_interaction_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-fapi-interaction-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateEventNotificationRequest:
-    headers: CreateEventNotificationHeaders = field()
-    request: str = field(metadata={'request': { 'media_type': 'application/jwt' }})
+    headers: CreateEventNotificationHeaders = dataclasses.field()
+    request: str = dataclasses.field(metadata={'request': { 'media_type': 'application/jwt' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateEventNotificationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

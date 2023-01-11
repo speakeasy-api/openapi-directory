@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import topologymap as shared_topologymap
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsReadRequest:
-    path_params: ExtrasTopologyMapsReadPathParams = field()
+    path_params: ExtrasTopologyMapsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    topology_map: Optional[shared.TopologyMap] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    topology_map: Optional[shared_topologymap.TopologyMap] = dataclasses.field(default=None)
     

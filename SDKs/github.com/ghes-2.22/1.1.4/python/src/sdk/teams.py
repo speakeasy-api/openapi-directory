@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -83,13 +83,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateMembershipForUserInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -127,13 +127,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/memberships/{username}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateMembershipForUserLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -167,13 +167,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -201,13 +201,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/projects/{project_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -249,13 +249,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -281,13 +281,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/repos/{owner}/{repo}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -453,13 +453,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -495,13 +495,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsCreateDiscussionCommentInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -529,13 +529,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/discussions/{discussion_number}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsCreateDiscussionCommentLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -563,13 +563,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/discussions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsCreateDiscussionInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -597,13 +597,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/discussions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsCreateDiscussionLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -1087,7 +1087,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 403:
             if utils.match_content_type(content_type, "application/json"):
@@ -1122,7 +1122,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
 
         return res
@@ -1151,7 +1151,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 403:
             if utils.match_content_type(content_type, "application/json"):
@@ -1194,7 +1194,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamDiscussionComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamDiscussionComment]])
                 res.team_discussion_comments = out
 
         return res
@@ -1225,7 +1225,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamDiscussionComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamDiscussionComment]])
                 res.team_discussion_comments = out
 
         return res
@@ -1256,7 +1256,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamDiscussion]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamDiscussion]])
                 res.team_discussions = out
 
         return res
@@ -1287,7 +1287,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamDiscussion]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamDiscussion]])
                 res.team_discussions = out
 
         return res
@@ -1316,7 +1316,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamFull]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamFull]])
                 res.team_fulls = out
         elif r.status_code == 304:
             pass
@@ -1357,7 +1357,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -1388,7 +1388,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1423,7 +1423,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamProject]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamProject]])
                 res.team_projects = out
 
         return res
@@ -1454,7 +1454,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamProject]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamProject]])
                 res.team_projects = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1493,7 +1493,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
 
         return res
@@ -1522,7 +1522,7 @@ class Teams:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1759,13 +1759,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateDiscussionCommentInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -1791,13 +1791,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateDiscussionCommentLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -1823,13 +1823,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateDiscussionInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -1855,13 +1855,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}/discussions/{discussion_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateDiscussionLegacyResponse(status_code=r.status_code, content_type=content_type)
@@ -1887,13 +1887,13 @@ class Teams:
         url = utils.generate_url(base_url, "/orgs/{org}/teams/{team_slug}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -1921,13 +1921,13 @@ class Teams:
         url = utils.generate_url(base_url, "/teams/{team_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TeamsUpdateLegacyResponse(status_code=r.status_code, content_type=content_type)

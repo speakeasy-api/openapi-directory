@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import api_overview as shared_api_overview
 
 
-@dataclass
+@dataclasses.dataclass
 class MetaGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_overview: Optional[shared.APIOverview] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_overview: Optional[shared_api_overview.APIOverview] = dataclasses.field(default=None)
     

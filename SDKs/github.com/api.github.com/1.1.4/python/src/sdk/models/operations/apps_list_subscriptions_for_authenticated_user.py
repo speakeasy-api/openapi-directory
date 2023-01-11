@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import user_marketplace_purchase as shared_user_marketplace_purchase
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsListSubscriptionsForAuthenticatedUserQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListSubscriptionsForAuthenticatedUserRequest:
-    query_params: AppsListSubscriptionsForAuthenticatedUserQueryParams = field()
+    query_params: AppsListSubscriptionsForAuthenticatedUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListSubscriptionsForAuthenticatedUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    user_marketplace_purchases: Optional[List[shared.UserMarketplacePurchase]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    user_marketplace_purchases: Optional[list[shared_user_marketplace_purchase.UserMarketplacePurchase]] = dataclasses.field(default=None)
     

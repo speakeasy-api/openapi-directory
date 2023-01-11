@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import boxscore as shared_boxscore
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedBoxScoreQueryParams:
-    game_id: int = field(metadata={'query_param': { 'field_name': 'gameId', 'style': 'form', 'explode': True }})
+    game_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'gameId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedBoxScoreRequest:
-    query_params: GetAdvancedBoxScoreQueryParams = field()
+    query_params: GetAdvancedBoxScoreQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedBoxScoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_score: Optional[shared.BoxScore] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_score: Optional[shared_boxscore.BoxScore] = dataclasses.field(default=None)
     

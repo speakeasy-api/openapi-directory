@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import alarm as shared_alarm
+from ..shared import timer as shared_timer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Example18:
-    alarm: List[Alarm] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('alarm') }})
-    timer: List[Timer] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timer') }})
+    alarm: list[shared_alarm.Alarm] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('alarm') }})
+    timer: list[shared_timer.Timer] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timer') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DbClusterCapacityInfo:
-    current_capacity: Optional[int] = field(default=None)
-    db_cluster_identifier: Optional[str] = field(default=None)
-    pending_capacity: Optional[int] = field(default=None)
-    seconds_before_timeout: Optional[int] = field(default=None)
-    timeout_action: Optional[str] = field(default=None)
+    current_capacity: Optional[int] = dataclasses.field(default=None)
+    db_cluster_identifier: Optional[str] = dataclasses.field(default=None)
+    pending_capacity: Optional[int] = dataclasses.field(default=None)
+    seconds_before_timeout: Optional[int] = dataclasses.field(default=None)
+    timeout_action: Optional[str] = dataclasses.field(default=None)
     

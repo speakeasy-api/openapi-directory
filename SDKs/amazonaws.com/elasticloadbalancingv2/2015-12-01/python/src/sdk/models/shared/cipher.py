@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Cipher:
     r"""Cipher
     Information about a cipher used in a policy.
     """
     
-    name: Optional[str] = field(default=None)
-    priority: Optional[int] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    priority: Optional[int] = dataclasses.field(default=None)
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSocibWeatherStationPathParams:
-    period: str = field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
-    station_name: str = field(metadata={'path_param': { 'field_name': 'stationName', 'style': 'simple', 'explode': False }})
+    period: str = dataclasses.field(metadata={'path_param': { 'field_name': 'period', 'style': 'simple', 'explode': False }})
+    station_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'stationName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSocibWeatherStationRequest:
-    path_params: GetSocibWeatherStationPathParams = field()
+    path_params: GetSocibWeatherStationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSocibWeatherStationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

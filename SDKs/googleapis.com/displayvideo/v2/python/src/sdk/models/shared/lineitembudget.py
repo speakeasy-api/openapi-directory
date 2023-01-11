@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,24 +17,24 @@ class LineItemBudgetBudgetUnitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LineItemBudget:
     r"""LineItemBudget
     Settings that control how budget is allocated.
     """
     
-    budget_allocation_type: Optional[LineItemBudgetBudgetAllocationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetAllocationType') }})
-    budget_unit: Optional[LineItemBudgetBudgetUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetUnit') }})
-    max_amount: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAmount') }})
+    budget_allocation_type: Optional[LineItemBudgetBudgetAllocationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetAllocationType') }})
+    budget_unit: Optional[LineItemBudgetBudgetUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetUnit') }})
+    max_amount: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAmount') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LineItemBudgetInput:
     r"""LineItemBudgetInput
     Settings that control how budget is allocated.
     """
     
-    budget_allocation_type: Optional[LineItemBudgetBudgetAllocationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetAllocationType') }})
-    max_amount: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAmount') }})
+    budget_allocation_type: Optional[LineItemBudgetBudgetAllocationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('budgetAllocationType') }})
+    max_amount: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAmount') }})
     

@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PurchaseScheduledInstancesResult:
     r"""PurchaseScheduledInstancesResult
     Contains the output of PurchaseScheduledInstances.
     """
     
-    scheduled_instance_set: Optional[List[ScheduledInstance]] = field(default=None)
+    scheduled_instance_set: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

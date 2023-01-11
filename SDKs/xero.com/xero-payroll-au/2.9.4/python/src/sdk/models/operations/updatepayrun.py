@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import payrun as shared_payrun
+from ..shared import payruns as shared_payruns
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayRunPathParams:
-    pay_run_id: str = field(metadata={'path_param': { 'field_name': 'PayRunID', 'style': 'simple', 'explode': False }})
+    pay_run_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PayRunID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayRunHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayRunSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayRunRequest:
-    headers: UpdatePayRunHeaders = field()
-    path_params: UpdatePayRunPathParams = field()
-    security: UpdatePayRunSecurity = field()
-    request: Optional[List[shared.PayRunInput]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: UpdatePayRunHeaders = dataclasses.field()
+    path_params: UpdatePayRunPathParams = dataclasses.field()
+    security: UpdatePayRunSecurity = dataclasses.field()
+    request: Optional[list[shared_payrun.PayRunInput]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayRunResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pay_runs: Optional[shared.PayRuns] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pay_runs: Optional[shared_payruns.PayRuns] = dataclasses.field(default=None)
     

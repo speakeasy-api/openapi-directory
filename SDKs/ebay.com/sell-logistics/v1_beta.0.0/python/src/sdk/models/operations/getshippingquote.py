@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import shippingquote as shared_shippingquote
 
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingQuotePathParams:
-    shipping_quote_id: str = field(metadata={'path_param': { 'field_name': 'shippingQuoteId', 'style': 'simple', 'explode': False }})
+    shipping_quote_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shippingQuoteId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingQuoteSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingQuoteRequest:
-    path_params: GetShippingQuotePathParams = field()
-    security: GetShippingQuoteSecurity = field()
+    path_params: GetShippingQuotePathParams = dataclasses.field()
+    security: GetShippingQuoteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingQuoteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    shipping_quote: Optional[shared.ShippingQuote] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    shipping_quote: Optional[shared_shippingquote.ShippingQuote] = dataclasses.field(default=None)
     

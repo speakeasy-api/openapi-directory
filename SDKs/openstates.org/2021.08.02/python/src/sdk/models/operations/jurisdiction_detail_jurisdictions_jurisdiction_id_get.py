@@ -1,36 +1,38 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import jurisdictioninclude_enum as shared_jurisdictioninclude_enum
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import jurisdiction as shared_jurisdiction
 
 
-@dataclass
+@dataclasses.dataclass
 class JurisdictionDetailJurisdictionsJurisdictionIDGetPathParams:
-    jurisdiction_id: str = field(metadata={'path_param': { 'field_name': 'jurisdiction_id', 'style': 'simple', 'explode': False }})
+    jurisdiction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jurisdiction_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JurisdictionDetailJurisdictionsJurisdictionIDGetQueryParams:
-    apikey: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'apikey', 'style': 'form', 'explode': True }})
-    include: Optional[List[shared.JurisdictionIncludeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    apikey: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apikey', 'style': 'form', 'explode': True }})
+    include: Optional[list[shared_jurisdictioninclude_enum.JurisdictionIncludeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JurisdictionDetailJurisdictionsJurisdictionIDGetHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JurisdictionDetailJurisdictionsJurisdictionIDGetRequest:
-    headers: JurisdictionDetailJurisdictionsJurisdictionIDGetHeaders = field()
-    path_params: JurisdictionDetailJurisdictionsJurisdictionIDGetPathParams = field()
-    query_params: JurisdictionDetailJurisdictionsJurisdictionIDGetQueryParams = field()
+    headers: JurisdictionDetailJurisdictionsJurisdictionIDGetHeaders = dataclasses.field()
+    path_params: JurisdictionDetailJurisdictionsJurisdictionIDGetPathParams = dataclasses.field()
+    query_params: JurisdictionDetailJurisdictionsJurisdictionIDGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class JurisdictionDetailJurisdictionsJurisdictionIDGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    jurisdiction: Optional[shared.Jurisdiction] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    jurisdiction: Optional[shared_jurisdiction.Jurisdiction] = dataclasses.field(default=None)
     

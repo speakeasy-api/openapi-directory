@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,19 +18,19 @@ s = sdk.SDK()
     
 req = operations.Oauth2TokeninfoRequest(
     query_params=operations.Oauth2TokeninfoQueryParams(
-        access_token="ducimus",
+        access_token="doloribus",
         alt="json",
-        fields="delectus",
-        id_token="non",
-        key="voluptatem",
-        oauth_token="dolorem",
-        pretty_print=True,
-        quota_user="quae",
-        user_ip="quia",
+        fields="autem",
+        id_token="adipisci",
+        key="accusantium",
+        oauth_token="ut",
+        pretty_print=False,
+        quota_user="quaerat",
+        user_ip="et",
     ),
 )
     
-res = s.sdk.oauth2_tokeninfo(req)
+res = s.oauth2_tokeninfo(req)
 
 if res.tokeninfo is not None:
     # handle response

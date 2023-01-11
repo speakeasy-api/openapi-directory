@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -31,16 +30,18 @@ req = operations.WebhooksAddRequest(
         ),
     ),
     headers=operations.WebhooksAddHeaders(
-        x_apideck_app_id="quidem",
+        x_apideck_app_id="rerum",
     ),
     request=shared.CreateWebhookRequest(
-        delivery_url="incidunt",
-        description="ratione",
+        delivery_url="placeat",
+        description="doloremque",
         events=[
-            "crm.lead.updated",
+            "accounting.customer.updated",
+            "lead.lead.updated",
+            "pos.item.deleted",
         ],
-        status="enabled",
-        unified_api="transactional-email",
+        status="disabled",
+        unified_api="file-storage",
     ),
 )
     
@@ -56,14 +57,14 @@ if res.create_webhook_response is not None:
 
 ### Webhooks
 
-* `webhooks_add` - Create webhook
-* `webhooks_all` - List webhooks
-* `webhooks_delete` - Delete webhook
+* `webhooks_add` - Create webhook subscription
+* `webhooks_all` - List webhook subscriptions
+* `webhooks_delete` - Delete webhook subscription
 * `webhooks_execute` - Execute a webhook
-* `webhooks_one` - Get webhook
+* `webhooks_one` - Get webhook subscription
 * `webhooks_resolve` - Resolve and Execute a connection webhook
 * `webhooks_short_execute` - Execute a webhook
-* `webhooks_update` - Update webhook
+* `webhooks_update` - Update webhook subscription
 
 <!-- End SDK Available Operations -->
 

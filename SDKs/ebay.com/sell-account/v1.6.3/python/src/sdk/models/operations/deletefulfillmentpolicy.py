@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFulfillmentPolicyPathParams:
-    fulfillment_policy_id: str = field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
+    fulfillment_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFulfillmentPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFulfillmentPolicyRequest:
-    path_params: DeleteFulfillmentPolicyPathParams = field()
-    security: DeleteFulfillmentPolicySecurity = field()
+    path_params: DeleteFulfillmentPolicyPathParams = dataclasses.field()
+    security: DeleteFulfillmentPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFulfillmentPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

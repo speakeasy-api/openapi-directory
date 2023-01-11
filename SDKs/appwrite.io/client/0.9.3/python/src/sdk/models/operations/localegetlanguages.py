@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import languagelist as shared_languagelist
 
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetLanguagesSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetLanguagesRequest:
-    security: LocaleGetLanguagesSecurity = field()
+    security: LocaleGetLanguagesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetLanguagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    language_list: Optional[shared.LanguageList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    language_list: Optional[shared_languagelist.LanguageList] = dataclasses.field(default=None)
     

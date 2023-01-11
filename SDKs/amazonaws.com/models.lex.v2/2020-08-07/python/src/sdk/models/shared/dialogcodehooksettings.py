@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DialogCodeHookSettings:
     r"""DialogCodeHookSettings
     Settings that determine the Lambda function that Amazon Lex uses for processing user responses.
     """
     
-    enabled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
     

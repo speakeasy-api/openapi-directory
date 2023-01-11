@@ -20,3 +20,5 @@ from .placedbetpart import *
 from .priceformatted import *
 from .singlebetrequestbody import *
 from .solution import *
+
+__all__ = ["Bet","BetDelayed","BetHistoryResponse","BetPlaced","Betslipbet","Betslipleg","Betslippart","BetSlipRequest","BetSlipResponse","CashInResponse","ComplexBetRequestBody","Error","Errors","FreeBetDetail","Leg","Part","PlacedBet","PlacedBetLeg","PlacedBetPart","PriceFormatted","SingleBetRequestBody","Solution"]

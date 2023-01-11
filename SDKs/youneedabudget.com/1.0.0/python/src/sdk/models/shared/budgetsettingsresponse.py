@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import budgetsettings as shared_budgetsettings
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BudgetSettingsResponseData:
-    settings: BudgetSettings = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
+    settings: shared_budgetsettings.BudgetSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BudgetSettingsResponse:
-    data: BudgetSettingsResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: BudgetSettingsResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

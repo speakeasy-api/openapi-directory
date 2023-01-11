@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Error:
-    developer_message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('developer_message') }})
-    error: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    error_code: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_code') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    developer_message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('developer_message') }})
+    error: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error_code: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_code') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,12 +15,12 @@ class YoutubeAndPartnersBiddingStrategyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class YoutubeAndPartnersBiddingStrategy:
     r"""YoutubeAndPartnersBiddingStrategy
     Settings that control the bid strategy for YouTube and Partners resources.
     """
     
-    type: Optional[YoutubeAndPartnersBiddingStrategyTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    type: Optional[YoutubeAndPartnersBiddingStrategyTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

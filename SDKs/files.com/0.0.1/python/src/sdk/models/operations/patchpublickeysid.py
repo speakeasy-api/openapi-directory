@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import publickeyentity as shared_publickeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchPublicKeysIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchPublicKeysIDRequestBody:
-    title: str = field(metadata={'multipart_form': { 'field_name': 'title' }})
+    title: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'title' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchPublicKeysIDRequest:
-    path_params: PatchPublicKeysIDPathParams = field()
-    request: PatchPublicKeysIDRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchPublicKeysIDPathParams = dataclasses.field()
+    request: PatchPublicKeysIDRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchPublicKeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_key_entity: Optional[shared.PublicKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_key_entity: Optional[shared_publickeyentity.PublicKeyEntity] = dataclasses.field(default=None)
     

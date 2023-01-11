@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import operation as shared_operation
+from ..shared import settingmodel as shared_settingmodel
+from ..shared import settingmodel_haljson as shared_settingmodel_haljson
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSettingPathParams:
-    setting_id: int = field(metadata={'path_param': { 'field_name': 'settingId', 'style': 'simple', 'explode': False }})
+    setting_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'settingId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSettingRequests:
-    operations: Optional[List[shared.Operation]] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    operations1: Optional[List[shared.Operation]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    operations2: Optional[List[shared.Operation]] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    operations3: Optional[List[shared.Operation]] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    operations: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    operations1: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    operations2: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    operations3: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSettingRequest:
-    path_params: UpdateSettingPathParams = field()
-    request: UpdateSettingRequests = field()
+    path_params: UpdateSettingPathParams = dataclasses.field()
+    request: UpdateSettingRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSettingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    setting_model: Optional[shared.SettingModel] = field(default=None)
-    setting_model_haljson: Optional[shared.SettingModelHaljson] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    setting_model: Optional[shared_settingmodel.SettingModel] = dataclasses.field(default=None)
+    setting_model_haljson: Optional[shared_settingmodel_haljson.SettingModelHaljson] = dataclasses.field(default=None)
     

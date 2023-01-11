@@ -1,0 +1,34 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.TdcerRequest(
+    security=operations.TdcerSecurity(
+        api_key=shared.SchemeAPIKey(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+        client_id=shared.SchemeClientID(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    ),
+    request=operations.TdcerRequestBody(
+        certificate_parameters=operations.TdcerRequestBodyCertificateParameters(
+            cust_id="id",
+            dob="vitae",
+            fin_yr="atque",
+        ),
+        consent_artifact="sit",
+        format="pdf",
+        txn_id="sint",
+    ),
+)
+    
+res = s.ap_is.tdcer(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

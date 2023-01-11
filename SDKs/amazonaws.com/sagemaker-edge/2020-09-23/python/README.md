@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.GetDeviceRegistrationRequest(
     headers=operations.GetDeviceRegistrationHeaders(
-        x_amz_algorithm="aliquid",
-        x_amz_content_sha256="velit",
-        x_amz_credential="atque",
-        x_amz_date="non",
-        x_amz_security_token="dicta",
-        x_amz_signature="recusandae",
-        x_amz_signed_headers="sint",
+        x_amz_algorithm="quos",
+        x_amz_content_sha256="quam",
+        x_amz_credential="quam",
+        x_amz_date="totam",
+        x_amz_security_token="omnis",
+        x_amz_signature="qui",
+        x_amz_signed_headers="neque",
     ),
     request=operations.GetDeviceRegistrationRequestBody(
-        device_fleet_name="inventore",
-        device_name="natus",
+        device_fleet_name="officia",
+        device_name="quo",
     ),
 )
     
-res = s.sdk.get_device_registration(req)
+res = s.get_device_registration(req)
 
 if res.get_device_registration_result is not None:
     # handle response

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,62 +25,57 @@ s.config_security(
     
 req = operations.SendCommandRequest(
     headers=operations.SendCommandHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="optio",
-        x_amz_credential="iste",
-        x_amz_date="nisi",
-        x_amz_security_token="repudiandae",
-        x_amz_signature="amet",
-        x_amz_signed_headers="impedit",
+        x_amz_algorithm="cum",
+        x_amz_content_sha256="repellat",
+        x_amz_credential="quaerat",
+        x_amz_date="velit",
+        x_amz_security_token="magni",
+        x_amz_signature="delectus",
+        x_amz_signed_headers="vel",
         x_amz_target="QLDBSession.SendCommand",
     ),
     request=shared.SendCommandRequest(
         abort_transaction={
-            "et": "perspiciatis",
-            "quasi": "eos",
+            "nihil": "laudantium",
+            "magni": "vel",
         },
         commit_transaction=shared.CommitTransactionRequest(
-            commit_digest="nesciunt",
-            transaction_id="neque",
+            commit_digest="eaque",
+            transaction_id="incidunt",
         ),
         end_session={
-            "et": "magni",
+            "magnam": "accusamus",
+            "occaecati": "rerum",
         },
         execute_statement=shared.ExecuteStatementRequest(
             parameters=[
                 shared.ValueHolder(
-                    ion_binary="ad",
-                    ion_text="sapiente",
+                    ion_binary="ut",
+                    ion_text="consequatur",
                 ),
                 shared.ValueHolder(
-                    ion_binary="at",
-                    ion_text="fuga",
-                ),
-                shared.ValueHolder(
-                    ion_binary="dicta",
-                    ion_text="optio",
+                    ion_binary="sequi",
+                    ion_text="omnis",
                 ),
             ],
-            statement="aut",
-            transaction_id="eum",
+            statement="quis",
+            transaction_id="labore",
         ),
         fetch_page=shared.FetchPageRequest(
-            next_page_token="error",
-            transaction_id="non",
+            next_page_token="sapiente",
+            transaction_id="accusamus",
         ),
-        session_token="corrupti",
+        session_token="velit",
         start_session=shared.StartSessionRequest(
-            ledger_name="nam",
+            ledger_name="amet",
         ),
         start_transaction={
-            "adipisci": "enim",
-            "laborum": "rerum",
-            "iure": "sequi",
+            "sunt": "molestias",
         },
     ),
 )
     
-res = s.sdk.send_command(req)
+res = s.send_command(req)
 
 if res.send_command_result is not None:
     # handle response

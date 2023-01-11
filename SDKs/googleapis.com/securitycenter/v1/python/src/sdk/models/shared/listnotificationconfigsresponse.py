@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import notificationconfig as shared_notificationconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListNotificationConfigsResponse:
     r"""ListNotificationConfigsResponse
     Response message for listing notification configs.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    notification_configs: Optional[List[NotificationConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfigs') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    notification_configs: Optional[list[shared_notificationconfig.NotificationConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfigs') }})
     

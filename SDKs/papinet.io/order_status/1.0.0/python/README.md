@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetOrdersRequest(
     query_params=operations.GetOrdersQueryParams(
-        limit="adipisci",
-        offset="illo",
-        order_status="Completed",
+        limit="odit",
+        offset="a",
+        order_status="Cancelled",
     ),
 )
     
-res = s.sdk.get_orders(req)
+res = s.get_orders(req)
 
 if res.list_of_orders is not None:
     # handle response

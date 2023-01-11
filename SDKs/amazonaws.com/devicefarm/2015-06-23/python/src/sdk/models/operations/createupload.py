@@ -1,40 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import createuploadrequest as shared_createuploadrequest
+from ..shared import createuploadresult as shared_createuploadresult
 
 class CreateUploadXAmzTargetEnum(str, Enum):
     DEVICE_FARM_20150623_CREATE_UPLOAD = "DeviceFarm_20150623.CreateUpload"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateUploadHeaders:
-    x_amz_target: CreateUploadXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: CreateUploadXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateUploadRequest:
-    headers: CreateUploadHeaders = field()
-    request: shared.CreateUploadRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateUploadHeaders = dataclasses.field()
+    request: shared_createuploadrequest.CreateUploadRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateUploadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    argument_exception: Optional[Any] = field(default=None)
-    create_upload_result: Optional[shared.CreateUploadResult] = field(default=None)
-    limit_exceeded_exception: Optional[Any] = field(default=None)
-    not_found_exception: Optional[Any] = field(default=None)
-    service_account_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    argument_exception: Optional[Any] = dataclasses.field(default=None)
+    create_upload_result: Optional[shared_createuploadresult.CreateUploadResult] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    service_account_exception: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import perfsampleseries as shared_perfsampleseries
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPerfSampleSeriesResponse:
-    perf_sample_series: Optional[List[PerfSampleSeries]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfSampleSeries') }})
+    perf_sample_series: Optional[list[shared_perfsampleseries.PerfSampleSeries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perfSampleSeries') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import parametergroup as shared_parametergroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteParameterGroupResponse:
-    parameter_group: Optional[ParameterGroup] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParameterGroup') }})
+    parameter_group: Optional[shared_parametergroup.ParameterGroup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParameterGroup') }})
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkApplianceVlanPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    vlan_id: str = field(metadata={'path_param': { 'field_name': 'vlanId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    vlan_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vlanId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkApplianceVlanRequest:
-    path_params: DeleteNetworkApplianceVlanPathParams = field()
+    path_params: DeleteNetworkApplianceVlanPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkApplianceVlanResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

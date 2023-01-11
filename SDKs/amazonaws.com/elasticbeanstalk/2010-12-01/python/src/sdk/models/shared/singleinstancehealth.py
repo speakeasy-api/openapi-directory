@@ -1,25 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from . import *
+from typing import Optional
+from ..shared import applicationmetrics as shared_applicationmetrics
+from ..shared import deployment as shared_deployment
+from ..shared import systemstatus as shared_systemstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class SingleInstanceHealth:
     r"""SingleInstanceHealth
     Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.
     """
     
-    application_metrics: Optional[ApplicationMetrics] = field(default=None)
-    availability_zone: Optional[str] = field(default=None)
-    causes: Optional[List[str]] = field(default=None)
-    color: Optional[str] = field(default=None)
-    deployment: Optional[Deployment] = field(default=None)
-    health_status: Optional[str] = field(default=None)
-    instance_id: Optional[str] = field(default=None)
-    instance_type: Optional[str] = field(default=None)
-    launched_at: Optional[datetime] = field(default=None)
-    system: Optional[SystemStatus] = field(default=None)
+    application_metrics: Optional[shared_applicationmetrics.ApplicationMetrics] = dataclasses.field(default=None)
+    availability_zone: Optional[str] = dataclasses.field(default=None)
+    causes: Optional[list[str]] = dataclasses.field(default=None)
+    color: Optional[str] = dataclasses.field(default=None)
+    deployment: Optional[shared_deployment.Deployment] = dataclasses.field(default=None)
+    health_status: Optional[str] = dataclasses.field(default=None)
+    instance_id: Optional[str] = dataclasses.field(default=None)
+    instance_type: Optional[str] = dataclasses.field(default=None)
+    launched_at: Optional[datetime] = dataclasses.field(default=None)
+    system: Optional[shared_systemstatus.SystemStatus] = dataclasses.field(default=None)
     

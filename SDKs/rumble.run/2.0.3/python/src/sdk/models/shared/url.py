@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class URL:
     r"""URL
     A URL to a resource
     """
     
-    id: Optional[str] = field(default=None)
+    id: Optional[str] = dataclasses.field(default=None)
     

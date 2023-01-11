@@ -9,3 +9,5 @@ from .listversionsresponse import *
 from .platform import *
 from .release import *
 from .version import *
+
+__all__ = ["XgafvEnum","AltEnum","ChannelChannelTypeEnum","Channel","Interval","ListChannelsResponse","ListPlatformsResponse","ListReleasesResponse","ListVersionsResponse","PlatformPlatformTypeEnum","Platform","Release","Version"]

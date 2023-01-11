@@ -1,29 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import auditevent as shared_auditevent
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import errorunauthorized as shared_errorunauthorized
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRequest:
-    path_params: GetEventPathParams = field()
-    security: GetEventSecurity = field()
+    path_params: GetEventPathParams = dataclasses.field()
+    security: GetEventSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventResponse:
-    content_type: str = field()
-    status_code: int = field()
-    audit_event: Optional[shared.AuditEvent] = field(default=None)
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    error_unauthorized: Optional[shared.ErrorUnauthorized] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    audit_event: Optional[shared_auditevent.AuditEvent] = dataclasses.field(default=None)
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    error_unauthorized: Optional[shared_errorunauthorized.ErrorUnauthorized] = dataclasses.field(default=None)
     

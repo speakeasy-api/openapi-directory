@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import execution as shared_execution
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsGetExecutionPathParams:
-    execution_id: str = field(metadata={'path_param': { 'field_name': 'executionId', 'style': 'simple', 'explode': False }})
-    function_id: str = field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
+    execution_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'executionId', 'style': 'simple', 'explode': False }})
+    function_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsGetExecutionSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsGetExecutionRequest:
-    path_params: FunctionsGetExecutionPathParams = field()
-    security: FunctionsGetExecutionSecurity = field()
+    path_params: FunctionsGetExecutionPathParams = dataclasses.field()
+    security: FunctionsGetExecutionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsGetExecutionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    execution: Optional[shared.Execution] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    execution: Optional[shared_execution.Execution] = dataclasses.field(default=None)
     

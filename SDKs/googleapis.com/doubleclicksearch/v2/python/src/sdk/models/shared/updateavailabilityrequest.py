@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import availability as shared_availability
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateAvailabilityRequest:
     r"""UpdateAvailabilityRequest
     The request to update availability.
     """
     
-    availabilities: Optional[List[Availability]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilities') }})
+    availabilities: Optional[list[shared_availability.Availability]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilities') }})
     

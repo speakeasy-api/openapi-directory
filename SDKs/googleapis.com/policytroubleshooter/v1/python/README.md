@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.PolicytroubleshooterIamTroubleshootRequest(
     security=operations.PolicytroubleshooterIamTroubleshootSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.PolicytroubleshooterIamTroubleshootQueryParams(
         dollar_xgafv="2",
-        access_token="sed",
+        access_token="commodi",
         alt="proto",
-        callback="facilis",
-        fields="id",
-        key="adipisci",
-        oauth_token="tempore",
-        pretty_print=False,
-        quota_user="illum",
-        upload_type="mollitia",
-        upload_protocol="iusto",
+        callback="aut",
+        fields="culpa",
+        key="doloribus",
+        oauth_token="nulla",
+        pretty_print=True,
+        quota_user="accusantium",
+        upload_type="alias",
+        upload_protocol="dolor",
     ),
     request=shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest(
         access_tuple=shared.GoogleCloudPolicytroubleshooterV1AccessTuple(
-            full_resource_name="vero",
-            permission="corporis",
-            principal="enim",
+            full_resource_name="voluptatem",
+            permission="veritatis",
+            principal="dolores",
         ),
     ),
 )

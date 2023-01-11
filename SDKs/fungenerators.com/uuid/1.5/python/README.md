@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ req = operations.GetUUIDRequest(
         ),
     ),
     query_params=operations.GetUUIDQueryParams(
-        count=2285084036942815123,
+        count=7828643123862776481,
     ),
 )
     

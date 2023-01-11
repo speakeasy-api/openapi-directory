@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUnsuspendUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUnsuspendUserRequestBody:
-    reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUnsuspendUserRequest:
-    path_params: EnterpriseAdminUnsuspendUserPathParams = field()
-    request: Optional[EnterpriseAdminUnsuspendUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminUnsuspendUserPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminUnsuspendUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUnsuspendUserResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

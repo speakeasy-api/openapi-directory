@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourceidentifier as shared_resourceidentifier
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDiscoveredResourcesResponse:
     r"""ListDiscoveredResourcesResponse
     <p/>
     """
     
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    resource_identifiers: Optional[List[ResourceIdentifier]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceIdentifiers') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    resource_identifiers: Optional[list[shared_resourceidentifier.ResourceIdentifier]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceIdentifiers') }})
     

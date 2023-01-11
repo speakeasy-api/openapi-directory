@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class UpcomingDfsSlatesByCompetitionFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class UpcomingDfsSlatesByCompetitionFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingDfsSlatesByCompetitionPathParams:
-    competition_id: str = field(metadata={'path_param': { 'field_name': 'competitionId', 'style': 'simple', 'explode': False }})
-    format: UpcomingDfsSlatesByCompetitionFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    competition_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'competitionId', 'style': 'simple', 'explode': False }})
+    format: UpcomingDfsSlatesByCompetitionFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingDfsSlatesByCompetitionRequest:
-    path_params: UpcomingDfsSlatesByCompetitionPathParams = field()
+    path_params: UpcomingDfsSlatesByCompetitionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingDfsSlatesByCompetitionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    dfs_slates: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dfs_slates: Optional[list[Any]] = dataclasses.field(default=None)
     

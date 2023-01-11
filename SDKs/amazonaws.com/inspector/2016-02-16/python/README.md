@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,35 @@ s.config_security(
     
 req = operations.AddAttributesToFindingsRequest(
     headers=operations.AddAttributesToFindingsHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="rem",
-        x_amz_credential="iusto",
-        x_amz_date="sed",
-        x_amz_security_token="numquam",
-        x_amz_signature="corrupti",
-        x_amz_signed_headers="eveniet",
+        x_amz_algorithm="quod",
+        x_amz_content_sha256="impedit",
+        x_amz_credential="nostrum",
+        x_amz_date="repudiandae",
+        x_amz_security_token="dicta",
+        x_amz_signature="vero",
+        x_amz_signed_headers="ea",
         x_amz_target="InspectorService.AddAttributesToFindings",
     ),
     request=shared.AddAttributesToFindingsRequest(
         attributes=[
             shared.Attribute(
-                key="molestiae",
-                value="veniam",
+                key="deleniti",
+                value="omnis",
+            ),
+            shared.Attribute(
+                key="eius",
+                value="consequuntur",
             ),
         ],
         finding_arns=[
-            "voluptatum",
-            "debitis",
-            "perspiciatis",
+            "laudantium",
+            "similique",
+            "ullam",
         ],
     ),
 )
     
-res = s.sdk.add_attributes_to_findings(req)
+res = s.add_attributes_to_findings(req)
 
 if res.add_attributes_to_findings_response is not None:
     # handle response

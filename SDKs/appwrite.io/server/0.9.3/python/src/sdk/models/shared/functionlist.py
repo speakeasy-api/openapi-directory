@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import function as shared_function
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FunctionList:
     r"""FunctionList
     Functions List
     """
     
-    functions: List[Function] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functions') }})
-    sum: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
+    functions: list[shared_function.Function] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functions') }})
+    sum: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
     

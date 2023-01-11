@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationDevicesUplinksLossAndLatencyPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 class GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum(str, Enum):
     WAN1 = "wan1"
@@ -13,24 +13,24 @@ class GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum(str, Enum):
     CELLULAR = "cellular"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationDevicesUplinksLossAndLatencyQueryParams:
-    ip: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ip', 'style': 'form', 'explode': True }})
-    t0: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
-    t1: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 't1', 'style': 'form', 'explode': True }})
-    timespan: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
-    uplink: Optional[GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum] = field(default=None, metadata={'query_param': { 'field_name': 'uplink', 'style': 'form', 'explode': True }})
+    ip: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ip', 'style': 'form', 'explode': True }})
+    t0: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
+    t1: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 't1', 'style': 'form', 'explode': True }})
+    timespan: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
+    uplink: Optional[GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uplink', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationDevicesUplinksLossAndLatencyRequest:
-    path_params: GetOrganizationDevicesUplinksLossAndLatencyPathParams = field()
-    query_params: GetOrganizationDevicesUplinksLossAndLatencyQueryParams = field()
+    path_params: GetOrganizationDevicesUplinksLossAndLatencyPathParams = dataclasses.field()
+    query_params: GetOrganizationDevicesUplinksLossAndLatencyQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationDevicesUplinksLossAndLatencyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_organization_devices_uplinks_loss_and_latency_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_organization_devices_uplinks_loss_and_latency_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deviceinstance as shared_deviceinstance
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDeviceInstanceResult:
-    device_instance: Optional[DeviceInstance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceInstance') }})
+    device_instance: Optional[shared_deviceinstance.DeviceInstance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceInstance') }})
     

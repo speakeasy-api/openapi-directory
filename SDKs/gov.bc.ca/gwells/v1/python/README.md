@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,12 +25,12 @@ s.config_security(
     
 req = operations.AquiferCodesDemandListRequest(
     query_params=operations.AquiferCodesDemandListQueryParams(
-        limit=536948743829112639,
-        offset=8711658350578709690,
+        limit=4105802276156407248,
+        offset=7219591670737759335,
     ),
 )
     
-res = s.sdk.aquifer_codes_demand_list(req)
+res = s.aquifer_codes.aquifer_codes_demand_list(req)
 
 if res.aquifer_codes_demand_list_200_application_json_object is not None:
     # handle response
@@ -41,7 +40,7 @@ if res.aquifer_codes_demand_list_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### aquifer-codes
 
 * `aquifer_codes_demand_list` - return a list of aquifer demand codes
 * `aquifer_codes_materials_list` - return a list of aquifer material codes
@@ -50,19 +49,43 @@ if res.aquifer_codes_demand_list_200_application_json_object is not None:
 * `aquifer_codes_subtypes_list` - return a list of aquifer subtype codes
 * `aquifer_codes_vulnerability_list` - return a list of aquifer vulnerability codes
 * `aquifer_codes_water_use_list` - return a list of water use codes
+
+### aquifers
+
 * `aquifers_files_list` - list files found for the aquifer identified in the uri
 * `aquifers_list` - return a list of aquifers
 * `aquifers_names_list` - List all aquifers in a simplified format
 * `aquifers_read` - return details of aquifers
+
+### cities
+
 * `cities_drillers_list` - returns a list of cities with a qualified, registered operator (driller or installer)
 * `cities_installers_list` - returns a list of cities with a qualified, registered operator (driller or installer)
+
+### config
+
 * `config_list` - serves general configuration
+
+### drillers
+
 * `drillers_files_list` - list files found for the aquifer identified in the uri
 * `drillers_list` - Returns a list of all person records
 * `drillers_names_list` - Search for a person in the Register
+
+### keycloak
+
 * `keycloak_list` - serves keycloak config
+
+### submissions
+
 * `submissions_options_list` - Options required for submitting activity report forms
+
+### surveys
+
 * `surveys_list` - returns a list of active surveys
+
+### wells
+
 * `wells_files_list` - list files found for the well identified in the uri
 * `wells_list` - returns a list of wells
 * `wells_read` - Return well detail.

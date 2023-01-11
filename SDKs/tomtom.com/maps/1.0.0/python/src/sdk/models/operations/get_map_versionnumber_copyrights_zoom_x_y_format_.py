@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -8,28 +8,28 @@ class GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsZoomXYFormatPathParams:
-    x: int = field(metadata={'path_param': { 'field_name': 'X', 'style': 'simple', 'explode': False }})
-    y: int = field(metadata={'path_param': { 'field_name': 'Y', 'style': 'simple', 'explode': False }})
-    format: GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    version_number: int = field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
-    zoom: int = field(metadata={'path_param': { 'field_name': 'zoom', 'style': 'simple', 'explode': False }})
+    x: int = dataclasses.field(metadata={'path_param': { 'field_name': 'X', 'style': 'simple', 'explode': False }})
+    y: int = dataclasses.field(metadata={'path_param': { 'field_name': 'Y', 'style': 'simple', 'explode': False }})
+    format: GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    version_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
+    zoom: int = dataclasses.field(metadata={'path_param': { 'field_name': 'zoom', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsZoomXYFormatQueryParams:
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsZoomXYFormatRequest:
-    path_params: GetMapVersionNumberCopyrightsZoomXYFormatPathParams = field()
-    query_params: GetMapVersionNumberCopyrightsZoomXYFormatQueryParams = field()
+    path_params: GetMapVersionNumberCopyrightsZoomXYFormatPathParams = dataclasses.field()
+    query_params: GetMapVersionNumberCopyrightsZoomXYFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberCopyrightsZoomXYFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

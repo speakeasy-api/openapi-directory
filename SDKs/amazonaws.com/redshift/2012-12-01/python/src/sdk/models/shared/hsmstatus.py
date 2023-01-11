@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class HsmStatus:
     r"""HsmStatus
     Describes the status of changes to HSM settings.
     """
     
-    hsm_client_certificate_identifier: Optional[str] = field(default=None)
-    hsm_configuration_identifier: Optional[str] = field(default=None)
-    status: Optional[str] = field(default=None)
+    hsm_client_certificate_identifier: Optional[str] = dataclasses.field(default=None)
+    hsm_configuration_identifier: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
     

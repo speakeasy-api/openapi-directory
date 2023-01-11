@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import poweroutlettemplate as shared_poweroutlettemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesReadRequest:
-    path_params: DcimPowerOutletTemplatesReadPathParams = field()
+    path_params: DcimPowerOutletTemplatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_outlet_template: Optional[shared.PowerOutletTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_outlet_template: Optional[shared_poweroutlettemplate.PowerOutletTemplate] = dataclasses.field(default=None)
     

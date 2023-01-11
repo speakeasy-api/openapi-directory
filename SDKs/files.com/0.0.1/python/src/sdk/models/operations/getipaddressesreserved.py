@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import publicipaddressentity as shared_publicipaddressentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesReservedQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesReservedRequest:
-    query_params: GetIPAddressesReservedQueryParams = field()
+    query_params: GetIPAddressesReservedQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIPAddressesReservedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_ip_address_entities: Optional[List[shared.PublicIPAddressEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_ip_address_entities: Optional[list[shared_publicipaddressentity.PublicIPAddressEntity]] = dataclasses.field(default=None)
     

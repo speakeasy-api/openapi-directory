@@ -1,12 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import adtechnologyproviders as shared_adtechnologyproviders
+from ..shared import policycompliance as shared_policycompliance
+from ..shared import advertiserandbrand as shared_advertiserandbrand
 
 class CreativeServingDecisionDetectedAttributesEnum(str, Enum):
     ATTRIBUTE_UNSPECIFIED = "ATTRIBUTE_UNSPECIFIED"
@@ -50,25 +52,25 @@ class CreativeServingDecisionDetectedAttributesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeServingDecision:
     r"""CreativeServingDecision
     Top level status and detected attributes of a creative.
     """
     
-    ad_technology_providers: Optional[AdTechnologyProviders] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adTechnologyProviders') }})
-    china_policy_compliance: Optional[PolicyCompliance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chinaPolicyCompliance') }})
-    deals_policy_compliance: Optional[PolicyCompliance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealsPolicyCompliance') }})
-    detected_advertisers: Optional[List[AdvertiserAndBrand]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedAdvertisers') }})
-    detected_attributes: Optional[List[CreativeServingDecisionDetectedAttributesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedAttributes') }})
-    detected_click_through_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedClickThroughUrls') }})
-    detected_domains: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedDomains') }})
-    detected_languages: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedLanguages') }})
-    detected_product_categories: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedProductCategories') }})
-    detected_sensitive_categories: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedSensitiveCategories') }})
-    detected_vendor_ids: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedVendorIds') }})
-    last_status_update: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastStatusUpdate') }})
-    network_policy_compliance: Optional[PolicyCompliance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkPolicyCompliance') }})
-    platform_policy_compliance: Optional[PolicyCompliance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformPolicyCompliance') }})
-    russia_policy_compliance: Optional[PolicyCompliance] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('russiaPolicyCompliance') }})
+    ad_technology_providers: Optional[shared_adtechnologyproviders.AdTechnologyProviders] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adTechnologyProviders') }})
+    china_policy_compliance: Optional[shared_policycompliance.PolicyCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chinaPolicyCompliance') }})
+    deals_policy_compliance: Optional[shared_policycompliance.PolicyCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealsPolicyCompliance') }})
+    detected_advertisers: Optional[list[shared_advertiserandbrand.AdvertiserAndBrand]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedAdvertisers') }})
+    detected_attributes: Optional[list[CreativeServingDecisionDetectedAttributesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedAttributes') }})
+    detected_click_through_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedClickThroughUrls') }})
+    detected_domains: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedDomains') }})
+    detected_languages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedLanguages') }})
+    detected_product_categories: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedProductCategories') }})
+    detected_sensitive_categories: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedSensitiveCategories') }})
+    detected_vendor_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedVendorIds') }})
+    last_status_update: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastStatusUpdate') }})
+    network_policy_compliance: Optional[shared_policycompliance.PolicyCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkPolicyCompliance') }})
+    platform_policy_compliance: Optional[shared_policycompliance.PolicyCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformPolicyCompliance') }})
+    russia_policy_compliance: Optional[shared_policycompliance.PolicyCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('russiaPolicyCompliance') }})
     

@@ -10,3 +10,5 @@ from .getcalleridentityresponse import *
 from .getfederationtokenresponse import *
 from .getsessiontokenresponse import *
 from .security import *
+
+__all__ = ["AssumedRoleUser","AssumeRoleResponse","AssumeRoleWithSamlResponse","AssumeRoleWithWebIdentityResponse","Credentials","DecodeAuthorizationMessageResponse","FederatedUser","GetAccessKeyInfoResponse","GetCallerIdentityResponse","GetFederationTokenResponse","GetSessionTokenResponse","SchemeHmac","Security"]

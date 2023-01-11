@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePublicKeyPathParams:
-    key_ids: str = field(metadata={'path_param': { 'field_name': 'key_ids', 'style': 'simple', 'explode': False }})
+    key_ids: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key_ids', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePublicKeyRequest:
-    path_params: EnterpriseAdminDeletePublicKeyPathParams = field()
+    path_params: EnterpriseAdminDeletePublicKeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePublicKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import schema1 as shared_schema1
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostChargeStations201ApplicationJSON:
-    chargestation: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chargestation') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    ok: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
+    chargestation: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chargestation') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    ok: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostChargeStationsRequest:
-    request: shared.Schema1 = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_schema1.Schema1 = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostChargeStationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_charge_stations_201_application_json_object: Optional[PostChargeStations201ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_charge_stations_201_application_json_object: Optional[PostChargeStations201ApplicationJSON] = dataclasses.field(default=None)
     

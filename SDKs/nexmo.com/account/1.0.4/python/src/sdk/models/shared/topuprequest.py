@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class TopupRequest:
-    trx: str = field(metadata={'form': { 'field_name': 'trx' }})
+    trx: str = dataclasses.field(metadata={'form': { 'field_name': 'trx' }})
     

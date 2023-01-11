@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationRequestBodySpec:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    spec: str = field(metadata={'multipart_form': { 'field_name': 'spec' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    spec: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'spec' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationRequestBody:
-    spec: Optional[UpdateAPISpecificationRequestBodySpec] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    spec: Optional[UpdateAPISpecificationRequestBodySpec] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationRequest:
-    path_params: UpdateAPISpecificationPathParams = field()
-    request: UpdateAPISpecificationRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: UpdateAPISpecificationSecurity = field()
+    path_params: UpdateAPISpecificationPathParams = dataclasses.field()
+    request: UpdateAPISpecificationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UpdateAPISpecificationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPISpecificationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import service as shared_service
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServicesQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServicesSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServicesRequest:
-    query_params: GetServicesQueryParams = field()
-    security: GetServicesSecurity = field()
+    query_params: GetServicesQueryParams = dataclasses.field()
+    security: GetServicesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    services: Optional[List[shared.Service]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    services: Optional[list[shared_service.Service]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,30 +21,30 @@ req = operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest(
         option1=operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListPathParams(
-        parent="quo",
+        parent="vel",
     ),
     query_params=operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListQueryParams(
         dollar_xgafv="2",
-        access_token="voluptas",
-        alt="media",
-        callback="repellat",
-        fields="dolorem",
-        filter="eligendi",
-        key="illum",
-        oauth_token="quia",
-        page_size=8631351793798156607,
-        page_token="nihil",
-        pretty_print=False,
-        quota_user="laudantium",
-        upload_type="quo",
-        upload_protocol="aliquid",
+        access_token="voluptatum",
+        alt="json",
+        callback="quis",
+        fields="quis",
+        filter="tempore",
+        key="quasi",
+        oauth_token="architecto",
+        page_size=6391953149941375058,
+        page_token="voluptates",
+        pretty_print=True,
+        quota_user="laborum",
+        upload_type="id",
+        upload_protocol="odio",
     ),
 )
     

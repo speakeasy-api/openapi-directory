@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import campaignresponse as shared_campaignresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CampaignsUpdatePathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaignId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaignId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CampaignsUpdateSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CampaignsUpdateRequest:
-    path_params: CampaignsUpdatePathParams = field()
-    security: CampaignsUpdateSecurity = field()
+    path_params: CampaignsUpdatePathParams = dataclasses.field()
+    security: CampaignsUpdateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CampaignsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    campaign_response: Optional[shared.CampaignResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    campaign_response: Optional[shared_campaignresponse.CampaignResponse] = dataclasses.field(default=None)
     

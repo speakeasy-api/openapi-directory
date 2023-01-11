@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sessionentity as shared_sessionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSessionsRequestBody:
-    otp: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'otp' }})
-    partial_session_id: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'partial_session_id' }})
-    password: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'password' }})
-    username: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'username' }})
+    otp: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'otp' }})
+    partial_session_id: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'partial_session_id' }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'password' }})
+    username: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'username' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSessionsRequest:
-    request: Optional[PostSessionsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostSessionsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSessionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    session_entity: Optional[shared.SessionEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    session_entity: Optional[shared_sessionentity.SessionEntity] = dataclasses.field(default=None)
     

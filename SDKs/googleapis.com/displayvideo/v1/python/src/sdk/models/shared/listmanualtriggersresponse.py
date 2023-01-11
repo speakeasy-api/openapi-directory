@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import manualtrigger as shared_manualtrigger
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListManualTriggersResponse:
-    manual_triggers: Optional[List[ManualTrigger]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('manualTriggers') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    manual_triggers: Optional[list[shared_manualtrigger.ManualTrigger]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('manualTriggers') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import placedbet as shared_placedbet
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BetHistoryResponse:
-    bets: Optional[List[PlacedBet]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bets') }})
+    bets: Optional[list[shared_placedbet.PlacedBet]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bets') }})
     

@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import returnpolicyrequest as shared_returnpolicyrequest
+from ..shared import setreturnpolicyresponse as shared_setreturnpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateReturnPolicyPathParams:
-    return_policy_id: str = field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
+    return_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateReturnPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateReturnPolicyRequest:
-    path_params: UpdateReturnPolicyPathParams = field()
-    request: shared.ReturnPolicyRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateReturnPolicySecurity = field()
+    path_params: UpdateReturnPolicyPathParams = dataclasses.field()
+    request: shared_returnpolicyrequest.ReturnPolicyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateReturnPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateReturnPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_return_policy_response: Optional[shared.SetReturnPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_return_policy_response: Optional[shared_setreturnpolicyresponse.SetReturnPolicyResponse] = dataclasses.field(default=None)
     

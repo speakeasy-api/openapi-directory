@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import burntokenrequest as shared_burntokenrequest
+from ..shared import error as shared_error
+from ..shared import burntokenresponse as shared_burntokenresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BurnTokenRequest:
-    request: shared.BurnTokenRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_burntokenrequest.BurnTokenRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BurnTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    burn_token_response: Optional[shared.BurnTokenResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    burn_token_response: Optional[shared_burntokenresponse.BurnTokenResponse] = dataclasses.field(default=None)
     

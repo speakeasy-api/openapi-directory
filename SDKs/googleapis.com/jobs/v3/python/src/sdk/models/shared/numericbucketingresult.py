@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bucketizedcount as shared_bucketizedcount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NumericBucketingResult:
     r"""NumericBucketingResult
     Output only. Custom numeric bucketing result.
     """
     
-    counts: Optional[List[BucketizedCount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
-    max_value: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxValue') }})
-    min_value: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minValue') }})
+    counts: Optional[list[shared_bucketizedcount.BucketizedCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
+    max_value: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxValue') }})
+    min_value: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minValue') }})
     

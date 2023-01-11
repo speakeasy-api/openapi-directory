@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class GetParcelsPidsSiteIDOutputFormatOutputFormatEnum(str, Enum):
@@ -11,19 +11,19 @@ class GetParcelsPidsSiteIDOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetParcelsPidsSiteIDOutputFormatPathParams:
-    output_format: GetParcelsPidsSiteIDOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
-    site_id: str = field(metadata={'path_param': { 'field_name': 'siteID', 'style': 'simple', 'explode': False }})
+    output_format: GetParcelsPidsSiteIDOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    site_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'siteID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetParcelsPidsSiteIDOutputFormatRequest:
-    path_params: GetParcelsPidsSiteIDOutputFormatPathParams = field()
+    path_params: GetParcelsPidsSiteIDOutputFormatPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetParcelsPidsSiteIDOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

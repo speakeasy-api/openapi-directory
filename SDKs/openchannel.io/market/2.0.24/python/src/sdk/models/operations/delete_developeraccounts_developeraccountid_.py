@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeveloperAccountsDeveloperAccountIDPathParams:
-    developer_account_id: str = field(metadata={'path_param': { 'field_name': 'developerAccountId', 'style': 'simple', 'explode': False }})
+    developer_account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'developerAccountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeveloperAccountsDeveloperAccountIDRequest:
-    path_params: DeleteDeveloperAccountsDeveloperAccountIDPathParams = field()
+    path_params: DeleteDeveloperAccountsDeveloperAccountIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeveloperAccountsDeveloperAccountIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

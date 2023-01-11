@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import bulkdeleteadsbyinventoryreferencerequest as shared_bulkdeleteadsbyinventoryreferencerequest
+from ..shared import bulkdeleteadsbyinventoryreferenceresponse as shared_bulkdeleteadsbyinventoryreferenceresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByInventoryReferencePathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByInventoryReferenceSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByInventoryReferenceRequest:
-    path_params: BulkDeleteAdsByInventoryReferencePathParams = field()
-    request: shared.BulkDeleteAdsByInventoryReferenceRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: BulkDeleteAdsByInventoryReferenceSecurity = field()
+    path_params: BulkDeleteAdsByInventoryReferencePathParams = dataclasses.field()
+    request: shared_bulkdeleteadsbyinventoryreferencerequest.BulkDeleteAdsByInventoryReferenceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: BulkDeleteAdsByInventoryReferenceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByInventoryReferenceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bulk_delete_ads_by_inventory_reference_response: Optional[shared.BulkDeleteAdsByInventoryReferenceResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bulk_delete_ads_by_inventory_reference_response: Optional[shared_bulkdeleteadsbyinventoryreferenceresponse.BulkDeleteAdsByInventoryReferenceResponse] = dataclasses.field(default=None)
     

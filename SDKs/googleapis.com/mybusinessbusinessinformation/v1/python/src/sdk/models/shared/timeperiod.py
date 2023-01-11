@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timeofday as shared_timeofday
 
 class TimePeriodCloseDayEnum(str, Enum):
     DAY_OF_WEEK_UNSPECIFIED = "DAY_OF_WEEK_UNSPECIFIED"
@@ -27,14 +27,14 @@ class TimePeriodOpenDayEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TimePeriod:
     r"""TimePeriod
     Represents a span of time that the business is open, starting on the specified open day/time and closing on the specified close day/time. The closing time must occur after the opening time, for example later in the same day, or on a subsequent day.
     """
     
-    close_day: Optional[TimePeriodCloseDayEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closeDay') }})
-    close_time: Optional[TimeOfDay] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closeTime') }})
-    open_day: Optional[TimePeriodOpenDayEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openDay') }})
-    open_time: Optional[TimeOfDay] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openTime') }})
+    close_day: Optional[TimePeriodCloseDayEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closeDay') }})
+    close_time: Optional[shared_timeofday.TimeOfDay] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closeTime') }})
+    open_day: Optional[TimePeriodOpenDayEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openDay') }})
+    open_time: Optional[shared_timeofday.TimeOfDay] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openTime') }})
     

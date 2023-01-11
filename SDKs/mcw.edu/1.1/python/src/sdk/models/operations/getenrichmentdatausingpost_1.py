@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import enrichmentrequest as shared_enrichmentrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEnrichmentDataUsingPost1Request:
-    request: shared.EnrichmentRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_enrichmentrequest.EnrichmentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEnrichmentDataUsingPost1Response:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

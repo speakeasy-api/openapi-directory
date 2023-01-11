@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetDomainsTldZoneIDDownloadRequest(
     path_params=operations.GetDomainsTldZoneIDDownloadPathParams(
-        zone_id="cupiditate",
+        zone_id="maxime",
     ),
     query_params=operations.GetDomainsTldZoneIDDownloadQueryParams(
-        api_key="reiciendis",
-        date_="minus",
+        api_key="omnis",
+        date_="voluptas",
     ),
 )
     

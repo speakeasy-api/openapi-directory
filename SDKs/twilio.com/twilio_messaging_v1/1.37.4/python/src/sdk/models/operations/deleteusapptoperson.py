@@ -1,0 +1,33 @@
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+
+
+DELETE_US_APP_TO_PERSON_SERVERS = [
+	"https://messaging.twilio.com",
+]
+
+
+@dataclasses.dataclass
+class DeleteUsAppToPersonPathParams:
+    messaging_service_sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'MessagingServiceSid', 'style': 'simple', 'explode': False }})
+    sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
+    
+
+@dataclasses.dataclass
+class DeleteUsAppToPersonSecurity:
+    account_sid_auth_token: shared_security.SchemeAccountSidAuthToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    
+
+@dataclasses.dataclass
+class DeleteUsAppToPersonRequest:
+    path_params: DeleteUsAppToPersonPathParams = dataclasses.field()
+    security: DeleteUsAppToPersonSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
+class DeleteUsAppToPersonResponse:
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    

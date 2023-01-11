@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.GetFeaturesFeatureIDRequest(
     path_params=operations.GetFeaturesFeatureIDPathParams(
-        feature_id=914375363837464697,
+        feature_id=4754435599357587291,
     ),
 )
     
@@ -49,11 +48,11 @@ if res.status_code == 200:
 * `get_names_decisions_recent` - Search for names affected by recent naming decision
 * `get_names_decisions_year` - Search for names affected by naming decisions in a given year
 * `get_names_inside` - Search in a geographic area
-* `get_names_name_id_output_format_` - Get a name by its nameId
 * `get_names_near` - Search near to a geographic point
 * `get_names_not_official_search` - Search by name, limit to unofficial names only
 * `get_names_official_search` - Search by name, limit to official names only
 * `get_names_search` - Search by name
+* `get_names_name_id_output_format_` - Get a name by its nameId
 
 ### name authority
 

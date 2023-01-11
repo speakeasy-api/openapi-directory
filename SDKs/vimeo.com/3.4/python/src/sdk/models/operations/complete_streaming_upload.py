@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class CompleteStreamingUploadPathParams:
-    upload: float = field(metadata={'path_param': { 'field_name': 'upload', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    upload: float = dataclasses.field(metadata={'path_param': { 'field_name': 'upload', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompleteStreamingUploadQueryParams:
-    signature: str = field(metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
-    video_file_id: float = field(metadata={'query_param': { 'field_name': 'video_file_id', 'style': 'form', 'explode': True }})
+    signature: str = dataclasses.field(metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
+    video_file_id: float = dataclasses.field(metadata={'query_param': { 'field_name': 'video_file_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompleteStreamingUploadSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompleteStreamingUploadRequest:
-    path_params: CompleteStreamingUploadPathParams = field()
-    query_params: CompleteStreamingUploadQueryParams = field()
-    security: CompleteStreamingUploadSecurity = field()
+    path_params: CompleteStreamingUploadPathParams = dataclasses.field()
+    query_params: CompleteStreamingUploadQueryParams = dataclasses.field()
+    security: CompleteStreamingUploadSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompleteStreamingUploadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

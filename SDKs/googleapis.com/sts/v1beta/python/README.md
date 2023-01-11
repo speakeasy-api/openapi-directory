@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,25 +19,25 @@ s = sdk.SDK()
 req = operations.StsTokenRequest(
     query_params=operations.StsTokenQueryParams(
         dollar_xgafv="2",
-        access_token="sint",
+        access_token="quas",
         alt="proto",
-        callback="quia",
-        fields="quo",
-        key="mollitia",
-        oauth_token="totam",
-        pretty_print=False,
-        quota_user="et",
-        upload_type="esse",
-        upload_protocol="modi",
+        callback="aut",
+        fields="at",
+        key="sint",
+        oauth_token="at",
+        pretty_print=True,
+        quota_user="enim",
+        upload_type="vel",
+        upload_protocol="temporibus",
     ),
     request=shared.GoogleIdentityStsV1betaExchangeTokenRequest(
-        audience="qui",
-        grant_type="nobis",
-        options="est",
-        requested_token_type="alias",
-        scope="quae",
-        subject_token="illum",
-        subject_token_type="et",
+        audience="nihil",
+        grant_type="repellendus",
+        options="blanditiis",
+        requested_token_type="possimus",
+        scope="animi",
+        subject_token="quo",
+        subject_token_type="est",
     ),
 )
     

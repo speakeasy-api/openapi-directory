@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DemodulationConfig:
     r"""DemodulationConfig
     Information about the demodulation <code>Config</code>.
     """
     
-    unvalidated_json: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unvalidatedJSON') }})
+    unvalidated_json: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unvalidatedJSON') }})
     

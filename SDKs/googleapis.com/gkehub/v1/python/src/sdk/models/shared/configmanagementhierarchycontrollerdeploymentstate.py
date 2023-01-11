@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,12 +18,12 @@ class ConfigManagementHierarchyControllerDeploymentStateHncEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigManagementHierarchyControllerDeploymentState:
     r"""ConfigManagementHierarchyControllerDeploymentState
     Deployment state for Hierarchy Controller
     """
     
-    extension: Optional[ConfigManagementHierarchyControllerDeploymentStateExtensionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('extension') }})
-    hnc: Optional[ConfigManagementHierarchyControllerDeploymentStateHncEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hnc') }})
+    extension: Optional[ConfigManagementHierarchyControllerDeploymentStateExtensionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('extension') }})
+    hnc: Optional[ConfigManagementHierarchyControllerDeploymentStateHncEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hnc') }})
     

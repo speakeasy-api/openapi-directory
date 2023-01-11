@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,33 @@ req = operations.CloudassetProjectsBatchGetAssetsHistoryRequest(
     security=operations.CloudassetProjectsBatchGetAssetsHistorySecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CloudassetProjectsBatchGetAssetsHistoryPathParams(
-        parent="quia",
+        parent="consequatur",
     ),
     query_params=operations.CloudassetProjectsBatchGetAssetsHistoryQueryParams(
         dollar_xgafv="2",
-        access_token="eum",
+        access_token="et",
         alt="media",
         asset_names=[
-            "voluptas",
+            "sunt",
+            "voluptatem",
         ],
-        callback="est",
-        content_type="CONTENT_TYPE_UNSPECIFIED",
-        fields="minima",
-        key="doloremque",
-        oauth_token="provident",
+        callback="nobis",
+        content_type="IAM_POLICY",
+        fields="reprehenderit",
+        key="vel",
+        oauth_token="aut",
         pretty_print=False,
-        quota_user="earum",
-        read_time_window_end_time="est",
-        read_time_window_start_time="aut",
-        upload_type="optio",
-        upload_protocol="est",
+        quota_user="dignissimos",
+        read_time_window_end_time="aut",
+        read_time_window_start_time="maxime",
+        upload_type="ea",
+        upload_protocol="et",
     ),
 )
     

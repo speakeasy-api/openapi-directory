@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbcluster as shared_dbcluster
 
 
-@dataclass
+@dataclasses.dataclass
 class RestoreDbClusterToPointInTimeResult:
-    db_cluster: Optional[DbCluster] = field(default=None)
+    db_cluster: Optional[shared_dbcluster.DbCluster] = dataclasses.field(default=None)
     

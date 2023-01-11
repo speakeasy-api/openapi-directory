@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import auditcommitteesearchlist as shared_auditcommitteesearchlist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesAuditCommitteesQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    q: List[str] = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    q: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesAuditCommitteesRequest:
-    query_params: GetNamesAuditCommitteesQueryParams = field()
+    query_params: GetNamesAuditCommitteesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesAuditCommitteesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    audit_committee_search_list: Optional[shared.AuditCommitteeSearchList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    audit_committee_search_list: Optional[shared_auditcommitteesearchlist.AuditCommitteeSearchList] = dataclasses.field(default=None)
     

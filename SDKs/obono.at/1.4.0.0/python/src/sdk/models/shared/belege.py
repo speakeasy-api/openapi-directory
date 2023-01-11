@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import beleg as shared_beleg
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BelegeBelegeGruppe:
-    belege_kompakt: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege-kompakt') }})
-    signaturzertifikat: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Signaturzertifikat') }})
-    zertifizierungsstellen: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Zertifizierungsstellen') }})
+    belege_kompakt: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege-kompakt') }})
+    signaturzertifikat: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Signaturzertifikat') }})
+    zertifizierungsstellen: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Zertifizierungsstellen') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Belege:
-    belege: Optional[List[Beleg]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege') }})
-    belege_gruppe: Optional[List[BelegeBelegeGruppe]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege-Gruppe') }})
+    belege: Optional[list[shared_beleg.Beleg]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege') }})
+    belege_gruppe: Optional[list[BelegeBelegeGruppe]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Belege-Gruppe') }})
     

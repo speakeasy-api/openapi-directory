@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workspacecreationproperties as shared_workspacecreationproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ModifyWorkspaceCreationPropertiesRequest:
-    resource_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceId') }})
-    workspace_creation_properties: WorkspaceCreationProperties = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('WorkspaceCreationProperties') }})
+    resource_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceId') }})
+    workspace_creation_properties: shared_workspacecreationproperties.WorkspaceCreationProperties = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('WorkspaceCreationProperties') }})
     

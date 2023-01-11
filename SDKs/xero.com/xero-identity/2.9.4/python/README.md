@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.DeleteConnectionRequest(
         ),
     ),
     path_params=operations.DeleteConnectionPathParams(
-        id="in",
+        id="qui",
     ),
 )
     
-res = s.sdk.delete_connection(req)
+res = s.identity.delete_connection(req)
 
 if res.status_code == 200:
     # handle response
@@ -38,7 +37,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### identity
 
 * `delete_connection` - Deletes a connection for this user (i.e. disconnect a tenant)
 * `get_connections` - Retrieves the connections for this user

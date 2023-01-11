@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SendCustomVerificationEmailResponse:
     r"""SendCustomVerificationEmailResponse
     The response received when attempting to send the custom verification email.
     """
     
-    message_id: Optional[str] = field(default=None)
+    message_id: Optional[str] = dataclasses.field(default=None)
     

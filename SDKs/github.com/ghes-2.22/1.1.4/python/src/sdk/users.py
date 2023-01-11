@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -31,20 +31,20 @@ class Users:
         url = base_url.removesuffix("/") + "/user/emails"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UsersAddEmailForAuthenticatedResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 201:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Email]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Email]])
                 res.emails = out
         elif r.status_code == 304:
             pass
@@ -141,13 +141,13 @@ class Users:
         url = base_url.removesuffix("/") + "/user/gpg_keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UsersCreateGpgKeyForAuthenticatedResponse(status_code=r.status_code, content_type=content_type)
@@ -189,13 +189,13 @@ class Users:
         url = base_url.removesuffix("/") + "/user/keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UsersCreatePublicSSHKeyForAuthenticatedResponse(status_code=r.status_code, content_type=content_type)
@@ -237,13 +237,13 @@ class Users:
         url = base_url.removesuffix("/") + "/user/emails"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UsersDeleteEmailForAuthenticatedResponse(status_code=r.status_code, content_type=content_type)
@@ -617,7 +617,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 304:
             pass
@@ -648,7 +648,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Email]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Email]])
                 res.emails = out
         elif r.status_code == 304:
             pass
@@ -691,7 +691,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 304:
             pass
@@ -730,7 +730,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 304:
             pass
@@ -769,7 +769,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -798,7 +798,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -827,7 +827,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GpgKey]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GpgKey]])
                 res.gpg_keys = out
         elif r.status_code == 304:
             pass
@@ -870,7 +870,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GpgKey]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GpgKey]])
                 res.gpg_keys = out
 
         return res
@@ -899,7 +899,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Email]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Email]])
                 res.emails = out
         elif r.status_code == 304:
             pass
@@ -942,7 +942,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.KeySimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.KeySimple]])
                 res.key_simples = out
 
         return res
@@ -971,7 +971,7 @@ class Users:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Key]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Key]])
                 res.keys = out
         elif r.status_code == 304:
             pass
@@ -1040,13 +1040,13 @@ class Users:
         url = base_url.removesuffix("/") + "/user"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UsersUpdateAuthenticatedResponse(status_code=r.status_code, content_type=content_type)

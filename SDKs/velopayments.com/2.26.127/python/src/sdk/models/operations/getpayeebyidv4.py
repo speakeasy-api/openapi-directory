@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import payeedetailresponse_2 as shared_payeedetailresponse_2
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeByIDV4PathParams:
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeByIDV4QueryParams:
-    sensitive: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
+    sensitive: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeByIDV4Request:
-    path_params: GetPayeeByIDV4PathParams = field()
-    query_params: GetPayeeByIDV4QueryParams = field()
+    path_params: GetPayeeByIDV4PathParams = dataclasses.field()
+    query_params: GetPayeeByIDV4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeByIDV4Response:
-    content_type: str = field()
-    status_code: int = field()
-    payee_detail_response_2: Optional[shared.PayeeDetailResponse2] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payee_detail_response_2: Optional[shared_payeedetailresponse_2.PayeeDetailResponse2] = dataclasses.field(default=None)
     

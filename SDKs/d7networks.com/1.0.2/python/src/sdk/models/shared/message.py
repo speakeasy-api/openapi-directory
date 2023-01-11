@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Message:
-    content: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    from_: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
-    to: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
+    content: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    from_: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
+    to: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetSearchV1FieldsRequest(
     query_params=operations.GetSearchV1FieldsQueryParams(
-        callback="maiores",
+        callback="officia",
     ),
 )
     
-res = s.sdk.get_search_v1_fields(req)
+res = s.get_search_v1_fields(req)
 
 if res.body is not None:
     # handle response

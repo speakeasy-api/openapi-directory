@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,29 +25,32 @@ s.config_security(
     
 req = operations.AddCustomRoutingEndpointsRequest(
     headers=operations.AddCustomRoutingEndpointsHeaders(
-        x_amz_algorithm="dignissimos",
-        x_amz_content_sha256="voluptates",
-        x_amz_credential="officia",
-        x_amz_date="dolore",
-        x_amz_security_token="hic",
-        x_amz_signature="recusandae",
-        x_amz_signed_headers="iste",
+        x_amz_algorithm="modi",
+        x_amz_content_sha256="cum",
+        x_amz_credential="similique",
+        x_amz_date="voluptatibus",
+        x_amz_security_token="quisquam",
+        x_amz_signature="quis",
+        x_amz_signed_headers="autem",
         x_amz_target="GlobalAccelerator_V20180706.AddCustomRoutingEndpoints",
     ),
     request=shared.AddCustomRoutingEndpointsRequest(
         endpoint_configurations=[
             shared.CustomRoutingEndpointConfiguration(
-                endpoint_id="alias",
+                endpoint_id="ducimus",
             ),
             shared.CustomRoutingEndpointConfiguration(
-                endpoint_id="eum",
+                endpoint_id="provident",
+            ),
+            shared.CustomRoutingEndpointConfiguration(
+                endpoint_id="commodi",
             ),
         ],
-        endpoint_group_arn="quia",
+        endpoint_group_arn="ut",
     ),
 )
     
-res = s.sdk.add_custom_routing_endpoints(req)
+res = s.add_custom_routing_endpoints(req)
 
 if res.add_custom_routing_endpoints_response is not None:
     # handle response

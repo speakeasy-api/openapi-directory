@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsCorrelationMatrixValidationRequestBody:
-    assets: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
-    assets_correlation_matrix: List[List[float]] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetsCorrelationMatrix') }})
+    assets: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets_correlation_matrix: list[list[float]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetsCorrelationMatrix') }})
     
 class PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum(str, Enum):
     VALID_CORRELATION_MATRIX = "valid correlation matrix"
@@ -19,19 +19,19 @@ class PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum(str, En
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsCorrelationMatrixValidation200ApplicationJSON:
-    message: PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    message: PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsCorrelationMatrixValidationRequest:
-    request: PostAssetsCorrelationMatrixValidationRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostAssetsCorrelationMatrixValidationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsCorrelationMatrixValidationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_assets_correlation_matrix_validation_200_application_json_object: Optional[PostAssetsCorrelationMatrixValidation200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_assets_correlation_matrix_validation_200_application_json_object: Optional[PostAssetsCorrelationMatrixValidation200ApplicationJSON] = dataclasses.field(default=None)
     

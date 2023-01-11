@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import weakcert as shared_weakcert
 
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetPathParams:
-    firmware_hash: str = field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
+    firmware_hash: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetSecurity:
-    api_key_header: shared.SchemeAPIKeyHeader = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_header: shared_security.SchemeAPIKeyHeader = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetRequest:
-    path_params: FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetPathParams = field()
-    security: FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetSecurity = field()
+    path_params: FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetPathParams = dataclasses.field()
+    security: FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    weak_certs: Optional[List[shared.WeakCert]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    weak_certs: Optional[list[shared_weakcert.WeakCert]] = dataclasses.field(default=None)
     

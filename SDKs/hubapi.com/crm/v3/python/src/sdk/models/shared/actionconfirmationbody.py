@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionConfirmationBody:
-    cancel_button_label: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancelButtonLabel') }})
-    confirm_button_label: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmButtonLabel') }})
-    prompt: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prompt') }})
+    cancel_button_label: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cancelButtonLabel') }})
+    confirm_button_label: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmButtonLabel') }})
+    prompt: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prompt') }})
     

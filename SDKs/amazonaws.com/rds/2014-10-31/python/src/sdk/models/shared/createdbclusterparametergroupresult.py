@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbclusterparametergroup as shared_dbclusterparametergroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDbClusterParameterGroupResult:
-    db_cluster_parameter_group: Optional[DbClusterParameterGroup] = field(default=None)
+    db_cluster_parameter_group: Optional[shared_dbclusterparametergroup.DbClusterParameterGroup] = dataclasses.field(default=None)
     

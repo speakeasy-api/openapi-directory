@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportHTMLBelegeBelegUUIDPathParams:
-    beleg_uuid: str = field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
+    beleg_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportHTMLBelegeBelegUUIDRequest:
-    path_params: GetExportHTMLBelegeBelegUUIDPathParams = field()
+    path_params: GetExportHTMLBelegeBelegUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportHTMLBelegeBelegUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import destinationdefinitionreadlist as shared_destinationdefinitionreadlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListLatestDestinationDefinitionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    destination_definition_read_list: Optional[shared.DestinationDefinitionReadList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    destination_definition_read_list: Optional[shared_destinationdefinitionreadlist.DestinationDefinitionReadList] = dataclasses.field(default=None)
     

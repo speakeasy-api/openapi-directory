@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import virtualgateway as shared_virtualgateway
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VirtualGateways:
-    virtual_gateways: Optional[List[VirtualGateway]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualGateways') }})
+    virtual_gateways: Optional[list[shared_virtualgateway.VirtualGateway]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualGateways') }})
     

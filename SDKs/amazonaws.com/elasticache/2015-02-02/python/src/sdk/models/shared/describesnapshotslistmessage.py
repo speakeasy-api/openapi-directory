@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import snapshotlist as shared_snapshotlist
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSnapshotsListMessage:
     r"""DescribeSnapshotsListMessage
     Represents the output of a <code>DescribeSnapshots</code> operation.
     """
     
-    marker: Optional[str] = field(default=None)
-    snapshots: Optional[List[Snapshot]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    snapshots: Optional[list[shared_snapshotlist.SnapshotList]] = dataclasses.field(default=None)
     

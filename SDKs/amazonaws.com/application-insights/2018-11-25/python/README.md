@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,30 +25,34 @@ s.config_security(
     
 req = operations.CreateApplicationRequest(
     headers=operations.CreateApplicationHeaders(
-        x_amz_algorithm="amet",
-        x_amz_content_sha256="blanditiis",
-        x_amz_credential="unde",
-        x_amz_date="nihil",
-        x_amz_security_token="asperiores",
-        x_amz_signature="quaerat",
-        x_amz_signed_headers="hic",
+        x_amz_algorithm="laudantium",
+        x_amz_content_sha256="odio",
+        x_amz_credential="deserunt",
+        x_amz_date="qui",
+        x_amz_security_token="inventore",
+        x_amz_signature="omnis",
+        x_amz_signed_headers="veritatis",
         x_amz_target="EC2WindowsBarleyService.CreateApplication",
     ),
     request=shared.CreateApplicationRequest(
         cwe_monitor_enabled=False,
-        ops_center_enabled=False,
-        ops_item_sns_topic_arn="pariatur",
-        resource_group_name="enim",
+        ops_center_enabled=True,
+        ops_item_sns_topic_arn="vitae",
+        resource_group_name="quia",
         tags=[
             shared.Tag(
-                key="possimus",
-                value="temporibus",
+                key="adipisci",
+                value="cupiditate",
+            ),
+            shared.Tag(
+                key="similique",
+                value="omnis",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_application(req)
+res = s.create_application(req)
 
 if res.create_application_response is not None:
     # handle response

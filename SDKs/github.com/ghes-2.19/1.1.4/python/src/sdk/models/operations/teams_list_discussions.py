@@ -1,35 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import team_id_enum as shared_team_id_enum
+from ..shared import team_discussion as shared_team_discussion
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionsPathParams:
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-class TeamsListDiscussionsDirectionEnum(str, Enum):
-    ASC = "asc"
-    DESC = "desc"
 
-
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionsQueryParams:
-    direction: Optional[TeamsListDiscussionsDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_team_id_enum.TeamIDEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionsRequest:
-    path_params: TeamsListDiscussionsPathParams = field()
-    query_params: TeamsListDiscussionsQueryParams = field()
+    path_params: TeamsListDiscussionsPathParams = dataclasses.field()
+    query_params: TeamsListDiscussionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    team_discussions: Optional[List[shared.TeamDiscussion]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_discussions: Optional[list[shared_team_discussion.TeamDiscussion]] = dataclasses.field(default=None)
     

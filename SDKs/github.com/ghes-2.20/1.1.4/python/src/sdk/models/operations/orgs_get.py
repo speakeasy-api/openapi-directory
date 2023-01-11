@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import organization_full as shared_organization_full
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetRequest:
-    path_params: OrgsGetPathParams = field()
+    path_params: OrgsGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    organization_full: Optional[shared.OrganizationFull] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    organization_full: Optional[shared_organization_full.OrganizationFull] = dataclasses.field(default=None)
     

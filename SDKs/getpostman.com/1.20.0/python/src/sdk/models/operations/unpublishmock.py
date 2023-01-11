@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UnpublishMockPathParams:
-    mock_uid: str = field(metadata={'path_param': { 'field_name': 'mock_uid', 'style': 'simple', 'explode': False }})
+    mock_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'mock_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UnpublishMock200ApplicationJSONMock:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UnpublishMock200ApplicationJSON:
-    mock: Optional[UnpublishMock200ApplicationJSONMock] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mock') }})
+    mock: Optional[UnpublishMock200ApplicationJSONMock] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mock') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UnpublishMockRequest:
-    path_params: UnpublishMockPathParams = field()
+    path_params: UnpublishMockPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UnpublishMockResponse:
-    content_type: str = field()
-    status_code: int = field()
-    unpublish_mock_200_application_json_object: Optional[UnpublishMock200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    unpublish_mock_200_application_json_object: Optional[UnpublishMock200ApplicationJSON] = dataclasses.field(default=None)
     

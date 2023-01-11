@@ -10,3 +10,5 @@ from .productrecommendation import *
 from .security import *
 from .suppressviolationrequest import *
 from .variationdetails import *
+
+__all__ = ["AspectRecommendations","ComplianceDetail","ComplianceSummary","ComplianceSummaryInfo","ComplianceViolation","CorrectiveRecommendations","NameValueList","PagedComplianceViolationCollection","ProductRecommendation","SchemeAPIAuth","SuppressViolationRequest","VariationDetails"]

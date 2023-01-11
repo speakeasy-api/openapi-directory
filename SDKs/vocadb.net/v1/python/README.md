@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,21 +18,21 @@ s = sdk.SDK()
     
 req = operations.ActivityEntryAPIGetListRequest(
     query_params=operations.ActivityEntryAPIGetListQueryParams(
-        before="1974-10-09T14:18:13Z",
-        edit_event="Deleted",
-        entry_fields="MainPicture",
-        entry_type="Artist",
+        before="1973-10-23T08:53:07Z",
+        edit_event="Updated",
+        entry_fields="Tags",
+        entry_type="PV",
         fields="ArchivedVersion",
-        get_total_count=True,
-        lang="English",
-        max_results=7887163202762339639,
-        since="1991-06-24T08:18:55Z",
+        get_total_count=False,
+        lang="Default",
+        max_results=409928697422585856,
+        since="1999-07-29T04:40:34Z",
         sort_rule="CreateDate",
-        user_id=8916108228658178676,
+        user_id=6897207526852881530,
     ),
 )
     
-res = s.sdk.activity_entry_api_get_list(req)
+res = s.activity_entry_api.activity_entry_api_get_list(req)
 
 if res.body is not None:
     # handle response
@@ -43,9 +42,12 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ActivityEntryApi
 
 * `activity_entry_api_get_list` - Gets a list of recent activity entries.
+
+### AlbumApi
+
 * `album_api_delete` - Deletes an album.
 * `album_api_delete_comment` - Deletes a comment.
 * `album_api_delete_review`
@@ -59,26 +61,45 @@ if res.body is not None:
 * `album_api_get_tracks` - Gets tracks for an album.
 * `album_api_get_tracks_fields`
 * `album_api_get_user_collections`
+
+### ArtistApi
+
 * `artist_api_delete` - Deletes an artist.
 * `artist_api_delete_comment` - Deletes a comment.
 * `artist_api_get_comments` - Gets a list of comments for an artist.
 * `artist_api_get_list` - Find artists.
 * `artist_api_get_names` - Gets a list of artist names. Ideal for autocomplete boxes.
 * `artist_api_get_one` - Gets an artist by Id.
+
+### CommentApi
+
 * `comment_api_delete_comment` - Deletes a comment.
 * `comment_api_get_comments` - Gets a list of comments for an entry.
+
+### DiscussionApi
+
 * `discussion_api_delete_comment`
 * `discussion_api_delete_topic`
 * `discussion_api_get_folders`
 * `discussion_api_get_topic`
 * `discussion_api_get_topics`
 * `discussion_api_get_topics_for_folder`
+
+### EntryApi
+
 * `entry_api_get_list` - Find entries.
 * `entry_api_get_names` - Gets a list of entry names. Ideal for autocomplete boxes.
+
+### EntryTypesApi
+
 * `entry_types_api_get_mapped_tag`
-* `get_api_users_current_album_collection_statuses_album_id_`
-* `get_api_users_current_followed_artists_artist_id_`
+
+### PVApi
+
 * `pv_api_get_list` - Gets a list of PVs for songs.
+
+### ReleaseEventApi
+
 * `release_event_api_delete` - Deletes an event.
 * `release_event_api_get_albums` - Gets a list of albums for a specific event.
 * `release_event_api_get_list` - Gets a page of events.
@@ -88,10 +109,19 @@ if res.body is not None:
 * `release_event_api_get_one`
 * `release_event_api_get_published_songs` - Gets a list of songs for a specific event.
 * `release_event_api_post_report` - Creates a new report.
+
+### ReleaseEventSeriesApi
+
 * `release_event_series_api_delete` - Deletes an event series.
 * `release_event_series_api_get_list` - Gets a page of event series.
 * `release_event_series_api_get_one` - Gets single event series by ID.
+
+### ResourcesApi
+
 * `resources_api_get_list` - Gets a number of resource sets for a specific culture.
+
+### SongApi
+
 * `song_api_delete` - Deletes a song.
 * `song_api_delete_comment` - Deletes a comment.
 * `song_api_get_by_id` - Gets a song by Id.
@@ -106,12 +136,18 @@ if res.body is not None:
 * `song_api_get_related` - Gets related songs.
 * `song_api_get_top_songs` - Gets top rated songs.
 * `song_api_post_rating` - Add or update rating for a specific song, for the currently logged in user.
+
+### SongListApi
+
 * `song_list_api_delete` - Deletes a song list.
 * `song_list_api_delete_comment` - Deletes a comment.
 * `song_list_api_get_comments` - Gets a list of comments for a song list.
 * `song_list_api_get_featured_list_names` - Gets a list of featuedd list names. Ideal for autocomplete boxes.
 * `song_list_api_get_featured_lists` - Gets a list of featured song lists.
 * `song_list_api_get_songs` - Gets a list of songs in a song list.
+
+### TagApi
+
 * `tag_api_delete` - Deletes a tag.
 * `tag_api_delete_comment` - Deletes a comment.
             Normal users can delete their own comments, moderators can delete all comments.
@@ -130,6 +166,9 @@ if res.body is not None:
 * `tag_api_get_top_tags` - Gets the most common tags in a category.
 * `tag_api_post_new_tag` - Creates a new tag.
 * `tag_api_post_report` - Creates a new report.
+
+### UserApi
+
 * `user_api_delete_followed_tag`
 * `user_api_delete_messages` - Deletes a list of user messages.
 * `user_api_delete_profile_comment` - Deletes a comment.
@@ -154,6 +193,11 @@ if res.body is not None:
 * `user_api_post_refresh_entry_edit` - Refresh entry edit status, indicating that the current user is still editing that entry.
 * `user_api_post_report`
 * `user_api_post_setting` - Updates user setting.
+* `get_api_users_current_album_collection_statuses_album_id_`
+* `get_api_users_current_followed_artists_artist_id_`
+
+### VenueApi
+
 * `venue_api_delete` - Deletes a venue.
 * `venue_api_get_list` - Gets a page of event venue.
 * `venue_api_post_report` - Creates a new report.

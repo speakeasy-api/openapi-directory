@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourcegroupviewmodel as shared_resourcegroupviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcegroupsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcegroupsIDRequest:
-    path_params: GetSetupV1ResourcegroupsIDPathParams = field()
+    path_params: GetSetupV1ResourcegroupsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcegroupsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_group_view_model: Optional[shared.ResourceGroupViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_group_view_model: Optional[shared_resourcegroupviewmodel.ResourceGroupViewModel] = dataclasses.field(default=None)
     

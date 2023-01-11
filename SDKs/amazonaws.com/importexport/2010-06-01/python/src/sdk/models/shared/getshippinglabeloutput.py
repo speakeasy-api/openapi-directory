@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingLabelOutput:
-    shipping_label_url: Optional[str] = field(default=None)
-    warning: Optional[str] = field(default=None)
+    shipping_label_url: Optional[str] = dataclasses.field(default=None)
+    warning: Optional[str] = dataclasses.field(default=None)
     

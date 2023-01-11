@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import category as shared_category
 
 class GetCategoriesDirectionEnum(str, Enum):
     ASC = "asc"
@@ -12,22 +12,22 @@ class GetCategoriesSortEnum(str, Enum):
     NAME = "name"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesQueryParams:
-    direction: Optional[GetCategoriesDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[GetCategoriesSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetCategoriesDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[GetCategoriesSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesRequest:
-    query_params: GetCategoriesQueryParams = field()
+    query_params: GetCategoriesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    categories: Optional[List[shared.Category]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    categories: Optional[list[shared_category.Category]] = dataclasses.field(default=None)
     

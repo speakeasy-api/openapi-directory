@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,22 @@ s.config_security(
     
 req = operations.DescribeReportCreationRequest(
     headers=operations.DescribeReportCreationHeaders(
-        x_amz_algorithm="vitae",
-        x_amz_content_sha256="animi",
-        x_amz_credential="eos",
-        x_amz_date="necessitatibus",
-        x_amz_security_token="aperiam",
-        x_amz_signature="suscipit",
-        x_amz_signed_headers="aut",
+        x_amz_algorithm="placeat",
+        x_amz_content_sha256="doloribus",
+        x_amz_credential="quibusdam",
+        x_amz_date="pariatur",
+        x_amz_security_token="sint",
+        x_amz_signature="ipsam",
+        x_amz_signed_headers="qui",
         x_amz_target="ResourceGroupsTaggingAPI_20170126.DescribeReportCreation",
     ),
     request={
-        "quibusdam": "non",
+        "dolores": "aut",
+        "est": "nobis",
     },
 )
     
-res = s.sdk.describe_report_creation(req)
+res = s.describe_report_creation(req)
 
 if res.describe_report_creation_output is not None:
     # handle response

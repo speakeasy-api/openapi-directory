@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -24,15 +24,15 @@ class GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleChromeManagementV1DeviceAueCountReport:
     r"""GoogleChromeManagementV1DeviceAueCountReport
     Report for CountChromeDevicesPerAueDateResponse, contains the count of devices of a specific model and auto update expiration range.
     """
     
-    aue_month: Optional[GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aueMonth') }})
-    aue_year: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aueYear') }})
-    count: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    expired: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expired') }})
-    model: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
+    aue_month: Optional[GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aueMonth') }})
+    aue_year: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aueYear') }})
+    count: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    expired: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expired') }})
+    model: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('model') }})
     

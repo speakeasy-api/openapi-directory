@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,39 +21,39 @@ req = operations.JobsProjectsTenantsClientEventsCreateRequest(
         option1=operations.JobsProjectsTenantsClientEventsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.JobsProjectsTenantsClientEventsCreatePathParams(
-        parent="in",
+        parent="amet",
     ),
     query_params=operations.JobsProjectsTenantsClientEventsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="et",
-        alt="json",
-        callback="minus",
-        fields="delectus",
-        key="adipisci",
-        oauth_token="id",
+        access_token="adipisci",
+        alt="media",
+        callback="sit",
+        fields="suscipit",
+        key="aliquam",
+        oauth_token="nobis",
         pretty_print=True,
-        quota_user="ipsam",
-        upload_type="similique",
-        upload_protocol="facere",
+        quota_user="eum",
+        upload_type="consequatur",
+        upload_protocol="perspiciatis",
     ),
     request=shared.ClientEvent(
-        create_time="voluptatem",
-        event_id="quo",
-        event_notes="omnis",
+        create_time="hic",
+        event_id="facilis",
+        event_notes="molestiae",
         job_event=shared.JobEvent(
             jobs=[
-                "id",
+                "molestiae",
             ],
-            type="VIEW_REDIRECT",
+            type="SENT_CV",
         ),
-        request_id="aut",
+        request_id="error",
     ),
 )
     

@@ -20,44 +20,6 @@ class Gateway:
         self._gen_version = gen_version
 
     
-    def get_v0_5_certs(self) -> operations.GetV05CertsResponse:
-        r"""Get certs for JWT verification
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/v0.5/certs"
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetV05CertsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Certs])
-                res.certs = out
-            if utils.match_content_type(content_type, "application/xml"):
-                res.body = r.content
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/xml"):
-                res.body = r.content
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ErrorResponse])
-                res.error_response = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/xml"):
-                res.body = r.content
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ErrorResponse])
-                res.error_response = out
-
-        return res
-
-    
     def get_v0_5_well_known_openid_configuration(self) -> operations.GetV05WellKnownOpenidConfigurationResponse:
         r"""Get openid configuration
         """
@@ -96,6 +58,44 @@ class Gateway:
         return res
 
     
+    def get_v0_5_certs(self) -> operations.GetV05CertsResponse:
+        r"""Get certs for JWT verification
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/v0.5/certs"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetV05CertsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Certs])
+                res.certs = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorResponse])
+                res.error_response = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorResponse])
+                res.error_response = out
+
+        return res
+
+    
     def post_v0_5_consent_requests_init(self, request: operations.PostV05ConsentRequestsInitRequest) -> operations.PostV05ConsentRequestsInitResponse:
         r"""Create consent request
         Creates a consent request to get data about a patient by HIU user.
@@ -106,7 +106,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/consent-requests/init"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -114,7 +114,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05ConsentRequestsInitResponse(status_code=r.status_code, content_type=content_type)
@@ -153,7 +153,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/consent-requests/status"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -161,7 +161,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05ConsentRequestsStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -199,7 +199,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/consents/fetch"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -207,7 +207,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05ConsentsFetchResponse(status_code=r.status_code, content_type=content_type)
@@ -247,7 +247,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/consents/hiu/on-notify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -255,7 +255,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05ConsentsHiuOnNotifyResponse(status_code=r.status_code, content_type=content_type)
@@ -289,7 +289,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/health-information/cm/request"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -297,7 +297,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05HealthInformationCmRequestResponse(status_code=r.status_code, content_type=content_type)
@@ -341,7 +341,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/health-information/notify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -349,7 +349,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05HealthInformationNotifyResponse(status_code=r.status_code, content_type=content_type)
@@ -389,7 +389,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/patients/find"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -397,7 +397,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05PatientsFindResponse(status_code=r.status_code, content_type=content_type)
@@ -433,7 +433,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/sessions"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -441,7 +441,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05SessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -484,7 +484,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/subscription-requests/cm/init"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -492,7 +492,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05SubscriptionRequestsCmInitResponse(status_code=r.status_code, content_type=content_type)
@@ -532,7 +532,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/subscription-requests/hiu/on-notify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -540,7 +540,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05SubscriptionRequestsHiuOnNotifyResponse(status_code=r.status_code, content_type=content_type)
@@ -574,7 +574,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/subscriptions/hiu/on-notify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -582,7 +582,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05SubscriptionsHiuOnNotifyResponse(status_code=r.status_code, content_type=content_type)
@@ -620,7 +620,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/users/auth/confirm"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -628,7 +628,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05UsersAuthConfirmResponse(status_code=r.status_code, content_type=content_type)
@@ -668,7 +668,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/users/auth/fetch-modes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -676,7 +676,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05UsersAuthFetchModesResponse(status_code=r.status_code, content_type=content_type)
@@ -715,7 +715,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/users/auth/init"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -723,7 +723,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05UsersAuthInitResponse(status_code=r.status_code, content_type=content_type)
@@ -763,7 +763,7 @@ class Gateway:
         url = base_url.removesuffix("/") + "/v0.5/users/auth/on-notify"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -771,7 +771,7 @@ class Gateway:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostV05UsersAuthOnNotifyResponse(status_code=r.status_code, content_type=content_type)

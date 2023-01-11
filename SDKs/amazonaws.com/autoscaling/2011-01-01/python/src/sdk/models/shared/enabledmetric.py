@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class EnabledMetric:
     r"""EnabledMetric
     Describes an enabled metric.
     """
     
-    granularity: Optional[str] = field(default=None)
-    metric: Optional[str] = field(default=None)
+    granularity: Optional[str] = dataclasses.field(default=None)
+    metric: Optional[str] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class KeyObject:
-    expiry: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('expiry'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    key_value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyValue') }})
-    parameters: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    expiry: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('expiry'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    key_value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyValue') }})
+    parameters: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
     

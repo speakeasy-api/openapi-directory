@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import update_model as shared_update_model
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesListQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesListRequest:
-    query_params: GetDomainsUpdatesListQueryParams = field()
+    query_params: GetDomainsUpdatesListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_model: Optional[shared.UpdateModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_model: Optional[shared_update_model.UpdateModel] = dataclasses.field(default=None)
     

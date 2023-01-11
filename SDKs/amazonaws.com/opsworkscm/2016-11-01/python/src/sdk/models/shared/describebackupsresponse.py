@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import backup as shared_backup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeBackupsResponse:
-    backups: Optional[List[Backup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Backups') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    backups: Optional[list[shared_backup.Backup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Backups') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

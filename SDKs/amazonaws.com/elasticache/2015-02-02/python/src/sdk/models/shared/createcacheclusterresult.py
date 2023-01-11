@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cachecluster as shared_cachecluster
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateCacheClusterResult:
-    cache_cluster: Optional[CacheCluster] = field(default=None)
+    cache_cluster: Optional[shared_cachecluster.CacheCluster] = dataclasses.field(default=None)
     

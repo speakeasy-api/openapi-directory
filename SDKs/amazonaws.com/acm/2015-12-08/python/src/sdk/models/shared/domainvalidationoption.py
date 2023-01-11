@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,12 +7,12 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DomainValidationOption:
     r"""DomainValidationOption
     Contains information about the domain names that you want ACM to use to send you emails that enable you to validate domain ownership.
     """
     
-    domain_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DomainName') }})
-    validation_domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ValidationDomain') }})
+    domain_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DomainName') }})
+    validation_domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ValidationDomain') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import role as shared_role
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateServiceLinkedRoleResponse:
-    role: Optional[Role] = field(default=None)
+    role: Optional[shared_role.Role] = dataclasses.field(default=None)
     

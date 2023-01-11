@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import paths as shared_paths
 
 
-@dataclass
+@dataclasses.dataclass
 class InvalidationBatch:
     r"""InvalidationBatch
     An invalidation batch.
     """
     
-    caller_reference: str = field()
-    paths: Paths = field()
+    caller_reference: str = dataclasses.field()
+    paths: shared_paths.Paths = dataclasses.field()
     

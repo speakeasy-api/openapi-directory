@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -9,15 +9,15 @@ class CreateTimeOffPeriodResponseDataTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTimeOffPeriodResponseData:
-    attributes: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
-    type: Optional[CreateTimeOffPeriodResponseDataTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    attributes: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
+    type: Optional[CreateTimeOffPeriodResponseDataTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTimeOffPeriodResponse:
-    data: CreateTimeOffPeriodResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    success: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
+    data: CreateTimeOffPeriodResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    success: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
     

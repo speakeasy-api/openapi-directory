@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fax_v1_fax as shared_fax_v1_fax
 
 
 FETCH_FAX_SERVERS = [
@@ -8,26 +9,26 @@ FETCH_FAX_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxPathParams:
-    sid: str = field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
+    sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxSecurity:
-    account_sid_auth_token: shared.SchemeAccountSidAuthToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    account_sid_auth_token: shared_security.SchemeAccountSidAuthToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxRequest:
-    path_params: FetchFaxPathParams = field()
-    security: FetchFaxSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: FetchFaxPathParams = dataclasses.field()
+    security: FetchFaxSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fax_v1_fax: Optional[shared.FaxV1Fax] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fax_v1_fax: Optional[shared_fax_v1_fax.FaxV1Fax] = dataclasses.field(default=None)
     

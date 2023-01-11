@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apiusagelist as shared_apiusagelist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsagePlansV2Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsagePlansV2Request:
-    security: GetAPIUsagePlansV2Security = field()
+    security: GetAPIUsagePlansV2Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsagePlansV2Response:
-    content_type: str = field()
-    status_code: int = field()
-    api_usage_list: Optional[shared.APIUsageList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_usage_list: Optional[shared_apiusagelist.APIUsageList] = dataclasses.field(default=None)
     

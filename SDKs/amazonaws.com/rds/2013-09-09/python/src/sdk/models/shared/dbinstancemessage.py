@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbinstancelist as shared_dbinstancelist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbInstanceMessage:
-    db_instances: Optional[List[DbInstance]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_instances: Optional[list[shared_dbinstancelist.DbInstanceList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

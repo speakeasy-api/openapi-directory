@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateWorkspaceImagePermissionRequest:
-    allow_copy_image: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AllowCopyImage') }})
-    image_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ImageId') }})
-    shared_account_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SharedAccountId') }})
+    allow_copy_image: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AllowCopyImage') }})
+    image_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ImageId') }})
+    shared_account_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SharedAccountId') }})
     

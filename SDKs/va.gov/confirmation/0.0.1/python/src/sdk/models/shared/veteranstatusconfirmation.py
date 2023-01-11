@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,11 +10,11 @@ class VeteranStatusConfirmationVeteranStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VeteranStatusConfirmation:
     r"""VeteranStatusConfirmation
     Veteran status confirmation for an individual
     """
     
-    veteran_status: Optional[VeteranStatusConfirmationVeteranStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('veteran_status') }})
+    veteran_status: Optional[VeteranStatusConfirmationVeteranStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('veteran_status') }})
     

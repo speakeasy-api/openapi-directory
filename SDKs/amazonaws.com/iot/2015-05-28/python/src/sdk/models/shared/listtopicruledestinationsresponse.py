@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import topicruledestinationsummary as shared_topicruledestinationsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTopicRuleDestinationsResponse:
-    destination_summaries: Optional[List[TopicRuleDestinationSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinationSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    destination_summaries: Optional[list[shared_topicruledestinationsummary.TopicRuleDestinationSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinationSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

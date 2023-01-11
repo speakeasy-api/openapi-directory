@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class WikiContentPathParams:
-    wiki_id: str = field(metadata={'path_param': { 'field_name': 'wiki_id', 'style': 'simple', 'explode': False }})
+    wiki_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'wiki_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WikiContentRequest:
-    path_params: WikiContentPathParams = field()
+    path_params: WikiContentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WikiContentResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionGroupMembership:
-    option_group_name: Optional[str] = field(default=None)
-    status: Optional[str] = field(default=None)
+    option_group_name: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
     

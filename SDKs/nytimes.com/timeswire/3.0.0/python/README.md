@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.GetContentJSONRequest(
     query_params=operations.GetContentJSONQueryParams(
-        url="quas",
+        url="consequatur",
     ),
 )
     
-res = s.sdk.get_content_json(req)
+res = s.get_content_json(req)
 
 if res.get_content_json_200_application_json_object is not None:
     # handle response

@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableservice as shared_writableservice
+from ..shared import service as shared_service
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesPartialUpdateRequest:
-    path_params: IpamServicesPartialUpdatePathParams = field()
-    request: shared.WritableServiceInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: IpamServicesPartialUpdatePathParams = dataclasses.field()
+    request: shared_writableservice.WritableServiceInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service: Optional[shared.Service] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service: Optional[shared_service.Service] = dataclasses.field(default=None)
     

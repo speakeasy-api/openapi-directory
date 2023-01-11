@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class GetClientClientIDTokenKindKindEnum(str, Enum):
@@ -7,19 +7,19 @@ class GetClientClientIDTokenKindKindEnum(str, Enum):
     PLAIN_ = "'plain'"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetClientClientIDTokenKindPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
-    kind: GetClientClientIDTokenKindKindEnum = field(metadata={'path_param': { 'field_name': 'kind', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
+    kind: GetClientClientIDTokenKindKindEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'kind', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClientClientIDTokenKindRequest:
-    path_params: GetClientClientIDTokenKindPathParams = field()
+    path_params: GetClientClientIDTokenKindPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClientClientIDTokenKindResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

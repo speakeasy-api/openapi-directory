@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFactQueryParams:
-    id: str = field(metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFactSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFactRequest:
-    query_params: DeleteFactQueryParams = field()
-    security: DeleteFactSecurity = field()
+    query_params: DeleteFactQueryParams = dataclasses.field()
+    security: DeleteFactSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFactResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

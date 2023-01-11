@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.GetIceServerConfigRequest(
     headers=operations.GetIceServerConfigHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ea",
-        x_amz_credential="voluptas",
-        x_amz_date="velit",
-        x_amz_security_token="ipsa",
-        x_amz_signature="in",
-        x_amz_signed_headers="quibusdam",
+        x_amz_algorithm="nemo",
+        x_amz_content_sha256="corporis",
+        x_amz_credential="cupiditate",
+        x_amz_date="soluta",
+        x_amz_security_token="voluptatibus",
+        x_amz_signature="maiores",
+        x_amz_signed_headers="corrupti",
     ),
     request=operations.GetIceServerConfigRequestBody(
-        channel_arn="nihil",
-        client_id="sint",
+        channel_arn="expedita",
+        client_id="nisi",
         service="TURN",
-        username="porro",
+        username="magni",
     ),
 )
     
-res = s.sdk.get_ice_server_config(req)
+res = s.get_ice_server_config(req)
 
 if res.get_ice_server_config_response is not None:
     # handle response

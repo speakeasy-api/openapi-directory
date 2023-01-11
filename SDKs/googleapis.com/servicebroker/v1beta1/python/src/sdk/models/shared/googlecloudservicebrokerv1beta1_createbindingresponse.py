@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudServicebrokerV1beta1CreateBindingResponse:
     r"""GoogleCloudServicebrokerV1beta1CreateBindingResponse
     Response for the `CreateBinding()` method.
     """
     
-    credentials: Optional[dict[str, Any]] = field(default=None)
-    description: Optional[str] = field(default=None)
-    operation: Optional[str] = field(default=None)
-    route_service_url: Optional[str] = field(default=None)
-    syslog_drain_url: Optional[str] = field(default=None)
-    volume_mounts: Optional[List[dict[str, Any]]] = field(default=None)
+    credentials: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    operation: Optional[str] = dataclasses.field(default=None)
+    route_service_url: Optional[str] = dataclasses.field(default=None)
+    syslog_drain_url: Optional[str] = dataclasses.field(default=None)
+    volume_mounts: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

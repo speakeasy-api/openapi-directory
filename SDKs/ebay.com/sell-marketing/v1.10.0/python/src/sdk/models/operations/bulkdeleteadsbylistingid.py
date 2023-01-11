@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import bulkdeleteadrequest as shared_bulkdeleteadrequest
+from ..shared import bulkdeleteadresponse as shared_bulkdeleteadresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByListingIDPathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByListingIDSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByListingIDRequest:
-    path_params: BulkDeleteAdsByListingIDPathParams = field()
-    request: shared.BulkDeleteAdRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: BulkDeleteAdsByListingIDSecurity = field()
+    path_params: BulkDeleteAdsByListingIDPathParams = dataclasses.field()
+    request: shared_bulkdeleteadrequest.BulkDeleteAdRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: BulkDeleteAdsByListingIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkDeleteAdsByListingIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bulk_delete_ad_response: Optional[shared.BulkDeleteAdResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bulk_delete_ad_response: Optional[shared_bulkdeleteadresponse.BulkDeleteAdResponse] = dataclasses.field(default=None)
     

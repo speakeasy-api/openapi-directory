@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import negotiatedpricepolicyresponse as shared_negotiatedpricepolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNegotiatedPricePoliciesPathParams:
-    marketplace_id: str = field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
+    marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNegotiatedPricePoliciesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNegotiatedPricePoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNegotiatedPricePoliciesRequest:
-    path_params: GetNegotiatedPricePoliciesPathParams = field()
-    query_params: GetNegotiatedPricePoliciesQueryParams = field()
-    security: GetNegotiatedPricePoliciesSecurity = field()
+    path_params: GetNegotiatedPricePoliciesPathParams = dataclasses.field()
+    query_params: GetNegotiatedPricePoliciesQueryParams = dataclasses.field()
+    security: GetNegotiatedPricePoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNegotiatedPricePoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    negotiated_price_policy_response: Optional[shared.NegotiatedPricePolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    negotiated_price_policy_response: Optional[shared_negotiatedpricepolicyresponse.NegotiatedPricePolicyResponse] = dataclasses.field(default=None)
     

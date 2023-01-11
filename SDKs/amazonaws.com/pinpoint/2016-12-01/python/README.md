@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,27 @@ s.config_security(
     
 req = operations.CreateAppRequest(
     headers=operations.CreateAppHeaders(
-        x_amz_algorithm="dolor",
-        x_amz_content_sha256="quidem",
-        x_amz_credential="nulla",
-        x_amz_date="dolores",
-        x_amz_security_token="fuga",
-        x_amz_signature="et",
-        x_amz_signed_headers="qui",
+        x_amz_algorithm="dolorum",
+        x_amz_content_sha256="ut",
+        x_amz_credential="voluptatum",
+        x_amz_date="alias",
+        x_amz_security_token="consequatur",
+        x_amz_signature="eum",
+        x_amz_signed_headers="nemo",
     ),
     request=operations.CreateAppRequestBody(
         create_application_request=operations.CreateAppRequestBodyCreateApplicationRequest(
-            name="voluptatum",
+            name="omnis",
             tags={
-                "distinctio": "dicta",
-                "tenetur": "suscipit",
+                "reprehenderit": "omnis",
+                "velit": "molestiae",
+                "id": "quia",
             },
         ),
     ),
 )
     
-res = s.sdk.create_app(req)
+res = s.create_app(req)
 
 if res.create_app_response is not None:
     # handle response

@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTiers200ApplicationJSONTiers:
-    build_seconds: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'build_seconds' }})
-    egress_bandwidth_bytes: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'egress_bandwidth_bytes' }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'name' }})
-    slug: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'slug' }})
-    storage_bytes: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'storage_bytes' }})
+    build_seconds: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('build_seconds') }})
+    egress_bandwidth_bytes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('egress_bandwidth_bytes') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    slug: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('slug') }})
+    storage_bytes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('storage_bytes') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTiers200ApplicationJSON:
-    tiers: Optional[List[ListTiers200ApplicationJSONTiers]] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'tiers' }})
+    tiers: Optional[list[ListTiers200ApplicationJSONTiers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tiers') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTiers401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListTiersResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    list_tiers_200_application_json_object: Optional[ListTiers200ApplicationJSON] = field(default=None)
-    list_tiers_401_application_json_object: Optional[ListTiers401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_tiers_200_application_json_object: Optional[ListTiers200ApplicationJSON] = dataclasses.field(default=None)
+    list_tiers_401_application_json_object: Optional[ListTiers401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

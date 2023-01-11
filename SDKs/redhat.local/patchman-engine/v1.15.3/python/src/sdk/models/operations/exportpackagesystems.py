@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import controllers_packagesystemitem as shared_controllers_packagesystemitem
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportPackageSystemsPathParams:
-    package_name: str = field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
+    package_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportPackageSystemsQueryParams:
-    filter_system_profile_sap_sids_in_: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_sids][in]', 'style': 'form', 'explode': True }})
-    filter_system_profile_sap_system_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_system]', 'style': 'form', 'explode': True }})
-    tags: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
+    filter_system_profile_sap_sids_in_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_sids][in]', 'style': 'form', 'explode': True }})
+    filter_system_profile_sap_system_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_system]', 'style': 'form', 'explode': True }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportPackageSystemsSecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportPackageSystemsRequest:
-    path_params: ExportPackageSystemsPathParams = field()
-    query_params: ExportPackageSystemsQueryParams = field()
-    security: ExportPackageSystemsSecurity = field()
+    path_params: ExportPackageSystemsPathParams = dataclasses.field()
+    query_params: ExportPackageSystemsQueryParams = dataclasses.field()
+    security: ExportPackageSystemsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportPackageSystemsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_package_system_items: Optional[List[shared.ControllersPackageSystemItem]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_package_system_items: Optional[list[shared_controllers_packagesystemitem.ControllersPackageSystemItem]] = dataclasses.field(default=None)
     

@@ -1,0 +1,276 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.MonitoringProjectsAlertPoliciesCreateRequest(
+    security=operations.MonitoringProjectsAlertPoliciesCreateSecurity(
+        option1=operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1(
+            oauth2=shared.SchemeOauth2(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+            oauth2c=shared.SchemeOauth2c(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+        ),
+    ),
+    path_params=operations.MonitoringProjectsAlertPoliciesCreatePathParams(
+        name="repellendus",
+    ),
+    query_params=operations.MonitoringProjectsAlertPoliciesCreateQueryParams(
+        dollar_xgafv="2",
+        access_token="omnis",
+        alt="proto",
+        callback="voluptas",
+        fields="corporis",
+        key="vero",
+        oauth_token="sed",
+        pretty_print=False,
+        quota_user="molestiae",
+        upload_type="rerum",
+        upload_protocol="exercitationem",
+    ),
+    request=shared.AlertPolicy(
+        alert_strategy=shared.AlertStrategy(
+            auto_close="nesciunt",
+            notification_rate_limit=shared.NotificationRateLimit(
+                period="omnis",
+            ),
+        ),
+        combiner="COMBINE_UNSPECIFIED",
+        conditions=[
+            shared.Condition(
+                condition_absent=shared.MetricAbsence(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="praesentium",
+                            cross_series_reducer="REDUCE_STDDEV",
+                            group_by_fields=[
+                                "magni",
+                                "quibusdam",
+                                "assumenda",
+                            ],
+                            per_series_aligner="ALIGN_PERCENT_CHANGE",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="minus",
+                            cross_series_reducer="REDUCE_SUM",
+                            group_by_fields=[
+                                "corporis",
+                                "quaerat",
+                            ],
+                            per_series_aligner="ALIGN_SUM",
+                        ),
+                    ],
+                    duration="qui",
+                    filter="ab",
+                    trigger=shared.Trigger(
+                        count=4629249652007334892,
+                        percent=87.099998,
+                    ),
+                ),
+                condition_matched_log=shared.LogMatch(
+                    filter="enim",
+                    label_extractors={
+                        "ut": "expedita",
+                        "quo": "beatae",
+                        "maxime": "vel",
+                    },
+                ),
+                condition_monitoring_query_language=shared.MonitoringQueryLanguageCondition(
+                    duration="eum",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_NO_OP",
+                    query="sed",
+                    trigger=shared.Trigger(
+                        count=3440003813319565983,
+                        percent=43.200001,
+                    ),
+                ),
+                condition_threshold=shared.MetricThreshold(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="voluptas",
+                            cross_series_reducer="REDUCE_MIN",
+                            group_by_fields=[
+                                "voluptatem",
+                                "et",
+                            ],
+                            per_series_aligner="ALIGN_NEXT_OLDER",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="maiores",
+                            cross_series_reducer="REDUCE_PERCENTILE_95",
+                            group_by_fields=[
+                                "ullam",
+                            ],
+                            per_series_aligner="ALIGN_COUNT_FALSE",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="dolores",
+                            cross_series_reducer="REDUCE_NONE",
+                            group_by_fields=[
+                                "rerum",
+                                "id",
+                            ],
+                            per_series_aligner="ALIGN_MEAN",
+                        ),
+                    ],
+                    comparison="COMPARISON_NE",
+                    denominator_aggregations=[
+                        shared.Aggregation(
+                            alignment_period="earum",
+                            cross_series_reducer="REDUCE_PERCENTILE_95",
+                            group_by_fields=[
+                                "explicabo",
+                            ],
+                            per_series_aligner="ALIGN_PERCENTILE_99",
+                        ),
+                    ],
+                    denominator_filter="eaque",
+                    duration="perferendis",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_ACTIVE",
+                    filter="neque",
+                    forecast_options=shared.ForecastOptions(
+                        forecast_horizon="ullam",
+                    ),
+                    threshold_value=33.099998,
+                    trigger=shared.Trigger(
+                        count=383869393711336780,
+                        percent=97.099998,
+                    ),
+                ),
+                display_name="consequatur",
+                name="enim",
+            ),
+            shared.Condition(
+                condition_absent=shared.MetricAbsence(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="architecto",
+                            cross_series_reducer="REDUCE_PERCENTILE_99",
+                            group_by_fields=[
+                                "quod",
+                                "corporis",
+                            ],
+                            per_series_aligner="ALIGN_MAX",
+                        ),
+                        shared.Aggregation(
+                            alignment_period="necessitatibus",
+                            cross_series_reducer="REDUCE_COUNT_FALSE",
+                            group_by_fields=[
+                                "non",
+                                "eligendi",
+                            ],
+                            per_series_aligner="ALIGN_PERCENTILE_05",
+                        ),
+                    ],
+                    duration="ipsum",
+                    filter="eos",
+                    trigger=shared.Trigger(
+                        count=960635814650371739,
+                        percent=58.200001,
+                    ),
+                ),
+                condition_matched_log=shared.LogMatch(
+                    filter="sint",
+                    label_extractors={
+                        "ut": "quis",
+                    },
+                ),
+                condition_monitoring_query_language=shared.MonitoringQueryLanguageCondition(
+                    duration="ab",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_NO_OP",
+                    query="nam",
+                    trigger=shared.Trigger(
+                        count=3985253464228977593,
+                        percent=5.200000,
+                    ),
+                ),
+                condition_threshold=shared.MetricThreshold(
+                    aggregations=[
+                        shared.Aggregation(
+                            alignment_period="qui",
+                            cross_series_reducer="REDUCE_MIN",
+                            group_by_fields=[
+                                "dolores",
+                                "officia",
+                                "eligendi",
+                            ],
+                            per_series_aligner="ALIGN_STDDEV",
+                        ),
+                    ],
+                    comparison="COMPARISON_GE",
+                    denominator_aggregations=[
+                        shared.Aggregation(
+                            alignment_period="aut",
+                            cross_series_reducer="REDUCE_PERCENTILE_05",
+                            group_by_fields=[
+                                "ab",
+                                "inventore",
+                                "deleniti",
+                            ],
+                            per_series_aligner="ALIGN_SUM",
+                        ),
+                    ],
+                    denominator_filter="ut",
+                    duration="vitae",
+                    evaluation_missing_data="EVALUATION_MISSING_DATA_INACTIVE",
+                    filter="totam",
+                    forecast_options=shared.ForecastOptions(
+                        forecast_horizon="omnis",
+                    ),
+                    threshold_value=67.099998,
+                    trigger=shared.Trigger(
+                        count=1280576806753042404,
+                        percent=72.099998,
+                    ),
+                ),
+                display_name="perspiciatis",
+                name="occaecati",
+            ),
+        ],
+        creation_record=shared.MutationRecord(
+            mutate_time="iusto",
+            mutated_by="eius",
+        ),
+        display_name="voluptatem",
+        documentation=shared.Documentation(
+            content="laboriosam",
+            mime_type="magni",
+        ),
+        enabled=True,
+        mutation_record=shared.MutationRecord(
+            mutate_time="exercitationem",
+            mutated_by="maiores",
+        ),
+        name="et",
+        notification_channels=[
+            "quo",
+            "magni",
+        ],
+        user_labels={
+            "omnis": "consectetur",
+            "accusamus": "non",
+        },
+        validity=shared.Status(
+            code=5237954261915984455,
+            details=[
+                {
+                    "facere": "architecto",
+                    "delectus": "ipsam",
+                    "repudiandae": "illo",
+                },
+            ],
+            message="saepe",
+        ),
+    ),
+)
+    
+res = s.projects.monitoring_projects_alert_policies_create(req)
+
+if res.alert_policy is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

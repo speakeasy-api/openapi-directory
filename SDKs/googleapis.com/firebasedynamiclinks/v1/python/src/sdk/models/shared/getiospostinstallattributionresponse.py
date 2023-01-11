@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,26 +17,26 @@ class GetIosPostInstallAttributionResponseRequestIPVersionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetIosPostInstallAttributionResponse:
     r"""GetIosPostInstallAttributionResponse
     Response for iSDK to execute strong match flow for post-install attribution.
     """
     
-    app_minimum_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appMinimumVersion') }})
-    attribution_confidence: Optional[GetIosPostInstallAttributionResponseAttributionConfidenceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributionConfidence') }})
-    deep_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deepLink') }})
-    external_browser_destination_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalBrowserDestinationLink') }})
-    fallback_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fallbackLink') }})
-    invitation_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invitationId') }})
-    is_strong_match_executable: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isStrongMatchExecutable') }})
-    match_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchMessage') }})
-    request_ip_version: Optional[GetIosPostInstallAttributionResponseRequestIPVersionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestIpVersion') }})
-    requested_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestedLink') }})
-    resolved_link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolvedLink') }})
-    utm_campaign: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmCampaign') }})
-    utm_content: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmContent') }})
-    utm_medium: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmMedium') }})
-    utm_source: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmSource') }})
-    utm_term: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmTerm') }})
+    app_minimum_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appMinimumVersion') }})
+    attribution_confidence: Optional[GetIosPostInstallAttributionResponseAttributionConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributionConfidence') }})
+    deep_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deepLink') }})
+    external_browser_destination_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalBrowserDestinationLink') }})
+    fallback_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fallbackLink') }})
+    invitation_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('invitationId') }})
+    is_strong_match_executable: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isStrongMatchExecutable') }})
+    match_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matchMessage') }})
+    request_ip_version: Optional[GetIosPostInstallAttributionResponseRequestIPVersionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestIpVersion') }})
+    requested_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestedLink') }})
+    resolved_link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolvedLink') }})
+    utm_campaign: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmCampaign') }})
+    utm_content: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmContent') }})
+    utm_medium: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmMedium') }})
+    utm_source: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmSource') }})
+    utm_term: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('utmTerm') }})
     

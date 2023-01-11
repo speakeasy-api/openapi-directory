@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifierGroupFilter:
-    modifier_group_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'modifier_group_id' }})
+    modifier_group_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'modifier_group_id' }})
     

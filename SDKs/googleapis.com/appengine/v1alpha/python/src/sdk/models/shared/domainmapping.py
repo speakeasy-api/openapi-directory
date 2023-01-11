@@ -1,19 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcerecord as shared_resourcerecord
+from ..shared import sslsettings as shared_sslsettings
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DomainMapping:
     r"""DomainMapping
     A domain serving an App Engine application.
     """
     
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    resource_records: Optional[List[ResourceRecord]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceRecords') }})
-    ssl_settings: Optional[SslSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sslSettings') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    resource_records: Optional[list[shared_resourcerecord.ResourceRecord]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceRecords') }})
+    ssl_settings: Optional[shared_sslsettings.SslSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sslSettings') }})
     

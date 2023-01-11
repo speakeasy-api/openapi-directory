@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -20,12 +20,12 @@ class Snmp3ConfigPrivacyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Snmp3Config:
-    authentication_password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication_password') }})
-    authentication_type: Optional[Snmp3ConfigAuthenticationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication_type') }})
-    context_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context_name') }})
-    privacy_password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy_password') }})
-    privacy_type: Optional[Snmp3ConfigPrivacyTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy_type') }})
-    username: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('username') }})
+    authentication_password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication_password') }})
+    authentication_type: Optional[Snmp3ConfigAuthenticationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication_type') }})
+    context_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context_name') }})
+    privacy_password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy_password') }})
+    privacy_type: Optional[Snmp3ConfigPrivacyTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy_type') }})
+    username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('username') }})
     

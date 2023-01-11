@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchmatchpersonalfirstlastnamein as shared_batchmatchpersonalfirstlastnamein
+from ..shared import batchnamematchedout as shared_batchnamematchedout
 
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchBatchRequest:
-    security: ChineseNameMatchBatchSecurity = field()
-    request: Optional[shared.BatchMatchPersonalFirstLastNameIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: ChineseNameMatchBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchmatchpersonalfirstlastnamein.BatchMatchPersonalFirstLastNameIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChineseNameMatchBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_name_matched_out: Optional[shared.BatchNameMatchedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_name_matched_out: Optional[shared_batchnamematchedout.BatchNameMatchedOut] = dataclasses.field(default=None)
     

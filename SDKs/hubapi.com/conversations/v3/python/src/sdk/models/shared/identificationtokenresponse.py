@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IdentificationTokenResponse:
     r"""IdentificationTokenResponse
     The identification token to be passed to the Conversations JS API to identify the visitor
     """
     
-    token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
+    token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
     

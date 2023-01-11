@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,13 +6,13 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import projectvisibilitytype_enum as shared_projectvisibilitytype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectVisibilityInput:
-    project_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectArn') }})
-    project_visibility: ProjectVisibilityTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectVisibility') }})
-    resource_access_role: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceAccessRole') }})
+    project_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectArn') }})
+    project_visibility: shared_projectvisibilitytype_enum.ProjectVisibilityTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectVisibility') }})
+    resource_access_role: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceAccessRole') }})
     

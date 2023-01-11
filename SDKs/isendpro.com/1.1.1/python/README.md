@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.AddShortlinkRequest(
     request=shared.ShortlinkRequest(
-        keyid="sunt",
-        shortlink="est",
+        keyid="reiciendis",
+        shortlink="voluptas",
     ),
 )
     
-res = s.sdk.add_shortlink(req)
+res = s.add_shortlink.add_shortlink(req)
 
 if res.shortlink_response is not None:
     # handle response
@@ -34,22 +33,55 @@ if res.shortlink_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### add shortlink
 
 * `add_shortlink` - add a shortlink
-* `comptage` - Compter le nombre de caractère 
-* `del_liste_noire` - Ajoute un numero en liste noire
+
+### add subaccount
+
+* `subaccount_add` - Ajoute un sous compte
+
+### campagne
+
 * `get_campagne` - Retourne les SMS envoyés sur une période donnée
+
+### comptage
+
+* `comptage` - Compter le nombre de caractère 
+
+### credit
+
 * `get_credit` - Interrogation credit
-* `get_hlr` - Vérifier la validité d'un numéro
+
+### delListeNoire
+
+* `del_liste_noire` - Ajoute un numero en liste noire
+
+### edit subaccount
+
+* `subaccount_edit` - Edit a subaccount
+
+### getListeNoire
+
 * `get_liste_noire` - Retourne le liste noire
+
+### hlr
+
+* `get_hlr` - Vérifier la validité d'un numéro
+
+### repertoire
+
 * `repertoire` - Gestion repertoire (modification)
 * `repertoire_crea` - Gestion repertoire (creation)
+
+### setListeNoire
+
+* `set_liste_noire` - Ajoute un numero en liste noire
+
+### sms
+
 * `send_sms` - Envoyer un sms
 * `send_sms_multi` - Envoyer des SMS
-* `set_liste_noire` - Ajoute un numero en liste noire
-* `subaccount_add` - Ajoute un sous compte
-* `subaccount_edit` - Edit a subaccount
 
 <!-- End SDK Available Operations -->
 

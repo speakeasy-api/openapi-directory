@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import webchannelfollow as shared_webchannelfollow
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsWebchannelIDPathParams:
-    webchannel_id: int = field(metadata={'path_param': { 'field_name': 'webchannel_id', 'style': 'simple', 'explode': False }})
+    webchannel_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'webchannel_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsWebchannelIDRequest:
-    path_params: GetUserFollowsWebchannelsWebchannelIDPathParams = field()
+    path_params: GetUserFollowsWebchannelsWebchannelIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsWebchannelIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    webchannel_follow: Optional[shared.WebchannelFollow] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    webchannel_follow: Optional[shared_webchannelfollow.WebchannelFollow] = dataclasses.field(default=None)
     

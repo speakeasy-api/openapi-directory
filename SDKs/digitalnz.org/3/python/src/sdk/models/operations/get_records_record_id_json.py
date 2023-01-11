@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import record as shared_record
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRecordsRecordIDJSONPathParams:
-    record_id: int = field(metadata={'path_param': { 'field_name': 'record_id', 'style': 'simple', 'explode': False }})
+    record_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'record_id', 'style': 'simple', 'explode': False }})
     
 class GetRecordsRecordIDJSONFormatEnum(str, Enum):
     JSON = "json"
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRecordsRecordIDJSONQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    format: GetRecordsRecordIDJSONFormatEnum = field(metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    format: GetRecordsRecordIDJSONFormatEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecordsRecordIDJSONRequest:
-    path_params: GetRecordsRecordIDJSONPathParams = field()
-    query_params: GetRecordsRecordIDJSONQueryParams = field()
+    path_params: GetRecordsRecordIDJSONPathParams = dataclasses.field()
+    query_params: GetRecordsRecordIDJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecordsRecordIDJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_records_record_id_json_403_application_json_object: Optional[dict[str, Any]] = field(default=None)
-    get_records_record_id_json_404_application_json_object: Optional[dict[str, Any]] = field(default=None)
-    record: Optional[shared.Record] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    get_records_record_id_json_403_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    get_records_record_id_json_404_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    record: Optional[shared_record.Record] = dataclasses.field(default=None)
     

@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import youtubeandpartnersbiddingstrategy as shared_youtubeandpartnersbiddingstrategy
+from ..shared import youtubeandpartnersinventorysourceconfig as shared_youtubeandpartnersinventorysourceconfig
+from ..shared import youtubeandpartnersthirdpartymeasurementsettings as shared_youtubeandpartnersthirdpartymeasurementsettings
+from ..shared import frequencycap as shared_frequencycap
 
 class YoutubeAndPartnersSettingsContentCategoryEnum(str, Enum):
     YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED = "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED"
@@ -13,15 +16,15 @@ class YoutubeAndPartnersSettingsContentCategoryEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class YoutubeAndPartnersSettings:
     r"""YoutubeAndPartnersSettings
     Settings for YouTube and Partners line items.
     """
     
-    bidding_strategy: Optional[YoutubeAndPartnersBiddingStrategy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('biddingStrategy') }})
-    content_category: Optional[YoutubeAndPartnersSettingsContentCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentCategory') }})
-    inventory_source_settings: Optional[YoutubeAndPartnersInventorySourceConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inventorySourceSettings') }})
-    third_party_measurement_settings: Optional[YoutubeAndPartnersThirdPartyMeasurementSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thirdPartyMeasurementSettings') }})
-    view_frequency_cap: Optional[FrequencyCap] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewFrequencyCap') }})
+    bidding_strategy: Optional[shared_youtubeandpartnersbiddingstrategy.YoutubeAndPartnersBiddingStrategy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('biddingStrategy') }})
+    content_category: Optional[YoutubeAndPartnersSettingsContentCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentCategory') }})
+    inventory_source_settings: Optional[shared_youtubeandpartnersinventorysourceconfig.YoutubeAndPartnersInventorySourceConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inventorySourceSettings') }})
+    third_party_measurement_settings: Optional[shared_youtubeandpartnersthirdpartymeasurementsettings.YoutubeAndPartnersThirdPartyMeasurementSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thirdPartyMeasurementSettings') }})
+    view_frequency_cap: Optional[shared_frequencycap.FrequencyCap] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewFrequencyCap') }})
     

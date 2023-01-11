@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import testresult as shared_testresult
 
 
-@dataclass
+@dataclasses.dataclass
 class TestFunctionResult:
-    test_result: Optional[TestResult] = field(default=None)
+    test_result: Optional[shared_testresult.TestResult] = dataclasses.field(default=None)
     

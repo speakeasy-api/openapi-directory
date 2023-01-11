@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import ssostrategyentity as shared_ssostrategyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesIDRequest:
-    path_params: GetSsoStrategiesIDPathParams = field()
+    path_params: GetSsoStrategiesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sso_strategy_entity: Optional[shared.SsoStrategyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sso_strategy_entity: Optional[shared_ssostrategyentity.SsoStrategyEntity] = dataclasses.field(default=None)
     

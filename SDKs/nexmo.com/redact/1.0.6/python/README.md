@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,13 +24,13 @@ req = operations.RedactMessageRequest(
         ),
     ),
     request=shared.RedactTransaction(
-        id="repellendus",
-        product="voice",
-        type="inbound",
+        id="eos",
+        product="sms",
+        type="outbound",
     ),
 )
     
-res = s.sdk.redact_message(req)
+res = s.redact_message(req)
 
 if res.status_code == 200:
     # handle response

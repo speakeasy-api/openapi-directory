@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,42 +21,42 @@ req = operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest(
         option1=operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams(
-        parent="ratione",
+        parent="ipsa",
     ),
     query_params=operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="deserunt",
+        dollar_xgafv="1",
+        access_token="rerum",
         alt="json",
-        callback="itaque",
-        connection_id="nam",
-        fields="possimus",
-        key="aspernatur",
-        oauth_token="est",
-        pretty_print=True,
-        quota_user="cum",
-        upload_type="dolorum",
-        upload_protocol="voluptas",
+        callback="fuga",
+        connection_id="ad",
+        fields="rem",
+        key="neque",
+        oauth_token="voluptas",
+        pretty_print=False,
+        quota_user="distinctio",
+        upload_type="culpa",
+        upload_protocol="sunt",
     ),
     request=shared.ConnectionInput(
         cloud_sql=shared.CloudSQLPropertiesInput(
             credential=shared.CloudSQLCredential(
-                password="et",
-                username="dolor",
+                password="incidunt",
+                username="quo",
             ),
-            database="sint",
-            instance_id="et",
-            type="DATABASE_TYPE_UNSPECIFIED",
+            database="sed",
+            instance_id="est",
+            type="MYSQL",
         ),
-        description="est",
-        friendly_name="aut",
-        name="autem",
+        description="et",
+        friendly_name="eveniet",
+        name="et",
     ),
 )
     

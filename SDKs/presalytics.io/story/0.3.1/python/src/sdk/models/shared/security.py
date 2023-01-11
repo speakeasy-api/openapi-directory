@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeJwt:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     

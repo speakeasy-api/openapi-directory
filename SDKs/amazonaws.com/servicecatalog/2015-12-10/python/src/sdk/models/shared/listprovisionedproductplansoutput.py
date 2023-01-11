@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import provisionedproductplansummary as shared_provisionedproductplansummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListProvisionedProductPlansOutput:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    provisioned_product_plans: Optional[List[ProvisionedProductPlanSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisionedProductPlans') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    provisioned_product_plans: Optional[list[shared_provisionedproductplansummary.ProvisionedProductPlanSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisionedProductPlans') }})
     

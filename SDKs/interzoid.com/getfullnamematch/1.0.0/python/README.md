@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetfullnamematchRequest(
     query_params=operations.GetfullnamematchQueryParams(
-        fullname="ratione",
-        license="omnis",
+        fullname="reprehenderit",
+        license="maxime",
     ),
 )
     
-res = s.sdk.getfullnamematch(req)
+res = s.full_name_match_similarity_key.getfullnamematch(req)
 
 if res.getfullnamematch_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getfullnamematch_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Full Name Match Similarity Key
 
 * `getfullnamematch` - Gets a similarity key for matching purposes for full name data
 

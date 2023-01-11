@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,13 +6,13 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import runner_groups_enterprise as shared_runner_groups_enterprise
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    runner_group_id: int = field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    runner_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
     
 class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum(str, Enum):
     SELECTED = "selected"
@@ -20,21 +20,21 @@ class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibili
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    visibility: Optional[EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    visibility: Optional[EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBodyVisibilityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest:
-    path_params: EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams = field()
-    request: Optional[EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_groups_enterprise: Optional[shared.RunnerGroupsEnterprise] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_groups_enterprise: Optional[shared_runner_groups_enterprise.RunnerGroupsEnterprise] = dataclasses.field(default=None)
     

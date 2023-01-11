@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -113,7 +113,7 @@ class Calls:
         url = utils.generate_url(base_url, "/self/calls/{id}/transfer", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -121,7 +121,7 @@ class Calls:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CallTransferResponse(status_code=r.status_code, content_type=content_type)
@@ -245,7 +245,7 @@ class Calls:
         url = base_url.removesuffix("/") + "/self/calls"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -253,14 +253,14 @@ class Calls:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateCallResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 201:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Call]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Call]])
                 res.calls = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):
@@ -302,7 +302,7 @@ class Calls:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Call]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Call]])
                 res.calls = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):
@@ -387,7 +387,7 @@ class Calls:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Call]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Call]])
                 res.calls = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):
@@ -431,7 +431,7 @@ class Calls:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Call]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Call]])
                 res.calls = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):

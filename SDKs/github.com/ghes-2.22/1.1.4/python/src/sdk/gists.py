@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -66,13 +66,13 @@ class Gists:
         url = base_url.removesuffix("/") + "/gists"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GistsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -111,13 +111,13 @@ class Gists:
         url = utils.generate_url(base_url, "/gists/{gist_id}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GistsCreateCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -380,7 +380,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.BaseGist]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.BaseGist]])
                 res.base_gists = out
         elif r.status_code == 304:
             pass
@@ -414,7 +414,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GistComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GistComment]])
                 res.gist_comments = out
         elif r.status_code == 304:
             pass
@@ -452,7 +452,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GistCommit]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GistCommit]])
                 res.gist_commits = out
         elif r.status_code == 304:
             pass
@@ -491,7 +491,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.BaseGist]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.BaseGist]])
                 res.base_gists = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -523,7 +523,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GistSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GistSimple]])
                 res.gist_simples = out
         elif r.status_code == 304:
             pass
@@ -564,7 +564,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.BaseGist]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.BaseGist]])
                 res.base_gists = out
         elif r.status_code == 304:
             pass
@@ -603,7 +603,7 @@ class Gists:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.BaseGist]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.BaseGist]])
                 res.base_gists = out
         elif r.status_code == 304:
             pass
@@ -697,13 +697,13 @@ class Gists:
         url = utils.generate_url(base_url, "/gists/{gist_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GistsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -734,13 +734,13 @@ class Gists:
         url = utils.generate_url(base_url, "/gists/{gist_id}/comments/{comment_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GistsUpdateCommentResponse(status_code=r.status_code, content_type=content_type)

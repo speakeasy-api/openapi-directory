@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import alert as shared_alert
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertsResponse:
     r"""ListAlertsResponse
     Response message for an alert listing request.
     """
     
-    alerts: Optional[List[Alert]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alerts') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    alerts: Optional[list[shared_alert.Alert]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alerts') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

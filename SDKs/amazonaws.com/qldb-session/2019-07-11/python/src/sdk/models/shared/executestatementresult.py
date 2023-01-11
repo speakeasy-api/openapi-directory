@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import iousage as shared_iousage
+from ..shared import page as shared_page
+from ..shared import timinginformation as shared_timinginformation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExecuteStatementResult:
     r"""ExecuteStatementResult
     Contains the details of the executed statement.
     """
     
-    consumed_i_os: Optional[IoUsage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConsumedIOs') }})
-    first_page: Optional[Page] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirstPage') }})
-    timing_information: Optional[TimingInformation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimingInformation') }})
+    consumed_i_os: Optional[shared_iousage.IoUsage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConsumedIOs') }})
+    first_page: Optional[shared_page.Page] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirstPage') }})
+    timing_information: Optional[shared_timinginformation.TimingInformation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimingInformation') }})
     

@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import weeklymaintenancewindow as shared_weeklymaintenancewindow
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudMemcacheV1beta2MaintenancePolicyInput:
     r"""GoogleCloudMemcacheV1beta2MaintenancePolicyInput
     Maintenance policy per instance.
     """
     
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    weekly_maintenance_window: Optional[List[WeeklyMaintenanceWindow]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weeklyMaintenanceWindow') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    weekly_maintenance_window: Optional[list[shared_weeklymaintenancewindow.WeeklyMaintenanceWindow]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weeklyMaintenanceWindow') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudMemcacheV1beta2MaintenancePolicy:
     r"""GoogleCloudMemcacheV1beta2MaintenancePolicy
     Maintenance policy per instance.
     """
     
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
-    weekly_maintenance_window: Optional[List[WeeklyMaintenanceWindow]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weeklyMaintenanceWindow') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    weekly_maintenance_window: Optional[list[shared_weeklymaintenancewindow.WeeklyMaintenanceWindow]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('weeklyMaintenanceWindow') }})
     

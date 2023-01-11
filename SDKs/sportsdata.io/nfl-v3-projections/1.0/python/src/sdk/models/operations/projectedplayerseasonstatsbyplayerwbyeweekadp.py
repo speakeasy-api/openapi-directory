@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,21 +7,21 @@ class ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams:
-    format: ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest:
-    path_params: ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams = field()
+    path_params: ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_season_projection: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_season_projection: Optional[Any] = dataclasses.field(default=None)
     

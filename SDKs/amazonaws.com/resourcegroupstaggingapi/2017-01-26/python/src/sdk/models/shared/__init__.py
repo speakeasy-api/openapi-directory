@@ -22,3 +22,5 @@ from .tagresourcesoutput import *
 from .targetidtype_enum import *
 from .untagresourcesinput import *
 from .untagresourcesoutput import *
+
+__all__ = ["ComplianceDetails","DescribeReportCreationOutput","ErrorCodeEnum","FailureInfo","GetComplianceSummaryInput","GetComplianceSummaryOutput","GetResourcesInput","GetResourcesOutput","GetTagKeysInput","GetTagKeysOutput","GetTagValuesInput","GetTagValuesOutput","GroupByAttributeEnum","ResourceTagMapping","SchemeHmac","Security","StartReportCreationInput","Summary","Tag","TagFilter","TagResourcesInput","TagResourcesOutput","TargetIDTypeEnum","UntagResourcesInput","UntagResourcesOutput"]

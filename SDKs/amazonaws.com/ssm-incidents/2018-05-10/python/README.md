@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,31 @@ s.config_security(
     
 req = operations.CreateReplicationSetRequest(
     headers=operations.CreateReplicationSetHeaders(
-        x_amz_algorithm="assumenda",
-        x_amz_content_sha256="incidunt",
-        x_amz_credential="perspiciatis",
-        x_amz_date="quia",
-        x_amz_security_token="unde",
-        x_amz_signature="ipsam",
-        x_amz_signed_headers="ad",
+        x_amz_algorithm="non",
+        x_amz_content_sha256="totam",
+        x_amz_credential="similique",
+        x_amz_date="sunt",
+        x_amz_security_token="aut",
+        x_amz_signature="quis",
+        x_amz_signed_headers="quis",
     ),
     request=operations.CreateReplicationSetRequestBody(
-        client_token="sint",
+        client_token="amet",
         regions={
-            "illum": shared.RegionMapInputValue(
-                sse_kms_key_id="error",
+            "totam": shared.RegionMapInputValue(
+                sse_kms_key_id="perspiciatis",
             ),
             "cupiditate": shared.RegionMapInputValue(
-                sse_kms_key_id="sit",
+                sse_kms_key_id="asperiores",
             ),
-            "sapiente": shared.RegionMapInputValue(
-                sse_kms_key_id="et",
+            "quasi": shared.RegionMapInputValue(
+                sse_kms_key_id="eius",
             ),
         },
     ),
 )
     
-res = s.sdk.create_replication_set(req)
+res = s.create_replication_set(req)
 
 if res.create_replication_set_output is not None:
     # handle response

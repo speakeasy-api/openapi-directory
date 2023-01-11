@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistrationsForksCreatePathParams:
-    registration_id: str = field(metadata={'path_param': { 'field_name': 'registration_id', 'style': 'simple', 'explode': False }})
+    registration_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registration_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistrationsForksCreateRequest:
-    path_params: RegistrationsForksCreatePathParams = field()
+    path_params: RegistrationsForksCreatePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistrationsForksCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

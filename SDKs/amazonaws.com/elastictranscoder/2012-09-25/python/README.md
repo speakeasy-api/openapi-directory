@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.CancelJobRequest(
     path_params=operations.CancelJobPathParams(
-        id="tempore",
+        id="est",
     ),
     headers=operations.CancelJobHeaders(
-        x_amz_algorithm="repellendus",
-        x_amz_content_sha256="asperiores",
-        x_amz_credential="molestiae",
-        x_amz_date="laboriosam",
-        x_amz_security_token="reprehenderit",
-        x_amz_signature="non",
-        x_amz_signed_headers="quis",
+        x_amz_algorithm="at",
+        x_amz_content_sha256="harum",
+        x_amz_credential="magnam",
+        x_amz_date="earum",
+        x_amz_security_token="qui",
+        x_amz_signature="vel",
+        x_amz_signed_headers="odio",
     ),
 )
     
-res = s.sdk.cancel_job(req)
+res = s.cancel_job(req)
 
 if res.cancel_job_response is not None:
     # handle response

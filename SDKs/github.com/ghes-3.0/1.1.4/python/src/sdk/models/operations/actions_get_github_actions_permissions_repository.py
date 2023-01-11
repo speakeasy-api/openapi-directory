@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import actions_repository_permissions as shared_actions_repository_permissions
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetGithubActionsPermissionsRepositoryPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetGithubActionsPermissionsRepositoryRequest:
-    path_params: ActionsGetGithubActionsPermissionsRepositoryPathParams = field()
+    path_params: ActionsGetGithubActionsPermissionsRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetGithubActionsPermissionsRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_repository_permissions: Optional[shared.ActionsRepositoryPermissions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_repository_permissions: Optional[shared_actions_repository_permissions.ActionsRepositoryPermissions] = dataclasses.field(default=None)
     

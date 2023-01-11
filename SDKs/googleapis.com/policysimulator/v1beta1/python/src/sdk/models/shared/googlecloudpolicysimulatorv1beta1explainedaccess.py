@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlerpcstatus as shared_googlerpcstatus
+from ..shared import googlecloudpolicysimulatorv1beta1explainedpolicy as shared_googlecloudpolicysimulatorv1beta1explainedpolicy
 
 class GoogleCloudPolicysimulatorV1beta1ExplainedAccessAccessStateEnum(str, Enum):
     ACCESS_STATE_UNSPECIFIED = "ACCESS_STATE_UNSPECIFIED"
@@ -14,13 +15,13 @@ class GoogleCloudPolicysimulatorV1beta1ExplainedAccessAccessStateEnum(str, Enum)
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPolicysimulatorV1beta1ExplainedAccess:
     r"""GoogleCloudPolicysimulatorV1beta1ExplainedAccess
     Details about how a set of policies, listed in ExplainedPolicy, resulted in a certain AccessState when replaying an access tuple.
     """
     
-    access_state: Optional[GoogleCloudPolicysimulatorV1beta1ExplainedAccessAccessStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessState') }})
-    errors: Optional[List[GoogleRPCStatus]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    policies: Optional[List[GoogleCloudPolicysimulatorV1beta1ExplainedPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    access_state: Optional[GoogleCloudPolicysimulatorV1beta1ExplainedAccessAccessStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessState') }})
+    errors: Optional[list[shared_googlerpcstatus.GoogleRPCStatus]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    policies: Optional[list[shared_googlecloudpolicysimulatorv1beta1explainedpolicy.GoogleCloudPolicysimulatorV1beta1ExplainedPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
     

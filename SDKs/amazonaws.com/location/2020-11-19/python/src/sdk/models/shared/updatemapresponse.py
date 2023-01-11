@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMapResponse:
-    map_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MapArn') }})
-    map_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MapName') }})
-    update_time: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UpdateTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    map_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MapArn') }})
+    map_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MapName') }})
+    update_time: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UpdateTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

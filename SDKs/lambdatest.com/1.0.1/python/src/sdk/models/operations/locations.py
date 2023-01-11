@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import locations as shared_locations
 
 
-@dataclass
+@dataclasses.dataclass
 class LocationsSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LocationsRequest:
-    security: LocationsSecurity = field()
+    security: LocationsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LocationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied: Optional[Any] = field(default=None)
-    locations: Optional[shared.Locations] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied: Optional[Any] = dataclasses.field(default=None)
+    locations: Optional[shared_locations.Locations] = dataclasses.field(default=None)
     

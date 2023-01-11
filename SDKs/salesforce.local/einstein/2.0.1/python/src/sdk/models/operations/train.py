@@ -1,32 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import v2languagetrainparams as shared_v2languagetrainparams
+from ..shared import security as shared_security
+from ..shared import trainresponse as shared_trainresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TrainRequestBody:
-    algorithm: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'algorithm' }})
-    dataset_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'datasetId' }})
-    epochs: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'epochs' }})
-    learning_rate: Optional[float] = field(default=None, metadata={'multipart_form': { 'field_name': 'learningRate' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    train_params: Optional[shared.V2LanguageTrainParams] = field(default=None, metadata={'multipart_form': { 'field_name': 'trainParams', 'json': True }})
+    algorithm: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'algorithm' }})
+    dataset_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'datasetId' }})
+    epochs: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'epochs' }})
+    learning_rate: Optional[float] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'learningRate' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    train_params: Optional[shared_v2languagetrainparams.V2LanguageTrainParams] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'trainParams', 'json': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainRequest:
-    security: TrainSecurity = field()
-    request: Optional[TrainRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: TrainSecurity = dataclasses.field()
+    request: Optional[TrainRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainResponse:
-    content_type: str = field()
-    status_code: int = field()
-    train_response: Optional[shared.TrainResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    train_response: Optional[shared_trainresponse.TrainResponse] = dataclasses.field(default=None)
     

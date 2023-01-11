@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import rule_category as shared_rule_category
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRuleCategoryPathParams:
-    rule_category_id: str = field(metadata={'path_param': { 'field_name': 'ruleCategoryId', 'style': 'simple', 'explode': False }})
+    rule_category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ruleCategoryId', 'style': 'simple', 'explode': False }})
     
 class DeleteRuleCategory200ApplicationJSONActionEnum(str, Enum):
     DELETE_RULE_CATEGORY = "DeleteRuleCategory"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteRuleCategory200ApplicationJSONData:
-    group_categories: List[shared.RuleCategory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
+    group_categories: list[shared_rule_category.RuleCategory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
     
 class DeleteRuleCategory200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class DeleteRuleCategory200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteRuleCategory200ApplicationJSON:
-    action: DeleteRuleCategory200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: DeleteRuleCategory200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: DeleteRuleCategory200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: DeleteRuleCategory200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: DeleteRuleCategory200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: DeleteRuleCategory200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRuleCategoryRequest:
-    path_params: DeleteRuleCategoryPathParams = field()
+    path_params: DeleteRuleCategoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteRuleCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_rule_category_200_application_json_object: Optional[DeleteRuleCategory200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_rule_category_200_application_json_object: Optional[DeleteRuleCategory200ApplicationJSON] = dataclasses.field(default=None)
     

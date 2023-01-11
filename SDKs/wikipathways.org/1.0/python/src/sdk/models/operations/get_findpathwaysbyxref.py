@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class GetFindPathwaysByXrefFormatEnum(str, Enum):
@@ -11,20 +11,20 @@ class GetFindPathwaysByXrefFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFindPathwaysByXrefQueryParams:
-    ids: List[Any] = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
-    codes: Optional[List[Any]] = field(default=None, metadata={'query_param': { 'field_name': 'codes', 'style': 'form', 'explode': False }})
-    format: Optional[GetFindPathwaysByXrefFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    ids: list[Any] = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
+    codes: Optional[list[Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'codes', 'style': 'form', 'explode': False }})
+    format: Optional[GetFindPathwaysByXrefFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFindPathwaysByXrefRequest:
-    query_params: GetFindPathwaysByXrefQueryParams = field()
+    query_params: GetFindPathwaysByXrefQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFindPathwaysByXrefResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

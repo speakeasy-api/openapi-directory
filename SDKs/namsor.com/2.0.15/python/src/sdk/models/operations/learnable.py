@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class LearnablePathParams:
-    learnable: bool = field(metadata={'path_param': { 'field_name': 'learnable', 'style': 'simple', 'explode': False }})
-    source: str = field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
+    learnable: bool = dataclasses.field(metadata={'path_param': { 'field_name': 'learnable', 'style': 'simple', 'explode': False }})
+    source: str = dataclasses.field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LearnableRequest:
-    path_params: LearnablePathParams = field()
+    path_params: LearnablePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LearnableResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

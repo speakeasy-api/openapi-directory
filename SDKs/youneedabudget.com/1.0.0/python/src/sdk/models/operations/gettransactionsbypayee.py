@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import hybridtransactionsresponse as shared_hybridtransactionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsByPayeePathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payee_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payee_id', 'style': 'simple', 'explode': False }})
     
 class GetTransactionsByPayeeTypeEnum(str, Enum):
     UNCATEGORIZED = "uncategorized"
     UNAPPROVED = "unapproved"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsByPayeeQueryParams:
-    last_knowledge_of_server: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
-    since_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'since_date', 'style': 'form', 'explode': True }})
-    type: Optional[GetTransactionsByPayeeTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    last_knowledge_of_server: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
+    since_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since_date', 'style': 'form', 'explode': True }})
+    type: Optional[GetTransactionsByPayeeTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsByPayeeRequest:
-    path_params: GetTransactionsByPayeePathParams = field()
-    query_params: GetTransactionsByPayeeQueryParams = field()
+    path_params: GetTransactionsByPayeePathParams = dataclasses.field()
+    query_params: GetTransactionsByPayeeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsByPayeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    hybrid_transactions_response: Optional[shared.HybridTransactionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    hybrid_transactions_response: Optional[shared_hybridtransactionsresponse.HybridTransactionsResponse] = dataclasses.field(default=None)
     

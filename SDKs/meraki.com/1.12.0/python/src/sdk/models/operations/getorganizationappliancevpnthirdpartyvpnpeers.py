@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationApplianceVpnThirdPartyVpnPeersRequest:
-    path_params: GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams = field()
+    path_params: GetOrganizationApplianceVpnThirdPartyVpnPeersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationApplianceVpnThirdPartyVpnPeersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_organization_appliance_vpn_third_party_vpn_peers_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_organization_appliance_vpn_third_party_vpn_peers_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

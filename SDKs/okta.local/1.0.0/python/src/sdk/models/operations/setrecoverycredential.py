@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion:
-    answer: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer') }})
-    question: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('question') }})
+    answer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer') }})
+    question: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('question') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialRequestBodyCredentials:
-    recovery_question: Optional[SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recovery_question') }})
+    recovery_question: Optional[SetRecoveryCredentialRequestBodyCredentialsRecoveryQuestion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recovery_question') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialRequestBody:
-    credentials: Optional[SetRecoveryCredentialRequestBodyCredentials] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
+    credentials: Optional[SetRecoveryCredentialRequestBodyCredentials] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialRequest:
-    path_params: SetRecoveryCredentialPathParams = field()
-    request: Optional[SetRecoveryCredentialRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: SetRecoveryCredentialPathParams = dataclasses.field()
+    request: Optional[SetRecoveryCredentialRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetRecoveryCredentialResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

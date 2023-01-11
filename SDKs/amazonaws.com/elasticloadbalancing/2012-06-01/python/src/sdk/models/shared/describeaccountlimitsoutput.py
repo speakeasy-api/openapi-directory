@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import limit as shared_limit
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAccountLimitsOutput:
-    limits: Optional[List[Limit]] = field(default=None)
-    next_marker: Optional[str] = field(default=None)
+    limits: Optional[list[shared_limit.Limit]] = dataclasses.field(default=None)
+    next_marker: Optional[str] = dataclasses.field(default=None)
     

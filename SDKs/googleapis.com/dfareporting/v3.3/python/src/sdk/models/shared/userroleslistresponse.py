@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import userrole as shared_userrole
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserRolesListResponse:
     r"""UserRolesListResponse
     User Role List Response
     """
     
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    user_roles: Optional[List[UserRole]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userRoles') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    user_roles: Optional[list[shared_userrole.UserRole]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userRoles') }})
     

@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import wlt_record as shared_wlt_record
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EliminationAllianceBackup:
     r"""EliminationAllianceBackup
     Backup team called in, may be null.
     """
     
-    in_: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('in') }})
-    out: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('out') }})
+    in_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('in') }})
+    out: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('out') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EliminationAllianceStatus:
-    current_level_record: Optional[WltRecord] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('current_level_record') }})
-    level: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('level') }})
-    playoff_average: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_average') }})
-    record: Optional[WltRecord] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('record') }})
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    current_level_record: Optional[shared_wlt_record.WltRecord] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('current_level_record') }})
+    level: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('level') }})
+    playoff_average: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playoff_average') }})
+    record: Optional[shared_wlt_record.WltRecord] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('record') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EliminationAlliance:
-    picks: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('picks') }})
-    backup: Optional[EliminationAllianceBackup] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backup') }})
-    declines: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declines') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    status: Optional[EliminationAllianceStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    picks: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('picks') }})
+    backup: Optional[EliminationAllianceBackup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backup') }})
+    declines: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declines') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    status: Optional[EliminationAllianceStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

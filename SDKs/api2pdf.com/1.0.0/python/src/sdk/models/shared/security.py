@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeHeaderAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    header_api_key: SchemeHeaderAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    header_api_key: SchemeHeaderAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeQueryAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'apikey' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'apikey' }})
     

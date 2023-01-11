@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.AlltrRequest(
     security=operations.AlltrSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AlltrRequestBody(
         certificate_parameters=operations.AlltrRequestBodyCertificateParameters(
-            dob="excepturi",
-            full_name="qui",
-            reg_num="aut",
-            uid="quas",
+            dob="et",
+            full_name="tempore",
+            reg_num="quis",
+            uid="vitae",
         ),
-        consent_artifact="odit",
+        consent_artifact="sunt",
         format="pdf",
-        txn_id="qui",
+        txn_id="sit",
     ),
 )
     
-res = s.sdk.alltr(req)
+res = s.ap_is.alltr(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alltr` - Allotment Letter
 * `bknoc` - NOC For Banks

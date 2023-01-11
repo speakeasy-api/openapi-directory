@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import zone_stats as shared_zone_stats
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsCollectionQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsCollectionRequest:
-    query_params: GetStatisticsCollectionQueryParams = field()
+    query_params: GetStatisticsCollectionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsCollectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    zone_stats: Optional[List[shared.ZoneStats]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    zone_stats: Optional[list[shared_zone_stats.ZoneStats]] = dataclasses.field(default=None)
     

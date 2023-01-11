@@ -19,3 +19,5 @@ from .sentence import *
 from .sentiment import *
 from .textspan import *
 from .token import *
+
+__all__ = ["XgafvEnum","AltEnum","AnalyzeEntitiesRequestEncodingTypeEnum","AnalyzeEntitiesRequest","AnalyzeEntitiesResponse","AnalyzeSentimentRequestEncodingTypeEnum","AnalyzeSentimentRequest","AnalyzeSentimentResponse","AnalyzeSyntaxRequestEncodingTypeEnum","AnalyzeSyntaxRequest","AnalyzeSyntaxResponse","AnnotateTextRequestEncodingTypeEnum","AnnotateTextRequest","AnnotateTextResponse","DependencyEdgeLabelEnum","DependencyEdge","DocumentTypeEnum","Document","EntityTypeEnum","Entity","EntityMentionTypeEnum","EntityMention","Features","PartOfSpeechAspectEnum","PartOfSpeechCaseEnum","PartOfSpeechFormEnum","PartOfSpeechGenderEnum","PartOfSpeechMoodEnum","PartOfSpeechNumberEnum","PartOfSpeechPersonEnum","PartOfSpeechProperEnum","PartOfSpeechReciprocityEnum","PartOfSpeechTagEnum","PartOfSpeechTenseEnum","PartOfSpeechVoiceEnum","PartOfSpeech","SchemeOauth2","SchemeOauth2c","Sentence","Sentiment","TextSpan","Token"]

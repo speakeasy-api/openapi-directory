@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,9 +18,9 @@ s = sdk.SDK()
     
 req = operations.MediaTabularExtractsheetRequest(
     query_params=operations.MediaTabularExtractsheetQueryParams(
-        arg1="quae",
-        entryid="rerum",
-        output="vero",
+        arg1="numquam",
+        entryid="modi",
+        output="quia",
     ),
 )
     

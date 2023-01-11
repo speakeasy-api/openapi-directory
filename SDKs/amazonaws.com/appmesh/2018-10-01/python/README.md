@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CreateMeshRequest(
     headers=operations.CreateMeshHeaders(
-        x_amz_algorithm="quas",
-        x_amz_content_sha256="facere",
-        x_amz_credential="eveniet",
-        x_amz_date="dolores",
-        x_amz_security_token="fuga",
-        x_amz_signature="error",
-        x_amz_signed_headers="autem",
+        x_amz_algorithm="nihil",
+        x_amz_content_sha256="quam",
+        x_amz_credential="et",
+        x_amz_date="vel",
+        x_amz_security_token="itaque",
+        x_amz_signature="provident",
+        x_amz_signed_headers="voluptatem",
     ),
     request=operations.CreateMeshRequestBody(
-        client_token="eaque",
-        mesh_name="omnis",
+        client_token="qui",
+        mesh_name="modi",
     ),
 )
     
-res = s.sdk.create_mesh(req)
+res = s.create_mesh(req)
 
 if res.create_mesh_output is not None:
     # handle response

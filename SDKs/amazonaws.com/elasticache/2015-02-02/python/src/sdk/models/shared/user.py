@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import authentication as shared_authentication
 
 
-@dataclass
+@dataclasses.dataclass
 class User:
-    arn: Optional[str] = field(default=None)
-    access_string: Optional[str] = field(default=None)
-    authentication: Optional[Authentication] = field(default=None)
-    engine: Optional[str] = field(default=None)
-    status: Optional[str] = field(default=None)
-    user_group_ids: Optional[List[str]] = field(default=None)
-    user_id: Optional[str] = field(default=None)
-    user_name: Optional[str] = field(default=None)
+    arn: Optional[str] = dataclasses.field(default=None)
+    access_string: Optional[str] = dataclasses.field(default=None)
+    authentication: Optional[shared_authentication.Authentication] = dataclasses.field(default=None)
+    engine: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
+    user_group_ids: Optional[list[str]] = dataclasses.field(default=None)
+    user_id: Optional[str] = dataclasses.field(default=None)
+    user_name: Optional[str] = dataclasses.field(default=None)
     

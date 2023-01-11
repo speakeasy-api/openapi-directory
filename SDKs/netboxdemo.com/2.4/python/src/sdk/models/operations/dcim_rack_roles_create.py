@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rackrole as shared_rackrole
+from ..shared import rackrole as shared_rackrole
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackRolesCreateRequest:
-    request: shared.RackRoleInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_rackrole.RackRoleInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackRolesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack_role: Optional[shared.RackRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack_role: Optional[shared_rackrole.RackRole] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelInstanceRefreshAnswer:
-    instance_refresh_id: Optional[str] = field(default=None)
+    instance_refresh_id: Optional[str] = dataclasses.field(default=None)
     

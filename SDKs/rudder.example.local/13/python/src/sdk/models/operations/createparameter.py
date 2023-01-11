@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import parameter as shared_parameter
 
 class CreateParameter200ApplicationJSONActionEnum(str, Enum):
     CREATE_PARAMETER = "createParameter"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateParameter200ApplicationJSONData:
     r"""CreateParameter200ApplicationJSONData
     Parameters
     """
     
-    parameters: List[shared.Parameter] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    parameters: list[shared_parameter.Parameter] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
     
 class CreateParameter200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -24,22 +24,22 @@ class CreateParameter200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateParameter200ApplicationJSON:
-    action: CreateParameter200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: CreateParameter200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    result: CreateParameter200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: CreateParameter200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: CreateParameter200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    result: CreateParameter200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateParameterRequest:
-    request: shared.Parameter = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_parameter.Parameter = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateParameterResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_parameter_200_application_json_object: Optional[CreateParameter200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_parameter_200_application_json_object: Optional[CreateParameter200ApplicationJSON] = dataclasses.field(default=None)
     

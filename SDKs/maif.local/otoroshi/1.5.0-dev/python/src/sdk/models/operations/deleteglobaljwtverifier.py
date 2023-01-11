@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deleted as shared_deleted
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalJwtVerifierPathParams:
-    verifier_id: str = field(metadata={'path_param': { 'field_name': 'verifierId', 'style': 'simple', 'explode': False }})
+    verifier_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'verifierId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalJwtVerifierSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalJwtVerifierRequest:
-    path_params: DeleteGlobalJwtVerifierPathParams = field()
-    security: DeleteGlobalJwtVerifierSecurity = field()
+    path_params: DeleteGlobalJwtVerifierPathParams = dataclasses.field()
+    security: DeleteGlobalJwtVerifierSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalJwtVerifierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deleted: Optional[shared.Deleted] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deleted: Optional[shared_deleted.Deleted] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.MrcerRequest(
     security=operations.MrcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.MrcerRequestBody(
         certificate_parameters=operations.MrcerRequestBodyCertificateParameters(
-            cert_type="fuga",
-            full_name="et",
-            rroll="tempore",
+            cert_type="et",
+            full_name="neque",
+            rroll="autem",
         ),
-        consent_artifact="quis",
+        consent_artifact="optio",
         format="pdf",
-        txn_id="sunt",
+        txn_id="blanditiis",
     ),
 )
     
-res = s.sdk.mrcer(req)
+res = s.ap_is.mrcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `mrcer` - Merit Certificate
 

@@ -1,104 +1,104 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaCertificateDataPanVerificationRecord:
-    num: str = field()
-    verified_on: str = field()
+    num: str = dataclasses.field()
+    verified_on: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaCertificateData:
-    pan_verification_record: Optional[PanVerificationRecordSchemaCertificateDataPanVerificationRecord] = field(default=None)
+    pan_verification_record: Optional[PanVerificationRecordSchemaCertificateDataPanVerificationRecord] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedByOrganizationAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedByOrganization:
-    address: PanVerificationRecordSchemaIssuedByOrganizationAddress = field()
-    code: str = field()
-    name: str = field()
-    tin: str = field()
-    type: str = field()
-    uid: str = field()
+    address: PanVerificationRecordSchemaIssuedByOrganizationAddress = dataclasses.field()
+    code: str = dataclasses.field()
+    name: str = dataclasses.field()
+    tin: str = dataclasses.field()
+    type: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedBy:
-    organization: PanVerificationRecordSchemaIssuedByOrganization = field()
+    organization: PanVerificationRecordSchemaIssuedByOrganization = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedToPersonAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedToPersonPhoto:
-    format: str = field()
+    format: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedToPerson:
-    address: PanVerificationRecordSchemaIssuedToPersonAddress = field()
-    photo: PanVerificationRecordSchemaIssuedToPersonPhoto = field()
-    dob: str = field()
-    email: str = field()
-    gender: str = field()
-    marital_status: str = field()
-    name: str = field()
-    phone: str = field()
-    religion: str = field()
-    swd: str = field()
-    swd_indicator: str = field()
-    title: str = field()
-    uid: str = field()
+    address: PanVerificationRecordSchemaIssuedToPersonAddress = dataclasses.field()
+    photo: PanVerificationRecordSchemaIssuedToPersonPhoto = dataclasses.field()
+    dob: str = dataclasses.field()
+    email: str = dataclasses.field()
+    gender: str = dataclasses.field()
+    marital_status: str = dataclasses.field()
+    name: str = dataclasses.field()
+    phone: str = dataclasses.field()
+    religion: str = dataclasses.field()
+    swd: str = dataclasses.field()
+    swd_indicator: str = dataclasses.field()
+    title: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchemaIssuedTo:
-    person: PanVerificationRecordSchemaIssuedToPerson = field()
+    person: PanVerificationRecordSchemaIssuedToPerson = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PanVerificationRecordSchema:
-    certificate_data: PanVerificationRecordSchemaCertificateData = field()
-    issued_by: PanVerificationRecordSchemaIssuedBy = field()
-    issued_to: PanVerificationRecordSchemaIssuedTo = field()
-    issue_date: str = field()
-    issued_at: str = field()
-    language: str = field()
-    name: str = field()
-    number: str = field()
-    status: str = field()
-    type: str = field()
-    valid_from_date: str = field()
+    certificate_data: PanVerificationRecordSchemaCertificateData = dataclasses.field()
+    issued_by: PanVerificationRecordSchemaIssuedBy = dataclasses.field()
+    issued_to: PanVerificationRecordSchemaIssuedTo = dataclasses.field()
+    issue_date: str = dataclasses.field()
+    issued_at: str = dataclasses.field()
+    language: str = dataclasses.field()
+    name: str = dataclasses.field()
+    number: str = dataclasses.field()
+    status: str = dataclasses.field()
+    type: str = dataclasses.field()
+    valid_from_date: str = dataclasses.field()
     

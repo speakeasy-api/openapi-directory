@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -9,11 +9,11 @@ class ApplyPolicyAllNodes200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApplyPolicyAllNodes200ApplicationJSONData:
-    hostname: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostname') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    result: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    hostname: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostname') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    result: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 class ApplyPolicyAllNodes200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -21,16 +21,16 @@ class ApplyPolicyAllNodes200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApplyPolicyAllNodes200ApplicationJSON:
-    action: ApplyPolicyAllNodes200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: List[ApplyPolicyAllNodes200ApplicationJSONData] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ApplyPolicyAllNodes200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ApplyPolicyAllNodes200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: list[ApplyPolicyAllNodes200ApplicationJSONData] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ApplyPolicyAllNodes200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplyPolicyAllNodesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    apply_policy_all_nodes_200_application_json_object: Optional[ApplyPolicyAllNodes200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    apply_policy_all_nodes_200_application_json_object: Optional[ApplyPolicyAllNodes200ApplicationJSON] = dataclasses.field(default=None)
     

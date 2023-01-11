@@ -1,16 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import verificationstatus_enum as shared_verificationstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class IdentityDkimAttributes:
-    r"""IdentityDkimAttributes
-    Represents the DKIM attributes of a verified email address or a domain.
-    """
-    
-    dkim_enabled: bool = field()
-    dkim_verification_status: VerificationStatusEnum = field()
-    dkim_tokens: Optional[List[str]] = field(default=None)
+    dkim_enabled: Optional[bool] = dataclasses.field(default=None)
+    dkim_tokens: Optional[list[str]] = dataclasses.field(default=None)
+    dkim_verification_status: Optional[shared_verificationstatus_enum.VerificationStatusEnum] = dataclasses.field(default=None)
     

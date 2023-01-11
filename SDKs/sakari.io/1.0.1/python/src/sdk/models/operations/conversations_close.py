@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import conversationresponse as shared_conversationresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsClosePathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
-    conversation_id: str = field(metadata={'path_param': { 'field_name': 'conversationId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    conversation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'conversationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsCloseSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsCloseRequest:
-    path_params: ConversationsClosePathParams = field()
-    security: ConversationsCloseSecurity = field()
+    path_params: ConversationsClosePathParams = dataclasses.field()
+    security: ConversationsCloseSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsCloseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    conversation_response: Optional[shared.ConversationResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    conversation_response: Optional[shared_conversationresponse.ConversationResponse] = dataclasses.field(default=None)
     

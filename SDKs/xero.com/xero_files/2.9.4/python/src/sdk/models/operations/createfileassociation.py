@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import association as shared_association
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateFileAssociationPathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateFileAssociationHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateFileAssociationSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateFileAssociationRequest:
-    headers: CreateFileAssociationHeaders = field()
-    path_params: CreateFileAssociationPathParams = field()
-    security: CreateFileAssociationSecurity = field()
-    request: Optional[shared.Association] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateFileAssociationHeaders = dataclasses.field()
+    path_params: CreateFileAssociationPathParams = dataclasses.field()
+    security: CreateFileAssociationSecurity = dataclasses.field()
+    request: Optional[shared_association.Association] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateFileAssociationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    association: Optional[shared.Association] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    association: Optional[shared_association.Association] = dataclasses.field(default=None)
     

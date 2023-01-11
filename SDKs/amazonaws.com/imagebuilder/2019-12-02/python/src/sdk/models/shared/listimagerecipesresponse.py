@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import imagerecipesummary as shared_imagerecipesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListImageRecipesResponse:
-    image_recipe_summary_list: Optional[List[ImageRecipeSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageRecipeSummaryList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    image_recipe_summary_list: Optional[list[shared_imagerecipesummary.ImageRecipeSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageRecipeSummaryList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
     

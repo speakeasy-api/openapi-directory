@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,32 +24,26 @@ s.config_security(
     )
 )
     
-req = operations.AddOrUpdateIntegrationLinkRequest(
-    path_params=operations.AddOrUpdateIntegrationLinkPathParams(
-        environment_id="vel",
-        integration_link_type="jira",
-        key="quas",
-        setting_id=3815582250837815516,
+req = operations.GetAuditlogsRequest(
+    path_params=operations.GetAuditlogsPathParams(
+        product_id="ea",
     ),
-    request=operations.AddOrUpdateIntegrationLinkRequests(
-        add_or_update_integration_link_model=shared.AddOrUpdateIntegrationLinkModel(
-            description="ut",
-            url="est",
-        ),
-        add_or_update_integration_link_model1=shared.AddOrUpdateIntegrationLinkModel(
-            description="ex",
-            url="iure",
-        ),
-        add_or_update_integration_link_model2=shared.AddOrUpdateIntegrationLinkModel(
-            description="nemo",
-            url="labore",
-        ),
+    query_params=operations.GetAuditlogsQueryParams(
+        audit_log_type={
+            "dolor": "voluptatem",
+            "illo": "est",
+            "reprehenderit": "facilis",
+        },
+        config_id="aliquid",
+        environment_id="iure",
+        from_utc_date_time="2004-03-31T03:18:23Z",
+        to_utc_date_time="1997-12-15T16:24:08Z",
     ),
 )
     
-res = s.sdk.add_or_update_integration_link(req)
+res = s.audit_logs.get_auditlogs(req)
 
-if res.integration_link_model is not None:
+if res.audit_log_item_models is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -58,59 +51,98 @@ if res.integration_link_model is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Audit logs
 
-* `add_or_update_integration_link` - Add or update Integration link
-* `create_config` - Create Config
-* `create_environment` - Create Environment
-* `create_permission_group` - Create Permission Group
-* `create_product` - Create Product
-* `create_setting` - Create Flag
-* `create_tag` - Create Tag
-* `delete_config` - Delete Config
-* `delete_environment` - Delete Environment
-* `delete_integration_link` - Delete Integration link
-* `delete_organization_member` - Delete Member from Organization
-* `delete_permission_group` - Delete Permission Group
-* `delete_product` - Delete Product
-* `delete_product_member` - Delete Member from Product
-* `delete_setting` - Delete Flag
-* `delete_tag` - Delete Tag
 * `get_auditlogs` - List Audit log items for Product
+* `get_deleted_settings` - List Deleted Settings
+* `get_organization_auditlogs` - List Audit log items for Organization
+
+### Configs
+
+* `create_config` - Create Config
+* `delete_config` - Delete Config
 * `get_config` - Get Config
 * `get_configs` - List Configs
-* `get_deleted_settings` - List Deleted Settings
+* `update_config` - Update Config
+
+### Environments
+
+* `create_environment` - Create Environment
+* `delete_environment` - Delete Environment
 * `get_environment` - Get Environment
 * `get_environments` - List Environments
+* `update_environment` - Update Environment
+
+### Feature Flag & Setting values
+
+* `get_setting_value` - Get value
+* `get_setting_values` - Get values
+* `replace_setting_value` - Replace value
+* `update_setting_value` - Update value
+
+### Feature Flag & Setting values using SDK Key
+
+* `get_setting_value_by_sdkkey` - Get value
+* `replace_setting_value_by_sdkkey` - Replace value
+* `update_setting_value_by_sdkkey` - Update value
+
+### Feature Flags & Settings
+
+* `create_setting` - Create Flag
+* `delete_setting` - Delete Flag
+* `get_setting` - Get Flag
+* `get_settings` - List Flags
+* `update_setting` - Update Flag
+
+### Integration links
+
+* `add_or_update_integration_link` - Add or update Integration link
+* `delete_integration_link` - Delete Integration link
 * `get_integration_link_details` - Get Integration link
+
+### Me
+
 * `get_me` - Get authenticated user details
-* `get_organization_auditlogs` - List Audit log items for Organization
+
+### Members
+
+* `delete_organization_member` - Delete Member from Organization
+* `delete_product_member` - Delete Member from Product
 * `get_organization_members` - List Organization Members
+* `get_product_members` - List Product Members
+* `invite_member` - Invite Member
+
+### Organizations
+
 * `get_organizations` - List Organizations
+
+### Permission Groups
+
+* `create_permission_group` - Create Permission Group
+* `delete_permission_group` - Delete Permission Group
 * `get_permission_group` - Get Permission Group
 * `get_permission_groups` - List Permission Groups
+* `update_permission_group` - Update Permission Group
+
+### Products
+
+* `create_product` - Create Product
+* `delete_product` - Delete Product
 * `get_product` - Get Product
-* `get_product_members` - List Product Members
 * `get_products` - List Products
+* `update_product` - Update Product
+
+### SDK Keys
+
 * `get_sdk_keys` - Get SDK Key
-* `get_setting` - Get Flag
-* `get_setting_value` - Get value
-* `get_setting_value_by_sdkkey` - Get value
-* `get_setting_values` - Get values
-* `get_settings` - List Flags
+
+### Tags
+
+* `create_tag` - Create Tag
+* `delete_tag` - Delete Tag
 * `get_settings_by_tag` - List Settings by Tag
 * `get_tag` - Get Tag
 * `get_tags` - List Tags
-* `invite_member` - Invite Member
-* `replace_setting_value` - Replace value
-* `replace_setting_value_by_sdkkey` - Replace value
-* `update_config` - Update Config
-* `update_environment` - Update Environment
-* `update_permission_group` - Update Permission Group
-* `update_product` - Update Product
-* `update_setting` - Update Flag
-* `update_setting_value` - Update value
-* `update_setting_value_by_sdkkey` - Update value
 * `update_tag` - Update Tag
 
 <!-- End SDK Available Operations -->

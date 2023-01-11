@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import errormessage as shared_errormessage
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIError:
     r"""APIError
     API invocation or processing error
     """
     
-    errors: List[ErrorMessage] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    errors: list[shared_errormessage.ErrorMessage] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

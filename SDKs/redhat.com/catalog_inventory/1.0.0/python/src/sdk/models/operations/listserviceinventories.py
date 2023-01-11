@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import serviceinventoriescollection as shared_serviceinventoriescollection
 
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceInventoriesQueryParams:
-    filter: Optional[dict[str, Any]] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'deepObject', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    sort_by: Optional[dict[str, Any]] = field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'deepObject', 'explode': True }})
+    filter: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'deepObject', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    sort_by: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_by', 'style': 'deepObject', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceInventoriesRequest:
-    query_params: ListServiceInventoriesQueryParams = field()
+    query_params: ListServiceInventoriesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceInventoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_inventories_collection: Optional[shared.ServiceInventoriesCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_inventories_collection: Optional[shared_serviceinventoriescollection.ServiceInventoriesCollection] = dataclasses.field(default=None)
     

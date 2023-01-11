@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,35 +25,35 @@ s.config_security(
     
 req = operations.SearchRequest(
     query_params=operations.SearchQueryParams(
-        cursor="ut",
-        expr="hic",
-        facet="veniam",
+        cursor="cumque",
+        expr="occaecati",
+        facet="iusto",
         format="sdk",
-        fq="ut",
-        highlight="animi",
-        partial=True,
+        fq="deserunt",
+        highlight="maiores",
+        partial=False,
         pretty="true",
-        q="unde",
-        q_options="repellat",
-        q_parser="lucene",
-        return_="tempore",
-        size=4592009160050073480,
-        sort="quia",
-        start=884502240364205692,
-        stats="voluptates",
+        q="dolorem",
+        q_options="ratione",
+        q_parser="dismax",
+        return_="excepturi",
+        size=3784438660469815446,
+        sort="quo",
+        start=4099325840936144508,
+        stats="vel",
     ),
     headers=operations.SearchHeaders(
-        x_amz_algorithm="consequatur",
-        x_amz_content_sha256="explicabo",
-        x_amz_credential="qui",
-        x_amz_date="perferendis",
-        x_amz_security_token="ipsum",
-        x_amz_signature="autem",
-        x_amz_signed_headers="perferendis",
+        x_amz_algorithm="optio",
+        x_amz_content_sha256="at",
+        x_amz_credential="a",
+        x_amz_date="rerum",
+        x_amz_security_token="repudiandae",
+        x_amz_signature="praesentium",
+        x_amz_signed_headers="tempora",
     ),
 )
     
-res = s.sdk.search(req)
+res = s.search(req)
 
 if res.search_response is not None:
     # handle response

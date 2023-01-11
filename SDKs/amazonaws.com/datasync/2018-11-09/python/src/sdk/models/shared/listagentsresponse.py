@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import agentlistentry as shared_agentlistentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAgentsResponse:
     r"""ListAgentsResponse
     ListAgentsResponse
     """
     
-    agents: Optional[List[AgentListEntry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agents') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    agents: Optional[list[shared_agentlistentry.AgentListEntry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agents') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

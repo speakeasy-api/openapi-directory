@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesAddedDownloadQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    date_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    date_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesAddedDownloadRequest:
-    query_params: GetDomainsUpdatesAddedDownloadQueryParams = field()
+    query_params: GetDomainsUpdatesAddedDownloadQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainsUpdatesAddedDownloadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class WhoisPathParams:
-    domain: str = field(metadata={'path_param': { 'field_name': 'domain', 'style': 'simple', 'explode': False }})
+    domain: str = dataclasses.field(metadata={'path_param': { 'field_name': 'domain', 'style': 'simple', 'explode': False }})
     
 class WhoisFormatEnum(str, Enum):
     RAW = "raw"
@@ -13,19 +13,19 @@ class WhoisFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class WhoisQueryParams:
-    format: Optional[WhoisFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    format: Optional[WhoisFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WhoisRequest:
-    path_params: WhoisPathParams = field()
-    query_params: WhoisQueryParams = field()
+    path_params: WhoisPathParams = dataclasses.field()
+    query_params: WhoisQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WhoisResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

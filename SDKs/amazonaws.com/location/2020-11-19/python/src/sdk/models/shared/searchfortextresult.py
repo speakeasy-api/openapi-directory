@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import place as shared_place
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchForTextResult:
     r"""SearchForTextResult
     Contains relevant Places returned by calling <code>SearchPlaceIndexForText</code>.
     """
     
-    place: Place = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Place') }})
+    place: shared_place.Place = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Place') }})
     

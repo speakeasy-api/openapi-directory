@@ -1,0 +1,18 @@
+import dataclasses
+from typing import Optional
+from ..shared import subnetlist as shared_subnetlist
+
+
+@dataclasses.dataclass
+class DbSubnetGroups:
+    r"""DbSubnetGroups
+    <p>Contains the details of an Amazon RDS DB subnet group. </p> <p>This data type is used as a response element in the <code>DescribeDBSubnetGroups</code> action. </p>
+    """
+    
+    db_subnet_group_arn: Optional[str] = dataclasses.field(default=None)
+    db_subnet_group_description: Optional[str] = dataclasses.field(default=None)
+    db_subnet_group_name: Optional[str] = dataclasses.field(default=None)
+    subnet_group_status: Optional[str] = dataclasses.field(default=None)
+    subnets: Optional[list[shared_subnetlist.SubnetList]] = dataclasses.field(default=None)
+    vpc_id: Optional[str] = dataclasses.field(default=None)
+    

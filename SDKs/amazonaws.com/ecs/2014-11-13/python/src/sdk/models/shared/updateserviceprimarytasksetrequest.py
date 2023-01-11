@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateServicePrimaryTaskSetRequest:
-    cluster: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
-    primary_task_set: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTaskSet') }})
-    service: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
+    cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
+    primary_task_set: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTaskSet') }})
+    service: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
     

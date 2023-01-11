@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class ProBowlersFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class ProBowlersFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ProBowlersPathParams:
-    format: ProBowlersFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: ProBowlersFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProBowlersRequest:
-    path_params: ProBowlersPathParams = field()
+    path_params: ProBowlersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProBowlersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_infos: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_infos: Optional[list[Any]] = dataclasses.field(default=None)
     

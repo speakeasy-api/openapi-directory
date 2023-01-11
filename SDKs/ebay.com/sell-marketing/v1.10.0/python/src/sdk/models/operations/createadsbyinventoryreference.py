@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createadsbyinventoryreferencerequest as shared_createadsbyinventoryreferencerequest
+from ..shared import adreferences as shared_adreferences
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAdsByInventoryReferencePathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAdsByInventoryReferenceSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAdsByInventoryReferenceRequest:
-    path_params: CreateAdsByInventoryReferencePathParams = field()
-    request: shared.CreateAdsByInventoryReferenceRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAdsByInventoryReferenceSecurity = field()
+    path_params: CreateAdsByInventoryReferencePathParams = dataclasses.field()
+    request: shared_createadsbyinventoryreferencerequest.CreateAdsByInventoryReferenceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAdsByInventoryReferenceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAdsByInventoryReferenceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ad_references: Optional[shared.AdReferences] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ad_references: Optional[shared_adreferences.AdReferences] = dataclasses.field(default=None)
     

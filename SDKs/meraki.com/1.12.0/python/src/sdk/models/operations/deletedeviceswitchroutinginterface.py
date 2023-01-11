@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeviceSwitchRoutingInterfacePathParams:
-    interface_id: str = field(metadata={'path_param': { 'field_name': 'interfaceId', 'style': 'simple', 'explode': False }})
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    interface_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'interfaceId', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeviceSwitchRoutingInterfaceRequest:
-    path_params: DeleteDeviceSwitchRoutingInterfacePathParams = field()
+    path_params: DeleteDeviceSwitchRoutingInterfacePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDeviceSwitchRoutingInterfaceResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

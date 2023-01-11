@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDAnnouncementsPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDAnnouncementsQueryParams:
-    data: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'data', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    data: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'data', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDAnnouncementsSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDAnnouncementsRequest:
-    path_params: CompanyIDAnnouncementsPathParams = field()
-    query_params: CompanyIDAnnouncementsQueryParams = field()
-    security: CompanyIDAnnouncementsSecurity = field()
+    path_params: CompanyIDAnnouncementsPathParams = dataclasses.field()
+    query_params: CompanyIDAnnouncementsQueryParams = dataclasses.field()
+    security: CompanyIDAnnouncementsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDAnnouncementsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_id_announcements_200_application_json_anies: Optional[List[Any]] = field(default=None)
-    company_id_announcements_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_id_announcements_200_application_json_anies: Optional[list[Any]] = dataclasses.field(default=None)
+    company_id_announcements_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

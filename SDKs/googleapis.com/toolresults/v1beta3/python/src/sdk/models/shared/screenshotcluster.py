@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import screen as shared_screen
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScreenshotCluster:
-    activity: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activity') }})
-    cluster_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clusterId') }})
-    key_screen: Optional[Screen] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyScreen') }})
-    screens: Optional[List[Screen]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('screens') }})
+    activity: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activity') }})
+    cluster_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clusterId') }})
+    key_screen: Optional[shared_screen.Screen] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyScreen') }})
+    screens: Optional[list[shared_screen.Screen]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('screens') }})
     

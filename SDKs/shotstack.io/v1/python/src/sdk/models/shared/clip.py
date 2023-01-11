@@ -1,9 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import videoasset as shared_videoasset
+from ..shared import imageasset as shared_imageasset
+from ..shared import titleasset as shared_titleasset
+from ..shared import htmlasset as shared_htmlasset
+from ..shared import audioasset as shared_audioasset
+from ..shared import lumaasset as shared_lumaasset
+from ..shared import offset as shared_offset
+from ..shared import transition as shared_transition
 
 class ClipEffectEnum(str, Enum):
     ZOOM_IN = "zoomIn"
@@ -41,21 +48,21 @@ class ClipPositionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Clip:
     r"""Clip
     A clip is a container for a specific type of asset, i.e. a title, image, video, audio or html. You use a Clip to define when an asset will display on the timeline, how long it will play for and transitions, filters and effects to apply to it.
     """
     
-    asset: Any = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
-    length: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
-    start: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
-    effect: Optional[ClipEffectEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
-    filter: Optional[ClipFilterEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filter') }})
-    fit: Optional[ClipFitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fit') }})
-    offset: Optional[Offset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offset') }})
-    opacity: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('opacity') }})
-    position: Optional[ClipPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
-    scale: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scale') }})
-    transition: Optional[Transition] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transition') }})
+    asset: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
+    length: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
+    start: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
+    effect: Optional[ClipEffectEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('effect') }})
+    filter: Optional[ClipFilterEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filter') }})
+    fit: Optional[ClipFitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fit') }})
+    offset: Optional[shared_offset.Offset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offset') }})
+    opacity: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('opacity') }})
+    position: Optional[ClipPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
+    scale: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scale') }})
+    transition: Optional[shared_transition.Transition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transition') }})
     

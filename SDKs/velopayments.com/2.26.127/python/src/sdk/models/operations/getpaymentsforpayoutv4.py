@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import getpaymentsforpayoutresponsev4 as shared_getpaymentsforpayoutresponsev4
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV4PathParams:
-    payout_id: str = field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
+    payout_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
     
 class GetPaymentsForPayoutV4StatusEnum(str, Enum):
     ACCEPTED = "ACCEPTED"
@@ -30,37 +30,37 @@ class GetPaymentsForPayoutV4TransmissionTypeEnum(str, Enum):
     WIRE = "WIRE"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV4QueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
-    payment_amount_from: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'paymentAmountFrom', 'style': 'form', 'explode': True }})
-    payment_amount_to: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'paymentAmountTo', 'style': 'form', 'explode': True }})
-    remote_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'remoteId', 'style': 'form', 'explode': True }})
-    remote_system_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'remoteSystemId', 'style': 'form', 'explode': True }})
-    sensitive: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    source_amount_from: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'sourceAmountFrom', 'style': 'form', 'explode': True }})
-    source_amount_to: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'sourceAmountTo', 'style': 'form', 'explode': True }})
-    status: Optional[GetPaymentsForPayoutV4StatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    submitted_date_from: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'submittedDateFrom', 'style': 'form', 'explode': True }})
-    submitted_date_to: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'submittedDateTo', 'style': 'form', 'explode': True }})
-    transmission_type: Optional[GetPaymentsForPayoutV4TransmissionTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'transmissionType', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    payment_amount_from: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'paymentAmountFrom', 'style': 'form', 'explode': True }})
+    payment_amount_to: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'paymentAmountTo', 'style': 'form', 'explode': True }})
+    remote_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'remoteId', 'style': 'form', 'explode': True }})
+    remote_system_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'remoteSystemId', 'style': 'form', 'explode': True }})
+    sensitive: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    source_amount_from: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceAmountFrom', 'style': 'form', 'explode': True }})
+    source_amount_to: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceAmountTo', 'style': 'form', 'explode': True }})
+    status: Optional[GetPaymentsForPayoutV4StatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    submitted_date_from: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'submittedDateFrom', 'style': 'form', 'explode': True }})
+    submitted_date_to: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'submittedDateTo', 'style': 'form', 'explode': True }})
+    transmission_type: Optional[GetPaymentsForPayoutV4TransmissionTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'transmissionType', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV4Request:
-    path_params: GetPaymentsForPayoutV4PathParams = field()
-    query_params: GetPaymentsForPayoutV4QueryParams = field()
+    path_params: GetPaymentsForPayoutV4PathParams = dataclasses.field()
+    query_params: GetPaymentsForPayoutV4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV4Response:
-    content_type: str = field()
-    status_code: int = field()
-    get_payments_for_payout_response_v4: Optional[shared.GetPaymentsForPayoutResponseV4] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_payments_for_payout_response_v4: Optional[shared_getpaymentsforpayoutresponsev4.GetPaymentsForPayoutResponseV4] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

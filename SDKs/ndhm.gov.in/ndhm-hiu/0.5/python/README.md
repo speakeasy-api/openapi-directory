@@ -8,18 +8,17 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-res = s.gateway.get_v0_5_certs()
+res = s.gateway.get_v0_5_well_known_openid_configuration()
 
-if res.certs is not None:
+if res.open_id_configuration is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -29,8 +28,8 @@ if res.certs is not None:
 
 ### Gateway
 
-* `get_v0_5_certs` - Get certs for JWT verification
 * `get_v0_5_well_known_openid_configuration` - Get openid configuration
+* `get_v0_5_certs` - Get certs for JWT verification
 * `post_v0_5_consent_requests_init` - Create consent request
 * `post_v0_5_consent_requests_status` - Get consent request status
 * `post_v0_5_consents_fetch` - Get consent artefact

@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import graph as shared_graph
+from ..shared import graph as shared_graph
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasGraphsCreateRequest:
-    request: shared.GraphInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_graph.GraphInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasGraphsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph: Optional[shared.Graph] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph: Optional[shared_graph.Graph] = dataclasses.field(default=None)
     

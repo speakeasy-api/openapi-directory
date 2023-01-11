@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.BrlcsRequest(
     security=operations.BrlcsSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.BrlcsRequestBody(
         certificate_parameters=operations.BrlcsRequestBodyCertificateParameters(
-            certificate_number="voluptates",
+            certificate_number="incidunt",
         ),
-        consent_artifact="nihil",
+        consent_artifact="quos",
         format="pdf",
-        txn_id="recusandae",
+        txn_id="omnis",
     ),
 )
     
-res = s.sdk.brlcs(req)
+res = s.ap_is.brlcs(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `brlcs` - Bar License
 * `dpcer` - Dependency Certificate

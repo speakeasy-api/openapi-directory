@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,7 +19,7 @@ s.config_security(
     security=shared.Security(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         user_token=shared.SchemeUserToken(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -31,18 +30,18 @@ req = operations.AddressSearchRequest(
     security=operations.AddressSearchSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         user_token=shared.SchemeUserToken(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     query_params=operations.AddressSearchQueryParams(
-        filter="cupiditate",
-        licensee="deserunt",
-        limit=5906822993303235775,
-        page=509459186601495910,
-        postcode_outward="accusamus",
-        query="in",
+        filter="non",
+        licensee="qui",
+        limit=1723494331383881702,
+        page=1307599990940102016,
+        postcode_outward="tempora",
+        query="provident",
     ),
 )
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -108,44 +108,44 @@ class ActivitiesWatercraftRentalExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Activities:
     r"""Activities
     Amenities and features related to leisure and play.
     """
     
-    beach_access: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachAccess') }})
-    beach_access_exception: Optional[ActivitiesBeachAccessExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachAccessException') }})
-    beach_front: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachFront') }})
-    beach_front_exception: Optional[ActivitiesBeachFrontExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachFrontException') }})
-    bicycle_rental: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bicycleRental') }})
-    bicycle_rental_exception: Optional[ActivitiesBicycleRentalExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bicycleRentalException') }})
-    boutique_stores: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boutiqueStores') }})
-    boutique_stores_exception: Optional[ActivitiesBoutiqueStoresExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boutiqueStoresException') }})
-    casino: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casino') }})
-    casino_exception: Optional[ActivitiesCasinoExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casinoException') }})
-    free_bicycle_rental: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBicycleRental') }})
-    free_bicycle_rental_exception: Optional[ActivitiesFreeBicycleRentalExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBicycleRentalException') }})
-    free_watercraft_rental: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWatercraftRental') }})
-    free_watercraft_rental_exception: Optional[ActivitiesFreeWatercraftRentalExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWatercraftRentalException') }})
-    game_room: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gameRoom') }})
-    game_room_exception: Optional[ActivitiesGameRoomExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gameRoomException') }})
-    golf: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('golf') }})
-    golf_exception: Optional[ActivitiesGolfExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('golfException') }})
-    horseback_riding: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('horsebackRiding') }})
-    horseback_riding_exception: Optional[ActivitiesHorsebackRidingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('horsebackRidingException') }})
-    nightclub: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nightclub') }})
-    nightclub_exception: Optional[ActivitiesNightclubExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nightclubException') }})
-    private_beach: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privateBeach') }})
-    private_beach_exception: Optional[ActivitiesPrivateBeachExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privateBeachException') }})
-    scuba: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scuba') }})
-    scuba_exception: Optional[ActivitiesScubaExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scubaException') }})
-    snorkeling: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snorkeling') }})
-    snorkeling_exception: Optional[ActivitiesSnorkelingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snorkelingException') }})
-    tennis: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tennis') }})
-    tennis_exception: Optional[ActivitiesTennisExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tennisException') }})
-    water_skiing: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSkiing') }})
-    water_skiing_exception: Optional[ActivitiesWaterSkiingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSkiingException') }})
-    watercraft_rental: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watercraftRental') }})
-    watercraft_rental_exception: Optional[ActivitiesWatercraftRentalExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watercraftRentalException') }})
+    beach_access: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachAccess') }})
+    beach_access_exception: Optional[ActivitiesBeachAccessExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachAccessException') }})
+    beach_front: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachFront') }})
+    beach_front_exception: Optional[ActivitiesBeachFrontExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('beachFrontException') }})
+    bicycle_rental: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bicycleRental') }})
+    bicycle_rental_exception: Optional[ActivitiesBicycleRentalExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bicycleRentalException') }})
+    boutique_stores: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boutiqueStores') }})
+    boutique_stores_exception: Optional[ActivitiesBoutiqueStoresExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boutiqueStoresException') }})
+    casino: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casino') }})
+    casino_exception: Optional[ActivitiesCasinoExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casinoException') }})
+    free_bicycle_rental: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBicycleRental') }})
+    free_bicycle_rental_exception: Optional[ActivitiesFreeBicycleRentalExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBicycleRentalException') }})
+    free_watercraft_rental: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWatercraftRental') }})
+    free_watercraft_rental_exception: Optional[ActivitiesFreeWatercraftRentalExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWatercraftRentalException') }})
+    game_room: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gameRoom') }})
+    game_room_exception: Optional[ActivitiesGameRoomExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gameRoomException') }})
+    golf: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('golf') }})
+    golf_exception: Optional[ActivitiesGolfExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('golfException') }})
+    horseback_riding: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('horsebackRiding') }})
+    horseback_riding_exception: Optional[ActivitiesHorsebackRidingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('horsebackRidingException') }})
+    nightclub: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nightclub') }})
+    nightclub_exception: Optional[ActivitiesNightclubExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nightclubException') }})
+    private_beach: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privateBeach') }})
+    private_beach_exception: Optional[ActivitiesPrivateBeachExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privateBeachException') }})
+    scuba: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scuba') }})
+    scuba_exception: Optional[ActivitiesScubaExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scubaException') }})
+    snorkeling: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snorkeling') }})
+    snorkeling_exception: Optional[ActivitiesSnorkelingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snorkelingException') }})
+    tennis: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tennis') }})
+    tennis_exception: Optional[ActivitiesTennisExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tennisException') }})
+    water_skiing: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSkiing') }})
+    water_skiing_exception: Optional[ActivitiesWaterSkiingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSkiingException') }})
+    watercraft_rental: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watercraftRental') }})
+    watercraft_rental_exception: Optional[ActivitiesWatercraftRentalExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watercraftRentalException') }})
     

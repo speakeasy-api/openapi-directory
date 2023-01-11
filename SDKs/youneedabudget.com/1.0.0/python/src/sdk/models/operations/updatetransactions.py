@@ -1,26 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import updatetransactionswrapper as shared_updatetransactionswrapper
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import savetransactionsresponse as shared_savetransactionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionsPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionsRequest:
-    path_params: UpdateTransactionsPathParams = field()
-    request: shared.UpdateTransactionsWrapper = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateTransactionsPathParams = dataclasses.field()
+    request: shared_updatetransactionswrapper.UpdateTransactionsWrapper = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    save_transactions_response: Optional[shared.SaveTransactionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    save_transactions_response: Optional[shared_savetransactionsresponse.SaveTransactionsResponse] = dataclasses.field(default=None)
     

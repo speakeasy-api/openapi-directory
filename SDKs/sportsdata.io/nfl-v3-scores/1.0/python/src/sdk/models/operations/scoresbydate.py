@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 
 class ScoresByDateFormatEnum(str, Enum):
@@ -10,20 +10,20 @@ class ScoresByDateFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByDatePathParams:
-    date_: str = field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
-    format: ScoresByDateFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    date_: str = dataclasses.field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
+    format: ScoresByDateFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByDateRequest:
-    path_params: ScoresByDatePathParams = field()
+    path_params: ScoresByDatePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByDateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scores: Optional[list[Any]] = dataclasses.field(default=None)
     

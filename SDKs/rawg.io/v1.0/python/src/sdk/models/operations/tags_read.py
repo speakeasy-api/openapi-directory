@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tagsingle as shared_tagsingle
 
 
-@dataclass
+@dataclasses.dataclass
 class TagsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TagsReadRequest:
-    path_params: TagsReadPathParams = field()
+    path_params: TagsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TagsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_single: Optional[shared.TagSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_single: Optional[shared_tagsingle.TagSingle] = dataclasses.field(default=None)
     

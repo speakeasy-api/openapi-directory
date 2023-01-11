@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWordsFromWordListPathParams:
-    permalink: str = field(metadata={'path_param': { 'field_name': 'permalink', 'style': 'simple', 'explode': False }})
+    permalink: str = dataclasses.field(metadata={'path_param': { 'field_name': 'permalink', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWordsFromWordListHeaders:
-    auth_token: str = field(metadata={'header': { 'field_name': 'auth_token', 'style': 'simple', 'explode': False }})
+    auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'auth_token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWordsFromWordListRequest:
-    headers: DeleteWordsFromWordListHeaders = field()
-    path_params: DeleteWordsFromWordListPathParams = field()
-    request: Optional[List[Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: DeleteWordsFromWordListHeaders = dataclasses.field()
+    path_params: DeleteWordsFromWordListPathParams = dataclasses.field()
+    request: Optional[list[Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWordsFromWordListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

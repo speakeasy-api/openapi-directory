@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,7 +6,7 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import monitorstreaminfo as shared_monitorstreaminfo
 
 class LiveBroadcastContentDetailsClosedCaptionsTypeEnum(str, Enum):
     CLOSED_CAPTIONS_TYPE_UNSPECIFIED = "closedCaptionsTypeUnspecified"
@@ -34,27 +34,27 @@ class LiveBroadcastContentDetailsStereoLayoutEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LiveBroadcastContentDetails:
     r"""LiveBroadcastContentDetails
     Detailed settings of a broadcast.
     """
     
-    bound_stream_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundStreamId') }})
-    bound_stream_last_update_time_ms: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundStreamLastUpdateTimeMs'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    closed_captions_type: Optional[LiveBroadcastContentDetailsClosedCaptionsTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closedCaptionsType') }})
-    enable_auto_start: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutoStart') }})
-    enable_auto_stop: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutoStop') }})
-    enable_closed_captions: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableClosedCaptions') }})
-    enable_content_encryption: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableContentEncryption') }})
-    enable_dvr: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableDvr') }})
-    enable_embed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableEmbed') }})
-    enable_low_latency: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableLowLatency') }})
-    latency_preference: Optional[LiveBroadcastContentDetailsLatencyPreferenceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latencyPreference') }})
-    mesh: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mesh') }})
-    monitor_stream: Optional[MonitorStreamInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitorStream') }})
-    projection: Optional[LiveBroadcastContentDetailsProjectionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projection') }})
-    record_from_start: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordFromStart') }})
-    start_with_slate: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startWithSlate') }})
-    stereo_layout: Optional[LiveBroadcastContentDetailsStereoLayoutEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stereoLayout') }})
+    bound_stream_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundStreamId') }})
+    bound_stream_last_update_time_ms: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundStreamLastUpdateTimeMs'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    closed_captions_type: Optional[LiveBroadcastContentDetailsClosedCaptionsTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('closedCaptionsType') }})
+    enable_auto_start: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutoStart') }})
+    enable_auto_stop: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableAutoStop') }})
+    enable_closed_captions: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableClosedCaptions') }})
+    enable_content_encryption: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableContentEncryption') }})
+    enable_dvr: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableDvr') }})
+    enable_embed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableEmbed') }})
+    enable_low_latency: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableLowLatency') }})
+    latency_preference: Optional[LiveBroadcastContentDetailsLatencyPreferenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latencyPreference') }})
+    mesh: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mesh') }})
+    monitor_stream: Optional[shared_monitorstreaminfo.MonitorStreamInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitorStream') }})
+    projection: Optional[LiveBroadcastContentDetailsProjectionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projection') }})
+    record_from_start: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordFromStart') }})
+    start_with_slate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startWithSlate') }})
+    stereo_layout: Optional[LiveBroadcastContentDetailsStereoLayoutEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stereoLayout') }})
     

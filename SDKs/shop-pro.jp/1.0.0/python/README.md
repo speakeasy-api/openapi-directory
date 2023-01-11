@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,15 +23,15 @@ req = operations.CreateUsageChargeRequest(
         ),
     ),
     path_params=operations.CreateUsageChargePathParams(
-        recurring_application_charge_id="omnis",
+        recurring_application_charge_id="aspernatur",
     ),
     headers=operations.CreateUsageChargeHeaders(
-        x_appstore_usage_charge_token="ducimus",
+        x_appstore_usage_charge_token="sequi",
     ),
     request=operations.CreateUsageChargeRequestBody(
         usage_charge=operations.CreateUsageChargeRequestBodyUsageCharge(
-            description="qui",
-            point=7166513718788633348,
+            description="unde",
+            point=5484340287911161180,
         ),
     ),
 )
@@ -70,8 +69,8 @@ if res.create_usage_charge_201_application_json_object is not None:
 
 ### script(deprecated)
 
-* `delete_v1_script_tags_script_tag_id_json` - スクリプトタグの削除
 * `create_script_tag` - スクリプトタグの作成
+* `delete_v1_script_tags_script_tag_id_json` - スクリプトタグの削除
 * `get_script_tag` - スクリプトタグの取得
 * `get_script_tags` - スクリプトタグの取得
 * `update_script_tag` - スクリプトタグの更新

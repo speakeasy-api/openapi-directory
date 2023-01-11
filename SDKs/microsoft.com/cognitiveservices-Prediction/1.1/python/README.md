@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,24 +18,24 @@ s = sdk.SDK()
     
 req = operations.PredictImageRequest(
     path_params=operations.PredictImagePathParams(
-        project_id="aspernatur",
+        project_id="officiis",
     ),
     query_params=operations.PredictImageQueryParams(
-        application="in",
-        iteration_id="nostrum",
+        application="accusamus",
+        iteration_id="veniam",
     ),
     headers=operations.PredictImageHeaders(
-        prediction_key="iure",
+        prediction_key="autem",
     ),
     request=operations.PredictImageRequestBody(
         image_data=operations.PredictImageRequestBodyImageData(
-            content="natus".encode(),
-            image_data="commodi",
+            content="eum".encode(),
+            image_data="assumenda",
         ),
     ),
 )
     
-res = s.sdk.predict_image(req)
+res = s.image_prediction_api.predict_image(req)
 
 if res.image_prediction_result_model is not None:
     # handle response
@@ -46,7 +45,7 @@ if res.image_prediction_result_model is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ImagePredictionApi
 
 * `predict_image` - Predict an image and saves the result
 * `predict_image_url` - Predict an image url and saves the result

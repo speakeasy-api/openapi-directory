@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitePathParams:
-    site_id: str = field(metadata={'path_param': { 'field_name': 'site_id', 'style': 'simple', 'explode': False }})
+    site_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'site_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSiteSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSiteRequest:
-    path_params: GetSitePathParams = field()
-    security: GetSiteSecurity = field()
+    path_params: GetSitePathParams = dataclasses.field()
+    security: GetSiteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site: Optional[shared.Site] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site: Optional[shared_site.Site] = dataclasses.field(default=None)
     

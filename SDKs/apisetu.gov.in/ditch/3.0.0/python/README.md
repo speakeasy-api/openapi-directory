@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.IncerRequest(
     security=operations.IncerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.IncerRequestBody(
         certificate_parameters=operations.IncerRequestBodyCertificateParameters(
-            appno="possimus",
-            certno="autem",
+            appno="error",
+            certno="nulla",
         ),
-        consent_artifact="ipsum",
+        consent_artifact="quis",
         format="pdf",
-        txn_id="aut",
+        txn_id="ratione",
     ),
 )
     
-res = s.sdk.incer(req)
+res = s.ap_is.incer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `incer` - Income Certificate
 * `rmcer` - Marriage Certificate

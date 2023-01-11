@@ -1,38 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_repository_permissions as shared_paginated_repository_permissions
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamsUsernamePermissionsRepositoriesRepoSlugPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamsUsernamePermissionsRepositoriesRepoSlugQueryParams:
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamsUsernamePermissionsRepositoriesRepoSlugSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamsUsernamePermissionsRepositoriesRepoSlugRequest:
-    path_params: GetTeamsUsernamePermissionsRepositoriesRepoSlugPathParams = field()
-    query_params: GetTeamsUsernamePermissionsRepositoriesRepoSlugQueryParams = field()
-    security: GetTeamsUsernamePermissionsRepositoriesRepoSlugSecurity = field()
+    path_params: GetTeamsUsernamePermissionsRepositoriesRepoSlugPathParams = dataclasses.field()
+    query_params: GetTeamsUsernamePermissionsRepositoriesRepoSlugQueryParams = dataclasses.field()
+    security: GetTeamsUsernamePermissionsRepositoriesRepoSlugSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamsUsernamePermissionsRepositoriesRepoSlugResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_repository_permissions: Optional[shared.PaginatedRepositoryPermissions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_repository_permissions: Optional[shared_paginated_repository_permissions.PaginatedRepositoryPermissions] = dataclasses.field(default=None)
     

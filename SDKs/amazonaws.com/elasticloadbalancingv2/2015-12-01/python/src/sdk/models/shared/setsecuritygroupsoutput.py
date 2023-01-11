@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetSecurityGroupsOutput:
-    security_group_ids: Optional[List[str]] = field(default=None)
+    security_group_ids: Optional[list[str]] = dataclasses.field(default=None)
     

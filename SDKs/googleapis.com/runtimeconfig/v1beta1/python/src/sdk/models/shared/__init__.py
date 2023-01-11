@@ -18,3 +18,5 @@ from .testiampermissionsresponse import *
 from .variable import *
 from .waiter import *
 from .watchvariablerequest import *
+
+__all__ = ["XgafvEnum","AltEnum","Binding","Cardinality","EndCondition","Expr","ListConfigsResponse","ListVariablesResponse","ListWaitersResponse","Operation","Policy","RuntimeConfig","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","TestIamPermissionsRequest","TestIamPermissionsResponse","VariableStateEnum","Variable","Waiter","WatchVariableRequest"]

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesJSONHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesJSONRequest:
-    headers: GetVolumesJSONHeaders = field()
+    headers: GetVolumesJSONHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    volumes: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    volumes: Optional[list[Any]] = dataclasses.field(default=None)
     

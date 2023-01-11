@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEpisodesInBatchForm:
-    ids: str = field(metadata={'form': { 'field_name': 'ids' }})
+    ids: str = dataclasses.field(metadata={'form': { 'field_name': 'ids' }})
     

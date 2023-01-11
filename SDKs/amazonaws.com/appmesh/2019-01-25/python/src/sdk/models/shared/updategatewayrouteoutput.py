@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gatewayroutedata as shared_gatewayroutedata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateGatewayRouteOutput:
-    gateway_route: GatewayRouteData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayRoute') }})
+    gateway_route: shared_gatewayroutedata.GatewayRouteData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayRoute') }})
     

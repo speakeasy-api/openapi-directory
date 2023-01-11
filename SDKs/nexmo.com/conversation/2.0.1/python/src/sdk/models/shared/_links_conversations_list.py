@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LinksConversationsListSelf:
-    href: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    href: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LinksConversationsList:
     r"""LinksConversationsList
     A series of links between resources in this API in the http://stateless.co/hal_specification.html.
     """
     
-    self: LinksConversationsListSelf = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
+    self: LinksConversationsListSelf = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
     

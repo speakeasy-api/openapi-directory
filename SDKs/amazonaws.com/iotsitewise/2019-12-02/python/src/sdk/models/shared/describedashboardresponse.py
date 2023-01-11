@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,14 +8,14 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeDashboardResponse:
-    dashboard_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardArn') }})
-    dashboard_creation_date: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardCreationDate'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    dashboard_definition: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardDefinition') }})
-    dashboard_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardId') }})
-    dashboard_last_update_date: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardLastUpdateDate'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    dashboard_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardName') }})
-    project_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectId') }})
-    dashboard_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardDescription') }})
+    dashboard_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardArn') }})
+    dashboard_creation_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardCreationDate'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    dashboard_definition: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardDefinition') }})
+    dashboard_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardId') }})
+    dashboard_last_update_date: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardLastUpdateDate'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    dashboard_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardName') }})
+    project_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectId') }})
+    dashboard_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dashboardDescription') }})
     

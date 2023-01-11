@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -10,22 +10,22 @@ class MarkdownRenderRequestBodyModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MarkdownRenderRequestBody:
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
-    context: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
-    mode: Optional[MarkdownRenderRequestBodyModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    context: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
+    mode: Optional[MarkdownRenderRequestBodyModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MarkdownRenderRequest:
-    request: Optional[MarkdownRenderRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[MarkdownRenderRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MarkdownRenderResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    markdown_render_200_text_html_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    markdown_render_200_text_html_string: Optional[str] = dataclasses.field(default=None)
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gridrange as shared_gridrange
 
 class MergeCellsRequestMergeTypeEnum(str, Enum):
     MERGE_ALL = "MERGE_ALL"
@@ -12,12 +12,12 @@ class MergeCellsRequestMergeTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MergeCellsRequest:
     r"""MergeCellsRequest
     Merges all cells in the range.
     """
     
-    merge_type: Optional[MergeCellsRequestMergeTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mergeType') }})
-    range: Optional[GridRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
+    merge_type: Optional[MergeCellsRequestMergeTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mergeType') }})
+    range: Optional[shared_gridrange.GridRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
     

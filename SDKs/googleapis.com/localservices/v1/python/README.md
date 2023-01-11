@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,32 @@ req = operations.LocalservicesAccountReportsSearchRequest(
     security=operations.LocalservicesAccountReportsSearchSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.LocalservicesAccountReportsSearchQueryParams(
-        dollar_xgafv="1",
-        access_token="deserunt",
+        dollar_xgafv="2",
+        access_token="ut",
         alt="proto",
-        callback="quae",
-        end_date_day=9166176680105154158,
-        end_date_month=3700916382826329361,
-        end_date_year=7949325261697935127,
-        fields="qui",
-        key="iste",
-        oauth_token="aperiam",
-        page_size=180525446025806699,
-        page_token="sed",
+        callback="minus",
+        end_date_day=2174189967349636921,
+        end_date_month=2614976778224928657,
+        end_date_year=6409889644823244839,
+        fields="quibusdam",
+        key="earum",
+        oauth_token="doloribus",
+        page_size=8887480854894973121,
+        page_token="saepe",
         pretty_print=True,
-        query="quis",
-        quota_user="amet",
-        start_date_day=4461855726951911472,
-        start_date_month=3498328393978279083,
-        start_date_year=4336138330598230696,
-        upload_type="vitae",
-        upload_protocol="aperiam",
+        query="et",
+        quota_user="est",
+        start_date_day=262930248101285882,
+        start_date_month=3776309695126930956,
+        start_date_year=2941842075518753716,
+        upload_type="aliquam",
+        upload_protocol="sequi",
     ),
 )
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import command as shared_command
 
 
-@dataclass
+@dataclasses.dataclass
 class PutCommandsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCommandsIDRequest:
-    path_params: PutCommandsIDPathParams = field()
-    request: shared.Command = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutCommandsIDPathParams = dataclasses.field()
+    request: shared_command.Command = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCommandsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    command: Optional[shared.Command] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    command: Optional[shared_command.Command] = dataclasses.field(default=None)
     

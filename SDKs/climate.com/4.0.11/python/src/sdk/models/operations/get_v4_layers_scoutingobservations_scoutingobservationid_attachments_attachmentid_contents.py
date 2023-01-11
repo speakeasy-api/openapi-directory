@@ -1,38 +1,40 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsPathParams:
-    attachment_id: str = field(metadata={'path_param': { 'field_name': 'attachmentId', 'style': 'simple', 'explode': False }})
-    scouting_observation_id: str = field(metadata={'path_param': { 'field_name': 'scoutingObservationId', 'style': 'simple', 'explode': False }})
+    attachment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'attachmentId', 'style': 'simple', 'explode': False }})
+    scouting_observation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scoutingObservationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    range: str = field(metadata={'header': { 'field_name': 'Range', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    range: str = dataclasses.field(metadata={'header': { 'field_name': 'Range', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    oauth2_authorization_code: Optional[shared.SchemeOauth2AuthorizationCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_authorization_code: Optional[shared_security.SchemeOauth2AuthorizationCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsRequest:
-    headers: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsHeaders = field()
-    path_params: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsPathParams = field()
-    security: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsSecurity = field()
+    headers: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsHeaders = dataclasses.field()
+    path_params: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsPathParams = dataclasses.field()
+    security: GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

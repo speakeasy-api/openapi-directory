@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import calendar as shared_calendar
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarsQueryParams:
-    all: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarsRequest:
-    query_params: GetCalendarsQueryParams = field()
+    query_params: GetCalendarsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    calendars: Optional[List[shared.Calendar]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    calendars: Optional[list[shared_calendar.Calendar]] = dataclasses.field(default=None)
     

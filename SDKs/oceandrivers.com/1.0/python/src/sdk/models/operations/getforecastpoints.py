@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastPointsPathParams:
-    language: str = field(metadata={'path_param': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
-    yatchclubid: str = field(metadata={'path_param': { 'field_name': 'yatchclubid', 'style': 'simple', 'explode': False }})
+    language: str = dataclasses.field(metadata={'path_param': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
+    yatchclubid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'yatchclubid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastPointsRequest:
-    path_params: GetForecastPointsPathParams = field()
+    path_params: GetForecastPointsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastPointsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyCookieNamesInWhiteList:
     r"""TooManyCookieNamesInWhiteList
     Your request contains more cookie names in the whitelist than are allowed per cache behavior.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

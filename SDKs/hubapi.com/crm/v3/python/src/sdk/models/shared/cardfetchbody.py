@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import cardobjecttypebody as shared_cardobjecttypebody
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CardFetchBody:
     r"""CardFetchBody
     Configuration for this card's data fetch request.
     """
     
-    object_types: List[CardObjectTypeBody] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectTypes') }})
-    target_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetUrl') }})
+    object_types: list[shared_cardobjecttypebody.CardObjectTypeBody] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectTypes') }})
+    target_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetUrl') }})
     

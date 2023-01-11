@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import service as shared_service
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesReadRequest:
-    path_params: IpamServicesReadPathParams = field()
+    path_params: IpamServicesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamServicesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service: Optional[shared.Service] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service: Optional[shared_service.Service] = dataclasses.field(default=None)
     

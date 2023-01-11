@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class WeekUpcomingPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WeekUpcomingRequest:
-    path_params: WeekUpcomingPathParams = field()
+    path_params: WeekUpcomingPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WeekUpcomingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    week_upcoming_200_application_json_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    week_upcoming_200_application_json_integer: Optional[int] = dataclasses.field(default=None)
     

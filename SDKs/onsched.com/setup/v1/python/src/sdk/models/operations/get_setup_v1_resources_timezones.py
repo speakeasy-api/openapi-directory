@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import systemtimezoneviewmodel as shared_systemtimezoneviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesTimezonesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    system_timezone_view_model: Optional[shared.SystemTimezoneViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    system_timezone_view_model: Optional[shared_systemtimezoneviewmodel.SystemTimezoneViewModel] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import devicewithconfigcontext as shared_devicewithconfigcontext
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesReadRequest:
-    path_params: DcimDevicesReadPathParams = field()
+    path_params: DcimDevicesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_with_config_context: Optional[shared.DeviceWithConfigContext] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_with_config_context: Optional[shared_devicewithconfigcontext.DeviceWithConfigContext] = dataclasses.field(default=None)
     

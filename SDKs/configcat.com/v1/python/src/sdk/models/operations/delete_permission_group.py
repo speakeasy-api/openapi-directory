@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionGroupPathParams:
-    permission_group_id: int = field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
+    permission_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionGroupRequest:
-    path_params: DeletePermissionGroupPathParams = field()
+    path_params: DeletePermissionGroupPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

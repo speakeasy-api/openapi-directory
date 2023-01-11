@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -93,4 +93,7 @@ class WebhookEventTypeEnum(str, Enum):
     HRIS_COMPANY_CREATED = "hris.company.created"
     HRIS_COMPANY_UPDATED = "hris.company.updated"
     HRIS_COMPANY_DELETED = "hris.company.deleted"
+    FILE_STORAGE_FILE_CREATED = "file-storage.file.created"
+    FILE_STORAGE_FILE_UPDATED = "file-storage.file.updated"
+    FILE_STORAGE_FILE_DELETED = "file-storage.file.deleted"
 

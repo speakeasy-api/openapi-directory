@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReportTaskProgressOutput:
     r"""ReportTaskProgressOutput
     Contains the output of ReportTaskProgress.
     """
     
-    canceled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('canceled') }})
+    canceled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('canceled') }})
     

@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectEnvvarNamePathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 class DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum(str, Enum):
     OK = "OK"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectEnvvarName200ApplicationJSON:
-    message: Optional[DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    message: Optional[DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectEnvvarNameRequest:
-    path_params: DeleteProjectUsernameProjectEnvvarNamePathParams = field()
+    path_params: DeleteProjectUsernameProjectEnvvarNamePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectEnvvarNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_project_username_project_envvar_name_200_application_json_object: Optional[DeleteProjectUsernameProjectEnvvarName200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_project_username_project_envvar_name_200_application_json_object: Optional[DeleteProjectUsernameProjectEnvvarName200ApplicationJSON] = dataclasses.field(default=None)
     

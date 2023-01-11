@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import exchangereviewstatus as shared_exchangereviewstatus
+from ..shared import publisherreviewstatus as shared_publisherreviewstatus
 
 class ReviewStatusInfoApprovalStatusEnum(str, Enum):
     APPROVAL_STATUS_UNSPECIFIED = "APPROVAL_STATUS_UNSPECIFIED"
@@ -26,15 +27,15 @@ class ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReviewStatusInfo:
     r"""ReviewStatusInfo
     Review statuses for the creative.
     """
     
-    approval_status: Optional[ReviewStatusInfoApprovalStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('approvalStatus') }})
-    content_and_policy_review_status: Optional[ReviewStatusInfoContentAndPolicyReviewStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentAndPolicyReviewStatus') }})
-    creative_and_landing_page_review_status: Optional[ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeAndLandingPageReviewStatus') }})
-    exchange_review_statuses: Optional[List[ExchangeReviewStatus]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeReviewStatuses') }})
-    publisher_review_statuses: Optional[List[PublisherReviewStatus]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherReviewStatuses') }})
+    approval_status: Optional[ReviewStatusInfoApprovalStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('approvalStatus') }})
+    content_and_policy_review_status: Optional[ReviewStatusInfoContentAndPolicyReviewStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentAndPolicyReviewStatus') }})
+    creative_and_landing_page_review_status: Optional[ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeAndLandingPageReviewStatus') }})
+    exchange_review_statuses: Optional[list[shared_exchangereviewstatus.ExchangeReviewStatus]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeReviewStatuses') }})
+    publisher_review_statuses: Optional[list[shared_publisherreviewstatus.PublisherReviewStatus]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherReviewStatuses') }})
     

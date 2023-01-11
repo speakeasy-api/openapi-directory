@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import updatepayeedetailsrequest as shared_updatepayeedetailsrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class PayeeDetailsUpdateV3PathParams:
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayeeDetailsUpdateV3Request:
-    path_params: PayeeDetailsUpdateV3PathParams = field()
-    request: shared.UpdatePayeeDetailsRequestInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PayeeDetailsUpdateV3PathParams = dataclasses.field()
+    request: shared_updatepayeedetailsrequest.UpdatePayeeDetailsRequestInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayeeDetailsUpdateV3Response:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

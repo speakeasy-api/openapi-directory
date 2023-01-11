@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -9,24 +9,24 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCveCheckConfigurationRequestBody:
     r"""UpdateCveCheckConfigurationRequestBody
     CVE check config
     """
     
-    api_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 class UpdateCveCheckConfiguration200ApplicationJSONActionEnum(str, Enum):
     UPDATE_CVE_CHECK_CONFIGURATION = "updateCVECheckConfiguration"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCveCheckConfiguration200ApplicationJSONData:
-    api_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 class UpdateCveCheckConfiguration200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -34,21 +34,21 @@ class UpdateCveCheckConfiguration200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCveCheckConfiguration200ApplicationJSON:
-    action: UpdateCveCheckConfiguration200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: UpdateCveCheckConfiguration200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: UpdateCveCheckConfiguration200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: UpdateCveCheckConfiguration200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: UpdateCveCheckConfiguration200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: UpdateCveCheckConfiguration200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCveCheckConfigurationRequest:
-    request: Optional[UpdateCveCheckConfigurationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[UpdateCveCheckConfigurationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCveCheckConfigurationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_cve_check_configuration_200_application_json_object: Optional[UpdateCveCheckConfiguration200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_cve_check_configuration_200_application_json_object: Optional[UpdateCveCheckConfiguration200ApplicationJSON] = dataclasses.field(default=None)
     

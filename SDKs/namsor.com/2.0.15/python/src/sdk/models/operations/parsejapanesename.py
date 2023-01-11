@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnameparsedout as shared_personalnameparsedout
 
 
-@dataclass
+@dataclasses.dataclass
 class ParseJapaneseNamePathParams:
-    japanese_name: str = field(metadata={'path_param': { 'field_name': 'japaneseName', 'style': 'simple', 'explode': False }})
+    japanese_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseJapaneseNameSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseJapaneseNameRequest:
-    path_params: ParseJapaneseNamePathParams = field()
-    security: ParseJapaneseNameSecurity = field()
+    path_params: ParseJapaneseNamePathParams = dataclasses.field()
+    security: ParseJapaneseNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseJapaneseNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_parsed_out: Optional[shared.PersonalNameParsedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_parsed_out: Optional[shared_personalnameparsedout.PersonalNameParsedOut] = dataclasses.field(default=None)
     

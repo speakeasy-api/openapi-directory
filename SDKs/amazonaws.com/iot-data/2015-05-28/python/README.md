@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.DeleteThingShadowRequest(
     path_params=operations.DeleteThingShadowPathParams(
-        thing_name="modi",
+        thing_name="aliquam",
     ),
     query_params=operations.DeleteThingShadowQueryParams(
-        name="quia",
+        name="quos",
     ),
     headers=operations.DeleteThingShadowHeaders(
-        x_amz_algorithm="pariatur",
-        x_amz_content_sha256="velit",
-        x_amz_credential="possimus",
-        x_amz_date="cumque",
-        x_amz_security_token="ut",
-        x_amz_signature="corrupti",
-        x_amz_signed_headers="officia",
+        x_amz_algorithm="omnis",
+        x_amz_content_sha256="illum",
+        x_amz_credential="repellat",
+        x_amz_date="id",
+        x_amz_security_token="blanditiis",
+        x_amz_signature="possimus",
+        x_amz_signed_headers="eius",
     ),
 )
     
-res = s.sdk.delete_thing_shadow(req)
+res = s.delete_thing_shadow(req)
 
 if res.delete_thing_shadow_response is not None:
     # handle response

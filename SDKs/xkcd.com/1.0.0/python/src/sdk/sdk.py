@@ -44,30 +44,6 @@ class SDK:
     
     
     
-    def get_comic_id_info_0_json(self, request: operations.GetComicIDInfo0JSONRequest) -> operations.GetComicIDInfo0JSONResponse:
-        r"""Fetch comics and metadata  by comic id.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/{comicId}/info.0.json", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetComicIDInfo0JSONResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-
-        return res
-
-    
     def get_info_0_json(self) -> operations.GetInfo0JSONResponse:
         r"""Fetch current comic and metadata.
         
@@ -84,6 +60,30 @@ class SDK:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetInfo0JSONResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_comic_id_info_0_json(self, request: operations.GetComicIDInfo0JSONRequest) -> operations.GetComicIDInfo0JSONResponse:
+        r"""Fetch comics and metadata  by comic id.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/{comicId}/info.0.json", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetComicIDInfo0JSONResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):

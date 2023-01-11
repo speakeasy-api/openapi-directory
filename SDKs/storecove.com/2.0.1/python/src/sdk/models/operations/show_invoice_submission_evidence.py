@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowInvoiceSubmissionEvidencePathParams:
-    guid: str = field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
+    guid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowInvoiceSubmissionEvidenceRequest:
-    path_params: ShowInvoiceSubmissionEvidencePathParams = field()
+    path_params: ShowInvoiceSubmissionEvidencePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowInvoiceSubmissionEvidenceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invoice_submission_evidence: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invoice_submission_evidence: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsDeleteRequest:
-    path_params: IpamVrfsDeletePathParams = field()
+    path_params: IpamVrfsDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVrfsDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

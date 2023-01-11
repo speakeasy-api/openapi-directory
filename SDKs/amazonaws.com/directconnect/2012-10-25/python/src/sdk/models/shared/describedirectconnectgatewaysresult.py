@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import directconnectgateway as shared_directconnectgateway
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeDirectConnectGatewaysResult:
-    direct_connect_gateways: Optional[List[DirectConnectGateway]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGateways') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    direct_connect_gateways: Optional[list[shared_directconnectgateway.DirectConnectGateway]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGateways') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

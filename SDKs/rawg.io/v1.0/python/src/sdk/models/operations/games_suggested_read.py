@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gamesingle as shared_gamesingle
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesSuggestedReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesSuggestedReadRequest:
-    path_params: GamesSuggestedReadPathParams = field()
+    path_params: GamesSuggestedReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesSuggestedReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    game_single: Optional[shared.GameSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    game_single: Optional[shared_gamesingle.GameSingle] = dataclasses.field(default=None)
     

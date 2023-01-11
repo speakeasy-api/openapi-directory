@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MapPair:
-    key_value: Optional[str] = field(default=None)
-    string_value: Optional[str] = field(default=None)
+    key_value: Optional[str] = dataclasses.field(default=None)
+    string_value: Optional[str] = dataclasses.field(default=None)
     

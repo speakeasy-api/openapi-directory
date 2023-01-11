@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class AnonymizePathParams:
-    anonymized: bool = field(metadata={'path_param': { 'field_name': 'anonymized', 'style': 'simple', 'explode': False }})
-    source: str = field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
+    anonymized: bool = dataclasses.field(metadata={'path_param': { 'field_name': 'anonymized', 'style': 'simple', 'explode': False }})
+    source: str = dataclasses.field(metadata={'path_param': { 'field_name': 'source', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AnonymizeRequest:
-    path_params: AnonymizePathParams = field()
+    path_params: AnonymizePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AnonymizeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

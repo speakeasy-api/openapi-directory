@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import querybatchresponse as shared_querybatchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class QueryBatchStatusV3PathParams:
-    batch_id: str = field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
+    batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QueryBatchStatusV3Request:
-    path_params: QueryBatchStatusV3PathParams = field()
+    path_params: QueryBatchStatusV3PathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class QueryBatchStatusV3Response:
-    content_type: str = field()
-    status_code: int = field()
-    query_batch_response: Optional[shared.QueryBatchResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    query_batch_response: Optional[shared_querybatchresponse.QueryBatchResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

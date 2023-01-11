@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dependenciesout as shared_dependenciesout
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SentenceDependencyOut:
-    dependencies: DependenciesOut = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencies') }})
-    sentence: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sentence') }})
+    dependencies: shared_dependenciesout.DependenciesOut = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencies') }})
+    sentence: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sentence') }})
     

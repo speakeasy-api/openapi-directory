@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import persona as shared_persona
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPersonasIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPersonasIDQueryParams:
-    expand: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': True }})
-    fields: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    expand: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'expand', 'style': 'form', 'explode': True }})
+    fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPersonasIDRequest:
-    path_params: GetPersonasIDPathParams = field()
-    query_params: GetPersonasIDQueryParams = field()
+    path_params: GetPersonasIDPathParams = dataclasses.field()
+    query_params: GetPersonasIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPersonasIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
-    persona: Optional[shared.Persona] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    persona: Optional[shared_persona.Persona] = dataclasses.field(default=None)
     

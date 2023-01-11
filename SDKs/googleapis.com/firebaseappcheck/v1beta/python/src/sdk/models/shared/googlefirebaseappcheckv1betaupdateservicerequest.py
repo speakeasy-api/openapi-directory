@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlefirebaseappcheckv1betaservice as shared_googlefirebaseappcheckv1betaservice
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleFirebaseAppcheckV1betaUpdateServiceRequest:
     r"""GoogleFirebaseAppcheckV1betaUpdateServiceRequest
     Request message for the UpdateService method as well as an individual update message for the BatchUpdateServices method.
     """
     
-    service: Optional[GoogleFirebaseAppcheckV1betaService] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
-    update_mask: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateMask') }})
+    service: Optional[shared_googlefirebaseappcheckv1betaservice.GoogleFirebaseAppcheckV1betaService] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
+    update_mask: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateMask') }})
     

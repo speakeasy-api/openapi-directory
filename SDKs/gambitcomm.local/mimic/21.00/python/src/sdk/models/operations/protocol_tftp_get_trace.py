@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configtftp as shared_configtftp
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetTraceRequest:
-    path_params: ProtocolTftpGetTracePathParams = field()
+    path_params: ProtocolTftpGetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_tftp: Optional[shared.ConfigTftp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_tftp: Optional[shared_configtftp.ConfigTftp] = dataclasses.field(default=None)
     

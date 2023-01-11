@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import repository_pre_receive_hook as shared_repository_pre_receive_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    pre_receive_hook_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    pre_receive_hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookForRepoRequest:
-    path_params: EnterpriseAdminGetPreReceiveHookForRepoPathParams = field()
+    path_params: EnterpriseAdminGetPreReceiveHookForRepoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveHookForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    repository_pre_receive_hook: Optional[shared.RepositoryPreReceiveHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    repository_pre_receive_hook: Optional[shared_repository_pre_receive_hook.RepositoryPreReceiveHook] = dataclasses.field(default=None)
     

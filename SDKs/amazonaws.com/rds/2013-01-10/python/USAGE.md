@@ -1,0 +1,38 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        hmac=shared.SchemeHmac(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.GetAddSourceIdentifierToSubscriptionRequest(
+    query_params=operations.GetAddSourceIdentifierToSubscriptionQueryParams(
+        action="AddSourceIdentifierToSubscription",
+        source_identifier="ad",
+        subscription_name="ut",
+        version="2013-01-10",
+    ),
+    headers=operations.GetAddSourceIdentifierToSubscriptionHeaders(
+        x_amz_algorithm="qui",
+        x_amz_content_sha256="in",
+        x_amz_credential="ea",
+        x_amz_date="voluptate",
+        x_amz_security_token="et",
+        x_amz_signature="consequatur",
+        x_amz_signed_headers="aliquam",
+    ),
+)
+    
+res = s.get_add_source_identifier_to_subscription(req)
+
+if res.body is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

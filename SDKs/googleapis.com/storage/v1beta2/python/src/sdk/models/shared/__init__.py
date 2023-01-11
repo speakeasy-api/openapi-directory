@@ -10,3 +10,5 @@ from .objectaccesscontrol import *
 from .objectaccesscontrols import *
 from .objects import *
 from .security import *
+
+__all__ = ["AltEnum","BucketCors","BucketLifecycleRuleAction","BucketLifecycleRuleCondition","BucketLifecycleRule","BucketLifecycle","BucketLogging","BucketOwner","BucketVersioning","BucketWebsite","Bucket","BucketAccessControl","BucketAccessControls","Buckets","Channel","ComposeRequestSourceObjectsObjectPreconditions","ComposeRequestSourceObjects","ComposeRequest","ObjectOwner","Object","ObjectAccessControl","ObjectAccessControls","Objects","SchemeOauth2","SchemeOauth2c"]

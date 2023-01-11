@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import messagesresponse as shared_messagesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class MessagesFetchAllPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MessagesFetchAllQueryParams:
-    contact_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'contactId', 'style': 'form', 'explode': True }})
-    conversation_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'conversationId', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    contact_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'contactId', 'style': 'form', 'explode': True }})
+    conversation_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'conversationId', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MessagesFetchAllSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MessagesFetchAllRequest:
-    path_params: MessagesFetchAllPathParams = field()
-    query_params: MessagesFetchAllQueryParams = field()
-    security: MessagesFetchAllSecurity = field()
+    path_params: MessagesFetchAllPathParams = dataclasses.field()
+    query_params: MessagesFetchAllQueryParams = dataclasses.field()
+    security: MessagesFetchAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MessagesFetchAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    messages_response: Optional[shared.MessagesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    messages_response: Optional[shared_messagesresponse.MessagesResponse] = dataclasses.field(default=None)
     

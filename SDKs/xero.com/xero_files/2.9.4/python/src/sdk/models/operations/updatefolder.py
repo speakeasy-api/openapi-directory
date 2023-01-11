@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFolderPathParams:
-    folder_id: str = field(metadata={'path_param': { 'field_name': 'FolderId', 'style': 'simple', 'explode': False }})
+    folder_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FolderId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFolderHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFolderSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFolderRequest:
-    headers: UpdateFolderHeaders = field()
-    path_params: UpdateFolderPathParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateFolderSecurity = field()
+    headers: UpdateFolderHeaders = dataclasses.field()
+    path_params: UpdateFolderPathParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateFolderSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFolderResponse:
-    content_type: str = field()
-    status_code: int = field()
-    folder: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    folder: Optional[Any] = dataclasses.field(default=None)
     

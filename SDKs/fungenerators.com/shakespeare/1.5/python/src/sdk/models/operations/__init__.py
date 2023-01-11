@@ -3,3 +3,5 @@ from .get_shakespeare_generate_lorem_ipsum import *
 from .get_shakespeare_generate_name import *
 from .get_shakespeare_quote import *
 from .get_shakespeare_translate import *
+
+__all__ = ["GetShakespeareGenerateInsultQueryParams","GetShakespeareGenerateInsultSecurity","GetShakespeareGenerateInsultRequest","GetShakespeareGenerateInsultResponse","GetShakespeareGenerateLoremIpsumQueryParams","GetShakespeareGenerateLoremIpsumSecurity","GetShakespeareGenerateLoremIpsumRequest","GetShakespeareGenerateLoremIpsumResponse","GetShakespeareGenerateNameQueryParams","GetShakespeareGenerateNameSecurity","GetShakespeareGenerateNameRequest","GetShakespeareGenerateNameResponse","GetShakespeareQuoteSecurity","GetShakespeareQuoteRequest","GetShakespeareQuoteResponse","GetShakespeareTranslateQueryParams","GetShakespeareTranslateSecurity","GetShakespeareTranslateRequest","GetShakespeareTranslateResponse"]

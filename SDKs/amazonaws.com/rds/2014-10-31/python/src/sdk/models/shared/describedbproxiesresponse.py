@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbproxy as shared_dbproxy
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbProxiesResponse:
-    db_proxies: Optional[List[DbProxy]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_proxies: Optional[list[shared_dbproxy.DbProxy]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

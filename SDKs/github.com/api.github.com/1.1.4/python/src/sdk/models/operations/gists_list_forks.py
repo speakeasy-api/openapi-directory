@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import gist_simple as shared_gist_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class GistsListForksPathParams:
-    gist_id: str = field(metadata={'path_param': { 'field_name': 'gist_id', 'style': 'simple', 'explode': False }})
+    gist_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gist_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsListForksQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsListForksRequest:
-    path_params: GistsListForksPathParams = field()
-    query_params: GistsListForksQueryParams = field()
+    path_params: GistsListForksPathParams = dataclasses.field()
+    query_params: GistsListForksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsListForksResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    gist_simples: Optional[List[shared.GistSimple]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    gist_simples: Optional[list[shared_gist_simple.GistSimple]] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -22,15 +22,15 @@ class ReportGoogleLocationRequestReportReasonBadRecommendationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReportGoogleLocationRequest:
     r"""ReportGoogleLocationRequest
     Request message for reporting a GoogleLocation.
     """
     
-    location_group_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationGroupName') }})
-    report_reason_bad_location: Optional[ReportGoogleLocationRequestReportReasonBadLocationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonBadLocation') }})
-    report_reason_bad_recommendation: Optional[ReportGoogleLocationRequestReportReasonBadRecommendationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonBadRecommendation') }})
-    report_reason_elaboration: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonElaboration') }})
-    report_reason_language_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonLanguageCode') }})
+    location_group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationGroupName') }})
+    report_reason_bad_location: Optional[ReportGoogleLocationRequestReportReasonBadLocationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonBadLocation') }})
+    report_reason_bad_recommendation: Optional[ReportGoogleLocationRequestReportReasonBadRecommendationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonBadRecommendation') }})
+    report_reason_elaboration: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonElaboration') }})
+    report_reason_language_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportReasonLanguageCode') }})
     

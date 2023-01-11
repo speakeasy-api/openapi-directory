@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,27 @@ s.config_security(
     
 req = operations.AddTagsToResourceRequest(
     headers=operations.AddTagsToResourceHeaders(
-        x_amz_algorithm="modi",
-        x_amz_content_sha256="dolor",
-        x_amz_credential="omnis",
-        x_amz_date="explicabo",
-        x_amz_security_token="voluptatum",
-        x_amz_signature="quia",
-        x_amz_signed_headers="perferendis",
+        x_amz_algorithm="nihil",
+        x_amz_content_sha256="magni",
+        x_amz_credential="vitae",
+        x_amz_date="excepturi",
+        x_amz_security_token="ut",
+        x_amz_signature="totam",
+        x_amz_signed_headers="blanditiis",
         x_amz_target="CloudHsmFrontendService.AddTagsToResource",
     ),
     request=shared.AddTagsToResourceRequest(
-        resource_arn="incidunt",
+        resource_arn="sint",
         tag_list=[
             shared.Tag(
-                key="velit",
-                value="voluptatem",
+                key="fugiat",
+                value="adipisci",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags_to_resource(req)
+res = s.add_tags_to_resource(req)
 
 if res.add_tags_to_resource_response is not None:
     # handle response

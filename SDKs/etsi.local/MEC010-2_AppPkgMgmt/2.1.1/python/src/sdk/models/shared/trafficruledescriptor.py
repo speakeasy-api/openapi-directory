@@ -1,15 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import action_enum as shared_action_enum
+from ..shared import interfacedescriptor as shared_interfacedescriptor
+from ..shared import filtertype_enum as shared_filtertype_enum
+from ..shared import trafficfilter as shared_trafficfilter
 
 
-@dataclass
+@dataclasses.dataclass
 class TrafficRuleDescriptor:
-    action: ActionEnum = field()
-    filter_type: FilterTypeEnum = field()
-    priority: int = field()
-    traffic_filter: List[TrafficFilter] = field()
-    traffic_rule_id: str = field()
-    dst_interface: Optional[List[InterfaceDescriptor]] = field(default=None)
+    action: shared_action_enum.ActionEnum = dataclasses.field()
+    filter_type: shared_filtertype_enum.FilterTypeEnum = dataclasses.field()
+    priority: int = dataclasses.field()
+    traffic_filter: list[shared_trafficfilter.TrafficFilter] = dataclasses.field()
+    traffic_rule_id: str = dataclasses.field()
+    dst_interface: Optional[list[shared_interfacedescriptor.InterfaceDescriptor]] = dataclasses.field(default=None)
     

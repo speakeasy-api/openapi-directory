@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.LlcerRequest(
     security=operations.LlcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.LlcerRequestBody(
         certificate_parameters=operations.LlcerRequestBodyCertificateParameters(
-            udf1="excepturi",
-            udf2="aut",
-            udf3="et",
+            udf1="ex",
+            udf2="ad",
+            udf3="dolorum",
         ),
-        consent_artifact="omnis",
+        consent_artifact="voluptatem",
         format="pdf",
-        txn_id="et",
+        txn_id="laborum",
     ),
 )
     
-res = s.sdk.llcer(req)
+res = s.ap_is.llcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `llcer` - Leave and License Certificate
 

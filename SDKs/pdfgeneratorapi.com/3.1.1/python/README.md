@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,16 +23,22 @@ s.config_security(
     )
 )
     
-req = operations.CopyTemplateRequest(
-    query_params=operations.CopyTemplateQueryParams(
-        name="consequatur",
-        template_id=9220811630772968327,
+req = operations.MergeTemplateRequest(
+    query_params=operations.MergeTemplateQueryParams(
+        format="zip",
+        name="neque",
+        output="base64",
+        template_id=8124352784887915603,
+    ),
+    request=shared.Data(
+        id=7762150201625547768,
+        name="possimus",
     ),
 )
     
-res = s.sdk.copy_template(req)
+res = s.documents.merge_template(req)
 
-if res.copy_template_200_application_json_object is not None:
+if res.merge_template_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -41,19 +46,25 @@ if res.copy_template_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Documents
+
+* `merge_template` - Generate document
+* `merge_templates` - Generate document (multiple templates)
+
+### Templates
 
 * `copy_template` - Copy template
 * `create_template` - Create template
 * `delete_template` - Delete template
-* `delete_workspace` - Delete workspace
 * `get_editor_url` - Open editor
 * `get_template` - Get template
 * `get_templates` - Get templates
-* `get_workspace` - Get workspace
-* `merge_template` - Generate document
-* `merge_templates` - Generate document (multiple templates)
 * `update_template` - Update template
+
+### Workspaces
+
+* `delete_workspace` - Delete workspace
+* `get_workspace` - Get workspace
 
 <!-- End SDK Available Operations -->
 

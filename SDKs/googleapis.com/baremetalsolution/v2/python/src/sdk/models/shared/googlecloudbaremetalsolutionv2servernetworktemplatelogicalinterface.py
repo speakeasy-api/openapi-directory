@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface:
     r"""GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface
     Logical interface.
     """
     
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    required: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('required') }})
-    type: Optional[GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    required: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('required') }})
+    type: Optional[GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

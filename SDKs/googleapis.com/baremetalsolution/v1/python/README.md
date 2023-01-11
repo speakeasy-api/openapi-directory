@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,30 @@ req = operations.BaremetalsolutionOperationsCancelRequest(
     security=operations.BaremetalsolutionOperationsCancelSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.BaremetalsolutionOperationsCancelPathParams(
-        name="non",
+        name="nulla",
     ),
     query_params=operations.BaremetalsolutionOperationsCancelQueryParams(
-        dollar_xgafv="2",
-        access_token="reprehenderit",
-        alt="media",
-        callback="doloribus",
-        fields="nihil",
-        key="commodi",
-        oauth_token="consequatur",
-        pretty_print=False,
-        quota_user="reprehenderit",
-        upload_type="tempore",
-        upload_protocol="consequatur",
+        dollar_xgafv="1",
+        access_token="eligendi",
+        alt="json",
+        callback="rerum",
+        fields="atque",
+        key="voluptatem",
+        oauth_token="dolor",
+        pretty_print=True,
+        quota_user="magni",
+        upload_type="exercitationem",
+        upload_protocol="provident",
     ),
     request={
-        "soluta": "molestiae",
-        "minima": "illum",
+        "similique": "ipsam",
+        "quia": "voluptatum",
     },
 )
     

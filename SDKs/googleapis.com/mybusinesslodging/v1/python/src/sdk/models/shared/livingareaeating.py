@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -102,42 +102,42 @@ class LivingAreaEatingToasterExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LivingAreaEating:
     r"""LivingAreaEating
     Information about eating features in the living area.
     """
     
-    coffee_maker: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coffeeMaker') }})
-    coffee_maker_exception: Optional[LivingAreaEatingCoffeeMakerExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coffeeMakerException') }})
-    cookware: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cookware') }})
-    cookware_exception: Optional[LivingAreaEatingCookwareExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cookwareException') }})
-    dishwasher: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dishwasher') }})
-    dishwasher_exception: Optional[LivingAreaEatingDishwasherExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dishwasherException') }})
-    indoor_grill: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indoorGrill') }})
-    indoor_grill_exception: Optional[LivingAreaEatingIndoorGrillExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indoorGrillException') }})
-    kettle: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kettle') }})
-    kettle_exception: Optional[LivingAreaEatingKettleExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kettleException') }})
-    kitchen_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kitchenAvailable') }})
-    kitchen_available_exception: Optional[LivingAreaEatingKitchenAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kitchenAvailableException') }})
-    microwave: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('microwave') }})
-    microwave_exception: Optional[LivingAreaEatingMicrowaveExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('microwaveException') }})
-    minibar: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minibar') }})
-    minibar_exception: Optional[LivingAreaEatingMinibarExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minibarException') }})
-    outdoor_grill: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outdoorGrill') }})
-    outdoor_grill_exception: Optional[LivingAreaEatingOutdoorGrillExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outdoorGrillException') }})
-    oven: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oven') }})
-    oven_exception: Optional[LivingAreaEatingOvenExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ovenException') }})
-    refrigerator: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refrigerator') }})
-    refrigerator_exception: Optional[LivingAreaEatingRefrigeratorExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refrigeratorException') }})
-    sink: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sink') }})
-    sink_exception: Optional[LivingAreaEatingSinkExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sinkException') }})
-    snackbar: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snackbar') }})
-    snackbar_exception: Optional[LivingAreaEatingSnackbarExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snackbarException') }})
-    stove: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stove') }})
-    stove_exception: Optional[LivingAreaEatingStoveExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stoveException') }})
-    tea_station: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('teaStation') }})
-    tea_station_exception: Optional[LivingAreaEatingTeaStationExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('teaStationException') }})
-    toaster: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toaster') }})
-    toaster_exception: Optional[LivingAreaEatingToasterExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toasterException') }})
+    coffee_maker: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coffeeMaker') }})
+    coffee_maker_exception: Optional[LivingAreaEatingCoffeeMakerExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coffeeMakerException') }})
+    cookware: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cookware') }})
+    cookware_exception: Optional[LivingAreaEatingCookwareExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cookwareException') }})
+    dishwasher: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dishwasher') }})
+    dishwasher_exception: Optional[LivingAreaEatingDishwasherExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dishwasherException') }})
+    indoor_grill: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indoorGrill') }})
+    indoor_grill_exception: Optional[LivingAreaEatingIndoorGrillExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indoorGrillException') }})
+    kettle: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kettle') }})
+    kettle_exception: Optional[LivingAreaEatingKettleExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kettleException') }})
+    kitchen_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kitchenAvailable') }})
+    kitchen_available_exception: Optional[LivingAreaEatingKitchenAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kitchenAvailableException') }})
+    microwave: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('microwave') }})
+    microwave_exception: Optional[LivingAreaEatingMicrowaveExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('microwaveException') }})
+    minibar: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minibar') }})
+    minibar_exception: Optional[LivingAreaEatingMinibarExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minibarException') }})
+    outdoor_grill: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outdoorGrill') }})
+    outdoor_grill_exception: Optional[LivingAreaEatingOutdoorGrillExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outdoorGrillException') }})
+    oven: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oven') }})
+    oven_exception: Optional[LivingAreaEatingOvenExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ovenException') }})
+    refrigerator: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refrigerator') }})
+    refrigerator_exception: Optional[LivingAreaEatingRefrigeratorExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refrigeratorException') }})
+    sink: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sink') }})
+    sink_exception: Optional[LivingAreaEatingSinkExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sinkException') }})
+    snackbar: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snackbar') }})
+    snackbar_exception: Optional[LivingAreaEatingSnackbarExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snackbarException') }})
+    stove: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stove') }})
+    stove_exception: Optional[LivingAreaEatingStoveExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stoveException') }})
+    tea_station: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('teaStation') }})
+    tea_station_exception: Optional[LivingAreaEatingTeaStationExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('teaStationException') }})
+    toaster: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toaster') }})
+    toaster_exception: Optional[LivingAreaEatingToasterExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toasterException') }})
     

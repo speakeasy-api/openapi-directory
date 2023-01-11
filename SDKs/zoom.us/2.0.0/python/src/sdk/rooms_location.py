@@ -1,0 +1,372 @@
+import requests
+from typing import Any,Optional
+from sdk.models import operations
+from . import utils
+
+class RoomsLocation:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def add_azr_location(self, request: operations.AddAzrLocationRequest) -> operations.AddAzrLocationResponse:
+        r"""Add a location
+        Add a location to the [location hierarchial structure(s)](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) of Zoom Rooms in an account.
+        
+        **Prerequisites:**
+        * Account owner or admin permissions.
+        * Zoom Rooms Version 4.0 or higher<br><br>
+        **Scopes:** `room:write:admin`<br> 
+        
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/rooms/locations"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AddAzrLocationResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.AddAzrLocation200ApplicationJSON])
+                res.add_azr_location_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def change_parent_location(self, request: operations.ChangeParentLocationRequest) -> operations.ChangeParentLocationResponse:
+        r"""Change the assigned parent location
+        An account owner of a Zoom account can establish a [Zoom Rooms Location Hierarchy](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) to better organize Zoom Rooms spread accross various location. The location can be structured in a hierarchy with Country being the top-level location, followed by city, campus, building, and floor. The location in the lower level in the hierarchy is considered as a child of the location that is a level above in the hierarchy. Use this API to change the parent location of a child location. <br><br> For instance, if the location hierarchy is structured in a way where there are two campuses (Campus 1, and Campus 2) in a City and Campus 1 consists of a building named Building 1 with a floor where Zoom Rooms are located, and you would like to rearrange the structure so that Building 1 along with its child locations (floor and Zoom Rooms) are relocated directly under Campus 2 instead of Campus 1, you must provide the location ID of Building 1 in the path parameter of this request and the location ID of Campus 2 as the value of `parent_location_id` in the  request body.<br><br>
+        **Prerequisite:**<br>
+        * Account owner or admin permission
+        * Zoom Rooms version 4.0 or higher<br>
+        **Scopes:** `room:write:admin`<br><br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/rooms/locations/{locationId}/location", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ChangeParentLocationResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.change_parent_location_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_zr_location_profile(self, request: operations.GetZrLocationProfileRequest) -> operations.GetZrLocationProfileResponse:
+        r"""Get Zoom Room location profile
+        Each location type of the [Zoom Rooms location hierarchy](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) has a profile page that includes information such as name of the location, address, support email, etc. Use this API to retrieve information about a specific Zoom Rooms location type such as information about the city where the Zoom Rooms is located.
+        
+        **Prerequisite:**<br>
+        * Account owner or admin permission
+        * Zoom Rooms version 4.0 or higher<br>
+        **Scopes:** `room:read:admin`<br> 
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/rooms/locations/{locationId}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetZrLocationProfileResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetZrLocationProfile200ApplicationJSON])
+                res.get_zr_location_profile_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_zr_location_settings(self, request: operations.GetZrLocationSettingsRequest) -> operations.GetZrLocationSettingsResponse:
+        r"""Get location settings
+        Get information on meeting or alert settings applied to Zoom Rooms located in a specific location. By default, only **Meeting Settings** are returned. To view only **Alert Settings**, specify `alert` as the value of the `setting_type` query parameter.<br><br>
+        **Prerequisites:**<br>
+        * Zoom Room licenses
+        * Owner or Admin privileges on the Zoom Account.<br>
+        **Scopes:** `room:read:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/rooms/locations/{locationId}/settings", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetZrLocationSettingsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.get_zr_location_settings_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_zr_location_structure(self, request: operations.GetZrLocationStructureRequest) -> operations.GetZrLocationStructureResponse:
+        r"""Get Zoom Room location structure
+        Get the [location hierarchial structure(s)](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) applied on the Zoom Rooms in an account.<br><br>
+        **Prerequisites:**<br>
+        * Zoom Rooms version 4.0 or higher
+        * Account owner or admin permissions<br>
+        **Scopes:** `room:read:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/rooms/locations/structure"
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetZrLocationStructureResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetZrLocationStructure200ApplicationJSON])
+                res.get_zr_location_structure_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def list_zr_locations(self, request: operations.ListZrLocationsRequest) -> operations.ListZrLocationsResponse:
+        r"""List Zoom Room locations
+        A Zoom account owner or a Zoom Room administrator can establish a [location hierarchy](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) to help manage Zoom Rooms that are spread among a variety of locations. Use this API to list the different location types used for Zoom Rooms in an account.<br><br>
+        **Prerequisites:**
+        * Account owner or admin permissions.
+        * Zoom Rooms Version 4.0 or higher<br><br>
+        **Scopes:** `room:read:admin`<br> 
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/rooms/locations"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListZrLocationsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ListZrLocations200ApplicationJSON])
+                res.list_zr_locations_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def update_zr_location_profile(self, request: operations.UpdateZrLocationProfileRequest) -> operations.UpdateZrLocationProfileResponse:
+        r"""Update Zoom Room location profile
+        Each location type of the [Zoom Rooms location hierarchy](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) has a profile page that includes information such as name of the location, address, support email, etc. Use this API to update information about a specific Zoom Rooms location type such as information about the city where the Zoom Rooms is located.
+        
+        **Prerequisite:**<br>
+        * Account owner or admin permission
+        * Zoom Rooms version 4.0 or higher<br>
+        **Scopes:** `room:write:admin`<br> 
+        
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/rooms/locations/{locationId}", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UpdateZrLocationProfileResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.update_zr_location_profile_200_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+
+        return res
+
+    
+    def update_zr_location_settings(self, request: operations.UpdateZrLocationSettingsRequest) -> operations.UpdateZrLocationSettingsResponse:
+        r"""Update location settings
+        Update information on either meeting or alert settings applied to Zoom Rooms located in a specific location. To update **Alert Settings**, specify `alert` as the value of the `setting_type` query parameter. Similarly, to update **Meeting Settings**, specify `meeting` as the value of the `setting_type` query parameter.<br><br>
+        **Prerequisites:**<br>
+        * Zoom Room licenses
+        * Owner or Admin privileges on the Zoom Account.<br>
+        **Scopes:** `room:write:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/rooms/locations/{locationId}/settings", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UpdateZrLocationSettingsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.update_zr_location_settings_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def update_zoom_rooms_location_structure(self, request: operations.UpdateZoomRoomsLocationStructureRequest) -> operations.UpdateZoomRoomsLocationStructureResponse:
+        r"""Update Zoom Rooms location structure
+        Update the [location hierarchial structure(s)](https://support.zoom.us/hc/en-us/articles/115000342983-Zoom-Rooms-Location-Hierarchy) applied on the Zoom Rooms in an account.<br><br>
+        **Prerequisites:**<br>
+        * Zoom Rooms version 4.0 or higher
+        * Account owner or admin permissions<br>
+        **Scopes:** `room:write:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/rooms/locations/structure"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UpdateZoomRoomsLocationStructureResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.update_zoom_rooms_location_structure_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    

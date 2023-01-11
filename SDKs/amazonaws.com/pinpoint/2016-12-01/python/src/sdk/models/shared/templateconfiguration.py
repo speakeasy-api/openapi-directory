@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import template as shared_template
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TemplateConfiguration:
     r"""TemplateConfiguration
     Specifies the message template to use for the message, for each type of channel.
     """
     
-    email_template: Optional[Template] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EmailTemplate') }})
-    push_template: Optional[Template] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PushTemplate') }})
-    sms_template: Optional[Template] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SMSTemplate') }})
-    voice_template: Optional[Template] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceTemplate') }})
+    email_template: Optional[shared_template.Template] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EmailTemplate') }})
+    push_template: Optional[shared_template.Template] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PushTemplate') }})
+    sms_template: Optional[shared_template.Template] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SMSTemplate') }})
+    voice_template: Optional[shared_template.Template] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceTemplate') }})
     

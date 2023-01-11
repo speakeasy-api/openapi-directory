@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import availabilityinputmodel as shared_availabilityinputmodel
+from ..shared import resourceavailabilityviewmodel as shared_resourceavailabilityviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDAvailabilityPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDAvailabilityRequests:
-    availability_input_model: Optional[shared.AvailabilityInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    availability_input_model1: Optional[shared.AvailabilityInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    availability_input_model2: Optional[shared.AvailabilityInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    availability_input_model3: Optional[shared.AvailabilityInputModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    availability_input_model: Optional[shared_availabilityinputmodel.AvailabilityInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    availability_input_model1: Optional[shared_availabilityinputmodel.AvailabilityInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    availability_input_model2: Optional[shared_availabilityinputmodel.AvailabilityInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    availability_input_model3: Optional[shared_availabilityinputmodel.AvailabilityInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDAvailabilityRequest:
-    path_params: PutSetupV1ResourcesIDAvailabilityPathParams = field()
-    request: Optional[PutSetupV1ResourcesIDAvailabilityRequests] = field(default=None)
+    path_params: PutSetupV1ResourcesIDAvailabilityPathParams = dataclasses.field()
+    request: Optional[PutSetupV1ResourcesIDAvailabilityRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDAvailabilityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_availability_view_model: Optional[shared.ResourceAvailabilityViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_availability_view_model: Optional[shared_resourceavailabilityviewmodel.ResourceAvailabilityViewModel] = dataclasses.field(default=None)
     

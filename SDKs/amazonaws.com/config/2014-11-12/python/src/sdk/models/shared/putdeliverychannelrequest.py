@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deliverychannel as shared_deliverychannel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutDeliveryChannelRequest:
     r"""PutDeliveryChannelRequest
     The input for the <a>PutDeliveryChannel</a> action.
     """
     
-    delivery_channel: DeliveryChannel = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryChannel') }})
+    delivery_channel: shared_deliverychannel.DeliveryChannel = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryChannel') }})
     

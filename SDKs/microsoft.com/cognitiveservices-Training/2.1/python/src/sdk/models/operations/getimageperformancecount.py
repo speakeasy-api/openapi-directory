@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetImagePerformanceCountPathParams:
-    iteration_id: str = field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    iteration_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagePerformanceCountQueryParams:
-    tag_ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
+    tag_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagePerformanceCountHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagePerformanceCountRequest:
-    headers: GetImagePerformanceCountHeaders = field()
-    path_params: GetImagePerformanceCountPathParams = field()
-    query_params: GetImagePerformanceCountQueryParams = field()
+    headers: GetImagePerformanceCountHeaders = dataclasses.field()
+    path_params: GetImagePerformanceCountPathParams = dataclasses.field()
+    query_params: GetImagePerformanceCountQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagePerformanceCountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_image_performance_count_200_application_json_int32_integer: Optional[int] = field(default=None)
-    get_image_performance_count_200_text_json_int32_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    get_image_performance_count_200_application_json_int32_integer: Optional[int] = dataclasses.field(default=None)
+    get_image_performance_count_200_text_json_int32_integer: Optional[int] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,9 +15,9 @@ class TaxSettingsResponseTaxationTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TaxSettingsResponse:
-    organization_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizationUuid') }})
-    taxation_mode: Optional[TaxSettingsResponseTaxationModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationMode') }})
-    taxation_type: Optional[TaxSettingsResponseTaxationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationType') }})
+    organization_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizationUuid') }})
+    taxation_mode: Optional[TaxSettingsResponseTaxationModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationMode') }})
+    taxation_type: Optional[TaxSettingsResponseTaxationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationType') }})
     

@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imagepredictionresultmodel as shared_imagepredictionresultmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PredictImagePathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageQueryParams:
-    application: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'application', 'style': 'form', 'explode': True }})
-    iteration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
+    application: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'application', 'style': 'form', 'explode': True }})
+    iteration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageHeaders:
-    prediction_key: str = field(metadata={'header': { 'field_name': 'Prediction-Key', 'style': 'simple', 'explode': False }})
+    prediction_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Prediction-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageRequestBodyImageData:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_data: str = field(metadata={'multipart_form': { 'field_name': 'imageData' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_data: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageData' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageRequestBody:
-    image_data: PredictImageRequestBodyImageData = field(metadata={'multipart_form': { 'file': True }})
+    image_data: PredictImageRequestBodyImageData = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageRequest:
-    headers: PredictImageHeaders = field()
-    path_params: PredictImagePathParams = field()
-    query_params: PredictImageQueryParams = field()
-    request: PredictImageRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    headers: PredictImageHeaders = dataclasses.field()
+    path_params: PredictImagePathParams = dataclasses.field()
+    query_params: PredictImageQueryParams = dataclasses.field()
+    request: PredictImageRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictImageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    image_prediction_result_model: Optional[shared.ImagePredictionResultModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    image_prediction_result_model: Optional[shared_imagepredictionresultmodel.ImagePredictionResultModel] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import languagesresource as shared_languagesresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LanguagesListResponse:
-    languages: Optional[List[LanguagesResource]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
+    languages: Optional[list[shared_languagesresource.LanguagesResource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
     

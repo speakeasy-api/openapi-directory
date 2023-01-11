@@ -7,3 +7,5 @@ from .emissionsgramsperpax import *
 from .flight import *
 from .flightwithemissions import *
 from .modelversion import *
+
+__all__ = ["XgafvEnum","AltEnum","ComputeFlightEmissionsRequest","ComputeFlightEmissionsResponse","Date","EmissionsGramsPerPax","Flight","FlightWithEmissions","ModelVersion"]

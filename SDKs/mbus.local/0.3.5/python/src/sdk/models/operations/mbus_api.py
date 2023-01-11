@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MbusAPIResponse:
-    content_type: str = field()
-    status_code: int = field()
-    text_error: Optional[str] = field(default=None)
-    yaml: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    text_error: Optional[str] = dataclasses.field(default=None)
+    yaml: Optional[str] = dataclasses.field(default=None)
     

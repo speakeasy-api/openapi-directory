@@ -1,17 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcevalue as shared_resourcevalue
+from ..shared import staticvalue as shared_staticvalue
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemediationParameterValue:
-    r"""RemediationParameterValue
-    The value is either a dynamic (resource) value or a static value. You must select either a dynamic value or a static value.
-    """
-    
-    resource_value: Optional[ResourceValue] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceValue') }})
-    static_value: Optional[StaticValue] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StaticValue') }})
+    resource_value: Optional[shared_resourcevalue.ResourceValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceValue') }})
+    static_value: Optional[shared_staticvalue.StaticValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StaticValue') }})
     

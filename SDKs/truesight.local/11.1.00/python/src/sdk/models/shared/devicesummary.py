@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -117,24 +117,24 @@ class DeviceSummaryTypeEnum(str, Enum):
     UNKNOWN = "UNKNOWN"
 
 
-@dataclass
+@dataclasses.dataclass
 class DeviceSummary:
-    agent_id: Optional[int] = field(default=None)
-    agent_name: Optional[str] = field(default=None)
-    ambient_temperature: Optional[float] = field(default=None)
-    collect_time: Optional[str] = field(default=None)
-    device_tsmo_key: Optional[str] = field(default=None)
-    device_url: Optional[str] = field(default=None)
-    heating_margin: Optional[float] = field(default=None)
-    heating_margin_unit: Optional[str] = field(default=None)
-    id: Optional[int] = field(default=None)
-    name: Optional[str] = field(default=None)
-    power_consumption: Optional[float] = field(default=None)
-    power_consumption_unit: Optional[str] = field(default=None)
-    product_version: Optional[str] = field(default=None)
-    server_id: Optional[int] = field(default=None)
-    server_name: Optional[str] = field(default=None)
-    sid: Optional[str] = field(default=None)
-    type: Optional[DeviceSummaryTypeEnum] = field(default=None)
-    update_timestamp: Optional[int] = field(default=None)
+    agent_id: Optional[int] = dataclasses.field(default=None)
+    agent_name: Optional[str] = dataclasses.field(default=None)
+    ambient_temperature: Optional[float] = dataclasses.field(default=None)
+    collect_time: Optional[str] = dataclasses.field(default=None)
+    device_tsmo_key: Optional[str] = dataclasses.field(default=None)
+    device_url: Optional[str] = dataclasses.field(default=None)
+    heating_margin: Optional[float] = dataclasses.field(default=None)
+    heating_margin_unit: Optional[str] = dataclasses.field(default=None)
+    id: Optional[int] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    power_consumption: Optional[float] = dataclasses.field(default=None)
+    power_consumption_unit: Optional[str] = dataclasses.field(default=None)
+    product_version: Optional[str] = dataclasses.field(default=None)
+    server_id: Optional[int] = dataclasses.field(default=None)
+    server_name: Optional[str] = dataclasses.field(default=None)
+    sid: Optional[str] = dataclasses.field(default=None)
+    type: Optional[DeviceSummaryTypeEnum] = dataclasses.field(default=None)
+    update_timestamp: Optional[int] = dataclasses.field(default=None)
     

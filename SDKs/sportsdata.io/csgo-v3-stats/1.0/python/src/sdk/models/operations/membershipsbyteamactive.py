@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class MembershipsByTeamActiveFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class MembershipsByTeamActiveFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByTeamActivePathParams:
-    format: MembershipsByTeamActiveFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    teamid: str = field(metadata={'path_param': { 'field_name': 'teamid', 'style': 'simple', 'explode': False }})
+    format: MembershipsByTeamActiveFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    teamid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByTeamActiveRequest:
-    path_params: MembershipsByTeamActivePathParams = field()
+    path_params: MembershipsByTeamActivePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByTeamActiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    memberships: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    memberships: Optional[list[Any]] = dataclasses.field(default=None)
     

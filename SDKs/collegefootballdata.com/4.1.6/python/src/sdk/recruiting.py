@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Recruiting:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PositionGroupRecruitingRating]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PositionGroupRecruitingRating]])
                 res.position_group_recruiting_ratings = out
         elif r.status_code == 400:
             pass
@@ -68,7 +68,7 @@ class Recruiting:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Recruit]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Recruit]])
                 res.recruits = out
         elif r.status_code == 400:
             pass
@@ -96,7 +96,7 @@ class Recruiting:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamRecruitingRank]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamRecruitingRank]])
                 res.team_recruiting_ranks = out
         elif r.status_code == 400:
             pass

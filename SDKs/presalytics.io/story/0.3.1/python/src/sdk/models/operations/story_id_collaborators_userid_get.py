@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import story_collaborator as shared_story_collaborator
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDCollaboratorsUseridGetPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    story_collaborator_userid: str = field(metadata={'path_param': { 'field_name': 'story_collaborator_userid', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    story_collaborator_userid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'story_collaborator_userid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDCollaboratorsUseridGetRequest:
-    path_params: StoryIDCollaboratorsUseridGetPathParams = field()
+    path_params: StoryIDCollaboratorsUseridGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDCollaboratorsUseridGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    story_collaborator: Optional[shared.StoryCollaborator] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    story_collaborator: Optional[shared_story_collaborator.StoryCollaborator] = dataclasses.field(default=None)
     

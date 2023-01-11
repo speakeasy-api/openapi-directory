@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import filemigrationentity as shared_filemigrationentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFileMigrationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileMigrationsIDRequest:
-    path_params: GetFileMigrationsIDPathParams = field()
+    path_params: GetFileMigrationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileMigrationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_migration_entity: Optional[shared.FileMigrationEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_migration_entity: Optional[shared_filemigrationentity.FileMigrationEntity] = dataclasses.field(default=None)
     

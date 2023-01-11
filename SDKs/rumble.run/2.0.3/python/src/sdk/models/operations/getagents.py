@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import agent as shared_agent
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentsRequest:
-    security: GetAgentsSecurity = field()
+    security: GetAgentsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    agents: Optional[List[shared.Agent]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    agents: Optional[list[shared_agent.Agent]] = dataclasses.field(default=None)
     

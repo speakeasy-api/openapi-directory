@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.CleanScanPageRequest(
     path_params=operations.CleanScanPagePathParams(
-        scan_id=9178586472167993024,
+        scan_id=6178327298726221817,
     ),
 )
     

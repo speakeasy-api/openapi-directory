@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,15 +18,15 @@ s = sdk.SDK()
     
 req = operations.PostCompileRequest(
     query_params=operations.PostCompileQueryParams(
-        explain="non",
+        explain="quia",
         instrument=True,
-        metrics=False,
+        metrics=True,
         pretty=False,
     ),
     request={
-        "et": "dolores",
-        "est": "quis",
-        "voluptas": "ut",
+        "et": "blanditiis",
+        "qui": "iure",
+        "tempora": "sunt",
     },
 )
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import jobbookmarkentry as shared_jobbookmarkentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResetJobBookmarkResponse:
-    job_bookmark_entry: Optional[JobBookmarkEntry] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobBookmarkEntry') }})
+    job_bookmark_entry: Optional[shared_jobbookmarkentry.JobBookmarkEntry] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('JobBookmarkEntry') }})
     

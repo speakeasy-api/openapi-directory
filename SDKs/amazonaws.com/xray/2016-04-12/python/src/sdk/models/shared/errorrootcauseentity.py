@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rootcauseexception as shared_rootcauseexception
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ErrorRootCauseEntity:
     r"""ErrorRootCauseEntity
     A collection of segments and corresponding subsegments associated to a trace summary error.
     """
     
-    exceptions: Optional[List[RootCauseException]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Exceptions') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    remote: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Remote') }})
+    exceptions: Optional[list[shared_rootcauseexception.RootCauseException]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Exceptions') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    remote: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Remote') }})
     

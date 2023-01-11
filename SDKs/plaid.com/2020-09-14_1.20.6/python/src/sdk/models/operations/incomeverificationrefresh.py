@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import incomeverificationrefreshrequest as shared_incomeverificationrefreshrequest
+from ..shared import incomeverificationrefreshresponse as shared_incomeverificationrefreshresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class IncomeVerificationRefreshRequest:
-    request: shared.IncomeVerificationRefreshRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_incomeverificationrefreshrequest.IncomeVerificationRefreshRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IncomeVerificationRefreshResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    income_verification_refresh_response: Optional[shared.IncomeVerificationRefreshResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    income_verification_refresh_response: Optional[shared_incomeverificationrefreshresponse.IncomeVerificationRefreshResponse] = dataclasses.field(default=None)
     

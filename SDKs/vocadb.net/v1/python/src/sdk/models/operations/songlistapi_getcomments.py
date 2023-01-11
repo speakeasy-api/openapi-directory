@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import partialfindresult_commentforapicontract_ as shared_partialfindresult_commentforapicontract_
 
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetCommentsPathParams:
-    list_id: int = field(metadata={'path_param': { 'field_name': 'listId', 'style': 'simple', 'explode': False }})
+    list_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'listId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetCommentsRequest:
-    path_params: SongListAPIGetCommentsPathParams = field()
+    path_params: SongListAPIGetCommentsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_comment_for_api_contract_: Optional[shared.PartialFindResultCommentForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_comment_for_api_contract_: Optional[shared_partialfindresult_commentforapicontract_.PartialFindResultCommentForAPIContract] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.SscerRequest(
     security=operations.SscerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.SscerRequestBody(
         certificate_parameters=operations.SscerRequestBodyCertificateParameters(
-            dob="quis",
-            full_name="culpa",
-            rroll="et",
-            rroll_code="et",
-            year="nostrum",
+            dob="in",
+            full_name="animi",
+            rroll="consequuntur",
+            rroll_code="impedit",
+            year="cumque",
         ),
-        consent_artifact="sed",
+        consent_artifact="eos",
         format="pdf",
-        txn_id="molestias",
+        txn_id="beatae",
     ),
 )
     
-res = s.sdk.sscer(req)
+res = s.ap_is.sscer(req)
 
 if res.status_code == 200:
     # handle response
@@ -50,7 +49,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `sscer` - Class X Marksheet
 * `svcer` - Class X Provisional Certificate

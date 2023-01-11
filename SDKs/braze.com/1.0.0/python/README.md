@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,9 +18,9 @@ s = sdk.SDK()
     
 req = operations.CampaignAnalyticsRequest(
     query_params=operations.CampaignAnalyticsQueryParams(
-        campaign_id="consequatur",
-        ending_at="veritatis",
-        length="officia",
+        campaign_id="cumque",
+        ending_at="tenetur",
+        length="non",
     ),
 )
     

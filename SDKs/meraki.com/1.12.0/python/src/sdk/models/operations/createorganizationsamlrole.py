@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRolePathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 class CreateOrganizationSamlRoleRequestBodyNetworksAccessEnum(str, Enum):
     FULL = "full"
@@ -17,10 +17,10 @@ class CreateOrganizationSamlRoleRequestBodyNetworksAccessEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRoleRequestBodyNetworks:
-    access: CreateOrganizationSamlRoleRequestBodyNetworksAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    access: CreateOrganizationSamlRoleRequestBodyNetworksAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class CreateOrganizationSamlRoleRequestBodyOrgAccessEnum(str, Enum):
     NONE = "none"
@@ -35,30 +35,30 @@ class CreateOrganizationSamlRoleRequestBodyTagsAccessEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRoleRequestBodyTags:
-    access: CreateOrganizationSamlRoleRequestBodyTagsAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    tag: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
+    access: CreateOrganizationSamlRoleRequestBodyTagsAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    tag: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRoleRequestBody:
-    org_access: CreateOrganizationSamlRoleRequestBodyOrgAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orgAccess') }})
-    role: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
-    networks: Optional[List[CreateOrganizationSamlRoleRequestBodyNetworks]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
-    tags: Optional[List[CreateOrganizationSamlRoleRequestBodyTags]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    org_access: CreateOrganizationSamlRoleRequestBodyOrgAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orgAccess') }})
+    role: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    networks: Optional[list[CreateOrganizationSamlRoleRequestBodyNetworks]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
+    tags: Optional[list[CreateOrganizationSamlRoleRequestBodyTags]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRoleRequest:
-    path_params: CreateOrganizationSamlRolePathParams = field()
-    request: CreateOrganizationSamlRoleRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateOrganizationSamlRolePathParams = dataclasses.field()
+    request: CreateOrganizationSamlRoleRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationSamlRoleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_organization_saml_role_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_organization_saml_role_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

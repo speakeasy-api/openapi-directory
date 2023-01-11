@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,410 +21,406 @@ req = operations.CloudbillingBillingAccountsEstimateCostScenarioRequest(
         option1=operations.CloudbillingBillingAccountsEstimateCostScenarioSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudbillingBillingAccountsEstimateCostScenarioPathParams(
-        billing_account="minima",
+        billing_account="harum",
     ),
     query_params=operations.CloudbillingBillingAccountsEstimateCostScenarioQueryParams(
         dollar_xgafv="2",
-        access_token="iure",
-        alt="proto",
-        callback="et",
-        fields="quidem",
-        key="est",
-        oauth_token="laboriosam",
+        access_token="eos",
+        alt="json",
+        callback="perferendis",
+        fields="rerum",
+        key="blanditiis",
+        oauth_token="quibusdam",
         pretty_print=False,
-        quota_user="quod",
-        upload_type="enim",
-        upload_protocol="rerum",
+        quota_user="voluptatem",
+        upload_type="odio",
+        upload_protocol="ut",
     ),
     request=shared.EstimateCostScenarioForBillingAccountRequest(
         cost_scenario=shared.CostScenario(
             commitments=[
                 shared.Commitment(
-                    name="ut",
+                    name="aut",
                     vm_resource_based_cud=shared.VMResourceBasedCud(
                         guest_accelerator=shared.GuestAccelerator(
-                            accelerator_count="autem",
-                            accelerator_type="tempore",
+                            accelerator_count="et",
+                            accelerator_type="delectus",
                         ),
-                        machine_series="vel",
-                        memory_size_gb=69.099998,
-                        plan="THIRTY_SIX_MONTH",
-                        region="inventore",
-                        virtual_cpu_count="consequatur",
+                        machine_series="cum",
+                        memory_size_gb=45.200001,
+                        plan="TWELVE_MONTH",
+                        region="est",
+                        virtual_cpu_count="harum",
+                    ),
+                ),
+                shared.Commitment(
+                    name="eos",
+                    vm_resource_based_cud=shared.VMResourceBasedCud(
+                        guest_accelerator=shared.GuestAccelerator(
+                            accelerator_count="et",
+                            accelerator_type="perferendis",
+                        ),
+                        machine_series="quam",
+                        memory_size_gb=71.099998,
+                        plan="TWELVE_MONTH",
+                        region="assumenda",
+                        virtual_cpu_count="recusandae",
                     ),
                 ),
             ],
             scenario_config=shared.ScenarioConfig(
-                estimate_duration="ipsam",
+                estimate_duration="soluta",
             ),
             workloads=[
                 shared.Workload(
-                    cloud_storage_workload=shared.CloudStorageWorkload(
-                        data_retrieval=shared.Usage(
+                    cloud_cdn_egress_workload=shared.CloudCdnEgressWorkload(
+                        cache_egress_destination="CACHE_EGRESS_DESTINATION_ASIA_PACIFIC",
+                        cache_egress_rate=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
                                 unit="ut",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="placeat",
+                                            estimation_time_frame_offset="cumque",
                                         ),
-                                        usage_rate=30.200001,
+                                        usage_rate=53.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="sint",
+                                        ),
+                                        usage_rate=51.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="voluptas",
+                                        ),
+                                        usage_rate=51.200001,
                                     ),
                                 ],
                             ),
                         ),
-                        data_stored=shared.Usage(
+                    ),
+                    cloud_cdn_workload=shared.CloudCdnWorkload(
+                        cache_fill_origin_service="CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE",
+                        cache_fill_rate=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="quia",
+                                unit="quibusdam",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="aut",
+                                            estimation_time_frame_offset="reprehenderit",
                                         ),
-                                        usage_rate=94.199997,
+                                        usage_rate=13.200000,
                                     ),
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="laborum",
+                                            estimation_time_frame_offset="eveniet",
+                                        ),
+                                        usage_rate=92.199997,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        cache_fill_regions=shared.CacheFillRegions(
+                            destination_region="CACHE_FILL_DESTINATION_REGION_UNSPECIFIED",
+                            source_region="CACHE_FILL_SOURCE_REGION_EUROPE",
+                        ),
+                        cache_look_up_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="accusamus",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="et",
+                                        ),
+                                        usage_rate=1.200000,
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ),
+                    cloud_interconnect_egress_workload=shared.CloudInterconnectEgressWorkload(
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="et",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="numquam",
+                                        ),
+                                        usage_rate=70.099998,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="consequatur",
+                                        ),
+                                        usage_rate=21.200001,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        interconnect_connection_location="INTERCONNECT_CONNECTION_LOCATION_AUSTRALIA",
+                    ),
+                    cloud_interconnect_workload=shared.CloudInterconnectWorkload(
+                        interconnect_attachments=[
+                            shared.VlanAttachment(
+                                bandwidth="BANDWIDTH_BPS_400M",
+                                vlan_count=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="id",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="a",
+                                                ),
+                                                usage_rate=6.200000,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="nemo",
+                                                ),
+                                                usage_rate=79.099998,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                            ),
+                        ],
+                        interconnect_type="INTERCONNECT_TYPE_PARTNER",
+                        link_type="LINK_TYPE_ETHERNET_10G_LR",
+                        provisioned_link_count=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="ratione",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="similique",
+                                        ),
+                                        usage_rate=56.099998,
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ),
+                    cloud_storage_egress_workload=shared.CloudStorageEgressWorkload(
+                        destination_continent="DESTINATION_CONTINENT_UNSPECIFIED",
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="eos",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="velit",
                                         ),
                                         usage_rate=44.200001,
                                     ),
                                 ],
                             ),
                         ),
-                        dual_region=shared.DualRegional(
-                            name="ipsa",
-                        ),
-                        multi_region=shared.MultiRegional(
-                            name="pariatur",
-                        ),
-                        operation_a=shared.Usage(
-                            usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="beatae",
-                                usage_rate_timeline_entries=[
-                                    shared.UsageRateTimelineEntry(
-                                        effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="amet",
-                                        ),
-                                        usage_rate=73.099998,
-                                    ),
-                                ],
-                            ),
-                        ),
-                        operation_b=shared.Usage(
-                            usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="est",
-                                usage_rate_timeline_entries=[
-                                    shared.UsageRateTimelineEntry(
-                                        effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="eligendi",
-                                        ),
-                                        usage_rate=28.100000,
-                                    ),
-                                ],
-                            ),
-                        ),
-                        region=shared.Regional(
-                            name="saepe",
-                        ),
-                        storage_class="tenetur",
+                        source_continent="SOURCE_CONTINENT_NORTH_AMERICA",
                     ),
-                    compute_vm_workload=shared.ComputeVMWorkload(
-                        enable_confidential_compute=False,
-                        guest_accelerator=shared.GuestAccelerator(
-                            accelerator_count="animi",
-                            accelerator_type="fugiat",
-                        ),
-                        instances_running=shared.Usage(
-                            usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="aut",
-                                usage_rate_timeline_entries=[
-                                    shared.UsageRateTimelineEntry(
-                                        effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="facere",
-                                        ),
-                                        usage_rate=57.099998,
-                                    ),
-                                ],
-                            ),
-                        ),
-                        licenses=[
-                            "architecto",
-                            "voluptas",
-                        ],
-                        machine_type=shared.MachineType(
-                            custom_machine_type=shared.CustomMachineType(
-                                machine_series="delectus",
-                                memory_size_gb=13.100000,
-                                virtual_cpu_count="officiis",
-                            ),
-                            predefined_machine_type=shared.PredefinedMachineType(
-                                machine_type="optio",
-                            ),
-                        ),
-                        persistent_disks=[
-                            shared.PersistentDisk(
-                                disk_size=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="aut",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="repellendus",
-                                                ),
-                                                usage_rate=98.099998,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                disk_type="numquam",
-                                provisioned_iops=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="saepe",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="veniam",
-                                                ),
-                                                usage_rate=13.200000,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="quam",
-                                                ),
-                                                usage_rate=64.099998,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                scope="SCOPE_ZONAL",
-                            ),
-                            shared.PersistentDisk(
-                                disk_size=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="veniam",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="molestiae",
-                                                ),
-                                                usage_rate=15.100000,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                disk_type="molestiae",
-                                provisioned_iops=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="fuga",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="quia",
-                                                ),
-                                                usage_rate=6.200000,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="quas",
-                                                ),
-                                                usage_rate=49.200001,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="excepturi",
-                                                ),
-                                                usage_rate=89.199997,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                scope="SCOPE_REGIONAL",
-                            ),
-                            shared.PersistentDisk(
-                                disk_size=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="libero",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="voluptatem",
-                                                ),
-                                                usage_rate=53.099998,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="incidunt",
-                                                ),
-                                                usage_rate=12.100000,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="possimus",
-                                                ),
-                                                usage_rate=43.200001,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                disk_type="quasi",
-                                provisioned_iops=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="nostrum",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="vel",
-                                                ),
-                                                usage_rate=81.099998,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="id",
-                                                ),
-                                                usage_rate=10.200000,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="ad",
-                                                ),
-                                                usage_rate=47.200001,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                scope="SCOPE_ZONAL",
-                            ),
-                        ],
-                        preemptible=False,
-                        region="minus",
-                    ),
-                    name="temporibus",
-                ),
-                shared.Workload(
                     cloud_storage_workload=shared.CloudStorageWorkload(
                         data_retrieval=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="sit",
+                                unit="sequi",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="aut",
+                                            estimation_time_frame_offset="quam",
                                         ),
-                                        usage_rate=99.199997,
+                                        usage_rate=80.099998,
                                     ),
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="occaecati",
+                                            estimation_time_frame_offset="illum",
                                         ),
-                                        usage_rate=18.200001,
+                                        usage_rate=34.200001,
                                     ),
                                 ],
                             ),
                         ),
                         data_stored=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="eos",
+                                unit="ab",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="est",
+                                            estimation_time_frame_offset="ut",
                                         ),
-                                        usage_rate=45.200001,
+                                        usage_rate=5.100000,
                                     ),
                                 ],
                             ),
                         ),
                         dual_region=shared.DualRegional(
-                            name="laborum",
+                            name="dolore",
                         ),
                         multi_region=shared.MultiRegional(
-                            name="vel",
+                            name="sequi",
                         ),
                         operation_a=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="qui",
+                                unit="dicta",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="est",
+                                            estimation_time_frame_offset="voluptatem",
                                         ),
-                                        usage_rate=69.199997,
+                                        usage_rate=89.099998,
                                     ),
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="saepe",
+                                            estimation_time_frame_offset="vitae",
                                         ),
-                                        usage_rate=35.099998,
-                                    ),
-                                    shared.UsageRateTimelineEntry(
-                                        effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="at",
-                                        ),
-                                        usage_rate=18.100000,
+                                        usage_rate=94.099998,
                                     ),
                                 ],
                             ),
                         ),
                         operation_b=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="accusantium",
+                                unit="ratione",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="corrupti",
+                                            estimation_time_frame_offset="atque",
                                         ),
-                                        usage_rate=54.200001,
+                                        usage_rate=50.200001,
                                     ),
                                 ],
                             ),
                         ),
                         region=shared.Regional(
-                            name="in",
+                            name="sunt",
                         ),
-                        storage_class="officiis",
+                        storage_class="rerum",
                     ),
                     compute_vm_workload=shared.ComputeVMWorkload(
-                        enable_confidential_compute=False,
+                        enable_confidential_compute=True,
                         guest_accelerator=shared.GuestAccelerator(
-                            accelerator_count="impedit",
-                            accelerator_type="est",
+                            accelerator_count="enim",
+                            accelerator_type="praesentium",
                         ),
                         instances_running=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="exercitationem",
+                                unit="fugit",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="et",
+                                            estimation_time_frame_offset="laboriosam",
                                         ),
-                                        usage_rate=3.200000,
+                                        usage_rate=90.199997,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="illum",
+                                        ),
+                                        usage_rate=48.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="sapiente",
+                                        ),
+                                        usage_rate=77.099998,
                                     ),
                                 ],
                             ),
                         ),
                         licenses=[
-                            "error",
-                            "id",
+                            "velit",
+                            "esse",
                         ],
                         machine_type=shared.MachineType(
                             custom_machine_type=shared.CustomMachineType(
-                                machine_series="minima",
-                                memory_size_gb=59.200001,
-                                virtual_cpu_count="dicta",
+                                machine_series="atque",
+                                memory_size_gb=32.099998,
+                                virtual_cpu_count="doloremque",
                             ),
                             predefined_machine_type=shared.PredefinedMachineType(
-                                machine_type="blanditiis",
+                                machine_type="quia",
                             ),
                         ),
                         persistent_disks=[
+                            shared.PersistentDisk(
+                                disk_size=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="voluptas",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="ipsum",
+                                                ),
+                                                usage_rate=1.200000,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="non",
+                                                ),
+                                                usage_rate=16.200001,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="sunt",
+                                                ),
+                                                usage_rate=49.099998,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                                disk_type="alias",
+                                provisioned_iops=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="aut",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="reiciendis",
+                                                ),
+                                                usage_rate=42.200001,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                                scope="SCOPE_ZONAL",
+                            ),
+                            shared.PersistentDisk(
+                                disk_size=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="aliquid",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="veritatis",
+                                                ),
+                                                usage_rate=24.200001,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                                disk_type="omnis",
+                                provisioned_iops=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="quidem",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="hic",
+                                                ),
+                                                usage_rate=98.099998,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                                scope="SCOPE_REGIONAL",
+                            ),
                             shared.PersistentDisk(
                                 disk_size=shared.Usage(
                                     usage_rate_timeline=shared.UsageRateTimeline(
@@ -433,29 +428,29 @@ req = operations.CloudbillingBillingAccountsEstimateCostScenarioRequest(
                                         usage_rate_timeline_entries=[
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="sapiente",
+                                                    estimation_time_frame_offset="enim",
                                                 ),
-                                                usage_rate=41.099998,
+                                                usage_rate=25.100000,
                                             ),
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="delectus",
+                                                    estimation_time_frame_offset="quis",
                                                 ),
-                                                usage_rate=53.099998,
+                                                usage_rate=87.099998,
                                             ),
                                         ],
                                     ),
                                 ),
-                                disk_type="delectus",
+                                disk_type="et",
                                 provisioned_iops=shared.Usage(
                                     usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="ipsa",
+                                        unit="eius",
                                         usage_rate_timeline_entries=[
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="aut",
+                                                    estimation_time_frame_offset="ipsa",
                                                 ),
-                                                usage_rate=7.100000,
+                                                usage_rate=54.200001,
                                             ),
                                         ],
                                     ),
@@ -464,253 +459,486 @@ req = operations.CloudbillingBillingAccountsEstimateCostScenarioRequest(
                             ),
                         ],
                         preemptible=False,
-                        region="aut",
+                        region="unde",
                     ),
-                    name="a",
-                ),
-                shared.Workload(
-                    cloud_storage_workload=shared.CloudStorageWorkload(
-                        data_retrieval=shared.Usage(
+                    name="ut",
+                    premium_tier_egress_workload=shared.PremiumTierEgressWorkload(
+                        destination_continent="DESTINATION_CONTINENT_INDIA",
+                        egress_rate=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="et",
+                                unit="adipisci",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="est",
+                                            estimation_time_frame_offset="atque",
+                                        ),
+                                        usage_rate=66.099998,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        source_region="accusantium",
+                    ),
+                    standard_tier_egress_workload=shared.StandardTierEgressWorkload(
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="ut",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="et",
+                                        ),
+                                        usage_rate=37.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="voluptas",
                                         ),
                                         usage_rate=39.200001,
                                     ),
                                 ],
                             ),
                         ),
-                        data_stored=shared.Usage(
+                        source_region="ratione",
+                    ),
+                ),
+                shared.Workload(
+                    cloud_cdn_egress_workload=shared.CloudCdnEgressWorkload(
+                        cache_egress_destination="CACHE_EGRESS_DESTINATION_UNSPECIFIED",
+                        cache_egress_rate=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="doloremque",
+                                unit="ut",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="eius",
+                                            estimation_time_frame_offset="ut",
                                         ),
-                                        usage_rate=45.200001,
+                                        usage_rate=9.200000,
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ),
+                    cloud_cdn_workload=shared.CloudCdnWorkload(
+                        cache_fill_origin_service="CACHE_FILL_ORIGIN_SERVICE_UNSPECIFIED",
+                        cache_fill_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="non",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="eum",
+                                        ),
+                                        usage_rate=96.099998,
                                     ),
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="voluptates",
+                                            estimation_time_frame_offset="quis",
                                         ),
-                                        usage_rate=40.099998,
+                                        usage_rate=29.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="et",
+                                        ),
+                                        usage_rate=38.200001,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        cache_fill_regions=shared.CacheFillRegions(
+                            destination_region="CACHE_FILL_DESTINATION_REGION_OTHERS",
+                            source_region="CACHE_FILL_SOURCE_REGION_SOUTH_AMERICA",
+                        ),
+                        cache_look_up_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="quaerat",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="quisquam",
+                                        ),
+                                        usage_rate=81.199997,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="reiciendis",
+                                        ),
+                                        usage_rate=8.100000,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="illo",
+                                        ),
+                                        usage_rate=85.199997,
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ),
+                    cloud_interconnect_egress_workload=shared.CloudInterconnectEgressWorkload(
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="at",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="unde",
+                                        ),
+                                        usage_rate=77.099998,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        interconnect_connection_location="INTERCONNECT_CONNECTION_LOCATION_EUROPE",
+                    ),
+                    cloud_interconnect_workload=shared.CloudInterconnectWorkload(
+                        interconnect_attachments=[
+                            shared.VlanAttachment(
+                                bandwidth="BANDWIDTH_BPS_2G",
+                                vlan_count=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="doloremque",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="quam",
+                                                ),
+                                                usage_rate=75.099998,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="aut",
+                                                ),
+                                                usage_rate=6.200000,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="dolorem",
+                                                ),
+                                                usage_rate=35.200001,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                            ),
+                            shared.VlanAttachment(
+                                bandwidth="BANDWIDTH_BPS_200M",
+                                vlan_count=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="dolorem",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="omnis",
+                                                ),
+                                                usage_rate=14.200000,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="eius",
+                                                ),
+                                                usage_rate=39.200001,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="et",
+                                                ),
+                                                usage_rate=21.100000,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                            ),
+                            shared.VlanAttachment(
+                                bandwidth="BANDWIDTH_BPS_300M",
+                                vlan_count=shared.Usage(
+                                    usage_rate_timeline=shared.UsageRateTimeline(
+                                        unit="omnis",
+                                        usage_rate_timeline_entries=[
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="maiores",
+                                                ),
+                                                usage_rate=55.200001,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="in",
+                                                ),
+                                                usage_rate=44.200001,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="ullam",
+                                                ),
+                                                usage_rate=71.099998,
+                                            ),
+                                        ],
+                                    ),
+                                ),
+                            ),
+                        ],
+                        interconnect_type="INTERCONNECT_TYPE_DEDICATED",
+                        link_type="LINK_TYPE_ETHERNET_100G_LR",
+                        provisioned_link_count=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="molestiae",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="soluta",
+                                        ),
+                                        usage_rate=60.200001,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="provident",
+                                        ),
+                                        usage_rate=75.099998,
+                                    ),
+                                ],
+                            ),
+                        ),
+                    ),
+                    cloud_storage_egress_workload=shared.CloudStorageEgressWorkload(
+                        destination_continent="DESTINATION_CONTINENT_SOUTH_AMERICA",
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="saepe",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="fugit",
+                                        ),
+                                        usage_rate=67.099998,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="alias",
+                                        ),
+                                        usage_rate=69.199997,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        source_continent="SOURCE_CONTINENT_ASIA_PACIFIC",
+                    ),
+                    cloud_storage_workload=shared.CloudStorageWorkload(
+                        data_retrieval=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="maiores",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="ut",
+                                        ),
+                                        usage_rate=79.199997,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="labore",
+                                        ),
+                                        usage_rate=66.199997,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        data_stored=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="ut",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="velit",
+                                        ),
+                                        usage_rate=44.200001,
                                     ),
                                 ],
                             ),
                         ),
                         dual_region=shared.DualRegional(
-                            name="rerum",
+                            name="quia",
                         ),
                         multi_region=shared.MultiRegional(
-                            name="nemo",
+                            name="aut",
                         ),
                         operation_a=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="reprehenderit",
+                                unit="eum",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="sed",
+                                            estimation_time_frame_offset="quia",
                                         ),
-                                        usage_rate=82.199997,
+                                        usage_rate=97.099998,
                                     ),
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="eos",
+                                            estimation_time_frame_offset="rerum",
                                         ),
-                                        usage_rate=47.099998,
+                                        usage_rate=27.100000,
                                     ),
                                 ],
                             ),
                         ),
                         operation_b=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="dignissimos",
+                                unit="optio",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="eveniet",
+                                            estimation_time_frame_offset="aspernatur",
                                         ),
-                                        usage_rate=89.099998,
-                                    ),
-                                    shared.UsageRateTimelineEntry(
-                                        effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="aut",
-                                        ),
-                                        usage_rate=19.100000,
+                                        usage_rate=44.099998,
                                     ),
                                 ],
                             ),
                         ),
                         region=shared.Regional(
-                            name="qui",
+                            name="odit",
                         ),
-                        storage_class="quas",
+                        storage_class="sint",
                     ),
                     compute_vm_workload=shared.ComputeVMWorkload(
-                        enable_confidential_compute=False,
+                        enable_confidential_compute=True,
                         guest_accelerator=shared.GuestAccelerator(
-                            accelerator_count="eos",
-                            accelerator_type="eos",
+                            accelerator_count="sed",
+                            accelerator_type="earum",
                         ),
                         instances_running=shared.Usage(
                             usage_rate_timeline=shared.UsageRateTimeline(
-                                unit="natus",
+                                unit="aut",
                                 usage_rate_timeline_entries=[
                                     shared.UsageRateTimelineEntry(
                                         effective_time=shared.EstimationTimePoint(
-                                            estimation_time_frame_offset="alias",
+                                            estimation_time_frame_offset="nulla",
                                         ),
-                                        usage_rate=59.099998,
+                                        usage_rate=93.099998,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="corrupti",
+                                        ),
+                                        usage_rate=16.100000,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="aperiam",
+                                        ),
+                                        usage_rate=13.200000,
                                     ),
                                 ],
                             ),
                         ),
                         licenses=[
-                            "eius",
-                            "repellat",
-                            "in",
+                            "illum",
+                            "minima",
+                            "voluptas",
                         ],
                         machine_type=shared.MachineType(
                             custom_machine_type=shared.CustomMachineType(
-                                machine_series="sunt",
-                                memory_size_gb=6.200000,
-                                virtual_cpu_count="quia",
+                                machine_series="laudantium",
+                                memory_size_gb=69.099998,
+                                virtual_cpu_count="tempore",
                             ),
                             predefined_machine_type=shared.PredefinedMachineType(
-                                machine_type="culpa",
+                                machine_type="itaque",
                             ),
                         ),
                         persistent_disks=[
                             shared.PersistentDisk(
                                 disk_size=shared.Usage(
                                     usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="qui",
+                                        unit="consequatur",
                                         usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="maxime",
-                                                ),
-                                                usage_rate=74.099998,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="quia",
-                                                ),
-                                                usage_rate=99.199997,
-                                            ),
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
                                                     estimation_time_frame_offset="aut",
                                                 ),
-                                                usage_rate=62.200001,
+                                                usage_rate=11.100000,
+                                            ),
+                                            shared.UsageRateTimelineEntry(
+                                                effective_time=shared.EstimationTimePoint(
+                                                    estimation_time_frame_offset="ducimus",
+                                                ),
+                                                usage_rate=1.100000,
                                             ),
                                         ],
                                     ),
                                 ),
-                                disk_type="sequi",
+                                disk_type="culpa",
                                 provisioned_iops=shared.Usage(
                                     usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="dolor",
+                                        unit="ea",
                                         usage_rate_timeline_entries=[
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="quas",
+                                                    estimation_time_frame_offset="sint",
                                                 ),
-                                                usage_rate=3.100000,
+                                                usage_rate=29.100000,
                                             ),
                                             shared.UsageRateTimelineEntry(
                                                 effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="qui",
+                                                    estimation_time_frame_offset="in",
                                                 ),
-                                                usage_rate=91.199997,
+                                                usage_rate=53.200001,
                                             ),
                                         ],
                                     ),
                                 ),
                                 scope="SCOPE_REGIONAL",
                             ),
-                            shared.PersistentDisk(
-                                disk_size=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="debitis",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="autem",
-                                                ),
-                                                usage_rate=79.199997,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="eum",
-                                                ),
-                                                usage_rate=67.199997,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                disk_type="saepe",
-                                provisioned_iops=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="laboriosam",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="esse",
-                                                ),
-                                                usage_rate=16.100000,
-                                            ),
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="consequatur",
-                                                ),
-                                                usage_rate=63.200001,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                scope="SCOPE_ZONAL",
-                            ),
-                            shared.PersistentDisk(
-                                disk_size=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="tempore",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="corrupti",
-                                                ),
-                                                usage_rate=63.200001,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                disk_type="eaque",
-                                provisioned_iops=shared.Usage(
-                                    usage_rate_timeline=shared.UsageRateTimeline(
-                                        unit="reprehenderit",
-                                        usage_rate_timeline_entries=[
-                                            shared.UsageRateTimelineEntry(
-                                                effective_time=shared.EstimationTimePoint(
-                                                    estimation_time_frame_offset="molestiae",
-                                                ),
-                                                usage_rate=32.099998,
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                                scope="SCOPE_UNSPECIFIED",
-                            ),
                         ],
                         preemptible=True,
-                        region="quae",
+                        region="est",
                     ),
-                    name="sit",
+                    name="aut",
+                    premium_tier_egress_workload=shared.PremiumTierEgressWorkload(
+                        destination_continent="DESTINATION_CONTINENT_SOUTH_AMERICA",
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="consequuntur",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="optio",
+                                        ),
+                                        usage_rate=80.199997,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        source_region="est",
+                    ),
+                    standard_tier_egress_workload=shared.StandardTierEgressWorkload(
+                        egress_rate=shared.Usage(
+                            usage_rate_timeline=shared.UsageRateTimeline(
+                                unit="velit",
+                                usage_rate_timeline_entries=[
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="vitae",
+                                        ),
+                                        usage_rate=53.099998,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="porro",
+                                        ),
+                                        usage_rate=67.099998,
+                                    ),
+                                    shared.UsageRateTimelineEntry(
+                                        effective_time=shared.EstimationTimePoint(
+                                            estimation_time_frame_offset="sunt",
+                                        ),
+                                        usage_rate=45.200001,
+                                    ),
+                                ],
+                            ),
+                        ),
+                        source_region="et",
+                    ),
                 ),
             ],
         ),

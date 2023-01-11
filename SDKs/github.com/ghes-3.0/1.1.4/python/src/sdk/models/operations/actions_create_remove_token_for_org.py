@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import authentication_token as shared_authentication_token
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForOrgRequest:
-    path_params: ActionsCreateRemoveTokenForOrgPathParams = field()
+    path_params: ActionsCreateRemoveTokenForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authentication_token: Optional[shared.AuthenticationToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authentication_token: Optional[shared_authentication_token.AuthenticationToken] = dataclasses.field(default=None)
     

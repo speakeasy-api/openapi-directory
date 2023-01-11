@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import responseformat_enum as shared_responseformat_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIVVersionCurrenciesHistorySupportedPathParams:
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIVVersionCurrenciesHistorySupportedQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
-    format: Optional[shared.ResponseFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    format: Optional[shared_responseformat_enum.ResponseFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIVVersionCurrenciesHistorySupportedRequest:
-    path_params: GetAPIVVersionCurrenciesHistorySupportedPathParams = field()
-    query_params: GetAPIVVersionCurrenciesHistorySupportedQueryParams = field()
+    path_params: GetAPIVVersionCurrenciesHistorySupportedPathParams = dataclasses.field()
+    query_params: GetAPIVVersionCurrenciesHistorySupportedQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIVVersionCurrenciesHistorySupportedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_api_v_version_currencies_history_supported_200_application_json_strings: Optional[List[str]] = field(default=None)
-    problem_details: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    problem_details: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    get_api_v_version_currencies_history_supported_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

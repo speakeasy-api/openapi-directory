@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import statistics as shared_statistics
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsQueryParams:
-    from_: datetime = field(metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
-    to: datetime = field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
+    from_: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
+    to: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsRequest:
-    query_params: GetStatisticsQueryParams = field()
+    query_params: GetStatisticsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStatisticsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    statistics: Optional[List[shared.Statistics]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    statistics: Optional[list[shared_statistics.Statistics]] = dataclasses.field(default=None)
     

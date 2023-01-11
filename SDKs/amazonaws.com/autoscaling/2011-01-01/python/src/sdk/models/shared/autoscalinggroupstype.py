@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import autoscalinggroup as shared_autoscalinggroup
 
 
-@dataclass
+@dataclasses.dataclass
 class AutoScalingGroupsType:
-    auto_scaling_groups: List[AutoScalingGroup] = field()
-    next_token: Optional[str] = field(default=None)
+    auto_scaling_groups: list[shared_autoscalinggroup.AutoScalingGroup] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

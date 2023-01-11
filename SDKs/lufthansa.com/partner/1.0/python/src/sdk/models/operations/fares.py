@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class FaresQueryParams:
-    carriers: str = field(metadata={'query_param': { 'field_name': 'carriers', 'style': 'form', 'explode': True }})
-    catalogues: str = field(metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
-    segments: str = field(metadata={'query_param': { 'field_name': 'segments', 'style': 'form', 'explode': True }})
-    fare_types: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fare-types', 'style': 'form', 'explode': True }})
-    travelers: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'travelers', 'style': 'form', 'explode': True }})
+    carriers: str = dataclasses.field(metadata={'query_param': { 'field_name': 'carriers', 'style': 'form', 'explode': True }})
+    catalogues: str = dataclasses.field(metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
+    segments: str = dataclasses.field(metadata={'query_param': { 'field_name': 'segments', 'style': 'form', 'explode': True }})
+    fare_types: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fare-types', 'style': 'form', 'explode': True }})
+    travelers: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'travelers', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FaresHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FaresSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FaresRequest:
-    headers: FaresHeaders = field()
-    query_params: FaresQueryParams = field()
-    security: FaresSecurity = field()
+    headers: FaresHeaders = dataclasses.field()
+    query_params: FaresQueryParams = dataclasses.field()
+    security: FaresSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FaresResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fares_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fares_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

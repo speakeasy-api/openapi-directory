@@ -1,17 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import spanscore as shared_spanscore
+from ..shared import score as shared_score
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AttributeScores:
-    r"""AttributeScores
-    This holds score values for a single attribute. It contains both per-span scores as well as an overall summary score..
-    """
-    
-    span_scores: Optional[List[SpanScore]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spanScores') }})
-    summary_score: Optional[Score] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summaryScore') }})
+    span_scores: Optional[list[shared_spanscore.SpanScore]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spanScores') }})
+    summary_score: Optional[shared_score.Score] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summaryScore') }})
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import insightsummary as shared_insightsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetInsightSummariesResult:
-    insight_summaries: Optional[List[InsightSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InsightSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    insight_summaries: Optional[list[shared_insightsummary.InsightSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InsightSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

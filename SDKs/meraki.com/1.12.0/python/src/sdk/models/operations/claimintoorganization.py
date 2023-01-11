@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ClaimIntoOrganizationPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 class ClaimIntoOrganizationRequestBodyLicensesModeEnum(str, Enum):
     ADD_DEVICES = "addDevices"
@@ -15,29 +15,29 @@ class ClaimIntoOrganizationRequestBodyLicensesModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClaimIntoOrganizationRequestBodyLicenses:
-    key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    mode: Optional[ClaimIntoOrganizationRequestBodyLicensesModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
+    key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    mode: Optional[ClaimIntoOrganizationRequestBodyLicensesModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClaimIntoOrganizationRequestBody:
-    licenses: Optional[List[ClaimIntoOrganizationRequestBodyLicenses]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('licenses') }})
-    orders: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orders') }})
-    serials: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serials') }})
+    licenses: Optional[list[ClaimIntoOrganizationRequestBodyLicenses]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('licenses') }})
+    orders: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orders') }})
+    serials: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serials') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClaimIntoOrganizationRequest:
-    path_params: ClaimIntoOrganizationPathParams = field()
-    request: Optional[ClaimIntoOrganizationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ClaimIntoOrganizationPathParams = dataclasses.field()
+    request: Optional[ClaimIntoOrganizationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClaimIntoOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    claim_into_organization_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    claim_into_organization_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

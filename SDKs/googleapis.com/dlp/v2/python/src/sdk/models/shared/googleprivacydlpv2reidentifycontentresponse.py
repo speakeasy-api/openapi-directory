@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2contentitem as shared_googleprivacydlpv2contentitem
+from ..shared import googleprivacydlpv2transformationoverview as shared_googleprivacydlpv2transformationoverview
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2ReidentifyContentResponse:
     r"""GooglePrivacyDlpV2ReidentifyContentResponse
     Results of re-identifying an item.
     """
     
-    item: Optional[GooglePrivacyDlpV2ContentItem] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
-    overview: Optional[GooglePrivacyDlpV2TransformationOverview] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('overview') }})
+    item: Optional[shared_googleprivacydlpv2contentitem.GooglePrivacyDlpV2ContentItem] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
+    overview: Optional[shared_googleprivacydlpv2transformationoverview.GooglePrivacyDlpV2TransformationOverview] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('overview') }})
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import controllers_packagedetailresponse as shared_controllers_packagedetailresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class LatestPackagePathParams:
-    package_name: str = field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
+    package_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LatestPackageSecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LatestPackageRequest:
-    path_params: LatestPackagePathParams = field()
-    security: LatestPackageSecurity = field()
+    path_params: LatestPackagePathParams = dataclasses.field()
+    security: LatestPackageSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LatestPackageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_package_detail_response: Optional[shared.ControllersPackageDetailResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_package_detail_response: Optional[shared_controllers_packagedetailresponse.ControllersPackageDetailResponse] = dataclasses.field(default=None)
     

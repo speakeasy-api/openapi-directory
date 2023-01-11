@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,28 +21,28 @@ req = operations.CloudbillingBillingAccountsCreateRequest(
         option1=operations.CloudbillingBillingAccountsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.CloudbillingBillingAccountsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="dolore",
-        alt="media",
-        callback="debitis",
-        fields="laudantium",
-        key="eaque",
-        oauth_token="molestiae",
+        access_token="tempore",
+        alt="proto",
+        callback="dolores",
+        fields="quia",
+        key="voluptatum",
+        oauth_token="provident",
         pretty_print=True,
-        quota_user="in",
-        upload_type="ab",
-        upload_protocol="eum",
+        quota_user="ex",
+        upload_type="animi",
+        upload_protocol="asperiores",
     ),
     request=shared.BillingAccountInput(
-        display_name="magnam",
-        master_billing_account="est",
+        display_name="qui",
+        master_billing_account="earum",
     ),
 )
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import configmanagementerrorresource as shared_configmanagementerrorresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigManagementSyncError:
     r"""ConfigManagementSyncError
     An ACM created error representing a problem syncing configurations
     """
     
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    error_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
-    error_resources: Optional[List[ConfigManagementErrorResource]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorResources') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
+    error_resources: Optional[list[shared_configmanagementerrorresource.ConfigManagementErrorResource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorResources') }})
     

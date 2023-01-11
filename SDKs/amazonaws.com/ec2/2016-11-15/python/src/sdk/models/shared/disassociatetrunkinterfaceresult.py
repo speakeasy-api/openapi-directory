@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DisassociateTrunkInterfaceResult:
-    client_token: Optional[str] = field(default=None)
-    return_: Optional[bool] = field(default=None)
+    client_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    return_: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

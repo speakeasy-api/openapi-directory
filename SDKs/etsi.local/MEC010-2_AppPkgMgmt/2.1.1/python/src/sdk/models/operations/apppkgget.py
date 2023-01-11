@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgGetPathParams:
-    app_pkg_id: str = field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
+    app_pkg_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgGetRequest:
-    path_params: AppPkgGetPathParams = field()
+    path_params: AppPkgGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

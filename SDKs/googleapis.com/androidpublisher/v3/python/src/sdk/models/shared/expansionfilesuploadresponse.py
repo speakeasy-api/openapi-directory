@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import expansionfile as shared_expansionfile
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExpansionFilesUploadResponse:
     r"""ExpansionFilesUploadResponse
     Response for uploading an expansion file.
     """
     
-    expansion_file: Optional[ExpansionFile] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expansionFile') }})
+    expansion_file: Optional[shared_expansionfile.ExpansionFile] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expansionFile') }})
     

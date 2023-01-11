@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,15 +7,15 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Tag:
     r"""Tag
     Tag
     """
     
-    dollar_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('$id') }})
-    command: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
-    date_created: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated') }})
-    function_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionId') }})
-    size: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    dollar_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('$id') }})
+    command: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
+    date_created: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated') }})
+    function_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionId') }})
+    size: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
     

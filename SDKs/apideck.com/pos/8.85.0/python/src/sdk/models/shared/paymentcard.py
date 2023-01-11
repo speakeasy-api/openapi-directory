@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import address as shared_address
 
 class PaymentCardCardBrandEnum(str, Enum):
     VISA = "visa"
@@ -34,50 +34,50 @@ class PaymentCardPrepaidTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaymentCard:
     r"""PaymentCard
     A card's non-confidential details.
     """
     
-    billing_address: Optional[Address] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing_address') }})
-    bin: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bin') }})
-    card_brand: Optional[PaymentCardCardBrandEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_brand') }})
-    card_type: Optional[PaymentCardCardTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_type') }})
-    cardholder_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardholder_name') }})
-    customer_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer_id') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    exp_month: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_month') }})
-    exp_year: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_year') }})
-    fingerprint: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    last_4: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_4') }})
-    merchant_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('merchant_id') }})
-    prepaid_type: Optional[PaymentCardPrepaidTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prepaid_type') }})
-    reference_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reference_id') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    billing_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing_address') }})
+    bin: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bin') }})
+    card_brand: Optional[PaymentCardCardBrandEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_brand') }})
+    card_type: Optional[PaymentCardCardTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_type') }})
+    cardholder_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardholder_name') }})
+    customer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer_id') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    exp_month: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_month') }})
+    exp_year: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_year') }})
+    fingerprint: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    last_4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_4') }})
+    merchant_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('merchant_id') }})
+    prepaid_type: Optional[PaymentCardPrepaidTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prepaid_type') }})
+    reference_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reference_id') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaymentCardInput:
     r"""PaymentCardInput
     A card's non-confidential details.
     """
     
-    billing_address: Optional[Address] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing_address') }})
-    bin: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bin') }})
-    card_brand: Optional[PaymentCardCardBrandEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_brand') }})
-    card_type: Optional[PaymentCardCardTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_type') }})
-    cardholder_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardholder_name') }})
-    customer_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer_id') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    exp_month: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_month') }})
-    exp_year: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_year') }})
-    fingerprint: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
-    last_4: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_4') }})
-    merchant_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('merchant_id') }})
-    prepaid_type: Optional[PaymentCardPrepaidTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prepaid_type') }})
-    reference_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reference_id') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    billing_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('billing_address') }})
+    bin: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bin') }})
+    card_brand: Optional[PaymentCardCardBrandEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_brand') }})
+    card_type: Optional[PaymentCardCardTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('card_type') }})
+    cardholder_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cardholder_name') }})
+    customer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer_id') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    exp_month: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_month') }})
+    exp_year: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exp_year') }})
+    fingerprint: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
+    last_4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_4') }})
+    merchant_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('merchant_id') }})
+    prepaid_type: Optional[PaymentCardPrepaidTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prepaid_type') }})
+    reference_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reference_id') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchpersonalnamein as shared_batchpersonalnamein
+from ..shared import batchpersonalnameparsedout as shared_batchpersonalnameparsedout
 
 
-@dataclass
+@dataclasses.dataclass
 class PinyinChineseNameBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PinyinChineseNameBatchRequest:
-    security: PinyinChineseNameBatchSecurity = field()
-    request: Optional[shared.BatchPersonalNameIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PinyinChineseNameBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchpersonalnamein.BatchPersonalNameIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PinyinChineseNameBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_personal_name_parsed_out: Optional[shared.BatchPersonalNameParsedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_personal_name_parsed_out: Optional[shared_batchpersonalnameparsedout.BatchPersonalNameParsedOut] = dataclasses.field(default=None)
     

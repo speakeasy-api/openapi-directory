@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -32,13 +32,13 @@ class SubscriptionCreateRequestEventTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubscriptionCreateRequest:
     r"""SubscriptionCreateRequest
     New webhook settings for an app.
     """
     
-    event_type: SubscriptionCreateRequestEventTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventType') }})
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    property_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('propertyName') }})
+    event_type: SubscriptionCreateRequestEventTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventType') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    property_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('propertyName') }})
     

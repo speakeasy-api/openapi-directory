@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import devicenapalm as shared_devicenapalm
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesNapalmPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesNapalmQueryParams:
-    method: str = field(metadata={'query_param': { 'field_name': 'method', 'style': 'form', 'explode': True }})
+    method: str = dataclasses.field(metadata={'query_param': { 'field_name': 'method', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesNapalmRequest:
-    path_params: DcimDevicesNapalmPathParams = field()
-    query_params: DcimDevicesNapalmQueryParams = field()
+    path_params: DcimDevicesNapalmPathParams = dataclasses.field()
+    query_params: DcimDevicesNapalmQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDevicesNapalmResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_napalm: Optional[shared.DeviceNapalm] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_napalm: Optional[shared_devicenapalm.DeviceNapalm] = dataclasses.field(default=None)
     

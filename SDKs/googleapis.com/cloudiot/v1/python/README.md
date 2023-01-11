@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,31 +21,31 @@ req = operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest(
         option1=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams(
-        parent="repudiandae",
+        parent="sed",
     ),
     query_params=operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams(
-        dollar_xgafv="2",
-        access_token="autem",
-        alt="media",
-        callback="nobis",
-        fields="eaque",
-        key="aut",
-        oauth_token="nam",
-        pretty_print=False,
-        quota_user="explicabo",
-        upload_type="tempora",
-        upload_protocol="non",
+        dollar_xgafv="1",
+        access_token="et",
+        alt="proto",
+        callback="quasi",
+        fields="pariatur",
+        key="eius",
+        oauth_token="soluta",
+        pretty_print=True,
+        quota_user="ex",
+        upload_type="eos",
+        upload_protocol="ratione",
     ),
     request=shared.BindDeviceToGatewayRequest(
-        device_id="cumque",
-        gateway_id="ad",
+        device_id="amet",
+        gateway_id="ipsam",
     ),
 )
     

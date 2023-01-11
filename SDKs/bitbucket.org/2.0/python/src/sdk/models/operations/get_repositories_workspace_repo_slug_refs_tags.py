@@ -1,38 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_tags as shared_paginated_tags
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams:
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest:
-    path_params: GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams = field()
-    query_params: GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams = field()
-    security: GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity = field()
+    path_params: GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams = dataclasses.field()
+    query_params: GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams = dataclasses.field()
+    security: GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_tags: Optional[shared.PaginatedTags] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_tags: Optional[shared_paginated_tags.PaginatedTags] = dataclasses.field(default=None)
     

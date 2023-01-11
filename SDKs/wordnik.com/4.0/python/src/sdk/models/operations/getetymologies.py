@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEtymologiesPathParams:
-    word: str = field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
+    word: str = dataclasses.field(metadata={'path_param': { 'field_name': 'word', 'style': 'simple', 'explode': False }})
     
 class GetEtymologiesUseCanonicalEnum(str, Enum):
     FALSE = "false"
     TRUE = "true"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEtymologiesQueryParams:
-    use_canonical: Optional[GetEtymologiesUseCanonicalEnum] = field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
+    use_canonical: Optional[GetEtymologiesUseCanonicalEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'useCanonical', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEtymologiesRequest:
-    path_params: GetEtymologiesPathParams = field()
-    query_params: GetEtymologiesQueryParams = field()
+    path_params: GetEtymologiesPathParams = dataclasses.field()
+    query_params: GetEtymologiesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEtymologiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

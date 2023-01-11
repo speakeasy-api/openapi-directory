@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablesecret as shared_writablesecret
+from ..shared import secret as shared_secret
 
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretsPartialUpdateRequest:
-    path_params: SecretsSecretsPartialUpdatePathParams = field()
-    request: shared.WritableSecretInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: SecretsSecretsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablesecret.WritableSecretInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    secret: Optional[shared.Secret] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    secret: Optional[shared_secret.Secret] = dataclasses.field(default=None)
     

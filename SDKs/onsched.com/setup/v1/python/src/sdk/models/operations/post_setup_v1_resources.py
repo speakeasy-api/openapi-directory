@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceinputmodel as shared_resourceinputmodel
+from ..shared import resourceviewmodel as shared_resourceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesQueryParams:
-    google_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
-    outlook_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
+    google_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
+    outlook_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesRequests:
-    resource_input_model: Optional[shared.ResourceInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    resource_input_model1: Optional[shared.ResourceInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    resource_input_model2: Optional[shared.ResourceInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    resource_input_model3: Optional[shared.ResourceInputModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    resource_input_model: Optional[shared_resourceinputmodel.ResourceInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    resource_input_model1: Optional[shared_resourceinputmodel.ResourceInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    resource_input_model2: Optional[shared_resourceinputmodel.ResourceInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    resource_input_model3: Optional[shared_resourceinputmodel.ResourceInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesRequest:
-    query_params: PostSetupV1ResourcesQueryParams = field()
-    request: Optional[PostSetupV1ResourcesRequests] = field(default=None)
+    query_params: PostSetupV1ResourcesQueryParams = dataclasses.field()
+    request: Optional[PostSetupV1ResourcesRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ResourcesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_view_model: Optional[shared.ResourceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_view_model: Optional[shared_resourceviewmodel.ResourceViewModel] = dataclasses.field(default=None)
     

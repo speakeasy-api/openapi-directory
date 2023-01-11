@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPirateTranslateQueryParams:
-    text: str = field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
+    text: str = dataclasses.field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPirateTranslateSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPirateTranslateRequest:
-    query_params: GetPirateTranslateQueryParams = field()
-    security: GetPirateTranslateSecurity = field()
+    query_params: GetPirateTranslateQueryParams = dataclasses.field()
+    security: GetPirateTranslateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPirateTranslateResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

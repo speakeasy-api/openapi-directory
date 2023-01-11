@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cachepolicylist as shared_cachepolicylist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListCachePoliciesResult:
-    cache_policy_list: Optional[CachePolicyList] = field(default=None)
+    cache_policy_list: Optional[shared_cachepolicylist.CachePolicyList] = dataclasses.field(default=None)
     

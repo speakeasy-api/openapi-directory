@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3AssetChangesChangeSetsChangeSetIDPathParams:
-    change_set_id: int = field(metadata={'path_param': { 'field_name': 'change-set-id', 'style': 'simple', 'explode': False }})
+    change_set_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'change-set-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3AssetChangesChangeSetsChangeSetIDRequest:
-    path_params: DeleteV3AssetChangesChangeSetsChangeSetIDPathParams = field()
+    path_params: DeleteV3AssetChangesChangeSetsChangeSetIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteV3AssetChangesChangeSetsChangeSetIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

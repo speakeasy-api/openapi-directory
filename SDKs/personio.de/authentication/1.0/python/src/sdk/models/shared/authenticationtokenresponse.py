@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthenticationTokenResponseData:
-    token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
+    token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthenticationTokenResponse:
-    data: AuthenticationTokenResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    success: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
+    data: AuthenticationTokenResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    success: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,15 +24,22 @@ s.config_security(
     )
 )
     
-req = operations.DeleteWebhooksIDRequest(
-    path_params=operations.DeleteWebhooksIDPathParams(
-        id="dolor",
+req = operations.PostRmmPreSignAttachmentRequest(
+    security=operations.PostRmmPreSignAttachmentSecurity(
+        basic_auth=shared.SchemeBasicAuth(
+            password="YOUR_PASSWORD_HERE",
+            username="YOUR_USERNAME_HERE",
+        ),
+    ),
+    request=shared.PreSignRequest(
+        file_extension="dignissimos",
+        media_type="ullam",
     ),
 )
     
-res = s.sdk.delete_webhooks_id_(req)
+res = s.attachments.post_rmm_pre_sign_attachment(req)
 
-if res.status_code == 200:
+if res.pre_sign_info is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -41,20 +47,32 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Attachments
 
-* `delete_webhooks_id_` - Delete a webhook
+* `post_rmm_pre_sign_attachment` - Upload an attachment via a signed URL
+
+### Blocked Numbers
+
 * `get_blocked_numbers` - List blocked numbers
+* `post_blocked_numbers` - Create a blocked number
+
+### Message
+
 * `get_messages` - Retrieve Messages
+* `get_messages_send` - Send message by simple GET or POST
 * `get_messages_id_` - Show Message
 * `get_messages_id_related_received_messages` - List Related Messages
-* `get_messages_send` - Send message by simple GET or POST
+* `post_messages` - Send Messages
+
+### Profile
+
 * `get_profile` - Get profile
+
+### Webhooks
+
+* `delete_webhooks_id_` - Delete a webhook
 * `get_webhooks` - List webhooks
 * `get_webhooks_id_` - Read a webhook
-* `post_blocked_numbers` - Create a blocked number
-* `post_messages` - Send Messages
-* `post_rmm_pre_sign_attachment` - Upload an attachment via a signed URL
 * `post_webhooks` - Create a webhook
 * `post_webhooks_id_` - Update a webhook
 

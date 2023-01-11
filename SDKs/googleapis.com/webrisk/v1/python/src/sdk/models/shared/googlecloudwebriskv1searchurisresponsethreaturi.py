@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -13,12 +13,12 @@ class GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudWebriskV1SearchUrisResponseThreatURI:
     r"""GoogleCloudWebriskV1SearchUrisResponseThreatURI
     Contains threat information on a matching uri.
     """
     
-    expire_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expireTime') }})
-    threat_types: Optional[List[GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatTypes') }})
+    expire_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expireTime') }})
+    threat_types: Optional[list[GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatTypes') }})
     

@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSpotFleetInstancesResponse:
     r"""DescribeSpotFleetInstancesResponse
     Contains the output of DescribeSpotFleetInstances.
     """
     
-    active_instances: Optional[List[ActiveInstance]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
-    spot_fleet_request_id: Optional[str] = field(default=None)
+    active_instances: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    spot_fleet_request_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

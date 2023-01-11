@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PublishMockPathParams:
-    mock_uid: str = field(metadata={'path_param': { 'field_name': 'mock_uid', 'style': 'simple', 'explode': False }})
+    mock_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'mock_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PublishMock200ApplicationJSONMock:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PublishMock200ApplicationJSON:
-    mock: Optional[PublishMock200ApplicationJSONMock] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mock') }})
+    mock: Optional[PublishMock200ApplicationJSONMock] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mock') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishMockRequest:
-    path_params: PublishMockPathParams = field()
+    path_params: PublishMockPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishMockResponse:
-    content_type: str = field()
-    status_code: int = field()
-    publish_mock_200_application_json_object: Optional[PublishMock200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    publish_mock_200_application_json_object: Optional[PublishMock200ApplicationJSON] = dataclasses.field(default=None)
     

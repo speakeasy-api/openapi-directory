@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import membership as shared_membership
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCreateMembershipPathParams:
-    team_id: str = field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsCreateMembershipRequestBody:
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    roles: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roles') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    roles: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roles') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCreateMembershipSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCreateMembershipRequest:
-    path_params: TeamsCreateMembershipPathParams = field()
-    security: TeamsCreateMembershipSecurity = field()
-    request: Optional[TeamsCreateMembershipRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsCreateMembershipPathParams = dataclasses.field()
+    security: TeamsCreateMembershipSecurity = dataclasses.field()
+    request: Optional[TeamsCreateMembershipRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCreateMembershipResponse:
-    content_type: str = field()
-    status_code: int = field()
-    membership: Optional[shared.Membership] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    membership: Optional[shared_membership.Membership] = dataclasses.field(default=None)
     

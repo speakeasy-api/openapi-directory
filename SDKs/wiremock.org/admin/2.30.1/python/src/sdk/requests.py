@@ -87,6 +87,29 @@ class Requests:
         return res
 
     
+    def get_admin_requests_unmatched(self) -> operations.GetAdminRequestsUnmatchedResponse:
+        r"""Find unmatched requests
+        Get details of logged requests that weren't matched by any stub mapping
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/__admin/requests/unmatched"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAdminRequestsUnmatchedResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+
+        return res
+
+    
     def get_admin_requests_request_id_(self, request: operations.GetAdminRequestsRequestIDRequest) -> operations.GetAdminRequestsRequestIDResponse:
         r"""Get request by ID
         """
@@ -111,29 +134,6 @@ class Requests:
         return res
 
     
-    def get_admin_requests_unmatched(self) -> operations.GetAdminRequestsUnmatchedResponse:
-        r"""Find unmatched requests
-        Get details of logged requests that weren't matched by any stub mapping
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/__admin/requests/unmatched"
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetAdminRequestsUnmatchedResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
-    
     def post_admin_requests_count(self, request: operations.PostAdminRequestsCountRequest) -> operations.PostAdminRequestsCountResponse:
         r"""Count requests by criteria
         Count requests logged in the journal matching the specified criteria
@@ -144,7 +144,7 @@ class Requests:
         url = base_url.removesuffix("/") + "/__admin/requests/count"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -152,7 +152,7 @@ class Requests:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAdminRequestsCountResponse(status_code=r.status_code, content_type=content_type)
@@ -175,7 +175,7 @@ class Requests:
         url = base_url.removesuffix("/") + "/__admin/requests/find"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -183,7 +183,7 @@ class Requests:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAdminRequestsFindResponse(status_code=r.status_code, content_type=content_type)
@@ -204,7 +204,7 @@ class Requests:
         url = base_url.removesuffix("/") + "/__admin/requests/remove"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -212,7 +212,7 @@ class Requests:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAdminRequestsRemoveResponse(status_code=r.status_code, content_type=content_type)
@@ -232,13 +232,13 @@ class Requests:
         url = base_url.removesuffix("/") + "/__admin/requests/remove-by-metadata"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAdminRequestsRemoveByMetadataResponse(status_code=r.status_code, content_type=content_type)

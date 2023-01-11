@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,29 +19,40 @@ s = sdk.SDK()
 req = operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest(
     query_params=operations.TravelimpactmodelFlightsComputeFlightEmissionsQueryParams(
         dollar_xgafv="1",
-        access_token="necessitatibus",
-        alt="media",
-        callback="vel",
-        fields="accusamus",
-        key="quisquam",
-        oauth_token="aliquid",
+        access_token="amet",
+        alt="proto",
+        callback="velit",
+        fields="id",
+        key="quos",
+        oauth_token="sit",
         pretty_print=True,
-        quota_user="officia",
-        upload_type="commodi",
-        upload_protocol="est",
+        quota_user="ut",
+        upload_type="autem",
+        upload_protocol="maxime",
     ),
     request=shared.ComputeFlightEmissionsRequest(
         flights=[
             shared.Flight(
                 departure_date=shared.Date(
-                    day=39902411189383839,
-                    month=727541421606400517,
-                    year=8695851542853274209,
+                    day=3414330612766374518,
+                    month=7016130896292550698,
+                    year=8639846375246871580,
                 ),
-                destination="earum",
-                flight_number=4507682604096346908,
-                operating_carrier_code="reprehenderit",
-                origin="hic",
+                destination="et",
+                flight_number=6689465552050660190,
+                operating_carrier_code="quis",
+                origin="dolor",
+            ),
+            shared.Flight(
+                departure_date=shared.Date(
+                    day=4465709863325755882,
+                    month=150416842709719260,
+                    year=7716596964253133653,
+                ),
+                destination="nihil",
+                flight_number=8732707823561012094,
+                operating_carrier_code="laborum",
+                origin="error",
             ),
         ],
     ),

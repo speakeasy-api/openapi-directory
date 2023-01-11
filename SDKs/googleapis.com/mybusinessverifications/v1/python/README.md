@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,43 +18,43 @@ s = sdk.SDK()
     
 req = operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest(
     path_params=operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams(
-        location="enim",
+        location="ex",
     ),
     query_params=operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams(
         dollar_xgafv="2",
-        access_token="voluptatibus",
-        alt="media",
-        callback="corrupti",
-        fields="dignissimos",
-        key="incidunt",
-        oauth_token="neque",
+        access_token="quis",
+        alt="json",
+        callback="qui",
+        fields="voluptates",
+        key="odio",
+        oauth_token="pariatur",
         pretty_print=False,
-        quota_user="et",
-        upload_type="earum",
-        upload_protocol="tempora",
+        quota_user="rerum",
+        upload_type="omnis",
+        upload_protocol="veritatis",
     ),
     request=shared.FetchVerificationOptionsRequest(
         context=shared.ServiceBusinessContext(
             address=shared.PostalAddress(
                 address_lines=[
-                    "ab",
-                    "quod",
+                    "vero",
                 ],
-                administrative_area="nemo",
-                language_code="nisi",
-                locality="est",
-                organization="iste",
-                postal_code="quia",
+                administrative_area="autem",
+                language_code="vel",
+                locality="quos",
+                organization="dolore",
+                postal_code="sequi",
                 recipients=[
-                    "ipsam",
+                    "minus",
+                    "harum",
                 ],
-                region_code="qui",
-                revision=5011812006485200487,
-                sorting_code="esse",
-                sublocality="molestiae",
+                region_code="dolores",
+                revision=5694222714762395261,
+                sorting_code="iure",
+                sublocality="beatae",
             ),
         ),
-        language_code="soluta",
+        language_code="ut",
     ),
 )
     

@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Teams:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 400:
             pass
@@ -68,7 +68,7 @@ class Teams:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Player]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Player]])
                 res.players = out
         elif r.status_code == 400:
             pass
@@ -96,7 +96,7 @@ class Teams:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamTalent]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamTalent]])
                 res.team_talents = out
         elif r.status_code == 400:
             pass
@@ -152,7 +152,7 @@ class Teams:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 400:
             pass

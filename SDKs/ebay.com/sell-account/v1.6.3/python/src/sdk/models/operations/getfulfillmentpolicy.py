@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fulfillmentpolicy as shared_fulfillmentpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPolicyPathParams:
-    fulfillment_policy_id: str = field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
+    fulfillment_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPolicyRequest:
-    path_params: GetFulfillmentPolicyPathParams = field()
-    security: GetFulfillmentPolicySecurity = field()
+    path_params: GetFulfillmentPolicyPathParams = dataclasses.field()
+    security: GetFulfillmentPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fulfillment_policy: Optional[shared.FulfillmentPolicy] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fulfillment_policy: Optional[shared_fulfillmentpolicy.FulfillmentPolicy] = dataclasses.field(default=None)
     

@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import issuetokenrequest as shared_issuetokenrequest
+from ..shared import error as shared_error
+from ..shared import issuetokenresponse as shared_issuetokenresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class IssueTokenRequest:
-    request: shared.IssueTokenRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_issuetokenrequest.IssueTokenRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IssueTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    issue_token_response: Optional[shared.IssueTokenResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    issue_token_response: Optional[shared_issuetokenresponse.IssueTokenResponse] = dataclasses.field(default=None)
     

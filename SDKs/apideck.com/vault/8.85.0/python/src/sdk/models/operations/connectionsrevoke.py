@@ -1,34 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import badrequestresponse as shared_badrequestresponse
+from ..shared import notfoundresponse as shared_notfoundresponse
+from ..shared import paymentrequiredresponse as shared_paymentrequiredresponse
+from ..shared import unauthorizedresponse as shared_unauthorizedresponse
+from ..shared import unexpectederrorresponse as shared_unexpectederrorresponse
+from ..shared import unprocessableresponse as shared_unprocessableresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionsRevokePathParams:
-    application_id: str = field(metadata={'path_param': { 'field_name': 'application_id', 'style': 'simple', 'explode': False }})
-    service_id: str = field(metadata={'path_param': { 'field_name': 'service_id', 'style': 'simple', 'explode': False }})
+    application_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'application_id', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'service_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionsRevokeQueryParams:
-    redirect_uri: str = field(metadata={'query_param': { 'field_name': 'redirect_uri', 'style': 'form', 'explode': True }})
-    state: str = field(metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    redirect_uri: str = dataclasses.field(metadata={'query_param': { 'field_name': 'redirect_uri', 'style': 'form', 'explode': True }})
+    state: str = dataclasses.field(metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionsRevokeRequest:
-    path_params: ConnectionsRevokePathParams = field()
-    query_params: ConnectionsRevokeQueryParams = field()
+    path_params: ConnectionsRevokePathParams = dataclasses.field()
+    query_params: ConnectionsRevokeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionsRevokeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bad_request_response: Optional[shared.BadRequestResponse] = field(default=None)
-    not_found_response: Optional[shared.NotFoundResponse] = field(default=None)
-    payment_required_response: Optional[shared.PaymentRequiredResponse] = field(default=None)
-    unauthorized_response: Optional[shared.UnauthorizedResponse] = field(default=None)
-    unexpected_error_response: Optional[shared.UnexpectedErrorResponse] = field(default=None)
-    unprocessable_response: Optional[shared.UnprocessableResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bad_request_response: Optional[shared_badrequestresponse.BadRequestResponse] = dataclasses.field(default=None)
+    not_found_response: Optional[shared_notfoundresponse.NotFoundResponse] = dataclasses.field(default=None)
+    payment_required_response: Optional[shared_paymentrequiredresponse.PaymentRequiredResponse] = dataclasses.field(default=None)
+    unauthorized_response: Optional[shared_unauthorizedresponse.UnauthorizedResponse] = dataclasses.field(default=None)
+    unexpected_error_response: Optional[shared_unexpectederrorresponse.UnexpectedErrorResponse] = dataclasses.field(default=None)
+    unprocessable_response: Optional[shared_unprocessableresponse.UnprocessableResponse] = dataclasses.field(default=None)
     

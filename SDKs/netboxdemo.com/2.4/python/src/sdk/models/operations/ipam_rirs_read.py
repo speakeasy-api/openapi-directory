@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rir as shared_rir
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsReadRequest:
-    path_params: IpamRirsReadPathParams = field()
+    path_params: IpamRirsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rir: Optional[shared.Rir] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rir: Optional[shared_rir.Rir] = dataclasses.field(default=None)
     

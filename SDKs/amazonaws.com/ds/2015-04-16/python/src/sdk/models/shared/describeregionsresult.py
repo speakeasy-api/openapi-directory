@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import regiondescription as shared_regiondescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeRegionsResult:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    regions_description: Optional[List[RegionDescription]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegionsDescription') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    regions_description: Optional[list[shared_regiondescription.RegionDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegionsDescription') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.DeleteKeyKeyRequest(
     path_params=operations.DeleteKeyKeyPathParams(
-        key="maxime",
+        key="nulla",
     ),
 )
     
-res = s.sdk.delete_key_key_(req)
+res = s.delete_key_key_(req)
 
 if res.empty is not None:
     # handle response

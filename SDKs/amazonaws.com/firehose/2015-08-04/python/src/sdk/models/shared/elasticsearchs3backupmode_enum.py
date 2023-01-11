@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class ElasticsearchS3BackupModeEnum(str, Enum):

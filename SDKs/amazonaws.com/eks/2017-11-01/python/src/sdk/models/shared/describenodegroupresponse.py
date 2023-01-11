@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nodegroup as shared_nodegroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeNodegroupResponse:
-    nodegroup: Optional[Nodegroup] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodegroup') }})
+    nodegroup: Optional[shared_nodegroup.Nodegroup] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nodegroup') }})
     

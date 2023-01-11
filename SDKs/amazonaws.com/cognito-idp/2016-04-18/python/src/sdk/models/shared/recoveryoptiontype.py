@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recoveryoptionnametype_enum as shared_recoveryoptionnametype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RecoveryOptionType:
     r"""RecoveryOptionType
     A map containing a priority as a key, and recovery method name as a value.
     """
     
-    name: RecoveryOptionNameTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    priority: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Priority') }})
+    name: shared_recoveryoptionnametype_enum.RecoveryOptionNameTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    priority: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Priority') }})
     

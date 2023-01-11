@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateQueueResult:
     r"""CreateQueueResult
     Returns the <code>QueueUrl</code> attribute of the created queue.
     """
     
-    queue_url: Optional[str] = field(default=None)
+    queue_url: Optional[str] = dataclasses.field(default=None)
     

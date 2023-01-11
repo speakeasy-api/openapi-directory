@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class MavenRepositoryConfigVersionPolicyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MavenRepositoryConfig:
     r"""MavenRepositoryConfig
     MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.
     """
     
-    allow_snapshot_overwrites: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowSnapshotOverwrites') }})
-    version_policy: Optional[MavenRepositoryConfigVersionPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('versionPolicy') }})
+    allow_snapshot_overwrites: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowSnapshotOverwrites') }})
+    version_policy: Optional[MavenRepositoryConfigVersionPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('versionPolicy') }})
     

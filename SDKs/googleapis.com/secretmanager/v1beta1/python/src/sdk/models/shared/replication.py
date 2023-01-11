@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import usermanaged as shared_usermanaged
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Replication:
     r"""Replication
     A policy that defines the replication configuration of data.
     """
     
-    automatic: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('automatic') }})
-    user_managed: Optional[UserManaged] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userManaged') }})
+    automatic: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('automatic') }})
+    user_managed: Optional[shared_usermanaged.UserManaged] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userManaged') }})
     

@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import kycresponse as shared_kycresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetKycSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKycRequest:
-    security: GetKycSecurity = field()
+    security: GetKycSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKycResponse:
-    content_type: str = field()
-    status_code: int = field()
-    kyc_response: Optional[shared.KycResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    kyc_response: Optional[shared_kycresponse.KycResponse] = dataclasses.field(default=None)
     

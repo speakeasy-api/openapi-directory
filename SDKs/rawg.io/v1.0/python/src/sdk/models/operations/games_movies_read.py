@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import movie as shared_movie
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesMoviesReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesMoviesReadRequest:
-    path_params: GamesMoviesReadPathParams = field()
+    path_params: GamesMoviesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesMoviesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    movie: Optional[shared.Movie] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    movie: Optional[shared_movie.Movie] = dataclasses.field(default=None)
     

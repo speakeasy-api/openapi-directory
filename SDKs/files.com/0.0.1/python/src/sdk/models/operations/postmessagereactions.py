@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messagereactionentity as shared_messagereactionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageReactionsRequestBody:
-    emoji: str = field(metadata={'multipart_form': { 'field_name': 'emoji' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    emoji: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'emoji' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageReactionsRequest:
-    request: Optional[PostMessageReactionsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostMessageReactionsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageReactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_reaction_entity: Optional[shared.MessageReactionEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_reaction_entity: Optional[shared_messagereactionentity.MessageReactionEntity] = dataclasses.field(default=None)
     

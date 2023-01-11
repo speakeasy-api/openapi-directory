@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class ActionFunctionFunctionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionFunction:
     r"""ActionFunction
     A serverless function associated with this custom workflow action.
     """
     
-    function_source: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionSource') }})
-    function_type: ActionFunctionFunctionTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionType') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    function_source: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionSource') }})
+    function_type: ActionFunctionFunctionTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionType') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     

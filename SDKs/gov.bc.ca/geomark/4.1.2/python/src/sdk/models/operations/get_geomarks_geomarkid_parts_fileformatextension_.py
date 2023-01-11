@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -14,25 +14,25 @@ class GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum(str, E
     WKT = "wkt"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDPartsFileFormatExtensionPathParams:
-    file_format_extension: GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum = field(metadata={'path_param': { 'field_name': 'fileFormatExtension', 'style': 'simple', 'explode': False }})
-    geomark_id: str = field(metadata={'path_param': { 'field_name': 'geomarkId', 'style': 'simple', 'explode': False }})
+    file_format_extension: GetGeomarksGeomarkIDPartsFileFormatExtensionFileFormatExtensionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'fileFormatExtension', 'style': 'simple', 'explode': False }})
+    geomark_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'geomarkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDPartsFileFormatExtensionQueryParams:
-    srid: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'srid', 'style': 'form', 'explode': True }})
+    srid: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'srid', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDPartsFileFormatExtensionRequest:
-    path_params: GetGeomarksGeomarkIDPartsFileFormatExtensionPathParams = field()
-    query_params: GetGeomarksGeomarkIDPartsFileFormatExtensionQueryParams = field()
+    path_params: GetGeomarksGeomarkIDPartsFileFormatExtensionPathParams = dataclasses.field()
+    query_params: GetGeomarksGeomarkIDPartsFileFormatExtensionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGeomarksGeomarkIDPartsFileFormatExtensionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

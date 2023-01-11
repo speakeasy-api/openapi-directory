@@ -1,4 +1,5 @@
 from ._xgafv_enum import *
+from .accesskeycredentials import *
 from .addgroupmigrationrequest import *
 from .alt_enum import *
 from .applianceversion import *
@@ -44,6 +45,7 @@ from .schedulingnodeaffinity import *
 from .security import *
 from .source import *
 from .status import *
+from .tag import *
 from .targetproject import *
 from .targetvmdetails import *
 from .upgradeappliancerequest import *
@@ -54,3 +56,5 @@ from .vmutilizationmetrics import *
 from .vmwaresourcedetails import *
 from .vmwarevmdetails import *
 from .vmwarevmsdetails import *
+
+__all__ = ["XgafvEnum","AccessKeyCredentials","AddGroupMigrationRequest","AltEnum","ApplianceVersion","AppliedLicenseTypeEnum","AppliedLicense","AvailableUpdates","AwsSecurityGroup","AwsSourceDetailsStateEnum","AwsSourceDetails","AwsSourceDetailsInput","AwsSourceVMDetailsFirmwareEnum","AwsSourceVMDetails","AwsVMDetailsArchitectureEnum","AwsVMDetailsBootOptionEnum","AwsVMDetailsPowerStateEnum","AwsVMDetailsVirtualizationTypeEnum","AwsVMDetails","AwsVmsDetails","CloneJobStateEnum","CloneJob","CloneJobInput","CloneStep","ComputeEngineTargetDefaultsBootOptionEnum","ComputeEngineTargetDefaultsDiskTypeEnum","ComputeEngineTargetDefaultsLicenseTypeEnum","ComputeEngineTargetDefaults","ComputeEngineTargetDefaultsInput","ComputeEngineTargetDetailsBootOptionEnum","ComputeEngineTargetDetailsDiskTypeEnum","ComputeEngineTargetDetailsLicenseTypeEnum","ComputeEngineTargetDetails","ComputeSchedulingOnHostMaintenanceEnum","ComputeSchedulingRestartTypeEnum","ComputeScheduling","CutoverJobStateEnum","CutoverJob","CutoverJobInput","CutoverStep","CycleStep","DatacenterConnectorStateEnum","DatacenterConnector","DatacenterConnectorInput","FetchInventoryResponse","Group","GroupInput","ListCloneJobsResponse","ListCutoverJobsResponse","ListDatacenterConnectorsResponse","ListGroupsResponse","ListLocationsResponse","ListMigratingVmsResponse","ListOperationsResponse","ListReplicationCyclesResponse","ListSourcesResponse","ListTargetProjectsResponse","ListUtilizationReportsResponse","Location","MigratingVMStateEnum","MigratingVM","MigratingVMInput","NetworkInterface","Operation","RemoveGroupMigrationRequest","ReplicatingStep","ReplicationCycleStateEnum","ReplicationCycle","ReplicationSync","SchedulePolicy","SchedulingNodeAffinityOperatorEnum","SchedulingNodeAffinity","SchemeOauth2","SchemeOauth2c","Source","SourceInput","Status","Tag","TargetProject","TargetProjectInput","TargetVMDetailsBootOptionEnum","TargetVMDetailsDiskTypeEnum","TargetVMDetailsLicenseTypeEnum","TargetVMDetails","TargetVMDetailsInput","UpgradeApplianceRequest","UpgradeStatusStateEnum","UpgradeStatus","UtilizationReportStateEnum","UtilizationReportTimeFrameEnum","UtilizationReport","UtilizationReportInput","VMUtilizationInfo","VMUtilizationInfoInput","VMUtilizationMetrics","VmwareSourceDetails","VmwareVMDetailsBootOptionEnum","VmwareVMDetailsPowerStateEnum","VmwareVMDetails","VmwareVMDetailsInput","VmwareVmsDetails"]

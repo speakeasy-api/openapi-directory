@@ -1,21 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import sourceupdate as shared_sourceupdate
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
+from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexceptioninfo
+from ..shared import sourceread as shared_sourceread
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSourceRequest:
-    request: shared.SourceUpdate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_sourceupdate.SourceUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSourceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
-    not_found_known_exception_info: Optional[shared.NotFoundKnownExceptionInfo] = field(default=None)
-    source_read: Optional[shared.SourceRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
+    not_found_known_exception_info: Optional[shared_notfoundknownexceptioninfo.NotFoundKnownExceptionInfo] = dataclasses.field(default=None)
+    source_read: Optional[shared_sourceread.SourceRead] = dataclasses.field(default=None)
     

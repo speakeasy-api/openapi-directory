@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupSha1Sha1PathParams:
-    sha1: str = field(metadata={'path_param': { 'field_name': 'sha1', 'style': 'simple', 'explode': False }})
+    sha1: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sha1', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupSha1Sha1Request:
-    path_params: GetLookupSha1Sha1PathParams = field()
+    path_params: GetLookupSha1Sha1PathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLookupSha1Sha1Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

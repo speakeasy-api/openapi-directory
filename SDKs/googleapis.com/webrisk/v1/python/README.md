@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,28 @@ req = operations.WebriskHashesSearchRequest(
     security=operations.WebriskHashesSearchSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.WebriskHashesSearchQueryParams(
         dollar_xgafv="2",
-        access_token="est",
-        alt="media",
-        callback="praesentium",
-        fields="sit",
-        hash_prefix="error",
-        key="assumenda",
-        oauth_token="veniam",
-        pretty_print=False,
-        quota_user="neque",
+        access_token="doloremque",
+        alt="proto",
+        callback="iure",
+        fields="libero",
+        hash_prefix="libero",
+        key="aut",
+        oauth_token="qui",
+        pretty_print=True,
+        quota_user="nihil",
         threat_types=[
-            "SOCIAL_ENGINEERING",
-            "UNWANTED_SOFTWARE",
             "THREAT_TYPE_UNSPECIFIED",
+            "MALWARE",
         ],
-        upload_type="aliquid",
-        upload_protocol="voluptatem",
+        upload_type="numquam",
+        upload_protocol="recusandae",
     ),
 )
     

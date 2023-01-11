@@ -1,0 +1,559 @@
+import requests
+from typing import Any,Optional
+from sdk.models import operations
+from . import utils
+
+class Billing:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def account_billing(self, request: operations.AccountBillingRequest) -> operations.AccountBillingResponse:
+        r"""Get billing information
+        Get [billing information](https://support.zoom.us/hc/en-us/articles/201363263-About-Billing) of a sub account.<br><br>Only master accounts can use this API. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' billing information. Email the partner programs team at **partner-success@zoom.us** for more details.<br>
+        
+        **Prerequisites:**
+        * Pro or a higher paid account with master account option enabled. <br>
+        
+        **Scope**:`billing:master`<br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/billing", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountBillingResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.AccountBilling200ApplicationJSON])
+                res.account_billing_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_billing_invoices(self, request: operations.AccountBillingInvoicesRequest) -> operations.AccountBillingInvoicesResponse:
+        r"""List billing invoices
+        List [invoices](https://support.zoom.us/hc/en-us/articles/207276556-Viewing-your-invoice-history#h_6710542f-23cc-4059-9cc7-ff02bec7314e) of a Zoom account.
+        
+        To list a regular Zoom account's invoices or a master account's invoices, provide `me` as the value of the `accountId` path parameter. To list a sub account's invoices, provide the account ID of the sub account in the `accountId` path parameter. 
+        
+        **Prerequisites:**
+        * Account must be enrolled in Pro or a higher plan.<br>
+        
+        **Scope**:`billing:master`<br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Additional Rate Limit:** You can make **one** API request per account(`accountId`) every **five** minutes until the daily limit is reached. This API has a daily limit of **6** requests per account(`accountId`).
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/billing/invoices", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountBillingInvoicesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.AccountBillingInvoices200ApplicationJSON])
+                res.account_billing_invoices_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def account_billing_update(self, request: operations.AccountBillingUpdateRequest) -> operations.AccountBillingUpdateResponse:
+        r"""Update billing information
+        Update [billing information](https://support.zoom.us/hc/en-us/articles/201363263-About-Billing) of a sub account.<br><br>
+        This API can only be used by master accounts that pay all billiing charges of their associated sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' billing information. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        
+        **Prerequisites:**
+        * Pro or a higher paid account with master account option enabled. <br>
+        
+        **Scope**:`billing:master`<br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/billing", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountBillingUpdateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_addon_cancel(self, request: operations.AccountPlanAddonCancelRequest) -> operations.AccountPlanAddonCancelResponse:
+        r"""Cancel additional plans
+        [Cancel additional plan](https://support.zoom.us/hc/en-us/articles/203634215-How-Do-I-Cancel-My-Subscription-) of a sub account. The cancellation does not provide refund for the current subscription. The service remains active for the current session.
+        
+        This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        
+        **Prerequisites:**<br>
+        * Pro or a higher plan with master account option enabled.
+        * The sub account must be a paid account.<br>
+        **Scope:** `billing:master`<br>
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/addons/status", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanAddonCancelResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.account_plan_addon_cancel_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_addon_create(self, request: operations.AccountPlanAddonCreateRequest) -> operations.AccountPlanAddonCreateResponse:
+        r"""Subscribe additional plan
+        Subscribe a sub account to a Zoom addon plan. This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        <br>**Prerequisites:**<br>
+        * Pro or a higher plan with master account option enabled.
+        * The sub account must be a paid account. The billing charges for the sub account must be paid by its master account.<br><br>
+        
+        **Scopes**: `billing:master`<br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/addons", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanAddonCreateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_addon_update(self, request: operations.AccountPlanAddonUpdateRequest) -> operations.AccountPlanAddonUpdateResponse:
+        r"""Update an additional plan
+        Update an additional plan for a sub account.
+        
+        This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        <br>**Prerequisites:**<br>
+        * Pro or a higher plan with master account enabled.
+        * The sub account must be a paid account. The billing charges for the sub account must be paid by the master account.<br><br>
+        
+        **Scopes**: `billing:master`<br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        
+        
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/addons", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanAddonUpdateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 204:
+            pass
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_base_delete(self, request: operations.AccountPlanBaseDeleteRequest) -> operations.AccountPlanBaseDeleteResponse:
+        r"""Cancel a base plan
+        [Cancel a base plan](https://support.zoom.us/hc/en-us/articles/203634215-How-Do-I-Cancel-My-Subscription-) for a sub account.
+        
+        This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        
+        **Scopes**: `billing:master`<br> 
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * The sub account must have a Pro or a higher plan.
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/base/status", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._security_client
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanBaseDeleteResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.account_plan_base_delete_204_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_base_update(self, request: operations.AccountPlanBaseUpdateRequest) -> operations.AccountPlanBaseUpdateResponse:
+        r"""Update a base plan
+        Update a base plan of a sub account. 
+        
+        This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        **Scopes:** `billing:master`<br><br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * The sub account must have a Pro or a higher plan.
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/base", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanBaseUpdateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 204:
+            pass
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plan_create(self, request: operations.AccountPlanCreateRequest) -> operations.AccountPlanCreateResponse:
+        r"""Subscribe plans
+        Subscribe a sub account to a Zoom plan using your master account. This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' subscriptions. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        **Scopes**: `billing:master`<br>
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlanCreateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.account_plan_create_200_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 201:
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.AccountPlanCreate201ApplicationJSON])
+                res.account_plan_create_201_application_json_object = out
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def account_plans(self, request: operations.AccountPlansRequest) -> operations.AccountPlansResponse:
+        r"""Get plan Information
+        Get plan information of a sub account that is managed by a master account. <br><br>This API can only be used by master accounts that pay all billiing charges of their associated Pro or higher sub accounts. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts' billing information. Email the partner programs team at **partner-success@zoom.us** for more details.<br><br>
+        **Scopes:** `billing:master`<br>
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+        
+        
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AccountPlansResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.AccountPlans200ApplicationJSON])
+                res.account_plans_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def download_invoice_pdf(self, request: operations.DownloadInvoicePdfRequest) -> operations.DownloadInvoicePdfResponse:
+        r"""Download an invoice file
+        Download a [billed](https://support.zoom.us/hc/en-us/articles/201363263-About-Billing) invoice file of a Zoom account in PDF format. To download a regular account's invoice or a  master account's invoice, provide `me` as the value of `accountId` path parameter. To download a sub account's invoice, provide the account ID of the sub account in the `accountId` path parameter. 
+        
+        
+        **Prerequisites:**
+        * Account must be enrolled in Pro or a higher plan.<br>
+        
+        **Scope**:`billing:master`<br>
+        **Rate Limit:** You can make **one** request to this API every **thirty** minutes until the daily limit is reached. This API has a daily limit of **100** requests per **account**.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/api/download/billing/invoices/{invoiceId}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DownloadInvoicePdfResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.download_invoice_pdf_200_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_account_billing_invoice(self, request: operations.GetAccountBillingInvoiceRequest) -> operations.GetAccountBillingInvoiceResponse:
+        r"""Get invoice details
+        Get detailed information about a specific [invoice](https://support.zoom.us/hc/en-us/articles/207276556-Viewing-your-invoice-history#h_6710542f-23cc-4059-9cc7-ff02bec7314e). <br>To retrieve a regular Zoom account's invoice details or a master account's invoice details, provide `me` as the value of `accountId` path parameter. To list a sub account's invoice details, provide the account ID of the sub account in the `accountId` path parameter. 
+        
+        **Prerequisites:**
+        * Account must be enrolled in Pro or a higher plan. <br>
+        
+        **Scope**:`billing:master`<br>
+        <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Additional Rate Limit:** You can make **one** API request every **thirty** minutes until the daily limit is reached. This API has a daily limit of **100** requests per **account**.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/billing/invoices/{invoiceId}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAccountBillingInvoiceResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetAccountBillingInvoice200ApplicationJSON])
+                res.get_account_billing_invoice_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_plan_usage(self, request: operations.GetPlanUsageRequest) -> operations.GetPlanUsageResponse:
+        r"""Get plan usage
+        Get information on usage of [plans](https://marketplace.zoom.us/docs/api-reference/other-references/plans) of an account. This API supports regular accounts as well as master and sub accounts. To get plan usage of a regular account, use the `account:read:admin` scope and provide “me” as the value of the  `accountId` path parameter.To get plan usage of a master account, provide the keyword \"me\" as the value of the `accountId` path parameter and use the `billing:master` scope. To get plan usage of a sub account, provide the actual account Id of the sub account as the value of the `accountId` path parameter and use the `billing:master` scope. 
+        
+        **Prerequisite**:<br>
+        Account type: master account on a paid Pro, Business or Enterprise plan.<br>
+        **Scope:** `billing:master` for master and sub accounts. `account:read:admin` for regular Zoom accounts.<br>
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/accounts/{accountId}/plans/usage", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPlanUsageResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetPlanUsage200ApplicationJSON])
+                res.get_plan_usage_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    

@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import saveaccountwrapper as shared_saveaccountwrapper
+from ..shared import accountresponse as shared_accountresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountRequest:
-    path_params: CreateAccountPathParams = field()
-    request: shared.SaveAccountWrapper = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateAccountPathParams = dataclasses.field()
+    request: shared_saveaccountwrapper.SaveAccountWrapper = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    account_response: Optional[shared.AccountResponse] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    account_response: Optional[shared_accountresponse.AccountResponse] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

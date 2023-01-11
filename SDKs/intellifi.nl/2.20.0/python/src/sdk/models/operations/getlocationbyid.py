@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import location as shared_location
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationByIDRequest:
-    path_params: GetLocationByIDPathParams = field()
+    path_params: GetLocationByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    location: Optional[shared.Location] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    location: Optional[shared_location.Location] = dataclasses.field(default=None)
     

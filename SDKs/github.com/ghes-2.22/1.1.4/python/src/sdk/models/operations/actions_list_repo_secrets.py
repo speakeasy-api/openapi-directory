@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import actions_secret as shared_actions_secret
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRepoSecretsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRepoSecretsQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsListRepoSecrets200ApplicationJSON:
-    secrets: List[shared.ActionsSecret] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('secrets') }})
-    total_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    secrets: list[shared_actions_secret.ActionsSecret] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('secrets') }})
+    total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRepoSecretsRequest:
-    path_params: ActionsListRepoSecretsPathParams = field()
-    query_params: ActionsListRepoSecretsQueryParams = field()
+    path_params: ActionsListRepoSecretsPathParams = dataclasses.field()
+    query_params: ActionsListRepoSecretsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRepoSecretsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    actions_list_repo_secrets_200_application_json_object: Optional[ActionsListRepoSecrets200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_list_repo_secrets_200_application_json_object: Optional[ActionsListRepoSecrets200ApplicationJSON] = dataclasses.field(default=None)
     

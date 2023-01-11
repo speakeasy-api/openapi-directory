@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MetaGetZenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    meta_get_zen_200_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    meta_get_zen_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

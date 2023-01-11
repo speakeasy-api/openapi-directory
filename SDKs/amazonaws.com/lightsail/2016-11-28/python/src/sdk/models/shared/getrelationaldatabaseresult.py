@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import relationaldatabase as shared_relationaldatabase
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRelationalDatabaseResult:
-    relational_database: Optional[RelationalDatabase] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationalDatabase') }})
+    relational_database: Optional[shared_relationaldatabase.RelationalDatabase] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationalDatabase') }})
     

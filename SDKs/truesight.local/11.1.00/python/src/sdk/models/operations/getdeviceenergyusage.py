@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDeviceEnergyUsagePathParams:
-    device_id: int = field(metadata={'path_param': { 'field_name': 'deviceId', 'style': 'simple', 'explode': False }})
+    device_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'deviceId', 'style': 'simple', 'explode': False }})
     
 class GetDeviceEnergyUsageBasisEnum(str, Enum):
     MONTHLY = "MONTHLY"
@@ -20,21 +20,21 @@ class GetDeviceEnergyUsageRollPeriodEnum(str, Enum):
     ONE_YEAR = "ONE_YEAR"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDeviceEnergyUsageQueryParams:
-    basis: Optional[GetDeviceEnergyUsageBasisEnum] = field(default=None, metadata={'query_param': { 'field_name': 'basis', 'style': 'form', 'explode': True }})
-    roll_period: Optional[GetDeviceEnergyUsageRollPeriodEnum] = field(default=None, metadata={'query_param': { 'field_name': 'rollPeriod', 'style': 'form', 'explode': True }})
+    basis: Optional[GetDeviceEnergyUsageBasisEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'basis', 'style': 'form', 'explode': True }})
+    roll_period: Optional[GetDeviceEnergyUsageRollPeriodEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rollPeriod', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDeviceEnergyUsageRequest:
-    path_params: GetDeviceEnergyUsagePathParams = field()
-    query_params: GetDeviceEnergyUsageQueryParams = field()
+    path_params: GetDeviceEnergyUsagePathParams = dataclasses.field()
+    query_params: GetDeviceEnergyUsageQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDeviceEnergyUsageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

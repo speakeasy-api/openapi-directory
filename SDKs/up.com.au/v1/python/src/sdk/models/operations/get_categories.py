@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listcategoriesresponse as shared_listcategoriesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesQueryParams:
-    filter_parent_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[parent]', 'style': 'form', 'explode': True }})
+    filter_parent_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[parent]', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesRequest:
-    query_params: GetCategoriesQueryParams = field()
+    query_params: GetCategoriesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCategoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_categories_response: Optional[shared.ListCategoriesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_categories_response: Optional[shared_listcategoriesresponse.ListCategoriesResponse] = dataclasses.field(default=None)
     

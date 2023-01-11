@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import hsmclientcertificate as shared_hsmclientcertificate
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateHsmClientCertificateResult:
-    hsm_client_certificate: Optional[HsmClientCertificate] = field(default=None)
+    hsm_client_certificate: Optional[shared_hsmclientcertificate.HsmClientCertificate] = dataclasses.field(default=None)
     

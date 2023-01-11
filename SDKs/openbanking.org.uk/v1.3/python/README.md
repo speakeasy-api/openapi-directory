@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,8 +18,8 @@ s = sdk.SDK()
     
 req = operations.GetAtmsRequest(
     headers=operations.GetAtmsHeaders(
-        if_modified_since="laudantium",
-        if_none_match="deserunt",
+        if_modified_since="nemo",
+        if_none_match="voluptatem",
     ),
 )
     

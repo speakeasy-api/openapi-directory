@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import oraclerdbms as shared_oraclerdbms
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OracleSourceConfig:
     r"""OracleSourceConfig
     Oracle data source configuration
     """
     
-    allowlist: Optional[OracleRdbms] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowlist') }})
-    drop_large_objects: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dropLargeObjects') }})
-    rejectlist: Optional[OracleRdbms] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rejectlist') }})
+    allowlist: Optional[shared_oraclerdbms.OracleRdbms] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowlist') }})
+    drop_large_objects: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dropLargeObjects') }})
+    rejectlist: Optional[shared_oraclerdbms.OracleRdbms] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rejectlist') }})
     

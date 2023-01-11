@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsF
     security=operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchPathParams(
-        location="soluta",
+        location="ducimus",
     ),
     query_params=operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchQueryParams(
         dollar_xgafv="1",
-        access_token="ducimus",
-        alt="media",
-        callback="amet",
-        fields="iusto",
-        key="atque",
-        oauth_token="et",
+        access_token="voluptatem",
+        alt="json",
+        callback="enim",
+        fields="quos",
+        key="blanditiis",
+        oauth_token="fugit",
         pretty_print=False,
-        quota_user="eligendi",
-        upload_type="sit",
-        upload_protocol="illum",
+        quota_user="praesentium",
+        upload_type="est",
+        upload_protocol="eius",
     ),
 )
     

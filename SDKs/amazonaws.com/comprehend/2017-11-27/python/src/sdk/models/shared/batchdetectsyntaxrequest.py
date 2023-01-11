@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import syntaxlanguagecode_enum as shared_syntaxlanguagecode_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDetectSyntaxRequest:
-    language_code: SyntaxLanguageCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
-    text_list: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextList') }})
+    language_code: shared_syntaxlanguagecode_enum.SyntaxLanguageCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
+    text_list: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextList') }})
     

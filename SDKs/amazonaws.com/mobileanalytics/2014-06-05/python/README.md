@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,82 +25,63 @@ s.config_security(
     
 req = operations.PutEventsRequest(
     headers=operations.PutEventsHeaders(
-        x_amz_algorithm="maiores",
-        x_amz_content_sha256="nobis",
-        x_amz_credential="quos",
-        x_amz_date="facilis",
-        x_amz_security_token="qui",
-        x_amz_signature="quis",
-        x_amz_signed_headers="aut",
-        x_amz_client_context="est",
-        x_amz_client_context_encoding="ipsa",
+        x_amz_algorithm="aperiam",
+        x_amz_content_sha256="enim",
+        x_amz_credential="sequi",
+        x_amz_date="laborum",
+        x_amz_security_token="voluptas",
+        x_amz_signature="aliquid",
+        x_amz_signed_headers="maiores",
+        x_amz_client_context="velit",
+        x_amz_client_context_encoding="modi",
     ),
     request=operations.PutEventsRequestBody(
         events=[
             shared.Event(
                 attributes={
-                    "sequi": "vitae",
-                    "quos": "possimus",
+                    "doloremque": "cum",
+                    "necessitatibus": "illum",
+                    "enim": "aspernatur",
                 },
-                event_type="ullam",
+                event_type="ratione",
                 metrics={
-                    "alias": 86.199997,
-                    "porro": 40.200001,
+                    "omnis": 1.100000,
+                    "omnis": 40.200001,
                 },
                 session=shared.Session(
-                    duration=1221100993313834821,
-                    id="repellat",
-                    start_timestamp="quaerat",
-                    stop_timestamp="velit",
+                    duration=164162024630061234,
+                    id="voluptatibus",
+                    start_timestamp="enim",
+                    stop_timestamp="in",
                 ),
-                timestamp="magni",
-                version="delectus",
+                timestamp="reiciendis",
+                version="rerum",
             ),
             shared.Event(
                 attributes={
-                    "quisquam": "ea",
-                    "nihil": "laudantium",
+                    "perspiciatis": "fugit",
+                    "asperiores": "fugit",
+                    "in": "ex",
                 },
-                event_type="magni",
+                event_type="saepe",
                 metrics={
-                    "eaque": 39.099998,
-                    "magnam": 4.100000,
+                    "nulla": 19.200001,
+                    "aliquid": 33.099998,
                 },
                 session=shared.Session(
-                    duration=1486108174757703253,
-                    id="cumque",
-                    start_timestamp="ut",
-                    stop_timestamp="consequatur",
+                    duration=273263606341302306,
+                    id="fugit",
+                    start_timestamp="qui",
+                    stop_timestamp="natus",
                 ),
-                timestamp="sequi",
-                version="omnis",
-            ),
-            shared.Event(
-                attributes={
-                    "labore": "sapiente",
-                    "accusamus": "velit",
-                    "amet": "deserunt",
-                },
-                event_type="sunt",
-                metrics={
-                    "quis": 32.200001,
-                    "rerum": 78.199997,
-                    "deserunt": 80.099998,
-                },
-                session=shared.Session(
-                    duration=6067427611927340037,
-                    id="ad",
-                    start_timestamp="ut",
-                    stop_timestamp="alias",
-                ),
-                timestamp="qui",
-                version="in",
+                timestamp="molestiae",
+                version="odit",
             ),
         ],
     ),
 )
     
-res = s.sdk.put_events(req)
+res = s.put_events(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetVideosAlt1PathParams:
-    preset_id: float = field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
+    preset_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetVideosAlt1QueryParams:
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetVideosAlt1Request:
-    path_params: GetEmbedPresetVideosAlt1PathParams = field()
-    query_params: GetEmbedPresetVideosAlt1QueryParams = field()
+    path_params: GetEmbedPresetVideosAlt1PathParams = dataclasses.field()
+    query_params: GetEmbedPresetVideosAlt1QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmbedPresetVideosAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    videos: Optional[List[shared.Video]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    videos: Optional[list[shared_video.Video]] = dataclasses.field(default=None)
     

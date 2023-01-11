@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -119,13 +119,13 @@ class Orgs:
         url = utils.generate_url(base_url, "/orgs/{org}/hooks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OrgsCreateWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -329,7 +329,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.OrganizationSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.OrganizationSimple]])
                 res.organization_simples = out
         elif r.status_code == 304:
             pass
@@ -393,7 +393,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.OrganizationSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.OrganizationSimple]])
                 res.organization_simples = out
         elif r.status_code == 304:
             pass
@@ -434,7 +434,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.OrganizationSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.OrganizationSimple]])
                 res.organization_simples = out
 
         return res
@@ -463,7 +463,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 302:
             res.headers = r.headers
@@ -498,7 +498,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.OrgMembership]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.OrgMembership]])
                 res.org_memberships = out
         elif r.status_code == 304:
             pass
@@ -541,7 +541,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -570,7 +570,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
 
         return res
@@ -598,7 +598,7 @@ class Orgs:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.OrgHook]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.OrgHook]])
                 res.org_hooks = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -768,13 +768,13 @@ class Orgs:
         url = utils.generate_url(base_url, "/orgs/{org}/memberships/{username}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OrgsSetMembershipForUserResponse(status_code=r.status_code, content_type=content_type)
@@ -838,13 +838,13 @@ class Orgs:
         url = utils.generate_url(base_url, "/orgs/{org}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OrgsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -879,13 +879,13 @@ class Orgs:
         url = utils.generate_url(base_url, "/user/memberships/orgs/{org}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OrgsUpdateMembershipForAuthenticatedUserResponse(status_code=r.status_code, content_type=content_type)
@@ -921,13 +921,13 @@ class Orgs:
         url = utils.generate_url(base_url, "/orgs/{org}/hooks/{hook_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.OrgsUpdateWebhookResponse(status_code=r.status_code, content_type=content_type)

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import week as shared_week
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarQueryParams:
-    year: int = field(metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    year: int = dataclasses.field(metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarRequest:
-    query_params: GetCalendarQueryParams = field()
+    query_params: GetCalendarQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCalendarResponse:
-    content_type: str = field()
-    status_code: int = field()
-    weeks: Optional[List[shared.Week]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    weeks: Optional[list[shared_week.Week]] = dataclasses.field(default=None)
     

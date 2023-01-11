@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateUserRequest:
-    display_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayName') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    organization_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
-    password: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Password') }})
+    display_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DisplayName') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    organization_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
+    password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Password') }})
     

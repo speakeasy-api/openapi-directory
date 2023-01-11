@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,34 +6,36 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import org_membership as shared_org_membership
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsUpdateMembershipForAuthenticatedUserPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 class OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum(str, Enum):
     ACTIVE = "active"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrgsUpdateMembershipForAuthenticatedUserRequestBody:
-    state: OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    state: OrgsUpdateMembershipForAuthenticatedUserRequestBodyStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsUpdateMembershipForAuthenticatedUserRequest:
-    path_params: OrgsUpdateMembershipForAuthenticatedUserPathParams = field()
-    request: Optional[OrgsUpdateMembershipForAuthenticatedUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: OrgsUpdateMembershipForAuthenticatedUserPathParams = dataclasses.field()
+    request: Optional[OrgsUpdateMembershipForAuthenticatedUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsUpdateMembershipForAuthenticatedUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    org_membership: Optional[shared.OrgMembership] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    org_membership: Optional[shared_org_membership.OrgMembership] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

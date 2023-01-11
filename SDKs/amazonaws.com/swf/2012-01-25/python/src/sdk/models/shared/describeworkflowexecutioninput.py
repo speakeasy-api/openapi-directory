@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workflowexecution as shared_workflowexecution
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeWorkflowExecutionInput:
-    domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
-    execution: WorkflowExecution = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('execution') }})
+    domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
+    execution: shared_workflowexecution.WorkflowExecution = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('execution') }})
     

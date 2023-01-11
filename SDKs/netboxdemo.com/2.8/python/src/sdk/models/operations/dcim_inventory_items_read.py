@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import inventoryitem as shared_inventoryitem
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsReadRequest:
-    path_params: DcimInventoryItemsReadPathParams = field()
+    path_params: DcimInventoryItemsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInventoryItemsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inventory_item: Optional[shared.InventoryItem] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inventory_item: Optional[shared_inventoryitem.InventoryItem] = dataclasses.field(default=None)
     

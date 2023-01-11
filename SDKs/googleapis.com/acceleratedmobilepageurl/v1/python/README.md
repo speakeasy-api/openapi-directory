@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,22 +18,22 @@ s = sdk.SDK()
     
 req = operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest(
     query_params=operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams(
-        dollar_xgafv="2",
-        access_token="et",
+        dollar_xgafv="1",
+        access_token="voluptatem",
         alt="proto",
-        callback="delectus",
-        fields="omnis",
-        key="molestiae",
-        oauth_token="repudiandae",
+        callback="dolores",
+        fields="quis",
+        key="facere",
+        oauth_token="doloremque",
         pretty_print=True,
-        quota_user="odio",
-        upload_type="doloremque",
-        upload_protocol="provident",
+        quota_user="aut",
+        upload_type="reiciendis",
+        upload_protocol="cum",
     ),
     request=shared.BatchGetAmpUrlsRequest(
-        lookup_strategy="FETCH_LIVE_DOC",
+        lookup_strategy="IN_INDEX_DOC",
         urls=[
-            "rem",
+            "sapiente",
         ],
     ),
 )

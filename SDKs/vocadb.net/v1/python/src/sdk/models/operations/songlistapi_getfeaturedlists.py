@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_songlistforapicontract_ as shared_partialfindresult_songlistforapicontract_
 
 class SongListAPIGetFeaturedListsFeaturedCategoryEnum(str, Enum):
     NOTHING = "Nothing"
@@ -37,30 +37,30 @@ class SongListAPIGetFeaturedListsSortEnum(str, Enum):
     CREATE_DATE = "CreateDate"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListsQueryParams:
-    child_tags: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'childTags', 'style': 'form', 'explode': True }})
-    featured_category: Optional[SongListAPIGetFeaturedListsFeaturedCategoryEnum] = field(default=None, metadata={'query_param': { 'field_name': 'featuredCategory', 'style': 'form', 'explode': True }})
-    fields: Optional[SongListAPIGetFeaturedListsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    lang: Optional[SongListAPIGetFeaturedListsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[SongListAPIGetFeaturedListsNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[SongListAPIGetFeaturedListsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    tag_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
+    child_tags: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'childTags', 'style': 'form', 'explode': True }})
+    featured_category: Optional[SongListAPIGetFeaturedListsFeaturedCategoryEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'featuredCategory', 'style': 'form', 'explode': True }})
+    fields: Optional[SongListAPIGetFeaturedListsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    lang: Optional[SongListAPIGetFeaturedListsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[SongListAPIGetFeaturedListsNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[SongListAPIGetFeaturedListsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    tag_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListsRequest:
-    query_params: SongListAPIGetFeaturedListsQueryParams = field()
+    query_params: SongListAPIGetFeaturedListsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_song_list_for_api_contract_: Optional[shared.PartialFindResultSongListForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_song_list_for_api_contract_: Optional[shared_partialfindresult_songlistforapicontract_.PartialFindResultSongListForAPIContract] = dataclasses.field(default=None)
     

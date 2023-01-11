@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getproductresponse as shared_getproductresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductsOnePathParams:
-    ecosystem_id: str = field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    ecosystem_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsOneRequest:
-    path_params: ProductsOnePathParams = field()
+    path_params: ProductsOnePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsOneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_product_response: Optional[shared.GetProductResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_product_response: Optional[shared_getproductresponse.GetProductResponse] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import quotefxsummaryv3 as shared_quotefxsummaryv3
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QuoteResponseV3:
-    fx_summaries: Optional[List[QuoteFxSummaryV3]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fxSummaries') }})
+    fx_summaries: Optional[list[shared_quotefxsummaryv3.QuoteFxSummaryV3]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fxSummaries') }})
     

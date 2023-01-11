@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_reports as shared_paginated_reports
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReportsForCommitPathParams:
-    commit: str = field(metadata={'path_param': { 'field_name': 'commit', 'style': 'simple', 'explode': False }})
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    commit: str = dataclasses.field(metadata={'path_param': { 'field_name': 'commit', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportsForCommitRequest:
-    path_params: GetReportsForCommitPathParams = field()
+    path_params: GetReportsForCommitPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportsForCommitResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_reports: Optional[shared.PaginatedReports] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_reports: Optional[shared_paginated_reports.PaginatedReports] = dataclasses.field(default=None)
     

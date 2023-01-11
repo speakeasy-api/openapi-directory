@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import contacttocreate as shared_contacttocreate
 
 class BatchCreateContactsRequestSourcesEnum(str, Enum):
     READ_SOURCE_TYPE_UNSPECIFIED = "READ_SOURCE_TYPE_UNSPECIFIED"
@@ -13,13 +13,13 @@ class BatchCreateContactsRequestSourcesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchCreateContactsRequestInput:
     r"""BatchCreateContactsRequestInput
     A request to create a batch of contacts.
     """
     
-    contacts: Optional[List[ContactToCreateInput]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contacts') }})
-    read_mask: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readMask') }})
-    sources: Optional[List[BatchCreateContactsRequestSourcesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sources') }})
+    contacts: Optional[list[shared_contacttocreate.ContactToCreateInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contacts') }})
+    read_mask: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readMask') }})
+    sources: Optional[list[BatchCreateContactsRequestSourcesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sources') }})
     

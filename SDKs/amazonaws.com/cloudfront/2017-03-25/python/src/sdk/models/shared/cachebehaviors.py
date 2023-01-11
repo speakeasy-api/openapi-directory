@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import cachebehaviorlist as shared_cachebehaviorlist
 
 
-@dataclass
+@dataclasses.dataclass
 class CacheBehaviors:
     r"""CacheBehaviors
     A complex type that contains zero or more <code>CacheBehavior</code> elements. 
     """
     
-    quantity: int = field()
-    items: Optional[List[CacheBehavior]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[shared_cachebehaviorlist.CacheBehaviorList]] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import policyversion as shared_policyversion
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPolicyVersionResponse:
     r"""GetPolicyVersionResponse
     Contains the response to a successful <a>GetPolicyVersion</a> request. 
     """
     
-    policy_version: Optional[PolicyVersion] = field(default=None)
+    policy_version: Optional[shared_policyversion.PolicyVersion] = dataclasses.field(default=None)
     

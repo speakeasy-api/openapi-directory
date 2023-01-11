@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWebhookInstancePathParams:
-    guid: str = field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
+    guid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWebhookInstanceRequest:
-    path_params: DeleteWebhookInstancePathParams = field()
+    path_params: DeleteWebhookInstancePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteWebhookInstanceResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import runner_application as shared_runner_application
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForRepoRequest:
-    path_params: ActionsListRunnerApplicationsForRepoPathParams = field()
+    path_params: ActionsListRunnerApplicationsForRepoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_applications: Optional[List[shared.RunnerApplication]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_applications: Optional[list[shared_runner_application.RunnerApplication]] = dataclasses.field(default=None)
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import revisioninfo as shared_revisioninfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchGetApplicationRevisionsOutput:
     r"""BatchGetApplicationRevisionsOutput
     Represents the output of a <code>BatchGetApplicationRevisions</code> operation.
     """
     
-    application_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applicationName') }})
-    error_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
-    revisions: Optional[List[RevisionInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revisions') }})
+    application_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applicationName') }})
+    error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
+    revisions: Optional[list[shared_revisioninfo.RevisionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revisions') }})
     

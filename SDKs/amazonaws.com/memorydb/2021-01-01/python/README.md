@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,28 @@ s.config_security(
     
 req = operations.BatchUpdateClusterRequest(
     headers=operations.BatchUpdateClusterHeaders(
-        x_amz_algorithm="ad",
-        x_amz_content_sha256="incidunt",
-        x_amz_credential="dolor",
-        x_amz_date="suscipit",
-        x_amz_security_token="officiis",
-        x_amz_signature="cum",
-        x_amz_signed_headers="totam",
+        x_amz_algorithm="dicta",
+        x_amz_content_sha256="inventore",
+        x_amz_credential="perspiciatis",
+        x_amz_date="ut",
+        x_amz_security_token="esse",
+        x_amz_signature="facere",
+        x_amz_signed_headers="commodi",
         x_amz_target="AmazonMemoryDB.BatchUpdateCluster",
     ),
     request=shared.BatchUpdateClusterRequest(
         cluster_names=[
-            "quos",
+            "asperiores",
+            "amet",
+            "cupiditate",
         ],
         service_update=shared.ServiceUpdateRequest(
-            service_update_name_to_apply="beatae",
+            service_update_name_to_apply="nisi",
         ),
     ),
 )
     
-res = s.sdk.batch_update_cluster(req)
+res = s.batch_update_cluster(req)
 
 if res.batch_update_cluster_response is not None:
     # handle response

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,39 +25,39 @@ s.config_security(
     
 req = operations.BatchAcknowledgeAlarmRequest(
     headers=operations.BatchAcknowledgeAlarmHeaders(
-        x_amz_algorithm="alias",
-        x_amz_content_sha256="tempore",
-        x_amz_credential="ipsum",
-        x_amz_date="omnis",
-        x_amz_security_token="error",
-        x_amz_signature="reprehenderit",
-        x_amz_signed_headers="explicabo",
+        x_amz_algorithm="maxime",
+        x_amz_content_sha256="quibusdam",
+        x_amz_credential="asperiores",
+        x_amz_date="provident",
+        x_amz_security_token="doloribus",
+        x_amz_signature="architecto",
+        x_amz_signed_headers="est",
     ),
     request=operations.BatchAcknowledgeAlarmRequestBody(
         acknowledge_action_requests=[
             shared.AcknowledgeAlarmActionRequest(
+                alarm_model_name="odio",
+                key_value="blanditiis",
+                note="voluptatem",
+                request_id="ea",
+            ),
+            shared.AcknowledgeAlarmActionRequest(
                 alarm_model_name="eum",
+                key_value="at",
+                note="fugit",
+                request_id="dolore",
+            ),
+            shared.AcknowledgeAlarmActionRequest(
+                alarm_model_name="voluptatem",
                 key_value="recusandae",
-                note="ratione",
-                request_id="labore",
-            ),
-            shared.AcknowledgeAlarmActionRequest(
-                alarm_model_name="necessitatibus",
-                key_value="saepe",
-                note="libero",
-                request_id="nobis",
-            ),
-            shared.AcknowledgeAlarmActionRequest(
-                alarm_model_name="ut",
-                key_value="accusamus",
-                note="qui",
-                request_id="hic",
+                note="impedit",
+                request_id="odio",
             ),
         ],
     ),
 )
     
-res = s.sdk.batch_acknowledge_alarm(req)
+res = s.batch_acknowledge_alarm(req)
 
 if res.batch_acknowledge_alarm_response is not None:
     # handle response

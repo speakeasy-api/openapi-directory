@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recommendationfeedbacksummary as shared_recommendationfeedbacksummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRecommendationFeedbackResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    recommendation_feedback_summaries: Optional[List[RecommendationFeedbackSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecommendationFeedbackSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    recommendation_feedback_summaries: Optional[list[shared_recommendationfeedbacksummary.RecommendationFeedbackSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecommendationFeedbackSummaries') }})
     

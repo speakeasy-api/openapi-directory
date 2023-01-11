@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import releaseeventforapicontract as shared_releaseeventforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetOnePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class ReleaseEventAPIGetOneFieldsEnum(str, Enum):
     NONE = "None"
@@ -28,22 +28,22 @@ class ReleaseEventAPIGetOneLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetOneQueryParams:
-    fields: Optional[ReleaseEventAPIGetOneFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[ReleaseEventAPIGetOneLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[ReleaseEventAPIGetOneFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[ReleaseEventAPIGetOneLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetOneRequest:
-    path_params: ReleaseEventAPIGetOnePathParams = field()
-    query_params: ReleaseEventAPIGetOneQueryParams = field()
+    path_params: ReleaseEventAPIGetOnePathParams = dataclasses.field()
+    query_params: ReleaseEventAPIGetOneQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetOneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    release_event_for_api_contract: Optional[shared.ReleaseEventForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    release_event_for_api_contract: Optional[shared_releaseeventforapicontract.ReleaseEventForAPIContract] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import eventcategoriesmaplist as shared_eventcategoriesmaplist
 
 
-@dataclass
+@dataclasses.dataclass
 class EventCategoriesMessage:
     r"""EventCategoriesMessage
     Data returned from the <code>DescribeEventCategories</code> operation.
     """
     
-    event_categories_map_list: Optional[List[EventCategoriesMap]] = field(default=None)
+    event_categories_map_list: Optional[list[shared_eventcategoriesmaplist.EventCategoriesMapList]] = dataclasses.field(default=None)
     

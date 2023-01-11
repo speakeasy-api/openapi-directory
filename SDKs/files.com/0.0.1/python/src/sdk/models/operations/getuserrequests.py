@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import userrequestentity as shared_userrequestentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserRequestsQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserRequestsRequest:
-    query_params: GetUserRequestsQueryParams = field()
+    query_params: GetUserRequestsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserRequestsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user_request_entities: Optional[List[shared.UserRequestEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user_request_entities: Optional[list[shared_userrequestentity.UserRequestEntity]] = dataclasses.field(default=None)
     

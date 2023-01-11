@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablecluster as shared_writablecluster
+from ..shared import cluster as shared_cluster
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersCreateRequest:
-    request: shared.WritableClusterInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablecluster.WritableClusterInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cluster: Optional[shared.Cluster] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cluster: Optional[shared_cluster.Cluster] = dataclasses.field(default=None)
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import deobfuscationfile as shared_deobfuscationfile
 
 
-@dataclass
+@dataclasses.dataclass
 class DeobfuscationFilesUploadResponse:
-    deobfuscation_file: Optional[DeobfuscationFile] = field(default=None)
+    deobfuscation_file: Optional[shared_deobfuscationfile.DeobfuscationFile] = dataclasses.field(default=None)
     

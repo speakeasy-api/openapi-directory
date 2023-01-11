@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import appslistdatasummary as shared_appslistdatasummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAppsListsResponse:
-    apps_lists: Optional[List[AppsListDataSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AppsLists') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    apps_lists: Optional[list[shared_appslistdatasummary.AppsListDataSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AppsLists') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

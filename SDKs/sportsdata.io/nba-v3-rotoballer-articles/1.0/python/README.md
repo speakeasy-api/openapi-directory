@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.RotoballerArticlesRequest(
     path_params=operations.RotoballerArticlesPathParams(
-        format="json",
+        format="xml",
     ),
 )
     
-res = s.sdk.rotoballer_articles(req)
+res = s.rotoballer_articles(req)
 
 if res.articles is not None:
     # handle response

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connectorversion as shared_connectorversion
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListConnectorVersionsResponse:
     r"""ListConnectorVersionsResponse
     Response message for Connectors.ListConnectorVersions.
     """
     
-    connector_versions: Optional[List[ConnectorVersion]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorVersions') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    connector_versions: Optional[list[shared_connectorversion.ConnectorVersion]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorVersions') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import metricalarm as shared_metricalarm
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmsForMetricOutput:
-    metric_alarms: Optional[List[MetricAlarm]] = field(default=None)
+    metric_alarms: Optional[list[shared_metricalarm.MetricAlarm]] = dataclasses.field(default=None)
     

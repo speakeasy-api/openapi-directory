@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import locationshalresponse as shared_locationshalresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetLocationsByAccountIDPathParams:
-    account_id: float = field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
+    account_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetLocationsByAccountIDSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetLocationsByAccountIDRequest:
-    path_params: AccountCtrlGetLocationsByAccountIDPathParams = field()
-    security: AccountCtrlGetLocationsByAccountIDSecurity = field()
+    path_params: AccountCtrlGetLocationsByAccountIDPathParams = dataclasses.field()
+    security: AccountCtrlGetLocationsByAccountIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetLocationsByAccountIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    locations_hal_response: Optional[shared.LocationsHalResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    locations_hal_response: Optional[shared_locationshalresponse.LocationsHalResponse] = dataclasses.field(default=None)
     

@@ -1,7 +1,10 @@
-from dataclasses import dataclass, field
-from typing import Enum,List,Optional
+import dataclasses
+from typing import Optional
+from enum import Enum
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
+from ..shared import onev2_1registry_get_responses_200_content_application_1json_schema_properties_registry_properties_subscription_allof_1 as shared_onev2_1registry_get_responses_200_content_application_1json_schema_properties_registry_properties_subscription_allof_1
 
 class PostRegistrySubscriptionRequestBodyTierSlugEnum(str, Enum):
     STARTER = "starter"
@@ -10,30 +13,30 @@ class PostRegistrySubscriptionRequestBodyTierSlugEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostRegistrySubscriptionRequestBody:
-    tier_slug: Optional[PostRegistrySubscriptionRequestBodyTierSlugEnum] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'tier_slug' }})
-    
-
-@dataclass
-class PostRegistrySubscriptionRequest:
-    request: Optional[PostRegistrySubscriptionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    tier_slug: Optional[PostRegistrySubscriptionRequestBodyTierSlugEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tier_slug') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostRegistrySubscription401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class PostRegistrySubscriptionRequest:
+    request: Optional[PostRegistrySubscriptionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    
+
+@dataclasses.dataclass
 class PostRegistrySubscriptionResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    post_registry_subscription_401_application_json_object: Optional[PostRegistrySubscription401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
-    onev2_1registry_get_responses_200_content_application_1json_schema_properties_registry_properties_subscription_all_of_1: Optional[shared.Onev21registryGetResponses200ContentApplication1jsonSchemaPropertiesRegistryPropertiesSubscriptionAllOf1] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_registry_subscription_401_application_json_object: Optional[PostRegistrySubscription401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
+    onev2_1registry_get_responses_200_content_application_1json_schema_properties_registry_properties_subscription_all_of_1: Optional[shared_onev2_1registry_get_responses_200_content_application_1json_schema_properties_registry_properties_subscription_allof_1.Onev21registryGetResponses200ContentApplication1jsonSchemaPropertiesRegistryPropertiesSubscriptionAllOf1] = dataclasses.field(default=None)
     

@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import minimal_repository as shared_minimal_repository
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposTransferPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposTransferRequestBody:
-    new_owner: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_owner') }})
-    team_ids: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_ids') }})
+    new_owner: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_owner') }})
+    team_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_ids') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposTransferRequest:
-    path_params: ReposTransferPathParams = field()
-    request: Optional[ReposTransferRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ReposTransferPathParams = dataclasses.field()
+    request: Optional[ReposTransferRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposTransferResponse:
-    content_type: str = field()
-    status_code: int = field()
-    minimal_repository: Optional[shared.MinimalRepository] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    minimal_repository: Optional[shared_minimal_repository.MinimalRepository] = dataclasses.field(default=None)
     

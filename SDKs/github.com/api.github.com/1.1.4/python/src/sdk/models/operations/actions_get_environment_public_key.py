@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import actions_public_key as shared_actions_public_key
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetEnvironmentPublicKeyPathParams:
-    environment_name: str = field(metadata={'path_param': { 'field_name': 'environment_name', 'style': 'simple', 'explode': False }})
-    repository_id: int = field(metadata={'path_param': { 'field_name': 'repository_id', 'style': 'simple', 'explode': False }})
+    environment_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environment_name', 'style': 'simple', 'explode': False }})
+    repository_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'repository_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetEnvironmentPublicKeyRequest:
-    path_params: ActionsGetEnvironmentPublicKeyPathParams = field()
+    path_params: ActionsGetEnvironmentPublicKeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetEnvironmentPublicKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_public_key: Optional[shared.ActionsPublicKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_public_key: Optional[shared_actions_public_key.ActionsPublicKey] = dataclasses.field(default=None)
     

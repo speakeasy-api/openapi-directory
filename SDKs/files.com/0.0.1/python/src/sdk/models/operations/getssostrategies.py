@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import ssostrategyentity as shared_ssostrategyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesRequest:
-    query_params: GetSsoStrategiesQueryParams = field()
+    query_params: GetSsoStrategiesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSsoStrategiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sso_strategy_entities: Optional[List[shared.SsoStrategyEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sso_strategy_entities: Optional[list[shared_ssostrategyentity.SsoStrategyEntity]] = dataclasses.field(default=None)
     

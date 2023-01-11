@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import indexfieldstatus as shared_indexfieldstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DefineIndexFieldResponse:
     r"""DefineIndexFieldResponse
     A response message that contains the status of an updated index field.
     """
     
-    index_field: IndexFieldStatus = field()
+    index_field: shared_indexfieldstatus.IndexFieldStatus = dataclasses.field()
     

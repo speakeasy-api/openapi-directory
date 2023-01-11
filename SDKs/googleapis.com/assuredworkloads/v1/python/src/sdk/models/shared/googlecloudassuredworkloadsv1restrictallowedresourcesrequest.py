@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTyp
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest:
     r"""GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest
     Request for restricting list of available resources in Workload environment.
     """
     
-    restriction_type: Optional[GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictionType') }})
+    restriction_type: Optional[GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictionType') }})
     

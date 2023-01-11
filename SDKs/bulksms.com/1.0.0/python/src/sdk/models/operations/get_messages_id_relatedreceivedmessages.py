@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import message as shared_message
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDRelatedReceivedMessagesPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDRelatedReceivedMessagesSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDRelatedReceivedMessagesRequest:
-    path_params: GetMessagesIDRelatedReceivedMessagesPathParams = field()
-    security: GetMessagesIDRelatedReceivedMessagesSecurity = field()
+    path_params: GetMessagesIDRelatedReceivedMessagesPathParams = dataclasses.field()
+    security: GetMessagesIDRelatedReceivedMessagesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDRelatedReceivedMessagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    messages: Optional[List[shared.Message]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    messages: Optional[list[shared_message.Message]] = dataclasses.field(default=None)
     

@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import creativeassetid as shared_creativeassetid
+from ..shared import clicktag as shared_clicktag
+from ..shared import creativecustomevent as shared_creativecustomevent
+from ..shared import dimensionvalue as shared_dimensionvalue
 
 class CreativeAssetMetadataDetectedFeaturesEnum(str, Enum):
     CSS_FONT_FACE = "CSS_FONT_FACE"
@@ -102,21 +105,21 @@ class CreativeAssetMetadataWarnedValidationRulesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeAssetMetadata:
     r"""CreativeAssetMetadata
     CreativeAssets contains properties of a creative asset file which will be uploaded or has already been uploaded. Refer to the creative sample code for how to upload assets and insert a creative.
     """
     
-    asset_identifier: Optional[CreativeAssetID] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetIdentifier') }})
-    click_tags: Optional[List[ClickTag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clickTags') }})
-    counter_custom_events: Optional[List[CreativeCustomEvent]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counterCustomEvents') }})
-    detected_features: Optional[List[CreativeAssetMetadataDetectedFeaturesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedFeatures') }})
-    exit_custom_events: Optional[List[CreativeCustomEvent]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exitCustomEvents') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    id_dimension_value: Optional[DimensionValue] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idDimensionValue') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    rich_media: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('richMedia') }})
-    timer_custom_events: Optional[List[CreativeCustomEvent]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timerCustomEvents') }})
-    warned_validation_rules: Optional[List[CreativeAssetMetadataWarnedValidationRulesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnedValidationRules') }})
+    asset_identifier: Optional[shared_creativeassetid.CreativeAssetID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetIdentifier') }})
+    click_tags: Optional[list[shared_clicktag.ClickTag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clickTags') }})
+    counter_custom_events: Optional[list[shared_creativecustomevent.CreativeCustomEvent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counterCustomEvents') }})
+    detected_features: Optional[list[CreativeAssetMetadataDetectedFeaturesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detectedFeatures') }})
+    exit_custom_events: Optional[list[shared_creativecustomevent.CreativeCustomEvent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exitCustomEvents') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id_dimension_value: Optional[shared_dimensionvalue.DimensionValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idDimensionValue') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    rich_media: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('richMedia') }})
+    timer_custom_events: Optional[list[shared_creativecustomevent.CreativeCustomEvent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timerCustomEvents') }})
+    warned_validation_rules: Optional[list[CreativeAssetMetadataWarnedValidationRulesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warnedValidationRules') }})
     

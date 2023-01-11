@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import calendarblockviewmodel as shared_calendarblockviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CalendarsBlockIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CalendarsBlockIDRequest:
-    path_params: DeleteSetupV1CalendarsBlockIDPathParams = field()
+    path_params: DeleteSetupV1CalendarsBlockIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CalendarsBlockIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    calendar_block_view_model: Optional[shared.CalendarBlockViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    calendar_block_view_model: Optional[shared_calendarblockviewmodel.CalendarBlockViewModel] = dataclasses.field(default=None)
     

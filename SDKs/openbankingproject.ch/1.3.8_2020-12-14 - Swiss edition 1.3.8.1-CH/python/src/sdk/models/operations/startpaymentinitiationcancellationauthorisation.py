@@ -1,72 +1,91 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import paymentproduct_enum as shared_paymentproduct_enum
+from ..shared import paymentservice_enum as shared_paymentservice_enum
+from ..shared import psu_http_method_enum as shared_psu_http_method_enum
+from ..shared import security as shared_security
+from ..shared import updatepsuauthentication as shared_updatepsuauthentication
+from ..shared import selectpsuauthenticationmethod as shared_selectpsuauthenticationmethod
+from ..shared import transactionauthorisation as shared_transactionauthorisation
+from ..shared import error400_ng_pis as shared_error400_ng_pis
+from ..shared import error400_pis as shared_error400_pis
+from ..shared import error401_ng_pis as shared_error401_ng_pis
+from ..shared import error401_pis as shared_error401_pis
+from ..shared import error403_ng_pis as shared_error403_ng_pis
+from ..shared import error403_pis as shared_error403_pis
+from ..shared import error404_ng_pis as shared_error404_ng_pis
+from ..shared import error404_pis as shared_error404_pis
+from ..shared import error405_ng_pis as shared_error405_ng_pis
+from ..shared import error405_pis as shared_error405_pis
+from ..shared import error409_ng_pis as shared_error409_ng_pis
+from ..shared import error409_pis as shared_error409_pis
+from ..shared import startscaprocessresponse as shared_startscaprocessresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class StartPaymentInitiationCancellationAuthorisationPathParams:
-    payment_product: shared.PaymentProductEnum = field(metadata={'path_param': { 'field_name': 'payment-product', 'style': 'simple', 'explode': False }})
-    payment_service: shared.PaymentServiceEnum = field(metadata={'path_param': { 'field_name': 'payment-service', 'style': 'simple', 'explode': False }})
-    payment_id: str = field(metadata={'path_param': { 'field_name': 'paymentId', 'style': 'simple', 'explode': False }})
+    payment_product: shared_paymentproduct_enum.PaymentProductEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'payment-product', 'style': 'simple', 'explode': False }})
+    payment_service: shared_paymentservice_enum.PaymentServiceEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'payment-service', 'style': 'simple', 'explode': False }})
+    payment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'paymentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartPaymentInitiationCancellationAuthorisationHeaders:
-    x_request_id: str = field(metadata={'header': { 'field_name': 'X-Request-ID', 'style': 'simple', 'explode': False }})
-    digest: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Digest', 'style': 'simple', 'explode': False }})
-    psu_accept: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept', 'style': 'simple', 'explode': False }})
-    psu_accept_charset: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Charset', 'style': 'simple', 'explode': False }})
-    psu_accept_encoding: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Encoding', 'style': 'simple', 'explode': False }})
-    psu_accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Language', 'style': 'simple', 'explode': False }})
-    psu_corporate_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID', 'style': 'simple', 'explode': False }})
-    psu_corporate_id_type: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID-Type', 'style': 'simple', 'explode': False }})
-    psu_device_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Device-ID', 'style': 'simple', 'explode': False }})
-    psu_geo_location: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Geo-Location', 'style': 'simple', 'explode': False }})
-    psu_http_method: Optional[shared.PsuHTTPMethodEnum] = field(default=None, metadata={'header': { 'field_name': 'PSU-Http-Method', 'style': 'simple', 'explode': False }})
-    psu_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-ID', 'style': 'simple', 'explode': False }})
-    psu_id_type: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-ID-Type', 'style': 'simple', 'explode': False }})
-    psu_ip_address: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Address', 'style': 'simple', 'explode': False }})
-    psu_ip_port: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Port', 'style': 'simple', 'explode': False }})
-    psu_user_agent: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-User-Agent', 'style': 'simple', 'explode': False }})
-    signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Signature', 'style': 'simple', 'explode': False }})
-    tpp_nok_redirect_uri: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Nok-Redirect-URI', 'style': 'simple', 'explode': False }})
-    tpp_notification_content_preferred: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Notification-Content-Preferred', 'style': 'simple', 'explode': False }})
-    tpp_notification_uri: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Notification-URI', 'style': 'simple', 'explode': False }})
-    tpp_redirect_preferred: Optional[bool] = field(default=None, metadata={'header': { 'field_name': 'TPP-Redirect-Preferred', 'style': 'simple', 'explode': False }})
-    tpp_redirect_uri: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Redirect-URI', 'style': 'simple', 'explode': False }})
-    tpp_signature_certificate: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Signature-Certificate', 'style': 'simple', 'explode': False }})
+    x_request_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Request-ID', 'style': 'simple', 'explode': False }})
+    digest: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Digest', 'style': 'simple', 'explode': False }})
+    psu_accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept', 'style': 'simple', 'explode': False }})
+    psu_accept_charset: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Charset', 'style': 'simple', 'explode': False }})
+    psu_accept_encoding: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Encoding', 'style': 'simple', 'explode': False }})
+    psu_accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Language', 'style': 'simple', 'explode': False }})
+    psu_corporate_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID', 'style': 'simple', 'explode': False }})
+    psu_corporate_id_type: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID-Type', 'style': 'simple', 'explode': False }})
+    psu_device_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Device-ID', 'style': 'simple', 'explode': False }})
+    psu_geo_location: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Geo-Location', 'style': 'simple', 'explode': False }})
+    psu_http_method: Optional[shared_psu_http_method_enum.PsuHTTPMethodEnum] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Http-Method', 'style': 'simple', 'explode': False }})
+    psu_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-ID', 'style': 'simple', 'explode': False }})
+    psu_id_type: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-ID-Type', 'style': 'simple', 'explode': False }})
+    psu_ip_address: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Address', 'style': 'simple', 'explode': False }})
+    psu_ip_port: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Port', 'style': 'simple', 'explode': False }})
+    psu_user_agent: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-User-Agent', 'style': 'simple', 'explode': False }})
+    signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Signature', 'style': 'simple', 'explode': False }})
+    tpp_nok_redirect_uri: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Nok-Redirect-URI', 'style': 'simple', 'explode': False }})
+    tpp_notification_content_preferred: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Notification-Content-Preferred', 'style': 'simple', 'explode': False }})
+    tpp_notification_uri: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Notification-URI', 'style': 'simple', 'explode': False }})
+    tpp_redirect_preferred: Optional[bool] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Redirect-Preferred', 'style': 'simple', 'explode': False }})
+    tpp_redirect_uri: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Redirect-URI', 'style': 'simple', 'explode': False }})
+    tpp_signature_certificate: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Signature-Certificate', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartPaymentInitiationCancellationAuthorisationSecurity:
-    bearer_auth_o_auth: Optional[shared.SchemeBearerAuthOAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth_o_auth: Optional[shared_security.SchemeBearerAuthOAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartPaymentInitiationCancellationAuthorisationRequest:
-    headers: StartPaymentInitiationCancellationAuthorisationHeaders = field()
-    path_params: StartPaymentInitiationCancellationAuthorisationPathParams = field()
-    security: StartPaymentInitiationCancellationAuthorisationSecurity = field()
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: StartPaymentInitiationCancellationAuthorisationHeaders = dataclasses.field()
+    path_params: StartPaymentInitiationCancellationAuthorisationPathParams = dataclasses.field()
+    security: StartPaymentInitiationCancellationAuthorisationSecurity = dataclasses.field()
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartPaymentInitiationCancellationAuthorisationResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error400_ng_pis: Optional[shared.Error400NgPis] = field(default=None)
-    error400_pis: Optional[shared.Error400Pis] = field(default=None)
-    error401_ng_pis: Optional[shared.Error401NgPis] = field(default=None)
-    error401_pis: Optional[shared.Error401Pis] = field(default=None)
-    error403_ng_pis: Optional[shared.Error403NgPis] = field(default=None)
-    error403_pis: Optional[shared.Error403Pis] = field(default=None)
-    error404_ng_pis: Optional[shared.Error404NgPis] = field(default=None)
-    error404_pis: Optional[shared.Error404Pis] = field(default=None)
-    error405_ng_pis: Optional[shared.Error405NgPis] = field(default=None)
-    error405_pis: Optional[shared.Error405Pis] = field(default=None)
-    error409_ng_pis: Optional[shared.Error409NgPis] = field(default=None)
-    error409_pis: Optional[shared.Error409Pis] = field(default=None)
-    start_scaprocess_response: Optional[shared.StartScaprocessResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error400_ng_pis: Optional[shared_error400_ng_pis.Error400NgPis] = dataclasses.field(default=None)
+    error400_pis: Optional[shared_error400_pis.Error400Pis] = dataclasses.field(default=None)
+    error401_ng_pis: Optional[shared_error401_ng_pis.Error401NgPis] = dataclasses.field(default=None)
+    error401_pis: Optional[shared_error401_pis.Error401Pis] = dataclasses.field(default=None)
+    error403_ng_pis: Optional[shared_error403_ng_pis.Error403NgPis] = dataclasses.field(default=None)
+    error403_pis: Optional[shared_error403_pis.Error403Pis] = dataclasses.field(default=None)
+    error404_ng_pis: Optional[shared_error404_ng_pis.Error404NgPis] = dataclasses.field(default=None)
+    error404_pis: Optional[shared_error404_pis.Error404Pis] = dataclasses.field(default=None)
+    error405_ng_pis: Optional[shared_error405_ng_pis.Error405NgPis] = dataclasses.field(default=None)
+    error405_pis: Optional[shared_error405_pis.Error405Pis] = dataclasses.field(default=None)
+    error409_ng_pis: Optional[shared_error409_ng_pis.Error409NgPis] = dataclasses.field(default=None)
+    error409_pis: Optional[shared_error409_pis.Error409Pis] = dataclasses.field(default=None)
+    start_scaprocess_response: Optional[shared_startscaprocessresponse.StartScaprocessResponse] = dataclasses.field(default=None)
     

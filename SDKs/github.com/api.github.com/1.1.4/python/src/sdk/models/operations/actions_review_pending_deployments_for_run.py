@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import deployment as shared_deployment
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsReviewPendingDeploymentsForRunPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    run_id: int = field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    run_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
     
 class ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum(str, Enum):
     APPROVED = "approved"
@@ -18,22 +18,22 @@ class ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsReviewPendingDeploymentsForRunRequestBody:
-    comment: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
-    environment_ids: List[int] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment_ids') }})
-    state: ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    comment: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
+    environment_ids: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment_ids') }})
+    state: ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsReviewPendingDeploymentsForRunRequest:
-    path_params: ActionsReviewPendingDeploymentsForRunPathParams = field()
-    request: Optional[ActionsReviewPendingDeploymentsForRunRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActionsReviewPendingDeploymentsForRunPathParams = dataclasses.field()
+    request: Optional[ActionsReviewPendingDeploymentsForRunRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsReviewPendingDeploymentsForRunResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deployments: Optional[List[shared.Deployment]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deployments: Optional[list[shared_deployment.Deployment]] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RatingCounts:
     r"""RatingCounts
     **dictionary** of rating (stars) to number of reviews with each rating for *this* product\"
@@ -16,9 +16,9 @@ class RatingCounts:
     
     """
     
-    one: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('1') }})
-    two: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('2') }})
-    three: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('3') }})
-    four: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('4') }})
-    five: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('5') }})
+    one: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('1') }})
+    two: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('2') }})
+    three: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('3') }})
+    four: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('4') }})
+    five: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('5') }})
     

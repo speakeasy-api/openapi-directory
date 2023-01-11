@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumVideoPathParams:
-    album_id: float = field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    album_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumVideoQueryParams:
-    password: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'password', 'style': 'form', 'explode': True }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'password', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumVideoRequest:
-    path_params: GetAlbumVideoPathParams = field()
-    query_params: GetAlbumVideoQueryParams = field()
+    path_params: GetAlbumVideoPathParams = dataclasses.field()
+    query_params: GetAlbumVideoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumVideoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    video: Optional[shared.Video] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    video: Optional[shared_video.Video] = dataclasses.field(default=None)
     

@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import objecttypefield as shared_objecttypefield
+from ..shared import objecttypekey as shared_objecttypekey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetProfileObjectTypeTemplateResponse:
-    allow_profile_creation: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AllowProfileCreation') }})
-    fields: Optional[dict[str, ObjectTypeField]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Fields') }})
-    keys: Optional[dict[str, List[ObjectTypeKey]]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Keys') }})
-    source_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SourceName') }})
-    source_object: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SourceObject') }})
-    template_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TemplateId') }})
+    allow_profile_creation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AllowProfileCreation') }})
+    fields: Optional[dict[str, shared_objecttypefield.ObjectTypeField]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Fields') }})
+    keys: Optional[dict[str, list[shared_objecttypekey.ObjectTypeKey]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Keys') }})
+    source_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SourceName') }})
+    source_object: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SourceObject') }})
+    template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TemplateId') }})
     

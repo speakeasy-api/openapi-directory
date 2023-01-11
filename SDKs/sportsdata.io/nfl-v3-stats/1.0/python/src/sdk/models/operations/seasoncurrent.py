@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SeasonCurrentPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonCurrentRequest:
-    path_params: SeasonCurrentPathParams = field()
+    path_params: SeasonCurrentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonCurrentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    season_current_200_application_json_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    season_current_200_application_json_integer: Optional[int] = dataclasses.field(default=None)
     

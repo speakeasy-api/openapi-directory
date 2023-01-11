@@ -1,27 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import taxsettingsupdaterequest as shared_taxsettingsupdaterequest
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import taxsettingsresponse as shared_taxsettingsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SetTaxationModeSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetTaxationModeRequest:
-    request: shared.TaxSettingsUpdateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: SetTaxationModeSecurity = field()
+    request: shared_taxsettingsupdaterequest.TaxSettingsUpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: SetTaxationModeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SetTaxationModeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    tax_settings_response: Optional[shared.TaxSettingsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    tax_settings_response: Optional[shared_taxsettingsresponse.TaxSettingsResponse] = dataclasses.field(default=None)
     

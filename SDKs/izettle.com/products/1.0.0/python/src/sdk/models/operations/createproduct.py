@@ -1,36 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import productcreaterequest as shared_productcreaterequest
+from ..shared import productresponse as shared_productresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductPathParams:
-    organization_uuid: str = field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
+    organization_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductQueryParams:
-    return_entity: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'returnEntity', 'style': 'form', 'explode': True }})
+    return_entity: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'returnEntity', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductRequest:
-    path_params: CreateProductPathParams = field()
-    query_params: CreateProductQueryParams = field()
-    request: shared.ProductCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateProductSecurity = field()
+    path_params: CreateProductPathParams = dataclasses.field()
+    query_params: CreateProductQueryParams = dataclasses.field()
+    request: shared_productcreaterequest.ProductCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateProductSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    product_response: Optional[shared.ProductResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_response: Optional[shared_productresponse.ProductResponse] = dataclasses.field(default=None)
     

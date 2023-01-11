@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ServiceEndpoint:
     r"""ServiceEndpoint
     The endpoint to which service requests can be submitted.
     """
     
-    endpoint: Optional[str] = field(default=None)
+    endpoint: Optional[str] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.AllocateStaticIPRequest(
     headers=operations.AllocateStaticIPHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="nesciunt",
-        x_amz_credential="tempore",
-        x_amz_date="libero",
-        x_amz_security_token="modi",
-        x_amz_signature="est",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="excepturi",
+        x_amz_content_sha256="quia",
+        x_amz_credential="dolore",
+        x_amz_date="sapiente",
+        x_amz_security_token="voluptas",
+        x_amz_signature="quis",
+        x_amz_signed_headers="dolor",
         x_amz_target="Lightsail_20161128.AllocateStaticIp",
     ),
     request=shared.AllocateStaticIPRequest(
-        static_ip_name="a",
+        static_ip_name="doloremque",
     ),
 )
     
-res = s.sdk.allocate_static_ip(req)
+res = s.allocate_static_ip(req)
 
 if res.allocate_static_ip_result is not None:
     # handle response

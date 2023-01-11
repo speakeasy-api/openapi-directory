@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettings:
     r"""ConnectionSettings
     Information about the <code>ConnectionSettings</code> attribute.
     """
     
-    idle_timeout: int = field()
+    idle_timeout: int = dataclasses.field()
     

@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import build as shared_build
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectTreeBranchPathParams:
-    branch: str = field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectTreeBranchRequestBody:
-    build_parameters: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('build_parameters') }})
-    parallel: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parallel') }})
-    revision: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revision') }})
+    build_parameters: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('build_parameters') }})
+    parallel: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parallel') }})
+    revision: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revision') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectTreeBranchRequest:
-    path_params: PostProjectUsernameProjectTreeBranchPathParams = field()
-    request: Optional[PostProjectUsernameProjectTreeBranchRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostProjectUsernameProjectTreeBranchPathParams = dataclasses.field()
+    request: Optional[PostProjectUsernameProjectTreeBranchRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectTreeBranchResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    build: Optional[shared.Build] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    build: Optional[shared_build.Build] = dataclasses.field(default=None)
     

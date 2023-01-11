@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,29 +25,30 @@ s.config_security(
     
 req = operations.GenerateDataSetRequest(
     headers=operations.GenerateDataSetHeaders(
-        x_amz_algorithm="voluptatem",
-        x_amz_content_sha256="fuga",
-        x_amz_credential="aperiam",
-        x_amz_date="facilis",
-        x_amz_security_token="eum",
-        x_amz_signature="atque",
-        x_amz_signed_headers="recusandae",
+        x_amz_algorithm="quisquam",
+        x_amz_content_sha256="sequi",
+        x_amz_credential="quia",
+        x_amz_date="est",
+        x_amz_security_token="voluptatem",
+        x_amz_signature="voluptate",
+        x_amz_signed_headers="facilis",
         x_amz_target="MarketplaceCommerceAnalytics20150701.GenerateDataSet",
     ),
     request=shared.GenerateDataSetRequest(
         customer_defined_values={
-            "iste": "atque",
+            "ipsum": "repudiandae",
+            "iusto": "quis",
         },
-        data_set_publication_date="2018-12-14T14:15:08Z",
-        data_set_type="daily_business_fees",
-        destination_s3_bucket_name="voluptas",
-        destination_s3_prefix="sunt",
-        role_name_arn="ratione",
-        sns_topic_arn="est",
+        data_set_publication_date="2013-05-15T08:13:46Z",
+        data_set_type="monthly_revenue_billing_and_revenue_data",
+        destination_s3_bucket_name="sunt",
+        destination_s3_prefix="laborum",
+        role_name_arn="quibusdam",
+        sns_topic_arn="eum",
     ),
 )
     
-res = s.sdk.generate_data_set(req)
+res = s.generate_data_set(req)
 
 if res.generate_data_set_result is not None:
     # handle response

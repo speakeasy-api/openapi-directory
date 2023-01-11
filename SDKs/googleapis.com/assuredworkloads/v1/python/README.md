@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest(
     security=operations.AssuredworkloadsOrganizationsLocationsOperationsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AssuredworkloadsOrganizationsLocationsOperationsListPathParams(
-        name="autem",
+        name="minus",
     ),
     query_params=operations.AssuredworkloadsOrganizationsLocationsOperationsListQueryParams(
-        dollar_xgafv="1",
-        access_token="officia",
-        alt="media",
-        callback="aperiam",
-        fields="quasi",
-        filter="enim",
-        key="incidunt",
-        oauth_token="tenetur",
-        page_size=8458858280201702678,
-        page_token="repellat",
+        dollar_xgafv="2",
+        access_token="nisi",
+        alt="proto",
+        callback="ducimus",
+        fields="nulla",
+        filter="non",
+        key="et",
+        oauth_token="dolore",
+        page_size=8865056654676877038,
+        page_token="non",
         pretty_print=False,
-        quota_user="totam",
-        upload_type="quisquam",
-        upload_protocol="ad",
+        quota_user="quisquam",
+        upload_type="cumque",
+        upload_protocol="aspernatur",
     ),
 )
     
@@ -63,6 +62,7 @@ if res.google_longrunning_list_operations_response is not None:
 * `assuredworkloads_organizations_locations_workloads_create` - Creates Assured Workload.
 * `assuredworkloads_organizations_locations_workloads_delete` - Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
 * `assuredworkloads_organizations_locations_workloads_list` - Lists Assured Workloads under a CRM Node.
+* `assuredworkloads_organizations_locations_workloads_mutate_partner_permissions` - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `assuredworkloads_organizations_locations_workloads_patch` - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 * `assuredworkloads_organizations_locations_workloads_restrict_allowed_resources` - Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
 * `assuredworkloads_organizations_locations_workloads_violations_acknowledge` - Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.

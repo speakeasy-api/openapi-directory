@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import uniqueproblem as shared_uniqueproblem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListUniqueProblemsResult:
     r"""ListUniqueProblemsResult
     Represents the result of a list unique problems request.
     """
     
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    unique_problems: Optional[dict[str, List[UniqueProblem]]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniqueProblems') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    unique_problems: Optional[dict[str, list[shared_uniqueproblem.UniqueProblem]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniqueProblems') }})
     

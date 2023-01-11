@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -41,7 +41,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DistrictRanking]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DistrictRanking]])
                 res.district_rankings = out
         elif r.status_code == 304:
             pass
@@ -72,7 +72,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 304:
             pass
@@ -103,7 +103,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_district_teams_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -134,7 +134,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamSimple]])
                 res.team_simples = out
         elif r.status_code == 304:
             pass
@@ -165,7 +165,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 304:
             pass
@@ -196,7 +196,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_event_teams_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -227,7 +227,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamSimple]])
                 res.team_simples = out
         elif r.status_code == 304:
             pass
@@ -320,7 +320,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Award]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Award]])
                 res.awards = out
         elif r.status_code == 304:
             pass
@@ -351,7 +351,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Award]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Award]])
                 res.awards = out
         elif r.status_code == 304:
             pass
@@ -382,7 +382,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DistrictList]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DistrictList]])
                 res.district_lists = out
         elif r.status_code == 304:
             pass
@@ -413,7 +413,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Award]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Award]])
                 res.awards = out
         elif r.status_code == 304:
             pass
@@ -444,7 +444,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Match]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Match]])
                 res.matches = out
         elif r.status_code == 304:
             pass
@@ -475,7 +475,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_team_event_matches_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -506,7 +506,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Match]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Match]])
                 res.matches = out
         elif r.status_code == 304:
             pass
@@ -568,7 +568,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
         elif r.status_code == 304:
             pass
@@ -599,7 +599,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
         elif r.status_code == 304:
             pass
@@ -630,7 +630,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_team_events_by_year_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -661,7 +661,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.EventSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.EventSimple]])
                 res.event_simples = out
         elif r.status_code == 304:
             pass
@@ -692,7 +692,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_team_events_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -723,7 +723,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.EventSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.EventSimple]])
                 res.event_simples = out
         elif r.status_code == 304:
             pass
@@ -785,7 +785,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Match]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Match]])
                 res.matches = out
         elif r.status_code == 304:
             pass
@@ -816,7 +816,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_team_matches_by_year_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -847,7 +847,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MatchSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MatchSimple]])
                 res.match_simples = out
         elif r.status_code == 304:
             pass
@@ -878,7 +878,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Media]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Media]])
                 res.media = out
         elif r.status_code == 304:
             pass
@@ -909,7 +909,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Media]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Media]])
                 res.media = out
         elif r.status_code == 304:
             pass
@@ -940,7 +940,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Media]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Media]])
                 res.media = out
         elif r.status_code == 304:
             pass
@@ -971,7 +971,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamRobot]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamRobot]])
                 res.team_robots = out
         elif r.status_code == 304:
             pass
@@ -1033,7 +1033,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Media]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Media]])
                 res.media = out
         elif r.status_code == 304:
             pass
@@ -1064,7 +1064,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[int]])
+                out = utils.unmarshal_json(r.text, Optional[list[int]])
                 res.get_team_years_participated_200_application_json_integers = out
         elif r.status_code == 304:
             pass
@@ -1095,7 +1095,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 304:
             pass
@@ -1126,7 +1126,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 304:
             pass
@@ -1157,7 +1157,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_teams_by_year_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -1188,7 +1188,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamSimple]])
                 res.team_simples = out
         elif r.status_code == 304:
             pass
@@ -1219,7 +1219,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_teams_keys_200_application_json_strings = out
         elif r.status_code == 304:
             pass
@@ -1250,7 +1250,7 @@ class Team:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamSimple]])
                 res.team_simples = out
         elif r.status_code == 304:
             pass

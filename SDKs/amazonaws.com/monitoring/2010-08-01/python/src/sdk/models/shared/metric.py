@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dimension as shared_dimension
 
 
-@dataclass
+@dataclasses.dataclass
 class Metric:
     r"""Metric
     Represents a specific metric.
     """
     
-    dimensions: Optional[List[Dimension]] = field(default=None)
-    metric_name: Optional[str] = field(default=None)
-    namespace: Optional[str] = field(default=None)
+    dimensions: Optional[list[shared_dimension.Dimension]] = dataclasses.field(default=None)
+    metric_name: Optional[str] = dataclasses.field(default=None)
+    namespace: Optional[str] = dataclasses.field(default=None)
     

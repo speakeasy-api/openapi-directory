@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStripeGatewayDeveloperDeveloperIDAccountsPathParams:
-    developer_id: str = field(metadata={'path_param': { 'field_name': 'developerId', 'style': 'simple', 'explode': False }})
+    developer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'developerId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStripeGatewayDeveloperDeveloperIDAccountsRequest:
-    path_params: GetStripeGatewayDeveloperDeveloperIDAccountsPathParams = field()
+    path_params: GetStripeGatewayDeveloperDeveloperIDAccountsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStripeGatewayDeveloperDeveloperIDAccountsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

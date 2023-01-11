@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersNameOrIDPausePathParams:
-    name_or_id: str = field(metadata={'path_param': { 'field_name': 'name_or_id', 'style': 'simple', 'explode': False }})
+    name_or_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name_or_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersNameOrIDPauseHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersNameOrIDPauseRequest:
-    headers: PostContainersNameOrIDPauseHeaders = field()
-    path_params: PostContainersNameOrIDPausePathParams = field()
+    headers: PostContainersNameOrIDPauseHeaders = dataclasses.field()
+    path_params: PostContainersNameOrIDPausePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersNameOrIDPauseResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,14 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import on_demand_promotion as shared_on_demand_promotion
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodPromotionPathParams:
-    ondemand_id: float = field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
+    ondemand_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
     
 class CreateVodPromotionRequestBodyAccessTypeEnum(str, Enum):
     DEFAULT = "default"
@@ -42,38 +44,38 @@ class CreateVodPromotionRequestBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVodPromotionRequestBody:
-    download: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    stream_period: CreateVodPromotionRequestBodyStreamPeriodEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stream_period') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    type: CreateVodPromotionRequestBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    access_type: Optional[CreateVodPromotionRequestBodyAccessTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_type') }})
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    discount_type: Optional[CreateVodPromotionRequestBodyDiscountTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discount_type') }})
-    end_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_time') }})
-    label: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    percent_off: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percent_off') }})
-    product_type: Optional[CreateVodPromotionRequestBodyProductTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('product_type') }})
-    start_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_time') }})
+    download: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    stream_period: CreateVodPromotionRequestBodyStreamPeriodEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stream_period') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    type: CreateVodPromotionRequestBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    access_type: Optional[CreateVodPromotionRequestBodyAccessTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_type') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    discount_type: Optional[CreateVodPromotionRequestBodyDiscountTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discount_type') }})
+    end_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_time') }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    percent_off: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percent_off') }})
+    product_type: Optional[CreateVodPromotionRequestBodyProductTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('product_type') }})
+    start_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_time') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodPromotionSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodPromotionRequest:
-    path_params: CreateVodPromotionPathParams = field()
-    request: CreateVodPromotionRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.ondemand.promotion+json' }})
-    security: CreateVodPromotionSecurity = field()
+    path_params: CreateVodPromotionPathParams = dataclasses.field()
+    request: CreateVodPromotionRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.ondemand.promotion+json' }})
+    security: CreateVodPromotionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVodPromotionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    on_demand_promotion: Optional[shared.OnDemandPromotion] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    on_demand_promotion: Optional[shared_on_demand_promotion.OnDemandPromotion] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import organization as shared_organization
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CityList:
-    organization: Organization = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization') }})
+    organization: shared_organization.Organization = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization') }})
     

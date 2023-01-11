@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2bigquerykey as shared_googleprivacydlpv2bigquerykey
+from ..shared import googleprivacydlpv2datastorekey as shared_googleprivacydlpv2datastorekey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2RecordKey:
     r"""GooglePrivacyDlpV2RecordKey
     Message for a unique key indicating a record that contains a finding.
     """
     
-    big_query_key: Optional[GooglePrivacyDlpV2BigQueryKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bigQueryKey') }})
-    datastore_key: Optional[GooglePrivacyDlpV2DatastoreKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datastoreKey') }})
-    id_values: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idValues') }})
+    big_query_key: Optional[shared_googleprivacydlpv2bigquerykey.GooglePrivacyDlpV2BigQueryKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bigQueryKey') }})
+    datastore_key: Optional[shared_googleprivacydlpv2datastorekey.GooglePrivacyDlpV2DatastoreKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datastoreKey') }})
+    id_values: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idValues') }})
     

@@ -20,6 +20,36 @@ class Campaigns:
         self._gen_version = gen_version
 
     
+    def get_resources_campaigns_json(self, request: operations.GetResourcesCampaignsJSONRequest) -> operations.GetResourcesCampaignsJSONResponse:
+        r"""Get Campaigns
+        Media Listings for a specific campaign
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/campaigns.json"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourcesCampaignsJSONResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.CampaignWrapped])
+                res.campaign_wrapped = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 500:
+            pass
+
+        return res
+
+    
     def get_resources_campaigns_id_json(self, request: operations.GetResourcesCampaignsIDJSONRequest) -> operations.GetResourcesCampaignsIDJSONResponse:
         r"""Get Campaign by ID
         Information about a specific campaign
@@ -101,36 +131,6 @@ class Campaigns:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.SyndicateMarshallerWrapped])
                 res.syndicate_marshaller_wrapped = out
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
-
-    
-    def get_resources_campaigns_json(self, request: operations.GetResourcesCampaignsJSONRequest) -> operations.GetResourcesCampaignsJSONResponse:
-        r"""Get Campaigns
-        Media Listings for a specific campaign
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/resources/campaigns.json"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetResourcesCampaignsJSONResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.CampaignWrapped])
-                res.campaign_wrapped = out
         elif r.status_code == 400:
             pass
         elif r.status_code == 500:

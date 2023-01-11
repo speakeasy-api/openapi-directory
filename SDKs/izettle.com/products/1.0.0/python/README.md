@@ -8,29 +8,36 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CountAllProductsRequest(
-    security=operations.CountAllProductsSecurity(
+req = operations.CreateCategoriesRequest(
+    security=operations.CreateCategoriesSecurity(
         zettle_api_key=shared.SchemeZettleAPIKey(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
-    path_params=operations.CountAllProductsPathParams(
-        organization_uuid="distinctio",
+    path_params=operations.CreateCategoriesPathParams(
+        organization_uuid="aut",
+    ),
+    request=shared.CategoryRequest(
+        categories=[
+            shared.CategoryDto(
+                name="debitis",
+                uuid="ut",
+            ),
+        ],
     ),
 )
     
-res = s.sdk.count_all_products(req)
+res = s.categories.create_categories(req)
 
-if res.product_count_responses is not None:
+if res.status_code == 200:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -38,37 +45,58 @@ if res.product_count_responses is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### categories
+
+* `create_categories` - Creates a new category
+* `get_product_types` - Retrieves all categories
+
+### discounts
+
+* `create_discount` - Creates a discount
+* `delete_discount` - Deletes a single discount 
+* `get_all_discounts` - Retrieves all discounts
+* `get_discount` - Retrieves a single discount
+* `update_discount` - Updates a single discount
+
+### images
+
+* `get_all_image_urls` - Retrieves all library item images
+
+### import
+
+* `get_latest_import_status` - Gets status for latest import
+* `get_status_by_uuid` - Gets status for an import
+* `import_library_v2` - Bulk import library items
+
+### library
+
+* `get_library` - Retrieves the entire library
+
+### products
 
 * `count_all_products` - Retrieves the count of existing products
-* `create_categories` - Creates a new category
-* `create_discount` - Creates a discount
 * `create_product` - Creates a new product
-* `create_product_slug` - Creates a product identifier
-* `create_tax_rates` - Creates new tax rates
-* `delete_discount` - Deletes a single discount 
 * `delete_product` - Deletes a single product
 * `delete_products` - Deletes a list of products
-* `delete_tax_rate` - Deletes a single tax rate
-* `get_all_discounts` - Retrieves all discounts
-* `get_all_image_urls` - Retrieves all library item images
 * `get_all_options` - Retrieves an aggregate of active Options in the library
 * `get_all_products_in_pos` - Retrieves all products visible in POS
 * `get_all_products_v2` - Retrieves all products visible in POS – v2
-* `get_discount` - Retrieves a single discount
-* `get_latest_import_status` - Gets status for latest import
-* `get_library` - Retrieves the entire library
 * `get_product` - Retrieves a single product
+* `update_product` - Updates a single product
+
+### products/online
+
+* `create_product_slug` - Creates a product identifier
+
+### taxes
+
+* `create_tax_rates` - Creates new tax rates
+* `delete_tax_rate` - Deletes a single tax rate
 * `get_product_count_for_all_taxes` - Gets all tax rates and a count of products associated with each
-* `get_product_types` - Retrieves all categories
-* `get_status_by_uuid` - Gets status for an import
 * `get_tax_rate` - Gets a single tax rate
 * `get_tax_rates` - Gets all tax rates available
 * `get_tax_settings` - Gets the organization tax settings 
-* `import_library_v2` - Bulk import library items
 * `set_taxation_mode` - Updates the organization tax settings
-* `update_discount` - Updates a single discount
-* `update_product` - Updates a single product
 * `update_tax_rate` - Updates a single tax rate
 
 <!-- End SDK Available Operations -->

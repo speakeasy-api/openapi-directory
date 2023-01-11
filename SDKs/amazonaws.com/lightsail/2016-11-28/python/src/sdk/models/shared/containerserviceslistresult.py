@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import containerservice as shared_containerservice
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContainerServicesListResult:
-    container_services: Optional[List[ContainerService]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerServices') }})
+    container_services: Optional[list[shared_containerservice.ContainerService]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerServices') }})
     

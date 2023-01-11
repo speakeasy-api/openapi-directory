@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import importfile as shared_importfile
 
 class TemplateContentsInterpreterEnum(str, Enum):
     UNKNOWN_INTERPRETER = "UNKNOWN_INTERPRETER"
@@ -12,15 +12,15 @@ class TemplateContentsInterpreterEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TemplateContents:
     r"""TemplateContents
     Files that make up the template contents of a template type.
     """
     
-    imports: Optional[List[ImportFile]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imports') }})
-    interpreter: Optional[TemplateContentsInterpreterEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpreter') }})
-    main_template: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mainTemplate') }})
-    schema: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
-    template: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('template') }})
+    imports: Optional[list[shared_importfile.ImportFile]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imports') }})
+    interpreter: Optional[TemplateContentsInterpreterEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpreter') }})
+    main_template: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mainTemplate') }})
+    schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
+    template: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('template') }})
     

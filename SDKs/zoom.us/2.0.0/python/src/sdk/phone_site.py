@@ -1,0 +1,217 @@
+import requests
+from typing import Any,Optional
+from sdk.models import operations
+from . import utils
+
+class PhoneSite:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def create_phone_site(self, request: operations.CreatePhoneSiteRequest) -> operations.CreatePhoneSiteResponse:
+        r"""Create a phone site
+        Sites allow you to organize Zoom Phone users in your organization. Use this API to create a [Site](https://support.zoom.us/hc/en-us/articles/360020809672).<br>
+        **Prerequisites:**<br>
+        * Multiple Sites must be [enabled](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites#h_05c88e35-1593-491f-b1a8-b7139a75dc15).
+        * Pro or a higher account with Zoom Phone enabled.
+        **Scope:** `phone:write:admin`<br> 
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/phone/sites"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.CreatePhoneSiteResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.CreatePhoneSite204ApplicationJSON])
+                res.create_phone_site_204_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def delete_phone_site(self, request: operations.DeletePhoneSiteRequest) -> operations.DeletePhoneSiteResponse:
+        r"""Delete a phone site
+        Sites allow you to organize Zoom Phone users in your organization. Use this API to delete a specific [site](https://support.zoom.us/hc/en-us/articles/360020809672) in a Zoom account. To delete a site, in the query parameter, you must provide the Site ID of another site where the assets of current site (users, numbers and phones) can be transferred to.  You cannot use this API to delete the main site.
+        
+        **Prerequisites:** <br>
+        * Account must have a Pro or a higher plan with Zoom Phone license. 
+        * [Multiple Sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites) must be enabled.<br>
+        **Scope:** `phone:write:admin`
+        <br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/phone/sites/{siteId}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("DELETE", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePhoneSiteResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.delete_phone_site_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 409:
+            pass
+
+        return res
+
+    
+    def get_a_site(self, request: operations.GetASiteRequest) -> operations.GetASiteResponse:
+        r"""Get phone site details
+        Sites allow you to organize Zoom Phone users in your organization. Use this API to get information about a specific [site](https://support.zoom.us/hc/en-us/articles/360020809672).
+        
+        
+        **Prerequisites:** <br>
+        * Account must have a Pro or a higher plan with Zoom Phone license.
+        * Multiple Sites must be [enabled](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites#h_05c88e35-1593-491f-b1a8-b7139a75dc15).<br>
+        **Scope:** `phone:read:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/phone/sites/{siteId}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetASiteResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.GetASite200ApplicationJSON])
+                res.get_a_site_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def list_phone_sites(self, request: operations.ListPhoneSitesRequest) -> operations.ListPhoneSitesResponse:
+        r"""List phone sites
+        Sites allow you to organize Zoom Phone users in your organization. Use this API to list all the [sites](https://support.zoom.us/hc/en-us/articles/360020809672) that have been created for an account.<br>
+        **Prerequisites:**<br>
+        * Multiple Sites must be [enabled](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-Multiple-Sites#h_05c88e35-1593-491f-b1a8-b7139a75dc15).
+        * Pro or a higher account with Zoom Phone enabled.
+        
+        **Scope:** `phone:read:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/phone/sites"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListPhoneSitesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ListPhoneSites200ApplicationJSON])
+                res.list_phone_sites_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+
+        return res
+
+    
+    def update_site_details(self, request: operations.UpdateSiteDetailsRequest) -> operations.UpdateSiteDetailsResponse:
+        r"""Update phone site details
+        Sites allow you to organize Zoom Phone users in your organization. Use this API to update information about a specific [site](https://support.zoom.us/hc/en-us/articles/360020809672).
+        
+        
+        **Prerequisites:** <br>
+        * Account must have a Pro or a higher plan with Zoom Phone license.
+        * **Scope:** `phone:write:admin`<br> 
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+        
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/phone/sites/{siteId}", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UpdateSiteDetailsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.update_site_details_204_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    

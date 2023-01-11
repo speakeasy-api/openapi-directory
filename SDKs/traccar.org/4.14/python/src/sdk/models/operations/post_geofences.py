@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import geofence as shared_geofence
 
 
-@dataclass
+@dataclasses.dataclass
 class PostGeofencesRequest:
-    request: shared.Geofence = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_geofence.Geofence = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostGeofencesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    geofence: Optional[shared.Geofence] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    geofence: Optional[shared_geofence.Geofence] = dataclasses.field(default=None)
     

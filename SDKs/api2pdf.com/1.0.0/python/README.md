@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,17 +25,17 @@ s.config_security(
     
 req = operations.ChromeFromHTMLPostRequest(
     request=shared.ChromeHTMLToPdfRequest(
-        file_name="qui",
-        html="quisquam",
+        file_name="in",
+        html="quia",
         inline_pdf=False,
         options=shared.ChromeAdvancedOptions(
-            landscape="aut",
+            landscape="quia",
             print_background=True,
         ),
     ),
 )
     
-res = s.sdk.chrome_from_html_post(req)
+res = s.headless_chrome.chrome_from_html_post(req)
 
 if res.api_response_success is not None:
     # handle response
@@ -46,17 +45,29 @@ if res.api_response_success is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Headless Chrome
 
 * `chrome_from_html_post` - Convert raw HTML to PDF
 * `chrome_from_url_get` - Convert URL to PDF
 * `chrome_from_url_post` - Convert URL to PDF
+
+### LibreOffice
+
 * `libre_convert_post` - Convert office document or image to PDF
+
+### Merge / Combine Pdfs
+
 * `merge_post` - Merge multiple PDFs together
+
+### ZXING (Zebra Crossing) Bar Codes
+
+* `zebra_get` - Generate bar codes and QR codes with ZXING.
+
+### wkhtmltopdf
+
 * `wkhtmltopdf_from_html_post` - Convert raw HTML to PDF
 * `wkhtmltopdf_from_url_get` - Convert URL to PDF
 * `wkhtmltopdf_from_url_post` - Convert URL to PDF
-* `zebra_get` - Generate bar codes and QR codes with ZXING.
 
 <!-- End SDK Available Operations -->
 

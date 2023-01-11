@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetweatherRequest(
     query_params=operations.GetweatherQueryParams(
-        city="dolor",
-        license="aut",
-        state="ipsa",
+        city="sit",
+        license="occaecati",
+        state="optio",
     ),
 )
     
-res = s.sdk.getweather(req)
+res = s.weather_by_city_and_state.getweather(req)
 
 if res.getweather_200_application_json_object is not None:
     # handle response
@@ -35,7 +34,7 @@ if res.getweather_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Weather by City and State
 
 * `getweather` - Gets current weather information for a US city and state
 

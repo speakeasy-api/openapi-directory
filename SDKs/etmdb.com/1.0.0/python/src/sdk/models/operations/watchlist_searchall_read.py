@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class WatchlistSearchallReadPathParams:
-    param: str = field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
+    param: str = dataclasses.field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WatchlistSearchallReadRequest:
-    path_params: WatchlistSearchallReadPathParams = field()
+    path_params: WatchlistSearchallReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WatchlistSearchallReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataset as shared_dataset
 
 class UploadDatasetSync1RequestBodyTypeEnum(str, Enum):
     IMAGE = "image"
@@ -9,28 +10,28 @@ class UploadDatasetSync1RequestBodyTypeEnum(str, Enum):
     IMAGE_MULTI_LABEL = "image-multi-label"
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadDatasetSync1RequestBody:
-    data: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    path: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
-    type: Optional[UploadDatasetSync1RequestBodyTypeEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'type' }})
+    data: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
+    type: Optional[UploadDatasetSync1RequestBodyTypeEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'type' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadDatasetSync1Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadDatasetSync1Request:
-    security: UploadDatasetSync1Security = field()
-    request: Optional[UploadDatasetSync1RequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UploadDatasetSync1Security = dataclasses.field()
+    request: Optional[UploadDatasetSync1RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadDatasetSync1Response:
-    content_type: str = field()
-    status_code: int = field()
-    dataset: Optional[shared.Dataset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dataset: Optional[shared_dataset.Dataset] = dataclasses.field(default=None)
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import snmpconfig as shared_snmpconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchSnmpConfigPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchSnmpConfigSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchSnmpConfigRequest:
-    path_params: GetCiscoSwitchSnmpConfigPathParams = field()
-    security: GetCiscoSwitchSnmpConfigSecurity = field()
+    path_params: GetCiscoSwitchSnmpConfigPathParams = dataclasses.field()
+    security: GetCiscoSwitchSnmpConfigSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchSnmpConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    snmp_config: Optional[shared.SnmpConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    snmp_config: Optional[shared_snmpconfig.SnmpConfig] = dataclasses.field(default=None)
     

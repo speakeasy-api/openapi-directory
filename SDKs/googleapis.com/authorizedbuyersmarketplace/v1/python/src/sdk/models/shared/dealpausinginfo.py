@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class DealPausingInfoPauseRoleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DealPausingInfo:
     r"""DealPausingInfo
     Information related to deal pausing.
     """
     
-    pause_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pauseReason') }})
-    pause_role: Optional[DealPausingInfoPauseRoleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pauseRole') }})
-    pausing_consented: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pausingConsented') }})
+    pause_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pauseReason') }})
+    pause_role: Optional[DealPausingInfoPauseRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pauseRole') }})
+    pausing_consented: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pausingConsented') }})
     

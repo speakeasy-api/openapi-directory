@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIMiscRandomAddressQueryParams:
-    number: int = field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
-    culture: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'culture', 'style': 'form', 'explode': True }})
+    number: int = dataclasses.field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
+    culture: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'culture', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIMiscRandomAddressHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIMiscRandomAddressRequest:
-    headers: GetAPIMiscRandomAddressHeaders = field()
-    query_params: GetAPIMiscRandomAddressQueryParams = field()
+    headers: GetAPIMiscRandomAddressHeaders = dataclasses.field()
+    query_params: GetAPIMiscRandomAddressQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIMiscRandomAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

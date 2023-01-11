@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchFieldByIDPathParams:
-    field_id: str = field(metadata={'path_param': { 'field_name': 'fieldId', 'style': 'simple', 'explode': False }})
+    field_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fieldId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFieldByIDSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    oauth2_authorization_code: Optional[shared.SchemeOauth2AuthorizationCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_authorization_code: Optional[shared_security.SchemeOauth2AuthorizationCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFieldByIDRequest:
-    path_params: FetchFieldByIDPathParams = field()
-    security: FetchFieldByIDSecurity = field()
+    path_params: FetchFieldByIDPathParams = dataclasses.field()
+    security: FetchFieldByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFieldByIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    field: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    field: Optional[Any] = dataclasses.field(default=None)
     

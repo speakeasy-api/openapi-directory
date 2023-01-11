@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountOrganizationsQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountOrganizationsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountOrganizationsRequest:
-    query_params: GetAccountOrganizationsQueryParams = field()
-    security: GetAccountOrganizationsSecurity = field()
+    query_params: GetAccountOrganizationsQueryParams = dataclasses.field()
+    security: GetAccountOrganizationsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountOrganizationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organizations: Optional[List[shared.Organization]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organizations: Optional[list[shared_organization.Organization]] = dataclasses.field(default=None)
     

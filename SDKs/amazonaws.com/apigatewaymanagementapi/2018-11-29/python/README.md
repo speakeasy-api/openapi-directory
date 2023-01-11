@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.DeleteConnectionRequest(
     path_params=operations.DeleteConnectionPathParams(
-        connection_id="vero",
+        connection_id="magni",
     ),
     headers=operations.DeleteConnectionHeaders(
-        x_amz_algorithm="distinctio",
-        x_amz_content_sha256="cumque",
-        x_amz_credential="ea",
-        x_amz_date="non",
-        x_amz_security_token="non",
-        x_amz_signature="nam",
-        x_amz_signed_headers="beatae",
+        x_amz_algorithm="recusandae",
+        x_amz_content_sha256="illum",
+        x_amz_credential="consequatur",
+        x_amz_date="dolores",
+        x_amz_security_token="hic",
+        x_amz_signature="nihil",
+        x_amz_signed_headers="explicabo",
     ),
 )
     
-res = s.sdk.delete_connection(req)
+res = s.delete_connection(req)
 
 if res.status_code == 200:
     # handle response

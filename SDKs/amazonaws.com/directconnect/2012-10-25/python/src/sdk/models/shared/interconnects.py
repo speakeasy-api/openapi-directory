@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import interconnect as shared_interconnect
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Interconnects:
-    interconnects: Optional[List[Interconnect]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interconnects') }})
+    interconnects: Optional[list[shared_interconnect.Interconnect]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interconnects') }})
     

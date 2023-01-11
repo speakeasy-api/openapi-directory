@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.DescribeEntitiesDetectionV2JobRequest(
     headers=operations.DescribeEntitiesDetectionV2JobHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="ut",
-        x_amz_credential="soluta",
-        x_amz_date="minima",
-        x_amz_security_token="fugit",
-        x_amz_signature="accusamus",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="enim",
+        x_amz_content_sha256="sunt",
+        x_amz_credential="quos",
+        x_amz_date="at",
+        x_amz_security_token="iusto",
+        x_amz_signature="et",
+        x_amz_signed_headers="praesentium",
         x_amz_target="ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
     ),
     request=shared.DescribeEntitiesDetectionV2JobRequest(
-        job_id="quod",
+        job_id="aut",
     ),
 )
     
-res = s.sdk.describe_entities_detection_v2_job(req)
+res = s.describe_entities_detection_v2_job(req)
 
 if res.describe_entities_detection_v2_job_response is not None:
     # handle response

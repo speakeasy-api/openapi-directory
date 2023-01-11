@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablerack as shared_writablerack
+from ..shared import rack as shared_rack
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksPartialUpdateRequest:
-    path_params: DcimRacksPartialUpdatePathParams = field()
-    request: shared.WritableRackInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimRacksPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablerack.WritableRackInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack: Optional[shared.Rack] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack: Optional[shared_rack.Rack] = dataclasses.field(default=None)
     

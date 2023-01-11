@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthorizableKeystorePathParams:
-    authorizable_id: str = field(metadata={'path_param': { 'field_name': 'authorizableId', 'style': 'simple', 'explode': False }})
-    intermediate_path: str = field(metadata={'path_param': { 'field_name': 'intermediatePath', 'style': 'simple', 'explode': False }})
+    authorizable_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'authorizableId', 'style': 'simple', 'explode': False }})
+    intermediate_path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'intermediatePath', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthorizableKeystoreRequest:
-    path_params: GetAuthorizableKeystorePathParams = field()
+    path_params: GetAuthorizableKeystorePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthorizableKeystoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_authorizable_keystore_default_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    keystore_info: Optional[str] = dataclasses.field(default=None)
+    get_authorizable_keystore_default_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

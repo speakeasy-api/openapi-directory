@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,8 +10,8 @@ class CodeScanningSarifsStatusProcessingStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CodeScanningSarifsStatus:
-    analyses_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyses_url') }})
-    processing_status: Optional[CodeScanningSarifsStatusProcessingStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('processing_status') }})
+    analyses_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyses_url') }})
+    processing_status: Optional[CodeScanningSarifsStatusProcessingStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('processing_status') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,19 +11,19 @@ class GetGetPathwayInfoFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayInfoQueryParams:
-    pw_id: str = field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
-    format: Optional[GetGetPathwayInfoFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    pw_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
+    format: Optional[GetGetPathwayInfoFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayInfoRequest:
-    query_params: GetGetPathwayInfoQueryParams = field()
+    query_params: GetGetPathwayInfoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

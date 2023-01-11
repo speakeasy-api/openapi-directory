@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import certificate as shared_certificate
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTlskeyHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTlskeyRequest:
-    headers: GetTlskeyHeaders = field()
+    headers: GetTlskeyHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTlskeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    certificate: Optional[shared.Certificate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    certificate: Optional[shared_certificate.Certificate] = dataclasses.field(default=None)
     

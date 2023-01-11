@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,20 +24,20 @@ req = operations.CreateLicenseRequest(
         ),
     ),
     request=operations.CreateLicenseRequestBody(
-        active=False,
-        currency="quos",
+        active=True,
+        currency="quo",
         hidden=False,
-        license_template_number="nemo",
-        licensee_number="quod",
-        name="nulla",
-        number="enim",
-        parentfeature="iure",
-        price=39.099998,
-        quantity="sed",
-        start_date="1975-05-08T13:02:25Z",
-        time_volume="molestias",
-        time_volume_period="est",
-        used_quantity="velit",
+        license_template_number="incidunt",
+        licensee_number="asperiores",
+        name="doloribus",
+        number="excepturi",
+        parentfeature="enim",
+        price=28.200001,
+        quantity="ut",
+        start_date="2008-07-16T16:51:35Z",
+        time_volume="at",
+        time_volume_period="explicabo",
+        used_quantity="autem",
     ),
 )
     

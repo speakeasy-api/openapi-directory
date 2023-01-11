@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import shippingfulfillmentpagedcollection as shared_shippingfulfillmentpagedcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingFulfillmentsPathParams:
-    order_id: str = field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
+    order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingFulfillmentsSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingFulfillmentsRequest:
-    path_params: GetShippingFulfillmentsPathParams = field()
-    security: GetShippingFulfillmentsSecurity = field()
+    path_params: GetShippingFulfillmentsPathParams = dataclasses.field()
+    security: GetShippingFulfillmentsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShippingFulfillmentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    shipping_fulfillment_paged_collection: Optional[shared.ShippingFulfillmentPagedCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    shipping_fulfillment_paged_collection: Optional[shared_shippingfulfillmentpagedcollection.ShippingFulfillmentPagedCollection] = dataclasses.field(default=None)
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbclustersnapshotattributesresult as shared_dbclustersnapshotattributesresult
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbClusterSnapshotAttributesResult:
-    db_cluster_snapshot_attributes_result: Optional[DbClusterSnapshotAttributesResult] = field(default=None)
+    db_cluster_snapshot_attributes_result: Optional[shared_dbclustersnapshotattributesresult.DbClusterSnapshotAttributesResult] = dataclasses.field(default=None)
     

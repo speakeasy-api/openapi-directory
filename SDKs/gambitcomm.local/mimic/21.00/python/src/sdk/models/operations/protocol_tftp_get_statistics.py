@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetStatisticsPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetStatisticsRequest:
-    path_params: ProtocolTftpGetStatisticsPathParams = field()
+    path_params: ProtocolTftpGetStatisticsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTftpGetStatisticsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_tftp_get_statistics_200_application_json_int32_integers: Optional[List[int]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_tftp_get_statistics_200_application_json_int32_integers: Optional[list[int]] = dataclasses.field(default=None)
     

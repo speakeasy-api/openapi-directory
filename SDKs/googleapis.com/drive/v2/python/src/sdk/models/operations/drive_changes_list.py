@@ -1,104 +1,107 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import changelist as shared_changelist
 
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListQueryParams:
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    drive_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'driveId', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    include_corpus_removals: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeCorpusRemovals', 'style': 'form', 'explode': True }})
-    include_deleted: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeDeleted', 'style': 'form', 'explode': True }})
-    include_items_from_all_drives: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeItemsFromAllDrives', 'style': 'form', 'explode': True }})
-    include_labels: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'includeLabels', 'style': 'form', 'explode': True }})
-    include_permissions_for_view: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'includePermissionsForView', 'style': 'form', 'explode': True }})
-    include_subscribed: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeSubscribed', 'style': 'form', 'explode': True }})
-    include_team_drive_items: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeTeamDriveItems', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    page_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'pageToken', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    spaces: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'spaces', 'style': 'form', 'explode': True }})
-    start_change_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'startChangeId', 'style': 'form', 'explode': True }})
-    supports_all_drives: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'supportsAllDrives', 'style': 'form', 'explode': True }})
-    supports_team_drives: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'supportsTeamDrives', 'style': 'form', 'explode': True }})
-    team_drive_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'teamDriveId', 'style': 'form', 'explode': True }})
-    user_ip: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    drive_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'driveId', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    include_corpus_removals: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeCorpusRemovals', 'style': 'form', 'explode': True }})
+    include_deleted: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeDeleted', 'style': 'form', 'explode': True }})
+    include_items_from_all_drives: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeItemsFromAllDrives', 'style': 'form', 'explode': True }})
+    include_labels: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeLabels', 'style': 'form', 'explode': True }})
+    include_permissions_for_view: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includePermissionsForView', 'style': 'form', 'explode': True }})
+    include_subscribed: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeSubscribed', 'style': 'form', 'explode': True }})
+    include_team_drive_items: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeTeamDriveItems', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    page_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageToken', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    spaces: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'spaces', 'style': 'form', 'explode': True }})
+    start_change_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startChangeId', 'style': 'form', 'explode': True }})
+    supports_all_drives: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'supportsAllDrives', 'style': 'form', 'explode': True }})
+    supports_team_drives: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'supportsTeamDrives', 'style': 'form', 'explode': True }})
+    team_drive_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'teamDriveId', 'style': 'form', 'explode': True }})
+    user_ip: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption1:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption2:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption3:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption4:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption5:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption6:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption7:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurityOption8:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListSecurity:
-    option1: Optional[DriveChangesListSecurityOption1] = field(default=None, metadata={'security': { 'option': True }})
-    option2: Optional[DriveChangesListSecurityOption2] = field(default=None, metadata={'security': { 'option': True }})
-    option3: Optional[DriveChangesListSecurityOption3] = field(default=None, metadata={'security': { 'option': True }})
-    option4: Optional[DriveChangesListSecurityOption4] = field(default=None, metadata={'security': { 'option': True }})
-    option5: Optional[DriveChangesListSecurityOption5] = field(default=None, metadata={'security': { 'option': True }})
-    option6: Optional[DriveChangesListSecurityOption6] = field(default=None, metadata={'security': { 'option': True }})
-    option7: Optional[DriveChangesListSecurityOption7] = field(default=None, metadata={'security': { 'option': True }})
-    option8: Optional[DriveChangesListSecurityOption8] = field(default=None, metadata={'security': { 'option': True }})
+    option1: Optional[DriveChangesListSecurityOption1] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option2: Optional[DriveChangesListSecurityOption2] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option3: Optional[DriveChangesListSecurityOption3] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option4: Optional[DriveChangesListSecurityOption4] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option5: Optional[DriveChangesListSecurityOption5] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option6: Optional[DriveChangesListSecurityOption6] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option7: Optional[DriveChangesListSecurityOption7] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
+    option8: Optional[DriveChangesListSecurityOption8] = dataclasses.field(default=None, metadata={'security': { 'option': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListRequest:
-    query_params: DriveChangesListQueryParams = field()
-    security: DriveChangesListSecurity = field()
+    query_params: DriveChangesListQueryParams = dataclasses.field()
+    security: DriveChangesListSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DriveChangesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    change_list: Optional[shared.ChangeList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    change_list: Optional[shared_changelist.ChangeList] = dataclasses.field(default=None)
     

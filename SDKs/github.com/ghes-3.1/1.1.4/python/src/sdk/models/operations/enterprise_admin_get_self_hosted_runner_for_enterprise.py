@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import runner as shared_runner
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    runner_id: int = field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    runner_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetSelfHostedRunnerForEnterpriseRequest:
-    path_params: EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams = field()
+    path_params: EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner: Optional[shared.Runner] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner: Optional[shared_runner.Runner] = dataclasses.field(default=None)
     

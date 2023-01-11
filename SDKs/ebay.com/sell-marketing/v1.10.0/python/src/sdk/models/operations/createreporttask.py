@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import createreporttask as shared_createreporttask
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateReportTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateReportTaskRequest:
-    request: shared.CreateReportTask = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateReportTaskSecurity = field()
+    request: shared_createreporttask.CreateReportTask = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateReportTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateReportTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

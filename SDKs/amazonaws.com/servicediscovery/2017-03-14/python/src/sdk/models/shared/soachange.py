@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SoaChange:
     r"""SoaChange
     Updated Start of Authority (SOA) properties for a public or private DNS namespace.
     """
     
-    ttl: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TTL') }})
+    ttl: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TTL') }})
     

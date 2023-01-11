@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import charityorg as shared_charityorg
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgByLegacyIDQueryParams:
-    legacy_charity_org_id: str = field(metadata={'query_param': { 'field_name': 'legacy_charity_org_id', 'style': 'form', 'explode': True }})
+    legacy_charity_org_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'legacy_charity_org_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgByLegacyIDHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgByLegacyIDSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgByLegacyIDRequest:
-    headers: GetCharityOrgByLegacyIDHeaders = field()
-    query_params: GetCharityOrgByLegacyIDQueryParams = field()
-    security: GetCharityOrgByLegacyIDSecurity = field()
+    headers: GetCharityOrgByLegacyIDHeaders = dataclasses.field()
+    query_params: GetCharityOrgByLegacyIDQueryParams = dataclasses.field()
+    security: GetCharityOrgByLegacyIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgByLegacyIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    charity_org: Optional[shared.CharityOrg] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    charity_org: Optional[shared_charityorg.CharityOrg] = dataclasses.field(default=None)
     

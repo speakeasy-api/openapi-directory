@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import objectid as shared_objectid
 
 class CertificateExtensionConstraintsKnownExtensionsEnum(str, Enum):
     KNOWN_CERTIFICATE_EXTENSION_UNSPECIFIED = "KNOWN_CERTIFICATE_EXTENSION_UNSPECIFIED"
@@ -15,12 +15,12 @@ class CertificateExtensionConstraintsKnownExtensionsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CertificateExtensionConstraints:
     r"""CertificateExtensionConstraints
     Describes a set of X.509 extensions that may be part of some certificate issuance controls.
     """
     
-    additional_extensions: Optional[List[ObjectID]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalExtensions') }})
-    known_extensions: Optional[List[CertificateExtensionConstraintsKnownExtensionsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('knownExtensions') }})
+    additional_extensions: Optional[list[shared_objectid.ObjectID]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalExtensions') }})
+    known_extensions: Optional[list[CertificateExtensionConstraintsKnownExtensionsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('knownExtensions') }})
     

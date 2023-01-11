@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import sourceregionlist as shared_sourceregionlist
 
 
-@dataclass
+@dataclasses.dataclass
 class SourceRegionMessage:
     r"""SourceRegionMessage
     Contains the result of a successful invocation of the <code>DescribeSourceRegions</code> action.
     """
     
-    marker: Optional[str] = field(default=None)
-    source_regions: Optional[List[SourceRegion]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    source_regions: Optional[list[shared_sourceregionlist.SourceRegionList]] = dataclasses.field(default=None)
     

@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import assetservicenow as shared_assetservicenow
 
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportAssetsJSONSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportAssetsJSONRequest:
-    security: SnowExportAssetsJSONSecurity = field()
+    security: SnowExportAssetsJSONSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportAssetsJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_service_nows: Optional[List[shared.AssetServiceNow]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_service_nows: Optional[list[shared_assetservicenow.AssetServiceNow]] = dataclasses.field(default=None)
     

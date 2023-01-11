@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import taxrateproductcount as shared_taxrateproductcount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TaxRateProductCountResponse:
-    counts: Optional[List[TaxRateProductCount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
+    counts: Optional[list[shared_taxrateproductcount.TaxRateProductCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
     

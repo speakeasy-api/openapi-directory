@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import studentcontact as shared_studentcontact
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StudentContactsForStudentResponse:
-    data: Optional[List[StudentContact]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[list[shared_studentcontact.StudentContact]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

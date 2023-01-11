@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import actions_public_key as shared_actions_public_key
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetRepoPublicKeyPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetRepoPublicKeyRequest:
-    path_params: ActionsGetRepoPublicKeyPathParams = field()
+    path_params: ActionsGetRepoPublicKeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetRepoPublicKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_public_key: Optional[shared.ActionsPublicKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_public_key: Optional[shared_actions_public_key.ActionsPublicKey] = dataclasses.field(default=None)
     

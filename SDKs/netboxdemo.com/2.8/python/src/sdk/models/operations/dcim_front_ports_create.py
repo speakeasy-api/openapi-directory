@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablefrontport as shared_writablefrontport
+from ..shared import frontport as shared_frontport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimFrontPortsCreateRequest:
-    request: shared.WritableFrontPortInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablefrontport.WritableFrontPortInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimFrontPortsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    front_port: Optional[shared.FrontPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    front_port: Optional[shared_frontport.FrontPort] = dataclasses.field(default=None)
     

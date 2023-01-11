@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Authorisations:
     r"""Authorisations
     An array of all authorisationIds.
     """
     
-    authorisation_ids: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorisationIds') }})
+    authorisation_ids: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorisationIds') }})
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -11,16 +11,16 @@ class PageviewsCountsTimeRangeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PageviewsCounts:
-    count: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    time_range: Optional[PageviewsCountsTimeRangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeRange') }})
+    count: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    time_range: Optional[PageviewsCountsTimeRangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeRange') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Pageviews:
-    blog_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blogId') }})
-    counts: Optional[List[PageviewsCounts]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    blog_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blogId') }})
+    counts: Optional[list[PageviewsCounts]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

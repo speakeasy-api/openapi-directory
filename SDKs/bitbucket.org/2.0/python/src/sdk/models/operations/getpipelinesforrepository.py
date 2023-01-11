@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_pipelines as shared_paginated_pipelines
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelinesForRepositoryPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelinesForRepositoryRequest:
-    path_params: GetPipelinesForRepositoryPathParams = field()
+    path_params: GetPipelinesForRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelinesForRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_pipelines: Optional[shared.PaginatedPipelines] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_pipelines: Optional[shared_paginated_pipelines.PaginatedPipelines] = dataclasses.field(default=None)
     

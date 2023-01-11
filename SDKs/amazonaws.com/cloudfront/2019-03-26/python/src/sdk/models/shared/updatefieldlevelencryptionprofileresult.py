@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from . import *
+from ..shared import fieldlevelencryptionprofile as shared_fieldlevelencryptionprofile
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFieldLevelEncryptionProfileResult:
-    field_level_encryption_profile: Optional[FieldLevelEncryptionProfile] = field(default=None)
+    field_level_encryption_profile: Optional[shared_fieldlevelencryptionprofile.FieldLevelEncryptionProfile] = dataclasses.field(default=None)
     

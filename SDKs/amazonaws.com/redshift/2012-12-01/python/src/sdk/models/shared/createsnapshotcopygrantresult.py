@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import snapshotcopygrant as shared_snapshotcopygrant
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateSnapshotCopyGrantResult:
-    snapshot_copy_grant: Optional[SnapshotCopyGrant] = field(default=None)
+    snapshot_copy_grant: Optional[shared_snapshotcopygrant.SnapshotCopyGrant] = dataclasses.field(default=None)
     

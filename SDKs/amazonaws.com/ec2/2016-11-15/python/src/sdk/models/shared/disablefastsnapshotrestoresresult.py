@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DisableFastSnapshotRestoresResult:
-    successful: Optional[List[DisableFastSnapshotRestoreSuccessItem]] = field(default=None)
-    unsuccessful: Optional[List[DisableFastSnapshotRestoreErrorItem]] = field(default=None)
+    successful: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    unsuccessful: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

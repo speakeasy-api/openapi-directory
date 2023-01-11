@@ -1,40 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceupdatemodel as shared_resourceupdatemodel
+from ..shared import resourceviewmodel as shared_resourceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDQueryParams:
-    google_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
-    outlook_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
+    google_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
+    outlook_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRequests:
-    resource_update_model: Optional[shared.ResourceUpdateModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    resource_update_model1: Optional[shared.ResourceUpdateModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    resource_update_model2: Optional[shared.ResourceUpdateModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    resource_update_model3: Optional[shared.ResourceUpdateModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    resource_update_model: Optional[shared_resourceupdatemodel.ResourceUpdateModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    resource_update_model1: Optional[shared_resourceupdatemodel.ResourceUpdateModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    resource_update_model2: Optional[shared_resourceupdatemodel.ResourceUpdateModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    resource_update_model3: Optional[shared_resourceupdatemodel.ResourceUpdateModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRequest:
-    path_params: PutSetupV1ResourcesIDPathParams = field()
-    query_params: PutSetupV1ResourcesIDQueryParams = field()
-    request: Optional[PutSetupV1ResourcesIDRequests] = field(default=None)
+    path_params: PutSetupV1ResourcesIDPathParams = dataclasses.field()
+    query_params: PutSetupV1ResourcesIDQueryParams = dataclasses.field()
+    request: Optional[PutSetupV1ResourcesIDRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_view_model: Optional[shared.ResourceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_view_model: Optional[shared_resourceviewmodel.ResourceViewModel] = dataclasses.field(default=None)
     

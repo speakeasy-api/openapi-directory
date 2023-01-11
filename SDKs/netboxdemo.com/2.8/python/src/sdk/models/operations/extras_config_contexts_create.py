@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableconfigcontext as shared_writableconfigcontext
+from ..shared import configcontext as shared_configcontext
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsCreateRequest:
-    request: shared.WritableConfigContextInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableconfigcontext.WritableConfigContextInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_context: Optional[shared.ConfigContext] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_context: Optional[shared_configcontext.ConfigContext] = dataclasses.field(default=None)
     

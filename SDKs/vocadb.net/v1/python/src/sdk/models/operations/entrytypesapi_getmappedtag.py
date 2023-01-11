@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import tagforapicontract as shared_tagforapicontract
 
 class EntryTypesAPIGetMappedTagEntryTypeEnum(str, Enum):
     UNDEFINED = "Undefined"
@@ -18,10 +18,10 @@ class EntryTypesAPIGetMappedTagEntryTypeEnum(str, Enum):
     VENUE = "Venue"
 
 
-@dataclass
+@dataclasses.dataclass
 class EntryTypesAPIGetMappedTagPathParams:
-    entry_type: EntryTypesAPIGetMappedTagEntryTypeEnum = field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
-    sub_type: str = field(metadata={'path_param': { 'field_name': 'subType', 'style': 'simple', 'explode': False }})
+    entry_type: EntryTypesAPIGetMappedTagEntryTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
+    sub_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'subType', 'style': 'simple', 'explode': False }})
     
 class EntryTypesAPIGetMappedTagFieldsEnum(str, Enum):
     NONE = "None"
@@ -36,21 +36,21 @@ class EntryTypesAPIGetMappedTagFieldsEnum(str, Enum):
     WEB_LINKS = "WebLinks"
 
 
-@dataclass
+@dataclasses.dataclass
 class EntryTypesAPIGetMappedTagQueryParams:
-    fields: Optional[EntryTypesAPIGetMappedTagFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields: Optional[EntryTypesAPIGetMappedTagFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EntryTypesAPIGetMappedTagRequest:
-    path_params: EntryTypesAPIGetMappedTagPathParams = field()
-    query_params: EntryTypesAPIGetMappedTagQueryParams = field()
+    path_params: EntryTypesAPIGetMappedTagPathParams = dataclasses.field()
+    query_params: EntryTypesAPIGetMappedTagQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EntryTypesAPIGetMappedTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    tag_for_api_contract: Optional[shared.TagForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    tag_for_api_contract: Optional[shared_tagforapicontract.TagForAPIContract] = dataclasses.field(default=None)
     

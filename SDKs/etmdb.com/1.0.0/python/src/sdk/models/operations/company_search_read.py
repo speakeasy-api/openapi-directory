@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchReadPathParams:
-    company_name: str = field(metadata={'path_param': { 'field_name': 'company_name', 'style': 'simple', 'explode': False }})
+    company_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'company_name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchReadRequest:
-    path_params: CompanySearchReadPathParams = field()
+    path_params: CompanySearchReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

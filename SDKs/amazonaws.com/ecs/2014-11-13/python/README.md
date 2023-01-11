@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,46 +25,42 @@ s.config_security(
     
 req = operations.CreateCapacityProviderRequest(
     headers=operations.CreateCapacityProviderHeaders(
-        x_amz_algorithm="quaerat",
-        x_amz_content_sha256="dolorem",
-        x_amz_credential="deserunt",
-        x_amz_date="assumenda",
-        x_amz_security_token="labore",
-        x_amz_signature="id",
-        x_amz_signed_headers="libero",
+        x_amz_algorithm="praesentium",
+        x_amz_content_sha256="voluptates",
+        x_amz_credential="inventore",
+        x_amz_date="voluptatem",
+        x_amz_security_token="deleniti",
+        x_amz_signature="facere",
+        x_amz_signed_headers="numquam",
         x_amz_target="AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
     ),
     request=shared.CreateCapacityProviderRequest(
         auto_scaling_group_provider=shared.AutoScalingGroupProvider(
-            auto_scaling_group_arn="amet",
+            auto_scaling_group_arn="explicabo",
             managed_scaling=shared.ManagedScaling(
-                instance_warmup_period=8359258950322430183,
-                maximum_scaling_step_size=6824086522203587541,
-                minimum_scaling_step_size=8833386012590933595,
+                instance_warmup_period=6635728551378606624,
+                maximum_scaling_step_size=5973617793068578508,
+                minimum_scaling_step_size=8160591596675653275,
                 status="DISABLED",
-                target_capacity=7897556196251778201,
+                target_capacity=7028752311702887101,
             ),
-            managed_termination_protection="DISABLED",
+            managed_termination_protection="ENABLED",
         ),
-        name="ab",
+        name="qui",
         tags=[
             shared.Tag(
-                key="facilis",
-                value="quis",
-            ),
-            shared.Tag(
-                key="sunt",
-                value="quis",
-            ),
-            shared.Tag(
                 key="qui",
-                value="aut",
+                value="et",
+            ),
+            shared.Tag(
+                key="aliquid",
+                value="repellendus",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_capacity_provider(req)
+res = s.create_capacity_provider(req)
 
 if res.create_capacity_provider_response is not None:
     # handle response

@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import fileuploadpartentity as shared_fileuploadpartentity
 
 
-@dataclass
+@dataclasses.dataclass
 class FileActionBeginUploadPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileActionBeginUploadRequestBody:
-    mkdir_parents: Optional[bool] = field(default=None, metadata={'multipart_form': { 'field_name': 'mkdir_parents' }})
-    part: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'part' }})
-    parts: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'parts' }})
-    ref: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'ref' }})
-    restart: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'restart' }})
-    with_rename: Optional[bool] = field(default=None, metadata={'multipart_form': { 'field_name': 'with_rename' }})
+    mkdir_parents: Optional[bool] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'mkdir_parents' }})
+    part: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'part' }})
+    parts: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'parts' }})
+    ref: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'ref' }})
+    restart: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'restart' }})
+    with_rename: Optional[bool] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'with_rename' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileActionBeginUploadRequest:
-    path_params: FileActionBeginUploadPathParams = field()
-    request: Optional[FileActionBeginUploadRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: FileActionBeginUploadPathParams = dataclasses.field()
+    request: Optional[FileActionBeginUploadRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileActionBeginUploadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_upload_part_entities: Optional[List[shared.FileUploadPartEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_upload_part_entities: Optional[list[shared_fileuploadpartentity.FileUploadPartEntity]] = dataclasses.field(default=None)
     

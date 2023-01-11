@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import expressionstatus as shared_expressionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DefineExpressionResponse:
     r"""DefineExpressionResponse
     The result of a <code>DefineExpression</code> request. Contains the status of the newly-configured expression.
     """
     
-    expression: ExpressionStatus = field()
+    expression: shared_expressionstatus.ExpressionStatus = dataclasses.field()
     

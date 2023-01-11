@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class IdpFantasyPlayersWithAdpFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class IdpFantasyPlayersWithAdpFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class IdpFantasyPlayersWithAdpPathParams:
-    format: IdpFantasyPlayersWithAdpFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: IdpFantasyPlayersWithAdpFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IdpFantasyPlayersWithAdpRequest:
-    path_params: IdpFantasyPlayersWithAdpPathParams = field()
+    path_params: IdpFantasyPlayersWithAdpPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IdpFantasyPlayersWithAdpResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fantasy_players: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fantasy_players: Optional[list[Any]] = dataclasses.field(default=None)
     

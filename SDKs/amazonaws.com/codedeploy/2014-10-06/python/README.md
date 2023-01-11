@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,34 +25,39 @@ s.config_security(
     
 req = operations.AddTagsToOnPremisesInstancesRequest(
     headers=operations.AddTagsToOnPremisesInstancesHeaders(
-        x_amz_algorithm="sed",
-        x_amz_content_sha256="praesentium",
-        x_amz_credential="excepturi",
-        x_amz_date="aut",
-        x_amz_security_token="architecto",
+        x_amz_algorithm="deserunt",
+        x_amz_content_sha256="sed",
+        x_amz_credential="sint",
+        x_amz_date="est",
+        x_amz_security_token="est",
         x_amz_signature="omnis",
-        x_amz_signed_headers="ut",
+        x_amz_signed_headers="reiciendis",
         x_amz_target="CodeDeploy_20141006.AddTagsToOnPremisesInstances",
     ),
     request=shared.AddTagsToOnPremisesInstancesInput(
         instance_names=[
-            "nisi",
-            "dolores",
+            "et",
+            "molestias",
+            "minus",
         ],
         tags=[
             shared.Tag(
-                key="dolorem",
-                value="in",
+                key="voluptatum",
+                value="tenetur",
             ),
             shared.Tag(
-                key="est",
-                value="quos",
+                key="rem",
+                value="autem",
+            ),
+            shared.Tag(
+                key="enim",
+                value="quia",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags_to_on_premises_instances(req)
+res = s.add_tags_to_on_premises_instances(req)
 
 if res.status_code == 200:
     # handle response

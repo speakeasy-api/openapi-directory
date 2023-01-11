@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import employee as shared_employee
+from ..shared import payroll as shared_payroll
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EmployeePayroll:
-    employee: Optional[Employee] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employee') }})
-    payroll: Optional[Payroll] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payroll') }})
+    employee: Optional[shared_employee.Employee] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employee') }})
+    payroll: Optional[shared_payroll.Payroll] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payroll') }})
     

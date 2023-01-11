@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import ipaddresstype_enum as shared_ipaddresstype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class DNSRuleDescriptor:
-    dns_rule_id: str = field()
-    domain_name: str = field()
-    ip_address: str = field()
-    ip_address_type: IPAddressTypeEnum = field()
-    ttl: Optional[int] = field(default=None)
+    dns_rule_id: str = dataclasses.field()
+    domain_name: str = dataclasses.field()
+    ip_address: str = dataclasses.field()
+    ip_address_type: shared_ipaddresstype_enum.IPAddressTypeEnum = dataclasses.field()
+    ttl: Optional[int] = dataclasses.field(default=None)
     

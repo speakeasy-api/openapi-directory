@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ingestioninfo as shared_ingestioninfo
 
 class CdnSettingsFrameRateEnum(str, Enum):
     THIRTYFPS = "30fps"
@@ -28,15 +28,15 @@ class CdnSettingsResolutionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CdnSettings:
     r"""CdnSettings
     Brief description of the live stream cdn settings.
     """
     
-    format: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    frame_rate: Optional[CdnSettingsFrameRateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('frameRate') }})
-    ingestion_info: Optional[IngestionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestionInfo') }})
-    ingestion_type: Optional[CdnSettingsIngestionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestionType') }})
-    resolution: Optional[CdnSettingsResolutionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolution') }})
+    format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    frame_rate: Optional[CdnSettingsFrameRateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('frameRate') }})
+    ingestion_info: Optional[shared_ingestioninfo.IngestionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestionInfo') }})
+    ingestion_type: Optional[CdnSettingsIngestionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestionType') }})
+    resolution: Optional[CdnSettingsResolutionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolution') }})
     

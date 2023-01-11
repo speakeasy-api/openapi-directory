@@ -16,3 +16,5 @@ from .restoreinstancerequest import *
 from .security import *
 from .snapshot import *
 from .status import *
+
+__all__ = ["XgafvEnum","AltEnum","BackupSourceInstanceTierEnum","BackupStateEnum","Backup","BackupInput","FileShareConfig","InstanceStateEnum","InstanceSuspensionReasonsEnum","InstanceTierEnum","Instance","InstanceInput","ListBackupsResponse","ListInstancesResponse","ListLocationsResponse","ListOperationsResponse","ListSnapshotsResponse","Location","NetworkConfigConnectModeEnum","NetworkConfigModesEnum","NetworkConfig","NetworkConfigInput","NfsExportOptionsAccessModeEnum","NfsExportOptionsSquashModeEnum","NfsExportOptions","Operation","RestoreInstanceRequest","SchemeOauth2","SchemeOauth2c","SnapshotInput","SnapshotStateEnum","Snapshot","Status"]

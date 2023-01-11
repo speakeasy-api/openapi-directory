@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getaddressresponse as shared_getaddressresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressPathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressRequest:
-    path_params: GetAddressPathParams = field()
+    path_params: GetAddressPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_address_response: Optional[shared.GetAddressResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_address_response: Optional[shared_getaddressresponse.GetAddressResponse] = dataclasses.field(default=None)
     

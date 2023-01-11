@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,20 +26,20 @@ s.config_security(
 req = operations.CancelRotateSecretRequest(
     headers=operations.CancelRotateSecretHeaders(
         x_amz_algorithm="dolorem",
-        x_amz_content_sha256="quos",
-        x_amz_credential="deleniti",
-        x_amz_date="commodi",
-        x_amz_security_token="nobis",
-        x_amz_signature="ea",
-        x_amz_signed_headers="aspernatur",
+        x_amz_content_sha256="magni",
+        x_amz_credential="sequi",
+        x_amz_date="non",
+        x_amz_security_token="a",
+        x_amz_signature="recusandae",
+        x_amz_signed_headers="molestias",
         x_amz_target="secretsmanager.CancelRotateSecret",
     ),
     request=shared.CancelRotateSecretRequest(
-        secret_id="et",
+        secret_id="dolores",
     ),
 )
     
-res = s.sdk.cancel_rotate_secret(req)
+res = s.cancel_rotate_secret(req)
 
 if res.cancel_rotate_secret_response is not None:
     # handle response

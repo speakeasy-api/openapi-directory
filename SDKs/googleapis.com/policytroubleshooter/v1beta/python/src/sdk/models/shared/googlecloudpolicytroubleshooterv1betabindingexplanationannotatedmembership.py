@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,12 +18,8 @@ class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership:
-    r"""GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership
-    Details about whether the binding includes the member.
-    """
-    
-    membership: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipMembershipEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membership') }})
-    relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipRelevanceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relevance') }})
+    membership: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipMembershipEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membership') }})
+    relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipRelevanceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relevance') }})
     

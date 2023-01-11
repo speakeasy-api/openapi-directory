@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import packagesearchresult as shared_packagesearchresult
 
 class SearchperpackageMatchModeEnum(str, Enum):
     LITERAL = "literal"
     REGEXP = "regexp"
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchperpackageQueryParams:
-    query: str = field(metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    match_mode: Optional[SearchperpackageMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'match_mode', 'style': 'form', 'explode': True }})
+    query: str = dataclasses.field(metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    match_mode: Optional[SearchperpackageMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'match_mode', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchperpackageSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchperpackageRequest:
-    query_params: SearchperpackageQueryParams = field()
-    security: SearchperpackageSecurity = field()
+    query_params: SearchperpackageQueryParams = dataclasses.field()
+    security: SearchperpackageSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchperpackageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    package_search_results: Optional[List[shared.PackageSearchResult]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    package_search_results: Optional[list[shared_packagesearchresult.PackageSearchResult]] = dataclasses.field(default=None)
     

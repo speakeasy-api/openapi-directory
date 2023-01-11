@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import reporttask as shared_reporttask
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTaskPathParams:
-    report_task_id: str = field(metadata={'path_param': { 'field_name': 'report_task_id', 'style': 'simple', 'explode': False }})
+    report_task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTaskRequest:
-    path_params: GetReportTaskPathParams = field()
-    security: GetReportTaskSecurity = field()
+    path_params: GetReportTaskPathParams = dataclasses.field()
+    security: GetReportTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report_task: Optional[shared.ReportTask] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report_task: Optional[shared_reporttask.ReportTask] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,33 +21,33 @@ req = operations.AnalyticsDataGaGetRequest(
         option1=operations.AnalyticsDataGaGetSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.AnalyticsDataGaGetQueryParams(
         alt="json",
-        dimensions="molestiae",
-        end_date="mollitia",
-        fields="non",
-        filters="similique",
-        ids="id",
-        include_empty_rows=True,
-        key="quia",
-        max_results=8874339057685439512,
-        metrics="tenetur",
-        oauth_token="non",
-        output="json",
+        dimensions="expedita",
+        end_date="necessitatibus",
+        fields="eveniet",
+        filters="omnis",
+        ids="nulla",
+        include_empty_rows=False,
+        key="occaecati",
+        max_results=2708896409316756384,
+        metrics="similique",
+        oauth_token="eum",
+        output="dataTable",
         pretty_print=True,
-        quota_user="perspiciatis",
-        sampling_level="HIGHER_PRECISION",
-        segment="aut",
-        sort="ut",
-        start_date="voluptas",
-        start_index=2569169535412766127,
-        user_ip="molestias",
+        quota_user="id",
+        sampling_level="DEFAULT",
+        segment="veniam",
+        sort="ea",
+        start_date="omnis",
+        start_index=4655524701577144768,
+        user_ip="ipsum",
     ),
 )
     

@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import domain as shared_domain
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyDomainsPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyDomainsQueryParams:
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyDomainsRequest:
-    path_params: GetVideoPrivacyDomainsPathParams = field()
-    query_params: GetVideoPrivacyDomainsQueryParams = field()
+    path_params: GetVideoPrivacyDomainsPathParams = dataclasses.field()
+    query_params: GetVideoPrivacyDomainsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyDomainsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    domains: Optional[List[shared.Domain]] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    domains: Optional[list[shared_domain.Domain]] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

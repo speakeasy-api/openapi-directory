@@ -1,12 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List
+from typing import Any
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import simple_commit as shared_simple_commit
+from ..shared import pull_request_minimal as shared_pull_request_minimal
+from ..shared import minimal_repository as shared_minimal_repository
 
 class CheckSuiteConclusionEnum(str, Enum):
     SUCCESS = "success"
@@ -24,27 +26,27 @@ class CheckSuiteStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CheckSuite:
     r"""CheckSuite
     A suite of checks performed on the code of a given code change
     """
     
-    after: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('after') }})
-    app: dict[str, Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
-    before: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('before') }})
-    check_runs_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('check_runs_url') }})
-    conclusion: CheckSuiteConclusionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('conclusion') }})
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    head_branch: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_branch') }})
-    head_commit: SimpleCommit = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_commit') }})
-    head_sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_sha') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    latest_check_runs_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('latest_check_runs_count') }})
-    node_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
-    pull_requests: List[PullRequestMinimal] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pull_requests') }})
-    repository: MinimalRepository = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository') }})
-    status: CheckSuiteStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    updated_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    after: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('after') }})
+    app: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
+    before: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('before') }})
+    check_runs_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('check_runs_url') }})
+    conclusion: CheckSuiteConclusionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('conclusion') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    head_branch: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_branch') }})
+    head_commit: shared_simple_commit.SimpleCommit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_commit') }})
+    head_sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_sha') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    latest_check_runs_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('latest_check_runs_count') }})
+    node_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
+    pull_requests: list[shared_pull_request_minimal.PullRequestMinimal] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pull_requests') }})
+    repository: shared_minimal_repository.MinimalRepository = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository') }})
+    status: CheckSuiteStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

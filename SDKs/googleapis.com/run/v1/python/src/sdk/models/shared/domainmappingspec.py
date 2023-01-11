@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class DomainMappingSpecCertificateModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DomainMappingSpec:
     r"""DomainMappingSpec
     The desired state of the Domain Mapping.
     """
     
-    certificate_mode: Optional[DomainMappingSpecCertificateModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateMode') }})
-    force_override: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forceOverride') }})
-    route_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('routeName') }})
+    certificate_mode: Optional[DomainMappingSpecCertificateModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateMode') }})
+    force_override: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forceOverride') }})
+    route_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('routeName') }})
     

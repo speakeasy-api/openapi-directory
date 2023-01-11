@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,24 @@ s.config_security(
     
 req = operations.AddTagsToStreamRequest(
     headers=operations.AddTagsToStreamHeaders(
-        x_amz_algorithm="temporibus",
-        x_amz_content_sha256="alias",
-        x_amz_credential="error",
-        x_amz_date="voluptatem",
-        x_amz_security_token="quia",
-        x_amz_signature="enim",
-        x_amz_signed_headers="aut",
+        x_amz_algorithm="vel",
+        x_amz_content_sha256="magni",
+        x_amz_credential="architecto",
+        x_amz_date="est",
+        x_amz_security_token="consectetur",
+        x_amz_signature="dolores",
+        x_amz_signed_headers="in",
         x_amz_target="Kinesis_20131202.AddTagsToStream",
     ),
     request=shared.AddTagsToStreamInput(
-        stream_name="ratione",
+        stream_name="possimus",
         tags={
-            "eius": "quisquam",
-            "sequi": "quia",
+            "animi": "nesciunt",
         },
     ),
 )
     
-res = s.sdk.add_tags_to_stream(req)
+res = s.add_tags_to_stream(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import insightselector as shared_insightselector
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetInsightSelectorsResponse:
-    insight_selectors: Optional[List[InsightSelector]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InsightSelectors') }})
-    trail_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrailARN') }})
+    insight_selectors: Optional[list[shared_insightselector.InsightSelector]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InsightSelectors') }})
+    trail_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrailARN') }})
     

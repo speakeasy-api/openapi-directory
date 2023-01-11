@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import relatedobservations as shared_relatedobservations
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeProblemObservationsResponse:
-    related_observations: Optional[RelatedObservations] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RelatedObservations') }})
+    related_observations: Optional[shared_relatedobservations.RelatedObservations] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RelatedObservations') }})
     

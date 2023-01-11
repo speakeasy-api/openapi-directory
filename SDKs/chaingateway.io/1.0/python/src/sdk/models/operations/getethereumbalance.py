@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getethereumbalancerequest as shared_getethereumbalancerequest
+from ..shared import getethereumbalance as shared_getethereumbalance
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEthereumBalanceHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEthereumBalanceRequest:
-    headers: GetEthereumBalanceHeaders = field()
-    request: shared.GetEthereumBalanceRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetEthereumBalanceHeaders = dataclasses.field()
+    request: shared_getethereumbalancerequest.GetEthereumBalanceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEthereumBalanceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_ethereum_balance: Optional[shared.GetEthereumBalance] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_ethereum_balance: Optional[shared_getethereumbalance.GetEthereumBalance] = dataclasses.field(default=None)
     

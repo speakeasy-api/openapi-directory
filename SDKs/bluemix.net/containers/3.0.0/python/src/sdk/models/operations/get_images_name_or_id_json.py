@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imagedetail as shared_imagedetail
 
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesNameOrIDJSONPathParams:
-    name_or_id: str = field(metadata={'path_param': { 'field_name': 'name_or_id', 'style': 'simple', 'explode': False }})
+    name_or_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name_or_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesNameOrIDJSONHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesNameOrIDJSONRequest:
-    headers: GetImagesNameOrIDJSONHeaders = field()
-    path_params: GetImagesNameOrIDJSONPathParams = field()
+    headers: GetImagesNameOrIDJSONHeaders = dataclasses.field()
+    path_params: GetImagesNameOrIDJSONPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetImagesNameOrIDJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    image_detail: Optional[shared.ImageDetail] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    image_detail: Optional[shared_imagedetail.ImageDetail] = dataclasses.field(default=None)
     

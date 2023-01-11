@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -28,23 +27,23 @@ req = operations.GetDeleteAlarmsRequest(
     query_params=operations.GetDeleteAlarmsQueryParams(
         action="DeleteAlarms",
         alarm_names=[
-            "sed",
-            "praesentium",
+            "omnis",
+            "illum",
         ],
         version="2010-08-01",
     ),
     headers=operations.GetDeleteAlarmsHeaders(
-        x_amz_algorithm="ea",
-        x_amz_content_sha256="iure",
-        x_amz_credential="rerum",
-        x_amz_date="voluptates",
+        x_amz_algorithm="dolores",
+        x_amz_content_sha256="harum",
+        x_amz_credential="neque",
+        x_amz_date="eligendi",
         x_amz_security_token="et",
-        x_amz_signature="adipisci",
-        x_amz_signed_headers="eum",
+        x_amz_signature="aut",
+        x_amz_signed_headers="fugiat",
     ),
 )
     
-res = s.sdk.get_delete_alarms(req)
+res = s.get_delete_alarms(req)
 
 if res.status_code == 200:
     # handle response

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getrawtxresponse as shared_getrawtxresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRawTxPathParams:
-    txid: str = field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
+    txid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRawTxRequest:
-    path_params: GetRawTxPathParams = field()
+    path_params: GetRawTxPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRawTxResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_raw_tx_response: Optional[shared.GetRawTxResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_raw_tx_response: Optional[shared_getrawtxresponse.GetRawTxResponse] = dataclasses.field(default=None)
     

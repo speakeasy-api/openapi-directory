@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbsubnetgroup as shared_dbsubnetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDbSubnetGroupResult:
-    db_subnet_group: Optional[DbSubnetGroup] = field(default=None)
+    db_subnet_group: Optional[shared_dbsubnetgroup.DbSubnetGroup] = dataclasses.field(default=None)
     

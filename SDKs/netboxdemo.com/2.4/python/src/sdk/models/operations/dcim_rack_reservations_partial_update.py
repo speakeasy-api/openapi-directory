@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablerackreservation as shared_writablerackreservation
+from ..shared import rackreservation as shared_rackreservation
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackReservationsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackReservationsPartialUpdateRequest:
-    path_params: DcimRackReservationsPartialUpdatePathParams = field()
-    request: shared.WritableRackReservationInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimRackReservationsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablerackreservation.WritableRackReservationInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRackReservationsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack_reservation: Optional[shared.RackReservation] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack_reservation: Optional[shared_rackreservation.RackReservation] = dataclasses.field(default=None)
     

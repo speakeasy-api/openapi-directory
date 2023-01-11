@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportTransitGatewayRoutesResult:
-    s3_location: Optional[str] = field(default=None)
+    s3_location: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

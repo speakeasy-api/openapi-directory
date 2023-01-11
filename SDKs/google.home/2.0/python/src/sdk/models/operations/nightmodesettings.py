@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import nightmodesettingsrequest as shared_nightmodesettingsrequest
+from ..shared import example17 as shared_example17
 
 
-@dataclass
+@dataclasses.dataclass
 class NightModesettingsRequest:
-    request: shared.NightModesettingsRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_nightmodesettingsrequest.NightModesettingsRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NightModesettingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example17: Optional[shared.Example17] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example17: Optional[shared_example17.Example17] = dataclasses.field(default=None)
     

@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import describeactionresponse as shared_describeactionresponse
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeActionPathParams:
-    action_id: str = field(metadata={'path_param': { 'field_name': 'actionId', 'style': 'simple', 'explode': False }})
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    action_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'actionId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeActionRequest:
-    path_params: DescribeActionPathParams = field()
+    path_params: DescribeActionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeActionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_action_response: Optional[shared.DescribeActionResponse] = field(default=None)
-    error_model: Optional[shared.ErrorModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_action_response: Optional[shared_describeactionresponse.DescribeActionResponse] = dataclasses.field(default=None)
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
     

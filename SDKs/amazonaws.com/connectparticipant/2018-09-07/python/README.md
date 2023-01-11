@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,26 @@ s.config_security(
     
 req = operations.CompleteAttachmentUploadRequest(
     headers=operations.CompleteAttachmentUploadHeaders(
-        x_amz_algorithm="ipsa",
-        x_amz_bearer="nihil",
-        x_amz_content_sha256="sed",
-        x_amz_credential="autem",
-        x_amz_date="consequatur",
-        x_amz_security_token="vitae",
-        x_amz_signature="vel",
-        x_amz_signed_headers="assumenda",
+        x_amz_algorithm="earum",
+        x_amz_bearer="quas",
+        x_amz_content_sha256="repellendus",
+        x_amz_credential="ut",
+        x_amz_date="voluptas",
+        x_amz_security_token="quisquam",
+        x_amz_signature="qui",
+        x_amz_signed_headers="voluptas",
     ),
     request=operations.CompleteAttachmentUploadRequestBody(
         attachment_ids=[
-            "ad",
-            "eum",
-            "voluptatem",
+            "deleniti",
+            "totam",
+            "nemo",
         ],
-        client_token="optio",
+        client_token="eligendi",
     ),
 )
     
-res = s.sdk.complete_attachment_upload(req)
+res = s.complete_attachment_upload(req)
 
 if res.complete_attachment_upload_response is not None:
     # handle response

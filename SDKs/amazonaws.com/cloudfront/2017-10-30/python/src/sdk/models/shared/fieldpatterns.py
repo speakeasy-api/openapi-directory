@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class FieldPatterns:
     r"""FieldPatterns
     A complex data type that includes the field patterns to match for field-level encryption.
     """
     
-    quantity: int = field()
-    items: Optional[List[str]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

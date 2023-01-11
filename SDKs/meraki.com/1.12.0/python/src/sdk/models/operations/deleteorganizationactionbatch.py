@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationActionBatchPathParams:
-    action_batch_id: str = field(metadata={'path_param': { 'field_name': 'actionBatchId', 'style': 'simple', 'explode': False }})
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    action_batch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'actionBatchId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationActionBatchRequest:
-    path_params: DeleteOrganizationActionBatchPathParams = field()
+    path_params: DeleteOrganizationActionBatchPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationActionBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

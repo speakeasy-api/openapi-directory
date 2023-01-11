@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class LatencyDescriptor:
-    max_latency: int = field()
+    max_latency: int = dataclasses.field()
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.AdcrdRequest(
     security=operations.AdcrdSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AdcrdRequestBody(
         certificate_parameters=operations.AdcrdRequestBodyCertificateParameters(
-            application_no="dolorum",
-            dob="illum",
-            exam_year="voluptatem",
-            full_name="ut",
+            application_no="natus",
+            dob="autem",
+            exam_year="incidunt",
+            full_name="neque",
         ),
-        consent_artifact="et",
+        consent_artifact="itaque",
         format="pdf",
-        txn_id="sequi",
+        txn_id="saepe",
     ),
 )
     
-res = s.sdk.adcrd(req)
+res = s.ap_is.adcrd(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `adcrd` - Admit Card
 

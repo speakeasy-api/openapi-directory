@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -21,13 +21,13 @@ class GoogleCloudChannelV1EduDataInstituteTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudChannelV1EduData:
     r"""GoogleCloudChannelV1EduData
     Required Edu Attributes
     """
     
-    institute_size: Optional[GoogleCloudChannelV1EduDataInstituteSizeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instituteSize') }})
-    institute_type: Optional[GoogleCloudChannelV1EduDataInstituteTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instituteType') }})
-    website: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('website') }})
+    institute_size: Optional[GoogleCloudChannelV1EduDataInstituteSizeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instituteSize') }})
+    institute_type: Optional[GoogleCloudChannelV1EduDataInstituteTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instituteType') }})
+    website: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('website') }})
     

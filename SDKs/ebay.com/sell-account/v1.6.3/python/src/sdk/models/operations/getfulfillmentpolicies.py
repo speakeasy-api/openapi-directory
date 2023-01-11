@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fulfillmentpolicyresponse as shared_fulfillmentpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPoliciesQueryParams:
-    marketplace_id: str = field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
+    marketplace_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'marketplace_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPoliciesRequest:
-    query_params: GetFulfillmentPoliciesQueryParams = field()
-    security: GetFulfillmentPoliciesSecurity = field()
+    query_params: GetFulfillmentPoliciesQueryParams = dataclasses.field()
+    security: GetFulfillmentPoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFulfillmentPoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fulfillment_policy_response: Optional[shared.FulfillmentPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fulfillment_policy_response: Optional[shared_fulfillmentpolicyresponse.FulfillmentPolicyResponse] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import aggregatecompliancebyconfigrule as shared_aggregatecompliancebyconfigrule
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeAggregateComplianceByConfigRulesResponse:
-    aggregate_compliance_by_config_rules: Optional[List[AggregateComplianceByConfigRule]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AggregateComplianceByConfigRules') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    aggregate_compliance_by_config_rules: Optional[list[shared_aggregatecompliancebyconfigrule.AggregateComplianceByConfigRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AggregateComplianceByConfigRules') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

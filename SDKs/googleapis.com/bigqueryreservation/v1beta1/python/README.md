@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,45 +21,44 @@ req = operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRe
         option1=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams(
-        parent="iste",
+        parent="accusamus",
     ),
     query_params=operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="aspernatur",
-        alt="media",
-        callback="soluta",
-        capacity_commitment_id="voluptatem",
-        enforce_single_admin_project_per_org=False,
-        fields="minus",
-        key="nesciunt",
-        oauth_token="qui",
+        dollar_xgafv="2",
+        access_token="deleniti",
+        alt="json",
+        callback="quasi",
+        capacity_commitment_id="praesentium",
+        enforce_single_admin_project_per_org=True,
+        fields="eos",
+        key="ipsam",
+        oauth_token="ipsum",
         pretty_print=False,
-        quota_user="odio",
-        upload_type="temporibus",
-        upload_protocol="harum",
+        quota_user="ut",
+        upload_type="veniam",
+        upload_protocol="qui",
     ),
     request=shared.CapacityCommitmentInput(
         failure_status=shared.Status(
-            code=24672949858063015,
+            code=7196243287888629260,
             details=[
                 {
-                    "ea": "rerum",
-                    "blanditiis": "libero",
+                    "distinctio": "eos",
                 },
             ],
-            message="aspernatur",
+            message="officia",
         ),
         multi_region_auxiliary=True,
-        plan="COMMITMENT_PLAN_UNSPECIFIED",
-        renewal_plan="FLEX",
-        slot_count="consequatur",
+        plan="ANNUAL",
+        renewal_plan="COMMITMENT_PLAN_UNSPECIFIED",
+        slot_count="corporis",
     ),
 )
     

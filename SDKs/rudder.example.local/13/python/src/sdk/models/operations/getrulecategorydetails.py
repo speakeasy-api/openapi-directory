@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import rule_category as shared_rule_category
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRuleCategoryDetailsPathParams:
-    rule_category_id: str = field(metadata={'path_param': { 'field_name': 'ruleCategoryId', 'style': 'simple', 'explode': False }})
+    rule_category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ruleCategoryId', 'style': 'simple', 'explode': False }})
     
 class GetRuleCategoryDetails200ApplicationJSONActionEnum(str, Enum):
     GET_RULE_CATEGORY_DETAILS = "GetRuleCategoryDetails"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRuleCategoryDetails200ApplicationJSONData:
-    rules_categories: List[shared.RuleCategory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rulesCategories') }})
+    rules_categories: list[shared_rule_category.RuleCategory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rulesCategories') }})
     
 class GetRuleCategoryDetails200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class GetRuleCategoryDetails200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRuleCategoryDetails200ApplicationJSON:
-    action: GetRuleCategoryDetails200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: GetRuleCategoryDetails200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: GetRuleCategoryDetails200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: GetRuleCategoryDetails200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: GetRuleCategoryDetails200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: GetRuleCategoryDetails200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRuleCategoryDetailsRequest:
-    path_params: GetRuleCategoryDetailsPathParams = field()
+    path_params: GetRuleCategoryDetailsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRuleCategoryDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_rule_category_details_200_application_json_object: Optional[GetRuleCategoryDetails200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_rule_category_details_200_application_json_object: Optional[GetRuleCategoryDetails200ApplicationJSON] = dataclasses.field(default=None)
     

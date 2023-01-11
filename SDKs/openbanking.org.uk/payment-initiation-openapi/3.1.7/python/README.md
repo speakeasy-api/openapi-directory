@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,175 +23,170 @@ req = operations.CreateDomesticPaymentConsentsRequest(
         ),
     ),
     headers=operations.CreateDomesticPaymentConsentsHeaders(
-        authorization="eligendi",
-        x_customer_user_agent="provident",
-        x_fapi_auth_date="qui",
-        x_fapi_customer_ip_address="consequatur",
-        x_fapi_interaction_id="molestiae",
-        x_idempotency_key="eaque",
-        x_jws_signature="accusamus",
+        authorization="doloremque",
+        x_customer_user_agent="maiores",
+        x_fapi_auth_date="atque",
+        x_fapi_customer_ip_address="ipsa",
+        x_fapi_interaction_id="blanditiis",
+        x_idempotency_key="expedita",
+        x_jws_signature="tenetur",
     ),
     request=operations.CreateDomesticPaymentConsentsRequests(
-        application_jose_plus_jwe="nihil".encode(),
+        application_jose_plus_jwe="iusto".encode(),
         ob_write_domestic_consent4=shared.ObWriteDomesticConsent4(
             data=shared.ObWriteDomesticConsent4Data(
                 authorisation=shared.ObWriteDomesticConsent4DataAuthorisation(
                     authorisation_type="Any",
-                    completion_date_time="1979-04-22T05:21:06Z",
+                    completion_date_time="1985-08-04T09:11:14Z",
                 ),
                 initiation=shared.ObWriteDomesticConsent4DataInitiation(
                     creditor_account=shared.ObWriteDomesticConsent4DataInitiationCreditorAccount(
-                        identification="facere",
-                        name="nesciunt",
-                        scheme_name="ullam",
-                        secondary_identification="placeat",
+                        identification="corporis",
+                        name="ipsam",
+                        scheme_name="voluptatem",
+                        secondary_identification="repellendus",
                     ),
                     creditor_postal_address=shared.ObPostalAddress6(
                         address_line=[
-                            "sed",
-                            "consectetur",
-                            "corrupti",
+                            "expedita",
                         ],
-                        address_type="Residential",
-                        building_number="exercitationem",
-                        country="assumenda",
-                        country_sub_division="vel",
-                        department="hic",
-                        post_code="ullam",
-                        street_name="omnis",
-                        sub_department="delectus",
-                        town_name="tempora",
+                        address_type="Business",
+                        building_number="eligendi",
+                        country="recusandae",
+                        country_sub_division="doloribus",
+                        department="molestiae",
+                        post_code="cupiditate",
+                        street_name="mollitia",
+                        sub_department="reiciendis",
+                        town_name="ad",
                     ),
                     debtor_account=shared.ObWriteDomesticConsent4DataInitiationDebtorAccount(
-                        identification="eveniet",
-                        name="consequatur",
-                        scheme_name="qui",
-                        secondary_identification="nihil",
+                        identification="consectetur",
+                        name="molestias",
+                        scheme_name="aliquid",
+                        secondary_identification="enim",
                     ),
-                    end_to_end_identification="rerum",
+                    end_to_end_identification="tempore",
                     instructed_amount=shared.ObWriteDomesticConsent4DataInitiationInstructedAmount(
-                        amount="minima",
-                        currency="qui",
+                        amount="iure",
+                        currency="recusandae",
                     ),
-                    instruction_identification="quis",
-                    local_instrument="ea",
+                    instruction_identification="quia",
+                    local_instrument="officia",
                     remittance_information=shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation(
-                        reference="expedita",
-                        unstructured="rerum",
+                        reference="sit",
+                        unstructured="adipisci",
                     ),
                     supplementary_data={
-                        "quidem": "vel",
-                        "laudantium": "officiis",
+                        "ut": "voluptatum",
+                        "velit": "eius",
+                        "quo": "aut",
                     },
                 ),
-                read_refund_account="Yes",
+                read_refund_account="No",
                 sca_support_data=shared.ObscaSupportData1(
-                    applied_authentication_approach="CA",
-                    reference_payment_order_id="dolores",
-                    requested_sca_exemption_type="Kiosk",
+                    applied_authentication_approach="SCA",
+                    reference_payment_order_id="soluta",
+                    requested_sca_exemption_type="PartyToParty",
                 ),
             ),
             risk=shared.ObRisk1(
                 delivery_address=shared.ObRisk1DeliveryAddress(
                     address_line=[
-                        "a",
-                        "voluptas",
-                        "omnis",
+                        "officia",
                     ],
-                    building_number="laudantium",
-                    country="assumenda",
-                    country_sub_division="dicta",
-                    post_code="omnis",
-                    street_name="nisi",
-                    town_name="voluptatem",
+                    building_number="reprehenderit",
+                    country="dolorem",
+                    country_sub_division="ea",
+                    post_code="dolore",
+                    street_name="saepe",
+                    town_name="atque",
                 ),
-                merchant_category_code="aspernatur",
-                merchant_customer_identification="iusto",
-                payment_context_code="PartyToParty",
+                merchant_category_code="et",
+                merchant_customer_identification="ut",
+                payment_context_code="Other",
             ),
         ),
         ob_write_domestic_consent5=shared.ObWriteDomesticConsent4(
             data=shared.ObWriteDomesticConsent4Data(
                 authorisation=shared.ObWriteDomesticConsent4DataAuthorisation(
                     authorisation_type="Single",
-                    completion_date_time="1991-02-20T06:05:16Z",
+                    completion_date_time="2017-12-26T15:29:34Z",
                 ),
                 initiation=shared.ObWriteDomesticConsent4DataInitiation(
                     creditor_account=shared.ObWriteDomesticConsent4DataInitiationCreditorAccount(
-                        identification="autem",
-                        name="necessitatibus",
-                        scheme_name="sunt",
-                        secondary_identification="dolor",
+                        identification="quisquam",
+                        name="velit",
+                        scheme_name="veritatis",
+                        secondary_identification="ipsa",
                     ),
                     creditor_postal_address=shared.ObPostalAddress6(
                         address_line=[
-                            "et",
-                            "voluptatum",
-                            "quia",
+                            "rem",
+                            "quo",
                         ],
-                        address_type="Statement",
-                        building_number="quia",
-                        country="aut",
-                        country_sub_division="cupiditate",
-                        department="dolores",
-                        post_code="amet",
-                        street_name="quia",
-                        sub_department="beatae",
-                        town_name="quidem",
+                        address_type="Correspondence",
+                        building_number="eum",
+                        country="facilis",
+                        country_sub_division="sint",
+                        department="vitae",
+                        post_code="labore",
+                        street_name="accusamus",
+                        sub_department="vero",
+                        town_name="voluptatem",
                     ),
                     debtor_account=shared.ObWriteDomesticConsent4DataInitiationDebtorAccount(
-                        identification="id",
-                        name="ratione",
-                        scheme_name="inventore",
-                        secondary_identification="ratione",
+                        identification="perferendis",
+                        name="est",
+                        scheme_name="ea",
+                        secondary_identification="rem",
                     ),
-                    end_to_end_identification="consequuntur",
+                    end_to_end_identification="qui",
                     instructed_amount=shared.ObWriteDomesticConsent4DataInitiationInstructedAmount(
-                        amount="sequi",
-                        currency="velit",
+                        amount="rerum",
+                        currency="minus",
                     ),
-                    instruction_identification="autem",
-                    local_instrument="est",
+                    instruction_identification="perspiciatis",
+                    local_instrument="natus",
                     remittance_information=shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation(
-                        reference="ullam",
-                        unstructured="enim",
+                        reference="repellat",
+                        unstructured="est",
                     ),
                     supplementary_data={
-                        "quia": "harum",
-                        "dolores": "corporis",
-                        "sit": "saepe",
+                        "et": "eligendi",
+                        "debitis": "dolor",
+                        "qui": "iusto",
                     },
                 ),
-                read_refund_account="Yes",
+                read_refund_account="No",
                 sca_support_data=shared.ObscaSupportData1(
-                    applied_authentication_approach="CA",
-                    reference_payment_order_id="aut",
-                    requested_sca_exemption_type="Kiosk",
+                    applied_authentication_approach="SCA",
+                    reference_payment_order_id="ut",
+                    requested_sca_exemption_type="EcommerceGoods",
                 ),
             ),
             risk=shared.ObRisk1(
                 delivery_address=shared.ObRisk1DeliveryAddress(
                     address_line=[
-                        "omnis",
-                        "expedita",
-                        "non",
+                        "ut",
+                        "fugiat",
                     ],
-                    building_number="expedita",
-                    country="quae",
-                    country_sub_division="assumenda",
-                    post_code="asperiores",
-                    street_name="ut",
-                    town_name="nesciunt",
+                    building_number="voluptatibus",
+                    country="omnis",
+                    country_sub_division="voluptatem",
+                    post_code="et",
+                    street_name="ratione",
+                    town_name="sit",
                 ),
-                merchant_category_code="libero",
-                merchant_customer_identification="voluptatibus",
-                payment_context_code="Other",
+                merchant_category_code="omnis",
+                merchant_customer_identification="voluptate",
+                payment_context_code="PartyToParty",
             ),
         ),
     ),
 )
     
-res = s.sdk.create_domestic_payment_consents(req)
+res = s.domestic_payments.create_domestic_payment_consents(req)
 
 if res.body is not None:
     # handle response
@@ -202,48 +196,69 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Domestic Payments
 
 * `create_domestic_payment_consents` - Create Domestic Payment Consents
 * `create_domestic_payments` - Create Domestic Payments
-* `create_domestic_scheduled_payment_consents` - Create Domestic Scheduled Payment Consents
-* `create_domestic_scheduled_payments` - Create Domestic Scheduled Payments
-* `create_domestic_standing_order_consents` - Create Domestic Standing Order Consents
-* `create_domestic_standing_orders` - Create Domestic Standing Orders
-* `create_file_payment_consents` - Create File Payment Consents
-* `create_file_payment_consents_consent_id_file` - Create File Payment Consents
-* `create_file_payments` - Create File Payments
-* `create_international_payment_consents` - Create International Payment Consents
-* `create_international_payments` - Create International Payments
-* `create_international_scheduled_payment_consents` - Create International Scheduled Payment Consents
-* `create_international_scheduled_payments` - Create International Scheduled Payments
-* `create_international_standing_order_consents` - Create International Standing Order Consents
-* `create_international_standing_orders` - Create International Standing Orders
 * `get_domestic_payment_consents_consent_id` - Get Domestic Payment Consents
 * `get_domestic_payment_consents_consent_id_funds_confirmation` - Get Domestic Payment Consents Funds Confirmation
 * `get_domestic_payments_domestic_payment_id` - Get Domestic Payments
-* `get_domestic_payments_domestic_payment_id_payment_details` - Get Payment Details
+
+### Domestic Scheduled Payments
+
+* `create_domestic_scheduled_payment_consents` - Create Domestic Scheduled Payment Consents
+* `create_domestic_scheduled_payments` - Create Domestic Scheduled Payments
 * `get_domestic_scheduled_payment_consents_consent_id` - Get Domestic Scheduled Payment Consents
 * `get_domestic_scheduled_payments_domestic_scheduled_payment_id` - Get Domestic Scheduled Payments
-* `get_domestic_scheduled_payments_domestic_scheduled_payment_id_payment_details` - Get Payment Details
+
+### Domestic Standing Orders
+
+* `create_domestic_standing_order_consents` - Create Domestic Standing Order Consents
+* `create_domestic_standing_orders` - Create Domestic Standing Orders
 * `get_domestic_standing_order_consents_consent_id` - Get Domestic Standing Order Consents
 * `get_domestic_standing_orders_domestic_standing_order_id` - Get Domestic Standing Orders
-* `get_domestic_standing_orders_domestic_standing_order_id_payment_details` - Get Payment Details
+
+### File Payments
+
+* `create_file_payment_consents` - Create File Payment Consents
+* `create_file_payment_consents_consent_id_file` - Create File Payment Consents
+* `create_file_payments` - Create File Payments
 * `get_file_payment_consents_consent_id` - Get File Payment Consents
 * `get_file_payment_consents_consent_id_file` - Get File Payment Consents
 * `get_file_payments_file_payment_id` - Get File Payments
-* `get_file_payments_file_payment_id_payment_details` - Get Payment Details
 * `get_file_payments_file_payment_id_report_file` - Get File Payments
+
+### International Payments
+
+* `create_international_payment_consents` - Create International Payment Consents
+* `create_international_payments` - Create International Payments
 * `get_international_payment_consents_consent_id` - Get International Payment Consents
 * `get_international_payment_consents_consent_id_funds_confirmation` - Get International Payment Consents Funds Confirmation
 * `get_international_payments_international_payment_id` - Get International Payments
-* `get_international_payments_international_payment_id_payment_details` - Get Payment Details
+
+### International Scheduled Payments
+
+* `create_international_scheduled_payment_consents` - Create International Scheduled Payment Consents
+* `create_international_scheduled_payments` - Create International Scheduled Payments
 * `get_international_scheduled_payment_consents_consent_id` - Get International Scheduled Payment Consents
 * `get_international_scheduled_payment_consents_consent_id_funds_confirmation` - Get International Scheduled Payment Consents Funds Confirmation
 * `get_international_scheduled_payments_international_scheduled_payment_id` - Get International Scheduled Payments
-* `get_international_scheduled_payments_international_scheduled_payment_id_payment_details` - Get Payment Details
+
+### International Standing Orders
+
+* `create_international_standing_order_consents` - Create International Standing Order Consents
+* `create_international_standing_orders` - Create International Standing Orders
 * `get_international_standing_order_consents_consent_id` - Get International Standing Order Consents
 * `get_international_standing_orders_international_standing_order_payment_id` - Get International Standing Orders
+
+### Payment Details
+
+* `get_domestic_payments_domestic_payment_id_payment_details` - Get Payment Details
+* `get_domestic_scheduled_payments_domestic_scheduled_payment_id_payment_details` - Get Payment Details
+* `get_domestic_standing_orders_domestic_standing_order_id_payment_details` - Get Payment Details
+* `get_file_payments_file_payment_id_payment_details` - Get Payment Details
+* `get_international_payments_international_payment_id_payment_details` - Get Payment Details
+* `get_international_scheduled_payments_international_scheduled_payment_id_payment_details` - Get Payment Details
 * `get_international_standing_orders_international_standing_order_payment_id_payment_details` - Get Payment Details
 
 <!-- End SDK Available Operations -->

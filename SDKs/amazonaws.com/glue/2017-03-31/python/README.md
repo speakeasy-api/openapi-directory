@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,299 +25,253 @@ s.config_security(
     
 req = operations.BatchCreatePartitionRequest(
     headers=operations.BatchCreatePartitionHeaders(
-        x_amz_algorithm="iste",
-        x_amz_content_sha256="deleniti",
-        x_amz_credential="libero",
-        x_amz_date="saepe",
+        x_amz_algorithm="molestias",
+        x_amz_content_sha256="dicta",
+        x_amz_credential="voluptatum",
+        x_amz_date="numquam",
         x_amz_security_token="et",
-        x_amz_signature="corporis",
-        x_amz_signed_headers="a",
+        x_amz_signature="ducimus",
+        x_amz_signed_headers="ducimus",
         x_amz_target="AWSGlue.BatchCreatePartition",
     ),
     request=shared.BatchCreatePartitionRequest(
-        catalog_id="numquam",
-        database_name="dolores",
+        catalog_id="et",
+        database_name="nam",
         partition_input_list=[
             shared.PartitionInput(
-                last_access_time="1997-09-15T16:54:12Z",
-                last_analyzed_time="2012-08-01T13:14:53Z",
+                last_access_time="1996-05-31T18:29:35Z",
+                last_analyzed_time="2014-05-31T19:07:57Z",
                 parameters={
-                    "repudiandae": "quo",
-                    "omnis": "adipisci",
+                    "deserunt": "illo",
+                    "tempore": "velit",
                 },
                 storage_descriptor=shared.StorageDescriptor(
                     bucket_columns=[
-                        "qui",
+                        "quidem",
                     ],
                     columns=[
                         shared.Column(
-                            comment="in",
-                            name="et",
+                            comment="officiis",
+                            name="veniam",
                             parameters={
-                                "eos": "quas",
-                                "commodi": "eum",
-                                "ex": "aut",
+                                "eius": "nobis",
+                                "aliquam": "qui",
                             },
-                            type="deleniti",
-                        ),
-                        shared.Column(
-                            comment="quam",
-                            name="in",
-                            parameters={
-                                "aperiam": "molestiae",
-                            },
-                            type="molestias",
-                        ),
-                        shared.Column(
-                            comment="magnam",
-                            name="voluptatem",
-                            parameters={
-                                "et": "recusandae",
-                            },
-                            type="error",
+                            type="debitis",
                         ),
                     ],
                     compressed=False,
-                    input_format="et",
-                    location="ratione",
-                    number_of_buckets=3189238340560411873,
-                    output_format="in",
+                    input_format="consequatur",
+                    location="iusto",
+                    number_of_buckets=8955101836556220093,
+                    output_format="iusto",
                     parameters={
-                        "dolores": "perferendis",
+                        "ut": "ut",
                     },
                     schema_reference=shared.SchemaReference(
                         schema_id=shared.SchemaID(
-                            registry_name="laboriosam",
-                            schema_arn="numquam",
-                            schema_name="necessitatibus",
+                            registry_name="expedita",
+                            schema_arn="repellendus",
+                            schema_name="commodi",
                         ),
-                        schema_version_id="aperiam",
-                        schema_version_number=5993925161476307471,
+                        schema_version_id="exercitationem",
+                        schema_version_number=7459015832090057282,
                     ),
                     serde_info=shared.SerDeInfo(
-                        name="velit",
+                        name="perferendis",
                         parameters={
-                            "hic": "quis",
-                            "sunt": "quo",
-                            "eveniet": "veniam",
+                            "autem": "dolore",
+                            "aliquam": "soluta",
                         },
-                        serialization_library="reiciendis",
+                        serialization_library="accusantium",
                     ),
                     skewed_info=shared.SkewedInfo(
                         skewed_column_names=[
-                            "dolor",
-                            "maiores",
+                            "aut",
+                            "accusamus",
                         ],
                         skewed_column_value_location_maps={
-                            "pariatur": "ad",
-                            "aperiam": "earum",
-                            "ea": "earum",
+                            "quisquam": "nihil",
                         },
                         skewed_column_values=[
-                            "error",
-                            "ipsa",
-                            "sint",
+                            "deleniti",
                         ],
                     ),
                     sort_columns=[
+                        shared.Order(
+                            column="rem",
+                            sort_order=6277689859743485219,
+                        ),
+                    ],
+                    stored_as_sub_directories=False,
+                ),
+                values=[
+                    "magni",
+                ],
+            ),
+            shared.PartitionInput(
+                last_access_time="2010-12-05T12:21:37Z",
+                last_analyzed_time="2011-08-12T07:40:33Z",
+                parameters={
+                    "quod": "corporis",
+                    "modi": "soluta",
+                    "odio": "expedita",
+                },
+                storage_descriptor=shared.StorageDescriptor(
+                    bucket_columns=[
+                        "ipsum",
+                        "saepe",
+                        "ad",
+                    ],
+                    columns=[
+                        shared.Column(
+                            comment="delectus",
+                            name="suscipit",
+                            parameters={
+                                "dolor": "ipsa",
+                                "quos": "voluptas",
+                            },
+                            type="laborum",
+                        ),
+                    ],
+                    compressed=False,
+                    input_format="iusto",
+                    location="et",
+                    number_of_buckets=3667925934151297536,
+                    output_format="voluptas",
+                    parameters={
+                        "quia": "voluptas",
+                        "corporis": "omnis",
+                    },
+                    schema_reference=shared.SchemaReference(
+                        schema_id=shared.SchemaID(
+                            registry_name="dolores",
+                            schema_arn="expedita",
+                            schema_name="enim",
+                        ),
+                        schema_version_id="quo",
+                        schema_version_number=515727864347354415,
+                    ),
+                    serde_info=shared.SerDeInfo(
+                        name="sequi",
+                        parameters={
+                            "illo": "enim",
+                            "et": "praesentium",
+                            "iste": "omnis",
+                        },
+                        serialization_library="odio",
+                    ),
+                    skewed_info=shared.SkewedInfo(
+                        skewed_column_names=[
+                            "adipisci",
+                            "quo",
+                            "rerum",
+                        ],
+                        skewed_column_value_location_maps={
+                            "suscipit": "fugit",
+                        },
+                        skewed_column_values=[
+                            "ullam",
+                            "vero",
+                        ],
+                    ),
+                    sort_columns=[
+                        shared.Order(
+                            column="et",
+                            sort_order=4855648594445967323,
+                        ),
+                    ],
+                    stored_as_sub_directories=False,
+                ),
+                values=[
+                    "nobis",
+                    "sunt",
+                ],
+            ),
+            shared.PartitionInput(
+                last_access_time="1971-09-16T06:53:03Z",
+                last_analyzed_time="1981-11-28T17:23:51Z",
+                parameters={
+                    "repellendus": "error",
+                },
+                storage_descriptor=shared.StorageDescriptor(
+                    bucket_columns=[
+                        "fugit",
+                    ],
+                    columns=[
+                        shared.Column(
+                            comment="dolores",
+                            name="aut",
+                            parameters={
+                                "nam": "molestias",
+                                "et": "cumque",
+                            },
+                            type="aut",
+                        ),
+                    ],
+                    compressed=False,
+                    input_format="voluptatem",
+                    location="provident",
+                    number_of_buckets=1615352566432714451,
+                    output_format="ullam",
+                    parameters={
+                        "reprehenderit": "aut",
+                    },
+                    schema_reference=shared.SchemaReference(
+                        schema_id=shared.SchemaID(
+                            registry_name="possimus",
+                            schema_arn="voluptatibus",
+                            schema_name="magni",
+                        ),
+                        schema_version_id="reiciendis",
+                        schema_version_number=2190221129833308991,
+                    ),
+                    serde_info=shared.SerDeInfo(
+                        name="laboriosam",
+                        parameters={
+                            "laudantium": "nam",
+                            "molestiae": "deserunt",
+                            "voluptates": "possimus",
+                        },
+                        serialization_library="et",
+                    ),
+                    skewed_info=shared.SkewedInfo(
+                        skewed_column_names=[
+                            "placeat",
+                        ],
+                        skewed_column_value_location_maps={
+                            "vero": "tempore",
+                            "rem": "cum",
+                            "ut": "inventore",
+                        },
+                        skewed_column_values=[
+                            "aliquam",
+                            "ratione",
+                        ],
+                    ),
+                    sort_columns=[
+                        shared.Order(
+                            column="hic",
+                            sort_order=8404441515746634618,
+                        ),
                         shared.Order(
                             column="qui",
-                            sort_order=6086645338585357339,
-                        ),
-                        shared.Order(
-                            column="neque",
-                            sort_order=2732100335356235297,
-                        ),
-                        shared.Order(
-                            column="ab",
-                            sort_order=3152036969321635858,
-                        ),
-                    ],
-                    stored_as_sub_directories=True,
-                ),
-                values=[
-                    "enim",
-                    "dignissimos",
-                    "rerum",
-                ],
-            ),
-            shared.PartitionInput(
-                last_access_time="1985-07-03T17:28:14Z",
-                last_analyzed_time="1993-02-24T01:52:12Z",
-                parameters={
-                    "ut": "assumenda",
-                },
-                storage_descriptor=shared.StorageDescriptor(
-                    bucket_columns=[
-                        "aut",
-                    ],
-                    columns=[
-                        shared.Column(
-                            comment="amet",
-                            name="et",
-                            parameters={
-                                "voluptatem": "nesciunt",
-                            },
-                            type="natus",
-                        ),
-                        shared.Column(
-                            comment="quasi",
-                            name="et",
-                            parameters={
-                                "autem": "quod",
-                                "impedit": "nostrum",
-                            },
-                            type="repudiandae",
-                        ),
-                        shared.Column(
-                            comment="dicta",
-                            name="vero",
-                            parameters={
-                                "delectus": "nam",
-                            },
-                            type="deleniti",
-                        ),
-                    ],
-                    compressed=False,
-                    input_format="eius",
-                    location="consequuntur",
-                    number_of_buckets=5084441811407222667,
-                    output_format="laudantium",
-                    parameters={
-                        "ullam": "quis",
-                    },
-                    schema_reference=shared.SchemaReference(
-                        schema_id=shared.SchemaID(
-                            registry_name="facilis",
-                            schema_arn="fugit",
-                            schema_name="aut",
-                        ),
-                        schema_version_id="id",
-                        schema_version_number=1104912452871584628,
-                    ),
-                    serde_info=shared.SerDeInfo(
-                        name="dicta",
-                        parameters={
-                            "molestiae": "aliquam",
-                            "quos": "omnis",
-                            "illum": "repellat",
-                        },
-                        serialization_library="id",
-                    ),
-                    skewed_info=shared.SkewedInfo(
-                        skewed_column_names=[
-                            "possimus",
-                            "eius",
-                        ],
-                        skewed_column_value_location_maps={
-                            "adipisci": "quasi",
-                        },
-                        skewed_column_values=[
-                            "in",
-                            "fuga",
-                            "nemo",
-                        ],
-                    ),
-                    sort_columns=[
-                        shared.Order(
-                            column="suscipit",
-                            sort_order=4754108277802182697,
-                        ),
-                        shared.Order(
-                            column="ratione",
-                            sort_order=5969817432109258462,
+                            sort_order=4664529193248400784,
                         ),
                     ],
                     stored_as_sub_directories=False,
                 ),
                 values=[
-                    "autem",
-                ],
-            ),
-            shared.PartitionInput(
-                last_access_time="1998-10-04T04:57:52Z",
-                last_analyzed_time="2010-02-05T01:21:05Z",
-                parameters={
-                    "recusandae": "quos",
-                },
-                storage_descriptor=shared.StorageDescriptor(
-                    bucket_columns=[
-                        "veniam",
-                    ],
-                    columns=[
-                        shared.Column(
-                            comment="harum",
-                            name="et",
-                            parameters={
-                                "aliquam": "vel",
-                            },
-                            type="cumque",
-                        ),
-                    ],
-                    compressed=True,
-                    input_format="earum",
-                    location="quisquam",
-                    number_of_buckets=5627190705484135544,
-                    output_format="id",
-                    parameters={
-                        "esse": "dolores",
-                        "cum": "consequuntur",
-                    },
-                    schema_reference=shared.SchemaReference(
-                        schema_id=shared.SchemaID(
-                            registry_name="vero",
-                            schema_arn="quia",
-                            schema_name="cupiditate",
-                        ),
-                        schema_version_id="sed",
-                        schema_version_number=3120941714676877055,
-                    ),
-                    serde_info=shared.SerDeInfo(
-                        name="expedita",
-                        parameters={
-                            "excepturi": "ut",
-                            "ipsa": "sit",
-                            "aliquid": "eos",
-                        },
-                        serialization_library="itaque",
-                    ),
-                    skewed_info=shared.SkewedInfo(
-                        skewed_column_names=[
-                            "soluta",
-                        ],
-                        skewed_column_value_location_maps={
-                            "vel": "iusto",
-                            "voluptatum": "illo",
-                            "exercitationem": "aut",
-                        },
-                        skewed_column_values=[
-                            "voluptate",
-                            "harum",
-                            "in",
-                        ],
-                    ),
-                    sort_columns=[
-                        shared.Order(
-                            column="ut",
-                            sort_order=4835256354221490868,
-                        ),
-                        shared.Order(
-                            column="sit",
-                            sort_order=7361183010849730604,
-                        ),
-                    ],
-                    stored_as_sub_directories=False,
-                ),
-                values=[
-                    "cum",
+                    "officia",
+                    "dolore",
                 ],
             ),
         ],
-        table_name="dicta",
+        table_name="hic",
     ),
 )
     
-res = s.sdk.batch_create_partition(req)
+res = s.batch_create_partition(req)
 
 if res.batch_create_partition_response is not None:
     # handle response

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from . import *
+from typing import Optional
+from ..shared import termxref as shared_termxref
 
 
-@dataclass
+@dataclasses.dataclass
 class Term:
-    acc_id: Optional[str] = field(default=None)
-    comment: Optional[str] = field(default=None)
-    created_by: Optional[str] = field(default=None)
-    creation_date: Optional[datetime] = field(default=None)
-    definition: Optional[str] = field(default=None)
-    modification_date: Optional[datetime] = field(default=None)
-    obsolete: Optional[int] = field(default=None)
-    ontology_id: Optional[str] = field(default=None)
-    term: Optional[str] = field(default=None)
-    xrefs: Optional[List[TermXRef]] = field(default=None)
+    acc_id: Optional[str] = dataclasses.field(default=None)
+    comment: Optional[str] = dataclasses.field(default=None)
+    created_by: Optional[str] = dataclasses.field(default=None)
+    creation_date: Optional[datetime] = dataclasses.field(default=None)
+    definition: Optional[str] = dataclasses.field(default=None)
+    modification_date: Optional[datetime] = dataclasses.field(default=None)
+    obsolete: Optional[int] = dataclasses.field(default=None)
+    ontology_id: Optional[str] = dataclasses.field(default=None)
+    term: Optional[str] = dataclasses.field(default=None)
+    xrefs: Optional[list[shared_termxref.TermXRef]] = dataclasses.field(default=None)
     

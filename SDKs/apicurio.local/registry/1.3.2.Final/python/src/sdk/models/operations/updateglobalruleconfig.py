@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import rule as shared_rule
+from ..shared import error as shared_error
 
 class UpdateGlobalRuleConfigRuleEnum(str, Enum):
     VALIDITY = "VALIDITY"
     COMPATIBILITY = "COMPATIBILITY"
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalRuleConfigPathParams:
-    rule: UpdateGlobalRuleConfigRuleEnum = field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
+    rule: UpdateGlobalRuleConfigRuleEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalRuleConfigRequest:
-    path_params: UpdateGlobalRuleConfigPathParams = field()
-    request: shared.Rule = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateGlobalRuleConfigPathParams = dataclasses.field()
+    request: shared_rule.Rule = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalRuleConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    rule: Optional[shared.Rule] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    rule: Optional[shared_rule.Rule] = dataclasses.field(default=None)
     

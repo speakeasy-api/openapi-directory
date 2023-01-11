@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import artifactmetadata as shared_artifactmetadata
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactMetaDataByGlobalIDPathParams:
-    global_id: int = field(metadata={'path_param': { 'field_name': 'globalId', 'style': 'simple', 'explode': False }})
+    global_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'globalId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactMetaDataByGlobalIDRequest:
-    path_params: GetArtifactMetaDataByGlobalIDPathParams = field()
+    path_params: GetArtifactMetaDataByGlobalIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactMetaDataByGlobalIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artifact_meta_data: Optional[shared.ArtifactMetaData] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artifact_meta_data: Optional[shared_artifactmetadata.ArtifactMetaData] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

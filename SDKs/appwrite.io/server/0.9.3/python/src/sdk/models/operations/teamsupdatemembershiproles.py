@@ -1,42 +1,45 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import membership as shared_membership
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateMembershipRolesPathParams:
-    membership_id: str = field(metadata={'path_param': { 'field_name': 'membershipId', 'style': 'simple', 'explode': False }})
-    team_id: str = field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
+    membership_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'membershipId', 'style': 'simple', 'explode': False }})
+    team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateMembershipRolesRequestBody:
-    roles: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roles') }})
+    roles: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roles') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateMembershipRolesSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateMembershipRolesRequest:
-    path_params: TeamsUpdateMembershipRolesPathParams = field()
-    security: TeamsUpdateMembershipRolesSecurity = field()
-    request: Optional[TeamsUpdateMembershipRolesRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsUpdateMembershipRolesPathParams = dataclasses.field()
+    security: TeamsUpdateMembershipRolesSecurity = dataclasses.field()
+    request: Optional[TeamsUpdateMembershipRolesRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsUpdateMembershipRolesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    membership: Optional[shared.Membership] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    membership: Optional[shared_membership.Membership] = dataclasses.field(default=None)
     

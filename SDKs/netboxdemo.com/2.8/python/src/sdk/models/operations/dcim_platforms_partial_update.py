@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableplatform as shared_writableplatform
+from ..shared import platform as shared_platform
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsPartialUpdateRequest:
-    path_params: DcimPlatformsPartialUpdatePathParams = field()
-    request: shared.WritablePlatformInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimPlatformsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writableplatform.WritablePlatformInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    platform: Optional[shared.Platform] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    platform: Optional[shared_platform.Platform] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccessKeyInfoResponse:
-    account: Optional[str] = field(default=None)
+    account: Optional[str] = dataclasses.field(default=None)
     

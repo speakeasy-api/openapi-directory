@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ClusterParameterGroupNameMessage:
     r"""ClusterParameterGroupNameMessage
     <p/>
     """
     
-    parameter_group_name: Optional[str] = field(default=None)
-    parameter_group_status: Optional[str] = field(default=None)
+    parameter_group_name: Optional[str] = dataclasses.field(default=None)
+    parameter_group_status: Optional[str] = dataclasses.field(default=None)
     

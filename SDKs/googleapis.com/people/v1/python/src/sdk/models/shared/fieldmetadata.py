@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import source as shared_source
+from ..shared import source as shared_source
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FieldMetadata:
     r"""FieldMetadata
     Metadata about a field.
     """
     
-    primary: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
-    source: Optional[Source] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
-    source_primary: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourcePrimary') }})
-    verified: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verified') }})
+    primary: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
+    source: Optional[shared_source.Source] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    source_primary: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourcePrimary') }})
+    verified: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verified') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FieldMetadataInput:
     r"""FieldMetadataInput
     Metadata about a field.
     """
     
-    source: Optional[SourceInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
-    source_primary: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourcePrimary') }})
+    source: Optional[shared_source.SourceInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    source_primary: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourcePrimary') }})
     

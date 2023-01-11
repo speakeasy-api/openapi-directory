@@ -1,0 +1,19 @@
+import dataclasses
+from typing import Any
+from enum import Enum
+from dataclasses_json import dataclass_json
+from sdk import utils
+from ..shared import webhook_event_enum as shared_webhook_event_enum
+
+
+@dataclass_json
+@dataclasses.dataclass
+class CreateWebhookResponseBody:
+    r"""CreateWebhookResponseBody
+    A webhook
+    """
+    
+    event: shared_webhook_event_enum.WebhookEventEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event') }})
+    url: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    webhook_id: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhook_id') }})
+    

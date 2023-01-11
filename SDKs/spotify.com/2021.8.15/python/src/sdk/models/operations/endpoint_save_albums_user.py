@@ -1,43 +1,44 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserQueryParams:
-    ids: str = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    ids: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserRequestBody:
-    ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ids') }})
+    ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ids') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserRequest:
-    headers: EndpointSaveAlbumsUserHeaders = field()
-    query_params: EndpointSaveAlbumsUserQueryParams = field()
-    security: EndpointSaveAlbumsUserSecurity = field()
-    request: Optional[EndpointSaveAlbumsUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: EndpointSaveAlbumsUserHeaders = dataclasses.field()
+    query_params: EndpointSaveAlbumsUserQueryParams = dataclasses.field()
+    security: EndpointSaveAlbumsUserSecurity = dataclasses.field()
+    request: Optional[EndpointSaveAlbumsUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointSaveAlbumsUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

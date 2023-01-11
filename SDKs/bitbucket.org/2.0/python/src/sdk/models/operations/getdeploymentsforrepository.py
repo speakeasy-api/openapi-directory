@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_deployments as shared_paginated_deployments
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDeploymentsForRepositoryPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDeploymentsForRepositoryRequest:
-    path_params: GetDeploymentsForRepositoryPathParams = field()
+    path_params: GetDeploymentsForRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDeploymentsForRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_deployments: Optional[shared.PaginatedDeployments] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_deployments: Optional[shared_paginated_deployments.PaginatedDeployments] = dataclasses.field(default=None)
     

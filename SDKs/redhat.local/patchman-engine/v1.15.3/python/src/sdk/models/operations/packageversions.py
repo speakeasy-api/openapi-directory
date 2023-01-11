@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import controllers_packageversionsresponse as shared_controllers_packageversionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PackageVersionsPathParams:
-    package_name: str = field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
+    package_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PackageVersionsQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PackageVersionsSecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PackageVersionsRequest:
-    path_params: PackageVersionsPathParams = field()
-    query_params: PackageVersionsQueryParams = field()
-    security: PackageVersionsSecurity = field()
+    path_params: PackageVersionsPathParams = dataclasses.field()
+    query_params: PackageVersionsQueryParams = dataclasses.field()
+    security: PackageVersionsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PackageVersionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_package_versions_response: Optional[shared.ControllersPackageVersionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_package_versions_response: Optional[shared_controllers_packageversionsresponse.ControllersPackageVersionsResponse] = dataclasses.field(default=None)
     

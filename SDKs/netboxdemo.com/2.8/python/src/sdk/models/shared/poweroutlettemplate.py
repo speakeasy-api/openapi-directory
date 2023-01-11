@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nesteddevicetype as shared_nesteddevicetype
+from ..shared import nestedpowerporttemplate as shared_nestedpowerporttemplate
 
 class PowerOutletTemplateFeedLegLabelEnum(str, Enum):
     A = "A"
@@ -17,10 +18,10 @@ class PowerOutletTemplateFeedLegValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletTemplateFeedLeg:
-    label: PowerOutletTemplateFeedLegLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: PowerOutletTemplateFeedLegValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: PowerOutletTemplateFeedLegLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: PowerOutletTemplateFeedLegValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 class PowerOutletTemplateTypeLabelEnum(str, Enum):
     C5 = "C5"
@@ -160,19 +161,19 @@ class PowerOutletTemplateTypeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletTemplateType:
-    label: PowerOutletTemplateTypeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: PowerOutletTemplateTypeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: PowerOutletTemplateTypeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: PowerOutletTemplateTypeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PowerOutletTemplate:
-    device_type: NestedDeviceType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    feed_leg: Optional[PowerOutletTemplateFeedLeg] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    power_port: Optional[NestedPowerPortTemplate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
-    type: Optional[PowerOutletTemplateType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    device_type: shared_nesteddevicetype.NestedDeviceType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    feed_leg: Optional[PowerOutletTemplateFeedLeg] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed_leg') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    power_port: Optional[shared_nestedpowerporttemplate.NestedPowerPortTemplate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('power_port') }})
+    type: Optional[PowerOutletTemplateType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

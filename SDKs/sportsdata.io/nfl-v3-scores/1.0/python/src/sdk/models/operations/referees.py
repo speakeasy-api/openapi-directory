@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class RefereesFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class RefereesFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class RefereesPathParams:
-    format: RefereesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: RefereesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RefereesRequest:
-    path_params: RefereesPathParams = field()
+    path_params: RefereesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RefereesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    referees: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    referees: Optional[list[Any]] = dataclasses.field(default=None)
     

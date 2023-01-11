@@ -13,3 +13,5 @@ from .prevhref import *
 from .security import *
 from .selfhref import *
 from .validationerrorsresponse import *
+
+__all__ = ["BasicUser","DetailedInvalidParam","Did","EndUserRoute","EndUserRouteEmbeddedObject","EndUserRouteHalResponse","ErrorResponse","FirstHref","Line","Links","NextHref","PrevHref","SchemeBearerAuth","SelfHref","ValidationErrorsResponse"]

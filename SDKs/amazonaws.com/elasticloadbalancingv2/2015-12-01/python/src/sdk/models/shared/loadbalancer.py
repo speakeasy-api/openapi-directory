@@ -1,29 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import availabilityzone as shared_availabilityzone
+from ..shared import ipaddresstype_enum as shared_ipaddresstype_enum
+from ..shared import loadbalancerschemeenum_enum as shared_loadbalancerschemeenum_enum
+from ..shared import loadbalancerstate as shared_loadbalancerstate
+from ..shared import loadbalancertypeenum_enum as shared_loadbalancertypeenum_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class LoadBalancer:
     r"""LoadBalancer
     Information about a load balancer.
     """
     
-    availability_zones: Optional[List[AvailabilityZone]] = field(default=None)
-    canonical_hosted_zone_id: Optional[str] = field(default=None)
-    created_time: Optional[datetime] = field(default=None)
-    customer_owned_ipv4_pool: Optional[str] = field(default=None)
-    dns_name: Optional[str] = field(default=None)
-    ip_address_type: Optional[IPAddressTypeEnum] = field(default=None)
-    load_balancer_arn: Optional[str] = field(default=None)
-    load_balancer_name: Optional[str] = field(default=None)
-    scheme: Optional[LoadBalancerSchemeEnumEnum] = field(default=None)
-    security_groups: Optional[List[str]] = field(default=None)
-    state: Optional[LoadBalancerState] = field(default=None)
-    type: Optional[LoadBalancerTypeEnumEnum] = field(default=None)
-    vpc_id: Optional[str] = field(default=None)
+    availability_zones: Optional[list[shared_availabilityzone.AvailabilityZone]] = dataclasses.field(default=None)
+    canonical_hosted_zone_id: Optional[str] = dataclasses.field(default=None)
+    created_time: Optional[datetime] = dataclasses.field(default=None)
+    customer_owned_ipv4_pool: Optional[str] = dataclasses.field(default=None)
+    dns_name: Optional[str] = dataclasses.field(default=None)
+    ip_address_type: Optional[shared_ipaddresstype_enum.IPAddressTypeEnum] = dataclasses.field(default=None)
+    load_balancer_arn: Optional[str] = dataclasses.field(default=None)
+    load_balancer_name: Optional[str] = dataclasses.field(default=None)
+    scheme: Optional[shared_loadbalancerschemeenum_enum.LoadBalancerSchemeEnumEnum] = dataclasses.field(default=None)
+    security_groups: Optional[list[str]] = dataclasses.field(default=None)
+    state: Optional[shared_loadbalancerstate.LoadBalancerState] = dataclasses.field(default=None)
+    type: Optional[shared_loadbalancertypeenum_enum.LoadBalancerTypeEnumEnum] = dataclasses.field(default=None)
+    vpc_id: Optional[str] = dataclasses.field(default=None)
     

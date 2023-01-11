@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CollectNowPathParams:
-    device_id: int = field(metadata={'path_param': { 'field_name': 'deviceId', 'style': 'simple', 'explode': False }})
+    device_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'deviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectNowQueryParams:
-    monitor_class: str = field(metadata={'query_param': { 'field_name': 'monitorClass', 'style': 'form', 'explode': True }})
+    monitor_class: str = dataclasses.field(metadata={'query_param': { 'field_name': 'monitorClass', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectNowRequest:
-    path_params: CollectNowPathParams = field()
-    query_params: CollectNowQueryParams = field()
+    path_params: CollectNowPathParams = dataclasses.field()
+    query_params: CollectNowQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectNowResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

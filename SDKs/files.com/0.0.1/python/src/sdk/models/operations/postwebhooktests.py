@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import webhooktestentity as shared_webhooktestentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhookTestsRequestBody:
-    url: str = field(metadata={'multipart_form': { 'field_name': 'url' }})
-    action: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'action' }})
-    body: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'body', 'json': True }})
-    encoding: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
-    file_as_body: Optional[bool] = field(default=None, metadata={'multipart_form': { 'field_name': 'file_as_body' }})
-    file_form_field: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'file_form_field' }})
-    headers: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'headers', 'json': True }})
-    method: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'method' }})
-    raw_body: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'raw_body' }})
+    url: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'url' }})
+    action: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'action' }})
+    body: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'body', 'json': True }})
+    encoding: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
+    file_as_body: Optional[bool] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'file_as_body' }})
+    file_form_field: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'file_form_field' }})
+    headers: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'headers', 'json': True }})
+    method: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'method' }})
+    raw_body: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'raw_body' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhookTestsRequest:
-    request: PostWebhookTestsRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostWebhookTestsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhookTestsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    webhook_test_entity: Optional[shared.WebhookTestEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    webhook_test_entity: Optional[shared_webhooktestentity.WebhookTestEntity] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StartVpcEndpointServicePrivateDNSVerificationResult:
-    return_value: Optional[bool] = field(default=None)
+    return_value: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

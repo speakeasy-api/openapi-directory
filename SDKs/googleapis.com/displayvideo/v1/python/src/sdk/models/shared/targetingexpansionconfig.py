@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,12 +15,12 @@ class TargetingExpansionConfigTargetingExpansionLevelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TargetingExpansionConfig:
     r"""TargetingExpansionConfig
     Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning November 7, 2022, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by November 9, 2022.
     """
     
-    exclude_first_party_audience: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludeFirstPartyAudience') }})
-    targeting_expansion_level: Optional[TargetingExpansionConfigTargetingExpansionLevelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingExpansionLevel') }})
+    exclude_first_party_audience: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludeFirstPartyAudience') }})
+    targeting_expansion_level: Optional[TargetingExpansionConfigTargetingExpansionLevelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingExpansionLevel') }})
     

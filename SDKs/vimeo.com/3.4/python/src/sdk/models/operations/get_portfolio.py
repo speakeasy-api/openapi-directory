@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import portfolio as shared_portfolio
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioPathParams:
-    portfolio_id: float = field(metadata={'path_param': { 'field_name': 'portfolio_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    portfolio_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'portfolio_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioRequest:
-    path_params: GetPortfolioPathParams = field()
+    path_params: GetPortfolioPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioResponse:
-    content_type: str = field()
-    status_code: int = field()
-    portfolio: Optional[shared.Portfolio] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    portfolio: Optional[shared_portfolio.Portfolio] = dataclasses.field(default=None)
     

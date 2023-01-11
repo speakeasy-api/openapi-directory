@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,31 +20,29 @@ req = operations.AlertcenterAlertsBatchDeleteRequest(
     security=operations.AlertcenterAlertsBatchDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.AlertcenterAlertsBatchDeleteQueryParams(
         dollar_xgafv="1",
-        access_token="quaerat",
-        alt="media",
-        callback="quia",
-        fields="minima",
-        key="similique",
-        oauth_token="corrupti",
+        access_token="nisi",
+        alt="json",
+        callback="modi",
+        fields="qui",
+        key="quae",
+        oauth_token="nemo",
         pretty_print=False,
-        quota_user="sint",
+        quota_user="commodi",
         upload_type="nulla",
-        upload_protocol="ab",
+        upload_protocol="culpa",
     ),
     request=shared.BatchDeleteAlertsRequest(
         alert_id=[
-            "quis",
-            "ut",
-            "nesciunt",
+            "id",
         ],
-        customer_id="veniam",
+        customer_id="odit",
     ),
 )
     

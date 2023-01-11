@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,12 +15,12 @@ class CustomRankingInfoImportanceLevelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CustomRankingInfo:
     r"""CustomRankingInfo
     Custom ranking information for SearchJobsRequest.
     """
     
-    importance_level: Optional[CustomRankingInfoImportanceLevelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importanceLevel') }})
-    ranking_expression: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rankingExpression') }})
+    importance_level: Optional[CustomRankingInfoImportanceLevelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importanceLevel') }})
+    ranking_expression: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rankingExpression') }})
     

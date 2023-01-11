@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,24 +18,24 @@ s = sdk.SDK()
     
 req = operations.GetFlightOffersRequest(
     query_params=operations.GetFlightOffersQueryParams(
-        adults=3462733497206508461,
-        children=5902760509050140210,
-        currency_code="quam",
-        departure_date="1996-04-18",
-        destination_location_code="cumque",
-        excluded_airline_codes="soluta",
-        included_airline_codes="sunt",
-        infants=2408550365227740434,
-        max=5521202747878656476,
-        max_price=5596430475431407243,
-        non_stop=True,
-        origin_location_code="qui",
-        return_date="1990-06-29",
+        adults=4814861198247358488,
+        children=4975249678507640420,
+        currency_code="expedita",
+        departure_date="1989-07-02",
+        destination_location_code="qui",
+        excluded_airline_codes="modi",
+        included_airline_codes="nihil",
+        infants=1011676084465510524,
+        max=8764227983217623240,
+        max_price=4745905187492708501,
+        non_stop=False,
+        origin_location_code="sit",
+        return_date="2001-11-04",
         travel_class="BUSINESS",
     ),
 )
     
-res = s.sdk.get_flight_offers(req)
+res = s.shopping.get_flight_offers(req)
 
 if res.success is not None:
     # handle response
@@ -46,7 +45,7 @@ if res.success is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Shopping
 
 * `get_flight_offers` - Return list of Flight Offers based on searching criteria.
 * `search_flight_offers` - Return list of Flight Offers based on posted searching criteria.

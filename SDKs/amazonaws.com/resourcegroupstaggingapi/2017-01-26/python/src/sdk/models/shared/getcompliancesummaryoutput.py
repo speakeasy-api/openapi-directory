@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import summary as shared_summary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetComplianceSummaryOutput:
-    pagination_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
-    summary_list: Optional[List[Summary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SummaryList') }})
+    pagination_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PaginationToken') }})
+    summary_list: Optional[list[shared_summary.Summary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SummaryList') }})
     

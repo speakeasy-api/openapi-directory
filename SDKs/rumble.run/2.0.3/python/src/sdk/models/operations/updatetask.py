@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import task as shared_task
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaskPathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaskSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaskRequest:
-    path_params: UpdateTaskPathParams = field()
-    request: shared.Task = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateTaskSecurity = field()
+    path_params: UpdateTaskPathParams = dataclasses.field()
+    request: shared_task.Task = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    task: Optional[shared.Task] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    task: Optional[shared_task.Task] = dataclasses.field(default=None)
     

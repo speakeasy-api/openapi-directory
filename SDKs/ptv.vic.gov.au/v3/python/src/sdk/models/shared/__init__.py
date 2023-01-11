@@ -48,3 +48,5 @@ from .v3_stopstaffing import *
 from .v3_stopticket import *
 from .v3_vehicledescriptor import *
 from .v3_vehicleposition import *
+
+__all__ = ["V3Departure","V3DeparturesResponse","V3Direction","V3DirectionsResponse","V3DirectionWithDescription","V3Disruption","V3DisruptionDirection","V3DisruptionMode","V3DisruptionModesResponse","V3DisruptionResponse","V3DisruptionRoute","V3Disruptions","V3DisruptionsResponse","V3DisruptionStop","V3ErrorResponse","V3Outlet","V3OutletGeolocation","V3OutletGeolocationResponse","V3OutletResponse","V3PatternDeparture","V3ResultOutlet","V3ResultRoute","V3ResultStop","V3RouteResponse","V3RouteServiceStatus","V3RouteType","V3RouteTypesResponse","V3Run","V3RunResponse","V3RunsResponse","V3SearchResult","V3Status","V3StopAccessibility","V3StopAccessibilityWheelchair","V3StopAmenityDetails","V3StopDetails","V3StopGeosearch","V3StopGps","V3StopLocation","V3StopModel","V3StopOnRoute","V3StoppingPattern","V3StoppingPatternStop","V3StopResponse","V3StopsByDistanceResponse","V3StopsOnRouteResponse","V3StopStaffing","V3StopTicket","V3VehicleDescriptor","V3VehiclePosition"]

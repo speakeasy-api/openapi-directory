@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
@@ -7,23 +7,23 @@ CONFIRM_CARBON_OFFSET1_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmCarbonOffset1RequestBody:
-    carbon_offset: str = field(metadata={'form': { 'field_name': 'carbonOffset' }})
-    transaction_id: str = field(metadata={'form': { 'field_name': 'transaction_id' }})
-    contact_email: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'contactEmail' }})
-    contact_first_name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'contactFirstName' }})
-    contact_last_name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'contactLastName' }})
+    carbon_offset: str = dataclasses.field(metadata={'form': { 'field_name': 'carbonOffset' }})
+    transaction_id: str = dataclasses.field(metadata={'form': { 'field_name': 'transaction_id' }})
+    contact_email: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'contactEmail' }})
+    contact_first_name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'contactFirstName' }})
+    contact_last_name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'contactLastName' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmCarbonOffset1Request:
-    request: Optional[ConfirmCarbonOffset1RequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    server_url: Optional[str] = field(default=None)
+    request: Optional[ConfirmCarbonOffset1RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmCarbonOffset1Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

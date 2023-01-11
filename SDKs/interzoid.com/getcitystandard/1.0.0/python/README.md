@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetcitystandardRequest(
     query_params=operations.GetcitystandardQueryParams(
-        city="molestiae",
+        city="perferendis",
         license="quia",
     ),
 )
     
-res = s.sdk.getcitystandard(req)
+res = s.city_data_standardization.getcitystandard(req)
 
 if res.getcitystandard_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getcitystandard_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### City Data Standardization
 
 * `getcitystandard` - Gets a city name standard for US and international cities
 

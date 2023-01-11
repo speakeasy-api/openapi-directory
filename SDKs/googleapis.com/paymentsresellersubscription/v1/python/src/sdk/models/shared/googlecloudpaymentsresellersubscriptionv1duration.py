@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1Duration:
     r"""GoogleCloudPaymentsResellerSubscriptionV1Duration
     Describes the length of a period of a time.
     """
     
-    count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    unit: Optional[GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    unit: Optional[GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
     

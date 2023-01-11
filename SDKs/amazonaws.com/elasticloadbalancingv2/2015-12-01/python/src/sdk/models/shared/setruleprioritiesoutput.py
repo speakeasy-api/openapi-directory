@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import rule as shared_rule
 
 
-@dataclass
+@dataclasses.dataclass
 class SetRulePrioritiesOutput:
-    rules: Optional[List[Rule]] = field(default=None)
+    rules: Optional[list[shared_rule.Rule]] = dataclasses.field(default=None)
     

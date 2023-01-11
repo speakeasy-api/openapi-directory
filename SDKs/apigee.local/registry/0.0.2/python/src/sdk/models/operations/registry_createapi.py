@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIQueryParams:
-    api_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_id', 'style': 'form', 'explode': True }})
+    api_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIRequest:
-    path_params: RegistryCreateAPIPathParams = field()
-    query_params: RegistryCreateAPIQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RegistryCreateAPIPathParams = dataclasses.field()
+    query_params: RegistryCreateAPIQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api: Optional[Any] = dataclasses.field(default=None)
     

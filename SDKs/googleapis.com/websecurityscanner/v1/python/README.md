@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,67 +20,65 @@ req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
     security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="ipsum",
+        parent="facilis",
     ),
     query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
         dollar_xgafv="1",
-        access_token="quia",
-        alt="json",
-        callback="nam",
-        fields="molestias",
-        key="molestias",
-        oauth_token="eius",
+        access_token="culpa",
+        alt="proto",
+        callback="quis",
+        fields="repellat",
+        key="qui",
+        oauth_token="ea",
         pretty_print=True,
-        quota_user="illo",
-        upload_type="ut",
-        upload_protocol="rem",
+        quota_user="laudantium",
+        upload_type="earum",
+        upload_protocol="eligendi",
     ),
     request=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
                 login_url="ut",
-                password="ipsa",
-                username="non",
+                password="eveniet",
+                username="quos",
             ),
             google_account=shared.GoogleAccount(
-                password="explicabo",
-                username="sed",
+                password="consectetur",
+                username="rem",
             ),
             iap_credential=shared.IapCredential(
                 iap_test_service_account_info=shared.IapTestServiceAccountInfo(
-                    target_audience_client_id="non",
+                    target_audience_client_id="et",
                 ),
             ),
         ),
         blacklist_patterns=[
-            "et",
-            "qui",
-            "placeat",
+            "sed",
+            "sint",
+            "suscipit",
         ],
-        display_name="et",
+        display_name="voluptatum",
         export_to_security_command_center="EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED",
         ignore_http_status_errors=True,
-        managed_scan=False,
-        max_qps=5205230009469101348,
-        name="qui",
+        managed_scan=True,
+        max_qps=1531485269277272612,
+        name="quam",
         risk_level="LOW",
         schedule=shared.Schedule(
-            interval_duration_days=1165905553304735879,
-            schedule_time="nihil",
+            interval_duration_days=1862485506550677711,
+            schedule_time="ipsam",
         ),
         starting_urls=[
-            "numquam",
-            "quaerat",
-            "eveniet",
+            "reiciendis",
         ],
         static_ip_scan=True,
-        user_agent="CHROME_LINUX",
+        user_agent="USER_AGENT_UNSPECIFIED",
     ),
 )
     

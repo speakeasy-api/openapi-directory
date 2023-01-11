@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import salestaxjurisdiction as shared_salestaxjurisdiction
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SalesTaxJurisdictions:
     r"""SalesTaxJurisdictions
     This complex type contains a list of sales tax jurisdictions.
     """
     
-    sales_tax_jurisdictions: Optional[List[SalesTaxJurisdiction]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salesTaxJurisdictions') }})
+    sales_tax_jurisdictions: Optional[list[shared_salestaxjurisdiction.SalesTaxJurisdiction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('salesTaxJurisdictions') }})
     

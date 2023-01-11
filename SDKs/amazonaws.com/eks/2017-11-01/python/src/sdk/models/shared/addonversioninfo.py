@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import compatibility as shared_compatibility
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddonVersionInfo:
     r"""AddonVersionInfo
     Information about an add-on version.
     """
     
-    addon_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addonVersion') }})
-    architecture: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('architecture') }})
-    compatibilities: Optional[List[Compatibility]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compatibilities') }})
+    addon_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addonVersion') }})
+    architecture: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('architecture') }})
+    compatibilities: Optional[list[shared_compatibility.Compatibility]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compatibilities') }})
     

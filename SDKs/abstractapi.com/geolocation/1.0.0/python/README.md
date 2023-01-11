@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetV1Request(
     query_params=operations.GetV1QueryParams(
-        api_key="recusandae",
-        fields="at",
-        ip_address="ipsum",
+        api_key="nihil",
+        fields="rerum",
+        ip_address="dicta",
     ),
 )
     
-res = s.sdk.get_v1_(req)
+res = s.get_v1_(req)
 
 if res.inline_response_200 is not None:
     # handle response

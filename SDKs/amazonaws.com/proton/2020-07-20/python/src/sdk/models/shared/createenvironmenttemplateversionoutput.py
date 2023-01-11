@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import environmenttemplateversion as shared_environmenttemplateversion
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateEnvironmentTemplateVersionOutput:
-    environment_template_version: EnvironmentTemplateVersion = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentTemplateVersion') }})
+    environment_template_version: shared_environmenttemplateversion.EnvironmentTemplateVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentTemplateVersion') }})
     

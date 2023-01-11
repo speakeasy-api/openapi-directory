@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import optimizationactivity as shared_optimizationactivity
 
 class CreativeOptimizationConfigurationOptimizationModelEnum(str, Enum):
     CLICK = "CLICK"
@@ -14,14 +14,14 @@ class CreativeOptimizationConfigurationOptimizationModelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeOptimizationConfiguration:
     r"""CreativeOptimizationConfiguration
     Creative optimization settings.
     """
     
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    optimization_activitys: Optional[List[OptimizationActivity]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optimizationActivitys') }})
-    optimization_model: Optional[CreativeOptimizationConfigurationOptimizationModelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optimizationModel') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    optimization_activitys: Optional[list[shared_optimizationactivity.OptimizationActivity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optimizationActivitys') }})
+    optimization_model: Optional[CreativeOptimizationConfigurationOptimizationModelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optimizationModel') }})
     

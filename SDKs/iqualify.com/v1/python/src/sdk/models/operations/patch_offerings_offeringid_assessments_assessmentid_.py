@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import assessment as shared_assessment
+from ..shared import assessmentresponse as shared_assessmentresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchOfferingsOfferingIDAssessmentsAssessmentIDPathParams:
-    assessment_id: str = field(metadata={'path_param': { 'field_name': 'assessmentId', 'style': 'simple', 'explode': False }})
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    assessment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'assessmentId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchOfferingsOfferingIDAssessmentsAssessmentIDRequest:
-    path_params: PatchOfferingsOfferingIDAssessmentsAssessmentIDPathParams = field()
-    request: shared.Assessment = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchOfferingsOfferingIDAssessmentsAssessmentIDPathParams = dataclasses.field()
+    request: shared_assessment.Assessment = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchOfferingsOfferingIDAssessmentsAssessmentIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    assessment_response: Optional[shared.AssessmentResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    assessment_response: Optional[shared_assessmentresponse.AssessmentResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

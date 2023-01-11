@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,7 +7,7 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExternalUnifiedEvent:
     r"""ExternalUnifiedEvent
     Used to represent any event. With this format, the `objectType` and `eventType` values are stringified CRM types. Example object:
@@ -34,10 +34,10 @@ class ExternalUnifiedEvent:
     ```
     """
     
-    event_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventType') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    object_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectId') }})
-    object_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectType') }})
-    occurred_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('occurredAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    properties: dict[str, str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
+    event_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventType') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    object_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectId') }})
+    object_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectType') }})
+    occurred_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('occurredAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    properties: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
     

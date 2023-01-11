@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudvideointelligencev1p2beta1_videocontext as shared_googlecloudvideointelligencev1p2beta1_videocontext
 
 class GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum(str, Enum):
     FEATURE_UNSPECIFIED = "FEATURE_UNSPECIFIED"
@@ -19,16 +19,16 @@ class GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum(str,
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest:
     r"""GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest
     Video annotation request.
     """
     
-    features: Optional[List[GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('features') }})
-    input_content: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputContent') }})
-    input_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputUri') }})
-    location_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationId') }})
-    output_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outputUri') }})
-    video_context: Optional[GoogleCloudVideointelligenceV1p2beta1VideoContext] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoContext') }})
+    features: Optional[list[GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('features') }})
+    input_content: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputContent') }})
+    input_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputUri') }})
+    location_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationId') }})
+    output_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outputUri') }})
+    video_context: Optional[shared_googlecloudvideointelligencev1p2beta1_videocontext.GoogleCloudVideointelligenceV1p2beta1VideoContext] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoContext') }})
     

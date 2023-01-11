@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import team_full as shared_team_full
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetPathParams:
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetRequest:
-    path_params: TeamsGetPathParams = field()
+    path_params: TeamsGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_full: Optional[shared.TeamFull] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_full: Optional[shared_team_full.TeamFull] = dataclasses.field(default=None)
     

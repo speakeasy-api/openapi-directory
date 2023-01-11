@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import user as shared_user
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateUserResponse:
-    user: Optional[User] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('User') }})
+    user: Optional[shared_user.User] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('User') }})
     

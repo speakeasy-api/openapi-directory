@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import betsliprequest as shared_betsliprequest
+from ..shared import betslipresponse as shared_betslipresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ValidateBetslipQueryParams:
-    expanded: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'expanded', 'style': 'form', 'explode': True }})
+    expanded: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'expanded', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateBetslipHeaders:
-    api_key: str = field(metadata={'header': { 'field_name': 'apiKey', 'style': 'simple', 'explode': False }})
-    api_secret: str = field(metadata={'header': { 'field_name': 'apiSecret', 'style': 'simple', 'explode': False }})
+    api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'apiKey', 'style': 'simple', 'explode': False }})
+    api_secret: str = dataclasses.field(metadata={'header': { 'field_name': 'apiSecret', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateBetslipRequest:
-    headers: ValidateBetslipHeaders = field()
-    query_params: ValidateBetslipQueryParams = field()
-    request: shared.BetSlipRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ValidateBetslipHeaders = dataclasses.field()
+    query_params: ValidateBetslipQueryParams = dataclasses.field()
+    request: shared_betsliprequest.BetSlipRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateBetslipResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bet_slip_response: Optional[shared.BetSlipResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bet_slip_response: Optional[shared_betslipresponse.BetSlipResponse] = dataclasses.field(default=None)
     

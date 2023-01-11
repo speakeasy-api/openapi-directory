@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.CmcerRequest(
     security=operations.CmcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.CmcerRequestBody(
         certificate_parameters=operations.CmcerRequestBodyCertificateParameters(
-            aplno="et",
-            certno="est",
-            sccd="quia",
+            aplno="architecto",
+            certno="ea",
+            sccd="et",
         ),
-        consent_artifact="minima",
+        consent_artifact="soluta",
         format="pdf",
-        txn_id="aut",
+        txn_id="ea",
     ),
 )
     
-res = s.sdk.cmcer(req)
+res = s.ap_is.cmcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cmcer` - Community Certificate
 * `cncer` - Conversion Certificate

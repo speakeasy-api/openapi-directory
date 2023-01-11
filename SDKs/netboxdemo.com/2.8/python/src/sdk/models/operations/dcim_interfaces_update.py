@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabledeviceinterface as shared_writabledeviceinterface
+from ..shared import deviceinterface as shared_deviceinterface
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesUpdateRequest:
-    path_params: DcimInterfacesUpdatePathParams = field()
-    request: shared.WritableDeviceInterfaceInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimInterfacesUpdatePathParams = dataclasses.field()
+    request: shared_writabledeviceinterface.WritableDeviceInterfaceInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_interface: Optional[shared.DeviceInterface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_interface: Optional[shared_deviceinterface.DeviceInterface] = dataclasses.field(default=None)
     

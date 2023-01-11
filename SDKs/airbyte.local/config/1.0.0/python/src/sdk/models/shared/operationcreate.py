@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import operatorconfiguration as shared_operatorconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OperationCreate:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    operator_configuration: OperatorConfiguration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operatorConfiguration') }})
-    workspace_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workspaceId') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    operator_configuration: shared_operatorconfiguration.OperatorConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operatorConfiguration') }})
+    workspace_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workspaceId') }})
     

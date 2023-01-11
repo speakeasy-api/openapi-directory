@@ -1,11 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from enum import Enum
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MoveAddressToVpcResult:
-    allocation_id: Optional[str] = field(default=None)
-    status: Optional[StatusEnum] = field(default=None)
+    allocation_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    status: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

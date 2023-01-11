@@ -8,22 +8,23 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.GetResourcesCampaignsIDJSONRequest(
-    path_params=operations.GetResourcesCampaignsIDJSONPathParams(
-        id=7387490049421462216,
+req = operations.GetResourcesCampaignsJSONRequest(
+    query_params=operations.GetResourcesCampaignsJSONQueryParams(
+        max=2660338303249884092,
+        offset=6293786694293878591,
+        sort="qui",
     ),
 )
     
-res = s.campaigns.get_resources_campaigns_id_json(req)
+res = s.campaigns.get_resources_campaigns_json(req)
 
 if res.campaign_wrapped is not None:
     # handle response
@@ -35,30 +36,30 @@ if res.campaign_wrapped is not None:
 
 ### campaigns
 
+* `get_resources_campaigns_json` - Get Campaigns
 * `get_resources_campaigns_id_json` - Get Campaign by ID
 * `get_resources_campaigns_id_media_json` - Get MediaItems by Campaign ID
 * `get_resources_campaigns_id_syndicate_format_` - Get MediaItems for Campaign
-* `get_resources_campaigns_json` - Get Campaigns
 
 ### languages
 
-* `get_resources_languages_id_json` - Get Language by ID
 * `get_resources_languages_json` - Get Languages
+* `get_resources_languages_id_json` - Get Language by ID
 
 ### media
 
+* `get_resources_media_json` - Get MediaItems
 * `get_resources_media_featured_json` - Get the list of featured content in the syndication system
+* `get_resources_media_most_popular_media_format_` - Get MediaItems by popularity
+* `get_resources_media_search_results_json` - Get MediaItems by search query
+* `get_resources_media_id_json` - Get MediaItem by ID
 * `get_resources_media_id_content` - Get content for MediaItem
 * `get_resources_media_id_embed_json` - Get embed code for MediaItem
-* `get_resources_media_id_json` - Get MediaItem by ID
 * `get_resources_media_id_preview_jpg` - Get Tag by ID
 * `get_resources_media_id_related_media_format_` - Get related MediaItems by ID
 * `get_resources_media_id_syndicate_format_` - Get syndicated content for MediaItem
 * `get_resources_media_id_thumbnail_jpg` - Get JPG thumbnail for MediaItem
 * `get_resources_media_id_youtube_meta_data_json` - Get Youtube metadata for MediaItem
-* `get_resources_media_json` - Get MediaItems
-* `get_resources_media_most_popular_media_format_` - Get MediaItems by popularity
-* `get_resources_media_search_results_json` - Get MediaItems by search query
 
 ### mediaTypes
 
@@ -70,19 +71,19 @@ if res.campaign_wrapped is not None:
 
 ### sources
 
+* `get_resources_sources_json` - Get Sources
 * `get_resources_sources_id_json` - Get Source by ID
 * `get_resources_sources_id_syndicate_format_` - Get MediaItems for Source
-* `get_resources_sources_json` - Get Sources
 
 ### tags
 
 * `get_resources_tags_format_` - Get Tags
+* `get_resources_tags_tag_languages_format_` - Get TagLanguages
+* `get_resources_tags_tag_types_format_` - Get MediaItems for Tag
 * `get_resources_tags_id_format_` - Get Tag by ID
 * `get_resources_tags_id_media_format_` - Get MediaItems for Tag
 * `get_resources_tags_id_related_format_` - Get related Tags by ID
 * `get_resources_tags_id_syndicate_format_` - Get MediaItems for Tag
-* `get_resources_tags_tag_languages_format_` - Get TagLanguages
-* `get_resources_tags_tag_types_format_` - Get MediaItems for Tag
 
 ### userMediaLists
 

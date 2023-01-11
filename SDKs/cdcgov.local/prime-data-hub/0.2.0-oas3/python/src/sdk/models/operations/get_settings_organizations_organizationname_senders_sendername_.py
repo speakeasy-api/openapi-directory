@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import sender as shared_sender
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameSendersSenderNamePathParams:
-    organization_name: str = field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
-    sender_name: str = field(metadata={'path_param': { 'field_name': 'senderName', 'style': 'simple', 'explode': False }})
+    organization_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
+    sender_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'senderName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest:
-    path_params: GetSettingsOrganizationsOrganizationNameSendersSenderNamePathParams = field()
-    security: GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity = field()
+    path_params: GetSettingsOrganizationsOrganizationNameSendersSenderNamePathParams = dataclasses.field()
+    security: GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sender: Optional[shared.Sender] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sender: Optional[shared_sender.Sender] = dataclasses.field(default=None)
     

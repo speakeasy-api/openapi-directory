@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeTrafficMirrorTargetsResult:
-    next_token: Optional[str] = field(default=None)
-    traffic_mirror_targets: Optional[List[TrafficMirrorTarget]] = field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    traffic_mirror_targets: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

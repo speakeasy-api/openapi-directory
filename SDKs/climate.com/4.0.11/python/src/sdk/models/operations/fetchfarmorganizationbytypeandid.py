@@ -1,32 +1,35 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import farmorganizationtype_enum as shared_farmorganizationtype_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchFarmOrganizationByTypeAndIDPathParams:
-    farm_organization_id: str = field(metadata={'path_param': { 'field_name': 'farmOrganizationId', 'style': 'simple', 'explode': False }})
-    farm_organization_type: shared.FarmOrganizationTypeEnum = field(metadata={'path_param': { 'field_name': 'farmOrganizationType', 'style': 'simple', 'explode': False }})
+    farm_organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'farmOrganizationId', 'style': 'simple', 'explode': False }})
+    farm_organization_type: shared_farmorganizationtype_enum.FarmOrganizationTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'farmOrganizationType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFarmOrganizationByTypeAndIDSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    oauth2_authorization_code: Optional[shared.SchemeOauth2AuthorizationCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_authorization_code: Optional[shared_security.SchemeOauth2AuthorizationCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFarmOrganizationByTypeAndIDRequest:
-    path_params: FetchFarmOrganizationByTypeAndIDPathParams = field()
-    security: FetchFarmOrganizationByTypeAndIDSecurity = field()
+    path_params: FetchFarmOrganizationByTypeAndIDPathParams = dataclasses.field()
+    security: FetchFarmOrganizationByTypeAndIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFarmOrganizationByTypeAndIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    farm_organization: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    farm_organization: Optional[Any] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,44 +18,40 @@ s = sdk.SDK()
     
 req = operations.MirrorAccountsInsertRequest(
     path_params=operations.MirrorAccountsInsertPathParams(
-        account_name="asperiores",
-        account_type="totam",
-        user_token="est",
+        account_name="quo",
+        account_type="dolorem",
+        user_token="quod",
     ),
     query_params=operations.MirrorAccountsInsertQueryParams(
         alt="json",
-        fields="atque",
-        key="corporis",
-        oauth_token="quaerat",
-        pretty_print=True,
-        quota_user="dolor",
-        user_ip="illum",
+        fields="eius",
+        key="dolor",
+        oauth_token="maiores",
+        pretty_print=False,
+        quota_user="recusandae",
+        user_ip="in",
     ),
     request=shared.Account(
         auth_tokens=[
             shared.AuthToken(
-                auth_token="quasi",
-                type="rerum",
-            ),
-            shared.AuthToken(
-                auth_token="sunt",
-                type="omnis",
-            ),
-            shared.AuthToken(
-                auth_token="nam",
-                type="non",
+                auth_token="ipsum",
+                type="mollitia",
             ),
         ],
         features=[
+            "ipsum",
             "vero",
-            "quas",
-            "iste",
+            "autem",
         ],
-        password="distinctio",
+        password="laboriosam",
         user_data=[
             shared.UserData(
-                key="autem",
-                value="saepe",
+                key="incidunt",
+                value="distinctio",
+            ),
+            shared.UserData(
+                key="labore",
+                value="magnam",
             ),
         ],
     ),

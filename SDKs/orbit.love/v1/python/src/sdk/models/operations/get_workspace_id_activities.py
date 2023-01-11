@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivitiesPathParams:
-    workspace_id: str = field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
+    workspace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
     
 class GetWorkspaceIDActivitiesActivityTypeEnum(str, Enum):
     DISCORD_MESSAGE_SENT = "discord:message:sent"
@@ -66,40 +66,40 @@ class GetWorkspaceIDActivitiesSortEnum(str, Enum):
     MEMBER = "member"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivitiesQueryParams:
-    activity_tags: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'activity_tags', 'style': 'form', 'explode': True }})
-    activity_type: Optional[GetWorkspaceIDActivitiesActivityTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'activity_type', 'style': 'form', 'explode': True }})
-    affiliation: Optional[GetWorkspaceIDActivitiesAffiliationEnum] = field(default=None, metadata={'query_param': { 'field_name': 'affiliation', 'style': 'form', 'explode': True }})
-    company: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'company', 'style': 'form', 'explode': True }})
-    direction: Optional[GetWorkspaceIDActivitiesDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    end_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
-    identity: Optional[GetWorkspaceIDActivitiesIdentityEnum] = field(default=None, metadata={'query_param': { 'field_name': 'identity', 'style': 'form', 'explode': True }})
-    items: Optional[GetWorkspaceIDActivitiesItemsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'items', 'style': 'form', 'explode': True }})
-    location: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'location', 'style': 'form', 'explode': True }})
-    member_tags: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'member_tags', 'style': 'form', 'explode': True }})
-    orbit_level: Optional[GetWorkspaceIDActivitiesOrbitLevelEnum] = field(default=None, metadata={'query_param': { 'field_name': 'orbit_level', 'style': 'form', 'explode': True }})
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    sort: Optional[GetWorkspaceIDActivitiesSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
-    type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
-    weight: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'weight', 'style': 'form', 'explode': True }})
+    activity_tags: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'activity_tags', 'style': 'form', 'explode': True }})
+    activity_type: Optional[GetWorkspaceIDActivitiesActivityTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'activity_type', 'style': 'form', 'explode': True }})
+    affiliation: Optional[GetWorkspaceIDActivitiesAffiliationEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'affiliation', 'style': 'form', 'explode': True }})
+    company: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'company', 'style': 'form', 'explode': True }})
+    direction: Optional[GetWorkspaceIDActivitiesDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
+    identity: Optional[GetWorkspaceIDActivitiesIdentityEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'identity', 'style': 'form', 'explode': True }})
+    items: Optional[GetWorkspaceIDActivitiesItemsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'items', 'style': 'form', 'explode': True }})
+    location: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'location', 'style': 'form', 'explode': True }})
+    member_tags: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'member_tags', 'style': 'form', 'explode': True }})
+    orbit_level: Optional[GetWorkspaceIDActivitiesOrbitLevelEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'orbit_level', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    sort: Optional[GetWorkspaceIDActivitiesSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    weight: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'weight', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivitiesSecurity:
-    bearer: shared.SchemeBearer = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    bearer: shared_security.SchemeBearer = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivitiesRequest:
-    path_params: GetWorkspaceIDActivitiesPathParams = field()
-    query_params: GetWorkspaceIDActivitiesQueryParams = field()
-    security: GetWorkspaceIDActivitiesSecurity = field()
+    path_params: GetWorkspaceIDActivitiesPathParams = dataclasses.field()
+    query_params: GetWorkspaceIDActivitiesQueryParams = dataclasses.field()
+    security: GetWorkspaceIDActivitiesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivitiesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

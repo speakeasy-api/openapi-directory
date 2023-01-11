@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import virtualgatewaydata as shared_virtualgatewaydata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteVirtualGatewayOutput:
-    virtual_gateway: VirtualGatewayData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualGateway') }})
+    virtual_gateway: shared_virtualgatewaydata.VirtualGatewayData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualGateway') }})
     

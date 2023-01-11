@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apihealthstatus as shared_apihealthstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHealthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_health_status: Optional[shared.APIHealthStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_health_status: Optional[shared_apihealthstatus.APIHealthStatus] = dataclasses.field(default=None)
     

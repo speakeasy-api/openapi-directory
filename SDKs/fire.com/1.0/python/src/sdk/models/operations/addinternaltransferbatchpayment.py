@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class AddInternalTransferBatchPaymentPathParams:
-    batch_uuid: str = field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
+    batch_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddInternalTransferBatchPaymentBatchItemInternalTransfer:
-    amount: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
-    ican_from: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icanFrom') }})
-    ican_to: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icanTo') }})
-    ref: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
+    amount: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    ican_from: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icanFrom') }})
+    ican_to: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icanTo') }})
+    ref: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddInternalTransferBatchPaymentNewBatchItemResponse:
-    batch_item_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('batchItemUuid') }})
+    batch_item_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('batchItemUuid') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddInternalTransferBatchPaymentRequest:
-    path_params: AddInternalTransferBatchPaymentPathParams = field()
-    request: AddInternalTransferBatchPaymentBatchItemInternalTransfer = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AddInternalTransferBatchPaymentPathParams = dataclasses.field()
+    request: AddInternalTransferBatchPaymentBatchItemInternalTransfer = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddInternalTransferBatchPaymentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    new_batch_item_response: Optional[AddInternalTransferBatchPaymentNewBatchItemResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    new_batch_item_response: Optional[AddInternalTransferBatchPaymentNewBatchItemResponse] = dataclasses.field(default=None)
     

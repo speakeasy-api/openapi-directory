@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interaction_limit as shared_interaction_limit
+from ..shared import interaction_limit_response as shared_interaction_limit_response
 
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForRepoRequest:
-    path_params: InteractionsSetRestrictionsForRepoPathParams = field()
-    request: Optional[shared.InteractionLimit] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: InteractionsSetRestrictionsForRepoPathParams = dataclasses.field()
+    request: Optional[shared_interaction_limit.InteractionLimit] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interaction_limit_response: Optional[shared.InteractionLimitResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interaction_limit_response: Optional[shared_interaction_limit_response.InteractionLimitResponse] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SubnetOutpost:
     r"""SubnetOutpost
     The ID of the outpost subnet.
     """
     
-    subnet_outpost_arn: Optional[str] = field(default=None)
+    subnet_outpost_arn: Optional[str] = dataclasses.field(default=None)
     

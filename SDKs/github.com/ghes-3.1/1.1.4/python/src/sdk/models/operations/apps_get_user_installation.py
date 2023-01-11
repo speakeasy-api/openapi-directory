@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import installation as shared_installation
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationRequest:
-    path_params: AppsGetUserInstallationPathParams = field()
+    path_params: AppsGetUserInstallationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    installation: Optional[shared.Installation] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    installation: Optional[shared_installation.Installation] = dataclasses.field(default=None)
     

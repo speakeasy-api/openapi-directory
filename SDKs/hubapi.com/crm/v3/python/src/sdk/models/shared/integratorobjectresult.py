@@ -1,16 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actionhookactionbody as shared_actionhookactionbody
+from ..shared import iframeactionbody as shared_iframeactionbody
+from ..shared import objecttoken as shared_objecttoken
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IntegratorObjectResult:
-    actions: List[Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    tokens: List[ObjectToken] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tokens') }})
-    link_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkUrl') }})
+    actions: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    tokens: list[shared_objecttoken.ObjectToken] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tokens') }})
+    link_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkUrl') }})
     

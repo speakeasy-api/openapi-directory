@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import album as shared_album
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumPathParams:
-    album_id: float = field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    album_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumRequest:
-    path_params: GetAlbumPathParams = field()
+    path_params: GetAlbumPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAlbumResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album: Optional[shared.Album] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album: Optional[shared_album.Album] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

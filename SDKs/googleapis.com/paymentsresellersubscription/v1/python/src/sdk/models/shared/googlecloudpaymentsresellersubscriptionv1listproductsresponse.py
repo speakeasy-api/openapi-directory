@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudpaymentsresellersubscriptionv1product as shared_googlecloudpaymentsresellersubscriptionv1product
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    products: Optional[List[GoogleCloudPaymentsResellerSubscriptionV1Product]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    products: Optional[list[shared_googlecloudpaymentsresellersubscriptionv1product.GoogleCloudPaymentsResellerSubscriptionV1Product]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
     

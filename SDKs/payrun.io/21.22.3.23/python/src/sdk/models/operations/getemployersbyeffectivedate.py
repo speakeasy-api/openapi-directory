@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import linkcollection as shared_linkcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployersByEffectiveDatePathParams:
-    effective_date: date = field(metadata={'path_param': { 'field_name': 'EffectiveDate', 'style': 'simple', 'explode': False }})
+    effective_date: date = dataclasses.field(metadata={'path_param': { 'field_name': 'EffectiveDate', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployersByEffectiveDateHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployersByEffectiveDateRequest:
-    headers: GetEmployersByEffectiveDateHeaders = field()
-    path_params: GetEmployersByEffectiveDatePathParams = field()
+    headers: GetEmployersByEffectiveDateHeaders = dataclasses.field()
+    path_params: GetEmployersByEffectiveDatePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployersByEffectiveDateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    link_collection: Optional[shared.LinkCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    link_collection: Optional[shared_linkcollection.LinkCollection] = dataclasses.field(default=None)
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import rule as shared_rule
 
 class GetArtifactRuleConfigRuleEnum(str, Enum):
     VALIDITY = "VALIDITY"
     COMPATIBILITY = "COMPATIBILITY"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactRuleConfigPathParams:
-    artifact_id: str = field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
-    rule: GetArtifactRuleConfigRuleEnum = field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
+    artifact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
+    rule: GetArtifactRuleConfigRuleEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactRuleConfigRequest:
-    path_params: GetArtifactRuleConfigPathParams = field()
+    path_params: GetArtifactRuleConfigPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactRuleConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    rule: Optional[shared.Rule] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    rule: Optional[shared_rule.Rule] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRealtimeHeaders:
-    sec_websocket_protocol: str = field(metadata={'header': { 'field_name': 'sec-websocket-protocol', 'style': 'simple', 'explode': False }})
+    sec_websocket_protocol: str = dataclasses.field(metadata={'header': { 'field_name': 'sec-websocket-protocol', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRealtimeRequest:
-    headers: GetRealtimeHeaders = field()
+    headers: GetRealtimeHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRealtimeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

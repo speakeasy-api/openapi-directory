@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import reserveddbinstance as shared_reserveddbinstance
 
 
-@dataclass
+@dataclasses.dataclass
 class PurchaseReservedDbInstancesOfferingResult:
-    reserved_db_instance: Optional[ReservedDbInstance] = field(default=None)
+    reserved_db_instance: Optional[shared_reserveddbinstance.ReservedDbInstance] = dataclasses.field(default=None)
     

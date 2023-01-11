@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -77,11 +77,11 @@ class ExchangeTargetingOptionDetailsExchangeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExchangeTargetingOptionDetails:
     r"""ExchangeTargetingOptionDetails
     Represents a targetable exchange. This will be populated in the exchange_details field of a TargetingOption when targeting_type is `TARGETING_TYPE_EXCHANGE`.
     """
     
-    exchange: Optional[ExchangeTargetingOptionDetailsExchangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
+    exchange: Optional[ExchangeTargetingOptionDetailsExchangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
     

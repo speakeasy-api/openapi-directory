@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.MybusinessnotificationsAccountsGetNotificationSettingRequest(
     path_params=operations.MybusinessnotificationsAccountsGetNotificationSettingPathParams(
-        name="numquam",
+        name="repellat",
     ),
     query_params=operations.MybusinessnotificationsAccountsGetNotificationSettingQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
-        alt="media",
-        callback="in",
-        fields="repellat",
-        key="incidunt",
-        oauth_token="molestiae",
+        dollar_xgafv="2",
+        access_token="ut",
+        alt="json",
+        callback="eum",
+        fields="repellendus",
+        key="totam",
+        oauth_token="facilis",
         pretty_print=False,
         quota_user="ut",
-        upload_type="ad",
-        upload_protocol="adipisci",
+        upload_type="dicta",
+        upload_protocol="enim",
     ),
 )
     

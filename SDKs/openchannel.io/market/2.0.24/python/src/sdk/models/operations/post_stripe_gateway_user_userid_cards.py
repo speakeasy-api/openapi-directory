@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayUserUserIDCardsPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayUserUserIDCardsQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
-    is_default: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'isDefault', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    is_default: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isDefault', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayUserUserIDCardsRequest:
-    path_params: PostStripeGatewayUserUserIDCardsPathParams = field()
-    query_params: PostStripeGatewayUserUserIDCardsQueryParams = field()
+    path_params: PostStripeGatewayUserUserIDCardsPathParams = dataclasses.field()
+    query_params: PostStripeGatewayUserUserIDCardsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStripeGatewayUserUserIDCardsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

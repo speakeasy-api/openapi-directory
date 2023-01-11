@@ -8,22 +8,15 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.GetComicIDInfo0JSONRequest(
-    path_params=operations.GetComicIDInfo0JSONPathParams(
-        comic_id=17.100000,
-    ),
-)
-    
-res = s.sdk.get_comic_id_info_0_json(req)
+res = s.get_info_0_json()
 
 if res.body is not None:
     # handle response
@@ -35,9 +28,9 @@ if res.body is not None:
 
 ### SDK SDK
 
-* `get_comic_id_info_0_json` - Fetch comics and metadata  by comic id.
-
 * `get_info_0_json` - Fetch current comic and metadata.
+
+* `get_comic_id_info_0_json` - Fetch comics and metadata  by comic id.
 
 
 <!-- End SDK Available Operations -->

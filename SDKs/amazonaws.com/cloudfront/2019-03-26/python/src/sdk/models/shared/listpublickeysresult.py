@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import publickeylist as shared_publickeylist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListPublicKeysResult:
-    public_key_list: Optional[PublicKeyList] = field(default=None)
+    public_key_list: Optional[shared_publickeylist.PublicKeyList] = dataclasses.field(default=None)
     

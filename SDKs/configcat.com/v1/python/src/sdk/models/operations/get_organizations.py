@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import organizationmodel_haljson as shared_organizationmodel_haljson
+from ..shared import organizationmodel as shared_organizationmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organization_model_haljsons: Optional[List[shared.OrganizationModelHaljson]] = field(default=None)
-    organization_models: Optional[List[shared.OrganizationModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization_model_haljsons: Optional[list[shared_organizationmodel_haljson.OrganizationModelHaljson]] = dataclasses.field(default=None)
+    organization_models: Optional[list[shared_organizationmodel.OrganizationModel]] = dataclasses.field(default=None)
     

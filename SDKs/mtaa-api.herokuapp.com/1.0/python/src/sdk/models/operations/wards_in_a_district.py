@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class WardsInADistrictPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
-    district: str = field(metadata={'path_param': { 'field_name': 'district', 'style': 'simple', 'explode': False }})
-    region: str = field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    district: str = dataclasses.field(metadata={'path_param': { 'field_name': 'district', 'style': 'simple', 'explode': False }})
+    region: str = dataclasses.field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WardsInADistrictRequest:
-    path_params: WardsInADistrictPathParams = field()
+    path_params: WardsInADistrictPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WardsInADistrictResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

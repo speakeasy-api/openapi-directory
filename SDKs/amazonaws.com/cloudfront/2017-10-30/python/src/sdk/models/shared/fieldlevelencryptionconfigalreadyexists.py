@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class FieldLevelEncryptionConfigAlreadyExists:
     r"""FieldLevelEncryptionConfigAlreadyExists
     The specified configuration for field-level encryption already exists.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

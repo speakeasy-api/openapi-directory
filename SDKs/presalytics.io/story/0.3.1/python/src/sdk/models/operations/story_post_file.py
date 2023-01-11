@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import story as shared_story
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryPostFileQueryParams:
-    include_outline: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_outline', 'style': 'form', 'explode': True }})
+    include_outline: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_outline', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryPostFileRequest:
-    query_params: StoryPostFileQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    query_params: StoryPostFileQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryPostFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    story: Optional[shared.Story] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    story: Optional[shared_story.Story] = dataclasses.field(default=None)
     

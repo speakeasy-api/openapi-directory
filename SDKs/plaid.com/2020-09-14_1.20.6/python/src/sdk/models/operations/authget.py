@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import authgetrequest as shared_authgetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthGetRequest:
-    request: shared.AuthGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_authgetrequest.AuthGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AuthGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    auth_get_response: Optional[dict[str, Any]] = field(default=None)
-    error: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    auth_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

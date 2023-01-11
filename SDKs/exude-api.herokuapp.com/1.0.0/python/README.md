@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,17 +18,17 @@ s = sdk.SDK()
     
 req = operations.FilterFileDataStoppingsRequest(
     path_params=operations.FilterFileDataStoppingsPathParams(
-        type="earum",
+        type="quae",
     ),
     request=operations.FilterFileDataStoppingsRequestBody(
         file=operations.FilterFileDataStoppingsRequestBodyFile(
-            content="esse".encode(),
-            file="non",
+            content="minima".encode(),
+            file="eaque",
         ),
     ),
 )
     
-res = s.sdk.filter_file_data_stoppings(req)
+res = s.exude.filter_file_data_stoppings(req)
 
 if res.exude_response_bean is not None:
     # handle response
@@ -39,7 +38,7 @@ if res.exude_response_bean is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### exude
 
 * `filter_file_data_stoppings` - Filter the stopping words from the provided input file
 * `filter_stoppings` - Filter the stopping words from the provided input data or links

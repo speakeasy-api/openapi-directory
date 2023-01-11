@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSurveyPathParams:
-    survey_id: str = field(metadata={'path_param': { 'field_name': 'SurveyId', 'style': 'simple', 'explode': False }})
+    survey_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'SurveyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSurveyRequest:
-    path_params: GetSurveyPathParams = field()
+    path_params: GetSurveyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSurveyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    survey_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    survey_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import milestone as shared_milestone
 
 
-@dataclass
+@dataclasses.dataclass
 class IssuesGetMilestonePathParams:
-    milestone_number: int = field(metadata={'path_param': { 'field_name': 'milestone_number', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    milestone_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'milestone_number', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IssuesGetMilestoneRequest:
-    path_params: IssuesGetMilestonePathParams = field()
+    path_params: IssuesGetMilestonePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IssuesGetMilestoneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    milestone: Optional[shared.Milestone] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    milestone: Optional[shared_milestone.Milestone] = dataclasses.field(default=None)
     

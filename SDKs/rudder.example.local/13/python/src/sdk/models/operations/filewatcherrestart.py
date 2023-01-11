@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,16 +13,16 @@ class FileWatcherRestart200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FileWatcherRestart200ApplicationJSON:
-    action: FileWatcherRestart200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: FileWatcherRestart200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: FileWatcherRestart200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: FileWatcherRestart200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FileWatcherRestartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_watcher_restart_200_application_json_object: Optional[FileWatcherRestart200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_watcher_restart_200_application_json_object: Optional[FileWatcherRestart200ApplicationJSON] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DefaultSearchFieldStatus:
     r"""DefaultSearchFieldStatus
     The value of the <code>DefaultSearchField</code> configured for this search domain and its current status.
     """
     
-    options: str = field()
-    status: OptionStatus = field()
+    options: str = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

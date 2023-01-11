@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import landlordtenancymodel as shared_landlordtenancymodel
 
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetTenancyPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetTenancyQueryParams:
-    tenancy_id: str = field(metadata={'query_param': { 'field_name': 'tenancyID', 'style': 'form', 'explode': True }})
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    tenancy_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'tenancyID', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetTenancyRequest:
-    path_params: LandlordControllerGetTenancyPathParams = field()
-    query_params: LandlordControllerGetTenancyQueryParams = field()
+    path_params: LandlordControllerGetTenancyPathParams = dataclasses.field()
+    query_params: LandlordControllerGetTenancyQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetTenancyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    landlord_tenancy_model: Optional[shared.LandlordTenancyModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    landlord_tenancy_model: Optional[shared_landlordtenancymodel.LandlordTenancyModel] = dataclasses.field(default=None)
     

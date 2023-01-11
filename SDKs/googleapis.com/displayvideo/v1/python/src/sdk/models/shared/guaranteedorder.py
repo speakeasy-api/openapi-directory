@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import guaranteedorderstatus as shared_guaranteedorderstatus
+from ..shared import guaranteedorderstatus as shared_guaranteedorderstatus
 
 class GuaranteedOrderExchangeEnum(str, Enum):
     EXCHANGE_UNSPECIFIED = "EXCHANGE_UNSPECIFIED"
@@ -81,42 +82,42 @@ class GuaranteedOrderExchangeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
-class GuaranteedOrderInput:
-    r"""GuaranteedOrderInput
-    A guaranteed order. Guaranteed orders are parent entity of guaranteed inventory sources. When creating a guaranteed inventory source, a guaranteed order ID must be assigned to the inventory source.
-    """
-    
-    default_campaign_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCampaignId') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    exchange: Optional[GuaranteedOrderExchangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
-    publisher_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherName') }})
-    read_access_inherited: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAccessInherited') }})
-    read_advertiser_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAdvertiserIds') }})
-    read_write_advertiser_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWriteAdvertiserId') }})
-    read_write_partner_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWritePartnerId') }})
-    status: Optional[GuaranteedOrderStatusInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GuaranteedOrder:
     r"""GuaranteedOrder
     A guaranteed order. Guaranteed orders are parent entity of guaranteed inventory sources. When creating a guaranteed inventory source, a guaranteed order ID must be assigned to the inventory source.
     """
     
-    default_advertiser_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultAdvertiserId') }})
-    default_campaign_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCampaignId') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    exchange: Optional[GuaranteedOrderExchangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
-    guaranteed_order_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guaranteedOrderId') }})
-    legacy_guaranteed_order_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legacyGuaranteedOrderId') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    publisher_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherName') }})
-    read_access_inherited: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAccessInherited') }})
-    read_advertiser_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAdvertiserIds') }})
-    read_write_advertiser_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWriteAdvertiserId') }})
-    read_write_partner_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWritePartnerId') }})
-    status: Optional[GuaranteedOrderStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    default_advertiser_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultAdvertiserId') }})
+    default_campaign_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCampaignId') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    exchange: Optional[GuaranteedOrderExchangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
+    guaranteed_order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guaranteedOrderId') }})
+    legacy_guaranteed_order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legacyGuaranteedOrderId') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    publisher_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherName') }})
+    read_access_inherited: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAccessInherited') }})
+    read_advertiser_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAdvertiserIds') }})
+    read_write_advertiser_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWriteAdvertiserId') }})
+    read_write_partner_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWritePartnerId') }})
+    status: Optional[shared_guaranteedorderstatus.GuaranteedOrderStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class GuaranteedOrderInput:
+    r"""GuaranteedOrderInput
+    A guaranteed order. Guaranteed orders are parent entity of guaranteed inventory sources. When creating a guaranteed inventory source, a guaranteed order ID must be assigned to the inventory source.
+    """
+    
+    default_campaign_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCampaignId') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    exchange: Optional[GuaranteedOrderExchangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
+    publisher_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherName') }})
+    read_access_inherited: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAccessInherited') }})
+    read_advertiser_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readAdvertiserIds') }})
+    read_write_advertiser_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWriteAdvertiserId') }})
+    read_write_partner_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('readWritePartnerId') }})
+    status: Optional[shared_guaranteedorderstatus.GuaranteedOrderStatusInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

@@ -233,49 +233,6 @@ class SDK:
         return res
 
     
-    def get_authorize_endpoint_access(self, request: operations.GetAuthorizeEndpointAccessRequest) -> operations.GetAuthorizeEndpointAccessResponse:
-        r"""Grants access to a cluster.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=AuthorizeEndpointAccess"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetAuthorizeEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_authorize_snapshot_access(self, request: operations.GetAuthorizeSnapshotAccessRequest) -> operations.GetAuthorizeSnapshotAccessResponse:
         r"""<p>Authorizes the specified Amazon Web Services account to restore the specified snapshot.</p> <p> For more information about working with snapshots, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html\">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
         """
@@ -313,37 +270,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_batch_modify_cluster_snapshots(self, request: operations.GetBatchModifyClusterSnapshotsRequest) -> operations.GetBatchModifyClusterSnapshotsResponse:
-        r"""Modifies the settings for a set of cluster snapshots.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=BatchModifyClusterSnapshots"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetBatchModifyClusterSnapshotsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -455,61 +381,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_create_endpoint_access(self, request: operations.GetCreateEndpointAccessRequest) -> operations.GetCreateEndpointAccessResponse:
-        r"""Creates a Redshift-managed VPC endpoint.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=CreateEndpointAccess"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetCreateEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 486:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 487:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 488:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 489:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -993,36 +864,6 @@ class SDK:
         return res
 
     
-    def get_delete_tags(self, request: operations.GetDeleteTagsRequest) -> operations.GetDeleteTagsResponse:
-        r"""Deletes tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or tags.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DeleteTags"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDeleteTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_delete_usage_limit(self, request: operations.GetDeleteUsageLimitRequest) -> operations.GetDeleteUsageLimitResponse:
         r"""Deletes a usage limit from a cluster.
         """
@@ -1047,31 +888,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_account_attributes(self, request: operations.GetDescribeAccountAttributesRequest) -> operations.GetDescribeAccountAttributesResponse:
-        r"""Returns a list of attributes attached to an account
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeAccountAttributes"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeAccountAttributesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -1140,37 +956,6 @@ class SDK:
         return res
 
     
-    def get_describe_cluster_parameter_groups(self, request: operations.GetDescribeClusterParameterGroupsRequest) -> operations.GetDescribeClusterParameterGroupsResponse:
-        r"""<p>Returns a list of Amazon Redshift parameter groups, including parameter groups you created and the default parameter group. For each parameter group, the response includes the parameter group name, description, and parameter group family name. You can optionally specify a name to retrieve the description of a specific parameter group.</p> <p> For more information about parameters and parameter groups, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html\">Amazon Redshift Parameter Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all parameter groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all parameter groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, parameter groups are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeClusterParameterGroups"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeClusterParameterGroupsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_describe_cluster_parameters(self, request: operations.GetDescribeClusterParametersRequest) -> operations.GetDescribeClusterParametersResponse:
         r"""<p>Returns a detailed list of parameters contained within the specified Amazon Redshift parameter group. For each parameter the response includes information such as parameter name, description, data type, value, whether the parameter value is modifiable, and so on.</p> <p>You can specify <i>source</i> filter to retrieve parameters of only specific type. For example, to retrieve parameters that were modified by a user action such as from <a>ModifyClusterParameterGroup</a>, you can specify <i>source</i> equal to <i>user</i>.</p> <p> For more information about parameters and parameter groups, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html\">Amazon Redshift Parameter Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
         """
@@ -1193,68 +978,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_cluster_security_groups(self, request: operations.GetDescribeClusterSecurityGroupsRequest) -> operations.GetDescribeClusterSecurityGroupsResponse:
-        r"""<p>Returns information about Amazon Redshift security groups. If the name of a security group is specified, the response will contain only information about only that security group.</p> <p> For information about managing security groups, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html\">Amazon Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all security groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all security groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, security groups are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeClusterSecurityGroups"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeClusterSecurityGroupsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_cluster_subnet_groups(self, request: operations.GetDescribeClusterSubnetGroupsRequest) -> operations.GetDescribeClusterSubnetGroupsResponse:
-        r"""<p>Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups. By default, this operation returns information about all cluster subnet groups that are defined in your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all subnet groups that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subnet groups that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subnet groups are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeClusterSubnetGroups"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeClusterSubnetGroupsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -1311,37 +1034,6 @@ class SDK:
         res = operations.GetDescribeClusterVersionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_clusters(self, request: operations.GetDescribeClustersRequest) -> operations.GetDescribeClustersResponse:
-        r"""<p>Returns properties of provisioned clusters including general cluster properties, cluster database properties, maintenance and backup properties, and security and access properties. This operation supports pagination. For more information about managing clusters, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html\">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all clusters that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all clusters that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, clusters are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeClusters"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeClustersResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -1547,37 +1239,6 @@ class SDK:
         return res
 
     
-    def get_describe_event_subscriptions(self, request: operations.GetDescribeEventSubscriptionsRequest) -> operations.GetDescribeEventSubscriptionsResponse:
-        r"""<p>Lists descriptions of all the Amazon Redshift event notification subscriptions for a customer account. If you specify a subscription name, lists the description for that subscription.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all event notification subscriptions that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all subscriptions that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, subscriptions are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeEventSubscriptions"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeEventSubscriptionsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_describe_events(self, request: operations.GetDescribeEventsRequest) -> operations.GetDescribeEventsResponse:
         r"""Returns events related to clusters, security groups, snapshots, and parameter groups for the past 14 days. Events specific to a particular cluster, security group, snapshot or parameter group can be obtained by providing the name as a parameter. By default, the past hour of events are returned.
         """
@@ -1597,68 +1258,6 @@ class SDK:
         res = operations.GetDescribeEventsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_hsm_client_certificates(self, request: operations.GetDescribeHsmClientCertificatesRequest) -> operations.GetDescribeHsmClientCertificatesResponse:
-        r"""<p>Returns information about the specified HSM client certificate. If no certificate ID is specified, returns information about all the HSM certificates owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM client certificates that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM client certificates that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM client certificates are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeHsmClientCertificates"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeHsmClientCertificatesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_hsm_configurations(self, request: operations.GetDescribeHsmConfigurationsRequest) -> operations.GetDescribeHsmConfigurationsResponse:
-        r"""<p>Returns information about the specified Amazon Redshift HSM configuration. If no configuration ID is specified, returns information about all the HSM configurations owned by your Amazon Web Services account.</p> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM connections that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all HSM connections that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, HSM connections are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeHsmConfigurations"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeHsmConfigurationsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -1845,62 +1444,6 @@ class SDK:
         return res
 
     
-    def get_describe_snapshot_copy_grants(self, request: operations.GetDescribeSnapshotCopyGrantsRequest) -> operations.GetDescribeSnapshotCopyGrantsResponse:
-        r"""<p>Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region.</p> <p> For more information about managing snapshot copy grants, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html\">Amazon Redshift Database Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>. </p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeSnapshotCopyGrants"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeSnapshotCopyGrantsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_snapshot_schedules(self, request: operations.GetDescribeSnapshotSchedulesRequest) -> operations.GetDescribeSnapshotSchedulesResponse:
-        r"""Returns a list of snapshot schedules. 
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeSnapshotSchedules"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeSnapshotSchedulesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_describe_storage(self, request: operations.GetDescribeStorageRequest) -> operations.GetDescribeStorageResponse:
         r"""Returns account level backups storage size and provisional storage.
         """
@@ -1943,68 +1486,6 @@ class SDK:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetDescribeTableRestoreStatusResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_tags(self, request: operations.GetDescribeTagsRequest) -> operations.GetDescribeTagsResponse:
-        r"""<p>Returns a list of tags. You can return tags from a specific resource by specifying an ARN, or you can return all tags for a given type of resource, such as clusters, snapshots, and so on.</p> <p>The following are limitations for <code>DescribeTags</code>: </p> <ul> <li> <p>You cannot specify an ARN and a resource-type value together in the same request.</p> </li> <li> <p>You cannot use the <code>MaxRecords</code> and <code>Marker</code> parameters together with the ARN parameter.</p> </li> <li> <p>The <code>MaxRecords</code> parameter can be a range from 10 to 50 results to return in a request.</p> </li> </ul> <p>If you specify both tag keys and tag values in the same request, Amazon Redshift returns all resources that match any combination of the specified keys and values. For example, if you have <code>owner</code> and <code>environment</code> for tag keys, and <code>admin</code> and <code>test</code> for tag values, all resources that have any combination of those values are returned.</p> <p>If both tag keys and values are omitted from the request, resources are returned regardless of whether they have tag keys or values associated with them.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeTags"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_describe_usage_limits(self, request: operations.GetDescribeUsageLimitsRequest) -> operations.GetDescribeUsageLimitsResponse:
-        r"""<p>Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster identifier, and feature type parameters:</p> <ul> <li> <p>If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the current account in the current region are returned.</p> </li> <li> <p>If usage limit identifier is provided, then the corresponding usage limit object is returned.</p> </li> <li> <p>If cluster identifier is provided, then all usage limit objects for the specified cluster are returned.</p> </li> <li> <p>If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and feature are returned.</p> </li> </ul>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=DescribeUsageLimits"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetDescribeUsageLimitsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/xml"):
@@ -2219,37 +1700,6 @@ class SDK:
         return res
 
     
-    def get_get_cluster_credentials(self, request: operations.GetGetClusterCredentialsRequest) -> operations.GetGetClusterCredentialsResponse:
-        r"""<p>Returns a database user name and temporary password with temporary authorization to log on to an Amazon Redshift database. The action returns the database user name prefixed with <code>IAM:</code> if <code>AutoCreate</code> is <code>False</code> or <code>IAMA:</code> if <code>AutoCreate</code> is <code>True</code>. You can optionally specify one or more database user groups that the user will join at log on. By default, the temporary credentials expire in 900 seconds. You can optionally specify a duration between 900 seconds (15 minutes) and 3600 seconds (60 minutes). For more information, see <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/generating-user-credentials.html\">Using IAM Authentication to Generate Database User Credentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>The Identity and Access Management (IAM) user or role that runs GetClusterCredentials must have an IAM policy attached that allows access to all necessary actions and resources. For more information about permissions, see <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources\">Resource Policies for GetClusterCredentials</a> in the Amazon Redshift Cluster Management Guide.</p> <p>If the <code>DbGroups</code> parameter is specified, the IAM policy must allow the <code>redshift:JoinGroup</code> action with access to the listed <code>dbgroups</code>. </p> <p>In addition, if the <code>AutoCreate</code> parameter is set to <code>True</code>, then the policy must include the <code>redshift:CreateClusterUser</code> privilege.</p> <p>If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource <code>dbname</code> for the specified database name. </p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=GetClusterCredentials"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetGetClusterCredentialsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_get_reserved_node_exchange_offerings(self, request: operations.GetGetReservedNodeExchangeOfferingsRequest) -> operations.GetGetReservedNodeExchangeOfferingsResponse:
         r"""Returns an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1 reserved node.
         """
@@ -2361,88 +1811,6 @@ class SDK:
         return res
 
     
-    def get_modify_cluster(self, request: operations.GetModifyClusterRequest) -> operations.GetModifyClusterResponse:
-        r"""<p>Modifies the settings for a cluster.</p> <p>You can also change node type and the number of nodes to scale up or down the cluster. When resizing a cluster, you must specify both the number of nodes and the node type even if one of the parameters does not change.</p> <p>You can add another security or parameter group, or change the admin user password. Resetting a cluster password or modifying the security groups associated with a cluster do not need a reboot. However, modifying a parameter group requires a reboot for parameters to take effect. For more information about managing clusters, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html\">Amazon Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifyCluster"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifyClusterResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 486:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 487:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 488:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 489:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 490:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 491:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 492:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 493:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 494:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 495:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 496:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 497:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 498:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_modify_cluster_db_revision(self, request: operations.GetModifyClusterDbRevisionRequest) -> operations.GetModifyClusterDbRevisionResponse:
         r"""Modifies the database revision of a cluster. The database revision is a unique revision of the database running in a cluster.
         """
@@ -2471,37 +1839,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_modify_cluster_iam_roles(self, request: operations.GetModifyClusterIamRolesRequest) -> operations.GetModifyClusterIamRolesResponse:
-        r"""<p>Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services.</p> <p>A cluster can have up to 10 IAM roles associated at any time.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifyClusterIamRoles"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifyClusterIamRolesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -2606,144 +1943,6 @@ class SDK:
         return res
 
     
-    def get_modify_cluster_subnet_group(self, request: operations.GetModifyClusterSubnetGroupRequest) -> operations.GetModifyClusterSubnetGroupResponse:
-        r"""Modifies a cluster subnet group to include the specified list of VPC subnets. The operation replaces the existing list of subnets with the new list of subnets.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifyClusterSubnetGroup"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifyClusterSubnetGroupResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_modify_endpoint_access(self, request: operations.GetModifyEndpointAccessRequest) -> operations.GetModifyEndpointAccessResponse:
-        r"""Modifies a Redshift-managed VPC endpoint.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifyEndpointAccess"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifyEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_modify_event_subscription(self, request: operations.GetModifyEventSubscriptionRequest) -> operations.GetModifyEventSubscriptionResponse:
-        r"""Modifies an existing Amazon Redshift event notification subscription.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifyEventSubscription"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifyEventSubscriptionResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 486:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 487:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 488:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_modify_snapshot_copy_retention_period(self, request: operations.GetModifySnapshotCopyRetentionPeriodRequest) -> operations.GetModifySnapshotCopyRetentionPeriodResponse:
         r"""Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region. By default, this operation only changes the retention period of copied automated snapshots. The retention periods for both new and existing copied automated snapshots are updated with the new retention period. You can set the manual option to change only the retention periods of copied manual snapshots. If you set this option, only newly copied manual snapshots have the new retention period. 
         """
@@ -2778,40 +1977,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_modify_snapshot_schedule(self, request: operations.GetModifySnapshotScheduleRequest) -> operations.GetModifySnapshotScheduleResponse:
-        r"""Modifies a snapshot schedule. Any schedule associated with a cluster is modified asynchronously.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=ModifySnapshotSchedule"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetModifySnapshotScheduleResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -3031,106 +2196,6 @@ class SDK:
         return res
 
     
-    def get_restore_from_cluster_snapshot(self, request: operations.GetRestoreFromClusterSnapshotRequest) -> operations.GetRestoreFromClusterSnapshotResponse:
-        r"""<p>Creates a new cluster from a snapshot. By default, Amazon Redshift creates the resulting cluster with the same configuration as the original cluster from which the snapshot was created, except that the new cluster is created with the default cluster security and parameter groups. After Amazon Redshift creates the cluster, you can use the <a>ModifyCluster</a> API to associate a different security group and different parameter group with the restored cluster. If you are using a DS node type, you can also choose to change to another DS node type of the same size during restore.</p> <p>If you restore a cluster into a VPC, you must provide a cluster subnet group where you want the cluster restored.</p> <p> For more information about working with snapshots, go to <a href=\"https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html\">Amazon Redshift Snapshots</a> in the <i>Amazon Redshift Cluster Management Guide</i>.</p>
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=RestoreFromClusterSnapshot"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetRestoreFromClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 486:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 487:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 488:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 489:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 490:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 491:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 492:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 493:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 494:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 495:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 496:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 497:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 498:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 499:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 501:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
     def get_restore_table_from_cluster_snapshot(self, request: operations.GetRestoreTableFromClusterSnapshotRequest) -> operations.GetRestoreTableFromClusterSnapshotResponse:
         r"""<p>Creates a new table from a table in an Amazon Redshift cluster snapshot. You must create the new table within the Amazon Redshift cluster that the snapshot was taken from.</p> <p>You cannot use <code>RestoreTableFromClusterSnapshot</code> to restore a table with the same name as an existing table in an Amazon Redshift cluster. That is, you cannot overwrite an existing table in a cluster with a restored table. If you want to replace your original table with a new, restored table, then rename or drop your original table before you call <code>RestoreTableFromClusterSnapshot</code>. When you have renamed your original table, then you can pass the original name of the table as the <code>NewTableName</code> parameter value in the call to <code>RestoreTableFromClusterSnapshot</code>. This way, you can replace the original table with the table created from the snapshot.</p>
         """
@@ -3239,52 +2304,6 @@ class SDK:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
         elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-
-        return res
-
-    
-    def get_revoke_endpoint_access(self, request: operations.GetRevokeEndpointAccessRequest) -> operations.GetRevokeEndpointAccessResponse:
-        r"""Revokes access to a cluster.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/#Action=RevokeEndpointAccess"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetRevokeEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 480:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 481:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 482:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 483:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 484:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 485:
-            if utils.match_content_type(content_type, "text/xml"):
-                res.body = r.content
-        elif r.status_code == 486:
             if utils.match_content_type(content_type, "text/xml"):
                 res.body = r.content
 
@@ -3402,14 +2421,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AcceptReservedNodeExchange"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAcceptReservedNodeExchangeResponse(status_code=r.status_code, content_type=content_type)
@@ -3451,14 +2470,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AddPartner"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAddPartnerResponse(status_code=r.status_code, content_type=content_type)
@@ -3488,14 +2507,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AssociateDataShareConsumer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAssociateDataShareConsumerResponse(status_code=r.status_code, content_type=content_type)
@@ -3522,14 +2541,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AuthorizeClusterSecurityGroupIngress"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAuthorizeClusterSecurityGroupIngressResponse(status_code=r.status_code, content_type=content_type)
@@ -3562,14 +2581,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AuthorizeDataShare"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAuthorizeDataShareResponse(status_code=r.status_code, content_type=content_type)
@@ -3593,14 +2612,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AuthorizeEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAuthorizeEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -3639,14 +2658,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=AuthorizeSnapshotAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostAuthorizeSnapshotAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -3685,14 +2704,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=BatchDeleteClusterSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostBatchDeleteClusterSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -3716,14 +2735,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=BatchModifyClusterSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostBatchModifyClusterSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -3750,14 +2769,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CancelResize"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCancelResizeResponse(status_code=r.status_code, content_type=content_type)
@@ -3790,14 +2809,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CopyClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCopyClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -3833,14 +2852,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateAuthenticationProfile"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateAuthenticationProfileResponse(status_code=r.status_code, content_type=content_type)
@@ -3870,14 +2889,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -3964,14 +2983,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateClusterParameterGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateClusterParameterGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4004,14 +3023,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateClusterSecurityGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateClusterSecurityGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4044,14 +3063,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -4093,14 +3112,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateClusterSubnetGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateClusterSubnetGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4145,14 +3164,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -4203,14 +3222,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateEventSubscription"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateEventSubscriptionResponse(status_code=r.status_code, content_type=content_type)
@@ -4264,14 +3283,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateHsmClientCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateHsmClientCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -4304,14 +3323,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateHsmConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateHsmConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -4344,14 +3363,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateScheduledAction"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateScheduledActionResponse(status_code=r.status_code, content_type=content_type)
@@ -4390,14 +3409,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateSnapshotCopyGrant"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateSnapshotCopyGrantResponse(status_code=r.status_code, content_type=content_type)
@@ -4436,14 +3455,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateSnapshotSchedule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateSnapshotScheduleResponse(status_code=r.status_code, content_type=content_type)
@@ -4482,14 +3501,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -4521,14 +3540,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=CreateUsageLimit"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostCreateUsageLimitResponse(status_code=r.status_code, content_type=content_type)
@@ -4570,14 +3589,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeauthorizeDataShare"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeauthorizeDataShareResponse(status_code=r.status_code, content_type=content_type)
@@ -4601,14 +3620,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteAuthenticationProfile"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteAuthenticationProfileResponse(status_code=r.status_code, content_type=content_type)
@@ -4635,14 +3654,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -4678,14 +3697,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteClusterParameterGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteClusterParameterGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4711,14 +3730,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteClusterSecurityGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteClusterSecurityGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4744,14 +3763,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -4778,14 +3797,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteClusterSubnetGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteClusterSubnetGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -4814,14 +3833,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -4857,14 +3876,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteEventSubscription"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteEventSubscriptionResponse(status_code=r.status_code, content_type=content_type)
@@ -4890,14 +3909,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteHsmClientCertificate"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteHsmClientCertificateResponse(status_code=r.status_code, content_type=content_type)
@@ -4923,14 +3942,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteHsmConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteHsmConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -4956,14 +3975,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeletePartner"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeletePartnerResponse(status_code=r.status_code, content_type=content_type)
@@ -4993,14 +4012,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteScheduledAction"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteScheduledActionResponse(status_code=r.status_code, content_type=content_type)
@@ -5026,14 +4045,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteSnapshotCopyGrant"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteSnapshotCopyGrantResponse(status_code=r.status_code, content_type=content_type)
@@ -5059,14 +4078,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteSnapshotSchedule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteSnapshotScheduleResponse(status_code=r.status_code, content_type=content_type)
@@ -5092,14 +4111,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -5125,14 +4144,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DeleteUsageLimit"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDeleteUsageLimitResponse(status_code=r.status_code, content_type=content_type)
@@ -5158,14 +4177,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeAccountAttributes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeAccountAttributesResponse(status_code=r.status_code, content_type=content_type)
@@ -5186,14 +4205,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeAuthenticationProfiles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeAuthenticationProfilesResponse(status_code=r.status_code, content_type=content_type)
@@ -5220,14 +4239,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterDbRevisions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterDbRevisionsResponse(status_code=r.status_code, content_type=content_type)
@@ -5254,14 +4273,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterParameterGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterParameterGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -5288,14 +4307,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterParameters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterParametersResponse(status_code=r.status_code, content_type=content_type)
@@ -5319,14 +4338,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterSecurityGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterSecurityGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -5353,14 +4372,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterSnapshots"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterSnapshotsResponse(status_code=r.status_code, content_type=content_type)
@@ -5390,14 +4409,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterSubnetGroups"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterSubnetGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -5424,14 +4443,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterTracks"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterTracksResponse(status_code=r.status_code, content_type=content_type)
@@ -5458,14 +4477,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusterVersions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClusterVersionsResponse(status_code=r.status_code, content_type=content_type)
@@ -5486,14 +4505,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeClusters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeClustersResponse(status_code=r.status_code, content_type=content_type)
@@ -5520,14 +4539,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeDataShares"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeDataSharesResponse(status_code=r.status_code, content_type=content_type)
@@ -5551,14 +4570,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeDataSharesForConsumer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeDataSharesForConsumerResponse(status_code=r.status_code, content_type=content_type)
@@ -5582,14 +4601,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeDataSharesForProducer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeDataSharesForProducerResponse(status_code=r.status_code, content_type=content_type)
@@ -5613,14 +4632,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeDefaultClusterParameters"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeDefaultClusterParametersResponse(status_code=r.status_code, content_type=content_type)
@@ -5641,14 +4660,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -5678,14 +4697,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeEndpointAuthorization"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeEndpointAuthorizationResponse(status_code=r.status_code, content_type=content_type)
@@ -5712,14 +4731,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeEventCategories"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeEventCategoriesResponse(status_code=r.status_code, content_type=content_type)
@@ -5740,14 +4759,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeEventSubscriptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeEventSubscriptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -5774,14 +4793,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeEvents"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeEventsResponse(status_code=r.status_code, content_type=content_type)
@@ -5802,14 +4821,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeHsmClientCertificates"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeHsmClientCertificatesResponse(status_code=r.status_code, content_type=content_type)
@@ -5836,14 +4855,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeHsmConfigurations"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeHsmConfigurationsResponse(status_code=r.status_code, content_type=content_type)
@@ -5870,14 +4889,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeLoggingStatus"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeLoggingStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -5901,14 +4920,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeNodeConfigurationOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeNodeConfigurationOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -5941,14 +4960,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeOrderableClusterOptions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeOrderableClusterOptionsResponse(status_code=r.status_code, content_type=content_type)
@@ -5969,14 +4988,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribePartners"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribePartnersResponse(status_code=r.status_code, content_type=content_type)
@@ -6003,14 +5022,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeReservedNodeOfferings"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeReservedNodeOfferingsResponse(status_code=r.status_code, content_type=content_type)
@@ -6040,14 +5059,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeReservedNodes"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeReservedNodesResponse(status_code=r.status_code, content_type=content_type)
@@ -6074,14 +5093,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeResize"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeResizeResponse(status_code=r.status_code, content_type=content_type)
@@ -6108,14 +5127,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeScheduledActions"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeScheduledActionsResponse(status_code=r.status_code, content_type=content_type)
@@ -6142,14 +5161,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeSnapshotCopyGrants"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeSnapshotCopyGrantsResponse(status_code=r.status_code, content_type=content_type)
@@ -6176,14 +5195,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeSnapshotSchedules"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeSnapshotSchedulesResponse(status_code=r.status_code, content_type=content_type)
@@ -6229,14 +5248,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeTableRestoreStatus"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeTableRestoreStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -6263,14 +5282,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeTags"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeTagsResponse(status_code=r.status_code, content_type=content_type)
@@ -6297,14 +5316,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DescribeUsageLimits"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDescribeUsageLimitsResponse(status_code=r.status_code, content_type=content_type)
@@ -6331,14 +5350,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DisableLogging"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDisableLoggingResponse(status_code=r.status_code, content_type=content_type)
@@ -6365,14 +5384,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DisableSnapshotCopy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDisableSnapshotCopyResponse(status_code=r.status_code, content_type=content_type)
@@ -6405,14 +5424,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=DisassociateDataShareConsumer"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostDisassociateDataShareConsumerResponse(status_code=r.status_code, content_type=content_type)
@@ -6439,14 +5458,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=EnableLogging"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostEnableLoggingResponse(status_code=r.status_code, content_type=content_type)
@@ -6485,14 +5504,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=EnableSnapshotCopy"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostEnableSnapshotCopyResponse(status_code=r.status_code, content_type=content_type)
@@ -6546,14 +5565,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetClusterCredentials"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetClusterCredentialsResponse(status_code=r.status_code, content_type=content_type)
@@ -6580,14 +5599,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=GetReservedNodeExchangeOfferings"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGetReservedNodeExchangeOfferingsResponse(status_code=r.status_code, content_type=content_type)
@@ -6626,14 +5645,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyAquaConfiguration"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyAquaConfigurationResponse(status_code=r.status_code, content_type=content_type)
@@ -6663,14 +5682,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyAuthenticationProfile"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyAuthenticationProfileResponse(status_code=r.status_code, content_type=content_type)
@@ -6700,14 +5719,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -6785,14 +5804,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterDbRevision"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterDbRevisionResponse(status_code=r.status_code, content_type=content_type)
@@ -6822,14 +5841,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterIamRoles"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterIamRolesResponse(status_code=r.status_code, content_type=content_type)
@@ -6856,14 +5875,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterMaintenance"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterMaintenanceResponse(status_code=r.status_code, content_type=content_type)
@@ -6890,14 +5909,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterParameterGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterParameterGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -6924,14 +5943,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -6961,14 +5980,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterSnapshotSchedule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterSnapshotScheduleResponse(status_code=r.status_code, content_type=content_type)
@@ -6997,14 +6016,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyClusterSubnetGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyClusterSubnetGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -7043,14 +6062,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -7089,14 +6108,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyEventSubscription"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyEventSubscriptionResponse(status_code=r.status_code, content_type=content_type)
@@ -7144,14 +6163,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyScheduledAction"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyScheduledActionResponse(status_code=r.status_code, content_type=content_type)
@@ -7187,14 +6206,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifySnapshotCopyRetentionPeriod"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifySnapshotCopyRetentionPeriodResponse(status_code=r.status_code, content_type=content_type)
@@ -7230,14 +6249,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifySnapshotSchedule"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifySnapshotScheduleResponse(status_code=r.status_code, content_type=content_type)
@@ -7267,14 +6286,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ModifyUsageLimit"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostModifyUsageLimitResponse(status_code=r.status_code, content_type=content_type)
@@ -7304,14 +6323,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=PauseCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostPauseClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -7338,14 +6357,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=PurchaseReservedNodeOffering"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostPurchaseReservedNodeOfferingResponse(status_code=r.status_code, content_type=content_type)
@@ -7378,14 +6397,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RebootCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRebootClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -7412,14 +6431,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RejectDataShare"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRejectDataShareResponse(status_code=r.status_code, content_type=content_type)
@@ -7443,14 +6462,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ResetClusterParameterGroup"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostResetClusterParameterGroupResponse(status_code=r.status_code, content_type=content_type)
@@ -7477,14 +6496,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ResizeCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostResizeClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -7532,14 +6551,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RestoreFromClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRestoreFromClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -7635,14 +6654,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RestoreTableFromClusterSnapshot"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRestoreTableFromClusterSnapshotResponse(status_code=r.status_code, content_type=content_type)
@@ -7684,14 +6703,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=ResumeCluster"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostResumeClusterResponse(status_code=r.status_code, content_type=content_type)
@@ -7721,14 +6740,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RevokeClusterSecurityGroupIngress"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRevokeClusterSecurityGroupIngressResponse(status_code=r.status_code, content_type=content_type)
@@ -7758,14 +6777,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RevokeEndpointAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRevokeEndpointAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -7807,14 +6826,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RevokeSnapshotAccess"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRevokeSnapshotAccessResponse(status_code=r.status_code, content_type=content_type)
@@ -7844,14 +6863,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=RotateEncryptionKey"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostRotateEncryptionKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -7881,14 +6900,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/#Action=UpdatePartnerStatus"
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._security_client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUpdatePartnerStatusResponse(status_code=r.status_code, content_type=content_type)

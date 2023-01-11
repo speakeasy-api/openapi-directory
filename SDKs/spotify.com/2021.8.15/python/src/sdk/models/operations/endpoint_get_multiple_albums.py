@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import albumsobject as shared_albumsobject
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetMultipleAlbumsQueryParams:
-    ids: str = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
-    market: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    ids: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    market: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetMultipleAlbumsHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetMultipleAlbumsSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetMultipleAlbumsRequest:
-    headers: EndpointGetMultipleAlbumsHeaders = field()
-    query_params: EndpointGetMultipleAlbumsQueryParams = field()
-    security: EndpointGetMultipleAlbumsSecurity = field()
+    headers: EndpointGetMultipleAlbumsHeaders = dataclasses.field()
+    query_params: EndpointGetMultipleAlbumsQueryParams = dataclasses.field()
+    security: EndpointGetMultipleAlbumsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetMultipleAlbumsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    albums_object: Optional[shared.AlbumsObject] = field(default=None)
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    albums_object: Optional[shared_albumsobject.AlbumsObject] = dataclasses.field(default=None)
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

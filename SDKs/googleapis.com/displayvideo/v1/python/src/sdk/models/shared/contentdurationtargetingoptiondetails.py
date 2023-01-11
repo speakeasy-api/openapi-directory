@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,11 +16,11 @@ class ContentDurationTargetingOptionDetailsContentDurationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContentDurationTargetingOptionDetails:
     r"""ContentDurationTargetingOptionDetails
     Represents a targetable content duration. This will be populated in the content_duration_details field when targeting_type is `TARGETING_TYPE_CONTENT_DURATION`.
     """
     
-    content_duration: Optional[ContentDurationTargetingOptionDetailsContentDurationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentDuration') }})
+    content_duration: Optional[ContentDurationTargetingOptionDetailsContentDurationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentDuration') }})
     

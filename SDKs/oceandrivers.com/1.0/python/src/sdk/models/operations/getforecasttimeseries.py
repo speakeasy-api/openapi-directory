@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastTimeSeriesPathParams:
-    latitude: float = field(metadata={'path_param': { 'field_name': 'latitude', 'style': 'simple', 'explode': False }})
-    longitude: float = field(metadata={'path_param': { 'field_name': 'longitude', 'style': 'simple', 'explode': False }})
+    latitude: float = dataclasses.field(metadata={'path_param': { 'field_name': 'latitude', 'style': 'simple', 'explode': False }})
+    longitude: float = dataclasses.field(metadata={'path_param': { 'field_name': 'longitude', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastTimeSeriesQueryParams:
-    weather: str = field(metadata={'query_param': { 'field_name': 'weather', 'style': 'form', 'explode': True }})
-    days: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'days', 'style': 'form', 'explode': True }})
-    endtime: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'endtime', 'style': 'form', 'explode': True }})
-    entryid: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'entryid', 'style': 'form', 'explode': True }})
-    hours: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'hours', 'style': 'form', 'explode': True }})
-    inittime: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'inittime', 'style': 'form', 'explode': True }})
-    wave: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'wave', 'style': 'form', 'explode': True }})
+    weather: str = dataclasses.field(metadata={'query_param': { 'field_name': 'weather', 'style': 'form', 'explode': True }})
+    days: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'days', 'style': 'form', 'explode': True }})
+    endtime: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endtime', 'style': 'form', 'explode': True }})
+    entryid: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'entryid', 'style': 'form', 'explode': True }})
+    hours: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hours', 'style': 'form', 'explode': True }})
+    inittime: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'inittime', 'style': 'form', 'explode': True }})
+    wave: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'wave', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastTimeSeriesRequest:
-    path_params: GetForecastTimeSeriesPathParams = field()
-    query_params: GetForecastTimeSeriesQueryParams = field()
+    path_params: GetForecastTimeSeriesPathParams = dataclasses.field()
+    query_params: GetForecastTimeSeriesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetForecastTimeSeriesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

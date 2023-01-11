@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.DeleteConsumerV1AppointmentsIDRequest(
     path_params=operations.DeleteConsumerV1AppointmentsIDPathParams(
-        id="unde",
+        id="voluptate",
     ),
 )
     
-res = s.sdk.delete_consumer_v1_appointments_id_(req)
+res = s.appointments.delete_consumer_v1_appointments_id_(req)
 
 if res.appointment_view_model is not None:
     # handle response
@@ -40,57 +39,81 @@ if res.appointment_view_model is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Appointments
 
 * `delete_consumer_v1_appointments_id_` - Returns an appointment object
-* `delete_consumer_v1_customers_id_`
-* `delete_consumer_v1_customers_subscriptions_id_`
 * `get_consumer_v1_appointments` - Returns a list of appointments.
 * `get_consumer_v1_appointments_bookingfields` - Returns a list of appointment booking fields
 * `get_consumer_v1_appointments_customfields` - Returns a list of appointment custom field definitions
 * `get_consumer_v1_appointments_id_` - Returns an appointment object.
-* `get_consumer_v1_availability_service_id_start_date_end_date_` - Returns a list of available times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_days` - Returns a list of available days.
-* `get_consumer_v1_availability_service_id_start_date_end_date_times` - Returns a list of available times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_unavailable` - Returns a list of unavailable times.
-* `get_consumer_v1_availability_service_id_start_date_end_date_windows` - Returns a list of available booking window times.
-* `get_consumer_v1_customers` - Returns a list of customers.
-* `get_consumer_v1_customers_bookingfields` - Returns a list of customer booking fields
-* `get_consumer_v1_customers_countries` - Returns a list of country objects
-* `get_consumer_v1_customers_customfields` - Returns a list of customField objects
-* `get_consumer_v1_customers_id_` - Returns a customer object.
-* `get_consumer_v1_customers_id_planlimits_service_id_resource_id_date_time_tz_` - Returns a list of customer booking limits.
-* `get_consumer_v1_customers_id_subscriptions` - Returns a customer subscription object.
-* `get_consumer_v1_customers_plans` - Returns a list of customers.
-* `get_consumer_v1_customers_plans_id_` - Returns a customer object.
-* `get_consumer_v1_customers_states` - Returns a list of state objects
-* `get_consumer_v1_customers_subscriptions` - Returns a list of customer subscriptions.
-* `get_consumer_v1_customers_subscriptions_id_` - Returns a customer subscription object.
-* `get_consumer_v1_locations` - Returns a list of business locations.
-* `get_consumer_v1_locations_id_` - Returns a business location object.
-* `get_consumer_v1_resources` - Returns a list of resources.
-* `get_consumer_v1_resources_id_` - Returns a resource object.
-* `get_consumer_v1_resources_id_services` - Returns a list of resource services.
-* `get_consumer_v1_servicegroups` - Returns a list of service groups.
-* `get_consumer_v1_servicegroups_id_` - Returns a serviceGroup object.
-* `get_consumer_v1_services` - Returns a list of services.
-* `get_consumer_v1_services_allocations_id_` - Get a service allocation
-* `get_consumer_v1_services_id_` - Returns a service object.
-* `get_consumer_v1_services_id_allocations` - Returns a list of service allocations.
-* `get_consumer_v1_services_id_resources` - Returns a list of resources.
-* `get_consumer_v1_settings` - Returns a list of customers.
-* `get_plan_id_`
 * `post_consumer_v1_appointments` - Returns an appointment object
-* `post_consumer_v1_customers` - Creates a new customer object.
-* `post_consumer_v1_customers_id_subscriptions` - Creates a new customer subscription object.
 * `put_consumer_v1_appointments_id_book` - Returns an appointment object
 * `put_consumer_v1_appointments_id_cancel` - Returns an appointment object
 * `put_consumer_v1_appointments_id_confirm` - Set the Appointment Confirm property to true or false
 * `put_consumer_v1_appointments_id_noshow` - For more information see <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a>
 * `put_consumer_v1_appointments_id_reschedule` - Returns an appointment object
 * `put_consumer_v1_appointments_id_reserve` - Returns an appointment object
-* `put_consumer_v1_customers_id_` - Updates a customer object.
+
+### Availability
+
+* `get_consumer_v1_availability_service_id_start_date_end_date_` - Returns a list of available times.
+* `get_consumer_v1_availability_service_id_start_date_end_date_days` - Returns a list of available days.
+* `get_consumer_v1_availability_service_id_start_date_end_date_times` - Returns a list of available times.
+* `get_consumer_v1_availability_service_id_start_date_end_date_unavailable` - Returns a list of unavailable times.
+* `get_consumer_v1_availability_service_id_start_date_end_date_windows` - Returns a list of available booking window times.
+
+### Customers
+
+* `delete_consumer_v1_customers_subscriptions_id_`
+* `delete_consumer_v1_customers_id_`
+* `get_consumer_v1_customers` - Returns a list of customers.
+* `get_consumer_v1_customers_bookingfields` - Returns a list of customer booking fields
+* `get_consumer_v1_customers_countries` - Returns a list of country objects
+* `get_consumer_v1_customers_customfields` - Returns a list of customField objects
+* `get_consumer_v1_customers_plans` - Returns a list of customers.
+* `get_consumer_v1_customers_plans_id_` - Returns a customer object.
+* `get_consumer_v1_customers_states` - Returns a list of state objects
+* `get_consumer_v1_customers_subscriptions` - Returns a list of customer subscriptions.
+* `get_consumer_v1_customers_subscriptions_id_` - Returns a customer subscription object.
+* `get_consumer_v1_customers_id_` - Returns a customer object.
+* `get_consumer_v1_customers_id_planlimits_service_id_resource_id_date_time_tz_` - Returns a list of customer booking limits.
+* `get_consumer_v1_customers_id_subscriptions` - Returns a customer subscription object.
+* `post_consumer_v1_customers` - Creates a new customer object.
+* `post_consumer_v1_customers_id_subscriptions` - Creates a new customer subscription object.
 * `put_consumer_v1_customers_subscriptions_id_` - Updates a customer subscription object.
+* `put_consumer_v1_customers_id_` - Updates a customer object.
+
+### Locations
+
+* `get_consumer_v1_locations` - Returns a list of business locations.
+* `get_consumer_v1_locations_id_` - Returns a business location object.
+
+### Resources
+
+* `get_consumer_v1_resources` - Returns a list of resources.
+* `get_consumer_v1_resources_id_` - Returns a resource object.
+* `get_consumer_v1_resources_id_services` - Returns a list of resource services.
+
+### ServiceGroups
+
+* `get_consumer_v1_servicegroups` - Returns a list of service groups.
+* `get_consumer_v1_servicegroups_id_` - Returns a serviceGroup object.
+
+### Services
+
+* `get_consumer_v1_services` - Returns a list of services.
+* `get_consumer_v1_services_allocations_id_` - Get a service allocation
+* `get_consumer_v1_services_id_` - Returns a service object.
+* `get_consumer_v1_services_id_allocations` - Returns a list of service allocations.
+* `get_consumer_v1_services_id_resources` - Returns a list of resources.
+
+### Settings
+
+* `get_consumer_v1_settings` - Returns a list of customers.
+
+### StripePlans
+
+* `get_plan_id_`
 
 <!-- End SDK Available Operations -->
 

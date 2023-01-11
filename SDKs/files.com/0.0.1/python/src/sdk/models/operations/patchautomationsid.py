@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import automationentity as shared_automationentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAutomationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class PatchAutomationsIDRequestBodyAutomationEnum(str, Enum):
     CREATE_FOLDER = "create_folder"
@@ -26,34 +26,34 @@ class PatchAutomationsIDRequestBodyTriggerEnum(str, Enum):
     ACTION = "action"
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAutomationsIDRequestBody:
-    automation: PatchAutomationsIDRequestBodyAutomationEnum = field(metadata={'multipart_form': { 'field_name': 'automation' }})
-    destination: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'destination' }})
-    destination_replace_from: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'destination_replace_from' }})
-    destination_replace_to: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'destination_replace_to' }})
-    destinations: Optional[List[str]] = field(default=None, metadata={'multipart_form': { 'field_name': 'destinations' }})
-    group_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'group_ids' }})
-    interval: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'interval' }})
-    path: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
-    schedule: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'schedule', 'json': True }})
-    source: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
-    trigger: Optional[PatchAutomationsIDRequestBodyTriggerEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'trigger' }})
-    trigger_action_path: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'trigger_action_path' }})
-    trigger_actions: Optional[List[str]] = field(default=None, metadata={'multipart_form': { 'field_name': 'trigger_actions' }})
-    user_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
-    value: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'value', 'json': True }})
+    automation: PatchAutomationsIDRequestBodyAutomationEnum = dataclasses.field(metadata={'multipart_form': { 'field_name': 'automation' }})
+    destination: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'destination' }})
+    destination_replace_from: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'destination_replace_from' }})
+    destination_replace_to: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'destination_replace_to' }})
+    destinations: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'destinations', 'json': True }})
+    group_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'group_ids' }})
+    interval: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'interval' }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
+    schedule: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'schedule', 'json': True }})
+    source: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
+    trigger: Optional[PatchAutomationsIDRequestBodyTriggerEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'trigger' }})
+    trigger_action_path: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'trigger_action_path' }})
+    trigger_actions: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'trigger_actions', 'json': True }})
+    user_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
+    value: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'value', 'json': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAutomationsIDRequest:
-    path_params: PatchAutomationsIDPathParams = field()
-    request: PatchAutomationsIDRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchAutomationsIDPathParams = dataclasses.field()
+    request: PatchAutomationsIDRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAutomationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    automation_entity: Optional[shared.AutomationEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    automation_entity: Optional[shared_automationentity.AutomationEntity] = dataclasses.field(default=None)
     

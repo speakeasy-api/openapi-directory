@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import frontport as shared_frontport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimFrontPortsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimFrontPortsReadRequest:
-    path_params: DcimFrontPortsReadPathParams = field()
+    path_params: DcimFrontPortsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimFrontPortsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    front_port: Optional[shared.FrontPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    front_port: Optional[shared_frontport.FrontPort] = dataclasses.field(default=None)
     

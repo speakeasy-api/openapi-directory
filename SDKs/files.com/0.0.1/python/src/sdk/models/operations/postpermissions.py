@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import permissionentity as shared_permissionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostPermissionsRequestBody:
-    group_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'group_id' }})
-    path: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
-    permission: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'permission' }})
-    recursive: Optional[bool] = field(default=None, metadata={'multipart_form': { 'field_name': 'recursive' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
-    username: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'username' }})
+    group_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'group_id' }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
+    permission: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'permission' }})
+    recursive: Optional[bool] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'recursive' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    username: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'username' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPermissionsRequest:
-    request: Optional[PostPermissionsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostPermissionsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPermissionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    permission_entity: Optional[shared.PermissionEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    permission_entity: Optional[shared_permissionentity.PermissionEntity] = dataclasses.field(default=None)
     

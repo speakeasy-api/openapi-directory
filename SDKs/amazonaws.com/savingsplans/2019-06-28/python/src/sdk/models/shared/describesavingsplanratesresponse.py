@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import savingsplanrate as shared_savingsplanrate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeSavingsPlanRatesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    savings_plan_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanId') }})
-    search_results: Optional[List[SavingsPlanRate]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('searchResults') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    savings_plan_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanId') }})
+    search_results: Optional[list[shared_savingsplanrate.SavingsPlanRate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('searchResults') }})
     

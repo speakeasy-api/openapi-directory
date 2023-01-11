@@ -1,32 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import snmpconfig as shared_snmpconfig
+from ..shared import apierror as shared_apierror
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBrocadeSwitchSnmpConfigPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBrocadeSwitchSnmpConfigSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBrocadeSwitchSnmpConfigRequest:
-    path_params: UpdateBrocadeSwitchSnmpConfigPathParams = field()
-    security: UpdateBrocadeSwitchSnmpConfigSecurity = field()
-    request: Optional[shared.SnmpConfig] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateBrocadeSwitchSnmpConfigPathParams = dataclasses.field()
+    security: UpdateBrocadeSwitchSnmpConfigSecurity = dataclasses.field()
+    request: Optional[shared_snmpconfig.SnmpConfig] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateBrocadeSwitchSnmpConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    snmp_config: Optional[shared.SnmpConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    snmp_config: Optional[shared_snmpconfig.SnmpConfig] = dataclasses.field(default=None)
     

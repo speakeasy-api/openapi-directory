@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import build as shared_build
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class DecodePathParams:
-    vin: str = field(metadata={'path_param': { 'field_name': 'vin', 'style': 'simple', 'explode': False }})
+    vin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vin', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DecodeQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DecodeRequest:
-    path_params: DecodePathParams = field()
-    query_params: DecodeQueryParams = field()
+    path_params: DecodePathParams = dataclasses.field()
+    query_params: DecodeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DecodeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    build: Optional[shared.Build] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    build: Optional[shared_build.Build] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

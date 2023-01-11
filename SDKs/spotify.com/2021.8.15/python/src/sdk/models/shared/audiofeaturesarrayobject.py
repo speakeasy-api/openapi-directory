@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import audiofeaturesobject as shared_audiofeaturesobject
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AudioFeaturesArrayObject:
-    audio_features: Optional[List[AudioFeaturesObject]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio_features') }})
+    audio_features: Optional[list[shared_audiofeaturesobject.AudioFeaturesObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio_features') }})
     

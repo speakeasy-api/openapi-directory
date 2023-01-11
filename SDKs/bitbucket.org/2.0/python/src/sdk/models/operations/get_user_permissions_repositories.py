@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_repository_permissions as shared_paginated_repository_permissions
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserPermissionsRepositoriesQueryParams:
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserPermissionsRepositoriesSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserPermissionsRepositoriesRequest:
-    query_params: GetUserPermissionsRepositoriesQueryParams = field()
-    security: GetUserPermissionsRepositoriesSecurity = field()
+    query_params: GetUserPermissionsRepositoriesQueryParams = dataclasses.field()
+    security: GetUserPermissionsRepositoriesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserPermissionsRepositoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_repository_permissions: Optional[shared.PaginatedRepositoryPermissions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_repository_permissions: Optional[shared_paginated_repository_permissions.PaginatedRepositoryPermissions] = dataclasses.field(default=None)
     

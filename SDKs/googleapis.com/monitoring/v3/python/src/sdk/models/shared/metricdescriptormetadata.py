@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,13 +16,13 @@ class MetricDescriptorMetadataLaunchStageEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MetricDescriptorMetadata:
     r"""MetricDescriptorMetadata
     Additional annotations that can be used to guide the usage of a metric.
     """
     
-    ingest_delay: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestDelay') }})
-    launch_stage: Optional[MetricDescriptorMetadataLaunchStageEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('launchStage') }})
-    sample_period: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('samplePeriod') }})
+    ingest_delay: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingestDelay') }})
+    launch_stage: Optional[MetricDescriptorMetadataLaunchStageEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('launchStage') }})
+    sample_period: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('samplePeriod') }})
     

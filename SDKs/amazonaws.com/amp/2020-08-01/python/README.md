@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.CreateWorkspaceRequest(
     headers=operations.CreateWorkspaceHeaders(
-        x_amz_algorithm="dolores",
-        x_amz_content_sha256="suscipit",
-        x_amz_credential="impedit",
-        x_amz_date="non",
-        x_amz_security_token="magnam",
-        x_amz_signature="ut",
-        x_amz_signed_headers="possimus",
+        x_amz_algorithm="commodi",
+        x_amz_content_sha256="in",
+        x_amz_credential="quibusdam",
+        x_amz_date="asperiores",
+        x_amz_security_token="quo",
+        x_amz_signature="ea",
+        x_amz_signed_headers="soluta",
     ),
     request=operations.CreateWorkspaceRequestBody(
-        alias="illo",
-        client_token="qui",
+        alias="tempora",
+        client_token="commodi",
         tags={
-            "ipsam": "ducimus",
-            "enim": "blanditiis",
+            "facere": "in",
+            "et": "odit",
         },
     ),
 )
     
-res = s.sdk.create_workspace(req)
+res = s.create_workspace(req)
 
 if res.create_workspace_response is not None:
     # handle response

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import shipment as shared_shipment
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelShipmentPathParams:
-    shipment_id: str = field(metadata={'path_param': { 'field_name': 'shipmentId', 'style': 'simple', 'explode': False }})
+    shipment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shipmentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelShipmentSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelShipmentRequest:
-    path_params: CancelShipmentPathParams = field()
-    security: CancelShipmentSecurity = field()
+    path_params: CancelShipmentPathParams = dataclasses.field()
+    security: CancelShipmentSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelShipmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    shipment: Optional[shared.Shipment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    shipment: Optional[shared_shipment.Shipment] = dataclasses.field(default=None)
     

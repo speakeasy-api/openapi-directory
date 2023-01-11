@@ -1,26 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import carecontext as shared_carecontext
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientLinkReferenceRequestPatient:
-    care_contexts: List[CareContext] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContexts') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    reference_number: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('referenceNumber') }})
+    care_contexts: list[shared_carecontext.CareContext] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContexts') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    reference_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('referenceNumber') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientLinkReferenceRequest:
-    patient: PatientLinkReferenceRequestPatient = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('patient') }})
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    timestamp: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    transaction_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionId') }})
+    patient: PatientLinkReferenceRequestPatient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('patient') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    transaction_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionId') }})
     

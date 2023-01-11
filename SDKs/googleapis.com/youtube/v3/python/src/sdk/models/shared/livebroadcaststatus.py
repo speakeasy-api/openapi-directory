@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -34,16 +34,16 @@ class LiveBroadcastStatusRecordingStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LiveBroadcastStatus:
     r"""LiveBroadcastStatus
     Live broadcast state.
     """
     
-    life_cycle_status: Optional[LiveBroadcastStatusLifeCycleStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifeCycleStatus') }})
-    live_broadcast_priority: Optional[LiveBroadcastStatusLiveBroadcastPriorityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('liveBroadcastPriority') }})
-    made_for_kids: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('madeForKids') }})
-    privacy_status: Optional[LiveBroadcastStatusPrivacyStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
-    recording_status: Optional[LiveBroadcastStatusRecordingStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordingStatus') }})
-    self_declared_made_for_kids: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfDeclaredMadeForKids') }})
+    life_cycle_status: Optional[LiveBroadcastStatusLifeCycleStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifeCycleStatus') }})
+    live_broadcast_priority: Optional[LiveBroadcastStatusLiveBroadcastPriorityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('liveBroadcastPriority') }})
+    made_for_kids: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('madeForKids') }})
+    privacy_status: Optional[LiveBroadcastStatusPrivacyStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
+    recording_status: Optional[LiveBroadcastStatusRecordingStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordingStatus') }})
+    self_declared_made_for_kids: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfDeclaredMadeForKids') }})
     

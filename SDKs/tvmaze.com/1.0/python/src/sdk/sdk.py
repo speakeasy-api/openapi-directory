@@ -1,11 +1,19 @@
 
 
 import requests
-from typing import Any,List,Optional
-from sdk.models import shared, operations
+from sdk.models import shared
 from . import utils
 
-
+from .auth import Auth
+from .followed_networks import FollowedNetworks
+from .followed_people import FollowedPeople
+from .followed_shows import FollowedShows
+from .followed_webchannels import FollowedWebchannels
+from .marked_episodes import MarkedEpisodes
+from .scrobbling import Scrobbling
+from .tagged_shows import TaggedShows
+from .voted_episodes import VotedEpisodes
+from .voted_shows import VotedShows
 
 
 SERVERS = [
@@ -16,6 +24,16 @@ SERVERS = [
 
 class SDK:
     
+    auth: Auth
+    followed_networks: FollowedNetworks
+    followed_people: FollowedPeople
+    followed_shows: FollowedShows
+    followed_webchannels: FollowedWebchannels
+    marked_episodes: MarkedEpisodes
+    scrobbling: Scrobbling
+    tagged_shows: TaggedShows
+    voted_episodes: VotedEpisodes
+    voted_shows: VotedShows
 
     _client: requests.Session
     _security_client: requests.Session
@@ -28,7 +46,7 @@ class SDK:
     def __init__(self) -> None:
         self._client = requests.Session()
         self._security_client = requests.Session()
-        
+        self._init_sdks()
 
 
     def config_server_url(self, server_url: str, params: dict[str, str]):
@@ -37,7 +55,7 @@ class SDK:
         else:
             self._server_url = server_url
 
-        
+        self._init_sdks()
     
 
     def config_client(self, client: requests.Session):
@@ -45,1170 +63,105 @@ class SDK:
         
         if self._security is not None:
             self._security_client = utils.configure_security_client(self._client, self._security)
-        
+        self._init_sdks()
     
 
     def config_security(self, security: shared.Security):
         self._security = security
         self._security_client = utils.configure_security_client(self._client, security)
-        
+        self._init_sdks()
     
     
+    def _init_sdks(self):
+        
+        self.auth = Auth(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.followed_networks = FollowedNetworks(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.followed_people = FollowedPeople(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.followed_shows = FollowedShows(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.followed_webchannels = FollowedWebchannels(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.marked_episodes = MarkedEpisodes(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.scrobbling = Scrobbling(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.tagged_shows = TaggedShows(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.voted_episodes = VotedEpisodes(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.voted_shows = VotedShows(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
     
-    def delete_user_episodes_episode_id_(self, request: operations.DeleteUserEpisodesEpisodeIDRequest) -> operations.DeleteUserEpisodesEpisodeIDResponse:
-        r"""Unmark an episode
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/episodes/{episode_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_follows_networks_network_id_(self, request: operations.DeleteUserFollowsNetworksNetworkIDRequest) -> operations.DeleteUserFollowsNetworksNetworkIDResponse:
-        r"""Unfollow a network
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/networks/{network_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserFollowsNetworksNetworkIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_follows_people_person_id_(self, request: operations.DeleteUserFollowsPeoplePersonIDRequest) -> operations.DeleteUserFollowsPeoplePersonIDResponse:
-        r"""Unfollow a person
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/people/{person_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserFollowsPeoplePersonIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_follows_shows_show_id_(self, request: operations.DeleteUserFollowsShowsShowIDRequest) -> operations.DeleteUserFollowsShowsShowIDResponse:
-        r"""Unfollow a show
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserFollowsShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_follows_webchannels_webchannel_id_(self, request: operations.DeleteUserFollowsWebchannelsWebchannelIDRequest) -> operations.DeleteUserFollowsWebchannelsWebchannelIDResponse:
-        r"""Unfollow a webchannel
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/webchannels/{webchannel_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserFollowsWebchannelsWebchannelIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_tags_tag_id_(self, request: operations.DeleteUserTagsTagIDRequest) -> operations.DeleteUserTagsTagIDResponse:
-        r"""Delete a specific tag
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/tags/{tag_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserTagsTagIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_tags_tag_id_shows_show_id_(self, request: operations.DeleteUserTagsTagIDShowsShowIDRequest) -> operations.DeleteUserTagsTagIDShowsShowIDResponse:
-        r"""Untag a show
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/tags/{tag_id}/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserTagsTagIDShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_votes_episodes_episode_id_(self, request: operations.DeleteUserVotesEpisodesEpisodeIDRequest) -> operations.DeleteUserVotesEpisodesEpisodeIDResponse:
-        r"""Remove an episode vote
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/episodes/{episode_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserVotesEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def delete_user_votes_shows_show_id_(self, request: operations.DeleteUserVotesShowsShowIDRequest) -> operations.DeleteUserVotesShowsShowIDResponse:
-        r"""Remove a show vote
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("DELETE", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.DeleteUserVotesShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_auth_validate(self) -> operations.GetAuthValidateResponse:
-        r"""Validate your authentication credentials
-        If the credentials supplied as HTTP basic are valid, the user's level of premium - if any - is returned.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/auth/validate"
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetAuthValidateResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.GetAuthValidate200ApplicationJSON])
-                res.get_auth_validate_200_application_json_object = out
-        elif r.status_code == 401:
-            pass
-
-        return res
-
-    
-    def get_scrobble_shows_show_id_(self, request: operations.GetScrobbleShowsShowIDRequest) -> operations.GetScrobbleShowsShowIDResponse:
-        r"""List watched and acquired episodes for a show
-        This endpoint can be used by all users, even without premium
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/scrobble/shows/{show_id}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetScrobbleShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MarkedEpisode]])
-                res.marked_episodes = out
-
-        return res
-
-    
-    def get_user_episodes(self, request: operations.GetUserEpisodesRequest) -> operations.GetUserEpisodesResponse:
-        r"""List the marked episodes
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/episodes"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserEpisodesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MarkedEpisode]])
-                res.marked_episodes = out
-
-        return res
-
-    
-    def get_user_episodes_episode_id_(self, request: operations.GetUserEpisodesEpisodeIDRequest) -> operations.GetUserEpisodesEpisodeIDResponse:
-        r"""Check if an episode is marked
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/episodes/{episode_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.MarkedEpisode])
-                res.marked_episode = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_follows_networks(self, request: operations.GetUserFollowsNetworksRequest) -> operations.GetUserFollowsNetworksResponse:
-        r"""List the followed networks
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/follows/networks"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsNetworksResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.NetworkFollow]])
-                res.network_follows = out
-
-        return res
-
-    
-    def get_user_follows_networks_network_id_(self, request: operations.GetUserFollowsNetworksNetworkIDRequest) -> operations.GetUserFollowsNetworksNetworkIDResponse:
-        r"""Check if a network is followed
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/networks/{network_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsNetworksNetworkIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.NetworkFollow])
-                res.network_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_follows_people(self, request: operations.GetUserFollowsPeopleRequest) -> operations.GetUserFollowsPeopleResponse:
-        r"""List the followed people
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/follows/people"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsPeopleResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PersonFollow]])
-                res.person_follows = out
-
-        return res
-
-    
-    def get_user_follows_people_person_id_(self, request: operations.GetUserFollowsPeoplePersonIDRequest) -> operations.GetUserFollowsPeoplePersonIDResponse:
-        r"""Check if a person is followed
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/people/{person_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsPeoplePersonIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.PersonFollow])
-                res.person_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_follows_shows(self, request: operations.GetUserFollowsShowsRequest) -> operations.GetUserFollowsShowsResponse:
-        r"""List the followed shows
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/follows/shows"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsShowsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ShowFollow]])
-                res.show_follows = out
-
-        return res
-
-    
-    def get_user_follows_shows_show_id_(self, request: operations.GetUserFollowsShowsShowIDRequest) -> operations.GetUserFollowsShowsShowIDResponse:
-        r"""Check if a show is followed
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ShowFollow])
-                res.show_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_follows_webchannels(self, request: operations.GetUserFollowsWebchannelsRequest) -> operations.GetUserFollowsWebchannelsResponse:
-        r"""List the followed webchannels
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/follows/webchannels"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsWebchannelsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.WebchannelFollow]])
-                res.webchannel_follows = out
-
-        return res
-
-    
-    def get_user_follows_webchannels_webchannel_id_(self, request: operations.GetUserFollowsWebchannelsWebchannelIDRequest) -> operations.GetUserFollowsWebchannelsWebchannelIDResponse:
-        r"""Check if a webchannel is followed
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/webchannels/{webchannel_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserFollowsWebchannelsWebchannelIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.WebchannelFollow])
-                res.webchannel_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_tags(self) -> operations.GetUserTagsResponse:
-        r"""List all tags
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/tags"
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Tag]])
-                res.tags = out
-
-        return res
-
-    
-    def get_user_tags_tag_id_shows(self, request: operations.GetUserTagsTagIDShowsRequest) -> operations.GetUserTagsTagIDShowsResponse:
-        r"""List all shows under this tag
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/tags/{tag_id}/shows", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserTagsTagIDShowsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagInstance]])
-                res.tag_instances = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_votes_episodes(self) -> operations.GetUserVotesEpisodesResponse:
-        r"""List the episodes voted for
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/votes/episodes"
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserVotesEpisodesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.EpisodeVote]])
-                res.episode_votes = out
-
-        return res
-
-    
-    def get_user_votes_episodes_episode_id_(self, request: operations.GetUserVotesEpisodesEpisodeIDRequest) -> operations.GetUserVotesEpisodesEpisodeIDResponse:
-        r"""Check if an episode is voted for
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/episodes/{episode_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserVotesEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.EpisodeVote])
-                res.episode_vote = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def get_user_votes_shows(self, request: operations.GetUserVotesShowsRequest) -> operations.GetUserVotesShowsResponse:
-        r"""List the shows voted for
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/votes/shows"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserVotesShowsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ShowVote]])
-                res.show_votes = out
-
-        return res
-
-    
-    def get_user_votes_shows_show_id_(self, request: operations.GetUserVotesShowsShowIDRequest) -> operations.GetUserVotesShowsShowIDResponse:
-        r"""Check if a show is voted for
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUserVotesShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ShowVote])
-                res.show_vote = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def patch_user_tags_tag_id_(self, request: operations.PatchUserTagsTagIDRequest) -> operations.PatchUserTagsTagIDResponse:
-        r"""Update a specific tag
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/tags/{tag_id}", request.path_params)
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PatchUserTagsTagIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Tag])
-                res.tag = out
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 422:
-            pass
-
-        return res
-
-    
-    def post_auth_poll(self, request: operations.PostAuthPollRequest) -> operations.PostAuthPollResponse:
-        r"""Poll whether an authentication request was confirmed
-        Using the token acquired in the `start` endpoint, you can start polling this endpoint once every 10 seconds.
-        
-        When the user has confirmed the authentication request on their end, this endpoint will return the user's API key that you can use in subsequent authenticated endpoints. Note that it'll do so only once, subsequent requests after the initial 200 response will return a 404.
-        
-        For as long as the user did not yet confirm their authentication request, this endpoint will return a 403.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/auth/poll"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        if data is None and form is None:
-           raise Exception('request body is required')
-        
-        client = self._security_client
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostAuthPollResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.PostAuthPoll200ApplicationJSON])
-                res.post_auth_poll_200_application_json_object = out
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 429:
-            pass
-
-        return res
-
-    
-    def post_auth_start(self, request: operations.PostAuthStartRequest) -> operations.PostAuthStartResponse:
-        r"""Start an authentication request
-        If you want to access the TVmaze API on behalf of a user without querying them for their password, use this endpoint.
-        
-        To get started, send a POST request containing the user's email address. The response will contain a `token`, which you can use as input to the `poll` endpoint. The user will receive an email prompting them to confirm the authentication request.
-        
-        Alternatively, if you expect the user to be logged in to TVmaze on the device they are currently interacting with, you can set `email_confirmation` to false and redirect them to the `confirm_url` URL. If they are logged in to TVmaze, they will be able to confirm the authentication request instantly.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/auth/start"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        if data is None and form is None:
-           raise Exception('request body is required')
-        
-        client = self._security_client
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostAuthStartResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.PostAuthStart200ApplicationJSON])
-                res.post_auth_start_200_application_json_object = out
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 429:
-            pass
-
-        return res
-
-    
-    def post_scrobble_episodes(self, request: operations.PostScrobbleEpisodesRequest) -> operations.PostScrobbleEpisodesResponse:
-        r"""Mark episodes as acquired or watched based on their IDs
-        This endpoint can be used by all users, even without premium
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/scrobble/episodes"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostScrobbleEpisodesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-        elif r.status_code == 207:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-        elif r.status_code == 422:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-
-        return res
-
-    
-    def post_scrobble_shows(self, request: operations.PostScrobbleShowsRequest) -> operations.PostScrobbleShowsResponse:
-        r"""Mark episodes within a show as acquired or watched based on their attributes
-        To specify a show, supply either `tvmaze_id`, `thetvdb_id` or `imdb_id`. To specify an episode, supply either both `season` and `episode`, or `airdate`.
-        
-        This endpoint can be used by all users, even without premium.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/scrobble/shows"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostScrobbleShowsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-        elif r.status_code == 207:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-        elif r.status_code == 422:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[Any]])
-                res.bulk_response = out
-
-        return res
-
-    
-    def post_user_tags(self, request: operations.PostUserTagsRequest) -> operations.PostUserTagsResponse:
-        r"""Create a new tag
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/user/tags"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostUserTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Tag])
-                res.tag = out
-        elif r.status_code == 422:
-            pass
-
-        return res
-
-    
-    def put_scrobble_episodes_episode_id_(self, request: operations.PutScrobbleEpisodesEpisodeIDRequest) -> operations.PutScrobbleEpisodesEpisodeIDResponse:
-        r"""Mark an episode as acquired or watched based on its ID
-        This endpoint can be used by all users, even without premium
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/scrobble/episodes/{episode_id}", request.path_params)
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutScrobbleEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.MarkedEpisode])
-                res.marked_episode = out
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 422:
-            pass
-
-        return res
-
-    
-    def put_user_episodes_episode_id_(self, request: operations.PutUserEpisodesEpisodeIDRequest) -> operations.PutUserEpisodesEpisodeIDResponse:
-        r"""Mark an episode
-        Set `marked_at` to `NULL` or leave it out to use the current time.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/episodes/{episode_id}", request.path_params)
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.MarkedEpisode])
-                res.marked_episode = out
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 422:
-            pass
-
-        return res
-
-    
-    def put_user_follows_networks_network_id_(self, request: operations.PutUserFollowsNetworksNetworkIDRequest) -> operations.PutUserFollowsNetworksNetworkIDResponse:
-        r"""Follow a network
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/networks/{network_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserFollowsNetworksNetworkIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.NetworkFollow])
-                res.network_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_follows_people_person_id_(self, request: operations.PutUserFollowsPeoplePersonIDRequest) -> operations.PutUserFollowsPeoplePersonIDResponse:
-        r"""Follow a person
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/people/{person_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserFollowsPeoplePersonIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.PersonFollow])
-                res.person_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_follows_shows_show_id_(self, request: operations.PutUserFollowsShowsShowIDRequest) -> operations.PutUserFollowsShowsShowIDResponse:
-        r"""Follow a show
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserFollowsShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ShowFollow])
-                res.show_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_follows_webchannels_webchannel_id_(self, request: operations.PutUserFollowsWebchannelsWebchannelIDRequest) -> operations.PutUserFollowsWebchannelsWebchannelIDResponse:
-        r"""Follow a webchannel
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/follows/webchannels/{webchannel_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserFollowsWebchannelsWebchannelIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.WebchannelFollow])
-                res.webchannel_follow = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_tags_tag_id_shows_show_id_(self, request: operations.PutUserTagsTagIDShowsShowIDRequest) -> operations.PutUserTagsTagIDShowsShowIDResponse:
-        r"""Tag a show
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/tags/{tag_id}/shows/{show_id}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserTagsTagIDShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.TagInstance])
-                res.tag_instance = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_votes_episodes_episode_id_(self, request: operations.PutUserVotesEpisodesEpisodeIDRequest) -> operations.PutUserVotesEpisodesEpisodeIDResponse:
-        r"""Vote for an episode
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/episodes/{episode_id}", request.path_params)
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserVotesEpisodesEpisodeIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.EpisodeVote])
-                res.episode_vote = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
-    def put_user_votes_shows_show_id_(self, request: operations.PutUserVotesShowsShowIDRequest) -> operations.PutUserVotesShowsShowIDResponse:
-        r"""Vote for a show
-        Set `voted_at` to `NULL` or leave it out to use the current time.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/user/votes/shows/{show_id}", request.path_params)
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = self._security_client
-        
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PutUserVotesShowsShowIDResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.ShowVote])
-                res.show_vote = out
-        elif r.status_code == 404:
-            pass
-
-        return res
-
     

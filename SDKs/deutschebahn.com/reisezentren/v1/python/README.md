@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetReisezentrenRequest(
     query_params=operations.GetReisezentrenQueryParams(
-        name="laboriosam",
+        name="nihil",
     ),
 )
     
-res = s.sdk.get_reisezentren(req)
+res = s.get_reisezentren(req)
 
 if res.travel_center_list is not None:
     # handle response
@@ -36,9 +35,9 @@ if res.travel_center_list is not None:
 ### SDK SDK
 
 * `get_reisezentren` - Get all station infos
-* `get_reisezentren_id_` - Get information about a specific station
 * `get_reisezentren_loc_lat_lon_` - Get information about a station near a location
 * `get_reisezentren_loc_lat_lon_dist_` - Get stations in a given radius
+* `get_reisezentren_id_` - Get information about a specific station
 
 <!-- End SDK Available Operations -->
 

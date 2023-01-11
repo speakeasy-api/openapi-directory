@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientRuntimeAbortPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientRuntimeAbortRequest:
-    path_params: ProtocolMqttClientRuntimeAbortPathParams = field()
+    path_params: ProtocolMqttClientRuntimeAbortPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientRuntimeAbortResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_mqtt_client_runtime_abort_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_mqtt_client_runtime_abort_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class MembershipSpecCertificateManagementEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MembershipSpec:
     r"""MembershipSpec
     **Workload Certificate**: The membership-specific input for WorkloadCertificate feature.
     """
     
-    certificate_management: Optional[MembershipSpecCertificateManagementEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateManagement') }})
+    certificate_management: Optional[MembershipSpecCertificateManagementEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateManagement') }})
     

@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import paymentdisputeactivityhistory as shared_paymentdisputeactivityhistory
 
 
 GET_ACTIVITIES_SERVERS = [
@@ -8,26 +9,26 @@ GET_ACTIVITIES_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActivitiesPathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActivitiesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActivitiesRequest:
-    path_params: GetActivitiesPathParams = field()
-    security: GetActivitiesSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: GetActivitiesPathParams = dataclasses.field()
+    security: GetActivitiesSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActivitiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_dispute_activity_history: Optional[shared.PaymentDisputeActivityHistory] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_dispute_activity_history: Optional[shared_paymentdisputeactivityhistory.PaymentDisputeActivityHistory] = dataclasses.field(default=None)
     

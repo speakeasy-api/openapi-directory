@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 
 class ExtensionConfigIntentAddMediaOptEnum(str, Enum):
@@ -10,11 +10,11 @@ class ExtensionConfigIntentAddMediaOptEnum(str, Enum):
     CONFIRM = "confirm"
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigIntentAddMedia:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    opt: Optional[List[ExtensionConfigIntentAddMediaOptEnum]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    opt: Optional[list[ExtensionConfigIntentAddMediaOptEnum]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     
 class ExtensionConfigIntentPlayMediaOptEnum(str, Enum):
     RESOLVE_PLAY_SHUFFLED = "resolvePlayShuffled"
@@ -23,60 +23,60 @@ class ExtensionConfigIntentPlayMediaOptEnum(str, Enum):
     RESOLVE_RESUME_PLAYBACK = "resolveResumePlayback"
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigIntentPlayMedia:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    opt: Optional[List[ExtensionConfigIntentPlayMediaOptEnum]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    opt: Optional[list[ExtensionConfigIntentPlayMediaOptEnum]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     
 class ExtensionConfigIntentUpdateMediaAffinityOptEnum(str, Enum):
     RESOLVE_AFFINITY_TYPE = "resolveAffinityType"
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigIntentUpdateMediaAffinity:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    opt: Optional[List[ExtensionConfigIntentUpdateMediaAffinityOptEnum]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    opt: Optional[list[ExtensionConfigIntentUpdateMediaAffinityOptEnum]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigIntent:
-    play_media: ExtensionConfigIntentPlayMedia = field()
-    add_media: Optional[ExtensionConfigIntentAddMedia] = field(default=None)
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    update_media_affinity: Optional[ExtensionConfigIntentUpdateMediaAffinity] = field(default=None)
+    play_media: ExtensionConfigIntentPlayMedia = dataclasses.field()
+    add_media: Optional[ExtensionConfigIntentAddMedia] = dataclasses.field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    update_media_affinity: Optional[ExtensionConfigIntentUpdateMediaAffinity] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigMediaQueuesPlayMedia:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigMediaQueuesUpdateActivity:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigMediaQueues:
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    play_media: Optional[ExtensionConfigMediaQueuesPlayMedia] = field(default=None)
-    update_activity: Optional[ExtensionConfigMediaQueuesUpdateActivity] = field(default=None)
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    play_media: Optional[ExtensionConfigMediaQueuesPlayMedia] = dataclasses.field(default=None)
+    update_activity: Optional[ExtensionConfigMediaQueuesUpdateActivity] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfigMedia:
-    queues: Optional[ExtensionConfigMediaQueues] = field(default=None)
+    queues: Optional[ExtensionConfigMediaQueues] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtensionConfig:
-    intent: ExtensionConfigIntent = field()
-    media: ExtensionConfigMedia = field()
-    version: str = field()
-    hdr: Optional[dict[str, Any]] = field(default=None)
-    url: Optional[str] = field(default=None)
+    intent: ExtensionConfigIntent = dataclasses.field()
+    media: ExtensionConfigMedia = dataclasses.field()
+    version: str = dataclasses.field()
+    hdr: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     

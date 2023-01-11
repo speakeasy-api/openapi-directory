@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ratetableresponse as shared_ratetableresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRateTablesQueryParams:
-    country_code: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
+    country_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRateTablesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRateTablesRequest:
-    query_params: GetRateTablesQueryParams = field()
-    security: GetRateTablesSecurity = field()
+    query_params: GetRateTablesQueryParams = dataclasses.field()
+    security: GetRateTablesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRateTablesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rate_table_response: Optional[shared.RateTableResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rate_table_response: Optional[shared_ratetableresponse.RateTableResponse] = dataclasses.field(default=None)
     

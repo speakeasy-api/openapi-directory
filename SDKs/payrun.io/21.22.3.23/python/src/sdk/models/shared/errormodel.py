@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -12,25 +12,25 @@ class ErrorModelErrorModelErrorCategoryEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ErrorModelErrorModelErrors:
     r"""ErrorModelErrorModelErrors
     The error models' errors
     """
     
-    error: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Error') }})
+    error: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Error') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ErrorModelErrorModel:
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Description') }})
-    error_category: Optional[ErrorModelErrorModelErrorCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorCategory') }})
-    errors: Optional[ErrorModelErrorModelErrors] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Description') }})
+    error_category: Optional[ErrorModelErrorModelErrorCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorCategory') }})
+    errors: Optional[ErrorModelErrorModelErrors] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ErrorModel:
-    error_model: Optional[ErrorModelErrorModel] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorModel') }})
+    error_model: Optional[ErrorModelErrorModel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorModel') }})
     

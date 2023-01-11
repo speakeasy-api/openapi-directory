@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class RemoveNetworkDevicesPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RemoveNetworkDevicesRequestBody:
-    serial: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serial') }})
+    serial: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serial') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveNetworkDevicesRequest:
-    path_params: RemoveNetworkDevicesPathParams = field()
-    request: RemoveNetworkDevicesRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RemoveNetworkDevicesPathParams = dataclasses.field()
+    request: RemoveNetworkDevicesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveNetworkDevicesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import snapshotcopygrantlist as shared_snapshotcopygrantlist
 
 
-@dataclass
+@dataclasses.dataclass
 class SnapshotCopyGrantMessage:
     r"""SnapshotCopyGrantMessage
     <p/>
     """
     
-    marker: Optional[str] = field(default=None)
-    snapshot_copy_grants: Optional[List[SnapshotCopyGrant]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    snapshot_copy_grants: Optional[list[shared_snapshotcopygrantlist.SnapshotCopyGrantList]] = dataclasses.field(default=None)
     

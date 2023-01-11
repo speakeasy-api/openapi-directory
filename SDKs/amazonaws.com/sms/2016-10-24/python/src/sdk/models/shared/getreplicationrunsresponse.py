@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import replicationjob as shared_replicationjob
+from ..shared import replicationrun as shared_replicationrun
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetReplicationRunsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    replication_job: Optional[ReplicationJob] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replicationJob') }})
-    replication_run_list: Optional[List[ReplicationRun]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replicationRunList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    replication_job: Optional[shared_replicationjob.ReplicationJob] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replicationJob') }})
+    replication_run_list: Optional[list[shared_replicationrun.ReplicationRun]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replicationRunList') }})
     

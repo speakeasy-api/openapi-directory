@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,34 +23,37 @@ req = operations.CreateAliasRequest(
         ),
     ),
     query_params=operations.CreateAliasQueryParams(
-        alias_name="consequatur",
-        domain_name="exercitationem",
+        alias_name="aut",
+        domain_name="porro",
     ),
     request=shared.CreateAliasModel(
         destinations=[
             shared.DestinationModel(
-                country="velit",
-                os="dolor",
-                url="aut",
+                country="magni",
+                os="nihil",
+                url="est",
+            ),
+            shared.DestinationModel(
+                country="ad",
+                os="autem",
+                url="autem",
             ),
         ],
         metatags=[
             shared.MetaTagModel(
-                content="repellat",
-                name="omnis",
+                content="a",
+                name="ut",
             ),
             shared.MetaTagModel(
-                content="quo",
-                name="in",
+                content="quia",
+                name="deleniti",
             ),
         ],
         snippets=[
             shared.SnippetModel(
-                id="et",
+                id="inventore",
                 parameters={
-                    "amet": "quo",
-                    "eligendi": "non",
-                    "quod": "doloribus",
+                    "in": "soluta",
                 },
             ),
         ],

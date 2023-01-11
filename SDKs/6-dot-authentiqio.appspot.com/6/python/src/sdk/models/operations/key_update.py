@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,28 +7,28 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class KeyUpdatePathParams:
-    pk: str = field(metadata={'path_param': { 'field_name': 'PK', 'style': 'simple', 'explode': False }})
+    pk: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PK', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class KeyUpdate200ApplicationJSON:
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class KeyUpdateRequest:
-    path_params: KeyUpdatePathParams = field()
-    request: bytes = field(metadata={'request': { 'media_type': 'application/jwt' }})
+    path_params: KeyUpdatePathParams = dataclasses.field()
+    request: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/jwt' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class KeyUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error: Optional[Any] = field(default=None)
-    key_update_200_application_json_object: Optional[KeyUpdate200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error: Optional[Any] = dataclasses.field(default=None)
+    key_update_200_application_json_object: Optional[KeyUpdate200ApplicationJSON] = dataclasses.field(default=None)
     

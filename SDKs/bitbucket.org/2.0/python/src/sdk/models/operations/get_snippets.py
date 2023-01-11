@@ -1,7 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_snippets as shared_paginated_snippets
 
 class GetSnippetsRoleEnum(str, Enum):
     OWNER = "owner"
@@ -9,28 +12,28 @@ class GetSnippetsRoleEnum(str, Enum):
     MEMBER = "member"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsQueryParams:
-    role: Optional[GetSnippetsRoleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
+    role: Optional[GetSnippetsRoleEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsRequest:
-    query_params: GetSnippetsQueryParams = field()
-    security: GetSnippetsSecurity = field()
+    query_params: GetSnippetsQueryParams = dataclasses.field()
+    security: GetSnippetsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnippetsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_snippets: Optional[shared.PaginatedSnippets] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_snippets: Optional[shared_paginated_snippets.PaginatedSnippets] = dataclasses.field(default=None)
     

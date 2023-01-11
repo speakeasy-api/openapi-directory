@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import findingtypestats as shared_findingtypestats
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFindingTypeStatsResponse:
     r"""ListFindingTypeStatsResponse
     Response for the `ListFindingTypeStats` method.
     """
     
-    finding_type_stats: Optional[List[FindingTypeStats]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('findingTypeStats') }})
+    finding_type_stats: Optional[list[shared_findingtypestats.FindingTypeStats]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('findingTypeStats') }})
     

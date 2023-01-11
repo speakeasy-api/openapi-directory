@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AttributeDoesNotExist:
     r"""AttributeDoesNotExist
     The specified attribute does not exist.
     """
     
-    box_usage: Optional[float] = field(default=None)
+    box_usage: Optional[float] = dataclasses.field(default=None)
     

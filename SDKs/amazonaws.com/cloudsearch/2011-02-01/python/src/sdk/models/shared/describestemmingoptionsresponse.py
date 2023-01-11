@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import stemmingoptionsstatus as shared_stemmingoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeStemmingOptionsResponse:
     r"""DescribeStemmingOptionsResponse
     A response message that contains the stemming options for a search domain.
     """
     
-    stems: StemmingOptionsStatus = field()
+    stems: shared_stemmingoptionsstatus.StemmingOptionsStatus = dataclasses.field()
     

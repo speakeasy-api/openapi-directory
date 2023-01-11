@@ -7,3 +7,5 @@ from .applicationtransferparam import *
 from .datatransfer import *
 from .datatransferslistresponse import *
 from .security import *
+
+__all__ = ["XgafvEnum","AltEnum","Application","ApplicationDataTransfer","ApplicationsListResponse","ApplicationTransferParam","DataTransfer","DataTransfersListResponse","SchemeOauth2","SchemeOauth2c"]

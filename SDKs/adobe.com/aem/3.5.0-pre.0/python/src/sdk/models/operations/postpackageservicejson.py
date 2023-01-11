@@ -1,44 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONQueryParams:
-    cmd: str = field(metadata={'query_param': { 'field_name': 'cmd', 'style': 'form', 'explode': True }})
-    charset_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': '_charset_', 'style': 'form', 'explode': True }})
-    force: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'force', 'style': 'form', 'explode': True }})
-    group_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'groupName', 'style': 'form', 'explode': True }})
-    package_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'packageName', 'style': 'form', 'explode': True }})
-    package_version: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'packageVersion', 'style': 'form', 'explode': True }})
-    recursive: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'recursive', 'style': 'form', 'explode': True }})
+    cmd: str = dataclasses.field(metadata={'query_param': { 'field_name': 'cmd', 'style': 'form', 'explode': True }})
+    charset_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '_charset_', 'style': 'form', 'explode': True }})
+    force: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'force', 'style': 'form', 'explode': True }})
+    group_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'groupName', 'style': 'form', 'explode': True }})
+    package_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'packageName', 'style': 'form', 'explode': True }})
+    package_version: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'packageVersion', 'style': 'form', 'explode': True }})
+    recursive: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'recursive', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONRequestBodyPackage:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    package: str = field(metadata={'multipart_form': { 'field_name': 'package' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    package: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'package' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONRequestBody:
-    package: Optional[PostPackageServiceJSONRequestBodyPackage] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    package: Optional[PostPackageServiceJSONRequestBodyPackage] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONRequest:
-    path_params: PostPackageServiceJSONPathParams = field()
-    query_params: PostPackageServiceJSONQueryParams = field()
-    request: Optional[PostPackageServiceJSONRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PostPackageServiceJSONPathParams = dataclasses.field()
+    query_params: PostPackageServiceJSONQueryParams = dataclasses.field()
+    request: Optional[PostPackageServiceJSONRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPackageServiceJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_package_service_json_default_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_package_service_json_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     

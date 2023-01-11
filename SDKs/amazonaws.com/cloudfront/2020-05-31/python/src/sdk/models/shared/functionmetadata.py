@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import functionstage_enum as shared_functionstage_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionMetadata:
     r"""FunctionMetadata
     Contains metadata about a CloudFront function.
     """
     
-    function_arn: str = field()
-    last_modified_time: datetime = field()
-    created_time: Optional[datetime] = field(default=None)
-    stage: Optional[FunctionStageEnum] = field(default=None)
+    function_arn: str = dataclasses.field()
+    last_modified_time: datetime = dataclasses.field()
+    created_time: Optional[datetime] = dataclasses.field(default=None)
+    stage: Optional[shared_functionstage_enum.FunctionStageEnum] = dataclasses.field(default=None)
     

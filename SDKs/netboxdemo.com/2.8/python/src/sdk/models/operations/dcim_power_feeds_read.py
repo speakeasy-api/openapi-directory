@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import powerfeed as shared_powerfeed
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsReadRequest:
-    path_params: DcimPowerFeedsReadPathParams = field()
+    path_params: DcimPowerFeedsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerFeedsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_feed: Optional[shared.PowerFeed] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_feed: Optional[shared_powerfeed.PowerFeed] = dataclasses.field(default=None)
     

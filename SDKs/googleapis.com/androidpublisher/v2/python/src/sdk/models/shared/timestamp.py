@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Timestamp:
-    nanos: Optional[int] = field(default=None)
-    seconds: Optional[str] = field(default=None)
+    nanos: Optional[int] = dataclasses.field(default=None)
+    seconds: Optional[str] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import postgresqltable as shared_postgresqltable
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostgresqlSchema:
     r"""PostgresqlSchema
     PostgreSQL schema.
     """
     
-    postgresql_tables: Optional[List[PostgresqlTable]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postgresqlTables') }})
-    schema: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
+    postgresql_tables: Optional[list[shared_postgresqltable.PostgresqlTable]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('postgresqlTables') }})
+    schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
     

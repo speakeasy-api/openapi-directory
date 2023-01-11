@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pipelinesummary as shared_pipelinesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPipelinesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    pipeline_summaries: Optional[List[PipelineSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipelineSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    pipeline_summaries: Optional[list[shared_pipelinesummary.PipelineSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipelineSummaries') }})
     

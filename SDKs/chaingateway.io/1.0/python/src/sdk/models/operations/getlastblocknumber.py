@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getlastblocknumber as shared_getlastblocknumber
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLastBlockNumberHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLastBlockNumberRequest:
-    headers: GetLastBlockNumberHeaders = field()
+    headers: GetLastBlockNumberHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLastBlockNumberResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_last_block_number: Optional[shared.GetLastBlockNumber] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_last_block_number: Optional[shared_getlastblocknumber.GetLastBlockNumber] = dataclasses.field(default=None)
     

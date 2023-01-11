@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import albumforuserforapicontract as shared_albumforuserforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsersCurrentAlbumCollectionStatusesAlbumIDPathParams:
-    album_id: int = field(metadata={'path_param': { 'field_name': 'albumId', 'style': 'simple', 'explode': False }})
+    album_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'albumId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsersCurrentAlbumCollectionStatusesAlbumIDRequest:
-    path_params: GetAPIUsersCurrentAlbumCollectionStatusesAlbumIDPathParams = field()
+    path_params: GetAPIUsersCurrentAlbumCollectionStatusesAlbumIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIUsersCurrentAlbumCollectionStatusesAlbumIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album_for_user_for_api_contract: Optional[shared.AlbumForUserForAPIContract] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album_for_user_for_api_contract: Optional[shared_albumforuserforapicontract.AlbumForUserForAPIContract] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

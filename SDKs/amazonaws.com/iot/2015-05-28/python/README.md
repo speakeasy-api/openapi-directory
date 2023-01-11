@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AcceptCertificateTransferRequest(
     path_params=operations.AcceptCertificateTransferPathParams(
-        certificate_id="aut",
+        certificate_id="quis",
     ),
     query_params=operations.AcceptCertificateTransferQueryParams(
         set_as_active=False,
     ),
     headers=operations.AcceptCertificateTransferHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="nisi",
-        x_amz_credential="voluptatibus",
-        x_amz_date="sapiente",
-        x_amz_security_token="quasi",
-        x_amz_signature="minima",
-        x_amz_signed_headers="odit",
+        x_amz_algorithm="fugit",
+        x_amz_content_sha256="aut",
+        x_amz_credential="id",
+        x_amz_date="sequi",
+        x_amz_security_token="dicta",
+        x_amz_signature="quis",
+        x_amz_signed_headers="molestiae",
     ),
 )
     
-res = s.sdk.accept_certificate_transfer(req)
+res = s.accept_certificate_transfer(req)
 
 if res.status_code == 200:
     # handle response

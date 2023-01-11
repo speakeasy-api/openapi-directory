@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import createpermissiongrouprequest as shared_createpermissiongrouprequest
+from ..shared import permissiongroupmodel as shared_permissiongroupmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatePermissionGroupPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePermissionGroupRequests:
-    create_permission_group_request: Optional[shared.CreatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    create_permission_group_request1: Optional[shared.CreatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    create_permission_group_request2: Optional[shared.CreatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    create_permission_group_request: Optional[shared_createpermissiongrouprequest.CreatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    create_permission_group_request1: Optional[shared_createpermissiongrouprequest.CreatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    create_permission_group_request2: Optional[shared_createpermissiongrouprequest.CreatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePermissionGroupRequest:
-    path_params: CreatePermissionGroupPathParams = field()
-    request: CreatePermissionGroupRequests = field()
+    path_params: CreatePermissionGroupPathParams = dataclasses.field()
+    request: CreatePermissionGroupRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePermissionGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    permission_group_model: Optional[shared.PermissionGroupModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    permission_group_model: Optional[shared_permissiongroupmodel.PermissionGroupModel] = dataclasses.field(default=None)
     

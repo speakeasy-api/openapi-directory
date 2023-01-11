@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,86 +20,85 @@ req = operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequ
     security=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams(
-        parent="qui",
+        parent="at",
     ),
     query_params=operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="placeat",
+        access_token="voluptas",
         alt="proto",
-        authorization_policy_id="officia",
-        callback="accusamus",
-        fields="ut",
+        authorization_policy_id="quod",
+        callback="aperiam",
+        fields="dolorem",
         key="id",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="at",
-        upload_type="excepturi",
-        upload_protocol="et",
+        oauth_token="rerum",
+        pretty_print=False,
+        quota_user="eum",
+        upload_type="iusto",
+        upload_protocol="repudiandae",
     ),
     request=shared.AuthorizationPolicyInput(
-        action="ALLOW",
-        description="vero",
+        action="ACTION_UNSPECIFIED",
+        description="aut",
         labels={
-            "aut": "in",
-            "fugiat": "cumque",
-            "sint": "iste",
+            "sunt": "sunt",
+            "corrupti": "minus",
         },
-        name="et",
+        name="consectetur",
         rules=[
             shared.Rule(
                 destinations=[
                     shared.Destination(
                         hosts=[
-                            "placeat",
+                            "nulla",
+                            "harum",
+                            "aliquid",
                         ],
                         http_header_match=shared.HTTPHeaderMatch(
                             header_name="est",
-                            regex_match="dolor",
+                            regex_match="ut",
                         ),
                         methods=[
-                            "iste",
-                            "qui",
+                            "aperiam",
+                            "voluptates",
                         ],
                         ports=[
-                            8958702389796972570,
-                            640832359014892917,
-                            3832344256514173857,
+                            5608578254048966378,
+                        ],
+                    ),
+                    shared.Destination(
+                        hosts=[
+                            "quo",
+                            "dolor",
+                            "nisi",
+                        ],
+                        http_header_match=shared.HTTPHeaderMatch(
+                            header_name="provident",
+                            regex_match="inventore",
+                        ),
+                        methods=[
+                            "magni",
+                            "error",
+                        ],
+                        ports=[
+                            3121704883122059694,
+                            8783722961125201754,
                         ],
                     ),
                 ],
                 sources=[
                     shared.Source(
                         ip_blocks=[
-                            "et",
-                        ],
-                        principals=[
-                            "est",
-                        ],
-                    ),
-                    shared.Source(
-                        ip_blocks=[
-                            "molestias",
-                        ],
-                        principals=[
+                            "tempore",
                             "qui",
-                            "harum",
-                            "laboriosam",
-                        ],
-                    ),
-                    shared.Source(
-                        ip_blocks=[
-                            "laborum",
-                            "maiores",
-                            "iusto",
                         ],
                         principals=[
-                            "repellat",
+                            "voluptate",
                         ],
                     ),
                 ],

@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchNumberPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
-    number: str = field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchNumberQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchNumberSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchNumberRequest:
-    path_params: CompanySearchNumberPathParams = field()
-    query_params: CompanySearchNumberQueryParams = field()
-    security: CompanySearchNumberSecurity = field()
+    path_params: CompanySearchNumberPathParams = dataclasses.field()
+    query_params: CompanySearchNumberQueryParams = dataclasses.field()
+    security: CompanySearchNumberSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanySearchNumberResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_search_number_200_application_json_anies: Optional[List[Any]] = field(default=None)
-    company_search_number_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_search_number_200_application_json_anies: Optional[list[Any]] = dataclasses.field(default=None)
+    company_search_number_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

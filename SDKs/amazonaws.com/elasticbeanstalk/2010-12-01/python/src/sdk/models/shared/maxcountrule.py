@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MaxCountRule:
     r"""MaxCountRule
     A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.
     """
     
-    enabled: bool = field()
-    delete_source_from_s3: Optional[bool] = field(default=None)
-    max_count: Optional[int] = field(default=None)
+    enabled: bool = dataclasses.field()
+    delete_source_from_s3: Optional[bool] = dataclasses.field(default=None)
+    max_count: Optional[int] = dataclasses.field(default=None)
     

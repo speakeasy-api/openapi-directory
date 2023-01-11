@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import portrange as shared_portrange
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateCustomRoutingListenerRequest:
-    accelerator_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AcceleratorArn') }})
-    idempotency_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdempotencyToken') }})
-    port_ranges: List[PortRange] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PortRanges') }})
+    accelerator_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('AcceleratorArn') }})
+    idempotency_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdempotencyToken') }})
+    port_ranges: list[shared_portrange.PortRange] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PortRanges') }})
     

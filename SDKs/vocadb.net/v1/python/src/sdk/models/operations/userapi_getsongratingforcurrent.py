@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetSongRatingForCurrentPathParams:
-    song_id: int = field(metadata={'path_param': { 'field_name': 'songId', 'style': 'simple', 'explode': False }})
+    song_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'songId', 'style': 'simple', 'explode': False }})
     
 class UserAPIGetSongRatingForCurrent200ApplicationJSONEnum(str, Enum):
     NOTHING = "Nothing"
@@ -26,17 +26,17 @@ class UserAPIGetSongRatingForCurrent200TextJSONEnum(str, Enum):
     FAVORITE = "Favorite"
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetSongRatingForCurrentRequest:
-    path_params: UserAPIGetSongRatingForCurrentPathParams = field()
+    path_params: UserAPIGetSongRatingForCurrentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetSongRatingForCurrentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    user_api_get_song_rating_for_current_200_application_json_string_enum: Optional[UserAPIGetSongRatingForCurrent200ApplicationJSONEnum] = field(default=None)
-    user_api_get_song_rating_for_current_200_application_jsonp_string_enum: Optional[UserAPIGetSongRatingForCurrent200ApplicationJsonpEnum] = field(default=None)
-    user_api_get_song_rating_for_current_200_text_json_string_enum: Optional[UserAPIGetSongRatingForCurrent200TextJSONEnum] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    user_api_get_song_rating_for_current_200_application_json_string_enum: Optional[UserAPIGetSongRatingForCurrent200ApplicationJSONEnum] = dataclasses.field(default=None)
+    user_api_get_song_rating_for_current_200_application_jsonp_string_enum: Optional[UserAPIGetSongRatingForCurrent200ApplicationJsonpEnum] = dataclasses.field(default=None)
+    user_api_get_song_rating_for_current_200_text_json_string_enum: Optional[UserAPIGetSongRatingForCurrent200TextJSONEnum] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import scheduledtriggerproperties as shared_scheduledtriggerproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TriggerProperties:
     r"""TriggerProperties
      Specifies the configuration details that control the trigger for a flow. Currently, these settings only apply to the <code>Scheduled</code> trigger type. 
     """
     
-    scheduled: Optional[ScheduledTriggerProperties] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Scheduled') }})
+    scheduled: Optional[shared_scheduledtriggerproperties.ScheduledTriggerProperties] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Scheduled') }})
     

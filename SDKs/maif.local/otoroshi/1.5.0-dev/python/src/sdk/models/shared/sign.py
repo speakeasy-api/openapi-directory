@@ -1,18 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hsalgosettings as shared_hsalgosettings
+from ..shared import rsalgosettings as shared_rsalgosettings
+from ..shared import esalgosettings as shared_esalgosettings
+from ..shared import jwksalgosettings as shared_jwksalgosettings
+from ..shared import verificationsettings as shared_verificationsettings
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Sign:
     r"""Sign
     Strategy where signature and field values are verified, and then token si re-signed
     """
     
-    algo_settings: Any = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('algoSettings') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    verification_settings: VerificationSettings = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('verificationSettings') }})
+    algo_settings: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('algoSettings') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    verification_settings: shared_verificationsettings.VerificationSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('verificationSettings') }})
     

@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import changelog as shared_changelog
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateChangelogPathParams:
-    slug: str = field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
+    slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateChangelogSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateChangelogRequest:
-    path_params: UpdateChangelogPathParams = field()
-    request: shared.Changelog = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateChangelogSecurity = field()
+    path_params: UpdateChangelogPathParams = dataclasses.field()
+    request: shared_changelog.Changelog = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateChangelogSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateChangelogResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

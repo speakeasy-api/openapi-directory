@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import ssh_key as shared_ssh_key
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetAllAuthorizedSSHKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ssh_keys: Optional[List[shared.SSHKey]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ssh_keys: Optional[list[shared_ssh_key.SSHKey]] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sku as shared_sku
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSkusResponse:
     r"""ListSkusResponse
     Response message for `ListSkus`.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    skus: Optional[List[Sku]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skus') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    skus: Optional[list[shared_sku.Sku]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skus') }})
     

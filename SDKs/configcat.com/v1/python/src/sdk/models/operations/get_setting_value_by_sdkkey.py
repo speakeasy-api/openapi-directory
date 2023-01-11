@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import settingvaluemodel as shared_settingvaluemodel
+from ..shared import settingvaluemodel_haljson as shared_settingvaluemodel_haljson
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValueBySdkkeyPathParams:
-    setting_key_or_id: str = field(metadata={'path_param': { 'field_name': 'settingKeyOrId', 'style': 'simple', 'explode': False }})
+    setting_key_or_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'settingKeyOrId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValueBySdkkeyHeaders:
-    x_configcat_sdkkey: str = field(metadata={'header': { 'field_name': 'X-CONFIGCAT-SDKKEY', 'style': 'simple', 'explode': False }})
+    x_configcat_sdkkey: str = dataclasses.field(metadata={'header': { 'field_name': 'X-CONFIGCAT-SDKKEY', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValueBySdkkeyRequest:
-    headers: GetSettingValueBySdkkeyHeaders = field()
-    path_params: GetSettingValueBySdkkeyPathParams = field()
+    headers: GetSettingValueBySdkkeyHeaders = dataclasses.field()
+    path_params: GetSettingValueBySdkkeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValueBySdkkeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    setting_value_model: Optional[shared.SettingValueModel] = field(default=None)
-    setting_value_model_haljson: Optional[shared.SettingValueModelHaljson] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    setting_value_model: Optional[shared_settingvaluemodel.SettingValueModel] = dataclasses.field(default=None)
+    setting_value_model_haljson: Optional[shared_settingvaluemodel_haljson.SettingValueModelHaljson] = dataclasses.field(default=None)
     

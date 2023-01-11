@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,21 +18,21 @@ s = sdk.SDK()
     
 req = operations.MybusinesslodgingLocationsGetLodgingRequest(
     path_params=operations.MybusinesslodgingLocationsGetLodgingPathParams(
-        name="cupiditate",
+        name="non",
     ),
     query_params=operations.MybusinesslodgingLocationsGetLodgingQueryParams(
-        dollar_xgafv="2",
-        access_token="iste",
-        alt="json",
-        callback="omnis",
-        fields="voluptas",
-        key="quia",
-        oauth_token="aut",
+        dollar_xgafv="1",
+        access_token="corrupti",
+        alt="proto",
+        callback="et",
+        fields="atque",
+        key="sed",
+        oauth_token="maiores",
         pretty_print=True,
-        quota_user="magnam",
-        read_mask="impedit",
-        upload_type="ratione",
-        upload_protocol="aut",
+        quota_user="eos",
+        read_mask="animi",
+        upload_type="iste",
+        upload_protocol="reprehenderit",
     ),
 )
     

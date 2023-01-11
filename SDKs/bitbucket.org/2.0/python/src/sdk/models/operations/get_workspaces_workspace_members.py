@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_workspace_memberships as shared_paginated_workspace_memberships
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspaceMembersPathParams:
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspaceMembersSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspaceMembersRequest:
-    path_params: GetWorkspacesWorkspaceMembersPathParams = field()
-    security: GetWorkspacesWorkspaceMembersSecurity = field()
+    path_params: GetWorkspacesWorkspaceMembersPathParams = dataclasses.field()
+    security: GetWorkspacesWorkspaceMembersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspaceMembersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_workspace_memberships: Optional[shared.PaginatedWorkspaceMemberships] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_workspace_memberships: Optional[shared_paginated_workspace_memberships.PaginatedWorkspaceMemberships] = dataclasses.field(default=None)
     

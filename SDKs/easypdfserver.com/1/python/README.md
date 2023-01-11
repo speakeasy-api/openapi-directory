@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.PostMakePdfRequest(
     request=operations.PostMakePdfRequestBody(
-        html="dolores",
-        key="quis",
-        url="facere",
+        html="dolorem",
+        key="assumenda",
+        url="laudantium",
     ),
 )
     
-res = s.sdk.post_make_pdf(req)
+res = s.post_make_pdf(req)
 
 if res.post_make_pdf_200_application_pdf_binary_string is not None:
     # handle response

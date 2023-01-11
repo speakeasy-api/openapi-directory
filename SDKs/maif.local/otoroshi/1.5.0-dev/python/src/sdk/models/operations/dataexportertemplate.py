@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataexporterconfig as shared_dataexporterconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class DataExporterTemplateQueryParams:
-    type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DataExporterTemplateSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DataExporterTemplateRequest:
-    query_params: DataExporterTemplateQueryParams = field()
-    security: DataExporterTemplateSecurity = field()
+    query_params: DataExporterTemplateQueryParams = dataclasses.field()
+    security: DataExporterTemplateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DataExporterTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    data_exporter_config: Optional[shared.DataExporterConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    data_exporter_config: Optional[shared_dataexporterconfig.DataExporterConfig] = dataclasses.field(default=None)
     

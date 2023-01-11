@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import landlordrentarrearsmodel as shared_landlordrentarrearsmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetRentArrearsPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetRentArrearsQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetRentArrearsRequest:
-    path_params: LandlordControllerGetRentArrearsPathParams = field()
-    query_params: LandlordControllerGetRentArrearsQueryParams = field()
+    path_params: LandlordControllerGetRentArrearsPathParams = dataclasses.field()
+    query_params: LandlordControllerGetRentArrearsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetRentArrearsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    landlord_rent_arrears_model: Optional[shared.LandlordRentArrearsModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    landlord_rent_arrears_model: Optional[shared_landlordrentarrearsmodel.LandlordRentArrearsModel] = dataclasses.field(default=None)
     

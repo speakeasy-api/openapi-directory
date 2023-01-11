@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import permission as shared_permission
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionsRequest:
-    request: shared.Permission = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_permission.Permission = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePermissionsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

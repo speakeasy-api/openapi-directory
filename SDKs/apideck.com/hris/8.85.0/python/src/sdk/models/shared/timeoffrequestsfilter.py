@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -14,10 +14,10 @@ class TimeOffRequestsFilterTimeOffRequestStatusEnum(str, Enum):
     OTHER = "other"
 
 
-@dataclass
+@dataclasses.dataclass
 class TimeOffRequestsFilter:
-    employee_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'employee_id' }})
-    end_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'end_date' }})
-    start_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'start_date' }})
-    time_off_request_status: Optional[TimeOffRequestsFilterTimeOffRequestStatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'time_off_request_status' }})
+    employee_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'employee_id' }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end_date' }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start_date' }})
+    time_off_request_status: Optional[TimeOffRequestsFilterTimeOffRequestStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time_off_request_status' }})
     

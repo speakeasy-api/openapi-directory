@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLaunchTemplateVersionsResult:
-    successfully_deleted_launch_template_versions: Optional[List[DeleteLaunchTemplateVersionsResponseSuccessItem]] = field(default=None)
-    unsuccessfully_deleted_launch_template_versions: Optional[List[DeleteLaunchTemplateVersionsResponseErrorItem]] = field(default=None)
+    successfully_deleted_launch_template_versions: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    unsuccessfully_deleted_launch_template_versions: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

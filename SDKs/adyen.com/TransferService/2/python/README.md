@@ -8,35 +8,26 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.GetTransactionsRequest(
-    security=operations.GetTransactionsSecurity(
+req = operations.PostTransfersRequest(
+    security=operations.PostTransfersSecurity(
         api_key_auth=shared.SchemeAPIKeyAuth(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
-    query_params=operations.GetTransactionsQueryParams(
-        account_holder_id="in",
-        balance_account_id="autem",
-        balance_platform="qui",
-        created_since="2022-08-17T18:35:42Z",
-        created_until="2008-01-31T10:07:32Z",
-        cursor="neque",
-        limit=4255970180603226314,
-    ),
+    request="illo",
 )
     
-res = s.sdk.get_transactions(req)
+res = s.general.post_transfers(req)
 
-if res.transaction_search_response is not None:
+if res.transfer is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -44,11 +35,14 @@ if res.transaction_search_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
+
+* `post_transfers` - Transfer funds.
+
+### Transactions
 
 * `get_transactions` - Get all transactions.
 * `get_transactions_id` - Get a transaction.
-* `post_transfers` - Transfer funds.
 
 <!-- End SDK Available Operations -->
 

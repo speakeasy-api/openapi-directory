@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResendValidationEmailRequest:
-    certificate_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CertificateArn') }})
-    domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Domain') }})
-    validation_domain: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ValidationDomain') }})
+    certificate_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CertificateArn') }})
+    domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Domain') }})
+    validation_domain: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ValidationDomain') }})
     

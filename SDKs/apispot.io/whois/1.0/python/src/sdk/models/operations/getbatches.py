@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBatchesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    array_of_batch: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    array_of_batch: Optional[Any] = dataclasses.field(default=None)
     

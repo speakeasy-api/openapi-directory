@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import payslip as shared_payslip
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PayslipObject:
-    payslip: Optional[Payslip] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Payslip') }})
+    payslip: Optional[shared_payslip.Payslip] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Payslip') }})
     

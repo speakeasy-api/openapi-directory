@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActionOrganizationActivityListHTMLQueryParams:
-    id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionOrganizationActivityListHTMLRequest:
-    query_params: GetActionOrganizationActivityListHTMLQueryParams = field()
+    query_params: GetActionOrganizationActivityListHTMLQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionOrganizationActivityListHTMLResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

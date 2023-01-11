@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionPathParams:
-    transaction_number: str = field(metadata={'path_param': { 'field_name': 'transactionNumber', 'style': 'simple', 'explode': False }})
+    transaction_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transactionNumber', 'style': 'simple', 'explode': False }})
     
 class UpdateTransactionRequestBodySourceEnum(str, Enum):
     SHOP = "SHOP"
@@ -20,33 +20,33 @@ class UpdateTransactionRequestBodyStatusEnum(str, Enum):
     PENDING = "PENDING"
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionRequestBody:
-    active: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'active' }})
-    date_closed: Optional[datetime] = field(default=None, metadata={'form': { 'field_name': 'dateClosed' }})
-    date_created: Optional[datetime] = field(default=None, metadata={'form': { 'field_name': 'dateCreated' }})
-    number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'number' }})
-    payment_method: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'paymentMethod' }})
-    source: Optional[UpdateTransactionRequestBodySourceEnum] = field(default=None, metadata={'form': { 'field_name': 'source' }})
-    status: Optional[UpdateTransactionRequestBodyStatusEnum] = field(default=None, metadata={'form': { 'field_name': 'status' }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'active' }})
+    date_closed: Optional[datetime] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'dateClosed' }})
+    date_created: Optional[datetime] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'dateCreated' }})
+    number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'number' }})
+    payment_method: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'paymentMethod' }})
+    source: Optional[UpdateTransactionRequestBodySourceEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'source' }})
+    status: Optional[UpdateTransactionRequestBodyStatusEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'status' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionRequest:
-    path_params: UpdateTransactionPathParams = field()
-    security: UpdateTransactionSecurity = field()
-    request: Optional[UpdateTransactionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: UpdateTransactionPathParams = dataclasses.field()
+    security: UpdateTransactionSecurity = dataclasses.field()
+    request: Optional[UpdateTransactionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

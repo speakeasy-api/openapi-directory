@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import runner_application as shared_runner_application
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListRunnerApplicationsForEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListRunnerApplicationsForEnterpriseRequest:
-    path_params: EnterpriseAdminListRunnerApplicationsForEnterprisePathParams = field()
+    path_params: EnterpriseAdminListRunnerApplicationsForEnterprisePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListRunnerApplicationsForEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_applications: Optional[List[shared.RunnerApplication]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_applications: Optional[list[shared_runner_application.RunnerApplication]] = dataclasses.field(default=None)
     

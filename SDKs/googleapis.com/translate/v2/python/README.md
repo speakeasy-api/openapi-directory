@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,30 +21,32 @@ req = operations.LanguageDetectionsDetectRequest(
         option1=operations.LanguageDetectionsDetectSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.LanguageDetectionsDetectQueryParams(
         dollar_xgafv="1",
-        access_token="tenetur",
-        alt="media",
-        bearer_token="non",
-        callback="odit",
-        fields="error",
-        key="doloremque",
-        oauth_token="sint",
-        pp=True,
+        access_token="reiciendis",
+        alt="json",
+        bearer_token="quisquam",
+        callback="necessitatibus",
+        fields="neque",
+        key="consequuntur",
+        oauth_token="ut",
+        pp=False,
         pretty_print=True,
-        quota_user="neque",
-        upload_type="debitis",
-        upload_protocol="suscipit",
+        quota_user="eum",
+        upload_type="eaque",
+        upload_protocol="est",
     ),
     request=shared.DetectLanguageRequest(
         q=[
-            "excepturi",
+            "eligendi",
+            "neque",
+            "dolorem",
         ],
     ),
 )

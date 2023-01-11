@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupUsersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupUsersIDQueryParams:
-    group_id: int = field(metadata={'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': True }})
-    user_id: int = field(metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    group_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': True }})
+    user_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupUsersIDRequest:
-    path_params: DeleteGroupUsersIDPathParams = field()
-    query_params: DeleteGroupUsersIDQueryParams = field()
+    path_params: DeleteGroupUsersIDPathParams = dataclasses.field()
+    query_params: DeleteGroupUsersIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGroupUsersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

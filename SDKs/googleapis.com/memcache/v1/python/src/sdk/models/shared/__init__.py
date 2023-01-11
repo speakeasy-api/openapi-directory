@@ -19,3 +19,5 @@ from .status import *
 from .timeofday import *
 from .updateparametersrequest import *
 from .weeklymaintenancewindow import *
+
+__all__ = ["XgafvEnum","AltEnum","ApplyParametersRequest","GoogleCloudMemcacheV1MaintenancePolicyInput","GoogleCloudMemcacheV1MaintenancePolicy","InstanceMemcacheVersionEnum","InstanceInput","InstanceStateEnum","Instance","InstanceMessageCodeEnum","InstanceMessage","ListInstancesResponse","ListLocationsResponse","ListOperationsResponse","Location","MaintenanceSchedule","MemcacheParametersInput","MemcacheParameters","NodeStateEnum","Node","NodeConfig","Operation","RescheduleMaintenanceRequestRescheduleTypeEnum","RescheduleMaintenanceRequest","SchemeOauth2","SchemeOauth2c","Status","TimeOfDay","UpdateParametersRequestInput","WeeklyMaintenanceWindowDayEnum","WeeklyMaintenanceWindow"]

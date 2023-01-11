@@ -31,3 +31,5 @@ from .softwareinformation import *
 from .taskstate_enum import *
 from .tasksummary import *
 from .unlockstate_enum import *
+
+__all__ = ["AttachmentStatusEnum","CancelTaskOutput","Capacity","CPUOptions","CreateTaskOutput","DescribeDeviceEc2Output","DescribeDeviceOutput","DescribeExecutionOutput","DescribeTaskOutput","DeviceSummary","EbsInstanceBlockDevice","ExecutionStateEnum","ExecutionSummary","Instance","InstanceBlockDeviceMapping","InstanceState","InstanceStateNameEnum","InstanceSummary","IPAddressAssignmentEnum","ListDeviceResourcesOutput","ListDevicesOutput","ListExecutionsOutput","ListTagsForResourceOutput","ListTasksOutput","PhysicalConnectorTypeEnum","PhysicalNetworkInterface","ResourceSummary","SchemeHmac","Security","SecurityGroupIdentifier","SoftwareInformation","TaskStateEnum","TaskSummary","UnlockStateEnum"]

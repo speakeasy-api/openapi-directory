@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -91,12 +91,12 @@ class DependencyEdgeLabelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DependencyEdge:
     r"""DependencyEdge
     Represents dependency parse tree information for a token.
     """
     
-    head_token_index: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headTokenIndex') }})
-    label: Optional[DependencyEdgeLabelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    head_token_index: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('headTokenIndex') }})
+    label: Optional[DependencyEdgeLabelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
     

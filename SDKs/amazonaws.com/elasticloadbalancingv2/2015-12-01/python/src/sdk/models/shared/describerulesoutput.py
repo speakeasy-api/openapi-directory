@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import rule as shared_rule
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeRulesOutput:
-    next_marker: Optional[str] = field(default=None)
-    rules: Optional[List[Rule]] = field(default=None)
+    next_marker: Optional[str] = dataclasses.field(default=None)
+    rules: Optional[list[shared_rule.Rule]] = dataclasses.field(default=None)
     

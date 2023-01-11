@@ -1,58 +1,59 @@
-from dataclasses import dataclass, field
-from typing import Any,Enum,List,Optional
+import dataclasses
+from typing import Any,Optional
+from enum import Enum
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAlertPoliciesQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    
-
-@dataclass
-class ListAlertPoliciesRequest:
-    query_params: ListAlertPoliciesQueryParams = field(default=None)
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONLinksPages1:
-    last: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'last' }})
-    next: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'next' }})
+    last: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last') }})
+    next: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONLinksPages2:
-    first: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'first' }})
-    prev: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'prev' }})
+    first: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first') }})
+    prev: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONLinks:
-    pages: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'pages' }})
+    pages: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pages') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONMeta:
-    total: int = field(default=None, metadata={'dataclasses_json': { 'field_name': 'total' }})
+    r"""ListAlertPolicies200ApplicationJSONMeta
+    Information about the response itself.
+    """
+    
+    total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONPoliciesAlertsSlack:
-    channel: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'channel' }})
-    url: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'url' }})
+    channel: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channel') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONPoliciesAlerts:
-    email: List[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'email' }})
-    slack: List[ListAlertPolicies200ApplicationJSONPoliciesAlertsSlack] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'slack' }})
+    email: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    slack: list[ListAlertPolicies200ApplicationJSONPoliciesAlertsSlack] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('slack') }})
     
 class ListAlertPolicies200ApplicationJSONPoliciesCompareEnum(str, Enum):
     GREATER_THAN = "GreaterThan"
@@ -80,42 +81,47 @@ class ListAlertPolicies200ApplicationJSONPoliciesWindowEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSONPolicies:
-    alerts: ListAlertPolicies200ApplicationJSONPoliciesAlerts = field(default=None, metadata={'dataclasses_json': { 'field_name': 'alerts' }})
-    compare: ListAlertPolicies200ApplicationJSONPoliciesCompareEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'compare' }})
-    description: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'description' }})
-    enabled: bool = field(default=None, metadata={'dataclasses_json': { 'field_name': 'enabled' }})
-    entities: List[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'entities' }})
-    tags: List[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'tags' }})
-    type: ListAlertPolicies200ApplicationJSONPoliciesTypeEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'type' }})
-    uuid: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'uuid' }})
-    value: float = field(default=None, metadata={'dataclasses_json': { 'field_name': 'value' }})
-    window: ListAlertPolicies200ApplicationJSONPoliciesWindowEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'window' }})
+    alerts: ListAlertPolicies200ApplicationJSONPoliciesAlerts = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('alerts') }})
+    compare: ListAlertPolicies200ApplicationJSONPoliciesCompareEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('compare') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    entities: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('entities') }})
+    tags: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    type: ListAlertPolicies200ApplicationJSONPoliciesTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    uuid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
+    value: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    window: ListAlertPolicies200ApplicationJSONPoliciesWindowEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('window') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies200ApplicationJSON:
-    links: Optional[ListAlertPolicies200ApplicationJSONLinks] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'links' }})
-    meta: ListAlertPolicies200ApplicationJSONMeta = field(default=None, metadata={'dataclasses_json': { 'field_name': 'meta' }})
-    policies: List[ListAlertPolicies200ApplicationJSONPolicies] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'policies' }})
+    meta: ListAlertPolicies200ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    policies: list[ListAlertPolicies200ApplicationJSONPolicies] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    links: Optional[ListAlertPolicies200ApplicationJSONLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAlertPolicies401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class ListAlertPoliciesRequest:
+    query_params: ListAlertPoliciesQueryParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
 class ListAlertPoliciesResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    list_alert_policies_200_application_json_object: Optional[ListAlertPolicies200ApplicationJSON] = field(default=None)
-    list_alert_policies_401_application_json_object: Optional[ListAlertPolicies401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_alert_policies_200_application_json_object: Optional[ListAlertPolicies200ApplicationJSON] = dataclasses.field(default=None)
+    list_alert_policies_401_application_json_object: Optional[ListAlertPolicies401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

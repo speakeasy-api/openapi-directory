@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import applicationsettingsresource as shared_applicationsettingsresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetApplicationSettingsResponse:
-    application_settings_resource: ApplicationSettingsResource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationSettingsResource') }})
+    application_settings_resource: shared_applicationsettingsresource.ApplicationSettingsResource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationSettingsResource') }})
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dashboardentry as shared_dashboardentry
 
 
-@dataclass
+@dataclasses.dataclass
 class ListDashboardsOutput:
-    dashboard_entries: Optional[List[DashboardEntry]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    dashboard_entries: Optional[list[shared_dashboardentry.DashboardEntry]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reviewreplyresult as shared_reviewreplyresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReviewsReplyResponse:
     r"""ReviewsReplyResponse
     Response on status of replying to a review.
     """
     
-    result: Optional[ReviewReplyResult] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    result: Optional[shared_reviewreplyresult.ReviewReplyResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     

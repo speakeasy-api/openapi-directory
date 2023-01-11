@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,23 +26,23 @@ s.config_security(
 req = operations.GetAddRoleToDbClusterRequest(
     query_params=operations.GetAddRoleToDbClusterQueryParams(
         action="AddRoleToDBCluster",
-        db_cluster_identifier="molestiae",
-        feature_name="tenetur",
-        role_arn="nemo",
+        db_cluster_identifier="qui",
+        feature_name="consequatur",
+        role_arn="laborum",
         version="2014-10-31",
     ),
     headers=operations.GetAddRoleToDbClusterHeaders(
-        x_amz_algorithm="iste",
-        x_amz_content_sha256="fuga",
-        x_amz_credential="suscipit",
-        x_amz_date="voluptatem",
-        x_amz_security_token="veniam",
-        x_amz_signature="excepturi",
-        x_amz_signed_headers="maxime",
+        x_amz_algorithm="laboriosam",
+        x_amz_content_sha256="fugiat",
+        x_amz_credential="et",
+        x_amz_date="nesciunt",
+        x_amz_security_token="tempore",
+        x_amz_signature="libero",
+        x_amz_signed_headers="modi",
     ),
 )
     
-res = s.sdk.get_add_role_to_db_cluster(req)
+res = s.get_add_role_to_db_cluster(req)
 
 if res.status_code == 200:
     # handle response
@@ -69,12 +68,7 @@ if res.status_code == 200:
 * `get_describe_db_cluster_snapshot_attributes` - <p>Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot.</p> <p>When sharing snapshots with other Amazon accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the <code>restore</code> attribute and a list of IDs for the Amazon accounts that are authorized to copy or restore the manual DB cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then the manual DB cluster snapshot is public and can be copied or restored by all Amazon accounts.</p> <p>To add or remove access for an Amazon account to copy or restore a manual DB cluster snapshot, or to make the manual DB cluster snapshot public or private, use the <a>ModifyDBClusterSnapshotAttribute</a> API action.</p>
 * `get_describe_valid_db_instance_modifications` - You can call <a>DescribeValidDBInstanceModifications</a> to learn what modifications you can make to your DB instance. You can use this information when you call <a>ModifyDBInstance</a>.
 * `get_failover_db_cluster` - <p>Forces a failover for a DB cluster.</p> <p>A failover for a DB cluster promotes one of the Read Replicas (read-only instances) in the DB cluster to be the primary instance (the cluster writer).</p> <p>Amazon Neptune will automatically fail over to a Read Replica, if one exists, when the primary instance fails. You can force a failover when you want to simulate a failure of a primary instance for testing. Because each instance in a DB cluster has its own endpoint address, you will need to clean up and re-establish any existing connections that use those endpoint addresses when the failover is complete.</p>
-* `get_modify_db_cluster` - Modify a setting for a DB cluster. You can change one or more database configuration parameters by specifying these parameters and the new values in the request.
 * `get_modify_db_cluster_endpoint` - Modifies the properties of an endpoint in an Amazon Neptune DB cluster.
-* `get_modify_db_cluster_snapshot_attribute` - <p>Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot.</p> <p>To share a manual DB cluster snapshot with other Amazon accounts, specify <code>restore</code> as the <code>AttributeName</code> and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the Amazon accounts that are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB cluster snapshot public, which means that it can be copied or restored by all Amazon accounts. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private information that you don't want available to all Amazon accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized Amazon account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this case.</p> <p>To view which Amazon accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API action.</p>
-* `get_modify_db_instance` - Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. To learn what modifications you can make to your DB instance, call <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
-* `get_modify_db_subnet_group` - Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the Amazon Region.
-* `get_modify_event_subscription` - <p>Modifies an existing event notification subscription. Note that you can't modify the source identifiers using this call; to change source identifiers for a subscription, use the <a>AddSourceIdentifierToSubscription</a> and <a>RemoveSourceIdentifierFromSubscription</a> calls.</p> <p>You can see a list of the event categories for a given SourceType by using the <b>DescribeEventCategories</b> action.</p>
 * `get_promote_read_replica_db_cluster` - Not supported.
 * `get_reboot_db_instance` - <p>You might need to reboot your DB instance, usually for maintenance reasons. For example, if you make certain modifications, or if you change the DB parameter group associated with the DB instance, you must reboot the instance for the changes to take effect.</p> <p>Rebooting a DB instance restarts the database engine service. Rebooting a DB instance results in a momentary outage, during which the DB instance status is set to rebooting.</p>
 * `get_remove_role_from_db_cluster` - Disassociates an Identity and Access Management (IAM) role from a DB cluster.

@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apppkginfomodifications as shared_apppkginfomodifications
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppPackagePatchPathParams:
-    app_pkg_id: str = field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
+    app_pkg_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPackagePatchRequest:
-    path_params: AppPackagePatchPathParams = field()
-    request: shared.AppPkgInfoModifications = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AppPackagePatchPathParams = dataclasses.field()
+    request: shared_apppkginfomodifications.AppPkgInfoModifications = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPackagePatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    app_pkg_info_modifications: Optional[shared.AppPkgInfoModifications] = field(default=None)
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    app_pkg_info_modifications: Optional[shared_apppkginfomodifications.AppPkgInfoModifications] = dataclasses.field(default=None)
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

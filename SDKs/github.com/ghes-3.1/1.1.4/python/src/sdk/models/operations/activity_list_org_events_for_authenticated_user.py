@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import event as shared_event
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListOrgEventsForAuthenticatedUserPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListOrgEventsForAuthenticatedUserQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListOrgEventsForAuthenticatedUserRequest:
-    path_params: ActivityListOrgEventsForAuthenticatedUserPathParams = field()
-    query_params: ActivityListOrgEventsForAuthenticatedUserQueryParams = field()
+    path_params: ActivityListOrgEventsForAuthenticatedUserPathParams = dataclasses.field()
+    query_params: ActivityListOrgEventsForAuthenticatedUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListOrgEventsForAuthenticatedUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    events: Optional[List[shared.Event]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    events: Optional[list[shared_event.Event]] = dataclasses.field(default=None)
     

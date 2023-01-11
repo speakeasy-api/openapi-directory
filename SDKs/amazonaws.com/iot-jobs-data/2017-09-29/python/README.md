@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.DescribeJobExecutionRequest(
     path_params=operations.DescribeJobExecutionPathParams(
-        job_id="optio",
-        thing_name="omnis",
+        job_id="aut",
+        thing_name="adipisci",
     ),
     query_params=operations.DescribeJobExecutionQueryParams(
-        execution_number=8768690139785603795,
-        include_job_document=True,
+        execution_number=3214739643573370622,
+        include_job_document=False,
     ),
     headers=operations.DescribeJobExecutionHeaders(
-        x_amz_algorithm="reiciendis",
-        x_amz_content_sha256="maxime",
-        x_amz_credential="quibusdam",
-        x_amz_date="asperiores",
-        x_amz_security_token="provident",
-        x_amz_signature="doloribus",
-        x_amz_signed_headers="architecto",
+        x_amz_algorithm="in",
+        x_amz_content_sha256="fuga",
+        x_amz_credential="nemo",
+        x_amz_date="dolore",
+        x_amz_security_token="suscipit",
+        x_amz_signature="architecto",
+        x_amz_signed_headers="ratione",
     ),
 )
     
-res = s.sdk.describe_job_execution(req)
+res = s.describe_job_execution(req)
 
 if res.describe_job_execution_response is not None:
     # handle response

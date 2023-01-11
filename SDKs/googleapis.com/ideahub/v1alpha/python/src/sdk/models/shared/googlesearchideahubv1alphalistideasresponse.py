@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlesearchideahubv1alphaidea as shared_googlesearchideahubv1alphaidea
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSearchIdeahubV1alphaListIdeasResponse:
-    ideas: Optional[List[GoogleSearchIdeahubV1alphaIdea]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ideas') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    ideas: Optional[list[shared_googlesearchideahubv1alphaidea.GoogleSearchIdeahubV1alphaIdea]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ideas') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import writerequest as shared_writerequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchWriteItemInput:
-    request_items: dict[str, List[WriteRequest]] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestItems') }})
+    request_items: dict[str, list[shared_writerequest.WriteRequest]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestItems') }})
     

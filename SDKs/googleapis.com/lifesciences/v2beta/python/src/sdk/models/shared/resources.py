@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import virtualmachine as shared_virtualmachine
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Resources:
     r"""Resources
     The system resources for the pipeline run. At least one zone or region must be specified or the pipeline run will fail.
     """
     
-    regions: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('regions') }})
-    virtual_machine: Optional[VirtualMachine] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualMachine') }})
-    zones: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('zones') }})
+    regions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('regions') }})
+    virtual_machine: Optional[shared_virtualmachine.VirtualMachine] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualMachine') }})
+    zones: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('zones') }})
     

@@ -1,43 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import patch as shared_patch
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchBulkDataExporterConfigSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 class PatchBulkDataExporterConfig200ApplicationJSONStatusEnum(str, Enum):
     TWO_HUNDRED = "200"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatchBulkDataExporterConfig200ApplicationJSON:
     r"""PatchBulkDataExporterConfig200ApplicationJSON
     The bulk response
     """
     
-    id: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    status: Optional[PatchBulkDataExporterConfig200ApplicationJSONStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    updated: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated') }})
+    id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    status: Optional[PatchBulkDataExporterConfig200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    updated: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchBulkDataExporterConfigRequest:
-    security: PatchBulkDataExporterConfigSecurity = field()
-    request: Optional[List[shared.Patch]] = field(default=None, metadata={'request': { 'media_type': 'application/ndjson' }})
+    security: PatchBulkDataExporterConfigSecurity = dataclasses.field()
+    request: Optional[list[shared_patch.Patch]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/ndjson' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchBulkDataExporterConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    patch_bulk_data_exporter_config_200_application_json_objects: Optional[List[PatchBulkDataExporterConfig200ApplicationJSON]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    patch_bulk_data_exporter_config_200_application_json_objects: Optional[list[PatchBulkDataExporterConfig200ApplicationJSON]] = dataclasses.field(default=None)
     

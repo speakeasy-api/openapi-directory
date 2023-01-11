@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import asset as shared_asset
 
 class AssetAssociationRoleEnum(str, Enum):
     ASSET_ROLE_UNSPECIFIED = "ASSET_ROLE_UNSPECIFIED"
@@ -26,12 +26,12 @@ class AssetAssociationRoleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AssetAssociation:
     r"""AssetAssociation
     Asset association for the creative.
     """
     
-    asset: Optional[Asset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
-    role: Optional[AssetAssociationRoleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    asset: Optional[shared_asset.Asset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('asset') }})
+    role: Optional[AssetAssociationRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
     

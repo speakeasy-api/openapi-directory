@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import pendingmaintenanceactions as shared_pendingmaintenanceactions
 
 
-@dataclass
+@dataclasses.dataclass
 class PendingMaintenanceActionsMessage:
     r"""PendingMaintenanceActionsMessage
     Represents the output of <a>DescribePendingMaintenanceActions</a>.
     """
     
-    marker: Optional[str] = field(default=None)
-    pending_maintenance_actions: Optional[List[ResourcePendingMaintenanceActions]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    pending_maintenance_actions: Optional[list[shared_pendingmaintenanceactions.PendingMaintenanceActions]] = dataclasses.field(default=None)
     

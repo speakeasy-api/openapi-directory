@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import vaultaccesspolicy as shared_vaultaccesspolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetVaultAccessPolicyOutput:
     r"""GetVaultAccessPolicyOutput
     Output for GetVaultAccessPolicy.
     """
     
-    policy: Optional[VaultAccessPolicy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policy') }})
+    policy: Optional[shared_vaultaccesspolicy.VaultAccessPolicy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policy') }})
     

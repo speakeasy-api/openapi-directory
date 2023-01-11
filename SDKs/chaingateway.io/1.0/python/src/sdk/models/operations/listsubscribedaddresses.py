@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listsubscribedaddresses as shared_listsubscribedaddresses
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSubscribedAddressesHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListSubscribedAddressesRequest:
-    headers: ListSubscribedAddressesHeaders = field()
+    headers: ListSubscribedAddressesHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListSubscribedAddressesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_subscribed_addresses: Optional[shared.ListSubscribedAddresses] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_subscribed_addresses: Optional[shared_listsubscribedaddresses.ListSubscribedAddresses] = dataclasses.field(default=None)
     

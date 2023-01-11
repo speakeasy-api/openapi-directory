@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import processorapexprocessortokencreaterequest as shared_processorapexprocessortokencreaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorApexProcessorTokenCreateRequest:
-    request: shared.ProcessorApexProcessorTokenCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_processorapexprocessortokencreaterequest.ProcessorApexProcessorTokenCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorApexProcessorTokenCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    processor_token_create_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    processor_token_create_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

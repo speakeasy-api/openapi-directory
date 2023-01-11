@@ -1,39 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import paystatementsummary as shared_paystatementsummary
 
 
-@dataclass
+@dataclasses.dataclass
 class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams:
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
-    year: str = field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
+    year: str = dataclasses.field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams:
-    dettypes: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'dettypes', 'style': 'form', 'explode': True }})
-    includetotalcount: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includetotalcount', 'style': 'form', 'explode': True }})
-    pagenumber: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pagenumber', 'style': 'form', 'explode': True }})
-    pagesize: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
+    dettypes: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dettypes', 'style': 'form', 'explode': True }})
+    includetotalcount: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includetotalcount', 'style': 'form', 'explode': True }})
+    pagenumber: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pagenumber', 'style': 'form', 'explode': True }})
+    pagesize: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest:
-    path_params: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams = field()
-    query_params: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams = field()
-    security: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity = field()
+    path_params: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams = dataclasses.field()
+    query_params: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams = dataclasses.field()
+    security: GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse:
-    content_type: str = field()
-    status_code: int = field()
-    errors: Optional[List[shared.Error]] = field(default=None)
-    pay_statement_summaries: Optional[List[shared.PayStatementSummary]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
+    pay_statement_summaries: Optional[list[shared_paystatementsummary.PayStatementSummary]] = dataclasses.field(default=None)
     

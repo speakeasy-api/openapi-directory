@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorRegisterPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorRegisterRequestBody:
-    callback_url: str = field(metadata={'form': { 'field_name': 'callbackUrl' }})
-    change_type: str = field(metadata={'form': { 'field_name': 'changeType' }})
+    callback_url: str = dataclasses.field(metadata={'form': { 'field_name': 'callbackUrl' }})
+    change_type: str = dataclasses.field(metadata={'form': { 'field_name': 'changeType' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorRegisterSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorRegisterRequest:
-    path_params: CompanyMonitorRegisterPathParams = field()
-    security: CompanyMonitorRegisterSecurity = field()
-    request: Optional[CompanyMonitorRegisterRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: CompanyMonitorRegisterPathParams = dataclasses.field()
+    security: CompanyMonitorRegisterSecurity = dataclasses.field()
+    request: Optional[CompanyMonitorRegisterRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorRegisterResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_monitor_register_200_application_json_any: Optional[Any] = field(default=None)
-    company_monitor_register_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_monitor_register_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    company_monitor_register_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

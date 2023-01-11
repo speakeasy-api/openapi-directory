@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.GetRoutingControlStateRequest(
     headers=operations.GetRoutingControlStateHeaders(
-        x_amz_algorithm="asperiores",
-        x_amz_content_sha256="quasi",
-        x_amz_credential="eius",
-        x_amz_date="ea",
-        x_amz_security_token="pariatur",
-        x_amz_signature="eligendi",
-        x_amz_signed_headers="sit",
+        x_amz_algorithm="sed",
+        x_amz_content_sha256="expedita",
+        x_amz_credential="maxime",
+        x_amz_date="eos",
+        x_amz_security_token="aut",
+        x_amz_signature="autem",
+        x_amz_signed_headers="deleniti",
         x_amz_target="ToggleCustomerAPI.GetRoutingControlState",
     ),
     request=shared.GetRoutingControlStateRequest(
-        routing_control_arn="quia",
+        routing_control_arn="asperiores",
     ),
 )
     
-res = s.sdk.get_routing_control_state(req)
+res = s.get_routing_control_state(req)
 
 if res.get_routing_control_state_response is not None:
     # handle response

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import userbadge as shared_userbadge
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailBadgesPathParams:
-    user_email: str = field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
+    user_email: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailBadgesRequest:
-    path_params: GetUsersUserEmailBadgesPathParams = field()
+    path_params: GetUsersUserEmailBadgesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailBadgesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    user_badges: Optional[List[shared.UserBadge]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    user_badges: Optional[list[shared_userbadge.UserBadge]] = dataclasses.field(default=None)
     

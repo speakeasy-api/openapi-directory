@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,72 +20,69 @@ req = operations.WebsecurityscannerProjectsScanConfigsCreateRequest(
     security=operations.WebsecurityscannerProjectsScanConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.WebsecurityscannerProjectsScanConfigsCreatePathParams(
-        parent="aperiam",
+        parent="nesciunt",
     ),
     query_params=operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="eius",
+        access_token="rerum",
         alt="media",
-        callback="rem",
-        fields="cupiditate",
-        key="omnis",
-        oauth_token="velit",
-        pretty_print=False,
-        quota_user="tempore",
-        upload_type="repellendus",
-        upload_protocol="ipsa",
+        callback="quo",
+        fields="et",
+        key="aut",
+        oauth_token="laboriosam",
+        pretty_print=True,
+        quota_user="voluptatem",
+        upload_type="quia",
+        upload_protocol="eos",
     ),
     request=shared.ScanConfig(
         authentication=shared.Authentication(
             custom_account=shared.CustomAccount(
-                login_url="quaerat",
-                password="ut",
+                login_url="dolorem",
+                password="quibusdam",
                 username="qui",
             ),
             google_account=shared.GoogleAccount(
-                password="vero",
-                username="quia",
+                password="enim",
+                username="dolores",
             ),
         ),
         blacklist_patterns=[
-            "doloribus",
-            "vitae",
-            "quos",
+            "earum",
         ],
-        display_name="et",
+        display_name="qui",
         latest_run=shared.ScanRun(
-            end_time="quasi",
-            execution_state="FINISHED",
+            end_time="ab",
+            execution_state="QUEUED",
             has_vulnerabilities=False,
-            name="id",
-            progress_percent=2697806848195229402,
+            name="voluptas",
+            progress_percent=8073592271542201319,
             result_state="RESULT_STATE_UNSPECIFIED",
-            start_time="ea",
-            urls_crawled_count="possimus",
-            urls_tested_count="numquam",
+            start_time="voluptatem",
+            urls_crawled_count="optio",
+            urls_tested_count="reiciendis",
         ),
-        max_qps=6954057250565448800,
-        name="veniam",
+        max_qps=1508960573531668363,
+        name="inventore",
         schedule=shared.Schedule(
-            interval_duration_days=7230071004187882185,
-            schedule_time="et",
+            interval_duration_days=1097738351481424118,
+            schedule_time="veritatis",
         ),
         starting_urls=[
-            "id",
-            "ipsum",
-            "sit",
+            "quis",
         ],
         target_platforms=[
-            "CLOUD_RUN",
-            "CLOUD_FUNCTIONS",
+            "COMPUTE",
+            "TARGET_PLATFORM_UNSPECIFIED",
+            "APP_ENGINE",
         ],
-        user_agent="CHROME_ANDROID",
+        user_agent="SAFARI_IPHONE",
     ),
 )
     

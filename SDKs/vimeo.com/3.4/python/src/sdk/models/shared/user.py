@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import picture as shared_picture
 
 class UserAccountEnum(str, Enum):
     BASIC = "basic"
@@ -21,335 +21,335 @@ class UserAccountEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsAlbums:
     r"""UserMetadataConnectionsAlbums
     Information about the albums created by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsAppearances:
     r"""UserMetadataConnectionsAppearances
     Information about the appearances of this user in other videos.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsBlock:
     r"""UserMetadataConnectionsBlock
     Information on the users that the current user has blocked. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsCategories:
     r"""UserMetadataConnectionsCategories
     Information about this user's followed categories.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsChannels:
     r"""UserMetadataConnectionsChannels
     Information about this user's subscribed channels.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsFeed:
     r"""UserMetadataConnectionsFeed
     Information about this user's feed.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsFolders:
     r"""UserMetadataConnectionsFolders
     Information about this user's folders.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsFollowers:
     r"""UserMetadataConnectionsFollowers
     Information about the user's followers.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsFollowing:
     r"""UserMetadataConnectionsFollowing
     Information about the users that the current user is following.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsGroups:
     r"""UserMetadataConnectionsGroups
     Information about the groups created by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsLikes:
     r"""UserMetadataConnectionsLikes
     Information about the videos that this user has liked.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsModeratedChannels:
     r"""UserMetadataConnectionsModeratedChannels
     Information about the channels that this user moderates.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsPictures:
     r"""UserMetadataConnectionsPictures
     Information about this user's portraits.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsPortfolios:
     r"""UserMetadataConnectionsPortfolios
     Information about this user's portfolios.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsRecommendedChannels:
     r"""UserMetadataConnectionsRecommendedChannels
     A collection of recommended channels for the current user to follow. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsRecommendedUsers:
     r"""UserMetadataConnectionsRecommendedUsers
     A Collection of recommended users for the current user to follow. This data requires a bearer token with the `private` scope.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsShared:
     r"""UserMetadataConnectionsShared
     Information about the videos that have been shared with this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsVideos:
     r"""UserMetadataConnectionsVideos
     Information about the videos uploaded by this user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsWatchedVideos:
     r"""UserMetadataConnectionsWatchedVideos
     Information about the videos that this user has watched.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnectionsWatchlater:
     r"""UserMetadataConnectionsWatchlater
     Information about the videos that this user wants to watch later.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    total: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    total: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataConnections:
     r"""UserMetadataConnections
     The list of resource URIs related to the user.
     """
     
-    albums: UserMetadataConnectionsAlbums = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('albums') }})
-    appearances: UserMetadataConnectionsAppearances = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appearances') }})
-    block: UserMetadataConnectionsBlock = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
-    categories: UserMetadataConnectionsCategories = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('categories') }})
-    channels: UserMetadataConnectionsChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channels') }})
-    feed: UserMetadataConnectionsFeed = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed') }})
-    folders: UserMetadataConnectionsFolders = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folders') }})
-    followers: UserMetadataConnectionsFollowers = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
-    following: UserMetadataConnectionsFollowing = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
-    groups: UserMetadataConnectionsGroups = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
-    likes: UserMetadataConnectionsLikes = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('likes') }})
-    moderated_channels: UserMetadataConnectionsModeratedChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('moderated_channels') }})
-    pictures: UserMetadataConnectionsPictures = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
-    portfolios: UserMetadataConnectionsPortfolios = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
-    recommended_channels: UserMetadataConnectionsRecommendedChannels = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_channels') }})
-    recommended_users: UserMetadataConnectionsRecommendedUsers = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_users') }})
-    shared: UserMetadataConnectionsShared = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('shared') }})
-    videos: UserMetadataConnectionsVideos = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
-    watched_videos: UserMetadataConnectionsWatchedVideos = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watched_videos') }})
-    watchlater: UserMetadataConnectionsWatchlater = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
+    albums: UserMetadataConnectionsAlbums = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('albums') }})
+    appearances: UserMetadataConnectionsAppearances = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appearances') }})
+    block: UserMetadataConnectionsBlock = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
+    categories: UserMetadataConnectionsCategories = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('categories') }})
+    channels: UserMetadataConnectionsChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channels') }})
+    feed: UserMetadataConnectionsFeed = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('feed') }})
+    folders: UserMetadataConnectionsFolders = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folders') }})
+    followers: UserMetadataConnectionsFollowers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
+    following: UserMetadataConnectionsFollowing = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
+    groups: UserMetadataConnectionsGroups = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    likes: UserMetadataConnectionsLikes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('likes') }})
+    moderated_channels: UserMetadataConnectionsModeratedChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('moderated_channels') }})
+    pictures: UserMetadataConnectionsPictures = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
+    portfolios: UserMetadataConnectionsPortfolios = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    recommended_channels: UserMetadataConnectionsRecommendedChannels = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_channels') }})
+    recommended_users: UserMetadataConnectionsRecommendedUsers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommended_users') }})
+    shared: UserMetadataConnectionsShared = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('shared') }})
+    videos: UserMetadataConnectionsVideos = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    watched_videos: UserMetadataConnectionsWatchedVideos = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watched_videos') }})
+    watchlater: UserMetadataConnectionsWatchlater = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataInteractionsAddPrivacyUser:
-    options: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataInteractionsBlock:
     r"""UserMetadataInteractionsBlock
     Information related to the block status of this user.
     """
     
-    added: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
-    added_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added_time') }})
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    added: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
+    added_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added_time') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataInteractionsFollow:
     r"""UserMetadataInteractionsFollow
     Information related to the followed status of this user.
     """
     
-    added: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    added: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('added') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataInteractionsReport:
     r"""UserMetadataInteractionsReport
     Information regarding where and how to report a user.
     """
     
-    options: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
-    reason: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    options: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    reason: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadataInteractions:
-    block: UserMetadataInteractionsBlock = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
-    follow: UserMetadataInteractionsFollow = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('follow') }})
-    report: UserMetadataInteractionsReport = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('report') }})
-    add_privacy_user: Optional[UserMetadataInteractionsAddPrivacyUser] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_privacy_user') }})
+    block: UserMetadataInteractionsBlock = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('block') }})
+    follow: UserMetadataInteractionsFollow = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('follow') }})
+    report: UserMetadataInteractionsReport = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('report') }})
+    add_privacy_user: Optional[UserMetadataInteractionsAddPrivacyUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add_privacy_user') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserMetadata:
     r"""UserMetadata
     The user's metadata.
     """
     
-    connections: UserMetadataConnections = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
-    interactions: UserMetadataInteractions = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interactions') }})
+    connections: UserMetadataConnections = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connections') }})
+    interactions: UserMetadataInteractions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interactions') }})
     
 class UserPreferencesVideosPrivacyCommentsEnum(str, Enum):
     ANYBODY = "anybody"
@@ -372,50 +372,50 @@ class UserPreferencesVideosPrivacyViewEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserPreferencesVideosPrivacy:
-    add: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
-    comments: Optional[UserPreferencesVideosPrivacyCommentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
-    download: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    embed: Optional[UserPreferencesVideosPrivacyEmbedEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
-    view: Optional[UserPreferencesVideosPrivacyViewEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
+    add: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
+    comments: Optional[UserPreferencesVideosPrivacyCommentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    embed: Optional[UserPreferencesVideosPrivacyEmbedEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
+    view: Optional[UserPreferencesVideosPrivacyViewEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserPreferencesVideos:
-    privacy: Optional[UserPreferencesVideosPrivacy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    privacy: Optional[UserPreferencesVideosPrivacy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserPreferences:
-    videos: Optional[UserPreferencesVideos] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    videos: Optional[UserPreferencesVideos] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserUploadQuotaLifetime:
     r"""UserUploadQuotaLifetime
     Information about the user's lifetime upload usage.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserUploadQuotaPeriodic:
     r"""UserUploadQuotaPeriodic
     Information about the user's usage for the current period.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    reset_date: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reset_date') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    reset_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reset_date') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 class UserUploadQuotaSpaceShowingEnum(str, Enum):
     LIFETIME = "lifetime"
@@ -423,54 +423,54 @@ class UserUploadQuotaSpaceShowingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserUploadQuotaSpace:
     r"""UserUploadQuotaSpace
     Information about the user's upload space remaining for the current period.
     """
     
-    free: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
-    max: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
-    showing: UserUploadQuotaSpaceShowingEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('showing') }})
-    used: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
+    free: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('free') }})
+    max: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max') }})
+    showing: UserUploadQuotaSpaceShowingEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('showing') }})
+    used: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserUploadQuota:
     r"""UserUploadQuota
     Appears only when the user has upload access and is looking at their own user record.
     """
     
-    lifetime: UserUploadQuotaLifetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifetime') }})
-    periodic: UserUploadQuotaPeriodic = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('periodic') }})
-    space: UserUploadQuotaSpace = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
+    lifetime: UserUploadQuotaLifetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('lifetime') }})
+    periodic: UserUploadQuotaPeriodic = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('periodic') }})
+    space: UserUploadQuotaSpace = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserWebsites:
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class User:
-    account: UserAccountEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    bio: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
-    created_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
-    link: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    location: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    metadata: UserMetadata = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    pictures: Picture = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
-    resource_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
-    upload_quota: UserUploadQuota = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload_quota') }})
-    uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
-    websites: List[UserWebsites] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('websites') }})
-    content_filter: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_filter') }})
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    preferences: Optional[UserPreferences] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferences') }})
+    account: UserAccountEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    bio: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
+    created_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_time') }})
+    link: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    location: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    metadata: UserMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    pictures: shared_picture.Picture = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pictures') }})
+    resource_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_key') }})
+    upload_quota: UserUploadQuota = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload_quota') }})
+    uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uri') }})
+    websites: list[UserWebsites] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('websites') }})
+    content_filter: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_filter') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    preferences: Optional[UserPreferences] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferences') }})
     

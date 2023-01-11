@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import settingmodel_haljson as shared_settingmodel_haljson
+from ..shared import settingmodel as shared_settingmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsPathParams:
-    config_id: str = field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
+    config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsRequest:
-    path_params: GetSettingsPathParams = field()
+    path_params: GetSettingsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    setting_model_haljsons: Optional[List[shared.SettingModelHaljson]] = field(default=None)
-    setting_models: Optional[List[shared.SettingModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    setting_model_haljsons: Optional[list[shared_settingmodel_haljson.SettingModelHaljson]] = dataclasses.field(default=None)
+    setting_models: Optional[list[shared_settingmodel.SettingModel]] = dataclasses.field(default=None)
     

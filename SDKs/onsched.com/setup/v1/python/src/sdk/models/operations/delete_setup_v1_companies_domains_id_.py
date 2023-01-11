@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import companydomainviewmodel as shared_companydomainviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CompaniesDomainsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CompaniesDomainsIDRequest:
-    path_params: DeleteSetupV1CompaniesDomainsIDPathParams = field()
+    path_params: DeleteSetupV1CompaniesDomainsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1CompaniesDomainsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_domain_view_model: Optional[shared.CompanyDomainViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_domain_view_model: Optional[shared_companydomainviewmodel.CompanyDomainViewModel] = dataclasses.field(default=None)
     

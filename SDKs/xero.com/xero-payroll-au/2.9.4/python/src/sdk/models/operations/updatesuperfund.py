@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import superfund as shared_superfund
+from ..shared import superfunds as shared_superfunds
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSuperfundPathParams:
-    super_fund_id: str = field(metadata={'path_param': { 'field_name': 'SuperFundID', 'style': 'simple', 'explode': False }})
+    super_fund_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'SuperFundID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSuperfundHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSuperfundSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSuperfundRequest:
-    headers: UpdateSuperfundHeaders = field()
-    path_params: UpdateSuperfundPathParams = field()
-    security: UpdateSuperfundSecurity = field()
-    request: Optional[List[shared.SuperFundInput]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: UpdateSuperfundHeaders = dataclasses.field()
+    path_params: UpdateSuperfundPathParams = dataclasses.field()
+    security: UpdateSuperfundSecurity = dataclasses.field()
+    request: Optional[list[shared_superfund.SuperFundInput]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSuperfundResponse:
-    content_type: str = field()
-    status_code: int = field()
-    super_funds: Optional[shared.SuperFunds] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    super_funds: Optional[shared_superfunds.SuperFunds] = dataclasses.field(default=None)
     

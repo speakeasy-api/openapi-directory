@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -28,27 +28,27 @@ class MessageStatusTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MessageStatus:
     r"""MessageStatus
     The status of the message
     """
     
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: MessageStatusTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    subtype: Optional[MessageStatusSubtypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subtype') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: MessageStatusTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    subtype: Optional[MessageStatusSubtypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subtype') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MessageSubmission:
     r"""MessageSubmission
     Identifies the submission.
     
     """
     
-    date_: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    date_: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('date'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class MessageTypeEnum(str, Enum):
     SENT = "SENT"
@@ -56,20 +56,20 @@ class MessageTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Message:
-    body: Any = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    status: MessageStatus = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    to: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
-    type: MessageTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    credit_cost: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditCost') }})
-    encoding: Optional[MessageEncodingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encoding') }})
-    from_: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
-    message_class: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('messageClass') }})
-    number_of_parts: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfParts') }})
-    protocol_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocolId') }})
-    related_sent_message_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relatedSentMessageId') }})
-    submission: Optional[MessageSubmission] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('submission') }})
-    user_supplied_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userSuppliedId') }})
+    body: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    status: MessageStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    to: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
+    type: MessageTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    credit_cost: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creditCost') }})
+    encoding: Optional[MessageEncodingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encoding') }})
+    from_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
+    message_class: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('messageClass') }})
+    number_of_parts: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfParts') }})
+    protocol_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocolId') }})
+    related_sent_message_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relatedSentMessageId') }})
+    submission: Optional[MessageSubmission] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('submission') }})
+    user_supplied_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userSuppliedId') }})
     

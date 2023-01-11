@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import team_membership as shared_team_membership
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 class TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum(str, Enum):
     MEMBER = "member"
@@ -21,36 +21,36 @@ class TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrgRequestBody:
-    role: Optional[TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    role: Optional[TeamsAddOrUpdateMembershipForUserInOrgRequestBodyRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSONErrors:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    field: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
-    resource: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    field: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
+    resource: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSON:
-    errors: Optional[List[TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSONErrors]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    errors: Optional[list[TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSONErrors]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrgRequest:
-    path_params: TeamsAddOrUpdateMembershipForUserInOrgPathParams = field()
-    request: Optional[TeamsAddOrUpdateMembershipForUserInOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsAddOrUpdateMembershipForUserInOrgPathParams = dataclasses.field()
+    request: Optional[TeamsAddOrUpdateMembershipForUserInOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateMembershipForUserInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_membership: Optional[shared.TeamMembership] = field(default=None)
-    teams_add_or_update_membership_for_user_in_org_422_application_json_object: Optional[TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_membership: Optional[shared_team_membership.TeamMembership] = dataclasses.field(default=None)
+    teams_add_or_update_membership_for_user_in_org_422_application_json_object: Optional[TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJSON] = dataclasses.field(default=None)
     

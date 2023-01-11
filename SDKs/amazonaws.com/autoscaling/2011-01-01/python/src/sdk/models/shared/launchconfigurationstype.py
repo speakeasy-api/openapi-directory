@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import launchconfiguration as shared_launchconfiguration
 
 
-@dataclass
+@dataclasses.dataclass
 class LaunchConfigurationsType:
-    launch_configurations: List[LaunchConfiguration] = field()
-    next_token: Optional[str] = field(default=None)
+    launch_configurations: list[shared_launchconfiguration.LaunchConfiguration] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

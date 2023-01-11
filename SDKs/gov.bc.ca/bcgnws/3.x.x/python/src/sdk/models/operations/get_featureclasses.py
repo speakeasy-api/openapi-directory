@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class GetFeatureClassesOutputFormatEnum(str, Enum):
@@ -6,18 +6,18 @@ class GetFeatureClassesOutputFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFeatureClassesQueryParams:
-    output_format: GetFeatureClassesOutputFormatEnum = field(metadata={'query_param': { 'field_name': 'outputFormat', 'style': 'form', 'explode': True }})
+    output_format: GetFeatureClassesOutputFormatEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'outputFormat', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeatureClassesRequest:
-    query_params: GetFeatureClassesQueryParams = field()
+    query_params: GetFeatureClassesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeatureClassesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

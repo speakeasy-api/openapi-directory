@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interfacetemplate as shared_interfacetemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceTemplatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceTemplatesReadRequest:
-    path_params: DcimInterfaceTemplatesReadPathParams = field()
+    path_params: DcimInterfaceTemplatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceTemplatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interface_template: Optional[shared.InterfaceTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interface_template: Optional[shared_interfacetemplate.InterfaceTemplate] = dataclasses.field(default=None)
     

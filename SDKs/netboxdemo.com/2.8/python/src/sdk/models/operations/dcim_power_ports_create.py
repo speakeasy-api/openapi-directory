@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablepowerport as shared_writablepowerport
+from ..shared import powerport as shared_powerport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortsCreateRequest:
-    request: shared.WritablePowerPortInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablepowerport.WritablePowerPortInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_port: Optional[shared.PowerPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_port: Optional[shared_powerport.PowerPort] = dataclasses.field(default=None)
     

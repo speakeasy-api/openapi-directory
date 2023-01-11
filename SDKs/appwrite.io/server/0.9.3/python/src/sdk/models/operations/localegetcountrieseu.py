@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import countrylist as shared_countrylist
 
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesEuSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesEuRequest:
-    security: LocaleGetCountriesEuSecurity = field()
+    security: LocaleGetCountriesEuSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesEuResponse:
-    content_type: str = field()
-    status_code: int = field()
-    country_list: Optional[shared.CountryList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    country_list: Optional[shared_countrylist.CountryList] = dataclasses.field(default=None)
     

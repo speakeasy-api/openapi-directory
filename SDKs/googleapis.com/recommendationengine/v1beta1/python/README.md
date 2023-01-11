@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,116 +20,98 @@ req = operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate
     security=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams(
-        parent="aut",
+        parent="enim",
     ),
     query_params=operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="nobis",
-        alt="media",
-        callback="est",
-        fields="magnam",
-        key="consequuntur",
-        oauth_token="ut",
-        pretty_print=False,
-        quota_user="earum",
-        upload_type="porro",
-        upload_protocol="dolorem",
+        dollar_xgafv="1",
+        access_token="voluptas",
+        alt="json",
+        callback="et",
+        fields="id",
+        key="dolorem",
+        oauth_token="sit",
+        pretty_print=True,
+        quota_user="a",
+        upload_type="nulla",
+        upload_protocol="blanditiis",
     ),
     request=shared.GoogleCloudRecommendationengineV1beta1CatalogItem(
         category_hierarchies=[
             shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(
                 categories=[
-                    "aut",
-                ],
-            ),
-            shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy(
-                categories=[
-                    "odit",
-                    "quis",
+                    "corporis",
+                    "recusandae",
                 ],
             ),
         ],
-        description="maiores",
-        id="cumque",
+        description="delectus",
+        id="eos",
         item_attributes=shared.GoogleCloudRecommendationengineV1beta1FeatureMap(
             categorical_features={
-                "labore": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
+                "culpa": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
                     value=[
-                        "sint",
-                    ],
-                ),
-                "nihil": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList(
-                    value=[
-                        "sint",
-                        "est",
+                        "aut",
+                        "consequatur",
                     ],
                 ),
             },
             numerical_features={
-                "officiis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
+                "odio": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
                     value=[
-                        11.100000,
-                        8.200000,
-                        97.099998,
-                    ],
-                ),
-                "voluptatem": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList(
-                    value=[
-                        8.200000,
+                        34.200001,
+                        40.200001,
                     ],
                 ),
             },
         ),
-        item_group_id="dolorum",
-        language_code="harum",
+        item_group_id="iste",
+        language_code="et",
         product_metadata=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem(
-            available_quantity="officiis",
-            canonical_product_uri="corrupti",
+            available_quantity="et",
+            canonical_product_uri="laudantium",
             costs={
-                "sunt": 90.199997,
-                "voluptate": 37.200001,
-                "ea": 90.199997,
+                "similique": 77.199997,
             },
-            currency_code="explicabo",
+            currency_code="incidunt",
             exact_price=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice(
-                display_price=25.200001,
-                original_price=99.199997,
+                display_price=27.200001,
+                original_price=64.099998,
             ),
             images=[
                 shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=7746893585940478322,
-                    uri="atque",
-                    width=5348356178737988486,
+                    height=8942292800023669852,
+                    uri="autem",
+                    width=5883357621257773236,
                 ),
                 shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=401863722195270076,
-                    uri="et",
-                    width=6249467380623826659,
+                    height=478099075473941033,
+                    uri="dolore",
+                    width=7587515172654034190,
                 ),
                 shared.GoogleCloudRecommendationengineV1beta1Image(
-                    height=5112485330184857086,
-                    uri="ipsum",
-                    width=4962516065621625535,
+                    height=8043303013086071262,
+                    uri="ipsa",
+                    width=1654514952870731982,
                 ),
             ],
             price_range=shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange(
-                max=57.099998,
-                min=16.200001,
+                max=75.199997,
+                min=32.099998,
             ),
-            stock_state="PREORDER",
+            stock_state="IN_STOCK",
         ),
         tags=[
-            "deserunt",
-            "expedita",
-            "illum",
+            "aut",
+            "reprehenderit",
+            "ea",
         ],
-        title="vitae",
+        title="dolorem",
     ),
 )
     

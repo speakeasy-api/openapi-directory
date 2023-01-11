@@ -8,30 +8,31 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.DeletePodcastByIDRequest(
-    path_params=operations.DeletePodcastByIDPathParams(
-        id="rerum",
+req = operations.GetBestPodcastsRequest(
+    query_params=operations.GetBestPodcastsQueryParams(
+        genre_id="voluptatem",
+        language="libero",
+        page=894224865029978060,
+        publisher_region="magnam",
+        region="ut",
+        safe_mode=5723728336937391556,
     ),
-    query_params=operations.DeletePodcastByIDQueryParams(
-        reason="eaque",
-    ),
-    headers=operations.DeletePodcastByIDHeaders(
-        x_listen_api_key="accusantium",
+    headers=operations.GetBestPodcastsHeaders(
+        x_listen_api_key="ut",
     ),
 )
     
-res = s.sdk.delete_podcast_by_id(req)
+res = s.directory_api.get_best_podcasts(req)
 
-if res.delete_podcast_response is not None:
+if res.best_podcasts_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -39,9 +40,8 @@ if res.delete_podcast_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Directory API
 
-* `delete_podcast_by_id` - Request to delete a podcast
 * `get_best_podcasts` - Fetch a list of best podcasts by genre
 * `get_curated_podcast_by_id` - Fetch a curated list of podcasts by id
 * `get_curated_podcasts` - Fetch curated lists of podcasts
@@ -50,15 +50,25 @@ if res.delete_podcast_response is not None:
 * `get_episodes_in_batch` - Batch fetch basic meta data for episodes
 * `get_genres` - Fetch a list of podcast genres
 * `get_languages` - Fetch a list of supported languages for podcasts
-* `get_playlist_by_id` - Fetch a playlist's info and items (i.e., episodes or podcasts).
-* `get_playlists` - Fetch a list of your playlists.
 * `get_podcast_by_id` - Fetch detailed meta data and episodes for a podcast by id
 * `get_podcast_recommendations` - Fetch recommendations for a podcast
 * `get_podcasts_in_batch` - Batch fetch basic meta data for podcasts
 * `get_regions` - Fetch a list of supported countries/regions for best podcasts
 * `just_listen` - Fetch a random podcast episode
-* `search` - Full-text search
+
+### Playlist API
+
+* `get_playlist_by_id` - Fetch a playlist's info and items (i.e., episodes or podcasts).
+* `get_playlists` - Fetch a list of your playlists.
+
+### Podcaster API
+
+* `delete_podcast_by_id` - Request to delete a podcast
 * `submit_podcast` - Submit a podcast to Listen Notes database
+
+### Search API
+
+* `search` - Full-text search
 * `typeahead` - Typeahead search
 
 <!-- End SDK Available Operations -->

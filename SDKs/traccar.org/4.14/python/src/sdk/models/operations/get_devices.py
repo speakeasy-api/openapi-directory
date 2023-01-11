@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import device as shared_device
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDevicesQueryParams:
-    all: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
-    id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
-    unique_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uniqueId', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    unique_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uniqueId', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDevicesRequest:
-    query_params: GetDevicesQueryParams = field()
+    query_params: GetDevicesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDevicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    devices: Optional[List[shared.Device]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    devices: Optional[list[shared_device.Device]] = dataclasses.field(default=None)
     

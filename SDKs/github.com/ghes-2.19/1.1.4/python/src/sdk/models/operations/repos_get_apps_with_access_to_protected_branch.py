@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetAppsWithAccessToProtectedBranchPathParams:
-    branch: str = field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetAppsWithAccessToProtectedBranchRequest:
-    path_params: ReposGetAppsWithAccessToProtectedBranchPathParams = field()
+    path_params: ReposGetAppsWithAccessToProtectedBranchPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetAppsWithAccessToProtectedBranchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    integrations: Optional[List[dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    integrations: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

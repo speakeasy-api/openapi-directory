@@ -1,47 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import describealarmresponse as shared_describealarmresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmPathParams:
-    alarm_model_name: str = field(metadata={'path_param': { 'field_name': 'alarmModelName', 'style': 'simple', 'explode': False }})
+    alarm_model_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'alarmModelName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmQueryParams:
-    key_value: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'keyValue', 'style': 'form', 'explode': True }})
+    key_value: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'keyValue', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmRequest:
-    headers: DescribeAlarmHeaders = field()
-    path_params: DescribeAlarmPathParams = field()
-    query_params: DescribeAlarmQueryParams = field()
+    headers: DescribeAlarmHeaders = dataclasses.field()
+    path_params: DescribeAlarmPathParams = dataclasses.field()
+    query_params: DescribeAlarmQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAlarmResponse:
-    content_type: str = field()
-    status_code: int = field()
-    describe_alarm_response: Optional[shared.DescribeAlarmResponse] = field(default=None)
-    internal_failure_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    service_unavailable_exception: Optional[Any] = field(default=None)
-    throttling_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    describe_alarm_response: Optional[shared_describealarmresponse.DescribeAlarmResponse] = dataclasses.field(default=None)
+    internal_failure_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    service_unavailable_exception: Optional[Any] = dataclasses.field(default=None)
+    throttling_exception: Optional[Any] = dataclasses.field(default=None)
     

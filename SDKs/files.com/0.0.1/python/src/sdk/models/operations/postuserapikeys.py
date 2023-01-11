@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import apikeyentity as shared_apikeyentity
 
 class PostUserAPIKeysRequestBodyPermissionSetEnum(str, Enum):
     NONE = "none"
@@ -15,23 +15,23 @@ class PostUserAPIKeysRequestBodyPermissionSetEnum(str, Enum):
     MOBILE_APP = "mobile_app"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUserAPIKeysRequestBody:
-    expires_at: Optional[datetime] = field(default=None, metadata={'multipart_form': { 'field_name': 'expires_at' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    path: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
-    permission_set: Optional[PostUserAPIKeysRequestBodyPermissionSetEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'permission_set' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    expires_at: Optional[datetime] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'expires_at' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'path' }})
+    permission_set: Optional[PostUserAPIKeysRequestBodyPermissionSetEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'permission_set' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUserAPIKeysRequest:
-    request: Optional[PostUserAPIKeysRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostUserAPIKeysRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUserAPIKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key_entity: Optional[shared.APIKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key_entity: Optional[shared_apikeyentity.APIKeyEntity] = dataclasses.field(default=None)
     

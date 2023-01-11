@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.HomegraphAgentUsersDeleteRequest(
     security=operations.HomegraphAgentUsersDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.HomegraphAgentUsersDeletePathParams(
-        agent_user_id="quas",
+        agent_user_id="voluptatem",
     ),
     query_params=operations.HomegraphAgentUsersDeleteQueryParams(
-        dollar_xgafv="2",
-        access_token="excepturi",
-        alt="proto",
-        callback="enim",
-        fields="aut",
-        key="numquam",
-        oauth_token="aliquam",
+        dollar_xgafv="1",
+        access_token="voluptatum",
+        alt="json",
+        callback="ut",
+        fields="consectetur",
+        key="minima",
+        oauth_token="laudantium",
         pretty_print=False,
-        quota_user="sint",
-        request_id="odio",
-        upload_type="consequatur",
-        upload_protocol="veritatis",
+        quota_user="aut",
+        request_id="amet",
+        upload_type="rerum",
+        upload_protocol="reprehenderit",
     ),
 )
     

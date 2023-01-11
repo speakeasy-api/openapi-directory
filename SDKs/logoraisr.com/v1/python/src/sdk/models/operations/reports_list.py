@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import report as shared_report
 
 
-@dataclass
+@dataclasses.dataclass
 class ReportsListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report: Optional[shared.Report] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report: Optional[shared_report.Report] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RequestTimeout:
     r"""RequestTimeout
     A timeout occurred when attempting to query the specified domain with specified query expression.
     """
     
-    box_usage: Optional[float] = field(default=None)
+    box_usage: Optional[float] = dataclasses.field(default=None)
     

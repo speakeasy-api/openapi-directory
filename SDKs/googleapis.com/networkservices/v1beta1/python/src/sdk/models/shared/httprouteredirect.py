@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,17 +14,17 @@ class HTTPRouteRedirectResponseCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HTTPRouteRedirect:
     r"""HTTPRouteRedirect
     The specification for redirecting traffic.
     """
     
-    host_redirect: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostRedirect') }})
-    https_redirect: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpsRedirect') }})
-    path_redirect: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pathRedirect') }})
-    port_redirect: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portRedirect') }})
-    prefix_rewrite: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prefixRewrite') }})
-    response_code: Optional[HTTPRouteRedirectResponseCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responseCode') }})
-    strip_query: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stripQuery') }})
+    host_redirect: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hostRedirect') }})
+    https_redirect: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpsRedirect') }})
+    path_redirect: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pathRedirect') }})
+    port_redirect: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portRedirect') }})
+    prefix_rewrite: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prefixRewrite') }})
+    response_code: Optional[HTTPRouteRedirectResponseCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responseCode') }})
+    strip_query: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stripQuery') }})
     

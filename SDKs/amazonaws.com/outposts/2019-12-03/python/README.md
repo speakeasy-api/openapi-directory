@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,28 +25,36 @@ s.config_security(
     
 req = operations.CreateOrderRequest(
     headers=operations.CreateOrderHeaders(
-        x_amz_algorithm="ea",
-        x_amz_content_sha256="sapiente",
-        x_amz_credential="consequatur",
-        x_amz_date="et",
-        x_amz_security_token="voluptate",
-        x_amz_signature="dolore",
-        x_amz_signed_headers="dignissimos",
+        x_amz_algorithm="adipisci",
+        x_amz_content_sha256="ipsum",
+        x_amz_credential="placeat",
+        x_amz_date="ut",
+        x_amz_security_token="voluptas",
+        x_amz_signature="sed",
+        x_amz_signed_headers="reprehenderit",
     ),
     request=operations.CreateOrderRequestBody(
         line_items=[
             shared.LineItemRequest(
-                catalog_item_id="eum",
-                quantity=281946176081875744,
+                catalog_item_id="atque",
+                quantity=8567863616121245583,
+            ),
+            shared.LineItemRequest(
+                catalog_item_id="quo",
+                quantity=6900483483283279297,
+            ),
+            shared.LineItemRequest(
+                catalog_item_id="perferendis",
+                quantity=4098291302621142390,
             ),
         ],
-        outpost_identifier="sed",
+        outpost_identifier="assumenda",
         payment_option="NO_UPFRONT",
         payment_term="THREE_YEARS",
     ),
 )
     
-res = s.sdk.create_order(req)
+res = s.create_order(req)
 
 if res.create_order_output is not None:
     # handle response

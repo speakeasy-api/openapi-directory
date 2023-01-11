@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import teamseasonstat as shared_teamseasonstat
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamSeasonStatsQueryParams:
-    conference: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
-    end_week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'endWeek', 'style': 'form', 'explode': True }})
-    start_week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'startWeek', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    conference: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
+    end_week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endWeek', 'style': 'form', 'explode': True }})
+    start_week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startWeek', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamSeasonStatsRequest:
-    query_params: GetTeamSeasonStatsQueryParams = field()
+    query_params: GetTeamSeasonStatsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamSeasonStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_season_stats: Optional[List[shared.TeamSeasonStat]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_season_stats: Optional[list[shared_teamseasonstat.TeamSeasonStat]] = dataclasses.field(default=None)
     

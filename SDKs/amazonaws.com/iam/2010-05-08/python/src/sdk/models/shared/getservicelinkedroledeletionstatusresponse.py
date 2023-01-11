@@ -1,11 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import deletiontaskfailurereasontype as shared_deletiontaskfailurereasontype
+from ..shared import deletiontaskstatustype_enum as shared_deletiontaskstatustype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServiceLinkedRoleDeletionStatusResponse:
-    status: DeletionTaskStatusTypeEnum = field()
-    reason: Optional[DeletionTaskFailureReasonType] = field(default=None)
+    status: shared_deletiontaskstatustype_enum.DeletionTaskStatusTypeEnum = dataclasses.field()
+    reason: Optional[shared_deletiontaskfailurereasontype.DeletionTaskFailureReasonType] = dataclasses.field(default=None)
     

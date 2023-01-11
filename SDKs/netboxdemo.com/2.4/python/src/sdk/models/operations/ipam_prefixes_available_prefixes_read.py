@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import prefix as shared_prefix
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesReadRequest:
-    path_params: IpamPrefixesAvailablePrefixesReadPathParams = field()
+    path_params: IpamPrefixesAvailablePrefixesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    prefix: Optional[shared.Prefix] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    prefix: Optional[shared_prefix.Prefix] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metricdescriptor as shared_metricdescriptor
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListMetricDescriptorsResponse:
     r"""ListMetricDescriptorsResponse
     The ListMetricDescriptors response.
     """
     
-    metric_descriptors: Optional[List[MetricDescriptor]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricDescriptors') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    metric_descriptors: Optional[list[shared_metricdescriptor.MetricDescriptor]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricDescriptors') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

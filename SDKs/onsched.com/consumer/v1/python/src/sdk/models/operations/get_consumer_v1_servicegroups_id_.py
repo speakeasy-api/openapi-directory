@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import servicegroupviewmodel as shared_servicegroupviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicegroupsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicegroupsIDRequest:
-    path_params: GetConsumerV1ServicegroupsIDPathParams = field()
+    path_params: GetConsumerV1ServicegroupsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicegroupsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_group_view_model: Optional[shared.ServiceGroupViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_group_view_model: Optional[shared_servicegroupviewmodel.ServiceGroupViewModel] = dataclasses.field(default=None)
     

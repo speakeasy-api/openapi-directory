@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import snapshot as shared_snapshot
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSnapshotsResponse:
     r"""ListSnapshotsResponse
     ListSnapshotsResponse is the result of ListSnapshotsRequest.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    snapshots: Optional[List[Snapshot]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snapshots') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    snapshots: Optional[list[shared_snapshot.Snapshot]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('snapshots') }})
     

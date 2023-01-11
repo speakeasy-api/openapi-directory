@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -29,9 +29,9 @@ class OrbitClassOrbitClassTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrbitClass:
-    orbit_class_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_description') }})
-    orbit_class_range: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_range') }})
-    orbit_class_type: Optional[OrbitClassOrbitClassTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_type') }})
+    orbit_class_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_description') }})
+    orbit_class_range: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_range') }})
+    orbit_class_type: Optional[OrbitClassOrbitClassTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('orbit_class_type') }})
     

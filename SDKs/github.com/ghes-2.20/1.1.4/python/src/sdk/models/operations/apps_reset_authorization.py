@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import authorization as shared_authorization
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetAuthorizationPathParams:
-    access_token: str = field(metadata={'path_param': { 'field_name': 'access_token', 'style': 'simple', 'explode': False }})
-    client_id: str = field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
+    access_token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'access_token', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetAuthorizationRequest:
-    path_params: AppsResetAuthorizationPathParams = field()
+    path_params: AppsResetAuthorizationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetAuthorizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authorization: Optional[shared.Authorization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authorization: Optional[shared_authorization.Authorization] = dataclasses.field(default=None)
     

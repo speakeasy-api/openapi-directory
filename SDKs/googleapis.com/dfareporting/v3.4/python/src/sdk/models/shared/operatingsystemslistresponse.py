@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import operatingsystem as shared_operatingsystem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OperatingSystemsListResponse:
     r"""OperatingSystemsListResponse
     Operating System List Response
     """
     
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    operating_systems: Optional[List[OperatingSystem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operatingSystems') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    operating_systems: Optional[list[shared_operatingsystem.OperatingSystem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operatingSystems') }})
     

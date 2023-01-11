@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import source as shared_source
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowSourcePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowSourceRequest:
-    path_params: ShowSourcePathParams = field()
+    path_params: ShowSourcePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowSourceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    source: Optional[shared.Source] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    source: Optional[shared_source.Source] = dataclasses.field(default=None)
     

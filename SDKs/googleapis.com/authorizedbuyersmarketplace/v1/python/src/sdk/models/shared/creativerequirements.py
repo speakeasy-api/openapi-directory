@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -33,16 +33,16 @@ class CreativeRequirementsSkippableAdTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeRequirements:
     r"""CreativeRequirements
     Message captures data about the creatives in the deal.
     """
     
-    creative_format: Optional[CreativeRequirementsCreativeFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
-    creative_pre_approval_policy: Optional[CreativeRequirementsCreativePreApprovalPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativePreApprovalPolicy') }})
-    creative_safe_frame_compatibility: Optional[CreativeRequirementsCreativeSafeFrameCompatibilityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeSafeFrameCompatibility') }})
-    max_ad_duration_ms: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAdDurationMs') }})
-    programmatic_creative_source: Optional[CreativeRequirementsProgrammaticCreativeSourceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('programmaticCreativeSource') }})
-    skippable_ad_type: Optional[CreativeRequirementsSkippableAdTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippableAdType') }})
+    creative_format: Optional[CreativeRequirementsCreativeFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
+    creative_pre_approval_policy: Optional[CreativeRequirementsCreativePreApprovalPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativePreApprovalPolicy') }})
+    creative_safe_frame_compatibility: Optional[CreativeRequirementsCreativeSafeFrameCompatibilityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeSafeFrameCompatibility') }})
+    max_ad_duration_ms: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAdDurationMs') }})
+    programmatic_creative_source: Optional[CreativeRequirementsProgrammaticCreativeSourceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('programmaticCreativeSource') }})
+    skippable_ad_type: Optional[CreativeRequirementsSkippableAdTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippableAdType') }})
     

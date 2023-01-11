@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SourceDataTrimTitle:
     r"""SourceDataTrimTitle
     Specifies how to trim common words from the beginning of a field to enable title sorting by that field.
     """
     
-    source_name: str = field()
-    default_value: Optional[str] = field(default=None)
-    language: Optional[str] = field(default=None)
-    separator: Optional[str] = field(default=None)
+    source_name: str = dataclasses.field()
+    default_value: Optional[str] = dataclasses.field(default=None)
+    language: Optional[str] = dataclasses.field(default=None)
+    separator: Optional[str] = dataclasses.field(default=None)
     

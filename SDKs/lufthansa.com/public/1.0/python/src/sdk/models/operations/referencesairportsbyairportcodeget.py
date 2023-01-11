@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import airportresponse as shared_airportresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetPathParams:
-    airport_code: str = field(metadata={'path_param': { 'field_name': 'airportCode', 'style': 'simple', 'explode': False }})
+    airport_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'airportCode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetQueryParams:
-    l_hoperated: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'LHoperated', 'style': 'form', 'explode': True }})
-    lang: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    l_hoperated: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'LHoperated', 'style': 'form', 'explode': True }})
+    lang: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetRequest:
-    headers: ReferencesAirportsByAirportCodeGetHeaders = field()
-    path_params: ReferencesAirportsByAirportCodeGetPathParams = field()
-    query_params: ReferencesAirportsByAirportCodeGetQueryParams = field()
-    security: ReferencesAirportsByAirportCodeGetSecurity = field()
+    headers: ReferencesAirportsByAirportCodeGetHeaders = dataclasses.field()
+    path_params: ReferencesAirportsByAirportCodeGetPathParams = dataclasses.field()
+    query_params: ReferencesAirportsByAirportCodeGetQueryParams = dataclasses.field()
+    security: ReferencesAirportsByAirportCodeGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirportsByAirportCodeGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    airport_response: Optional[shared.AirportResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    airport_response: Optional[shared_airportresponse.AirportResponse] = dataclasses.field(default=None)
     

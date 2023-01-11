@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,42 +20,45 @@ req = operations.ApigeeregistryProjectsLocationsApisCreateRequest(
     security=operations.ApigeeregistryProjectsLocationsApisCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ApigeeregistryProjectsLocationsApisCreatePathParams(
-        parent="possimus",
+        parent="modi",
     ),
     query_params=operations.ApigeeregistryProjectsLocationsApisCreateQueryParams(
         dollar_xgafv="2",
-        access_token="esse",
-        alt="proto",
-        api_id="quae",
-        callback="eum",
-        fields="qui",
-        key="ad",
-        oauth_token="vel",
+        access_token="dolores",
+        alt="media",
+        api_id="delectus",
+        callback="sint",
+        fields="non",
+        key="labore",
+        oauth_token="ut",
         pretty_print=False,
-        quota_user="qui",
-        upload_type="qui",
-        upload_protocol="dolor",
+        quota_user="magni",
+        upload_type="eveniet",
+        upload_protocol="consectetur",
     ),
     request=shared.APIInput(
         annotations={
-            "asperiores": "minima",
+            "eum": "rerum",
+            "ut": "est",
+            "quas": "quia",
         },
-        availability="dolores",
-        description="vitae",
-        display_name="et",
+        availability="rem",
+        description="incidunt",
+        display_name="modi",
         labels={
-            "quam": "quo",
-            "dignissimos": "quo",
+            "ex": "maiores",
+            "inventore": "quia",
+            "amet": "ullam",
         },
-        name="sint",
-        recommended_deployment="sit",
-        recommended_version="ducimus",
+        name="ut",
+        recommended_deployment="fugit",
+        recommended_version="temporibus",
     ),
 )
     

@@ -1,41 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import pdftolineswithlocationresult as shared_pdftolineswithlocationresult
 
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationHeaders:
-    language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
-    preprocessing: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
+    language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
+    preprocessing: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationRequestBody:
-    image_file: PdfOcrPdfToLinesWithLocationRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: PdfOcrPdfToLinesWithLocationRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationRequest:
-    headers: PdfOcrPdfToLinesWithLocationHeaders = field()
-    request: PdfOcrPdfToLinesWithLocationRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: PdfOcrPdfToLinesWithLocationSecurity = field()
+    headers: PdfOcrPdfToLinesWithLocationHeaders = dataclasses.field()
+    request: PdfOcrPdfToLinesWithLocationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: PdfOcrPdfToLinesWithLocationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPdfToLinesWithLocationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    pdf_to_lines_with_location_result: Optional[shared.PdfToLinesWithLocationResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    pdf_to_lines_with_location_result: Optional[shared_pdftolineswithlocationresult.PdfToLinesWithLocationResult] = dataclasses.field(default=None)
     

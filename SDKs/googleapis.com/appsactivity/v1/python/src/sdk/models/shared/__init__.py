@@ -11,3 +11,5 @@ from .rename import *
 from .security import *
 from .target import *
 from .user import *
+
+__all__ = ["Activity","AltEnum","EventAdditionalEventTypesEnum","EventPrimaryEventTypeEnum","Event","ListActivitiesResponse","Move","Parent","PermissionRoleEnum","PermissionTypeEnum","Permission","PermissionChange","Photo","Rename","SchemeOauth2","SchemeOauth2c","Target","User"]

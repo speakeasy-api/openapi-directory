@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_pipeline_variables as shared_paginated_pipeline_variables
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForUserPathParams:
-    selected_user: str = field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
+    selected_user: str = dataclasses.field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForUserRequest:
-    path_params: GetPipelineVariablesForUserPathParams = field()
+    path_params: GetPipelineVariablesForUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_pipeline_variables: Optional[shared.PaginatedPipelineVariables] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_pipeline_variables: Optional[shared_paginated_pipeline_variables.PaginatedPipelineVariables] = dataclasses.field(default=None)
     

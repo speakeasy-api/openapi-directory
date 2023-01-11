@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import channel as shared_channel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelRequest:
-    path_params: GetChannelPathParams = field()
+    path_params: GetChannelPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChannelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channel: Optional[shared.Channel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channel: Optional[shared_channel.Channel] = dataclasses.field(default=None)
     

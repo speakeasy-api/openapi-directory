@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import vcenterdatasourcerequest as shared_vcenterdatasourcerequest
+from ..shared import apierror as shared_apierror
+from ..shared import vcenterdatasource as shared_vcenterdatasource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddVcenterDatasourceSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVcenterDatasourceRequest:
-    request: shared.VCenterDataSourceRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddVcenterDatasourceSecurity = field()
+    request: shared_vcenterdatasourcerequest.VCenterDataSourceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddVcenterDatasourceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVcenterDatasourceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    v_center_data_source: Optional[shared.VCenterDataSource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    v_center_data_source: Optional[shared_vcenterdatasource.VCenterDataSource] = dataclasses.field(default=None)
     

@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import updateevidencepaymentdisputerequest as shared_updateevidencepaymentdisputerequest
 
 
 UPDATE_EVIDENCE_SERVERS = [
@@ -11,26 +12,26 @@ UPDATE_EVIDENCE_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEvidencePathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEvidenceSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEvidenceRequest:
-    path_params: UpdateEvidencePathParams = field()
-    security: UpdateEvidenceSecurity = field()
-    request: Optional[shared.UpdateEvidencePaymentDisputeRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    server_url: Optional[str] = field(default=None)
+    path_params: UpdateEvidencePathParams = dataclasses.field()
+    security: UpdateEvidenceSecurity = dataclasses.field()
+    request: Optional[shared_updateevidencepaymentdisputerequest.UpdateEvidencePaymentDisputeRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEvidenceResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

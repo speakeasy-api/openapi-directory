@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class KeysAPICustomPathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class KeysAPICustomRequest:
-    path_params: KeysAPICustomPathParams = field()
+    path_params: KeysAPICustomPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class KeysAPICustomResponse:
-    content_type: str = field()
-    status_code: int = field()
-    keys_api_custom_200_application_octet_stream_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    keys_api_custom_200_application_octet_stream_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

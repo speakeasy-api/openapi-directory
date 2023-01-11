@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import porter_author as shared_porter_author
 
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetCommitAuthorsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetCommitAuthorsQueryParams:
-    since: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    since: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetCommitAuthorsRequest:
-    path_params: MigrationsGetCommitAuthorsPathParams = field()
-    query_params: MigrationsGetCommitAuthorsQueryParams = field()
+    path_params: MigrationsGetCommitAuthorsPathParams = dataclasses.field()
+    query_params: MigrationsGetCommitAuthorsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetCommitAuthorsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    porter_authors: Optional[List[shared.PorterAuthor]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    porter_authors: Optional[list[shared_porter_author.PorterAuthor]] = dataclasses.field(default=None)
     

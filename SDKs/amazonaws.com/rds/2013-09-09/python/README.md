@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAddSourceIdentifierToSubscriptionRequest(
     query_params=operations.GetAddSourceIdentifierToSubscriptionQueryParams(
         action="AddSourceIdentifierToSubscription",
-        source_identifier="sequi",
-        subscription_name="doloremque",
+        source_identifier="rerum",
+        subscription_name="voluptates",
         version="2013-09-09",
     ),
     headers=operations.GetAddSourceIdentifierToSubscriptionHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="qui",
-        x_amz_date="voluptate",
-        x_amz_security_token="quia",
-        x_amz_signature="numquam",
-        x_amz_signed_headers="voluptates",
+        x_amz_algorithm="adipisci",
+        x_amz_content_sha256="eum",
+        x_amz_credential="non",
+        x_amz_date="qui",
+        x_amz_security_token="eum",
+        x_amz_signature="corporis",
+        x_amz_signed_headers="magni",
     ),
 )
     
-res = s.sdk.get_add_source_identifier_to_subscription(req)
+res = s.get_add_source_identifier_to_subscription(req)
 
 if res.body is not None:
     # handle response
@@ -64,9 +63,6 @@ if res.body is not None:
 * `get_delete_event_subscription`
 * `get_delete_option_group`
 * `get_download_db_log_file_portion`
-* `get_modify_db_instance`
-* `get_modify_db_subnet_group`
-* `get_modify_event_subscription`
 * `get_promote_read_replica`
 * `get_reboot_db_instance`
 * `get_remove_source_identifier_from_subscription`

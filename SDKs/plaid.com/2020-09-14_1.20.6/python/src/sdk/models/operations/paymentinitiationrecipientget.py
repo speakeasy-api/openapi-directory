@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import paymentinitiationrecipientgetrequest as shared_paymentinitiationrecipientgetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class PaymentInitiationRecipientGetRequest:
-    request: shared.PaymentInitiationRecipientGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_paymentinitiationrecipientgetrequest.PaymentInitiationRecipientGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PaymentInitiationRecipientGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_initiation_recipient_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_initiation_recipient_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

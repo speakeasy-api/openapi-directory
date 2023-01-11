@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import aggregatebucket as shared_aggregatebucket
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AggregateResponse:
-    bucket: Optional[List[AggregateBucket]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
+    bucket: Optional[list[shared_aggregatebucket.AggregateBucket]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
     

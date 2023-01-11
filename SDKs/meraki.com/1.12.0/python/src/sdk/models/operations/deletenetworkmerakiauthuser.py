@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkMerakiAuthUserPathParams:
-    meraki_auth_user_id: str = field(metadata={'path_param': { 'field_name': 'merakiAuthUserId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    meraki_auth_user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'merakiAuthUserId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkMerakiAuthUserRequest:
-    path_params: DeleteNetworkMerakiAuthUserPathParams = field()
+    path_params: DeleteNetworkMerakiAuthUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkMerakiAuthUserResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

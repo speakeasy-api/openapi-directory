@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import validdbinstancemodificationsmessage as shared_validdbinstancemodificationsmessage
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeValidDbInstanceModificationsResult:
-    valid_db_instance_modifications_message: Optional[ValidDbInstanceModificationsMessage] = field(default=None)
+    valid_db_instance_modifications_message: Optional[shared_validdbinstancemodificationsmessage.ValidDbInstanceModificationsMessage] = dataclasses.field(default=None)
     

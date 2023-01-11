@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIDeleteQueryParams:
-    notes: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
+    notes: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIDeleteRequest:
-    path_params: SongAPIDeletePathParams = field()
-    query_params: SongAPIDeleteQueryParams = field()
+    path_params: SongAPIDeletePathParams = dataclasses.field()
+    query_params: SongAPIDeleteQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

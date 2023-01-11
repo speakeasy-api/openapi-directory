@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -22,27 +22,27 @@ class GetEventsStatusEnum(str, Enum):
     ARCHIVED = "ARCHIVED"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsQueryParams:
-    area_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'area_id', 'style': 'form', 'explode': True }})
-    bbox: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
-    created: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'created', 'style': 'form', 'explode': True }})
-    event_type: Optional[GetEventsEventTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'event_type', 'style': 'form', 'explode': True }})
-    format: Optional[GetEventsFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    jurisdiction: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'jurisdiction', 'style': 'form', 'explode': True }})
-    road_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'road_name', 'style': 'form', 'explode': True }})
-    severity: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'severity', 'style': 'form', 'explode': True }})
-    status: Optional[GetEventsStatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    updated: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'updated', 'style': 'form', 'explode': True }})
+    area_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'area_id', 'style': 'form', 'explode': True }})
+    bbox: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
+    created: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'created', 'style': 'form', 'explode': True }})
+    event_type: Optional[GetEventsEventTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'event_type', 'style': 'form', 'explode': True }})
+    format: Optional[GetEventsFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    jurisdiction: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'jurisdiction', 'style': 'form', 'explode': True }})
+    road_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'road_name', 'style': 'form', 'explode': True }})
+    severity: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'severity', 'style': 'form', 'explode': True }})
+    status: Optional[GetEventsStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    updated: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsRequest:
-    query_params: GetEventsQueryParams = field()
+    query_params: GetEventsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

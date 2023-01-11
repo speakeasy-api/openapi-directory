@@ -8,38 +8,23 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CreateImagesFromDataRequest(
-    path_params=operations.CreateImagesFromDataPathParams(
-        project_id="reiciendis",
-    ),
-    query_params=operations.CreateImagesFromDataQueryParams(
-        tag_ids=[
-            "suscipit",
-        ],
-    ),
-    headers=operations.CreateImagesFromDataHeaders(
-        training_key="dolor",
-    ),
-    request=operations.CreateImagesFromDataRequestBody(
-        image_data=operations.CreateImagesFromDataRequestBodyImageData(
-            content="quia".encode(),
-            image_data="rerum",
-        ),
+req = operations.GetAccountInfoRequest(
+    headers=operations.GetAccountInfoHeaders(
+        training_key="voluptatem",
     ),
 )
     
-res = s.sdk.create_images_from_data(req)
+res = s.account_api.get_account_info(req)
 
-if res.image_create_summary is not None:
+if res.account is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -47,36 +32,51 @@ if res.image_create_summary is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AccountApi
 
-* `create_images_from_data` - Add the provided images to the set of training images
-* `create_project` - Create a project
-* `create_tag` - Create a tag for the project
-* `delete_image_tags` - Remove a set of tags from a set of images
-* `delete_images` - Delete images from the set of training images
-* `delete_iteration` - Delete a specific iteration of a project
-* `delete_prediction` - Delete a set of predicted images and their associated prediction results
-* `delete_project` - Delete a specific project
-* `delete_tag` - Delete a tag from the project
-* `export_iteration` - Export a trained iteration
 * `get_account_info` - Get basic information about your account
+
+### DomainsApi
+
 * `get_domain` - Get information about a specific domain
 * `get_domains` - Get a list of the available domains
+
+### ImageApi
+
+* `create_images_from_data` - Add the provided images to the set of training images
+* `delete_image_tags` - Remove a set of tags from a set of images
+* `delete_images` - Delete images from the set of training images
+* `get_tagged_images` - Get tagged images for a given project iteration
+* `get_untagged_images` - Get untagged images for a given project iteration
+
+### PredictionsApi
+
+* `delete_prediction` - Delete a set of predicted images and their associated prediction results
+* `quick_test_image` - Quick test an image
+* `quick_test_image_url` - Quick test an image url
+
+### ProjectApi
+
+* `create_project` - Create a project
+* `delete_iteration` - Delete a specific iteration of a project
+* `delete_project` - Delete a specific project
+* `export_iteration` - Export a trained iteration
 * `get_exports` - Get the list of exports for a specific iteration
 * `get_iteration` - Get a specific iteration
 * `get_iteration_performance` - Get detailed performance information about a trained iteration
 * `get_iterations` - Get iterations for the project
 * `get_project` - Get a specific project
 * `get_projects` - Get your projects
-* `get_tag` - Get information about a specific tag
-* `get_tagged_images` - Get tagged images for a given project iteration
-* `get_tags` - Get the tags for a given project and iteration
-* `get_untagged_images` - Get untagged images for a given project iteration
-* `quick_test_image` - Quick test an image
-* `quick_test_image_url` - Quick test an image url
 * `train_project` - Queues project for training
 * `update_iteration` - Update a specific iteration
 * `update_project` - Update a specific project
+
+### TagsApi
+
+* `create_tag` - Create a tag for the project
+* `delete_tag` - Delete a tag from the project
+* `get_tag` - Get information about a specific tag
+* `get_tags` - Get the tags for a given project and iteration
 * `update_tag` - Update a tag
 
 <!-- End SDK Available Operations -->

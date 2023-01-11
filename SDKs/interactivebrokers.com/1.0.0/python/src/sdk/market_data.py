@@ -1,0 +1,101 @@
+import requests
+from typing import Optional
+from sdk.models import operations
+from . import utils
+
+class MarketData:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def get_marketdata_exchange_components(self) -> operations.GetMarketdataExchangeComponentsResponse:
+        r"""Exchange Components
+        This endpoint provides a bit mapping for the bid/ask/last 'market' values in the snapshot response. 
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/marketdata/exchange_components"
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetMarketdataExchangeComponentsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[operations.GetMarketdataExchangeComponents200ApplicationJSON]])
+                res.get_marketdata_exchange_components_200_application_json_objects = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 408:
+            pass
+
+        return res
+
+    
+    def get_marketdata_snapshot(self, request: operations.GetMarketdataSnapshotRequest) -> operations.GetMarketdataSnapshotResponse:
+        r"""Market Data Snapshot
+        This endpoint allows the consumer to request a market data snapshot for one or more trading products. 
+        Consumers need to provide unique identifiers (conids) for the products in the IB product database (retrievable using the /secdef endpoint). The 'market' values are integers whose bits indicate the exchange(s) making up the quote. 
+        
+        The mapping of bit to exchange is obtained from the marketdata/exchange_component endpoint. For example, if a bid has a 'market' value of 5 and the exchange_component result has the map 
+        0 => NYSE, 1 => ISLAND, 2 => ARCA then the exchanges contributing to the bid size are NYSE and ARCA. 
+        
+        Similarly, if market=2, then only ISLAND is contributing.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/marketdata/snapshot"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetMarketdataSnapshotResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[operations.GetMarketdataSnapshot200ApplicationJSON]])
+                res.get_marketdata_snapshot_200_application_json_objects = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 408:
+            pass
+
+        return res
+
+    

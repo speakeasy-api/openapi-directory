@@ -1,20 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actor as shared_actor
+from ..shared import actiondetail as shared_actiondetail
+from ..shared import target as shared_target
+from ..shared import timerange as shared_timerange
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Action:
     r"""Action
     Information about the action.
     """
     
-    actor: Optional[Actor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actor') }})
-    detail: Optional[ActionDetail] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    target: Optional[Target] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
-    time_range: Optional[TimeRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeRange') }})
-    timestamp: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp') }})
+    actor: Optional[shared_actor.Actor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actor') }})
+    detail: Optional[shared_actiondetail.ActionDetail] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    target: Optional[shared_target.Target] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
+    time_range: Optional[shared_timerange.TimeRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeRange') }})
+    timestamp: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class HTTPConfigHTTPEnabledStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HTTPConfig:
     r"""HTTPConfig
     The configuration of the HTTP bridge for a device registry.
     """
     
-    http_enabled_state: Optional[HTTPConfigHTTPEnabledStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpEnabledState') }})
+    http_enabled_state: Optional[HTTPConfigHTTPEnabledStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpEnabledState') }})
     

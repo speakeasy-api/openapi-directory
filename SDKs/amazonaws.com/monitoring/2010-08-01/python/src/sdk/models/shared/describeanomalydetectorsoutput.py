@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import anomalydetector as shared_anomalydetector
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAnomalyDetectorsOutput:
-    anomaly_detectors: Optional[List[AnomalyDetector]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    anomaly_detectors: Optional[list[shared_anomalydetector.AnomalyDetector]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

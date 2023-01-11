@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import webhookentry as shared_webhookentry
+from ..shared import error as shared_error
+from ..shared import webhook as shared_webhook
 
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksRequest:
-    request: shared.WebhookEntry = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostWebhooksSecurity = field()
+    request: shared_webhookentry.WebhookEntry = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostWebhooksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    webhook: Optional[shared.Webhook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None)
     

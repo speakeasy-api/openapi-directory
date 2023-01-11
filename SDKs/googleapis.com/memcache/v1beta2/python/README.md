@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,33 @@ req = operations.MemcacheProjectsLocationsInstancesApplyParametersRequest(
     security=operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.MemcacheProjectsLocationsInstancesApplyParametersPathParams(
-        name="a",
+        name="dolores",
     ),
     query_params=operations.MemcacheProjectsLocationsInstancesApplyParametersQueryParams(
         dollar_xgafv="1",
-        access_token="qui",
+        access_token="ut",
         alt="media",
-        callback="et",
-        fields="ex",
-        key="ut",
-        oauth_token="officiis",
-        pretty_print=True,
-        quota_user="animi",
-        upload_type="blanditiis",
-        upload_protocol="et",
+        callback="dolore",
+        fields="eos",
+        key="autem",
+        oauth_token="ut",
+        pretty_print=False,
+        quota_user="odio",
+        upload_type="quia",
+        upload_protocol="voluptas",
     ),
     request=shared.ApplyParametersRequest(
         apply_all=False,
         node_ids=[
+            "et",
             "dolor",
-            "eos",
+            "nulla",
         ],
     ),
 )

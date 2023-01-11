@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatePipelineVariableForTeamPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePipelineVariableForTeamQueryParams:
-    workspace: str = field(metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
+    workspace: str = dataclasses.field(metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePipelineVariableForTeamRequest:
-    path_params: CreatePipelineVariableForTeamPathParams = field()
-    query_params: CreatePipelineVariableForTeamQueryParams = field()
-    request: Optional[dict[str, Any]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreatePipelineVariableForTeamPathParams = dataclasses.field()
+    query_params: CreatePipelineVariableForTeamQueryParams = dataclasses.field()
+    request: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatePipelineVariableForTeamResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    pipeline_variable: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    pipeline_variable: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

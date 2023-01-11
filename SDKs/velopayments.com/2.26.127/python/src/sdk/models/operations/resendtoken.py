@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import resendtokenrequest as shared_resendtokenrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ResendTokenPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResendTokenRequest:
-    path_params: ResendTokenPathParams = field()
-    request: shared.ResendTokenRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ResendTokenPathParams = dataclasses.field()
+    request: shared_resendtokenrequest.ResendTokenRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResendTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

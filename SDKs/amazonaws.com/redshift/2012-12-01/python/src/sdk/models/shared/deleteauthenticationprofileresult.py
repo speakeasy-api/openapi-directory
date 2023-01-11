@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAuthenticationProfileResult:
-    authentication_profile_name: Optional[str] = field(default=None)
+    authentication_profile_name: Optional[str] = dataclasses.field(default=None)
     

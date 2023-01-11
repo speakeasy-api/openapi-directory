@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCourseMappingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    course_mappings: Optional[dict[str, str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    course_mappings: Optional[dict[str, str]] = dataclasses.field(default=None)
     

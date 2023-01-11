@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import classificationexportconfiguration as shared_classificationexportconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetClassificationExportConfigurationResponse:
-    configuration: Optional[ClassificationExportConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
+    configuration: Optional[shared_classificationexportconfiguration.ClassificationExportConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
     

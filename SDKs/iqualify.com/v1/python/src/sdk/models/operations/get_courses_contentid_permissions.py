@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDPermissionsPathParams:
-    content_id: str = field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
+    content_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDPermissionsRequest:
-    path_params: GetCoursesContentIDPermissionsPathParams = field()
+    path_params: GetCoursesContentIDPermissionsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCoursesContentIDPermissionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    user_permission: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    user_permission: Optional[Any] = dataclasses.field(default=None)
     

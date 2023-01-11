@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActionPackageRelationshipsListQueryParams:
-    id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
-    id2: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'id2', 'style': 'form', 'explode': True }})
-    rel: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'rel', 'style': 'form', 'explode': True }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id2: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id2', 'style': 'form', 'explode': True }})
+    rel: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rel', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionPackageRelationshipsListRequest:
-    query_params: GetActionPackageRelationshipsListQueryParams = field()
+    query_params: GetActionPackageRelationshipsListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionPackageRelationshipsListResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

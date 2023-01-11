@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SendBounceResponse:
     r"""SendBounceResponse
     Represents a unique message ID.
     """
     
-    message_id: Optional[str] = field(default=None)
+    message_id: Optional[str] = dataclasses.field(default=None)
     

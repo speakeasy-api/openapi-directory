@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSuspendUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSuspendUserRequestBody:
-    reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSuspendUserRequest:
-    path_params: EnterpriseAdminSuspendUserPathParams = field()
-    request: Optional[EnterpriseAdminSuspendUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminSuspendUserPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminSuspendUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSuspendUserResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

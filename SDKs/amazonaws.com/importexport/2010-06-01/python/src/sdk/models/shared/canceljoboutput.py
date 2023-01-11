@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelJobOutput:
     r"""CancelJobOutput
     Output structure for the CancelJob operation.
     """
     
-    success: Optional[bool] = field(default=None)
+    success: Optional[bool] = dataclasses.field(default=None)
     

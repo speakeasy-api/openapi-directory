@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import asset as shared_asset
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsRequest:
-    query_params: GetAssetsQueryParams = field()
-    security: GetAssetsSecurity = field()
+    query_params: GetAssetsQueryParams = dataclasses.field()
+    security: GetAssetsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssetsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    assets: Optional[List[shared.Asset]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    assets: Optional[list[shared_asset.Asset]] = dataclasses.field(default=None)
     

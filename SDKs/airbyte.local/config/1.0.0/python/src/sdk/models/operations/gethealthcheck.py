@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import healthcheckread as shared_healthcheckread
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHealthCheckResponse:
-    content_type: str = field()
-    status_code: int = field()
-    health_check_read: Optional[shared.HealthCheckRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    health_check_read: Optional[shared_healthcheckread.HealthCheckRead] = dataclasses.field(default=None)
     

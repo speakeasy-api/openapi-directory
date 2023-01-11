@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteGlobalWebhookPathParams:
-    hook_id: int = field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
+    hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteGlobalWebhookHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteGlobalWebhookRequest:
-    headers: EnterpriseAdminDeleteGlobalWebhookHeaders = field()
-    path_params: EnterpriseAdminDeleteGlobalWebhookPathParams = field()
+    headers: EnterpriseAdminDeleteGlobalWebhookHeaders = dataclasses.field()
+    path_params: EnterpriseAdminDeleteGlobalWebhookPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeleteGlobalWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

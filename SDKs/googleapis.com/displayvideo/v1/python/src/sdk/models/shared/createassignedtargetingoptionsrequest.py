@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import assignedtargetingoption as shared_assignedtargetingoption
 
 class CreateAssignedTargetingOptionsRequestTargetingTypeEnum(str, Enum):
     TARGETING_TYPE_UNSPECIFIED = "TARGETING_TYPE_UNSPECIFIED"
@@ -55,12 +55,12 @@ class CreateAssignedTargetingOptionsRequestTargetingTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAssignedTargetingOptionsRequestInput:
     r"""CreateAssignedTargetingOptionsRequestInput
     A request listing which assigned targeting options of a given targeting type should be created and added.
     """
     
-    assigned_targeting_options: Optional[List[AssignedTargetingOptionInput]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignedTargetingOptions') }})
-    targeting_type: Optional[CreateAssignedTargetingOptionsRequestTargetingTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingType') }})
+    assigned_targeting_options: Optional[list[shared_assignedtargetingoption.AssignedTargetingOptionInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignedTargetingOptions') }})
+    targeting_type: Optional[CreateAssignedTargetingOptionsRequestTargetingTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingType') }})
     

@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import directive as shared_directive
 
 
-@dataclass
+@dataclasses.dataclass
 class DirectiveDetailsPathParams:
-    directive_id: str = field(metadata={'path_param': { 'field_name': 'directiveId', 'style': 'simple', 'explode': False }})
+    directive_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'directiveId', 'style': 'simple', 'explode': False }})
     
 class DirectiveDetails200ApplicationJSONActionEnum(str, Enum):
     DIRECTIVE_DETAILS = "directiveDetails"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DirectiveDetails200ApplicationJSONData:
-    directives: List[shared.Directive] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
+    directives: list[shared_directive.Directive] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
     
 class DirectiveDetails200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class DirectiveDetails200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DirectiveDetails200ApplicationJSON:
-    action: DirectiveDetails200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: DirectiveDetails200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: DirectiveDetails200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: DirectiveDetails200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: DirectiveDetails200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: DirectiveDetails200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DirectiveDetailsRequest:
-    path_params: DirectiveDetailsPathParams = field()
+    path_params: DirectiveDetailsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DirectiveDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    directive_details_200_application_json_object: Optional[DirectiveDetails200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    directive_details_200_application_json_object: Optional[DirectiveDetails200ApplicationJSON] = dataclasses.field(default=None)
     

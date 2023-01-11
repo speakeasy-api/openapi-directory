@@ -1,29 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import stagedemployee as shared_stagedemployee
+from ..shared import error as shared_error
+from ..shared import trackingnumberresponse as shared_trackingnumberresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class AddNewEmployeeToWebLinkPathParams:
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddNewEmployeeToWebLinkSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddNewEmployeeToWebLinkRequest:
-    path_params: AddNewEmployeeToWebLinkPathParams = field()
-    request: shared.StagedEmployee = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddNewEmployeeToWebLinkSecurity = field()
+    path_params: AddNewEmployeeToWebLinkPathParams = dataclasses.field()
+    request: shared_stagedemployee.StagedEmployee = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddNewEmployeeToWebLinkSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddNewEmployeeToWebLinkResponse:
-    content_type: str = field()
-    status_code: int = field()
-    errors: Optional[List[shared.Error]] = field(default=None)
-    tracking_number_responses: Optional[List[shared.TrackingNumberResponse]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
+    tracking_number_responses: Optional[list[shared_trackingnumberresponse.TrackingNumberResponse]] = dataclasses.field(default=None)
     

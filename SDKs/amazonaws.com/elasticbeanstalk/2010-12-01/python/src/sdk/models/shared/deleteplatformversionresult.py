@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import platformsummary as shared_platformsummary
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePlatformVersionResult:
-    platform_summary: Optional[PlatformSummary] = field(default=None)
+    platform_summary: Optional[shared_platformsummary.PlatformSummary] = dataclasses.field(default=None)
     

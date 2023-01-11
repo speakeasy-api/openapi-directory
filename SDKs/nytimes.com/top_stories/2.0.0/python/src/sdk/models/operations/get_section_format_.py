@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import article as shared_article
 
 class GetSectionFormatFormatEnum(str, Enum):
     JSON = "json"
@@ -38,32 +38,32 @@ class GetSectionFormatSectionEnum(str, Enum):
     INSIDER = "insider"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionFormatPathParams:
-    format: GetSectionFormatFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    section: GetSectionFormatSectionEnum = field(metadata={'path_param': { 'field_name': 'section', 'style': 'simple', 'explode': False }})
+    format: GetSectionFormatFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    section: GetSectionFormatSectionEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'section', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionFormatQueryParams:
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetSectionFormat200ApplicationJSON:
-    results: Optional[List[shared.Article]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
+    results: Optional[list[shared_article.Article]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('results') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionFormatRequest:
-    path_params: GetSectionFormatPathParams = field()
-    query_params: GetSectionFormatQueryParams = field()
+    path_params: GetSectionFormatPathParams = dataclasses.field()
+    query_params: GetSectionFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSectionFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_section_format_200_application_json_object: Optional[GetSectionFormat200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_section_format_200_application_json_object: Optional[GetSectionFormat200ApplicationJSON] = dataclasses.field(default=None)
     

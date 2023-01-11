@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import productresponse as shared_productresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAllProductsV2PathParams:
-    organization_uuid: str = field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
+    organization_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllProductsV2QueryParams:
-    sort: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    sort: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllProductsV2Security:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllProductsV2Request:
-    path_params: GetAllProductsV2PathParams = field()
-    query_params: GetAllProductsV2QueryParams = field()
-    security: GetAllProductsV2Security = field()
+    path_params: GetAllProductsV2PathParams = dataclasses.field()
+    query_params: GetAllProductsV2QueryParams = dataclasses.field()
+    security: GetAllProductsV2Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllProductsV2Response:
-    content_type: str = field()
-    status_code: int = field()
-    product_responses: Optional[List[shared.ProductResponse]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_responses: Optional[list[shared_productresponse.ProductResponse]] = dataclasses.field(default=None)
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import profiles as shared_profiles
 
 
-@dataclass
+@dataclasses.dataclass
 class ProfilesSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProfilesRequest:
-    security: ProfilesSecurity = field()
+    security: ProfilesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProfilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied: Optional[Any] = field(default=None)
-    profiles: Optional[shared.Profiles] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied: Optional[Any] = dataclasses.field(default=None)
+    profiles: Optional[shared_profiles.Profiles] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.GetHackathonsIDFormatRequest(
     path_params=operations.GetHackathonsIDFormatPathParams(
-        id=9173058623913194203,
+        id=6129263824403308222,
     ),
 )
     

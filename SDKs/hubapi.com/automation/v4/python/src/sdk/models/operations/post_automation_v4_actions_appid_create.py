@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import extensionactiondefinitioninput as shared_extensionactiondefinitioninput
+from ..shared import extensionactiondefinition as shared_extensionactiondefinition
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAutomationV4ActionsAppIDCreatePathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAutomationV4ActionsAppIDCreateSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAutomationV4ActionsAppIDCreateRequest:
-    path_params: PostAutomationV4ActionsAppIDCreatePathParams = field()
-    request: shared.ExtensionActionDefinitionInput = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostAutomationV4ActionsAppIDCreateSecurity = field()
+    path_params: PostAutomationV4ActionsAppIDCreatePathParams = dataclasses.field()
+    request: shared_extensionactiondefinitioninput.ExtensionActionDefinitionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostAutomationV4ActionsAppIDCreateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAutomationV4ActionsAppIDCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    extension_action_definition: Optional[shared.ExtensionActionDefinition] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    extension_action_definition: Optional[shared_extensionactiondefinition.ExtensionActionDefinition] = dataclasses.field(default=None)
     

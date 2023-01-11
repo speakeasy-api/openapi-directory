@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,27 @@ s.config_security(
     
 req = operations.AcceptEulasRequest(
     path_params=operations.AcceptEulasPathParams(
-        studio_id="animi",
+        studio_id="asperiores",
     ),
     headers=operations.AcceptEulasHeaders(
-        x_amz_algorithm="rerum",
-        x_amz_client_token="sit",
-        x_amz_content_sha256="et",
-        x_amz_credential="minima",
-        x_amz_date="eos",
-        x_amz_security_token="accusantium",
-        x_amz_signature="minima",
-        x_amz_signed_headers="qui",
+        x_amz_algorithm="tempore",
+        x_amz_client_token="tempore",
+        x_amz_content_sha256="assumenda",
+        x_amz_credential="deleniti",
+        x_amz_date="ea",
+        x_amz_security_token="aut",
+        x_amz_signature="dignissimos",
+        x_amz_signed_headers="voluptatem",
     ),
     request=operations.AcceptEulasRequestBody(
         eula_ids=[
-            "est",
+            "quo",
+            "atque",
         ],
     ),
 )
     
-res = s.sdk.accept_eulas(req)
+res = s.accept_eulas(req)
 
 if res.accept_eulas_response is not None:
     # handle response

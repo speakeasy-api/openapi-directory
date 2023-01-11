@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFeaturesFeatureIDPathParams:
-    feature_id: int = field(metadata={'path_param': { 'field_name': 'featureId', 'style': 'simple', 'explode': False }})
+    feature_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'featureId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeaturesFeatureIDRequest:
-    path_params: GetFeaturesFeatureIDPathParams = field()
+    path_params: GetFeaturesFeatureIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeaturesFeatureIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

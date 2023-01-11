@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import chain as shared_chain
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchChainsResponse:
     r"""SearchChainsResponse
     Response message for Locations.SearchChains.
     """
     
-    chains: Optional[List[Chain]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chains') }})
+    chains: Optional[list[shared_chain.Chain]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chains') }})
     

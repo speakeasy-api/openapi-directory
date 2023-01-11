@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import snapshotschedulelist as shared_snapshotschedulelist
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSnapshotSchedulesOutputMessage:
-    marker: Optional[str] = field(default=None)
-    snapshot_schedules: Optional[List[SnapshotSchedule]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    snapshot_schedules: Optional[list[shared_snapshotschedulelist.SnapshotScheduleList]] = dataclasses.field(default=None)
     

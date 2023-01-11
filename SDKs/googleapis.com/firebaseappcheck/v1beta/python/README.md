@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,31 +21,32 @@ req = operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest(
         option1=operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams(
-        parent="eaque",
+        parent="non",
     ),
     query_params=operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams(
         dollar_xgafv="2",
-        access_token="ut",
-        alt="proto",
-        callback="impedit",
-        fields="quia",
-        key="quia",
+        access_token="omnis",
+        alt="json",
+        callback="sed",
+        fields="accusantium",
+        key="at",
         names=[
-            "nihil",
-            "beatae",
+            "pariatur",
+            "earum",
+            "error",
         ],
-        oauth_token="corporis",
-        pretty_print=True,
-        quota_user="officia",
-        upload_type="ipsum",
-        upload_protocol="provident",
+        oauth_token="aut",
+        pretty_print=False,
+        quota_user="qui",
+        upload_type="id",
+        upload_protocol="enim",
     ),
 )
     

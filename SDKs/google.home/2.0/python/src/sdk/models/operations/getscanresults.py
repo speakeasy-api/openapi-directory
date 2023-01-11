@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import example112 as shared_example112
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScanResultsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example112s: Optional[List[shared.Example112]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example112s: Optional[list[shared_example112.Example112]] = dataclasses.field(default=None)
     

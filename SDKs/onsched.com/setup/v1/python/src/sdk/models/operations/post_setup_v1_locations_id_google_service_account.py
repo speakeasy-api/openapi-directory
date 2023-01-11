@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import googleserviceaccountcreds as shared_googleserviceaccountcreds
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsIDGoogleServiceAccountPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsIDGoogleServiceAccountRequests:
-    google_service_account_creds: Optional[shared.GoogleServiceAccountCreds] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    google_service_account_creds1: Optional[shared.GoogleServiceAccountCreds] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    google_service_account_creds2: Optional[shared.GoogleServiceAccountCreds] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    google_service_account_creds3: Optional[shared.GoogleServiceAccountCreds] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    google_service_account_creds: Optional[shared_googleserviceaccountcreds.GoogleServiceAccountCreds] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    google_service_account_creds1: Optional[shared_googleserviceaccountcreds.GoogleServiceAccountCreds] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    google_service_account_creds2: Optional[shared_googleserviceaccountcreds.GoogleServiceAccountCreds] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    google_service_account_creds3: Optional[shared_googleserviceaccountcreds.GoogleServiceAccountCreds] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsIDGoogleServiceAccountRequest:
-    path_params: PostSetupV1LocationsIDGoogleServiceAccountPathParams = field()
-    request: Optional[PostSetupV1LocationsIDGoogleServiceAccountRequests] = field(default=None)
+    path_params: PostSetupV1LocationsIDGoogleServiceAccountPathParams = dataclasses.field()
+    request: Optional[PostSetupV1LocationsIDGoogleServiceAccountRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1LocationsIDGoogleServiceAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    google_service_account_creds: Optional[shared.GoogleServiceAccountCreds] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    google_service_account_creds: Optional[shared_googleserviceaccountcreds.GoogleServiceAccountCreds] = dataclasses.field(default=None)
     

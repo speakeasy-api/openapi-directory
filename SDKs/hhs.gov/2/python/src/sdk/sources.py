@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -18,6 +18,36 @@ class Sources:
         self._language = language
         self._sdk_version = sdk_version
         self._gen_version = gen_version
+
+    
+    def get_resources_sources_json(self, request: operations.GetResourcesSourcesJSONRequest) -> operations.GetResourcesSourcesJSONResponse:
+        r"""Get Sources
+        Source Listings
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/sources.json"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourcesSourcesJSONResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SourceWrapped]])
+                res.source_wrappeds = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 500:
+            pass
+
+        return res
 
     
     def get_resources_sources_id_json(self, request: operations.GetResourcesSourcesIDJSONRequest) -> operations.GetResourcesSourcesIDJSONResponse:
@@ -39,7 +69,7 @@ class Sources:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SourceWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SourceWrapped]])
                 res.source_wrappeds = out
         elif r.status_code == 400:
             pass
@@ -69,38 +99,8 @@ class Sources:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MediaItemWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MediaItemWrapped]])
                 res.media_item_wrappeds = out
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
-
-    
-    def get_resources_sources_json(self, request: operations.GetResourcesSourcesJSONRequest) -> operations.GetResourcesSourcesJSONResponse:
-        r"""Get Sources
-        Source Listings
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/resources/sources.json"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetResourcesSourcesJSONResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SourceWrapped]])
-                res.source_wrappeds = out
         elif r.status_code == 400:
             pass
         elif r.status_code == 500:

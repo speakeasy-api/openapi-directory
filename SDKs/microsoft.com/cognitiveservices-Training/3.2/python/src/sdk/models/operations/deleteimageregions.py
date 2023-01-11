@@ -1,0 +1,26 @@
+import dataclasses
+from typing import Optional
+
+
+@dataclasses.dataclass
+class DeleteImageRegionsPathParams:
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    
+
+@dataclasses.dataclass
+class DeleteImageRegionsQueryParams:
+    region_ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'regionIds', 'style': 'form', 'explode': False }})
+    
+
+@dataclasses.dataclass
+class DeleteImageRegionsRequest:
+    path_params: DeleteImageRegionsPathParams = dataclasses.field()
+    query_params: DeleteImageRegionsQueryParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
+class DeleteImageRegionsResponse:
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    

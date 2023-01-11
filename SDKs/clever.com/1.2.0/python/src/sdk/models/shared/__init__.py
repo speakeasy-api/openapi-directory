@@ -34,3 +34,5 @@ from .teacher import *
 from .teacherresponse import *
 from .teachersresponse import *
 from .term import *
+
+__all__ = ["Credentials","District","DistrictAdmin","DistrictAdminResponse","DistrictAdminsResponse","DistrictResponse","DistrictsResponse","DistrictStatusStateEnum","DistrictStatus","DistrictStatusResponse","DistrictStatusResponses","GradeLevelsResponse","Location","Name","NotFound","Principal","SchoolHighGradeEnum","SchoolLowGradeEnum","School","SchoolAdmin","SchoolAdminResponse","SchoolAdminsResponse","SchoolResponse","SchoolsResponse","SectionGradeEnum","SectionSubjectEnum","Section","SectionResponse","SectionsResponse","SchemeOauth","Security","StudentEllStatusEnum","StudentGenderEnum","StudentGradeEnum","StudentHispanicEthnicityEnum","StudentRaceEnum","Student","StudentContact","StudentContactResponse","StudentContactsForStudentResponse","StudentContactsResponse","StudentResponse","StudentsResponse","Teacher","TeacherResponse","TeachersResponse","Term"]

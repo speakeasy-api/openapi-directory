@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEbsDefaultKmsKeyIDResult:
-    kms_key_id: Optional[str] = field(default=None)
+    kms_key_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

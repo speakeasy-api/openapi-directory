@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class InvalidNextToken:
     r"""InvalidNextToken
     The specified NextToken is not valid. 
     """
     
-    box_usage: Optional[float] = field(default=None)
+    box_usage: Optional[float] = dataclasses.field(default=None)
     

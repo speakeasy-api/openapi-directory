@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import devicefeatures as shared_devicefeatures
+from ..shared import deviceinfo as shared_deviceinfo
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class DetectDeviceDetectPostSecurity:
-    api_key_header: shared.SchemeAPIKeyHeader = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_header: shared_security.SchemeAPIKeyHeader = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetectDeviceDetectPostRequest:
-    request: shared.DeviceFeatures = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: DetectDeviceDetectPostSecurity = field()
+    request: shared_devicefeatures.DeviceFeatures = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: DetectDeviceDetectPostSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DetectDeviceDetectPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_info: Optional[shared.DeviceInfo] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_info: Optional[shared_deviceinfo.DeviceInfo] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

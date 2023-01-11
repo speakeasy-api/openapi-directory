@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import oneannouncements_post_responses_201_content_application_1json_schema as shared_oneannouncements_post_responses_201_content_application_1json_schema
+from ..shared import oneannouncements_post_responses_403_content_application_1json_schema as shared_oneannouncements_post_responses_403_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomersAccountAnnouncementsPathParams:
-    account: int = field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
+    account: int = dataclasses.field(metadata={'path_param': { 'field_name': 'account', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetCustomersAccountAnnouncements200ApplicationJSON:
-    list: Optional[List[shared.OneannouncementsPostResponses201ContentApplication1jsonSchema]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('list') }})
+    list: Optional[list[shared_oneannouncements_post_responses_201_content_application_1json_schema.OneannouncementsPostResponses201ContentApplication1jsonSchema]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('list') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomersAccountAnnouncementsRequest:
-    path_params: GetCustomersAccountAnnouncementsPathParams = field()
+    path_params: GetCustomersAccountAnnouncementsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomersAccountAnnouncementsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_customers_account_announcements_200_application_json_object: Optional[GetCustomersAccountAnnouncements200ApplicationJSON] = field(default=None)
-    oneannouncements_post_responses_403_content_application_1json_schema: Optional[shared.OneannouncementsPostResponses403ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_customers_account_announcements_200_application_json_object: Optional[GetCustomersAccountAnnouncements200ApplicationJSON] = dataclasses.field(default=None)
+    oneannouncements_post_responses_403_content_application_1json_schema: Optional[shared_oneannouncements_post_responses_403_content_application_1json_schema.OneannouncementsPostResponses403ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

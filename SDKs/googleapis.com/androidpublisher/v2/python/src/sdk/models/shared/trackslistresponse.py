@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import track as shared_track
 
 
-@dataclass
+@dataclasses.dataclass
 class TracksListResponse:
-    kind: Optional[str] = field(default=None)
-    tracks: Optional[List[Track]] = field(default=None)
+    kind: Optional[str] = dataclasses.field(default=None)
+    tracks: Optional[list[shared_track.Track]] = dataclasses.field(default=None)
     

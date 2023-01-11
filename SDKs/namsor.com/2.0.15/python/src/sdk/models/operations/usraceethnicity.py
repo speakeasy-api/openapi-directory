@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import firstlastnameusraceethnicityout as shared_firstlastnameusraceethnicityout
 
 
-@dataclass
+@dataclasses.dataclass
 class UsRaceEthnicityPathParams:
-    first_name: str = field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
-    last_name: str = field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
+    first_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
+    last_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsRaceEthnicitySecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsRaceEthnicityRequest:
-    path_params: UsRaceEthnicityPathParams = field()
-    security: UsRaceEthnicitySecurity = field()
+    path_params: UsRaceEthnicityPathParams = dataclasses.field()
+    security: UsRaceEthnicitySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsRaceEthnicityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    first_last_name_us_race_ethnicity_out: Optional[shared.FirstLastNameUsRaceEthnicityOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    first_last_name_us_race_ethnicity_out: Optional[shared_firstlastnameusraceethnicityout.FirstLastNameUsRaceEthnicityOut] = dataclasses.field(default=None)
     

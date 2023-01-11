@@ -1,42 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
+from ..shared import playlistobject as shared_playlistobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistPathParams:
-    playlist_id: str = field(metadata={'path_param': { 'field_name': 'playlist_id', 'style': 'simple', 'explode': False }})
+    playlist_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playlist_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistQueryParams:
-    additional_types: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'additional_types', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    market: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    additional_types: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'additional_types', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    market: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistRequest:
-    headers: EndpointGetPlaylistHeaders = field()
-    path_params: EndpointGetPlaylistPathParams = field()
-    query_params: EndpointGetPlaylistQueryParams = field()
-    security: EndpointGetPlaylistSecurity = field()
+    headers: EndpointGetPlaylistHeaders = dataclasses.field()
+    path_params: EndpointGetPlaylistPathParams = dataclasses.field()
+    query_params: EndpointGetPlaylistQueryParams = dataclasses.field()
+    security: EndpointGetPlaylistSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetPlaylistResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
-    playlist_object: Optional[shared.PlaylistObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
+    playlist_object: Optional[shared_playlistobject.PlaylistObject] = dataclasses.field(default=None)
     

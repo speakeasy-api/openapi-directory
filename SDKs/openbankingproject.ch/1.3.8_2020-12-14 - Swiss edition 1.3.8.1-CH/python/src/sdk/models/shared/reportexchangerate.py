@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,16 +8,16 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReportExchangeRate:
     r"""ReportExchangeRate
     Exchange Rate.
     """
     
-    exchange_rate: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeRate') }})
-    quotation_date: date = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('quotationDate'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    source_currency: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceCurrency') }})
-    target_currency: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetCurrency') }})
-    unit_currency: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unitCurrency') }})
-    contract_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contractIdentification') }})
+    exchange_rate: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchangeRate') }})
+    quotation_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('quotationDate'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    source_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceCurrency') }})
+    target_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetCurrency') }})
+    unit_currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unitCurrency') }})
+    contract_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contractIdentification') }})
     

@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import traffic as shared_traffic
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CloneTraffic:
     r"""CloneTraffic
     Clone Traffic
     """
     
-    clones: List[Traffic] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clones') }})
-    count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    uniques: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniques') }})
+    clones: list[shared_traffic.Traffic] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('clones') }})
+    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    uniques: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uniques') }})
     

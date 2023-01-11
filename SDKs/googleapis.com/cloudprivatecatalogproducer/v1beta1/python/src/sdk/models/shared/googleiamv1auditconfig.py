@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleiamv1auditlogconfig as shared_googleiamv1auditlogconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleIamV1AuditConfig:
     r"""GoogleIamV1AuditConfig
     Specifies the audit configuration for a service.
@@ -62,6 +62,6 @@ class GoogleIamV1AuditConfig:
     aliya@example.com from DATA_WRITE logging.
     """
     
-    audit_log_configs: Optional[List[GoogleIamV1AuditLogConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auditLogConfigs') }})
-    service: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
+    audit_log_configs: Optional[list[shared_googleiamv1auditlogconfig.GoogleIamV1AuditLogConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auditLogConfigs') }})
+    service: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
     

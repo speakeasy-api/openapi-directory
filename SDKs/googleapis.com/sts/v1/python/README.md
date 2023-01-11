@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,20 +19,20 @@ s = sdk.SDK()
 req = operations.StsIntrospectRequest(
     query_params=operations.StsIntrospectQueryParams(
         dollar_xgafv="2",
-        access_token="odit",
+        access_token="est",
         alt="json",
-        callback="et",
-        fields="eaque",
-        key="possimus",
-        oauth_token="sit",
-        pretty_print=False,
-        quota_user="odio",
-        upload_type="reiciendis",
-        upload_protocol="aliquid",
+        callback="nostrum",
+        fields="ea",
+        key="omnis",
+        oauth_token="quia",
+        pretty_print=True,
+        quota_user="omnis",
+        upload_type="soluta",
+        upload_protocol="sequi",
     ),
     request=shared.GoogleIdentityStsV1IntrospectTokenRequest(
-        token="non",
-        token_type_hint="voluptas",
+        token="neque",
+        token_type_hint="et",
     ),
 )
     
@@ -50,7 +49,8 @@ if res.google_identity_sts_v1_introspect_token_response is not None:
 ### v1
 
 * `sts_introspect` - Gets information about a Google OAuth 2.0 access token issued by the Google Cloud [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest).
-* `sts_token` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundary at the moment. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
+* `sts_oauthtoken` - Exchanges a credential that represents the resource owner's authorization for a Google-generated [OAuth 2.0 access token] (https://www.rfc-editor.org/rfc/rfc6749#section-5) or [refreshes an accesstoken] (https://www.rfc-editor.org/rfc/rfc6749#section-6) following [the OAuth 2.0 authorization framework] (https://tools.ietf.org/html/rfc8693) The credential can be one of the following: - An authorization code issued by the workforce identity federation authorization endpoint - A [refresh token](https://www.rfc-editor.org/rfc/rfc6749#section-10.4) issued by this endpoint This endpoint is only meant to be called by the Google Cloud CLI. Also note that this API only accepts the authorization code issued for workforce pools.
+* `sts_token` - Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external identity within an identity pool, or it applies a Credential Access Boundary to a Google access token. Note that workforce pools do not support Credential Access Boundaries. When you call this method, do not send the `Authorization` HTTP header in the request. This method does not require the `Authorization` header, and using the header can cause the request to fail.
 
 <!-- End SDK Available Operations -->
 

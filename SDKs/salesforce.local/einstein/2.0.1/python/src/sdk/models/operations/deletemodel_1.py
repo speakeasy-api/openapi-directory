@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deletionresponse as shared_deletionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteModel1PathParams:
-    model_id: str = field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
+    model_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteModel1Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteModel1Request:
-    path_params: DeleteModel1PathParams = field()
-    security: DeleteModel1Security = field()
+    path_params: DeleteModel1PathParams = dataclasses.field()
+    security: DeleteModel1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteModel1Response:
-    content_type: str = field()
-    status_code: int = field()
-    deletion_response: Optional[shared.DeletionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deletion_response: Optional[shared_deletionresponse.DeletionResponse] = dataclasses.field(default=None)
     

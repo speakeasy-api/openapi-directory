@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PutFactQueryParams:
-    category: str = field(metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
-    fact: str = field(metadata={'query_param': { 'field_name': 'fact', 'style': 'form', 'explode': True }})
-    subcategory: str = field(metadata={'query_param': { 'field_name': 'subcategory', 'style': 'form', 'explode': True }})
-    tags: str = field(metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
+    category: str = dataclasses.field(metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
+    fact: str = dataclasses.field(metadata={'query_param': { 'field_name': 'fact', 'style': 'form', 'explode': True }})
+    subcategory: str = dataclasses.field(metadata={'query_param': { 'field_name': 'subcategory', 'style': 'form', 'explode': True }})
+    tags: str = dataclasses.field(metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutFactSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutFactRequest:
-    query_params: PutFactQueryParams = field()
-    security: PutFactSecurity = field()
+    query_params: PutFactQueryParams = dataclasses.field()
+    security: PutFactSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PutFactResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

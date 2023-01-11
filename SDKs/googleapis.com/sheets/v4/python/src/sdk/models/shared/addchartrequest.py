@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import embeddedchart as shared_embeddedchart
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddChartRequest:
     r"""AddChartRequest
     Adds a chart to a sheet in the spreadsheet.
     """
     
-    chart: Optional[EmbeddedChart] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chart') }})
+    chart: Optional[shared_embeddedchart.EmbeddedChart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('chart') }})
     

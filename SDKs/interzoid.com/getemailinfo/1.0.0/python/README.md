@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetemailinfoRequest(
     query_params=operations.GetemailinfoQueryParams(
-        email="voluptatem",
-        license="nobis",
+        email="non",
+        license="cupiditate",
     ),
 )
     
-res = s.sdk.getemailinfo(req)
+res = s.email_address_information.getemailinfo(req)
 
 if res.getemailinfo_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getemailinfo_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Email Address Information
 
 * `getemailinfo` - Gets email validation information for an email address
 

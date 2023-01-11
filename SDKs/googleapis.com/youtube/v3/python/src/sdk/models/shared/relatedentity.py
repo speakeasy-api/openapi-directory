@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import entity as shared_entity
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RelatedEntity:
-    entity: Optional[Entity] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entity') }})
+    entity: Optional[shared_entity.Entity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entity') }})
     

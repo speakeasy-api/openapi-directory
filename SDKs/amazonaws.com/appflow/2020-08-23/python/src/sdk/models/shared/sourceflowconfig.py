@@ -1,20 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connectortype_enum as shared_connectortype_enum
+from ..shared import incrementalpullconfig as shared_incrementalpullconfig
+from ..shared import sourceconnectorproperties as shared_sourceconnectorproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SourceFlowConfig:
     r"""SourceFlowConfig
      Contains information about the configuration of the source connector used in the flow. 
     """
     
-    connector_type: ConnectorTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorType') }})
-    source_connector_properties: SourceConnectorProperties = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceConnectorProperties') }})
-    connector_profile_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorProfileName') }})
-    incremental_pull_config: Optional[IncrementalPullConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('incrementalPullConfig') }})
+    connector_type: shared_connectortype_enum.ConnectorTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorType') }})
+    source_connector_properties: shared_sourceconnectorproperties.SourceConnectorProperties = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceConnectorProperties') }})
+    connector_profile_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectorProfileName') }})
+    incremental_pull_config: Optional[shared_incrementalpullconfig.IncrementalPullConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('incrementalPullConfig') }})
     

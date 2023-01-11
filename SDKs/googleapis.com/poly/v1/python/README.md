@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.PolyAssetsGetRequest(
     path_params=operations.PolyAssetsGetPathParams(
-        name="rerum",
+        name="autem",
     ),
     query_params=operations.PolyAssetsGetQueryParams(
         dollar_xgafv="2",
-        access_token="repudiandae",
-        alt="media",
-        callback="nisi",
-        fields="sit",
-        key="aut",
-        oauth_token="exercitationem",
-        pretty_print=True,
-        quota_user="corporis",
-        upload_type="odio",
-        upload_protocol="animi",
+        access_token="dolores",
+        alt="json",
+        callback="eum",
+        fields="facere",
+        key="vitae",
+        oauth_token="pariatur",
+        pretty_print=False,
+        quota_user="aspernatur",
+        upload_type="reiciendis",
+        upload_protocol="velit",
     ),
 )
     

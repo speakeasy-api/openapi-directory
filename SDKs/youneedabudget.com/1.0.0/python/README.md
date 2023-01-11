@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,55 +23,22 @@ s.config_security(
     )
 )
     
-req = operations.BulkCreateTransactionsRequest(
-    path_params=operations.BulkCreateTransactionsPathParams(
-        budget_id="esse",
+req = operations.CreateAccountRequest(
+    path_params=operations.CreateAccountPathParams(
+        budget_id="quo",
     ),
-    request=shared.BulkTransactions(
-        transactions=[
-            shared.SaveTransaction(
-                account_id="reiciendis",
-                amount=3980895351131401136,
-                approved=True,
-                category_id="quam",
-                cleared="reconciled",
-                date_="1999-04-28",
-                flag_color="red",
-                import_id="magnam",
-                memo="hic",
-                payee_id="sit",
-                payee_name="ut",
-                subtransactions=[
-                    shared.SaveSubTransaction(
-                        amount=4934187139318920637,
-                        category_id="delectus",
-                        memo="est",
-                        payee_id="facilis",
-                        payee_name="porro",
-                    ),
-                    shared.SaveSubTransaction(
-                        amount=2665025749108563884,
-                        category_id="amet",
-                        memo="labore",
-                        payee_id="beatae",
-                        payee_name="repellendus",
-                    ),
-                    shared.SaveSubTransaction(
-                        amount=961304557501690962,
-                        category_id="officia",
-                        memo="nemo",
-                        payee_id="optio",
-                        payee_name="sed",
-                    ),
-                ],
-            ),
-        ],
+    request=shared.SaveAccountWrapper(
+        account=shared.SaveAccount(
+            balance=1779878049279090778,
+            name="quos",
+            type="otherAsset",
+        ),
     ),
 )
     
-res = s.sdk.bulk_create_transactions(req)
+res = s.accounts.create_account(req)
 
-if res.bulk_response is not None:
+if res.account_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -80,38 +46,65 @@ if res.bulk_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Accounts
 
-* `bulk_create_transactions` - Bulk create transactions
 * `create_account` - Create a new account
-* `create_transaction` - Create a single transaction or multiple transactions
 * `get_account_by_id` - Single account
 * `get_accounts` - Account list
+
+### Budgets
+
 * `get_budget_by_id` - Single budget
-* `get_budget_month` - Single budget month
-* `get_budget_months` - List budget months
 * `get_budget_settings_by_id` - Budget Settings
 * `get_budgets` - List budgets
+
+### Categories
+
 * `get_categories` - List categories
 * `get_category_by_id` - Single category
 * `get_month_category_by_id` - Single category for a specific budget month
-* `get_payee_by_id` - Single payee
+* `update_month_category` - Update a category for a specific month
+
+### Deprecated
+
+* `bulk_create_transactions` - Bulk create transactions
+
+### Months
+
+* `get_budget_month` - Single budget month
+* `get_budget_months` - List budget months
+
+### Payee Locations
+
 * `get_payee_location_by_id` - Single payee location
 * `get_payee_locations` - List payee locations
 * `get_payee_locations_by_payee` - List locations for a payee
+
+### Payees
+
+* `get_payee_by_id` - Single payee
 * `get_payees` - List payees
+
+### Scheduled Transactions
+
 * `get_scheduled_transaction_by_id` - Single scheduled transaction
 * `get_scheduled_transactions` - List scheduled transactions
+
+### Transactions
+
+* `create_transaction` - Create a single transaction or multiple transactions
 * `get_transaction_by_id` - Single transaction
 * `get_transactions` - List transactions
 * `get_transactions_by_account` - List account transactions
 * `get_transactions_by_category` - List category transactions
 * `get_transactions_by_payee` - List payee transactions
-* `get_user` - User info
 * `import_transactions` - Import transactions
-* `update_month_category` - Update a category for a specific month
 * `update_transaction` - Updates an existing transaction
 * `update_transactions` - Update multiple transactions
+
+### User
+
+* `get_user` - User info
 
 <!-- End SDK Available Operations -->
 

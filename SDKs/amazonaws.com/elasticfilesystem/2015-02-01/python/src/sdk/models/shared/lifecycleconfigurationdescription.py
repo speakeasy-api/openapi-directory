@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import lifecyclepolicy as shared_lifecyclepolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LifecycleConfigurationDescription:
-    lifecycle_policies: Optional[List[LifecyclePolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LifecyclePolicies') }})
+    lifecycle_policies: Optional[list[shared_lifecyclepolicy.LifecyclePolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LifecyclePolicies') }})
     

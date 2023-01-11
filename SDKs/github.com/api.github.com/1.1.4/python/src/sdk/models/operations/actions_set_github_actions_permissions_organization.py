@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import allowed_actions_enum as shared_allowed_actions_enum
+from ..shared import enabled_repositories_enum as shared_enabled_repositories_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetGithubActionsPermissionsOrganizationPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsSetGithubActionsPermissionsOrganizationRequestBody:
-    enabled_repositories: shared.EnabledRepositoriesEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled_repositories') }})
-    allowed_actions: Optional[shared.AllowedActionsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowed_actions') }})
+    enabled_repositories: shared_enabled_repositories_enum.EnabledRepositoriesEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled_repositories') }})
+    allowed_actions: Optional[shared_allowed_actions_enum.AllowedActionsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowed_actions') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetGithubActionsPermissionsOrganizationRequest:
-    path_params: ActionsSetGithubActionsPermissionsOrganizationPathParams = field()
-    request: Optional[ActionsSetGithubActionsPermissionsOrganizationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActionsSetGithubActionsPermissionsOrganizationPathParams = dataclasses.field()
+    request: Optional[ActionsSetGithubActionsPermissionsOrganizationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetGithubActionsPermissionsOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

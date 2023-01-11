@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcependingmaintenanceactions as shared_resourcependingmaintenanceactions
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApplyPendingMaintenanceActionResponse:
     r"""ApplyPendingMaintenanceActionResponse
     <p/>
     """
     
-    resource_pending_maintenance_actions: Optional[ResourcePendingMaintenanceActions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourcePendingMaintenanceActions') }})
+    resource_pending_maintenance_actions: Optional[shared_resourcependingmaintenanceactions.ResourcePendingMaintenanceActions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourcePendingMaintenanceActions') }})
     

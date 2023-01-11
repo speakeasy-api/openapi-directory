@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import parameterslist as shared_parameterslist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbClusterParameterGroupDetails:
     r"""DbClusterParameterGroupDetails
     Provides details about a DB cluster parameter group including the parameters in the DB cluster parameter group.
     """
     
-    marker: Optional[str] = field(default=None)
-    parameters: Optional[List[Parameter]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    parameters: Optional[list[shared_parameterslist.ParametersList]] = dataclasses.field(default=None)
     

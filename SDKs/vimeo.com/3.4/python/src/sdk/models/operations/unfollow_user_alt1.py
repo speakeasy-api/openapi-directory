@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UnfollowUserAlt1PathParams:
-    follow_user_id: float = field(metadata={'path_param': { 'field_name': 'follow_user_id', 'style': 'simple', 'explode': False }})
+    follow_user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'follow_user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UnfollowUserAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UnfollowUserAlt1Request:
-    path_params: UnfollowUserAlt1PathParams = field()
-    security: UnfollowUserAlt1Security = field()
+    path_params: UnfollowUserAlt1PathParams = dataclasses.field()
+    security: UnfollowUserAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UnfollowUserAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

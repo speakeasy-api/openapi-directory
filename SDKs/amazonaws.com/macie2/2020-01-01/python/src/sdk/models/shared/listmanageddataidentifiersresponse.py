@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import manageddataidentifiersummary as shared_manageddataidentifiersummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListManagedDataIdentifiersResponse:
-    items: Optional[List[ManagedDataIdentifierSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    items: Optional[list[shared_manageddataidentifiersummary.ManagedDataIdentifierSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import pre_receive_environment_download_status as shared_pre_receive_environment_download_status
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentPathParams:
-    pre_receive_environment_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_environment_id', 'style': 'simple', 'explode': False }})
+    pre_receive_environment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_environment_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentRequest:
-    path_params: EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentPathParams = field()
+    path_params: EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pre_receive_environment_download_status: Optional[shared.PreReceiveEnvironmentDownloadStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pre_receive_environment_download_status: Optional[shared_pre_receive_environment_download_status.PreReceiveEnvironmentDownloadStatus] = dataclasses.field(default=None)
     

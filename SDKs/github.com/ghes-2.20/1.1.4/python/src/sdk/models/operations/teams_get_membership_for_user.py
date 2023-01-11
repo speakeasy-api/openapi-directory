@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import team_membership as shared_team_membership
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetMembershipForUserPathParams:
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetMembershipForUserRequest:
-    path_params: TeamsGetMembershipForUserPathParams = field()
+    path_params: TeamsGetMembershipForUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsGetMembershipForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_membership: Optional[shared.TeamMembership] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_membership: Optional[shared_team_membership.TeamMembership] = dataclasses.field(default=None)
     

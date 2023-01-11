@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevlan as shared_writablevlan
+from ..shared import vlan as shared_vlan
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlansPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlansPartialUpdateRequest:
-    path_params: IpamVlansPartialUpdatePathParams = field()
-    request: shared.WritableVlanInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: IpamVlansPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablevlan.WritableVlanInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlansPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vlan: Optional[shared.Vlan] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vlan: Optional[shared_vlan.Vlan] = dataclasses.field(default=None)
     

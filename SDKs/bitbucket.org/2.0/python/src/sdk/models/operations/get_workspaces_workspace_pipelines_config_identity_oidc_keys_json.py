@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspacePipelinesConfigIdentityOidcKeysJSONPathParams:
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspacePipelinesConfigIdentityOidcKeysJSONRequest:
-    path_params: GetWorkspacesWorkspacePipelinesConfigIdentityOidcKeysJSONPathParams = field()
+    path_params: GetWorkspacesWorkspacePipelinesConfigIdentityOidcKeysJSONPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspacesWorkspacePipelinesConfigIdentityOidcKeysJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

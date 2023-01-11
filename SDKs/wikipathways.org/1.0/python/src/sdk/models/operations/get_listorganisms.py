@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,18 +11,18 @@ class GetListOrganismsFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListOrganismsQueryParams:
-    format: Optional[GetListOrganismsFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    format: Optional[GetListOrganismsFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListOrganismsRequest:
-    query_params: GetListOrganismsQueryParams = field()
+    query_params: GetListOrganismsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListOrganismsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

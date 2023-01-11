@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import instancerefresh as shared_instancerefresh
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeInstanceRefreshesAnswer:
-    instance_refreshes: Optional[List[InstanceRefresh]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    instance_refreshes: Optional[list[shared_instancerefresh.InstanceRefresh]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import jobtemplate as shared_jobtemplate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListJobTemplatesResponse:
     r"""ListJobTemplatesResponse
     Response message for `TranscoderService.ListJobTemplates`.
     """
     
-    job_templates: Optional[List[JobTemplate]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobTemplates') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    job_templates: Optional[list[shared_jobtemplate.JobTemplate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobTemplates') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

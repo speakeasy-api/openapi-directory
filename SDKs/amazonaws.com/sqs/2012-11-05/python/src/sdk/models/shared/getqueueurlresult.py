@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetQueueURLResult:
     r"""GetQueueURLResult
     For more information, see <a href=\"https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-api-responses.html\">Interpreting Responses</a> in the <i>Amazon SQS Developer Guide</i>.
     """
     
-    queue_url: Optional[str] = field(default=None)
+    queue_url: Optional[str] = dataclasses.field(default=None)
     

@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import similarsalepriceresp as shared_similarsalepriceresp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMarket3SimilarSalePriceGetQueryParams:
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
-    vin: str = field(metadata={'query_param': { 'field_name': 'vin', 'style': 'form', 'explode': True }})
-    days_back: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'daysBack', 'style': 'form', 'explode': True }})
-    region_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
-    same_year: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sameYear', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    vin: str = dataclasses.field(metadata={'query_param': { 'field_name': 'vin', 'style': 'form', 'explode': True }})
+    days_back: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'daysBack', 'style': 'form', 'explode': True }})
+    region_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
+    same_year: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sameYear', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMarket3SimilarSalePriceGetRequest:
-    query_params: GetMarket3SimilarSalePriceGetQueryParams = field()
+    query_params: GetMarket3SimilarSalePriceGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMarket3SimilarSalePriceGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    similar_sale_price_resp: Optional[shared.SimilarSalePriceResp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    similar_sale_price_resp: Optional[shared_similarsalepriceresp.SimilarSalePriceResp] = dataclasses.field(default=None)
     

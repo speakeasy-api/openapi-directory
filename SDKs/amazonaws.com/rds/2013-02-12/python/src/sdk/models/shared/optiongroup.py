@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import optionslist as shared_optionslist
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionGroup:
-    allows_vpc_and_non_vpc_instance_memberships: Optional[bool] = field(default=None)
-    engine_name: Optional[str] = field(default=None)
-    major_engine_version: Optional[str] = field(default=None)
-    option_group_description: Optional[str] = field(default=None)
-    option_group_name: Optional[str] = field(default=None)
-    options: Optional[List[Option]] = field(default=None)
-    vpc_id: Optional[str] = field(default=None)
+    allows_vpc_and_non_vpc_instance_memberships: Optional[bool] = dataclasses.field(default=None)
+    engine_name: Optional[str] = dataclasses.field(default=None)
+    major_engine_version: Optional[str] = dataclasses.field(default=None)
+    option_group_description: Optional[str] = dataclasses.field(default=None)
+    option_group_name: Optional[str] = dataclasses.field(default=None)
+    options: Optional[list[shared_optionslist.OptionsList]] = dataclasses.field(default=None)
+    vpc_id: Optional[str] = dataclasses.field(default=None)
     

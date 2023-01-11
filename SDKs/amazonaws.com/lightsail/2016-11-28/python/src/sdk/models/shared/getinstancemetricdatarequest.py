@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import instancemetricname_enum as shared_instancemetricname_enum
+from ..shared import metricstatistic_enum as shared_metricstatistic_enum
+from ..shared import metricunit_enum as shared_metricunit_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetInstanceMetricDataRequest:
-    end_time: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    instance_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceName') }})
-    metric_name: InstanceMetricNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricName') }})
-    period: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
-    start_time: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    statistics: List[MetricStatisticEnum] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statistics') }})
-    unit: MetricUnitEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
+    end_time: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    instance_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceName') }})
+    metric_name: shared_instancemetricname_enum.InstanceMetricNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricName') }})
+    period: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('period') }})
+    start_time: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    statistics: list[shared_metricstatistic_enum.MetricStatisticEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statistics') }})
+    unit: shared_metricunit_enum.MetricUnitEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
     

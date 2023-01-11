@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import simple_user as shared_simple_user
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListBlockedUsersPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrgsListBlockedUsers415ApplicationJSON:
-    documentation_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListBlockedUsersRequest:
-    path_params: OrgsListBlockedUsersPathParams = field()
+    path_params: OrgsListBlockedUsersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListBlockedUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    orgs_list_blocked_users_415_application_json_object: Optional[OrgsListBlockedUsers415ApplicationJSON] = field(default=None)
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    orgs_list_blocked_users_415_application_json_object: Optional[OrgsListBlockedUsers415ApplicationJSON] = dataclasses.field(default=None)
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
     

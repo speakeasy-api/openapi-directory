@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import boarddetail as shared_boarddetail
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDPathParams:
-    board_id: str = field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
+    board_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'board_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDRequest:
-    path_params: GetV3BoardsBoardIDPathParams = field()
+    path_params: GetV3BoardsBoardIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3BoardsBoardIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    board_detail: Optional[shared.BoardDetail] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    board_detail: Optional[shared_boarddetail.BoardDetail] = dataclasses.field(default=None)
     

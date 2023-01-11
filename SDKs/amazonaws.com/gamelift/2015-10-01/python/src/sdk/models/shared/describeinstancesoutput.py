@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import instance as shared_instance
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeInstancesOutput:
     r"""DescribeInstancesOutput
     Represents the returned data in response to a request operation.
     """
     
-    instances: Optional[List[Instance]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Instances') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    instances: Optional[list[shared_instance.Instance]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Instances') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

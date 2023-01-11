@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import endpoint as shared_endpoint
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEndpointsQueryParams:
-    openapi: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'openapi', 'style': 'form', 'explode': True }})
+    openapi: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'openapi', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEndpointsRequest:
-    query_params: GetEndpointsQueryParams = field()
+    query_params: GetEndpointsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEndpointsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    endpoint: Optional[shared.Endpoint] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    endpoint: Optional[shared_endpoint.Endpoint] = dataclasses.field(default=None)
     

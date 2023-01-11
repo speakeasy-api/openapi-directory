@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposListLanguagesPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListLanguagesRequest:
-    path_params: ReposListLanguagesPathParams = field()
+    path_params: ReposListLanguagesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListLanguagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    language: Optional[dict[str, int]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    language: Optional[dict[str, int]] = dataclasses.field(default=None)
     

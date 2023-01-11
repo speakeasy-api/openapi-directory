@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccessibilityRequest:
-    endpoint_enabled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint_enabled') }})
-    hotword_enabled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hotword_enabled') }})
+    endpoint_enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint_enabled') }})
+    hotword_enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hotword_enabled') }})
     

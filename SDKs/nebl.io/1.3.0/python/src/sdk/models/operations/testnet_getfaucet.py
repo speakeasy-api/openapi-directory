@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getfaucetresponse as shared_getfaucetresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetFaucetQueryParams:
-    address: str = field(metadata={'query_param': { 'field_name': 'address', 'style': 'form', 'explode': True }})
-    amount: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'amount', 'style': 'form', 'explode': True }})
+    address: str = dataclasses.field(metadata={'query_param': { 'field_name': 'address', 'style': 'form', 'explode': True }})
+    amount: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'amount', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetFaucetRequest:
-    query_params: TestnetGetFaucetQueryParams = field()
+    query_params: TestnetGetFaucetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetFaucetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_faucet_response: Optional[shared.GetFaucetResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_faucet_response: Optional[shared_getfaucetresponse.GetFaucetResponse] = dataclasses.field(default=None)
     

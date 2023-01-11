@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.GetLookupSha1Sha1Request(
     path_params=operations.GetLookupSha1Sha1PathParams(
-        sha1="sit",
+        sha1="nisi",
     ),
 )
     

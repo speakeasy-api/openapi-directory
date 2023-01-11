@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import webhooksresponse as shared_webhooksresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class WebhooksFetchAllPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WebhooksFetchAllSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WebhooksFetchAllRequest:
-    path_params: WebhooksFetchAllPathParams = field()
-    security: WebhooksFetchAllSecurity = field()
+    path_params: WebhooksFetchAllPathParams = dataclasses.field()
+    security: WebhooksFetchAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WebhooksFetchAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    webhooks_response: Optional[shared.WebhooksResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    webhooks_response: Optional[shared_webhooksresponse.WebhooksResponse] = dataclasses.field(default=None)
     

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_pvforsongcontract_ as shared_partialfindresult_pvforsongcontract_
 
 class PvAPIGetListLangEnum(str, Enum):
     DEFAULT = "Default"
@@ -22,25 +22,25 @@ class PvAPIGetListServiceEnum(str, Enum):
     BANDCAMP = "Bandcamp"
 
 
-@dataclass
+@dataclasses.dataclass
 class PvAPIGetListQueryParams:
-    author: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'author', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    lang: Optional[PvAPIGetListLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    service: Optional[PvAPIGetListServiceEnum] = field(default=None, metadata={'query_param': { 'field_name': 'service', 'style': 'form', 'explode': True }})
+    author: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'author', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    lang: Optional[PvAPIGetListLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    service: Optional[PvAPIGetListServiceEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'service', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PvAPIGetListRequest:
-    query_params: PvAPIGetListQueryParams = field()
+    query_params: PvAPIGetListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PvAPIGetListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_pv_for_song_contract_: Optional[shared.PartialFindResultPvForSongContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_pv_for_song_contract_: Optional[shared_partialfindresult_pvforsongcontract_.PartialFindResultPvForSongContract] = dataclasses.field(default=None)
     

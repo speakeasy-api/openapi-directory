@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ratetable as shared_ratetable
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RateTableResponse:
     r"""RateTableResponse
     The response container for with information on a seller's shipping rate tables.
     """
     
-    rate_tables: Optional[List[RateTable]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rateTables') }})
+    rate_tables: Optional[list[shared_ratetable.RateTable]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rateTables') }})
     

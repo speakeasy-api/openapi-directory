@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientMessageCardPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientMessageCardRequest:
-    path_params: ProtocolMqttClientMessageCardPathParams = field()
+    path_params: ProtocolMqttClientMessageCardPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttClientMessageCardResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_mqtt_client_message_card_200_application_json_int32_integers: Optional[List[int]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_mqtt_client_message_card_200_application_json_int32_integers: Optional[list[int]] = dataclasses.field(default=None)
     

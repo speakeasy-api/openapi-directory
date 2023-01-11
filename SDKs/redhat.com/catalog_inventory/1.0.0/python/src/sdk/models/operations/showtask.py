@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import task as shared_task
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowTaskPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowTaskRequest:
-    path_params: ShowTaskPathParams = field()
+    path_params: ShowTaskPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    task: Optional[shared.Task] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    task: Optional[shared_task.Task] = dataclasses.field(default=None)
     

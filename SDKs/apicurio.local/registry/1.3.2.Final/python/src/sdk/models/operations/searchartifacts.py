@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import artifactsearchresults as shared_artifactsearchresults
+from ..shared import error as shared_error
 
 class SearchArtifactsOrderEnum(str, Enum):
     ASC = "asc"
@@ -14,24 +15,24 @@ class SearchArtifactsOverEnum(str, Enum):
     LABELS = "labels"
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchArtifactsQueryParams:
-    limit: int = field(metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: int = field(metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    order: Optional[SearchArtifactsOrderEnum] = field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
-    over: Optional[SearchArtifactsOverEnum] = field(default=None, metadata={'query_param': { 'field_name': 'over', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    limit: int = dataclasses.field(metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: int = dataclasses.field(metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    order: Optional[SearchArtifactsOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    over: Optional[SearchArtifactsOverEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'over', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchArtifactsRequest:
-    query_params: SearchArtifactsQueryParams = field()
+    query_params: SearchArtifactsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchArtifactsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artifact_search_results: Optional[shared.ArtifactSearchResults] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artifact_search_results: Optional[shared_artifactsearchresults.ArtifactSearchResults] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

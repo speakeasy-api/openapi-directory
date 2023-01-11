@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookQueryParams:
-    workspace: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
+    workspace: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookRequestBodyWebhook:
-    collection: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookRequestBody:
-    webhook: Optional[CreateWebhookRequestBodyWebhook] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhook') }})
+    webhook: Optional[CreateWebhookRequestBodyWebhook] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhook') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookRequest:
-    query_params: CreateWebhookQueryParams = field()
-    request: Optional[CreateWebhookRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    query_params: CreateWebhookQueryParams = dataclasses.field()
+    request: Optional[CreateWebhookRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

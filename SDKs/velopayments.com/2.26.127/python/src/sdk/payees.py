@@ -1,0 +1,491 @@
+import requests
+from typing import Any,Optional
+from sdk.models import shared, operations
+from . import utils
+
+class Payees:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def delete_payee_by_id_v3(self, request: operations.DeletePayeeByIDV3Request) -> operations.DeletePayeeByIDV3Response:
+        r"""Delete Payee by Id
+        <p>Use v4 instead</p>
+        <p>This API will delete Payee by Id (UUID). Deletion by ID is not allowed if:</p>
+        <p>* Payee ID is not found</p>
+        <p>* If Payee has not been on-boarded</p>
+        <p>* If Payee is in grace period</p>
+        <p>* If Payee has existing payments</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/payees/{payeeId}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePayeeByIDV3Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def delete_payee_by_id_v4(self, request: operations.DeletePayeeByIDV4Request) -> operations.DeletePayeeByIDV4Response:
+        r"""Delete Payee by Id
+        <p>This API will delete Payee by Id (UUID). Deletion by ID is not allowed if:</p>
+        <p>* Payee ID is not found</p>
+        <p>* If Payee has not been on-boarded</p>
+        <p>* If Payee is in grace period</p>
+        <p>* If Payee has existing payments</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v4/payees/{payeeId}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePayeeByIDV4Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_payee_by_id_v3(self, request: operations.GetPayeeByIDV3Request) -> operations.GetPayeeByIDV3Response:
+        r"""Get Payee by Id
+        <p>Use v4 instead</p>
+        <p>Get Payee by Id</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/payees/{payeeId}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPayeeByIDV3Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PayeeDetailResponse])
+                res.payee_detail_response = out
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_payee_by_id_v4(self, request: operations.GetPayeeByIDV4Request) -> operations.GetPayeeByIDV4Response:
+        r"""Get Payee by Id
+        Get Payee by Id
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v4/payees/{payeeId}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPayeeByIDV4Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PayeeDetailResponse2])
+                res.payee_detail_response_2 = out
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def list_payee_changes_v3(self, request: operations.ListPayeeChangesV3Request) -> operations.ListPayeeChangesV3Response:
+        r"""List Payee Changes
+        <p>Use v4 instead</p>
+        <p>Get a paginated response listing payee changes.</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/v3/payees/deltas"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListPayeeChangesV3Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PayeeDeltaResponse])
+                res.payee_delta_response = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def list_payee_changes_v4(self, request: operations.ListPayeeChangesV4Request) -> operations.ListPayeeChangesV4Response:
+        r"""List Payee Changes
+        Get a paginated response listing payee changes (updated since a particular time) to a limited set of fields:
+        - dbaName
+        - displayName
+        - email
+        - onboardedStatus
+        - payeeCountry
+        - payeeId
+        - remoteId
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/v4/payees/deltas"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListPayeeChangesV4Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PayeeDeltaResponse2])
+                res.payee_delta_response_2 = out
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def list_payees_v3(self, request: operations.ListPayeesV3Request) -> operations.ListPayeesV3Response:
+        r"""List Payees
+        <p>Use v4 instead</p>
+        Get a paginated response listing the payees for a payor.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/v3/payees"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListPayeesV3Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PagedPayeeResponse])
+                res.paged_payee_response = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+
+        return res
+
+    
+    def list_payees_v4(self, request: operations.ListPayeesV4Request) -> operations.ListPayeesV4Response:
+        r"""List Payees
+        Get a paginated response listing the payees for a payor.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/v4/payees"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListPayeesV4Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PagedPayeeResponse2])
+                res.paged_payee_response_2 = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+
+        return res
+
+    
+    def payee_details_update_v3(self, request: operations.PayeeDetailsUpdateV3Request) -> operations.PayeeDetailsUpdateV3Response:
+        r"""Update Payee Details
+        <p>Use v4 instead</p>
+        <p>Update payee details for the given Payee Id.<p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/payees/{payeeId}/payeeDetailsUpdate", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PayeeDetailsUpdateV3Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+
+        return res
+
+    
+    def payee_details_update_v4(self, request: operations.PayeeDetailsUpdateV4Request) -> operations.PayeeDetailsUpdateV4Response:
+        r"""Update Payee Details
+        <p>Update payee details for the given Payee Id.<p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v4/payees/{payeeId}/payeeDetailsUpdate", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PayeeDetailsUpdateV4Response(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+
+        return res
+
+    
+    def post_v3_payees_payee_id_remote_id_update(self, request: operations.PostV3PayeesPayeeIDRemoteIDUpdateRequest) -> operations.PostV3PayeesPayeeIDRemoteIDUpdateResponse:
+        r"""Update Payee Remote Id
+        <p>Use v4 instead</p>
+        <p>Update the remote Id for the given Payee Id.</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v3/payees/{payeeId}/remoteIdUpdate", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostV3PayeesPayeeIDRemoteIDUpdateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+        elif r.status_code == 409:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_409 = out
+
+        return res
+
+    
+    def post_v4_payees_payee_id_remote_id_update(self, request: operations.PostV4PayeesPayeeIDRemoteIDUpdateRequest) -> operations.PostV4PayeesPayeeIDRemoteIDUpdateResponse:
+        r"""Update Payee Remote Id
+        <p>Update the remote Id for the given Payee Id.</p>
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v4/payees/{payeeId}/remoteIdUpdate", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostV4PayeesPayeeIDRemoteIDUpdateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_400 = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_401 = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_403 = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_404 = out
+        elif r.status_code == 409:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.inline_response_409 = out
+
+        return res
+
+    

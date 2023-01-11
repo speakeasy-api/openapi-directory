@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import phraseset as shared_phraseset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPhraseSetResponse:
     r"""ListPhraseSetResponse
     Message returned to the client by the `ListPhraseSet` method.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    phrase_sets: Optional[List[PhraseSet]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSets') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    phrase_sets: Optional[list[shared_phraseset.PhraseSet]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSets') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import groupentity as shared_groupentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsIDRequest:
-    path_params: GetGroupsIDPathParams = field()
+    path_params: GetGroupsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group_entity: Optional[shared.GroupEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_entity: Optional[shared_groupentity.GroupEntity] = dataclasses.field(default=None)
     

@@ -1,15 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MetricDimension:
-    r"""MetricDimension
-    Specifies metric-based criteria for including or excluding endpoints from a segment. These criteria derive from custom metrics that you define for endpoints.
-    """
-    
-    comparison_operator: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComparisonOperator') }})
-    value: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Value') }})
+    comparison_operator: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComparisonOperator') }})
+    value: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Value') }})
     

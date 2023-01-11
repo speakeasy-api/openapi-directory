@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import evaluationresult as shared_evaluationresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetComplianceDetailsByResourceResponse:
     r"""GetComplianceDetailsByResourceResponse
     <p/>
     """
     
-    evaluation_results: Optional[List[EvaluationResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationResults') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    evaluation_results: Optional[list[shared_evaluationresult.EvaluationResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EvaluationResults') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

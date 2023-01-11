@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PepMonitorUpdatePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepMonitorUpdateRequestBody:
-    webhook: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'Webhook' }})
+    webhook: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'Webhook' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepMonitorUpdateSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepMonitorUpdateRequest:
-    path_params: PepMonitorUpdatePathParams = field()
-    security: PepMonitorUpdateSecurity = field()
-    request: Optional[PepMonitorUpdateRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: PepMonitorUpdatePathParams = dataclasses.field()
+    security: PepMonitorUpdateSecurity = dataclasses.field()
+    request: Optional[PepMonitorUpdateRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepMonitorUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pep_monitor_update_200_application_json_any: Optional[Any] = field(default=None)
-    pep_monitor_update_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pep_monitor_update_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    pep_monitor_update_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

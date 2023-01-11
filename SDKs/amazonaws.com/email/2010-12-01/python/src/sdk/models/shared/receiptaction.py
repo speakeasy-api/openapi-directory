@@ -1,19 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import addheaderaction as shared_addheaderaction
+from ..shared import bounceaction as shared_bounceaction
+from ..shared import lambdaaction as shared_lambdaaction
+from ..shared import s3action as shared_s3action
+from ..shared import snsaction as shared_snsaction
+from ..shared import stopaction as shared_stopaction
+from ..shared import workmailaction as shared_workmailaction
 
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptAction:
     r"""ReceiptAction
     <p>An action that Amazon SES can take when it receives an email on behalf of one or more email addresses or domains that you own. An instance of this data type can represent only one action.</p> <p>For information about setting up receipt rules, see the <a href=\"https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html\">Amazon SES Developer Guide</a>.</p>
     """
     
-    add_header_action: Optional[AddHeaderAction] = field(default=None)
-    bounce_action: Optional[BounceAction] = field(default=None)
-    lambda_action: Optional[LambdaAction] = field(default=None)
-    s3_action: Optional[S3Action] = field(default=None)
-    sns_action: Optional[SnsAction] = field(default=None)
-    stop_action: Optional[StopAction] = field(default=None)
-    workmail_action: Optional[WorkmailAction] = field(default=None)
+    add_header_action: Optional[shared_addheaderaction.AddHeaderAction] = dataclasses.field(default=None)
+    bounce_action: Optional[shared_bounceaction.BounceAction] = dataclasses.field(default=None)
+    lambda_action: Optional[shared_lambdaaction.LambdaAction] = dataclasses.field(default=None)
+    s3_action: Optional[shared_s3action.S3Action] = dataclasses.field(default=None)
+    sns_action: Optional[shared_snsaction.SnsAction] = dataclasses.field(default=None)
+    stop_action: Optional[shared_stopaction.StopAction] = dataclasses.field(default=None)
+    workmail_action: Optional[shared_workmailaction.WorkmailAction] = dataclasses.field(default=None)
     

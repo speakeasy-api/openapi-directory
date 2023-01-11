@@ -1,40 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import gettrailrequest as shared_gettrailrequest
+from ..shared import gettrailresponse as shared_gettrailresponse
 
 class GetTrailXAmzTargetEnum(str, Enum):
     COM_AMAZONAWS_CLOUDTRAIL_V20131101_CLOUD_TRAIL_20131101_GET_TRAIL = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetTrail"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTrailHeaders:
-    x_amz_target: GetTrailXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: GetTrailXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrailRequest:
-    headers: GetTrailHeaders = field()
-    request: shared.GetTrailRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetTrailHeaders = dataclasses.field()
+    request: shared_gettrailrequest.GetTrailRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrailResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_trail_response: Optional[shared.GetTrailResponse] = field(default=None)
-    invalid_trail_name_exception: Optional[Any] = field(default=None)
-    operation_not_permitted_exception: Optional[Any] = field(default=None)
-    trail_not_found_exception: Optional[Any] = field(default=None)
-    unsupported_operation_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_trail_response: Optional[shared_gettrailresponse.GetTrailResponse] = dataclasses.field(default=None)
+    invalid_trail_name_exception: Optional[Any] = dataclasses.field(default=None)
+    operation_not_permitted_exception: Optional[Any] = dataclasses.field(default=None)
+    trail_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    unsupported_operation_exception: Optional[Any] = dataclasses.field(default=None)
     

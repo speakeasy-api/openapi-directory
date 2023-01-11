@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,90 +25,38 @@ s.config_security(
     
 req = operations.BatchMeterUsageRequest(
     headers=operations.BatchMeterUsageHeaders(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="dolor",
-        x_amz_credential="veritatis",
-        x_amz_date="dicta",
-        x_amz_security_token="consequatur",
-        x_amz_signature="mollitia",
-        x_amz_signed_headers="distinctio",
+        x_amz_algorithm="nihil",
+        x_amz_content_sha256="dolorem",
+        x_amz_credential="impedit",
+        x_amz_date="laboriosam",
+        x_amz_security_token="iste",
+        x_amz_signature="soluta",
+        x_amz_signed_headers="ut",
         x_amz_target="AWSMPMeteringService.BatchMeterUsage",
     ),
     request=shared.BatchMeterUsageRequest(
-        product_code="dolor",
+        product_code="vel",
         usage_records=[
             shared.UsageRecord(
-                customer_identifier="veniam",
-                dimension="ullam",
-                quantity=7143517679490005021,
-                timestamp="1986-11-05T10:48:26Z",
+                customer_identifier="soluta",
+                dimension="alias",
+                quantity=3089778739814785022,
+                timestamp="1984-04-21T17:27:21Z",
                 usage_allocations=[
                     shared.UsageAllocation(
-                        allocated_usage_quantity=5086685836834963172,
+                        allocated_usage_quantity=4453435121235553912,
                         tags=[
                             shared.Tag(
-                                key="nisi",
-                                value="consequatur",
+                                key="dolore",
+                                value="quidem",
                             ),
                             shared.Tag(
-                                key="fugiat",
-                                value="tenetur",
-                            ),
-                        ],
-                    ),
-                    shared.UsageAllocation(
-                        allocated_usage_quantity=8093916486147727286,
-                        tags=[
-                            shared.Tag(
-                                key="aspernatur",
-                                value="dignissimos",
-                            ),
-                        ],
-                    ),
-                    shared.UsageAllocation(
-                        allocated_usage_quantity=7014153113816809001,
-                        tags=[
-                            shared.Tag(
-                                key="saepe",
-                                value="voluptas",
+                                key="doloribus",
+                                value="at",
                             ),
                             shared.Tag(
-                                key="sunt",
-                                value="optio",
-                            ),
-                        ],
-                    ),
-                ],
-            ),
-            shared.UsageRecord(
-                customer_identifier="omnis",
-                dimension="ut",
-                quantity=8667532264838713382,
-                timestamp="2022-10-20T07:35:43Z",
-                usage_allocations=[
-                    shared.UsageAllocation(
-                        allocated_usage_quantity=1128063950629246547,
-                        tags=[
-                            shared.Tag(
-                                key="voluptatum",
-                                value="alias",
-                            ),
-                            shared.Tag(
-                                key="consequatur",
-                                value="eum",
-                            ),
-                            shared.Tag(
-                                key="nemo",
-                                value="omnis",
-                            ),
-                        ],
-                    ),
-                    shared.UsageAllocation(
-                        allocated_usage_quantity=730903235187604438,
-                        tags=[
-                            shared.Tag(
-                                key="omnis",
-                                value="velit",
+                                key="dolore",
+                                value="et",
                             ),
                         ],
                     ),
@@ -119,7 +66,7 @@ req = operations.BatchMeterUsageRequest(
     ),
 )
     
-res = s.sdk.batch_meter_usage(req)
+res = s.batch_meter_usage(req)
 
 if res.batch_meter_usage_result is not None:
     # handle response

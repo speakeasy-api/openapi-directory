@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import organization_invitation as shared_organization_invitation
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListPendingInvitationsInOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListPendingInvitationsInOrgQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListPendingInvitationsInOrgRequest:
-    path_params: TeamsListPendingInvitationsInOrgPathParams = field()
-    query_params: TeamsListPendingInvitationsInOrgQueryParams = field()
+    path_params: TeamsListPendingInvitationsInOrgPathParams = dataclasses.field()
+    query_params: TeamsListPendingInvitationsInOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListPendingInvitationsInOrgResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    organization_invitations: Optional[List[shared.OrganizationInvitation]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization_invitations: Optional[list[shared_organization_invitation.OrganizationInvitation]] = dataclasses.field(default=None)
     

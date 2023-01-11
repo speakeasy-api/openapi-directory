@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import volume as shared_volume
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeVolumesResult:
     r"""DescribeVolumesResult
     Contains the response to a <code>DescribeVolumes</code> request.
     """
     
-    volumes: Optional[List[Volume]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Volumes') }})
+    volumes: Optional[list[shared_volume.Volume]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Volumes') }})
     

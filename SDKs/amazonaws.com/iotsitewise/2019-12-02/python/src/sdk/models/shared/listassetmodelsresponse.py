@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import assetmodelsummary as shared_assetmodelsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAssetModelsResponse:
-    asset_model_summaries: List[AssetModelSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetModelSummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    asset_model_summaries: list[shared_assetmodelsummary.AssetModelSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetModelSummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

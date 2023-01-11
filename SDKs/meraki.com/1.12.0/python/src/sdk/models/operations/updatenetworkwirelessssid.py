@@ -1,53 +1,53 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    number: str = field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials:
     r"""UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials
     (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
     """
     
-    logon_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logonName') }})
-    password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    logon_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logonName') }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers:
-    host: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    port: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    host: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyActiveDirectory:
     r"""UpdateNetworkWirelessSsidRequestBodyActiveDirectory
     The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
     """
     
-    credentials: Optional[UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
-    servers: Optional[List[UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
+    credentials: Optional[UpdateNetworkWirelessSsidRequestBodyActiveDirectoryCredentials] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
+    servers: Optional[list[UpdateNetworkWirelessSsidRequestBodyActiveDirectoryServers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds:
-    tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    vlan_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlanId') }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    vlan_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlanId') }})
     
 class UpdateNetworkWirelessSsidRequestBodyAuthModeEnum(str, Enum):
     OPEN = "open"
@@ -62,36 +62,36 @@ class UpdateNetworkWirelessSsidRequestBodyAuthModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyDNSRewrite:
     r"""UpdateNetworkWirelessSsidRequestBodyDNSRewrite
     DNS servers rewrite settings
     """
     
-    dns_custom_nameservers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsCustomNameservers') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    dns_custom_nameservers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsCustomNameservers') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyDot11r:
     r"""UpdateNetworkWirelessSsidRequestBodyDot11r
     The current setting for 802.11r
     """
     
-    adaptive: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaptive') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    adaptive: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaptive') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyDot11w:
     r"""UpdateNetworkWirelessSsidRequestBodyDot11w
     The current setting for Protected Management Frames (802.11w).
     """
     
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    required: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('required') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    required: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('required') }})
     
 class UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum(str, Enum):
     WEP = "wep"
@@ -103,109 +103,109 @@ class UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLdapCredentials:
     r"""UpdateNetworkWirelessSsidRequestBodyLdapCredentials
     (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
     """
     
-    distinguished_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distinguishedName') }})
-    password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    distinguished_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('distinguishedName') }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate:
     r"""UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate
     The CA certificate used to sign the LDAP server's key.
     """
     
-    contents: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
+    contents: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLdapServers:
-    host: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    port: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    host: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    port: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLdap:
     r"""UpdateNetworkWirelessSsidRequestBodyLdap
     The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
     """
     
-    base_distinguished_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseDistinguishedName') }})
-    credentials: Optional[UpdateNetworkWirelessSsidRequestBodyLdapCredentials] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
-    server_ca_certificate: Optional[UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverCaCertificate') }})
-    servers: Optional[List[UpdateNetworkWirelessSsidRequestBodyLdapServers]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
+    base_distinguished_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseDistinguishedName') }})
+    credentials: Optional[UpdateNetworkWirelessSsidRequestBodyLdapCredentials] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('credentials') }})
+    server_ca_certificate: Optional[UpdateNetworkWirelessSsidRequestBodyLdapServerCaCertificate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverCaCertificate') }})
+    servers: Optional[list[UpdateNetworkWirelessSsidRequestBodyLdapServers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate:
     r"""UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate
     The Client CA Certificate used to sign the client certificate.
     """
     
-    contents: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
+    contents: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication:
     r"""UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication
     The current setting for certificate verification.
     """
     
-    client_root_ca_certificate: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientRootCaCertificate') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    ocsp_responder_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ocspResponderUrl') }})
-    use_ldap: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useLdap') }})
-    use_ocsp: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useOcsp') }})
+    client_root_ca_certificate: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthenticationClientRootCaCertificate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientRootCaCertificate') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    ocsp_responder_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ocspResponderUrl') }})
+    use_ldap: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useLdap') }})
+    use_ocsp: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useOcsp') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication:
     r"""UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication
     The current setting for password-based authentication.
     """
     
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyLocalRadius:
     r"""UpdateNetworkWirelessSsidRequestBodyLocalRadius
     The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
     """
     
-    cache_timeout: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cacheTimeout') }})
-    certificate_authentication: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateAuthentication') }})
-    password_authentication: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('passwordAuthentication') }})
+    cache_timeout: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cacheTimeout') }})
+    certificate_authentication: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusCertificateAuthentication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificateAuthentication') }})
+    password_authentication: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadiusPasswordAuthentication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('passwordAuthentication') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyOauth:
     r"""UpdateNetworkWirelessSsidRequestBodyOauth
     The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
     """
     
-    allowed_domains: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedDomains') }})
+    allowed_domains: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedDomains') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers:
-    host: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    port: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    radsec_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radsecEnabled') }})
-    secret: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
+    host: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    radsec_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radsecEnabled') }})
+    secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
     
 class UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum(str, Enum):
     FILTER_ID = "Filter-Id"
@@ -223,12 +223,12 @@ class UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum(str, Enu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBodyRadiusServers:
-    host: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    port: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    radsec_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radsecEnabled') }})
-    secret: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
+    host: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    radsec_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radsecEnabled') }})
+    secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
     
 class UpdateNetworkWirelessSsidRequestBodySplashPageEnum(str, Enum):
     NONE = "None"
@@ -255,73 +255,73 @@ class UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequestBody:
-    active_directory: Optional[UpdateNetworkWirelessSsidRequestBodyActiveDirectory] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDirectory') }})
-    adult_content_filtering_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adultContentFilteringEnabled') }})
-    ap_tags_and_vlan_ids: Optional[List[UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apTagsAndVlanIds') }})
-    auth_mode: Optional[UpdateNetworkWirelessSsidRequestBodyAuthModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authMode') }})
-    availability_tags: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityTags') }})
-    available_on_all_aps: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availableOnAllAps') }})
-    band_selection: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandSelection') }})
-    concentrator_network_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('concentratorNetworkId') }})
-    default_vlan_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultVlanId') }})
-    dns_rewrite: Optional[UpdateNetworkWirelessSsidRequestBodyDNSRewrite] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsRewrite') }})
-    dot11r: Optional[UpdateNetworkWirelessSsidRequestBodyDot11r] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dot11r') }})
-    dot11w: Optional[UpdateNetworkWirelessSsidRequestBodyDot11w] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dot11w') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    encryption_mode: Optional[UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionMode') }})
-    enterprise_admin_access: Optional[UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enterpriseAdminAccess') }})
-    ip_assignment_mode: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipAssignmentMode') }})
-    lan_isolation_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lanIsolationEnabled') }})
-    ldap: Optional[UpdateNetworkWirelessSsidRequestBodyLdap] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ldap') }})
-    local_radius: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadius] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('localRadius') }})
-    mandatory_dhcp_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandatoryDhcpEnabled') }})
-    min_bitrate: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minBitrate') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    oauth: Optional[UpdateNetworkWirelessSsidRequestBodyOauth] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oauth') }})
-    per_client_bandwidth_limit_down: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perClientBandwidthLimitDown') }})
-    per_client_bandwidth_limit_up: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perClientBandwidthLimitUp') }})
-    per_ssid_bandwidth_limit_down: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perSsidBandwidthLimitDown') }})
-    per_ssid_bandwidth_limit_up: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perSsidBandwidthLimitUp') }})
-    psk: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('psk') }})
-    radius_accounting_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingEnabled') }})
-    radius_accounting_interim_interval: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingInterimInterval') }})
-    radius_accounting_servers: Optional[List[UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingServers') }})
-    radius_attribute_for_group_policies: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAttributeForGroupPolicies') }})
-    radius_authentication_nas_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAuthenticationNasId') }})
-    radius_called_station_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusCalledStationId') }})
-    radius_coa_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusCoaEnabled') }})
-    radius_failover_policy: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusFailoverPolicy') }})
-    radius_fallback_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusFallbackEnabled') }})
-    radius_guest_vlan_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusGuestVlanEnabled') }})
-    radius_guest_vlan_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusGuestVlanId') }})
-    radius_load_balancing_policy: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusLoadBalancingPolicy') }})
-    radius_override: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusOverride') }})
-    radius_proxy_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusProxyEnabled') }})
-    radius_server_attempts_limit: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServerAttemptsLimit') }})
-    radius_server_timeout: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServerTimeout') }})
-    radius_servers: Optional[List[UpdateNetworkWirelessSsidRequestBodyRadiusServers]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServers') }})
-    radius_testing_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusTestingEnabled') }})
-    splash_guest_sponsor_domains: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('splashGuestSponsorDomains') }})
-    splash_page: Optional[UpdateNetworkWirelessSsidRequestBodySplashPageEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('splashPage') }})
-    use_vlan_tagging: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useVlanTagging') }})
-    visible: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visible') }})
-    vlan_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlanId') }})
-    walled_garden_enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('walledGardenEnabled') }})
-    walled_garden_ranges: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('walledGardenRanges') }})
-    wpa_encryption_mode: Optional[UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wpaEncryptionMode') }})
+    active_directory: Optional[UpdateNetworkWirelessSsidRequestBodyActiveDirectory] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDirectory') }})
+    adult_content_filtering_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adultContentFilteringEnabled') }})
+    ap_tags_and_vlan_ids: Optional[list[UpdateNetworkWirelessSsidRequestBodyApTagsAndVlanIds]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apTagsAndVlanIds') }})
+    auth_mode: Optional[UpdateNetworkWirelessSsidRequestBodyAuthModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authMode') }})
+    availability_tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityTags') }})
+    available_on_all_aps: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availableOnAllAps') }})
+    band_selection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandSelection') }})
+    concentrator_network_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('concentratorNetworkId') }})
+    default_vlan_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultVlanId') }})
+    dns_rewrite: Optional[UpdateNetworkWirelessSsidRequestBodyDNSRewrite] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dnsRewrite') }})
+    dot11r: Optional[UpdateNetworkWirelessSsidRequestBodyDot11r] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dot11r') }})
+    dot11w: Optional[UpdateNetworkWirelessSsidRequestBodyDot11w] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dot11w') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    encryption_mode: Optional[UpdateNetworkWirelessSsidRequestBodyEncryptionModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionMode') }})
+    enterprise_admin_access: Optional[UpdateNetworkWirelessSsidRequestBodyEnterpriseAdminAccessEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enterpriseAdminAccess') }})
+    ip_assignment_mode: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipAssignmentMode') }})
+    lan_isolation_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lanIsolationEnabled') }})
+    ldap: Optional[UpdateNetworkWirelessSsidRequestBodyLdap] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ldap') }})
+    local_radius: Optional[UpdateNetworkWirelessSsidRequestBodyLocalRadius] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('localRadius') }})
+    mandatory_dhcp_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandatoryDhcpEnabled') }})
+    min_bitrate: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minBitrate') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    oauth: Optional[UpdateNetworkWirelessSsidRequestBodyOauth] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oauth') }})
+    per_client_bandwidth_limit_down: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perClientBandwidthLimitDown') }})
+    per_client_bandwidth_limit_up: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perClientBandwidthLimitUp') }})
+    per_ssid_bandwidth_limit_down: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perSsidBandwidthLimitDown') }})
+    per_ssid_bandwidth_limit_up: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('perSsidBandwidthLimitUp') }})
+    psk: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('psk') }})
+    radius_accounting_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingEnabled') }})
+    radius_accounting_interim_interval: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingInterimInterval') }})
+    radius_accounting_servers: Optional[list[UpdateNetworkWirelessSsidRequestBodyRadiusAccountingServers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAccountingServers') }})
+    radius_attribute_for_group_policies: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusAttributeForGroupPoliciesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAttributeForGroupPolicies') }})
+    radius_authentication_nas_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusAuthenticationNasId') }})
+    radius_called_station_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusCalledStationId') }})
+    radius_coa_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusCoaEnabled') }})
+    radius_failover_policy: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusFailoverPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusFailoverPolicy') }})
+    radius_fallback_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusFallbackEnabled') }})
+    radius_guest_vlan_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusGuestVlanEnabled') }})
+    radius_guest_vlan_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusGuestVlanId') }})
+    radius_load_balancing_policy: Optional[UpdateNetworkWirelessSsidRequestBodyRadiusLoadBalancingPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusLoadBalancingPolicy') }})
+    radius_override: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusOverride') }})
+    radius_proxy_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusProxyEnabled') }})
+    radius_server_attempts_limit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServerAttemptsLimit') }})
+    radius_server_timeout: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServerTimeout') }})
+    radius_servers: Optional[list[UpdateNetworkWirelessSsidRequestBodyRadiusServers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusServers') }})
+    radius_testing_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('radiusTestingEnabled') }})
+    splash_guest_sponsor_domains: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('splashGuestSponsorDomains') }})
+    splash_page: Optional[UpdateNetworkWirelessSsidRequestBodySplashPageEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('splashPage') }})
+    use_vlan_tagging: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useVlanTagging') }})
+    visible: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('visible') }})
+    vlan_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vlanId') }})
+    walled_garden_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('walledGardenEnabled') }})
+    walled_garden_ranges: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('walledGardenRanges') }})
+    wpa_encryption_mode: Optional[UpdateNetworkWirelessSsidRequestBodyWpaEncryptionModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wpaEncryptionMode') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidRequest:
-    path_params: UpdateNetworkWirelessSsidPathParams = field()
-    request: Optional[UpdateNetworkWirelessSsidRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkWirelessSsidPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkWirelessSsidRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_wireless_ssid_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_wireless_ssid_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

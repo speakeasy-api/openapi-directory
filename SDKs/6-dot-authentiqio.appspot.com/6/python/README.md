@@ -8,24 +8,26 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.HeadKeyPkRequest(
-    path_params=operations.HeadKeyPkPathParams(
-        pk="nobis",
+req = operations.KeyRevokeRequest(
+    path_params=operations.KeyRevokePathParams(
+        pk="expedita",
+    ),
+    query_params=operations.KeyRevokeQueryParams(
+        secret="consequuntur",
     ),
 )
     
-res = s.sdk.head_key_pk_(req)
+res = s.delete.key_revoke(req)
 
-if res.status_code == 200:
+if res.key_revoke_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -33,7 +35,30 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### delete
+
+* `key_revoke` - Revoke an Identity (Key) with a revocation secret
+* `key_revoke_nosecret` - Revoke an Authentiq ID using email & phone.
+
+If called with `email` and `phone` only, a verification code 
+will be sent by email. Do a second call adding `code` to 
+complete the revocation.
+
+* `sign_delete` - delete a verification job
+
+### get
+
+* `key_retrieve` - Get public details of an Authentiq ID.
+
+* `sign_retrieve` - get the status / current content of a verification job
+
+### head
+
+* `head_key_pk_` - HEAD info on Authentiq ID
+
+* `sign_retrieve_head` - HEAD to get the status of a verification job
+
+### key
 
 * `head_key_pk_` - HEAD info on Authentiq ID
 
@@ -69,8 +94,53 @@ a self-signed JWT
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
+
+### login
+
 * `push_login_request` - push sign-in request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+
+### post
+
+* `key_register` - Register a new ID `JWT(sub, devtoken)`
+
+v5: `JWT(sub, pk, devtoken, ...)`
+
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+* `key_update` - update properties of an Authentiq ID.
+(not operational in v4; use PUT for now)
+
+v5: POST issuer-signed email & phone scopes in
+a self-signed JWT
+
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+* `push_login_request` - push sign-in request
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+* `sign_confirm` - this is a scope confirmation
+* `sign_request` - scope verification request
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+
+### put
+
+* `key_bind` - Update Authentiq ID by replacing the object.
+
+v4: `JWT(sub,email,phone)` to bind email/phone hash; 
+
+v5: POST issuer-signed email & phone scopes
+and PUT to update registration `JWT(sub, pk, devtoken, ...)`
+
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+* `sign_update` - authority updates a JWT with its signature
+See: https://github.com/skion/authentiq/wiki/JWT-Examples
+
+
+### scope
 
 * `sign_confirm` - this is a scope confirmation
 * `sign_delete` - delete a verification job

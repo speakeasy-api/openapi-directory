@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import pdftotextresponse as shared_pdftotextresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostHeaders:
-    language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
-    preprocessing: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
-    recognition_mode: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'recognitionMode', 'style': 'simple', 'explode': False }})
+    language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'language', 'style': 'simple', 'explode': False }})
+    preprocessing: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
+    recognition_mode: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'recognitionMode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostRequestBody:
-    image_file: PdfOcrPostRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: PdfOcrPostRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostRequest:
-    headers: PdfOcrPostHeaders = field()
-    request: PdfOcrPostRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: PdfOcrPostSecurity = field()
+    headers: PdfOcrPostHeaders = dataclasses.field()
+    request: PdfOcrPostRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: PdfOcrPostSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PdfOcrPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    pdf_to_text_response: Optional[shared.PdfToTextResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    pdf_to_text_response: Optional[shared_pdftotextresponse.PdfToTextResponse] = dataclasses.field(default=None)
     

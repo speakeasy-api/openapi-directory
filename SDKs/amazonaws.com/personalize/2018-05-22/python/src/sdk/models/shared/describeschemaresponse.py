@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datasetschema as shared_datasetschema
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeSchemaResponse:
-    schema: Optional[DatasetSchema] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
+    schema: Optional[shared_datasetschema.DatasetSchema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
     

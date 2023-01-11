@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,13 +23,13 @@ req = operations.EndpointGetAnAlbumRequest(
         ),
     ),
     path_params=operations.EndpointGetAnAlbumPathParams(
-        id="atque",
+        id="aperiam",
     ),
     query_params=operations.EndpointGetAnAlbumQueryParams(
-        market="aliquid",
+        market="doloremque",
     ),
     headers=operations.EndpointGetAnAlbumHeaders(
-        authorization="itaque",
+        authorization="in",
     ),
 )
     

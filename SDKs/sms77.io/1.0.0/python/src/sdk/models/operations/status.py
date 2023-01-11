@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StatusQueryParams:
-    msg_id: str = field(metadata={'query_param': { 'field_name': 'msg_id', 'style': 'form', 'explode': True }})
+    msg_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'msg_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StatusRequest:
-    query_params: StatusQueryParams = field()
+    query_params: StatusQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    status_200_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    status_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

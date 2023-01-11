@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,7 +19,7 @@ s.config_security(
     security=shared.Security(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         api_secret=shared.SchemeAPISecret(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -29,13 +28,13 @@ s.config_security(
     
 req = operations.BuyANumberRequest(
     request=shared.NumberDetails(
-        country="dignissimos",
-        msisdn="vel",
-        target_api_key="dolorem",
+        country="sed",
+        msisdn="quibusdam",
+        target_api_key="consequatur",
     ),
 )
     
-res = s.sdk.buy_a_number(req)
+res = s.buy_a_number(req)
 
 if res.response is not None:
     # handle response

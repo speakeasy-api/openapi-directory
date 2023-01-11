@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,13 +15,13 @@ class GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleIdentityAccesscontextmanagerV1OsConstraint:
     r"""GoogleIdentityAccesscontextmanagerV1OsConstraint
     A restriction on the OS type and version of devices making requests.
     """
     
-    minimum_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minimumVersion') }})
-    os_type: Optional[GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('osType') }})
-    require_verified_chrome_os: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requireVerifiedChromeOs') }})
+    minimum_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minimumVersion') }})
+    os_type: Optional[GoogleIdentityAccesscontextmanagerV1OsConstraintOsTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('osType') }})
+    require_verified_chrome_os: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requireVerifiedChromeOs') }})
     

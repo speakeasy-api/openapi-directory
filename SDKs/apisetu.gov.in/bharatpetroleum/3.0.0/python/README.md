@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.LpgsvRequest(
     security=operations.LpgsvSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.LpgsvRequestBody(
         certificate_parameters=operations.LpgsvRequestBodyCertificateParameters(
-            lpgid="aut",
-            svid="ea",
+            lpgid="vitae",
+            svid="ad",
         ),
-        consent_artifact="et",
+        consent_artifact="commodi",
         format="pdf",
-        txn_id="enim",
+        txn_id="sit",
     ),
 )
     
-res = s.sdk.lpgsv(req)
+res = s.ap_is.lpgsv(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `lpgsv` - LPG Subscription Voucher
 

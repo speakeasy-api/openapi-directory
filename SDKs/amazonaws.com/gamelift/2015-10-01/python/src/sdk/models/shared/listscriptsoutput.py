@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import script as shared_script
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListScriptsOutput:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    scripts: Optional[List[Script]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Scripts') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    scripts: Optional[list[shared_script.Script]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Scripts') }})
     

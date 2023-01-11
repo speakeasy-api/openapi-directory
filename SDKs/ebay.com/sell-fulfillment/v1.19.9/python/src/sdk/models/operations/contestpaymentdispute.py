@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import contestpaymentdisputerequest as shared_contestpaymentdisputerequest
 
 
 CONTEST_PAYMENT_DISPUTE_SERVERS = [
@@ -8,26 +9,26 @@ CONTEST_PAYMENT_DISPUTE_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ContestPaymentDisputePathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContestPaymentDisputeSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ContestPaymentDisputeRequest:
-    path_params: ContestPaymentDisputePathParams = field()
-    security: ContestPaymentDisputeSecurity = field()
-    request: Optional[shared.ContestPaymentDisputeRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    server_url: Optional[str] = field(default=None)
+    path_params: ContestPaymentDisputePathParams = dataclasses.field()
+    security: ContestPaymentDisputeSecurity = dataclasses.field()
+    request: Optional[shared_contestpaymentdisputerequest.ContestPaymentDisputeRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ContestPaymentDisputeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

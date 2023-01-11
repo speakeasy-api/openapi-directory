@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Detections:
-    confidence: Optional[float] = field(default=None)
-    language: Optional[str] = field(default=None)
+    confidence: Optional[float] = dataclasses.field(default=None)
+    language: Optional[str] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import group as shared_group
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupPathParams:
-    group_id: float = field(metadata={'path_param': { 'field_name': 'group_id', 'style': 'simple', 'explode': False }})
+    group_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'group_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupRequest:
-    path_params: GetGroupPathParams = field()
+    path_params: GetGroupPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group: Optional[shared.Group] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group: Optional[shared_group.Group] = dataclasses.field(default=None)
     

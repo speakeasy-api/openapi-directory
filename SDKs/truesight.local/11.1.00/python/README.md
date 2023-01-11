@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,10 +18,10 @@ s = sdk.SDK()
     
 req = operations.CollectNowRequest(
     path_params=operations.CollectNowPathParams(
-        device_id=7495016280008294591,
+        device_id=7415012023453953318,
     ),
     query_params=operations.CollectNowQueryParams(
-        monitor_class="aliquam",
+        monitor_class="velit",
     ),
 )
     

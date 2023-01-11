@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import configissue as shared_configissue
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetPathParams:
-    firmware_hash: str = field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
+    firmware_hash: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetSecurity:
-    api_key_header: shared.SchemeAPIKeyHeader = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_header: shared_security.SchemeAPIKeyHeader = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetRequest:
-    path_params: FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetPathParams = field()
-    security: FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetSecurity = field()
+    path_params: FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetPathParams = dataclasses.field()
+    security: FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_issues: Optional[List[shared.ConfigIssue]] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_issues: Optional[list[shared_configissue.ConfigIssue]] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

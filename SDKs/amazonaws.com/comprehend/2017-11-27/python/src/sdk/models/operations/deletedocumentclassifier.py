@@ -1,42 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import deletedocumentclassifierrequest as shared_deletedocumentclassifierrequest
 
 class DeleteDocumentClassifierXAmzTargetEnum(str, Enum):
     COMPREHEND_20171127_DELETE_DOCUMENT_CLASSIFIER = "Comprehend_20171127.DeleteDocumentClassifier"
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDocumentClassifierHeaders:
-    x_amz_target: DeleteDocumentClassifierXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: DeleteDocumentClassifierXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDocumentClassifierRequest:
-    headers: DeleteDocumentClassifierHeaders = field()
-    request: shared.DeleteDocumentClassifierRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DeleteDocumentClassifierHeaders = dataclasses.field()
+    request: shared_deletedocumentclassifierrequest.DeleteDocumentClassifierRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDocumentClassifierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_document_classifier_response: Optional[dict[str, Any]] = field(default=None)
-    internal_server_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
-    resource_in_use_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    resource_unavailable_exception: Optional[Any] = field(default=None)
-    too_many_requests_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_document_classifier_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    internal_server_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_in_use_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_unavailable_exception: Optional[Any] = dataclasses.field(default=None)
+    too_many_requests_exception: Optional[Any] = dataclasses.field(default=None)
     

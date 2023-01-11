@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -85,7 +85,7 @@ class Site:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.APIKeyEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.APIKeyEntity]])
                 res.api_key_entities = out
         elif r.status_code == 400:
             pass
@@ -131,7 +131,7 @@ class Site:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DNSRecordEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DNSRecordEntity]])
                 res.dns_record_entities = out
         elif r.status_code == 400:
             pass
@@ -177,7 +177,7 @@ class Site:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IPAddressEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IPAddressEntity]])
                 res.ip_address_entities = out
         elif r.status_code == 400:
             pass
@@ -258,13 +258,13 @@ class Site:
         url = base_url.removesuffix("/") + "/site"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchSiteResponse(status_code=r.status_code, content_type=content_type)
@@ -307,13 +307,13 @@ class Site:
         url = base_url.removesuffix("/") + "/site/api_keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSiteAPIKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -356,7 +356,7 @@ class Site:
         url = base_url.removesuffix("/") + "/site/test-webhook"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -364,7 +364,7 @@ class Site:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostSiteTestWebhookResponse(status_code=r.status_code, content_type=content_type)

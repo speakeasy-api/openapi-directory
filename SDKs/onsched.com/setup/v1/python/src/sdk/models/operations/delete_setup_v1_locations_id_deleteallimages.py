@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDDeleteallimagesPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDDeleteallimagesQueryParams:
-    uppercase: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'uppercase', 'style': 'form', 'explode': True }})
+    uppercase: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uppercase', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDDeleteallimagesRequest:
-    path_params: DeleteSetupV1LocationsIDDeleteallimagesPathParams = field()
-    query_params: DeleteSetupV1LocationsIDDeleteallimagesQueryParams = field()
+    path_params: DeleteSetupV1LocationsIDDeleteallimagesPathParams = dataclasses.field()
+    query_params: DeleteSetupV1LocationsIDDeleteallimagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSetupV1LocationsIDDeleteallimagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_setup_v1_locations_id_deleteallimages_200_application_json_boolean: Optional[bool] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_setup_v1_locations_id_deleteallimages_200_application_json_boolean: Optional[bool] = dataclasses.field(default=None)
     

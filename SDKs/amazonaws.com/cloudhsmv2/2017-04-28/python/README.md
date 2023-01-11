@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,36 +25,32 @@ s.config_security(
     
 req = operations.CopyBackupToRegionRequest(
     headers=operations.CopyBackupToRegionHeaders(
-        x_amz_algorithm="maxime",
-        x_amz_content_sha256="omnis",
-        x_amz_credential="dolor",
-        x_amz_date="non",
-        x_amz_security_token="veniam",
-        x_amz_signature="dolorem",
-        x_amz_signed_headers="minima",
+        x_amz_algorithm="sunt",
+        x_amz_content_sha256="asperiores",
+        x_amz_credential="reprehenderit",
+        x_amz_date="consectetur",
+        x_amz_security_token="sequi",
+        x_amz_signature="reprehenderit",
+        x_amz_signed_headers="qui",
         x_amz_target="BaldrApiService.CopyBackupToRegion",
     ),
     request=shared.CopyBackupToRegionRequest(
-        backup_id="iste",
-        destination_region="magni",
+        backup_id="enim",
+        destination_region="sint",
         tag_list=[
             shared.Tag(
-                key="omnis",
-                value="iste",
+                key="rem",
+                value="aliquid",
             ),
             shared.Tag(
-                key="unde",
-                value="adipisci",
-            ),
-            shared.Tag(
-                key="impedit",
-                value="tempora",
+                key="quo",
+                value="quo",
             ),
         ],
     ),
 )
     
-res = s.sdk.copy_backup_to_region(req)
+res = s.copy_backup_to_region(req)
 
 if res.copy_backup_to_region_response is not None:
     # handle response

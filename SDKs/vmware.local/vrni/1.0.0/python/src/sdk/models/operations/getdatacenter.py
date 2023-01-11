@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import vcdatacenter as shared_vcdatacenter
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDatacenterPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatacenterQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatacenterSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatacenterRequest:
-    path_params: GetDatacenterPathParams = field()
-    query_params: GetDatacenterQueryParams = field()
-    security: GetDatacenterSecurity = field()
+    path_params: GetDatacenterPathParams = dataclasses.field()
+    query_params: GetDatacenterQueryParams = dataclasses.field()
+    security: GetDatacenterSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatacenterResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    vc_datacenter: Optional[shared.VcDatacenter] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    vc_datacenter: Optional[shared_vcdatacenter.VcDatacenter] = dataclasses.field(default=None)
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -31,12 +31,12 @@ class MetricRequestOptionsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MetricRequest:
     r"""MetricRequest
     A request to return values for one metric and the options for how those values should be returned.
     """
     
-    metric: Optional[MetricRequestMetricEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metric') }})
-    options: Optional[List[MetricRequestOptionsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
+    metric: Optional[MetricRequestMetricEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metric') }})
+    options: Optional[list[MetricRequestOptionsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('options') }})
     

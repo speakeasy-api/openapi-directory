@@ -1,0 +1,39 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        adv_security_token=shared.SchemeAdvSecurityToken(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.CompileRequest(
+    path_params=operations.CompilePathParams(
+        template_token="rerum",
+    ),
+    query_params=operations.CompileQueryParams(
+        doc_file_name="et",
+        doc_url_expires_in=815808886711016184,
+        latex_compiler="pdflatex",
+        latex_runs=8966549739029418275,
+        main_file_name="dolores",
+    ),
+    headers=operations.CompileHeaders(
+        content_type="dolorum",
+    ),
+    request={
+        "rerum": "dolor",
+    },
+)
+    
+res = s.pdf_generation.compile(req)
+
+if res.compile_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

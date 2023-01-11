@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -17,13 +17,13 @@ class GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum(str, Enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudChannelV1CustomerConstraints:
     r"""GoogleCloudChannelV1CustomerConstraints
     Represents constraints required to purchase the Offer for a customer.
     """
     
-    allowed_customer_types: Optional[List[GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedCustomerTypes') }})
-    allowed_regions: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedRegions') }})
-    promotional_order_types: Optional[List[GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('promotionalOrderTypes') }})
+    allowed_customer_types: Optional[list[GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedCustomerTypes') }})
+    allowed_regions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedRegions') }})
+    promotional_order_types: Optional[list[GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('promotionalOrderTypes') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,8 +7,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SelfUpdatePasswordRequest:
-    new_password: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPassword') }})
-    old_password: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldPassword') }})
+    new_password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPassword') }})
+    old_password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldPassword') }})
     

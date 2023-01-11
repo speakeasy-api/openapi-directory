@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import location as shared_location
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchGoogleLocationsRequestInput:
     r"""SearchGoogleLocationsRequestInput
     Request message for GoogleLocations.SearchGoogleLocations.
     """
     
-    location: Optional[LocationInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    page_size: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pageSize') }})
-    query: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
+    location: Optional[shared_location.LocationInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pageSize') }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import behaviorentity as shared_behaviorentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBehaviorsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBehaviorsIDRequest:
-    path_params: GetBehaviorsIDPathParams = field()
+    path_params: GetBehaviorsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBehaviorsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    behavior_entity: Optional[shared.BehaviorEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    behavior_entity: Optional[shared_behaviorentity.BehaviorEntity] = dataclasses.field(default=None)
     

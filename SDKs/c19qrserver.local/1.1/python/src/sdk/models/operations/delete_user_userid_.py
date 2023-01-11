@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import invalidtoken as shared_invalidtoken
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserUserIDPathParams:
-    user_id: int = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserUserIDRequest:
-    path_params: DeleteUserUserIDPathParams = field()
+    path_params: DeleteUserUserIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserUserIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
     

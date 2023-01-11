@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.ExtensionConfigurationRequest(
     headers=operations.ExtensionConfigurationHeaders(
-        accept_language="qui",
-        cache_control="nostrum",
-        if_none_match="modi",
-        request_timeout=23.100000,
-        user_agent="fugiat",
-        x_applecloudextension_retry_count=6.100000,
-        x_applecloudextension_session_id="aut",
+        accept_language="beatae",
+        cache_control="aut",
+        if_none_match="quia",
+        request_timeout=22.200001,
+        user_agent="ea",
+        x_applecloudextension_retry_count=66.099998,
+        x_applecloudextension_session_id="animi",
     ),
 )
     

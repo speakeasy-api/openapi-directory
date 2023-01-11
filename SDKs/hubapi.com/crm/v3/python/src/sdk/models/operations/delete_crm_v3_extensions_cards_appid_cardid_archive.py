@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
-    card_id: str = field(metadata={'path_param': { 'field_name': 'cardId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    card_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cardId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest:
-    path_params: DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams = field()
-    security: DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity = field()
+    path_params: DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams = dataclasses.field()
+    security: DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

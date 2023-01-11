@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import notificationconfiguration as shared_notificationconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddNotificationChannelsResponse:
     r"""AddNotificationChannelsResponse
     The structure representing the AddNotificationChannelsResponse.
     """
     
-    notification_configuration: Optional[NotificationConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfiguration') }})
+    notification_configuration: Optional[shared_notificationconfiguration.NotificationConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfiguration') }})
     

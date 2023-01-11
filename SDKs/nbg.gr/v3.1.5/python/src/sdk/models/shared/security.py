@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAuthorizationCodeToken:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeClientCredentialsToken:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeClientID:
-    api_key: str = field(metadata={'security': { 'field_name': 'Client-Id' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'Client-Id' }})
     

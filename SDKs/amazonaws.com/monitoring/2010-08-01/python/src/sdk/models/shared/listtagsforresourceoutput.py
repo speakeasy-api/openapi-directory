@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class ListTagsForResourceOutput:
-    tags: Optional[List[Tag]] = field(default=None)
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None)
     

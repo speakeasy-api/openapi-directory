@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioVideoPathParams:
-    portfolio_id: float = field(metadata={'path_param': { 'field_name': 'portfolio_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    portfolio_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'portfolio_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioVideoRequest:
-    path_params: GetPortfolioVideoPathParams = field()
+    path_params: GetPortfolioVideoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfolioVideoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    video: Optional[shared.Video] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    video: Optional[shared_video.Video] = dataclasses.field(default=None)
     

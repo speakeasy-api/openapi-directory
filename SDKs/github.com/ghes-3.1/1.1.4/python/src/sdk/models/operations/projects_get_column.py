@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import project_column as shared_project_column
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetColumnPathParams:
-    column_id: int = field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
+    column_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetColumnRequest:
-    path_params: ProjectsGetColumnPathParams = field()
+    path_params: ProjectsGetColumnPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetColumnResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    project_column: Optional[shared.ProjectColumn] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    project_column: Optional[shared_project_column.ProjectColumn] = dataclasses.field(default=None)
     

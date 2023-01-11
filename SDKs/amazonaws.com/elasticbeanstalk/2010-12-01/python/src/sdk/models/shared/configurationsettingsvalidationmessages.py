@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import validationmessage as shared_validationmessage
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfigurationSettingsValidationMessages:
     r"""ConfigurationSettingsValidationMessages
     Provides a list of validation messages.
     """
     
-    messages: Optional[List[ValidationMessage]] = field(default=None)
+    messages: Optional[list[shared_validationmessage.ValidationMessage]] = dataclasses.field(default=None)
     

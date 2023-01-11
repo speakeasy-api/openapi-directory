@@ -1,11 +1,10 @@
 
 
 import requests
-from typing import Optional
-from sdk.models import operations
+
 from . import utils
 
-
+from .apis import ApIs
 
 
 SERVERS = [
@@ -15,6 +14,7 @@ SERVERS = [
 
 class SDK:
     
+    ap_is: ApIs
 
     _client: requests.Session
     _security_client: requests.Session
@@ -27,7 +27,7 @@ class SDK:
     def __init__(self) -> None:
         self._client = requests.Session()
         self._security_client = requests.Session()
-        
+        self._init_sdks()
 
 
     def config_server_url(self, server_url: str, params: dict[str, str]):
@@ -36,342 +36,23 @@ class SDK:
         else:
             self._server_url = server_url
 
-        
+        self._init_sdks()
     
 
     def config_client(self, client: requests.Session):
         self._client = client
-        
+        self._init_sdks()
     
     
+    def _init_sdks(self):
+        
+        self.ap_is = ApIs(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
     
-    def cripc(self, request: operations.CripcRequest) -> operations.CripcResponse:
-        r"""Insurance Policy - Car
-        API to verify Insurance Policy - Car.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/cripc/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.CripcResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc400ApplicationJSON])
-                res.cripc_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc401ApplicationJSON])
-                res.cripc_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc404ApplicationJSON])
-                res.cripc_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc500ApplicationJSON])
-                res.cripc_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc502ApplicationJSON])
-                res.cripc_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc503ApplicationJSON])
-                res.cripc_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cripc504ApplicationJSON])
-                res.cripc_504_application_json_object = out
-
-        return res
-
-    
-    def cvipc(self, request: operations.CvipcRequest) -> operations.CvipcResponse:
-        r"""Insurance Policy - Commercial Vehicle
-        API to verify Insurance Policy - Commercial Vehicle.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/cvipc/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.CvipcResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc400ApplicationJSON])
-                res.cvipc_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc401ApplicationJSON])
-                res.cvipc_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc404ApplicationJSON])
-                res.cvipc_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc500ApplicationJSON])
-                res.cvipc_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc502ApplicationJSON])
-                res.cvipc_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc503ApplicationJSON])
-                res.cvipc_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Cvipc504ApplicationJSON])
-                res.cvipc_504_application_json_object = out
-
-        return res
-
-    
-    def gicer(self, request: operations.GicerRequest) -> operations.GicerResponse:
-        r"""Insurance Policy - Group
-        API to verify Insurance Policy - Group.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/gicer/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GicerResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer400ApplicationJSON])
-                res.gicer_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer401ApplicationJSON])
-                res.gicer_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer404ApplicationJSON])
-                res.gicer_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer500ApplicationJSON])
-                res.gicer_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer502ApplicationJSON])
-                res.gicer_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer503ApplicationJSON])
-                res.gicer_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Gicer504ApplicationJSON])
-                res.gicer_504_application_json_object = out
-
-        return res
-
-    
-    def hlipc(self, request: operations.HlipcRequest) -> operations.HlipcResponse:
-        r"""Insurance Policy - Health
-        API to verify Insurance Policy - Health.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/hlipc/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.HlipcResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc400ApplicationJSON])
-                res.hlipc_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc401ApplicationJSON])
-                res.hlipc_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc404ApplicationJSON])
-                res.hlipc_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc500ApplicationJSON])
-                res.hlipc_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc502ApplicationJSON])
-                res.hlipc_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc503ApplicationJSON])
-                res.hlipc_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hlipc504ApplicationJSON])
-                res.hlipc_504_application_json_object = out
-
-        return res
-
-    
-    def hmipc(self, request: operations.HmipcRequest) -> operations.HmipcResponse:
-        r"""Insurance Policy - Home
-        API to verify Insurance Policy - Home.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/hmipc/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.HmipcResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc400ApplicationJSON])
-                res.hmipc_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc401ApplicationJSON])
-                res.hmipc_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc404ApplicationJSON])
-                res.hmipc_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc500ApplicationJSON])
-                res.hmipc_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc502ApplicationJSON])
-                res.hmipc_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc503ApplicationJSON])
-                res.hmipc_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Hmipc504ApplicationJSON])
-                res.hmipc_504_application_json_object = out
-
-        return res
-
-    
-    def twipc(self, request: operations.TwipcRequest) -> operations.TwipcResponse:
-        r"""Insurance Policy - Two Wheeler
-        API to verify Insurance Policy - Two Wheeler.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/twipc/certificate"
-        
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
-        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
-            headers["content-type"] = req_content_type
-        
-        client = utils.configure_security_client(self._client, request.security)
-        
-        r = client.request("POST", url, data=data, files=form, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.TwipcResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 400:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc400ApplicationJSON])
-                res.twipc_400_application_json_object = out
-        elif r.status_code == 401:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc401ApplicationJSON])
-                res.twipc_401_application_json_object = out
-        elif r.status_code == 404:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc404ApplicationJSON])
-                res.twipc_404_application_json_object = out
-        elif r.status_code == 500:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc500ApplicationJSON])
-                res.twipc_500_application_json_object = out
-        elif r.status_code == 502:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc502ApplicationJSON])
-                res.twipc_502_application_json_object = out
-        elif r.status_code == 503:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc503ApplicationJSON])
-                res.twipc_503_application_json_object = out
-        elif r.status_code == 504:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Twipc504ApplicationJSON])
-                res.twipc_504_application_json_object = out
-
-        return res
-
     

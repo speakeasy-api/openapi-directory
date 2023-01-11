@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class FindFormsQueryParams:
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindFormsSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FindForms200ApplicationJSON:
-    data: List[Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindFormsRequest:
-    query_params: FindFormsQueryParams = field()
-    security: FindFormsSecurity = field()
+    query_params: FindFormsQueryParams = dataclasses.field()
+    security: FindFormsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindFormsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    find_forms_200_application_json_object: Optional[FindForms200ApplicationJSON] = field(default=None)
-    find_forms_401_application_json_any: Optional[Any] = field(default=None)
-    find_forms_429_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    find_forms_200_application_json_object: Optional[FindForms200ApplicationJSON] = dataclasses.field(default=None)
+    find_forms_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    find_forms_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

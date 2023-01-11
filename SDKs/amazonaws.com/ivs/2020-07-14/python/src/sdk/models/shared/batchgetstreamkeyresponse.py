@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batcherror as shared_batcherror
+from ..shared import streamkey as shared_streamkey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchGetStreamKeyResponse:
-    errors: Optional[List[BatchError]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    stream_keys: Optional[List[StreamKey]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streamKeys') }})
+    errors: Optional[list[shared_batcherror.BatchError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    stream_keys: Optional[list[shared_streamkey.StreamKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streamKeys') }})
     

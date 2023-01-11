@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.AccountCtrlGetAccountServicesByAccountIDRequest(
         ),
     ),
     path_params=operations.AccountCtrlGetAccountServicesByAccountIDPathParams(
-        account_id=99.199997,
+        account_id=24.200001,
     ),
 )
     
-res = s.sdk.account_ctrl_get_account_services_by_account_id(req)
+res = s.account_ctrl_get_account_services_by_account_id(req)
 
 if res.account_hal_response is not None:
     # handle response

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configcoap as shared_configcoap
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolCoapGetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolCoapGetTraceRequest:
-    path_params: ProtocolCoapGetTracePathParams = field()
+    path_params: ProtocolCoapGetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolCoapGetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_coap: Optional[shared.ConfigCoap] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_coap: Optional[shared_configcoap.ConfigCoap] = dataclasses.field(default=None)
     

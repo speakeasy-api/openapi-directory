@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import applicationresourcelifecycleconfig as shared_applicationresourcelifecycleconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationResourceLifecycleDescriptionMessage:
-    application_name: Optional[str] = field(default=None)
-    resource_lifecycle_config: Optional[ApplicationResourceLifecycleConfig] = field(default=None)
+    application_name: Optional[str] = dataclasses.field(default=None)
+    resource_lifecycle_config: Optional[shared_applicationresourcelifecycleconfig.ApplicationResourceLifecycleConfig] = dataclasses.field(default=None)
     

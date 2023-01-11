@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import setequalizervaluesrequest as shared_setequalizervaluesrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class SetEqualizerValuesRequest:
-    request: shared.SetEqualizerValuesRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_setequalizervaluesrequest.SetEqualizerValuesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetEqualizerValuesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_equalizer_values_200_text_plain_object: Optional[str] = dataclasses.field(default=None)
     

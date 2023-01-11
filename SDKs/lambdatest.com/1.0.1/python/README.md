@@ -8,27 +8,29 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.LocationsRequest(
-    security=operations.LocationsSecurity(
+req = operations.DevicesRequest(
+    security=operations.DevicesSecurity(
         basic_auth=shared.SchemeBasicAuth(
             password="YOUR_PASSWORD_HERE",
             username="YOUR_USERNAME_HERE",
         ),
     ),
+    query_params=operations.DevicesQueryParams(
+        os="omnis",
+    ),
 )
     
-res = s.sdk.locations(req)
+res = s.get_devices.devices(req)
 
-if res.locations is not None:
+if res.os_devices is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -36,16 +38,40 @@ if res.locations is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Get Devices
+
+* `devices` - Fetch all available device combinations.
+
+### Get Locations
 
 * `locations` - Fetch Locations
-* `profiles` - Fetch login profiles
-* `resolutions` - Fetch all available resolution on different OS
-* `start_screenshot_test` - Start Screenshot Test
-* `zipped_screenshots` - Fetch Zipped Screenshots
-* `devices` - Fetch all available device combinations.
+
+### Get OS-Browsers
+
 * `os_browsers` - Fetch all available os-browser combinations.
+
+### Get Profiles
+
+* `profiles` - Fetch login profiles
+
+### Get Resolutions
+
+* `resolutions` - Fetch all available resolution on different OS
+
+### Get Screenshots
+
 * `screenshots` - Fetch specified screenshot details
+
+### Get Zipped Screenshots
+
+* `zipped_screenshots` - Fetch Zipped Screenshots
+
+### Start Screenshot Test
+
+* `start_screenshot_test` - Start Screenshot Test
+
+### Stop Screenshot Test
+
 * `stop_screenshots_test` - Stop specified screenshot test
 
 <!-- End SDK Available Operations -->

@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeIpv6PoolsResult:
-    ipv6_pools: Optional[List[Ipv6Pool]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    ipv6_pools: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

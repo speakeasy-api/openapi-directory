@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.LicerRequest(
     security=operations.LicerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.LicerRequestBody(
         certificate_parameters=operations.LicerRequestBodyCertificateParameters(
-            full_name="porro",
-            udf1="ut",
-            udf2="cumque",
+            full_name="ullam",
+            udf1="velit",
+            udf2="eos",
         ),
-        consent_artifact="tenetur",
+        consent_artifact="officiis",
         format="pdf",
-        txn_id="quia",
+        txn_id="nam",
     ),
 )
     
-res = s.sdk.licer(req)
+res = s.ap_is.licer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `licer` - Insurance Policy - Life
 * `prcpt` - Premium Receipt

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.DeleteLexiconRequest(
     path_params=operations.DeleteLexiconPathParams(
-        lexicon_name="sequi",
+        lexicon_name="nemo",
     ),
     headers=operations.DeleteLexiconHeaders(
-        x_amz_algorithm="non",
-        x_amz_content_sha256="a",
-        x_amz_credential="recusandae",
-        x_amz_date="molestias",
-        x_amz_security_token="quis",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="sint",
+        x_amz_algorithm="quia",
+        x_amz_content_sha256="provident",
+        x_amz_credential="sint",
+        x_amz_date="distinctio",
+        x_amz_security_token="maiores",
+        x_amz_signature="exercitationem",
+        x_amz_signed_headers="sunt",
     ),
 )
     
-res = s.sdk.delete_lexicon(req)
+res = s.delete_lexicon(req)
 
 if res.delete_lexicon_output is not None:
     # handle response

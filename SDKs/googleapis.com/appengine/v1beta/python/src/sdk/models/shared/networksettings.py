@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class NetworkSettingsIngressTrafficAllowedEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NetworkSettings:
     r"""NetworkSettings
     A NetworkSettings resource is a container for ingress settings for a version or service.
     """
     
-    ingress_traffic_allowed: Optional[NetworkSettingsIngressTrafficAllowedEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingressTrafficAllowed') }})
+    ingress_traffic_allowed: Optional[NetworkSettingsIngressTrafficAllowedEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ingressTrafficAllowed') }})
     

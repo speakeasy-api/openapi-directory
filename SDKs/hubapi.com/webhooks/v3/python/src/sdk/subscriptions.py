@@ -96,7 +96,7 @@ class Subscriptions:
         url = utils.generate_url(base_url, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -104,7 +104,7 @@ class Subscriptions:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -126,7 +126,7 @@ class Subscriptions:
         url = utils.generate_url(base_url, "/webhooks/v3/{appId}/subscriptions/batch/update", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -134,7 +134,7 @@ class Subscriptions:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchResponse(status_code=r.status_code, content_type=content_type)
@@ -160,7 +160,7 @@ class Subscriptions:
         url = utils.generate_url(base_url, "/webhooks/v3/{appId}/subscriptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -168,7 +168,7 @@ class Subscriptions:
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostWebhooksV3AppIDSubscriptionsCreateResponse(status_code=r.status_code, content_type=content_type)

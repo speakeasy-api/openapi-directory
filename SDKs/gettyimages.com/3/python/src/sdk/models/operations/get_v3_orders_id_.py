@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import orderdetail as shared_orderdetail
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3OrdersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3OrdersIDHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3OrdersIDRequest:
-    headers: GetV3OrdersIDHeaders = field()
-    path_params: GetV3OrdersIDPathParams = field()
+    headers: GetV3OrdersIDHeaders = dataclasses.field()
+    path_params: GetV3OrdersIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3OrdersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    order_detail: Optional[shared.OrderDetail] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    order_detail: Optional[shared_orderdetail.OrderDetail] = dataclasses.field(default=None)
     

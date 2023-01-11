@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,14 +16,14 @@ class PerformanceGoalBidStrategyPerformanceGoalTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PerformanceGoalBidStrategy:
     r"""PerformanceGoalBidStrategy
     A strategy that automatically adjusts the bid to meet or beat a specified performance goal.
     """
     
-    custom_bidding_algorithm_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customBiddingAlgorithmId') }})
-    max_average_cpm_bid_amount_micros: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAverageCpmBidAmountMicros') }})
-    performance_goal_amount_micros: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalAmountMicros') }})
-    performance_goal_type: Optional[PerformanceGoalBidStrategyPerformanceGoalTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalType') }})
+    custom_bidding_algorithm_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customBiddingAlgorithmId') }})
+    max_average_cpm_bid_amount_micros: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxAverageCpmBidAmountMicros') }})
+    performance_goal_amount_micros: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalAmountMicros') }})
+    performance_goal_type: Optional[PerformanceGoalBidStrategyPerformanceGoalTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('performanceGoalType') }})
     

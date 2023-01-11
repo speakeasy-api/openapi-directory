@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionDraining:
     r"""ConnectionDraining
     Information about the <code>ConnectionDraining</code> attribute.
     """
     
-    enabled: bool = field()
-    timeout: Optional[int] = field(default=None)
+    enabled: bool = dataclasses.field()
+    timeout: Optional[int] = dataclasses.field(default=None)
     

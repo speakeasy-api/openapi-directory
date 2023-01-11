@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import groupentity as shared_groupentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchGroupsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchGroupsIDRequestBody:
-    admin_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'admin_ids' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    notes: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'notes' }})
-    user_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
+    admin_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'admin_ids' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    notes: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'notes' }})
+    user_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchGroupsIDRequest:
-    path_params: PatchGroupsIDPathParams = field()
-    request: Optional[PatchGroupsIDRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchGroupsIDPathParams = dataclasses.field()
+    request: Optional[PatchGroupsIDRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchGroupsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group_entity: Optional[shared.GroupEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_entity: Optional[shared_groupentity.GroupEntity] = dataclasses.field(default=None)
     

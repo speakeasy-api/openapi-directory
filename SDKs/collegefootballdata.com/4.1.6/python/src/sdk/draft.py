@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Draft:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DraftPick]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DraftPick]])
                 res.draft_picks = out
         elif r.status_code == 400:
             pass
@@ -67,7 +67,7 @@ class Draft:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DraftPosition]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DraftPosition]])
                 res.draft_positions = out
         elif r.status_code == 400:
             pass
@@ -94,7 +94,7 @@ class Draft:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DraftTeam]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DraftTeam]])
                 res.draft_teams = out
         elif r.status_code == 400:
             pass

@@ -1,33 +1,27 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
-
-class EnterpriseAdminListPreReceiveEnvironmentsSortEnum(str, Enum):
-    CREATED = "created"
-    UPDATED = "updated"
-    NAME = "name"
+from ..shared import direction_enum as shared_direction_enum
+from ..shared import direction_enum2 as shared_direction_enum2
+from ..shared import pre_receive_environment as shared_pre_receive_environment
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveEnvironmentsQueryParams:
-    direction: Optional[shared.DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[EnterpriseAdminListPreReceiveEnvironmentsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_direction_enum.DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_direction_enum2.DirectionEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveEnvironmentsRequest:
-    query_params: EnterpriseAdminListPreReceiveEnvironmentsQueryParams = field()
+    query_params: EnterpriseAdminListPreReceiveEnvironmentsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveEnvironmentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pre_receive_environments: Optional[List[shared.PreReceiveEnvironment]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pre_receive_environments: Optional[list[shared_pre_receive_environment.PreReceiveEnvironment]] = dataclasses.field(default=None)
     

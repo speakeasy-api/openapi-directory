@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import platformdescription as shared_platformdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribePlatformVersionResult:
-    platform_description: Optional[PlatformDescription] = field(default=None)
+    platform_description: Optional[shared_platformdescription.PlatformDescription] = dataclasses.field(default=None)
     

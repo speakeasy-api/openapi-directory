@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import group_category as shared_group_category
 
 class CreateGroupCategory200ApplicationJSONActionEnum(str, Enum):
     CREATE_GROUP_CATEGORY = "CreateGroupCategory"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateGroupCategory200ApplicationJSONData:
-    group_categories: List[shared.GroupCategory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
+    group_categories: list[shared_group_category.GroupCategory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
     
 class CreateGroupCategory200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -20,21 +20,21 @@ class CreateGroupCategory200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateGroupCategory200ApplicationJSON:
-    action: CreateGroupCategory200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: CreateGroupCategory200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: CreateGroupCategory200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: CreateGroupCategory200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: CreateGroupCategory200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: CreateGroupCategory200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateGroupCategoryRequest:
-    request: shared.GroupCategory = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_group_category.GroupCategory = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateGroupCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_group_category_200_application_json_object: Optional[CreateGroupCategory200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_group_category_200_application_json_object: Optional[CreateGroupCategory200ApplicationJSON] = dataclasses.field(default=None)
     

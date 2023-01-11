@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import sentence as shared_sentence
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSentencesFromBookPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSentencesFromBookQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetSentencesFromBook200ApplicationJSON:
-    data: Optional[List[shared.Sentence]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[list[shared_sentence.Sentence]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSentencesFromBookRequest:
-    path_params: GetSentencesFromBookPathParams = field()
-    query_params: GetSentencesFromBookQueryParams = field()
+    path_params: GetSentencesFromBookPathParams = dataclasses.field()
+    query_params: GetSentencesFromBookQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSentencesFromBookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_sentences_from_book_200_application_json_object: Optional[GetSentencesFromBook200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_sentences_from_book_200_application_json_object: Optional[GetSentencesFromBook200ApplicationJSON] = dataclasses.field(default=None)
     

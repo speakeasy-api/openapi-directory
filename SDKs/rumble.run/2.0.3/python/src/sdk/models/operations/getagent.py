@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import agent as shared_agent
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentPathParams:
-    agent_id: str = field(metadata={'path_param': { 'field_name': 'agent_id', 'style': 'simple', 'explode': False }})
+    agent_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'agent_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentRequest:
-    path_params: GetAgentPathParams = field()
-    security: GetAgentSecurity = field()
+    path_params: GetAgentPathParams = dataclasses.field()
+    security: GetAgentSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAgentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    agent: Optional[shared.Agent] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    agent: Optional[shared_agent.Agent] = dataclasses.field(default=None)
     

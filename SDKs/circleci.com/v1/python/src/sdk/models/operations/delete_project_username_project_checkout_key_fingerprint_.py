@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams:
-    fingerprint: str = field(metadata={'path_param': { 'field_name': 'fingerprint', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    fingerprint: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fingerprint', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 class DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum(str, Enum):
     OK = "OK"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON:
-    message: Optional[DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    message: Optional[DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest:
-    path_params: DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams = field()
+    path_params: DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_project_username_project_checkout_key_fingerprint_200_application_json_object: Optional[DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_project_username_project_checkout_key_fingerprint_200_application_json_object: Optional[DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSON] = dataclasses.field(default=None)
     

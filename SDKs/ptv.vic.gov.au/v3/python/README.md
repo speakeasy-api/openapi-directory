@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,34 +18,31 @@ s = sdk.SDK()
     
 req = operations.DeparturesGetForStopRequest(
     path_params=operations.DeparturesGetForStopPathParams(
-        route_type=6630931860368459851,
-        stop_id=829498391807953224,
+        route_type=1875779757757656623,
+        stop_id=158847938390706278,
     ),
     query_params=operations.DeparturesGetForStopQueryParams(
-        date_utc="1998-11-11T19:36:56Z",
-        devid="sed",
-        direction_id=6626872615399574248,
+        date_utc="2010-04-18T02:08:53Z",
+        devid="reiciendis",
+        direction_id=987590293786385272,
         expand=[
-            "Route",
             "Direction",
-            "Disruption",
         ],
         gtfs=False,
-        include_cancelled=False,
+        include_cancelled=True,
         include_geopath=True,
-        look_backwards=True,
-        max_results=4552221498027089411,
+        look_backwards=False,
+        max_results=638447667090541478,
         platform_numbers=[
-            5772850537798811911,
-            1368122250028032720,
-            1149259997749928352,
+            4289703848110996868,
+            684912401521822353,
         ],
-        signature="maxime",
-        token="voluptatum",
+        signature="natus",
+        token="non",
     ),
 )
     
-res = s.sdk.departures_get_for_stop(req)
+res = s.departures.departures_get_for_stop(req)
 
 if res.v3_departures_response is not None:
     # handle response
@@ -56,31 +52,61 @@ if res.v3_departures_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Departures
 
 * `departures_get_for_stop` - View departures for all routes from a stop
 * `departures_get_for_stop_and_route` - View departures for a specific route from a stop
+
+### Directions
+
 * `directions_for_direction` - View all routes for a direction of travel
 * `directions_for_direction_and_type` - View all routes of a particular type for a direction of travel
 * `directions_for_route` - View directions that a route travels in
+
+### Disruptions
+
 * `disruptions_get_all_disruptions` - View all disruptions for all route types
 * `disruptions_get_disruption_by_id` - View a specific disruption
 * `disruptions_get_disruption_modes` - Get all disruption modes
 * `disruptions_get_disruptions_by_route` - View all disruptions for a particular route
 * `disruptions_get_disruptions_by_route_and_stop` - View all disruptions for a particular route and stop
 * `disruptions_get_disruptions_by_stop` - View all disruptions for a particular stop
+
+### FareEstimate
+
 * `fare_estimate_get_fare_estimate_by_zone` - Estimate a fare by zone
+
+### Outlets
+
 * `outlets_get_all_outlets` - List all ticket outlets
 * `outlets_get_outlets_by_geolocation` - List ticket outlets near a specific location
+
+### Patterns
+
 * `patterns_get_pattern_by_run` - View the stopping pattern for a specific trip/service run
+
+### RouteTypes
+
 * `route_types_get_route_types` - View all route types and their names
+
+### Routes
+
 * `routes_one_or_more_routes` - View route names and numbers for all routes
 * `routes_route_from_id` - View route name and number for specific route ID
+
+### Runs
+
 * `runs_for_route` - View all trip/service runs for a specific route ID
 * `runs_for_route_and_route_type` - View all trip/service runs for a specific route ID and route type
 * `runs_for_run` - View all trip/service runs for a specific run_ref
 * `runs_for_run_and_route_type` - View the trip/service run for a specific run_ref and route type
+
+### Search
+
 * `search_search` - View stops, routes and myki ticket outlets that match the search term
+
+### Stops
+
 * `stops_stop_details` - View facilities at a specific stop (Metro and V/Line stations only)
 * `stops_stops_by_geolocation` - View all stops near a specific location
 * `stops_stops_for_route` - View all stops on a specific route

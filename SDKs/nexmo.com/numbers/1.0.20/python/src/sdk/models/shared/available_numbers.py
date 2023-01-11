@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import availablenumber as shared_availablenumber
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AvailableNumbers:
-    count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    numbers: Optional[List[Availablenumber]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numbers') }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    numbers: Optional[list[shared_availablenumber.Availablenumber]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numbers') }})
     

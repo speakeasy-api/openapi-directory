@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 
 class BoxScoresByDateDeltaFormatEnum(str, Enum):
@@ -10,21 +10,21 @@ class BoxScoresByDateDeltaFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateDeltaPathParams:
-    date_: str = field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
-    format: BoxScoresByDateDeltaFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    minutes: str = field(metadata={'path_param': { 'field_name': 'minutes', 'style': 'simple', 'explode': False }})
+    date_: str = dataclasses.field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
+    format: BoxScoresByDateDeltaFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    minutes: str = dataclasses.field(metadata={'path_param': { 'field_name': 'minutes', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateDeltaRequest:
-    path_params: BoxScoresByDateDeltaPathParams = field()
+    path_params: BoxScoresByDateDeltaPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateDeltaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_scores: Optional[list[Any]] = dataclasses.field(default=None)
     

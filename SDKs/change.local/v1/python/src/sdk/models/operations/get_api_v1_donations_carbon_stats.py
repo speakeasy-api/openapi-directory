@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsCarbonStatsQueryParams:
-    id: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsCarbonStatsSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsCarbonStatsRequest:
-    query_params: GetAPIV1DonationsCarbonStatsQueryParams = field()
-    security: GetAPIV1DonationsCarbonStatsSecurity = field()
+    query_params: GetAPIV1DonationsCarbonStatsQueryParams = dataclasses.field()
+    security: GetAPIV1DonationsCarbonStatsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIV1DonationsCarbonStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

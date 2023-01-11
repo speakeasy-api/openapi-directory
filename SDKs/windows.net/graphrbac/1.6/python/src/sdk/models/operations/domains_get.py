@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DomainsGetPathParams:
-    domain_name: str = field(metadata={'path_param': { 'field_name': 'domainName', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    domain_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'domainName', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DomainsGetQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DomainsGetRequest:
-    path_params: DomainsGetPathParams = field()
-    query_params: DomainsGetQueryParams = field()
+    path_params: DomainsGetPathParams = dataclasses.field()
+    query_params: DomainsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DomainsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    domain: Optional[dict[str, dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    domain: Optional[dict[str, dict[str, Any]]] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import studiomembership as shared_studiomembership
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetStudioMemberResponse:
-    member: Optional[StudioMembership] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('member') }})
+    member: Optional[shared_studiomembership.StudioMembership] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('member') }})
     

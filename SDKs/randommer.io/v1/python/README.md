@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,14 +18,14 @@ s = sdk.SDK()
     
 req = operations.GetAPICardRequest(
     query_params=operations.GetAPICardQueryParams(
-        type="voluptatum",
+        type="voluptatibus",
     ),
     headers=operations.GetAPICardHeaders(
-        x_api_key="quo",
+        x_api_key="esse",
     ),
 )
     
-res = s.sdk.get_api_card(req)
+res = s.card.get_api_card(req)
 
 if res.status_code == 200:
     # handle response
@@ -36,21 +35,36 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Card
 
 * `get_api_card` - Get Card
 * `get_api_card_types` - Get available card types
+
+### Misc
+
 * `get_api_misc_cultures`
 * `get_api_misc_random_address`
+
+### Name
+
 * `get_api_name` - Get name
 * `get_api_name_suggestions` - Get business name suggestions
+
+### Phone
+
 * `get_api_phone_countries` - Get available countries
 * `get_api_phone_generate` - Get bulk telephone numbers for a country
 * `get_api_phone_validate` - Validate a phone number
+
+### SocialNumber
+
 * `get_api_social_number` - Generate a social security number
+* `post_api_social_number` - Validate VAT/identity numbers
+
+### Text
+
 * `get_api_text_lorem_ipsum` - Generate lorem ipsum
 * `get_api_text_password` - Generate password
-* `post_api_social_number` - Validate VAT/identity numbers
 * `post_api_text_humanize` - Humanize text
 * `post_api_text_transform` - Transform text
 

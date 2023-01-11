@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActionRelatedListQueryParams:
-    dataset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'dataset', 'style': 'form', 'explode': True }})
-    featured: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'featured', 'style': 'form', 'explode': True }})
-    id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    type_filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'type_filter', 'style': 'form', 'explode': True }})
+    dataset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dataset', 'style': 'form', 'explode': True }})
+    featured: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'featured', 'style': 'form', 'explode': True }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    type_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type_filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionRelatedListRequest:
-    query_params: GetActionRelatedListQueryParams = field()
+    query_params: GetActionRelatedListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionRelatedListResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import subscriptionstate_enum as shared_subscriptionstate_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetSubscriptionStateResponse:
-    subscription_state: SubscriptionStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SubscriptionState') }})
+    subscription_state: shared_subscriptionstate_enum.SubscriptionStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SubscriptionState') }})
     

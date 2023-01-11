@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,26 @@ s.config_security(
     
 req = operations.AssociateLensesRequest(
     path_params=operations.AssociateLensesPathParams(
-        workload_id="sapiente",
+        workload_id="unde",
     ),
     headers=operations.AssociateLensesHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="perferendis",
-        x_amz_credential="maiores",
-        x_amz_date="est",
-        x_amz_security_token="atque",
-        x_amz_signature="sint",
-        x_amz_signed_headers="vero",
+        x_amz_algorithm="ipsam",
+        x_amz_content_sha256="ad",
+        x_amz_credential="sint",
+        x_amz_date="dolores",
+        x_amz_security_token="illum",
+        x_amz_signature="error",
+        x_amz_signed_headers="cupiditate",
     ),
     request=operations.AssociateLensesRequestBody(
         lens_aliases=[
-            "rem",
+            "sapiente",
+            "et",
         ],
     ),
 )
     
-res = s.sdk.associate_lenses(req)
+res = s.associate_lenses(req)
 
 if res.status_code == 200:
     # handle response

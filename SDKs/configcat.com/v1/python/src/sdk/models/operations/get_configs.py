@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import configmodel_haljson as shared_configmodel_haljson
+from ..shared import configmodel as shared_configmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConfigsPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConfigsRequest:
-    path_params: GetConfigsPathParams = field()
+    path_params: GetConfigsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConfigsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_model_haljsons: Optional[List[shared.ConfigModelHaljson]] = field(default=None)
-    config_models: Optional[List[shared.ConfigModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_model_haljsons: Optional[list[shared_configmodel_haljson.ConfigModelHaljson]] = dataclasses.field(default=None)
+    config_models: Optional[list[shared_configmodel.ConfigModel]] = dataclasses.field(default=None)
     

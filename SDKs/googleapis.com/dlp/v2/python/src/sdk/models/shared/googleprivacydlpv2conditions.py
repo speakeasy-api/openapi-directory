@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2condition as shared_googleprivacydlpv2condition
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2Conditions:
     r"""GooglePrivacyDlpV2Conditions
     A collection of conditions.
     """
     
-    conditions: Optional[List[GooglePrivacyDlpV2Condition]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conditions') }})
+    conditions: Optional[list[shared_googleprivacydlpv2condition.GooglePrivacyDlpV2Condition]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conditions') }})
     

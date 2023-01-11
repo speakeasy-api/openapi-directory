@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import user as shared_user
+from ..shared import error as shared_error
+from ..shared import userresponse as shared_userresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersRequest:
-    request: shared.User = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_user.User = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    user_response: Optional[shared.UserResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    user_response: Optional[shared_userresponse.UserResponse] = dataclasses.field(default=None)
     

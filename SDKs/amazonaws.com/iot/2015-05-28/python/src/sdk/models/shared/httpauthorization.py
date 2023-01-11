@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sigv4authorization as shared_sigv4authorization
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HTTPAuthorization:
     r"""HTTPAuthorization
     The authorization method used to send messages.
     """
     
-    sigv4: Optional[SigV4Authorization] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sigv4') }})
+    sigv4: Optional[shared_sigv4authorization.SigV4Authorization] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sigv4') }})
     

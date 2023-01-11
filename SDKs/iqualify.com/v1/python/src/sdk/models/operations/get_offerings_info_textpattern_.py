@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import portfolioactivations as shared_portfolioactivations
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsInfoTextPatternPathParams:
-    text_pattern: str = field(metadata={'path_param': { 'field_name': 'textPattern', 'style': 'simple', 'explode': False }})
+    text_pattern: str = dataclasses.field(metadata={'path_param': { 'field_name': 'textPattern', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsInfoTextPatternRequest:
-    path_params: GetOfferingsInfoTextPatternPathParams = field()
+    path_params: GetOfferingsInfoTextPatternPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsInfoTextPatternResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    portfolio_activations: Optional[List[shared.PortfolioActivations]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    portfolio_activations: Optional[list[shared_portfolioactivations.PortfolioActivations]] = dataclasses.field(default=None)
     

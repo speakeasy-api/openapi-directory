@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.ClearUserSessionsRequest(
     path_params=operations.ClearUserSessionsPathParams(
-        user_id="illo",
+        user_id="unde",
     ),
-    request="aperiam".encode(),
+    request="nihil".encode(),
 )
     
-res = s.sdk.clear_user_sessions(req)
+res = s.clear_user_sessions(req)
 
 if res.status_code == 200:
     # handle response

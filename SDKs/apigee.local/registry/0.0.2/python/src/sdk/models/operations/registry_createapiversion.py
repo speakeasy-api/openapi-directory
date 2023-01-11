@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIVersionPathParams:
-    api: str = field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    api: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIVersionQueryParams:
-    api_version_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_version_id', 'style': 'form', 'explode': True }})
+    api_version_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_version_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIVersionRequest:
-    path_params: RegistryCreateAPIVersionPathParams = field()
-    query_params: RegistryCreateAPIVersionQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RegistryCreateAPIVersionPathParams = dataclasses.field()
+    query_params: RegistryCreateAPIVersionQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateAPIVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_version: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_version: Optional[Any] = dataclasses.field(default=None)
     

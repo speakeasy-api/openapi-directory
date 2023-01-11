@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import earning as shared_earning
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAllEarningsPathParams:
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllEarningsSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllEarningsRequest:
-    path_params: GetAllEarningsPathParams = field()
-    security: GetAllEarningsSecurity = field()
+    path_params: GetAllEarningsPathParams = dataclasses.field()
+    security: GetAllEarningsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllEarningsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    earnings: Optional[List[shared.Earning]] = field(default=None)
-    errors: Optional[List[shared.Error]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    earnings: Optional[list[shared_earning.Earning]] = dataclasses.field(default=None)
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
     

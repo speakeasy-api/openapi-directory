@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgIDGetPathParams:
-    app_pkg_id: str = field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
+    app_pkg_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appPkgId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgIDGetQueryParams:
-    all_fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'all_fields', 'style': 'form', 'explode': True }})
-    exclude_default: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'exclude_default', 'style': 'form', 'explode': True }})
-    exclude_fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'exclude_fields', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    all_fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'all_fields', 'style': 'form', 'explode': True }})
+    exclude_default: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude_default', 'style': 'form', 'explode': True }})
+    exclude_fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude_fields', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgIDGetRequest:
-    path_params: AppPkgIDGetPathParams = field()
-    query_params: AppPkgIDGetQueryParams = field()
+    path_params: AppPkgIDGetPathParams = dataclasses.field()
+    query_params: AppPkgIDGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppPkgIDGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    app_d: Optional[str] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

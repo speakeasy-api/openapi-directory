@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import fileshare as shared_fileshare
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesFsJSONHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesFsJSONRequest:
-    headers: GetVolumesFsJSONHeaders = field()
+    headers: GetVolumesFsJSONHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVolumesFsJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fileshares: Optional[List[shared.Fileshare]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fileshares: Optional[list[shared_fileshare.Fileshare]] = dataclasses.field(default=None)
     

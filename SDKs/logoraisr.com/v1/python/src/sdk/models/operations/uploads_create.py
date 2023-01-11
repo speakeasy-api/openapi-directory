@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import fileresponse as shared_fileresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadsCreateRequestBodyFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadsCreateRequestBody:
-    file: UploadsCreateRequestBodyFile = field(metadata={'multipart_form': { 'file': True }})
+    file: UploadsCreateRequestBodyFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadsCreateRequest:
-    request: UploadsCreateRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: UploadsCreateRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_response: Optional[shared.FileResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_response: Optional[shared_fileresponse.FileResponse] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudcontactcenterinsightsv1analysis as shared_googlecloudcontactcenterinsightsv1analysis
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudContactcenterinsightsV1ListAnalysesResponse:
     r"""GoogleCloudContactcenterinsightsV1ListAnalysesResponse
     The response to list analyses.
     """
     
-    analyses: Optional[List[GoogleCloudContactcenterinsightsV1Analysis]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyses') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    analyses: Optional[list[shared_googlecloudcontactcenterinsightsv1analysis.GoogleCloudContactcenterinsightsV1Analysis]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyses') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

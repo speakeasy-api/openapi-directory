@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,31 +20,32 @@ req = operations.EssentialcontactsProjectsContactsComputeRequest(
     security=operations.EssentialcontactsProjectsContactsComputeSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.EssentialcontactsProjectsContactsComputePathParams(
-        parent="animi",
+        parent="sint",
     ),
     query_params=operations.EssentialcontactsProjectsContactsComputeQueryParams(
-        dollar_xgafv="2",
-        access_token="numquam",
-        alt="proto",
-        callback="amet",
-        fields="quia",
-        key="maiores",
+        dollar_xgafv="1",
+        access_token="eos",
+        alt="json",
+        callback="ex",
+        fields="dolor",
+        key="odio",
         notification_categories=[
+            "ALL",
             "PRODUCT_UPDATES",
         ],
-        oauth_token="non",
-        page_size=2052705281164802646,
-        page_token="omnis",
-        pretty_print=True,
-        quota_user="ut",
-        upload_type="fugit",
-        upload_protocol="doloribus",
+        oauth_token="deserunt",
+        page_size=6503842544790942575,
+        page_token="aut",
+        pretty_print=False,
+        quota_user="qui",
+        upload_type="odio",
+        upload_protocol="inventore",
     ),
 )
     

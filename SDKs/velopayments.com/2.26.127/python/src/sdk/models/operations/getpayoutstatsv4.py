@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import getpayoutstatistics as shared_getpayoutstatistics
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutStatsV4QueryParams:
-    payor_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
+    payor_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutStatsV4Request:
-    query_params: GetPayoutStatsV4QueryParams = field()
+    query_params: GetPayoutStatsV4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutStatsV4Response:
-    content_type: str = field()
-    status_code: int = field()
-    get_payout_statistics: Optional[shared.GetPayoutStatistics] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_payout_statistics: Optional[shared_getpayoutstatistics.GetPayoutStatistics] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

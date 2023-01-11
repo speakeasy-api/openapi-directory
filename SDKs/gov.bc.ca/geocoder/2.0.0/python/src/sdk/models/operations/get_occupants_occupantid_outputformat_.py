@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -12,10 +12,10 @@ class GetOccupantsOccupantIDOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOccupantsOccupantIDOutputFormatPathParams:
-    occupant_id: str = field(metadata={'path_param': { 'field_name': 'occupantID', 'style': 'simple', 'explode': False }})
-    output_format: GetOccupantsOccupantIDOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    occupant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'occupantID', 'style': 'simple', 'explode': False }})
+    output_format: GetOccupantsOccupantIDOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 class GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum(str, Enum):
     ANY = "any"
@@ -26,22 +26,22 @@ class GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum(str, Enum):
     ROUTING_POINT = "routingPoint"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOccupantsOccupantIDOutputFormatQueryParams:
-    brief: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
-    location_descriptor: Optional[GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum] = field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
-    set_back: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
+    brief: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'brief', 'style': 'form', 'explode': True }})
+    location_descriptor: Optional[GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationDescriptor', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    set_back: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'setBack', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOccupantsOccupantIDOutputFormatRequest:
-    path_params: GetOccupantsOccupantIDOutputFormatPathParams = field()
-    query_params: GetOccupantsOccupantIDOutputFormatQueryParams = field()
+    path_params: GetOccupantsOccupantIDOutputFormatPathParams = dataclasses.field()
+    query_params: GetOccupantsOccupantIDOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOccupantsOccupantIDOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

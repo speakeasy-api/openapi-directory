@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import apk as shared_apk
 
 
-@dataclass
+@dataclasses.dataclass
 class ApksListResponse:
-    apks: Optional[List[Apk]] = field(default=None)
-    kind: Optional[str] = field(default=None)
+    apks: Optional[list[shared_apk.Apk]] = dataclasses.field(default=None)
+    kind: Optional[str] = dataclasses.field(default=None)
     

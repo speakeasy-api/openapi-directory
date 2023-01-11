@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import countrylist as shared_countrylist
 
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesRequest:
-    security: LocaleGetCountriesSecurity = field()
+    security: LocaleGetCountriesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCountriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    country_list: Optional[shared.CountryList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    country_list: Optional[shared_countrylist.CountryList] = dataclasses.field(default=None)
     

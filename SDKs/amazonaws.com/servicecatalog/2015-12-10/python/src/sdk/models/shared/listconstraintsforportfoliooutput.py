@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import constraintdetail as shared_constraintdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListConstraintsForPortfolioOutput:
-    constraint_details: Optional[List[ConstraintDetail]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConstraintDetails') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    constraint_details: Optional[list[shared_constraintdetail.ConstraintDetail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConstraintDetails') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
     

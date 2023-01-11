@@ -24,3 +24,5 @@ from .tagresourceinput import *
 from .untagresourceinput import *
 from .updatehostinput import *
 from .vpcconfiguration import *
+
+__all__ = ["Connection","ConnectionStatusEnum","CreateConnectionInput","CreateConnectionOutput","CreateHostInput","CreateHostOutput","DeleteConnectionInput","DeleteHostInput","GetConnectionInput","GetConnectionOutput","GetHostInput","GetHostOutput","Host","ListConnectionsInput","ListConnectionsOutput","ListHostsInput","ListHostsOutput","ListTagsForResourceInput","ListTagsForResourceOutput","ProviderTypeEnum","SchemeHmac","Security","Tag","TagResourceInput","UntagResourceInput","UpdateHostInput","VpcConfiguration"]

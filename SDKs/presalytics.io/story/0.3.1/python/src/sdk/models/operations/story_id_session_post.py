@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import session as shared_session
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDSessionPostPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDSessionPostRequest:
-    path_params: StoryIDSessionPostPathParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: StoryIDSessionPostPathParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDSessionPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    session: Optional[shared.Session] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    session: Optional[shared_session.Session] = dataclasses.field(default=None)
     

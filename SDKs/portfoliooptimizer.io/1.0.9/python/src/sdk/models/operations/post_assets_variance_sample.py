@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSampleRequestBodyAssets:
-    asset_returns: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
+    asset_returns: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSampleRequestBody:
-    assets: List[PostAssetsVarianceSampleRequestBodyAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsVarianceSampleRequestBodyAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSample200ApplicationJSONAssets:
-    asset_variance: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetVariance') }})
+    asset_variance: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetVariance') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSample200ApplicationJSON:
-    assets: List[PostAssetsVarianceSample200ApplicationJSONAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsVarianceSample200ApplicationJSONAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSampleRequest:
-    request: PostAssetsVarianceSampleRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostAssetsVarianceSampleRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsVarianceSampleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_assets_variance_sample_200_application_json_object: Optional[PostAssetsVarianceSample200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_assets_variance_sample_200_application_json_object: Optional[PostAssetsVarianceSample200ApplicationJSON] = dataclasses.field(default=None)
     

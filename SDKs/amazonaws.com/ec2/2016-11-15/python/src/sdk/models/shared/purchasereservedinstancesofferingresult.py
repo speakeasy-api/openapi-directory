@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PurchaseReservedInstancesOfferingResult:
     r"""PurchaseReservedInstancesOfferingResult
     Contains the output of PurchaseReservedInstancesOffering.
     """
     
-    reserved_instances_id: Optional[str] = field(default=None)
+    reserved_instances_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

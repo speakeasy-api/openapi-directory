@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class DriverRaceProjectionsEntryListFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class DriverRaceProjectionsEntryListFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class DriverRaceProjectionsEntryListPathParams:
-    format: DriverRaceProjectionsEntryListFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    raceid: str = field(metadata={'path_param': { 'field_name': 'raceid', 'style': 'simple', 'explode': False }})
+    format: DriverRaceProjectionsEntryListFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    raceid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'raceid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriverRaceProjectionsEntryListRequest:
-    path_params: DriverRaceProjectionsEntryListPathParams = field()
+    path_params: DriverRaceProjectionsEntryListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DriverRaceProjectionsEntryListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    driver_race_projections: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    driver_race_projections: Optional[list[Any]] = dataclasses.field(default=None)
     

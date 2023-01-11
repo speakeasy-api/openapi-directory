@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import originrequestpolicylist as shared_originrequestpolicylist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListOriginRequestPoliciesResult:
-    origin_request_policy_list: Optional[OriginRequestPolicyList] = field(default=None)
+    origin_request_policy_list: Optional[shared_originrequestpolicylist.OriginRequestPolicyList] = dataclasses.field(default=None)
     

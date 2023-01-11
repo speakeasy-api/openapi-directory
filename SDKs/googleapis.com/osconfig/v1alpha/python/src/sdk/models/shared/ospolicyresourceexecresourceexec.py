@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ospolicyresourcefile as shared_ospolicyresourcefile
 
 class OsPolicyResourceExecResourceExecInterpreterEnum(str, Enum):
     INTERPRETER_UNSPECIFIED = "INTERPRETER_UNSPECIFIED"
@@ -13,15 +13,15 @@ class OsPolicyResourceExecResourceExecInterpreterEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OsPolicyResourceExecResourceExec:
     r"""OsPolicyResourceExecResourceExec
     A file or script to execute.
     """
     
-    args: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('args') }})
-    file: Optional[OsPolicyResourceFile] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('file') }})
-    interpreter: Optional[OsPolicyResourceExecResourceExecInterpreterEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpreter') }})
-    output_file_path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outputFilePath') }})
-    script: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('script') }})
+    args: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('args') }})
+    file: Optional[shared_ospolicyresourcefile.OsPolicyResourceFile] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('file') }})
+    interpreter: Optional[OsPolicyResourceExecResourceExecInterpreterEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interpreter') }})
+    output_file_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outputFilePath') }})
+    script: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('script') }})
     

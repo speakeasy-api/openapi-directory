@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sendusersmessageresponse as shared_sendusersmessageresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SendUsersMessagesResponse:
-    send_users_message_response: SendUsersMessageResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SendUsersMessageResponse') }})
+    send_users_message_response: shared_sendusersmessageresponse.SendUsersMessageResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SendUsersMessageResponse') }})
     

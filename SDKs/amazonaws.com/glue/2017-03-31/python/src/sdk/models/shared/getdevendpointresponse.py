@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import devendpoint as shared_devendpoint
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDevEndpointResponse:
-    dev_endpoint: Optional[DevEndpoint] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DevEndpoint') }})
+    dev_endpoint: Optional[shared_devendpoint.DevEndpoint] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DevEndpoint') }})
     

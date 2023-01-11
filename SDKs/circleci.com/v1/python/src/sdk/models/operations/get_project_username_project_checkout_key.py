@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import key as shared_key
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyRequest:
-    path_params: GetProjectUsernameProjectCheckoutKeyPathParams = field()
+    path_params: GetProjectUsernameProjectCheckoutKeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    keys: Optional[List[shared.Key]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    keys: Optional[list[shared_key.Key]] = dataclasses.field(default=None)
     

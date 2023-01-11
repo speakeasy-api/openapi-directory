@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,14 +11,14 @@ class TagSettingKeywordOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TagSetting:
     r"""TagSetting
     Tag Settings
     """
     
-    additional_key_values: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalKeyValues') }})
-    include_click_through_urls: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeClickThroughUrls') }})
-    include_click_tracking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeClickTracking') }})
-    keyword_option: Optional[TagSettingKeywordOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keywordOption') }})
+    additional_key_values: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalKeyValues') }})
+    include_click_through_urls: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeClickThroughUrls') }})
+    include_click_tracking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeClickTracking') }})
+    keyword_option: Optional[TagSettingKeywordOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keywordOption') }})
     

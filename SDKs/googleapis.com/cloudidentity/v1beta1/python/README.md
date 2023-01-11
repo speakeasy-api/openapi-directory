@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,25 +18,24 @@ s = sdk.SDK()
     
 req = operations.CloudidentityCustomersUserinvitationsCancelRequest(
     path_params=operations.CloudidentityCustomersUserinvitationsCancelPathParams(
-        name="et",
+        name="dolor",
     ),
     query_params=operations.CloudidentityCustomersUserinvitationsCancelQueryParams(
-        dollar_xgafv="2",
-        access_token="enim",
+        dollar_xgafv="1",
+        access_token="ut",
         alt="proto",
-        callback="incidunt",
-        fields="amet",
-        key="architecto",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="ducimus",
-        upload_type="doloribus",
-        upload_protocol="sit",
+        callback="nobis",
+        fields="ut",
+        key="autem",
+        oauth_token="praesentium",
+        pretty_print=True,
+        quota_user="est",
+        upload_type="et",
+        upload_protocol="et",
     ),
     request={
-        "ipsum": "voluptas",
-        "aut": "praesentium",
-        "reiciendis": "consequatur",
+        "ex": "optio",
+        "perferendis": "vel",
     },
 )
     

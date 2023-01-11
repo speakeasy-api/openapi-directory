@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,18 +18,18 @@ s = sdk.SDK()
     
 req = operations.GetVaccineStatusRequest(
     headers=operations.GetVaccineStatusHeaders(
-        accept="rerum",
-        authorization="iusto",
-        content_type="qui",
+        accept="numquam",
+        authorization="illum",
+        content_type="fugiat",
     ),
     request=shared.VaccineStatusRequest(
-        department_id="ad",
-        patient_id="accusantium",
-        token="impedit",
+        department_id="dolores",
+        patient_id="possimus",
+        token="voluptatibus",
     ),
 )
     
-res = s.sdk.get_vaccine_status(req)
+res = s.athena_api.get_vaccine_status(req)
 
 if res.vaccine_response is not None:
     # handle response
@@ -40,7 +39,7 @@ if res.vaccine_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### athena-api
 
 * `get_vaccine_status` - return vaccine status from USA -- Athena Health API
 

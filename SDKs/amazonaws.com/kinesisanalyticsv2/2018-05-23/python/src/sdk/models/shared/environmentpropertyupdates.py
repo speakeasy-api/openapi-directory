@@ -1,19 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import propertygroup as shared_propertygroup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnvironmentPropertyUpdates:
     r"""EnvironmentPropertyUpdates
     Describes updates to the execution property groups for a Flink-based Kinesis Data Analytics application or a Studio notebook.
     """
     
-    property_groups: List[PropertyGroup] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PropertyGroups') }})
+    property_groups: list[shared_propertygroup.PropertyGroup] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PropertyGroups') }})
     

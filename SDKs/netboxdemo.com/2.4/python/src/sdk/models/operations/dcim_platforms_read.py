@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import platform as shared_platform
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsReadRequest:
-    path_params: DcimPlatformsReadPathParams = field()
+    path_params: DcimPlatformsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPlatformsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    platform: Optional[shared.Platform] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    platform: Optional[shared_platform.Platform] = dataclasses.field(default=None)
     

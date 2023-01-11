@@ -1,9 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class AssociateTransitGatewayRouteTableResultAssociation:
+    r"""AssociateTransitGatewayRouteTableResultAssociation
+    The ID of the association.
+    """
+    
+    resource_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    resource_type: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    state: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    transit_gateway_attachment_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    transit_gateway_route_table_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class AssociateTransitGatewayRouteTableResult:
-    association: Optional[TransitGatewayAssociation] = field(default=None)
+    association: Optional[AssociateTransitGatewayRouteTableResultAssociation] = dataclasses.field(default=None)
     

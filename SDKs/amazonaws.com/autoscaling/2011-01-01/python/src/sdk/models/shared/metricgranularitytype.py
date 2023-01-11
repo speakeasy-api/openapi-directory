@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MetricGranularityType:
     r"""MetricGranularityType
     Describes a granularity of a metric.
     """
     
-    granularity: Optional[str] = field(default=None)
+    granularity: Optional[str] = dataclasses.field(default=None)
     

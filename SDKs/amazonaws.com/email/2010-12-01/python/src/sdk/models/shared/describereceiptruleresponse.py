@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import receiptrule as shared_receiptrule
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeReceiptRuleResponse:
     r"""DescribeReceiptRuleResponse
     Represents the details of a receipt rule.
     """
     
-    rule: Optional[ReceiptRule] = field(default=None)
+    rule: Optional[shared_receiptrule.ReceiptRule] = dataclasses.field(default=None)
     

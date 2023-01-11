@@ -1,41 +1,47 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Any,Optional
 from enum import Enum
-from . import *
+from ..shared import automaticfailoverstatus_enum as shared_automaticfailoverstatus_enum
+from ..shared import endpoint as shared_endpoint
+from ..shared import globalreplicationgroupinfo as shared_globalreplicationgroupinfo
+from ..shared import logdeliveryconfigurationlist as shared_logdeliveryconfigurationlist
+from ..shared import multiazstatus_enum as shared_multiazstatus_enum
+from ..shared import nodegrouplist as shared_nodegrouplist
+from ..shared import replicationgrouppendingmodifiedvalues as shared_replicationgrouppendingmodifiedvalues
 
 
-@dataclass
+@dataclasses.dataclass
 class ReplicationGroup:
     r"""ReplicationGroup
     Contains all of the attributes of a specific Redis replication group.
     """
     
-    arn: Optional[str] = field(default=None)
-    at_rest_encryption_enabled: Optional[bool] = field(default=None)
-    auth_token_enabled: Optional[bool] = field(default=None)
-    auth_token_last_modified_date: Optional[datetime] = field(default=None)
-    automatic_failover: Optional[AutomaticFailoverStatusEnum] = field(default=None)
-    cache_node_type: Optional[str] = field(default=None)
-    cluster_enabled: Optional[bool] = field(default=None)
-    configuration_endpoint: Optional[Endpoint] = field(default=None)
-    description: Optional[str] = field(default=None)
-    global_replication_group_info: Optional[GlobalReplicationGroupInfo] = field(default=None)
-    kms_key_id: Optional[str] = field(default=None)
-    log_delivery_configurations: Optional[List[LogDeliveryConfiguration]] = field(default=None)
-    member_clusters: Optional[List[str]] = field(default=None)
-    member_clusters_outpost_arns: Optional[List[str]] = field(default=None)
-    multi_az: Optional[MultiAzStatusEnum] = field(default=None)
-    node_groups: Optional[List[NodeGroup]] = field(default=None)
-    pending_modified_values: Optional[ReplicationGroupPendingModifiedValues] = field(default=None)
-    replication_group_create_time: Optional[datetime] = field(default=None)
-    replication_group_id: Optional[str] = field(default=None)
-    snapshot_retention_limit: Optional[int] = field(default=None)
-    snapshot_window: Optional[str] = field(default=None)
-    snapshotting_cluster_id: Optional[str] = field(default=None)
-    status: Optional[str] = field(default=None)
-    transit_encryption_enabled: Optional[bool] = field(default=None)
-    user_group_ids: Optional[List[str]] = field(default=None)
+    arn: Optional[str] = dataclasses.field(default=None)
+    at_rest_encryption_enabled: Optional[bool] = dataclasses.field(default=None)
+    auth_token_enabled: Optional[bool] = dataclasses.field(default=None)
+    auth_token_last_modified_date: Optional[datetime] = dataclasses.field(default=None)
+    automatic_failover: Optional[shared_automaticfailoverstatus_enum.AutomaticFailoverStatusEnum] = dataclasses.field(default=None)
+    cache_node_type: Optional[str] = dataclasses.field(default=None)
+    cluster_enabled: Optional[bool] = dataclasses.field(default=None)
+    configuration_endpoint: Optional[shared_endpoint.Endpoint] = dataclasses.field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    global_replication_group_info: Optional[shared_globalreplicationgroupinfo.GlobalReplicationGroupInfo] = dataclasses.field(default=None)
+    kms_key_id: Optional[str] = dataclasses.field(default=None)
+    log_delivery_configurations: Optional[list[shared_logdeliveryconfigurationlist.LogDeliveryConfigurationList]] = dataclasses.field(default=None)
+    member_clusters: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
+    member_clusters_outpost_arns: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
+    multi_az: Optional[shared_multiazstatus_enum.MultiAzStatusEnum] = dataclasses.field(default=None)
+    node_groups: Optional[list[shared_nodegrouplist.NodeGroupList]] = dataclasses.field(default=None)
+    pending_modified_values: Optional[shared_replicationgrouppendingmodifiedvalues.ReplicationGroupPendingModifiedValues] = dataclasses.field(default=None)
+    replication_group_create_time: Optional[datetime] = dataclasses.field(default=None)
+    replication_group_id: Optional[str] = dataclasses.field(default=None)
+    snapshot_retention_limit: Optional[int] = dataclasses.field(default=None)
+    snapshot_window: Optional[str] = dataclasses.field(default=None)
+    snapshotting_cluster_id: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
+    transit_encryption_enabled: Optional[bool] = dataclasses.field(default=None)
+    user_group_ids: Optional[list[str]] = dataclasses.field(default=None)
     

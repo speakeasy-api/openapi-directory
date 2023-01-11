@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class HaltPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class HaltRequest:
-    path_params: HaltPathParams = field()
+    path_params: HaltPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class HaltResponse:
-    content_type: str = field()
-    status_code: int = field()
-    halt_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    halt_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

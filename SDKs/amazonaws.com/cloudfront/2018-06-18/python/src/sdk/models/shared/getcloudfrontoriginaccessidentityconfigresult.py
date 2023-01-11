@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cloudfrontoriginaccessidentityconfig as shared_cloudfrontoriginaccessidentityconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCloudFrontOriginAccessIdentityConfigResult:
     r"""GetCloudFrontOriginAccessIdentityConfigResult
     The returned result of the corresponding request.
     """
     
-    cloud_front_origin_access_identity_config: Optional[CloudFrontOriginAccessIdentityConfig] = field(default=None)
+    cloud_front_origin_access_identity_config: Optional[shared_cloudfrontoriginaccessidentityconfig.CloudFrontOriginAccessIdentityConfig] = dataclasses.field(default=None)
     

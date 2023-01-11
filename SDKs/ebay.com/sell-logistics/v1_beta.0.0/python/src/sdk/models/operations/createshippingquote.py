@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import shippingquoterequest as shared_shippingquoterequest
+from ..shared import shippingquote as shared_shippingquote
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateShippingQuoteSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateShippingQuoteRequest:
-    request: shared.ShippingQuoteRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateShippingQuoteSecurity = field()
+    request: shared_shippingquoterequest.ShippingQuoteRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateShippingQuoteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateShippingQuoteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    shipping_quote: Optional[shared.ShippingQuote] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    shipping_quote: Optional[shared_shippingquote.ShippingQuote] = dataclasses.field(default=None)
     

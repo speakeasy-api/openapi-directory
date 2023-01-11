@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -28,11 +28,11 @@ class SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEn
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SensitiveCategoryAssignedTargetingOptionDetails:
     r"""SensitiveCategoryAssignedTargetingOptionDetails
     Targeting details for sensitive category. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
     """
     
-    excluded_sensitive_category: Optional[SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedSensitiveCategory') }})
+    excluded_sensitive_category: Optional[SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedSensitiveCategory') }})
     

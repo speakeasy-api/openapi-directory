@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,13 +19,13 @@ class ObscaSupportData1RequestedScaExemptionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ObscaSupportData1:
     r"""ObscaSupportData1
     Supporting Data provided by TPP, when requesting SCA Exemption.
     """
     
-    applied_authentication_approach: Optional[ObscaSupportData1AppliedAuthenticationApproachEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AppliedAuthenticationApproach') }})
-    reference_payment_order_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReferencePaymentOrderId') }})
-    requested_sca_exemption_type: Optional[ObscaSupportData1RequestedScaExemptionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestedSCAExemptionType') }})
+    applied_authentication_approach: Optional[ObscaSupportData1AppliedAuthenticationApproachEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AppliedAuthenticationApproach') }})
+    reference_payment_order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReferencePaymentOrderId') }})
+    requested_sca_exemption_type: Optional[ObscaSupportData1RequestedScaExemptionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RequestedSCAExemptionType') }})
     

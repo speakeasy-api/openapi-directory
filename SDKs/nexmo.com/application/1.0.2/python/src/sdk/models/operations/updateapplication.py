@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,12 +6,12 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import application as shared_application
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateApplicationPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
     
 class UpdateApplicationRequestBodyTypeEnum(str, Enum):
     VOICE = "voice"
@@ -19,27 +19,27 @@ class UpdateApplicationRequestBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateApplicationRequestBody:
-    api_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key') }})
-    api_secret: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_secret') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: UpdateApplicationRequestBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    answer_method: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer_method') }})
-    answer_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer_url') }})
-    event_method: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_method') }})
-    event_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_url') }})
+    api_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key') }})
+    api_secret: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_secret') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: UpdateApplicationRequestBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    answer_method: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer_method') }})
+    answer_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answer_url') }})
+    event_method: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_method') }})
+    event_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_url') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateApplicationRequest:
-    path_params: UpdateApplicationPathParams = field()
-    request: Optional[UpdateApplicationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateApplicationPathParams = dataclasses.field()
+    request: Optional[UpdateApplicationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    application: Optional[shared.Application] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    application: Optional[shared_application.Application] = dataclasses.field(default=None)
     

@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import publickey as shared_publickey
+from ..shared import reusableconfigwrapper as shared_reusableconfigwrapper
+from ..shared import subjectconfig as shared_subjectconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CertificateConfig:
     r"""CertificateConfig
     A CertificateConfig describes an X.509 certificate or CSR that is to be created, as an alternative to using ASN.1.
     """
     
-    public_key: Optional[PublicKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKey') }})
-    reusable_config: Optional[ReusableConfigWrapper] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reusableConfig') }})
-    subject_config: Optional[SubjectConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectConfig') }})
+    public_key: Optional[shared_publickey.PublicKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKey') }})
+    reusable_config: Optional[shared_reusableconfigwrapper.ReusableConfigWrapper] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reusableConfig') }})
+    subject_config: Optional[shared_subjectconfig.SubjectConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectConfig') }})
     

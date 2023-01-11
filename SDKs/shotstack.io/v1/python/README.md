@@ -8,29 +8,28 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.DeleteAssetRequest(
-    security=operations.DeleteAssetSecurity(
+req = operations.GetRenderRequest(
+    security=operations.GetRenderSecurity(
         developer_key=shared.SchemeDeveloperKey(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
-    path_params=operations.DeleteAssetPathParams(
-        id="veritatis",
+    path_params=operations.GetRenderPathParams(
+        id="vel",
     ),
 )
     
-res = s.sdk.delete_asset(req)
+res = s.edit.get_render(req)
 
-if res.status_code == 200:
+if res.render_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -38,13 +37,16 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Edit
+
+* `get_render` - Get Render Status
+* `post_render` - Render Asset
+
+### Serve
 
 * `delete_asset` - Delete Asset
 * `get_asset` - Get Asset
 * `get_asset_by_render_id` - Get Asset by Render ID
-* `get_render` - Get Render Status
-* `post_render` - Render Asset
 
 <!-- End SDK Available Operations -->
 

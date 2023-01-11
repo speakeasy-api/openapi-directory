@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,28 +25,28 @@ s.config_security(
     
 req = operations.DescribeServicesRequest(
     query_params=operations.DescribeServicesQueryParams(
-        max_results="et",
-        next_token="deleniti",
+        max_results="maiores",
+        next_token="nobis",
     ),
     headers=operations.DescribeServicesHeaders(
-        x_amz_algorithm="ratione",
-        x_amz_content_sha256="voluptas",
-        x_amz_credential="quas",
-        x_amz_date="quae",
-        x_amz_security_token="incidunt",
-        x_amz_signature="sapiente",
-        x_amz_signed_headers="dolore",
+        x_amz_algorithm="quos",
+        x_amz_content_sha256="facilis",
+        x_amz_credential="qui",
+        x_amz_date="quis",
+        x_amz_security_token="aut",
+        x_amz_signature="est",
+        x_amz_signed_headers="ipsa",
         x_amz_target="AWSPriceListService.DescribeServices",
     ),
     request=shared.DescribeServicesRequest(
-        format_version="aut",
-        max_results=1425085460978815393,
-        next_token="omnis",
-        service_code="amet",
+        format_version="eveniet",
+        max_results=1787359646289181114,
+        next_token="vitae",
+        service_code="quos",
     ),
 )
     
-res = s.sdk.describe_services(req)
+res = s.describe_services(req)
 
 if res.describe_services_response is not None:
     # handle response

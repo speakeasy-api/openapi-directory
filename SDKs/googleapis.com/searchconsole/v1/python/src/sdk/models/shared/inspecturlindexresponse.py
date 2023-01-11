@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import urlinspectionresult as shared_urlinspectionresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InspectURLIndexResponse:
     r"""InspectURLIndexResponse
     Index-Status inspection response.
     """
     
-    inspection_result: Optional[URLInspectionResult] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inspectionResult') }})
+    inspection_result: Optional[shared_urlinspectionresult.URLInspectionResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inspectionResult') }})
     

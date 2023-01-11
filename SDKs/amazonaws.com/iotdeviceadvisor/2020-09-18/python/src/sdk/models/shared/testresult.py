@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import groupresult as shared_groupresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TestResult:
     r"""TestResult
     Show each group result.
     """
     
-    groups: Optional[List[GroupResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    groups: Optional[list[shared_groupresult.GroupResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
     

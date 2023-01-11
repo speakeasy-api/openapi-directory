@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import testgridsessionartifact as shared_testgridsessionartifact
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTestGridSessionArtifactsResult:
-    artifacts: Optional[List[TestGridSessionArtifact]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artifacts') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    artifacts: Optional[list[shared_testgridsessionartifact.TestGridSessionArtifact]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artifacts') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

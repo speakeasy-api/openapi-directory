@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,35 +20,37 @@ req = operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest
     security=operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams(
-        name="architecto",
+        name="unde",
     ),
     query_params=operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams(
         dollar_xgafv="2",
-        access_token="iure",
+        access_token="cumque",
         alt="media",
-        callback="aut",
-        fields="est",
-        key="corrupti",
-        oauth_token="eaque",
+        callback="voluptatum",
+        fields="labore",
+        key="rerum",
+        oauth_token="qui",
         pretty_print=False,
-        quota_user="et",
-        upload_type="repellendus",
-        upload_protocol="aut",
+        quota_user="quo",
+        upload_type="et",
+        upload_protocol="sit",
     ),
     request=shared.ActivateCertificateAuthorityRequest(
-        pem_ca_certificate="in",
-        request_id="rerum",
+        pem_ca_certificate="doloribus",
+        request_id="et",
         subordinate_config=shared.SubordinateConfig(
-            certificate_authority="distinctio",
+            certificate_authority="eveniet",
             pem_issuer_chain=shared.SubordinateConfigChain(
                 pem_certificates=[
-                    "maxime",
+                    "praesentium",
+                    "sequi",
+                    "illum",
                 ],
             ),
         ),

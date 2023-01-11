@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clientauthenticationsettinginfo as shared_clientauthenticationsettinginfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeClientAuthenticationSettingsResult:
-    client_authentication_settings_info: Optional[List[ClientAuthenticationSettingInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientAuthenticationSettingsInfo') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    client_authentication_settings_info: Optional[list[shared_clientauthenticationsettinginfo.ClientAuthenticationSettingInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClientAuthenticationSettingsInfo') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

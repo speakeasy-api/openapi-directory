@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import describedblogfileslist as shared_describedblogfileslist
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbLogFilesResponse:
-    describe_db_log_files: Optional[List[DescribeDbLogFilesDetails]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    describe_db_log_files: Optional[list[shared_describedblogfileslist.DescribeDbLogFilesList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

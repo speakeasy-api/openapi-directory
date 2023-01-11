@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.IticrRequest(
     security=operations.IticrSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.IticrRequestBody(
         certificate_parameters=operations.IticrRequestBodyCertificateParameters(
-            full_name="enim",
-            certno="voluptas",
+            full_name="impedit",
+            certno="magni",
         ),
-        consent_artifact="consequatur",
+        consent_artifact="id",
         format="pdf",
-        txn_id="suscipit",
+        txn_id="fugiat",
     ),
 )
     
-res = s.sdk.iticr(req)
+res = s.ap_is.iticr(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `iticr` - ITI Certificate
 

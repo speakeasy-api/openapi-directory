@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,26 +21,26 @@ req = operations.StorageBucketAccessControlsDeleteRequest(
         option1=operations.StorageBucketAccessControlsDeleteSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.StorageBucketAccessControlsDeletePathParams(
-        bucket="debitis",
-        entity="asperiores",
+        bucket="laboriosam",
+        entity="quae",
     ),
     query_params=operations.StorageBucketAccessControlsDeleteQueryParams(
         alt="json",
-        fields="in",
-        key="esse",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="et",
-        upload_type="alias",
-        user_ip="repudiandae",
-        user_project="dolorem",
+        fields="enim",
+        key="numquam",
+        oauth_token="earum",
+        pretty_print=False,
+        quota_user="itaque",
+        upload_type="eveniet",
+        user_ip="odit",
+        user_project="rerum",
     ),
 )
     

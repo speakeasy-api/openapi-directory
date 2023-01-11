@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Amount:
-    amount: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
-    currency: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
+    amount: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
     

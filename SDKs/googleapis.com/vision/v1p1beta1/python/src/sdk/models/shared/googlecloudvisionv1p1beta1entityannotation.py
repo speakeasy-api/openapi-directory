@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudvisionv1p1beta1boundingpoly as shared_googlecloudvisionv1p1beta1boundingpoly
+from ..shared import googlecloudvisionv1p1beta1locationinfo as shared_googlecloudvisionv1p1beta1locationinfo
+from ..shared import googlecloudvisionv1p1beta1property as shared_googlecloudvisionv1p1beta1property
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVisionV1p1beta1EntityAnnotation:
     r"""GoogleCloudVisionV1p1beta1EntityAnnotation
     Set of detected entity features.
     """
     
-    bounding_poly: Optional[GoogleCloudVisionV1p1beta1BoundingPoly] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundingPoly') }})
-    confidence: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidence') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    locale: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
-    locations: Optional[List[GoogleCloudVisionV1p1beta1LocationInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locations') }})
-    mid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mid') }})
-    properties: Optional[List[GoogleCloudVisionV1p1beta1Property]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
-    score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
-    topicality: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicality') }})
+    bounding_poly: Optional[shared_googlecloudvisionv1p1beta1boundingpoly.GoogleCloudVisionV1p1beta1BoundingPoly] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('boundingPoly') }})
+    confidence: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidence') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
+    locations: Optional[list[shared_googlecloudvisionv1p1beta1locationinfo.GoogleCloudVisionV1p1beta1LocationInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locations') }})
+    mid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mid') }})
+    properties: Optional[list[shared_googlecloudvisionv1p1beta1property.GoogleCloudVisionV1p1beta1Property]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
+    score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
+    topicality: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicality') }})
     

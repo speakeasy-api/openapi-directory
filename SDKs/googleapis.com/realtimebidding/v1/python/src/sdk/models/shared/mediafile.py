@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -26,12 +26,12 @@ class MediaFileMimeTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MediaFile:
     r"""MediaFile
     Information about each media file in the VAST.
     """
     
-    bitrate: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bitrate') }})
-    mime_type: Optional[MediaFileMimeTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mimeType') }})
+    bitrate: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bitrate') }})
+    mime_type: Optional[MediaFileMimeTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mimeType') }})
     

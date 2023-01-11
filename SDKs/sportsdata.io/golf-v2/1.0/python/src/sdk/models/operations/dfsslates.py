@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class DfsSlatesFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class DfsSlatesFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class DfsSlatesPathParams:
-    format: DfsSlatesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    tournamentid: str = field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
+    format: DfsSlatesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    tournamentid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DfsSlatesRequest:
-    path_params: DfsSlatesPathParams = field()
+    path_params: DfsSlatesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DfsSlatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    dfs_slates: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dfs_slates: Optional[list[Any]] = dataclasses.field(default=None)
     

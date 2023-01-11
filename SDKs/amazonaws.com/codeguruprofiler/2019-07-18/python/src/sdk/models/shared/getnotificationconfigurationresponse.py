@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import notificationconfiguration as shared_notificationconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetNotificationConfigurationResponse:
     r"""GetNotificationConfigurationResponse
     The structure representing the GetNotificationConfigurationResponse.
     """
     
-    notification_configuration: NotificationConfiguration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfiguration') }})
+    notification_configuration: shared_notificationconfiguration.NotificationConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notificationConfiguration') }})
     

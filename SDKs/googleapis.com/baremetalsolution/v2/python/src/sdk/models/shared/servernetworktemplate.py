@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudbaremetalsolutionv2servernetworktemplatelogicalinterface as shared_googlecloudbaremetalsolutionv2servernetworktemplatelogicalinterface
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ServerNetworkTemplate:
     r"""ServerNetworkTemplate
     Network template.
     """
     
-    applicable_instance_types: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applicableInstanceTypes') }})
-    logical_interfaces: Optional[List[GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logicalInterfaces') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    applicable_instance_types: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applicableInstanceTypes') }})
+    logical_interfaces: Optional[list[shared_googlecloudbaremetalsolutionv2servernetworktemplatelogicalinterface.GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logicalInterfaces') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

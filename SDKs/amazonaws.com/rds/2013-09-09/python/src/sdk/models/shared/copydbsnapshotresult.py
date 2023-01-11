@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbsnapshot as shared_dbsnapshot
 
 
-@dataclass
+@dataclasses.dataclass
 class CopyDbSnapshotResult:
-    db_snapshot: Optional[DbSnapshot] = field(default=None)
+    db_snapshot: Optional[shared_dbsnapshot.DbSnapshot] = dataclasses.field(default=None)
     

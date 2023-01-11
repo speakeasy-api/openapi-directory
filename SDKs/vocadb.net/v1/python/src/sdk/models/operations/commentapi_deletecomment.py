@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class CommentAPIDeleteCommentEntryTypeEnum(str, Enum):
@@ -16,19 +16,19 @@ class CommentAPIDeleteCommentEntryTypeEnum(str, Enum):
     VENUE = "Venue"
 
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIDeleteCommentPathParams:
-    comment_id: int = field(metadata={'path_param': { 'field_name': 'commentId', 'style': 'simple', 'explode': False }})
-    entry_type: CommentAPIDeleteCommentEntryTypeEnum = field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
+    comment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'commentId', 'style': 'simple', 'explode': False }})
+    entry_type: CommentAPIDeleteCommentEntryTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'entryType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIDeleteCommentRequest:
-    path_params: CommentAPIDeleteCommentPathParams = field()
+    path_params: CommentAPIDeleteCommentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CommentAPIDeleteCommentResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

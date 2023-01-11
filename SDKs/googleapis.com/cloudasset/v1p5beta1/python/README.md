@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,33 +20,34 @@ req = operations.CloudassetAssetsListRequest(
     security=operations.CloudassetAssetsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CloudassetAssetsListPathParams(
-        parent="qui",
+        parent="occaecati",
     ),
     query_params=operations.CloudassetAssetsListQueryParams(
-        dollar_xgafv="1",
+        dollar_xgafv="2",
         access_token="rerum",
-        alt="proto",
+        alt="json",
         asset_types=[
-            "nesciunt",
+            "enim",
+            "voluptas",
         ],
-        callback="cumque",
-        content_type="IAM_POLICY",
-        fields="quasi",
-        key="corrupti",
-        oauth_token="sed",
-        page_size=6483753444866358335,
-        page_token="molestiae",
+        callback="voluptas",
+        content_type="RESOURCE",
+        fields="atque",
+        key="dolores",
+        oauth_token="optio",
+        page_size=2232215791667708434,
+        page_token="aut",
         pretty_print=True,
-        quota_user="provident",
-        read_time="et",
-        upload_type="autem",
-        upload_protocol="at",
+        quota_user="totam",
+        read_time="ut",
+        upload_type="et",
+        upload_protocol="et",
     ),
 )
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itemwebhookupdaterequest as shared_itemwebhookupdaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemWebhookUpdateRequest:
-    request: shared.ItemWebhookUpdateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itemwebhookupdaterequest.ItemWebhookUpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemWebhookUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_webhook_update_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_webhook_update_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

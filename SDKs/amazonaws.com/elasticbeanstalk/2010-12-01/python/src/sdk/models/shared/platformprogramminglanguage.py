@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PlatformProgrammingLanguage:
     r"""PlatformProgrammingLanguage
     A programming language supported by the platform.
     """
     
-    name: Optional[str] = field(default=None)
-    version: Optional[str] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    version: Optional[str] = dataclasses.field(default=None)
     

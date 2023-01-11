@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import pool as shared_pool
 
 
-@dataclass
+@dataclasses.dataclass
 class PoolsListResponse:
-    next_page_token: Optional[str] = field(default=None)
-    resources: Optional[List[Pool]] = field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
+    resources: Optional[list[shared_pool.Pool]] = dataclasses.field(default=None)
     

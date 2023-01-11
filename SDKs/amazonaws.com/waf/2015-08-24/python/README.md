@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.CreateByteMatchSetRequest(
     headers=operations.CreateByteMatchSetHeaders(
-        x_amz_algorithm="ipsa",
-        x_amz_content_sha256="sequi",
-        x_amz_credential="inventore",
-        x_amz_date="earum",
-        x_amz_security_token="ad",
-        x_amz_signature="eligendi",
-        x_amz_signed_headers="quia",
+        x_amz_algorithm="nesciunt",
+        x_amz_content_sha256="velit",
+        x_amz_credential="at",
+        x_amz_date="repellat",
+        x_amz_security_token="placeat",
+        x_amz_signature="accusantium",
+        x_amz_signed_headers="sunt",
         x_amz_target="AWSWAF_20150824.CreateByteMatchSet",
     ),
     request=shared.CreateByteMatchSetRequest(
-        change_token="nihil",
-        name="dolorum",
+        change_token="et",
+        name="id",
     ),
 )
     
-res = s.sdk.create_byte_match_set(req)
+res = s.create_byte_match_set(req)
 
 if res.create_byte_match_set_response is not None:
     # handle response

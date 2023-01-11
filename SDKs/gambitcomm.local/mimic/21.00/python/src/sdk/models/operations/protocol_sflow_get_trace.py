@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configsflow as shared_configsflow
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowGetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowGetTraceRequest:
-    path_params: ProtocolSflowGetTracePathParams = field()
+    path_params: ProtocolSflowGetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowGetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_sflow: Optional[shared.ConfigSflow] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_sflow: Optional[shared_configsflow.ConfigSflow] = dataclasses.field(default=None)
     

@@ -1,21 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import targetrole_enum as shared_targetrole_enum
+from ..shared import targethealth as shared_targethealth
+from ..shared import targettype_enum as shared_targettype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class DbProxyTarget:
     r"""DbProxyTarget
     <p>Contains the details for an RDS Proxy target. It represents an RDS DB instance or Aurora DB cluster that the proxy can connect to. One or more targets are associated with an RDS Proxy target group.</p> <p>This data type is used as a response element in the <code>DescribeDBProxyTargets</code> action.</p>
     """
     
-    endpoint: Optional[str] = field(default=None)
-    port: Optional[int] = field(default=None)
-    rds_resource_id: Optional[str] = field(default=None)
-    role: Optional[TargetRoleEnum] = field(default=None)
-    target_arn: Optional[str] = field(default=None)
-    target_health: Optional[TargetHealth] = field(default=None)
-    tracked_cluster_id: Optional[str] = field(default=None)
-    type: Optional[TargetTypeEnum] = field(default=None)
+    endpoint: Optional[str] = dataclasses.field(default=None)
+    port: Optional[int] = dataclasses.field(default=None)
+    rds_resource_id: Optional[str] = dataclasses.field(default=None)
+    role: Optional[shared_targetrole_enum.TargetRoleEnum] = dataclasses.field(default=None)
+    target_arn: Optional[str] = dataclasses.field(default=None)
+    target_health: Optional[shared_targethealth.TargetHealth] = dataclasses.field(default=None)
+    tracked_cluster_id: Optional[str] = dataclasses.field(default=None)
+    type: Optional[shared_targettype_enum.TargetTypeEnum] = dataclasses.field(default=None)
     

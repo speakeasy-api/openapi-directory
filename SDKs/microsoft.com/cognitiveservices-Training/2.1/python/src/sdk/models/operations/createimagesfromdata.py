@@ -1,46 +1,46 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import imagecreatesummary as shared_imagecreatesummary
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataQueryParams:
-    tag_ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
+    tag_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataRequestBodyImageData:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_data: str = field(metadata={'multipart_form': { 'field_name': 'imageData' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_data: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageData' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataRequestBody:
-    image_data: CreateImagesFromDataRequestBodyImageData = field(metadata={'multipart_form': { 'file': True }})
+    image_data: CreateImagesFromDataRequestBodyImageData = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataRequest:
-    headers: CreateImagesFromDataHeaders = field()
-    path_params: CreateImagesFromDataPathParams = field()
-    query_params: CreateImagesFromDataQueryParams = field()
-    request: CreateImagesFromDataRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    headers: CreateImagesFromDataHeaders = dataclasses.field()
+    path_params: CreateImagesFromDataPathParams = dataclasses.field()
+    query_params: CreateImagesFromDataQueryParams = dataclasses.field()
+    request: CreateImagesFromDataRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateImagesFromDataResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    image_create_summary: Optional[shared.ImageCreateSummary] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    image_create_summary: Optional[shared_imagecreatesummary.ImageCreateSummary] = dataclasses.field(default=None)
     

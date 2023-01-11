@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class GetFoldersSortEnum(str, Enum):
     NAME = "Name"
@@ -9,31 +9,31 @@ class GetFoldersSortEnum(str, Enum):
     CREATED_DATE_UTC = "CreatedDateUTC"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFoldersQueryParams:
-    sort: Optional[GetFoldersSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    sort: Optional[GetFoldersSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoldersHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoldersSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoldersRequest:
-    headers: GetFoldersHeaders = field()
-    query_params: GetFoldersQueryParams = field()
-    security: GetFoldersSecurity = field()
+    headers: GetFoldersHeaders = dataclasses.field()
+    query_params: GetFoldersQueryParams = dataclasses.field()
+    security: GetFoldersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoldersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    folders: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    folders: Optional[list[Any]] = dataclasses.field(default=None)
     

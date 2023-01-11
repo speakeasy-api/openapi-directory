@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -24,16 +24,16 @@ class BusinessMeetingRoomsExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Business:
     r"""Business
     Features of the property of specific interest to the business traveler.
     """
     
-    business_center: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessCenter') }})
-    business_center_exception: Optional[BusinessBusinessCenterExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessCenterException') }})
-    meeting_rooms: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRooms') }})
-    meeting_rooms_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsCount') }})
-    meeting_rooms_count_exception: Optional[BusinessMeetingRoomsCountExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsCountException') }})
-    meeting_rooms_exception: Optional[BusinessMeetingRoomsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsException') }})
+    business_center: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessCenter') }})
+    business_center_exception: Optional[BusinessBusinessCenterExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessCenterException') }})
+    meeting_rooms: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRooms') }})
+    meeting_rooms_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsCount') }})
+    meeting_rooms_count_exception: Optional[BusinessMeetingRoomsCountExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsCountException') }})
+    meeting_rooms_exception: Optional[BusinessMeetingRoomsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meetingRoomsException') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import campaignwrapped as shared_campaignwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDJSONPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDJSONRequest:
-    path_params: GetResourcesCampaignsIDJSONPathParams = field()
+    path_params: GetResourcesCampaignsIDJSONPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesCampaignsIDJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    campaign_wrapped: Optional[shared.CampaignWrapped] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    campaign_wrapped: Optional[shared_campaignwrapped.CampaignWrapped] = dataclasses.field(default=None)
     

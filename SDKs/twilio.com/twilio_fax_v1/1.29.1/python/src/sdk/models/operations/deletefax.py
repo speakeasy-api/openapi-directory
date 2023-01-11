@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
 DELETE_FAX_SERVERS = [
@@ -8,25 +8,25 @@ DELETE_FAX_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFaxPathParams:
-    sid: str = field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
+    sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFaxSecurity:
-    account_sid_auth_token: shared.SchemeAccountSidAuthToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    account_sid_auth_token: shared_security.SchemeAccountSidAuthToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFaxRequest:
-    path_params: DeleteFaxPathParams = field()
-    security: DeleteFaxSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: DeleteFaxPathParams = dataclasses.field()
+    security: DeleteFaxSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFaxResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

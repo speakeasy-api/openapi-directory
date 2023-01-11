@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ciscoswitchdatasource as shared_ciscoswitchdatasource
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchRequest:
-    path_params: GetCiscoSwitchPathParams = field()
-    security: GetCiscoSwitchSecurity = field()
+    path_params: GetCiscoSwitchPathParams = dataclasses.field()
+    security: GetCiscoSwitchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCiscoSwitchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cisco_switch_data_source: Optional[shared.CiscoSwitchDataSource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cisco_switch_data_source: Optional[shared_ciscoswitchdatasource.CiscoSwitchDataSource] = dataclasses.field(default=None)
     

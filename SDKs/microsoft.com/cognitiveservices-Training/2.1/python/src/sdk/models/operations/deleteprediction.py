@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class DeletePredictionPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePredictionQueryParams:
-    ids: List[str] = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
+    ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePredictionHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePredictionRequest:
-    headers: DeletePredictionHeaders = field()
-    path_params: DeletePredictionPathParams = field()
-    query_params: DeletePredictionQueryParams = field()
+    headers: DeletePredictionHeaders = dataclasses.field()
+    path_params: DeletePredictionPathParams = dataclasses.field()
+    query_params: DeletePredictionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePredictionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,38 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import batchinputmarketingeventsubscriber as shared_batchinputmarketingeventsubscriber
+from ..shared import batchresponsesubscribervidresponse as shared_batchresponsesubscribervidresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams:
-    external_event_id: str = field(metadata={'path_param': { 'field_name': 'externalEventId', 'style': 'simple', 'explode': False }})
-    subscriber_state: str = field(metadata={'path_param': { 'field_name': 'subscriberState', 'style': 'simple', 'explode': False }})
+    external_event_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'externalEventId', 'style': 'simple', 'explode': False }})
+    subscriber_state: str = dataclasses.field(metadata={'path_param': { 'field_name': 'subscriberState', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams:
-    external_account_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'externalAccountId', 'style': 'form', 'explode': True }})
+    external_account_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'externalAccountId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity:
-    hapikey: Optional[shared.SchemeHapikey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    oauth2_legacy: Optional[shared.SchemeOauth2Legacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    private_apps_legacy: Optional[shared.SchemePrivateAppsLegacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_legacy: Optional[shared_security.SchemeOauth2Legacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    private_apps_legacy: Optional[shared_security.SchemePrivateAppsLegacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest:
-    path_params: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams = field()
-    query_params: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams = field()
-    request: shared.BatchInputMarketingEventSubscriber = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity = field()
+    path_params: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams = dataclasses.field()
+    query_params: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams = dataclasses.field()
+    request: shared_batchinputmarketingeventsubscriber.BatchInputMarketingEventSubscriber = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_response_subscriber_vid_response: Optional[shared.BatchResponseSubscriberVidResponse] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_response_subscriber_vid_response: Optional[shared_batchresponsesubscribervidresponse.BatchResponseSubscriberVidResponse] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

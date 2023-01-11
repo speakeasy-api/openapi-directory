@@ -15,3 +15,5 @@ from .userhalresponse import *
 from .usersembeddedobject import *
 from .usershalresponse import *
 from .validationerrorsresponse import *
+
+__all__ = ["Contact","DetailedInvalidParam","Did","ErrorResponse","FirstHref","Links","NextHref","PrevHref","SchemeBearerAuth","SelfHref","User","UserEmbeddedObject","UserExtension","UserHalResponse","UsersEmbeddedObject","UsersHalResponse","ValidationErrorsResponse"]

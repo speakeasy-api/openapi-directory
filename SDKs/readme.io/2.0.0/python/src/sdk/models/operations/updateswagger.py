@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerRequestBodySwagger:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    swagger: str = field(metadata={'multipart_form': { 'field_name': 'swagger' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    swagger: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'swagger' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerRequestBody:
-    swagger: Optional[UpdateSwaggerRequestBodySwagger] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    swagger: Optional[UpdateSwaggerRequestBodySwagger] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerRequest:
-    path_params: UpdateSwaggerPathParams = field()
-    request: UpdateSwaggerRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: UpdateSwaggerSecurity = field()
+    path_params: UpdateSwaggerPathParams = dataclasses.field()
+    request: UpdateSwaggerRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UpdateSwaggerSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSwaggerResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

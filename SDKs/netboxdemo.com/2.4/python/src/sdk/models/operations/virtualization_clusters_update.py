@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablecluster as shared_writablecluster
+from ..shared import cluster as shared_cluster
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersUpdateRequest:
-    path_params: VirtualizationClustersUpdatePathParams = field()
-    request: shared.WritableClusterInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: VirtualizationClustersUpdatePathParams = dataclasses.field()
+    request: shared_writablecluster.WritableClusterInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cluster: Optional[shared.Cluster] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cluster: Optional[shared_cluster.Cluster] = dataclasses.field(default=None)
     

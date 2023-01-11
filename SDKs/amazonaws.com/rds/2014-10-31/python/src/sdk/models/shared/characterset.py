@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CharacterSet:
     r"""CharacterSet
      This data type is used as a response element in the action <code>DescribeDBEngineVersions</code>. 
     """
     
-    character_set_description: Optional[str] = field(default=None)
-    character_set_name: Optional[str] = field(default=None)
+    character_set_description: Optional[str] = dataclasses.field(default=None)
+    character_set_name: Optional[str] = dataclasses.field(default=None)
     

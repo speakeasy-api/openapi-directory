@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerSeasonStatsFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class PlayerSeasonStatsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsPathParams:
-    format: PlayerSeasonStatsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    roundid: str = field(metadata={'path_param': { 'field_name': 'roundid', 'style': 'simple', 'explode': False }})
+    format: PlayerSeasonStatsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    roundid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'roundid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsRequest:
-    path_params: PlayerSeasonStatsPathParams = field()
+    path_params: PlayerSeasonStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_seasons: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_seasons: Optional[list[Any]] = dataclasses.field(default=None)
     

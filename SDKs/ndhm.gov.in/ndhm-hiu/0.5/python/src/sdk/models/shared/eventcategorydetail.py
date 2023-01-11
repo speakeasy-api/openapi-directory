@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import carecontextdefinition as shared_carecontextdefinition
+from ..shared import hitypeenum_enum as shared_hitypeenum_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EventCategoryDetail:
-    care_context: CareContextDefinition = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContext') }})
-    hi_types: List[HiTypeEnumEnum] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hiTypes') }})
+    care_context: shared_carecontextdefinition.CareContextDefinition = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContext') }})
+    hi_types: list[shared_hitypeenum_enum.HiTypeEnumEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hiTypes') }})
     

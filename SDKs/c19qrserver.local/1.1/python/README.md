@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,7 +25,7 @@ s.config_security(
     
 req = operations.DeleteSigninSigninIDRequest(
     path_params=operations.DeleteSigninSigninIDPathParams(
-        signin_id=4749040620526837782,
+        signin_id=1213256779453366885,
     ),
 )
     

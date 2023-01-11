@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PepRetrievePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class PepRetrieveAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
     APPLICATION_PDF = "application/pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class PepRetrieveHeaders:
-    accept: Optional[PepRetrieveAcceptEnum] = field(default=None, metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: Optional[PepRetrieveAcceptEnum] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepRetrieveSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PepRetrieveRequest:
-    headers: PepRetrieveHeaders = field()
-    path_params: PepRetrievePathParams = field()
-    security: PepRetrieveSecurity = field()
+    headers: PepRetrieveHeaders = dataclasses.field()
+    path_params: PepRetrievePathParams = dataclasses.field()
+    security: PepRetrieveSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PepRetrieveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pep_retrieve_200_application_json_any: Optional[Any] = field(default=None)
-    pep_retrieve_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pep_retrieve_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    pep_retrieve_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

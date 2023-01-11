@@ -1,38 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import applicationupdateparameters as shared_applicationupdateparameters
+from ..shared import grapherror as shared_grapherror
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsPatchPathParams:
-    application_object_id: str = field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    application_object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'applicationObjectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsPatchQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsPatchRequests:
-    application_update_parameters: Optional[shared.ApplicationUpdateParameters] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    application_update_parameters1: Optional[shared.ApplicationUpdateParameters] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    application_update_parameters: Optional[shared_applicationupdateparameters.ApplicationUpdateParameters] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_update_parameters1: Optional[shared_applicationupdateparameters.ApplicationUpdateParameters] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsPatchRequest:
-    path_params: ApplicationsPatchPathParams = field()
-    query_params: ApplicationsPatchQueryParams = field()
-    request: ApplicationsPatchRequests = field()
+    path_params: ApplicationsPatchPathParams = dataclasses.field()
+    query_params: ApplicationsPatchQueryParams = dataclasses.field()
+    request: ApplicationsPatchRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ApplicationsPatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph_error: Optional[shared.GraphError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
     

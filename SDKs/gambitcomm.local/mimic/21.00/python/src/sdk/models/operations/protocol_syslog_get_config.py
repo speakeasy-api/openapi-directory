@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configsyslog as shared_configsyslog
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogGetConfigPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogGetConfigRequest:
-    path_params: ProtocolSyslogGetConfigPathParams = field()
+    path_params: ProtocolSyslogGetConfigPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSyslogGetConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_syslog: Optional[shared.ConfigSyslog] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_syslog: Optional[shared_configsyslog.ConfigSyslog] = dataclasses.field(default=None)
     

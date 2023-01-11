@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import fieldlevelencryptionprofileconfig as shared_fieldlevelencryptionprofileconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFieldLevelEncryptionProfileConfigResult:
-    field_level_encryption_profile_config: Optional[FieldLevelEncryptionProfileConfig] = field(default=None)
+    field_level_encryption_profile_config: Optional[shared_fieldlevelencryptionprofileconfig.FieldLevelEncryptionProfileConfig] = dataclasses.field(default=None)
     

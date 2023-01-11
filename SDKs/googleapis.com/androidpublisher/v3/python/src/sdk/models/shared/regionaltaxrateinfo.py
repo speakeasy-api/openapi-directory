@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -23,13 +23,9 @@ class RegionalTaxRateInfoTaxTierEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegionalTaxRateInfo:
-    r"""RegionalTaxRateInfo
-    Specified details about taxation in a given geographical region.
-    """
-    
-    eligible_for_streaming_service_tax_rate: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eligibleForStreamingServiceTaxRate') }})
-    streaming_tax_type: Optional[RegionalTaxRateInfoStreamingTaxTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streamingTaxType') }})
-    tax_tier: Optional[RegionalTaxRateInfoTaxTierEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxTier') }})
+    eligible_for_streaming_service_tax_rate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eligibleForStreamingServiceTaxRate') }})
+    streaming_tax_type: Optional[RegionalTaxRateInfoStreamingTaxTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streamingTaxType') }})
+    tax_tier: Optional[RegionalTaxRateInfoTaxTierEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxTier') }})
     

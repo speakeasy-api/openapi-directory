@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import image as shared_image
 
 
-@dataclass
+@dataclasses.dataclass
 class ImagesUploadResponse:
-    image: Optional[Image] = field(default=None)
+    image: Optional[shared_image.Image] = dataclasses.field(default=None)
     

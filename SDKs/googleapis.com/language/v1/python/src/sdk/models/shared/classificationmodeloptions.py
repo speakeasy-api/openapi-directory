@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import v2model as shared_v2model
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClassificationModelOptions:
     r"""ClassificationModelOptions
     Model options available for classification requests.
     """
     
-    v1_model: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('v1Model') }})
-    v2_model: Optional[V2Model] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('v2Model') }})
+    v1_model: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('v1Model') }})
+    v2_model: Optional[shared_v2model.V2Model] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('v2Model') }})
     

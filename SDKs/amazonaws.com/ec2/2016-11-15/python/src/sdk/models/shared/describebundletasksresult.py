@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeBundleTasksResult:
-    bundle_tasks: Optional[List[BundleTask]] = field(default=None)
+    bundle_tasks: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

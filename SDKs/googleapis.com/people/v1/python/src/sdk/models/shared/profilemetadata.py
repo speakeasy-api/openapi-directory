@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -17,12 +17,12 @@ class ProfileMetadataUserTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProfileMetadata:
     r"""ProfileMetadata
     The metadata about a profile.
     """
     
-    object_type: Optional[ProfileMetadataObjectTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectType') }})
-    user_types: Optional[List[ProfileMetadataUserTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userTypes') }})
+    object_type: Optional[ProfileMetadataObjectTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectType') }})
+    user_types: Optional[list[ProfileMetadataUserTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userTypes') }})
     

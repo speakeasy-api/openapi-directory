@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,47 +25,43 @@ s.config_security(
     
 req = operations.CreateAccessPointRequest(
     headers=operations.CreateAccessPointHeaders(
-        x_amz_algorithm="adipisci",
-        x_amz_content_sha256="exercitationem",
-        x_amz_credential="deserunt",
-        x_amz_date="ex",
-        x_amz_security_token="est",
-        x_amz_signature="at",
-        x_amz_signed_headers="harum",
+        x_amz_algorithm="vero",
+        x_amz_content_sha256="debitis",
+        x_amz_credential="vitae",
+        x_amz_date="illo",
+        x_amz_security_token="dolor",
+        x_amz_signature="aut",
+        x_amz_signed_headers="corrupti",
     ),
     request=operations.CreateAccessPointRequestBody(
-        client_token="magnam",
-        file_system_id="earum",
+        client_token="iusto",
+        file_system_id="necessitatibus",
         posix_user=operations.CreateAccessPointRequestBodyPosixUser(
-            gid=6071879840269989152,
+            gid=9099396917438780945,
             secondary_gids=[
-                2377858688803942796,
-                3164118301708844729,
+                7393415062790344033,
+                5573655011999427817,
             ],
-            uid=2623329617577619714,
+            uid=3450856630666814463,
         ),
         root_directory=operations.CreateAccessPointRequestBodyRootDirectory(
             creation_info=shared.CreationInfo(
-                owner_gid=3382514557618281506,
-                owner_uid=5226245147244245092,
-                permissions="sint",
+                owner_gid=2817162217093611776,
+                owner_uid=2020632354827331984,
+                permissions="magni",
             ),
-            path="non",
+            path="nostrum",
         ),
         tags=[
             shared.Tag(
-                key="debitis",
-                value="in",
-            ),
-            shared.Tag(
-                key="dolore",
-                value="quas",
+                key="tenetur",
+                value="numquam",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_access_point(req)
+res = s.create_access_point(req)
 
 if res.access_point_description is not None:
     # handle response

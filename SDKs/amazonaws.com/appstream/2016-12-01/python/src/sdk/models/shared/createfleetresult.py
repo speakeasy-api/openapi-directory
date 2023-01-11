@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import fleet as shared_fleet
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateFleetResult:
-    fleet: Optional[Fleet] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Fleet') }})
+    fleet: Optional[shared_fleet.Fleet] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Fleet') }})
     

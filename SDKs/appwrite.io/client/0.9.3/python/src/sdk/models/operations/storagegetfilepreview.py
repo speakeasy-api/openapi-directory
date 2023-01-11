@@ -1,43 +1,44 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePreviewPathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePreviewQueryParams:
-    background: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'background', 'style': 'form', 'explode': True }})
-    border_color: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'borderColor', 'style': 'form', 'explode': True }})
-    border_radius: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'borderRadius', 'style': 'form', 'explode': True }})
-    border_width: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'borderWidth', 'style': 'form', 'explode': True }})
-    gravity: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'gravity', 'style': 'form', 'explode': True }})
-    height: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'height', 'style': 'form', 'explode': True }})
-    opacity: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'opacity', 'style': 'form', 'explode': True }})
-    output: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
-    quality: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'quality', 'style': 'form', 'explode': True }})
-    rotation: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'rotation', 'style': 'form', 'explode': True }})
-    width: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
+    background: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'background', 'style': 'form', 'explode': True }})
+    border_color: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'borderColor', 'style': 'form', 'explode': True }})
+    border_radius: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'borderRadius', 'style': 'form', 'explode': True }})
+    border_width: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'borderWidth', 'style': 'form', 'explode': True }})
+    gravity: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'gravity', 'style': 'form', 'explode': True }})
+    height: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'height', 'style': 'form', 'explode': True }})
+    opacity: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'opacity', 'style': 'form', 'explode': True }})
+    output: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
+    quality: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quality', 'style': 'form', 'explode': True }})
+    rotation: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rotation', 'style': 'form', 'explode': True }})
+    width: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePreviewSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePreviewRequest:
-    path_params: StorageGetFilePreviewPathParams = field()
-    query_params: StorageGetFilePreviewQueryParams = field()
-    security: StorageGetFilePreviewSecurity = field()
+    path_params: StorageGetFilePreviewPathParams = dataclasses.field()
+    query_params: StorageGetFilePreviewQueryParams = dataclasses.field()
+    security: StorageGetFilePreviewSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePreviewResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

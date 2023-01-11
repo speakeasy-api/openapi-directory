@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import welldetail as shared_welldetail
 
 
-@dataclass
+@dataclasses.dataclass
 class WellsReadPathParams:
-    well_tag_number: int = field(metadata={'path_param': { 'field_name': 'well_tag_number', 'style': 'simple', 'explode': False }})
+    well_tag_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'well_tag_number', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsReadRequest:
-    path_params: WellsReadPathParams = field()
+    path_params: WellsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    well_detail: Optional[shared.WellDetail] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    well_detail: Optional[shared_welldetail.WellDetail] = dataclasses.field(default=None)
     

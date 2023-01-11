@@ -1,9 +1,0 @@
-from dataclasses import dataclass, field
-from enum import Enum
-
-class ActionTypeEnum(str, Enum):
-    INVITE = "INVITE"
-    ENABLE_ALL_FEATURES = "ENABLE_ALL_FEATURES"
-    APPROVE_ALL_FEATURES = "APPROVE_ALL_FEATURES"
-    ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE = "ADD_ORGANIZATIONS_SERVICE_LINKED_ROLE"
-

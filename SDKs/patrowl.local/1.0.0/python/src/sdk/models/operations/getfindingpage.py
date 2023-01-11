@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import findings as shared_findings
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFindingPagePathParams:
-    scan_id: int = field(metadata={'path_param': { 'field_name': 'scanId', 'style': 'simple', 'explode': False }})
+    scan_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'scanId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFindingPageRequest:
-    path_params: GetFindingPagePathParams = field()
+    path_params: GetFindingPagePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFindingPageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    findings: Optional[List[shared.Findings]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    findings: Optional[list[shared_findings.Findings]] = dataclasses.field(default=None)
     

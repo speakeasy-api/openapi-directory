@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import songforapicontract as shared_songforapicontract
 
 class SongAPIGetHighlightedSongsFieldsEnum(str, Enum):
     NONE = "None"
@@ -24,21 +24,21 @@ class SongAPIGetHighlightedSongsLanguagePreferenceEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetHighlightedSongsQueryParams:
-    fields: Optional[SongAPIGetHighlightedSongsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    language_preference: Optional[SongAPIGetHighlightedSongsLanguagePreferenceEnum] = field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
+    fields: Optional[SongAPIGetHighlightedSongsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    language_preference: Optional[SongAPIGetHighlightedSongsLanguagePreferenceEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetHighlightedSongsRequest:
-    query_params: SongAPIGetHighlightedSongsQueryParams = field()
+    query_params: SongAPIGetHighlightedSongsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetHighlightedSongsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_for_api_contracts: Optional[List[shared.SongForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_for_api_contracts: Optional[list[shared_songforapicontract.SongForAPIContract]] = dataclasses.field(default=None)
     

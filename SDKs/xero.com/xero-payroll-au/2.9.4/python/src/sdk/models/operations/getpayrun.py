@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import payruns as shared_payruns
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunPathParams:
-    pay_run_id: str = field(metadata={'path_param': { 'field_name': 'PayRunID', 'style': 'simple', 'explode': False }})
+    pay_run_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PayRunID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunRequest:
-    headers: GetPayRunHeaders = field()
-    path_params: GetPayRunPathParams = field()
-    security: GetPayRunSecurity = field()
+    headers: GetPayRunHeaders = dataclasses.field()
+    path_params: GetPayRunPathParams = dataclasses.field()
+    security: GetPayRunSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayRunResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pay_runs: Optional[shared.PayRuns] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pay_runs: Optional[shared_payruns.PayRuns] = dataclasses.field(default=None)
     

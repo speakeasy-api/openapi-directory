@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.CurrentSeasonRequest(
     path_params=operations.CurrentSeasonPathParams(
-        format="JSON",
+        format="XML",
     ),
 )
     
-res = s.sdk.current_season(req)
+res = s.current_season(req)
 
 if res.season is not None:
     # handle response

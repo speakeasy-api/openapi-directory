@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsRequestBodyAssets:
-    asset_prices: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetPrices') }})
+    asset_prices: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetPrices') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsRequestBody:
-    assets: List[PostAssetsReturnsRequestBodyAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsReturnsRequestBodyAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturns200ApplicationJSONAssets:
-    asset_returns: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
+    asset_returns: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturns200ApplicationJSON:
-    assets: List[PostAssetsReturns200ApplicationJSONAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsReturns200ApplicationJSONAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsRequest:
-    request: PostAssetsReturnsRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostAssetsReturnsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_assets_returns_200_application_json_object: Optional[PostAssetsReturns200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_assets_returns_200_application_json_object: Optional[PostAssetsReturns200ApplicationJSON] = dataclasses.field(default=None)
     

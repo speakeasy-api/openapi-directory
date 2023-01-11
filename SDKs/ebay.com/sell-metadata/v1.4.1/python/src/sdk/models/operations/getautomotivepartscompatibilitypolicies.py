@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import automotivepartscompatibilitypolicyresponse as shared_automotivepartscompatibilitypolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomotivePartsCompatibilityPoliciesPathParams:
-    marketplace_id: str = field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
+    marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomotivePartsCompatibilityPoliciesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomotivePartsCompatibilityPoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomotivePartsCompatibilityPoliciesRequest:
-    path_params: GetAutomotivePartsCompatibilityPoliciesPathParams = field()
-    query_params: GetAutomotivePartsCompatibilityPoliciesQueryParams = field()
-    security: GetAutomotivePartsCompatibilityPoliciesSecurity = field()
+    path_params: GetAutomotivePartsCompatibilityPoliciesPathParams = dataclasses.field()
+    query_params: GetAutomotivePartsCompatibilityPoliciesQueryParams = dataclasses.field()
+    security: GetAutomotivePartsCompatibilityPoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomotivePartsCompatibilityPoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    automotive_parts_compatibility_policy_response: Optional[shared.AutomotivePartsCompatibilityPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    automotive_parts_compatibility_policy_response: Optional[shared_automotivepartscompatibilitypolicyresponse.AutomotivePartsCompatibilityPolicyResponse] = dataclasses.field(default=None)
     

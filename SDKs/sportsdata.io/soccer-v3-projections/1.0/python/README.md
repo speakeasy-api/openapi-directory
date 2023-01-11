@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,12 +25,12 @@ s.config_security(
     
 req = operations.DfsSlatesByDateRequest(
     path_params=operations.DfsSlatesByDatePathParams(
-        date_="aut",
-        format="xml",
+        date_="sunt",
+        format="json",
     ),
 )
     
-res = s.sdk.dfs_slates_by_date(req)
+res = s.dfs_slates_by_date(req)
 
 if res.dfs_slates is not None:
     # handle response

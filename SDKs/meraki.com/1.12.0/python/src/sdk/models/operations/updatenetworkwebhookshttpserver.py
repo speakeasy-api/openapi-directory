@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,29 +7,29 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWebhooksHTTPServerPathParams:
-    http_server_id: str = field(metadata={'path_param': { 'field_name': 'httpServerId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    http_server_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'httpServerId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWebhooksHTTPServerRequestBody:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    shared_secret: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedSecret') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    shared_secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedSecret') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWebhooksHTTPServerRequest:
-    path_params: UpdateNetworkWebhooksHTTPServerPathParams = field()
-    request: Optional[UpdateNetworkWebhooksHTTPServerRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkWebhooksHTTPServerPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkWebhooksHTTPServerRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWebhooksHTTPServerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_webhooks_http_server_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_webhooks_http_server_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

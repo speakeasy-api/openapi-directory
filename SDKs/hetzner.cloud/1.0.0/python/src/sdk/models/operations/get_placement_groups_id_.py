@@ -1,43 +1,43 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPlacementGroupsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum(str, Enum):
     SPREAD = "spread"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetPlacementGroupsIDPlacementGroupResponsePlacementGroup:
-    created: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    labels: dict[str, str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    servers: List[int] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
-    type: GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    created: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    servers: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('servers') }})
+    type: GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetPlacementGroupsIDPlacementGroupResponse:
-    placement_group: GetPlacementGroupsIDPlacementGroupResponsePlacementGroup = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('placement_group') }})
+    placement_group: GetPlacementGroupsIDPlacementGroupResponsePlacementGroup = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('placement_group') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPlacementGroupsIDRequest:
-    path_params: GetPlacementGroupsIDPathParams = field()
+    path_params: GetPlacementGroupsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPlacementGroupsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    placement_group_response: Optional[GetPlacementGroupsIDPlacementGroupResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    placement_group_response: Optional[GetPlacementGroupsIDPlacementGroupResponse] = dataclasses.field(default=None)
     

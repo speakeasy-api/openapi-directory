@@ -1,11 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class DescribeVolumeAttributeResultAutoEnableIo:
+    r"""DescribeVolumeAttributeResultAutoEnableIo
+    The state of <code>autoEnableIO</code> attribute.
+    """
+    
+    value: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class DescribeVolumeAttributeResult:
-    auto_enable_io: Optional[AttributeBooleanValue] = field(default=None)
-    product_codes: Optional[List[ProductCode]] = field(default=None)
-    volume_id: Optional[str] = field(default=None)
+    auto_enable_io: Optional[DescribeVolumeAttributeResultAutoEnableIo] = dataclasses.field(default=None)
+    product_codes: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    volume_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

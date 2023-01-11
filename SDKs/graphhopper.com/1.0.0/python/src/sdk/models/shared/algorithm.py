@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,12 +14,12 @@ class AlgorithmProblemTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Algorithm:
     r"""Algorithm
     Use `objectives` instead.
     """
     
-    objective: Optional[AlgorithmObjectiveEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objective') }})
-    problem_type: Optional[AlgorithmProblemTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problem_type') }})
+    objective: Optional[AlgorithmObjectiveEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objective') }})
+    problem_type: Optional[AlgorithmProblemTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('problem_type') }})
     

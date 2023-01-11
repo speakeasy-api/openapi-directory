@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import schema1 as shared_schema1
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchChargeStationPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatchChargeStation200ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    ok: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
-    result: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    ok: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ok') }})
+    result: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchChargeStationRequest:
-    path_params: PatchChargeStationPathParams = field()
-    request: shared.Schema1 = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchChargeStationPathParams = dataclasses.field()
+    request: shared_schema1.Schema1 = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchChargeStationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    patch_charge_station_200_application_json_object: Optional[PatchChargeStation200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    patch_charge_station_200_application_json_object: Optional[PatchChargeStation200ApplicationJSON] = dataclasses.field(default=None)
     

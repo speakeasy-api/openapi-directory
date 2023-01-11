@@ -1,20 +1,17 @@
-from dataclasses import dataclass, field
-from datetime import datetime
+import dataclasses
+from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Enum,List,Optional
+from typing import Optional
+from enum import Enum
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGarbageCollectionPathParams:
-    registry_name: str = field(default=None, metadata={'path_param': { 'field_name': 'registry_name', 'style': 'simple', 'explode': False }})
-    
-
-@dataclass
-class GetGarbageCollectionRequest:
-    path_params: GetGarbageCollectionPathParams = field(default=None)
+    registry_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registry_name', 'style': 'simple', 'explode': False }})
     
 class GetGarbageCollection200ApplicationJSONGarbageCollectionStatusEnum(str, Enum):
     REQUESTED = "requested"
@@ -28,37 +25,42 @@ class GetGarbageCollection200ApplicationJSONGarbageCollectionStatusEnum(str, Enu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetGarbageCollection200ApplicationJSONGarbageCollection:
-    blobs_deleted: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'blobs_deleted' }})
-    created_at: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'created_at', 'encoder': datetime.isoformat, 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    freed_bytes: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'freed_bytes' }})
-    registry_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'registry_name' }})
-    status: Optional[GetGarbageCollection200ApplicationJSONGarbageCollectionStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'status' }})
-    updated_at: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'updated_at', 'encoder': datetime.isoformat, 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'uuid' }})
+    blobs_deleted: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blobs_deleted') }})
+    created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    freed_bytes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freed_bytes') }})
+    registry_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registry_name') }})
+    status: Optional[GetGarbageCollection200ApplicationJSONGarbageCollectionStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetGarbageCollection200ApplicationJSON:
-    garbage_collection: Optional[GetGarbageCollection200ApplicationJSONGarbageCollection] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'garbage_collection' }})
+    garbage_collection: Optional[GetGarbageCollection200ApplicationJSONGarbageCollection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('garbage_collection') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetGarbageCollection401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class GetGarbageCollectionRequest:
+    path_params: GetGarbageCollectionPathParams = dataclasses.field()
+    
+
+@dataclasses.dataclass
 class GetGarbageCollectionResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    get_garbage_collection_200_application_json_object: Optional[GetGarbageCollection200ApplicationJSON] = field(default=None)
-    get_garbage_collection_401_application_json_object: Optional[GetGarbageCollection401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_garbage_collection_200_application_json_object: Optional[GetGarbageCollection200ApplicationJSON] = dataclasses.field(default=None)
+    get_garbage_collection_401_application_json_object: Optional[GetGarbageCollection401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

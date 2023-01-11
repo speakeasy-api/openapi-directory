@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import tags as shared_tags
 
 
-@dataclass
+@dataclasses.dataclass
 class ListTagsForResourceResult:
     r"""ListTagsForResourceResult
      The returned result of the corresponding request.
     """
     
-    tags: Tags = field()
+    tags: shared_tags.Tags = dataclasses.field()
     

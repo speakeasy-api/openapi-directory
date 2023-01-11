@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchfirstlastnamephonenumbergeoin as shared_batchfirstlastnamephonenumbergeoin
+from ..shared import batchfirstlastnamephonecodedout as shared_batchfirstlastnamephonecodedout
 
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoBatchRequest:
-    security: PhoneCodeGeoBatchSecurity = field()
-    request: Optional[shared.BatchFirstLastNamePhoneNumberGeoIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PhoneCodeGeoBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchfirstlastnamephonenumbergeoin.BatchFirstLastNamePhoneNumberGeoIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_first_last_name_phone_coded_out: Optional[shared.BatchFirstLastNamePhoneCodedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_first_last_name_phone_coded_out: Optional[shared_batchfirstlastnamephonecodedout.BatchFirstLastNamePhoneCodedOut] = dataclasses.field(default=None)
     

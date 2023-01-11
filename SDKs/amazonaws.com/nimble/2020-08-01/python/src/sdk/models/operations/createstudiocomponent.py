@@ -1,42 +1,48 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import activedirectoryconfiguration as shared_activedirectoryconfiguration
+from ..shared import computefarmconfiguration as shared_computefarmconfiguration
+from ..shared import licenseserviceconfiguration as shared_licenseserviceconfiguration
+from ..shared import sharedfilesystemconfiguration as shared_sharedfilesystemconfiguration
+from ..shared import studiocomponentinitializationscript as shared_studiocomponentinitializationscript
+from ..shared import scriptparameterkeyvalue as shared_scriptparameterkeyvalue
+from ..shared import createstudiocomponentresponse as shared_createstudiocomponentresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentPathParams:
-    studio_id: str = field(metadata={'path_param': { 'field_name': 'studioId', 'style': 'simple', 'explode': False }})
+    studio_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'studioId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_client_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Client-Token', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_client_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Client-Token', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentRequestBodyConfiguration:
     r"""CreateStudioComponentRequestBodyConfiguration
     The configuration of the studio component, based on component type.
     """
     
-    active_directory_configuration: Optional[shared.ActiveDirectoryConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDirectoryConfiguration') }})
-    compute_farm_configuration: Optional[shared.ComputeFarmConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('computeFarmConfiguration') }})
-    license_service_configuration: Optional[shared.LicenseServiceConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('licenseServiceConfiguration') }})
-    shared_file_system_configuration: Optional[shared.SharedFileSystemConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedFileSystemConfiguration') }})
+    active_directory_configuration: Optional[shared_activedirectoryconfiguration.ActiveDirectoryConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDirectoryConfiguration') }})
+    compute_farm_configuration: Optional[shared_computefarmconfiguration.ComputeFarmConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('computeFarmConfiguration') }})
+    license_service_configuration: Optional[shared_licenseserviceconfiguration.LicenseServiceConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('licenseServiceConfiguration') }})
+    shared_file_system_configuration: Optional[shared_sharedfilesystemconfiguration.SharedFileSystemConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedFileSystemConfiguration') }})
     
 class CreateStudioComponentRequestBodySubtypeEnum(str, Enum):
     AWS_MANAGED_MICROSOFT_AD = "AWS_MANAGED_MICROSOFT_AD"
@@ -53,36 +59,36 @@ class CreateStudioComponentRequestBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentRequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: CreateStudioComponentRequestBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    configuration: Optional[CreateStudioComponentRequestBodyConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    ec2_security_group_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ec2SecurityGroupIds') }})
-    initialization_scripts: Optional[List[shared.StudioComponentInitializationScript]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('initializationScripts') }})
-    script_parameters: Optional[List[shared.ScriptParameterKeyValue]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scriptParameters') }})
-    subtype: Optional[CreateStudioComponentRequestBodySubtypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subtype') }})
-    tags: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: CreateStudioComponentRequestBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    configuration: Optional[CreateStudioComponentRequestBodyConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    ec2_security_group_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ec2SecurityGroupIds') }})
+    initialization_scripts: Optional[list[shared_studiocomponentinitializationscript.StudioComponentInitializationScript]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('initializationScripts') }})
+    script_parameters: Optional[list[shared_scriptparameterkeyvalue.ScriptParameterKeyValue]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scriptParameters') }})
+    subtype: Optional[CreateStudioComponentRequestBodySubtypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subtype') }})
+    tags: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentRequest:
-    headers: CreateStudioComponentHeaders = field()
-    path_params: CreateStudioComponentPathParams = field()
-    request: CreateStudioComponentRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateStudioComponentHeaders = dataclasses.field()
+    path_params: CreateStudioComponentPathParams = dataclasses.field()
+    request: CreateStudioComponentRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateStudioComponentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied_exception: Optional[Any] = field(default=None)
-    conflict_exception: Optional[Any] = field(default=None)
-    create_studio_component_response: Optional[shared.CreateStudioComponentResponse] = field(default=None)
-    internal_server_error_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    service_quota_exceeded_exception: Optional[Any] = field(default=None)
-    throttling_exception: Optional[Any] = field(default=None)
-    validation_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied_exception: Optional[Any] = dataclasses.field(default=None)
+    conflict_exception: Optional[Any] = dataclasses.field(default=None)
+    create_studio_component_response: Optional[shared_createstudiocomponentresponse.CreateStudioComponentResponse] = dataclasses.field(default=None)
+    internal_server_error_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    service_quota_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    throttling_exception: Optional[Any] = dataclasses.field(default=None)
+    validation_exception: Optional[Any] = dataclasses.field(default=None)
     

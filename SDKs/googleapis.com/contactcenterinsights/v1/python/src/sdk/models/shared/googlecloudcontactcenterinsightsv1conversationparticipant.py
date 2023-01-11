@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,15 +13,15 @@ class GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum(str, Enu
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudContactcenterinsightsV1ConversationParticipant:
     r"""GoogleCloudContactcenterinsightsV1ConversationParticipant
     The call participant speaking for a given utterance.
     """
     
-    dialogflow_participant: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dialogflowParticipant') }})
-    dialogflow_participant_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dialogflowParticipantName') }})
-    obfuscated_external_user_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('obfuscatedExternalUserId') }})
-    role: Optional[GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
-    user_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
+    dialogflow_participant: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dialogflowParticipant') }})
+    dialogflow_participant_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dialogflowParticipantName') }})
+    obfuscated_external_user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('obfuscatedExternalUserId') }})
+    role: Optional[GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
     

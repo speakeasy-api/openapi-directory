@@ -1,35 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import submissionentry as shared_submissionentry
+from ..shared import error as shared_error
+from ..shared import message as shared_message
 
 
-@dataclass
+@dataclasses.dataclass
 class PostMessagesQueryParams:
-    auto_unicode: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'auto-unicode', 'style': 'form', 'explode': True }})
-    deduplication_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'deduplication-id', 'style': 'form', 'explode': True }})
-    schedule_date: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'schedule-date', 'style': 'form', 'explode': True }})
-    schedule_description: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'schedule-description', 'style': 'form', 'explode': True }})
+    auto_unicode: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'auto-unicode', 'style': 'form', 'explode': True }})
+    deduplication_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deduplication-id', 'style': 'form', 'explode': True }})
+    schedule_date: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'schedule-date', 'style': 'form', 'explode': True }})
+    schedule_description: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'schedule-description', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessagesSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessagesRequest:
-    query_params: PostMessagesQueryParams = field()
-    request: List[shared.SubmissionEntry] = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostMessagesSecurity = field()
+    query_params: PostMessagesQueryParams = dataclasses.field()
+    request: list[shared_submissionentry.SubmissionEntry] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostMessagesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    messages: Optional[List[shared.Message]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    messages: Optional[list[shared_message.Message]] = dataclasses.field(default=None)
     

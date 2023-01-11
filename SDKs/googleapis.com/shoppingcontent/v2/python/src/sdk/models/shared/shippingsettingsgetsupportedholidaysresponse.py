@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import holidaysholiday as shared_holidaysholiday
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ShippingsettingsGetSupportedHolidaysResponse:
-    holidays: Optional[List[HolidaysHoliday]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('holidays') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    holidays: Optional[list[shared_holidaysholiday.HolidaysHoliday]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('holidays') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

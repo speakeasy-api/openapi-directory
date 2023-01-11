@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.AcceptInvitationRequest(
     headers=operations.AcceptInvitationHeaders(
-        x_amz_algorithm="sit",
-        x_amz_content_sha256="repellat",
+        x_amz_algorithm="temporibus",
+        x_amz_content_sha256="consequatur",
         x_amz_credential="non",
-        x_amz_date="facilis",
-        x_amz_security_token="id",
+        x_amz_date="nulla",
+        x_amz_security_token="inventore",
         x_amz_signature="reprehenderit",
-        x_amz_signed_headers="sit",
+        x_amz_signed_headers="quos",
     ),
     request=operations.AcceptInvitationRequestBody(
-        graph_arn="at",
+        graph_arn="saepe",
     ),
 )
     
-res = s.sdk.accept_invitation(req)
+res = s.accept_invitation(req)
 
 if res.status_code == 200:
     # handle response

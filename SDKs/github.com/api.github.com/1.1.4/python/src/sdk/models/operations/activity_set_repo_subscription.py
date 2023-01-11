@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import repository_subscription as shared_repository_subscription
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivitySetRepoSubscriptionPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActivitySetRepoSubscriptionRequestBody:
-    ignored: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ignored') }})
-    subscribed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscribed') }})
+    ignored: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ignored') }})
+    subscribed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscribed') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivitySetRepoSubscriptionRequest:
-    path_params: ActivitySetRepoSubscriptionPathParams = field()
-    request: Optional[ActivitySetRepoSubscriptionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActivitySetRepoSubscriptionPathParams = dataclasses.field()
+    request: Optional[ActivitySetRepoSubscriptionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivitySetRepoSubscriptionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    repository_subscription: Optional[shared.RepositorySubscription] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    repository_subscription: Optional[shared_repository_subscription.RepositorySubscription] = dataclasses.field(default=None)
     

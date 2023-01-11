@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import vcentermanager as shared_vcentermanager
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVcenterManagerPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVcenterManagerQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVcenterManagerSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVcenterManagerRequest:
-    path_params: GetVcenterManagerPathParams = field()
-    query_params: GetVcenterManagerQueryParams = field()
-    security: GetVcenterManagerSecurity = field()
+    path_params: GetVcenterManagerPathParams = dataclasses.field()
+    query_params: GetVcenterManagerQueryParams = dataclasses.field()
+    security: GetVcenterManagerSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVcenterManagerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    v_center_manager: Optional[shared.VCenterManager] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    v_center_manager: Optional[shared_vcentermanager.VCenterManager] = dataclasses.field(default=None)
     

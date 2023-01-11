@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,9 +12,9 @@ class ReloadTechniques200ApplicationJSONDataTechniquesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReloadTechniques200ApplicationJSONData:
-    techniques: ReloadTechniques200ApplicationJSONDataTechniquesEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('techniques') }})
+    techniques: ReloadTechniques200ApplicationJSONDataTechniquesEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('techniques') }})
     
 class ReloadTechniques200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -22,16 +22,16 @@ class ReloadTechniques200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReloadTechniques200ApplicationJSON:
-    action: ReloadTechniques200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ReloadTechniques200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ReloadTechniques200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ReloadTechniques200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ReloadTechniques200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ReloadTechniques200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReloadTechniquesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    reload_techniques_200_application_json_object: Optional[ReloadTechniques200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reload_techniques_200_application_json_object: Optional[ReloadTechniques200ApplicationJSON] = dataclasses.field(default=None)
     

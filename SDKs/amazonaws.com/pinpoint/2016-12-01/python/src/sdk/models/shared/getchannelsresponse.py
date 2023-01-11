@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import channelsresponse as shared_channelsresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetChannelsResponse:
-    channels_response: ChannelsResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChannelsResponse') }})
+    channels_response: shared_channelsresponse.ChannelsResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChannelsResponse') }})
     

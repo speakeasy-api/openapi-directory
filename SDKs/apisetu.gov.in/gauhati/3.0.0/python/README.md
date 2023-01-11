@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.SocerRequest(
     security=operations.SocerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.SocerRequestBody(
         certificate_parameters=operations.SocerRequestBodyCertificateParameters(
-            appl_no="et",
-            dob="et",
-            full_name="quia",
-            session="et",
+            appl_no="tempore",
+            dob="dignissimos",
+            full_name="nihil",
+            session="enim",
         ),
-        consent_artifact="maiores",
+        consent_artifact="excepturi",
         format="pdf",
-        txn_id="velit",
+        txn_id="voluptate",
     ),
 )
     
-res = s.sdk.socer(req)
+res = s.ap_is.socer(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `socer` - Educational/ Exam Registration Certificate
 

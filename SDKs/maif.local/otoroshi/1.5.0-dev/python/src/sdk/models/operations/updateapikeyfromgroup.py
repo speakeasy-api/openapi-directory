@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apikey as shared_apikey
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPIKeyFromGroupPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
-    group_id: str = field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPIKeyFromGroupSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPIKeyFromGroupRequest:
-    path_params: UpdateAPIKeyFromGroupPathParams = field()
-    security: UpdateAPIKeyFromGroupSecurity = field()
-    request: Optional[shared.APIKey] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateAPIKeyFromGroupPathParams = dataclasses.field()
+    security: UpdateAPIKeyFromGroupSecurity = dataclasses.field()
+    request: Optional[shared_apikey.APIKey] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAPIKeyFromGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key: Optional[shared.APIKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key: Optional[shared_apikey.APIKey] = dataclasses.field(default=None)
     

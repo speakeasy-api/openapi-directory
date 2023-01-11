@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import certificate as shared_certificate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeCertificatesResponse:
-    certificates: Optional[List[Certificate]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Certificates') }})
-    marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
+    certificates: Optional[list[shared_certificate.Certificate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Certificates') }})
+    marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
     

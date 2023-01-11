@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tlsrouteroutedestination as shared_tlsrouteroutedestination
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TLSRouteRouteAction:
     r"""TLSRouteRouteAction
     The specifications for routing traffic and applying associated policies.
     """
     
-    destinations: Optional[List[TLSRouteRouteDestination]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    destinations: Optional[list[shared_tlsrouteroutedestination.TLSRouteRouteDestination]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
     

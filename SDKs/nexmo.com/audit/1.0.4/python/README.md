@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,11 +24,11 @@ req = operations.GetEventRequest(
         ),
     ),
     path_params=operations.GetEventPathParams(
-        id="enim",
+        id="fuga",
     ),
 )
     
-res = s.sdk.get_event(req)
+res = s.get_event(req)
 
 if res.audit_event is not None:
     # handle response

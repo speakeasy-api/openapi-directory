@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,27 @@ s.config_security(
     
 req = operations.GetMediaRequest(
     headers=operations.GetMediaHeaders(
-        x_amz_algorithm="laborum",
-        x_amz_content_sha256="quibusdam",
-        x_amz_credential="eum",
-        x_amz_date="magnam",
-        x_amz_security_token="veniam",
-        x_amz_signature="dolores",
-        x_amz_signed_headers="rerum",
+        x_amz_algorithm="corporis",
+        x_amz_content_sha256="at",
+        x_amz_credential="nostrum",
+        x_amz_date="recusandae",
+        x_amz_security_token="iste",
+        x_amz_signature="at",
+        x_amz_signed_headers="qui",
     ),
     request=operations.GetMediaRequestBody(
         start_selector=operations.GetMediaRequestBodyStartSelector(
-            after_fragment_number="et",
-            continuation_token="voluptatem",
-            start_selector_type="CONTINUATION_TOKEN",
-            start_timestamp="2007-03-18T05:26:14Z",
+            after_fragment_number="fugit",
+            continuation_token="repellat",
+            start_selector_type="PRODUCER_TIMESTAMP",
+            start_timestamp="2002-04-24T14:41:47Z",
         ),
-        stream_arn="est",
-        stream_name="natus",
+        stream_arn="omnis",
+        stream_name="magni",
     ),
 )
     
-res = s.sdk.get_media(req)
+res = s.get_media(req)
 
 if res.get_media_output is not None:
     # handle response

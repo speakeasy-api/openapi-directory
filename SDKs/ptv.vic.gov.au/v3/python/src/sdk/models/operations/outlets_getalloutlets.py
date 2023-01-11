@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import v3_errorresponse as shared_v3_errorresponse
+from ..shared import v3_outletresponse as shared_v3_outletresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class OutletsGetAllOutletsQueryParams:
-    devid: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'max_results', 'style': 'form', 'explode': True }})
-    signature: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
-    token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    devid: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max_results', 'style': 'form', 'explode': True }})
+    signature: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
+    token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OutletsGetAllOutletsRequest:
-    query_params: OutletsGetAllOutletsQueryParams = field()
+    query_params: OutletsGetAllOutletsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OutletsGetAllOutletsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    v3_error_response: Optional[shared.V3ErrorResponse] = field(default=None)
-    v3_outlet_response: Optional[shared.V3OutletResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    v3_error_response: Optional[shared_v3_errorresponse.V3ErrorResponse] = dataclasses.field(default=None)
+    v3_outlet_response: Optional[shared_v3_outletresponse.V3OutletResponse] = dataclasses.field(default=None)
     

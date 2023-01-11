@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DataTransferProgress:
     r"""DataTransferProgress
     Describes the status of a cluster while it is in the process of resizing with an incremental resize.
     """
     
-    current_rate_in_mega_bytes_per_second: Optional[float] = field(default=None)
-    data_transferred_in_mega_bytes: Optional[int] = field(default=None)
-    elapsed_time_in_seconds: Optional[int] = field(default=None)
-    estimated_time_to_completion_in_seconds: Optional[int] = field(default=None)
-    status: Optional[str] = field(default=None)
-    total_data_in_mega_bytes: Optional[int] = field(default=None)
+    current_rate_in_mega_bytes_per_second: Optional[float] = dataclasses.field(default=None)
+    data_transferred_in_mega_bytes: Optional[int] = dataclasses.field(default=None)
+    elapsed_time_in_seconds: Optional[int] = dataclasses.field(default=None)
+    estimated_time_to_completion_in_seconds: Optional[int] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
+    total_data_in_mega_bytes: Optional[int] = dataclasses.field(default=None)
     

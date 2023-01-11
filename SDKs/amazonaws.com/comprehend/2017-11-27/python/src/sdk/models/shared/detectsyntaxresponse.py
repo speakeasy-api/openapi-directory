@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import syntaxtoken as shared_syntaxtoken
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectSyntaxResponse:
-    syntax_tokens: Optional[List[SyntaxToken]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SyntaxTokens') }})
+    syntax_tokens: Optional[list[shared_syntaxtoken.SyntaxToken]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SyntaxTokens') }})
     

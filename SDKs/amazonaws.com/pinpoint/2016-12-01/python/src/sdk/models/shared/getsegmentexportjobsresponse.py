@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import exportjobsresponse as shared_exportjobsresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetSegmentExportJobsResponse:
-    export_jobs_response: ExportJobsResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExportJobsResponse') }})
+    export_jobs_response: shared_exportjobsresponse.ExportJobsResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExportJobsResponse') }})
     

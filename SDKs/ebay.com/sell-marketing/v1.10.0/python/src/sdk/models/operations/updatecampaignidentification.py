@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import updatecampaignidentificationrequest as shared_updatecampaignidentificationrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCampaignIdentificationPathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCampaignIdentificationSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCampaignIdentificationRequest:
-    path_params: UpdateCampaignIdentificationPathParams = field()
-    request: shared.UpdateCampaignIdentificationRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateCampaignIdentificationSecurity = field()
+    path_params: UpdateCampaignIdentificationPathParams = dataclasses.field()
+    request: shared_updatecampaignidentificationrequest.UpdateCampaignIdentificationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateCampaignIdentificationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCampaignIdentificationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcebucketaccess_enum as shared_resourcebucketaccess_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetResourceAccessForBucketRequest:
-    access: ResourceBucketAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    bucket_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucketName') }})
-    resource_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceName') }})
+    access: shared_resourcebucketaccess_enum.ResourceBucketAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    bucket_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucketName') }})
+    resource_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceName') }})
     

@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import journalline as shared_journalline
 
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLineFromEmployerPathParams:
-    employer_id: str = field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
-    journal_line_id: str = field(metadata={'path_param': { 'field_name': 'JournalLineId', 'style': 'simple', 'explode': False }})
+    employer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
+    journal_line_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'JournalLineId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLineFromEmployerHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLineFromEmployerRequest:
-    headers: GetJournalLineFromEmployerHeaders = field()
-    path_params: GetJournalLineFromEmployerPathParams = field()
+    headers: GetJournalLineFromEmployerHeaders = dataclasses.field()
+    path_params: GetJournalLineFromEmployerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLineFromEmployerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    journal_line: Optional[shared.JournalLine] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    journal_line: Optional[shared_journalline.JournalLine] = dataclasses.field(default=None)
     

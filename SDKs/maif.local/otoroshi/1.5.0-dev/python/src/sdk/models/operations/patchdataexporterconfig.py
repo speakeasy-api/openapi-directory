@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import patch as shared_patch
+from ..shared import dataexporterconfig as shared_dataexporterconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchDataExporterConfigPathParams:
-    data_exporter_config_id: str = field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
+    data_exporter_config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'dataExporterConfigId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchDataExporterConfigSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchDataExporterConfigRequest:
-    path_params: PatchDataExporterConfigPathParams = field()
-    security: PatchDataExporterConfigSecurity = field()
-    request: Optional[List[shared.Patch]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchDataExporterConfigPathParams = dataclasses.field()
+    security: PatchDataExporterConfigSecurity = dataclasses.field()
+    request: Optional[list[shared_patch.Patch]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchDataExporterConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    data_exporter_config: Optional[shared.DataExporterConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    data_exporter_config: Optional[shared_dataexporterconfig.DataExporterConfig] = dataclasses.field(default=None)
     

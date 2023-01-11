@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import listtrackersresponseentry as shared_listtrackersresponseentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTrackersResponse:
-    entries: List[ListTrackersResponseEntry] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    entries: list[shared_listtrackersresponseentry.ListTrackersResponseEntry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

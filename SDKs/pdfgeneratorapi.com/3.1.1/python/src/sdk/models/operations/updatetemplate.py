@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,18 +6,19 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import templatedefinition as shared_templatedefinition
+from ..shared import templatedefinitionnew as shared_templatedefinitionnew
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplateQueryParams:
-    template_id: int = field(metadata={'query_param': { 'field_name': 'templateId', 'style': 'form', 'explode': True }})
+    template_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'templateId', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate200ApplicationJSON:
-    response: Optional[shared.TemplateDefinition] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('response') }})
+    response: Optional[shared_templatedefinition.TemplateDefinition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('response') }})
     
 class UpdateTemplate401ApplicationJSONErrorEnum(str, Enum):
     AUTHENTICATION_FAILED_REQUEST_EXPIRED = "Authentication failed: request expired"
@@ -33,20 +34,20 @@ class UpdateTemplate401ApplicationJSONErrorEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate401ApplicationJSON:
-    error: Optional[UpdateTemplate401ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    error: Optional[UpdateTemplate401ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 class UpdateTemplate403ApplicationJSONErrorEnum(str, Enum):
     YOUR_ACCOUNT_HAS_EXCEEDED_THE_MONTHLY_DOCUMENT_GENERATION_LIMIT_ = "Your account has exceeded the monthly document generation limit."
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate403ApplicationJSON:
-    error: Optional[UpdateTemplate403ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    error: Optional[UpdateTemplate403ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 class UpdateTemplate404ApplicationJSONErrorEnum(str, Enum):
     ENTITY_NOT_FOUND = "Entity not found"
@@ -55,10 +56,10 @@ class UpdateTemplate404ApplicationJSONErrorEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate404ApplicationJSON:
-    error: Optional[UpdateTemplate404ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    error: Optional[UpdateTemplate404ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 class UpdateTemplate422ApplicationJSONErrorEnum(str, Enum):
     UNABLE_TO_PARSE_JSON_PLEASE_CHECK_FORMATTING = "Unable to parse JSON, please check formatting"
@@ -68,33 +69,33 @@ class UpdateTemplate422ApplicationJSONErrorEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate422ApplicationJSON:
-    error: Optional[UpdateTemplate422ApplicationJSONErrorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    error: Optional[UpdateTemplate422ApplicationJSONErrorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplate500ApplicationJSON:
-    error: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    status: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    error: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    status: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplateRequest:
-    query_params: UpdateTemplateQueryParams = field()
-    request: shared.TemplateDefinitionNew = field(metadata={'request': { 'media_type': 'application/json' }})
+    query_params: UpdateTemplateQueryParams = dataclasses.field()
+    request: shared_templatedefinitionnew.TemplateDefinitionNew = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_template_200_application_json_object: Optional[UpdateTemplate200ApplicationJSON] = field(default=None)
-    update_template_401_application_json_object: Optional[UpdateTemplate401ApplicationJSON] = field(default=None)
-    update_template_403_application_json_object: Optional[UpdateTemplate403ApplicationJSON] = field(default=None)
-    update_template_404_application_json_object: Optional[UpdateTemplate404ApplicationJSON] = field(default=None)
-    update_template_422_application_json_object: Optional[UpdateTemplate422ApplicationJSON] = field(default=None)
-    update_template_500_application_json_object: Optional[UpdateTemplate500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_template_200_application_json_object: Optional[UpdateTemplate200ApplicationJSON] = dataclasses.field(default=None)
+    update_template_401_application_json_object: Optional[UpdateTemplate401ApplicationJSON] = dataclasses.field(default=None)
+    update_template_403_application_json_object: Optional[UpdateTemplate403ApplicationJSON] = dataclasses.field(default=None)
+    update_template_404_application_json_object: Optional[UpdateTemplate404ApplicationJSON] = dataclasses.field(default=None)
+    update_template_422_application_json_object: Optional[UpdateTemplate422ApplicationJSON] = dataclasses.field(default=None)
+    update_template_500_application_json_object: Optional[UpdateTemplate500ApplicationJSON] = dataclasses.field(default=None)
     

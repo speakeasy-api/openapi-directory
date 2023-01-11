@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 
 class GetAddonEnum(str, Enum):
@@ -67,24 +67,24 @@ class GetPackageEnum(str, Enum):
     WS25 = "WS25"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetQueryParams:
-    ip: str = field(metadata={'query_param': { 'field_name': 'ip', 'style': 'form', 'explode': True }})
-    key: str = field(metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    addon: Optional[List[GetAddonEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'addon', 'style': 'form', 'explode': False }})
-    format: Optional[GetFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    lang: Optional[GetLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    package: Optional[GetPackageEnum] = field(default=None, metadata={'query_param': { 'field_name': 'package', 'style': 'form', 'explode': True }})
+    ip: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ip', 'style': 'form', 'explode': True }})
+    key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    addon: Optional[list[GetAddonEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'addon', 'style': 'form', 'explode': False }})
+    format: Optional[GetFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    lang: Optional[GetLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    package: Optional[GetPackageEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'package', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequest:
-    query_params: GetQueryParams = field()
+    query_params: GetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

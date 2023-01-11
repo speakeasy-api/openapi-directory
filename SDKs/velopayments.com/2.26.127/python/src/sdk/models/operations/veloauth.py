@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import authresponse as shared_authresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class VeloAuthQueryParams:
-    grant_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'grant_type', 'style': 'form', 'explode': True }})
+    grant_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'grant_type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VeloAuthSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VeloAuthRequest:
-    query_params: VeloAuthQueryParams = field()
-    security: VeloAuthSecurity = field()
+    query_params: VeloAuthQueryParams = dataclasses.field()
+    security: VeloAuthSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VeloAuthResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    auth_response: Optional[shared.AuthResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    auth_response: Optional[shared_authresponse.AuthResponse] = dataclasses.field(default=None)
     

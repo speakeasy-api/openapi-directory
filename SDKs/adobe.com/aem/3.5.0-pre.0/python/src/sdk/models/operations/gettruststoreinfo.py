@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import truststoreinfo as shared_truststoreinfo
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTruststoreInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    truststore_info: Optional[shared.TruststoreInfo] = field(default=None)
-    get_truststore_info_default_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    truststore_info: Optional[shared_truststoreinfo.TruststoreInfo] = dataclasses.field(default=None)
+    get_truststore_info_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     

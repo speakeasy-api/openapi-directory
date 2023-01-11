@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableconsoleserverporttemplate as shared_writableconsoleserverporttemplate
+from ..shared import consoleserverporttemplate as shared_consoleserverporttemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortTemplatesCreateRequest:
-    request: shared.WritableConsoleServerPortTemplateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableconsoleserverporttemplate.WritableConsoleServerPortTemplateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsoleServerPortTemplatesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    console_server_port_template: Optional[shared.ConsoleServerPortTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    console_server_port_template: Optional[shared_consoleserverporttemplate.ConsoleServerPortTemplate] = dataclasses.field(default=None)
     

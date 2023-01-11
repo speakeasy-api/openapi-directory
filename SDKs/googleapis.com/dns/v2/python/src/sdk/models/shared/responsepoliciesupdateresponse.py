@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import responseheader as shared_responseheader
+from ..shared import responsepolicy as shared_responsepolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResponsePoliciesUpdateResponse:
-    header: Optional[ResponseHeader] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
-    response_policy: Optional[ResponsePolicy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responsePolicy') }})
+    header: Optional[shared_responseheader.ResponseHeader] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
+    response_policy: Optional[shared_responsepolicy.ResponsePolicy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responsePolicy') }})
     

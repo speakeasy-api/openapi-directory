@@ -1,0 +1,78 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        hmac=shared.SchemeHmac(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.PutEventsRequest(
+    headers=operations.PutEventsHeaders(
+        x_amz_algorithm="aperiam",
+        x_amz_content_sha256="enim",
+        x_amz_credential="sequi",
+        x_amz_date="laborum",
+        x_amz_security_token="voluptas",
+        x_amz_signature="aliquid",
+        x_amz_signed_headers="maiores",
+        x_amz_client_context="velit",
+        x_amz_client_context_encoding="modi",
+    ),
+    request=operations.PutEventsRequestBody(
+        events=[
+            shared.Event(
+                attributes={
+                    "doloremque": "cum",
+                    "necessitatibus": "illum",
+                    "enim": "aspernatur",
+                },
+                event_type="ratione",
+                metrics={
+                    "omnis": 1.100000,
+                    "omnis": 40.200001,
+                },
+                session=shared.Session(
+                    duration=164162024630061234,
+                    id="voluptatibus",
+                    start_timestamp="enim",
+                    stop_timestamp="in",
+                ),
+                timestamp="reiciendis",
+                version="rerum",
+            ),
+            shared.Event(
+                attributes={
+                    "perspiciatis": "fugit",
+                    "asperiores": "fugit",
+                    "in": "ex",
+                },
+                event_type="saepe",
+                metrics={
+                    "nulla": 19.200001,
+                    "aliquid": 33.099998,
+                },
+                session=shared.Session(
+                    duration=273263606341302306,
+                    id="fugit",
+                    start_timestamp="qui",
+                    stop_timestamp="natus",
+                ),
+                timestamp="molestiae",
+                version="odit",
+            ),
+        ],
+    ),
+)
+    
+res = s.put_events(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

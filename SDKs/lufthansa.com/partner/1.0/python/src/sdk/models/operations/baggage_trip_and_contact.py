@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class BaggageTripAndContactPathParams:
-    search_id: str = field(metadata={'path_param': { 'field_name': 'searchID', 'style': 'simple', 'explode': False }})
+    search_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'searchID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BaggageTripAndContactHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BaggageTripAndContactSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BaggageTripAndContactRequest:
-    headers: BaggageTripAndContactHeaders = field()
-    path_params: BaggageTripAndContactPathParams = field()
-    security: BaggageTripAndContactSecurity = field()
+    headers: BaggageTripAndContactHeaders = dataclasses.field()
+    path_params: BaggageTripAndContactPathParams = dataclasses.field()
+    security: BaggageTripAndContactSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BaggageTripAndContactResponse:
-    content_type: str = field()
-    status_code: int = field()
-    baggage_trip_and_contact_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    baggage_trip_and_contact_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

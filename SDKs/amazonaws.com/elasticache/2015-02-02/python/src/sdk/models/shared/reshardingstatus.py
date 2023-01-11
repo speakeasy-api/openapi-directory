@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import slotmigration as shared_slotmigration
 
 
-@dataclass
+@dataclasses.dataclass
 class ReshardingStatus:
     r"""ReshardingStatus
     The status of an online resharding operation.
     """
     
-    slot_migration: Optional[SlotMigration] = field(default=None)
+    slot_migration: Optional[shared_slotmigration.SlotMigration] = dataclasses.field(default=None)
     

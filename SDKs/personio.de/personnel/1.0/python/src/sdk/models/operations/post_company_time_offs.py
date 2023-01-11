@@ -1,25 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import createtimeoffperiodresponse as shared_createtimeoffperiodresponse
+from ..shared import createtimeoffperiodrequest as shared_createtimeoffperiodrequest
+from ..shared import errorresponse as shared_errorresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostCompanyTimeOffs201ApplicationJSON:
-    data: Optional[shared.CreateTimeOffPeriodResponse] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: Optional[shared_createtimeoffperiodresponse.CreateTimeOffPeriodResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCompanyTimeOffsRequest:
-    request: shared.CreateTimeOffPeriodRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_createtimeoffperiodrequest.CreateTimeOffPeriodRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCompanyTimeOffsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    post_company_time_offs_201_application_json_object: Optional[PostCompanyTimeOffs201ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    post_company_time_offs_201_application_json_object: Optional[PostCompanyTimeOffs201ApplicationJSON] = dataclasses.field(default=None)
     

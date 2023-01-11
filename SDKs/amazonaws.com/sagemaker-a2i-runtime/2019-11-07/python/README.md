@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.DeleteHumanLoopRequest(
     path_params=operations.DeleteHumanLoopPathParams(
-        human_loop_name="corrupti",
+        human_loop_name="exercitationem",
     ),
     headers=operations.DeleteHumanLoopHeaders(
-        x_amz_algorithm="perspiciatis",
-        x_amz_content_sha256="accusamus",
-        x_amz_credential="iusto",
-        x_amz_date="aut",
-        x_amz_security_token="illo",
-        x_amz_signature="molestiae",
-        x_amz_signed_headers="quo",
+        x_amz_algorithm="hic",
+        x_amz_content_sha256="doloribus",
+        x_amz_credential="porro",
+        x_amz_date="est",
+        x_amz_security_token="deserunt",
+        x_amz_signature="eum",
+        x_amz_signed_headers="sit",
     ),
 )
     
-res = s.sdk.delete_human_loop(req)
+res = s.delete_human_loop(req)
 
 if res.delete_human_loop_response is not None:
     # handle response

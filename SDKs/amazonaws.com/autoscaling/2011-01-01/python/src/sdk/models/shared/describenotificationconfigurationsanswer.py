@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import notificationconfiguration as shared_notificationconfiguration
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeNotificationConfigurationsAnswer:
-    notification_configurations: List[NotificationConfiguration] = field()
-    next_token: Optional[str] = field(default=None)
+    notification_configurations: list[shared_notificationconfiguration.NotificationConfiguration] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

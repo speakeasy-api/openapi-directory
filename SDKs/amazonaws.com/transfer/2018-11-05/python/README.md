@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,44 +25,47 @@ s.config_security(
     
 req = operations.CreateAccessRequest(
     headers=operations.CreateAccessHeaders(
-        x_amz_algorithm="quod",
-        x_amz_content_sha256="voluptas",
-        x_amz_credential="dolorem",
-        x_amz_date="molestias",
-        x_amz_security_token="dolor",
-        x_amz_signature="consequatur",
-        x_amz_signed_headers="rem",
+        x_amz_algorithm="eos",
+        x_amz_content_sha256="modi",
+        x_amz_credential="et",
+        x_amz_date="culpa",
+        x_amz_security_token="unde",
+        x_amz_signature="quae",
+        x_amz_signed_headers="incidunt",
         x_amz_target="TransferService.CreateAccess",
     ),
     request=shared.CreateAccessRequest(
-        external_id="quaerat",
-        home_directory="quia",
+        external_id="nam",
+        home_directory="optio",
         home_directory_mappings=[
             shared.HomeDirectoryMapEntry(
-                entry="hic",
-                target="sunt",
+                entry="ratione",
+                target="quaerat",
             ),
             shared.HomeDirectoryMapEntry(
-                entry="eos",
-                target="odio",
+                entry="qui",
+                target="modi",
+            ),
+            shared.HomeDirectoryMapEntry(
+                entry="cum",
+                target="rem",
             ),
         ],
-        home_directory_type="PATH",
-        policy="reprehenderit",
+        home_directory_type="LOGICAL",
+        policy="cum",
         posix_profile=shared.PosixProfile(
-            gid=6659964822841469656,
+            gid=5917608095681824334,
             secondary_gids=[
-                7283126716863424883,
-                3313831822642516207,
+                7738685661617987022,
             ],
-            uid=5414503095933566521,
+            uid=3301601712436159733,
         ),
-        role="quis",
-        server_id="et",
+        role="dolore",
+        server_id="placeat",
     ),
 )
     
-res = s.sdk.create_access(req)
+res = s.create_access(req)
 
 if res.create_access_response is not None:
     # handle response

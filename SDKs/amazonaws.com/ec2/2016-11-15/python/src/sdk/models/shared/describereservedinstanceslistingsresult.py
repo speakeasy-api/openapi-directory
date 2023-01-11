@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeReservedInstancesListingsResult:
     r"""DescribeReservedInstancesListingsResult
     Contains the output of DescribeReservedInstancesListings.
     """
     
-    reserved_instances_listings: Optional[List[ReservedInstancesListing]] = field(default=None)
+    reserved_instances_listings: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

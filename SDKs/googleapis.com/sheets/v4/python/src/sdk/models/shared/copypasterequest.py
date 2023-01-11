@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gridrange as shared_gridrange
 
 class CopyPasteRequestPasteOrientationEnum(str, Enum):
     NORMAL = "NORMAL"
@@ -20,14 +20,14 @@ class CopyPasteRequestPasteTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CopyPasteRequest:
     r"""CopyPasteRequest
     Copies data from the source to the destination.
     """
     
-    destination: Optional[GridRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
-    paste_orientation: Optional[CopyPasteRequestPasteOrientationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pasteOrientation') }})
-    paste_type: Optional[CopyPasteRequestPasteTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pasteType') }})
-    source: Optional[GridRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    destination: Optional[shared_gridrange.GridRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination') }})
+    paste_orientation: Optional[CopyPasteRequestPasteOrientationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pasteOrientation') }})
+    paste_type: Optional[CopyPasteRequestPasteTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pasteType') }})
+    source: Optional[shared_gridrange.GridRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
     

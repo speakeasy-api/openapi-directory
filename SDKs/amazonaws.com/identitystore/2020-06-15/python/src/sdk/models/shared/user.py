@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class User:
     r"""User
     A user object, which contains a specified user’s metadata and attributes.
     """
     
-    user_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserId') }})
-    user_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserName') }})
+    user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserId') }})
+    user_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserName') }})
     

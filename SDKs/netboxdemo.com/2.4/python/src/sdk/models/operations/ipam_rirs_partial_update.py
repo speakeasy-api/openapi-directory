@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import rir as shared_rir
+from ..shared import rir as shared_rir
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsPartialUpdateRequest:
-    path_params: IpamRirsPartialUpdatePathParams = field()
-    request: shared.RirInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: IpamRirsPartialUpdatePathParams = dataclasses.field()
+    request: shared_rir.RirInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rir: Optional[shared.Rir] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rir: Optional[shared_rir.Rir] = dataclasses.field(default=None)
     

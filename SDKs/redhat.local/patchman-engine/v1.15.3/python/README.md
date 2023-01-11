@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.LatestPackageRequest(
         ),
     ),
     path_params=operations.LatestPackagePathParams(
-        package_name="non",
+        package_name="fuga",
     ),
 )
     
-res = s.sdk.latest_package(req)
+res = s.latest_package(req)
 
 if res.controllers_package_detail_response is not None:
     # handle response

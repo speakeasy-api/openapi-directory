@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class RacesScheduleFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class RacesScheduleFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class RacesSchedulePathParams:
-    format: RacesScheduleFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: RacesScheduleFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RacesScheduleRequest:
-    path_params: RacesSchedulePathParams = field()
+    path_params: RacesSchedulePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RacesScheduleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    races: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    races: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import songforapicontract as shared_songforapicontract
 
 class SongAPIGetByPvFieldsEnum(str, Enum):
     NONE = "None"
@@ -36,23 +36,23 @@ class SongAPIGetByPvPvServiceEnum(str, Enum):
     BANDCAMP = "Bandcamp"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetByPvQueryParams:
-    pv_id: str = field(metadata={'query_param': { 'field_name': 'pvId', 'style': 'form', 'explode': True }})
-    pv_service: SongAPIGetByPvPvServiceEnum = field(metadata={'query_param': { 'field_name': 'pvService', 'style': 'form', 'explode': True }})
-    fields: Optional[SongAPIGetByPvFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[SongAPIGetByPvLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    pv_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pvId', 'style': 'form', 'explode': True }})
+    pv_service: SongAPIGetByPvPvServiceEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'pvService', 'style': 'form', 'explode': True }})
+    fields: Optional[SongAPIGetByPvFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[SongAPIGetByPvLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetByPvRequest:
-    query_params: SongAPIGetByPvQueryParams = field()
+    query_params: SongAPIGetByPvQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetByPvResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_for_api_contract: Optional[shared.SongForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_for_api_contract: Optional[shared_songforapicontract.SongForAPIContract] = dataclasses.field(default=None)
     

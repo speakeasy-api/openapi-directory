@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import assetreportremoverequest as shared_assetreportremoverequest
 
 
-@dataclass
+@dataclasses.dataclass
 class AssetReportRemoveRequest:
-    request: shared.AssetReportRemoveRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_assetreportremoverequest.AssetReportRemoveRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AssetReportRemoveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_report_remove_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_report_remove_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

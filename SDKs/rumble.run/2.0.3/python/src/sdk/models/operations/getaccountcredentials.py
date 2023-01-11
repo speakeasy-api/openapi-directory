@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import credential as shared_credential
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountCredentialsQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountCredentialsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountCredentialsRequest:
-    query_params: GetAccountCredentialsQueryParams = field()
-    security: GetAccountCredentialsSecurity = field()
+    query_params: GetAccountCredentialsQueryParams = dataclasses.field()
+    security: GetAccountCredentialsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountCredentialsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    credentials: Optional[List[shared.Credential]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    credentials: Optional[list[shared_credential.Credential]] = dataclasses.field(default=None)
     

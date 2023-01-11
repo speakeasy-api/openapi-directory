@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import parentachievement as shared_parentachievement
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesAchievementsReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesAchievementsReadRequest:
-    path_params: GamesAchievementsReadPathParams = field()
+    path_params: GamesAchievementsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesAchievementsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    parent_achievement: Optional[shared.ParentAchievement] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    parent_achievement: Optional[shared_parentachievement.ParentAchievement] = dataclasses.field(default=None)
     

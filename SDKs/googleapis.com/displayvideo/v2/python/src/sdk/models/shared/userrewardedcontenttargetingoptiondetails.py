@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum(str, Enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserRewardedContentTargetingOptionDetails:
     r"""UserRewardedContentTargetingOptionDetails
     Represents a targetable user rewarded content status for video ads only. This will be populated in the user_rewarded_content_details field when targeting_type is `TARGETING_TYPE_USER_REWARDED_CONTENT`.
     """
     
-    user_rewarded_content: Optional[UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userRewardedContent') }})
+    user_rewarded_content: Optional[UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userRewardedContent') }})
     

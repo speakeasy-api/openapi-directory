@@ -1,32 +1,35 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import direction_enum as shared_direction_enum
+from ..shared import sort_enum as shared_sort_enum
+from ..shared import starred_repository as shared_starred_repository
+from ..shared import repository as shared_repository
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListReposStarredByUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListReposStarredByUserQueryParams:
-    direction: Optional[shared.DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[shared.SortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_direction_enum.DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_sort_enum.SortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListReposStarredByUserRequest:
-    path_params: ActivityListReposStarredByUserPathParams = field()
-    query_params: ActivityListReposStarredByUserQueryParams = field()
+    path_params: ActivityListReposStarredByUserPathParams = dataclasses.field()
+    query_params: ActivityListReposStarredByUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityListReposStarredByUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    activity_list_repos_starred_by_user_200_application_json_any_of: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    activity_list_repos_starred_by_user_200_application_json_any_of: Optional[Any] = dataclasses.field(default=None)
     

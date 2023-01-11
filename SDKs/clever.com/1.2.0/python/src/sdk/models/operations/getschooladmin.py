@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notfound as shared_notfound
+from ..shared import schooladminresponse as shared_schooladminresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSchoolAdminPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchoolAdminQueryParams:
-    include: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    include: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchoolAdminRequest:
-    path_params: GetSchoolAdminPathParams = field()
-    query_params: GetSchoolAdminQueryParams = field()
+    path_params: GetSchoolAdminPathParams = dataclasses.field()
+    query_params: GetSchoolAdminQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchoolAdminResponse:
-    content_type: str = field()
-    status_code: int = field()
-    not_found: Optional[shared.NotFound] = field(default=None)
-    school_admin_response: Optional[shared.SchoolAdminResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    not_found: Optional[shared_notfound.NotFound] = dataclasses.field(default=None)
+    school_admin_response: Optional[shared_schooladminresponse.SchoolAdminResponse] = dataclasses.field(default=None)
     

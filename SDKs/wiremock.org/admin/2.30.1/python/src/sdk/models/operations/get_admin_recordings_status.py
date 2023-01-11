@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,14 +11,14 @@ class GetAdminRecordingsStatus200ApplicationJSONStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAdminRecordingsStatus200ApplicationJSON:
-    status: Optional[GetAdminRecordingsStatus200ApplicationJSONStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: Optional[GetAdminRecordingsStatus200ApplicationJSONStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminRecordingsStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_admin_recordings_status_200_application_json_object: Optional[GetAdminRecordingsStatus200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_admin_recordings_status_200_application_json_object: Optional[GetAdminRecordingsStatus200ApplicationJSON] = dataclasses.field(default=None)
     

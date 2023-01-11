@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import comment as shared_comment
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesPathParams:
-    channel_id: str = field(metadata={'path_param': { 'field_name': 'channelId', 'style': 'simple', 'explode': False }})
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    channel_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channelId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesRequest:
-    path_params: GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesPathParams = field()
+    path_params: GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    comments: Optional[List[shared.Comment]] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    comments: Optional[list[shared_comment.Comment]] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

@@ -28,3 +28,5 @@ from .webcast import *
 from .wlt_record import *
 from .zebra import *
 from .zebra_team import *
+
+__all__ = ["APIStatus","APIStatusAppVersion","Award","AwardRecipient","DistrictList","DistrictRankingEventPoints","DistrictRanking","EliminationAllianceBackup","EliminationAllianceStatus","EliminationAlliance","Event","EventDistrictPointsPoints","EventDistrictPointsTiebreakers","EventDistrictPoints","EventInsights","EventOpRs","EventRankingExtraStatsInfo","EventRankingRankings","EventRankingSortOrderInfo","EventRanking","EventSimple","MatchAlliances","MatchCompLevelEnum","MatchVideos","MatchWinningAllianceEnum","Match","MatchAlliance","MatchSimpleAlliances","MatchSimpleCompLevelEnum","MatchSimpleWinningAllianceEnum","MatchSimple","MediaTypeEnum","Media","SchemeAPIKey","Team","TeamEventStatus","TeamEventStatusAlliance","TeamEventStatusAllianceBackup","TeamEventStatusPlayoffLevelEnum","TeamEventStatusPlayoffStatusEnum","TeamEventStatusPlayoff","TeamEventStatusRankRanking","TeamEventStatusRankSortOrderInfo","TeamEventStatusRank","TeamRobot","TeamSimple","WebcastTypeEnum","Webcast","WltRecord","ZebraAlliances","Zebra","ZebraTeam"]

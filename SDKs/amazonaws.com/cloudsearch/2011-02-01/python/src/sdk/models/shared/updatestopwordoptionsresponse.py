@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import stopwordoptionsstatus as shared_stopwordoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateStopwordOptionsResponse:
     r"""UpdateStopwordOptionsResponse
     A response message that contains the status of updated stopword options.
     """
     
-    stopwords: StopwordOptionsStatus = field()
+    stopwords: shared_stopwordoptionsstatus.StopwordOptionsStatus = dataclasses.field()
     

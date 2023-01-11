@@ -25,3 +25,5 @@ from .provisioningissue import *
 from .security import *
 from .selfmanagedcertificate import *
 from .status import *
+
+__all__ = ["XgafvEnum","AltEnum","AuthorizationAttemptInfoFailureReasonEnum","AuthorizationAttemptInfoStateEnum","AuthorizationAttemptInfo","CertificateScopeEnum","Certificate","CertificateInput","CertificateAuthorityConfig","CertificateAuthorityServiceConfig","CertificateIssuanceConfigKeyAlgorithmEnum","CertificateIssuanceConfig","CertificateIssuanceConfigInput","CertificateMap","CertificateMapInput","CertificateMapEntryMatcherEnum","CertificateMapEntryStateEnum","CertificateMapEntry","CertificateMapEntryInput","DNSAuthorizationInput","DNSAuthorization","DNSResourceRecord","GclbTarget","IPConfig","ListCertificateIssuanceConfigsResponse","ListCertificateMapEntriesResponse","ListCertificateMapsResponse","ListCertificatesResponse","ListDNSAuthorizationsResponse","ListLocationsResponse","ListOperationsResponse","Location","ManagedCertificateStateEnum","ManagedCertificate","ManagedCertificateInput","Operation","ProvisioningIssueReasonEnum","ProvisioningIssue","SchemeOauth2","SchemeOauth2c","SelfManagedCertificate","Status"]

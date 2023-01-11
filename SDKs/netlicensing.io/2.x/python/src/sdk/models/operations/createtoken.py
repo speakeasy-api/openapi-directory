@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class CreateTokenRequestBodyActionEnum(str, Enum):
     LICENSEE_LOGIN = "licenseeLogin"
@@ -22,38 +22,38 @@ class CreateTokenRequestBodyTypeEnum(str, Enum):
     ACTION = "ACTION"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTokenRequestBody:
-    token_type: CreateTokenRequestBodyTokenTypeEnum = field(metadata={'form': { 'field_name': 'tokenType' }})
-    action: Optional[CreateTokenRequestBodyActionEnum] = field(default=None, metadata={'form': { 'field_name': 'action' }})
-    api_key_role: Optional[CreateTokenRequestBodyAPIKeyRoleEnum] = field(default=None, metadata={'form': { 'field_name': 'apiKeyRole' }})
-    cancel_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'cancelURL' }})
-    cancel_url_title: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'cancelURLTitle' }})
-    license_template_number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'licenseTemplateNumber' }})
-    licensee_number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'licenseeNumber' }})
-    predefined_shopping_item: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'predefinedShoppingItem' }})
-    private_key: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'privateKey' }})
-    product_number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'productNumber' }})
-    success_url: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'successURL' }})
-    success_url_title: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'successURLTitle' }})
-    type: Optional[CreateTokenRequestBodyTypeEnum] = field(default=None, metadata={'form': { 'field_name': 'type' }})
+    token_type: CreateTokenRequestBodyTokenTypeEnum = dataclasses.field(metadata={'form': { 'field_name': 'tokenType' }})
+    action: Optional[CreateTokenRequestBodyActionEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'action' }})
+    api_key_role: Optional[CreateTokenRequestBodyAPIKeyRoleEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'apiKeyRole' }})
+    cancel_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'cancelURL' }})
+    cancel_url_title: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'cancelURLTitle' }})
+    license_template_number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licenseTemplateNumber' }})
+    licensee_number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licenseeNumber' }})
+    predefined_shopping_item: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'predefinedShoppingItem' }})
+    private_key: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'privateKey' }})
+    product_number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'productNumber' }})
+    success_url: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'successURL' }})
+    success_url_title: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'successURLTitle' }})
+    type: Optional[CreateTokenRequestBodyTypeEnum] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'type' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTokenSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTokenRequest:
-    request: CreateTokenRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: CreateTokenSecurity = field()
+    request: CreateTokenRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: CreateTokenSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

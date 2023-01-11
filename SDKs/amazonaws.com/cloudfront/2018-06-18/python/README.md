@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,18 +25,18 @@ s.config_security(
     
 req = operations.CreateCloudFrontOriginAccessIdentity20180618Request(
     headers=operations.CreateCloudFrontOriginAccessIdentity20180618Headers(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="nemo",
-        x_amz_credential="illo",
-        x_amz_date="animi",
-        x_amz_security_token="earum",
-        x_amz_signature="neque",
-        x_amz_signed_headers="vero",
+        x_amz_algorithm="enim",
+        x_amz_content_sha256="necessitatibus",
+        x_amz_credential="non",
+        x_amz_date="nam",
+        x_amz_security_token="in",
+        x_amz_signature="eum",
+        x_amz_signed_headers="hic",
     ),
-    request="et".encode(),
+    request="ut".encode(),
 )
     
-res = s.sdk.create_cloud_front_origin_access_identity2018_06_18(req)
+res = s.create_cloud_front_origin_access_identity2018_06_18(req)
 
 if res.body is not None:
     # handle response

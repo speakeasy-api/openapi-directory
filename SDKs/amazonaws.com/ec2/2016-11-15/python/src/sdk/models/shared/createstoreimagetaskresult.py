@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateStoreImageTaskResult:
-    object_key: Optional[str] = field(default=None)
+    object_key: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

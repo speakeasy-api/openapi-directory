@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import globalclusterlist as shared_globalclusterlist
 
 
-@dataclass
+@dataclasses.dataclass
 class GlobalClustersMessage:
-    global_clusters: Optional[List[GlobalCluster]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    global_clusters: Optional[list[shared_globalclusterlist.GlobalClusterList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import operations
 from . import utils
 
@@ -73,6 +73,32 @@ class SDK:
         return res
 
     
+    def get_ip_txt(self) -> operations.GetIPTxtResponse:
+        r"""request the current time based on the ip of the request. note: this is a \"best guess\" obtained from open-source data.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/ip.txt"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetIPTxtResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.date_time_text_response = r.content
+        else:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.error_text_response = r.content
+
+        return res
+
+    
     def get_ip_ipv4_(self, request: operations.GetIPIpv4Request) -> operations.GetIPIpv4Response:
         r"""request the current time based on the ip of the request. note: this is a \"best guess\" obtained from open-source data.
         """
@@ -127,32 +153,6 @@ class SDK:
         return res
 
     
-    def get_ip_txt(self) -> operations.GetIPTxtResponse:
-        r"""request the current time based on the ip of the request. note: this is a \"best guess\" obtained from open-source data.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/ip.txt"
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetIPTxtResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.date_time_text_response = r.content
-        else:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.error_text_response = r.content
-
-        return res
-
-    
     def get_timezone(self) -> operations.GetTimezoneResponse:
         r"""a listing of all timezones.
         """
@@ -171,8 +171,31 @@ class SDK:
         
         if True:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.list_json_response = out
+
+        return res
+
+    
+    def get_timezone_txt(self) -> operations.GetTimezoneTxtResponse:
+        r"""a listing of all timezones.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/timezone.txt"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetTimezoneTxtResponse(status_code=r.status_code, content_type=content_type)
+        
+        if True:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.list_text_response = r.content
 
         return res
 
@@ -195,12 +218,38 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.list_json_response = out
         else:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[Any])
                 res.error_json_response = out
+
+        return res
+
+    
+    def get_timezone_area_txt(self, request: operations.GetTimezoneAreaTxtRequest) -> operations.GetTimezoneAreaTxtResponse:
+        r"""a listing of all timezones available for that area.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/timezone/{area}.txt", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetTimezoneAreaTxtResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.list_text_response = r.content
+        else:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.error_text_response = r.content
 
         return res
 
@@ -229,6 +278,32 @@ class SDK:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[Any])
                 res.error_json_response = out
+
+        return res
+
+    
+    def get_timezone_area_location_txt(self, request: operations.GetTimezoneAreaLocationTxtRequest) -> operations.GetTimezoneAreaLocationTxtResponse:
+        r"""request the current time for a timezone.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/timezone/{area}/{location}.txt", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetTimezoneAreaLocationTxtResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.date_time_text_response = r.content
+        else:
+            if utils.match_content_type(content_type, "text/plain"):
+                res.error_text_response = r.content
 
         return res
 
@@ -283,81 +358,6 @@ class SDK:
         else:
             if utils.match_content_type(content_type, "text/plain"):
                 res.error_text_response = r.content
-
-        return res
-
-    
-    def get_timezone_area_location_txt(self, request: operations.GetTimezoneAreaLocationTxtRequest) -> operations.GetTimezoneAreaLocationTxtResponse:
-        r"""request the current time for a timezone.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/timezone/{area}/{location}.txt", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetTimezoneAreaLocationTxtResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.date_time_text_response = r.content
-        else:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.error_text_response = r.content
-
-        return res
-
-    
-    def get_timezone_area_txt(self, request: operations.GetTimezoneAreaTxtRequest) -> operations.GetTimezoneAreaTxtResponse:
-        r"""a listing of all timezones available for that area.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/timezone/{area}.txt", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetTimezoneAreaTxtResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.list_text_response = r.content
-        else:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.error_text_response = r.content
-
-        return res
-
-    
-    def get_timezone_txt(self) -> operations.GetTimezoneTxtResponse:
-        r"""a listing of all timezones.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/timezone.txt"
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetTimezoneTxtResponse(status_code=r.status_code, content_type=content_type)
-        
-        if True:
-            if utils.match_content_type(content_type, "text/plain"):
-                res.list_text_response = r.content
 
         return res
 

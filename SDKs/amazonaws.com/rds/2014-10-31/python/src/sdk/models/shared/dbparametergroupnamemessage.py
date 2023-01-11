@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DbParameterGroupNameMessage:
     r"""DbParameterGroupNameMessage
      Contains the result of a successful invocation of the <code>ModifyDBParameterGroup</code> or <code>ResetDBParameterGroup</code> action. 
     """
     
-    db_parameter_group_name: Optional[str] = field(default=None)
+    db_parameter_group_name: Optional[str] = dataclasses.field(default=None)
     

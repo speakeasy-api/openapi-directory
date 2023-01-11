@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import tagmodel_haljson as shared_tagmodel_haljson
+from ..shared import tagmodel as shared_tagmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsRequest:
-    path_params: GetTagsPathParams = field()
+    path_params: GetTagsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_model_haljsons: Optional[List[shared.TagModelHaljson]] = field(default=None)
-    tag_models: Optional[List[shared.TagModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_model_haljsons: Optional[list[shared_tagmodel_haljson.TagModelHaljson]] = dataclasses.field(default=None)
+    tag_models: Optional[list[shared_tagmodel.TagModel]] = dataclasses.field(default=None)
     

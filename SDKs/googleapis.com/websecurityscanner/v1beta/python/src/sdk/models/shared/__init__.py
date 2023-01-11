@@ -28,3 +28,5 @@ from .vulnerableheaders import *
 from .vulnerableparameters import *
 from .xss import *
 from .xxe import *
+
+__all__ = ["XgafvEnum","AltEnum","Authentication","CrawledURL","CustomAccount","FindingSeverityEnum","Finding","FindingTypeStats","Form","GoogleAccount","Header","IapCredential","IapTestServiceAccountInfo","ListCrawledUrlsResponse","ListFindingsResponse","ListFindingTypeStatsResponse","ListScanConfigsResponse","ListScanRunsResponse","OutdatedLibrary","ScanConfigExportToSecurityCommandCenterEnum","ScanConfigRiskLevelEnum","ScanConfigTargetPlatformsEnum","ScanConfigUserAgentEnum","ScanConfig","ScanConfigErrorCodeEnum","ScanConfigError","ScanRunExecutionStateEnum","ScanRunResultStateEnum","ScanRun","ScanRunErrorTraceCodeEnum","ScanRunErrorTrace","ScanRunWarningTraceCodeEnum","ScanRunWarningTrace","Schedule","SchemeOauth2","SchemeOauth2c","ViolatingResource","VulnerableHeaders","VulnerableParameters","XSS","XxePayloadLocationEnum","Xxe"]

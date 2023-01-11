@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -17,9 +17,9 @@ class RedactTransactionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RedactTransaction:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    product: RedactTransactionProductEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('product') }})
-    type: RedactTransactionTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    product: RedactTransactionProductEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('product') }})
+    type: RedactTransactionTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gettokenrequest as shared_gettokenrequest
+from ..shared import gettoken as shared_gettoken
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenRequest:
-    headers: GetTokenHeaders = field()
-    request: shared.GetTokenRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetTokenHeaders = dataclasses.field()
+    request: shared_gettokenrequest.GetTokenRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_token: Optional[shared.GetToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_token: Optional[shared_gettoken.GetToken] = dataclasses.field(default=None)
     

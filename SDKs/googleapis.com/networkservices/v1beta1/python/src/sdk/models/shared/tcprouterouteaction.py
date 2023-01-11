@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tcprouteroutedestination as shared_tcprouteroutedestination
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TCPRouteRouteAction:
     r"""TCPRouteRouteAction
     The specifications for routing traffic and applying associated policies.
     """
     
-    destinations: Optional[List[TCPRouteRouteDestination]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
-    original_destination: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originalDestination') }})
+    destinations: Optional[list[shared_tcprouteroutedestination.TCPRouteRouteDestination]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    original_destination: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originalDestination') }})
     

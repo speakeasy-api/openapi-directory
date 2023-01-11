@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -31,23 +30,23 @@ req = operations.MessagesAddRequest(
         ),
     ),
     query_params=operations.MessagesAddQueryParams(
-        raw=False,
+        raw=True,
     ),
     headers=operations.MessagesAddHeaders(
-        x_apideck_app_id="accusantium",
-        x_apideck_consumer_id="eaque",
-        x_apideck_service_id="facilis",
+        x_apideck_app_id="et",
+        x_apideck_consumer_id="error",
+        x_apideck_service_id="vero",
     ),
     request=shared.MessageInput(
-        body="quidem",
-        from_="tempore",
-        messaging_service_id="dignissimos",
-        reference="nihil",
-        scheduled_at="1982-02-05T17:38:42Z",
-        subject="excepturi",
-        to="ut",
+        body="sit",
+        from_="maxime",
+        messaging_service_id="est",
+        reference="natus",
+        scheduled_at="1979-01-06T21:57:55Z",
+        subject="saepe",
+        to="dolorem",
         type="mms",
-        webhook_url="dolorum",
+        webhook_url="recusandae",
     ),
 )
     

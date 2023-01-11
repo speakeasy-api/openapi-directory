@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import belege as shared_belege
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegePathParams:
-    registrierkasse_uuid: str = field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
+    registrierkasse_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
     
 class GetBelegeFormatEnum(str, Enum):
     EXPORT = "export"
@@ -18,27 +18,27 @@ class GetBelegeOrderEnum(str, Enum):
     DESC = "desc"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeQueryParams:
-    format: GetBelegeFormatEnum = field(metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
-    before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
-    gte: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'gte', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    lte: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'lte', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    order: Optional[GetBelegeOrderEnum] = field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    format: GetBelegeFormatEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
+    before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
+    gte: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'gte', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    lte: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lte', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    order: Optional[GetBelegeOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeRequest:
-    path_params: GetBelegePathParams = field()
-    query_params: GetBelegeQueryParams = field()
+    path_params: GetBelegePathParams = dataclasses.field()
+    query_params: GetBelegeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBelegeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    belege: Optional[shared.Belege] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    belege: Optional[shared_belege.Belege] = dataclasses.field(default=None)
     

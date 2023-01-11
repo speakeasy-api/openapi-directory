@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import wireless as shared_wireless
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLanPathParams:
-    wireless_id: str = field(metadata={'path_param': { 'field_name': 'wireless_id', 'style': 'simple', 'explode': False }})
+    wireless_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'wireless_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLanSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLanRequest:
-    path_params: GetWirelessLanPathParams = field()
-    security: GetWirelessLanSecurity = field()
+    path_params: GetWirelessLanPathParams = dataclasses.field()
+    security: GetWirelessLanSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWirelessLanResponse:
-    content_type: str = field()
-    status_code: int = field()
-    wireless: Optional[shared.Wireless] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    wireless: Optional[shared_wireless.Wireless] = dataclasses.field(default=None)
     

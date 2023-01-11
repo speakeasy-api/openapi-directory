@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import cachesecuritygroups as shared_cachesecuritygroups
 
 
-@dataclass
+@dataclasses.dataclass
 class CacheSecurityGroupMessage:
     r"""CacheSecurityGroupMessage
     Represents the output of a <code>DescribeCacheSecurityGroups</code> operation.
     """
     
-    cache_security_groups: Optional[List[CacheSecurityGroup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    cache_security_groups: Optional[list[shared_cachesecuritygroups.CacheSecurityGroups]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

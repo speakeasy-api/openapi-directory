@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import gherror as shared_gherror
+from ..shared import matrixresponse as shared_matrixresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMatrixSolutionPathParams:
-    job_id: str = field(metadata={'path_param': { 'field_name': 'jobId', 'style': 'simple', 'explode': False }})
+    job_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jobId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatrixSolutionRequest:
-    path_params: GetMatrixSolutionPathParams = field()
+    path_params: GetMatrixSolutionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatrixSolutionResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    gh_error: Optional[shared.GhError] = field(default=None)
-    matrix_response: Optional[shared.MatrixResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    gh_error: Optional[shared_gherror.GhError] = dataclasses.field(default=None)
+    matrix_response: Optional[shared_matrixresponse.MatrixResponse] = dataclasses.field(default=None)
     

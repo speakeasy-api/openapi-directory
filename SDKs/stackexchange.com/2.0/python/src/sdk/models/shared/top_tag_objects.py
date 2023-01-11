@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TopTagObjects:
-    answer_count: Optional[int] = field(default=None)
-    answer_score: Optional[int] = field(default=None)
-    question_count: Optional[int] = field(default=None)
-    question_score: Optional[int] = field(default=None)
-    tag_name: Optional[str] = field(default=None)
-    user_id: Optional[int] = field(default=None)
+    answer_count: Optional[int] = dataclasses.field(default=None)
+    answer_score: Optional[int] = dataclasses.field(default=None)
+    question_count: Optional[int] = dataclasses.field(default=None)
+    question_score: Optional[int] = dataclasses.field(default=None)
+    tag_name: Optional[str] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
     

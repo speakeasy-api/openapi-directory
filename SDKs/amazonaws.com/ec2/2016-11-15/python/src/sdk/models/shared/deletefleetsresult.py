@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFleetsResult:
-    successful_fleet_deletions: Optional[List[DeleteFleetSuccessItem]] = field(default=None)
-    unsuccessful_fleet_deletions: Optional[List[DeleteFleetErrorItem]] = field(default=None)
+    successful_fleet_deletions: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    unsuccessful_fleet_deletions: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import build as shared_build
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeBuildOutput:
     r"""DescribeBuildOutput
     Represents the returned data in response to a request operation.
     """
     
-    build: Optional[Build] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Build') }})
+    build: Optional[shared_build.Build] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Build') }})
     

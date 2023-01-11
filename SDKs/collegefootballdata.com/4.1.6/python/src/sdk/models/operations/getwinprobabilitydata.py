@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import playwp as shared_playwp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWinProbabilityDataQueryParams:
-    game_id: int = field(metadata={'query_param': { 'field_name': 'gameId', 'style': 'form', 'explode': True }})
+    game_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'gameId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWinProbabilityDataRequest:
-    query_params: GetWinProbabilityDataQueryParams = field()
+    query_params: GetWinProbabilityDataQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWinProbabilityDataResponse:
-    content_type: str = field()
-    status_code: int = field()
-    play_wps: Optional[List[shared.PlayWp]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    play_wps: Optional[list[shared_playwp.PlayWp]] = dataclasses.field(default=None)
     

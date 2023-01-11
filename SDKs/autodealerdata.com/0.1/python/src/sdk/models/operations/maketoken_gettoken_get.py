@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import jsonwebtoken as shared_jsonwebtoken
 
 
-@dataclass
+@dataclasses.dataclass
 class MakeTokenGetTokenGetQueryParams:
-    api_id: str = field(metadata={'query_param': { 'field_name': 'apiID', 'style': 'form', 'explode': True }})
-    api_key: str = field(metadata={'query_param': { 'field_name': 'apiKey', 'style': 'form', 'explode': True }})
+    api_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'apiID', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'apiKey', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MakeTokenGetTokenGetRequest:
-    query_params: MakeTokenGetTokenGetQueryParams = field()
+    query_params: MakeTokenGetTokenGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MakeTokenGetTokenGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    json_web_token: Optional[shared.JSONWebToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    json_web_token: Optional[shared_jsonwebtoken.JSONWebToken] = dataclasses.field(default=None)
     

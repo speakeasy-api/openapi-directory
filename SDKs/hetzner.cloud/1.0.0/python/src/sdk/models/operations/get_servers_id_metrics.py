@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetricsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class GetServersIDMetricsTypeEnum(str, Enum):
     CPU = "cpu"
@@ -15,44 +15,44 @@ class GetServersIDMetricsTypeEnum(str, Enum):
     NETWORK = "network"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetricsQueryParams:
-    end: str = field(metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
-    start: str = field(metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    type: GetServersIDMetricsTypeEnum = field(metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
-    step: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'step', 'style': 'form', 'explode': True }})
+    end: str = dataclasses.field(metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
+    start: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    type: GetServersIDMetricsTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    step: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'step', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetrics200ApplicationJSONMetricsTimeSeries:
-    values: List[List[Any]] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    values: list[list[Any]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetrics200ApplicationJSONMetrics:
-    end: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
-    start: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
-    step: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('step') }})
-    time_series: dict[str, GetServersIDMetrics200ApplicationJSONMetricsTimeSeries] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time_series') }})
+    end: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
+    start: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
+    step: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('step') }})
+    time_series: dict[str, GetServersIDMetrics200ApplicationJSONMetricsTimeSeries] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time_series') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetrics200ApplicationJSON:
-    metrics: GetServersIDMetrics200ApplicationJSONMetrics = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metrics') }})
+    metrics: GetServersIDMetrics200ApplicationJSONMetrics = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metrics') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetricsRequest:
-    path_params: GetServersIDMetricsPathParams = field()
-    query_params: GetServersIDMetricsQueryParams = field()
+    path_params: GetServersIDMetricsPathParams = dataclasses.field()
+    query_params: GetServersIDMetricsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetServersIDMetricsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_servers_id_metrics_200_application_json_object: Optional[GetServersIDMetrics200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_servers_id_metrics_200_application_json_object: Optional[GetServersIDMetrics200ApplicationJSON] = dataclasses.field(default=None)
     

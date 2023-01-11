@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.ApmclRequest(
     security=operations.ApmclSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.ApmclRequestBody(
         certificate_parameters=operations.ApmclRequestBodyCertificateParameters(
-            document_number="sit",
+            document_number="ut",
         ),
-        consent_artifact="aut",
+        consent_artifact="officiis",
         format="pdf",
-        txn_id="vitae",
+        txn_id="eum",
     ),
 )
     
-res = s.sdk.apmcl(req)
+res = s.ap_is.apmcl(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `apmcl` - Agriculture Produce Market Committee License
 

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import errordetail as shared_errordetail
 
 
-@dataclass
+@dataclasses.dataclass
 class Error:
-    category: str = field()
-    correlation_id: str = field()
-    message: str = field()
-    context: Optional[dict[str, List[str]]] = field(default=None)
-    errors: Optional[List[ErrorDetail]] = field(default=None)
-    links: Optional[dict[str, str]] = field(default=None)
-    sub_category: Optional[str] = field(default=None)
+    category: str = dataclasses.field()
+    correlation_id: str = dataclasses.field()
+    message: str = dataclasses.field()
+    context: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    errors: Optional[list[shared_errordetail.ErrorDetail]] = dataclasses.field(default=None)
+    links: Optional[dict[str, str]] = dataclasses.field(default=None)
+    sub_category: Optional[str] = dataclasses.field(default=None)
     

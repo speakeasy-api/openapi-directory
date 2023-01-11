@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import event as shared_event
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictEventsPathParams:
-    district_key: str = field(metadata={'path_param': { 'field_name': 'district_key', 'style': 'simple', 'explode': False }})
+    district_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'district_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictEventsHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictEventsSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictEventsRequest:
-    headers: GetDistrictEventsHeaders = field()
-    path_params: GetDistrictEventsPathParams = field()
-    security: GetDistrictEventsSecurity = field()
+    headers: GetDistrictEventsHeaders = dataclasses.field()
+    path_params: GetDistrictEventsPathParams = dataclasses.field()
+    security: GetDistrictEventsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictEventsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    events: Optional[List[shared.Event]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    events: Optional[list[shared_event.Event]] = dataclasses.field(default=None)
     

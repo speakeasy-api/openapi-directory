@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,37 +7,37 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits:
     r"""UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits
     Global per-client bandwidth limit
     """
     
-    limit_down: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitDown') }})
-    limit_up: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitUp') }})
+    limit_down: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitDown') }})
+    limit_up: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitUp') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingRequestBody:
-    global_bandwidth_limits: Optional[UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('globalBandwidthLimits') }})
+    global_bandwidth_limits: Optional[UpdateNetworkApplianceTrafficShapingRequestBodyGlobalBandwidthLimits] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('globalBandwidthLimits') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingRequest:
-    path_params: UpdateNetworkApplianceTrafficShapingPathParams = field()
-    request: Optional[UpdateNetworkApplianceTrafficShapingRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkApplianceTrafficShapingPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkApplianceTrafficShapingRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkApplianceTrafficShapingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_appliance_traffic_shaping_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_appliance_traffic_shaping_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import siteresponse as shared_siteresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVVersionSitesSiteIdsPathParams:
-    site_ids: str = field(metadata={'path_param': { 'field_name': 'site_Ids', 'style': 'simple', 'explode': False }})
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    site_ids: str = dataclasses.field(metadata={'path_param': { 'field_name': 'site_Ids', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVVersionSitesSiteIdsRequest:
-    path_params: GetVVersionSitesSiteIdsPathParams = field()
+    path_params: GetVVersionSitesSiteIdsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVVersionSitesSiteIdsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site_response: Optional[shared.SiteResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site_response: Optional[shared_siteresponse.SiteResponse] = dataclasses.field(default=None)
     

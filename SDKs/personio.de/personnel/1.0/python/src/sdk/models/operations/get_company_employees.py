@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import employeesresponse as shared_employeesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyEmployeesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employees_response: Optional[shared.EmployeesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employees_response: Optional[shared_employeesresponse.EmployeesResponse] = dataclasses.field(default=None)
     

@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPathwaysWithDiagramsForCategoryUsingGetPathParams:
-    category: str = field(metadata={'path_param': { 'field_name': 'category', 'style': 'simple', 'explode': False }})
+    category: str = dataclasses.field(metadata={'path_param': { 'field_name': 'category', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPathwaysWithDiagramsForCategoryUsingGetRequest:
-    path_params: GetPathwaysWithDiagramsForCategoryUsingGetPathParams = field()
+    path_params: GetPathwaysWithDiagramsForCategoryUsingGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPathwaysWithDiagramsForCategoryUsingGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

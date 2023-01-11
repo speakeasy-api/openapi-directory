@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import applicationresponse as shared_applicationresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAppResponse:
-    application_response: ApplicationResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationResponse') }})
+    application_response: shared_applicationresponse.ApplicationResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationResponse') }})
     

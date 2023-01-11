@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from . import *
+from typing import Optional
+from ..shared import scheduledupdategroupaction as shared_scheduledupdategroupaction
 
 
-@dataclass
+@dataclasses.dataclass
 class ScheduledActionsType:
-    next_token: Optional[str] = field(default=None)
-    scheduled_update_group_actions: Optional[List[ScheduledUpdateGroupAction]] = field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
+    scheduled_update_group_actions: Optional[list[shared_scheduledupdategroupaction.ScheduledUpdateGroupAction]] = dataclasses.field(default=None)
     

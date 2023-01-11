@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import dailyqualityresponse as shared_dailyqualityresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class QualityGetDailyDataQualityForSitePathParams:
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QualityGetDailyDataQualityForSiteQueryParams:
-    end_date: str = field(metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
-    site_id: str = field(metadata={'query_param': { 'field_name': 'siteId', 'style': 'form', 'explode': True }})
-    start_date: str = field(metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
+    end_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
+    site_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'siteId', 'style': 'form', 'explode': True }})
+    start_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QualityGetDailyDataQualityForSiteRequest:
-    path_params: QualityGetDailyDataQualityForSitePathParams = field()
-    query_params: QualityGetDailyDataQualityForSiteQueryParams = field()
+    path_params: QualityGetDailyDataQualityForSitePathParams = dataclasses.field()
+    query_params: QualityGetDailyDataQualityForSiteQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class QualityGetDailyDataQualityForSiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    daily_quality_response: Optional[shared.DailyQualityResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    daily_quality_response: Optional[shared_dailyqualityresponse.DailyQualityResponse] = dataclasses.field(default=None)
     

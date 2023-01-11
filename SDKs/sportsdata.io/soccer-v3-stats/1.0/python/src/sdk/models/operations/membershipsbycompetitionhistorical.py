@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class MembershipsByCompetitionHistoricalFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class MembershipsByCompetitionHistoricalFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByCompetitionHistoricalPathParams:
-    competition: str = field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
-    format: MembershipsByCompetitionHistoricalFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    competition: str = dataclasses.field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
+    format: MembershipsByCompetitionHistoricalFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByCompetitionHistoricalRequest:
-    path_params: MembershipsByCompetitionHistoricalPathParams = field()
+    path_params: MembershipsByCompetitionHistoricalPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MembershipsByCompetitionHistoricalResponse:
-    content_type: str = field()
-    status_code: int = field()
-    memberships: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    memberships: Optional[list[Any]] = dataclasses.field(default=None)
     

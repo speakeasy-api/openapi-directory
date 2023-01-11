@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import targetgroupattribute as shared_targetgroupattribute
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyTargetGroupAttributesOutput:
-    attributes: Optional[List[TargetGroupAttribute]] = field(default=None)
+    attributes: Optional[list[shared_targetgroupattribute.TargetGroupAttribute]] = dataclasses.field(default=None)
     

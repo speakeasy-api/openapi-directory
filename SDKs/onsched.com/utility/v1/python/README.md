@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,18 +23,9 @@ s.config_security(
     )
 )
     
-req = operations.GetPlanIDRequest(
-    path_params=operations.GetPlanIDPathParams(
-        plan_id="voluptates",
-    ),
-    query_params=operations.GetPlanIDQueryParams(
-        location_id="ea",
-    ),
-)
-    
-res = s.sdk.get_plan_id_(req)
+res = s.health.get_utility_v1_health_heartbeat()
 
-if res.status_code == 200:
+if res.get_utility_v1_health_heartbeat_200_application_json_string is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -43,10 +33,13 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Health
+
+* `get_utility_v1_health_heartbeat`
+
+### StripePlans
 
 * `get_plan_id_`
-* `get_utility_v1_health_heartbeat`
 
 <!-- End SDK Available Operations -->
 

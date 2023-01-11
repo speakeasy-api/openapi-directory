@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesJSONQueryParams:
-    q: str = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': False }})
+    q: str = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesJSONRequest:
-    query_params: GetResourcesJSONQueryParams = field()
+    query_params: GetResourcesJSONQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_wrappeds: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_wrappeds: Optional[list[Any]] = dataclasses.field(default=None)
     

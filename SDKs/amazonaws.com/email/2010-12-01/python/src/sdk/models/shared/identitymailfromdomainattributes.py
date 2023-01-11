@@ -1,15 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import behavioronmxfailure_enum as shared_behavioronmxfailure_enum
+from ..shared import custommailfromstatus_enum as shared_custommailfromstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class IdentityMailFromDomainAttributes:
-    r"""IdentityMailFromDomainAttributes
-    Represents the custom MAIL FROM domain attributes of a verified identity (email address or domain).
-    """
-    
-    behavior_on_mx_failure: BehaviorOnMxFailureEnum = field()
-    mail_from_domain: str = field()
-    mail_from_domain_status: CustomMailFromStatusEnum = field()
+    behavior_on_mx_failure: Optional[shared_behavioronmxfailure_enum.BehaviorOnMxFailureEnum] = dataclasses.field(default=None)
+    mail_from_domain: Optional[str] = dataclasses.field(default=None)
+    mail_from_domain_status: Optional[shared_custommailfromstatus_enum.CustomMailFromStatusEnum] = dataclasses.field(default=None)
     

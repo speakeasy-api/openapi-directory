@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,7 +18,7 @@ s = sdk.SDK()
     
 req = operations.AppendBlockChildrenRequest(
     path_params=operations.AppendBlockChildrenPathParams(
-        id="ut",
+        id="voluptatem",
     ),
     request=operations.AppendBlockChildrenRequestBody(
         children=[
@@ -30,24 +29,38 @@ req = operations.AppendBlockChildrenRequest(
                             text=operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText(
                                 content="quae",
                             ),
-                            type="rerum",
+                            type="nesciunt",
                         ),
                         operations.AppendBlockChildrenRequestBodyChildrenHeading2Text(
                             text=operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText(
-                                content="corrupti",
+                                content="ad",
+                            ),
+                            type="incidunt",
+                        ),
+                    ],
+                ),
+                object="dicta",
+                type="veritatis",
+            ),
+            operations.AppendBlockChildrenRequestBodyChildren(
+                heading_2=operations.AppendBlockChildrenRequestBodyChildrenHeading2(
+                    text=[
+                        operations.AppendBlockChildrenRequestBodyChildrenHeading2Text(
+                            text=operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText(
+                                content="recusandae",
                             ),
                             type="qui",
                         ),
                         operations.AppendBlockChildrenRequestBodyChildrenHeading2Text(
                             text=operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText(
-                                content="animi",
+                                content="consequatur",
                             ),
-                            type="eum",
+                            type="ut",
                         ),
                     ],
                 ),
-                object="occaecati",
-                type="eum",
+                object="sint",
+                type="sit",
             ),
         ],
     ),

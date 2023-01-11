@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetPdusizePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    pdusize: int = field(metadata={'path_param': { 'field_name': 'pdusize', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    pdusize: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pdusize', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetPdusizeRequest:
-    path_params: SetPdusizePathParams = field()
+    path_params: SetPdusizePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SetPdusizeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_pdusize_200_application_json_int32_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_pdusize_200_application_json_int32_integer: Optional[int] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from . import *
+from typing import Optional
+from ..shared import failedscheduledupdategroupactionrequest as shared_failedscheduledupdategroupactionrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class BatchDeleteScheduledActionAnswer:
-    failed_scheduled_actions: Optional[List[FailedScheduledUpdateGroupActionRequest]] = field(default=None)
+    failed_scheduled_actions: Optional[list[shared_failedscheduledupdategroupactionrequest.FailedScheduledUpdateGroupActionRequest]] = dataclasses.field(default=None)
     

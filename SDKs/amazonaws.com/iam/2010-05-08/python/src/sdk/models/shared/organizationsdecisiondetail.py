@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OrganizationsDecisionDetail:
     r"""OrganizationsDecisionDetail
     Contains information about the effect that Organizations has on a policy simulation.
     """
     
-    allowed_by_organizations: Optional[bool] = field(default=None)
+    allowed_by_organizations: Optional[bool] = dataclasses.field(default=None)
     

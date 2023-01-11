@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import token as shared_token
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountUpdateVerificationRequestBody:
-    secret: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
-    user_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
+    secret: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
+    user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdateVerificationSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdateVerificationRequest:
-    security: AccountUpdateVerificationSecurity = field()
-    request: Optional[AccountUpdateVerificationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AccountUpdateVerificationSecurity = dataclasses.field()
+    request: Optional[AccountUpdateVerificationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdateVerificationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    token: Optional[shared.Token] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    token: Optional[shared_token.Token] = dataclasses.field(default=None)
     

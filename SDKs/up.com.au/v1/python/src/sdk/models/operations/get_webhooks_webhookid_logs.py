@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listwebhookdeliverylogsresponse as shared_listwebhookdeliverylogsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksWebhookIDLogsPathParams:
-    webhook_id: str = field(metadata={'path_param': { 'field_name': 'webhookId', 'style': 'simple', 'explode': False }})
+    webhook_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'webhookId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksWebhookIDLogsQueryParams:
-    page_size_: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
+    page_size_: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page[size]', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksWebhookIDLogsRequest:
-    path_params: GetWebhooksWebhookIDLogsPathParams = field()
-    query_params: GetWebhooksWebhookIDLogsQueryParams = field()
+    path_params: GetWebhooksWebhookIDLogsPathParams = dataclasses.field()
+    query_params: GetWebhooksWebhookIDLogsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksWebhookIDLogsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_webhook_delivery_logs_response: Optional[shared.ListWebhookDeliveryLogsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_webhook_delivery_logs_response: Optional[shared_listwebhookdeliverylogsresponse.ListWebhookDeliveryLogsResponse] = dataclasses.field(default=None)
     

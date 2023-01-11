@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyUsersPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyUsersQueryParams:
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyUsersRequest:
-    path_params: GetVideoPrivacyUsersPathParams = field()
-    query_params: GetVideoPrivacyUsersQueryParams = field()
+    path_params: GetVideoPrivacyUsersPathParams = dataclasses.field()
+    query_params: GetVideoPrivacyUsersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoPrivacyUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    users: Optional[List[shared.User]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    users: Optional[list[shared_user.User]] = dataclasses.field(default=None)
     

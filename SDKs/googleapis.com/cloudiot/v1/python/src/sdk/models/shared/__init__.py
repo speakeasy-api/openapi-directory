@@ -32,3 +32,5 @@ from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
 from .unbinddevicefromgatewayrequest import *
 from .x509certificatedetails import *
+
+__all__ = ["XgafvEnum","AltEnum","BindDeviceToGatewayRequest","Binding","DeviceLogLevelEnum","Device","DeviceConfig","DeviceCredential","DeviceRegistryLogLevelEnum","DeviceRegistry","DeviceState","EventNotificationConfig","Expr","GatewayConfigGatewayAuthMethodEnum","GatewayConfigGatewayTypeEnum","GatewayConfig","GetIamPolicyRequest","GetPolicyOptions","HTTPConfigHTTPEnabledStateEnum","HTTPConfig","ListDeviceConfigVersionsResponse","ListDeviceRegistriesResponse","ListDevicesResponse","ListDeviceStatesResponse","ModifyCloudToDeviceConfigRequest","MqttConfigMqttEnabledStateEnum","MqttConfig","Policy","PublicKeyCertificateFormatEnum","PublicKeyCertificate","PublicKeyCredentialFormatEnum","PublicKeyCredential","RegistryCredential","SchemeOauth2","SchemeOauth2c","SendCommandToDeviceRequest","SetIamPolicyRequest","StateNotificationConfig","Status","TestIamPermissionsRequest","TestIamPermissionsResponse","UnbindDeviceFromGatewayRequest","X509CertificateDetails"]

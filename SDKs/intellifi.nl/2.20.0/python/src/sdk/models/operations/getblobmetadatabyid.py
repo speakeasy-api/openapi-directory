@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import blob as shared_blob
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBlobMetadataByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlobMetadataByIDRequest:
-    path_params: GetBlobMetadataByIDPathParams = field()
+    path_params: GetBlobMetadataByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlobMetadataByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    blob: Optional[shared.Blob] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    blob: Optional[shared_blob.Blob] = dataclasses.field(default=None)
     

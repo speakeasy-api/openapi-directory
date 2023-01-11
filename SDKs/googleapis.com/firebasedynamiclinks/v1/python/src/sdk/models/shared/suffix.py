@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,12 +12,12 @@ class SuffixOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Suffix:
     r"""Suffix
     Short Dynamic Link suffix.
     """
     
-    custom_suffix: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customSuffix') }})
-    option: Optional[SuffixOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('option') }})
+    custom_suffix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customSuffix') }})
+    option: Optional[SuffixOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('option') }})
     

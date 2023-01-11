@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_pipeline_variables as shared_paginated_pipeline_variables
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForTeamPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForTeamQueryParams:
-    workspace: str = field(metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
+    workspace: str = dataclasses.field(metadata={'query_param': { 'field_name': 'workspace', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForTeamRequest:
-    path_params: GetPipelineVariablesForTeamPathParams = field()
-    query_params: GetPipelineVariablesForTeamQueryParams = field()
+    path_params: GetPipelineVariablesForTeamPathParams = dataclasses.field()
+    query_params: GetPipelineVariablesForTeamQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineVariablesForTeamResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_pipeline_variables: Optional[shared.PaginatedPipelineVariables] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_pipeline_variables: Optional[shared_paginated_pipeline_variables.PaginatedPipelineVariables] = dataclasses.field(default=None)
     

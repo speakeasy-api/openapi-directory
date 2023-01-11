@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PartnerIntegrationOutputMessage:
-    database_name: Optional[str] = field(default=None)
-    partner_name: Optional[str] = field(default=None)
+    database_name: Optional[str] = dataclasses.field(default=None)
+    partner_name: Optional[str] = dataclasses.field(default=None)
     

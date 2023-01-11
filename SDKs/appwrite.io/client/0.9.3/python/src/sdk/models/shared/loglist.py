@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import log as shared_log
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LogList:
     r"""LogList
     Logs List
     """
     
-    logs: List[Log] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logs') }})
+    logs: list[shared_log.Log] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logs') }})
     

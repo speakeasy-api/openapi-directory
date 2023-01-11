@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import corridorout as shared_corridorout
 
 
-@dataclass
+@dataclasses.dataclass
 class CorridorPathParams:
-    country_iso2_from: str = field(metadata={'path_param': { 'field_name': 'countryIso2From', 'style': 'simple', 'explode': False }})
-    country_iso2_to: str = field(metadata={'path_param': { 'field_name': 'countryIso2To', 'style': 'simple', 'explode': False }})
-    first_name_from: str = field(metadata={'path_param': { 'field_name': 'firstNameFrom', 'style': 'simple', 'explode': False }})
-    first_name_to: str = field(metadata={'path_param': { 'field_name': 'firstNameTo', 'style': 'simple', 'explode': False }})
-    last_name_from: str = field(metadata={'path_param': { 'field_name': 'lastNameFrom', 'style': 'simple', 'explode': False }})
-    last_name_to: str = field(metadata={'path_param': { 'field_name': 'lastNameTo', 'style': 'simple', 'explode': False }})
+    country_iso2_from: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryIso2From', 'style': 'simple', 'explode': False }})
+    country_iso2_to: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryIso2To', 'style': 'simple', 'explode': False }})
+    first_name_from: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firstNameFrom', 'style': 'simple', 'explode': False }})
+    first_name_to: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firstNameTo', 'style': 'simple', 'explode': False }})
+    last_name_from: str = dataclasses.field(metadata={'path_param': { 'field_name': 'lastNameFrom', 'style': 'simple', 'explode': False }})
+    last_name_to: str = dataclasses.field(metadata={'path_param': { 'field_name': 'lastNameTo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CorridorSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CorridorRequest:
-    path_params: CorridorPathParams = field()
-    security: CorridorSecurity = field()
+    path_params: CorridorPathParams = dataclasses.field()
+    security: CorridorSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CorridorResponse:
-    content_type: str = field()
-    status_code: int = field()
-    corridor_out: Optional[shared.CorridorOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    corridor_out: Optional[shared_corridorout.CorridorOut] = dataclasses.field(default=None)
     

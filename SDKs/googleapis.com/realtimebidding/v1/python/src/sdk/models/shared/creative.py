@@ -1,18 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
-
-class CreativeCreativeFormatEnum(str, Enum):
-    CREATIVE_FORMAT_UNSPECIFIED = "CREATIVE_FORMAT_UNSPECIFIED"
-    HTML = "HTML"
-    VIDEO = "VIDEO"
-    NATIVE = "NATIVE"
+from ..shared import creativeservingdecision as shared_creativeservingdecision
+from ..shared import htmlcontent as shared_htmlcontent
+from ..shared import nativecontent as shared_nativecontent
+from ..shared import videocontent as shared_videocontent
 
 class CreativeDeclaredAttributesEnum(str, Enum):
     ATTRIBUTE_UNSPECIFIED = "ATTRIBUTE_UNSPECIFIED"
@@ -62,57 +59,63 @@ class CreativeRestrictedCategoriesEnum(str, Enum):
     RESTRICTED_CATEGORY_UNSPECIFIED = "RESTRICTED_CATEGORY_UNSPECIFIED"
     ALCOHOL = "ALCOHOL"
 
+class CreativeCreativeFormatEnum(str, Enum):
+    CREATIVE_FORMAT_UNSPECIFIED = "CREATIVE_FORMAT_UNSPECIFIED"
+    HTML = "HTML"
+    VIDEO = "VIDEO"
+    NATIVE = "NATIVE"
+
 
 @dataclass_json
-@dataclass
-class Creative:
-    r"""Creative
-    A creative and its classification data.
-    """
-    
-    account_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
-    ad_choices_destination_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adChoicesDestinationUrl') }})
-    advertiser_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advertiserName') }})
-    agency_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agencyId') }})
-    api_update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiUpdateTime') }})
-    creative_format: Optional[CreativeCreativeFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
-    creative_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeId') }})
-    creative_serving_decision: Optional[CreativeServingDecision] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeServingDecision') }})
-    deal_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealIds') }})
-    declared_attributes: Optional[List[CreativeDeclaredAttributesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredAttributes') }})
-    declared_click_through_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredClickThroughUrls') }})
-    declared_restricted_categories: Optional[List[CreativeDeclaredRestrictedCategoriesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredRestrictedCategories') }})
-    declared_vendor_ids: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredVendorIds') }})
-    html: Optional[HTMLContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('html') }})
-    impression_tracking_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionTrackingUrls') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    native: Optional[NativeContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('native') }})
-    render_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderUrl') }})
-    restricted_categories: Optional[List[CreativeRestrictedCategoriesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictedCategories') }})
-    version: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
-    video: Optional[VideoContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('video') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreativeInput:
     r"""CreativeInput
     A creative and its classification data.
     """
     
-    ad_choices_destination_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adChoicesDestinationUrl') }})
-    advertiser_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advertiserName') }})
-    agency_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agencyId') }})
-    creative_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeId') }})
-    creative_serving_decision: Optional[CreativeServingDecision] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeServingDecision') }})
-    declared_attributes: Optional[List[CreativeDeclaredAttributesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredAttributes') }})
-    declared_click_through_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredClickThroughUrls') }})
-    declared_restricted_categories: Optional[List[CreativeDeclaredRestrictedCategoriesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredRestrictedCategories') }})
-    declared_vendor_ids: Optional[List[int]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredVendorIds') }})
-    html: Optional[HTMLContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('html') }})
-    impression_tracking_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionTrackingUrls') }})
-    native: Optional[NativeContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('native') }})
-    render_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderUrl') }})
-    restricted_categories: Optional[List[CreativeRestrictedCategoriesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictedCategories') }})
-    video: Optional[VideoContent] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('video') }})
+    ad_choices_destination_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adChoicesDestinationUrl') }})
+    advertiser_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advertiserName') }})
+    agency_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agencyId') }})
+    creative_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeId') }})
+    creative_serving_decision: Optional[shared_creativeservingdecision.CreativeServingDecision] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeServingDecision') }})
+    declared_attributes: Optional[list[CreativeDeclaredAttributesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredAttributes') }})
+    declared_click_through_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredClickThroughUrls') }})
+    declared_restricted_categories: Optional[list[CreativeDeclaredRestrictedCategoriesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredRestrictedCategories') }})
+    declared_vendor_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredVendorIds') }})
+    html: Optional[shared_htmlcontent.HTMLContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('html') }})
+    impression_tracking_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionTrackingUrls') }})
+    native: Optional[shared_nativecontent.NativeContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('native') }})
+    render_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderUrl') }})
+    restricted_categories: Optional[list[CreativeRestrictedCategoriesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictedCategories') }})
+    video: Optional[shared_videocontent.VideoContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('video') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class Creative:
+    r"""Creative
+    A creative and its classification data.
+    """
+    
+    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
+    ad_choices_destination_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adChoicesDestinationUrl') }})
+    advertiser_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('advertiserName') }})
+    agency_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agencyId') }})
+    api_update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiUpdateTime') }})
+    creative_format: Optional[CreativeCreativeFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeFormat') }})
+    creative_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeId') }})
+    creative_serving_decision: Optional[shared_creativeservingdecision.CreativeServingDecision] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('creativeServingDecision') }})
+    deal_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealIds') }})
+    declared_attributes: Optional[list[CreativeDeclaredAttributesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredAttributes') }})
+    declared_click_through_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredClickThroughUrls') }})
+    declared_restricted_categories: Optional[list[CreativeDeclaredRestrictedCategoriesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredRestrictedCategories') }})
+    declared_vendor_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('declaredVendorIds') }})
+    html: Optional[shared_htmlcontent.HTMLContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('html') }})
+    impression_tracking_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionTrackingUrls') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    native: Optional[shared_nativecontent.NativeContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('native') }})
+    render_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderUrl') }})
+    restricted_categories: Optional[list[CreativeRestrictedCategoriesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restrictedCategories') }})
+    version: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    video: Optional[shared_videocontent.VideoContent] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('video') }})
     

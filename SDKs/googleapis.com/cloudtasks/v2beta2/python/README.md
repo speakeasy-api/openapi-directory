@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,36 +20,36 @@ req = operations.CloudtasksAPIQueueUpdateRequest(
     security=operations.CloudtasksAPIQueueUpdateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.CloudtasksAPIQueueUpdateQueryParams(
-        dollar_xgafv="1",
-        access_token="harum",
-        alt="proto",
-        app_id="voluptatem",
-        callback="tenetur",
-        fields="et",
-        key="facilis",
-        oauth_token="architecto",
-        pretty_print=True,
-        quota_user="qui",
-        upload_type="id",
-        upload_protocol="soluta",
+        dollar_xgafv="2",
+        access_token="enim",
+        alt="json",
+        app_id="quisquam",
+        callback="sit",
+        fields="qui",
+        key="voluptates",
+        oauth_token="voluptate",
+        pretty_print=False,
+        quota_user="error",
+        upload_type="consequuntur",
+        upload_protocol="illo",
     ),
     request=shared.HTTPBody(
-        content_type="voluptas",
-        data="saepe",
+        content_type="quia",
+        data="sunt",
         extensions=[
             {
-                "aperiam": "perspiciatis",
-                "nemo": "tempore",
+                "repellat": "explicabo",
             },
             {
-                "voluptates": "magnam",
-                "a": "velit",
+                "animi": "omnis",
+                "eum": "recusandae",
+                "doloribus": "officia",
             },
         ],
     ),

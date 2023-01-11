@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,10 +23,10 @@ req = operations.PostCreateNotificationConfigurationRequest(
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="ex",
+    request="aspernatur",
 )
     
-res = s.sdk.post_create_notification_configuration(req)
+res = s.general.post_create_notification_configuration(req)
 
 if res.get_notification_configuration_response is not None:
     # handle response
@@ -37,7 +36,7 @@ if res.get_notification_configuration_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `post_create_notification_configuration` - Subscribe to notifications.
 * `post_delete_notification_configurations` - Delete an existing notification subscription configuration.

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import aliasmodel as shared_aliasmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAliasQueryParams:
-    alias_name: str = field(metadata={'query_param': { 'field_name': 'aliasName', 'style': 'form', 'explode': True }})
-    domain_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'domainName', 'style': 'form', 'explode': True }})
+    alias_name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'aliasName', 'style': 'form', 'explode': True }})
+    domain_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'domainName', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAliasSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAliasRequest:
-    query_params: GetAliasQueryParams = field()
-    security: GetAliasSecurity = field()
+    query_params: GetAliasQueryParams = dataclasses.field()
+    security: GetAliasSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAliasResponse:
-    content_type: str = field()
-    status_code: int = field()
-    alias_model: Optional[shared.AliasModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    alias_model: Optional[shared_aliasmodel.AliasModel] = dataclasses.field(default=None)
     

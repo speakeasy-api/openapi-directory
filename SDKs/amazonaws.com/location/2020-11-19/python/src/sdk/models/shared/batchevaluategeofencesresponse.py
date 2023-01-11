@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchevaluategeofenceserror as shared_batchevaluategeofenceserror
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchEvaluateGeofencesResponse:
-    errors: List[BatchEvaluateGeofencesError] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
+    errors: list[shared_batchevaluategeofenceserror.BatchEvaluateGeofencesError] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
     

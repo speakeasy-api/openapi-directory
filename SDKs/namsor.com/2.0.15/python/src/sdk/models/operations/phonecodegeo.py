@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import firstlastnamephonecodedout as shared_firstlastnamephonecodedout
 
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoPathParams:
-    country_iso2: str = field(metadata={'path_param': { 'field_name': 'countryIso2', 'style': 'simple', 'explode': False }})
-    first_name: str = field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
-    last_name: str = field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
-    phone_number: str = field(metadata={'path_param': { 'field_name': 'phoneNumber', 'style': 'simple', 'explode': False }})
+    country_iso2: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryIso2', 'style': 'simple', 'explode': False }})
+    first_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
+    last_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
+    phone_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'phoneNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoRequest:
-    path_params: PhoneCodeGeoPathParams = field()
-    security: PhoneCodeGeoSecurity = field()
+    path_params: PhoneCodeGeoPathParams = dataclasses.field()
+    security: PhoneCodeGeoSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PhoneCodeGeoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    first_last_name_phone_coded_out: Optional[shared.FirstLastNamePhoneCodedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    first_last_name_phone_coded_out: Optional[shared_firstlastnamephonecodedout.FirstLastNamePhoneCodedOut] = dataclasses.field(default=None)
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import endpointaccess as shared_endpointaccess
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointAccessList:
-    endpoint_access_list: Optional[List[EndpointAccess]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    endpoint_access_list: Optional[list[shared_endpointaccess.EndpointAccess]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

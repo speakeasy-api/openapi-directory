@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDashboardOutput:
-    dashboard_arn: Optional[str] = field(default=None)
-    dashboard_body: Optional[str] = field(default=None)
-    dashboard_name: Optional[str] = field(default=None)
+    dashboard_arn: Optional[str] = dataclasses.field(default=None)
+    dashboard_body: Optional[str] = dataclasses.field(default=None)
+    dashboard_name: Optional[str] = dataclasses.field(default=None)
     

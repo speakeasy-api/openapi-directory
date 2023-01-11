@@ -1,0 +1,200 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.ConnectorsProjectsLocationsConnectionsCreateRequest(
+    security=operations.ConnectorsProjectsLocationsConnectionsCreateSecurity(
+        oauth2=shared.SchemeOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+        oauth2c=shared.SchemeOauth2c(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    path_params=operations.ConnectorsProjectsLocationsConnectionsCreatePathParams(
+        parent="laborum",
+    ),
+    query_params=operations.ConnectorsProjectsLocationsConnectionsCreateQueryParams(
+        dollar_xgafv="2",
+        access_token="et",
+        alt="media",
+        callback="voluptatibus",
+        connection_id="debitis",
+        fields="voluptates",
+        key="et",
+        oauth_token="iure",
+        pretty_print=False,
+        quota_user="asperiores",
+        upload_type="ea",
+        upload_protocol="consectetur",
+    ),
+    request=shared.ConnectionInput(
+        auth_config=shared.AuthConfig(
+            additional_variables=[
+                shared.ConfigVariable(
+                    bool_value=False,
+                    int_value="suscipit",
+                    key="maiores",
+                    secret_value=shared.Secret(
+                        secret_version="iusto",
+                    ),
+                    string_value="eos",
+                ),
+                shared.ConfigVariable(
+                    bool_value=False,
+                    int_value="repellat",
+                    key="eligendi",
+                    secret_value=shared.Secret(
+                        secret_version="ut",
+                    ),
+                    string_value="et",
+                ),
+            ],
+            auth_type="OAUTH2_CLIENT_CREDENTIALS",
+            oauth2_client_credentials=shared.Oauth2ClientCredentials(
+                client_id="odit",
+                client_secret=shared.Secret(
+                    secret_version="aut",
+                ),
+            ),
+            oauth2_jwt_bearer=shared.Oauth2JwtBearer(
+                client_key=shared.Secret(
+                    secret_version="rerum",
+                ),
+                jwt_claims=shared.JwtClaims(
+                    audience="repudiandae",
+                    issuer="quos",
+                    subject="consequatur",
+                ),
+            ),
+            ssh_public_key=shared.SSHPublicKey(
+                cert_type="accusamus",
+                ssh_client_cert=shared.Secret(
+                    secret_version="rerum",
+                ),
+                ssh_client_cert_pass=shared.Secret(
+                    secret_version="eos",
+                ),
+                username="est",
+            ),
+            user_password=shared.UserPassword(
+                password=shared.Secret(
+                    secret_version="qui",
+                ),
+                username="enim",
+            ),
+        ),
+        config_variables=[
+            shared.ConfigVariable(
+                bool_value=True,
+                int_value="nobis",
+                key="reiciendis",
+                secret_value=shared.Secret(
+                    secret_version="minus",
+                ),
+                string_value="doloremque",
+            ),
+            shared.ConfigVariable(
+                bool_value=True,
+                int_value="voluptas",
+                key="autem",
+                secret_value=shared.Secret(
+                    secret_version="ut",
+                ),
+                string_value="dicta",
+            ),
+            shared.ConfigVariable(
+                bool_value=False,
+                int_value="culpa",
+                key="et",
+                secret_value=shared.Secret(
+                    secret_version="provident",
+                ),
+                string_value="id",
+            ),
+        ],
+        connector_version="dolorem",
+        description="rerum",
+        destination_configs=[
+            shared.DestinationConfig(
+                destinations=[
+                    shared.Destination(
+                        host="dolor",
+                        port=6236403914782054328,
+                        service_attachment="ab",
+                    ),
+                    shared.Destination(
+                        host="vel",
+                        port=4094679320341630421,
+                        service_attachment="et",
+                    ),
+                    shared.Destination(
+                        host="enim",
+                        port=8623464447008361335,
+                        service_attachment="corporis",
+                    ),
+                ],
+                key="facere",
+            ),
+            shared.DestinationConfig(
+                destinations=[
+                    shared.Destination(
+                        host="assumenda",
+                        port=4352521914877300365,
+                        service_attachment="et",
+                    ),
+                    shared.Destination(
+                        host="minus",
+                        port=6512242709642800696,
+                        service_attachment="similique",
+                    ),
+                ],
+                key="omnis",
+            ),
+            shared.DestinationConfig(
+                destinations=[
+                    shared.Destination(
+                        host="sunt",
+                        port=1624115472900005299,
+                        service_attachment="qui",
+                    ),
+                    shared.Destination(
+                        host="occaecati",
+                        port=6185666323245807780,
+                        service_attachment="alias",
+                    ),
+                ],
+                key="eum",
+            ),
+        ],
+        labels={
+            "quod": "quis",
+            "accusantium": "magni",
+        },
+        lock_config=shared.LockConfig(
+            locked=False,
+            reason="est",
+        ),
+        node_config=shared.NodeConfig(
+            max_node_count=8456589800173565241,
+            min_node_count=3490050072483158353,
+        ),
+        service_account="id",
+        status=shared.ConnectionStatus(
+            description="excepturi",
+            state="ERROR",
+            status="labore",
+        ),
+        suspended=False,
+    ),
+)
+    
+res = s.projects.connectors_projects_locations_connections_create(req)
+
+if res.operation is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

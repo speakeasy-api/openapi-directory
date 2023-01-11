@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,16 +23,16 @@ req = operations.GetEventsV3EventsGetPageRequest(
         ),
     ),
     query_params=operations.GetEventsV3EventsGetPageQueryParams(
-        after="culpa",
-        before="libero",
-        event_type="mollitia",
-        limit=7141689443649356981,
-        object_id=1288557390006708125,
-        object_type="culpa",
-        occurred_after="1977-10-23T18:28:22Z",
-        occurred_before="1976-06-03T22:31:45Z",
+        after="illum",
+        before="non",
+        event_type="omnis",
+        limit=2518897347341021606,
+        object_id=6625460606341040745,
+        object_type="quod",
+        occurred_after="2014-04-14T23:19:12Z",
+        occurred_before="2009-12-07T17:37:59Z",
         sort=[
-            "beatae",
+            "repellendus",
         ],
     ),
 )

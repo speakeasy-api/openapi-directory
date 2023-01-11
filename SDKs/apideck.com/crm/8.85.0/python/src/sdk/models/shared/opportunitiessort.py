@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import sortdirection_enum as shared_sortdirection_enum
 
 class OpportunitiesSortByEnum(str, Enum):
     CREATED_AT = "created_at"
@@ -15,8 +15,8 @@ class OpportunitiesSortByEnum(str, Enum):
     STATUS = "status"
 
 
-@dataclass
+@dataclasses.dataclass
 class OpportunitiesSort:
-    by: Optional[OpportunitiesSortByEnum] = field(default=None, metadata={'query_param': { 'field_name': 'by' }})
-    direction: Optional[SortDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction' }})
+    by: Optional[OpportunitiesSortByEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'by' }})
+    direction: Optional[shared_sortdirection_enum.SortDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction' }})
     

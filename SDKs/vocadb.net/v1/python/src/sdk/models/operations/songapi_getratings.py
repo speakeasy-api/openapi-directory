@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import ratedsongforuserforapicontract as shared_ratedsongforuserforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRatingsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class SongAPIGetRatingsLangEnum(str, Enum):
     DEFAULT = "Default"
@@ -21,22 +21,22 @@ class SongAPIGetRatingsUserFieldsEnum(str, Enum):
     OLD_USERNAMES = "OldUsernames"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRatingsQueryParams:
-    user_fields: SongAPIGetRatingsUserFieldsEnum = field(metadata={'query_param': { 'field_name': 'userFields', 'style': 'form', 'explode': True }})
-    lang: Optional[SongAPIGetRatingsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    user_fields: SongAPIGetRatingsUserFieldsEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'userFields', 'style': 'form', 'explode': True }})
+    lang: Optional[SongAPIGetRatingsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRatingsRequest:
-    path_params: SongAPIGetRatingsPathParams = field()
-    query_params: SongAPIGetRatingsQueryParams = field()
+    path_params: SongAPIGetRatingsPathParams = dataclasses.field()
+    query_params: SongAPIGetRatingsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRatingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    rated_song_for_user_for_api_contracts: Optional[List[shared.RatedSongForUserForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    rated_song_for_user_for_api_contracts: Optional[list[shared_ratedsongforuserforapicontract.RatedSongForUserForAPIContract]] = dataclasses.field(default=None)
     

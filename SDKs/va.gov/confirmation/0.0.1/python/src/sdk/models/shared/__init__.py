@@ -3,3 +3,5 @@ from .authorizationerror import *
 from .security import *
 from .veteranstatusconfirmation import *
 from .veteranstatusrequest import *
+
+__all__ = ["APIErrorErrors","APIError","AuthorizationError","SchemeApikey","VeteranStatusConfirmationVeteranStatusEnum","VeteranStatusConfirmation","VeteranStatusRequestGenderEnum","VeteranStatusRequest"]

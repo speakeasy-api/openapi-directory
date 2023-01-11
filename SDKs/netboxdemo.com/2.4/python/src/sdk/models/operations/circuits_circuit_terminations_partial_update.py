@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablecircuittermination as shared_writablecircuittermination
+from ..shared import circuittermination as shared_circuittermination
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitTerminationsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitTerminationsPartialUpdateRequest:
-    path_params: CircuitsCircuitTerminationsPartialUpdatePathParams = field()
-    request: shared.WritableCircuitTerminationInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CircuitsCircuitTerminationsPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablecircuittermination.WritableCircuitTerminationInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsCircuitTerminationsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    circuit_termination: Optional[shared.CircuitTermination] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    circuit_termination: Optional[shared_circuittermination.CircuitTermination] = dataclasses.field(default=None)
     

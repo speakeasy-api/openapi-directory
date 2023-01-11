@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,53 +18,52 @@ s = sdk.SDK()
     
 req = operations.MybusinessAccountsCreateRequest(
     query_params=operations.MybusinessAccountsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="est",
-        alt="media",
-        callback="soluta",
-        fields="rerum",
-        key="perspiciatis",
-        oauth_token="amet",
-        pretty_print=False,
-        primary_owner="suscipit",
-        quota_user="in",
-        upload_type="voluptas",
-        upload_protocol="impedit",
+        dollar_xgafv="1",
+        access_token="quas",
+        alt="json",
+        callback="quasi",
+        fields="modi",
+        key="blanditiis",
+        oauth_token="hic",
+        pretty_print=True,
+        primary_owner="perferendis",
+        quota_user="voluptatem",
+        upload_type="quia",
+        upload_protocol="animi",
     ),
     request=shared.Account(
-        account_name="repellat",
-        account_number="nemo",
-        name="ut",
+        account_name="ea",
+        account_number="velit",
+        name="ratione",
         organization_info=shared.OrganizationInfo(
-            phone_number="adipisci",
+            phone_number="et",
             postal_address=shared.PostalAddress(
                 address_lines=[
-                    "dolore",
-                    "consequuntur",
+                    "repellendus",
+                    "enim",
+                    "veritatis",
                 ],
-                administrative_area="laboriosam",
-                language_code="molestias",
-                locality="in",
-                organization="harum",
-                postal_code="cupiditate",
+                administrative_area="quidem",
+                language_code="ut",
+                locality="porro",
+                organization="voluptatem",
+                postal_code="saepe",
                 recipients=[
-                    "ea",
-                    "aliquid",
-                    "rem",
+                    "esse",
                 ],
-                region_code="qui",
-                revision=44272711320736584,
-                sorting_code="voluptatem",
-                sublocality="molestiae",
+                region_code="quibusdam",
+                revision=5367062260347718474,
+                sorting_code="deleniti",
+                sublocality="debitis",
             ),
-            registered_domain="quaerat",
+            registered_domain="assumenda",
         ),
-        permission_level="MEMBER_LEVEL",
-        role="ACCOUNT_ROLE_UNSPECIFIED",
+        permission_level="PERMISSION_LEVEL_UNSPECIFIED",
+        role="COMMUNITY_MANAGER",
         state=shared.AccountState(
-            status="ACCOUNT_STATUS_UNSPECIFIED",
+            status="VERIFICATION_REQUESTED",
         ),
-        type="LOCATION_GROUP",
+        type="PERSONAL",
     ),
 )
     

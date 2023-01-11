@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import phone as shared_phone
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PhoneList:
     r"""PhoneList
     Phones List
     """
     
-    phones: List[Phone] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phones') }})
-    sum: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
+    phones: list[shared_phone.Phone] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phones') }})
+    sum: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sum') }})
     

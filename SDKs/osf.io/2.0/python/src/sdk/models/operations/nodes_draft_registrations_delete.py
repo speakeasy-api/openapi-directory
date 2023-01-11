@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class NodesDraftRegistrationsDeletePathParams:
-    draft_id: str = field(metadata={'path_param': { 'field_name': 'draft_id', 'style': 'simple', 'explode': False }})
-    node_id: str = field(metadata={'path_param': { 'field_name': 'node_id', 'style': 'simple', 'explode': False }})
+    draft_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'draft_id', 'style': 'simple', 'explode': False }})
+    node_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'node_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NodesDraftRegistrationsDeleteRequest:
-    path_params: NodesDraftRegistrationsDeletePathParams = field()
+    path_params: NodesDraftRegistrationsDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NodesDraftRegistrationsDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

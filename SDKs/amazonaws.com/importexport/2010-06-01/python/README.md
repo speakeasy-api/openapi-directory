@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.GetCancelJobRequest(
     query_params=operations.GetCancelJobQueryParams(
-        api_version="voluptatem",
-        aws_access_key_id="omnis",
+        api_version="amet",
+        aws_access_key_id="et",
         action="CancelJob",
-        job_id="et",
+        job_id="voluptatem",
         operation="CancelJob",
-        signature="quasi",
-        signature_method="eum",
-        signature_version="dolor",
-        timestamp="ut",
+        signature="natus",
+        signature_method="quasi",
+        signature_version="et",
+        timestamp="quod",
         version="2010-06-01",
     ),
 )
     
-res = s.sdk.get_cancel_job(req)
+res = s.get_cancel_job(req)
 
 if res.body is not None:
     # handle response

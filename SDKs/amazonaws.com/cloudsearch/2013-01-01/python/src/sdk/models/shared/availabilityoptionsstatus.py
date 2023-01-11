@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class AvailabilityOptionsStatus:
     r"""AvailabilityOptionsStatus
     The status and configuration of the domain's availability options.
     """
     
-    options: bool = field()
-    status: OptionStatus = field()
+    options: bool = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

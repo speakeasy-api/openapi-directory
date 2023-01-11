@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import commit_activity as shared_commit_activity
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCommitActivityStatsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCommitActivityStatsRequest:
-    path_params: ReposGetCommitActivityStatsPathParams = field()
+    path_params: ReposGetCommitActivityStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCommitActivityStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    commit_activities: Optional[List[shared.CommitActivity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    commit_activities: Optional[list[shared_commit_activity.CommitActivity]] = dataclasses.field(default=None)
     

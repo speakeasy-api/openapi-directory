@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -8,9 +8,9 @@ class CreatePayorLinkRequestLinkTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePayorLinkRequest:
-    from_payor_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fromPayorId') }})
-    link_type: CreatePayorLinkRequestLinkTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkType') }})
-    to_payor_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('toPayorId') }})
+    from_payor_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fromPayorId') }})
+    link_type: CreatePayorLinkRequestLinkTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkType') }})
+    to_payor_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('toPayorId') }})
     

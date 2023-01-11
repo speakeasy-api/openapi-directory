@@ -1,13 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from enum import Enum
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHostReservationPurchasePreviewResult:
-    currency_code: Optional[CurrencyCodeValuesEnum] = field(default=None)
-    purchase: Optional[List[Purchase]] = field(default=None)
-    total_hourly_price: Optional[str] = field(default=None)
-    total_upfront_price: Optional[str] = field(default=None)
+    currency_code: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    purchase: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    total_hourly_price: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    total_upfront_price: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

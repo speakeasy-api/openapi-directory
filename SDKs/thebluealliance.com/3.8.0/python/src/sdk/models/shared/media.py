@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -21,16 +21,16 @@ class MediaTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Media:
     r"""Media
     The `Media` object contains a reference for most any media associated with a team or event on TBA.
     """
     
-    foreign_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('foreign_key') }})
-    type: MediaTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    details: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
-    direct_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_url') }})
-    preferred: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferred') }})
-    view_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view_url') }})
+    foreign_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('foreign_key') }})
+    type: MediaTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    details: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
+    direct_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_url') }})
+    preferred: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('preferred') }})
+    view_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view_url') }})
     

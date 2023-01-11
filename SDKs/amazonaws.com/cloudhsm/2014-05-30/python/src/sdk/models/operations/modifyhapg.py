@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import modifyhapgrequest as shared_modifyhapgrequest
+from ..shared import modifyhapgresponse as shared_modifyhapgresponse
 
 class ModifyHapgXAmzTargetEnum(str, Enum):
     CLOUD_HSM_FRONTEND_SERVICE_MODIFY_HAPG = "CloudHsmFrontendService.ModifyHapg"
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyHapgHeaders:
-    x_amz_target: ModifyHapgXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: ModifyHapgXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ModifyHapgRequest:
-    headers: ModifyHapgHeaders = field()
-    request: shared.ModifyHapgRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ModifyHapgHeaders = dataclasses.field()
+    request: shared_modifyhapgrequest.ModifyHapgRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ModifyHapgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cloud_hsm_internal_exception: Optional[Any] = field(default=None)
-    cloud_hsm_service_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
-    modify_hapg_response: Optional[shared.ModifyHapgResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cloud_hsm_internal_exception: Optional[Any] = dataclasses.field(default=None)
+    cloud_hsm_service_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
+    modify_hapg_response: Optional[shared_modifyhapgresponse.ModifyHapgResponse] = dataclasses.field(default=None)
     

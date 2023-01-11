@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import stopwordoptionsstatus as shared_stopwordoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeStopwordOptionsResponse:
     r"""DescribeStopwordOptionsResponse
     A response message that contains the stopword options for a search domain.
     """
     
-    stopwords: StopwordOptionsStatus = field()
+    stopwords: shared_stopwordoptionsstatus.StopwordOptionsStatus = dataclasses.field()
     

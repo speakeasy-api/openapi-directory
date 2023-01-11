@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,31 @@ req = operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest(
     security=operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubPathParams(
-        project="aut",
+        project="consequatur",
     ),
     query_params=operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubQueryParams(
-        dollar_xgafv="2",
-        access_token="voluptas",
+        dollar_xgafv="1",
+        access_token="et",
         alt="media",
-        callback="cum",
-        fields="sunt",
-        key="officiis",
-        oauth_token="doloremque",
-        pretty_print=False,
-        quota_user="a",
-        upload_type="consequatur",
-        upload_protocol="rerum",
+        callback="qui",
+        fields="neque",
+        key="sit",
+        oauth_token="accusamus",
+        pretty_print=True,
+        quota_user="similique",
+        upload_type="quibusdam",
+        upload_protocol="et",
     ),
     request={
-        "dolores": "ut",
-        "quasi": "ullam",
+        "consectetur": "earum",
+        "quos": "illo",
+        "eligendi": "quam",
     },
 )
     

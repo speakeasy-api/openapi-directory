@@ -1,0 +1,181 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.DoubleclickbidmanagerQueriesCreatequeryRequest(
+    security=operations.DoubleclickbidmanagerQueriesCreatequerySecurity(
+        oauth2=shared.SchemeOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+        oauth2c=shared.SchemeOauth2c(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    query_params=operations.DoubleclickbidmanagerQueriesCreatequeryQueryParams(
+        dollar_xgafv="2",
+        access_token="reprehenderit",
+        alt="proto",
+        asynchronous=True,
+        callback="recusandae",
+        fields="soluta",
+        key="error",
+        oauth_token="reprehenderit",
+        pretty_print=True,
+        quota_user="aperiam",
+        upload_type="temporibus",
+        upload_protocol="quisquam",
+    ),
+    request=shared.Query(
+        kind="ab",
+        metadata=shared.QueryMetadata(
+            data_range="CURRENT_DAY",
+            format="EXCEL_CSV",
+            google_cloud_storage_path_for_latest_report="eum",
+            google_drive_path_for_latest_report="soluta",
+            latest_report_run_time_ms="dolore",
+            locale="excepturi",
+            report_count=272458188829119136,
+            running=False,
+            send_notification=True,
+            share_email_address=[
+                "odit",
+                "repudiandae",
+            ],
+            title="aut",
+        ),
+        params=shared.Parameters(
+            filters=[
+                shared.FilterPair(
+                    type="FILTER_APP_URL",
+                    value="occaecati",
+                ),
+                shared.FilterPair(
+                    type="FILTER_BUDGET_SEGMENT_BUDGET",
+                    value="voluptate",
+                ),
+            ],
+            group_bys=[
+                "FILTER_YOUTUBE_AD_VIDEO",
+                "FILTER_TRUEVIEW_INTEREST",
+            ],
+            include_invite_data=True,
+            metrics=[
+                "METRIC_FEE6_PARTNER",
+                "METRIC_ACTIVE_VIEW_PERCENT_IN_BACKGROUND",
+            ],
+            options=shared.Options(
+                include_only_targeted_user_lists=False,
+                path_query_options=shared.PathQueryOptions(
+                    channel_grouping=shared.ChannelGrouping(
+                        fallback_name="repellendus",
+                        name="alias",
+                        rules=[
+                            shared.Rule(
+                                disjunctive_match_statements=[
+                                    shared.DisjunctiveMatchStatement(
+                                        event_filters=[
+                                            shared.EventFilter(
+                                                dimension_filter=shared.PathQueryOptionsFilter(
+                                                    filter="FILTER_CAMPAIGN_DAILY_FREQUENCY",
+                                                    match="EXACT",
+                                                    values=[
+                                                        "voluptas",
+                                                    ],
+                                                ),
+                                            ),
+                                        ],
+                                    ),
+                                ],
+                                name="amet",
+                            ),
+                        ],
+                    ),
+                    path_filters=[
+                        shared.PathFilter(
+                            event_filters=[
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="FILTER_USER_LIST_THIRD_PARTY_NAME",
+                                        match="BEGINS_WITH",
+                                        values=[
+                                            "omnis",
+                                            "commodi",
+                                        ],
+                                    ),
+                                ),
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="FILTER_SKIPPABLE_SUPPORT",
+                                        match="BEGINS_WITH",
+                                        values=[
+                                            "nesciunt",
+                                            "dolores",
+                                            "impedit",
+                                        ],
+                                    ),
+                                ),
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="FILTER_TRUEVIEW_REGION",
+                                        match="PARTIAL",
+                                        values=[
+                                            "quas",
+                                        ],
+                                    ),
+                                ),
+                            ],
+                            path_match_position="ANY",
+                        ),
+                        shared.PathFilter(
+                            event_filters=[
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_COMPLETE",
+                                        match="PARTIAL",
+                                        values=[
+                                            "sint",
+                                            "nihil",
+                                        ],
+                                    ),
+                                ),
+                                shared.EventFilter(
+                                    dimension_filter=shared.PathQueryOptionsFilter(
+                                        filter="FILTER_VARIANT_NAME",
+                                        match="UNKNOWN",
+                                        values=[
+                                            "in",
+                                            "cumque",
+                                        ],
+                                    ),
+                                ),
+                            ],
+                            path_match_position="LAST",
+                        ),
+                    ],
+                ),
+            ),
+            type="TYPE_KEYWORD",
+        ),
+        query_id="nihil",
+        report_data_end_time_ms="vel",
+        report_data_start_time_ms="minima",
+        schedule=shared.QuerySchedule(
+            end_time_ms="dolor",
+            frequency="YEARLY",
+            next_run_minute_of_day=1221540791052924616,
+            next_run_timezone_code="doloribus",
+            start_time_ms="veritatis",
+        ),
+        timezone_code="dolor",
+    ),
+)
+    
+res = s.queries.doubleclickbidmanager_queries_createquery(req)
+
+if res.query is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

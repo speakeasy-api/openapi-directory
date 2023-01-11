@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import participation_stats as shared_participation_stats
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetParticipationStatsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetParticipationStatsRequest:
-    path_params: ReposGetParticipationStatsPathParams = field()
+    path_params: ReposGetParticipationStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetParticipationStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    participation_stats: Optional[shared.ParticipationStats] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    participation_stats: Optional[shared_participation_stats.ParticipationStats] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,24 @@ s.config_security(
     
 req = operations.AddNotificationChannelRequest(
     headers=operations.AddNotificationChannelHeaders(
-        x_amz_algorithm="corrupti",
-        x_amz_content_sha256="voluptatem",
-        x_amz_credential="quasi",
-        x_amz_date="repellat",
-        x_amz_security_token="rem",
-        x_amz_signature="nisi",
-        x_amz_signed_headers="nulla",
+        x_amz_algorithm="aut",
+        x_amz_content_sha256="voluptate",
+        x_amz_credential="a",
+        x_amz_date="consequatur",
+        x_amz_security_token="dolore",
+        x_amz_signature="assumenda",
+        x_amz_signed_headers="rerum",
     ),
     request=operations.AddNotificationChannelRequestBody(
         config=operations.AddNotificationChannelRequestBodyConfig(
             sns=shared.SnsChannelConfig(
-                topic_arn="et",
+                topic_arn="non",
             ),
         ),
     ),
 )
     
-res = s.sdk.add_notification_channel(req)
+res = s.add_notification_channel(req)
 
 if res.add_notification_channel_response is not None:
     # handle response

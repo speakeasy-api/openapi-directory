@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import email as shared_email
+from ..shared import validation_error as shared_validation_error
 
 class UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBodyVisibilityEnum(str, Enum):
     PUBLIC = "public"
@@ -11,22 +13,22 @@ class UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBodyVisibilityEnum(st
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBody:
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    visibility: UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBodyVisibilityEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    visibility: UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBodyVisibilityEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('visibility') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersSetPrimaryEmailVisibilityForAuthenticatedRequest:
-    request: Optional[UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[UsersSetPrimaryEmailVisibilityForAuthenticatedRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersSetPrimaryEmailVisibilityForAuthenticatedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    emails: Optional[List[shared.Email]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    emails: Optional[list[shared_email.Email]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

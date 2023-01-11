@@ -1,30 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest
+from ..shared import googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest as shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput:
     r"""GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput
     A single kind of update to apply to a Label.
     """
     
-    create_field: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateFieldRequestInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createField') }})
-    create_selection_choice: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createSelectionChoice') }})
-    delete_field: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteFieldRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteField') }})
-    delete_selection_choice: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteSelectionChoiceRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteSelectionChoice') }})
-    disable_field: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableField') }})
-    disable_selection_choice: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableSelectionChoice') }})
-    enable_field: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableField') }})
-    enable_selection_choice: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSelectionChoice') }})
-    update_field: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateField') }})
-    update_field_type: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateFieldType') }})
-    update_label: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateLabelPropertiesRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateLabel') }})
-    update_selection_choice_properties: Optional[GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateSelectionChoiceProperties') }})
+    create_field: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateFieldRequestInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createField') }})
+    create_selection_choice: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createSelectionChoice') }})
+    delete_field: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteFieldRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteField') }})
+    delete_selection_choice: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteSelectionChoiceRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteSelectionChoice') }})
+    disable_field: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableField') }})
+    disable_selection_choice: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableSelectionChoice') }})
+    enable_field: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableField') }})
+    enable_selection_choice: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enableSelectionChoice') }})
+    update_field: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateField') }})
+    update_field_type: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateFieldType') }})
+    update_label: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateLabelPropertiesRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateLabel') }})
+    update_selection_choice_properties: Optional[shared_googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateSelectionChoiceProperties') }})
     

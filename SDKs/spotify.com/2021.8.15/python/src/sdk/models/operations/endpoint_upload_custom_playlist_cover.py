@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointUploadCustomPlaylistCoverPathParams:
-    playlist_id: str = field(metadata={'path_param': { 'field_name': 'playlist_id', 'style': 'simple', 'explode': False }})
+    playlist_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playlist_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointUploadCustomPlaylistCoverHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointUploadCustomPlaylistCoverSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointUploadCustomPlaylistCoverRequest:
-    headers: EndpointUploadCustomPlaylistCoverHeaders = field()
-    path_params: EndpointUploadCustomPlaylistCoverPathParams = field()
-    request: str = field(metadata={'request': { 'media_type': 'image/jpeg' }})
-    security: EndpointUploadCustomPlaylistCoverSecurity = field()
+    headers: EndpointUploadCustomPlaylistCoverHeaders = dataclasses.field()
+    path_params: EndpointUploadCustomPlaylistCoverPathParams = dataclasses.field()
+    request: str = dataclasses.field(metadata={'request': { 'media_type': 'image/jpeg' }})
+    security: EndpointUploadCustomPlaylistCoverSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointUploadCustomPlaylistCoverResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

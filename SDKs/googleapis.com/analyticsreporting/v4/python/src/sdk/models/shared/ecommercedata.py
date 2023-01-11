@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import productdata as shared_productdata
+from ..shared import transactiondata as shared_transactiondata
 
 class EcommerceDataActionTypeEnum(str, Enum):
     UNKNOWN = "UNKNOWN"
@@ -23,14 +24,14 @@ class EcommerceDataEcommerceTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EcommerceData:
     r"""EcommerceData
     E-commerce details associated with the user activity.
     """
     
-    action_type: Optional[EcommerceDataActionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionType') }})
-    ecommerce_type: Optional[EcommerceDataEcommerceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ecommerceType') }})
-    products: Optional[List[ProductData]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
-    transaction: Optional[TransactionData] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transaction') }})
+    action_type: Optional[EcommerceDataActionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionType') }})
+    ecommerce_type: Optional[EcommerceDataEcommerceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ecommerceType') }})
+    products: Optional[list[shared_productdata.ProductData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
+    transaction: Optional[shared_transactiondata.TransactionData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transaction') }})
     

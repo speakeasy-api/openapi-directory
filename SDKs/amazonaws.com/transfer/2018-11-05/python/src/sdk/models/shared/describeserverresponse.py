@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import describedserver as shared_describedserver
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeServerResponse:
-    server: DescribedServer = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Server') }})
+    server: shared_describedserver.DescribedServer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Server') }})
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import inventorytask as shared_inventorytask
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInventoryTaskPathParams:
-    task_id: str = field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
+    task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'task_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInventoryTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInventoryTaskRequest:
-    path_params: GetInventoryTaskPathParams = field()
-    security: GetInventoryTaskSecurity = field()
+    path_params: GetInventoryTaskPathParams = dataclasses.field()
+    security: GetInventoryTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInventoryTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inventory_task: Optional[shared.InventoryTask] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inventory_task: Optional[shared_inventorytask.InventoryTask] = dataclasses.field(default=None)
     

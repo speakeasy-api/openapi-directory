@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
-from sdk.models import shared
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIPatchProduct2Request:
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIPatchProduct2Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

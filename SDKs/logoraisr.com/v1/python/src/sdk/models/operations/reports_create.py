@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import reportrequest as shared_reportrequest
+from ..shared import reportresponse as shared_reportresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ReportsCreateRequest:
-    request: shared.ReportRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_reportrequest.ReportRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReportsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report_response: Optional[shared.ReportResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report_response: Optional[shared_reportresponse.ReportResponse] = dataclasses.field(default=None)
     

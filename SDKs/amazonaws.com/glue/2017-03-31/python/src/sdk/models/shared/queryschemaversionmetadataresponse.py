@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metadatainfo as shared_metadatainfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QuerySchemaVersionMetadataResponse:
-    metadata_info_map: Optional[dict[str, MetadataInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MetadataInfoMap') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    schema_version_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaVersionId') }})
+    metadata_info_map: Optional[dict[str, shared_metadatainfo.MetadataInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MetadataInfoMap') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    schema_version_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaVersionId') }})
     

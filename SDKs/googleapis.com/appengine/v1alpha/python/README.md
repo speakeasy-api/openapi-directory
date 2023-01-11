@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,48 +20,50 @@ req = operations.AppengineAppsAuthorizedCertificatesCreateRequest(
     security=operations.AppengineAppsAuthorizedCertificatesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AppengineAppsAuthorizedCertificatesCreatePathParams(
-        apps_id="dolorem",
+        apps_id="omnis",
     ),
     query_params=operations.AppengineAppsAuthorizedCertificatesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="molestiae",
+        access_token="eligendi",
         alt="media",
-        callback="voluptatum",
-        fields="quos",
-        key="laboriosam",
-        oauth_token="incidunt",
+        callback="eveniet",
+        fields="est",
+        key="omnis",
+        oauth_token="blanditiis",
         pretty_print=True,
-        quota_user="explicabo",
-        upload_type="fuga",
-        upload_protocol="dignissimos",
+        quota_user="ut",
+        upload_type="odit",
+        upload_protocol="non",
     ),
     request=shared.AuthorizedCertificate(
         certificate_raw_data=shared.CertificateRawData(
-            private_key="perferendis",
-            public_certificate="fuga",
+            private_key="porro",
+            public_certificate="sunt",
         ),
-        display_name="voluptatum",
-        domain_mappings_count=2502447430483721171,
+        display_name="ea",
+        domain_mappings_count=1801121852245990253,
         domain_names=[
-            "quibusdam",
+            "aperiam",
+            "aut",
+            "ex",
         ],
-        expire_time="explicabo",
-        id="vel",
+        expire_time="modi",
+        id="qui",
         managed_certificate=shared.ManagedCertificate(
-            last_renewal_time="earum",
-            status="FAILED_RETRYING_NOT_VISIBLE",
+            last_renewal_time="quia",
+            status="OK",
         ),
-        name="voluptatem",
+        name="nisi",
         visible_domain_mappings=[
-            "vitae",
-            "harum",
-            "ab",
+            "tenetur",
+            "praesentium",
+            "totam",
         ],
     ),
 )

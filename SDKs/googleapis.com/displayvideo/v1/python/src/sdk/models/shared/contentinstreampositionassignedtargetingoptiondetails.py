@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,24 +19,24 @@ class ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositi
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContentInstreamPositionAssignedTargetingOptionDetails:
     r"""ContentInstreamPositionAssignedTargetingOptionDetails
     Assigned content instream position targeting option details. This will be populated in the content_instream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
     """
     
-    ad_type: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsAdTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adType') }})
-    content_instream_position: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentInstreamPosition') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    ad_type: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsAdTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adType') }})
+    content_instream_position: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentInstreamPosition') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContentInstreamPositionAssignedTargetingOptionDetailsInput:
     r"""ContentInstreamPositionAssignedTargetingOptionDetailsInput
     Assigned content instream position targeting option details. This will be populated in the content_instream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
     """
     
-    content_instream_position: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentInstreamPosition') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    content_instream_position: Optional[ContentInstreamPositionAssignedTargetingOptionDetailsContentInstreamPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentInstreamPosition') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     

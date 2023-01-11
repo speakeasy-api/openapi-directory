@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableregion as shared_writableregion
+from ..shared import region as shared_region
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRegionsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRegionsUpdateRequest:
-    path_params: DcimRegionsUpdatePathParams = field()
-    request: shared.WritableRegionInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimRegionsUpdatePathParams = dataclasses.field()
+    request: shared_writableregion.WritableRegionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRegionsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    region: Optional[shared.Region] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    region: Optional[shared_region.Region] = dataclasses.field(default=None)
     

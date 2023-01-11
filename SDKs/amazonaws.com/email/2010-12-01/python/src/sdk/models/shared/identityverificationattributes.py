@@ -1,15 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import verificationstatus_enum as shared_verificationstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class IdentityVerificationAttributes:
-    r"""IdentityVerificationAttributes
-    Represents the verification attributes of a single identity.
-    """
-    
-    verification_status: VerificationStatusEnum = field()
-    verification_token: Optional[str] = field(default=None)
+    verification_status: Optional[shared_verificationstatus_enum.VerificationStatusEnum] = dataclasses.field(default=None)
+    verification_token: Optional[str] = dataclasses.field(default=None)
     

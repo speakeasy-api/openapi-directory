@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDDeletePathParams:
-    session_id: str = field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
+    session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDDeleteRequest:
-    path_params: SessionIDDeletePathParams = field()
+    path_params: SessionIDDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

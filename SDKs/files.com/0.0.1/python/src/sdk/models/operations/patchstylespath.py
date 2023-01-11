@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import styleentity as shared_styleentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchStylesPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchStylesPathRequestBodyFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    file: str = field(metadata={'multipart_form': { 'field_name': 'file' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'file' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchStylesPathRequestBody:
-    file: PatchStylesPathRequestBodyFile = field(metadata={'multipart_form': { 'file': True }})
+    file: PatchStylesPathRequestBodyFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchStylesPathRequest:
-    path_params: PatchStylesPathPathParams = field()
-    request: PatchStylesPathRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchStylesPathPathParams = dataclasses.field()
+    request: PatchStylesPathRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchStylesPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    style_entity: Optional[shared.StyleEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    style_entity: Optional[shared_styleentity.StyleEntity] = dataclasses.field(default=None)
     

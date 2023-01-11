@@ -1,135 +1,135 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance:
-    company_name: Optional[str] = field(default=None)
-    policy_no: Optional[str] = field(default=None)
-    valid_till: Optional[str] = field(default=None)
+    company_name: Optional[str] = dataclasses.field(default=None)
+    policy_no: Optional[str] = dataclasses.field(default=None)
+    valid_till: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle:
-    chasis_no: Optional[str] = field(default=None)
-    class_: Optional[dict[str, Any]] = field(default=None)
-    color: Optional[str] = field(default=None)
-    cubic_capacity: Optional[dict[str, Any]] = field(default=None)
-    cylinder: Optional[dict[str, Any]] = field(default=None)
-    engine_no: Optional[str] = field(default=None)
-    fit_till: Optional[dict[str, Any]] = field(default=None)
-    fuel_desc: Optional[dict[str, Any]] = field(default=None)
-    make: Optional[dict[str, Any]] = field(default=None)
-    mfg_date: Optional[dict[str, Any]] = field(default=None)
-    model: Optional[str] = field(default=None)
-    seat_capacity: Optional[str] = field(default=None)
-    sleeper_capacity: Optional[str] = field(default=None)
-    standing_capacity: Optional[dict[str, Any]] = field(default=None)
-    unladen_weight: Optional[str] = field(default=None)
-    wheelbase: Optional[dict[str, Any]] = field(default=None)
+    chasis_no: Optional[str] = dataclasses.field(default=None)
+    class_: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    color: Optional[str] = dataclasses.field(default=None)
+    cubic_capacity: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    cylinder: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    engine_no: Optional[str] = dataclasses.field(default=None)
+    fit_till: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    fuel_desc: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    make: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    mfg_date: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    model: Optional[str] = dataclasses.field(default=None)
+    seat_capacity: Optional[str] = dataclasses.field(default=None)
+    sleeper_capacity: Optional[str] = dataclasses.field(default=None)
+    standing_capacity: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    unladen_weight: Optional[str] = dataclasses.field(default=None)
+    wheelbase: Optional[dict[str, Any]] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaCertificateDataVehicleRegistration:
-    financer: str = field()
-    norms_desc: str = field()
-    status_date: str = field()
-    insurance: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance] = field(default=None)
-    vehicle: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle] = field(default=None)
+    financer: str = dataclasses.field()
+    norms_desc: str = dataclasses.field()
+    status_date: str = dataclasses.field()
+    insurance: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance] = dataclasses.field(default=None)
+    vehicle: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaCertificateData:
-    vehicle_registration: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistration] = field(default=None)
+    vehicle_registration: Optional[VehicleRegistrationSchemaCertificateDataVehicleRegistration] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedByOrganizationAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedByOrganization:
-    address: VehicleRegistrationSchemaIssuedByOrganizationAddress = field()
-    code: str = field()
-    name: str = field()
-    tin: str = field()
-    type: str = field()
-    uid: str = field()
+    address: VehicleRegistrationSchemaIssuedByOrganizationAddress = dataclasses.field()
+    code: str = dataclasses.field()
+    name: str = dataclasses.field()
+    tin: str = dataclasses.field()
+    type: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedBy:
-    organization: VehicleRegistrationSchemaIssuedByOrganization = field()
+    organization: VehicleRegistrationSchemaIssuedByOrganization = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedToPersonAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedToPersonPhoto:
-    format: str = field()
+    format: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedToPerson:
-    address: VehicleRegistrationSchemaIssuedToPersonAddress = field()
-    photo: VehicleRegistrationSchemaIssuedToPersonPhoto = field()
-    dob: str = field()
-    email: str = field()
-    gender: str = field()
-    marital_status: str = field()
-    name: str = field()
-    phone: str = field()
-    religion: str = field()
-    swd: str = field()
-    swd_indicator: str = field()
-    title: str = field()
-    uid: str = field()
+    address: VehicleRegistrationSchemaIssuedToPersonAddress = dataclasses.field()
+    photo: VehicleRegistrationSchemaIssuedToPersonPhoto = dataclasses.field()
+    dob: str = dataclasses.field()
+    email: str = dataclasses.field()
+    gender: str = dataclasses.field()
+    marital_status: str = dataclasses.field()
+    name: str = dataclasses.field()
+    phone: str = dataclasses.field()
+    religion: str = dataclasses.field()
+    swd: str = dataclasses.field()
+    swd_indicator: str = dataclasses.field()
+    title: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchemaIssuedTo:
-    person: VehicleRegistrationSchemaIssuedToPerson = field()
+    person: VehicleRegistrationSchemaIssuedToPerson = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VehicleRegistrationSchema:
-    certificate_data: VehicleRegistrationSchemaCertificateData = field()
-    issued_by: VehicleRegistrationSchemaIssuedBy = field()
-    issued_to: VehicleRegistrationSchemaIssuedTo = field()
-    issue_date: str = field()
-    issued_at: str = field()
-    language: str = field()
-    name: str = field()
-    number: int = field()
-    status: str = field()
-    type: str = field()
-    valid_from_date: str = field()
-    expiry_date: Optional[str] = field(default=None)
+    certificate_data: VehicleRegistrationSchemaCertificateData = dataclasses.field()
+    issued_by: VehicleRegistrationSchemaIssuedBy = dataclasses.field()
+    issued_to: VehicleRegistrationSchemaIssuedTo = dataclasses.field()
+    issue_date: str = dataclasses.field()
+    issued_at: str = dataclasses.field()
+    language: str = dataclasses.field()
+    name: str = dataclasses.field()
+    number: int = dataclasses.field()
+    status: str = dataclasses.field()
+    type: str = dataclasses.field()
+    valid_from_date: str = dataclasses.field()
+    expiry_date: Optional[str] = dataclasses.field(default=None)
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sendethereumrequest as shared_sendethereumrequest
+from ..shared import sendethereum as shared_sendethereum
 
 
-@dataclass
+@dataclasses.dataclass
 class SendEthereumHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendEthereumRequest:
-    headers: SendEthereumHeaders = field()
-    request: shared.SendEthereumRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SendEthereumHeaders = dataclasses.field()
+    request: shared_sendethereumrequest.SendEthereumRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendEthereumResponse:
-    content_type: str = field()
-    status_code: int = field()
-    send_ethereum: Optional[shared.SendEthereum] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    send_ethereum: Optional[shared_sendethereum.SendEthereum] = dataclasses.field(default=None)
     

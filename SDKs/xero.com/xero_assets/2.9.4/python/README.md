@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,29 +23,29 @@ req = operations.CreateAssetRequest(
         ),
     ),
     headers=operations.CreateAssetHeaders(
-        xero_tenant_id="perferendis",
+        xero_tenant_id="dolorem",
     ),
     request=shared.Asset(
-        accounting_book_value=7.100000,
-        asset_id="veritatis",
-        asset_name="ducimus",
-        asset_number="voluptas",
-        asset_status="Disposed",
-        asset_type_id="fugit",
-        book_depreciation_detail="sit",
-        book_depreciation_setting="omnis",
+        accounting_book_value=73.099998,
+        asset_id="tempora",
+        asset_name="est",
+        asset_number="debitis",
+        asset_status="Draft",
+        asset_type_id="soluta",
+        book_depreciation_detail="fugit",
+        book_depreciation_setting="magni",
         can_rollback=False,
-        disposal_date="1998-07-13",
-        disposal_price=80.199997,
-        is_delete_enabled_for_date=True,
-        purchase_date="2016-05-04",
-        purchase_price=81.099998,
-        serial_number="assumenda",
-        warranty_expiry_date="minima",
+        disposal_date="1998-01-20",
+        disposal_price=38.200001,
+        is_delete_enabled_for_date=False,
+        purchase_date="1972-02-09",
+        purchase_price=66.199997,
+        serial_number="ipsam",
+        warranty_expiry_date="veniam",
     ),
 )
     
-res = s.sdk.create_asset(req)
+res = s.asset.create_asset(req)
 
 if res.asset is not None:
     # handle response
@@ -56,7 +55,7 @@ if res.asset is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Asset
 
 * `create_asset` - adds a fixed asset
 * `create_asset_type` - adds a fixed asset type

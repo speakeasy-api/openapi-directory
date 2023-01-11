@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,31 @@ req = operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest(
     security=operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.SecuritycenterOrganizationsAssetsRunDiscoveryPathParams(
-        parent="quia",
+        parent="officiis",
     ),
     query_params=operations.SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams(
         dollar_xgafv="1",
-        access_token="nihil",
+        access_token="omnis",
         alt="media",
-        callback="labore",
-        fields="error",
-        key="fuga",
-        oauth_token="unde",
+        callback="ullam",
+        fields="molestiae",
+        key="facere",
+        oauth_token="non",
         pretty_print=True,
-        quota_user="est",
-        upload_type="voluptas",
-        upload_protocol="maiores",
+        quota_user="quis",
+        upload_type="iure",
+        upload_protocol="neque",
     ),
     request={
-        "consectetur": "enim",
-        "provident": "dolores",
+        "aspernatur": "sed",
+        "temporibus": "culpa",
+        "soluta": "dolor",
     },
 )
     
@@ -72,7 +72,7 @@ if res.operation is not None:
 
 * `securitycenter_projects_assets_group` - Filters an organization's assets and groups them by their specified properties.
 * `securitycenter_projects_assets_list` - Lists an organization's assets.
-* `securitycenter_projects_big_query_exports_create` - Creates a big query export.
+* `securitycenter_projects_big_query_exports_create` - Creates a BigQuery export.
 * `securitycenter_projects_big_query_exports_list` - Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports under that level are also returned e.g. if requesting BigQuery exports under a folder, then all BigQuery exports immediately under the folder plus the ones created under the projects within the folder are returned.
 * `securitycenter_projects_findings_bulk_mute` - Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either an organization, folder or project. The findings matched by the filter will be muted after the LRO is done.
 * `securitycenter_projects_mute_configs_create` - Creates a mute config.

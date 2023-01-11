@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.AndroidpublisherEditsApklistingsDeleteRequest(
     security=operations.AndroidpublisherEditsApklistingsDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AndroidpublisherEditsApklistingsDeletePathParams(
-        apk_version_code=3004786443331028729,
-        edit_id="consequuntur",
-        language="tenetur",
-        package_name="eos",
+        apk_version_code=3804614449984271553,
+        edit_id="itaque",
+        language="eligendi",
+        package_name="libero",
     ),
     query_params=operations.AndroidpublisherEditsApklistingsDeleteQueryParams(
         alt="json",
-        fields="et",
-        key="cumque",
-        oauth_token="reprehenderit",
+        fields="eum",
+        key="quia",
+        oauth_token="harum",
         pretty_print=False,
-        quota_user="ut",
-        user_ip="dicta",
+        quota_user="nihil",
+        user_ip="consequatur",
     ),
 )
     

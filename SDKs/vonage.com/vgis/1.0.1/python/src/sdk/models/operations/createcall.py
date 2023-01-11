@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import callcreate as shared_callcreate
+from ..shared import call as shared_call
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateCallRequest:
-    request: shared.CallCreate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_callcreate.CallCreate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCallResponse:
-    content_type: str = field()
-    status_code: int = field()
-    calls: Optional[List[shared.Call]] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    calls: Optional[list[shared_call.Call]] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

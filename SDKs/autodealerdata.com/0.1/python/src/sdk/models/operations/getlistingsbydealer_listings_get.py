@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import listingresp as shared_listingresp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingsByDealerListingsGetQueryParams:
-    dealer_id: int = field(metadata={'query_param': { 'field_name': 'dealerID', 'style': 'form', 'explode': True }})
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
-    new_cars: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'newCars', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    dealer_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'dealerID', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    new_cars: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'newCars', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingsByDealerListingsGetRequest:
-    query_params: GetListingsByDealerListingsGetQueryParams = field()
+    query_params: GetListingsByDealerListingsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingsByDealerListingsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    listing_resp: Optional[shared.ListingResp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    listing_resp: Optional[shared_listingresp.ListingResp] = dataclasses.field(default=None)
     

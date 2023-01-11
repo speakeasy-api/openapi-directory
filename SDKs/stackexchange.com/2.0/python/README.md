@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,17 +18,17 @@ s = sdk.SDK()
     
 req = operations.GetAccessTokensAccessTokensRequest(
     path_params=operations.GetAccessTokensAccessTokensPathParams(
-        access_tokens="impedit",
+        access_tokens="quia",
     ),
     query_params=operations.GetAccessTokensAccessTokensQueryParams(
-        callback="magnam",
-        filter="sunt",
-        page=6608286524129246963,
-        pagesize=8078278458336878205,
+        callback="eum",
+        filter="numquam",
+        page=6423785216339369715,
+        pagesize=8269079274911214111,
     ),
 )
     
-res = s.sdk.get_access_tokens_access_tokens_(req)
+res = s.get_access_tokens_access_tokens_(req)
 
 if res.body is not None:
     # handle response
@@ -121,30 +120,6 @@ rank is the default sort.
  
 This method returns a list of badges.
 
-* `get_badges_ids_` - Gets the badges identified in id.
- 
-Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
- 
-Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
- 
-This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
- 
-For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
- 
-rank is the default sort.
- 
-{ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
- 
-This method returns a list of badges.
-
-* `get_badges_ids_recipients` - Returns recently awarded badges in the system, constrained to a certain set of badges.
- 
-As these badges have been awarded, they will have the badge.user property set.
- 
-{ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
- 
-This method returns a list of badges.
-
 * `get_badges_name` - Gets all explicitly named badges in the system.
  
 A named badged stands in opposition to a tag-based badge. These are referred to as general badges on the sites themselves.
@@ -166,6 +141,30 @@ This method returns a list of badges.
 For the rank sort, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
  
 rank is the default sort.
+ 
+This method returns a list of badges.
+
+* `get_badges_ids_` - Gets the badges identified in id.
+ 
+Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
+ 
+Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
+ 
+This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
+ 
+For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+ 
+rank is the default sort.
+ 
+{ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+ 
+This method returns a list of badges.
+
+* `get_badges_ids_recipients` - Returns recently awarded badges in the system, constrained to a certain set of badges.
+ 
+As these badges have been awarded, they will have the badge.user property set.
+ 
+{ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
  
 This method returns a list of badges.
 
@@ -537,6 +536,46 @@ The sorts accepted by this method operate on the follow fields of the question o
  
 This method returns a list of questions.
 
+* `get_questions_no_answers` - Returns questions which have received no answers.
+ 
+Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
+ 
+This method corresponds roughly with the this site tab.
+ 
+To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+ 
+The sorts accepted by this method operate on the follow fields of the question object:
+ - activity - last_activity_date
+ - creation - creation_date
+ - votes - score
+  activity is the default sort.
+ 
+ It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+
+ 
+This method returns a list of questions.
+
+* `get_questions_unanswered` - Returns questions the site considers to be unanswered.
+ 
+Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
+ 
+To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+ 
+Compare with /questions/no-answers.
+ 
+This method corresponds roughly with the unanswered tab.
+ 
+The sorts accepted by this method operate on the follow fields of the question object:
+ - activity - last_activity_date
+ - creation - creation_date
+ - votes - score
+  activity is the default sort.
+ 
+ It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+
+ 
+This method returns a list of questions.
+
 * `get_questions_ids_` - Returns the questions identified in {ids}.
  
 This is most useful for fetching fresh data when maintaining a cache of question ids, or polling for changes.
@@ -634,46 +673,6 @@ Voting data is scrubbed to deter inferencing of voter identity.
 {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for question_id on question objects.
  
 This method returns a list of question timeline events.
-
-* `get_questions_no_answers` - Returns questions which have received no answers.
- 
-Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
- 
-This method corresponds roughly with the this site tab.
- 
-To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
- 
-The sorts accepted by this method operate on the follow fields of the question object:
- - activity - last_activity_date
- - creation - creation_date
- - votes - score
-  activity is the default sort.
- 
- It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-
- 
-This method returns a list of questions.
-
-* `get_questions_unanswered` - Returns questions the site considers to be unanswered.
- 
-Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
- 
-To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
- 
-Compare with /questions/no-answers.
- 
-This method corresponds roughly with the unanswered tab.
- 
-The sorts accepted by this method operate on the follow fields of the question object:
- - activity - last_activity_date
- - creation - creation_date
- - votes - score
-  activity is the default sort.
- 
- It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-
- 
-This method returns a list of questions.
 
 * `get_revisions_ids_` - Returns edit revisions identified by ids in {ids}.
  
@@ -848,18 +847,6 @@ The sorts accepted by this method operate on the follow fields of the tag_synony
  
 This method returns a list of tag_synonyms.
 
-* `get_tags_tag_top_answerers_period_` - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
- 
-This is a view onto the data presented on the tag info page on the sites.
- 
-This method returns a list of tag score objects.
-
-* `get_tags_tag_top_askers_period_` - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
- 
-This is a view onto the data presented on the tag info page on the sites.
- 
-This method returns a list of tag score objects.
-
 * `get_tags_tags_faq` - Returns the frequently asked questions for the given set of tags in {tags}.
  
 For a question to be returned, it must have all the tags in {tags} and be considered "frequently asked". The exact algorithm for determining whether a question is considered a FAQ is subject to change at any time.
@@ -915,6 +902,18 @@ Be aware that not all tags have wikis.
  
 This method returns a list of tag wikis.
 
+* `get_tags_tag_top_answerers_period_` - Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+ 
+This is a view onto the data presented on the tag info page on the sites.
+ 
+This method returns a list of tag score objects.
+
+* `get_tags_tag_top_askers_period_` - Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+ 
+This is a view onto the data presented on the tag info page on the sites.
+ 
+This method returns a list of tag score objects.
+
 * `get_users` - Returns all users on a site.
  
 This method returns a list of users.
@@ -931,105 +930,37 @@ The sorts accepted by this method operate on the follow fields of the user objec
  
 The inname parameter lets consumers filter the results down to just those users with a certain substring in their display name. For example, inname=kevin will return all users with both users named simply "Kevin" or those with Kevin as one of (or part of) their names; such as "Kevin Montrose".
 
-* `get_users_id_inbox` - Returns a user's inbox.
+* `get_users_moderators` - Gets those users on a site who can exercise moderation powers.
  
-This method requires an access_token, with a scope containing "read_inbox".
+Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
  
-This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
- 
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
- 
-This method returns a list of inbox items.
-
-* `get_users_id_inbox_unread` - Returns the unread items in a user's inbox.
- 
-This method requires an access_token, with a scope containing "read_inbox".
- 
-This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
- 
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
- 
-This method returns a list of inbox items.
-
-* `get_users_id_notifications` - Returns a user's notifications.
- 
-This method requires an access_token, with a scope containing "read_inbox".
- 
-This method returns a list of notifications.
-
-* `get_users_id_notifications_unread` - Returns a user's unread notifications.
- 
-This method requires an access_token, with a scope containing "read_inbox".
- 
-This method returns a list of notifications.
-
-* `get_users_id_privileges` - Returns the privileges a user has.
- 
-Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
- 
-{id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
- 
-This method returns a list of privileges.
-
-* `get_users_id_reputation_history_full` - Returns a user's full reputation history, including private events.
- 
-This method requires an access_token, with a scope containing "private_info".
- 
-This method returns a list of reputation_history.
-
-* `get_users_id_tags_tags_top_answers` - Returns the top 30 answers a user has posted in response to questions with the given tags.
- 
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
- 
-The sorts accepted by this method operate on the follow fields of the answer object:
- - activity - last_activity_date
+The sorts accepted by this method operate on the follow fields of the user object:
+ - reputation - reputation
  - creation - creation_date
- - votes - score
-  activity is the default sort.
+ - name - display_name
+ - modified - last_modified_date
+  reputation is the default sort.
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
  
-This method returns a list of answers.
+This method returns a list of users.
 
-* `get_users_id_tags_tags_top_questions` - Returns the top 30 questions a user has asked with the given tags.
+* `get_users_moderators_elected` - Returns those users on a site who both have moderator powers, and were actually elected.
  
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
  
-The sorts accepted by this method operate on the follow fields of the question object:
- - activity - last_activity_date
+The sorts accepted by this method operate on the follow fields of the user object:
+ - reputation - reputation
  - creation - creation_date
- - votes - score
-  activity is the default sort.
+ - name - display_name
+ - modified - last_modified_date
+  reputation is the default sort.
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
  
-This method returns a list of questions.
-
-* `get_users_id_top_answer_tags` - Returns a single user's top tags by answer score.
- 
-This a subset of the data returned on a user's tags tab.
- 
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
- 
-This method returns a list of top_tag objects.
-
-* `get_users_id_top_question_tags` - Returns a single user's top tags by question score.
- 
-This a subset of the data returned on a user's tags tab.
- 
-{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
- 
-This method returns a list of top_tag objects.
-
-* `get_users_id_write_permissions` - Returns the write permissions a user has via the api.
- 
-The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
- 
-This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
- 
-This method returns a list of write_permissions.
+This method returns a list of users.
 
 * `get_users_ids_` - Gets the users identified in ids in {ids}.
  
@@ -1293,37 +1224,105 @@ This method returns users' posts, edits, and earned badges in the order they wer
  
 This method returns a list of user timeline objects.
 
-* `get_users_moderators` - Gets those users on a site who can exercise moderation powers.
+* `get_users_id_inbox` - Returns a user's inbox.
  
-Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
+This method requires an access_token, with a scope containing "read_inbox".
  
-The sorts accepted by this method operate on the follow fields of the user object:
- - reputation - reputation
+This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+ 
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+ 
+This method returns a list of inbox items.
+
+* `get_users_id_inbox_unread` - Returns the unread items in a user's inbox.
+ 
+This method requires an access_token, with a scope containing "read_inbox".
+ 
+This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
+ 
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+ 
+This method returns a list of inbox items.
+
+* `get_users_id_notifications` - Returns a user's notifications.
+ 
+This method requires an access_token, with a scope containing "read_inbox".
+ 
+This method returns a list of notifications.
+
+* `get_users_id_notifications_unread` - Returns a user's unread notifications.
+ 
+This method requires an access_token, with a scope containing "read_inbox".
+ 
+This method returns a list of notifications.
+
+* `get_users_id_privileges` - Returns the privileges a user has.
+ 
+Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
+ 
+{id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
+ 
+This method returns a list of privileges.
+
+* `get_users_id_reputation_history_full` - Returns a user's full reputation history, including private events.
+ 
+This method requires an access_token, with a scope containing "private_info".
+ 
+This method returns a list of reputation_history.
+
+* `get_users_id_tags_tags_top_answers` - Returns the top 30 answers a user has posted in response to questions with the given tags.
+ 
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+ 
+The sorts accepted by this method operate on the follow fields of the answer object:
+ - activity - last_activity_date
  - creation - creation_date
- - name - display_name
- - modified - last_modified_date
-  reputation is the default sort.
+ - votes - score
+  activity is the default sort.
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
  
-This method returns a list of users.
+This method returns a list of answers.
 
-* `get_users_moderators_elected` - Returns those users on a site who both have moderator powers, and were actually elected.
+* `get_users_id_tags_tags_top_questions` - Returns the top 30 questions a user has asked with the given tags.
  
-This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
  
-The sorts accepted by this method operate on the follow fields of the user object:
- - reputation - reputation
+The sorts accepted by this method operate on the follow fields of the question object:
+ - activity - last_activity_date
  - creation - creation_date
- - name - display_name
- - modified - last_modified_date
-  reputation is the default sort.
+ - votes - score
+  activity is the default sort.
  
  It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
 
  
-This method returns a list of users.
+This method returns a list of questions.
+
+* `get_users_id_top_answer_tags` - Returns a single user's top tags by answer score.
+ 
+This a subset of the data returned on a user's tags tab.
+ 
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+ 
+This method returns a list of top_tag objects.
+
+* `get_users_id_top_question_tags` - Returns a single user's top tags by question score.
+ 
+This a subset of the data returned on a user's tags tab.
+ 
+{id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+ 
+This method returns a list of top_tag objects.
+
+* `get_users_id_write_permissions` - Returns the write permissions a user has via the api.
+ 
+The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
+ 
+This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
+ 
+This method returns a list of write_permissions.
 
 * `post_comments_id_delete` - Deletes a comment.
  

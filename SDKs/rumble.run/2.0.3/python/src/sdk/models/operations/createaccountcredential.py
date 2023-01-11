@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import credentialoptions as shared_credentialoptions
+from ..shared import credential as shared_credential
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountCredentialSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountCredentialRequest:
-    request: shared.CredentialOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAccountCredentialSecurity = field()
+    request: shared_credentialoptions.CredentialOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAccountCredentialSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountCredentialResponse:
-    content_type: str = field()
-    status_code: int = field()
-    credential: Optional[shared.Credential] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    credential: Optional[shared_credential.Credential] = dataclasses.field(default=None)
     

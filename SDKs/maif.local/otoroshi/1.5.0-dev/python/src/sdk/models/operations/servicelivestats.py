@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import stats as shared_stats
 
 
-@dataclass
+@dataclasses.dataclass
 class ServiceLiveStatsPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceLiveStatsSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceLiveStatsRequest:
-    path_params: ServiceLiveStatsPathParams = field()
-    security: ServiceLiveStatsSecurity = field()
+    path_params: ServiceLiveStatsPathParams = dataclasses.field()
+    security: ServiceLiveStatsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceLiveStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    stats: Optional[shared.Stats] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    stats: Optional[shared_stats.Stats] = dataclasses.field(default=None)
     

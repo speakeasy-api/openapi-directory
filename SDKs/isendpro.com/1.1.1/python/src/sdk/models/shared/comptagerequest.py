@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -110,18 +110,18 @@ class ComptageRequestSmslongEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ComptageRequest:
-    comptage: ComptageRequestComptageEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comptage') }})
-    keyid: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyid') }})
-    num: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('num') }})
-    sms: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sms') }})
-    date_envoi: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date_envoi') }})
-    emetteur: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('emetteur') }})
-    gmt_zone: Optional[ComptageRequestGmtZoneEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmt_zone') }})
-    nostop: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nostop') }})
-    num_azur: Optional[ComptageRequestNumAzurEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numAzur') }})
-    smslong: Optional[ComptageRequestSmslongEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('smslong') }})
-    tracker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tracker') }})
-    ucs2: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ucs2') }})
+    comptage: ComptageRequestComptageEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('comptage') }})
+    keyid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyid') }})
+    num: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('num') }})
+    sms: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sms') }})
+    date_envoi: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date_envoi') }})
+    emetteur: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('emetteur') }})
+    gmt_zone: Optional[ComptageRequestGmtZoneEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmt_zone') }})
+    nostop: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nostop') }})
+    num_azur: Optional[ComptageRequestNumAzurEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numAzur') }})
+    smslong: Optional[ComptageRequestSmslongEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('smslong') }})
+    tracker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tracker') }})
+    ucs2: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ucs2') }})
     

@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import journalinstruction as shared_journalinstruction
 
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalInstructionTemplatePathParams:
-    journal_instruction_id: str = field(metadata={'path_param': { 'field_name': 'JournalInstructionId', 'style': 'simple', 'explode': False }})
+    journal_instruction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'JournalInstructionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalInstructionTemplateHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalInstructionTemplateRequest:
-    headers: GetJournalInstructionTemplateHeaders = field()
-    path_params: GetJournalInstructionTemplatePathParams = field()
+    headers: GetJournalInstructionTemplateHeaders = dataclasses.field()
+    path_params: GetJournalInstructionTemplatePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalInstructionTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    journal_instruction: Optional[shared.JournalInstruction] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    journal_instruction: Optional[shared_journalinstruction.JournalInstruction] = dataclasses.field(default=None)
     

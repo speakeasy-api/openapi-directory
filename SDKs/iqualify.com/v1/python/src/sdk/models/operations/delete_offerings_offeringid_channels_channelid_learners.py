@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOfferingsOfferingIDChannelsChannelIDLearnersPathParams:
-    channel_id: str = field(metadata={'path_param': { 'field_name': 'channelId', 'style': 'simple', 'explode': False }})
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    channel_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channelId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteOfferingsOfferingIDChannelsChannelIDLearnersRequestBody:
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOfferingsOfferingIDChannelsChannelIDLearnersRequest:
-    path_params: DeleteOfferingsOfferingIDChannelsChannelIDLearnersPathParams = field()
-    request: DeleteOfferingsOfferingIDChannelsChannelIDLearnersRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DeleteOfferingsOfferingIDChannelsChannelIDLearnersPathParams = dataclasses.field()
+    request: DeleteOfferingsOfferingIDChannelsChannelIDLearnersRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOfferingsOfferingIDChannelsChannelIDLearnersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import billdocumentlink as shared_billdocumentlink
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BillDocumentOrVersion:
-    date_: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
-    links: List[BillDocumentLink] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
-    note: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
+    date_: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
+    links: list[shared_billdocumentlink.BillDocumentLink] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    note: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
     

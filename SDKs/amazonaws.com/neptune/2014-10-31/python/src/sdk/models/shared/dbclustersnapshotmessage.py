@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbclustersnapshotlist as shared_dbclustersnapshotlist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbClusterSnapshotMessage:
-    db_cluster_snapshots: Optional[List[DbClusterSnapshot]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_cluster_snapshots: Optional[list[shared_dbclustersnapshotlist.DbClusterSnapshotList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

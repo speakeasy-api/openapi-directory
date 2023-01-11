@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAzureAuth:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    azure_auth: SchemeAzureAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    azure_auth: SchemeAzureAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     

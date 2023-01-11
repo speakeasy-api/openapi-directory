@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateSamlProviderResponse:
     r"""CreateSamlProviderResponse
     Contains the response to a successful <a>CreateSAMLProvider</a> request. 
     """
     
-    saml_provider_arn: Optional[str] = field(default=None)
-    tags: Optional[List[Tag]] = field(default=None)
+    saml_provider_arn: Optional[str] = dataclasses.field(default=None)
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None)
     

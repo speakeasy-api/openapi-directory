@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import paymentpolicy as shared_paymentpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPolicyPathParams:
-    payment_policy_id: str = field(metadata={'path_param': { 'field_name': 'payment_policy_id', 'style': 'simple', 'explode': False }})
+    payment_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_policy_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPolicyRequest:
-    path_params: GetPaymentPolicyPathParams = field()
-    security: GetPaymentPolicySecurity = field()
+    path_params: GetPaymentPolicyPathParams = dataclasses.field()
+    security: GetPaymentPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_policy: Optional[shared.PaymentPolicy] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_policy: Optional[shared_paymentpolicy.PaymentPolicy] = dataclasses.field(default=None)
     

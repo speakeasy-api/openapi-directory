@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetTimerAction:
     r"""SetTimerAction
     Information needed to set the timer.
     """
     
-    timer_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timerName') }})
-    duration_expression: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('durationExpression') }})
-    seconds: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('seconds') }})
+    timer_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timerName') }})
+    duration_expression: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('durationExpression') }})
+    seconds: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('seconds') }})
     

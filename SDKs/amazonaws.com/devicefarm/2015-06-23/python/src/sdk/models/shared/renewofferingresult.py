@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import offeringtransaction as shared_offeringtransaction
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RenewOfferingResult:
     r"""RenewOfferingResult
     The result of a renewal offering.
     """
     
-    offering_transaction: Optional[OfferingTransaction] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offeringTransaction') }})
+    offering_transaction: Optional[shared_offeringtransaction.OfferingTransaction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('offeringTransaction') }})
     

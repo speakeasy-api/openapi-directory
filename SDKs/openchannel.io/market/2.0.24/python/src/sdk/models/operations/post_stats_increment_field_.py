@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostStatsIncrementFieldPathParams:
-    field: str = field(metadata={'path_param': { 'field_name': 'field', 'style': 'simple', 'explode': False }})
+    field: str = dataclasses.field(metadata={'path_param': { 'field_name': 'field', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStatsIncrementFieldQueryParams:
-    app_id: str = field(metadata={'query_param': { 'field_name': 'appId', 'style': 'form', 'explode': True }})
-    date_: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
-    user_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
-    value: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'value', 'style': 'form', 'explode': True }})
+    app_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'appId', 'style': 'form', 'explode': True }})
+    date_: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'date', 'style': 'form', 'explode': True }})
+    user_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    value: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'value', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStatsIncrementFieldRequest:
-    path_params: PostStatsIncrementFieldPathParams = field()
-    query_params: PostStatsIncrementFieldQueryParams = field()
+    path_params: PostStatsIncrementFieldPathParams = dataclasses.field()
+    query_params: PostStatsIncrementFieldQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostStatsIncrementFieldResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

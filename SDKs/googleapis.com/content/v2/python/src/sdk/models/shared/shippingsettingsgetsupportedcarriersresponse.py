@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import carrierscarrier as shared_carrierscarrier
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ShippingsettingsGetSupportedCarriersResponse:
-    carriers: Optional[List[CarriersCarrier]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('carriers') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    carriers: Optional[list[shared_carrierscarrier.CarriersCarrier]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('carriers') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

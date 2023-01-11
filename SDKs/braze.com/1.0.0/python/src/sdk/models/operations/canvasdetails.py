@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CanvasDetailsQueryParams:
-    canvas_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'canvas_id', 'style': 'form', 'explode': True }})
+    canvas_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'canvas_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CanvasDetailsRequest:
-    query_params: CanvasDetailsQueryParams = field()
+    query_params: CanvasDetailsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CanvasDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sitetypelayer as shared_sitetypelayer
 
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesGetSitesForPublicFacingAPIPathParams:
-    site_type_id: int = field(metadata={'path_param': { 'field_name': 'siteType_Id', 'style': 'simple', 'explode': False }})
-    version: str = field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
+    site_type_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'siteType_Id', 'style': 'simple', 'explode': False }})
+    version: str = dataclasses.field(metadata={'path_param': { 'field_name': 'version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesGetSitesForPublicFacingAPIRequest:
-    path_params: SiteTypesGetSitesForPublicFacingAPIPathParams = field()
+    path_params: SiteTypesGetSitesForPublicFacingAPIPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SiteTypesGetSitesForPublicFacingAPIResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site_type_layer: Optional[shared.SiteTypeLayer] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site_type_layer: Optional[shared_sitetypelayer.SiteTypeLayer] = dataclasses.field(default=None)
     

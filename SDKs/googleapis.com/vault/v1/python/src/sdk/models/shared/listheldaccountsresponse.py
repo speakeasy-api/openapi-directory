@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import heldaccount as shared_heldaccount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListHeldAccountsResponse:
     r"""ListHeldAccountsResponse
     Returns a list of the accounts covered by a hold.
     """
     
-    accounts: Optional[List[HeldAccount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
+    accounts: Optional[list[shared_heldaccount.HeldAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
     

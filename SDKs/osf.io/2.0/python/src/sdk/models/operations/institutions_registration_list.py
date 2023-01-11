@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsRegistrationListPathParams:
-    institution_id: str = field(metadata={'path_param': { 'field_name': 'institution_id', 'style': 'simple', 'explode': False }})
+    institution_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'institution_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsRegistrationListRequest:
-    path_params: InstitutionsRegistrationListPathParams = field()
+    path_params: InstitutionsRegistrationListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsRegistrationListResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

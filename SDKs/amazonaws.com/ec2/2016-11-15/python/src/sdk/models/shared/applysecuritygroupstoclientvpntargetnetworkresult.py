@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplySecurityGroupsToClientVpnTargetNetworkResult:
-    security_group_ids: Optional[List[str]] = field(default=None)
+    security_group_ids: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

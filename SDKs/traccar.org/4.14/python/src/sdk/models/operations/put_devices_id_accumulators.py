@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import deviceaccumulators as shared_deviceaccumulators
 
 
-@dataclass
+@dataclasses.dataclass
 class PutDevicesIDAccumulatorsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutDevicesIDAccumulatorsRequest:
-    path_params: PutDevicesIDAccumulatorsPathParams = field()
-    request: shared.DeviceAccumulators = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutDevicesIDAccumulatorsPathParams = dataclasses.field()
+    request: shared_deviceaccumulators.DeviceAccumulators = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutDevicesIDAccumulatorsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

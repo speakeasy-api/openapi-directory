@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import eventsubscription as shared_eventsubscription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeEventSubscriptionsResponse:
     r"""DescribeEventSubscriptionsResponse
     <p/>
     """
     
-    event_subscriptions_list: Optional[List[EventSubscription]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventSubscriptionsList') }})
-    marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
+    event_subscriptions_list: Optional[list[shared_eventsubscription.EventSubscription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventSubscriptionsList') }})
+    marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
     

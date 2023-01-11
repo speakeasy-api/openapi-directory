@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gatewaysummary as shared_gatewaysummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGatewaysResponse:
-    gateway_summaries: List[GatewaySummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewaySummaries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    gateway_summaries: list[shared_gatewaysummary.GatewaySummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewaySummaries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

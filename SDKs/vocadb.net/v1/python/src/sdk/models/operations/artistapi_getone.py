@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import artistforapicontract as shared_artistforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class ArtistAPIGetOnePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class ArtistAPIGetOneFieldsEnum(str, Enum):
     NONE = "None"
@@ -36,23 +36,23 @@ class ArtistAPIGetOneRelationsEnum(str, Enum):
     ALL = "All"
 
 
-@dataclass
+@dataclasses.dataclass
 class ArtistAPIGetOneQueryParams:
-    fields: Optional[ArtistAPIGetOneFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[ArtistAPIGetOneLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    relations: Optional[ArtistAPIGetOneRelationsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'relations', 'style': 'form', 'explode': True }})
+    fields: Optional[ArtistAPIGetOneFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[ArtistAPIGetOneLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    relations: Optional[ArtistAPIGetOneRelationsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'relations', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ArtistAPIGetOneRequest:
-    path_params: ArtistAPIGetOnePathParams = field()
-    query_params: ArtistAPIGetOneQueryParams = field()
+    path_params: ArtistAPIGetOnePathParams = dataclasses.field()
+    query_params: ArtistAPIGetOneQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ArtistAPIGetOneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artist_for_api_contract: Optional[shared.ArtistForAPIContract] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artist_for_api_contract: Optional[shared_artistforapicontract.ArtistForAPIContract] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

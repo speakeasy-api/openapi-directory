@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig:
     r"""GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig
     Config for PERSON_DETECTION.
     """
     
-    include_attributes: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeAttributes') }})
-    include_bounding_boxes: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeBoundingBoxes') }})
-    include_pose_landmarks: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includePoseLandmarks') }})
+    include_attributes: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeAttributes') }})
+    include_bounding_boxes: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeBoundingBoxes') }})
+    include_pose_landmarks: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includePoseLandmarks') }})
     

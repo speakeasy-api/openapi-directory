@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import outage as shared_outage
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSnowMonkeyOutagesSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnowMonkeyOutagesRequest:
-    security: GetSnowMonkeyOutagesSecurity = field()
+    security: GetSnowMonkeyOutagesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnowMonkeyOutagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    outages: Optional[List[shared.Outage]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    outages: Optional[list[shared_outage.Outage]] = dataclasses.field(default=None)
     

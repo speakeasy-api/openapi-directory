@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksFieldsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class AlbumAPIGetTracksFieldsLangEnum(str, Enum):
     DEFAULT = "Default"
@@ -14,25 +14,25 @@ class AlbumAPIGetTracksFieldsLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksFieldsQueryParams:
-    disc_number: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'discNumber', 'style': 'form', 'explode': True }})
-    field: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
-    lang: Optional[AlbumAPIGetTracksFieldsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    disc_number: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'discNumber', 'style': 'form', 'explode': True }})
+    field: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field', 'style': 'form', 'explode': True }})
+    lang: Optional[AlbumAPIGetTracksFieldsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksFieldsRequest:
-    path_params: AlbumAPIGetTracksFieldsPathParams = field()
-    query_params: AlbumAPIGetTracksFieldsQueryParams = field()
+    path_params: AlbumAPIGetTracksFieldsPathParams = dataclasses.field()
+    query_params: AlbumAPIGetTracksFieldsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksFieldsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album_api_get_tracks_fields_200_application_json_objects: Optional[List[dict[str, str]]] = field(default=None)
-    album_api_get_tracks_fields_200_application_jsonp_objects: Optional[List[dict[str, str]]] = field(default=None)
-    album_api_get_tracks_fields_200_text_json_objects: Optional[List[dict[str, str]]] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album_api_get_tracks_fields_200_application_json_objects: Optional[list[dict[str, str]]] = dataclasses.field(default=None)
+    album_api_get_tracks_fields_200_application_jsonp_objects: Optional[list[dict[str, str]]] = dataclasses.field(default=None)
+    album_api_get_tracks_fields_200_text_json_objects: Optional[list[dict[str, str]]] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

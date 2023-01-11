@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import formfieldsetentity as shared_formfieldsetentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFormFieldSetsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFormFieldSetsIDRequest:
-    path_params: GetFormFieldSetsIDPathParams = field()
+    path_params: GetFormFieldSetsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFormFieldSetsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    form_field_set_entity: Optional[shared.FormFieldSetEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    form_field_set_entity: Optional[shared_formfieldsetentity.FormFieldSetEntity] = dataclasses.field(default=None)
     

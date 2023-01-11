@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import origingrouplist as shared_origingrouplist
 
 
-@dataclass
+@dataclasses.dataclass
 class OriginGroups:
     r"""OriginGroups
     A complex data type for the origin groups specified for a distribution.
     """
     
-    quantity: int = field()
-    items: Optional[List[OriginGroup]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[shared_origingrouplist.OriginGroupList]] = dataclasses.field(default=None)
     

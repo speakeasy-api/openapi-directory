@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsIPReleasePathParams:
-    ip: str = field(metadata={'path_param': { 'field_name': 'ip', 'style': 'simple', 'explode': False }})
+    ip: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ip', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsIPReleaseHeaders:
-    x_auth_project_id: str = field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
-    x_auth_token: str = field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
+    x_auth_project_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Project-Id', 'style': 'simple', 'explode': False }})
+    x_auth_token: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Auth-Token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsIPReleaseRequest:
-    headers: PostContainersFloatingIpsIPReleaseHeaders = field()
-    path_params: PostContainersFloatingIpsIPReleasePathParams = field()
+    headers: PostContainersFloatingIpsIPReleaseHeaders = dataclasses.field()
+    path_params: PostContainersFloatingIpsIPReleasePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostContainersFloatingIpsIPReleaseResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

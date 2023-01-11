@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportKeyPairResult:
-    key_fingerprint: Optional[str] = field(default=None)
-    key_name: Optional[str] = field(default=None)
-    key_pair_id: Optional[str] = field(default=None)
-    tags: Optional[List[Tag]] = field(default=None)
+    key_fingerprint: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    key_name: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    key_pair_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    tags: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

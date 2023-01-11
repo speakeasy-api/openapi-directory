@@ -1,37 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fileobject as shared_fileobject
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFilePathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFileHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFileSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFileRequest:
-    headers: UpdateFileHeaders = field()
-    path_params: UpdateFilePathParams = field()
-    security: UpdateFileSecurity = field()
-    request: Optional[shared.FileObject] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: UpdateFileHeaders = dataclasses.field()
+    path_params: UpdateFilePathParams = dataclasses.field()
+    security: UpdateFileSecurity = dataclasses.field()
+    request: Optional[shared_fileobject.FileObject] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_object: Optional[shared.FileObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_object: Optional[shared_fileobject.FileObject] = dataclasses.field(default=None)
     

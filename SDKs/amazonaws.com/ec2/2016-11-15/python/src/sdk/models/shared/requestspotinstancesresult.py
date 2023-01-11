@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RequestSpotInstancesResult:
     r"""RequestSpotInstancesResult
     Contains the output of RequestSpotInstances.
     """
     
-    spot_instance_requests: Optional[List[SpotInstanceRequest]] = field(default=None)
+    spot_instance_requests: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchputassetpropertyerrorentry as shared_batchputassetpropertyerrorentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchPutAssetPropertyValueResponse:
-    error_entries: List[BatchPutAssetPropertyErrorEntry] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorEntries') }})
+    error_entries: list[shared_batchputassetpropertyerrorentry.BatchPutAssetPropertyErrorEntry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorEntries') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.ConnectRequest(
     request=operations.ConnectRequestBody(
-        endpoint="veniam",
+        endpoint="iste",
     ),
 )
     
-res = s.sdk.connect(req)
+res = s.connect(req)
 
 if res.connect_200_application_json_string is not None:
     # handle response

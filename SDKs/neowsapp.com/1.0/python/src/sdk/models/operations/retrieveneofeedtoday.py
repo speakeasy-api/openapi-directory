@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import nearearthobjectlist as shared_nearearthobjectlist
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNeoFeedTodayQueryParams:
-    detailed: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'detailed', 'style': 'form', 'explode': True }})
+    detailed: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'detailed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNeoFeedTodayRequest:
-    query_params: RetrieveNeoFeedTodayQueryParams = field()
+    query_params: RetrieveNeoFeedTodayQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNeoFeedTodayResponse:
-    content_type: str = field()
-    status_code: int = field()
-    near_earth_object_list: Optional[shared.NearEarthObjectList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    near_earth_object_list: Optional[shared_nearearthobjectlist.NearEarthObjectList] = dataclasses.field(default=None)
     

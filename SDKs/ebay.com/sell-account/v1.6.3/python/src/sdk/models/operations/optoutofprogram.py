@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import program as shared_program
 
 
-@dataclass
+@dataclasses.dataclass
 class OptOutOfProgramSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OptOutOfProgramRequest:
-    request: shared.Program = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: OptOutOfProgramSecurity = field()
+    request: shared_program.Program = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: OptOutOfProgramSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OptOutOfProgramResponse:
-    content_type: str = field()
-    status_code: int = field()
-    opt_out_of_program_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    opt_out_of_program_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

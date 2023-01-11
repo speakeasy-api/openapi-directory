@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import v3_disruptionmodesresponse as shared_v3_disruptionmodesresponse
+from ..shared import v3_errorresponse as shared_v3_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DisruptionsGetDisruptionModesQueryParams:
-    devid: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
-    signature: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
-    token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    devid: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
+    signature: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
+    token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DisruptionsGetDisruptionModesRequest:
-    query_params: DisruptionsGetDisruptionModesQueryParams = field()
+    query_params: DisruptionsGetDisruptionModesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DisruptionsGetDisruptionModesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    v3_disruption_modes_response: Optional[shared.V3DisruptionModesResponse] = field(default=None)
-    v3_error_response: Optional[shared.V3ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    v3_disruption_modes_response: Optional[shared_v3_disruptionmodesresponse.V3DisruptionModesResponse] = dataclasses.field(default=None)
+    v3_error_response: Optional[shared_v3_errorresponse.V3ErrorResponse] = dataclasses.field(default=None)
     

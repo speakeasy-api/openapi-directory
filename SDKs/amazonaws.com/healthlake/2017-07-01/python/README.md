@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,42 +25,46 @@ s.config_security(
     
 req = operations.CreateFhirDatastoreRequest(
     headers=operations.CreateFhirDatastoreHeaders(
-        x_amz_algorithm="tempora",
-        x_amz_content_sha256="ut",
-        x_amz_credential="voluptas",
-        x_amz_date="sit",
-        x_amz_security_token="maiores",
-        x_amz_signature="aliquid",
-        x_amz_signed_headers="veritatis",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="est",
+        x_amz_credential="eos",
+        x_amz_date="quas",
+        x_amz_security_token="commodi",
+        x_amz_signature="eum",
+        x_amz_signed_headers="ex",
         x_amz_target="HealthLake.CreateFHIRDatastore",
     ),
     request=shared.CreateFhirDatastoreRequest(
-        client_token="sequi",
-        datastore_name="libero",
+        client_token="deleniti",
+        datastore_name="quam",
         datastore_type_version="R4",
         preload_data_config=shared.PreloadDataConfig(
             preload_data_type="SYNTHEA",
         ),
         sse_configuration=shared.SseConfiguration(
             kms_encryption_config=shared.KmsEncryptionConfig(
-                cmk_type="CUSTOMER_MANAGED_KMS_KEY",
-                kms_key_id="architecto",
+                cmk_type="AWS_OWNED_KMS_KEY",
+                kms_key_id="molestiae",
             ),
         ),
         tags=[
             shared.Tag(
-                key="tempora",
-                value="velit",
+                key="magnam",
+                value="voluptatem",
             ),
             shared.Tag(
-                key="aut",
-                value="aut",
+                key="nihil",
+                value="et",
+            ),
+            shared.Tag(
+                key="recusandae",
+                value="error",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_fhir_datastore(req)
+res = s.create_fhir_datastore(req)
 
 if res.create_fhir_datastore_response is not None:
     # handle response

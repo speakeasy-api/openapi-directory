@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sentimentdetectionjobproperties as shared_sentimentdetectionjobproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSentimentDetectionJobsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    sentiment_detection_job_properties_list: Optional[List[SentimentDetectionJobProperties]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SentimentDetectionJobPropertiesList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    sentiment_detection_job_properties_list: Optional[list[shared_sentimentdetectionjobproperties.SentimentDetectionJobProperties]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SentimentDetectionJobPropertiesList') }})
     

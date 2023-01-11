@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Stats:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.AdvancedGameStat]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.AdvancedGameStat]])
                 res.advanced_game_stats = out
         elif r.status_code == 400:
             pass
@@ -68,7 +68,7 @@ class Stats:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.AdvancedSeasonStat]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.AdvancedSeasonStat]])
                 res.advanced_season_stats = out
         elif r.status_code == 400:
             pass
@@ -95,7 +95,7 @@ class Stats:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.get_stat_categories_200_application_json_strings = out
 
         return res
@@ -121,7 +121,7 @@ class Stats:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamSeasonStat]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamSeasonStat]])
                 res.team_season_stats = out
         elif r.status_code == 400:
             pass

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -19,14 +19,14 @@ class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestViewEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest:
     r"""GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest
     Request to update the `CopyMode` of the given Label. Changes to this policy are not revisioned, do not require publishing, and take effect immediately. \
     """
     
-    copy_mode: Optional[GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestCopyModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyMode') }})
-    language_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
-    use_admin_access: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useAdminAccess') }})
-    view: Optional[GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestViewEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
+    copy_mode: Optional[GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestCopyModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyMode') }})
+    language_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languageCode') }})
+    use_admin_access: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('useAdminAccess') }})
+    view: Optional[GoogleAppsDriveLabelsV2betaUpdateLabelCopyModeRequestViewEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
     

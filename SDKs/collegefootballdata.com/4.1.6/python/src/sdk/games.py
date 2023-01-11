@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -66,7 +66,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Week]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Week]])
                 res.weeks = out
         elif r.status_code == 400:
             pass
@@ -94,7 +94,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GameMedia]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GameMedia]])
                 res.game_medias = out
         elif r.status_code == 400:
             pass
@@ -122,7 +122,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GameWeather]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GameWeather]])
                 res.game_weathers = out
         elif r.status_code == 400:
             pass
@@ -150,7 +150,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Game]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Game]])
                 res.games = out
         elif r.status_code == 400:
             pass
@@ -178,7 +178,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerGame]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerGame]])
                 res.player_games = out
         elif r.status_code == 400:
             pass
@@ -206,7 +206,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamGame]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamGame]])
                 res.team_games = out
         elif r.status_code == 400:
             pass
@@ -234,7 +234,7 @@ class Games:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TeamRecord]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TeamRecord]])
                 res.team_records = out
         elif r.status_code == 400:
             pass

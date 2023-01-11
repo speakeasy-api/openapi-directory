@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import consumer as shared_consumer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListStreamConsumersOutput:
-    consumers: Optional[List[Consumer]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Consumers') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    consumers: Optional[list[shared_consumer.Consumer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Consumers') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

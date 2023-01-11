@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import userschedulecollection as shared_userschedulecollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSchedulesQueryParams:
-    feed_type: str = field(metadata={'query_param': { 'field_name': 'feed_type', 'style': 'form', 'explode': True }})
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    feed_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'feed_type', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchedulesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchedulesRequest:
-    query_params: GetSchedulesQueryParams = field()
-    security: GetSchedulesSecurity = field()
+    query_params: GetSchedulesQueryParams = dataclasses.field()
+    security: GetSchedulesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSchedulesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user_schedule_collection: Optional[shared.UserScheduleCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user_schedule_collection: Optional[shared_userschedulecollection.UserScheduleCollection] = dataclasses.field(default=None)
     

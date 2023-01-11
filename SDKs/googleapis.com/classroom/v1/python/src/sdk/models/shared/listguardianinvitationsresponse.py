@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import guardianinvitation as shared_guardianinvitation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGuardianInvitationsResponse:
     r"""ListGuardianInvitationsResponse
     Response when listing guardian invitations.
     """
     
-    guardian_invitations: Optional[List[GuardianInvitation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guardianInvitations') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    guardian_invitations: Optional[list[shared_guardianinvitation.GuardianInvitation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guardianInvitations') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

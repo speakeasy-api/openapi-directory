@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ads as shared_ads
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAdsByInventoryReferencePathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdsByInventoryReferenceQueryParams:
-    inventory_reference_id: str = field(metadata={'query_param': { 'field_name': 'inventory_reference_id', 'style': 'form', 'explode': True }})
-    inventory_reference_type: str = field(metadata={'query_param': { 'field_name': 'inventory_reference_type', 'style': 'form', 'explode': True }})
+    inventory_reference_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'inventory_reference_id', 'style': 'form', 'explode': True }})
+    inventory_reference_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'inventory_reference_type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdsByInventoryReferenceSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdsByInventoryReferenceRequest:
-    path_params: GetAdsByInventoryReferencePathParams = field()
-    query_params: GetAdsByInventoryReferenceQueryParams = field()
-    security: GetAdsByInventoryReferenceSecurity = field()
+    path_params: GetAdsByInventoryReferencePathParams = dataclasses.field()
+    query_params: GetAdsByInventoryReferenceQueryParams = dataclasses.field()
+    security: GetAdsByInventoryReferenceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdsByInventoryReferenceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ads: Optional[shared.Ads] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ads: Optional[shared_ads.Ads] = dataclasses.field(default=None)
     

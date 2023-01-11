@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTruststoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_truststore_default_application_octet_stream_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_truststore_default_application_octet_stream_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,7 +19,7 @@ s.config_security(
     security=shared.Security(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         application_id=shared.SchemeApplicationID(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -34,13 +33,13 @@ req = operations.ConnectionSettingsAllRequest(
         ),
     ),
     path_params=operations.ConnectionSettingsAllPathParams(
-        resource="eveniet",
-        service_id="rerum",
-        unified_api="qui",
+        resource="atque",
+        service_id="maiores",
+        unified_api="beatae",
     ),
     headers=operations.ConnectionSettingsAllHeaders(
-        x_apideck_app_id="voluptatem",
-        x_apideck_consumer_id="voluptatem",
+        x_apideck_app_id="ab",
+        x_apideck_consumer_id="exercitationem",
     ),
 )
     

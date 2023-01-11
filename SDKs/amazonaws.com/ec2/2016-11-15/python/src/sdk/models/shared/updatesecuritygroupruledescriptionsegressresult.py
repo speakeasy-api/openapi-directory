@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Optional
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSecurityGroupRuleDescriptionsEgressResult:
-    return_: Optional[bool] = field(default=None)
+    return_: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

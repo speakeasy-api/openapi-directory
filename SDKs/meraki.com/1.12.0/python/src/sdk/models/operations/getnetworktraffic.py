@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkTrafficPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 class GetNetworkTrafficDeviceTypeEnum(str, Enum):
     COMBINED = "combined"
@@ -14,22 +14,22 @@ class GetNetworkTrafficDeviceTypeEnum(str, Enum):
     APPLIANCE = "appliance"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkTrafficQueryParams:
-    device_type: Optional[GetNetworkTrafficDeviceTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'deviceType', 'style': 'form', 'explode': True }})
-    t0: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
-    timespan: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
+    device_type: Optional[GetNetworkTrafficDeviceTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deviceType', 'style': 'form', 'explode': True }})
+    t0: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 't0', 'style': 'form', 'explode': True }})
+    timespan: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'timespan', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkTrafficRequest:
-    path_params: GetNetworkTrafficPathParams = field()
-    query_params: GetNetworkTrafficQueryParams = field()
+    path_params: GetNetworkTrafficPathParams = dataclasses.field()
+    query_params: GetNetworkTrafficQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkTrafficResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_network_traffic_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_network_traffic_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

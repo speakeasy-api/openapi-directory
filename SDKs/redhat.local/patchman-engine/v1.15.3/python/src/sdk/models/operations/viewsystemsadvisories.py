@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import controllers_systemsadvisoriesrequest as shared_controllers_systemsadvisoriesrequest
+from ..shared import controllers_systemsadvisoriesresponse as shared_controllers_systemsadvisoriesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ViewSystemsAdvisoriesSecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewSystemsAdvisoriesRequest:
-    request: shared.ControllersSystemsAdvisoriesRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: ViewSystemsAdvisoriesSecurity = field()
+    request: shared_controllers_systemsadvisoriesrequest.ControllersSystemsAdvisoriesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: ViewSystemsAdvisoriesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewSystemsAdvisoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_systems_advisories_response: Optional[shared.ControllersSystemsAdvisoriesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_systems_advisories_response: Optional[shared_controllers_systemsadvisoriesresponse.ControllersSystemsAdvisoriesResponse] = dataclasses.field(default=None)
     

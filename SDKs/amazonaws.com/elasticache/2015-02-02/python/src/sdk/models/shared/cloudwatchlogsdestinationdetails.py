@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CloudWatchLogsDestinationDetails:
     r"""CloudWatchLogsDestinationDetails
     The configuration details of the CloudWatch Logs destination.
     """
     
-    log_group: Optional[str] = field(default=None)
+    log_group: Optional[str] = dataclasses.field(default=None)
     

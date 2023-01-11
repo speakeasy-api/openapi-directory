@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeGithubAccessCode:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeInternalAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'ckan_api_key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'ckan_api_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    github_access_code: Optional[SchemeGithubAccessCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    internal_api_key: Optional[SchemeInternalAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    github_access_code: Optional[SchemeGithubAccessCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    internal_api_key: Optional[SchemeInternalAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     

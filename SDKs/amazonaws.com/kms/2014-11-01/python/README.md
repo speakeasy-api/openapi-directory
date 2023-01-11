@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CancelKeyDeletionRequest(
     headers=operations.CancelKeyDeletionHeaders(
-        x_amz_algorithm="quis",
-        x_amz_content_sha256="consequatur",
-        x_amz_credential="tenetur",
-        x_amz_date="alias",
-        x_amz_security_token="similique",
-        x_amz_signature="iure",
-        x_amz_signed_headers="fugit",
+        x_amz_algorithm="aut",
+        x_amz_content_sha256="officiis",
+        x_amz_credential="aliquid",
+        x_amz_date="natus",
+        x_amz_security_token="voluptate",
+        x_amz_signature="consectetur",
+        x_amz_signed_headers="tempore",
         x_amz_target="TrentService.CancelKeyDeletion",
     ),
     request=shared.CancelKeyDeletionRequest(
-        key_id="deleniti",
+        key_id="voluptatibus",
     ),
 )
     
-res = s.sdk.cancel_key_deletion(req)
+res = s.cancel_key_deletion(req)
 
 if res.cancel_key_deletion_response is not None:
     # handle response

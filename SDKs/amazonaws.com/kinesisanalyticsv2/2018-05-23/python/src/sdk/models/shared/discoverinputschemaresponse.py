@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sourceschema as shared_sourceschema
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DiscoverInputSchemaResponse:
-    input_schema: Optional[SourceSchema] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputSchema') }})
-    parsed_input_records: Optional[List[List[str]]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParsedInputRecords') }})
-    processed_input_records: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProcessedInputRecords') }})
-    raw_input_records: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RawInputRecords') }})
+    input_schema: Optional[shared_sourceschema.SourceSchema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputSchema') }})
+    parsed_input_records: Optional[list[list[str]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParsedInputRecords') }})
+    processed_input_records: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProcessedInputRecords') }})
+    raw_input_records: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RawInputRecords') }})
     

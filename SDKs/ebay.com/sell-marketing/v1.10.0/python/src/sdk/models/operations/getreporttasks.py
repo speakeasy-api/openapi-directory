@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import reporttaskpagedcollection as shared_reporttaskpagedcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTasksQueryParams:
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    report_task_statuses: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'report_task_statuses', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    report_task_statuses: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'report_task_statuses', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTasksSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTasksRequest:
-    query_params: GetReportTasksQueryParams = field()
-    security: GetReportTasksSecurity = field()
+    query_params: GetReportTasksQueryParams = dataclasses.field()
+    security: GetReportTasksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportTasksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report_task_paged_collection: Optional[shared.ReportTaskPagedCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report_task_paged_collection: Optional[shared_reporttaskpagedcollection.ReportTaskPagedCollection] = dataclasses.field(default=None)
     

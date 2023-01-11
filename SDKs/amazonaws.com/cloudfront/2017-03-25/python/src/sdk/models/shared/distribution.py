@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import activetrustedsigners as shared_activetrustedsigners
+from ..shared import distributionconfig as shared_distributionconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class Distribution:
     r"""Distribution
     The distribution's information.
     """
     
-    arn: str = field()
-    active_trusted_signers: ActiveTrustedSigners = field()
-    distribution_config: DistributionConfig = field()
-    domain_name: str = field()
-    id: str = field()
-    in_progress_invalidation_batches: int = field()
-    last_modified_time: datetime = field()
-    status: str = field()
+    arn: str = dataclasses.field()
+    active_trusted_signers: shared_activetrustedsigners.ActiveTrustedSigners = dataclasses.field()
+    distribution_config: shared_distributionconfig.DistributionConfig = dataclasses.field()
+    domain_name: str = dataclasses.field()
+    id: str = dataclasses.field()
+    in_progress_invalidation_batches: int = dataclasses.field()
+    last_modified_time: datetime = dataclasses.field()
+    status: str = dataclasses.field()
     

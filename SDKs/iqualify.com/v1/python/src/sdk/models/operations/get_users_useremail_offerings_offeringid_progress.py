@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailOfferingsOfferingIDProgressPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
-    user_email: str = field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    user_email: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSON:
-    completion: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('completion') }})
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    first_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstName') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    last_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastName') }})
+    completion: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('completion') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstName') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastName') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailOfferingsOfferingIDProgressRequest:
-    path_params: GetUsersUserEmailOfferingsOfferingIDProgressPathParams = field()
+    path_params: GetUsersUserEmailOfferingsOfferingIDProgressPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersUserEmailOfferingsOfferingIDProgressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    get_users_user_email_offerings_offering_id_progress_200_application_json_object: Optional[GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    get_users_user_email_offerings_offering_id_progress_200_application_json_object: Optional[GetUsersUserEmailOfferingsOfferingIDProgress200ApplicationJSON] = dataclasses.field(default=None)
     

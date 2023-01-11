@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import identitygetrequest as shared_identitygetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class IdentityGetRequest:
-    request: shared.IdentityGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_identitygetrequest.IdentityGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IdentityGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    identity_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    identity_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

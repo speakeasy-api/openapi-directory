@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,25 +11,25 @@ class GetAuthinfo200ApplicationJSONAuthMethodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAuthinfo200ApplicationJSONPermissions:
-    mutate: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mutate') }})
+    mutate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mutate') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAuthinfo200ApplicationJSON:
-    api_key_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key_id') }})
-    auth_method: Optional[GetAuthinfo200ApplicationJSONAuthMethodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auth_method') }})
-    authenticated: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticated') }})
-    permissions: Optional[GetAuthinfo200ApplicationJSONPermissions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    user_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_id') }})
+    api_key_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('api_key_id') }})
+    auth_method: Optional[GetAuthinfo200ApplicationJSONAuthMethodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('auth_method') }})
+    authenticated: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticated') }})
+    permissions: Optional[GetAuthinfo200ApplicationJSONPermissions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAuthinfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_authinfo_200_application_json_object: Optional[GetAuthinfo200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_authinfo_200_application_json_object: Optional[GetAuthinfo200ApplicationJSON] = dataclasses.field(default=None)
     

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import assessmentpendingsubmission as shared_assessmentpendingsubmission
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDLearnersPendingSubmissionPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDLearnersPendingSubmissionQueryParams:
-    days: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'days', 'style': 'form', 'explode': True }})
+    days: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'days', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDLearnersPendingSubmissionRequest:
-    path_params: GetOfferingsOfferingIDLearnersPendingSubmissionPathParams = field()
-    query_params: GetOfferingsOfferingIDLearnersPendingSubmissionQueryParams = field()
+    path_params: GetOfferingsOfferingIDLearnersPendingSubmissionPathParams = dataclasses.field()
+    query_params: GetOfferingsOfferingIDLearnersPendingSubmissionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDLearnersPendingSubmissionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    assessment_pending_submissions: Optional[List[shared.AssessmentPendingSubmission]] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    assessment_pending_submissions: Optional[list[shared_assessmentpendingsubmission.AssessmentPendingSubmission]] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

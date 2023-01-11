@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keypair as shared_keypair
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetKeyPairResult:
-    key_pair: Optional[KeyPair] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyPair') }})
+    key_pair: Optional[shared_keypair.KeyPair] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyPair') }})
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Subscription:
     r"""Subscription
     Information about a subscription.
     """
     
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Id') }})
-    source: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Source') }})
-    subject: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Subject') }})
-    target: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Target') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Id') }})
+    source: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Source') }})
+    subject: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Subject') }})
+    target: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Target') }})
     

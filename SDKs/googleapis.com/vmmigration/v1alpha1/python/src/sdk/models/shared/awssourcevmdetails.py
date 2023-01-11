@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class AwsSourceVMDetailsFirmwareEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AwsSourceVMDetails:
     r"""AwsSourceVMDetails
     Represent the source AWS VM details.
     """
     
-    committed_storage_bytes: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageBytes') }})
-    firmware: Optional[AwsSourceVMDetailsFirmwareEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firmware') }})
+    committed_storage_bytes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageBytes') }})
+    firmware: Optional[AwsSourceVMDetailsFirmwareEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firmware') }})
     

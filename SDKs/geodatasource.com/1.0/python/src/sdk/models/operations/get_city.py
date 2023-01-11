@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,22 +7,22 @@ class GetCityFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCityQueryParams:
-    key: str = field(metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    lat: float = field(metadata={'query_param': { 'field_name': 'lat', 'style': 'form', 'explode': True }})
-    lng: float = field(metadata={'query_param': { 'field_name': 'lng', 'style': 'form', 'explode': True }})
-    format: Optional[GetCityFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    lat: float = dataclasses.field(metadata={'query_param': { 'field_name': 'lat', 'style': 'form', 'explode': True }})
+    lng: float = dataclasses.field(metadata={'query_param': { 'field_name': 'lng', 'style': 'form', 'explode': True }})
+    format: Optional[GetCityFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCityRequest:
-    query_params: GetCityQueryParams = field()
+    query_params: GetCityQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_city_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_city_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_songforapicontract_ as shared_partialfindresult_songforapicontract_
 
 class SongAPIGetListArtistParticipationStatusEnum(str, Enum):
     EVERYTHING = "Everything"
@@ -67,48 +67,48 @@ class SongAPIGetListStatusEnum(str, Enum):
     LOCKED = "Locked"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetListQueryParams:
-    advanced_filters: Optional[List[Any]] = field(default=None, metadata={'query_param': { 'field_name': 'advancedFilters', 'style': 'form', 'explode': True }})
-    after_date: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'afterDate', 'style': 'form', 'explode': True }})
-    artist_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'artistId', 'style': 'form', 'explode': True }})
-    artist_participation_status: Optional[SongAPIGetListArtistParticipationStatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'artistParticipationStatus', 'style': 'form', 'explode': True }})
-    before_date: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'beforeDate', 'style': 'form', 'explode': True }})
-    child_tags: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'childTags', 'style': 'form', 'explode': True }})
-    child_voicebanks: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'childVoicebanks', 'style': 'form', 'explode': True }})
-    fields: Optional[SongAPIGetListFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    include_members: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'includeMembers', 'style': 'form', 'explode': True }})
-    lang: Optional[SongAPIGetListLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    min_score: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'minScore', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[SongAPIGetListNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    only_with_pvs: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'onlyWithPvs', 'style': 'form', 'explode': True }})
-    parent_song_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'parentSongId', 'style': 'form', 'explode': True }})
-    prefer_accurate_matches: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'preferAccurateMatches', 'style': 'form', 'explode': True }})
-    pv_services: Optional[SongAPIGetListPvServicesEnum] = field(default=None, metadata={'query_param': { 'field_name': 'pvServices', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    release_event_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'releaseEventId', 'style': 'form', 'explode': True }})
-    since: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
-    song_types: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'songTypes', 'style': 'form', 'explode': True }})
-    sort: Optional[SongAPIGetListSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    status: Optional[SongAPIGetListStatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    tag_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
-    tag_name: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
-    unify_types_and_tags: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'unifyTypesAndTags', 'style': 'form', 'explode': True }})
-    user_collection_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'userCollectionId', 'style': 'form', 'explode': True }})
+    advanced_filters: Optional[list[Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'advancedFilters', 'style': 'form', 'explode': True }})
+    after_date: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'afterDate', 'style': 'form', 'explode': True }})
+    artist_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artistId', 'style': 'form', 'explode': True }})
+    artist_participation_status: Optional[SongAPIGetListArtistParticipationStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artistParticipationStatus', 'style': 'form', 'explode': True }})
+    before_date: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'beforeDate', 'style': 'form', 'explode': True }})
+    child_tags: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'childTags', 'style': 'form', 'explode': True }})
+    child_voicebanks: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'childVoicebanks', 'style': 'form', 'explode': True }})
+    fields: Optional[SongAPIGetListFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    include_members: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeMembers', 'style': 'form', 'explode': True }})
+    lang: Optional[SongAPIGetListLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    min_score: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'minScore', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[SongAPIGetListNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    only_with_pvs: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'onlyWithPvs', 'style': 'form', 'explode': True }})
+    parent_song_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'parentSongId', 'style': 'form', 'explode': True }})
+    prefer_accurate_matches: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'preferAccurateMatches', 'style': 'form', 'explode': True }})
+    pv_services: Optional[SongAPIGetListPvServicesEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pvServices', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    release_event_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'releaseEventId', 'style': 'form', 'explode': True }})
+    since: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'since', 'style': 'form', 'explode': True }})
+    song_types: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'songTypes', 'style': 'form', 'explode': True }})
+    sort: Optional[SongAPIGetListSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    status: Optional[SongAPIGetListStatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    tag_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
+    tag_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
+    unify_types_and_tags: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'unifyTypesAndTags', 'style': 'form', 'explode': True }})
+    user_collection_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userCollectionId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetListRequest:
-    query_params: SongAPIGetListQueryParams = field()
+    query_params: SongAPIGetListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_song_for_api_contract_: Optional[shared.PartialFindResultSongForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_song_for_api_contract_: Optional[shared_partialfindresult_songforapicontract_.PartialFindResultSongForAPIContract] = dataclasses.field(default=None)
     

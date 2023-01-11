@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import loadbalancertargetgroupstate as shared_loadbalancertargetgroupstate
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeLoadBalancerTargetGroupsResponse:
-    load_balancer_target_groups: Optional[List[LoadBalancerTargetGroupState]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    load_balancer_target_groups: Optional[list[shared_loadbalancertargetgroupstate.LoadBalancerTargetGroupState]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,24 +18,25 @@ s = sdk.SDK()
     
 req = operations.GetCmsV3DomainsGetPageRequest(
     security=operations.GetCmsV3DomainsGetPageSecurity(
-        hapikey=shared.SchemeHapikey(
+        private_apps_legacy=shared.SchemePrivateAppsLegacy(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     query_params=operations.GetCmsV3DomainsGetPageQueryParams(
-        after="occaecati",
+        after="sint",
         archived=True,
-        created_after="2012-05-15T08:49:21Z",
-        created_at="2001-08-25T02:02:02Z",
-        created_before="2008-07-27T23:42:32Z",
-        limit=7094204514937110226,
+        created_after="1979-06-18T08:47:49Z",
+        created_at="1996-07-01T20:51:37Z",
+        created_before="1975-07-12T06:10:33Z",
+        limit=5059578240158743690,
         sort=[
-            "earum",
-            "quasi",
+            "officiis",
+            "provident",
+            "aspernatur",
         ],
-        updated_after="1996-05-07T04:42:59Z",
-        updated_at="1971-08-13T12:44:06Z",
-        updated_before="1999-02-27T08:04:06Z",
+        updated_after="2008-10-11T04:42:47Z",
+        updated_at="1970-09-06T10:10:38Z",
+        updated_before="2002-08-08T17:15:15Z",
     ),
 )
     

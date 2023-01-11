@@ -1,48 +1,48 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets:
-    asset_prices: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetPrices') }})
+    asset_prices: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetPrices') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios:
-    assets_weights: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetsWeights') }})
+    assets_weights: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetsWeights') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeightRequestBody:
-    assets: List[PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
-    portfolios: List[PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    assets: list[PostPortfolioSimulationRebalancingFixedWeightRequestBodyAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    portfolios: list[PostPortfolioSimulationRebalancingFixedWeightRequestBodyPortfolios] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSONPortfolios:
-    portfolio_values: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioValues') }})
+    portfolio_values: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolioValues') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSON:
-    portfolios: List[PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSONPortfolios] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
+    portfolios: list[PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSONPortfolios] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolios') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeightRequest:
-    request: PostPortfolioSimulationRebalancingFixedWeightRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostPortfolioSimulationRebalancingFixedWeightRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPortfolioSimulationRebalancingFixedWeightResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_portfolio_simulation_rebalancing_fixed_weight_200_application_json_object: Optional[PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_portfolio_simulation_rebalancing_fixed_weight_200_application_json_object: Optional[PostPortfolioSimulationRebalancingFixedWeight200ApplicationJSON] = dataclasses.field(default=None)
     

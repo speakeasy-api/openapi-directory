@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ScanPathParams:
-    baudrate: int = field(metadata={'path_param': { 'field_name': 'baudrate', 'style': 'simple', 'explode': False }})
-    device: str = field(metadata={'path_param': { 'field_name': 'device', 'style': 'simple', 'explode': False }})
+    baudrate: int = dataclasses.field(metadata={'path_param': { 'field_name': 'baudrate', 'style': 'simple', 'explode': False }})
+    device: str = dataclasses.field(metadata={'path_param': { 'field_name': 'device', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScanRequest:
-    path_params: ScanPathParams = field()
+    path_params: ScanPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScanResponse:
-    content_type: str = field()
-    status_code: int = field()
-    slaves: Optional[str] = field(default=None)
-    text_error: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    slaves: Optional[str] = dataclasses.field(default=None)
+    text_error: Optional[str] = dataclasses.field(default=None)
     

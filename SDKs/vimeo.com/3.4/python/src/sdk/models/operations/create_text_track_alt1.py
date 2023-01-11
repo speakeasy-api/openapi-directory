@@ -1,15 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import text_track as shared_text_track
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTextTrackAlt1PathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 class CreateTextTrackAlt1RequestBodyTypeEnum(str, Enum):
     CAPTIONS = "captions"
@@ -20,30 +22,30 @@ class CreateTextTrackAlt1RequestBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTextTrackAlt1RequestBody:
-    language: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('language') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: CreateTextTrackAlt1RequestBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    language: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('language') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: CreateTextTrackAlt1RequestBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTextTrackAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTextTrackAlt1Request:
-    path_params: CreateTextTrackAlt1PathParams = field()
-    request: CreateTextTrackAlt1RequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video.texttrack+json' }})
-    security: CreateTextTrackAlt1Security = field()
+    path_params: CreateTextTrackAlt1PathParams = dataclasses.field()
+    request: CreateTextTrackAlt1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video.texttrack+json' }})
+    security: CreateTextTrackAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTextTrackAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    text_track: Optional[shared.TextTrack] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    text_track: Optional[shared_text_track.TextTrack] = dataclasses.field(default=None)
     

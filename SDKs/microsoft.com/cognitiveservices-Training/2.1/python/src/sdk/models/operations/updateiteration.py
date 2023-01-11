@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import iteration as shared_iteration
+from ..shared import iteration as shared_iteration
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateIterationPathParams:
-    iteration_id: str = field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    iteration_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateIterationHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateIterationRequestsInput:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    text_xml: bytes = field(metadata={'request': { 'media_type': 'text/xml' }})
-    iteration: Optional[shared.IterationInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    iteration1: Optional[shared.IterationInput] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    iteration2: Optional[shared.IterationInput] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    text_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'text/xml' }})
+    iteration: Optional[shared_iteration.IterationInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    iteration1: Optional[shared_iteration.IterationInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    iteration2: Optional[shared_iteration.IterationInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateIterationRequest:
-    headers: UpdateIterationHeaders = field()
-    path_params: UpdateIterationPathParams = field()
-    request: UpdateIterationRequestsInput = field()
+    headers: UpdateIterationHeaders = dataclasses.field()
+    path_params: UpdateIterationPathParams = dataclasses.field()
+    request: UpdateIterationRequestsInput = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateIterationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    iteration: Optional[shared.Iteration] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    iteration: Optional[shared_iteration.Iteration] = dataclasses.field(default=None)
     

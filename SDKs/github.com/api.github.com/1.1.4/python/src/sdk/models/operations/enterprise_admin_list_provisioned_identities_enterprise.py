@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import scim_user_list_enterprise as shared_scim_user_list_enterprise
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListProvisionedIdentitiesEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams:
-    count: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    start_index: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    start_index: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest:
-    path_params: EnterpriseAdminListProvisionedIdentitiesEnterprisePathParams = field()
-    query_params: EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams = field()
+    path_params: EnterpriseAdminListProvisionedIdentitiesEnterprisePathParams = dataclasses.field()
+    query_params: EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListProvisionedIdentitiesEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scim_user_list_enterprise: Optional[shared.ScimUserListEnterprise] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scim_user_list_enterprise: Optional[shared_scim_user_list_enterprise.ScimUserListEnterprise] = dataclasses.field(default=None)
     

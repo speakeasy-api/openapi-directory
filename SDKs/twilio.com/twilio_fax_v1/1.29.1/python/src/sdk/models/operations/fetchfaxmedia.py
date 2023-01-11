@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fax_v1_fax_fax_media as shared_fax_v1_fax_fax_media
 
 
 FETCH_FAX_MEDIA_SERVERS = [
@@ -8,27 +9,27 @@ FETCH_FAX_MEDIA_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxMediaPathParams:
-    fax_sid: str = field(metadata={'path_param': { 'field_name': 'FaxSid', 'style': 'simple', 'explode': False }})
-    sid: str = field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
+    fax_sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FaxSid', 'style': 'simple', 'explode': False }})
+    sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'Sid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxMediaSecurity:
-    account_sid_auth_token: shared.SchemeAccountSidAuthToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    account_sid_auth_token: shared_security.SchemeAccountSidAuthToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxMediaRequest:
-    path_params: FetchFaxMediaPathParams = field()
-    security: FetchFaxMediaSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: FetchFaxMediaPathParams = dataclasses.field()
+    security: FetchFaxMediaSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchFaxMediaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fax_v1_fax_fax_media: Optional[shared.FaxV1FaxFaxMedia] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fax_v1_fax_fax_media: Optional[shared_fax_v1_fax_fax_media.FaxV1FaxFaxMedia] = dataclasses.field(default=None)
     

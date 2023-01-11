@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationInventoryDevicePathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationInventoryDeviceRequest:
-    path_params: GetOrganizationInventoryDevicePathParams = field()
+    path_params: GetOrganizationInventoryDevicePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationInventoryDeviceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_organization_inventory_device_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_organization_inventory_device_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

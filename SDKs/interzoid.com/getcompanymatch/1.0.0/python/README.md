@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetcompanymatchRequest(
     query_params=operations.GetcompanymatchQueryParams(
-        company="nihil",
-        license="fugiat",
+        company="iure",
+        license="voluptatem",
     ),
 )
     
-res = s.sdk.getcompanymatch(req)
+res = s.company_name_similarity_key.getcompanymatch(req)
 
 if res.getcompanymatch_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getcompanymatch_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Company Name Similarity Key
 
 * `getcompanymatch` - Gets a similarity key for matching purposes for company name data
 

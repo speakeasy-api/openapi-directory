@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,7 +12,7 @@ class SongRatingContractRatingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SongRatingContract:
-    rating: Optional[SongRatingContractRatingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rating') }, 'form': { 'field_name': 'rating' }})
+    rating: Optional[SongRatingContractRatingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rating') }, 'form': { 'field_name': 'rating' }})
     

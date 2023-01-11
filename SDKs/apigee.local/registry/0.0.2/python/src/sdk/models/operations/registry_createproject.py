@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateProjectQueryParams:
-    project_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'project_id', 'style': 'form', 'explode': True }})
+    project_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'project_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateProjectRequest:
-    query_params: RegistryCreateProjectQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    query_params: RegistryCreateProjectQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryCreateProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,24 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gamesessionqueuedestination as shared_gamesessionqueuedestination
+from ..shared import filterconfiguration as shared_filterconfiguration
+from ..shared import playerlatencypolicy as shared_playerlatencypolicy
+from ..shared import priorityconfiguration as shared_priorityconfiguration
+from ..shared import tag as shared_tag
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateGameSessionQueueInput:
     r"""CreateGameSessionQueueInput
     Represents the input for a request operation.
     """
     
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    custom_event_data: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomEventData') }})
-    destinations: Optional[List[GameSessionQueueDestination]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Destinations') }})
-    filter_configuration: Optional[FilterConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FilterConfiguration') }})
-    notification_target: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationTarget') }})
-    player_latency_policies: Optional[List[PlayerLatencyPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlayerLatencyPolicies') }})
-    priority_configuration: Optional[PriorityConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PriorityConfiguration') }})
-    tags: Optional[List[Tag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Tags') }})
-    timeout_in_seconds: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimeoutInSeconds') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    custom_event_data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomEventData') }})
+    destinations: Optional[list[shared_gamesessionqueuedestination.GameSessionQueueDestination]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Destinations') }})
+    filter_configuration: Optional[shared_filterconfiguration.FilterConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FilterConfiguration') }})
+    notification_target: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NotificationTarget') }})
+    player_latency_policies: Optional[list[shared_playerlatencypolicy.PlayerLatencyPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlayerLatencyPolicies') }})
+    priority_configuration: Optional[shared_priorityconfiguration.PriorityConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PriorityConfiguration') }})
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Tags') }})
+    timeout_in_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TimeoutInSeconds') }})
     

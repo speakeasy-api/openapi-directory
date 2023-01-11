@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class ListIdentityPoliciesResponse:
     r"""ListIdentityPoliciesResponse
     A list of names of sending authorization policies that apply to an identity.
     """
     
-    policy_names: List[str] = field()
+    policy_names: list[str] = dataclasses.field()
     

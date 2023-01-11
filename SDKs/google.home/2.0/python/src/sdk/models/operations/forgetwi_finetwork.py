@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import forgetwi_finetworkrequest as shared_forgetwi_finetworkrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ForgetWiFiNetworkRequest:
-    request: shared.ForgetWiFiNetworkRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_forgetwi_finetworkrequest.ForgetWiFiNetworkRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ForgetWiFiNetworkResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    forget_wi_fi_network_200_text_plain_object: Optional[str] = dataclasses.field(default=None)
     

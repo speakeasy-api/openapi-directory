@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dealservingmetadatadealpausestatus as shared_dealservingmetadatadealpausestatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DealServingMetadata:
-    alcohol_ads_allowed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alcoholAdsAllowed') }})
-    deal_pause_status: Optional[DealServingMetadataDealPauseStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealPauseStatus') }})
+    alcohol_ads_allowed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alcoholAdsAllowed') }})
+    deal_pause_status: Optional[shared_dealservingmetadatadealpausestatus.DealServingMetadataDealPauseStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dealPauseStatus') }})
     

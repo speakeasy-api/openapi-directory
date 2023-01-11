@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import s3dataconfig as shared_s3dataconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchInferenceJobOutput:
     r"""BatchInferenceJobOutput
     The output configuration parameters of a batch inference job.
     """
     
-    s3_data_destination: S3DataConfig = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3DataDestination') }})
+    s3_data_destination: shared_s3dataconfig.S3DataConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3DataDestination') }})
     

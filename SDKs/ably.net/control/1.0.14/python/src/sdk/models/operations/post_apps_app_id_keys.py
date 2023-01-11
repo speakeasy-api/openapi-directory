@@ -1,29 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import key_post as shared_key_post
+from ..shared import error as shared_error
+from ..shared import key_response as shared_key_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAppsAppIDKeysPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAppsAppIDKeysSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAppsAppIDKeysRequest:
-    path_params: PostAppsAppIDKeysPathParams = field()
-    security: PostAppsAppIDKeysSecurity = field()
-    request: Optional[shared.KeyPost] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostAppsAppIDKeysPathParams = dataclasses.field()
+    security: PostAppsAppIDKeysSecurity = dataclasses.field()
+    request: Optional[shared_key_post.KeyPost] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAppsAppIDKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    key_response: Optional[shared.KeyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    key_response: Optional[shared_key_response.KeyResponse] = dataclasses.field(default=None)
     

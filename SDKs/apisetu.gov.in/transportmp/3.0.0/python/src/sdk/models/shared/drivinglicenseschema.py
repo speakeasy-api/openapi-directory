@@ -1,109 +1,109 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaCertificateDataDrivingLicense:
-    abbreviation: str = field()
-    code: str = field()
-    description: str = field()
-    endorse_date: str = field()
-    issue_date: str = field()
+    abbreviation: str = dataclasses.field()
+    code: str = dataclasses.field()
+    description: str = dataclasses.field()
+    endorse_date: str = dataclasses.field()
+    issue_date: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaCertificateData:
-    driving_license: Optional[DrivingLicenseSchemaCertificateDataDrivingLicense] = field(default=None)
+    driving_license: Optional[DrivingLicenseSchemaCertificateDataDrivingLicense] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedByOrganizationAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedByOrganization:
-    address: DrivingLicenseSchemaIssuedByOrganizationAddress = field()
-    code: str = field()
-    name: str = field()
-    tin: str = field()
-    type: str = field()
-    uid: str = field()
+    address: DrivingLicenseSchemaIssuedByOrganizationAddress = dataclasses.field()
+    code: str = dataclasses.field()
+    name: str = dataclasses.field()
+    tin: str = dataclasses.field()
+    type: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedBy:
-    organization: DrivingLicenseSchemaIssuedByOrganization = field()
+    organization: DrivingLicenseSchemaIssuedByOrganization = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedToPersonAddress:
-    country: str = field()
-    district: str = field()
-    house: str = field()
-    landmark: str = field()
-    line1: str = field()
-    line2: str = field()
-    locality: str = field()
-    pin: str = field()
-    state: str = field()
-    type: str = field()
-    vtc: str = field()
+    country: str = dataclasses.field()
+    district: str = dataclasses.field()
+    house: str = dataclasses.field()
+    landmark: str = dataclasses.field()
+    line1: str = dataclasses.field()
+    line2: str = dataclasses.field()
+    locality: str = dataclasses.field()
+    pin: str = dataclasses.field()
+    state: str = dataclasses.field()
+    type: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedToPersonPhoto:
-    format: str = field()
+    format: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedToPerson:
-    address: DrivingLicenseSchemaIssuedToPersonAddress = field()
-    photo: DrivingLicenseSchemaIssuedToPersonPhoto = field()
-    dob: str = field()
-    email: str = field()
-    gender: str = field()
-    marital_status: str = field()
-    name: str = field()
-    phone: str = field()
-    religion: str = field()
-    swd: str = field()
-    swd_indicator: str = field()
-    title: str = field()
-    uid: str = field()
+    address: DrivingLicenseSchemaIssuedToPersonAddress = dataclasses.field()
+    photo: DrivingLicenseSchemaIssuedToPersonPhoto = dataclasses.field()
+    dob: str = dataclasses.field()
+    email: str = dataclasses.field()
+    gender: str = dataclasses.field()
+    marital_status: str = dataclasses.field()
+    name: str = dataclasses.field()
+    phone: str = dataclasses.field()
+    religion: str = dataclasses.field()
+    swd: str = dataclasses.field()
+    swd_indicator: str = dataclasses.field()
+    title: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchemaIssuedTo:
-    person: DrivingLicenseSchemaIssuedToPerson = field()
+    person: DrivingLicenseSchemaIssuedToPerson = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DrivingLicenseSchema:
-    certificate_data: DrivingLicenseSchemaCertificateData = field()
-    issued_by: DrivingLicenseSchemaIssuedBy = field()
-    issued_to: DrivingLicenseSchemaIssuedTo = field()
-    issue_date: str = field()
-    issued_at: str = field()
-    language: str = field()
-    name: str = field()
-    number: int = field()
-    status: str = field()
-    type: str = field()
-    valid_from_date: str = field()
-    expiry_date: Optional[str] = field(default=None)
-    prev_number: Optional[int] = field(default=None)
+    certificate_data: DrivingLicenseSchemaCertificateData = dataclasses.field()
+    issued_by: DrivingLicenseSchemaIssuedBy = dataclasses.field()
+    issued_to: DrivingLicenseSchemaIssuedTo = dataclasses.field()
+    issue_date: str = dataclasses.field()
+    issued_at: str = dataclasses.field()
+    language: str = dataclasses.field()
+    name: str = dataclasses.field()
+    number: int = dataclasses.field()
+    status: str = dataclasses.field()
+    type: str = dataclasses.field()
+    valid_from_date: str = dataclasses.field()
+    expiry_date: Optional[str] = dataclasses.field(default=None)
+    prev_number: Optional[int] = dataclasses.field(default=None)
     

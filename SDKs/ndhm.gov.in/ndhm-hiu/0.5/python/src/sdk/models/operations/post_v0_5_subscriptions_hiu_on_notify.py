@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import hiusubscriptionnotificationacknowledgment as shared_hiusubscriptionnotificationacknowledgment
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05SubscriptionsHiuOnNotifyHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_cm_id: str = field(metadata={'header': { 'field_name': 'X-CM-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_cm_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-CM-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05SubscriptionsHiuOnNotifyRequest:
-    headers: PostV05SubscriptionsHiuOnNotifyHeaders = field()
-    request: shared.HiuSubscriptionNotificationAcknowledgment = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PostV05SubscriptionsHiuOnNotifyHeaders = dataclasses.field()
+    request: shared_hiusubscriptionnotificationacknowledgment.HiuSubscriptionNotificationAcknowledgment = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05SubscriptionsHiuOnNotifyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

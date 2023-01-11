@@ -1,0 +1,14 @@
+import dataclasses
+from typing import Optional
+
+
+@dataclasses.dataclass
+class AvailableProcessorFeatureList:
+    r"""AvailableProcessorFeatureList
+    <p>Contains the available processor feature information for the DB instance class of a DB instance.</p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html#USER_ConfigureProcessor\">Configuring the Processor of the DB Instance Class</a> in the <i>Amazon RDS User Guide. </i> </p>
+    """
+    
+    allowed_values: Optional[str] = dataclasses.field(default=None)
+    default_value: Optional[str] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    

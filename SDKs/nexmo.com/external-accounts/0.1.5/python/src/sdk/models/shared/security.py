@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
-class SchemeBearerAuth:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+@dataclasses.dataclass
+class SchemeBasicAuth:
+    password: str = dataclasses.field(metadata={'security': { 'field_name': 'password' }})
+    username: str = dataclasses.field(metadata={'security': { 'field_name': 'username' }})
     
 
-@dataclass
-class SchemeBasicAuth:
-    password: str = field(metadata={'security': { 'field_name': 'password' }})
-    username: str = field(metadata={'security': { 'field_name': 'username' }})
+@dataclasses.dataclass
+class SchemeBearerAuth:
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     

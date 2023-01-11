@@ -1,70 +1,72 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import customermanagedchannels3storage as shared_customermanagedchannels3storage
+from ..shared import tag as shared_tag
+from ..shared import createchannelresponse as shared_createchannelresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequestBodyChannelStorage:
     r"""CreateChannelRequestBodyChannelStorage
     Where channel data is stored. You may choose one of <code>serviceManagedS3</code>, <code>customerManagedS3</code> storage. If not specified, the default is <code>serviceManagedS3</code>. This can't be changed after creation of the channel.
     """
     
-    customer_managed_s3: Optional[shared.CustomerManagedChannelS3Storage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customerManagedS3') }})
-    service_managed_s3: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceManagedS3') }})
+    customer_managed_s3: Optional[shared_customermanagedchannels3storage.CustomerManagedChannelS3Storage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customerManagedS3') }})
+    service_managed_s3: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceManagedS3') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequestBodyRetentionPeriod:
     r"""CreateChannelRequestBodyRetentionPeriod
     How long, in days, message data is kept.
     """
     
-    number_of_days: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfDays') }})
-    unlimited: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unlimited') }})
+    number_of_days: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfDays') }})
+    unlimited: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unlimited') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequestBody:
-    channel_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelName') }})
-    channel_storage: Optional[CreateChannelRequestBodyChannelStorage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelStorage') }})
-    retention_period: Optional[CreateChannelRequestBodyRetentionPeriod] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retentionPeriod') }})
-    tags: Optional[List[shared.Tag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    channel_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelName') }})
+    channel_storage: Optional[CreateChannelRequestBodyChannelStorage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelStorage') }})
+    retention_period: Optional[CreateChannelRequestBodyRetentionPeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('retentionPeriod') }})
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelRequest:
-    headers: CreateChannelHeaders = field()
-    request: CreateChannelRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateChannelHeaders = dataclasses.field()
+    request: CreateChannelRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateChannelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_channel_response: Optional[shared.CreateChannelResponse] = field(default=None)
-    internal_failure_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
-    limit_exceeded_exception: Optional[Any] = field(default=None)
-    resource_already_exists_exception: Optional[Any] = field(default=None)
-    service_unavailable_exception: Optional[Any] = field(default=None)
-    throttling_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_channel_response: Optional[shared_createchannelresponse.CreateChannelResponse] = dataclasses.field(default=None)
+    internal_failure_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_already_exists_exception: Optional[Any] = dataclasses.field(default=None)
+    service_unavailable_exception: Optional[Any] = dataclasses.field(default=None)
+    throttling_exception: Optional[Any] = dataclasses.field(default=None)
     

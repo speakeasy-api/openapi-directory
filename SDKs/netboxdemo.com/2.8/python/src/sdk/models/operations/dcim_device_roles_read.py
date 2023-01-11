@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import devicerole as shared_devicerole
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesReadRequest:
-    path_params: DcimDeviceRolesReadPathParams = field()
+    path_params: DcimDeviceRolesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_role: Optional[shared.DeviceRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_role: Optional[shared_devicerole.DeviceRole] = dataclasses.field(default=None)
     

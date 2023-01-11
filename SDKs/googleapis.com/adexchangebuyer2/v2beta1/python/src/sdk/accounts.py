@@ -29,14 +29,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/clients", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsClientsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -83,14 +83,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -187,14 +187,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsClientsUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -266,14 +266,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users/{userId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -295,14 +295,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -324,14 +324,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:add", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse(status_code=r.status_code, content_type=content_type)
@@ -378,14 +378,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:remove", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse(status_code=r.status_code, content_type=content_type)
@@ -457,14 +457,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:stopWatching", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse(status_code=r.status_code, content_type=content_type)
@@ -486,14 +486,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives/{creativeId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -515,14 +515,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:watch", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsCreativesWatchResponse(status_code=r.status_code, content_type=content_type)
@@ -569,14 +569,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:pause", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse(status_code=r.status_code, content_type=content_type)
@@ -598,14 +598,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:resume", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse(status_code=r.status_code, content_type=content_type)
@@ -677,14 +677,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:accept", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsAcceptResponse(status_code=r.status_code, content_type=content_type)
@@ -706,14 +706,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:addNote", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsAddNoteResponse(status_code=r.status_code, content_type=content_type)
@@ -735,14 +735,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:cancelNegotiation", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse(status_code=r.status_code, content_type=content_type)
@@ -764,14 +764,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:completeSetup", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse(status_code=r.status_code, content_type=content_type)
@@ -793,14 +793,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -872,14 +872,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:pause", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsPauseResponse(status_code=r.status_code, content_type=content_type)
@@ -901,14 +901,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:resume", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsResumeResponse(status_code=r.status_code, content_type=content_type)
@@ -930,14 +930,14 @@ class Accounts:
         url = utils.generate_url(base_url, "/v2beta1/accounts/{accountId}/proposals/{proposalId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PUT", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.Adexchangebuyer2AccountsProposalsUpdateResponse(status_code=r.status_code, content_type=content_type)

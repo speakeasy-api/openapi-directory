@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import loggingoptions as shared_loggingoptions
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeLoggingOptionsResponse:
-    logging_options: LoggingOptions = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('loggingOptions') }})
+    logging_options: shared_loggingoptions.LoggingOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('loggingOptions') }})
     

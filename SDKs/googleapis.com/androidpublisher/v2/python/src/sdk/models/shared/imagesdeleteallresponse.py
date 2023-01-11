@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import image as shared_image
 
 
-@dataclass
+@dataclasses.dataclass
 class ImagesDeleteAllResponse:
-    deleted: Optional[List[Image]] = field(default=None)
+    deleted: Optional[list[shared_image.Image]] = dataclasses.field(default=None)
     

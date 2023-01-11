@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import example110 as shared_example110
 
 
-@dataclass
+@dataclasses.dataclass
 class StatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example110: Optional[shared.Example110] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example110: Optional[shared_example110.Example110] = dataclasses.field(default=None)
     

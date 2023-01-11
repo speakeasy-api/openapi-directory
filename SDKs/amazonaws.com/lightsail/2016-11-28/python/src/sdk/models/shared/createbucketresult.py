@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bucket as shared_bucket
+from ..shared import operation as shared_operation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateBucketResult:
-    bucket: Optional[Bucket] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
-    operations: Optional[List[Operation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
+    bucket: Optional[shared_bucket.Bucket] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucket') }})
+    operations: Optional[list[shared_operation.Operation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operations') }})
     

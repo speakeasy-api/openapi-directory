@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import apidimensionfiltergroup as shared_apidimensionfiltergroup
 
 class SearchAnalyticsQueryRequestAggregationTypeEnum(str, Enum):
     AUTO = "AUTO"
@@ -44,16 +44,16 @@ class SearchAnalyticsQueryRequestTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchAnalyticsQueryRequest:
-    aggregation_type: Optional[SearchAnalyticsQueryRequestAggregationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aggregationType') }})
-    data_state: Optional[SearchAnalyticsQueryRequestDataStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataState') }})
-    dimension_filter_groups: Optional[List[APIDimensionFilterGroup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimensionFilterGroups') }})
-    dimensions: Optional[List[SearchAnalyticsQueryRequestDimensionsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimensions') }})
-    end_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endDate') }})
-    row_limit: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rowLimit') }})
-    search_type: Optional[SearchAnalyticsQueryRequestSearchTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('searchType') }})
-    start_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startDate') }})
-    start_row: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startRow') }})
-    type: Optional[SearchAnalyticsQueryRequestTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    aggregation_type: Optional[SearchAnalyticsQueryRequestAggregationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aggregationType') }})
+    data_state: Optional[SearchAnalyticsQueryRequestDataStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataState') }})
+    dimension_filter_groups: Optional[list[shared_apidimensionfiltergroup.APIDimensionFilterGroup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimensionFilterGroups') }})
+    dimensions: Optional[list[SearchAnalyticsQueryRequestDimensionsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dimensions') }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endDate') }})
+    row_limit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rowLimit') }})
+    search_type: Optional[SearchAnalyticsQueryRequestSearchTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('searchType') }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startDate') }})
+    start_row: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startRow') }})
+    type: Optional[SearchAnalyticsQueryRequestTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

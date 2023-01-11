@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getlanguagesresponse as shared_getlanguagesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesRequest:
-    headers: GetLanguagesHeaders = field()
+    headers: GetLanguagesHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_languages_response: Optional[shared.GetLanguagesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_languages_response: Optional[shared_getlanguagesresponse.GetLanguagesResponse] = dataclasses.field(default=None)
     

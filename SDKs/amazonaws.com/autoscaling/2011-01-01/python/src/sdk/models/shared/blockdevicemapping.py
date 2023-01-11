@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import ebs as shared_ebs
 
 
-@dataclass
+@dataclasses.dataclass
 class BlockDeviceMapping:
     r"""BlockDeviceMapping
     Describes a block device mapping.
     """
     
-    device_name: str = field()
-    ebs: Optional[Ebs] = field(default=None)
-    no_device: Optional[bool] = field(default=None)
-    virtual_name: Optional[str] = field(default=None)
+    device_name: str = dataclasses.field()
+    ebs: Optional[shared_ebs.Ebs] = dataclasses.field(default=None)
+    no_device: Optional[bool] = dataclasses.field(default=None)
+    virtual_name: Optional[str] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import oneusers_get_responses_200_content_application_1json_schema_items as shared_oneusers_get_responses_200_content_application_1json_schema_items
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserRequest:
-    path_params: GetUserPathParams = field()
+    path_params: GetUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    oneusers_get_responses_200_content_application_1json_schema_items: Optional[shared.OneusersGetResponses200ContentApplication1jsonSchemaItems] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    oneusers_get_responses_200_content_application_1json_schema_items: Optional[shared_oneusers_get_responses_200_content_application_1json_schema_items.OneusersGetResponses200ContentApplication1jsonSchemaItems] = dataclasses.field(default=None)
     

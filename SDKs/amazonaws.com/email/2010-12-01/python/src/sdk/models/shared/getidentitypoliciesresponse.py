@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIdentityPoliciesResponse:
     r"""GetIdentityPoliciesResponse
     Represents the requested sending authorization policies.
     """
     
-    policies: dict[str, str] = field()
+    policies: dict[str, str] = dataclasses.field()
     

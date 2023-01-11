@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import stats as shared_stats
 
 
-@dataclass
+@dataclasses.dataclass
 class GlobalLiveStatsSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GlobalLiveStatsRequest:
-    security: GlobalLiveStatsSecurity = field()
+    security: GlobalLiveStatsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GlobalLiveStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    stats: Optional[shared.Stats] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    stats: Optional[shared_stats.Stats] = dataclasses.field(default=None)
     

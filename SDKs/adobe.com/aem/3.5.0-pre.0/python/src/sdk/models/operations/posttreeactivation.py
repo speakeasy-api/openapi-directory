@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostTreeActivationQueryParams:
-    ignoredeactivated: bool = field(metadata={'query_param': { 'field_name': 'ignoredeactivated', 'style': 'form', 'explode': True }})
-    onlymodified: bool = field(metadata={'query_param': { 'field_name': 'onlymodified', 'style': 'form', 'explode': True }})
-    path: str = field(metadata={'query_param': { 'field_name': 'path', 'style': 'form', 'explode': True }})
+    ignoredeactivated: bool = dataclasses.field(metadata={'query_param': { 'field_name': 'ignoredeactivated', 'style': 'form', 'explode': True }})
+    onlymodified: bool = dataclasses.field(metadata={'query_param': { 'field_name': 'onlymodified', 'style': 'form', 'explode': True }})
+    path: str = dataclasses.field(metadata={'query_param': { 'field_name': 'path', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTreeActivationRequest:
-    query_params: PostTreeActivationQueryParams = field()
+    query_params: PostTreeActivationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTreeActivationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

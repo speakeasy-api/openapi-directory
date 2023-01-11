@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import example1 as shared_example1
 
 
-@dataclass
+@dataclasses.dataclass
 class EurekaInfoQueryParams:
-    nonce: int = field(metadata={'query_param': { 'field_name': 'nonce', 'style': 'form', 'explode': True }})
-    options: str = field(metadata={'query_param': { 'field_name': 'options', 'style': 'form', 'explode': True }})
-    params: str = field(metadata={'query_param': { 'field_name': 'params', 'style': 'form', 'explode': True }})
+    nonce: int = dataclasses.field(metadata={'query_param': { 'field_name': 'nonce', 'style': 'form', 'explode': True }})
+    options: str = dataclasses.field(metadata={'query_param': { 'field_name': 'options', 'style': 'form', 'explode': True }})
+    params: str = dataclasses.field(metadata={'query_param': { 'field_name': 'params', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EurekaInfoRequest:
-    query_params: EurekaInfoQueryParams = field()
+    query_params: EurekaInfoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EurekaInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example1: Optional[shared.Example1] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example1: Optional[shared_example1.Example1] = dataclasses.field(default=None)
     

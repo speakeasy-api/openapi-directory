@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -18,14 +18,14 @@ class PublicUpdateSubscriptionStatusRequestLegalBasisEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PublicUpdateSubscriptionStatusRequest:
     r"""PublicUpdateSubscriptionStatusRequest
     A request to change the status of a contact's subscription.
     """
     
-    email_address: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emailAddress') }})
-    subscription_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptionId') }})
-    legal_basis: Optional[PublicUpdateSubscriptionStatusRequestLegalBasisEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legalBasis') }})
-    legal_basis_explanation: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legalBasisExplanation') }})
+    email_address: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emailAddress') }})
+    subscription_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptionId') }})
+    legal_basis: Optional[PublicUpdateSubscriptionStatusRequestLegalBasisEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legalBasis') }})
+    legal_basis_explanation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legalBasisExplanation') }})
     

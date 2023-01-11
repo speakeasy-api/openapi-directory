@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsByYearKeysPathParams:
-    year: int = field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
+    year: int = dataclasses.field(metadata={'path_param': { 'field_name': 'year', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsByYearKeysHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsByYearKeysSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsByYearKeysRequest:
-    headers: GetEventsByYearKeysHeaders = field()
-    path_params: GetEventsByYearKeysPathParams = field()
-    security: GetEventsByYearKeysSecurity = field()
+    headers: GetEventsByYearKeysHeaders = dataclasses.field()
+    path_params: GetEventsByYearKeysPathParams = dataclasses.field()
+    security: GetEventsByYearKeysSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsByYearKeysResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_events_by_year_keys_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_events_by_year_keys_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

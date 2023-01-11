@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import trace as shared_trace
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchGetTracesResult:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    traces: Optional[List[Trace]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Traces') }})
-    unprocessed_trace_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnprocessedTraceIds') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    traces: Optional[list[shared_trace.Trace]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Traces') }})
+    unprocessed_trace_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnprocessedTraceIds') }})
     

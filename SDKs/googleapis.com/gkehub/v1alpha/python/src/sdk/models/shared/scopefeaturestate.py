@@ -1,16 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import featurestate as shared_featurestate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScopeFeatureState:
-    r"""ScopeFeatureState
-    ScopeFeatureState contains Scope-wide Feature status information.
-    """
-    
-    state: Optional[FeatureState] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    state: Optional[shared_featurestate.FeatureState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     

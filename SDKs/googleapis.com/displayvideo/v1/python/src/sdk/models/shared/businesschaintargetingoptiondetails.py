@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -37,13 +37,13 @@ class BusinessChainTargetingOptionDetailsGeoRegionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BusinessChainTargetingOptionDetails:
     r"""BusinessChainTargetingOptionDetails
     Represents a targetable business chain within a geo region. This will be populated in the business_chain_details field when targeting_type is `TARGETING_TYPE_BUSINESS_CHAIN`.
     """
     
-    business_chain: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessChain') }})
-    geo_region: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegion') }})
-    geo_region_type: Optional[BusinessChainTargetingOptionDetailsGeoRegionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegionType') }})
+    business_chain: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('businessChain') }})
+    geo_region: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegion') }})
+    geo_region_type: Optional[BusinessChainTargetingOptionDetailsGeoRegionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegionType') }})
     

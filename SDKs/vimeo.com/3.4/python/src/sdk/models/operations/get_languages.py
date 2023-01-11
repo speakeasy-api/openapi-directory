@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import language as shared_language
 
 class GetLanguagesFilterEnum(str, Enum):
     TEXTTRACKS = "texttracks"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesQueryParams:
-    filter: Optional[GetLanguagesFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[GetLanguagesFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesRequest:
-    query_params: GetLanguagesQueryParams = field()
+    query_params: GetLanguagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLanguagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    languages: Optional[List[shared.Language]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    languages: Optional[list[shared_language.Language]] = dataclasses.field(default=None)
     

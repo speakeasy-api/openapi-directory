@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -22,13 +22,13 @@ class SoftwareConfigOptionalComponentsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SoftwareConfig:
     r"""SoftwareConfig
     Specifies the selection and config of software inside the cluster.
     """
     
-    image_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageVersion') }})
-    optional_components: Optional[List[SoftwareConfigOptionalComponentsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optionalComponents') }})
-    properties: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
+    image_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageVersion') }})
+    optional_components: Optional[list[SoftwareConfigOptionalComponentsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('optionalComponents') }})
+    properties: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
     

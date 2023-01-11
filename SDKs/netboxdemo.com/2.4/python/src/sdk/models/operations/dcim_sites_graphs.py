@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimSitesGraphsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimSitesGraphsRequest:
-    path_params: DcimSitesGraphsPathParams = field()
+    path_params: DcimSitesGraphsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimSitesGraphsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site: Optional[shared.Site] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site: Optional[shared_site.Site] = dataclasses.field(default=None)
     

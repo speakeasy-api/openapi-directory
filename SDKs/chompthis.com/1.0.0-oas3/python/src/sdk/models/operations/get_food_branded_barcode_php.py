@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import brandedfoodobject as shared_brandedfoodobject
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodBrandedBarcodePhpQueryParams:
-    code: str = field(metadata={'query_param': { 'field_name': 'code', 'style': 'form', 'explode': True }})
+    code: str = dataclasses.field(metadata={'query_param': { 'field_name': 'code', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodBrandedBarcodePhpSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodBrandedBarcodePhpRequest:
-    query_params: GetFoodBrandedBarcodePhpQueryParams = field()
-    security: GetFoodBrandedBarcodePhpSecurity = field()
+    query_params: GetFoodBrandedBarcodePhpQueryParams = dataclasses.field()
+    security: GetFoodBrandedBarcodePhpSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFoodBrandedBarcodePhpResponse:
-    content_type: str = field()
-    status_code: int = field()
-    branded_food_object: Optional[shared.BrandedFoodObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    branded_food_object: Optional[shared_brandedfoodobject.BrandedFoodObject] = dataclasses.field(default=None)
     

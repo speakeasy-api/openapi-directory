@@ -1,40 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awssourcedetails as shared_awssourcedetails
+from ..shared import status as shared_status
+from ..shared import vmwaresourcedetails as shared_vmwaresourcedetails
+from ..shared import awssourcedetails as shared_awssourcedetails
 
 
 @dataclass_json
-@dataclass
-class SourceInput:
-    r"""SourceInput
-    Source message describes a specific vm migration Source resource. It contains the source environment information.
-    """
-    
-    aws: Optional[AwsSourceDetailsInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aws') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    error: Optional[Status] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    vmware: Optional[VmwareSourceDetails] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmware') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Source:
     r"""Source
     Source message describes a specific vm migration Source resource. It contains the source environment information.
     """
     
-    aws: Optional[AwsSourceDetails] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aws') }})
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    error: Optional[Status] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    update_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
-    vmware: Optional[VmwareSourceDetails] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmware') }})
+    aws: Optional[shared_awssourcedetails.AwsSourceDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aws') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    error: Optional[shared_status.Status] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    update_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTime') }})
+    vmware: Optional[shared_vmwaresourcedetails.VmwareSourceDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmware') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class SourceInput:
+    r"""SourceInput
+    Source message describes a specific vm migration Source resource. It contains the source environment information.
+    """
+    
+    aws: Optional[shared_awssourcedetails.AwsSourceDetailsInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aws') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    error: Optional[shared_status.Status] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    vmware: Optional[shared_vmwaresourcedetails.VmwareSourceDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmware') }})
     

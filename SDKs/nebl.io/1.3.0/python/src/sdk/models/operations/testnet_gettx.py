@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gettxresponse as shared_gettxresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetTxPathParams:
-    txid: str = field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
+    txid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetTxRequest:
-    path_params: TestnetGetTxPathParams = field()
+    path_params: TestnetGetTxPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetTxResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_tx_response: Optional[shared.GetTxResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_tx_response: Optional[shared_gettxresponse.GetTxResponse] = dataclasses.field(default=None)
     

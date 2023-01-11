@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class EmojisGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    emojis_get_200_application_json_object: Optional[dict[str, str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    emojis_get_200_application_json_object: Optional[dict[str, str]] = dataclasses.field(default=None)
     

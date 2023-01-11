@@ -1,0 +1,33 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.PostEventsV3SendRequest(
+    security=operations.PostEventsV3SendSecurity(
+        hapikey=shared.SchemeHapikey(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    ),
+    request=shared.BehavioralEventHTTPCompletionRequest(
+        email="impedit",
+        event_name="fugiat",
+        object_id="qui",
+        occurred_at="1972-12-01T08:46:03Z",
+        properties={
+            "est": "ipsam",
+            "veniam": "eos",
+            "reprehenderit": "deleniti",
+        },
+        utk="quia",
+    ),
+)
+    
+res = s.behavioral_events_tracking.post_events_v3_send(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cloudfrontoriginaccessidentityconfig as shared_cloudfrontoriginaccessidentityconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class CloudFrontOriginAccessIdentity:
     r"""CloudFrontOriginAccessIdentity
     CloudFront origin access identity.
     """
     
-    id: str = field()
-    s3_canonical_user_id: str = field()
-    cloud_front_origin_access_identity_config: Optional[CloudFrontOriginAccessIdentityConfig] = field(default=None)
+    id: str = dataclasses.field()
+    s3_canonical_user_id: str = dataclasses.field()
+    cloud_front_origin_access_identity_config: Optional[shared_cloudfrontoriginaccessidentityconfig.CloudFrontOriginAccessIdentityConfig] = dataclasses.field(default=None)
     

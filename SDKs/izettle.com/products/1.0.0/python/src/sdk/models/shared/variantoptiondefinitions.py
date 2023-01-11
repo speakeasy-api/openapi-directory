@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import variantoptiondefinition as shared_variantoptiondefinition
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VariantOptionDefinitions:
-    definitions: List[VariantOptionDefinition] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('definitions') }})
+    definitions: list[shared_variantoptiondefinition.VariantOptionDefinition] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('definitions') }})
     

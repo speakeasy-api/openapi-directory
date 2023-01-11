@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fileobject as shared_fileobject
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileQueryParams:
-    folder_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'FolderId', 'style': 'form', 'explode': True }})
+    folder_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'FolderId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileRequestBody:
-    body: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'body' }})
-    filename: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
-    mime_type: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'mimeType' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    body: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'body' }})
+    filename: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
+    mime_type: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'mimeType' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileRequest:
-    headers: UploadFileHeaders = field()
-    query_params: UploadFileQueryParams = field()
-    security: UploadFileSecurity = field()
-    request: Optional[UploadFileRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    headers: UploadFileHeaders = dataclasses.field()
+    query_params: UploadFileQueryParams = dataclasses.field()
+    security: UploadFileSecurity = dataclasses.field()
+    request: Optional[UploadFileRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_object: Optional[shared.FileObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_object: Optional[shared_fileobject.FileObject] = dataclasses.field(default=None)
     

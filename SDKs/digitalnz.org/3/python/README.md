@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -29,40 +28,41 @@ req = operations.GetRecordsFormatRequest(
         format="xml",
     ),
     query_params=operations.GetRecordsFormatQueryParams(
-        and_category_="Archives",
-        and_century_="dignissimos",
-        and_collection_="nesciunt",
-        and_content_partner_="commodi",
-        and_creator_="dolor",
-        and_date_="natus",
-        and_dc_type_="est",
-        and_decade_="praesentium",
-        and_format_="quam",
+        and_category_="Audio",
+        and_century_="praesentium",
+        and_collection_="sint",
+        and_content_partner_="qui",
+        and_creator_="atque",
+        and_date_="iusto",
+        and_dc_type_="rem",
+        and_decade_="dolorum",
+        and_format_="ut",
         and_has_large_thumbnail_url_="Y",
-        and_has_lat_lng_=True,
-        and_is_commercial_use_=False,
-        and_or_filter_field_="in",
-        and_placename_="laboriosam",
-        and_primary_collection_="molestiae",
-        and_subject_="error",
-        and_title_="recusandae",
+        and_has_lat_lng_=False,
+        and_is_commercial_use_=True,
+        and_or_filter_field_="maiores",
+        and_placename_="ab",
+        and_primary_collection_="amet",
+        and_subject_="fugiat",
+        and_title_="est",
         and_usage_="Share",
-        and_year_="accusantium",
-        api_key="qui",
-        direction="desc",
+        and_year_="consequatur",
+        api_key="quia",
+        direction="asc",
         exclude_filters_from_facets=False,
         facets=[
-            "year",
+            "creator",
+            "century",
         ],
-        facets_page=6145129450379232766,
-        facets_per_page=3615018601672790208,
-        fields="nesciunt",
-        geo_bbox="quia",
-        page=2021619814846964830,
-        per_page=5952694347717306601,
+        facets_page=7749255547755295069,
+        facets_per_page=2063540456602819,
+        fields="corporis",
+        geo_bbox="quaerat",
+        page=693839712308138010,
+        per_page=5270800729784320551,
         sort="syndication_date",
-        text="eum",
-        without_filter_field_="debitis",
+        text="quam",
+        without_filter_field_="autem",
     ),
 )
     

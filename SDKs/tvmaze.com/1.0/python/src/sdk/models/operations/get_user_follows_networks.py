@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import networkfollow as shared_networkfollow
 
 class GetUserFollowsNetworksEmbedEnum(str, Enum):
     NETWORK = "network"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksQueryParams:
-    embed: Optional[GetUserFollowsNetworksEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetUserFollowsNetworksEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksRequest:
-    query_params: GetUserFollowsNetworksQueryParams = field()
+    query_params: GetUserFollowsNetworksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    network_follows: Optional[List[shared.NetworkFollow]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    network_follows: Optional[list[shared_networkfollow.NetworkFollow]] = dataclasses.field(default=None)
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import multiclusteringressfeaturespec as shared_multiclusteringressfeaturespec
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommonFeatureSpec:
     r"""CommonFeatureSpec
     CommonFeatureSpec contains Hub-wide configuration information
     """
     
-    appdevexperience: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appdevexperience') }})
-    fleetobservability: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fleetobservability') }})
-    multiclusteringress: Optional[MultiClusterIngressFeatureSpec] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multiclusteringress') }})
+    appdevexperience: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appdevexperience') }})
+    fleetobservability: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fleetobservability') }})
+    multiclusteringress: Optional[shared_multiclusteringressfeaturespec.MultiClusterIngressFeatureSpec] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multiclusteringress') }})
     

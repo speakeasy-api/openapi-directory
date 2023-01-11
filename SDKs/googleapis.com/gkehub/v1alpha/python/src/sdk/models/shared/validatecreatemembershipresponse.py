@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import validationresult as shared_validationresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ValidateCreateMembershipResponse:
     r"""ValidateCreateMembershipResponse
     Response message for the `GkeHub.ValidateCreateMembership` method.
     """
     
-    validation_results: Optional[List[ValidationResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validationResults') }})
+    validation_results: Optional[list[shared_validationresult.ValidationResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validationResults') }})
     

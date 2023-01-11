@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -42,7 +42,7 @@ class Lookup:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ResponseItem]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ResponseItem]])
                 res.response_items = out
         elif r.status_code == 401:
             pass

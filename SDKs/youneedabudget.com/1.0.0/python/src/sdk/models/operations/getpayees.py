@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import payeesresponse as shared_payeesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeesPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeesQueryParams:
-    last_knowledge_of_server: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
+    last_knowledge_of_server: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'last_knowledge_of_server', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeesRequest:
-    path_params: GetPayeesPathParams = field()
-    query_params: GetPayeesQueryParams = field()
+    path_params: GetPayeesPathParams = dataclasses.field()
+    query_params: GetPayeesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    payees_response: Optional[shared.PayeesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    payees_response: Optional[shared_payeesresponse.PayeesResponse] = dataclasses.field(default=None)
     

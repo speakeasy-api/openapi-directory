@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsChoicesReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsChoicesReadRequest:
-    path_params: CircuitsChoicesReadPathParams = field()
+    path_params: CircuitsChoicesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsChoicesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

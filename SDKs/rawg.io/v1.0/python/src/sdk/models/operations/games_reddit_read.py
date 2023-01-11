@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import reddit as shared_reddit
 
 
-@dataclass
+@dataclasses.dataclass
 class GamesRedditReadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesRedditReadRequest:
-    path_params: GamesRedditReadPathParams = field()
+    path_params: GamesRedditReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GamesRedditReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    reddit: Optional[shared.Reddit] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reddit: Optional[shared_reddit.Reddit] = dataclasses.field(default=None)
     

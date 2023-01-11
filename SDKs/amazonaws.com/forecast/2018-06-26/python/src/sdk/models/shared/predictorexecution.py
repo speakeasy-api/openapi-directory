@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import testwindowsummary as shared_testwindowsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PredictorExecution:
     r"""PredictorExecution
     The algorithm used to perform a backtest and the status of those tests.
     """
     
-    algorithm_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlgorithmArn') }})
-    test_windows: Optional[List[TestWindowSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TestWindows') }})
+    algorithm_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlgorithmArn') }})
+    test_windows: Optional[list[shared_testwindowsummary.TestWindowSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TestWindows') }})
     

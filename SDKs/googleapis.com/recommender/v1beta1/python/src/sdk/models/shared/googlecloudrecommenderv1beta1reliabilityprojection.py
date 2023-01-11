@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -12,12 +12,12 @@ class GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecommenderV1beta1ReliabilityProjection:
     r"""GoogleCloudRecommenderV1beta1ReliabilityProjection
     Contains information on the impact of a reliability recommendation.
     """
     
-    details: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
-    risks: Optional[List[GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('risks') }})
+    details: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
+    risks: Optional[list[GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('risks') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,10 +18,10 @@ s = sdk.SDK()
     
 req = operations.GetActionNotificationExportResultsRequest(
     query_params=operations.GetActionNotificationExportResultsQueryParams(
-        action_notification_export_id=763388924383789986,
-        cursor="molestiae",
-        per_page=8246720065789982806,
-        user_id=252123505414078850,
+        action_notification_export_id=2966375377600891262,
+        cursor="aut",
+        per_page=5026721396665135782,
+        user_id=8604752373465719830,
     ),
 )
     

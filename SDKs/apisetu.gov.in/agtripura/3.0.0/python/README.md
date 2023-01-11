@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.PecerRequest(
     security=operations.PecerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.PecerRequestBody(
         certificate_parameters=operations.PecerRequestBodyCertificateParameters(
-            ac_no="quo",
-            dob="ut",
+            ac_no="aut",
+            dob="dicta",
         ),
-        consent_artifact="vel",
+        consent_artifact="qui",
         format="pdf",
-        txn_id="eligendi",
+        txn_id="dolore",
     ),
 )
     
-res = s.sdk.pecer(req)
+res = s.ap_is.pecer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pecer` - Pension Certificate
 * `prfnd` - Provident Fund

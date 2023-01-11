@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import invalidation as shared_invalidation
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateInvalidationResult:
     r"""CreateInvalidationResult
     The returned result of the corresponding request.
     """
     
-    invalidation: Optional[Invalidation] = field(default=None)
+    invalidation: Optional[shared_invalidation.Invalidation] = dataclasses.field(default=None)
     

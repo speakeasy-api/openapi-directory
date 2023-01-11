@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keyusagedailycountepoch as shared_keyusagedailycountepoch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class KeyUsageResult:
-    daily_count: Optional[List[KeyUsageDailyCountEpoch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyCount') }})
-    end: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
-    start: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
-    total: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    daily_count: Optional[list[shared_keyusagedailycountepoch.KeyUsageDailyCountEpoch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyCount') }})
+    end: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('end') }})
+    start: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start') }})
+    total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ s.config_security(
     )
 )
     
-res = s.sdk.circuits_choices_list()
+res = s.circuits.circuits_choices_list()
 
 if res.status_code == 200:
     # handle response
@@ -34,7 +33,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `circuits_choices_list`
 * `circuits_choices_read`
@@ -63,6 +62,9 @@ if res.status_code == 200:
 * `circuits_providers_partial_update`
 * `circuits_providers_read`
 * `circuits_providers_update`
+
+### dcim
+
 * `dcim_choices_list`
 * `dcim_choices_read`
 * `dcim_connected_device_list` - This endpoint allows a user to determine what device (if any) is connected to a given peer device and peer
@@ -233,6 +235,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `dcim_virtual_chassis_partial_update`
 * `dcim_virtual_chassis_read`
 * `dcim_virtual_chassis_update`
+
+### extras
+
 * `extras_choices_list`
 * `extras_choices_read`
 * `extras_config_contexts_create`
@@ -276,6 +281,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `extras_topology_maps_read`
 * `extras_topology_maps_render`
 * `extras_topology_maps_update`
+
+### ipam
+
 * `ipam_choices_list`
 * `ipam_choices_read`
 * `ipam_aggregates_create`
@@ -340,6 +348,9 @@ however results will not be paginated.
 * `ipam_vrfs_partial_update`
 * `ipam_vrfs_read`
 * `ipam_vrfs_update`
+
+### secrets
+
 * `secrets_choices_list`
 * `secrets_choices_read`
 * `secrets_generate_rsa_key_pair_list` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
@@ -374,6 +385,9 @@ key will be returned instead of a new one.
 * `secrets_secrets_partial_update`
 * `secrets_secrets_read`
 * `secrets_secrets_update`
+
+### tenancy
+
 * `tenancy_choices_list`
 * `tenancy_choices_read`
 * `tenancy_tenant_groups_create`
@@ -388,6 +402,9 @@ key will be returned instead of a new one.
 * `tenancy_tenants_partial_update`
 * `tenancy_tenants_read`
 * `tenancy_tenants_update`
+
+### virtualization
+
 * `virtualization_choices_list`
 * `virtualization_choices_read`
 * `virtualization_cluster_groups_create`

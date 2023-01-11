@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import reservednode as shared_reservednode
 
 
-@dataclass
+@dataclasses.dataclass
 class PurchaseReservedNodeOfferingResult:
-    reserved_node: Optional[ReservedNode] = field(default=None)
+    reserved_node: Optional[shared_reservednode.ReservedNode] = dataclasses.field(default=None)
     

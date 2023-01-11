@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUUIDQueryParams:
-    uuidstr: str = field(metadata={'query_param': { 'field_name': 'uuidstr', 'style': 'form', 'explode': True }})
+    uuidstr: str = dataclasses.field(metadata={'query_param': { 'field_name': 'uuidstr', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUUIDSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUUIDRequest:
-    query_params: PostUUIDQueryParams = field()
-    security: PostUUIDSecurity = field()
+    query_params: PostUUIDQueryParams = dataclasses.field()
+    security: PostUUIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

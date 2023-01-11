@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errortemplate as shared_errortemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateServiceTemplatePathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateServiceTemplateSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateServiceTemplateRequest:
-    path_params: CreateServiceTemplatePathParams = field()
-    security: CreateServiceTemplateSecurity = field()
-    request: Optional[shared.ErrorTemplate] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateServiceTemplatePathParams = dataclasses.field()
+    security: CreateServiceTemplateSecurity = dataclasses.field()
+    request: Optional[shared_errortemplate.ErrorTemplate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateServiceTemplateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_template: Optional[shared.ErrorTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_template: Optional[shared_errortemplate.ErrorTemplate] = dataclasses.field(default=None)
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import imageidentifier as shared_imageidentifier
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StartImageScanRequest:
-    image_id: ImageIdentifier = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageId') }})
-    repository_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repositoryName') }})
-    registry_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryId') }})
+    image_id: shared_imageidentifier.ImageIdentifier = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('imageId') }})
+    repository_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repositoryName') }})
+    registry_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registryId') }})
     

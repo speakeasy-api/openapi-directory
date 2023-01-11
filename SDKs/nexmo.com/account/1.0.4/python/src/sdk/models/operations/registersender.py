@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import registeremailrequest as shared_registeremailrequest
+from ..shared import registeremailresponse as shared_registeremailresponse
 
 
 REGISTER_SENDER_SERVERS = [
@@ -8,22 +9,22 @@ REGISTER_SENDER_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class RegisterSenderQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    api_secret: str = field(metadata={'query_param': { 'field_name': 'api_secret', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_secret: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_secret', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegisterSenderRequest:
-    query_params: RegisterSenderQueryParams = field()
-    request: shared.RegisterEmailRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    server_url: Optional[str] = field(default=None)
+    query_params: RegisterSenderQueryParams = dataclasses.field()
+    request: shared_registeremailrequest.RegisterEmailRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class RegisterSenderResponse:
-    content_type: str = field()
-    status_code: int = field()
-    register_email_response: Optional[shared.RegisterEmailResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    register_email_response: Optional[shared_registeremailresponse.RegisterEmailResponse] = dataclasses.field(default=None)
     

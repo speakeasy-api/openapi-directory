@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.GkehubProjectsLocationsListRequest(
     security=operations.GkehubProjectsLocationsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.GkehubProjectsLocationsListPathParams(
-        name="molestias",
+        name="eligendi",
     ),
     query_params=operations.GkehubProjectsLocationsListQueryParams(
         dollar_xgafv="1",
-        access_token="laboriosam",
-        alt="json",
-        callback="commodi",
-        fields="ut",
-        filter="iste",
-        key="sapiente",
-        oauth_token="sequi",
-        page_size=4343853676733501390,
-        page_token="voluptatem",
-        pretty_print=True,
-        quota_user="ut",
-        upload_type="ut",
-        upload_protocol="voluptas",
+        access_token="ducimus",
+        alt="media",
+        callback="quaerat",
+        fields="rerum",
+        filter="sint",
+        key="autem",
+        oauth_token="sapiente",
+        page_size=6967151006170035181,
+        page_token="repellat",
+        pretty_print=False,
+        quota_user="non",
+        upload_type="praesentium",
+        upload_protocol="maxime",
     ),
 )
     

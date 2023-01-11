@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminRequestsRequestIDPathParams:
-    request_id: str = field(metadata={'path_param': { 'field_name': 'requestId', 'style': 'simple', 'explode': False }})
+    request_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'requestId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminRequestsRequestIDRequest:
-    path_params: GetAdminRequestsRequestIDPathParams = field()
+    path_params: GetAdminRequestsRequestIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminRequestsRequestIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -18,10 +17,10 @@ from sdk.models import operations, shared
 s = sdk.SDK()
     
 req = operations.PostDisableRequest(
-    request="vel",
+    request="commodi",
 )
     
-res = s.sdk.post_disable(req)
+res = s.post_disable(req)
 
 if res.disable_result is not None:
     # handle response

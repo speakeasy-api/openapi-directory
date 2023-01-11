@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import authentication_token as shared_authentication_token
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateRemoveTokenForEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateRemoveTokenForEnterpriseRequest:
-    path_params: EnterpriseAdminCreateRemoveTokenForEnterprisePathParams = field()
+    path_params: EnterpriseAdminCreateRemoveTokenForEnterprisePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateRemoveTokenForEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authentication_token: Optional[shared.AuthenticationToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authentication_token: Optional[shared_authentication_token.AuthenticationToken] = dataclasses.field(default=None)
     

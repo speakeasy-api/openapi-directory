@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class PlayByPlayFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlayPathParams:
-    format: PlayByPlayFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    gameid: str = field(metadata={'path_param': { 'field_name': 'gameid', 'style': 'simple', 'explode': False }})
+    format: PlayByPlayFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    gameid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gameid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlayRequest:
-    path_params: PlayByPlayPathParams = field()
+    path_params: PlayByPlayPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlayResponse:
-    content_type: str = field()
-    status_code: int = field()
-    play_by_play: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    play_by_play: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -54,26 +54,26 @@ class LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LivingAreaAccessibility:
     r"""LivingAreaAccessibility
     Accessibility features of the living area.
     """
     
-    ada_compliant_unit: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaCompliantUnit') }})
-    ada_compliant_unit_exception: Optional[LivingAreaAccessibilityAdaCompliantUnitExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaCompliantUnitException') }})
-    hearing_accessible_doorbell: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleDoorbell') }})
-    hearing_accessible_doorbell_exception: Optional[LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleDoorbellException') }})
-    hearing_accessible_fire_alarm: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleFireAlarm') }})
-    hearing_accessible_fire_alarm_exception: Optional[LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleFireAlarmException') }})
-    hearing_accessible_unit: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleUnit') }})
-    hearing_accessible_unit_exception: Optional[LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleUnitException') }})
-    mobility_accessible_bathtub: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleBathtub') }})
-    mobility_accessible_bathtub_exception: Optional[LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleBathtubException') }})
-    mobility_accessible_shower: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleShower') }})
-    mobility_accessible_shower_exception: Optional[LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleShowerException') }})
-    mobility_accessible_toilet: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleToilet') }})
-    mobility_accessible_toilet_exception: Optional[LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleToiletException') }})
-    mobility_accessible_unit: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleUnit') }})
-    mobility_accessible_unit_exception: Optional[LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleUnitException') }})
+    ada_compliant_unit: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaCompliantUnit') }})
+    ada_compliant_unit_exception: Optional[LivingAreaAccessibilityAdaCompliantUnitExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adaCompliantUnitException') }})
+    hearing_accessible_doorbell: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleDoorbell') }})
+    hearing_accessible_doorbell_exception: Optional[LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleDoorbellException') }})
+    hearing_accessible_fire_alarm: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleFireAlarm') }})
+    hearing_accessible_fire_alarm_exception: Optional[LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleFireAlarmException') }})
+    hearing_accessible_unit: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleUnit') }})
+    hearing_accessible_unit_exception: Optional[LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hearingAccessibleUnitException') }})
+    mobility_accessible_bathtub: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleBathtub') }})
+    mobility_accessible_bathtub_exception: Optional[LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleBathtubException') }})
+    mobility_accessible_shower: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleShower') }})
+    mobility_accessible_shower_exception: Optional[LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleShowerException') }})
+    mobility_accessible_toilet: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleToilet') }})
+    mobility_accessible_toilet_exception: Optional[LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleToiletException') }})
+    mobility_accessible_unit: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleUnit') }})
+    mobility_accessible_unit_exception: Optional[LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleUnitException') }})
     

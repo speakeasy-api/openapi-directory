@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connection as shared_connection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteConnectionResponse:
-    connection: Optional[Connection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Connection') }})
+    connection: Optional[shared_connection.Connection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Connection') }})
     

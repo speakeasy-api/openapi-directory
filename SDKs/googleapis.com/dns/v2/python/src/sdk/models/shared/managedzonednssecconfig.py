@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dnskeyspec as shared_dnskeyspec
 
 class ManagedZoneDNSSecConfigNonExistenceEnum(str, Enum):
     NSEC = "NSEC"
@@ -16,10 +16,10 @@ class ManagedZoneDNSSecConfigStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ManagedZoneDNSSecConfig:
-    default_key_specs: Optional[List[DNSKeySpec]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultKeySpecs') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    non_existence: Optional[ManagedZoneDNSSecConfigNonExistenceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nonExistence') }})
-    state: Optional[ManagedZoneDNSSecConfigStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    default_key_specs: Optional[list[shared_dnskeyspec.DNSKeySpec]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultKeySpecs') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    non_existence: Optional[ManagedZoneDNSSecConfigNonExistenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nonExistence') }})
+    state: Optional[ManagedZoneDNSSecConfigStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     

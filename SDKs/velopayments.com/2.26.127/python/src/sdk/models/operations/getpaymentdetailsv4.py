@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import paymentresponsev4 as shared_paymentresponsev4
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDetailsV4PathParams:
-    payment_id: str = field(metadata={'path_param': { 'field_name': 'paymentId', 'style': 'simple', 'explode': False }})
+    payment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'paymentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDetailsV4QueryParams:
-    sensitive: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
+    sensitive: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sensitive', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDetailsV4Request:
-    path_params: GetPaymentDetailsV4PathParams = field()
-    query_params: GetPaymentDetailsV4QueryParams = field()
+    path_params: GetPaymentDetailsV4PathParams = dataclasses.field()
+    query_params: GetPaymentDetailsV4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDetailsV4Response:
-    content_type: str = field()
-    status_code: int = field()
-    payment_response_v4: Optional[shared.PaymentResponseV4] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_response_v4: Optional[shared_paymentresponsev4.PaymentResponseV4] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import thread_subscription as shared_thread_subscription
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetThreadSubscriptionForAuthenticatedUserPathParams:
-    thread_id: int = field(metadata={'path_param': { 'field_name': 'thread_id', 'style': 'simple', 'explode': False }})
+    thread_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'thread_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetThreadSubscriptionForAuthenticatedUserRequest:
-    path_params: ActivityGetThreadSubscriptionForAuthenticatedUserPathParams = field()
+    path_params: ActivityGetThreadSubscriptionForAuthenticatedUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetThreadSubscriptionForAuthenticatedUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    thread_subscription: Optional[shared.ThreadSubscription] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    thread_subscription: Optional[shared_thread_subscription.ThreadSubscription] = dataclasses.field(default=None)
     

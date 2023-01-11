@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import songforapicontract as shared_songforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetPublishedSongsPathParams:
-    event_id: int = field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
+    event_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'eventId', 'style': 'simple', 'explode': False }})
     
 class ReleaseEventAPIGetPublishedSongsFieldsEnum(str, Enum):
     NONE = "None"
@@ -29,22 +29,22 @@ class ReleaseEventAPIGetPublishedSongsLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetPublishedSongsQueryParams:
-    fields: Optional[ReleaseEventAPIGetPublishedSongsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[ReleaseEventAPIGetPublishedSongsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[ReleaseEventAPIGetPublishedSongsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[ReleaseEventAPIGetPublishedSongsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetPublishedSongsRequest:
-    path_params: ReleaseEventAPIGetPublishedSongsPathParams = field()
-    query_params: ReleaseEventAPIGetPublishedSongsQueryParams = field()
+    path_params: ReleaseEventAPIGetPublishedSongsPathParams = dataclasses.field()
+    query_params: ReleaseEventAPIGetPublishedSongsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReleaseEventAPIGetPublishedSongsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_for_api_contracts: Optional[List[shared.SongForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_for_api_contracts: Optional[list[shared_songforapicontract.SongForAPIContract]] = dataclasses.field(default=None)
     

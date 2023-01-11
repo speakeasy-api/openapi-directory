@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import extension as shared_extension
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserExtensionsSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserExtensionsRequest:
-    security: GetUserExtensionsSecurity = field()
+    security: GetUserExtensionsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserExtensionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    extensions: Optional[List[shared.Extension]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    extensions: Optional[list[shared_extension.Extension]] = dataclasses.field(default=None)
     

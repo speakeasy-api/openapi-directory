@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import messagelist as shared_messagelist
 
 
-@dataclass
+@dataclasses.dataclass
 class ReceiveMessageResult:
     r"""ReceiveMessageResult
     A list of received messages.
     """
     
-    messages: Optional[List[Message]] = field(default=None)
+    messages: Optional[list[shared_messagelist.MessageList]] = dataclasses.field(default=None)
     

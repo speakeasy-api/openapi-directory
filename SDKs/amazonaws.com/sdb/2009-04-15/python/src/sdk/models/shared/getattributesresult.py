@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import attributelist as shared_attributelist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAttributesResult:
-    attributes: Optional[List[Attribute]] = field(default=None)
+    attributes: Optional[list[shared_attributelist.AttributeList]] = dataclasses.field(default=None)
     

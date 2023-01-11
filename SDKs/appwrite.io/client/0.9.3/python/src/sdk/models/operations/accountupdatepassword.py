@@ -1,35 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import user as shared_user
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountUpdatePasswordRequestBody:
-    password: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
-    old_password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldPassword') }})
+    password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    old_password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldPassword') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdatePasswordSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdatePasswordRequest:
-    security: AccountUpdatePasswordSecurity = field()
-    request: Optional[AccountUpdatePasswordRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AccountUpdatePasswordSecurity = dataclasses.field()
+    request: Optional[AccountUpdatePasswordRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountUpdatePasswordResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user: Optional[shared.User] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user: Optional[shared_user.User] = dataclasses.field(default=None)
     

@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import group_category as shared_group_category
+from ..shared import group_category_update as shared_group_category_update
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGroupCategoryPathParams:
-    group_category_id: str = field(metadata={'path_param': { 'field_name': 'groupCategoryId', 'style': 'simple', 'explode': False }})
+    group_category_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupCategoryId', 'style': 'simple', 'explode': False }})
     
 class UpdateGroupCategory200ApplicationJSONActionEnum(str, Enum):
     UPDATE_GROUP_CATEGORY = "UpdateGroupCategory"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateGroupCategory200ApplicationJSONData:
-    group_categories: List[shared.GroupCategory] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
+    group_categories: list[shared_group_category.GroupCategory] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupCategories') }})
     
 class UpdateGroupCategory200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -28,22 +29,22 @@ class UpdateGroupCategory200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateGroupCategory200ApplicationJSON:
-    action: UpdateGroupCategory200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: UpdateGroupCategory200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: UpdateGroupCategory200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: UpdateGroupCategory200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: UpdateGroupCategory200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: UpdateGroupCategory200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGroupCategoryRequest:
-    path_params: UpdateGroupCategoryPathParams = field()
-    request: shared.GroupCategoryUpdate = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateGroupCategoryPathParams = dataclasses.field()
+    request: shared_group_category_update.GroupCategoryUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGroupCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_group_category_200_application_json_object: Optional[UpdateGroupCategory200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_group_category_200_application_json_object: Optional[UpdateGroupCategory200ApplicationJSON] = dataclasses.field(default=None)
     

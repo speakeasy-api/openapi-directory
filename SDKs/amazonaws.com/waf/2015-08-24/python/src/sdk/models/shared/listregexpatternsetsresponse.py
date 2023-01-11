@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import regexpatternsetsummary as shared_regexpatternsetsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRegexPatternSetsResponse:
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
-    regex_pattern_sets: Optional[List[RegexPatternSetSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegexPatternSets') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    regex_pattern_sets: Optional[list[shared_regexpatternsetsummary.RegexPatternSetSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegexPatternSets') }})
     

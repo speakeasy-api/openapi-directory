@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.ChcerRequest(
     security=operations.ChcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.ChcerRequestBody(
         certificate_parameters=operations.ChcerRequestBodyCertificateParameters(
-            ref_no="aliquid",
-            token_no="ex",
+            ref_no="illo",
+            token_no="eveniet",
         ),
-        consent_artifact="magnam",
+        consent_artifact="cumque",
         format="pdf",
-        txn_id="laudantium",
+        txn_id="eveniet",
     ),
 )
     
-res = s.sdk.chcer(req)
+res = s.ap_is.chcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `chcer` - Character Certificate
 * `dncer` - Distance Certificate

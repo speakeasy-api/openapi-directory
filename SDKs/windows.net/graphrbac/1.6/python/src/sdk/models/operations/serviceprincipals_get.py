@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import grapherror as shared_grapherror
 
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsGetPathParams:
-    object_id: str = field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsGetQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsGetRequest:
-    path_params: ServicePrincipalsGetPathParams = field()
-    query_params: ServicePrincipalsGetQueryParams = field()
+    path_params: ServicePrincipalsGetPathParams = dataclasses.field()
+    query_params: ServicePrincipalsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph_error: Optional[shared.GraphError] = field(default=None)
-    service_principal: Optional[dict[str, dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
+    service_principal: Optional[dict[str, dict[str, Any]]] = dataclasses.field(default=None)
     

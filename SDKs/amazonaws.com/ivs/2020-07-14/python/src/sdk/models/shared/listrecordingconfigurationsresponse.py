@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recordingconfigurationsummary as shared_recordingconfigurationsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRecordingConfigurationsResponse:
-    recording_configurations: List[RecordingConfigurationSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordingConfigurations') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    recording_configurations: list[shared_recordingconfigurationsummary.RecordingConfigurationSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recordingConfigurations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

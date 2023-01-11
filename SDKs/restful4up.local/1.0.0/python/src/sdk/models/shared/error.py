@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class Error:
-    message: str = field()
-    status: int = field()
+    message: str = dataclasses.field()
+    status: int = dataclasses.field()
     

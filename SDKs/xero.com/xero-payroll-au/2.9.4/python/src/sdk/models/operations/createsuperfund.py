@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import superfund as shared_superfund
+from ..shared import superfunds as shared_superfunds
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateSuperfundHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSuperfundSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSuperfundRequest:
-    headers: CreateSuperfundHeaders = field()
-    request: List[shared.SuperFundInput] = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateSuperfundSecurity = field()
+    headers: CreateSuperfundHeaders = dataclasses.field()
+    request: list[shared_superfund.SuperFundInput] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateSuperfundSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSuperfundResponse:
-    content_type: str = field()
-    status_code: int = field()
-    super_funds: Optional[shared.SuperFunds] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    super_funds: Optional[shared_superfunds.SuperFunds] = dataclasses.field(default=None)
     

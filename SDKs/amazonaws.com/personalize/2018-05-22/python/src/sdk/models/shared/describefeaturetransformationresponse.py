@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import featuretransformation as shared_featuretransformation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeFeatureTransformationResponse:
-    feature_transformation: Optional[FeatureTransformation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('featureTransformation') }})
+    feature_transformation: Optional[shared_featuretransformation.FeatureTransformation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('featureTransformation') }})
     

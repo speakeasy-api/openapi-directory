@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import runner_application as shared_runner_application
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForOrgRequest:
-    path_params: ActionsListRunnerApplicationsForOrgPathParams = field()
+    path_params: ActionsListRunnerApplicationsForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListRunnerApplicationsForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_applications: Optional[List[shared.RunnerApplication]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_applications: Optional[list[shared_runner_application.RunnerApplication]] = dataclasses.field(default=None)
     

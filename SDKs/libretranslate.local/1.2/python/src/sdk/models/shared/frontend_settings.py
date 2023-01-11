@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class FrontendSettingsLanguageSource:
-    code: Optional[str] = field(default=None)
-    name: Optional[str] = field(default=None)
+    code: Optional[str] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FrontendSettingsLanguageTarget:
-    code: Optional[str] = field(default=None)
-    name: Optional[str] = field(default=None)
+    code: Optional[str] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FrontendSettingsLanguage:
-    source: Optional[FrontendSettingsLanguageSource] = field(default=None)
-    target: Optional[FrontendSettingsLanguageTarget] = field(default=None)
+    source: Optional[FrontendSettingsLanguageSource] = dataclasses.field(default=None)
+    target: Optional[FrontendSettingsLanguageTarget] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FrontendSettings:
-    char_limit: Optional[int] = field(default=None)
-    frontend_timeout: Optional[int] = field(default=None)
-    language: Optional[FrontendSettingsLanguage] = field(default=None)
+    char_limit: Optional[int] = dataclasses.field(default=None)
+    frontend_timeout: Optional[int] = dataclasses.field(default=None)
+    language: Optional[FrontendSettingsLanguage] = dataclasses.field(default=None)
     

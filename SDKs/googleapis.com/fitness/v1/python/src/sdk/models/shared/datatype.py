@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datatypefield as shared_datatypefield
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DataType:
-    field: Optional[List[DataTypeField]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    field: Optional[list[shared_datatypefield.DataTypeField]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

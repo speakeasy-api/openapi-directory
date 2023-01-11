@@ -8,28 +8,27 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.PostCloseAccountRequest(
-    security=operations.PostCloseAccountSecurity(
+req = operations.PostCloseAccountHolderRequest(
+    security=operations.PostCloseAccountHolderSecurity(
         basic_auth=shared.SchemeBasicAuth(
             password="YOUR_PASSWORD_HERE",
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="inventore",
+    request="voluptatum",
 )
     
-res = s.sdk.post_close_account(req)
+res = s.account_holders.post_close_account_holder(req)
 
-if res.close_account_response is not None:
+if res.close_account_holder_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -37,23 +36,29 @@ if res.close_account_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account holders
+
+* `post_close_account_holder` - Close an account holder.
+* `post_create_account_holder` - Create a new account holder.
+* `post_get_account_holder` - Get an account holder.
+* `post_get_tax_form` - Get a tax form.
+* `post_suspend_account_holder` - Suspend an account holder.
+* `post_un_suspend_account_holder` - Unsuspend an account holder.
+* `post_update_account_holder` - Update an account holder.
+* `post_update_account_holder_state` - Update payout or processing state.
+
+### Accounts
 
 * `post_close_account` - Close an account.
-* `post_close_account_holder` - Close an account holder.
 * `post_create_account` - Create a new account.
-* `post_create_account_holder` - Create a new account holder.
+* `post_update_account` - Update an account.
+
+### Verification
+
 * `post_delete_bank_accounts` - Delete bank accounts.
 * `post_delete_shareholders` - Delete shareholders.
 * `post_delete_signatories` - Delete signatories.
-* `post_get_account_holder` - Get an account holder.
-* `post_get_tax_form` - Get a tax form.
 * `post_get_uploaded_documents` - Get documents.
-* `post_suspend_account_holder` - Suspend an account holder.
-* `post_un_suspend_account_holder` - Unsuspend an account holder.
-* `post_update_account` - Update an account.
-* `post_update_account_holder` - Update an account holder.
-* `post_update_account_holder_state` - Update payout or processing state.
 * `post_upload_document` - Upload a document.
 
 <!-- End SDK Available Operations -->

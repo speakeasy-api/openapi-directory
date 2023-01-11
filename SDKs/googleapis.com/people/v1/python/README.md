@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,30 +21,29 @@ req = operations.PeopleContactGroupsBatchGetRequest(
         option1=operations.PeopleContactGroupsBatchGetSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.PeopleContactGroupsBatchGetQueryParams(
-        dollar_xgafv="1",
-        access_token="quia",
+        dollar_xgafv="2",
+        access_token="deserunt",
         alt="media",
-        callback="nihil",
-        fields="et",
-        group_fields="dolor",
+        callback="voluptas",
+        fields="adipisci",
+        group_fields="sit",
         key="et",
-        max_members=9176577634530861449,
-        oauth_token="blanditiis",
+        max_members=3864639738060764919,
+        oauth_token="voluptas",
         pretty_print=True,
-        quota_user="atque",
+        quota_user="eum",
         resource_names=[
-            "hic",
-            "eum",
+            "sed",
         ],
-        upload_type="sint",
-        upload_protocol="sint",
+        upload_type="hic",
+        upload_protocol="laborum",
     ),
 )
     

@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import customfielddefinition as shared_customfielddefinition
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAllCustomFieldsByCategoryPathParams:
-    category: str = field(metadata={'path_param': { 'field_name': 'category', 'style': 'simple', 'explode': False }})
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    category: str = dataclasses.field(metadata={'path_param': { 'field_name': 'category', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllCustomFieldsByCategorySecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllCustomFieldsByCategoryRequest:
-    path_params: GetAllCustomFieldsByCategoryPathParams = field()
-    security: GetAllCustomFieldsByCategorySecurity = field()
+    path_params: GetAllCustomFieldsByCategoryPathParams = dataclasses.field()
+    security: GetAllCustomFieldsByCategorySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAllCustomFieldsByCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    custom_field_definitions: Optional[List[shared.CustomFieldDefinition]] = field(default=None)
-    errors: Optional[List[shared.Error]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    custom_field_definitions: Optional[list[shared_customfielddefinition.CustomFieldDefinition]] = dataclasses.field(default=None)
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
     

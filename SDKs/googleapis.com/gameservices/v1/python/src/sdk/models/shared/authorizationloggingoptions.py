@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,11 +13,11 @@ class AuthorizationLoggingOptionsPermissionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthorizationLoggingOptions:
     r"""AuthorizationLoggingOptions
     Authorization-related information used by Cloud Audit Logging.
     """
     
-    permission_type: Optional[AuthorizationLoggingOptionsPermissionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissionType') }})
+    permission_type: Optional[AuthorizationLoggingOptionsPermissionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissionType') }})
     

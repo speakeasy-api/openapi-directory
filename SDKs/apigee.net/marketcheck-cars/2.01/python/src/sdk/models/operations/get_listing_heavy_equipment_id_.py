@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import heavyequipmentslisting as shared_heavyequipmentslisting
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDRequest:
-    path_params: GetListingHeavyEquipmentIDPathParams = field()
-    query_params: GetListingHeavyEquipmentIDQueryParams = field()
+    path_params: GetListingHeavyEquipmentIDPathParams = dataclasses.field()
+    query_params: GetListingHeavyEquipmentIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    heavy_equipments_listing: Optional[shared.HeavyEquipmentsListing] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    heavy_equipments_listing: Optional[shared_heavyequipmentslisting.HeavyEquipmentsListing] = dataclasses.field(default=None)
     

@@ -1,0 +1,12 @@
+import dataclasses
+from typing import Optional
+from dataclasses_json import dataclass_json
+from sdk import utils
+
+
+@dataclass_json
+@dataclasses.dataclass
+class GetRevenueRecognitionRuleAssociationType:
+    revenue_recognition_rule_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revenueRecognitionRuleName') }})
+    success: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
+    

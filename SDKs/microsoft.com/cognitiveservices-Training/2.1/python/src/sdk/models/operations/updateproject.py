@@ -1,41 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import project as shared_project
+from ..shared import project as shared_project
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectRequestsInput:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    text_xml: bytes = field(metadata={'request': { 'media_type': 'text/xml' }})
-    project: Optional[shared.ProjectInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    project1: Optional[shared.ProjectInput] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    project2: Optional[shared.ProjectInput] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    text_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'text/xml' }})
+    project: Optional[shared_project.ProjectInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    project1: Optional[shared_project.ProjectInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    project2: Optional[shared_project.ProjectInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectRequest:
-    headers: UpdateProjectHeaders = field()
-    path_params: UpdateProjectPathParams = field()
-    request: UpdateProjectRequestsInput = field()
+    headers: UpdateProjectHeaders = dataclasses.field()
+    path_params: UpdateProjectPathParams = dataclasses.field()
+    request: UpdateProjectRequestsInput = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    project: Optional[shared.Project] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    project: Optional[shared_project.Project] = dataclasses.field(default=None)
     

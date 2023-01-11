@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -21,9 +21,9 @@ class MeasurementPartnerCampaignLinkMeasurementPartnerEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MeasurementPartnerCampaignLink:
-    link_status: Optional[MeasurementPartnerCampaignLinkLinkStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkStatus') }})
-    measurement_partner: Optional[MeasurementPartnerCampaignLinkMeasurementPartnerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('measurementPartner') }})
-    partner_campaign_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('partnerCampaignId') }})
+    link_status: Optional[MeasurementPartnerCampaignLinkLinkStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkStatus') }})
+    measurement_partner: Optional[MeasurementPartnerCampaignLinkMeasurementPartnerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('measurementPartner') }})
+    partner_campaign_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('partnerCampaignId') }})
     

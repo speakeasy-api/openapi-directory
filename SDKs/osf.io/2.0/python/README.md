@@ -8,23 +8,15 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.UsersAddonAccountsListRequest(
-    path_params=operations.UsersAddonAccountsListPathParams(
-        provider="ut",
-        user_id="quas",
-    ),
-)
-    
-res = s.sdk.users_addon_accounts_list(req)
+res = s.addons.addons_list()
 
 if res.body is not None:
     # handle response
@@ -34,14 +26,21 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Addons
 
-* `users_addon_accounts_list` - List all addon accounts
-* `users_addon_accounts_read` - Retrieve an addon account
 * `addons_list` - List all addons
+
+### Base
+
 * `base_read` - Root
+
+### Citations
+
 * `citations_styles_list` - List all citation styles
 * `citations_styles_read` - Retrieve a citation style
+
+### Collections
+
 * `collections_add_metadata` - Add Metadata or Subjects to a Entitiy in a Collection
 * `collections_collected_metadata` - Retrieve subject data for a specific piece of metadata info for a collection
 * `collections_create` - Create a Collection
@@ -63,24 +62,45 @@ if res.body is not None:
 * `collections_metadata_registrations_list` - Retrieve a list of collected metadata for a collection
 * `collections_metadata_subjects_relationships` - Retrieve subject metadata for a specific piece of metadata in a collection
 * `collections_metadata_subjects_relationships_update` - Update subjects for a specific piece of metadata in a collection
+
+### Comments
+
 * `comments_delete` - Delete a comment
 * `comments_put` - Update a comment
 * `comments_read` - Retrieve a comment
+
+### Files
+
 * `files_detail` - Retrieve a file
 * `files_patch` - Update a file
 * `files_version_detail` - Retrieve a file version
 * `files_versions` - List all file versions
+
+### Institutions
+
 * `institutions_detail` - Retrieve an institution
 * `institutions_list` - List all institutions
 * `institutions_node_list` - List all affiliated nodes
 * `institutions_registration_list` - List all affiliated registrations
 * `institutions_users_list` - List all affiliated users
+
+### Licenses
+
 * `license_list` - List all licenses
 * `licenses_read` - Retrieve a license
+
+### Logs
+
 * `logs_actions` - Actions
 * `logs_read` - Retrieve a log
+
+### Metaschemas
+
 * `metaschemas_list` - List all metaschemas
 * `metaschemas_read` - Retrieve a metaschema
+
+### Nodes
+
 * `nodes_addon_read` - Retrieve an addon
 * `nodes_addons_folders_list` - List all addon folders
 * `nodes_addons_list` - List all addons
@@ -121,17 +141,26 @@ if res.body is not None:
 * `nodes_view_only_links_list` - List all view only links
 * `nodes_view_only_links_read` - Retrieve a view only link
 * `nodes_wikis_list` - List all wikis
+
+### Preprint Providers
+
 * `preprint_provider_detail` - Retrieve a preprint provider
 * `preprint_provider_licenses_list` - List all licenses
 * `preprint_provider_list` - List all preprint providers
 * `preprint_provider_taxonomies_list` - List all taxonomies
 * `preprint_providers_preprints_list` - List all preprints
+
+### Preprints
+
 * `preprints_citation_list` - Retrieve citation details
 * `preprints_citation_read` - Retrieve a styled citation
 * `preprints_create` - Create a preprint
 * `preprints_list` - List all preprints
 * `preprints_partial_update` - Update a preprint
 * `preprints_read` - Retrieve a preprint
+
+### Registrations
+
 * `registrations_children_list` - List all child registrations
 * `registrations_citation_read` - Retrieve a citation
 * `registrations_citations_list` - List all citation styles
@@ -153,8 +182,16 @@ if res.body is not None:
 * `registrations_view_only_links_list` - List all view only links
 * `registrations_view_only_links_read` - Retrieve a view only link
 * `registrations_wikis_list` - List all wikis
+
+### Taxonomies
+
 * `taxonomies_list` - List all taxonomies
 * `taxonomies_read` - Retrieve a taxonomy
+
+### Users
+
+* `users_addon_accounts_list` - List all addon accounts
+* `users_addon_accounts_read` - Retrieve an addon account
 * `users_addons_list` - List all user addons
 * `users_addons_read` - Retrieve a user addon
 * `users_institutions_list` - List all institutions
@@ -164,8 +201,14 @@ if res.body is not None:
 * `users_preprints_list` - List all preprints
 * `users_read` - Retrieve a user
 * `users_registrations_list` - List all registrations
+
+### View Only Links
+
 * `view_only_links_node_list` - List all nodes
 * `view_only_links_read` - Retrieve a view only link
+
+### Wikis
+
 * `wiki_content` - Retrieve the Content of a Wiki
 * `wiki_read` - Retrieve a Wiki
 

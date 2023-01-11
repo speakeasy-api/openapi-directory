@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,12 +23,12 @@ req = operations.ExtensionCtrlGetAccountExtensionByIDRequest(
         ),
     ),
     path_params=operations.ExtensionCtrlGetAccountExtensionByIDPathParams(
-        account_id="maxime",
-        extension_number=99.199997,
+        account_id="omnis",
+        extension_number=82.199997,
     ),
 )
     
-res = s.sdk.extension_ctrl_get_account_extension_by_id(req)
+res = s.extension_ctrl_get_account_extension_by_id(req)
 
 if res.end_user_route_hal_response is not None:
     # handle response

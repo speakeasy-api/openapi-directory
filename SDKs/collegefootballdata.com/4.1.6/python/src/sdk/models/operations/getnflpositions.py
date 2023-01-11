@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import draftposition as shared_draftposition
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNflPositionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    draft_positions: Optional[List[shared.DraftPosition]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    draft_positions: Optional[list[shared_draftposition.DraftPosition]] = dataclasses.field(default=None)
     

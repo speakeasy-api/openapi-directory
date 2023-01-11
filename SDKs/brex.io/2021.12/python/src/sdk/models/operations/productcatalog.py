@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductCatalogPathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductCatalogSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductCatalogRequest:
-    path_params: ProductCatalogPathParams = field()
-    security: ProductCatalogSecurity = field()
+    path_params: ProductCatalogPathParams = dataclasses.field()
+    security: ProductCatalogSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductCatalogResponse:
-    content_type: str = field()
-    status_code: int = field()
-    product_catalog_200_application_json_any: Optional[Any] = field(default=None)
-    product_catalog_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_catalog_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    product_catalog_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

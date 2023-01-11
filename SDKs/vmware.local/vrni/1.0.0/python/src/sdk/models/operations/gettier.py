@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import tier as shared_tier
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTierPathParams:
-    tier_id: str = field(metadata={'path_param': { 'field_name': 'tier-id', 'style': 'simple', 'explode': False }})
+    tier_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tier-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTierHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTierSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTierRequest:
-    headers: GetTierHeaders = field()
-    path_params: GetTierPathParams = field()
-    security: GetTierSecurity = field()
+    headers: GetTierHeaders = dataclasses.field()
+    path_params: GetTierPathParams = dataclasses.field()
+    security: GetTierSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tier: Optional[shared.Tier] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tier: Optional[shared_tier.Tier] = dataclasses.field(default=None)
     

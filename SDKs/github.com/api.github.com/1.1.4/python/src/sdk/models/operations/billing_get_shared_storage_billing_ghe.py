@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import combined_billing_usage as shared_combined_billing_usage
 
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetSharedStorageBillingGhePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetSharedStorageBillingGheRequest:
-    path_params: BillingGetSharedStorageBillingGhePathParams = field()
+    path_params: BillingGetSharedStorageBillingGhePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BillingGetSharedStorageBillingGheResponse:
-    content_type: str = field()
-    status_code: int = field()
-    combined_billing_usage: Optional[shared.CombinedBillingUsage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    combined_billing_usage: Optional[shared_combined_billing_usage.CombinedBillingUsage] = dataclasses.field(default=None)
     

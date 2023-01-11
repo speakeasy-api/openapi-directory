@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
-    baudrate: int = field(metadata={'path_param': { 'field_name': 'baudrate', 'style': 'simple', 'explode': False }})
-    device: str = field(metadata={'path_param': { 'field_name': 'device', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    baudrate: int = dataclasses.field(metadata={'path_param': { 'field_name': 'baudrate', 'style': 'simple', 'explode': False }})
+    device: str = dataclasses.field(metadata={'path_param': { 'field_name': 'device', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRequest:
-    path_params: GetPathParams = field()
+    path_params: GetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    mbus_data: Optional[str] = field(default=None)
-    text_error: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    mbus_data: Optional[str] = dataclasses.field(default=None)
+    text_error: Optional[str] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bandedrange as shared_bandedrange
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddBandingRequest:
     r"""AddBandingRequest
     Adds a new banded range to the spreadsheet.
     """
     
-    banded_range: Optional[BandedRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandedRange') }})
+    banded_range: Optional[shared_bandedrange.BandedRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bandedRange') }})
     

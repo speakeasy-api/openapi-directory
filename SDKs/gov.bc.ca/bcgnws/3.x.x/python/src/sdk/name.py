@@ -123,31 +123,6 @@ class Name:
         return res
 
     
-    def get_names_name_id_output_format_(self, request: operations.GetNamesNameIDOutputFormatRequest) -> operations.GetNamesNameIDOutputFormatResponse:
-        r"""Get a name by its nameId
-        Get information about the geographical name with the specified nameId.
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/names/{nameId}.{outputFormat}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetNamesNameIDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-        elif r.status_code == 404:
-            pass
-
-        return res
-
-    
     def get_names_near(self, request: operations.GetNamesNearRequest) -> operations.GetNamesNearResponse:
         r"""Search near to a geographic point
         Search for information about geographical names that correspond to features within a geographic area defined by a centre point and a radius.  Various options and filter parameters are available to refine the search.
@@ -247,6 +222,31 @@ class Name:
         if r.status_code == 200:
             pass
         elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def get_names_name_id_output_format_(self, request: operations.GetNamesNameIDOutputFormatRequest) -> operations.GetNamesNameIDOutputFormatResponse:
+        r"""Get a name by its nameId
+        Get information about the geographical name with the specified nameId.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/names/{nameId}.{outputFormat}", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetNamesNameIDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+        elif r.status_code == 404:
             pass
 
         return res

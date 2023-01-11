@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,27 +21,27 @@ req = operations.Area120tablesTablesListRequest(
         option1=operations.Area120tablesTablesListSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.Area120tablesTablesListQueryParams(
         dollar_xgafv="1",
-        access_token="fuga",
-        alt="proto",
-        callback="provident",
-        fields="velit",
-        key="illo",
-        oauth_token="ut",
-        order_by="sed",
-        page_size=2581808292385944413,
-        page_token="expedita",
+        access_token="maiores",
+        alt="media",
+        callback="ipsam",
+        fields="odio",
+        key="sit",
+        oauth_token="voluptas",
+        order_by="aut",
+        page_size=2338102413139933104,
+        page_token="non",
         pretty_print=False,
-        quota_user="quae",
-        upload_type="et",
-        upload_protocol="et",
+        quota_user="accusantium",
+        upload_type="placeat",
+        upload_protocol="magni",
     ),
 )
     

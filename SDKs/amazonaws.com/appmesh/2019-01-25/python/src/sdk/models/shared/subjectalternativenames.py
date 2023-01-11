@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import subjectalternativenamematchers as shared_subjectalternativenamematchers
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubjectAlternativeNames:
     r"""SubjectAlternativeNames
     An object that represents the subject alternative names secured by the certificate.
     """
     
-    match: SubjectAlternativeNameMatchers = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('match') }})
+    match: shared_subjectalternativenamematchers.SubjectAlternativeNameMatchers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('match') }})
     

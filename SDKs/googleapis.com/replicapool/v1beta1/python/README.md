@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,29 +21,29 @@ req = operations.ReplicapoolPoolsDeleteRequest(
         option1=operations.ReplicapoolPoolsDeleteSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.ReplicapoolPoolsDeletePathParams(
-        pool_name="molestiae",
-        project_name="occaecati",
-        zone="molestiae",
+        pool_name="error",
+        project_name="sint",
+        zone="commodi",
     ),
     query_params=operations.ReplicapoolPoolsDeleteQueryParams(
         alt="json",
-        fields="dolorum",
-        key="numquam",
-        oauth_token="facilis",
-        pretty_print=False,
-        quota_user="aliquid",
-        user_ip="nesciunt",
+        fields="et",
+        key="veniam",
+        oauth_token="necessitatibus",
+        pretty_print=True,
+        quota_user="sed",
+        user_ip="nihil",
     ),
     request=shared.PoolsDeleteRequest(
         abandon_instances=[
-            "at",
+            "qui",
         ],
     ),
 )

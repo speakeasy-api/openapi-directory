@@ -1,0 +1,29 @@
+import dataclasses
+from typing import Optional
+from enum import Enum
+from dataclasses_json import dataclass_json
+from sdk import utils
+
+class ControlErrorResponseStatusEnum(str, Enum):
+    ZERO = "0"
+    ONE = "1"
+    TWO = "2"
+    THREE = "3"
+    FOUR = "4"
+    FIVE = "5"
+    SIX = "6"
+    EIGHT = "8"
+    NINE = "9"
+    NINETEEN = "19"
+
+
+@dataclass_json
+@dataclasses.dataclass
+class ControlErrorResponse:
+    r"""ControlErrorResponse
+    Error
+    """
+    
+    error_text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error_text') }})
+    status: Optional[ControlErrorResponseStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    

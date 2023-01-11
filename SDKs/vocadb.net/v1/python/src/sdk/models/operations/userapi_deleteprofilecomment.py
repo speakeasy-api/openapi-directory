@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteProfileCommentPathParams:
-    comment_id: int = field(metadata={'path_param': { 'field_name': 'commentId', 'style': 'simple', 'explode': False }})
+    comment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'commentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteProfileCommentRequest:
-    path_params: UserAPIDeleteProfileCommentPathParams = field()
+    path_params: UserAPIDeleteProfileCommentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteProfileCommentResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

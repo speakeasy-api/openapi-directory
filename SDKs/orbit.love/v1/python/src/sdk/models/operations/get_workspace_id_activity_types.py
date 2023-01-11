@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivityTypesPathParams:
-    workspace_id: str = field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
+    workspace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivityTypesSecurity:
-    bearer: shared.SchemeBearer = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    bearer: shared_security.SchemeBearer = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivityTypesRequest:
-    path_params: GetWorkspaceIDActivityTypesPathParams = field()
-    security: GetWorkspaceIDActivityTypesSecurity = field()
+    path_params: GetWorkspaceIDActivityTypesPathParams = dataclasses.field()
+    security: GetWorkspaceIDActivityTypesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDActivityTypesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetVehicleDetailsByRegistrationNumberRequest(
     headers=operations.GetVehicleDetailsByRegistrationNumberHeaders(
-        x_correlation_id="labore",
-        x_api_key="eaque",
+        x_correlation_id="ducimus",
+        x_api_key="repellendus",
     ),
     request=shared.VehicleRequest(
-        registration_number="quidem",
+        registration_number="officia",
     ),
 )
     

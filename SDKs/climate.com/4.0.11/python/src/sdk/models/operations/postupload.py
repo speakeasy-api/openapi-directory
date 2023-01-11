@@ -1,31 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import upload as shared_upload
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUploadHeaders:
-    x_recipient_email: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Recipient-Email', 'style': 'simple', 'explode': False }})
+    x_recipient_email: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Recipient-Email', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUploadSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    oauth2_authorization_code: Optional[shared.SchemeOauth2AuthorizationCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_authorization_code: Optional[shared_security.SchemeOauth2AuthorizationCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUploadRequest:
-    headers: PostUploadHeaders = field()
-    security: PostUploadSecurity = field()
-    request: Optional[shared.Upload] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: PostUploadHeaders = dataclasses.field()
+    security: PostUploadSecurity = dataclasses.field()
+    request: Optional[shared_upload.Upload] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUploadResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    created_upload: Optional[str] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    created_upload: Optional[str] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

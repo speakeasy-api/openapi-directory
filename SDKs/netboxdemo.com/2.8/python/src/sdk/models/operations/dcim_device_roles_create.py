@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import devicerole as shared_devicerole
+from ..shared import devicerole as shared_devicerole
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesCreateRequest:
-    request: shared.DeviceRoleInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_devicerole.DeviceRoleInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_role: Optional[shared.DeviceRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_role: Optional[shared_devicerole.DeviceRole] = dataclasses.field(default=None)
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class FilmographySearchallReadPathParams:
-    param: str = field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
+    param: str = dataclasses.field(metadata={'path_param': { 'field_name': 'param', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FilmographySearchallReadRequest:
-    path_params: FilmographySearchallReadPathParams = field()
+    path_params: FilmographySearchallReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FilmographySearchallReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,22 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HovercardContexts:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    octicon: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('octicon') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    octicon: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('octicon') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Hovercard:
     r"""Hovercard
     Hovercard
     """
     
-    contexts: List[HovercardContexts] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('contexts') }})
+    contexts: list[HovercardContexts] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('contexts') }})
     

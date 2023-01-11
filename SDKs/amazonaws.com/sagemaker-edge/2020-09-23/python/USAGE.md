@@ -1,0 +1,36 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        hmac=shared.SchemeHmac(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.GetDeviceRegistrationRequest(
+    headers=operations.GetDeviceRegistrationHeaders(
+        x_amz_algorithm="quos",
+        x_amz_content_sha256="quam",
+        x_amz_credential="quam",
+        x_amz_date="totam",
+        x_amz_security_token="omnis",
+        x_amz_signature="qui",
+        x_amz_signed_headers="neque",
+    ),
+    request=operations.GetDeviceRegistrationRequestBody(
+        device_fleet_name="officia",
+        device_name="quo",
+    ),
+)
+    
+res = s.get_device_registration(req)
+
+if res.get_device_registration_result is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

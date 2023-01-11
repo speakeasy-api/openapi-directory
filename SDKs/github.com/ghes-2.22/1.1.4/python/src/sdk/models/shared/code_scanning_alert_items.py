@@ -1,26 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import code_scanning_alert_classification_enum as shared_code_scanning_alert_classification_enum
+from ..shared import simple_user as shared_simple_user
+from ..shared import code_scanning_alert_dismissed_reason_enum as shared_code_scanning_alert_dismissed_reason_enum
+from ..shared import code_scanning_alert_instance as shared_code_scanning_alert_instance
+from ..shared import code_scanning_alert_rule_summary as shared_code_scanning_alert_rule_summary
+from ..shared import code_scanning_alert_state_enum as shared_code_scanning_alert_state_enum
+from ..shared import code_scanning_analysis_tool as shared_code_scanning_analysis_tool
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CodeScanningAlertItems:
-    classification: CodeScanningAlertClassificationEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('classification') }})
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    dismissed_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    dismissed_by: SimpleUser = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_by') }})
-    dismissed_reason: CodeScanningAlertDismissedReasonEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_reason') }})
-    html_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
-    instance: CodeScanningAlertInstance = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
-    number: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
-    rule: CodeScanningAlertRuleSummary = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rule') }})
-    state: CodeScanningAlertStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    tool: CodeScanningAnalysisTool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tool') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    classification: shared_code_scanning_alert_classification_enum.CodeScanningAlertClassificationEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('classification') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    dismissed_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    dismissed_by: shared_simple_user.SimpleUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_by') }})
+    dismissed_reason: shared_code_scanning_alert_dismissed_reason_enum.CodeScanningAlertDismissedReasonEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dismissed_reason') }})
+    html_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
+    instance: shared_code_scanning_alert_instance.CodeScanningAlertInstance = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
+    number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    rule: shared_code_scanning_alert_rule_summary.CodeScanningAlertRuleSummary = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rule') }})
+    state: shared_code_scanning_alert_state_enum.CodeScanningAlertStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    tool: shared_code_scanning_analysis_tool.CodeScanningAnalysisTool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tool') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

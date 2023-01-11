@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TrapListPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrapListRequest:
-    path_params: TrapListPathParams = field()
+    path_params: TrapListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TrapListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    trap_list_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    trap_list_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

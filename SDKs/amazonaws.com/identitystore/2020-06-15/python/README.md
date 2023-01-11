@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.DescribeGroupRequest(
     headers=operations.DescribeGroupHeaders(
-        x_amz_algorithm="saepe",
-        x_amz_content_sha256="ut",
-        x_amz_credential="praesentium",
-        x_amz_date="minus",
-        x_amz_security_token="accusantium",
-        x_amz_signature="reiciendis",
-        x_amz_signed_headers="consectetur",
+        x_amz_algorithm="mollitia",
+        x_amz_content_sha256="neque",
+        x_amz_credential="autem",
+        x_amz_date="ab",
+        x_amz_security_token="dolore",
+        x_amz_signature="fugit",
+        x_amz_signed_headers="saepe",
         x_amz_target="AWSIdentityStore.DescribeGroup",
     ),
     request=shared.DescribeGroupRequest(
-        group_id="non",
-        identity_store_id="temporibus",
+        group_id="dignissimos",
+        identity_store_id="rerum",
     ),
 )
     
-res = s.sdk.describe_group(req)
+res = s.describe_group(req)
 
 if res.describe_group_response is not None:
     # handle response

@@ -1,12 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import _xgafv_enum as shared__xgafv_enum
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import floodlightactivitieslistresponse as shared_floodlightactivitieslistresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DfareportingFloodlightActivitiesListPathParams:
-    profile_id: str = field(metadata={'path_param': { 'field_name': 'profileId', 'style': 'simple', 'explode': False }})
+    profile_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileId', 'style': 'simple', 'explode': False }})
     
 class DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum(str, Enum):
     COUNTER = "COUNTER"
@@ -21,50 +25,50 @@ class DfareportingFloodlightActivitiesListSortOrderEnum(str, Enum):
     DESCENDING = "DESCENDING"
 
 
-@dataclass
+@dataclasses.dataclass
 class DfareportingFloodlightActivitiesListQueryParams:
-    dollar_xgafv: Optional[shared.XgafvEnum] = field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
-    access_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
-    advertiser_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'advertiserId', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    floodlight_activity_group_ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupIds', 'style': 'form', 'explode': True }})
-    floodlight_activity_group_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupName', 'style': 'form', 'explode': True }})
-    floodlight_activity_group_tag_string: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupTagString', 'style': 'form', 'explode': True }})
-    floodlight_activity_group_type: Optional[DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupType', 'style': 'form', 'explode': True }})
-    floodlight_configuration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'floodlightConfigurationId', 'style': 'form', 'explode': True }})
-    ids: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    page_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'pageToken', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    search_string: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'searchString', 'style': 'form', 'explode': True }})
-    sort_field: Optional[DfareportingFloodlightActivitiesListSortFieldEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sortField', 'style': 'form', 'explode': True }})
-    sort_order: Optional[DfareportingFloodlightActivitiesListSortOrderEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': True }})
-    tag_string: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'tagString', 'style': 'form', 'explode': True }})
-    upload_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
-    upload_protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
+    dollar_xgafv: Optional[shared__xgafv_enum.XgafvEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
+    advertiser_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'advertiserId', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    floodlight_activity_group_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupIds', 'style': 'form', 'explode': True }})
+    floodlight_activity_group_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupName', 'style': 'form', 'explode': True }})
+    floodlight_activity_group_tag_string: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupTagString', 'style': 'form', 'explode': True }})
+    floodlight_activity_group_type: Optional[DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'floodlightActivityGroupType', 'style': 'form', 'explode': True }})
+    floodlight_configuration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'floodlightConfigurationId', 'style': 'form', 'explode': True }})
+    ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    page_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageToken', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    search_string: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'searchString', 'style': 'form', 'explode': True }})
+    sort_field: Optional[DfareportingFloodlightActivitiesListSortFieldEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortField', 'style': 'form', 'explode': True }})
+    sort_order: Optional[DfareportingFloodlightActivitiesListSortOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortOrder', 'style': 'form', 'explode': True }})
+    tag_string: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagString', 'style': 'form', 'explode': True }})
+    upload_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
+    upload_protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DfareportingFloodlightActivitiesListSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DfareportingFloodlightActivitiesListRequest:
-    path_params: DfareportingFloodlightActivitiesListPathParams = field()
-    query_params: DfareportingFloodlightActivitiesListQueryParams = field()
-    security: DfareportingFloodlightActivitiesListSecurity = field()
+    path_params: DfareportingFloodlightActivitiesListPathParams = dataclasses.field()
+    query_params: DfareportingFloodlightActivitiesListQueryParams = dataclasses.field()
+    security: DfareportingFloodlightActivitiesListSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DfareportingFloodlightActivitiesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    floodlight_activities_list_response: Optional[shared.FloodlightActivitiesListResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    floodlight_activities_list_response: Optional[shared_floodlightactivitieslistresponse.FloodlightActivitiesListResponse] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import platformsingle as shared_platformsingle
 
 
-@dataclass
+@dataclasses.dataclass
 class PlatformsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlatformsReadRequest:
-    path_params: PlatformsReadPathParams = field()
+    path_params: PlatformsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlatformsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    platform_single: Optional[shared.PlatformSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    platform_single: Optional[shared_platformsingle.PlatformSingle] = dataclasses.field(default=None)
     

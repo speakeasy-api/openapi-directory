@@ -133,6 +133,55 @@ class Webhooks:
         return res
 
     
+    def post_webhooks(self, request: operations.PostWebhooksRequest) -> operations.PostWebhooksResponse:
+        r"""Create webhook
+        Create a new webhook with a given URL. The URL will receive webhook
+        events as JSON-encoded `POST` requests. The URL must respond with a HTTP
+        `200` status on success.
+        
+        There is currently a limit of 10 webhooks at any given time. Once this
+        limit is reached, existing webhooks will need to be deleted before new
+        webhooks can be created.
+        
+        Event delivery is retried with exponential backoff if the URL is
+        unreachable or it does not respond with a `200` status. The response
+        includes a `secretKey` attribute, which is used to sign requests sent to
+        the webhook URL. It will not be returned from any other endpoints within
+        the Up API. If the `secretKey` is lost, simply create a new webhook with
+        the same URL, capture its `secretKey` and then delete the original
+        webhook. See [Handling webhook events](#callback_post_webhookURL) for
+        details on how to process webhook events.
+        
+        It is probably a good idea to test the webhook by
+        [sending it a `PING` event](#post_webhooks_webhookId_ping) after creating
+        it.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/webhooks"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostWebhooksResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.CreateWebhookResponse])
+                res.create_webhook_response = out
+
+        return res
+
+    
     def post_webhooks_webhook_id_ping(self, request: operations.PostWebhooksWebhookIDPingRequest) -> operations.PostWebhooksWebhookIDPingResponse:
         r"""Ping webhook
         Send a `PING` event to a webhook by providing its unique identifier.

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import org_pre_receive_hook as shared_org_pre_receive_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    pre_receive_hook_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    pre_receive_hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_hook_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest:
-    path_params: EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams = field()
+    path_params: EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    org_pre_receive_hook: Optional[shared.OrgPreReceiveHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    org_pre_receive_hook: Optional[shared_org_pre_receive_hook.OrgPreReceiveHook] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,34 +20,34 @@ req = operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest(
     security=operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeQueryParams(
-        dollar_xgafv="1",
-        access_token="deserunt",
-        alt="json",
-        callback="autem",
-        fields="et",
-        key="architecto",
-        oauth_token="ducimus",
-        pretty_print=True,
-        quota_user="quis",
-        upload_type="provident",
-        upload_protocol="qui",
+        dollar_xgafv="2",
+        access_token="in",
+        alt="proto",
+        callback="et",
+        fields="nisi",
+        key="aspernatur",
+        oauth_token="et",
+        pretty_print=False,
+        quota_user="nobis",
+        upload_type="ex",
+        upload_protocol="repellat",
     ),
     request=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest(
-        display_name="sequi",
-        id_token="porro",
+        display_name="in",
+        id_token="voluptatibus",
         phone_verification_info=shared.GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo(
-            android_verification_proof="est",
+            android_verification_proof="consequatur",
             code="et",
-            phone_number="sint",
-            session_info="aperiam",
+            phone_number="nihil",
+            session_info="in",
         ),
-        tenant_id="officiis",
+        tenant_id="dolorum",
     ),
 )
     

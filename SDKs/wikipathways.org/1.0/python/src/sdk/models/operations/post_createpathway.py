@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,21 +11,21 @@ class PostCreatePathwayFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostCreatePathwayQueryParams:
-    auth: str = field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
-    gpml: str = field(metadata={'query_param': { 'field_name': 'gpml', 'style': 'form', 'explode': True }})
-    username: str = field(metadata={'query_param': { 'field_name': 'username', 'style': 'form', 'explode': True }})
-    format: Optional[PostCreatePathwayFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    auth: str = dataclasses.field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
+    gpml: str = dataclasses.field(metadata={'query_param': { 'field_name': 'gpml', 'style': 'form', 'explode': True }})
+    username: str = dataclasses.field(metadata={'query_param': { 'field_name': 'username', 'style': 'form', 'explode': True }})
+    format: Optional[PostCreatePathwayFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCreatePathwayRequest:
-    query_params: PostCreatePathwayQueryParams = field()
+    query_params: PostCreatePathwayQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCreatePathwayResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

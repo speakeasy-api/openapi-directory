@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class UserAPIDeleteMessagesPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteMessagesQueryParams:
-    message_id: List[int] = field(metadata={'query_param': { 'field_name': 'messageId', 'style': 'form', 'explode': True }})
+    message_id: list[int] = dataclasses.field(metadata={'query_param': { 'field_name': 'messageId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteMessagesRequest:
-    path_params: UserAPIDeleteMessagesPathParams = field()
-    query_params: UserAPIDeleteMessagesQueryParams = field()
+    path_params: UserAPIDeleteMessagesPathParams = dataclasses.field()
+    query_params: UserAPIDeleteMessagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteMessagesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import on_demand_region as shared_on_demand_region
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVodRegionsPathParams:
-    ondemand_id: float = field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
+    ondemand_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteVodRegionsRequestBody:
-    countries: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('countries') }})
+    countries: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('countries') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVodRegionsSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVodRegionsRequest:
-    path_params: DeleteVodRegionsPathParams = field()
-    security: DeleteVodRegionsSecurity = field()
-    request: Optional[DeleteVodRegionsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.ondemand.region+json' }})
+    path_params: DeleteVodRegionsPathParams = dataclasses.field()
+    security: DeleteVodRegionsSecurity = dataclasses.field()
+    request: Optional[DeleteVodRegionsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.ondemand.region+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVodRegionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    on_demand_regions: Optional[List[shared.OnDemandRegion]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    on_demand_regions: Optional[list[shared_on_demand_region.OnDemandRegion]] = dataclasses.field(default=None)
     

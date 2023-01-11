@@ -1,14 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import album as shared_album
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class CreateAlbumRequestBodyLayoutEnum(str, Enum):
     GRID = "grid"
@@ -36,36 +38,36 @@ class CreateAlbumRequestBodyThemeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumRequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    brand_color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brand_color') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    hide_nav: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hide_nav') }})
-    layout: Optional[CreateAlbumRequestBodyLayoutEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('layout') }})
-    password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
-    privacy: Optional[CreateAlbumRequestBodyPrivacyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
-    review_mode: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_mode') }})
-    sort: Optional[CreateAlbumRequestBodySortEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
-    theme: Optional[CreateAlbumRequestBodyThemeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('theme') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    brand_color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brand_color') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    hide_nav: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hide_nav') }})
+    layout: Optional[CreateAlbumRequestBodyLayoutEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('layout') }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    privacy: Optional[CreateAlbumRequestBodyPrivacyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    review_mode: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_mode') }})
+    sort: Optional[CreateAlbumRequestBodySortEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
+    theme: Optional[CreateAlbumRequestBodyThemeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('theme') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumRequest:
-    path_params: CreateAlbumPathParams = field()
-    request: CreateAlbumRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.album+json' }})
-    security: CreateAlbumSecurity = field()
+    path_params: CreateAlbumPathParams = dataclasses.field()
+    request: CreateAlbumRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.album+json' }})
+    security: CreateAlbumSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album: Optional[shared.Album] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album: Optional[shared_album.Album] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

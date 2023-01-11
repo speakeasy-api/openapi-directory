@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import environmenttemplate as shared_environmenttemplate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentTemplateOutput:
-    environment_template: EnvironmentTemplate = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentTemplate') }})
+    environment_template: shared_environmenttemplate.EnvironmentTemplate = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('environmentTemplate') }})
     

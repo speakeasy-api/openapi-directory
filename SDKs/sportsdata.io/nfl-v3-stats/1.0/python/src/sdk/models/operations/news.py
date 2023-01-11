@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class NewsPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsRequest:
-    path_params: NewsPathParams = field()
+    path_params: NewsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    news: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    news: Optional[list[Any]] = dataclasses.field(default=None)
     

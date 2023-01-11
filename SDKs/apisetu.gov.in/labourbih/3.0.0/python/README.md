@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.AlimwRequest(
     security=operations.AlimwSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AlimwRequestBody(
         certificate_parameters=operations.AlimwRequestBodyCertificateParameters(
-            ref_no="commodi",
-            token_no="qui",
+            ref_no="maxime",
+            token_no="rerum",
         ),
         consent_artifact="quisquam",
         format="pdf",
-        txn_id="ducimus",
+        txn_id="nemo",
     ),
 )
     
-res = s.sdk.alimw(req)
+res = s.ap_is.alimw(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alimw` - Application for License for Inter State Migrant Workmen
 * `alsbl` - Application/ License for Boilers

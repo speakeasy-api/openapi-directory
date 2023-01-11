@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import as2keyentity as shared_as2keyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAs2KeysIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAs2KeysIDRequest:
-    path_params: GetAs2KeysIDPathParams = field()
+    path_params: GetAs2KeysIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAs2KeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    as2_key_entity: Optional[shared.As2KeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    as2_key_entity: Optional[shared_as2keyentity.As2KeyEntity] = dataclasses.field(default=None)
     

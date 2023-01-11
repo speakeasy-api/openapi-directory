@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import combinedaudience as shared_combinedaudience
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCombinedAudiencesResponse:
-    combined_audiences: Optional[List[CombinedAudience]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('combinedAudiences') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    combined_audiences: Optional[list[shared_combinedaudience.CombinedAudience]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('combinedAudiences') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keyphrase as shared_keyphrase
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectKeyPhrasesResponse:
-    key_phrases: Optional[List[KeyPhrase]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeyPhrases') }})
+    key_phrases: Optional[list[shared_keyphrase.KeyPhrase]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeyPhrases') }})
     

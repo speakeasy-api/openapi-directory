@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import script as shared_script
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScriptPathParams:
-    script_id: str = field(metadata={'path_param': { 'field_name': 'scriptId', 'style': 'simple', 'explode': False }})
+    script_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scriptId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScriptSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScriptRequest:
-    path_params: UpdateScriptPathParams = field()
-    security: UpdateScriptSecurity = field()
-    request: Optional[shared.Script] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateScriptPathParams = dataclasses.field()
+    security: UpdateScriptSecurity = dataclasses.field()
+    request: Optional[shared_script.Script] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateScriptResponse:
-    content_type: str = field()
-    status_code: int = field()
-    script: Optional[shared.Script] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    script: Optional[shared_script.Script] = dataclasses.field(default=None)
     

@@ -1,29 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bufferinghints as shared_bufferinghints
+from ..shared import cloudwatchloggingoptions as shared_cloudwatchloggingoptions
+from ..shared import compressionformat_enum as shared_compressionformat_enum
+from ..shared import dataformatconversionconfiguration as shared_dataformatconversionconfiguration
+from ..shared import dynamicpartitioningconfiguration as shared_dynamicpartitioningconfiguration
+from ..shared import encryptionconfiguration as shared_encryptionconfiguration
+from ..shared import processingconfiguration as shared_processingconfiguration
+from ..shared import s3destinationdescription as shared_s3destinationdescription
+from ..shared import s3backupmode_enum as shared_s3backupmode_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExtendedS3DestinationDescription:
     r"""ExtendedS3DestinationDescription
     Describes a destination in Amazon S3.
     """
     
-    bucket_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BucketARN') }})
-    buffering_hints: BufferingHints = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BufferingHints') }})
-    compression_format: CompressionFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CompressionFormat') }})
-    encryption_configuration: EncryptionConfiguration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EncryptionConfiguration') }})
-    role_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RoleARN') }})
-    cloud_watch_logging_options: Optional[CloudWatchLoggingOptions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchLoggingOptions') }})
-    data_format_conversion_configuration: Optional[DataFormatConversionConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DataFormatConversionConfiguration') }})
-    dynamic_partitioning_configuration: Optional[DynamicPartitioningConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DynamicPartitioningConfiguration') }})
-    error_output_prefix: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorOutputPrefix') }})
-    prefix: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Prefix') }})
-    processing_configuration: Optional[ProcessingConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProcessingConfiguration') }})
-    s3_backup_description: Optional[S3DestinationDescription] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3BackupDescription') }})
-    s3_backup_mode: Optional[S3BackupModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3BackupMode') }})
+    bucket_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BucketARN') }})
+    buffering_hints: shared_bufferinghints.BufferingHints = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BufferingHints') }})
+    compression_format: shared_compressionformat_enum.CompressionFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CompressionFormat') }})
+    encryption_configuration: shared_encryptionconfiguration.EncryptionConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EncryptionConfiguration') }})
+    role_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RoleARN') }})
+    cloud_watch_logging_options: Optional[shared_cloudwatchloggingoptions.CloudWatchLoggingOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchLoggingOptions') }})
+    data_format_conversion_configuration: Optional[shared_dataformatconversionconfiguration.DataFormatConversionConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DataFormatConversionConfiguration') }})
+    dynamic_partitioning_configuration: Optional[shared_dynamicpartitioningconfiguration.DynamicPartitioningConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DynamicPartitioningConfiguration') }})
+    error_output_prefix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorOutputPrefix') }})
+    prefix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Prefix') }})
+    processing_configuration: Optional[shared_processingconfiguration.ProcessingConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProcessingConfiguration') }})
+    s3_backup_description: Optional[shared_s3destinationdescription.S3DestinationDescription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3BackupDescription') }})
+    s3_backup_mode: Optional[shared_s3backupmode_enum.S3BackupModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3BackupMode') }})
     

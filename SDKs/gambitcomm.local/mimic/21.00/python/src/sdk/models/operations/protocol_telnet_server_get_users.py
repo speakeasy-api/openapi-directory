@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import telnetuser as shared_telnetuser
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetUsersPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetUsersRequest:
-    path_params: ProtocolTelnetServerGetUsersPathParams = field()
+    path_params: ProtocolTelnetServerGetUsersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    telnet_users: Optional[List[shared.TelnetUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    telnet_users: Optional[list[shared_telnetuser.TelnetUser]] = dataclasses.field(default=None)
     

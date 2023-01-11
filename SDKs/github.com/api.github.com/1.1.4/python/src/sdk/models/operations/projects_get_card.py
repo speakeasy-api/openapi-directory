@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import project_card as shared_project_card
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetCardPathParams:
-    card_id: int = field(metadata={'path_param': { 'field_name': 'card_id', 'style': 'simple', 'explode': False }})
+    card_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'card_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetCardRequest:
-    path_params: ProjectsGetCardPathParams = field()
+    path_params: ProjectsGetCardPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsGetCardResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    project_card: Optional[shared.ProjectCard] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    project_card: Optional[shared_project_card.ProjectCard] = dataclasses.field(default=None)
     

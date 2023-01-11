@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import scim_error as shared_scim_error
+from ..shared import scim_user_list as shared_scim_user_list
 
 
-@dataclass
+@dataclasses.dataclass
 class ScimListProvisionedIdentitiesPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScimListProvisionedIdentitiesQueryParams:
-    count: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    start_index: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    start_index: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScimListProvisionedIdentitiesRequest:
-    path_params: ScimListProvisionedIdentitiesPathParams = field()
-    query_params: ScimListProvisionedIdentitiesQueryParams = field()
+    path_params: ScimListProvisionedIdentitiesPathParams = dataclasses.field()
+    query_params: ScimListProvisionedIdentitiesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScimListProvisionedIdentitiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scim_error: Optional[shared.ScimError] = field(default=None)
-    scim_user_list: Optional[shared.ScimUserList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scim_error: Optional[shared_scim_error.ScimError] = dataclasses.field(default=None)
+    scim_user_list: Optional[shared_scim_user_list.ScimUserList] = dataclasses.field(default=None)
     

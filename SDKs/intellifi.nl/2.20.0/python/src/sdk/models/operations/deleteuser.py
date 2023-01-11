@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import responsedefaultresource as shared_responsedefaultresource
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserSecurity:
-    cookie_sid: shared.SchemeCookieSid = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
+    cookie_sid: shared_security.SchemeCookieSid = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserRequest:
-    path_params: DeleteUserPathParams = field()
-    security: DeleteUserSecurity = field()
+    path_params: DeleteUserPathParams = dataclasses.field()
+    security: DeleteUserSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_default_resource: Optional[shared.ResponseDefaultResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_default_resource: Optional[shared_responsedefaultresource.ResponseDefaultResource] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,24 +23,24 @@ req = operations.GetCallLogsRequest(
         ),
     ),
     path_params=operations.GetCallLogsPathParams(
-        account_id="error",
+        account_id="nisi",
     ),
     query_params=operations.GetCallLogsQueryParams(
-        destination_user="voluptas",
-        direction="Inbound",
-        end_gte="vel",
-        end_lte="in",
-        from_="quia",
-        page=6.200000,
-        page_size=63.200001,
-        source_user="quasi",
-        start_gte="dolorum",
-        start_lte="voluptatem",
-        to="enim",
+        destination_user="vel",
+        direction="Outbound",
+        end_gte="harum",
+        end_lte="ad",
+        from_="aut",
+        page=97.099998,
+        page_size=8.100000,
+        source_user="qui",
+        start_gte="ipsum",
+        start_lte="dolorum",
+        to="error",
     ),
 )
     
-res = s.sdk.get_call_logs(req)
+res = s.get_call_logs(req)
 
 if res.call_logs_hal_response is not None:
     # handle response

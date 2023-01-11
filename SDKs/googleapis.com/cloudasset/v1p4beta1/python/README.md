@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,44 +20,45 @@ req = operations.CloudassetAnalyzeIamPolicyRequest(
     security=operations.CloudassetAnalyzeIamPolicySecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CloudassetAnalyzeIamPolicyPathParams(
-        parent="nam",
+        parent="minus",
     ),
     query_params=operations.CloudassetAnalyzeIamPolicyQueryParams(
         dollar_xgafv="1",
-        access_token="quia",
+        access_token="eligendi",
         alt="proto",
         analysis_query_access_selector_permissions=[
-            "eligendi",
-            "saepe",
-            "repellat",
+            "voluptatem",
+            "culpa",
+            "voluptas",
         ],
         analysis_query_access_selector_roles=[
-            "facere",
-            "vel",
+            "velit",
+            "et",
+            "voluptates",
         ],
-        analysis_query_identity_selector_identity="numquam",
-        analysis_query_resource_selector_full_resource_name="eius",
-        callback="aut",
-        fields="voluptate",
-        key="ad",
-        oauth_token="provident",
-        options_analyze_service_account_impersonation=False,
-        options_execution_timeout="omnis",
+        analysis_query_identity_selector_identity="sunt",
+        analysis_query_resource_selector_full_resource_name="neque",
+        callback="iste",
+        fields="aut",
+        key="quae",
+        oauth_token="fugit",
+        options_analyze_service_account_impersonation=True,
+        options_execution_timeout="tempora",
         options_expand_groups=True,
         options_expand_resources=True,
-        options_expand_roles=False,
-        options_output_group_edges=True,
+        options_expand_roles=True,
+        options_output_group_edges=False,
         options_output_resource_edges=True,
-        pretty_print=True,
-        quota_user="maiores",
-        upload_type="reprehenderit",
-        upload_protocol="dolorum",
+        pretty_print=False,
+        quota_user="reprehenderit",
+        upload_type="iusto",
+        upload_protocol="ex",
     ),
 )
     

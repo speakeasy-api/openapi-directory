@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import portfolio as shared_portfolio
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfoliosPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class GetPortfoliosDirectionEnum(str, Enum):
     ASC = "asc"
@@ -20,24 +20,24 @@ class GetPortfoliosSortEnum(str, Enum):
     DATE = "date"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfoliosQueryParams:
-    direction: Optional[GetPortfoliosDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[GetPortfoliosSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[GetPortfoliosDirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[GetPortfoliosSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfoliosRequest:
-    path_params: GetPortfoliosPathParams = field()
-    query_params: GetPortfoliosQueryParams = field()
+    path_params: GetPortfoliosPathParams = dataclasses.field()
+    query_params: GetPortfoliosQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPortfoliosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    portfolios: Optional[List[shared.Portfolio]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    portfolios: Optional[list[shared_portfolio.Portfolio]] = dataclasses.field(default=None)
     

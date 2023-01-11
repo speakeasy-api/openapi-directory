@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import statistics as shared_statistics
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveCurrentNeoStatisticsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    statistics: Optional[shared.Statistics] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    statistics: Optional[shared_statistics.Statistics] = dataclasses.field(default=None)
     

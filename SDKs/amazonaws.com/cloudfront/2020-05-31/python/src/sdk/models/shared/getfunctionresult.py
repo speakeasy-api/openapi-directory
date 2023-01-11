@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFunctionResult:
-    function_code: Optional[str] = field(default=None)
+    function_code: Optional[str] = dataclasses.field(default=None)
     

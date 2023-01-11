@@ -54,14 +54,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{parent}/promotions:findEligible", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse(status_code=r.status_code, content_type=content_type)
@@ -108,14 +108,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{name}:cancel", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse(status_code=r.status_code, content_type=content_type)
@@ -137,14 +137,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{parent}/subscriptions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -166,14 +166,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{name}:entitle", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse(status_code=r.status_code, content_type=content_type)
@@ -187,7 +187,7 @@ class Partners:
 
     
     def paymentsresellersubscription_partners_subscriptions_extend(self, request: operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest) -> operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse:
-        r"""Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+        r"""[Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
         """
         
         base_url = self._server_url
@@ -195,14 +195,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{name}:extend", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse(status_code=r.status_code, content_type=content_type)
@@ -249,14 +249,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{parent}/subscriptions:provision", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse(status_code=r.status_code, content_type=content_type)
@@ -278,14 +278,14 @@ class Partners:
         url = utils.generate_url(base_url, "/v1/{name}:undoCancel", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse(status_code=r.status_code, content_type=content_type)

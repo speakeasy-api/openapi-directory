@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googledevtoolsremotebuildexecutionadminv1alphainstance as shared_googledevtoolsremotebuildexecutionadminv1alphainstance
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse:
-    instances: Optional[List[GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instances') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    instances: Optional[list[shared_googledevtoolsremotebuildexecutionadminv1alphainstance.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instances') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

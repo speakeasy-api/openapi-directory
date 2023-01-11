@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import membermodel as shared_membermodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProductMembersPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductMembersRequest:
-    path_params: GetProductMembersPathParams = field()
+    path_params: GetProductMembersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductMembersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    member_models: Optional[List[shared.MemberModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    member_models: Optional[list[shared_membermodel.MemberModel]] = dataclasses.field(default=None)
     

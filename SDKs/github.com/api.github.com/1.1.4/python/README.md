@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest(
     path_params=operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams(
-        org="fugiat",
-        repository_id=7721589441139439455,
-        runner_group_id=3226718161535449406,
+        org="quas",
+        repository_id=1032291537367353830,
+        runner_group_id=1897604844250369910,
     ),
 )
     
-res = s.sdk.actions_add_repo_access_to_self_hosted_runner_group_in_org(req)
+res = s.actions.actions_add_repo_access_to_self_hosted_runner_group_in_org(req)
 
 if res.status_code == 200:
     # handle response
@@ -35,7 +34,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### actions
 
 * `actions_add_repo_access_to_self_hosted_runner_group_in_org` - Add repository access to a self-hosted runner group in an organization
 * `actions_add_selected_repo_to_org_secret` - Add selected repository to an organization secret
@@ -119,6 +118,9 @@ if res.status_code == 200:
 * `actions_set_selected_repositories_enabled_github_actions_organization` - Set selected repositories enabled for GitHub Actions in an organization
 * `actions_set_self_hosted_runners_in_group_for_org` - Set self-hosted runners in a group for an organization
 * `actions_update_self_hosted_runner_group_for_org` - Update a self-hosted runner group for an organization
+
+### activity
+
 * `activity_check_repo_is_starred_by_authenticated_user` - Check if a repository is starred by the authenticated user
 * `activity_delete_repo_subscription` - Delete a repository subscription
 * `activity_delete_thread_subscription` - Delete a thread subscription
@@ -150,6 +152,9 @@ if res.status_code == 200:
 * `activity_set_thread_subscription` - Set a thread subscription
 * `activity_star_repo_for_authenticated_user` - Star a repository for the authenticated user
 * `activity_unstar_repo_for_authenticated_user` - Unstar a repository for the authenticated user
+
+### apps
+
 * `apps_add_repo_to_installation` - Add a repository to an app installation
 * `apps_check_authorization` - Check an authorization
 * `apps_check_token` - Check a token
@@ -188,7 +193,13 @@ if res.status_code == 200:
 * `apps_suspend_installation` - Suspend an app installation
 * `apps_unsuspend_installation` - Unsuspend an app installation
 * `apps_update_webhook_config_for_app` - Update a webhook configuration for an app
+
+### audit-log
+
 * `audit_log_get_audit_log` - Get the audit log for an enterprise
+
+### billing
+
 * `billing_get_github_actions_billing_ghe` - Get GitHub Actions billing for an enterprise
 * `billing_get_github_actions_billing_org` - Get GitHub Actions billing for an organization
 * `billing_get_github_actions_billing_user` - Get GitHub Actions billing for a user
@@ -198,6 +209,9 @@ if res.status_code == 200:
 * `billing_get_shared_storage_billing_ghe` - Get shared storage billing for an enterprise
 * `billing_get_shared_storage_billing_org` - Get shared storage billing for an organization
 * `billing_get_shared_storage_billing_user` - Get shared storage billing for a user
+
+### checks
+
 * `checks_create` - Create a check run
 * `checks_create_suite` - Create a check suite
 * `checks_get` - Get a check run
@@ -209,6 +223,9 @@ if res.status_code == 200:
 * `checks_rerequest_suite` - Rerequest a check suite
 * `checks_set_suites_preferences` - Update repository preferences for check suites
 * `checks_update` - Update a check run
+
+### code-scanning
+
 * `code_scanning_delete_analysis` - Delete a code scanning analysis from a repository
 * `code_scanning_get_alert` - Get a code scanning alert
 * `code_scanning_get_analysis` - Get a code scanning analysis for a repository
@@ -218,10 +235,19 @@ if res.status_code == 200:
 * `code_scanning_list_recent_analyses` - List code scanning analyses for a repository
 * `code_scanning_update_alert` - Update a code scanning alert
 * `code_scanning_upload_sarif` - Upload an analysis as SARIF data
+
+### codes-of-conduct
+
 * `codes_of_conduct_get_all_codes_of_conduct` - Get all codes of conduct
 * `codes_of_conduct_get_conduct_code` - Get a code of conduct
 * `codes_of_conduct_get_for_repo` - Get the code of conduct for a repository
+
+### emojis
+
 * `emojis_get` - Get emojis
+
+### enterprise-admin
+
 * `enterprise_admin_add_org_access_to_self_hosted_runner_group_in_enterprise` - Add organization access to a self-hosted runner group in an enterprise
 * `enterprise_admin_add_self_hosted_runner_to_group_for_enterprise` - Add a self-hosted runner to a group for an enterprise
 * `enterprise_admin_create_registration_token_for_enterprise` - Create a registration token for an enterprise
@@ -261,6 +287,9 @@ if res.status_code == 200:
 * `enterprise_admin_update_attribute_for_enterprise_group` - Update an attribute for a SCIM enterprise group
 * `enterprise_admin_update_attribute_for_enterprise_user` - Update an attribute for a SCIM enterprise user
 * `enterprise_admin_update_self_hosted_runner_group_for_enterprise` - Update a self-hosted runner group for an enterprise
+
+### gists
+
 * `gists_check_is_starred` - Check if a gist is starred
 * `gists_create` - Create a gist
 * `gists_create_comment` - Create a gist comment
@@ -281,6 +310,9 @@ if res.status_code == 200:
 * `gists_unstar` - Unstar a gist
 * `gists_update` - Update a gist
 * `gists_update_comment` - Update a gist comment
+
+### git
+
 * `git_create_blob` - Create a blob
 * `git_create_commit` - Create a commit
 * `git_create_ref` - Create a reference
@@ -294,8 +326,14 @@ if res.status_code == 200:
 * `git_get_tree` - Get a tree
 * `git_list_matching_refs` - List matching references
 * `git_update_ref` - Update a reference
+
+### gitignore
+
 * `gitignore_get_all_templates` - Get all gitignore templates
 * `gitignore_get_template` - Get a gitignore template
+
+### interactions
+
 * `interactions_get_restrictions_for_authenticated_user` - Get interaction restrictions for your public repositories
 * `interactions_get_restrictions_for_org` - Get interaction restrictions for an organization
 * `interactions_get_restrictions_for_repo` - Get interaction restrictions for a repository
@@ -305,6 +343,9 @@ if res.status_code == 200:
 * `interactions_set_restrictions_for_authenticated_user` - Set interaction restrictions for your public repositories
 * `interactions_set_restrictions_for_org` - Set interaction restrictions for an organization
 * `interactions_set_restrictions_for_repo` - Set interaction restrictions for a repository
+
+### issues
+
 * `issues_add_assignees` - Add assignees to an issue
 * `issues_add_labels` - Add labels to an issue
 * `issues_check_user_can_be_assigned` - Check if a user can be assigned
@@ -344,15 +385,27 @@ if res.status_code == 200:
 * `issues_update_comment` - Update an issue comment
 * `issues_update_label` - Update a label
 * `issues_update_milestone` - Update a milestone
+
+### licenses
+
 * `licenses_get` - Get a license
 * `licenses_get_all_commonly_used` - Get all commonly used licenses
 * `licenses_get_for_repo` - Get the license for a repository
+
+### markdown
+
 * `markdown_render` - Render a Markdown document
 * `markdown_render_raw` - Render a Markdown document in raw mode
+
+### meta
+
 * `meta_get` - Get GitHub meta information
 * `meta_get_octocat` - Get Octocat
 * `meta_get_zen` - Get the Zen of GitHub
 * `meta_root` - GitHub API Root
+
+### migrations
+
 * `migrations_cancel_import` - Cancel an import
 * `migrations_delete_archive_for_authenticated_user` - Delete a user migration archive
 * `migrations_delete_archive_for_org` - Delete an organization migration archive
@@ -375,6 +428,9 @@ if res.status_code == 200:
 * `migrations_unlock_repo_for_authenticated_user` - Unlock a user repository
 * `migrations_unlock_repo_for_org` - Unlock an organization repository
 * `migrations_update_import` - Update an import
+
+### oauth-authorizations
+
 * `oauth_authorizations_create_authorization` - Create a new authorization
 * `oauth_authorizations_delete_authorization` - Delete an authorization
 * `oauth_authorizations_delete_grant` - Delete a grant
@@ -385,6 +441,9 @@ if res.status_code == 200:
 * `oauth_authorizations_list_authorizations` - List your authorizations
 * `oauth_authorizations_list_grants` - List your grants
 * `oauth_authorizations_update_authorization` - Update an existing authorization
+
+### orgs
+
 * `orgs_block_user` - Block a user from an organization
 * `orgs_cancel_invitation` - Cancel an organization invitation
 * `orgs_check_blocked_user` - Check if a user is blocked by an organization
@@ -427,6 +486,9 @@ if res.status_code == 200:
 * `orgs_update_membership_for_authenticated_user` - Update an organization membership for the authenticated user
 * `orgs_update_webhook` - Update an organization webhook
 * `orgs_update_webhook_config_for_org` - Update a webhook configuration for an organization
+
+### packages
+
 * `packages_delete_package_for_authenticated_user` - Delete a package for the authenticated user
 * `packages_delete_package_for_org` - Delete a package for an organization
 * `packages_delete_package_version_for_authenticated_user` - Delete a package version for the authenticated user
@@ -444,6 +506,9 @@ if res.status_code == 200:
 * `packages_restore_package_for_org` - Restore a package for an organization
 * `packages_restore_package_version_for_authenticated_user` - Restore a package version for the authenticated user
 * `packages_restore_package_version_for_org` - Restore package version for an organization
+
+### projects
+
 * `projects_add_collaborator` - Add project collaborator
 * `projects_create_card` - Create a project card
 * `projects_create_column` - Create a project column
@@ -469,6 +534,9 @@ if res.status_code == 200:
 * `projects_update` - Update a project
 * `projects_update_card` - Update an existing project card
 * `projects_update_column` - Update an existing project column
+
+### pulls
+
 * `pulls_check_if_merged` - Check if a pull request has been merged
 * `pulls_create` - Create a pull request
 * `pulls_create_reply_for_review_comment` - Create a reply for a review comment
@@ -496,7 +564,13 @@ if res.status_code == 200:
 * `pulls_update_branch` - Update a pull request branch
 * `pulls_update_review` - Update a review for a pull request
 * `pulls_update_review_comment` - Update a review comment for a pull request
+
+### rate-limit
+
 * `rate_limit_get` - Get rate limit status for the authenticated user
+
+### reactions
+
 * `reactions_create_for_commit_comment` - Create reaction for a commit comment
 * `reactions_create_for_issue` - Create reaction for an issue
 * `reactions_create_for_issue_comment` - Create reaction for an issue comment
@@ -520,6 +594,9 @@ if res.status_code == 200:
 * `reactions_list_for_team_discussion_comment_legacy` - List reactions for a team discussion comment (Legacy)
 * `reactions_list_for_team_discussion_in_org` - List reactions for a team discussion
 * `reactions_list_for_team_discussion_legacy` - List reactions for a team discussion (Legacy)
+
+### repos
+
 * `repos_accept_invitation` - Accept a repository invitation
 * `repos_add_app_access_restrictions` - Add app access restrictions
 * `repos_add_collaborator` - Add a repository collaborator
@@ -668,12 +745,18 @@ if res.status_code == 200:
 * `repos_update_webhook` - Update a repository webhook
 * `repos_update_webhook_config_for_repo` - Update a webhook configuration for a repository
 * `repos_upload_release_asset` - Upload a release asset
+
+### scim
+
 * `scim_delete_user_from_org` - Delete a SCIM user from an organization
 * `scim_get_provisioning_information_for_user` - Get SCIM provisioning information for a user
 * `scim_list_provisioned_identities` - List SCIM provisioned identities
 * `scim_provision_and_invite_user` - Provision and invite a SCIM user
 * `scim_set_information_for_provisioned_user` - Update a provisioned organization membership
 * `scim_update_attribute_for_user` - Update an attribute for a SCIM user
+
+### search
+
 * `search_code` - Search code
 * `search_commits` - Search commits
 * `search_issues_and_pull_requests` - Search issues and pull requests
@@ -681,9 +764,15 @@ if res.status_code == 200:
 * `search_repos` - Search repositories
 * `search_topics` - Search topics
 * `search_users` - Search users
+
+### secret-scanning
+
 * `secret_scanning_get_alert` - Get a secret scanning alert
 * `secret_scanning_list_alerts_for_repo` - List secret scanning alerts for a repository
 * `secret_scanning_update_alert` - Update a secret scanning alert
+
+### teams
+
 * `teams_add_member_legacy` - Add team member (Legacy)
 * `teams_add_or_update_membership_for_user_in_org` - Add or update team membership for a user
 * `teams_add_or_update_membership_for_user_legacy` - Add or update team membership for a user (Legacy)
@@ -749,6 +838,9 @@ if res.status_code == 200:
 * `teams_update_discussion_legacy` - Update a discussion (Legacy)
 * `teams_update_in_org` - Update a team
 * `teams_update_legacy` - Update a team (Legacy)
+
+### users
+
 * `users_add_email_for_authenticated` - Add an email address for the authenticated user
 * `users_block` - Block a user
 * `users_check_blocked` - Check if a user is blocked by the authenticated user

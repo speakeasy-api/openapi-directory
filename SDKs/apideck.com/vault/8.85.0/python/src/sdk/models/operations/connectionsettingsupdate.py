@@ -1,46 +1,54 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import connection as shared_connection
+from ..shared import badrequestresponse as shared_badrequestresponse
+from ..shared import notfoundresponse as shared_notfoundresponse
+from ..shared import paymentrequiredresponse as shared_paymentrequiredresponse
+from ..shared import unauthorizedresponse as shared_unauthorizedresponse
+from ..shared import unexpectederrorresponse as shared_unexpectederrorresponse
+from ..shared import unprocessableresponse as shared_unprocessableresponse
+from ..shared import updateconnectionresponse as shared_updateconnectionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettingsUpdatePathParams:
-    resource: str = field(metadata={'path_param': { 'field_name': 'resource', 'style': 'simple', 'explode': False }})
-    service_id: str = field(metadata={'path_param': { 'field_name': 'service_id', 'style': 'simple', 'explode': False }})
-    unified_api: str = field(metadata={'path_param': { 'field_name': 'unified_api', 'style': 'simple', 'explode': False }})
+    resource: str = dataclasses.field(metadata={'path_param': { 'field_name': 'resource', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'service_id', 'style': 'simple', 'explode': False }})
+    unified_api: str = dataclasses.field(metadata={'path_param': { 'field_name': 'unified_api', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettingsUpdateHeaders:
-    x_apideck_app_id: str = field(metadata={'header': { 'field_name': 'x-apideck-app-id', 'style': 'simple', 'explode': False }})
-    x_apideck_consumer_id: str = field(metadata={'header': { 'field_name': 'x-apideck-consumer-id', 'style': 'simple', 'explode': False }})
+    x_apideck_app_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-apideck-app-id', 'style': 'simple', 'explode': False }})
+    x_apideck_consumer_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-apideck-consumer-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettingsUpdateSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettingsUpdateRequest:
-    headers: ConnectionSettingsUpdateHeaders = field()
-    path_params: ConnectionSettingsUpdatePathParams = field()
-    request: shared.ConnectionInput = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: ConnectionSettingsUpdateSecurity = field()
+    headers: ConnectionSettingsUpdateHeaders = dataclasses.field()
+    path_params: ConnectionSettingsUpdatePathParams = dataclasses.field()
+    request: shared_connection.ConnectionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: ConnectionSettingsUpdateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConnectionSettingsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bad_request_response: Optional[shared.BadRequestResponse] = field(default=None)
-    not_found_response: Optional[shared.NotFoundResponse] = field(default=None)
-    payment_required_response: Optional[shared.PaymentRequiredResponse] = field(default=None)
-    unauthorized_response: Optional[shared.UnauthorizedResponse] = field(default=None)
-    unexpected_error_response: Optional[shared.UnexpectedErrorResponse] = field(default=None)
-    unprocessable_response: Optional[shared.UnprocessableResponse] = field(default=None)
-    update_connection_response: Optional[shared.UpdateConnectionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bad_request_response: Optional[shared_badrequestresponse.BadRequestResponse] = dataclasses.field(default=None)
+    not_found_response: Optional[shared_notfoundresponse.NotFoundResponse] = dataclasses.field(default=None)
+    payment_required_response: Optional[shared_paymentrequiredresponse.PaymentRequiredResponse] = dataclasses.field(default=None)
+    unauthorized_response: Optional[shared_unauthorizedresponse.UnauthorizedResponse] = dataclasses.field(default=None)
+    unexpected_error_response: Optional[shared_unexpectederrorresponse.UnexpectedErrorResponse] = dataclasses.field(default=None)
+    unprocessable_response: Optional[shared_unprocessableresponse.UnprocessableResponse] = dataclasses.field(default=None)
+    update_connection_response: Optional[shared_updateconnectionresponse.UpdateConnectionResponse] = dataclasses.field(default=None)
     

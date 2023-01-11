@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import filingspage as shared_filingspage
 
 class GetFilingsAmendmentIndicatorEnum(str, Enum):
     UNKNOWN = ""
@@ -26,48 +26,48 @@ class GetFilingsOfficeEnum(str, Enum):
     P = "P"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFilingsQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
-    amendment_indicator: Optional[List[GetFilingsAmendmentIndicatorEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'amendment_indicator', 'style': 'form', 'explode': True }})
-    beginning_image_number: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'beginning_image_number', 'style': 'form', 'explode': True }})
-    candidate_id: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
-    committee_id: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'committee_id', 'style': 'form', 'explode': True }})
-    committee_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'committee_type', 'style': 'form', 'explode': True }})
-    cycle: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'cycle', 'style': 'form', 'explode': True }})
-    district: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'district', 'style': 'form', 'explode': True }})
-    document_type: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'document_type', 'style': 'form', 'explode': True }})
-    file_number: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'file_number', 'style': 'form', 'explode': True }})
-    filer_type: Optional[GetFilingsFilerTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filer_type', 'style': 'form', 'explode': True }})
-    form_category: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'form_category', 'style': 'form', 'explode': True }})
-    form_type: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'form_type', 'style': 'form', 'explode': True }})
-    is_amended: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'is_amended', 'style': 'form', 'explode': True }})
-    max_receipt_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'max_receipt_date', 'style': 'form', 'explode': True }})
-    min_receipt_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'min_receipt_date', 'style': 'form', 'explode': True }})
-    most_recent: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'most_recent', 'style': 'form', 'explode': True }})
-    office: Optional[List[GetFilingsOfficeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'office', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    party: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'party', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    primary_general_indicator: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'primary_general_indicator', 'style': 'form', 'explode': True }})
-    report_type: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'report_type', 'style': 'form', 'explode': True }})
-    report_year: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'report_year', 'style': 'form', 'explode': True }})
-    request_type: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'request_type', 'style': 'form', 'explode': True }})
-    sort: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    sort_hide_null: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_hide_null', 'style': 'form', 'explode': True }})
-    sort_null_only: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_null_only', 'style': 'form', 'explode': True }})
-    sort_nulls_last: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'sort_nulls_last', 'style': 'form', 'explode': True }})
-    state: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    amendment_indicator: Optional[list[GetFilingsAmendmentIndicatorEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'amendment_indicator', 'style': 'form', 'explode': True }})
+    beginning_image_number: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'beginning_image_number', 'style': 'form', 'explode': True }})
+    candidate_id: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
+    committee_id: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'committee_id', 'style': 'form', 'explode': True }})
+    committee_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'committee_type', 'style': 'form', 'explode': True }})
+    cycle: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cycle', 'style': 'form', 'explode': True }})
+    district: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'district', 'style': 'form', 'explode': True }})
+    document_type: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'document_type', 'style': 'form', 'explode': True }})
+    file_number: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'file_number', 'style': 'form', 'explode': True }})
+    filer_type: Optional[GetFilingsFilerTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filer_type', 'style': 'form', 'explode': True }})
+    form_category: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'form_category', 'style': 'form', 'explode': True }})
+    form_type: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'form_type', 'style': 'form', 'explode': True }})
+    is_amended: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'is_amended', 'style': 'form', 'explode': True }})
+    max_receipt_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max_receipt_date', 'style': 'form', 'explode': True }})
+    min_receipt_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'min_receipt_date', 'style': 'form', 'explode': True }})
+    most_recent: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'most_recent', 'style': 'form', 'explode': True }})
+    office: Optional[list[GetFilingsOfficeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'office', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    party: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'party', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    primary_general_indicator: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'primary_general_indicator', 'style': 'form', 'explode': True }})
+    report_type: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'report_type', 'style': 'form', 'explode': True }})
+    report_year: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'report_year', 'style': 'form', 'explode': True }})
+    request_type: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'request_type', 'style': 'form', 'explode': True }})
+    sort: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    sort_hide_null: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_hide_null', 'style': 'form', 'explode': True }})
+    sort_null_only: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_null_only', 'style': 'form', 'explode': True }})
+    sort_nulls_last: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_nulls_last', 'style': 'form', 'explode': True }})
+    state: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilingsRequest:
-    query_params: GetFilingsQueryParams = field()
+    query_params: GetFilingsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    filings_page: Optional[shared.FilingsPage] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    filings_page: Optional[shared_filingspage.FilingsPage] = dataclasses.field(default=None)
     

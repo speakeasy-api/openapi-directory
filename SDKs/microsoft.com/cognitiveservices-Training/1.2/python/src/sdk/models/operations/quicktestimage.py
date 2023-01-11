@@ -1,46 +1,46 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imagepredictionresult as shared_imagepredictionresult
 
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImagePathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageQueryParams:
-    iteration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
+    iteration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageRequestBodyImageData:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_data: str = field(metadata={'multipart_form': { 'field_name': 'imageData' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_data: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageData' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageRequestBody:
-    image_data: QuickTestImageRequestBodyImageData = field(metadata={'multipart_form': { 'file': True }})
+    image_data: QuickTestImageRequestBodyImageData = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageRequest:
-    headers: QuickTestImageHeaders = field()
-    path_params: QuickTestImagePathParams = field()
-    query_params: QuickTestImageQueryParams = field()
-    request: QuickTestImageRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    headers: QuickTestImageHeaders = dataclasses.field()
+    path_params: QuickTestImagePathParams = dataclasses.field()
+    query_params: QuickTestImageQueryParams = dataclasses.field()
+    request: QuickTestImageRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QuickTestImageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    image_prediction_result: Optional[shared.ImagePredictionResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    image_prediction_result: Optional[shared_imagepredictionresult.ImagePredictionResult] = dataclasses.field(default=None)
     

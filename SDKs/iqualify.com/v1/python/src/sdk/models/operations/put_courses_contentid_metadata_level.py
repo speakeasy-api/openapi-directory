@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import coursemetaresponse as shared_coursemetaresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PutCoursesContentIDMetadataLevelPathParams:
-    content_id: str = field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
+    content_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contentId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCoursesContentIDMetadataLevelRequestBody:
-    level: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('level') }})
+    level: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('level') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCoursesContentIDMetadataLevelRequest:
-    path_params: PutCoursesContentIDMetadataLevelPathParams = field()
-    request: PutCoursesContentIDMetadataLevelRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutCoursesContentIDMetadataLevelPathParams = dataclasses.field()
+    request: PutCoursesContentIDMetadataLevelRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCoursesContentIDMetadataLevelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    course_meta_response: Optional[shared.CourseMetaResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    course_meta_response: Optional[shared_coursemetaresponse.CourseMetaResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

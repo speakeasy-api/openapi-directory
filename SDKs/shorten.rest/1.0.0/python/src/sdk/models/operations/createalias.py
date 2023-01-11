@@ -1,29 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createaliasmodel as shared_createaliasmodel
+from ..shared import createaliasresponsemodel as shared_createaliasresponsemodel
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAliasQueryParams:
-    alias_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'aliasName', 'style': 'form', 'explode': True }})
-    domain_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'domainName', 'style': 'form', 'explode': True }})
+    alias_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'aliasName', 'style': 'form', 'explode': True }})
+    domain_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'domainName', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAliasSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAliasRequest:
-    query_params: CreateAliasQueryParams = field()
-    request: shared.CreateAliasModel = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAliasSecurity = field()
+    query_params: CreateAliasQueryParams = dataclasses.field()
+    request: shared_createaliasmodel.CreateAliasModel = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAliasSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAliasResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_alias_response_model: Optional[shared.CreateAliasResponseModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_alias_response_model: Optional[shared_createaliasresponsemodel.CreateAliasResponseModel] = dataclasses.field(default=None)
     

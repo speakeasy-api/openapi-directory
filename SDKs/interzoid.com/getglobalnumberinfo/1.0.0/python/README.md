@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetglobalnumberinfoRequest(
     query_params=operations.GetglobalnumberinfoQueryParams(
-        intlnumber="repellendus",
-        license="eum",
+        intlnumber="perferendis",
+        license="natus",
     ),
 )
     
-res = s.sdk.getglobalnumberinfo(req)
+res = s.global_phone_number_information.getglobalnumberinfo(req)
 
 if res.getglobalnumberinfo_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getglobalnumberinfo_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Global Phone Number Information
 
 * `getglobalnumberinfo` - Get demographic information for a global telephone number
 

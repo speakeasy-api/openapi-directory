@@ -1,0 +1,18 @@
+import dataclasses
+from typing import Optional
+from ..shared import endpoint as shared_endpoint
+
+
+@dataclasses.dataclass
+class NodeGroupMemberList:
+    r"""NodeGroupMemberList
+    Represents a single node within a node group (shard).
+    """
+    
+    cache_cluster_id: Optional[str] = dataclasses.field(default=None)
+    cache_node_id: Optional[str] = dataclasses.field(default=None)
+    current_role: Optional[str] = dataclasses.field(default=None)
+    preferred_availability_zone: Optional[str] = dataclasses.field(default=None)
+    preferred_outpost_arn: Optional[str] = dataclasses.field(default=None)
+    read_endpoint: Optional[shared_endpoint.Endpoint] = dataclasses.field(default=None)
+    

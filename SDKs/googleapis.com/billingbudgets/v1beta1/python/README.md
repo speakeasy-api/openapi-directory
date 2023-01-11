@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,103 +21,98 @@ req = operations.BillingbudgetsBillingAccountsBudgetsCreateRequest(
         option1=operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams(
-        parent="ratione",
+        parent="accusamus",
     ),
     query_params=operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams(
         dollar_xgafv="1",
-        access_token="libero",
-        alt="proto",
-        callback="qui",
-        fields="quae",
-        key="iste",
-        oauth_token="animi",
+        access_token="officia",
+        alt="json",
+        callback="enim",
+        fields="accusantium",
+        key="deserunt",
+        oauth_token="dolores",
         pretty_print=True,
-        quota_user="pariatur",
-        upload_type="adipisci",
-        upload_protocol="recusandae",
+        quota_user="quam",
+        upload_type="quod",
+        upload_protocol="iste",
     ),
     request=shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput(
         budget=shared.GoogleCloudBillingBudgetsV1beta1BudgetInput(
             all_updates_rule=shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule(
                 disable_default_iam_recipients=True,
                 monitoring_notification_channels=[
-                    "unde",
+                    "beatae",
                 ],
-                pubsub_topic="et",
-                schema_version="voluptatum",
+                pubsub_topic="impedit",
+                schema_version="natus",
             ),
             amount=shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount(
                 last_period_amount={
-                    "molestiae": "tempora",
+                    "non": "tempore",
+                    "iusto": "quas",
                 },
                 specified_amount=shared.GoogleTypeMoney(
-                    currency_code="praesentium",
-                    nanos=2369452140427811028,
-                    units="sed",
+                    currency_code="nobis",
+                    nanos=2434754690830972633,
+                    units="debitis",
                 ),
             ),
             budget_filter=shared.GoogleCloudBillingBudgetsV1beta1Filter(
-                calendar_period="YEAR",
+                calendar_period="QUARTER",
                 credit_types=[
-                    "aliquid",
-                    "sit",
-                    "aut",
+                    "ratione",
+                    "ad",
                 ],
-                credit_types_treatment="EXCLUDE_ALL_CREDITS",
+                credit_types_treatment="INCLUDE_ALL_CREDITS",
                 custom_period=shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod(
                     end_date=shared.GoogleTypeDate(
-                        day=5424098840598598124,
-                        month=6573536602896611658,
-                        year=5050765952509064220,
+                        day=6022974110687088585,
+                        month=3276416351004451594,
+                        year=8350655293440247125,
                     ),
                     start_date=shared.GoogleTypeDate(
-                        day=2424619421979615217,
-                        month=3868935517736166565,
-                        year=2032218833617120042,
+                        day=6207443467076797378,
+                        month=8419873006552606755,
+                        year=196396550416631637,
                     ),
                 ),
                 labels={
-                    "aut": [
-                        "voluptatum",
-                        "officia",
-                        "illum",
-                    ],
-                    "incidunt": [
-                        "et",
-                        "dolorem",
+                    "sed": [
+                        "possimus",
+                        "sit",
+                        "ut",
                     ],
                 },
                 projects=[
-                    "laborum",
+                    "et",
+                    "aliquam",
                 ],
                 services=[
-                    "dicta",
+                    "pariatur",
+                    "tempora",
                 ],
                 subaccounts=[
-                    "nisi",
+                    "maiores",
+                    "et",
                 ],
             ),
-            display_name="tempore",
-            etag="rerum",
+            display_name="est",
+            etag="ipsa",
             threshold_rules=[
                 shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule(
-                    spend_basis="FORECASTED_SPEND",
-                    threshold_percent=71.199997,
-                ),
-                shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule(
-                    spend_basis="FORECASTED_SPEND",
-                    threshold_percent=78.199997,
-                ),
-                shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule(
                     spend_basis="CURRENT_SPEND",
-                    threshold_percent=44.099998,
+                    threshold_percent=96.099998,
+                ),
+                shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule(
+                    spend_basis="BASIS_UNSPECIFIED",
+                    threshold_percent=16.200001,
                 ),
             ],
         ),

@@ -1,8 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fax_v1_fax_fax_media as shared_fax_v1_fax_fax_media
 
 
 LIST_FAX_MEDIA_SERVERS = [
@@ -10,51 +11,51 @@ LIST_FAX_MEDIA_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaPathParams:
-    fax_sid: str = field(metadata={'path_param': { 'field_name': 'FaxSid', 'style': 'simple', 'explode': False }})
+    fax_sid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FaxSid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaQueryParams:
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'PageSize', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'PageSize', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaSecurity:
-    account_sid_auth_token: shared.SchemeAccountSidAuthToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    account_sid_auth_token: shared_security.SchemeAccountSidAuthToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaListFaxMediaResponseMeta:
-    first_page_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_page_url') }})
-    key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    next_page_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('next_page_url') }})
-    page: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
-    page_size: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_size') }})
-    previous_page_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous_page_url') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    first_page_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first_page_url') }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    next_page_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('next_page_url') }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_size') }})
+    previous_page_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('previous_page_url') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaListFaxMediaResponse:
-    media: Optional[List[shared.FaxV1FaxFaxMedia]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('media') }})
-    meta: Optional[ListFaxMediaListFaxMediaResponseMeta] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    media: Optional[list[shared_fax_v1_fax_fax_media.FaxV1FaxFaxMedia]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('media') }})
+    meta: Optional[ListFaxMediaListFaxMediaResponseMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaRequest:
-    path_params: ListFaxMediaPathParams = field()
-    query_params: ListFaxMediaQueryParams = field()
-    security: ListFaxMediaSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: ListFaxMediaPathParams = dataclasses.field()
+    query_params: ListFaxMediaQueryParams = dataclasses.field()
+    security: ListFaxMediaSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFaxMediaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_fax_media_response: Optional[ListFaxMediaListFaxMediaResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_fax_media_response: Optional[ListFaxMediaListFaxMediaResponse] = dataclasses.field(default=None)
     

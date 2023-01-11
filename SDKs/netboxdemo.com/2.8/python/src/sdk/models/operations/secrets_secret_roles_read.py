@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import secretrole as shared_secretrole
 
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretRolesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretRolesReadRequest:
-    path_params: SecretsSecretRolesReadPathParams = field()
+    path_params: SecretsSecretRolesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretRolesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    secret_role: Optional[shared.SecretRole] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    secret_role: Optional[shared_secretrole.SecretRole] = dataclasses.field(default=None)
     

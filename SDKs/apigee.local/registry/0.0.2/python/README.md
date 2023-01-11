@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,15 +18,15 @@ s = sdk.SDK()
     
 req = operations.RegistryCreateAPIRequest(
     path_params=operations.RegistryCreateAPIPathParams(
-        project="ipsum",
+        project="rerum",
     ),
     query_params=operations.RegistryCreateAPIQueryParams(
-        api_id="rem",
+        api_id="nobis",
     ),
-    request="consequuntur",
+    request="nemo",
 )
     
-res = s.sdk.registry_create_api(req)
+res = s.registry_create_api(req)
 
 if res.api is not None:
     # handle response

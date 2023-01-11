@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import errorcode_enum as shared_errorcode_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ObError1:
-    error_code: ErrorCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorCode') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
-    path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Path') }})
+    error_code: shared_errorcode_enum.ErrorCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ErrorCode') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Path') }})
     

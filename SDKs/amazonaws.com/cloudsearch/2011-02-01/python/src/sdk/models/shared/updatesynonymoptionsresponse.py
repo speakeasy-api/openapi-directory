@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import synonymoptionsstatus as shared_synonymoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateSynonymOptionsResponse:
     r"""UpdateSynonymOptionsResponse
     A response message that contains the status of updated synonym options.
     """
     
-    synonyms: SynonymOptionsStatus = field()
+    synonyms: shared_synonymoptionsstatus.SynonymOptionsStatus = dataclasses.field()
     

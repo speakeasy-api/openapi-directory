@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.DeleteBinIDRequest(
     path_params=operations.DeleteBinIDPathParams(
-        id="temporibus",
+        id="ipsum",
     ),
 )
     
-res = s.sdk.delete_bin_id_(req)
+res = s.delete_bin_id_(req)
 
 if res.delete_status is not None:
     # handle response

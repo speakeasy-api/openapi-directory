@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,14 +25,14 @@ s.config_security(
     
 req = operations.GetLinesRequest(
     query_params=operations.GetLinesQueryParams(
-        away="blanditiis",
-        conference="voluptatem",
-        game_id=1968362912832942364,
-        home="consequatur",
-        season_type="voluptatem",
-        team="nam",
-        week=6118617986052237062,
-        year=2385020320511952434,
+        away="quia",
+        conference="blanditiis",
+        game_id=501002963790601971,
+        home="expedita",
+        season_type="quo",
+        team="id",
+        week=319022383954109970,
+        year=3325329196161324374,
     ),
 )
     

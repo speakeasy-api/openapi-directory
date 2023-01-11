@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import provider as shared_provider
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersGraphsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersGraphsRequest:
-    path_params: CircuitsProvidersGraphsPathParams = field()
+    path_params: CircuitsProvidersGraphsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersGraphsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    provider: Optional[shared.Provider] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    provider: Optional[shared_provider.Provider] = dataclasses.field(default=None)
     

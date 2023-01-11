@@ -34,7 +34,7 @@ class Balance:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.balance_200_text_plain_float_number = r.content
 
         return res
 

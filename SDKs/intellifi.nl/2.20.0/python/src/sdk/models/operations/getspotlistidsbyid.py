@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotListIdsByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotListIdsByIDRequest:
-    path_params: GetSpotListIdsByIDPathParams = field()
+    path_params: GetSpotListIdsByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSpotListIdsByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_of_item_ids: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_of_item_ids: Optional[list[str]] = dataclasses.field(default=None)
     

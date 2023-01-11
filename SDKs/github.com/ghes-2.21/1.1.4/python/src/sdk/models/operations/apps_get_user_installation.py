@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import installation_ghes_2 as shared_installation_ghes_2
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationRequest:
-    headers: AppsGetUserInstallationHeaders = field()
-    path_params: AppsGetUserInstallationPathParams = field()
+    headers: AppsGetUserInstallationHeaders = dataclasses.field()
+    path_params: AppsGetUserInstallationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetUserInstallationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    installation_ghes_2: Optional[shared.InstallationGhes2] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    installation_ghes_2: Optional[shared_installation_ghes_2.InstallationGhes2] = dataclasses.field(default=None)
     

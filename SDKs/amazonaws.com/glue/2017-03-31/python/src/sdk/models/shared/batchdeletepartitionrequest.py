@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import partitionvaluelist as shared_partitionvaluelist
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDeletePartitionRequest:
-    database_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatabaseName') }})
-    partitions_to_delete: List[PartitionValueList] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PartitionsToDelete') }})
-    table_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableName') }})
-    catalog_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CatalogId') }})
+    database_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatabaseName') }})
+    partitions_to_delete: list[shared_partitionvaluelist.PartitionValueList] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PartitionsToDelete') }})
+    table_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableName') }})
+    catalog_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CatalogId') }})
     

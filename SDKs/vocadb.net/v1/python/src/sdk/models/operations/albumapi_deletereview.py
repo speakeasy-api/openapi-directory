@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIDeleteReviewPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    review_id: int = field(metadata={'path_param': { 'field_name': 'reviewId', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    review_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'reviewId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIDeleteReviewRequest:
-    path_params: AlbumAPIDeleteReviewPathParams = field()
+    path_params: AlbumAPIDeleteReviewPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIDeleteReviewResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

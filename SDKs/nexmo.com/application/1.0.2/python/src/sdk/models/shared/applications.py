@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import _embedded as shared__embedded
+from ..shared import links as shared_links
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Applications:
-    embedded: Embedded = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_embedded') }})
-    links: Links = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
-    count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
-    page_index: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_index') }})
-    page_size: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_size') }})
+    embedded: shared__embedded.Embedded = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_embedded') }})
+    links: shared_links.Links = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
+    count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('count') }})
+    page_index: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_index') }})
+    page_size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('page_size') }})
     

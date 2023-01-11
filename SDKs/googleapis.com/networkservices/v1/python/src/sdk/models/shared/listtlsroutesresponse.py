@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tlsroute as shared_tlsroute
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTLSRoutesResponse:
     r"""ListTLSRoutesResponse
     Response returned by the ListTlsRoutes method.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    tls_routes: Optional[List[TLSRoute]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tlsRoutes') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    tls_routes: Optional[list[shared_tlsroute.TLSRoute]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tlsRoutes') }})
     

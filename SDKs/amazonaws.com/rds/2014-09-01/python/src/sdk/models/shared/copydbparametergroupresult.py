@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbparametergroup as shared_dbparametergroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CopyDbParameterGroupResult:
-    db_parameter_group: Optional[DbParameterGroup] = field(default=None)
+    db_parameter_group: Optional[shared_dbparametergroup.DbParameterGroup] = dataclasses.field(default=None)
     

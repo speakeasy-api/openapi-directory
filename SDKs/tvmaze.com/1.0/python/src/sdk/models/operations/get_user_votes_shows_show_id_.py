@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import showvote as shared_showvote
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsShowIDPathParams:
-    show_id: int = field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
+    show_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsShowIDRequest:
-    path_params: GetUserVotesShowsShowIDPathParams = field()
+    path_params: GetUserVotesShowsShowIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsShowIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    show_vote: Optional[shared.ShowVote] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    show_vote: Optional[shared_showvote.ShowVote] = dataclasses.field(default=None)
     

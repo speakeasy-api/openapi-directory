@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import signalreturnreportrequest as shared_signalreturnreportrequest
+from ..shared import signalreturnreportresponse as shared_signalreturnreportresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SignalReturnReportRequest:
-    request: shared.SignalReturnReportRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_signalreturnreportrequest.SignalReturnReportRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SignalReturnReportResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    signal_return_report_response: Optional[shared.SignalReturnReportResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    signal_return_report_response: Optional[shared_signalreturnreportresponse.SignalReturnReportResponse] = dataclasses.field(default=None)
     

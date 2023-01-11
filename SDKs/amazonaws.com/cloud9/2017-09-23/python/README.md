@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,44 +25,40 @@ s.config_security(
     
 req = operations.CreateEnvironmentEc2Request(
     headers=operations.CreateEnvironmentEc2Headers(
-        x_amz_algorithm="animi",
-        x_amz_content_sha256="facere",
-        x_amz_credential="consequatur",
-        x_amz_date="ipsum",
-        x_amz_security_token="hic",
-        x_amz_signature="amet",
-        x_amz_signed_headers="quasi",
+        x_amz_algorithm="cupiditate",
+        x_amz_content_sha256="omnis",
+        x_amz_credential="iste",
+        x_amz_date="unde",
+        x_amz_security_token="adipisci",
+        x_amz_signature="impedit",
+        x_amz_signed_headers="tempora",
         x_amz_target="AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
     ),
     request=shared.CreateEnvironmentEc2Request(
-        automatic_stop_time_minutes=2683203673119178326,
-        client_request_token="eum",
-        connection_type="CONNECT_SSH",
-        description="beatae",
+        automatic_stop_time_minutes=3876518618080918046,
+        client_request_token="corrupti",
+        connection_type="CONNECT_SSM",
+        description="cum",
         dry_run=False,
-        image_id="est",
-        instance_type="a",
-        name="quia",
-        owner_arn="sit",
-        subnet_id="quaerat",
+        image_id="ea",
+        instance_type="architecto",
+        name="esse",
+        owner_arn="explicabo",
+        subnet_id="distinctio",
         tags=[
             shared.Tag(
-                key="sunt",
-                value="nobis",
-            ),
-            shared.Tag(
-                key="quasi",
-                value="et",
-            ),
-            shared.Tag(
                 key="non",
-                value="veniam",
+                value="accusantium",
+            ),
+            shared.Tag(
+                key="ut",
+                value="consequatur",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_environment_ec2(req)
+res = s.create_environment_ec2(req)
 
 if res.create_environment_ec2_result is not None:
     # handle response

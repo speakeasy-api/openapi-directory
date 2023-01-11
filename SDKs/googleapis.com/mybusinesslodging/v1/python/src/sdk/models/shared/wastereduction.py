@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -102,42 +102,42 @@ class WasteReductionWaterBottleFillingStationsExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WasteReduction:
     r"""WasteReduction
     Waste reduction practices implemented at the hotel.
     """
     
-    compostable_food_containers_and_cutlery: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostableFoodContainersAndCutlery') }})
-    compostable_food_containers_and_cutlery_exception: Optional[WasteReductionCompostableFoodContainersAndCutleryExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostableFoodContainersAndCutleryException') }})
-    composts_excess_food: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostsExcessFood') }})
-    composts_excess_food_exception: Optional[WasteReductionCompostsExcessFoodExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostsExcessFoodException') }})
-    donates_excess_food: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('donatesExcessFood') }})
-    donates_excess_food_exception: Optional[WasteReductionDonatesExcessFoodExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('donatesExcessFoodException') }})
-    food_waste_reduction_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('foodWasteReductionProgram') }})
-    food_waste_reduction_program_exception: Optional[WasteReductionFoodWasteReductionProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('foodWasteReductionProgramException') }})
-    no_single_use_plastic_straws: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticStraws') }})
-    no_single_use_plastic_straws_exception: Optional[WasteReductionNoSingleUsePlasticStrawsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticStrawsException') }})
-    no_single_use_plastic_water_bottles: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticWaterBottles') }})
-    no_single_use_plastic_water_bottles_exception: Optional[WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticWaterBottlesException') }})
-    no_styrofoam_food_containers: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noStyrofoamFoodContainers') }})
-    no_styrofoam_food_containers_exception: Optional[WasteReductionNoStyrofoamFoodContainersExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noStyrofoamFoodContainersException') }})
-    recycling_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recyclingProgram') }})
-    recycling_program_exception: Optional[WasteReductionRecyclingProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recyclingProgramException') }})
-    refillable_toiletry_containers: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refillableToiletryContainers') }})
-    refillable_toiletry_containers_exception: Optional[WasteReductionRefillableToiletryContainersExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refillableToiletryContainersException') }})
-    safely_disposes_batteries: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesBatteries') }})
-    safely_disposes_batteries_exception: Optional[WasteReductionSafelyDisposesBatteriesExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesBatteriesException') }})
-    safely_disposes_electronics: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesElectronics') }})
-    safely_disposes_electronics_exception: Optional[WasteReductionSafelyDisposesElectronicsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesElectronicsException') }})
-    safely_disposes_lightbulbs: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesLightbulbs') }})
-    safely_disposes_lightbulbs_exception: Optional[WasteReductionSafelyDisposesLightbulbsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesLightbulbsException') }})
-    safely_handles_hazardous_substances: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyHandlesHazardousSubstances') }})
-    safely_handles_hazardous_substances_exception: Optional[WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyHandlesHazardousSubstancesException') }})
-    soap_donation_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('soapDonationProgram') }})
-    soap_donation_program_exception: Optional[WasteReductionSoapDonationProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('soapDonationProgramException') }})
-    toiletry_donation_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toiletryDonationProgram') }})
-    toiletry_donation_program_exception: Optional[WasteReductionToiletryDonationProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toiletryDonationProgramException') }})
-    water_bottle_filling_stations: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterBottleFillingStations') }})
-    water_bottle_filling_stations_exception: Optional[WasteReductionWaterBottleFillingStationsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterBottleFillingStationsException') }})
+    compostable_food_containers_and_cutlery: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostableFoodContainersAndCutlery') }})
+    compostable_food_containers_and_cutlery_exception: Optional[WasteReductionCompostableFoodContainersAndCutleryExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostableFoodContainersAndCutleryException') }})
+    composts_excess_food: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostsExcessFood') }})
+    composts_excess_food_exception: Optional[WasteReductionCompostsExcessFoodExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('compostsExcessFoodException') }})
+    donates_excess_food: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('donatesExcessFood') }})
+    donates_excess_food_exception: Optional[WasteReductionDonatesExcessFoodExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('donatesExcessFoodException') }})
+    food_waste_reduction_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('foodWasteReductionProgram') }})
+    food_waste_reduction_program_exception: Optional[WasteReductionFoodWasteReductionProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('foodWasteReductionProgramException') }})
+    no_single_use_plastic_straws: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticStraws') }})
+    no_single_use_plastic_straws_exception: Optional[WasteReductionNoSingleUsePlasticStrawsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticStrawsException') }})
+    no_single_use_plastic_water_bottles: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticWaterBottles') }})
+    no_single_use_plastic_water_bottles_exception: Optional[WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noSingleUsePlasticWaterBottlesException') }})
+    no_styrofoam_food_containers: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noStyrofoamFoodContainers') }})
+    no_styrofoam_food_containers_exception: Optional[WasteReductionNoStyrofoamFoodContainersExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('noStyrofoamFoodContainersException') }})
+    recycling_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recyclingProgram') }})
+    recycling_program_exception: Optional[WasteReductionRecyclingProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recyclingProgramException') }})
+    refillable_toiletry_containers: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refillableToiletryContainers') }})
+    refillable_toiletry_containers_exception: Optional[WasteReductionRefillableToiletryContainersExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('refillableToiletryContainersException') }})
+    safely_disposes_batteries: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesBatteries') }})
+    safely_disposes_batteries_exception: Optional[WasteReductionSafelyDisposesBatteriesExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesBatteriesException') }})
+    safely_disposes_electronics: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesElectronics') }})
+    safely_disposes_electronics_exception: Optional[WasteReductionSafelyDisposesElectronicsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesElectronicsException') }})
+    safely_disposes_lightbulbs: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesLightbulbs') }})
+    safely_disposes_lightbulbs_exception: Optional[WasteReductionSafelyDisposesLightbulbsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyDisposesLightbulbsException') }})
+    safely_handles_hazardous_substances: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyHandlesHazardousSubstances') }})
+    safely_handles_hazardous_substances_exception: Optional[WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('safelyHandlesHazardousSubstancesException') }})
+    soap_donation_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('soapDonationProgram') }})
+    soap_donation_program_exception: Optional[WasteReductionSoapDonationProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('soapDonationProgramException') }})
+    toiletry_donation_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toiletryDonationProgram') }})
+    toiletry_donation_program_exception: Optional[WasteReductionToiletryDonationProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('toiletryDonationProgramException') }})
+    water_bottle_filling_stations: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterBottleFillingStations') }})
+    water_bottle_filling_stations_exception: Optional[WasteReductionWaterBottleFillingStationsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterBottleFillingStationsException') }})
     

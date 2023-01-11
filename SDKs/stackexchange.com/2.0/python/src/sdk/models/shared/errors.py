@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Errors:
-    description: Optional[str] = field(default=None)
-    error_id: Optional[int] = field(default=None)
-    error_name: Optional[str] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    error_id: Optional[int] = dataclasses.field(default=None)
+    error_name: Optional[str] = dataclasses.field(default=None)
     

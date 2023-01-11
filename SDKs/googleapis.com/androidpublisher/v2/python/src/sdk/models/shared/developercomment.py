@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import timestamp as shared_timestamp
 
 
-@dataclass
+@dataclasses.dataclass
 class DeveloperComment:
-    last_modified: Optional[Timestamp] = field(default=None)
-    text: Optional[str] = field(default=None)
+    last_modified: Optional[shared_timestamp.Timestamp] = dataclasses.field(default=None)
+    text: Optional[str] = dataclasses.field(default=None)
     

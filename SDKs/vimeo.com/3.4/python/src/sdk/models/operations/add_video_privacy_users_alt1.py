@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class AddVideoPrivacyUsersAlt1PathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideoPrivacyUsersAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideoPrivacyUsersAlt1Request:
-    path_params: AddVideoPrivacyUsersAlt1PathParams = field()
-    security: AddVideoPrivacyUsersAlt1Security = field()
+    path_params: AddVideoPrivacyUsersAlt1PathParams = dataclasses.field()
+    security: AddVideoPrivacyUsersAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideoPrivacyUsersAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    users: Optional[List[shared.User]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    users: Optional[list[shared_user.User]] = dataclasses.field(default=None)
     

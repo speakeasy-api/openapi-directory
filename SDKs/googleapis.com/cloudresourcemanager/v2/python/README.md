@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,28 +20,28 @@ req = operations.CloudresourcemanagerFoldersCreateRequest(
     security=operations.CloudresourcemanagerFoldersCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.CloudresourcemanagerFoldersCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="quibusdam",
-        alt="media",
-        callback="dolorum",
-        fields="ea",
-        key="molestias",
-        oauth_token="omnis",
-        parent="nobis",
-        pretty_print=False,
-        quota_user="animi",
-        upload_type="minima",
-        upload_protocol="provident",
+        dollar_xgafv="1",
+        access_token="aliquid",
+        alt="json",
+        callback="et",
+        fields="molestiae",
+        key="id",
+        oauth_token="perferendis",
+        parent="consequatur",
+        pretty_print=True,
+        quota_user="nemo",
+        upload_type="minus",
+        upload_protocol="voluptatem",
     ),
     request=shared.FolderInput(
-        display_name="et",
-        parent="impedit",
+        display_name="amet",
+        parent="rem",
     ),
 )
     

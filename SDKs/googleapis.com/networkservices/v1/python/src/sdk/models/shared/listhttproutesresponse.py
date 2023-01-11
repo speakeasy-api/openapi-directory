@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import httproute as shared_httproute
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListHTTPRoutesResponse:
     r"""ListHTTPRoutesResponse
     Response returned by the ListHttpRoutes method.
     """
     
-    http_routes: Optional[List[HTTPRoute]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpRoutes') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    http_routes: Optional[list[shared_httproute.HTTPRoute]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpRoutes') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

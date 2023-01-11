@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CancelTaskExecutionRequest(
     headers=operations.CancelTaskExecutionHeaders(
-        x_amz_algorithm="iste",
-        x_amz_content_sha256="temporibus",
-        x_amz_credential="explicabo",
-        x_amz_date="eaque",
-        x_amz_security_token="rem",
-        x_amz_signature="explicabo",
-        x_amz_signed_headers="veritatis",
+        x_amz_algorithm="veniam",
+        x_amz_content_sha256="quidem",
+        x_amz_credential="et",
+        x_amz_date="nemo",
+        x_amz_security_token="cumque",
+        x_amz_signature="ipsam",
+        x_amz_signed_headers="consequatur",
         x_amz_target="FmrsService.CancelTaskExecution",
     ),
     request=shared.CancelTaskExecutionRequest(
-        task_execution_arn="ut",
+        task_execution_arn="ullam",
     ),
 )
     
-res = s.sdk.cancel_task_execution(req)
+res = s.cancel_task_execution(req)
 
 if res.cancel_task_execution_response is not None:
     # handle response

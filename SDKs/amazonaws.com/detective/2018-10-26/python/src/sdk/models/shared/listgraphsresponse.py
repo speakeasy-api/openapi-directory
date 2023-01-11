@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import graph as shared_graph
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGraphsResponse:
-    graph_list: Optional[List[Graph]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GraphList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    graph_list: Optional[list[shared_graph.Graph]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GraphList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

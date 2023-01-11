@@ -1,64 +1,78 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import psu_http_method_enum as shared_psu_http_method_enum
+from ..shared import security as shared_security
+from ..shared import error400_ng_sbs as shared_error400_ng_sbs
+from ..shared import error400_sbs as shared_error400_sbs
+from ..shared import error401_ng_sbs as shared_error401_ng_sbs
+from ..shared import error401_sbs as shared_error401_sbs
+from ..shared import error403_ng_sbs as shared_error403_ng_sbs
+from ..shared import error403_sbs as shared_error403_sbs
+from ..shared import error404_ng_sbs as shared_error404_ng_sbs
+from ..shared import error404_sbs as shared_error404_sbs
+from ..shared import error405_ng_sbs as shared_error405_ng_sbs
+from ..shared import error405_sbs as shared_error405_sbs
+from ..shared import error409_ng_sbs as shared_error409_ng_sbs
+from ..shared import error409_sbs as shared_error409_sbs
+from ..shared import signingbasketstatusresponse_200 as shared_signingbasketstatusresponse_200
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSigningBasketStatusPathParams:
-    basket_id: str = field(metadata={'path_param': { 'field_name': 'basketId', 'style': 'simple', 'explode': False }})
+    basket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'basketId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigningBasketStatusHeaders:
-    x_request_id: str = field(metadata={'header': { 'field_name': 'X-Request-ID', 'style': 'simple', 'explode': False }})
-    digest: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Digest', 'style': 'simple', 'explode': False }})
-    psu_accept: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept', 'style': 'simple', 'explode': False }})
-    psu_accept_charset: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Charset', 'style': 'simple', 'explode': False }})
-    psu_accept_encoding: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Encoding', 'style': 'simple', 'explode': False }})
-    psu_accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Language', 'style': 'simple', 'explode': False }})
-    psu_corporate_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID', 'style': 'simple', 'explode': False }})
-    psu_corporate_id_type: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID-Type', 'style': 'simple', 'explode': False }})
-    psu_device_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Device-ID', 'style': 'simple', 'explode': False }})
-    psu_geo_location: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-Geo-Location', 'style': 'simple', 'explode': False }})
-    psu_http_method: Optional[shared.PsuHTTPMethodEnum] = field(default=None, metadata={'header': { 'field_name': 'PSU-Http-Method', 'style': 'simple', 'explode': False }})
-    psu_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-ID', 'style': 'simple', 'explode': False }})
-    psu_id_type: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-ID-Type', 'style': 'simple', 'explode': False }})
-    psu_ip_address: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Address', 'style': 'simple', 'explode': False }})
-    psu_ip_port: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Port', 'style': 'simple', 'explode': False }})
-    psu_user_agent: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'PSU-User-Agent', 'style': 'simple', 'explode': False }})
-    signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Signature', 'style': 'simple', 'explode': False }})
-    tpp_signature_certificate: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'TPP-Signature-Certificate', 'style': 'simple', 'explode': False }})
+    x_request_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Request-ID', 'style': 'simple', 'explode': False }})
+    digest: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Digest', 'style': 'simple', 'explode': False }})
+    psu_accept: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept', 'style': 'simple', 'explode': False }})
+    psu_accept_charset: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Charset', 'style': 'simple', 'explode': False }})
+    psu_accept_encoding: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Encoding', 'style': 'simple', 'explode': False }})
+    psu_accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Accept-Language', 'style': 'simple', 'explode': False }})
+    psu_corporate_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID', 'style': 'simple', 'explode': False }})
+    psu_corporate_id_type: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Corporate-ID-Type', 'style': 'simple', 'explode': False }})
+    psu_device_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Device-ID', 'style': 'simple', 'explode': False }})
+    psu_geo_location: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Geo-Location', 'style': 'simple', 'explode': False }})
+    psu_http_method: Optional[shared_psu_http_method_enum.PsuHTTPMethodEnum] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-Http-Method', 'style': 'simple', 'explode': False }})
+    psu_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-ID', 'style': 'simple', 'explode': False }})
+    psu_id_type: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-ID-Type', 'style': 'simple', 'explode': False }})
+    psu_ip_address: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Address', 'style': 'simple', 'explode': False }})
+    psu_ip_port: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-IP-Port', 'style': 'simple', 'explode': False }})
+    psu_user_agent: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'PSU-User-Agent', 'style': 'simple', 'explode': False }})
+    signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Signature', 'style': 'simple', 'explode': False }})
+    tpp_signature_certificate: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'TPP-Signature-Certificate', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigningBasketStatusSecurity:
-    bearer_auth_o_auth: Optional[shared.SchemeBearerAuthOAuth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth_o_auth: Optional[shared_security.SchemeBearerAuthOAuth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigningBasketStatusRequest:
-    headers: GetSigningBasketStatusHeaders = field()
-    path_params: GetSigningBasketStatusPathParams = field()
-    security: GetSigningBasketStatusSecurity = field()
+    headers: GetSigningBasketStatusHeaders = dataclasses.field()
+    path_params: GetSigningBasketStatusPathParams = dataclasses.field()
+    security: GetSigningBasketStatusSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigningBasketStatusResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error400_ng_sbs: Optional[shared.Error400NgSbs] = field(default=None)
-    error400_sbs: Optional[shared.Error400Sbs] = field(default=None)
-    error401_ng_sbs: Optional[shared.Error401NgSbs] = field(default=None)
-    error401_sbs: Optional[shared.Error401Sbs] = field(default=None)
-    error403_ng_sbs: Optional[shared.Error403NgSbs] = field(default=None)
-    error403_sbs: Optional[shared.Error403Sbs] = field(default=None)
-    error404_ng_sbs: Optional[shared.Error404NgSbs] = field(default=None)
-    error404_sbs: Optional[shared.Error404Sbs] = field(default=None)
-    error405_ng_sbs: Optional[shared.Error405NgSbs] = field(default=None)
-    error405_sbs: Optional[shared.Error405Sbs] = field(default=None)
-    error409_ng_sbs: Optional[shared.Error409NgSbs] = field(default=None)
-    error409_sbs: Optional[shared.Error409Sbs] = field(default=None)
-    signing_basket_status_response_200: Optional[shared.SigningBasketStatusResponse200] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error400_ng_sbs: Optional[shared_error400_ng_sbs.Error400NgSbs] = dataclasses.field(default=None)
+    error400_sbs: Optional[shared_error400_sbs.Error400Sbs] = dataclasses.field(default=None)
+    error401_ng_sbs: Optional[shared_error401_ng_sbs.Error401NgSbs] = dataclasses.field(default=None)
+    error401_sbs: Optional[shared_error401_sbs.Error401Sbs] = dataclasses.field(default=None)
+    error403_ng_sbs: Optional[shared_error403_ng_sbs.Error403NgSbs] = dataclasses.field(default=None)
+    error403_sbs: Optional[shared_error403_sbs.Error403Sbs] = dataclasses.field(default=None)
+    error404_ng_sbs: Optional[shared_error404_ng_sbs.Error404NgSbs] = dataclasses.field(default=None)
+    error404_sbs: Optional[shared_error404_sbs.Error404Sbs] = dataclasses.field(default=None)
+    error405_ng_sbs: Optional[shared_error405_ng_sbs.Error405NgSbs] = dataclasses.field(default=None)
+    error405_sbs: Optional[shared_error405_sbs.Error405Sbs] = dataclasses.field(default=None)
+    error409_ng_sbs: Optional[shared_error409_ng_sbs.Error409NgSbs] = dataclasses.field(default=None)
+    error409_sbs: Optional[shared_error409_sbs.Error409Sbs] = dataclasses.field(default=None)
+    signing_basket_status_response_200: Optional[shared_signingbasketstatusresponse_200.SigningBasketStatusResponse200] = dataclasses.field(default=None)
     

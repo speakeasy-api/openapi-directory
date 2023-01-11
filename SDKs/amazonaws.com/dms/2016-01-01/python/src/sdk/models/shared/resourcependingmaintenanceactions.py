@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pendingmaintenanceaction as shared_pendingmaintenanceaction
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResourcePendingMaintenanceActions:
     r"""ResourcePendingMaintenanceActions
     Identifies an DMS resource and any pending actions for it.
     """
     
-    pending_maintenance_action_details: Optional[List[PendingMaintenanceAction]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PendingMaintenanceActionDetails') }})
-    resource_identifier: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceIdentifier') }})
+    pending_maintenance_action_details: Optional[list[shared_pendingmaintenanceaction.PendingMaintenanceAction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PendingMaintenanceActionDetails') }})
+    resource_identifier: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceIdentifier') }})
     

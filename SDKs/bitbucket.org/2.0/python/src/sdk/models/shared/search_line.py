@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import search_segment as shared_search_segment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchLine:
-    line: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('line') }})
-    segments: Optional[List[SearchSegment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('segments') }})
+    line: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('line') }})
+    segments: Optional[list[shared_search_segment.SearchSegment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('segments') }})
     

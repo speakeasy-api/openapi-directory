@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.PvcerRequest(
     security=operations.PvcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.PvcerRequestBody(
         certificate_parameters=operations.PvcerRequestBodyCertificateParameters(
-            enrol_no="est",
-            full_name="alias",
-            year="non",
+            enrol_no="quis",
+            full_name="ratione",
+            year="ut",
         ),
-        consent_artifact="facilis",
+        consent_artifact="et",
         format="pdf",
-        txn_id="officiis",
+        txn_id="placeat",
     ),
 )
     
-res = s.sdk.pvcer(req)
+res = s.ap_is.pvcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pvcer` - Provisional Certificate
 

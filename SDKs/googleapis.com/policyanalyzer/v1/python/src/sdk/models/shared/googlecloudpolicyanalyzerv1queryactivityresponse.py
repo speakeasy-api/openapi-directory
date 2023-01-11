@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudpolicyanalyzerv1activity as shared_googlecloudpolicyanalyzerv1activity
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPolicyanalyzerV1QueryActivityResponse:
     r"""GoogleCloudPolicyanalyzerV1QueryActivityResponse
     Response to the `QueryActivity` method.
     """
     
-    activities: Optional[List[GoogleCloudPolicyanalyzerV1Activity]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activities') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    activities: Optional[list[shared_googlecloudpolicyanalyzerv1activity.GoogleCloudPolicyanalyzerV1Activity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activities') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

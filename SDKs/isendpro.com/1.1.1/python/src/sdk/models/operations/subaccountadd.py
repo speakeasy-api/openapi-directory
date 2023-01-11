@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import subaccountaddrequest as shared_subaccountaddrequest
+from ..shared import erreur as shared_erreur
+from ..shared import subaccountaddresponse as shared_subaccountaddresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SubaccountAddRequest:
-    request: shared.SubaccountAddRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_subaccountaddrequest.SubaccountAddRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubaccountAddResponse:
-    content_type: str = field()
-    status_code: int = field()
-    erreur: Optional[shared.Erreur] = field(default=None)
-    subaccount_add_response: Optional[shared.SubaccountAddResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    erreur: Optional[shared_erreur.Erreur] = dataclasses.field(default=None)
+    subaccount_add_response: Optional[shared_subaccountaddresponse.SubaccountAddResponse] = dataclasses.field(default=None)
     

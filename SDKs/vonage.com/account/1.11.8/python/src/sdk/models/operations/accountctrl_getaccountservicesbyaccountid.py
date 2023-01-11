@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import accounthalresponse as shared_accounthalresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetAccountServicesByAccountIDPathParams:
-    account_id: float = field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
+    account_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'account_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetAccountServicesByAccountIDSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetAccountServicesByAccountIDRequest:
-    path_params: AccountCtrlGetAccountServicesByAccountIDPathParams = field()
-    security: AccountCtrlGetAccountServicesByAccountIDSecurity = field()
+    path_params: AccountCtrlGetAccountServicesByAccountIDPathParams = dataclasses.field()
+    security: AccountCtrlGetAccountServicesByAccountIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AccountCtrlGetAccountServicesByAccountIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    account_hal_response: Optional[shared.AccountHalResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    account_hal_response: Optional[shared_accounthalresponse.AccountHalResponse] = dataclasses.field(default=None)
     

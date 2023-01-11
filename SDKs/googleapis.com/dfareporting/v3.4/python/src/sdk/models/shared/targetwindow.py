@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class TargetWindowTargetWindowOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TargetWindow:
     r"""TargetWindow
     Target Window.
     """
     
-    custom_html: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customHtml') }})
-    target_window_option: Optional[TargetWindowTargetWindowOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetWindowOption') }})
+    custom_html: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customHtml') }})
+    target_window_option: Optional[TargetWindowTargetWindowOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetWindowOption') }})
     

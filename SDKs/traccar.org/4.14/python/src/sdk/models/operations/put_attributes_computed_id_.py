@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import attribute as shared_attribute
 
 
-@dataclass
+@dataclasses.dataclass
 class PutAttributesComputedIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutAttributesComputedIDRequest:
-    path_params: PutAttributesComputedIDPathParams = field()
-    request: shared.Attribute = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutAttributesComputedIDPathParams = dataclasses.field()
+    request: shared_attribute.Attribute = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutAttributesComputedIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    attribute: Optional[shared.Attribute] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    attribute: Optional[shared_attribute.Attribute] = dataclasses.field(default=None)
     

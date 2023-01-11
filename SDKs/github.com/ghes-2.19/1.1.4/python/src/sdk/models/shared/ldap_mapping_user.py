@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,61 +8,61 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LdapMappingUserPlan:
-    collaborators: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collaborators') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    private_repos: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_repos') }})
-    space: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
+    collaborators: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collaborators') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    private_repos: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_repos') }})
+    space: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('space') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LdapMappingUser:
     r"""LdapMappingUser
     Ldap Private User
     """
     
-    avatar_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
-    bio: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
-    blog: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('blog') }})
-    collaborators: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collaborators') }})
-    company: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('company') }})
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    disk_usage: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('disk_usage') }})
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
-    followers: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
-    followers_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
-    following: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
-    following_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
-    gists_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
-    gravatar_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
-    hireable: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hireable') }})
-    html_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    location: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    login: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    node_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
-    organizations_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
-    owned_private_repos: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('owned_private_repos') }})
-    private_gists: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_gists') }})
-    public_gists: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_gists') }})
-    public_repos: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_repos') }})
-    received_events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
-    repos_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
-    site_admin: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
-    starred_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
-    subscriptions_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
-    total_private_repos: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_private_repos') }})
-    two_factor_authentication: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('two_factor_authentication') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    updated_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    business_plus: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('business_plus') }})
-    ldap_dn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ldap_dn') }})
-    plan: Optional[LdapMappingUserPlan] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plan') }})
-    suspended_at: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suspended_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    twitter_username: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('twitter_username') }})
+    avatar_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
+    bio: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bio') }})
+    blog: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('blog') }})
+    collaborators: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('collaborators') }})
+    company: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('company') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    disk_usage: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('disk_usage') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
+    followers: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers') }})
+    followers_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
+    following: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following') }})
+    following_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
+    gists_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
+    gravatar_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
+    hireable: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hireable') }})
+    html_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    location: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    login: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    node_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
+    organizations_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
+    owned_private_repos: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('owned_private_repos') }})
+    private_gists: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('private_gists') }})
+    public_gists: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_gists') }})
+    public_repos: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('public_repos') }})
+    received_events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
+    repos_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
+    site_admin: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
+    starred_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
+    subscriptions_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
+    total_private_repos: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_private_repos') }})
+    two_factor_authentication: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('two_factor_authentication') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    business_plus: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('business_plus') }})
+    ldap_dn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ldap_dn') }})
+    plan: Optional[LdapMappingUserPlan] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plan') }})
+    suspended_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suspended_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    twitter_username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('twitter_username') }})
     

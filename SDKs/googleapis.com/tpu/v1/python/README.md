@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,30 @@ req = operations.TpuProjectsLocationsAcceleratorTypesListRequest(
     security=operations.TpuProjectsLocationsAcceleratorTypesListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.TpuProjectsLocationsAcceleratorTypesListPathParams(
-        parent="quidem",
+        parent="cumque",
     ),
     query_params=operations.TpuProjectsLocationsAcceleratorTypesListQueryParams(
-        dollar_xgafv="1",
-        access_token="quasi",
-        alt="media",
-        callback="aut",
-        fields="in",
-        filter="veritatis",
-        key="quos",
-        oauth_token="molestiae",
-        order_by="blanditiis",
-        page_size=4836021948156843738,
-        page_token="ipsum",
-        pretty_print=False,
-        quota_user="nihil",
-        upload_type="necessitatibus",
-        upload_protocol="adipisci",
+        dollar_xgafv="2",
+        access_token="dolor",
+        alt="json",
+        callback="nihil",
+        fields="a",
+        filter="aliquid",
+        key="repudiandae",
+        oauth_token="aperiam",
+        order_by="tempora",
+        page_size=3192688218102539939,
+        page_token="cum",
+        pretty_print=True,
+        quota_user="et",
+        upload_type="in",
+        upload_protocol="libero",
     ),
 )
     

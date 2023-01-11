@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rulesummary as shared_rulesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRateBasedRulesResponse:
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
-    rules: Optional[List[RuleSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rules') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    rules: Optional[list[shared_rulesummary.RuleSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rules') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import distributionidlist as shared_distributionidlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListDistributionsByCachePolicyIDResult:
-    distribution_id_list: Optional[DistributionIDList] = field(default=None)
+    distribution_id_list: Optional[shared_distributionidlist.DistributionIDList] = dataclasses.field(default=None)
     

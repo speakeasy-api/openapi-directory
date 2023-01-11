@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import terminologydatalocation as shared_terminologydatalocation
+from ..shared import terminologyproperties as shared_terminologyproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetTerminologyResponse:
-    terminology_data_location: Optional[TerminologyDataLocation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TerminologyDataLocation') }})
-    terminology_properties: Optional[TerminologyProperties] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TerminologyProperties') }})
+    terminology_data_location: Optional[shared_terminologydatalocation.TerminologyDataLocation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TerminologyDataLocation') }})
+    terminology_properties: Optional[shared_terminologyproperties.TerminologyProperties] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TerminologyProperties') }})
     

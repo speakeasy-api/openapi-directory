@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import teamrecruitingrank as shared_teamrecruitingrank
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingTeamsQueryParams:
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingTeamsRequest:
-    query_params: GetRecruitingTeamsQueryParams = field()
+    query_params: GetRecruitingTeamsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRecruitingTeamsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_recruiting_ranks: Optional[List[shared.TeamRecruitingRank]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_recruiting_ranks: Optional[list[shared_teamrecruitingrank.TeamRecruitingRank]] = dataclasses.field(default=None)
     

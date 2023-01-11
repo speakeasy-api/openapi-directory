@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayerSeasonStatsWWorldGolfRankingsFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class PlayerSeasonStatsWWorldGolfRankingsFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsWWorldGolfRankingsPathParams:
-    format: PlayerSeasonStatsWWorldGolfRankingsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: PlayerSeasonStatsWWorldGolfRankingsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsWWorldGolfRankingsRequest:
-    path_params: PlayerSeasonStatsWWorldGolfRankingsPathParams = field()
+    path_params: PlayerSeasonStatsWWorldGolfRankingsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayerSeasonStatsWWorldGolfRankingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_seasons: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_seasons: Optional[list[Any]] = dataclasses.field(default=None)
     

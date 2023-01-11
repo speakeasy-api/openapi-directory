@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUntaggedImageCountPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUntaggedImageCountQueryParams:
-    iteration_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
+    iteration_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'iterationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUntaggedImageCountHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUntaggedImageCountRequest:
-    headers: GetUntaggedImageCountHeaders = field()
-    path_params: GetUntaggedImageCountPathParams = field()
-    query_params: GetUntaggedImageCountQueryParams = field()
+    headers: GetUntaggedImageCountHeaders = dataclasses.field()
+    path_params: GetUntaggedImageCountPathParams = dataclasses.field()
+    query_params: GetUntaggedImageCountQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUntaggedImageCountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    get_untagged_image_count_200_application_json_int32_integer: Optional[int] = field(default=None)
-    get_untagged_image_count_200_text_json_int32_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    get_untagged_image_count_200_application_json_int32_integer: Optional[int] = dataclasses.field(default=None)
+    get_untagged_image_count_200_text_json_int32_integer: Optional[int] = dataclasses.field(default=None)
     

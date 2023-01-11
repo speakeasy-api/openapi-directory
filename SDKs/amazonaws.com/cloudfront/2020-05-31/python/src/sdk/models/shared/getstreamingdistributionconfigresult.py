@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import streamingdistributionconfig as shared_streamingdistributionconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStreamingDistributionConfigResult:
     r"""GetStreamingDistributionConfigResult
     The returned result of the corresponding request.
     """
     
-    streaming_distribution_config: Optional[StreamingDistributionConfig] = field(default=None)
+    streaming_distribution_config: Optional[shared_streamingdistributionconfig.StreamingDistributionConfig] = dataclasses.field(default=None)
     

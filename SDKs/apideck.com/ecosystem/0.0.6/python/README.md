@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.CategoriesAllRequest(
     path_params=operations.CategoriesAllPathParams(
-        ecosystem_id="rerum",
+        ecosystem_id="itaque",
     ),
     query_params=operations.CategoriesAllQueryParams(
-        cursor="nobis",
-        limit=7495419760578899443,
+        cursor="optio",
+        limit=7998526504416170211,
     ),
 )
     

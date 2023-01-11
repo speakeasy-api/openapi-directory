@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,10 +19,10 @@ s.config_security(
     security=shared.Security(
         api_key_header_auth=shared.SchemeAPIKeyHeaderAuth(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         api_key_query_auth=shared.SchemeAPIKeyQueryAuth(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -32,54 +31,51 @@ s.config_security(
     
 req = operations.GetAuditCaseRequest(
     query_params=operations.GetAuditCaseQueryParams(
-        api_key="doloremque",
+        api_key="consequatur",
         audit_case_id=[
-            "maiores",
+            "officia",
+            "nihil",
         ],
         audit_id=[
-            6260203721741419285,
-            626693492911080547,
+            7756699698972645173,
+            5607289564857015942,
         ],
         candidate_id=[
-            "non",
+            "necessitatibus",
+            "iste",
         ],
-        committee_designation="molestias",
+        committee_designation="ea",
         committee_id=[
-            "quo",
+            "sed",
         ],
         committee_type=[
-            "at",
-            "veritatis",
-            "sequi",
+            "aliquam",
+            "nisi",
         ],
         cycle=[
-            5964140265861919200,
-            4915141299098414606,
-            4810246019628772601,
+            8156228904820113242,
+            5947285951484731198,
         ],
-        max_election_cycle=6561479165173553535,
-        min_election_cycle=4212189814162458386,
-        page=309870905088988184,
-        per_page=3369996514632458230,
-        primary_category_id="incidunt",
+        max_election_cycle=869561943583408486,
+        min_election_cycle=3655237301516905859,
+        page=2909554718741390322,
+        per_page=6600351355182752240,
+        primary_category_id="non",
         q=[
-            "nostrum",
-            "esse",
-            "dolores",
+            "delectus",
         ],
         qq=[
-            "et",
-            "id",
+            "minus",
         ],
         sort=[
-            "magni",
-            "minima",
-            "doloremque",
+            "eos",
+            "quaerat",
+            "quasi",
         ],
         sort_hide_null=False,
         sort_null_only=True,
-        sort_nulls_last=True,
-        sub_category_id="itaque",
+        sort_nulls_last=False,
+        sub_category_id="officia",
     ),
 )
     

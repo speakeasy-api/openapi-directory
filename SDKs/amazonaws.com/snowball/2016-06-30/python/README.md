@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CancelClusterRequest(
     headers=operations.CancelClusterHeaders(
-        x_amz_algorithm="culpa",
-        x_amz_content_sha256="unde",
-        x_amz_credential="quae",
-        x_amz_date="incidunt",
-        x_amz_security_token="voluptas",
-        x_amz_signature="nam",
-        x_amz_signed_headers="optio",
+        x_amz_algorithm="perferendis",
+        x_amz_content_sha256="consequatur",
+        x_amz_credential="ut",
+        x_amz_date="soluta",
+        x_amz_security_token="voluptatem",
+        x_amz_signature="adipisci",
+        x_amz_signed_headers="nobis",
         x_amz_target="AWSIESnowballJobManagementService.CancelCluster",
     ),
     request=shared.CancelClusterRequest(
-        cluster_id="ratione",
+        cluster_id="necessitatibus",
     ),
 )
     
-res = s.sdk.cancel_cluster(req)
+res = s.cancel_cluster(req)
 
 if res.cancel_cluster_result is not None:
     # handle response

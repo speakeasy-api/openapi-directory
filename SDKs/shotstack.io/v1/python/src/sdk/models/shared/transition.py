@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -132,12 +132,12 @@ class TransitionOutEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Transition:
     r"""Transition
     In and out transitions for a clip - i.e. fade in and fade out
     """
     
-    in_: Optional[TransitionInEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('in') }})
-    out: Optional[TransitionOutEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('out') }})
+    in_: Optional[TransitionInEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('in') }})
+    out: Optional[TransitionOutEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('out') }})
     

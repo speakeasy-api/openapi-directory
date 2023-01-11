@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import authentication as shared_authentication
+from ..shared import scanrun as shared_scanrun
+from ..shared import schedule as shared_schedule
 
 class ScanConfigTargetPlatformsEnum(str, Enum):
     TARGET_PLATFORM_UNSPECIFIED = "TARGET_PLATFORM_UNSPECIFIED"
@@ -20,20 +22,20 @@ class ScanConfigUserAgentEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScanConfig:
     r"""ScanConfig
     A ScanConfig resource contains the configurations to launch a scan. next id: 12
     """
     
-    authentication: Optional[Authentication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication') }})
-    blacklist_patterns: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blacklistPatterns') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    latest_run: Optional[ScanRun] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latestRun') }})
-    max_qps: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxQps') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    schedule: Optional[Schedule] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule') }})
-    starting_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startingUrls') }})
-    target_platforms: Optional[List[ScanConfigTargetPlatformsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetPlatforms') }})
-    user_agent: Optional[ScanConfigUserAgentEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userAgent') }})
+    authentication: Optional[shared_authentication.Authentication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authentication') }})
+    blacklist_patterns: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blacklistPatterns') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    latest_run: Optional[shared_scanrun.ScanRun] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latestRun') }})
+    max_qps: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxQps') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    schedule: Optional[shared_schedule.Schedule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule') }})
+    starting_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startingUrls') }})
+    target_platforms: Optional[list[ScanConfigTargetPlatformsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetPlatforms') }})
+    user_agent: Optional[ScanConfigUserAgentEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userAgent') }})
     

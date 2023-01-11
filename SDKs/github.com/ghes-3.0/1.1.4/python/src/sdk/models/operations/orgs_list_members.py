@@ -1,42 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import org_enum2 as shared_org_enum2
+from ..shared import org_enum3 as shared_org_enum3
+from ..shared import simple_user as shared_simple_user
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListMembersPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
-class OrgsListMembersFilterEnum(str, Enum):
-    TWOFA_DISABLED = "2fa_disabled"
-    ALL = "all"
 
-class OrgsListMembersRoleEnum(str, Enum):
-    ALL = "all"
-    ADMIN = "admin"
-    MEMBER = "member"
-
-
-@dataclass
+@dataclasses.dataclass
 class OrgsListMembersQueryParams:
-    filter: Optional[OrgsListMembersFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    role: Optional[OrgsListMembersRoleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
+    filter: Optional[shared_org_enum2.OrgEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    role: Optional[shared_org_enum3.OrgEnum3] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListMembersRequest:
-    path_params: OrgsListMembersPathParams = field()
-    query_params: OrgsListMembersQueryParams = field()
+    path_params: OrgsListMembersPathParams = dataclasses.field()
+    query_params: OrgsListMembersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListMembersResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import zone_info as shared_zone_info
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoTldZonePathParams:
-    zone: str = field(metadata={'path_param': { 'field_name': 'zone', 'style': 'simple', 'explode': False }})
+    zone: str = dataclasses.field(metadata={'path_param': { 'field_name': 'zone', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoTldZoneQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoTldZoneRequest:
-    path_params: GetInfoTldZonePathParams = field()
-    query_params: GetInfoTldZoneQueryParams = field()
+    path_params: GetInfoTldZonePathParams = dataclasses.field()
+    query_params: GetInfoTldZoneQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoTldZoneResponse:
-    content_type: str = field()
-    status_code: int = field()
-    zone_info: Optional[shared.ZoneInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    zone_info: Optional[shared_zone_info.ZoneInfo] = dataclasses.field(default=None)
     

@@ -46,3 +46,5 @@ from .updateitemoutput import *
 from .updatetableinput import *
 from .updatetableoutput import *
 from .writerequest import *
+
+__all__ = ["AttributeActionEnum","AttributeValue","AttributeValueUpdate","BatchGetItemInput","BatchGetItemOutput","BatchResponse","BatchWriteItemInput","BatchWriteItemOutput","BatchWriteResponse","ComparisonOperatorEnum","Condition","CreateTableInput","CreateTableOutput","DeleteItemInput","DeleteItemOutput","DeleteRequest","DeleteTableInput","DeleteTableOutput","DescribeTableInput","DescribeTableOutput","ExpectedAttributeValue","GetItemInput","GetItemOutput","Key","KeysAndAttributes","KeySchema","KeySchemaElement","ListTablesInput","ListTablesOutput","ProvisionedThroughput","ProvisionedThroughputDescription","PutItemInput","PutItemOutput","PutRequest","QueryInput","QueryOutput","ReturnValueEnum","ScalarAttributeTypeEnum","ScanInput","ScanOutput","SchemeHmac","Security","TableDescription","TableStatusEnum","UpdateItemInput","UpdateItemOutput","UpdateTableInput","UpdateTableOutput","WriteRequest"]

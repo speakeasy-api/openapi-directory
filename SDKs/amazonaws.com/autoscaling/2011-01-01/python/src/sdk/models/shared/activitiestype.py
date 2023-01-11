@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import activity as shared_activity
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivitiesType:
-    activities: List[Activity] = field()
-    next_token: Optional[str] = field(default=None)
+    activities: list[shared_activity.Activity] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

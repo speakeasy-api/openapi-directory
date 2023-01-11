@@ -1,12 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_pullrequests as shared_paginated_pullrequests
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPullrequestsSelectedUserPathParams:
-    selected_user: str = field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
+    selected_user: str = dataclasses.field(metadata={'path_param': { 'field_name': 'selected_user', 'style': 'simple', 'explode': False }})
     
 class GetPullrequestsSelectedUserStateEnum(str, Enum):
     MERGED = "MERGED"
@@ -15,29 +18,29 @@ class GetPullrequestsSelectedUserStateEnum(str, Enum):
     DECLINED = "DECLINED"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPullrequestsSelectedUserQueryParams:
-    state: Optional[GetPullrequestsSelectedUserStateEnum] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    state: Optional[GetPullrequestsSelectedUserStateEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPullrequestsSelectedUserSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPullrequestsSelectedUserRequest:
-    path_params: GetPullrequestsSelectedUserPathParams = field()
-    query_params: GetPullrequestsSelectedUserQueryParams = field()
-    security: GetPullrequestsSelectedUserSecurity = field()
+    path_params: GetPullrequestsSelectedUserPathParams = dataclasses.field()
+    query_params: GetPullrequestsSelectedUserQueryParams = dataclasses.field()
+    security: GetPullrequestsSelectedUserSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPullrequestsSelectedUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_pullrequests: Optional[shared.PaginatedPullrequests] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_pullrequests: Optional[shared_paginated_pullrequests.PaginatedPullrequests] = dataclasses.field(default=None)
     

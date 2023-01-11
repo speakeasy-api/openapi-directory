@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import taglist as shared_taglist
 
 
-@dataclass
+@dataclasses.dataclass
 class ClusterParameterGroup:
     r"""ClusterParameterGroup
     Describes a parameter group.
     """
     
-    description: Optional[str] = field(default=None)
-    parameter_group_family: Optional[str] = field(default=None)
-    parameter_group_name: Optional[str] = field(default=None)
-    tags: Optional[List[Tag]] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    parameter_group_family: Optional[str] = dataclasses.field(default=None)
+    parameter_group_name: Optional[str] = dataclasses.field(default=None)
+    tags: Optional[list[shared_taglist.TagList]] = dataclasses.field(default=None)
     

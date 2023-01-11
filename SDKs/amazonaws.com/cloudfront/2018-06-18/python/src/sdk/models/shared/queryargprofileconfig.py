@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import queryargprofiles as shared_queryargprofiles
 
 
-@dataclass
+@dataclasses.dataclass
 class QueryArgProfileConfig:
     r"""QueryArgProfileConfig
     Configuration for query argument-profile mapping for field-level encryption.
     """
     
-    forward_when_query_arg_profile_is_unknown: bool = field()
-    query_arg_profiles: Optional[QueryArgProfiles] = field(default=None)
+    forward_when_query_arg_profile_is_unknown: bool = dataclasses.field()
+    query_arg_profiles: Optional[shared_queryargprofiles.QueryArgProfiles] = dataclasses.field(default=None)
     

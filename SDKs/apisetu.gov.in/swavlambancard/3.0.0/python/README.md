@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.DpicrRequest(
     security=operations.DpicrSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.DpicrRequestBody(
         certificate_parameters=operations.DpicrRequestBodyCertificateParameters(
-            cert_no="exercitationem",
-            full_name="ut",
+            cert_no="facere",
+            full_name="facere",
         ),
-        consent_artifact="ipsum",
+        consent_artifact="ut",
         format="pdf",
         txn_id="assumenda",
     ),
 )
     
-res = s.sdk.dpicr(req)
+res = s.ap_is.dpicr(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dpicr` - Disabled Person Identity Card/ Certificate
 * `govid` - ID Card

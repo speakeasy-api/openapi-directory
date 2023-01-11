@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import registerparameters as shared_registerparameters
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchDomainsResponse:
     r"""SearchDomainsResponse
     Response for the `SearchDomains` method.
     """
     
-    register_parameters: Optional[List[RegisterParameters]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registerParameters') }})
+    register_parameters: Optional[list[shared_registerparameters.RegisterParameters]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('registerParameters') }})
     

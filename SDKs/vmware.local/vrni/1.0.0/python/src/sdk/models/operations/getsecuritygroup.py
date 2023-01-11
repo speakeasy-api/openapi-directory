@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import basesecuritygroup as shared_basesecuritygroup
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSecurityGroupPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSecurityGroupQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSecurityGroupSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSecurityGroupRequest:
-    path_params: GetSecurityGroupPathParams = field()
-    query_params: GetSecurityGroupQueryParams = field()
-    security: GetSecurityGroupSecurity = field()
+    path_params: GetSecurityGroupPathParams = dataclasses.field()
+    query_params: GetSecurityGroupQueryParams = dataclasses.field()
+    security: GetSecurityGroupSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSecurityGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    base_security_group: Optional[shared.BaseSecurityGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    base_security_group: Optional[shared_basesecuritygroup.BaseSecurityGroup] = dataclasses.field(default=None)
     

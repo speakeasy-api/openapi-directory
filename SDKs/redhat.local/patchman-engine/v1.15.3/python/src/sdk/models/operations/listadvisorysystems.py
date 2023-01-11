@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import controllers_advisorysystemsresponse as shared_controllers_advisorysystemsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAdvisorySystemsPathParams:
-    advisory_id: str = field(metadata={'path_param': { 'field_name': 'advisory_id', 'style': 'simple', 'explode': False }})
+    advisory_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'advisory_id', 'style': 'simple', 'explode': False }})
     
 class ListAdvisorySystemsSortEnum(str, Enum):
     ID = "id"
@@ -20,46 +21,46 @@ class ListAdvisorySystemsSortEnum(str, Enum):
     STALE = "stale"
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAdvisorySystemsQueryParams:
-    filter_created_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[created]', 'style': 'form', 'explode': True }})
-    filter_culled_timestamp_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[culled_timestamp]', 'style': 'form', 'explode': True }})
-    filter_display_name_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[display_name]', 'style': 'form', 'explode': True }})
-    filter_id_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[id]', 'style': 'form', 'explode': True }})
-    filter_insights_id_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[insights_id]', 'style': 'form', 'explode': True }})
-    filter_last_evaluation_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[last_evaluation]', 'style': 'form', 'explode': True }})
-    filter_last_upload_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[last_upload]', 'style': 'form', 'explode': True }})
-    filter_other_count_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[other_count]', 'style': 'form', 'explode': True }})
-    filter_rhba_count_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[rhba_count]', 'style': 'form', 'explode': True }})
-    filter_rhea_count_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[rhea_count]', 'style': 'form', 'explode': True }})
-    filter_rhsa_count_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[rhsa_count]', 'style': 'form', 'explode': True }})
-    filter_stale_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[stale]', 'style': 'form', 'explode': True }})
-    filter_stale_timestamp_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[stale_timestamp]', 'style': 'form', 'explode': True }})
-    filter_stale_warning_timestamp_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[stale_warning_timestamp]', 'style': 'form', 'explode': True }})
-    filter_system_profile_sap_sids_in_: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_sids][in]', 'style': 'form', 'explode': True }})
-    filter_system_profile_sap_system_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_system]', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
-    sort: Optional[ListAdvisorySystemsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    tags: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
+    filter_created_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[created]', 'style': 'form', 'explode': True }})
+    filter_culled_timestamp_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[culled_timestamp]', 'style': 'form', 'explode': True }})
+    filter_display_name_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[display_name]', 'style': 'form', 'explode': True }})
+    filter_id_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[id]', 'style': 'form', 'explode': True }})
+    filter_insights_id_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[insights_id]', 'style': 'form', 'explode': True }})
+    filter_last_evaluation_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[last_evaluation]', 'style': 'form', 'explode': True }})
+    filter_last_upload_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[last_upload]', 'style': 'form', 'explode': True }})
+    filter_other_count_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[other_count]', 'style': 'form', 'explode': True }})
+    filter_rhba_count_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[rhba_count]', 'style': 'form', 'explode': True }})
+    filter_rhea_count_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[rhea_count]', 'style': 'form', 'explode': True }})
+    filter_rhsa_count_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[rhsa_count]', 'style': 'form', 'explode': True }})
+    filter_stale_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[stale]', 'style': 'form', 'explode': True }})
+    filter_stale_timestamp_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[stale_timestamp]', 'style': 'form', 'explode': True }})
+    filter_stale_warning_timestamp_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[stale_warning_timestamp]', 'style': 'form', 'explode': True }})
+    filter_system_profile_sap_sids_in_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_sids][in]', 'style': 'form', 'explode': True }})
+    filter_system_profile_sap_system_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter[system_profile][sap_system]', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    sort: Optional[ListAdvisorySystemsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListAdvisorySystemsSecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListAdvisorySystemsRequest:
-    path_params: ListAdvisorySystemsPathParams = field()
-    query_params: ListAdvisorySystemsQueryParams = field()
-    security: ListAdvisorySystemsSecurity = field()
+    path_params: ListAdvisorySystemsPathParams = dataclasses.field()
+    query_params: ListAdvisorySystemsQueryParams = dataclasses.field()
+    security: ListAdvisorySystemsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListAdvisorySystemsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_advisory_systems_response: Optional[shared.ControllersAdvisorySystemsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_advisory_systems_response: Optional[shared_controllers_advisorysystemsresponse.ControllersAdvisorySystemsResponse] = dataclasses.field(default=None)
     

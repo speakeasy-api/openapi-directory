@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import codesigningconfig as shared_codesigningconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCodeSigningConfigsResponse:
-    code_signing_configs: Optional[List[CodeSigningConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CodeSigningConfigs') }})
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    code_signing_configs: Optional[list[shared_codesigningconfig.CodeSigningConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CodeSigningConfigs') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
     

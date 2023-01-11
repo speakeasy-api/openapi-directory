@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import v3_disruptionmode as shared_v3_disruptionmode
+from ..shared import v3_status as shared_v3_status
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class V3DisruptionModesResponse:
-    disruption_modes: Optional[List[V3DisruptionMode]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disruption_modes') }})
-    status: Optional[V3Status] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    disruption_modes: Optional[list[shared_v3_disruptionmode.V3DisruptionMode]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disruption_modes') }})
+    status: Optional[shared_v3_status.V3Status] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

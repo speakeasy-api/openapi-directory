@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,18 +23,18 @@ req = operations.ImageOcrImageLinesWithLocationRequest(
         ),
     ),
     headers=operations.ImageOcrImageLinesWithLocationHeaders(
-        language="deleniti",
-        preprocessing="qui",
+        language="quasi",
+        preprocessing="tempore",
     ),
     request=operations.ImageOcrImageLinesWithLocationRequestBody(
         image_file=operations.ImageOcrImageLinesWithLocationRequestBodyImageFile(
-            content="et".encode(),
-            image_file="quia",
+            content="consequatur".encode(),
+            image_file="quos",
         ),
     ),
 )
     
-res = s.sdk.image_ocr_image_lines_with_location(req)
+res = s.image_ocr.image_ocr_image_lines_with_location(req)
 
 if res.image_to_lines_with_location_result is not None:
     # handle response
@@ -45,7 +44,7 @@ if res.image_to_lines_with_location_result is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ImageOcr
 
 * `image_ocr_image_lines_with_location` - Convert a scanned image into words with location
 * `image_ocr_image_words_with_location` - Convert a scanned image into words with location
@@ -55,15 +54,24 @@ if res.image_to_lines_with_location_result is not None:
 * `image_ocr_photo_to_text` - Convert a photo of a document into text
 * `image_ocr_photo_words_with_location` - Convert a photo of a document or receipt into words with location
 * `image_ocr_post` - Convert a scanned image into text
+
+### PdfOcr
+
 * `pdf_ocr_pdf_to_lines_with_location` - Convert a PDF into text lines with location
 * `pdf_ocr_pdf_to_words_with_location` - Convert a PDF into words with location
 * `pdf_ocr_post` - Converts an uploaded PDF file into text via Optical Character Recognition.
+
+### Preprocessing
+
 * `preprocessing_binarize` - Convert an image of text into a binarized (light and dark) view
 * `preprocessing_binarize_advanced` - Convert an image of text into a binary (light and dark) view with ML
 * `preprocessing_get_page_angle` - Get the angle of the page / document / receipt
 * `preprocessing_unrotate` - Detect and unrotate a document image
 * `preprocessing_unrotate_advanced` - Detect and unrotate a document image (advanced)
 * `preprocessing_unskew` - Detect and unskew a photo of a document
+
+### Receipts
+
 * `receipts_photo_to_csv` - Convert a photo of a receipt into a CSV file containing structured information from the receipt
 
 <!-- End SDK Available Operations -->

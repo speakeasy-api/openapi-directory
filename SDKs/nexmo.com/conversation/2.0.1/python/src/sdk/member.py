@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import operations
 from . import utils
 
@@ -29,13 +29,13 @@ class Member:
         url = utils.generate_url(base_url, "/conversations/{conversation_id}/members", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreateMemberResponse(status_code=r.status_code, content_type=content_type)
@@ -115,7 +115,7 @@ class Member:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[operations.GetMembers200ApplicationJSON]])
+                out = utils.unmarshal_json(r.text, Optional[list[operations.GetMembers200ApplicationJSON]])
                 res.get_members_200_application_json_objects = out
 
         return res
@@ -130,13 +130,13 @@ class Member:
         url = utils.generate_url(base_url, "/conversations/{conversation_id}/members/{member_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpdateMemberResponse(status_code=r.status_code, content_type=content_type)

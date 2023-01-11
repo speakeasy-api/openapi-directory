@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class JobSearchReadPathParams:
-    job_title: str = field(metadata={'path_param': { 'field_name': 'job_title', 'style': 'simple', 'explode': False }})
+    job_title: str = dataclasses.field(metadata={'path_param': { 'field_name': 'job_title', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JobSearchReadRequest:
-    path_params: JobSearchReadPathParams = field()
+    path_params: JobSearchReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class JobSearchReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

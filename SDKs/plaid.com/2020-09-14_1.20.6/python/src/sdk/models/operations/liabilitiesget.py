@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import liabilitiesgetrequest as shared_liabilitiesgetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class LiabilitiesGetRequest:
-    request: shared.LiabilitiesGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_liabilitiesgetrequest.LiabilitiesGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LiabilitiesGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    liabilities_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    liabilities_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

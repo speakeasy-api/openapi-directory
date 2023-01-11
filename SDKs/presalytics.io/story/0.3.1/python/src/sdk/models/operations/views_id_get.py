@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import view as shared_view
 
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDGetPathParams:
-    view_id: str = field(metadata={'path_param': { 'field_name': 'view_id', 'style': 'simple', 'explode': False }})
+    view_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'view_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDGetRequest:
-    path_params: ViewsIDGetPathParams = field()
+    path_params: ViewsIDGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ViewsIDGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    view: Optional[shared.View] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    view: Optional[shared_view.View] = dataclasses.field(default=None)
     

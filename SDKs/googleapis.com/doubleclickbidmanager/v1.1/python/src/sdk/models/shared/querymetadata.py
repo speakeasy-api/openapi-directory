@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -33,21 +33,21 @@ class QueryMetadataFormatEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QueryMetadata:
     r"""QueryMetadata
     Query metadata.
     """
     
-    data_range: Optional[QueryMetadataDataRangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataRange') }})
-    format: Optional[QueryMetadataFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    google_cloud_storage_path_for_latest_report: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleCloudStoragePathForLatestReport') }})
-    google_drive_path_for_latest_report: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleDrivePathForLatestReport') }})
-    latest_report_run_time_ms: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latestReportRunTimeMs') }})
-    locale: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
-    report_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportCount') }})
-    running: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('running') }})
-    send_notification: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sendNotification') }})
-    share_email_address: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shareEmailAddress') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    data_range: Optional[QueryMetadataDataRangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataRange') }})
+    format: Optional[QueryMetadataFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    google_cloud_storage_path_for_latest_report: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleCloudStoragePathForLatestReport') }})
+    google_drive_path_for_latest_report: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleDrivePathForLatestReport') }})
+    latest_report_run_time_ms: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('latestReportRunTimeMs') }})
+    locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
+    report_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportCount') }})
+    running: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('running') }})
+    send_notification: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sendNotification') }})
+    share_email_address: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shareEmailAddress') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     

@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import flowtemplatefiltername_enum as shared_flowtemplatefiltername_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FlowTemplateFilter:
     r"""FlowTemplateFilter
     An object that filters a workflow search.
     """
     
-    name: FlowTemplateFilterNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    value: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    name: shared_flowtemplatefiltername_enum.FlowTemplateFilterNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    value: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

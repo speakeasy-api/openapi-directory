@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import frequencycap as shared_frequencycap
 
 class DeliverySchedulePriorityEnum(str, Enum):
     AD_PRIORITY_01 = "AD_PRIORITY_01"
@@ -25,14 +25,14 @@ class DeliverySchedulePriorityEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeliverySchedule:
     r"""DeliverySchedule
     Delivery Schedule.
     """
     
-    frequency_cap: Optional[FrequencyCap] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequencyCap') }})
-    hard_cutoff: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hardCutoff') }})
-    impression_ratio: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionRatio') }})
-    priority: Optional[DeliverySchedulePriorityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priority') }})
+    frequency_cap: Optional[shared_frequencycap.FrequencyCap] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequencyCap') }})
+    hard_cutoff: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hardCutoff') }})
+    impression_ratio: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impressionRatio') }})
+    priority: Optional[DeliverySchedulePriorityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('priority') }})
     

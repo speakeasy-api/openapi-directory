@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,24 @@ s.config_security(
     
 req = operations.DeleteScalingPolicyRequest(
     headers=operations.DeleteScalingPolicyHeaders(
-        x_amz_algorithm="eos",
-        x_amz_content_sha256="praesentium",
-        x_amz_credential="itaque",
-        x_amz_date="ipsum",
-        x_amz_security_token="natus",
-        x_amz_signature="quas",
-        x_amz_signed_headers="nesciunt",
+        x_amz_algorithm="vitae",
+        x_amz_content_sha256="fugit",
+        x_amz_credential="non",
+        x_amz_date="aut",
+        x_amz_security_token="autem",
+        x_amz_signature="dolores",
+        x_amz_signed_headers="aperiam",
         x_amz_target="AnyScaleFrontendService.DeleteScalingPolicy",
     ),
     request=shared.DeleteScalingPolicyRequest(
-        policy_name="quod",
-        resource_id="repudiandae",
-        scalable_dimension="ecs:service:DesiredCount",
-        service_namespace="elasticmapreduce",
+        policy_name="culpa",
+        resource_id="quaerat",
+        scalable_dimension="rds:cluster:ReadReplicaCount",
+        service_namespace="custom-resource",
     ),
 )
     
-res = s.sdk.delete_scaling_policy(req)
+res = s.delete_scaling_policy(req)
 
 if res.delete_scaling_policy_response is not None:
     # handle response

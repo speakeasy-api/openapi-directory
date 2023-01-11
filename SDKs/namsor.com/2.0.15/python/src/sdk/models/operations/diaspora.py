@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import firstlastnamediasporaedout as shared_firstlastnamediasporaedout
 
 
-@dataclass
+@dataclasses.dataclass
 class DiasporaPathParams:
-    country_iso2: str = field(metadata={'path_param': { 'field_name': 'countryIso2', 'style': 'simple', 'explode': False }})
-    first_name: str = field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
-    last_name: str = field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
+    country_iso2: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryIso2', 'style': 'simple', 'explode': False }})
+    first_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firstName', 'style': 'simple', 'explode': False }})
+    last_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'lastName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiasporaSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DiasporaRequest:
-    path_params: DiasporaPathParams = field()
-    security: DiasporaSecurity = field()
+    path_params: DiasporaPathParams = dataclasses.field()
+    security: DiasporaSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DiasporaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    first_last_name_diasporaed_out: Optional[shared.FirstLastNameDiasporaedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    first_last_name_diasporaed_out: Optional[shared_firstlastnamediasporaedout.FirstLastNameDiasporaedOut] = dataclasses.field(default=None)
     

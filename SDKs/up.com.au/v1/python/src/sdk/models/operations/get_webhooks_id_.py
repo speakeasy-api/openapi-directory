@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getwebhookresponse as shared_getwebhookresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDRequest:
-    path_params: GetWebhooksIDPathParams = field()
+    path_params: GetWebhooksIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_webhook_response: Optional[shared.GetWebhookResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_webhook_response: Optional[shared_getwebhookresponse.GetWebhookResponse] = dataclasses.field(default=None)
     

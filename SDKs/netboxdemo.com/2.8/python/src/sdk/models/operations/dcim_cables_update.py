@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablecable as shared_writablecable
+from ..shared import cable as shared_cable
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesUpdateRequest:
-    path_params: DcimCablesUpdatePathParams = field()
-    request: shared.WritableCableInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimCablesUpdatePathParams = dataclasses.field()
+    request: shared_writablecable.WritableCableInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimCablesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cable: Optional[shared.Cable] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cable: Optional[shared_cable.Cable] = dataclasses.field(default=None)
     

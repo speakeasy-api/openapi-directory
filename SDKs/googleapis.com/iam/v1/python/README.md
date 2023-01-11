@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,32 @@ req = operations.IamIamPoliciesLintPolicyRequest(
     security=operations.IamIamPoliciesLintPolicySecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.IamIamPoliciesLintPolicyQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
+        dollar_xgafv="2",
+        access_token="repudiandae",
         alt="media",
-        callback="est",
-        fields="rem",
-        key="velit",
-        oauth_token="voluptates",
-        pretty_print=True,
-        quota_user="molestias",
-        upload_type="sit",
-        upload_protocol="repellendus",
+        callback="occaecati",
+        fields="officia",
+        key="ducimus",
+        oauth_token="nihil",
+        pretty_print=False,
+        quota_user="velit",
+        upload_type="ipsam",
+        upload_protocol="aut",
     ),
     request=shared.LintPolicyRequest(
         condition=shared.Expr(
-            description="amet",
-            expression="veritatis",
-            location="natus",
-            title="est",
+            description="qui",
+            expression="necessitatibus",
+            location="voluptas",
+            title="qui",
         ),
-        full_resource_name="quos",
+        full_resource_name="quisquam",
     ),
 )
     

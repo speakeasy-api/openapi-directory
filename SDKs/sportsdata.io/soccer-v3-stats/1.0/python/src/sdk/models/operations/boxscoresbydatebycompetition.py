@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 
 class BoxScoresByDateByCompetitionFormatEnum(str, Enum):
@@ -10,21 +10,21 @@ class BoxScoresByDateByCompetitionFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateByCompetitionPathParams:
-    competition: str = field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
-    date_: str = field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
-    format: BoxScoresByDateByCompetitionFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    competition: str = dataclasses.field(metadata={'path_param': { 'field_name': 'competition', 'style': 'simple', 'explode': False }})
+    date_: str = dataclasses.field(metadata={'path_param': { 'field_name': 'date', 'style': 'simple', 'explode': False }})
+    format: BoxScoresByDateByCompetitionFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateByCompetitionRequest:
-    path_params: BoxScoresByDateByCompetitionPathParams = field()
+    path_params: BoxScoresByDateByCompetitionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoresByDateByCompetitionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_scores: Optional[list[Any]] = dataclasses.field(default=None)
     

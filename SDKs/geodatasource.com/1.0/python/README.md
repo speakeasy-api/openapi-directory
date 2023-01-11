@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,13 +19,13 @@ s = sdk.SDK()
 req = operations.GetCityRequest(
     query_params=operations.GetCityQueryParams(
         format="json",
-        key="voluptatem",
-        lat=62.200001,
-        lng=0.100000,
+        key="ex",
+        lat=12.200000,
+        lng=33.200001,
     ),
 )
     
-res = s.sdk.get_city(req)
+res = s.get_city(req)
 
 if res.get_city_200_application_json_string is not None:
     # handle response

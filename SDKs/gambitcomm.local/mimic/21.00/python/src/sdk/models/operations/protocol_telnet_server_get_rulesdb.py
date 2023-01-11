@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetRulesdbPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetRulesdbRequest:
-    path_params: ProtocolTelnetServerGetRulesdbPathParams = field()
+    path_params: ProtocolTelnetServerGetRulesdbPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetServerGetRulesdbResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_telnet_server_get_rulesdb_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_telnet_server_get_rulesdb_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

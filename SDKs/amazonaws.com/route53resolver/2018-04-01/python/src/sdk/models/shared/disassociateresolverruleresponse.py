@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resolverruleassociation as shared_resolverruleassociation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DisassociateResolverRuleResponse:
-    resolver_rule_association: Optional[ResolverRuleAssociation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverRuleAssociation') }})
+    resolver_rule_association: Optional[shared_resolverruleassociation.ResolverRuleAssociation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverRuleAssociation') }})
     

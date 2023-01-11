@@ -1,150 +1,150 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionPathParams:
-    collection_uid: str = field(metadata={'path_param': { 'field_name': 'collection_uid', 'style': 'simple', 'explode': False }})
+    collection_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionInfo:
-    postman_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_postman_id') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    schema: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
+    postman_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_postman_id') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schema') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionItemItemRequestBody:
-    mode: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
-    raw: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('raw') }})
+    mode: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
+    raw: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('raw') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionItemItemRequestHeader:
-    key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionItemItemRequest:
-    body: Optional[UpdateCollectionRequestBodyCollectionItemItemRequestBody] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    header: Optional[List[UpdateCollectionRequestBodyCollectionItemItemRequestHeader]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
-    method: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('method') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    body: Optional[UpdateCollectionRequestBodyCollectionItemItemRequestBody] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    header: Optional[list[UpdateCollectionRequestBodyCollectionItemItemRequestHeader]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
+    method: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('method') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionItemItem:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    request: Optional[UpdateCollectionRequestBodyCollectionItemItemRequest] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    request: Optional[UpdateCollectionRequestBodyCollectionItemItemRequest] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollectionItem:
-    item: Optional[List[UpdateCollectionRequestBodyCollectionItemItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    item: Optional[list[UpdateCollectionRequestBodyCollectionItemItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBodyCollection:
-    info: Optional[UpdateCollectionRequestBodyCollectionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('info') }})
-    item: Optional[List[UpdateCollectionRequestBodyCollectionItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
+    info: Optional[UpdateCollectionRequestBodyCollectionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('info') }})
+    item: Optional[list[UpdateCollectionRequestBodyCollectionItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequestBody:
-    collection: Optional[UpdateCollectionRequestBodyCollection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
+    collection: Optional[UpdateCollectionRequestBodyCollection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection200ApplicationJSONCollection:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection200ApplicationJSON:
-    collection: Optional[UpdateCollection200ApplicationJSONCollection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
+    collection: Optional[UpdateCollection200ApplicationJSONCollection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('collection') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection400ApplicationJSONError:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection400ApplicationJSON:
-    error: Optional[UpdateCollection400ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[UpdateCollection400ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection403ApplicationJSONError:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection403ApplicationJSON:
-    error: Optional[UpdateCollection403ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[UpdateCollection403ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection404ApplicationJSONErrorDetails:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    item: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    item: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('item') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection404ApplicationJSONError:
-    details: Optional[UpdateCollection404ApplicationJSONErrorDetails] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    details: Optional[UpdateCollection404ApplicationJSONErrorDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('details') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateCollection404ApplicationJSON:
-    error: Optional[UpdateCollection404ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[UpdateCollection404ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionRequest:
-    path_params: UpdateCollectionPathParams = field()
-    request: Optional[UpdateCollectionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateCollectionPathParams = dataclasses.field()
+    request: Optional[UpdateCollectionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCollectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_collection_200_application_json_object: Optional[UpdateCollection200ApplicationJSON] = field(default=None)
-    update_collection_400_application_json_object: Optional[UpdateCollection400ApplicationJSON] = field(default=None)
-    update_collection_403_application_json_object: Optional[UpdateCollection403ApplicationJSON] = field(default=None)
-    update_collection_404_application_json_object: Optional[UpdateCollection404ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_collection_200_application_json_object: Optional[UpdateCollection200ApplicationJSON] = dataclasses.field(default=None)
+    update_collection_400_application_json_object: Optional[UpdateCollection400ApplicationJSON] = dataclasses.field(default=None)
+    update_collection_403_application_json_object: Optional[UpdateCollection403ApplicationJSON] = dataclasses.field(default=None)
+    update_collection_404_application_json_object: Optional[UpdateCollection404ApplicationJSON] = dataclasses.field(default=None)
     

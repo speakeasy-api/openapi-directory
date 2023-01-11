@@ -29,3 +29,5 @@ from .testiampermissionsresponse import *
 from .uploadaptartifactmediaresponse import *
 from .uploadyumartifactmediaresponse import *
 from .version import *
+
+__all__ = ["XgafvEnum","AltEnum","Binding","Expr","GoogleDevtoolsArtifactregistryV1beta2File","HashTypeEnum","Hash","ImportAptArtifactsGcsSource","ImportAptArtifactsRequest","ImportYumArtifactsGcsSource","ImportYumArtifactsRequest","ListFilesResponse","ListLocationsResponse","ListPackagesResponse","ListRepositoriesResponse","ListTagsResponse","ListVersionsResponse","Location","MavenRepositoryConfigVersionPolicyEnum","MavenRepositoryConfig","Operation","Package","Policy","RepositoryFormatEnum","Repository","RepositoryInput","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","Tag","TestIamPermissionsRequest","TestIamPermissionsResponse","UploadAptArtifactMediaResponse","UploadYumArtifactMediaResponse","Version"]

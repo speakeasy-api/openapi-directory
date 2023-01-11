@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import clusterparametergroup as shared_clusterparametergroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateClusterParameterGroupResult:
-    cluster_parameter_group: Optional[ClusterParameterGroup] = field(default=None)
+    cluster_parameter_group: Optional[shared_clusterparametergroup.ClusterParameterGroup] = dataclasses.field(default=None)
     

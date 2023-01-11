@@ -1,46 +1,46 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import global_hook as shared_global_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateGlobalWebhookHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateGlobalWebhookRequestBodyConfig:
     r"""EnterpriseAdminCreateGlobalWebhookRequestBodyConfig
     Key/value pairs to provide settings for this webhook.
     """
     
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    content_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_type') }})
-    insecure_ssl: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('insecure_ssl') }})
-    secret: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    content_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_type') }})
+    insecure_ssl: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('insecure_ssl') }})
+    secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateGlobalWebhookRequestBody:
-    config: EnterpriseAdminCreateGlobalWebhookRequestBodyConfig = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('config') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    events: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('events') }})
+    config: EnterpriseAdminCreateGlobalWebhookRequestBodyConfig = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('config') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    events: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('events') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateGlobalWebhookRequest:
-    headers: EnterpriseAdminCreateGlobalWebhookHeaders = field()
-    request: Optional[EnterpriseAdminCreateGlobalWebhookRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: EnterpriseAdminCreateGlobalWebhookHeaders = dataclasses.field()
+    request: Optional[EnterpriseAdminCreateGlobalWebhookRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminCreateGlobalWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_hook: Optional[shared.GlobalHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_hook: Optional[shared_global_hook.GlobalHook] = dataclasses.field(default=None)
     

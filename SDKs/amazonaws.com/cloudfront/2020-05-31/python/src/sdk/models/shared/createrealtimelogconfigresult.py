@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import realtimelogconfig as shared_realtimelogconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateRealtimeLogConfigResult:
-    realtime_log_config: Optional[RealtimeLogConfig] = field(default=None)
+    realtime_log_config: Optional[shared_realtimelogconfig.RealtimeLogConfig] = dataclasses.field(default=None)
     

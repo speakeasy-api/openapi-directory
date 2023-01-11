@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAdminScenarios200ApplicationJSONScenarios:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    possible_states: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('possibleStates') }})
-    state: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    possible_states: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('possibleStates') }})
+    state: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAdminScenarios200ApplicationJSON:
-    scenarios: Optional[List[GetAdminScenarios200ApplicationJSONScenarios]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scenarios') }})
+    scenarios: Optional[list[GetAdminScenarios200ApplicationJSONScenarios]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scenarios') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminScenariosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_admin_scenarios_200_application_json_object: Optional[GetAdminScenarios200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_admin_scenarios_200_application_json_object: Optional[GetAdminScenarios200ApplicationJSON] = dataclasses.field(default=None)
     

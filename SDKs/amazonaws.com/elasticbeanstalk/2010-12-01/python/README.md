@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAbortEnvironmentUpdateRequest(
     query_params=operations.GetAbortEnvironmentUpdateQueryParams(
         action="AbortEnvironmentUpdate",
-        environment_id="ad",
-        environment_name="ab",
+        environment_id="voluptas",
+        environment_name="facilis",
         version="2010-12-01",
     ),
     headers=operations.GetAbortEnvironmentUpdateHeaders(
-        x_amz_algorithm="delectus",
-        x_amz_content_sha256="recusandae",
-        x_amz_credential="voluptate",
-        x_amz_date="possimus",
-        x_amz_security_token="autem",
-        x_amz_signature="sed",
-        x_amz_signed_headers="voluptas",
+        x_amz_algorithm="sunt",
+        x_amz_content_sha256="quis",
+        x_amz_credential="qui",
+        x_amz_date="aut",
+        x_amz_security_token="temporibus",
+        x_amz_signature="nemo",
+        x_amz_signed_headers="ea",
     ),
 )
     
-res = s.sdk.get_abort_environment_update(req)
+res = s.get_abort_environment_update(req)
 
 if res.status_code == 200:
     # handle response

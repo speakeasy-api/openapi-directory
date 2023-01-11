@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetPathParams:
-    airline_code: str = field(metadata={'path_param': { 'field_name': 'airlineCode', 'style': 'simple', 'explode': False }})
+    airline_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'airlineCode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetQueryParams:
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetRequest:
-    headers: ReferencesAirlinesByAirlineCodeGetHeaders = field()
-    path_params: ReferencesAirlinesByAirlineCodeGetPathParams = field()
-    query_params: ReferencesAirlinesByAirlineCodeGetQueryParams = field()
-    security: ReferencesAirlinesByAirlineCodeGetSecurity = field()
+    headers: ReferencesAirlinesByAirlineCodeGetHeaders = dataclasses.field()
+    path_params: ReferencesAirlinesByAirlineCodeGetPathParams = dataclasses.field()
+    query_params: ReferencesAirlinesByAirlineCodeGetQueryParams = dataclasses.field()
+    security: ReferencesAirlinesByAirlineCodeGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReferencesAirlinesByAirlineCodeGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    references_airlines_by_airline_code_get_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    references_airlines_by_airline_code_get_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import tenantgroup as shared_tenantgroup
+from ..shared import tenantgroup as shared_tenantgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsUpdateRequest:
-    path_params: TenancyTenantGroupsUpdatePathParams = field()
-    request: shared.TenantGroupInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TenancyTenantGroupsUpdatePathParams = dataclasses.field()
+    request: shared_tenantgroup.TenantGroupInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tenant_group: Optional[shared.TenantGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tenant_group: Optional[shared_tenantgroup.TenantGroup] = dataclasses.field(default=None)
     

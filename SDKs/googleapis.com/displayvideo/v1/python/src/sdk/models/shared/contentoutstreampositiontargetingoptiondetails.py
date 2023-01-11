@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,11 +14,11 @@ class ContentOutstreamPositionTargetingOptionDetailsContentOutstreamPositionEnum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContentOutstreamPositionTargetingOptionDetails:
     r"""ContentOutstreamPositionTargetingOptionDetails
     Represents a targetable content outstream position, which could be used by display and video ads. This will be populated in the content_outstream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
     """
     
-    content_outstream_position: Optional[ContentOutstreamPositionTargetingOptionDetailsContentOutstreamPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
+    content_outstream_position: Optional[ContentOutstreamPositionTargetingOptionDetailsContentOutstreamPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
     

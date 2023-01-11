@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,7 +6,7 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import date_ as shared_date_
 
 class OpenInfoStatusEnum(str, Enum):
     OPEN_FOR_BUSINESS_UNSPECIFIED = "OPEN_FOR_BUSINESS_UNSPECIFIED"
@@ -16,13 +16,13 @@ class OpenInfoStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OpenInfo:
     r"""OpenInfo
     Information related to the opening state of the business.
     """
     
-    can_reopen: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canReopen') }})
-    opening_date: Optional[Date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openingDate') }})
-    status: Optional[OpenInfoStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    can_reopen: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('canReopen') }})
+    opening_date: Optional[shared_date_.Date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('openingDate') }})
+    status: Optional[OpenInfoStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

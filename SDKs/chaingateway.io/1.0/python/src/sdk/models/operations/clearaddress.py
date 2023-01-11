@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import clearaddressrequest as shared_clearaddressrequest
+from ..shared import clearaddress as shared_clearaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class ClearAddressHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClearAddressRequest:
-    headers: ClearAddressHeaders = field()
-    request: shared.ClearAddressRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ClearAddressHeaders = dataclasses.field()
+    request: shared_clearaddressrequest.ClearAddressRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClearAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    clear_address: Optional[shared.ClearAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    clear_address: Optional[shared_clearaddress.ClearAddress] = dataclasses.field(default=None)
     

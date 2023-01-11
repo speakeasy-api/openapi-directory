@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tenantgroup as shared_tenantgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsReadRequest:
-    path_params: TenancyTenantGroupsReadPathParams = field()
+    path_params: TenancyTenantGroupsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TenancyTenantGroupsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tenant_group: Optional[shared.TenantGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tenant_group: Optional[shared_tenantgroup.TenantGroup] = dataclasses.field(default=None)
     

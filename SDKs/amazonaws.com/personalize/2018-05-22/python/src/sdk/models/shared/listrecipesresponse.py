@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recipesummary as shared_recipesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRecipesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    recipes: Optional[List[RecipeSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipes') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    recipes: Optional[list[shared_recipesummary.RecipeSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recipes') }})
     

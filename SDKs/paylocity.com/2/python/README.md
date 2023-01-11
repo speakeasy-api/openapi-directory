@@ -8,29 +8,43 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.AddClientSecretRequest(
-    security=operations.AddClientSecretSecurity(
+req = operations.AddOrUpdateAdditionalRatesRequest(
+    security=operations.AddOrUpdateAdditionalRatesSecurity(
         paylocity_auth=shared.SchemePaylocityAuth(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
-    request=shared.AddClientSecret(
-        code="voluptatem",
+    path_params=operations.AddOrUpdateAdditionalRatesPathParams(
+        company_id="deleniti",
+        employee_id="ab",
+    ),
+    request=shared.AdditionalRate(
+        change_reason="alias",
+        cost_center1="voluptatem",
+        cost_center2="et",
+        cost_center3="hic",
+        effective_date="inventore",
+        end_check_date="illum",
+        job="mollitia",
+        rate=60.099998,
+        rate_code="aliquid",
+        rate_notes="nobis",
+        rate_per="quibusdam",
+        shift="et",
     ),
 )
     
-res = s.sdk.add_client_secret(req)
+res = s.additional_rates.add_or_update_additional_rates(req)
 
-if res.client_credentials_responses is not None:
+if res.status_code == 200:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -38,36 +52,78 @@ if res.client_credentials_responses is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Additional Rates
+
+* `add_or_update_additional_rates` - Add/update additional rates
+
+### Client Credentials
 
 * `add_client_secret` - Obtain new client secret.
-* `add_employee` - Add new employee
-* `add_local_tax` - Add new local tax
-* `add_new_employee_to_web_link` - Add new employee to Web Link
-* `add_or_update_additional_rates` - Add/update additional rates
-* `add_or_update_an_employee_earning` - Add/Update Earning
-* `add_or_update_emergency_contacts` - Add/update emergency contacts
-* `add_or_update_non_primary_state_tax` - Add/update non-primary state tax
-* `add_or_update_primary_state_tax` - Add/update primary state tax
-* `delete_earning_by_earning_code_and_start_date` - Delete Earning by Earning Code and Start Date
-* `delete_local_tax_by_tax_code` - Delete local tax by tax code
+
+### Company Codes
+
 * `get_all_company_codes_and_descriptions_by_resource` - Get All Company Codes
+
+### Company-Specific Schema
+
+* `get_company_specific_open_api_documentation` - Get Company-Specific Open API Documentation
+
+### Custom Fields
+
 * `get_all_custom_fields_by_category` - Get All Custom Fields
+
+### Direct Deposit
+
 * `get_all_direct_deposit` - Get All Direct Deposit
+
+### Earnings
+
+* `add_or_update_an_employee_earning` - Add/Update Earning
+* `delete_earning_by_earning_code_and_start_date` - Delete Earning by Earning Code and Start Date
 * `get_all_earnings` - Get All Earnings
 * `get_earning_by_earning_code_and_start_date` - Get Earning by Earning Code and Start Date
 * `get_earnings_by_earning_code` - Get Earnings by Earning Code
+
+### Emergency Contacts
+
+* `add_or_update_emergency_contacts` - Add/update emergency contacts
+
+### Employee
+
+* `add_employee` - Add new employee
 * `get_all_employees` - Get all employees
-* `get_all_local_taxes` - Get all local taxes
-* `get_company_specific_open_api_documentation` - Get Company-Specific Open API Documentation
 * `get_employee` - Get employee
+* `update_employee` - Update employee
+
+### Employee Benefit Setup
+
+* `update_or_add_employee_benefit_setup` - Add/update employee's benefit setup
+
+### Employee Staging
+
+* `add_new_employee_to_web_link` - Add new employee to Web Link
+
+### Local Taxes
+
+* `add_local_tax` - Add new local tax
+* `delete_local_tax_by_tax_code` - Delete local tax by tax code
+* `get_all_local_taxes` - Get all local taxes
 * `get_local_tax_by_tax_code` - Get local taxes by tax code
+
+### Non-Primary State Tax
+
+* `add_or_update_non_primary_state_tax` - Add/update non-primary state tax
+
+### PayStatements
+
 * `gets_employee_pay_statement_detail_data_based_on_the_specified_year` - Get employee pay statement details data for the specified year.
 * `gets_employee_pay_statement_detail_data_based_on_the_specified_year_and_check_date` - Get employee pay statement details data for the specified year and check date.
 * `gets_employee_pay_statement_summary_data_based_on_the_specified_year` - Get employee pay statement summary data for the specified year.
 * `gets_employee_pay_statement_summary_data_based_on_the_specified_year_and_check_date` - Get employee pay statement summary data for the specified year and check date.
-* `update_employee` - Update employee
-* `update_or_add_employee_benefit_setup` - Add/update employee's benefit setup
+
+### Primary State Tax
+
+* `add_or_update_primary_state_tax` - Add/update primary state tax
 
 <!-- End SDK Available Operations -->
 

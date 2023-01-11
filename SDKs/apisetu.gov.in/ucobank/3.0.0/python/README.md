@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.TdcerRequest(
     security=operations.TdcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.TdcerRequestBody(
         certificate_parameters=operations.TdcerRequestBodyCertificateParameters(
-            cust_id="quod",
-            dob="rem",
-            fin_yr="recusandae",
+            cust_id="id",
+            dob="vitae",
+            fin_yr="atque",
         ),
-        consent_artifact="consequuntur",
+        consent_artifact="sit",
         format="pdf",
-        txn_id="quo",
+        txn_id="sint",
     ),
 )
     
-res = s.sdk.tdcer(req)
+res = s.ap_is.tdcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `tdcer` - TDS Certificate
 

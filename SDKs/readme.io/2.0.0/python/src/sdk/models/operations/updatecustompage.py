@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import custompage as shared_custompage
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCustomPagePathParams:
-    slug: str = field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
+    slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCustomPageSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCustomPageRequest:
-    path_params: UpdateCustomPagePathParams = field()
-    request: shared.CustomPage = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateCustomPageSecurity = field()
+    path_params: UpdateCustomPagePathParams = dataclasses.field()
+    request: shared_custompage.CustomPage = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateCustomPageSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateCustomPageResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

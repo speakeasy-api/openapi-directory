@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configmqtt as shared_configmqtt
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttGetConfigPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttGetConfigRequest:
-    path_params: ProtocolMqttGetConfigPathParams = field()
+    path_params: ProtocolMqttGetConfigPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolMqttGetConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_mqtt: Optional[shared.ConfigMqtt] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_mqtt: Optional[shared_configmqtt.ConfigMqtt] = dataclasses.field(default=None)
     

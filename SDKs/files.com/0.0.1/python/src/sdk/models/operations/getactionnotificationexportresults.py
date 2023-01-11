@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import actionnotificationexportresultentity as shared_actionnotificationexportresultentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportResultsQueryParams:
-    action_notification_export_id: int = field(metadata={'query_param': { 'field_name': 'action_notification_export_id', 'style': 'form', 'explode': True }})
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    action_notification_export_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'action_notification_export_id', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportResultsRequest:
-    query_params: GetActionNotificationExportResultsQueryParams = field()
+    query_params: GetActionNotificationExportResultsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetActionNotificationExportResultsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    action_notification_export_result_entities: Optional[List[shared.ActionNotificationExportResultEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    action_notification_export_result_entities: Optional[list[shared_actionnotificationexportresultentity.ActionNotificationExportResultEntity]] = dataclasses.field(default=None)
     

@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reference as shared_reference
+from ..shared import simpleportrange as shared_simpleportrange
 
 class RecommendedRuleActionEnum(str, Enum):
     ALLOW = "ALLOW"
@@ -11,11 +12,11 @@ class RecommendedRuleActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RecommendedRule:
-    action: Optional[RecommendedRuleActionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    destinations: Optional[List[Reference]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
-    port_ranges: Optional[List[SimplePortRange]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port_ranges') }})
-    protocols: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocols') }})
-    sources: Optional[List[Reference]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sources') }})
+    action: Optional[RecommendedRuleActionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    destinations: Optional[list[shared_reference.Reference]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    port_ranges: Optional[list[shared_simpleportrange.SimplePortRange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port_ranges') }})
+    protocols: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocols') }})
+    sources: Optional[list[shared_reference.Reference]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sources') }})
     

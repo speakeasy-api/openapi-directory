@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeHTTPBearer:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAccessToken:
-    api_key: str = field(metadata={'security': { 'field_name': 'access-token' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'access-token' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    access_token: Optional[SchemeAccessToken] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    http_bearer: Optional[SchemeHTTPBearer] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    access_token: Optional[SchemeAccessToken] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    http_bearer: Optional[SchemeHTTPBearer] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     

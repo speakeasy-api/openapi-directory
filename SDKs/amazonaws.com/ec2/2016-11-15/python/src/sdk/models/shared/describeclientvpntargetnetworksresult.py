@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeClientVpnTargetNetworksResult:
-    client_vpn_target_networks: Optional[List[TargetNetwork]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    client_vpn_target_networks: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import permissiongroupmodel as shared_permissiongroupmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPermissionGroupPathParams:
-    permission_group_id: int = field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
+    permission_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPermissionGroupRequest:
-    path_params: GetPermissionGroupPathParams = field()
+    path_params: GetPermissionGroupPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPermissionGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    permission_group_model: Optional[shared.PermissionGroupModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    permission_group_model: Optional[shared_permissiongroupmodel.PermissionGroupModel] = dataclasses.field(default=None)
     

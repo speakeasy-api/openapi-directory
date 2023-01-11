@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetAuthenticatedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    integration: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    integration: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

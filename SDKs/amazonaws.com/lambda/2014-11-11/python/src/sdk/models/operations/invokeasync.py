@@ -1,48 +1,51 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import invalidrequestcontentexception as shared_invalidrequestcontentexception
+from ..shared import invokeasyncresponse as shared_invokeasyncresponse
+from ..shared import resourcenotfoundexception as shared_resourcenotfoundexception
+from ..shared import serviceexception as shared_serviceexception
 
 
-@dataclass
+@dataclasses.dataclass
 class InvokeAsyncPathParams:
-    function_name: str = field(metadata={'path_param': { 'field_name': 'FunctionName', 'style': 'simple', 'explode': False }})
+    function_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FunctionName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InvokeAsyncHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InvokeAsyncRequestBody:
-    invoke_args: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InvokeArgs') }})
+    invoke_args: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InvokeArgs') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InvokeAsyncRequest:
-    headers: InvokeAsyncHeaders = field()
-    path_params: InvokeAsyncPathParams = field()
-    request: InvokeAsyncRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: InvokeAsyncHeaders = dataclasses.field()
+    path_params: InvokeAsyncPathParams = dataclasses.field()
+    request: InvokeAsyncRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InvokeAsyncResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_request_content_exception: Optional[shared.InvalidRequestContentException] = field(default=None)
-    invoke_async_response: Optional[shared.InvokeAsyncResponse] = field(default=None)
-    resource_not_found_exception: Optional[shared.ResourceNotFoundException] = field(default=None)
-    service_exception: Optional[shared.ServiceException] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_request_content_exception: Optional[shared_invalidrequestcontentexception.InvalidRequestContentException] = dataclasses.field(default=None)
+    invoke_async_response: Optional[shared_invokeasyncresponse.InvokeAsyncResponse] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[shared_resourcenotfoundexception.ResourceNotFoundException] = dataclasses.field(default=None)
+    service_exception: Optional[shared_serviceexception.ServiceException] = dataclasses.field(default=None)
     

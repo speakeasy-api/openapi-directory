@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import namespace_patch as shared_namespace_patch
+from ..shared import error as shared_error
+from ..shared import namespace_response as shared_namespace_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDNamespacesNamespaceIDPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
-    namespace_id: str = field(metadata={'path_param': { 'field_name': 'namespace_id', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    namespace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'namespace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDNamespacesNamespaceIDSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDNamespacesNamespaceIDRequest:
-    path_params: PatchAppsAppIDNamespacesNamespaceIDPathParams = field()
-    security: PatchAppsAppIDNamespacesNamespaceIDSecurity = field()
-    request: Optional[shared.NamespacePatch] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchAppsAppIDNamespacesNamespaceIDPathParams = dataclasses.field()
+    security: PatchAppsAppIDNamespacesNamespaceIDSecurity = dataclasses.field()
+    request: Optional[shared_namespace_patch.NamespacePatch] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDNamespacesNamespaceIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    namespace_response: Optional[shared.NamespaceResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    namespace_response: Optional[shared_namespace_response.NamespaceResponse] = dataclasses.field(default=None)
     

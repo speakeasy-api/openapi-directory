@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,72 +20,68 @@ req = operations.TranslateProjectsLocationsBatchTranslateDocumentRequest(
     security=operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams(
-        parent="perferendis",
+        parent="et",
     ),
     query_params=operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams(
         dollar_xgafv="1",
-        access_token="omnis",
+        access_token="deserunt",
         alt="media",
-        callback="veniam",
-        fields="officiis",
-        key="aliquam",
-        oauth_token="at",
+        callback="sit",
+        fields="recusandae",
+        key="et",
+        oauth_token="quia",
         pretty_print=True,
-        quota_user="qui",
-        upload_type="quasi",
-        upload_protocol="nulla",
+        quota_user="aut",
+        upload_type="ut",
+        upload_protocol="sed",
     ),
     request=shared.BatchTranslateDocumentRequest(
         format_conversions={
-            "minima": "aperiam",
-            "quos": "quae",
+            "iure": "ad",
         },
         glossaries={
-            "dicta": shared.TranslateTextGlossaryConfig(
-                glossary="voluptatem",
-                ignore_case=False,
-            ),
-            "suscipit": shared.TranslateTextGlossaryConfig(
-                glossary="et",
-                ignore_case=False,
+            "omnis": shared.TranslateTextGlossaryConfig(
+                glossary="nam",
+                ignore_case=True,
             ),
         },
         input_configs=[
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="dolorem",
+                    input_uri="deleniti",
                 ),
             ),
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="qui",
+                    input_uri="et",
                 ),
             ),
             shared.BatchDocumentInputConfig(
                 gcs_source=shared.GcsSource(
-                    input_uri="sed",
+                    input_uri="placeat",
                 ),
             ),
         ],
         models={
-            "rerum": "ut",
-            "tempore": "eligendi",
-            "possimus": "quos",
+            "ut": "beatae",
+            "perferendis": "ipsa",
         },
         output_config=shared.BatchDocumentOutputConfig(
             gcs_destination=shared.GcsDestination(
-                output_uri_prefix="eos",
+                output_uri_prefix="et",
             ),
         ),
-        source_language_code="veniam",
+        source_language_code="soluta",
         target_language_codes=[
-            "beatae",
+            "mollitia",
+            "qui",
+            "quasi",
         ],
     ),
 )

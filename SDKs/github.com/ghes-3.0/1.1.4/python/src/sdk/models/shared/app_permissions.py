@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -125,40 +125,40 @@ class AppPermissionsWorkflowsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppPermissions:
     r"""AppPermissions
     The permissions granted to the user-to-server access token.
     """
     
-    actions: Optional[AppPermissionsActionsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
-    administration: Optional[AppPermissionsAdministrationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('administration') }})
-    checks: Optional[AppPermissionsChecksEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checks') }})
-    content_references: Optional[AppPermissionsContentReferencesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_references') }})
-    contents: Optional[AppPermissionsContentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
-    deployments: Optional[AppPermissionsDeploymentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployments') }})
-    environments: Optional[AppPermissionsEnvironmentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environments') }})
-    issues: Optional[AppPermissionsIssuesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('issues') }})
-    members: Optional[AppPermissionsMembersEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('members') }})
-    metadata: Optional[AppPermissionsMetadataEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    organization_administration: Optional[AppPermissionsOrganizationAdministrationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_administration') }})
-    organization_hooks: Optional[AppPermissionsOrganizationHooksEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_hooks') }})
-    organization_plan: Optional[AppPermissionsOrganizationPlanEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_plan') }})
-    organization_projects: Optional[AppPermissionsOrganizationProjectsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_projects') }})
-    organization_secrets: Optional[AppPermissionsOrganizationSecretsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_secrets') }})
-    organization_self_hosted_runners: Optional[AppPermissionsOrganizationSelfHostedRunnersEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_self_hosted_runners') }})
-    organization_user_blocking: Optional[AppPermissionsOrganizationUserBlockingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_user_blocking') }})
-    packages: Optional[AppPermissionsPackagesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('packages') }})
-    pages: Optional[AppPermissionsPagesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pages') }})
-    pull_requests: Optional[AppPermissionsPullRequestsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pull_requests') }})
-    repository_hooks: Optional[AppPermissionsRepositoryHooksEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_hooks') }})
-    repository_projects: Optional[AppPermissionsRepositoryProjectsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_projects') }})
-    secret_scanning_alerts: Optional[AppPermissionsSecretScanningAlertsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret_scanning_alerts') }})
-    secrets: Optional[AppPermissionsSecretsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secrets') }})
-    security_events: Optional[AppPermissionsSecurityEventsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('security_events') }})
-    single_file: Optional[AppPermissionsSingleFileEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('single_file') }})
-    statuses: Optional[AppPermissionsStatusesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statuses') }})
-    team_discussions: Optional[AppPermissionsTeamDiscussionsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_discussions') }})
-    vulnerability_alerts: Optional[AppPermissionsVulnerabilityAlertsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vulnerability_alerts') }})
-    workflows: Optional[AppPermissionsWorkflowsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workflows') }})
+    actions: Optional[AppPermissionsActionsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
+    administration: Optional[AppPermissionsAdministrationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('administration') }})
+    checks: Optional[AppPermissionsChecksEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checks') }})
+    content_references: Optional[AppPermissionsContentReferencesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_references') }})
+    contents: Optional[AppPermissionsContentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contents') }})
+    deployments: Optional[AppPermissionsDeploymentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployments') }})
+    environments: Optional[AppPermissionsEnvironmentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environments') }})
+    issues: Optional[AppPermissionsIssuesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('issues') }})
+    members: Optional[AppPermissionsMembersEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('members') }})
+    metadata: Optional[AppPermissionsMetadataEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    organization_administration: Optional[AppPermissionsOrganizationAdministrationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_administration') }})
+    organization_hooks: Optional[AppPermissionsOrganizationHooksEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_hooks') }})
+    organization_plan: Optional[AppPermissionsOrganizationPlanEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_plan') }})
+    organization_projects: Optional[AppPermissionsOrganizationProjectsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_projects') }})
+    organization_secrets: Optional[AppPermissionsOrganizationSecretsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_secrets') }})
+    organization_self_hosted_runners: Optional[AppPermissionsOrganizationSelfHostedRunnersEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_self_hosted_runners') }})
+    organization_user_blocking: Optional[AppPermissionsOrganizationUserBlockingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_user_blocking') }})
+    packages: Optional[AppPermissionsPackagesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('packages') }})
+    pages: Optional[AppPermissionsPagesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pages') }})
+    pull_requests: Optional[AppPermissionsPullRequestsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pull_requests') }})
+    repository_hooks: Optional[AppPermissionsRepositoryHooksEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_hooks') }})
+    repository_projects: Optional[AppPermissionsRepositoryProjectsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_projects') }})
+    secret_scanning_alerts: Optional[AppPermissionsSecretScanningAlertsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secret_scanning_alerts') }})
+    secrets: Optional[AppPermissionsSecretsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secrets') }})
+    security_events: Optional[AppPermissionsSecurityEventsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('security_events') }})
+    single_file: Optional[AppPermissionsSingleFileEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('single_file') }})
+    statuses: Optional[AppPermissionsStatusesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statuses') }})
+    team_discussions: Optional[AppPermissionsTeamDiscussionsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team_discussions') }})
+    vulnerability_alerts: Optional[AppPermissionsVulnerabilityAlertsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vulnerability_alerts') }})
+    workflows: Optional[AppPermissionsWorkflowsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workflows') }})
     

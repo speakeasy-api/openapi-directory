@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,47 +21,46 @@ req = operations.JobsProjectsClientEventsCreateRequest(
         option1=operations.JobsProjectsClientEventsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.JobsProjectsClientEventsCreatePathParams(
-        parent="expedita",
+        parent="eveniet",
     ),
     query_params=operations.JobsProjectsClientEventsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="doloremque",
-        alt="media",
-        callback="in",
-        fields="dignissimos",
-        key="temporibus",
-        oauth_token="ipsa",
-        pretty_print=False,
-        quota_user="impedit",
-        upload_type="molestiae",
-        upload_protocol="dolor",
+        dollar_xgafv="2",
+        access_token="ut",
+        alt="json",
+        callback="deserunt",
+        fields="ut",
+        key="provident",
+        oauth_token="alias",
+        pretty_print=True,
+        quota_user="atque",
+        upload_type="dolore",
+        upload_protocol="voluptatem",
     ),
     request=shared.CreateClientEventRequest(
         client_event=shared.ClientEvent(
-            create_time="tempore",
-            event_id="voluptatem",
+            create_time="est",
+            event_id="quo",
             extra_info={
-                "non": "qui",
-                "nemo": "explicabo",
-                "consectetur": "distinctio",
+                "accusantium": "tempora",
+                "voluptatibus": "corporis",
+                "ex": "voluptatem",
             },
             job_event=shared.JobEvent(
                 jobs=[
-                    "quae",
-                    "earum",
-                    "voluptatem",
+                    "dolorem",
+                    "qui",
                 ],
-                type="IMPRESSION",
+                type="APPLICATION_COMPANY_SUBMIT",
             ),
-            parent_event_id="sunt",
-            request_id="ratione",
+            parent_event_id="consequatur",
+            request_id="quaerat",
         ),
     ),
 )

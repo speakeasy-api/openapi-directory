@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import payoutsummaryresponse as shared_payoutsummaryresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutSummaryQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutSummarySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutSummaryRequest:
-    query_params: GetPayoutSummaryQueryParams = field()
-    security: GetPayoutSummarySecurity = field()
+    query_params: GetPayoutSummaryQueryParams = dataclasses.field()
+    security: GetPayoutSummarySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayoutSummaryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payout_summary_response: Optional[shared.PayoutSummaryResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payout_summary_response: Optional[shared_payoutsummaryresponse.PayoutSummaryResponse] = dataclasses.field(default=None)
     

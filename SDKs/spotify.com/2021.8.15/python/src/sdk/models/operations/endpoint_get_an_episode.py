@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import episodeobject as shared_episodeobject
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodeQueryParams:
-    market: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    market: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodeHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodeSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodeRequest:
-    headers: EndpointGetAnEpisodeHeaders = field()
-    path_params: EndpointGetAnEpisodePathParams = field()
-    query_params: EndpointGetAnEpisodeQueryParams = field()
-    security: EndpointGetAnEpisodeSecurity = field()
+    headers: EndpointGetAnEpisodeHeaders = dataclasses.field()
+    path_params: EndpointGetAnEpisodePathParams = dataclasses.field()
+    query_params: EndpointGetAnEpisodeQueryParams = dataclasses.field()
+    security: EndpointGetAnEpisodeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnEpisodeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    episode_object: Optional[shared.EpisodeObject] = field(default=None)
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    episode_object: Optional[shared_episodeobject.EpisodeObject] = dataclasses.field(default=None)
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
     

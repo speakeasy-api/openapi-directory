@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import transfer as shared_transfer
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransferPathParams:
-    transfer_id: str = field(metadata={'path_param': { 'field_name': 'transfer_Id', 'style': 'simple', 'explode': False }})
+    transfer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transfer_Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransferSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransferRequest:
-    path_params: GetTransferPathParams = field()
-    security: GetTransferSecurity = field()
+    path_params: GetTransferPathParams = dataclasses.field()
+    security: GetTransferSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransferResponse:
-    content_type: str = field()
-    status_code: int = field()
-    transfer: Optional[shared.Transfer] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    transfer: Optional[shared_transfer.Transfer] = dataclasses.field(default=None)
     

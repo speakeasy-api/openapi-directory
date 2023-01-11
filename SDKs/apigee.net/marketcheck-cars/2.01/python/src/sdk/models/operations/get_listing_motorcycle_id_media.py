@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import listingmedia as shared_listingmedia
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingMotorcycleIDMediaPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingMotorcycleIDMediaQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingMotorcycleIDMediaRequest:
-    path_params: GetListingMotorcycleIDMediaPathParams = field()
-    query_params: GetListingMotorcycleIDMediaQueryParams = field()
+    path_params: GetListingMotorcycleIDMediaPathParams = dataclasses.field()
+    query_params: GetListingMotorcycleIDMediaQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingMotorcycleIDMediaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    listing_media: Optional[shared.ListingMedia] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    listing_media: Optional[shared_listingmedia.ListingMedia] = dataclasses.field(default=None)
     

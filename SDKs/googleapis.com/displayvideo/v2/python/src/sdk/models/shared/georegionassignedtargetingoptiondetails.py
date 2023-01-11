@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -37,25 +37,25 @@ class GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
-class GeoRegionAssignedTargetingOptionDetailsInput:
-    r"""GeoRegionAssignedTargetingOptionDetailsInput
-    Details for assigned geographic region targeting option. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_GEO_REGION`.
-    """
-    
-    negative: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negative') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GeoRegionAssignedTargetingOptionDetails:
     r"""GeoRegionAssignedTargetingOptionDetails
     Details for assigned geographic region targeting option. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_GEO_REGION`.
     """
     
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    geo_region_type: Optional[GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegionType') }})
-    negative: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negative') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    geo_region_type: Optional[GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('geoRegionType') }})
+    negative: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negative') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class GeoRegionAssignedTargetingOptionDetailsInput:
+    r"""GeoRegionAssignedTargetingOptionDetailsInput
+    Details for assigned geographic region targeting option. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_GEO_REGION`.
+    """
+    
+    negative: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('negative') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     

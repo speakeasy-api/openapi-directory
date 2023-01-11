@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clickmodel as shared_clickmodel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetClicksModel:
-    clicks: Optional[List[ClickModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clicks') }})
-    last_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastId') }})
+    clicks: Optional[list[shared_clickmodel.ClickModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clicks') }})
+    last_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastId') }})
     

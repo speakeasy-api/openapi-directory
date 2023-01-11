@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from . import *
+from ..shared import googlerpcstatus as shared_googlerpcstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleLongrunningOperation:
     r"""GoogleLongrunningOperation
     This resource represents a long-running operation that is the result of a
     network API call.
     """
     
-    done: Optional[bool] = field(default=None)
-    error: Optional[GoogleRPCStatus] = field(default=None)
-    metadata: Optional[dict[str, Any]] = field(default=None)
-    name: Optional[str] = field(default=None)
-    response: Optional[dict[str, Any]] = field(default=None)
+    done: Optional[bool] = dataclasses.field(default=None)
+    error: Optional[shared_googlerpcstatus.GoogleRPCStatus] = dataclasses.field(default=None)
+    metadata: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

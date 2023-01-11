@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,13 +14,13 @@ class PatchesSchemaOpEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatchesSchema:
     r"""PatchesSchema
     A JSON patch operation
     """
     
-    op: PatchesSchemaOpEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
-    path: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    value: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    op: PatchesSchemaOpEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
+    path: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    value: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

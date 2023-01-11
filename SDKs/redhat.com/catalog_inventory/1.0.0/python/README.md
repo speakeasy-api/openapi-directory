@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,22 +24,9 @@ s.config_security(
     )
 )
     
-req = operations.AppliedInventoriesTagsForServiceOfferingRequest(
-    path_params=operations.AppliedInventoriesTagsForServiceOfferingPathParams(
-        id="consequatur",
-    ),
-    request=shared.AppliedInventoriesParametersServicePlan(
-        service_parameters={
-            "non": "ipsa",
-            "aut": "debitis",
-            "doloribus": "distinctio",
-        },
-    ),
-)
-    
-res = s.sdk.applied_inventories_tags_for_service_offering(req)
+res = s.get_documentation()
 
-if res.tags is not None:
+if res.get_documentation_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -50,20 +36,55 @@ if res.tags is not None:
 
 ### SDK SDK
 
-* `applied_inventories_tags_for_service_offering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `get_documentation` - Return this API document in JSON format
-* `incremental_refresh_source` - Incremental Refresh an existing Source
-* `list_service_credential_types` - List ServiceCredentialTypes
+* `post_graph_ql` - Perform a GraphQL Query
+
+### ServiceCredential
+
 * `list_service_credentials` - List ServiceCredentials
+* `show_service_credential` - Show an existing ServiceCredential
+
+### ServiceCredentialType
+
+* `list_service_credential_types` - List ServiceCredentialTypes
+* `show_service_credential_type` - Show an existing ServiceCredentialType
+
+### ServiceInstance
+
 * `list_service_instances` - List ServiceInstances
+* `show_service_instance` - Show an existing ServiceInstance
+
+### ServiceInventory
+
 * `list_service_inventories` - List ServiceInventories
 * `list_service_inventory_tags` - List Tags for ServiceInventory
-* `list_service_offering_nodes` - List ServiceOfferingNodes
+* `show_service_inventory` - Show an existing ServiceInventory
+* `tag_service_inventory` - Tag a ServiceInventory
+* `untag_service_inventory` - Untag a ServiceInventory
+
+### ServiceOffering
+
+* `applied_inventories_tags_for_service_offering` - Invokes computing of ServiceInventories tags for given ServiceOffering
 * `list_service_offering_service_instances` - List ServiceInstances for ServiceOffering
 * `list_service_offering_service_offering_nodes` - List ServiceOfferingNodes for ServiceOffering
 * `list_service_offering_service_plans` - List ServicePlans for ServiceOffering
 * `list_service_offerings` - List ServiceOfferings
+* `order_service_offering` - Order an existing ServiceOffering
+* `show_service_offering` - Show an existing ServiceOffering
+
+### ServiceOfferingNode
+
+* `list_service_offering_nodes` - List ServiceOfferingNodes
+* `show_service_offering_node` - Show an existing ServiceOfferingNode
+
+### ServicePlan
+
 * `list_service_plans` - List ServicePlans
+* `show_service_plan` - Show an existing ServicePlan
+
+### Source
+
+* `incremental_refresh_source` - Incremental Refresh an existing Source
 * `list_source_service_instances` - List ServiceInstances for Source
 * `list_source_service_inventories` - List ServiceInventories for Source
 * `list_source_service_offering_nodes` - List ServiceOfferingNodes for Source
@@ -71,22 +92,17 @@ if res.tags is not None:
 * `list_source_service_plans` - List ServicePlans for Source
 * `list_source_tasks` - List Tasks for Source
 * `list_sources` - List Sources
-* `list_tags` - List Tags
-* `list_tasks` - List Tasks
-* `order_service_offering` - Order an existing ServiceOffering
-* `post_graph_ql` - Perform a GraphQL Query
 * `refresh_source` -  Refresh an existing Source
-* `show_service_credential` - Show an existing ServiceCredential
-* `show_service_credential_type` - Show an existing ServiceCredentialType
-* `show_service_instance` - Show an existing ServiceInstance
-* `show_service_inventory` - Show an existing ServiceInventory
-* `show_service_offering` - Show an existing ServiceOffering
-* `show_service_offering_node` - Show an existing ServiceOfferingNode
-* `show_service_plan` - Show an existing ServicePlan
 * `show_source` - Show an existing Source
+
+### Tags
+
+* `list_tags` - List Tags
+
+### Task
+
+* `list_tasks` - List Tasks
 * `show_task` - Show an existing Task
-* `tag_service_inventory` - Tag a ServiceInventory
-* `untag_service_inventory` - Untag a ServiceInventory
 * `update_task` - Update an existing Task
 
 <!-- End SDK Available Operations -->

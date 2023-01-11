@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProductModulePathParams:
-    product_module_number: str = field(metadata={'path_param': { 'field_name': 'productModuleNumber', 'style': 'simple', 'explode': False }})
+    product_module_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productModuleNumber', 'style': 'simple', 'explode': False }})
     
 class UpdateProductModuleRequestBodyLicenseTemplateEnum(str, Enum):
     TIMEVOLUME = "TIMEVOLUME"
@@ -20,35 +20,35 @@ class UpdateProductModuleRequestBodyNodeSecretModeEnum(str, Enum):
     CLIENT = "CLIENT"
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProductModuleRequestBody:
-    active: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'active' }})
-    license_template: Optional[List[UpdateProductModuleRequestBodyLicenseTemplateEnum]] = field(default=None, metadata={'form': { 'field_name': 'licenseTemplate' }})
-    licensing_model: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'licensingModel' }})
-    max_checkout_validity: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'maxCheckoutValidity' }})
-    name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'name' }})
-    node_secret_mode: Optional[List[UpdateProductModuleRequestBodyNodeSecretModeEnum]] = field(default=None, metadata={'form': { 'field_name': 'nodeSecretMode' }})
-    number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'number' }})
-    red_threshold: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'redThreshold' }})
-    yellow_threshold: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'yellowThreshold' }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'active' }})
+    license_template: Optional[list[UpdateProductModuleRequestBodyLicenseTemplateEnum]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licenseTemplate' }})
+    licensing_model: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licensingModel' }})
+    max_checkout_validity: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'maxCheckoutValidity' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'name' }})
+    node_secret_mode: Optional[list[UpdateProductModuleRequestBodyNodeSecretModeEnum]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'nodeSecretMode' }})
+    number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'number' }})
+    red_threshold: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'redThreshold' }})
+    yellow_threshold: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'yellowThreshold' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProductModuleSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProductModuleRequest:
-    path_params: UpdateProductModulePathParams = field()
-    security: UpdateProductModuleSecurity = field()
-    request: Optional[UpdateProductModuleRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: UpdateProductModulePathParams = dataclasses.field()
+    security: UpdateProductModuleSecurity = dataclasses.field()
+    request: Optional[UpdateProductModuleRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateProductModuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import loglist as shared_loglist
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetLogsPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetLogsSecurity:
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetLogsRequest:
-    path_params: UsersGetLogsPathParams = field()
-    security: UsersGetLogsSecurity = field()
+    path_params: UsersGetLogsPathParams = dataclasses.field()
+    security: UsersGetLogsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetLogsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    log_list: Optional[shared.LogList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    log_list: Optional[shared_loglist.LogList] = dataclasses.field(default=None)
     

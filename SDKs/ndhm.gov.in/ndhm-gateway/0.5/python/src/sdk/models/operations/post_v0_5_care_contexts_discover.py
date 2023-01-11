@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import patientdiscoveryrequest as shared_patientdiscoveryrequest
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05CareContextsDiscoverHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_hip_id: str = field(metadata={'header': { 'field_name': 'X-HIP-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_hip_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-HIP-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05CareContextsDiscoverRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    patient_discovery_request: Optional[shared.PatientDiscoveryRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    patient_discovery_request: Optional[shared_patientdiscoveryrequest.PatientDiscoveryRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05CareContextsDiscoverRequest:
-    headers: PostV05CareContextsDiscoverHeaders = field()
-    request: PostV05CareContextsDiscoverRequests = field()
+    headers: PostV05CareContextsDiscoverHeaders = dataclasses.field()
+    request: PostV05CareContextsDiscoverRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05CareContextsDiscoverResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

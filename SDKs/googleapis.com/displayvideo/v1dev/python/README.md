@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,27 +21,27 @@ req = operations.DisplayvideoMediaDownloadRequest(
         option1=operations.DisplayvideoMediaDownloadSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.DisplayvideoMediaDownloadPathParams(
-        resource_name="vero",
+        resource_name="ab",
     ),
     query_params=operations.DisplayvideoMediaDownloadQueryParams(
         dollar_xgafv="1",
-        access_token="debitis",
-        alt="media",
-        callback="ut",
-        fields="sed",
-        key="expedita",
-        oauth_token="sunt",
+        access_token="quia",
+        alt="proto",
+        callback="ad",
+        fields="adipisci",
+        key="deleniti",
+        oauth_token="corrupti",
         pretty_print=False,
-        quota_user="unde",
-        upload_type="maiores",
-        upload_protocol="cupiditate",
+        quota_user="dolorem",
+        upload_type="omnis",
+        upload_protocol="qui",
     ),
 )
     

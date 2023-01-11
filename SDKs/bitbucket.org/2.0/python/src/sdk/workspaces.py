@@ -1,0 +1,800 @@
+import requests
+from typing import Any,Optional
+from sdk.models import shared, operations
+from . import utils
+
+class Workspaces:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def delete_workspaces_workspace_hooks_uid_(self, request: operations.DeleteWorkspacesWorkspaceHooksUIDRequest) -> operations.DeleteWorkspacesWorkspaceHooksUIDResponse:
+        r"""Deletes the specified webhook subscription from the given workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/hooks/{uid}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeleteWorkspacesWorkspaceHooksUIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_user_permissions_workspaces(self, request: operations.GetUserPermissionsWorkspacesRequest) -> operations.GetUserPermissionsWorkspacesResponse:
+        r"""Returns an object for each workspace the caller is a member of, and
+        their effective role - the highest level of privilege the caller has.
+        If a user is a member of multiple groups with distinct roles, only the
+        highest level is returned.
+        
+        Permissions can be:
+        
+        * `owner`
+        * `collaborator`
+        * `member`
+        
+        Example:
+        
+        ```
+        $ curl https://api.bitbucket.org/2.0/user/permissions/workspaces
+        
+        {
+          \"pagelen\": 10,
+          \"page\": 1,
+          \"size\": 1,
+          \"values\": [
+            {
+              \"type\": \"workspace_membership\",
+              \"permission\": \"owner\",
+              \"last_accessed\": \"2019-03-07T12:35:02.900024+00:00\",
+              \"added_on\": \"2018-10-11T17:42:02.961424+00:00\",
+              \"user\": {
+                \"type\": \"user\",
+                \"uuid\": \"{470c176d-3574-44ea-bb41-89e8638bcca4}\",
+                \"nickname\": \"evzijst\",
+                \"display_name\": \"Erik van Zijst\",
+              },
+              \"workspace\": {
+                \"type\": \"workspace\",
+                \"uuid\": \"{a15fb181-db1f-48f7-b41f-e1eff06929d6}\",
+                \"slug\": \"bbworkspace1\",
+                \"name\": \"Atlassian Bitbucket\",
+              }
+            }
+          ]
+        }
+        ```
+        
+        Results may be further [filtered or sorted](../../../meta/filtering) by
+        workspace or permission by adding the following query string parameters:
+        
+        * `q=workspace.slug=\"bbworkspace1\"` or `q=permission=\"owner\"`
+        * `sort=workspace.slug`
+        
+        Note that the query parameter values need to be URL escaped so that `=`
+        would become `%3D`.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/user/permissions/workspaces"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUserPermissionsWorkspacesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedWorkspaceMemberships])
+                res.paginated_workspace_memberships = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces(self, request: operations.GetWorkspacesRequest) -> operations.GetWorkspacesResponse:
+        r"""Returns a list of workspaces accessible by the authenticated user.
+        
+        Example:
+        
+        ```
+        $ curl https://api.bitbucket.org/2.0/workspaces
+        
+        {
+          \"pagelen\": 10,
+          \"page\": 1,
+          \"size\": 1,
+          \"values\": [
+            {
+                \"uuid\": \"{a15fb181-db1f-48f7-b41f-e1eff06929d6}\",
+                \"links\": {
+                    \"owners\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members?q=permission%3D%22owner%22\"
+                    },
+                    \"self\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/workspaces/bbworkspace1\"
+                    },
+                    \"repositories\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/repositories/bbworkspace1\"
+                    },
+                    \"snippets\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/snippets/bbworkspace1\"
+                    },
+                    \"html\": {
+                        \"href\": \"https://bitbucket.org/bbworkspace1/\"
+                    },
+                    \"avatar\": {
+                        \"href\": \"https://bitbucket.org/workspaces/bbworkspace1/avatar/?ts=1543465801\"
+                    },
+                    \"members\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/workspaces/bbworkspace1/members\"
+                    },
+                    \"projects\": {
+                        \"href\": \"https://api.bitbucket.org/2.0/workspaces/bbworkspace1/projects\"
+                    }
+                },
+                \"created_on\": \"2018-11-14T19:15:05.058566+00:00\",
+                \"type\": \"workspace\",
+                \"slug\": \"bbworkspace1\",
+                \"is_private\": true,
+                \"name\": \"Atlassian Bitbucket\"
+            }
+          ]
+        }
+        ```
+        
+        Results may be further [filtered or sorted](../meta/filtering) by
+        workspace or permission by adding the following query string parameters:
+        
+        * `q=slug=\"bbworkspace1\"` or `q=is_private=true`
+        * `sort=created_on`
+        
+        Note that the query parameter values need to be URL escaped so that `=`
+        would become `%3D`.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/workspaces"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedWorkspaces])
+                res.paginated_workspaces = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_(self, request: operations.GetWorkspacesWorkspaceRequest) -> operations.GetWorkspacesWorkspaceResponse:
+        r"""Returns the requested workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.workspace = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_hooks(self, request: operations.GetWorkspacesWorkspaceHooksRequest) -> operations.GetWorkspacesWorkspaceHooksResponse:
+        r"""Returns a paginated list of webhooks installed on this workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/hooks", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceHooksResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedWebhookSubscriptions])
+                res.paginated_webhook_subscriptions = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_hooks_uid_(self, request: operations.GetWorkspacesWorkspaceHooksUIDRequest) -> operations.GetWorkspacesWorkspaceHooksUIDResponse:
+        r"""Returns the webhook with the specified id installed on the given
+        workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/hooks/{uid}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceHooksUIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.webhook_subscription = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_members(self, request: operations.GetWorkspacesWorkspaceMembersRequest) -> operations.GetWorkspacesWorkspaceMembersResponse:
+        r"""Returns all members of the requested workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/members", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceMembersResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedWorkspaceMemberships])
+                res.paginated_workspace_memberships = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_members_member_(self, request: operations.GetWorkspacesWorkspaceMembersMemberRequest) -> operations.GetWorkspacesWorkspaceMembersMemberResponse:
+        r"""Returns the workspace membership, which includes
+        a `User` object for the member and a `Workspace` object
+        for the requested workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/members/{member}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceMembersMemberResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.workspace_membership = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_permissions(self, request: operations.GetWorkspacesWorkspacePermissionsRequest) -> operations.GetWorkspacesWorkspacePermissionsResponse:
+        r"""Returns the list of members in a workspace
+        and their permission levels.
+        Permission can be:
+        * `owner`
+        * `collaborator`
+        * `member`
+        
+        Example:
+        
+        ```
+        $ curl -X https://api.bitbucket.org/2.0/workspaces/bbworkspace1/permissions
+        
+        {
+            \"pagelen\": 10,
+            \"values\": [
+                {
+                    \"permission\": \"owner\",
+                    \"type\": \"workspace_membership\",
+                    \"user\": {
+                        \"type\": \"user\",
+                        \"uuid\": \"{470c176d-3574-44ea-bb41-89e8638bcca4}\",
+                        \"display_name\": \"Erik van Zijst\",
+                    },
+                    \"workspace\": {
+                        \"type\": \"workspace\",
+                        \"uuid\": \"{a15fb181-db1f-48f7-b41f-e1eff06929d6}\",
+                        \"slug\": \"bbworkspace1\",
+                        \"name\": \"Atlassian Bitbucket\",
+                    }
+                },
+                {
+                    \"permission\": \"member\",
+                    \"type\": \"workspace_membership\",
+                    \"user\": {
+                        \"type\": \"user\",
+                        \"nickname\": \"seanaty\",
+                        \"display_name\": \"Sean Conaty\",
+                        \"uuid\": \"{504c3b62-8120-4f0c-a7bc-87800b9d6f70}\"
+                    },
+                    \"workspace\": {
+                        \"type\": \"workspace\",
+                        \"uuid\": \"{a15fb181-db1f-48f7-b41f-e1eff06929d6}\",
+                        \"slug\": \"bbworkspace1\",
+                        \"name\": \"Atlassian Bitbucket\",
+                    }
+                }
+            ],
+            \"page\": 1,
+            \"size\": 2
+        }
+        ```
+        
+        Results may be further [filtered](../../../meta/filtering) by
+        permission by adding the following query string parameters:
+        
+        * `q=permission=\"owner\"`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/permissions", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspacePermissionsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedWorkspaceMemberships])
+                res.paginated_workspace_memberships = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_permissions_repositories(self, request: operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest) -> operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse:
+        r"""Returns an object for each repository permission for all of a
+        workspace's repositories.
+        
+        Permissions returned are effective permissions: the highest level of
+        permission the user has. This does not distinguish between direct and
+        indirect (group) privileges.
+        
+        Only users with admin permission for the team may access this resource.
+        
+        Permissions can be:
+        
+        * `admin`
+        * `write`
+        * `read`
+        
+        Example:
+        
+        ```
+        $ curl https://api.bitbucket.org/2.0/workspaces/atlassian_tutorial/permissions/repositories
+        
+        {
+          \"pagelen\": 10,
+          \"values\": [
+            {
+              \"type\": \"repository_permission\",
+              \"user\": {
+                \"type\": \"user\",
+                \"display_name\": \"Erik van Zijst\",
+                \"uuid\": \"{d301aafa-d676-4ee0-88be-962be7417567}\"
+              },
+              \"repository\": {
+                \"type\": \"repository\",
+                \"name\": \"geordi\",
+                \"full_name\": \"atlassian_tutorial/geordi\",
+                \"uuid\": \"{85d08b4e-571d-44e9-a507-fa476535aa98}\"
+              },
+              \"permission\": \"admin\"
+            },
+            {
+              \"type\": \"repository_permission\",
+              \"user\": {
+                \"type\": \"user\",
+                \"display_name\": \"Sean Conaty\",
+                \"uuid\": \"{504c3b62-8120-4f0c-a7bc-87800b9d6f70}\"
+              },
+              \"repository\": {
+                \"type\": \"repository\",
+                \"name\": \"geordi\",
+                \"full_name\": \"atlassian_tutorial/geordi\",
+                \"uuid\": \"{85d08b4e-571d-44e9-a507-fa476535aa98}\"
+              },
+              \"permission\": \"write\"
+            },
+            {
+              \"type\": \"repository_permission\",
+              \"user\": {
+                \"type\": \"user\",
+                \"display_name\": \"Jeff Zeng\",
+                \"uuid\": \"{47f92a9a-c3a3-4d0b-bc4e-782a969c5c72}\"
+              },
+              \"repository\": {
+                \"type\": \"repository\",
+                \"name\": \"whee\",
+                \"full_name\": \"atlassian_tutorial/whee\",
+                \"uuid\": \"{30ba25e9-51ff-4555-8dd0-fc7ee2fa0895}\"
+              },
+              \"permission\": \"admin\"
+            }
+          ],
+          \"page\": 1,
+          \"size\": 3
+        }
+        ```
+        
+        Results may be further [filtered or sorted](../../../../meta/filtering)
+        by repository, user, or permission by adding the following query string
+        parameters:
+        
+        * `q=repository.name=\"geordi\"` or `q=permission>\"read\"`
+        * `sort=user.display_name`
+        
+        Note that the query parameter values need to be URL escaped so that `=`
+        would become `%3D`.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/permissions/repositories", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedRepositoryPermissions])
+                res.paginated_repository_permissions = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_permissions_repositories_repo_slug_(self, request: operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest) -> operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse:
+        r"""Returns an object for the repository permission of each user in the
+        requested repository.
+        
+        Permissions returned are effective permissions: the highest level of
+        permission the user has. This does not distinguish between direct and
+        indirect (group) privileges.
+        
+        Only users with admin permission for the repository may access this resource.
+        
+        Permissions can be:
+        
+        * `admin`
+        * `write`
+        * `read`
+        
+        Example:
+        
+        ```
+        $ curl https://api.bitbucket.org/2.0/workspaces/atlassian_tutorial/permissions/repositories/geordi
+        
+        {
+          \"pagelen\": 10,
+          \"values\": [
+            {
+              \"type\": \"repository_permission\",
+              \"user\": {
+                \"type\": \"user\",
+                \"display_name\": \"Erik van Zijst\",
+                \"uuid\": \"{d301aafa-d676-4ee0-88be-962be7417567}\"
+              },
+              \"repository\": {
+                \"type\": \"repository\",
+                \"name\": \"geordi\",
+                \"full_name\": \"atlassian_tutorial/geordi\",
+                \"uuid\": \"{85d08b4e-571d-44e9-a507-fa476535aa98}\"
+              },
+              \"permission\": \"admin\"
+            },
+            {
+              \"type\": \"repository_permission\",
+              \"user\": {
+                \"type\": \"user\",
+                \"display_name\": \"Sean Conaty\",
+                \"uuid\": \"{504c3b62-8120-4f0c-a7bc-87800b9d6f70}\"
+              },
+              \"repository\": {
+                \"type\": \"repository\",
+                \"name\": \"geordi\",
+                \"full_name\": \"atlassian_tutorial/geordi\",
+                \"uuid\": \"{85d08b4e-571d-44e9-a507-fa476535aa98}\"
+              },
+              \"permission\": \"write\"
+            }
+          ],
+          \"page\": 1,
+          \"size\": 2
+        }
+        ```
+        
+        Results may be further [filtered or sorted](../../../../meta/filtering)
+        by user, or permission by adding the following query string parameters:
+        
+        * `q=permission>\"read\"`
+        * `sort=user.display_name`
+        
+        Note that the query parameter values need to be URL escaped so that `=`
+        would become `%3D`.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedRepositoryPermissions])
+                res.paginated_repository_permissions = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_projects(self, request: operations.GetWorkspacesWorkspaceProjectsRequest) -> operations.GetWorkspacesWorkspaceProjectsResponse:
+        r"""Returns the list of projects in this workspace.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/projects", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceProjectsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PaginatedProjects])
+                res.paginated_projects = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def get_workspaces_workspace_projects_project_key_(self, request: operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest) -> operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse:
+        r"""Returns the requested project.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/projects/{project_key}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.project = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def post_workspaces_workspace_hooks(self, request: operations.PostWorkspacesWorkspaceHooksRequest) -> operations.PostWorkspacesWorkspaceHooksResponse:
+        r"""Creates a new webhook on the specified workspace.
+        
+        Workspace webhooks are fired for events from all repositories contained
+        by that workspace.
+        
+        Note that only owners can install webhooks on workspaces.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/hooks", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostWorkspacesWorkspaceHooksResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            res.headers = r.headers
+            
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.webhook_subscription = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    
+    def put_workspaces_workspace_hooks_uid_(self, request: operations.PutWorkspacesWorkspaceHooksUIDRequest) -> operations.PutWorkspacesWorkspaceHooksUIDResponse:
+        r"""Updates the specified webhook subscription.
+        
+        The following properties can be mutated:
+        
+        * `description`
+        * `url`
+        * `active`
+        * `events`
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/workspaces/{workspace}/hooks/{uid}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PUT", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PutWorkspacesWorkspaceHooksUIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.webhook_subscription = out
+        elif r.status_code == 403:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[dict[str, Any]])
+                res.error = out
+
+        return res
+
+    

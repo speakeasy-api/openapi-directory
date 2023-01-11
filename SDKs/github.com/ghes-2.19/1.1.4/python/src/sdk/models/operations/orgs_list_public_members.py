@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import simple_user as shared_simple_user
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListPublicMembersPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListPublicMembersQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListPublicMembersRequest:
-    path_params: OrgsListPublicMembersPathParams = field()
-    query_params: OrgsListPublicMembersQueryParams = field()
+    path_params: OrgsListPublicMembersPathParams = dataclasses.field()
+    query_params: OrgsListPublicMembersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListPublicMembersResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
     

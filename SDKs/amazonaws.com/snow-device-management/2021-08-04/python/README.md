@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.CancelTaskRequest(
     path_params=operations.CancelTaskPathParams(
-        task_id="possimus",
+        task_id="itaque",
     ),
     headers=operations.CancelTaskHeaders(
-        x_amz_algorithm="non",
-        x_amz_content_sha256="rerum",
-        x_amz_credential="repellat",
-        x_amz_date="quas",
-        x_amz_security_token="eos",
-        x_amz_signature="modi",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="nobis",
+        x_amz_content_sha256="sequi",
+        x_amz_credential="esse",
+        x_amz_date="nobis",
+        x_amz_security_token="sint",
+        x_amz_signature="et",
+        x_amz_signed_headers="sequi",
     ),
 )
     
-res = s.sdk.cancel_task(req)
+res = s.cancel_task(req)
 
 if res.cancel_task_output is not None:
     # handle response

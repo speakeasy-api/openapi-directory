@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LatencyInjectionFaultConfig:
     r"""LatencyInjectionFaultConfig
     Config for large latency injection fault
     """
     
-    from_: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
-    ratio: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratio') }})
-    to: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
+    from_: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('from') }})
+    ratio: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratio') }})
+    to: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('to') }})
     

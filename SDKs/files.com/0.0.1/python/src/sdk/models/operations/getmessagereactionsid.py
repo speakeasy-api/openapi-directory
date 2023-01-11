@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messagereactionentity as shared_messagereactionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageReactionsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageReactionsIDRequest:
-    path_params: GetMessageReactionsIDPathParams = field()
+    path_params: GetMessageReactionsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageReactionsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_reaction_entity: Optional[shared.MessageReactionEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_reaction_entity: Optional[shared_messagereactionentity.MessageReactionEntity] = dataclasses.field(default=None)
     

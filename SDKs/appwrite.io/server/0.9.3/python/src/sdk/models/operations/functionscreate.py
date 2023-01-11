@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import function as shared_function
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateRequestBody:
-    execute: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('execute') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    runtime: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtime') }})
-    events: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('events') }})
-    schedule: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule') }})
-    timeout: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeout') }})
-    vars: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vars') }})
+    execute: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('execute') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    runtime: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtime') }})
+    events: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('events') }})
+    schedule: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule') }})
+    timeout: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeout') }})
+    vars: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vars') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateSecurity:
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateRequest:
-    security: FunctionsCreateSecurity = field()
-    request: Optional[FunctionsCreateRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: FunctionsCreateSecurity = dataclasses.field()
+    request: Optional[FunctionsCreateRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    function: Optional[shared.Function] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    function: Optional[shared_function.Function] = dataclasses.field(default=None)
     

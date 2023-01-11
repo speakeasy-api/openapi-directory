@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.ActivateEventSourceRequest(
     headers=operations.ActivateEventSourceHeaders(
-        x_amz_algorithm="laboriosam",
-        x_amz_content_sha256="hic",
-        x_amz_credential="porro",
-        x_amz_date="atque",
-        x_amz_security_token="et",
-        x_amz_signature="aperiam",
-        x_amz_signed_headers="beatae",
+        x_amz_algorithm="harum",
+        x_amz_content_sha256="quisquam",
+        x_amz_credential="expedita",
+        x_amz_date="et",
+        x_amz_security_token="voluptate",
+        x_amz_signature="omnis",
+        x_amz_signed_headers="dolores",
         x_amz_target="AWSEvents.ActivateEventSource",
     ),
     request=shared.ActivateEventSourceRequest(
-        name="sunt",
+        name="vel",
     ),
 )
     
-res = s.sdk.activate_event_source(req)
+res = s.activate_event_source(req)
 
 if res.status_code == 200:
     # handle response

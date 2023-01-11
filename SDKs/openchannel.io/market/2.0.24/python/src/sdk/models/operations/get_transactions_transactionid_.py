@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsTransactionIDPathParams:
-    transaction_id: str = field(metadata={'path_param': { 'field_name': 'transactionId', 'style': 'simple', 'explode': False }})
+    transaction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'transactionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsTransactionIDRequest:
-    path_params: GetTransactionsTransactionIDPathParams = field()
+    path_params: GetTransactionsTransactionIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsTransactionIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

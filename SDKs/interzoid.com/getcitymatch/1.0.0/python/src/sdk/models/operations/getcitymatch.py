@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetcitymatchQueryParams:
-    city: str = field(metadata={'query_param': { 'field_name': 'city', 'style': 'form', 'explode': True }})
-    license: str = field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
+    city: str = dataclasses.field(metadata={'query_param': { 'field_name': 'city', 'style': 'form', 'explode': True }})
+    license: str = dataclasses.field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Getcitymatch200ApplicationJSON:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
-    credits: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
-    simkey: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Simkey') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
+    credits: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
+    simkey: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Simkey') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetcitymatchRequest:
-    query_params: GetcitymatchQueryParams = field()
+    query_params: GetcitymatchQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetcitymatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getcitymatch_200_application_json_object: Optional[Getcitymatch200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getcitymatch_200_application_json_object: Optional[Getcitymatch200ApplicationJSON] = dataclasses.field(default=None)
     

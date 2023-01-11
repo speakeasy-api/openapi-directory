@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class NetworkUsersBadgeCounts:
-    bronze: Optional[int] = field(default=None)
-    gold: Optional[int] = field(default=None)
-    silver: Optional[int] = field(default=None)
+    bronze: Optional[int] = dataclasses.field(default=None)
+    gold: Optional[int] = dataclasses.field(default=None)
+    silver: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class NetworkUsers:
-    account_id: Optional[int] = field(default=None)
-    answer_count: Optional[int] = field(default=None)
-    badge_counts: Optional[NetworkUsersBadgeCounts] = field(default=None)
-    creation_date: Optional[int] = field(default=None)
-    last_access_date: Optional[int] = field(default=None)
-    question_count: Optional[int] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    site_name: Optional[str] = field(default=None)
-    site_url: Optional[str] = field(default=None)
-    top_answers: Optional[List[Any]] = field(default=None)
-    top_questions: Optional[List[Any]] = field(default=None)
-    user_id: Optional[int] = field(default=None)
-    user_type: Optional[str] = field(default=None)
+    account_id: Optional[int] = dataclasses.field(default=None)
+    answer_count: Optional[int] = dataclasses.field(default=None)
+    badge_counts: Optional[NetworkUsersBadgeCounts] = dataclasses.field(default=None)
+    creation_date: Optional[int] = dataclasses.field(default=None)
+    last_access_date: Optional[int] = dataclasses.field(default=None)
+    question_count: Optional[int] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    site_name: Optional[str] = dataclasses.field(default=None)
+    site_url: Optional[str] = dataclasses.field(default=None)
+    top_answers: Optional[list[Any]] = dataclasses.field(default=None)
+    top_questions: Optional[list[Any]] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
+    user_type: Optional[str] = dataclasses.field(default=None)
     

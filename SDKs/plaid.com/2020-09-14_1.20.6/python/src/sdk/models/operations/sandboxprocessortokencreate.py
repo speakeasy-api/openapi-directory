@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import sandboxprocessortokencreaterequest as shared_sandboxprocessortokencreaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class SandboxProcessorTokenCreateRequest:
-    request: shared.SandboxProcessorTokenCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_sandboxprocessortokencreaterequest.SandboxProcessorTokenCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SandboxProcessorTokenCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    sandbox_processor_token_create_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    sandbox_processor_token_create_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

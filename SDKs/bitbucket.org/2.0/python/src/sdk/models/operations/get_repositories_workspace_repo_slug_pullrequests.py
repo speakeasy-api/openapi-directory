@@ -1,13 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import paginated_pullrequests as shared_paginated_pullrequests
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 class GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum(str, Enum):
     MERGED = "MERGED"
@@ -16,29 +19,29 @@ class GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum(str, Enum):
     DECLINED = "DECLINED"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams:
-    state: Optional[GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    state: Optional[GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    basic: Optional[shared.SchemeBasic] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
-    oauth2: Optional[shared.SchemeOauth2] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    basic: Optional[shared_security.SchemeBasic] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    oauth2: Optional[shared_security.SchemeOauth2] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest:
-    path_params: GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams = field()
-    query_params: GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams = field()
-    security: GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity = field()
+    path_params: GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams = dataclasses.field()
+    query_params: GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams = dataclasses.field()
+    security: GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoriesWorkspaceRepoSlugPullrequestsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    paginated_pullrequests: Optional[shared.PaginatedPullrequests] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    paginated_pullrequests: Optional[shared_paginated_pullrequests.PaginatedPullrequests] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -10,22 +10,22 @@ class ExportTransactionsCsvv4IncludeEnum(str, Enum):
     PAYOR_AND_DESCENDANTS = "payorAndDescendants"
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportTransactionsCsvv4QueryParams:
-    end_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'endDate', 'style': 'form', 'explode': True }})
-    include: Optional[ExportTransactionsCsvv4IncludeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
-    payor_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
-    start_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
+    end_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endDate', 'style': 'form', 'explode': True }})
+    include: Optional[ExportTransactionsCsvv4IncludeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    payor_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
+    start_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportTransactionsCsvv4Request:
-    query_params: ExportTransactionsCsvv4QueryParams = field()
+    query_params: ExportTransactionsCsvv4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportTransactionsCsvv4Response:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

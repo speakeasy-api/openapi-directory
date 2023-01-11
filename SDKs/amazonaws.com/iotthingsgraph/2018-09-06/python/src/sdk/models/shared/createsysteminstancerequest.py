@@ -1,19 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import definitiondocument as shared_definitiondocument
+from ..shared import metricsconfiguration as shared_metricsconfiguration
+from ..shared import tag as shared_tag
+from ..shared import deploymenttarget_enum as shared_deploymenttarget_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateSystemInstanceRequest:
-    definition: DefinitionDocument = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('definition') }})
-    target: DeploymentTargetEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
-    flow_actions_role_arn: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('flowActionsRoleArn') }})
-    greengrass_group_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('greengrassGroupName') }})
-    metrics_configuration: Optional[MetricsConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricsConfiguration') }})
-    s3_bucket_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3BucketName') }})
-    tags: Optional[List[Tag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    definition: shared_definitiondocument.DefinitionDocument = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('definition') }})
+    target: shared_deploymenttarget_enum.DeploymentTargetEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
+    flow_actions_role_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('flowActionsRoleArn') }})
+    greengrass_group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('greengrassGroupName') }})
+    metrics_configuration: Optional[shared_metricsconfiguration.MetricsConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricsConfiguration') }})
+    s3_bucket_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3BucketName') }})
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     

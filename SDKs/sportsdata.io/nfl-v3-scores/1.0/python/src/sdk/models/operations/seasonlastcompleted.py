@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,19 +7,19 @@ class SeasonLastCompletedFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class SeasonLastCompletedPathParams:
-    format: SeasonLastCompletedFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: SeasonLastCompletedFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonLastCompletedRequest:
-    path_params: SeasonLastCompletedPathParams = field()
+    path_params: SeasonLastCompletedPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonLastCompletedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    season_last_completed_200_application_json_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    season_last_completed_200_application_json_integer: Optional[int] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApplicationSnapshotConfigurationUpdate:
     r"""ApplicationSnapshotConfigurationUpdate
     Describes updates to whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
     """
     
-    snapshots_enabled_update: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotsEnabledUpdate') }})
+    snapshots_enabled_update: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnapshotsEnabledUpdate') }})
     

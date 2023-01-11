@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PlayByPlaySimulationFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class PlayByPlaySimulationFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlaySimulationPathParams:
-    format: PlayByPlaySimulationFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    numberofplays: str = field(metadata={'path_param': { 'field_name': 'numberofplays', 'style': 'simple', 'explode': False }})
+    format: PlayByPlaySimulationFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    numberofplays: str = dataclasses.field(metadata={'path_param': { 'field_name': 'numberofplays', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlaySimulationRequest:
-    path_params: PlayByPlaySimulationPathParams = field()
+    path_params: PlayByPlaySimulationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PlayByPlaySimulationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    play_by_plays: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    play_by_plays: Optional[list[Any]] = dataclasses.field(default=None)
     

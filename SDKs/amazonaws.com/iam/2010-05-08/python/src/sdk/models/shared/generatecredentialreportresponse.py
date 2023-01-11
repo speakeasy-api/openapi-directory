@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import reportstatetype_enum as shared_reportstatetype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GenerateCredentialReportResponse:
     r"""GenerateCredentialReportResponse
     Contains the response to a successful <a>GenerateCredentialReport</a> request. 
     """
     
-    description: Optional[str] = field(default=None)
-    state: Optional[ReportStateTypeEnum] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    state: Optional[shared_reportstatetype_enum.ReportStateTypeEnum] = dataclasses.field(default=None)
     

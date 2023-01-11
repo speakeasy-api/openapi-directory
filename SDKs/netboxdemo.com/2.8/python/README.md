@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,21 +26,21 @@ s.config_security(
 req = operations.CircuitsCircuitTerminationsCreateRequest(
     request=shared.WritableCircuitTerminationInput(
         cable=shared.NestedCableInput(
-            label="aliquid",
+            label="nemo",
         ),
-        circuit=5396713859516954870,
+        circuit=7890651243899766706,
         connection_status=True,
-        description="animi",
-        port_speed=5767282679630353800,
-        pp_info="magni",
-        site=3444678983313942400,
+        description="hic",
+        port_speed=4398235907993438713,
+        pp_info="cupiditate",
+        site=8328236888456191330,
         term_side="A",
-        upstream_speed=2772754371455433371,
-        xconnect_id="eveniet",
+        upstream_speed=8250179090128807741,
+        xconnect_id="quis",
     ),
 )
     
-res = s.sdk.circuits_circuit_terminations_create(req)
+res = s.circuits.circuits_circuit_terminations_create(req)
 
 if res.circuit_termination is not None:
     # handle response
@@ -51,7 +50,7 @@ if res.circuit_termination is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `circuits_circuit_terminations_create`
 * `circuits_circuit_terminations_delete`
@@ -78,6 +77,9 @@ if res.circuit_termination is not None:
 * `circuits_providers_partial_update`
 * `circuits_providers_read` - Call to super to allow for caching
 * `circuits_providers_update`
+
+### dcim
+
 * `dcim_cables_create`
 * `dcim_cables_delete`
 * `dcim_cables_list` - Call to super to allow for caching
@@ -291,6 +293,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `dcim_virtual_chassis_partial_update`
 * `dcim_virtual_chassis_read` - Call to super to allow for caching
 * `dcim_virtual_chassis_update`
+
+### extras
+
 * `extras_custom_field_choices_list`
 * `extras_custom_field_choices_read`
 * `extras_config_contexts_create`
@@ -330,6 +335,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `extras_tags_partial_update`
 * `extras_tags_read` - Call to super to allow for caching
 * `extras_tags_update`
+
+### ipam
+
 * `ipam_aggregates_create`
 * `ipam_aggregates_delete`
 * `ipam_aggregates_list` - Call to super to allow for caching
@@ -398,6 +406,9 @@ invoked in parallel, which results in a race condition where multiple insertions
 * `ipam_vrfs_partial_update`
 * `ipam_vrfs_read` - Call to super to allow for caching
 * `ipam_vrfs_update`
+
+### secrets
+
 * `secrets_generate_rsa_key_pair_list` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
 * `secrets_get_session_key_create` - Retrieve a temporary session key to use for encrypting and decrypting secrets via the API. The user's private RSA
 key is POSTed with the name `private_key`. An example:
@@ -425,6 +436,9 @@ key will be returned instead of a new one.
 * `secrets_secrets_partial_update`
 * `secrets_secrets_read`
 * `secrets_secrets_update`
+
+### tenancy
+
 * `tenancy_tenant_groups_create`
 * `tenancy_tenant_groups_delete`
 * `tenancy_tenant_groups_list` - Call to super to allow for caching
@@ -437,6 +451,9 @@ key will be returned instead of a new one.
 * `tenancy_tenants_partial_update`
 * `tenancy_tenants_read` - Call to super to allow for caching
 * `tenancy_tenants_update`
+
+### virtualization
+
 * `virtualization_cluster_groups_create`
 * `virtualization_cluster_groups_delete`
 * `virtualization_cluster_groups_list` - Call to super to allow for caching

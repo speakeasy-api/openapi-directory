@@ -1,49 +1,49 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitorPathParams:
-    monitor_uid: str = field(metadata={'path_param': { 'field_name': 'monitor_uid', 'style': 'simple', 'explode': False }})
+    monitor_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'monitor_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitor200ApplicationJSONMonitor:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitor200ApplicationJSON:
-    monitor: Optional[DeleteMonitor200ApplicationJSONMonitor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitor') }})
+    monitor: Optional[DeleteMonitor200ApplicationJSONMonitor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitor') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitor404ApplicationJSONError:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitor404ApplicationJSON:
-    error: Optional[DeleteMonitor404ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[DeleteMonitor404ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitorRequest:
-    path_params: DeleteMonitorPathParams = field()
+    path_params: DeleteMonitorPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteMonitorResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_monitor_200_application_json_object: Optional[DeleteMonitor200ApplicationJSON] = field(default=None)
-    delete_monitor_404_application_json_object: Optional[DeleteMonitor404ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_monitor_200_application_json_object: Optional[DeleteMonitor200ApplicationJSON] = dataclasses.field(default=None)
+    delete_monitor_404_application_json_object: Optional[DeleteMonitor404ApplicationJSON] = dataclasses.field(default=None)
     

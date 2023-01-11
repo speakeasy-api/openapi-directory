@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import organization_simple as shared_organization_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListForAuthenticatedUserQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListForAuthenticatedUserRequest:
-    query_params: OrgsListForAuthenticatedUserQueryParams = field()
+    query_params: OrgsListForAuthenticatedUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListForAuthenticatedUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    organization_simples: Optional[List[shared.OrganizationSimple]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    organization_simples: Optional[list[shared_organization_simple.OrganizationSimple]] = dataclasses.field(default=None)
     

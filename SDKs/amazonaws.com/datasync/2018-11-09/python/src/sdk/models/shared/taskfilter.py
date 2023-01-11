@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import taskfiltername_enum as shared_taskfiltername_enum
+from ..shared import operator_enum as shared_operator_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TaskFilter:
     r"""TaskFilter
     You can use API filters to narrow down the list of resources returned by <code>ListTasks</code>. For example, to retrieve all tasks on a source location, you can use <code>ListTasks</code> with filter name <code>LocationId</code> and <code>Operator Equals</code> with the ARN for the location.
     """
     
-    name: TaskFilterNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    operator: OperatorEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Operator') }})
-    values: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Values') }})
+    name: shared_taskfiltername_enum.TaskFilterNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    operator: shared_operator_enum.OperatorEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Operator') }})
+    values: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Values') }})
     

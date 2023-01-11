@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import otoroshihealth as shared_otoroshihealth
 
 
-@dataclass
+@dataclasses.dataclass
 class HealthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    otoroshi_health: Optional[shared.OtoroshiHealth] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    otoroshi_health: Optional[shared_otoroshihealth.OtoroshiHealth] = dataclasses.field(default=None)
     

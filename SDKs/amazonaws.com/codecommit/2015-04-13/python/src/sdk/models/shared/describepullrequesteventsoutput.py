@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pullrequestevent as shared_pullrequestevent
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribePullRequestEventsOutput:
-    pull_request_events: List[PullRequestEvent] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullRequestEvents') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    pull_request_events: list[shared_pullrequestevent.PullRequestEvent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullRequestEvents') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

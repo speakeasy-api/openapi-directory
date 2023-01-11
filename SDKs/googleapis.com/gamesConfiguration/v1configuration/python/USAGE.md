@@ -1,0 +1,40 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.GamesConfigurationAchievementConfigurationsDeleteRequest(
+    security=operations.GamesConfigurationAchievementConfigurationsDeleteSecurity(
+        oauth2=shared.SchemeOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+        oauth2c=shared.SchemeOauth2c(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    path_params=operations.GamesConfigurationAchievementConfigurationsDeletePathParams(
+        achievement_id="earum",
+    ),
+    query_params=operations.GamesConfigurationAchievementConfigurationsDeleteQueryParams(
+        dollar_xgafv="1",
+        access_token="cum",
+        alt="json",
+        callback="dicta",
+        fields="consequatur",
+        key="et",
+        oauth_token="tempora",
+        pretty_print=True,
+        quota_user="aliquam",
+        upload_type="quaerat",
+        upload_protocol="voluptatem",
+    ),
+)
+    
+res = s.achievement_configurations.games_configuration_achievement_configurations_delete(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import serviceinstance as shared_serviceinstance
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CancelServiceInstanceDeploymentOutput:
-    service_instance: ServiceInstance = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceInstance') }})
+    service_instance: shared_serviceinstance.ServiceInstance = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceInstance') }})
     

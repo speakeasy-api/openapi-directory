@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,100 +25,94 @@ s.config_security(
     
 req = operations.CreateConnectorRequest(
     headers=operations.CreateConnectorHeaders(
-        x_amz_algorithm="atque",
-        x_amz_content_sha256="odio",
-        x_amz_credential="quam",
-        x_amz_date="ut",
-        x_amz_security_token="qui",
-        x_amz_signature="voluptas",
-        x_amz_signed_headers="in",
+        x_amz_algorithm="totam",
+        x_amz_content_sha256="eum",
+        x_amz_credential="laborum",
+        x_amz_date="maxime",
+        x_amz_security_token="voluptatem",
+        x_amz_signature="aut",
+        x_amz_signed_headers="qui",
     ),
     request=operations.CreateConnectorRequestBody(
         capacity=operations.CreateConnectorRequestBodyCapacity(
             auto_scaling=shared.AutoScaling(
-                max_worker_count=8330659122177198523,
-                mcu_count=6845063625500580422,
-                min_worker_count=8887929759950233110,
+                max_worker_count=3504002613480678211,
+                mcu_count=2500753354058343789,
+                min_worker_count=2787501642645844576,
                 scale_in_policy=shared.ScaleInPolicy(
-                    cpu_utilization_percentage=1971677885960265268,
+                    cpu_utilization_percentage=7677299547891902014,
                 ),
                 scale_out_policy=shared.ScaleOutPolicy(
-                    cpu_utilization_percentage=1242866194161234105,
+                    cpu_utilization_percentage=7105999358852640672,
                 ),
             ),
             provisioned_capacity=shared.ProvisionedCapacity(
-                mcu_count=2209437841303140266,
-                worker_count=7300439094265252843,
+                mcu_count=3679840646143242248,
+                worker_count=3126614124520816277,
             ),
         ),
         connector_configuration={
-            "dolorem": "facere",
+            "molestiae": "voluptas",
         },
-        connector_description="magnam",
-        connector_name="aut",
+        connector_description="officia",
+        connector_name="cupiditate",
         kafka_cluster=operations.CreateConnectorRequestBodyKafkaCluster(
             apache_kafka_cluster=shared.ApacheKafkaCluster(
-                bootstrap_servers="eum",
+                bootstrap_servers="in",
                 vpc=shared.Vpc(
                     security_groups=[
-                        "perferendis",
-                        "quam",
+                        "ipsa",
+                        "nemo",
                     ],
                     subnets=[
-                        "quas",
-                        "qui",
-                        "ut",
+                        "quae",
+                        "odit",
+                        "expedita",
                     ],
                 ),
             ),
         ),
         kafka_cluster_client_authentication=operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication(
-            authentication_type="IAM",
+            authentication_type="NONE",
         ),
         kafka_cluster_encryption_in_transit=operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit(
-            encryption_type="PLAINTEXT",
+            encryption_type="TLS",
         ),
-        kafka_connect_version="harum",
+        kafka_connect_version="voluptate",
         log_delivery=operations.CreateConnectorRequestBodyLogDelivery(
             worker_log_delivery=shared.WorkerLogDelivery(
                 cloud_watch_logs=shared.CloudWatchLogsLogDelivery(
                     enabled=False,
-                    log_group="facilis",
+                    log_group="harum",
                 ),
                 firehose=shared.FirehoseLogDelivery(
-                    delivery_stream="blanditiis",
+                    delivery_stream="nulla",
                     enabled=True,
                 ),
                 s3=shared.S3LogDelivery(
-                    bucket="ea",
+                    bucket="corrupti",
                     enabled=False,
-                    prefix="non",
+                    prefix="consectetur",
                 ),
             ),
         ),
         plugins=[
             shared.Plugin(
                 custom_plugin=shared.CustomPlugin(
-                    custom_plugin_arn="qui",
-                    revision=1535039728394233189,
-                ),
-            ),
-            shared.Plugin(
-                custom_plugin=shared.CustomPlugin(
-                    custom_plugin_arn="aut",
-                    revision=6522720780889015448,
+                    custom_plugin_arn="impedit",
+                    revision=8021751157946261264,
                 ),
             ),
         ],
-        service_execution_role_arn="adipisci",
+        service_execution_role_arn="doloribus",
         worker_configuration=operations.CreateConnectorRequestBodyWorkerConfiguration(
-            revision=4051032581715466747,
-            worker_configuration_arn="praesentium",
+            revision=5906068016607125469,
+            worker_configuration_arn="quis",
         ),
     ),
 )
     
-res = s.sdk.create_connector(req)
+res = s.create_connector(req)
 
 if res.create_connector_response is not None:
     # handle response

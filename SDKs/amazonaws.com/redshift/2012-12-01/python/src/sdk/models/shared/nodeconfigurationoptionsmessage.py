@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import nodeconfigurationoptionlist as shared_nodeconfigurationoptionlist
 
 
-@dataclass
+@dataclasses.dataclass
 class NodeConfigurationOptionsMessage:
-    marker: Optional[str] = field(default=None)
-    node_configuration_option_list: Optional[List[NodeConfigurationOption]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    node_configuration_option_list: Optional[list[shared_nodeconfigurationoptionlist.NodeConfigurationOptionList]] = dataclasses.field(default=None)
     

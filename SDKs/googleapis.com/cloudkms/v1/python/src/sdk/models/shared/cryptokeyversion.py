@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keyoperationattestation as shared_keyoperationattestation
+from ..shared import externalprotectionleveloptions as shared_externalprotectionleveloptions
+from ..shared import keyoperationattestation as shared_keyoperationattestation
 
 class CryptoKeyVersionStateEnum(str, Enum):
     CRYPTO_KEY_VERSION_STATE_UNSPECIFIED = "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED"
@@ -55,36 +57,36 @@ class CryptoKeyVersionProtectionLevelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CryptoKeyVersionInput:
     r"""CryptoKeyVersionInput
     A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
     """
     
-    attestation: Optional[KeyOperationAttestationInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestation') }})
-    external_protection_level_options: Optional[ExternalProtectionLevelOptions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalProtectionLevelOptions') }})
-    state: Optional[CryptoKeyVersionStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    attestation: Optional[shared_keyoperationattestation.KeyOperationAttestationInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestation') }})
+    external_protection_level_options: Optional[shared_externalprotectionleveloptions.ExternalProtectionLevelOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalProtectionLevelOptions') }})
+    state: Optional[CryptoKeyVersionStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CryptoKeyVersion:
     r"""CryptoKeyVersion
     A CryptoKeyVersion represents an individual cryptographic key, and the associated key material. An ENABLED version can be used for cryptographic operations. For security reasons, the raw cryptographic key material represented by a CryptoKeyVersion can never be viewed or exported. It can only be used to encrypt, decrypt, or sign data when an authorized user or application invokes Cloud KMS.
     """
     
-    algorithm: Optional[CryptoKeyVersionAlgorithmEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
-    attestation: Optional[KeyOperationAttestation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestation') }})
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    destroy_event_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destroyEventTime') }})
-    destroy_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destroyTime') }})
-    external_protection_level_options: Optional[ExternalProtectionLevelOptions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalProtectionLevelOptions') }})
-    generate_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generateTime') }})
-    import_failure_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importFailureReason') }})
-    import_job: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importJob') }})
-    import_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importTime') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    protection_level: Optional[CryptoKeyVersionProtectionLevelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protectionLevel') }})
-    reimport_eligible: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reimportEligible') }})
-    state: Optional[CryptoKeyVersionStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    algorithm: Optional[CryptoKeyVersionAlgorithmEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
+    attestation: Optional[shared_keyoperationattestation.KeyOperationAttestation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestation') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    destroy_event_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destroyEventTime') }})
+    destroy_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destroyTime') }})
+    external_protection_level_options: Optional[shared_externalprotectionleveloptions.ExternalProtectionLevelOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalProtectionLevelOptions') }})
+    generate_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generateTime') }})
+    import_failure_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importFailureReason') }})
+    import_job: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importJob') }})
+    import_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importTime') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    protection_level: Optional[CryptoKeyVersionProtectionLevelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protectionLevel') }})
+    reimport_eligible: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reimportEligible') }})
+    state: Optional[CryptoKeyVersionStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     

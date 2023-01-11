@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class NewsFeedCardsDetailsQueryParams:
-    card_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'card_id', 'style': 'form', 'explode': True }})
+    card_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'card_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsFeedCardsDetailsRequest:
-    query_params: NewsFeedCardsDetailsQueryParams = field()
+    query_params: NewsFeedCardsDetailsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsFeedCardsDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

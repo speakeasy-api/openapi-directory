@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,36 +20,38 @@ req = operations.FileProjectsLocationsBackupsCreateRequest(
     security=operations.FileProjectsLocationsBackupsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.FileProjectsLocationsBackupsCreatePathParams(
-        parent="est",
+        parent="eius",
     ),
     query_params=operations.FileProjectsLocationsBackupsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="ut",
-        alt="media",
-        backup_id="porro",
-        callback="excepturi",
-        fields="fugiat",
-        key="maxime",
-        oauth_token="vero",
+        access_token="sunt",
+        alt="json",
+        backup_id="consequuntur",
+        callback="itaque",
+        fields="architecto",
+        key="magni",
+        oauth_token="repellat",
         pretty_print=False,
-        quota_user="pariatur",
-        upload_type="itaque",
-        upload_protocol="ipsum",
+        quota_user="ut",
+        upload_type="qui",
+        upload_protocol="voluptas",
     ),
     request=shared.BackupInput(
-        description="velit",
-        kms_key_name="quisquam",
+        description="sed",
+        kms_key_name="odit",
         labels={
-            "occaecati": "fuga",
+            "minima": "dolores",
+            "eum": "sapiente",
+            "culpa": "et",
         },
-        source_file_share="modi",
-        source_instance="illo",
+        source_file_share="molestiae",
+        source_instance="ex",
     ),
 )
     

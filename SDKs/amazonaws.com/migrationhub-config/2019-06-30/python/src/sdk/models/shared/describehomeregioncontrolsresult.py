@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import homeregioncontrol as shared_homeregioncontrol
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeHomeRegionControlsResult:
-    home_region_controls: Optional[List[HomeRegionControl]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('HomeRegionControls') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    home_region_controls: Optional[list[shared_homeregioncontrol.HomeRegionControl]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('HomeRegionControls') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

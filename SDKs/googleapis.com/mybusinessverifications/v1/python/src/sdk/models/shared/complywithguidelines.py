@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class ComplyWithGuidelinesRecommendationReasonEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ComplyWithGuidelines:
     r"""ComplyWithGuidelines
     Indicates that the location fails to comply with our [guidelines](https://support.google.com/business/answer/3038177).
     """
     
-    recommendation_reason: Optional[ComplyWithGuidelinesRecommendationReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendationReason') }})
+    recommendation_reason: Optional[ComplyWithGuidelinesRecommendationReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendationReason') }})
     

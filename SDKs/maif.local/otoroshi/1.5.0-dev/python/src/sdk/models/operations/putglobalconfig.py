@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import globalconfig as shared_globalconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class PutGlobalConfigSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutGlobalConfigRequest:
-    security: PutGlobalConfigSecurity = field()
-    request: Optional[shared.GlobalConfig] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PutGlobalConfigSecurity = dataclasses.field()
+    request: Optional[shared_globalconfig.GlobalConfig] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutGlobalConfigResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_config: Optional[shared.GlobalConfig] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_config: Optional[shared_globalconfig.GlobalConfig] = dataclasses.field(default=None)
     

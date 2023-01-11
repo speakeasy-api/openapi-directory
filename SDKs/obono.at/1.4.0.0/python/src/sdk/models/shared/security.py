@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeJwt:
-    api_key: str = field(metadata={'security': { 'field_name': 'Authorization' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    jwt: SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeBasicAuth:
-    password: str = field(metadata={'security': { 'field_name': 'password' }})
-    username: str = field(metadata={'security': { 'field_name': 'username' }})
+    password: str = dataclasses.field(metadata={'security': { 'field_name': 'password' }})
+    username: str = dataclasses.field(metadata={'security': { 'field_name': 'username' }})
     

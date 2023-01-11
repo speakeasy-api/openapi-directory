@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import acceptpaymentdisputerequest as shared_acceptpaymentdisputerequest
 
 
 ACCEPT_PAYMENT_DISPUTE_SERVERS = [
@@ -8,26 +9,26 @@ ACCEPT_PAYMENT_DISPUTE_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class AcceptPaymentDisputePathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AcceptPaymentDisputeSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AcceptPaymentDisputeRequest:
-    path_params: AcceptPaymentDisputePathParams = field()
-    security: AcceptPaymentDisputeSecurity = field()
-    request: Optional[shared.AcceptPaymentDisputeRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    server_url: Optional[str] = field(default=None)
+    path_params: AcceptPaymentDisputePathParams = dataclasses.field()
+    security: AcceptPaymentDisputeSecurity = dataclasses.field()
+    request: Optional[shared_acceptpaymentdisputerequest.AcceptPaymentDisputeRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class AcceptPaymentDisputeResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

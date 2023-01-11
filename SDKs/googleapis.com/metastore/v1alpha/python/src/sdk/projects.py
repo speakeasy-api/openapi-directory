@@ -29,14 +29,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{parent}/federations", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsFederationsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -124,6 +124,35 @@ class Projects:
         return res
 
     
+    def metastore_projects_locations_services_alter_location(self, request: operations.MetastoreProjectsLocationsServicesAlterLocationRequest) -> operations.MetastoreProjectsLocationsServicesAlterLocationResponse:
+        r"""Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1alpha/{service}:alterLocation", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MetastoreProjectsLocationsServicesAlterLocationResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Operation])
+                res.operation = out
+
+        return res
+
+    
     def metastore_projects_locations_services_backups_create(self, request: operations.MetastoreProjectsLocationsServicesBackupsCreateRequest) -> operations.MetastoreProjectsLocationsServicesBackupsCreateResponse:
         r"""Creates a new backup in a given project and location.
         """
@@ -133,14 +162,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{parent}/backups", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesBackupsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -212,14 +241,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{parent}/services", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -266,14 +295,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{resource}:setIamPolicy", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -295,14 +324,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{resource}:testIamPermissions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsResponse(status_code=r.status_code, content_type=content_type)
@@ -324,14 +353,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{service}:exportMetadata", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesExportMetadataResponse(status_code=r.status_code, content_type=content_type)
@@ -378,14 +407,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{parent}/metadataImports", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -457,17 +486,75 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Operation])
+                res.operation = out
+
+        return res
+
+    
+    def metastore_projects_locations_services_move_table_to_database(self, request: operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest) -> operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse:
+        r"""Move a table to another database.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1alpha/{service}:moveTableToDatabase", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Operation])
+                res.operation = out
+
+        return res
+
+    
+    def metastore_projects_locations_services_query_metadata(self, request: operations.MetastoreProjectsLocationsServicesQueryMetadataRequest) -> operations.MetastoreProjectsLocationsServicesQueryMetadataResponse:
+        r"""Query DPMS metadata.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1alpha/{service}:queryMetadata", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MetastoreProjectsLocationsServicesQueryMetadataResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
@@ -486,14 +573,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{resource}:removeIamPolicy", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse(status_code=r.status_code, content_type=content_type)
@@ -515,14 +602,14 @@ class Projects:
         url = utils.generate_url(base_url, "/v1alpha/{service}:restore", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.MetastoreProjectsLocationsServicesRestoreResponse(status_code=r.status_code, content_type=content_type)

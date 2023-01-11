@@ -1,0 +1,32 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.AbusiveexperiencereportSitesGetRequest(
+    path_params=operations.AbusiveexperiencereportSitesGetPathParams(
+        name="rerum",
+    ),
+    query_params=operations.AbusiveexperiencereportSitesGetQueryParams(
+        dollar_xgafv="2",
+        access_token="quia",
+        alt="media",
+        callback="qui",
+        fields="hic",
+        key="eum",
+        oauth_token="debitis",
+        pretty_print=True,
+        quota_user="cupiditate",
+        upload_type="reiciendis",
+        upload_protocol="minus",
+    ),
+)
+    
+res = s.sites.abusiveexperiencereport_sites_get(req)
+
+if res.site_summary_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

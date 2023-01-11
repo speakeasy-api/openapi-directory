@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'api_key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'api_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    api_key: Optional[SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: Optional[SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     

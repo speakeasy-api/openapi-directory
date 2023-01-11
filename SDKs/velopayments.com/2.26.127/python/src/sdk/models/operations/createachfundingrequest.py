@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import fundingrequestv1 as shared_fundingrequestv1
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAchFundingRequestPathParams:
-    source_account_id: str = field(metadata={'path_param': { 'field_name': 'sourceAccountId', 'style': 'simple', 'explode': False }})
+    source_account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sourceAccountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAchFundingRequestRequest:
-    path_params: CreateAchFundingRequestPathParams = field()
-    request: shared.FundingRequestV1 = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateAchFundingRequestPathParams = dataclasses.field()
+    request: shared_fundingrequestv1.FundingRequestV1 = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAchFundingRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

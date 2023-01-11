@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class XPingFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class XPingPathParams:
-    format: XPingFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    seconds: str = field(metadata={'path_param': { 'field_name': 'seconds', 'style': 'simple', 'explode': False }})
+    format: XPingFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    seconds: str = dataclasses.field(metadata={'path_param': { 'field_name': 'seconds', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class XPingRequest:
-    path_params: XPingPathParams = field()
+    path_params: XPingPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class XPingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    x_ping_200_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    x_ping_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

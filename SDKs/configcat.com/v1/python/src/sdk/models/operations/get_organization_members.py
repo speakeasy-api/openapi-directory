@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import usermodel as shared_usermodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationMembersPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationMembersRequest:
-    path_params: GetOrganizationMembersPathParams = field()
+    path_params: GetOrganizationMembersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationMembersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user_models: Optional[List[shared.UserModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user_models: Optional[list[shared_usermodel.UserModel]] = dataclasses.field(default=None)
     

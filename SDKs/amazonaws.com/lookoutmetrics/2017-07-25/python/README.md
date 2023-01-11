@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.ActivateAnomalyDetectorRequest(
     headers=operations.ActivateAnomalyDetectorHeaders(
-        x_amz_algorithm="saepe",
-        x_amz_content_sha256="harum",
-        x_amz_credential="animi",
-        x_amz_date="eius",
-        x_amz_security_token="necessitatibus",
-        x_amz_signature="optio",
-        x_amz_signed_headers="amet",
+        x_amz_algorithm="aliquid",
+        x_amz_content_sha256="quasi",
+        x_amz_credential="impedit",
+        x_amz_date="tempora",
+        x_amz_security_token="consequatur",
+        x_amz_signature="eos",
+        x_amz_signed_headers="non",
     ),
     request=operations.ActivateAnomalyDetectorRequestBody(
-        anomaly_detector_arn="eaque",
+        anomaly_detector_arn="nesciunt",
     ),
 )
     
-res = s.sdk.activate_anomaly_detector(req)
+res = s.activate_anomaly_detector(req)
 
 if res.activate_anomaly_detector_response is not None:
     # handle response

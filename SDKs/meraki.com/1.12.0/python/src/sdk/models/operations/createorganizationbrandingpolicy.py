@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 class CreateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum(str, Enum):
     ALL_ORGANIZATION_ADMINS = "All organization admins"
@@ -21,14 +21,14 @@ class CreateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum(str,
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyRequestBodyAdminSettings:
     r"""CreateOrganizationBrandingPolicyRequestBodyAdminSettings
     Settings for describing which kinds of admins this policy applies to.
     """
     
-    applies_to: Optional[CreateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appliesTo') }})
-    values: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    applies_to: Optional[CreateOrganizationBrandingPolicyRequestBodyAdminSettingsAppliesToEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appliesTo') }})
+    values: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     
 class CreateOrganizationBrandingPolicyRequestBodyHelpSettingsAPIDocsSubtabEnum(str, Enum):
     DEFAULT_OR_INHERIT = "default or inherit"
@@ -87,7 +87,7 @@ class CreateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnow
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyRequestBodyHelpSettings:
     r"""CreateOrganizationBrandingPolicyRequestBodyHelpSettings
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
@@ -97,40 +97,40 @@ class CreateOrganizationBrandingPolicyRequestBodyHelpSettings:
      Each property defaults to 'default or inherit' when not provided.
     """
     
-    api_docs_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsAPIDocsSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiDocsSubtab') }})
-    cases_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casesSubtab') }})
-    cisco_meraki_product_documentation: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ciscoMerakiProductDocumentation') }})
-    community_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communitySubtab') }})
-    data_protection_requests_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataProtectionRequestsSubtab') }})
-    firewall_info_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewallInfoSubtab') }})
-    get_help_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('getHelpSubtab') }})
-    get_help_subtab_knowledge_base_search: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('getHelpSubtabKnowledgeBaseSearch') }})
-    hardware_replacements_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hardwareReplacementsSubtab') }})
-    help_tab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('helpTab') }})
-    new_features_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newFeaturesSubtab') }})
-    sm_forums: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('smForums') }})
-    support_contact_info: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('supportContactInfo') }})
-    universal_search_knowledge_base_search: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('universalSearchKnowledgeBaseSearch') }})
+    api_docs_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsAPIDocsSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiDocsSubtab') }})
+    cases_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsCasesSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('casesSubtab') }})
+    cisco_meraki_product_documentation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ciscoMerakiProductDocumentation') }})
+    community_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsCommunitySubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communitySubtab') }})
+    data_protection_requests_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsDataProtectionRequestsSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataProtectionRequestsSubtab') }})
+    firewall_info_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsFirewallInfoSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewallInfoSubtab') }})
+    get_help_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsGetHelpSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('getHelpSubtab') }})
+    get_help_subtab_knowledge_base_search: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('getHelpSubtabKnowledgeBaseSearch') }})
+    hardware_replacements_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsHardwareReplacementsSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hardwareReplacementsSubtab') }})
+    help_tab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsHelpTabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('helpTab') }})
+    new_features_subtab: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsNewFeaturesSubtabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newFeaturesSubtab') }})
+    sm_forums: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsSmForumsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('smForums') }})
+    support_contact_info: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('supportContactInfo') }})
+    universal_search_knowledge_base_search: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettingsUniversalSearchKnowledgeBaseSearchEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('universalSearchKnowledgeBaseSearch') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyRequestBody:
-    admin_settings: CreateOrganizationBrandingPolicyRequestBodyAdminSettings = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('adminSettings') }})
-    enabled: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    help_settings: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('helpSettings') }})
+    admin_settings: CreateOrganizationBrandingPolicyRequestBodyAdminSettings = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('adminSettings') }})
+    enabled: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    help_settings: Optional[CreateOrganizationBrandingPolicyRequestBodyHelpSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('helpSettings') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyRequest:
-    path_params: CreateOrganizationBrandingPolicyPathParams = field()
-    request: CreateOrganizationBrandingPolicyRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateOrganizationBrandingPolicyPathParams = dataclasses.field()
+    request: CreateOrganizationBrandingPolicyRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationBrandingPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_organization_branding_policy_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_organization_branding_policy_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

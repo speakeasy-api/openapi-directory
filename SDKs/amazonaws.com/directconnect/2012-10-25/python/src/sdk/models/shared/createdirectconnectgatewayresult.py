@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import directconnectgateway as shared_directconnectgateway
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDirectConnectGatewayResult:
-    direct_connect_gateway: Optional[DirectConnectGateway] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGateway') }})
+    direct_connect_gateway: Optional[shared_directconnectgateway.DirectConnectGateway] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directConnectGateway') }})
     

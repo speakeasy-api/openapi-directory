@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,38 +20,38 @@ req = operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCrea
     security=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams(
-        parent="dolor",
+        parent="aliquid",
     ),
     query_params=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="mollitia",
-        alt="proto",
-        callback="architecto",
-        document_id="aperiam",
-        fields="tempora",
-        key="culpa",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="laudantium",
-        upload_type="commodi",
-        upload_protocol="error",
+        dollar_xgafv="2",
+        access_token="praesentium",
+        alt="media",
+        callback="id",
+        document_id="non",
+        fields="ipsam",
+        key="qui",
+        oauth_token="explicabo",
+        pretty_print=True,
+        quota_user="sapiente",
+        upload_type="quia",
+        upload_protocol="dolorem",
     ),
     request=shared.GoogleCloudDiscoveryengineV1betaDocument(
-        id="magnam",
-        json_data="qui",
-        name="hic",
-        parent_document_id="quaerat",
-        schema_id="quia",
+        id="aut",
+        json_data="molestiae",
+        name="quod",
+        parent_document_id="voluptatum",
+        schema_id="quos",
         struct_data={
-            "in": "vero",
-            "eligendi": "qui",
-            "rerum": "aspernatur",
+            "incidunt": "ab",
+            "explicabo": "fuga",
+            "dignissimos": "perferendis",
         },
     ),
 )

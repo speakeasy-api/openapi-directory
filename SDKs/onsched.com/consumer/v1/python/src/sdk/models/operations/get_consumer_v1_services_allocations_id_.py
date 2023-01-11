@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import serviceallocationviewmodel as shared_serviceallocationviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicesAllocationsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicesAllocationsIDRequest:
-    path_params: GetConsumerV1ServicesAllocationsIDPathParams = field()
+    path_params: GetConsumerV1ServicesAllocationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ServicesAllocationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_allocation_view_model: Optional[shared.ServiceAllocationViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_allocation_view_model: Optional[shared_serviceallocationviewmodel.ServiceAllocationViewModel] = dataclasses.field(default=None)
     

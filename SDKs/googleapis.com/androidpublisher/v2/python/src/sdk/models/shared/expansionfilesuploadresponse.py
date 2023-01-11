@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import expansionfile as shared_expansionfile
 
 
-@dataclass
+@dataclasses.dataclass
 class ExpansionFilesUploadResponse:
-    expansion_file: Optional[ExpansionFile] = field(default=None)
+    expansion_file: Optional[shared_expansionfile.ExpansionFile] = dataclasses.field(default=None)
     

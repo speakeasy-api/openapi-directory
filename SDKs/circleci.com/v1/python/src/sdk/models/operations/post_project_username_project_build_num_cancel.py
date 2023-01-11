@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import build as shared_build
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectBuildNumCancelPathParams:
-    build_num: int = field(metadata={'path_param': { 'field_name': 'build_num', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    build_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'build_num', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectBuildNumCancelRequest:
-    path_params: PostProjectUsernameProjectBuildNumCancelPathParams = field()
+    path_params: PostProjectUsernameProjectBuildNumCancelPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectBuildNumCancelResponse:
-    content_type: str = field()
-    status_code: int = field()
-    build: Optional[shared.Build] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    build: Optional[shared_build.Build] = dataclasses.field(default=None)
     

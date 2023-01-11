@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataset as shared_dataset
 
 class CreateDatasetRequestBodyTypeEnum(str, Enum):
     IMAGE = "image"
     IMAGE_MULTI_LABEL = "image-multi-label"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDatasetRequestBody:
-    labels: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'labels' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    type: Optional[CreateDatasetRequestBodyTypeEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'type' }})
+    labels: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'labels' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    type: Optional[CreateDatasetRequestBodyTypeEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'type' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDatasetSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDatasetRequest:
-    security: CreateDatasetSecurity = field()
-    request: Optional[CreateDatasetRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: CreateDatasetSecurity = dataclasses.field()
+    request: Optional[CreateDatasetRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDatasetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    dataset: Optional[shared.Dataset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dataset: Optional[shared_dataset.Dataset] = dataclasses.field(default=None)
     

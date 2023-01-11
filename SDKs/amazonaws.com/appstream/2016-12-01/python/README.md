@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AssociateFleetRequest(
     headers=operations.AssociateFleetHeaders(
-        x_amz_algorithm="consequatur",
-        x_amz_content_sha256="dolores",
-        x_amz_credential="et",
-        x_amz_date="quos",
-        x_amz_security_token="est",
-        x_amz_signature="est",
-        x_amz_signed_headers="neque",
+        x_amz_algorithm="sapiente",
+        x_amz_content_sha256="ipsam",
+        x_amz_credential="autem",
+        x_amz_date="placeat",
+        x_amz_security_token="velit",
+        x_amz_signature="minus",
+        x_amz_signed_headers="praesentium",
         x_amz_target="PhotonAdminProxyService.AssociateFleet",
     ),
     request=shared.AssociateFleetRequest(
-        fleet_name="quis",
-        stack_name="eius",
+        fleet_name="voluptas",
+        stack_name="consequatur",
     ),
 )
     
-res = s.sdk.associate_fleet(req)
+res = s.associate_fleet(req)
 
 if res.associate_fleet_result is not None:
     # handle response

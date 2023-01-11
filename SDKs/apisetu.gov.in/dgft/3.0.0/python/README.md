@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.ImporterExporterCodeVerificationAPIRequest(
         ),
     ),
     path_params=operations.ImporterExporterCodeVerificationAPIPathParams(
-        iec="et",
+        iec="accusamus",
     ),
 )
     
-res = s.sdk.importer_exporter_code_verification_api(req)
+res = s.ap_is.importer_exporter_code_verification_api(req)
 
 if res.importer_exporter_code_verification_api_200_application_json_object is not None:
     # handle response
@@ -38,7 +37,7 @@ if res.importer_exporter_code_verification_api_200_application_json_object is no
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `importer_exporter_code_verification_api` - Importer-Exporter Code (IEC) Verification API.
 

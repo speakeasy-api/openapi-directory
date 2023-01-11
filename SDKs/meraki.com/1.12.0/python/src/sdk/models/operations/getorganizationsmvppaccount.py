@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationSmVppAccountPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
-    vpp_account_id: str = field(metadata={'path_param': { 'field_name': 'vppAccountId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    vpp_account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vppAccountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationSmVppAccountRequest:
-    path_params: GetOrganizationSmVppAccountPathParams = field()
+    path_params: GetOrganizationSmVppAccountPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationSmVppAccountResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_organization_sm_vpp_account_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_organization_sm_vpp_account_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

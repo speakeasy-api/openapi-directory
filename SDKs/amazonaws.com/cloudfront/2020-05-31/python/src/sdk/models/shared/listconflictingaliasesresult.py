@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import conflictingaliaseslist as shared_conflictingaliaseslist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListConflictingAliasesResult:
-    conflicting_aliases_list: Optional[ConflictingAliasesList] = field(default=None)
+    conflicting_aliases_list: Optional[shared_conflictingaliaseslist.ConflictingAliasesList] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ListIdentitiesResponse:
     r"""ListIdentitiesResponse
     A list of all identities that you have attempted to verify under your AWS account, regardless of verification status.
     """
     
-    identities: List[str] = field()
-    next_token: Optional[str] = field(default=None)
+    identities: list[str] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

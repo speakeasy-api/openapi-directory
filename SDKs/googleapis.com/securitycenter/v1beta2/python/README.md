@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetect
     security=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams(
-        name="repudiandae",
+        name="sed",
     ),
     query_params=operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams(
-        dollar_xgafv="2",
-        access_token="non",
+        dollar_xgafv="1",
+        access_token="sed",
         alt="media",
-        callback="possimus",
+        callback="ut",
         fields="voluptatem",
-        key="asperiores",
-        oauth_token="temporibus",
-        pretty_print=True,
-        quota_user="fugit",
-        upload_type="molestias",
-        upload_protocol="eum",
+        key="voluptas",
+        oauth_token="non",
+        pretty_print=False,
+        quota_user="quia",
+        upload_type="unde",
+        upload_protocol="maiores",
     ),
 )
     
@@ -56,9 +55,9 @@ if res.container_threat_detection_settings is not None:
 
 ### projects
 
-* `securitycenter_projects_locations_clusters_get_container_threat_detection_settings` - Get the ContainerThreatDetectionSettings resource.
+* `securitycenter_projects_locations_clusters_get_container_threat_detection_settings` - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
 * `securitycenter_projects_locations_clusters_update_container_threat_detection_settings` - Update the ContainerThreatDetectionSettings resource.
-* `securitycenter_projects_web_security_scanner_settings_calculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings.
+* `securitycenter_projects_web_security_scanner_settings_calculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 
 <!-- End SDK Available Operations -->
 

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gluepolicy as shared_gluepolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetResourcePoliciesResponse:
-    get_resource_policies_response_list: Optional[List[GluePolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GetResourcePoliciesResponseList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    get_resource_policies_response_list: Optional[list[shared_gluepolicy.GluePolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GetResourcePoliciesResponseList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

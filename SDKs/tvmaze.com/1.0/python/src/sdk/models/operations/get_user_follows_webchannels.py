@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import webchannelfollow as shared_webchannelfollow
 
 class GetUserFollowsWebchannelsEmbedEnum(str, Enum):
     WEBCHANNEL = "webchannel"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsQueryParams:
-    embed: Optional[GetUserFollowsWebchannelsEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetUserFollowsWebchannelsEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsRequest:
-    query_params: GetUserFollowsWebchannelsQueryParams = field()
+    query_params: GetUserFollowsWebchannelsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsWebchannelsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    webchannel_follows: Optional[List[shared.WebchannelFollow]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    webchannel_follows: Optional[list[shared_webchannelfollow.WebchannelFollow]] = dataclasses.field(default=None)
     

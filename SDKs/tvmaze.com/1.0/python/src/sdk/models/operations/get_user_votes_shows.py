@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import showvote as shared_showvote
 
 class GetUserVotesShowsEmbedEnum(str, Enum):
     SHOW = "show"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsQueryParams:
-    embed: Optional[GetUserVotesShowsEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetUserVotesShowsEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsRequest:
-    query_params: GetUserVotesShowsQueryParams = field()
+    query_params: GetUserVotesShowsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesShowsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    show_votes: Optional[List[shared.ShowVote]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    show_votes: Optional[list[shared_showvote.ShowVote]] = dataclasses.field(default=None)
     

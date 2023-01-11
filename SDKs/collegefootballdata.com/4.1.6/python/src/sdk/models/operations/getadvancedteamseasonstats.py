@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import advancedseasonstat as shared_advancedseasonstat
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedTeamSeasonStatsQueryParams:
-    end_week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'endWeek', 'style': 'form', 'explode': True }})
-    exclude_garbage_time: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'excludeGarbageTime', 'style': 'form', 'explode': True }})
-    start_week: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'startWeek', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    end_week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endWeek', 'style': 'form', 'explode': True }})
+    exclude_garbage_time: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeGarbageTime', 'style': 'form', 'explode': True }})
+    start_week: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startWeek', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedTeamSeasonStatsRequest:
-    query_params: GetAdvancedTeamSeasonStatsQueryParams = field()
+    query_params: GetAdvancedTeamSeasonStatsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdvancedTeamSeasonStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    advanced_season_stats: Optional[List[shared.AdvancedSeasonStat]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    advanced_season_stats: Optional[list[shared_advancedseasonstat.AdvancedSeasonStat]] = dataclasses.field(default=None)
     

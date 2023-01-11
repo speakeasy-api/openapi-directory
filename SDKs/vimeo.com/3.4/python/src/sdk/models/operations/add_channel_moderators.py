@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AddChannelModeratorsPathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AddChannelModeratorsRequestBody:
-    user_uri: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_uri') }})
+    user_uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user_uri') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddChannelModeratorsSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddChannelModeratorsRequest:
-    path_params: AddChannelModeratorsPathParams = field()
-    request: AddChannelModeratorsRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddChannelModeratorsSecurity = field()
+    path_params: AddChannelModeratorsPathParams = dataclasses.field()
+    request: AddChannelModeratorsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddChannelModeratorsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddChannelModeratorsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

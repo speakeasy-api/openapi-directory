@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostRequestRequest:
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    all_response_types_example: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    all_response_types_example: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import presignrequest as shared_presignrequest
+from ..shared import presigninfo as shared_presigninfo
 
 
-@dataclass
+@dataclasses.dataclass
 class PostRmmPreSignAttachmentSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRmmPreSignAttachmentRequest:
-    request: shared.PreSignRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostRmmPreSignAttachmentSecurity = field()
+    request: shared_presignrequest.PreSignRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostRmmPreSignAttachmentSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRmmPreSignAttachmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pre_sign_info: Optional[shared.PreSignInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pre_sign_info: Optional[shared_presigninfo.PreSignInfo] = dataclasses.field(default=None)
     

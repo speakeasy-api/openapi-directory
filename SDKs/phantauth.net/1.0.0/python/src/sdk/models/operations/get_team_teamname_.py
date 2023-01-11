@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamTeamnamePathParams:
-    teamname: str = field(metadata={'path_param': { 'field_name': 'teamname', 'style': 'simple', 'explode': False }})
+    teamname: str = dataclasses.field(metadata={'path_param': { 'field_name': 'teamname', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetTeamTeamname200ApplicationJSON:
-    sub: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sub') }})
-    at_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@id') }})
-    logo: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo') }})
-    logo_email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_email') }})
-    members: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('members') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    profile: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profile') }})
+    sub: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sub') }})
+    at_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@id') }})
+    logo: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo') }})
+    logo_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_email') }})
+    members: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('members') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    profile: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profile') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamTeamnameRequest:
-    path_params: GetTeamTeamnamePathParams = field()
+    path_params: GetTeamTeamnamePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamTeamnameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_team_teamname_200_application_json_object: Optional[GetTeamTeamname200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_team_teamname_200_application_json_object: Optional[GetTeamTeamname200ApplicationJSON] = dataclasses.field(default=None)
     

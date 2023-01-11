@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import virtualmachineinterface as shared_virtualmachineinterface
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesReadRequest:
-    path_params: VirtualizationInterfacesReadPathParams = field()
+    path_params: VirtualizationInterfacesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    virtual_machine_interface: Optional[shared.VirtualMachineInterface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    virtual_machine_interface: Optional[shared_virtualmachineinterface.VirtualMachineInterface] = dataclasses.field(default=None)
     

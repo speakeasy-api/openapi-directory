@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,7 +25,7 @@ s.config_security(
     
 req = operations.GetGifByIDRequest(
     path_params=operations.GetGifByIDPathParams(
-        gif_id=6481606743659216426,
+        gif_id=7811605540752032210,
     ),
 )
     

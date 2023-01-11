@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -46,15 +46,15 @@ class GoogleCloudVisionV1p2beta1SafeSearchAnnotationViolenceEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVisionV1p2beta1SafeSearchAnnotation:
     r"""GoogleCloudVisionV1p2beta1SafeSearchAnnotation
     Set of features pertaining to the image, computed by computer vision methods over safe-search verticals (for example, adult, spoof, medical, violence).
     """
     
-    adult: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationAdultEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adult') }})
-    medical: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationMedicalEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('medical') }})
-    racy: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationRacyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('racy') }})
-    spoof: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationSpoofEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spoof') }})
-    violence: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationViolenceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('violence') }})
+    adult: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationAdultEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adult') }})
+    medical: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationMedicalEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('medical') }})
+    racy: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationRacyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('racy') }})
+    spoof: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationSpoofEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spoof') }})
+    violence: Optional[GoogleCloudVisionV1p2beta1SafeSearchAnnotationViolenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('violence') }})
     

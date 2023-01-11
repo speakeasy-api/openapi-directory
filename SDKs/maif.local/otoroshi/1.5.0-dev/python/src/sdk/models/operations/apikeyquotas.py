@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import quotas as shared_quotas
 
 
-@dataclass
+@dataclasses.dataclass
 class APIKeyQuotasPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeyQuotasSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeyQuotasRequest:
-    path_params: APIKeyQuotasPathParams = field()
-    security: APIKeyQuotasSecurity = field()
+    path_params: APIKeyQuotasPathParams = dataclasses.field()
+    security: APIKeyQuotasSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class APIKeyQuotasResponse:
-    content_type: str = field()
-    status_code: int = field()
-    quotas: Optional[shared.Quotas] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    quotas: Optional[shared_quotas.Quotas] = dataclasses.field(default=None)
     

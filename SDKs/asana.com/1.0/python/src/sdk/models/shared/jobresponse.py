@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import projectcompact as shared_projectcompact
+from ..shared import taskcompact as shared_taskcompact
 
 class JobResponseStatusEnum(str, Enum):
     NOT_STARTED = "not_started"
@@ -13,12 +14,16 @@ class JobResponseStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class JobResponse:
-    gid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gid') }})
-    new_project: Optional[ProjectCompact] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_project') }})
-    new_task: Optional[TaskCompact] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_task') }})
-    resource_subtype: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_subtype') }})
-    resource_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_type') }})
-    status: Optional[JobResponseStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    r"""JobResponse
+    A *job* is an object representing a process that handles asynchronous work.
+    """
+    
+    gid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gid') }})
+    new_project: Optional[shared_projectcompact.ProjectCompact] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_project') }})
+    new_task: Optional[shared_taskcompact.TaskCompact] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_task') }})
+    resource_subtype: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_subtype') }})
+    resource_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_type') }})
+    status: Optional[JobResponseStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

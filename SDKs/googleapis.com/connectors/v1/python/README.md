@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,149 +20,186 @@ req = operations.ConnectorsProjectsLocationsConnectionsCreateRequest(
     security=operations.ConnectorsProjectsLocationsConnectionsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ConnectorsProjectsLocationsConnectionsCreatePathParams(
-        parent="non",
+        parent="laborum",
     ),
     query_params=operations.ConnectorsProjectsLocationsConnectionsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="eligendi",
-        alt="json",
-        callback="voluptas",
-        connection_id="eos",
-        fields="modi",
+        dollar_xgafv="2",
+        access_token="et",
+        alt="media",
+        callback="voluptatibus",
+        connection_id="debitis",
+        fields="voluptates",
         key="et",
-        oauth_token="rem",
+        oauth_token="iure",
         pretty_print=False,
-        quota_user="molestias",
-        upload_type="libero",
-        upload_protocol="occaecati",
+        quota_user="asperiores",
+        upload_type="ea",
+        upload_protocol="consectetur",
     ),
     request=shared.ConnectionInput(
         auth_config=shared.AuthConfig(
             additional_variables=[
                 shared.ConfigVariable(
-                    bool_value=True,
-                    int_value="eos",
-                    key="rerum",
+                    bool_value=False,
+                    int_value="suscipit",
+                    key="maiores",
                     secret_value=shared.Secret(
-                        secret_version="excepturi",
+                        secret_version="iusto",
                     ),
-                    string_value="repellendus",
+                    string_value="eos",
+                ),
+                shared.ConfigVariable(
+                    bool_value=False,
+                    int_value="repellat",
+                    key="eligendi",
+                    secret_value=shared.Secret(
+                        secret_version="ut",
+                    ),
+                    string_value="et",
                 ),
             ],
             auth_type="OAUTH2_CLIENT_CREDENTIALS",
             oauth2_client_credentials=shared.Oauth2ClientCredentials(
-                client_id="qui",
+                client_id="odit",
                 client_secret=shared.Secret(
-                    secret_version="commodi",
+                    secret_version="aut",
                 ),
             ),
             oauth2_jwt_bearer=shared.Oauth2JwtBearer(
                 client_key=shared.Secret(
-                    secret_version="dolores",
+                    secret_version="rerum",
                 ),
                 jwt_claims=shared.JwtClaims(
-                    audience="aut",
-                    issuer="necessitatibus",
-                    subject="nesciunt",
+                    audience="repudiandae",
+                    issuer="quos",
+                    subject="consequatur",
                 ),
             ),
             ssh_public_key=shared.SSHPublicKey(
-                cert_type="magni",
+                cert_type="accusamus",
                 ssh_client_cert=shared.Secret(
-                    secret_version="non",
+                    secret_version="rerum",
                 ),
                 ssh_client_cert_pass=shared.Secret(
-                    secret_version="distinctio",
+                    secret_version="eos",
                 ),
-                username="minima",
+                username="est",
             ),
             user_password=shared.UserPassword(
                 password=shared.Secret(
-                    secret_version="ut",
+                    secret_version="qui",
                 ),
-                username="aperiam",
+                username="enim",
             ),
         ),
         config_variables=[
             shared.ConfigVariable(
-                bool_value=False,
-                int_value="sunt",
-                key="animi",
+                bool_value=True,
+                int_value="nobis",
+                key="reiciendis",
                 secret_value=shared.Secret(
-                    secret_version="mollitia",
+                    secret_version="minus",
                 ),
-                string_value="excepturi",
+                string_value="doloremque",
+            ),
+            shared.ConfigVariable(
+                bool_value=True,
+                int_value="voluptas",
+                key="autem",
+                secret_value=shared.Secret(
+                    secret_version="ut",
+                ),
+                string_value="dicta",
             ),
             shared.ConfigVariable(
                 bool_value=False,
-                int_value="ut",
-                key="ex",
+                int_value="culpa",
+                key="et",
                 secret_value=shared.Secret(
-                    secret_version="ad",
+                    secret_version="provident",
                 ),
-                string_value="assumenda",
+                string_value="id",
             ),
         ],
-        connector_version="eaque",
-        description="consequatur",
+        connector_version="dolorem",
+        description="rerum",
         destination_configs=[
             shared.DestinationConfig(
                 destinations=[
                     shared.Destination(
-                        host="velit",
-                        port=7322938111960336165,
-                        service_attachment="in",
+                        host="dolor",
+                        port=6236403914782054328,
+                        service_attachment="ab",
                     ),
                     shared.Destination(
-                        host="veritatis",
-                        port=5952822771195429582,
-                        service_attachment="modi",
+                        host="vel",
+                        port=4094679320341630421,
+                        service_attachment="et",
                     ),
                     shared.Destination(
-                        host="est",
-                        port=1427910665186750051,
-                        service_attachment="cumque",
+                        host="enim",
+                        port=8623464447008361335,
+                        service_attachment="corporis",
                     ),
                 ],
-                key="natus",
+                key="facere",
             ),
             shared.DestinationConfig(
                 destinations=[
                     shared.Destination(
-                        host="beatae",
-                        port=9144606812326692045,
-                        service_attachment="amet",
+                        host="assumenda",
+                        port=4352521914877300365,
+                        service_attachment="et",
+                    ),
+                    shared.Destination(
+                        host="minus",
+                        port=6512242709642800696,
+                        service_attachment="similique",
                     ),
                 ],
-                key="dolorem",
+                key="omnis",
+            ),
+            shared.DestinationConfig(
+                destinations=[
+                    shared.Destination(
+                        host="sunt",
+                        port=1624115472900005299,
+                        service_attachment="qui",
+                    ),
+                    shared.Destination(
+                        host="occaecati",
+                        port=6185666323245807780,
+                        service_attachment="alias",
+                    ),
+                ],
+                key="eum",
             ),
         ],
         labels={
-            "similique": "et",
-            "ducimus": "cupiditate",
-            "consequatur": "exercitationem",
+            "quod": "quis",
+            "accusantium": "magni",
         },
         lock_config=shared.LockConfig(
             locked=False,
-            reason="voluptas",
+            reason="est",
         ),
         node_config=shared.NodeConfig(
-            max_node_count=6413110699676294475,
-            min_node_count=8175015999967088442,
+            max_node_count=8456589800173565241,
+            min_node_count=3490050072483158353,
         ),
-        service_account="iste",
+        service_account="id",
         status=shared.ConnectionStatus(
-            description="corrupti",
-            state="UPDATING",
-            status="quia",
+            description="excepturi",
+            state="ERROR",
+            status="labore",
         ),
-        suspended=True,
+        suspended=False,
     ),
 )
     

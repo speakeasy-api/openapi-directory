@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import eventdetailfieldvalues_enum as shared_eventdetailfieldvalues_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3EventsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3EventsIDQueryParams:
-    fields: Optional[List[shared.EventDetailFieldValuesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    fields: Optional[list[shared_eventdetailfieldvalues_enum.EventDetailFieldValuesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3EventsIDHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3EventsIDRequest:
-    headers: GetV3EventsIDHeaders = field()
-    path_params: GetV3EventsIDPathParams = field()
-    query_params: GetV3EventsIDQueryParams = field()
+    headers: GetV3EventsIDHeaders = dataclasses.field()
+    path_params: GetV3EventsIDPathParams = dataclasses.field()
+    query_params: GetV3EventsIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3EventsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

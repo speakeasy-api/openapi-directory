@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class WritablePlatformLegacyRPCClientEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WritablePlatformInput:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    slug: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('slug') }})
-    manufacturer: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('manufacturer') }})
-    napalm_args: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('napalm_args') }})
-    napalm_driver: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('napalm_driver') }})
-    rpc_client: Optional[WritablePlatformLegacyRPCClientEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rpc_client') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    slug: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('slug') }})
+    manufacturer: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('manufacturer') }})
+    napalm_args: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('napalm_args') }})
+    napalm_driver: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('napalm_driver') }})
+    rpc_client: Optional[WritablePlatformLegacyRPCClientEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rpc_client') }})
     

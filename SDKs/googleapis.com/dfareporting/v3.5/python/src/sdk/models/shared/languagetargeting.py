@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import language as shared_language
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LanguageTargeting:
     r"""LanguageTargeting
     Language Targeting.
     """
     
-    languages: Optional[List[Language]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
+    languages: Optional[list[shared_language.Language]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
     

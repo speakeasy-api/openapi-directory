@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import export as shared_export
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportIterationPathParams:
-    iteration_id: str = field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    iteration_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 class ExportIterationFlavorEnum(str, Enum):
     LINUX = "Linux"
@@ -20,28 +20,28 @@ class ExportIterationPlatformEnum(str, Enum):
     ONNX = "ONNX"
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportIterationQueryParams:
-    platform: ExportIterationPlatformEnum = field(metadata={'query_param': { 'field_name': 'platform', 'style': 'form', 'explode': True }})
-    flavor: Optional[ExportIterationFlavorEnum] = field(default=None, metadata={'query_param': { 'field_name': 'flavor', 'style': 'form', 'explode': True }})
+    platform: ExportIterationPlatformEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'platform', 'style': 'form', 'explode': True }})
+    flavor: Optional[ExportIterationFlavorEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'flavor', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportIterationHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportIterationRequest:
-    headers: ExportIterationHeaders = field()
-    path_params: ExportIterationPathParams = field()
-    query_params: ExportIterationQueryParams = field()
+    headers: ExportIterationHeaders = dataclasses.field()
+    path_params: ExportIterationPathParams = dataclasses.field()
+    query_params: ExportIterationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportIterationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    export: Optional[shared.Export] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    export: Optional[shared_export.Export] = dataclasses.field(default=None)
     

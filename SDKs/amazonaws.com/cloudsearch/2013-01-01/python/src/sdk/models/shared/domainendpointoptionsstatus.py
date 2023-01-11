@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import domainendpointoptions as shared_domainendpointoptions
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DomainEndpointOptionsStatus:
     r"""DomainEndpointOptionsStatus
     The configuration and status of the domain's endpoint options.
     """
     
-    options: DomainEndpointOptions = field()
-    status: OptionStatus = field()
+    options: shared_domainendpointoptions.DomainEndpointOptions = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

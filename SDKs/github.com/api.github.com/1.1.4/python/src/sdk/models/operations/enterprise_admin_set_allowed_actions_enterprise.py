@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import selected_actions as shared_selected_actions
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetAllowedActionsEnterprisePathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetAllowedActionsEnterpriseRequest:
-    path_params: EnterpriseAdminSetAllowedActionsEnterprisePathParams = field()
-    request: Optional[shared.SelectedActions] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminSetAllowedActionsEnterprisePathParams = dataclasses.field()
+    request: Optional[shared_selected_actions.SelectedActions] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetAllowedActionsEnterpriseResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

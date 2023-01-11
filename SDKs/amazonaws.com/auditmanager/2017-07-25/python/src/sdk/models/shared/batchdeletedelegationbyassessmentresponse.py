@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchdeletedelegationbyassessmenterror as shared_batchdeletedelegationbyassessmenterror
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDeleteDelegationByAssessmentResponse:
-    errors: Optional[List[BatchDeleteDelegationByAssessmentError]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    errors: Optional[list[shared_batchdeletedelegationbyassessmenterror.BatchDeleteDelegationByAssessmentError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

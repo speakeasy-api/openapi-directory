@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.DeleteReportDefinitionRequest(
     headers=operations.DeleteReportDefinitionHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="consequatur",
-        x_amz_credential="saepe",
-        x_amz_date="consequatur",
-        x_amz_security_token="non",
-        x_amz_signature="recusandae",
-        x_amz_signed_headers="cum",
+        x_amz_algorithm="quo",
+        x_amz_content_sha256="et",
+        x_amz_credential="eligendi",
+        x_amz_date="soluta",
+        x_amz_security_token="enim",
+        x_amz_signature="commodi",
+        x_amz_signed_headers="quia",
         x_amz_target="AWSOrigamiServiceGatewayService.DeleteReportDefinition",
     ),
     request=shared.DeleteReportDefinitionRequest(
-        report_name="recusandae",
+        report_name="placeat",
     ),
 )
     
-res = s.sdk.delete_report_definition(req)
+res = s.delete_report_definition(req)
 
 if res.delete_report_definition_response is not None:
     # handle response

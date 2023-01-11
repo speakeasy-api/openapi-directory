@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import usermessagecontract as shared_usermessagecontract
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessagePathParams:
-    message_id: int = field(metadata={'path_param': { 'field_name': 'messageId', 'style': 'simple', 'explode': False }})
+    message_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'messageId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessageRequest:
-    path_params: UserAPIGetMessagePathParams = field()
+    path_params: UserAPIGetMessagePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    user_message_contract: Optional[shared.UserMessageContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    user_message_contract: Optional[shared_usermessagecontract.UserMessageContract] = dataclasses.field(default=None)
     

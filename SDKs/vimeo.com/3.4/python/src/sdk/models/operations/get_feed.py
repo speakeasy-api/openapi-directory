@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import activity_3_1 as shared_activity_3_1
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class GetFeedTypeEnum(str, Enum):
     APPEARS = "appears"
@@ -23,29 +24,29 @@ class GetFeedTypeEnum(str, Enum):
     UPLOADS = "uploads"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedQueryParams:
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    type: Optional[GetFeedTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    type: Optional[GetFeedTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedRequest:
-    path_params: GetFeedPathParams = field()
-    query_params: GetFeedQueryParams = field()
-    security: GetFeedSecurity = field()
+    path_params: GetFeedPathParams = dataclasses.field()
+    query_params: GetFeedQueryParams = dataclasses.field()
+    security: GetFeedSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFeedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    activity_3_1s: Optional[List[shared.Activity31]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    activity_3_1s: Optional[list[shared_activity_3_1.Activity31]] = dataclasses.field(default=None)
     

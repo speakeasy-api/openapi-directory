@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import standingorderdetails as shared_standingorderdetails
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdditionalInformationStructured:
     r"""AdditionalInformationStructured
     Is used if and only if the bookingStatus entry equals \"information\". 
@@ -13,5 +13,5 @@ class AdditionalInformationStructured:
     
     """
     
-    standing_order_details: StandingOrderDetails = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('standingOrderDetails') }})
+    standing_order_details: shared_standingorderdetails.StandingOrderDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('standingOrderDetails') }})
     

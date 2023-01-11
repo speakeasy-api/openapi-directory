@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SourceSecurityGroup:
     r"""SourceSecurityGroup
     Information about a source security group.
     """
     
-    group_name: Optional[str] = field(default=None)
-    owner_alias: Optional[str] = field(default=None)
+    group_name: Optional[str] = dataclasses.field(default=None)
+    owner_alias: Optional[str] = dataclasses.field(default=None)
     

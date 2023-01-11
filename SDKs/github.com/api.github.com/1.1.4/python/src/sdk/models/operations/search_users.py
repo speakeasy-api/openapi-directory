@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import order_enum as shared_order_enum
+from ..shared import user_search_result_item as shared_user_search_result_item
+from ..shared import validation_error as shared_validation_error
 
 class SearchUsersSortEnum(str, Enum):
     FOLLOWERS = "followers"
@@ -11,41 +13,41 @@ class SearchUsersSortEnum(str, Enum):
     JOINED = "joined"
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchUsersQueryParams:
-    q: str = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    order: Optional[shared.OrderEnum] = field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[SearchUsersSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    q: str = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    order: Optional[shared_order_enum.OrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[SearchUsersSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchUsers200ApplicationJSON:
-    incomplete_results: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('incomplete_results') }})
-    items: List[shared.UserSearchResultItem] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
-    total_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    incomplete_results: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('incomplete_results') }})
+    items: list[shared_user_search_result_item.UserSearchResultItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
+    total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchUsers503ApplicationJSON:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    documentation_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    documentation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchUsersRequest:
-    query_params: SearchUsersQueryParams = field()
+    query_params: SearchUsersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    search_users_200_application_json_object: Optional[SearchUsers200ApplicationJSON] = field(default=None)
-    search_users_503_application_json_object: Optional[SearchUsers503ApplicationJSON] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    search_users_200_application_json_object: Optional[SearchUsers200ApplicationJSON] = dataclasses.field(default=None)
+    search_users_503_application_json_object: Optional[SearchUsers503ApplicationJSON] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

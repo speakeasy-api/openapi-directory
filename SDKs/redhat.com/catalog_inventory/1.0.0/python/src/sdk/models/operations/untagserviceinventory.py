@@ -1,21 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List
-from sdk.models import shared
+import dataclasses
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class UntagServiceInventoryPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UntagServiceInventoryRequest:
-    path_params: UntagServiceInventoryPathParams = field()
-    request: List[shared.Tag] = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UntagServiceInventoryPathParams = dataclasses.field()
+    request: list[shared_tag.Tag] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UntagServiceInventoryResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import invalidtoken as shared_invalidtoken
+from ..shared import keyfailure as shared_keyfailure
+from ..shared import signin as shared_signin
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninsQueryParams:
-    less_than: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'less_than', 'style': 'form', 'explode': True }})
-    return_count: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'return_count', 'style': 'form', 'explode': True }})
+    less_than: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'less_than', 'style': 'form', 'explode': True }})
+    return_count: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'return_count', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninsRequest:
-    query_params: GetSigninsQueryParams = field()
+    query_params: GetSigninsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
-    key_failure: Optional[shared.KeyFailure] = field(default=None)
-    signins: Optional[List[shared.Signin]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
+    key_failure: Optional[shared_keyfailure.KeyFailure] = dataclasses.field(default=None)
+    signins: Optional[list[shared_signin.Signin]] = dataclasses.field(default=None)
     

@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import updatepermissiongrouprequest as shared_updatepermissiongrouprequest
+from ..shared import permissiongroupmodel as shared_permissiongroupmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePermissionGroupPathParams:
-    permission_group_id: int = field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
+    permission_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'permissionGroupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePermissionGroupRequests:
-    update_permission_group_request: Optional[shared.UpdatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    update_permission_group_request1: Optional[shared.UpdatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    update_permission_group_request2: Optional[shared.UpdatePermissionGroupRequest] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    update_permission_group_request: Optional[shared_updatepermissiongrouprequest.UpdatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    update_permission_group_request1: Optional[shared_updatepermissiongrouprequest.UpdatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    update_permission_group_request2: Optional[shared_updatepermissiongrouprequest.UpdatePermissionGroupRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePermissionGroupRequest:
-    path_params: UpdatePermissionGroupPathParams = field()
-    request: UpdatePermissionGroupRequests = field()
+    path_params: UpdatePermissionGroupPathParams = dataclasses.field()
+    request: UpdatePermissionGroupRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePermissionGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    permission_group_model: Optional[shared.PermissionGroupModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    permission_group_model: Optional[shared_permissiongroupmodel.PermissionGroupModel] = dataclasses.field(default=None)
     

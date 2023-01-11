@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
+from ..shared import batchsnapshotoperationerrorlist as shared_batchsnapshotoperationerrorlist
 
 
-@dataclass
+@dataclasses.dataclass
 class BatchDeleteClusterSnapshotsResult:
-    errors: Optional[List[SnapshotErrorMessage]] = field(default=None)
-    resources: Optional[List[str]] = field(default=None)
+    errors: Optional[list[shared_batchsnapshotoperationerrorlist.BatchSnapshotOperationErrorList]] = dataclasses.field(default=None)
+    resources: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

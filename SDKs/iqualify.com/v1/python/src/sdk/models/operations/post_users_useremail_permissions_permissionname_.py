@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import permissionname_enum as shared_permissionname_enum
+from ..shared import error as shared_error
+from ..shared import userresponse as shared_userresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailPermissionsPermissionNamePathParams:
-    permission_name: shared.PermissionNameEnum = field(metadata={'path_param': { 'field_name': 'permissionName', 'style': 'simple', 'explode': False }})
-    user_email: str = field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
+    permission_name: shared_permissionname_enum.PermissionNameEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'permissionName', 'style': 'simple', 'explode': False }})
+    user_email: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailPermissionsPermissionNameRequest:
-    path_params: PostUsersUserEmailPermissionsPermissionNamePathParams = field()
+    path_params: PostUsersUserEmailPermissionsPermissionNamePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailPermissionsPermissionNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    user_response: Optional[shared.UserResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    user_response: Optional[shared_userresponse.UserResponse] = dataclasses.field(default=None)
     

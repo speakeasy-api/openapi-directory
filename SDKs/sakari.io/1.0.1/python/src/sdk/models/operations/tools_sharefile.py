@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import sharefileresponse as shared_sharefileresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileMultipartFormDataMedia:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    media: str = field(metadata={'multipart_form': { 'field_name': 'media' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    media: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'media' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileMultipartFormData:
-    media: Optional[ToolsShareFileMultipartFormDataMedia] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    media: Optional[ToolsShareFileMultipartFormDataMedia] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileRequests:
-    application_octet_stream: bytes = field(metadata={'request': { 'media_type': 'application/octet-stream' }})
-    object: Optional[ToolsShareFileMultipartFormData] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    application_octet_stream: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/octet-stream' }})
+    object: Optional[ToolsShareFileMultipartFormData] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileRequest:
-    request: ToolsShareFileRequests = field()
-    security: ToolsShareFileSecurity = field()
+    request: ToolsShareFileRequests = dataclasses.field()
+    security: ToolsShareFileSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ToolsShareFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    share_file_response: Optional[shared.ShareFileResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    share_file_response: Optional[shared_sharefileresponse.ShareFileResponse] = dataclasses.field(default=None)
     

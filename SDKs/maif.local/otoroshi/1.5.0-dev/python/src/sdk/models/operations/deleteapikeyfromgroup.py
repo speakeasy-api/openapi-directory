@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deleted as shared_deleted
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAPIKeyFromGroupPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
-    group_id: str = field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clientId', 'style': 'simple', 'explode': False }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAPIKeyFromGroupSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAPIKeyFromGroupRequest:
-    path_params: DeleteAPIKeyFromGroupPathParams = field()
-    security: DeleteAPIKeyFromGroupSecurity = field()
+    path_params: DeleteAPIKeyFromGroupPathParams = dataclasses.field()
+    security: DeleteAPIKeyFromGroupSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAPIKeyFromGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deleted: Optional[shared.Deleted] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deleted: Optional[shared_deleted.Deleted] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -14,24 +14,24 @@ class GetUpdatePathwayFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUpdatePathwayQueryParams:
-    auth: str = field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
-    description: str = field(metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
-    gpml: str = field(metadata={'query_param': { 'field_name': 'gpml', 'style': 'form', 'explode': True }})
-    pw_id: str = field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
-    revision: int = field(metadata={'query_param': { 'field_name': 'revision', 'style': 'form', 'explode': True }})
-    username: str = field(metadata={'query_param': { 'field_name': 'username', 'style': 'form', 'explode': True }})
-    format: Optional[GetUpdatePathwayFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    auth: str = dataclasses.field(metadata={'query_param': { 'field_name': 'auth', 'style': 'form', 'explode': True }})
+    description: str = dataclasses.field(metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
+    gpml: str = dataclasses.field(metadata={'query_param': { 'field_name': 'gpml', 'style': 'form', 'explode': True }})
+    pw_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
+    revision: int = dataclasses.field(metadata={'query_param': { 'field_name': 'revision', 'style': 'form', 'explode': True }})
+    username: str = dataclasses.field(metadata={'query_param': { 'field_name': 'username', 'style': 'form', 'explode': True }})
+    format: Optional[GetUpdatePathwayFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUpdatePathwayRequest:
-    query_params: GetUpdatePathwayQueryParams = field()
+    query_params: GetUpdatePathwayQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUpdatePathwayResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

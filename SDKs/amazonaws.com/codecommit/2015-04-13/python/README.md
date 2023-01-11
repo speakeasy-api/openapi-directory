@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AssociateApprovalRuleTemplateWithRepositoryRequest(
     headers=operations.AssociateApprovalRuleTemplateWithRepositoryHeaders(
-        x_amz_algorithm="cum",
-        x_amz_content_sha256="a",
-        x_amz_credential="quo",
-        x_amz_date="delectus",
-        x_amz_security_token="et",
-        x_amz_signature="ipsum",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="omnis",
+        x_amz_content_sha256="ut",
+        x_amz_credential="libero",
+        x_amz_date="consequatur",
+        x_amz_security_token="qui",
+        x_amz_signature="sit",
+        x_amz_signed_headers="quasi",
         x_amz_target="CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository",
     ),
     request=shared.AssociateApprovalRuleTemplateWithRepositoryInput(
-        approval_rule_template_name="et",
-        repository_name="cupiditate",
+        approval_rule_template_name="voluptate",
+        repository_name="ut",
     ),
 )
     
-res = s.sdk.associate_approval_rule_template_with_repository(req)
+res = s.associate_approval_rule_template_with_repository(req)
 
 if res.status_code == 200:
     # handle response

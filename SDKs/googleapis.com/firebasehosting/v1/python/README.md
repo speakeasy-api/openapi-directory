@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,23 +18,24 @@ s = sdk.SDK()
     
 req = operations.FirebasehostingOperationsCancelRequest(
     path_params=operations.FirebasehostingOperationsCancelPathParams(
-        name="eligendi",
+        name="inventore",
     ),
     query_params=operations.FirebasehostingOperationsCancelQueryParams(
         dollar_xgafv="1",
-        access_token="dolor",
-        alt="json",
-        callback="corrupti",
-        fields="qui",
-        key="repellendus",
-        oauth_token="dicta",
-        pretty_print=False,
-        quota_user="ratione",
-        upload_type="voluptates",
-        upload_protocol="fugiat",
+        access_token="cumque",
+        alt="media",
+        callback="voluptatem",
+        fields="tempore",
+        key="cum",
+        oauth_token="ratione",
+        pretty_print=True,
+        quota_user="eius",
+        upload_type="et",
+        upload_protocol="consequatur",
     ),
     request={
-        "quidem": "unde",
+        "placeat": "est",
+        "voluptas": "et",
     },
 )
     

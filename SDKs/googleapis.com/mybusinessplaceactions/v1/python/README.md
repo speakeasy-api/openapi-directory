@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,26 +18,26 @@ s = sdk.SDK()
     
 req = operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest(
     path_params=operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams(
-        parent="illum",
+        parent="aut",
     ),
     query_params=operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams(
         dollar_xgafv="2",
-        access_token="enim",
+        access_token="dignissimos",
         alt="proto",
-        callback="distinctio",
-        fields="adipisci",
-        key="sequi",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="vero",
-        upload_type="architecto",
-        upload_protocol="vitae",
+        callback="commodi",
+        fields="rerum",
+        key="voluptas",
+        oauth_token="quasi",
+        pretty_print=False,
+        quota_user="vel",
+        upload_type="sed",
+        upload_protocol="et",
     ),
     request=shared.PlaceActionLinkInput(
-        is_preferred=False,
-        name="atque",
-        place_action_type="FOOD_DELIVERY",
-        uri="quis",
+        is_preferred=True,
+        name="aut",
+        place_action_type="DINING_RESERVATION",
+        uri="modi",
     ),
 )
     

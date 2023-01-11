@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class KeySimple:
     r"""KeySimple
     Key Simple
     """
     
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import announcement as shared_announcement
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetAnnouncementRequest:
-    request: Optional[shared.Announcement] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_announcement.Announcement] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetAnnouncementResponse:
-    content_type: str = field()
-    status_code: int = field()
-    announcement: Optional[shared.Announcement] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    announcement: Optional[shared_announcement.Announcement] = dataclasses.field(default=None)
     

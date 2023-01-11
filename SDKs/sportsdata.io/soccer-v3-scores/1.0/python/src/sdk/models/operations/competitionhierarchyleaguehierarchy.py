@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class CompetitionHierarchyLeagueHierarchyFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class CompetitionHierarchyLeagueHierarchyFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionHierarchyLeagueHierarchyPathParams:
-    format: CompetitionHierarchyLeagueHierarchyFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: CompetitionHierarchyLeagueHierarchyFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionHierarchyLeagueHierarchyRequest:
-    path_params: CompetitionHierarchyLeagueHierarchyPathParams = field()
+    path_params: CompetitionHierarchyLeagueHierarchyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompetitionHierarchyLeagueHierarchyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    areas: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    areas: Optional[list[Any]] = dataclasses.field(default=None)
     

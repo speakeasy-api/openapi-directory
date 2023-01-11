@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,12 +25,12 @@ s.config_security(
     
 req = operations.DeleteProjectUsernameProjectBuildCacheRequest(
     path_params=operations.DeleteProjectUsernameProjectBuildCachePathParams(
-        project="molestiae",
-        username="officia",
+        project="necessitatibus",
+        username="quam",
     ),
 )
     
-res = s.sdk.delete_project_username_project_build_cache(req)
+res = s.delete_project_username_project_build_cache(req)
 
 if res.delete_project_username_project_build_cache_200_application_json_object is not None:
     # handle response
@@ -53,14 +52,6 @@ if res.delete_project_username_project_build_cache_200_application_json_object i
 
 * `get_project_username_project_` - Build summary for each of the last 30 builds for a single git repo.
 
-* `get_project_username_project_build_num_` - Full details for a single build. The response includes all of the fields from the build summary.
-This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-
-* `get_project_username_project_build_num_artifacts` - List the artifacts produced by a given build.
-
-* `get_project_username_project_build_num_tests` - Provides test metadata for a build
-Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-
 * `get_project_username_project_checkout_key` - Lists checkout keys.
 
 * `get_project_username_project_checkout_key_fingerprint_` - Get a checkout key.
@@ -69,15 +60,19 @@ Note: [Learn how to set up your builds to collect test metadata](https://circlec
 
 * `get_project_username_project_envvar_name_` - Gets the hidden value of environment variable :name
 
+* `get_project_username_project_build_num_` - Full details for a single build. The response includes all of the fields from the build summary.
+This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+
+* `get_project_username_project_build_num_artifacts` - List the artifacts produced by a given build.
+
+* `get_project_username_project_build_num_tests` - Provides test metadata for a build
+Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+
 * `get_projects` - List of all the projects you're following on CircleCI, with build information organized by branch.
 
 * `get_recent_builds` - Build summary for each of the last 30 recent builds, ordered by build_num.
 
 * `post_project_username_project_` - Triggers a new build, returns a summary of the build.
-
-* `post_project_username_project_build_num_cancel` - Cancels the build, returns a summary of the build.
-
-* `post_project_username_project_build_num_retry` - Retries the build, returns a summary of the new build.
 
 * `post_project_username_project_checkout_key` - Creates a new checkout key.
 Only usable with a user API token.
@@ -90,6 +85,10 @@ Only usable with a user API token.
 Optional build parameters can be set using an experimental API.
 
 Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
+
+* `post_project_username_project_build_num_cancel` - Cancels the build, returns a summary of the build.
+
+* `post_project_username_project_build_num_retry` - Retries the build, returns a summary of the new build.
 
 * `post_user_heroku_key` - Adds your Heroku API key to CircleCI, takes apikey as form param name.
 

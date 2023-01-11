@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,110 +20,108 @@ req = operations.VideointelligenceVideosAnnotateRequest(
     security=operations.VideointelligenceVideosAnnotateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.VideointelligenceVideosAnnotateQueryParams(
         dollar_xgafv="1",
-        access_token="iusto",
+        access_token="necessitatibus",
         alt="json",
-        callback="animi",
-        fields="aperiam",
-        key="odio",
-        oauth_token="repellat",
+        callback="suscipit",
+        fields="exercitationem",
+        key="omnis",
+        oauth_token="reprehenderit",
         pretty_print=True,
-        quota_user="doloribus",
-        upload_type="porro",
-        upload_protocol="sequi",
+        quota_user="minima",
+        upload_type="sit",
+        upload_protocol="quas",
     ),
     request=shared.GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequest(
         features=[
-            "TEXT_DETECTION",
             "SHOT_CHANGE_DETECTION",
-            "LOGO_RECOGNITION",
         ],
-        input_content="sed",
-        input_uri="qui",
-        location_id="dolores",
-        output_uri="sed",
+        input_content="et",
+        input_uri="perferendis",
+        location_id="sunt",
+        output_uri="ipsum",
         video_context=shared.GoogleCloudVideointelligenceV1p3beta1VideoContext(
             explicit_content_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1ExplicitContentDetectionConfig(
-                model="quibusdam",
+                model="eum",
             ),
             face_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1FaceDetectionConfig(
-                include_attributes=True,
+                include_attributes=False,
                 include_bounding_boxes=False,
-                model="rerum",
+                model="est",
             ),
             label_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1LabelDetectionConfig(
-                frame_confidence_threshold=28.200001,
-                label_detection_mode="SHOT_AND_FRAME_MODE",
-                model="illo",
-                stationary_camera=True,
-                video_confidence_threshold=25.200001,
+                frame_confidence_threshold=94.099998,
+                label_detection_mode="SHOT_MODE",
+                model="ipsa",
+                stationary_camera=False,
+                video_confidence_threshold=79.199997,
             ),
             object_tracking_config=shared.GoogleCloudVideointelligenceV1p3beta1ObjectTrackingConfig(
-                model="maxime",
+                model="eos",
             ),
             person_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1PersonDetectionConfig(
-                include_attributes=True,
+                include_attributes=False,
                 include_bounding_boxes=False,
-                include_pose_landmarks=False,
+                include_pose_landmarks=True,
             ),
             segments=[
                 shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment(
-                    end_time_offset="velit",
-                    start_time_offset="quia",
+                    end_time_offset="et",
+                    start_time_offset="aut",
                 ),
                 shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment(
-                    end_time_offset="non",
-                    start_time_offset="ab",
+                    end_time_offset="saepe",
+                    start_time_offset="fugit",
+                ),
+                shared.GoogleCloudVideointelligenceV1p3beta1VideoSegment(
+                    end_time_offset="quae",
+                    start_time_offset="repellat",
                 ),
             ],
             shot_change_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1ShotChangeDetectionConfig(
-                model="eos",
+                model="laboriosam",
             ),
             speech_transcription_config=shared.GoogleCloudVideointelligenceV1p3beta1SpeechTranscriptionConfig(
                 audio_tracks=[
-                    3315239506547643892,
-                    2170068001213528811,
-                    1582343921395994185,
+                    8944738037156554366,
+                    2062583762746098340,
+                    3421029898312825929,
                 ],
-                diarization_speaker_count=4542759901218261428,
+                diarization_speaker_count=7614446021282930123,
                 enable_automatic_punctuation=True,
-                enable_speaker_diarization=True,
-                enable_word_confidence=True,
-                filter_profanity=True,
-                language_code="accusamus",
-                max_alternatives=3595861241565795942,
+                enable_speaker_diarization=False,
+                enable_word_confidence=False,
+                filter_profanity=False,
+                language_code="quia",
+                max_alternatives=2397772980755581892,
                 speech_contexts=[
                     shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext(
                         phrases=[
-                            "est",
+                            "ut",
+                            "quasi",
                         ],
                     ),
                     shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext(
                         phrases=[
-                            "et",
-                            "ducimus",
-                        ],
-                    ),
-                    shared.GoogleCloudVideointelligenceV1p3beta1SpeechContext(
-                        phrases=[
-                            "officiis",
+                            "ea",
+                            "sit",
                         ],
                     ),
                 ],
             ),
             text_detection_config=shared.GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig(
                 language_hints=[
-                    "est",
-                    "voluptas",
-                    "quis",
+                    "dicta",
+                    "eum",
+                    "molestiae",
                 ],
-                model="in",
+                model="eum",
             ),
         ),
     ),

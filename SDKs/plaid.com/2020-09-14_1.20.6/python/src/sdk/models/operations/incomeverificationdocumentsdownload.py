@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import incomeverificationdocumentsdownloadrequest as shared_incomeverificationdocumentsdownloadrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class IncomeVerificationDocumentsDownloadRequest:
-    request: shared.IncomeVerificationDocumentsDownloadRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_incomeverificationdocumentsdownloadrequest.IncomeVerificationDocumentsDownloadRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IncomeVerificationDocumentsDownloadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    income_verification_documents_download_200_application_zip_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    income_verification_documents_download_200_application_zip_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

@@ -1,0 +1,58 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.DriveactivityActivityQueryRequest(
+    security=operations.DriveactivityActivityQuerySecurity(
+        option1=operations.DriveactivityActivityQuerySecurityOption1(
+            oauth2=shared.SchemeOauth2(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+            oauth2c=shared.SchemeOauth2c(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+        ),
+    ),
+    query_params=operations.DriveactivityActivityQueryQueryParams(
+        dollar_xgafv="1",
+        access_token="necessitatibus",
+        alt="json",
+        callback="alias",
+        fields="rerum",
+        key="impedit",
+        oauth_token="a",
+        pretty_print=True,
+        quota_user="quo",
+        upload_type="aut",
+        upload_protocol="consectetur",
+    ),
+    request=shared.QueryDriveActivityRequest(
+        ancestor_name="corporis",
+        consolidation_strategy=shared.ConsolidationStrategy(
+            legacy={
+                "minus": "quaerat",
+                "possimus": "non",
+                "vel": "maiores",
+            },
+            none={
+                "quia": "et",
+                "ut": "sunt",
+                "ut": "rerum",
+            },
+        ),
+        filter="repudiandae",
+        item_name="et",
+        page_size=392893070412712568,
+        page_token="aut",
+    ),
+)
+    
+res = s.activity.driveactivity_activity_query(req)
+
+if res.query_drive_activity_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

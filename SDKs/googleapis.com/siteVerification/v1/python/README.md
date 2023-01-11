@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.SiteVerificationWebResourceDeleteRequest(
     security=operations.SiteVerificationWebResourceDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.SiteVerificationWebResourceDeletePathParams(
-        id="maiores",
+        id="rerum",
     ),
     query_params=operations.SiteVerificationWebResourceDeleteQueryParams(
         alt="json",
-        fields="impedit",
-        key="modi",
-        oauth_token="nihil",
+        fields="quasi",
+        key="mollitia",
+        oauth_token="ipsa",
         pretty_print=True,
-        quota_user="voluptates",
-        user_ip="esse",
+        quota_user="vitae",
+        user_ip="omnis",
     ),
 )
     

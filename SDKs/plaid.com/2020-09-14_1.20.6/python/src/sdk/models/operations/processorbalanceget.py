@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import processorbalancegetrequest as shared_processorbalancegetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorBalanceGetRequest:
-    request: shared.ProcessorBalanceGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_processorbalancegetrequest.ProcessorBalanceGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProcessorBalanceGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    processor_balance_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    processor_balance_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

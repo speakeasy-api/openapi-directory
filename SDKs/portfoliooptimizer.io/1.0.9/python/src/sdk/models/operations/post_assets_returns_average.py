@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverageRequestBodyAssets:
-    asset_returns: List[float] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
+    asset_returns: list[float] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetReturns') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverageRequestBody:
-    assets: List[PostAssetsReturnsAverageRequestBodyAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsReturnsAverageRequestBodyAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverage200ApplicationJSONAssets:
-    asset_average_return: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetAverageReturn') }})
+    asset_average_return: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assetAverageReturn') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverage200ApplicationJSON:
-    assets: List[PostAssetsReturnsAverage200ApplicationJSONAssets] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
+    assets: list[PostAssetsReturnsAverage200ApplicationJSONAssets] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('assets') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverageRequest:
-    request: PostAssetsReturnsAverageRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: PostAssetsReturnsAverageRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAssetsReturnsAverageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_assets_returns_average_200_application_json_object: Optional[PostAssetsReturnsAverage200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_assets_returns_average_200_application_json_object: Optional[PostAssetsReturnsAverage200ApplicationJSON] = dataclasses.field(default=None)
     

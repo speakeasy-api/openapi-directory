@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.CreateProjectRequest(
     query_params=operations.CreateProjectQueryParams(
-        name="ea",
-        region="quaerat",
-        snapshot_id="dolorem",
+        name="magnam",
+        region="similique",
+        snapshot_id="fuga",
     ),
     headers=operations.CreateProjectHeaders(
-        x_amz_algorithm="nemo",
-        x_amz_content_sha256="quia",
-        x_amz_credential="provident",
-        x_amz_date="sint",
-        x_amz_security_token="distinctio",
-        x_amz_signature="maiores",
-        x_amz_signed_headers="exercitationem",
+        x_amz_algorithm="voluptatem",
+        x_amz_content_sha256="officia",
+        x_amz_credential="iure",
+        x_amz_date="at",
+        x_amz_security_token="consequatur",
+        x_amz_signature="aut",
+        x_amz_signed_headers="nobis",
     ),
     request=operations.CreateProjectRequestBody(
-        contents="sunt",
+        contents="vero",
     ),
 )
     
-res = s.sdk.create_project(req)
+res = s.create_project(req)
 
 if res.create_project_result is not None:
     # handle response

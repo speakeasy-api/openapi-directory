@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import gettokenholdersresponse as shared_gettokenholdersresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenHoldersPathParams:
-    tokenid: str = field(metadata={'path_param': { 'field_name': 'tokenid', 'style': 'simple', 'explode': False }})
+    tokenid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tokenid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenHoldersRequest:
-    path_params: GetTokenHoldersPathParams = field()
+    path_params: GetTokenHoldersPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenHoldersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    get_token_holders_response: Optional[shared.GetTokenHoldersResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    get_token_holders_response: Optional[shared_gettokenholdersresponse.GetTokenHoldersResponse] = dataclasses.field(default=None)
     

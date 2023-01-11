@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,853 +21,309 @@ req = operations.CloudtraceProjectsTracesBatchWriteRequest(
         option1=operations.CloudtraceProjectsTracesBatchWriteSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudtraceProjectsTracesBatchWritePathParams(
-        name="fuga",
+        name="sed",
     ),
     query_params=operations.CloudtraceProjectsTracesBatchWriteQueryParams(
         dollar_xgafv="1",
-        access_token="facilis",
-        alt="media",
-        callback="cupiditate",
-        fields="esse",
-        key="magni",
-        oauth_token="sit",
+        access_token="voluptatem",
+        alt="proto",
+        callback="voluptatem",
+        fields="sequi",
+        key="fugiat",
+        oauth_token="rerum",
         pretty_print=False,
-        quota_user="repudiandae",
-        upload_type="similique",
-        upload_protocol="esse",
+        quota_user="illo",
+        upload_type="consequuntur",
+        upload_protocol="distinctio",
     ),
     request=shared.BatchWriteSpansRequest(
         spans=[
             shared.Span(
                 attributes=shared.Attributes(
                     attribute_map={
-                        "rem": shared.AttributeValue(
-                            bool_value=True,
-                            int_value="iure",
+                        "quidem": shared.AttributeValue(
+                            bool_value=False,
+                            int_value="aut",
                             string_value=shared.TruncatableString(
-                                truncated_byte_count=7412154669292656382,
-                                value="provident",
+                                truncated_byte_count=8715475418672385544,
+                                value="aliquam",
+                            ),
+                        ),
+                        "voluptas": shared.AttributeValue(
+                            bool_value=False,
+                            int_value="earum",
+                            string_value=shared.TruncatableString(
+                                truncated_byte_count=8426579191464542008,
+                                value="officiis",
                             ),
                         ),
                     },
-                    dropped_attributes_count=1882013532627511909,
+                    dropped_attributes_count=8701862092385727698,
                 ),
-                child_span_count=5159362991102182092,
+                child_span_count=1375510182566394480,
                 display_name=shared.TruncatableString(
-                    truncated_byte_count=2631232728389147934,
-                    value="dolore",
-                ),
-                end_time="recusandae",
-                links=shared.Links(
-                    dropped_links_count=900608263848019373,
-                    link=[
-                        shared.Link(
-                            attributes=shared.Attributes(
-                                attribute_map={
-                                    "laborum": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="et",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=4107694427994788216,
-                                            value="et",
-                                        ),
-                                    ),
-                                    "voluptatem": shared.AttributeValue(
-                                        bool_value=False,
-                                        int_value="eaque",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=5719352211019357973,
-                                            value="perferendis",
-                                        ),
-                                    ),
-                                },
-                                dropped_attributes_count=7120345347815777111,
-                            ),
-                            span_id="labore",
-                            trace_id="qui",
-                            type="PARENT_LINKED_SPAN",
-                        ),
-                        shared.Link(
-                            attributes=shared.Attributes(
-                                attribute_map={
-                                    "ut": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="consectetur",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=8154880525151637120,
-                                            value="doloribus",
-                                        ),
-                                    ),
-                                    "pariatur": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="incidunt",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=372072971954873086,
-                                            value="iste",
-                                        ),
-                                    ),
-                                    "sit": shared.AttributeValue(
-                                        bool_value=False,
-                                        int_value="molestiae",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=2043847166453853718,
-                                            value="et",
-                                        ),
-                                    ),
-                                },
-                                dropped_attributes_count=6542411700234841629,
-                            ),
-                            span_id="quo",
-                            trace_id="voluptas",
-                            type="PARENT_LINKED_SPAN",
-                        ),
-                    ],
-                ),
-                name="ipsam",
-                parent_span_id="quod",
-                same_process_as_parent_span=True,
-                span_id="hic",
-                span_kind="CLIENT",
-                stack_trace=shared.StackTrace(
-                    stack_frames=shared.StackFrames(
-                        dropped_frames_count=8625985804930332770,
-                        frame=[
-                            shared.StackFrame(
-                                column_number="et",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=93791829547420238,
-                                    value="itaque",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=7316543229150888277,
-                                    value="rem",
-                                ),
-                                line_number="et",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=4871526677843426098,
-                                        value="repellat",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=192662194052221150,
-                                        value="neque",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=6145378819146129817,
-                                    value="laboriosam",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=4325617781642148088,
-                                    value="magnam",
-                                ),
-                            ),
-                            shared.StackFrame(
-                                column_number="reiciendis",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=418373007686355712,
-                                    value="voluptatum",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=3191746064594094765,
-                                    value="soluta",
-                                ),
-                                line_number="quo",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=7581585206308525222,
-                                        value="eos",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=5411230817567836379,
-                                        value="magnam",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=1349466626456106616,
-                                    value="ut",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=3153009224665982389,
-                                    value="cupiditate",
-                                ),
-                            ),
-                        ],
-                    ),
-                    stack_trace_hash_id="corrupti",
-                ),
-                start_time="dolor",
-                status=shared.Status(
-                    code=2238569681300579679,
-                    details=[
-                        {
-                            "debitis": "ex",
-                            "nam": "ex",
-                        },
-                        {
-                            "vero": "repellendus",
-                            "qui": "veniam",
-                        },
-                        {
-                            "totam": "eius",
-                            "nisi": "aliquid",
-                            "fugiat": "sit",
-                        },
-                    ],
-                    message="dignissimos",
-                ),
-                time_events=shared.TimeEvents(
-                    dropped_annotations_count=8376081643456033423,
-                    dropped_message_events_count=3300264040377190200,
-                    time_event=[
-                        shared.TimeEvent(
-                            annotation=shared.Annotation(
-                                attributes=shared.Attributes(
-                                    attribute_map={
-                                        "aliquid": shared.AttributeValue(
-                                            bool_value=True,
-                                            int_value="veritatis",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=5823308888678265137,
-                                                value="sed",
-                                            ),
-                                        ),
-                                        "aliquam": shared.AttributeValue(
-                                            bool_value=True,
-                                            int_value="ex",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=8057906358955275330,
-                                                value="ex",
-                                            ),
-                                        ),
-                                        "vitae": shared.AttributeValue(
-                                            bool_value=True,
-                                            int_value="veniam",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=6963093291005377551,
-                                                value="est",
-                                            ),
-                                        ),
-                                    },
-                                    dropped_attributes_count=7670742053654497762,
-                                ),
-                                description=shared.TruncatableString(
-                                    truncated_byte_count=9069299569638429191,
-                                    value="omnis",
-                                ),
-                            ),
-                            message_event=shared.MessageEvent(
-                                compressed_size_bytes="provident",
-                                id="commodi",
-                                type="TYPE_UNSPECIFIED",
-                                uncompressed_size_bytes="sed",
-                            ),
-                            time="fugiat",
-                        ),
-                    ],
-                ),
-            ),
-            shared.Span(
-                attributes=shared.Attributes(
-                    attribute_map={
-                        "molestiae": shared.AttributeValue(
-                            bool_value=True,
-                            int_value="eum",
-                            string_value=shared.TruncatableString(
-                                truncated_byte_count=3162591810075885038,
-                                value="recusandae",
-                            ),
-                        ),
-                        "distinctio": shared.AttributeValue(
-                            bool_value=True,
-                            int_value="quia",
-                            string_value=shared.TruncatableString(
-                                truncated_byte_count=3113692847381544996,
-                                value="quis",
-                            ),
-                        ),
-                    },
-                    dropped_attributes_count=1711403167402294839,
-                ),
-                child_span_count=658028883953665887,
-                display_name=shared.TruncatableString(
-                    truncated_byte_count=2708742425483043233,
+                    truncated_byte_count=2667853516496602622,
                     value="qui",
                 ),
-                end_time="blanditiis",
+                end_time="ut",
                 links=shared.Links(
-                    dropped_links_count=1124888169288528810,
+                    dropped_links_count=4889365166711756349,
                     link=[
                         shared.Link(
                             attributes=shared.Attributes(
                                 attribute_map={
-                                    "consequatur": shared.AttributeValue(
+                                    "totam": shared.AttributeValue(
                                         bool_value=True,
-                                        int_value="illum",
+                                        int_value="aut",
                                         string_value=shared.TruncatableString(
-                                            truncated_byte_count=4440095872882271002,
-                                            value="saepe",
+                                            truncated_byte_count=5173904636198102650,
+                                            value="quod",
                                         ),
                                     ),
-                                    "culpa": shared.AttributeValue(
+                                    "nemo": shared.AttributeValue(
                                         bool_value=True,
-                                        int_value="dolor",
+                                        int_value="non",
                                         string_value=shared.TruncatableString(
-                                            truncated_byte_count=2720658529666853584,
-                                            value="nihil",
+                                            truncated_byte_count=4098791226593642061,
+                                            value="iusto",
+                                        ),
+                                    ),
+                                    "qui": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="atque",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=3882091319042386722,
+                                            value="fuga",
                                         ),
                                     ),
                                 },
-                                dropped_attributes_count=4291946209512453872,
+                                dropped_attributes_count=4359438289431162146,
                             ),
-                            span_id="exercitationem",
+                            span_id="accusantium",
                             trace_id="deserunt",
-                            type="TYPE_UNSPECIFIED",
+                            type="PARENT_LINKED_SPAN",
                         ),
                         shared.Link(
                             attributes=shared.Attributes(
                                 attribute_map={
-                                    "aspernatur": shared.AttributeValue(
+                                    "quia": shared.AttributeValue(
                                         bool_value=True,
-                                        int_value="ut",
+                                        int_value="laudantium",
                                         string_value=shared.TruncatableString(
-                                            truncated_byte_count=5050253948894144695,
-                                            value="iste",
-                                        ),
-                                    ),
-                                    "quod": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="officiis",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=8054518398797532132,
-                                            value="esse",
+                                            truncated_byte_count=8421933435429370482,
+                                            value="veniam",
                                         ),
                                     ),
                                 },
-                                dropped_attributes_count=1691434432587593857,
+                                dropped_attributes_count=5529399417018292483,
                             ),
-                            span_id="adipisci",
-                            trace_id="aspernatur",
+                            span_id="qui",
+                            trace_id="in",
+                            type="CHILD_LINKED_SPAN",
+                        ),
+                        shared.Link(
+                            attributes=shared.Attributes(
+                                attribute_map={
+                                    "et": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="aut",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=5473806528995187397,
+                                            value="assumenda",
+                                        ),
+                                    ),
+                                    "voluptas": shared.AttributeValue(
+                                        bool_value=False,
+                                        int_value="inventore",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=1489145555310145027,
+                                            value="sit",
+                                        ),
+                                    ),
+                                    "aliquam": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="delectus",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=8494194552799514182,
+                                            value="voluptatum",
+                                        ),
+                                    ),
+                                },
+                                dropped_attributes_count=6504184864662289257,
+                            ),
+                            span_id="voluptas",
+                            trace_id="iste",
                             type="CHILD_LINKED_SPAN",
                         ),
                     ],
                 ),
-                name="sapiente",
-                parent_span_id="at",
+                name="natus",
+                parent_span_id="voluptatem",
                 same_process_as_parent_span=True,
-                span_id="dolor",
-                span_kind="SERVER",
+                span_id="quod",
+                span_kind="PRODUCER",
                 stack_trace=shared.StackTrace(
                     stack_frames=shared.StackFrames(
-                        dropped_frames_count=4318552592500431206,
+                        dropped_frames_count=2358920126147056983,
                         frame=[
                             shared.StackFrame(
-                                column_number="voluptatibus",
+                                column_number="debitis",
                                 file_name=shared.TruncatableString(
-                                    truncated_byte_count=2057425696130468793,
-                                    value="aut",
+                                    truncated_byte_count=8278747621504323425,
+                                    value="commodi",
                                 ),
                                 function_name=shared.TruncatableString(
-                                    truncated_byte_count=5472948715167207246,
-                                    value="ea",
+                                    truncated_byte_count=2627235105381626935,
+                                    value="aliquam",
                                 ),
-                                line_number="necessitatibus",
+                                line_number="et",
                                 load_module=shared.Module(
                                     build_id=shared.TruncatableString(
-                                        truncated_byte_count=8504318534870582666,
-                                        value="aut",
+                                        truncated_byte_count=5466498657175269736,
+                                        value="qui",
                                     ),
                                     module=shared.TruncatableString(
-                                        truncated_byte_count=1449417248362810995,
-                                        value="voluptatem",
+                                        truncated_byte_count=2863387328857630046,
+                                        value="sed",
                                     ),
                                 ),
                                 original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=4375476757655588205,
-                                    value="maxime",
+                                    truncated_byte_count=2827825157440231987,
+                                    value="explicabo",
                                 ),
                                 source_version=shared.TruncatableString(
-                                    truncated_byte_count=6317859072742515473,
-                                    value="quod",
+                                    truncated_byte_count=3270159172791425179,
+                                    value="et",
                                 ),
                             ),
                             shared.StackFrame(
-                                column_number="voluptatum",
+                                column_number="quia",
                                 file_name=shared.TruncatableString(
-                                    truncated_byte_count=6580143705113543846,
-                                    value="aut",
+                                    truncated_byte_count=7323224768096393255,
+                                    value="iste",
                                 ),
                                 function_name=shared.TruncatableString(
-                                    truncated_byte_count=394045682720935338,
-                                    value="iusto",
+                                    truncated_byte_count=9023388149142311413,
+                                    value="voluptatem",
                                 ),
                                 line_number="in",
                                 load_module=shared.Module(
                                     build_id=shared.TruncatableString(
-                                        truncated_byte_count=3460064967972003242,
-                                        value="cum",
+                                        truncated_byte_count=6994506137373746828,
+                                        value="quis",
                                     ),
                                     module=shared.TruncatableString(
-                                        truncated_byte_count=668873899885723210,
-                                        value="nostrum",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=7466532413770905939,
-                                    value="perspiciatis",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=8685251208025816075,
-                                    value="ut",
-                                ),
-                            ),
-                            shared.StackFrame(
-                                column_number="veniam",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=8412716791473707099,
-                                    value="officia",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=7605692820699002696,
-                                    value="ipsum",
-                                ),
-                                line_number="adipisci",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=3020508955706901651,
-                                        value="molestiae",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=7372117690145769185,
+                                        truncated_byte_count=5408533498458557761,
                                         value="ut",
                                     ),
                                 ),
                                 original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=7895065323425861377,
-                                    value="facere",
+                                    truncated_byte_count=2919099918776042889,
+                                    value="in",
                                 ),
                                 source_version=shared.TruncatableString(
-                                    truncated_byte_count=2607881367854918601,
-                                    value="similique",
+                                    truncated_byte_count=3248081538846909880,
+                                    value="voluptas",
                                 ),
                             ),
                         ],
                     ),
-                    stack_trace_hash_id="odio",
+                    stack_trace_hash_id="beatae",
                 ),
-                start_time="adipisci",
+                start_time="et",
                 status=shared.Status(
-                    code=2554508371746394260,
+                    code=8847373183400321540,
                     details=[
                         {
-                            "et": "doloribus",
-                        },
-                        {
-                            "nam": "sint",
+                            "est": "quia",
+                            "voluptatibus": "quas",
+                            "illum": "voluptas",
                         },
                     ],
-                    message="repudiandae",
+                    message="accusantium",
                 ),
                 time_events=shared.TimeEvents(
-                    dropped_annotations_count=3057003022441306605,
-                    dropped_message_events_count=4567130275734661693,
+                    dropped_annotations_count=1261618183671180042,
+                    dropped_message_events_count=6271005194797273684,
                     time_event=[
                         shared.TimeEvent(
                             annotation=shared.Annotation(
                                 attributes=shared.Attributes(
                                     attribute_map={
-                                        "qui": shared.AttributeValue(
-                                            bool_value=False,
-                                            int_value="qui",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=3220956862257110409,
-                                                value="laboriosam",
-                                            ),
-                                        ),
-                                        "similique": shared.AttributeValue(
-                                            bool_value=False,
+                                        "repudiandae": shared.AttributeValue(
+                                            bool_value=True,
                                             int_value="et",
                                             string_value=shared.TruncatableString(
-                                                truncated_byte_count=8772352799208422705,
-                                                value="qui",
+                                                truncated_byte_count=2227978087237540479,
+                                                value="alias",
                                             ),
                                         ),
-                                    },
-                                    dropped_attributes_count=2254885794860710070,
-                                ),
-                                description=shared.TruncatableString(
-                                    truncated_byte_count=6423926587202505410,
-                                    value="error",
-                                ),
-                            ),
-                            message_event=shared.MessageEvent(
-                                compressed_size_bytes="deserunt",
-                                id="recusandae",
-                                type="RECEIVED",
-                                uncompressed_size_bytes="ut",
-                            ),
-                            time="culpa",
-                        ),
-                        shared.TimeEvent(
-                            annotation=shared.Annotation(
-                                attributes=shared.Attributes(
-                                    attribute_map={
-                                        "est": shared.AttributeValue(
+                                        "sit": shared.AttributeValue(
                                             bool_value=False,
-                                            int_value="et",
+                                            int_value="error",
                                             string_value=shared.TruncatableString(
-                                                truncated_byte_count=5912980749044626026,
-                                                value="veritatis",
+                                                truncated_byte_count=1147601219165276827,
+                                                value="et",
                                             ),
                                         ),
-                                        "ut": shared.AttributeValue(
+                                        "voluptatem": shared.AttributeValue(
                                             bool_value=True,
-                                            int_value="minus",
+                                            int_value="ipsa",
                                             string_value=shared.TruncatableString(
-                                                truncated_byte_count=8176708107005068801,
-                                                value="minima",
-                                            ),
-                                        ),
-                                        "consequatur": shared.AttributeValue(
-                                            bool_value=False,
-                                            int_value="voluptate",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=1180761073515899667,
-                                                value="laudantium",
+                                                truncated_byte_count=1306744595110475852,
+                                                value="aliquam",
                                             ),
                                         ),
                                     },
-                                    dropped_attributes_count=534137970119690627,
+                                    dropped_attributes_count=4817872680905293471,
                                 ),
                                 description=shared.TruncatableString(
-                                    truncated_byte_count=3152267740478274112,
-                                    value="libero",
+                                    truncated_byte_count=3266479277466968158,
+                                    value="eos",
                                 ),
                             ),
                             message_event=shared.MessageEvent(
-                                compressed_size_bytes="ut",
-                                id="est",
+                                compressed_size_bytes="eius",
+                                id="quaerat",
                                 type="SENT",
-                                uncompressed_size_bytes="quae",
+                                uncompressed_size_bytes="et",
                             ),
-                            time="sint",
-                        ),
-                    ],
-                ),
-            ),
-            shared.Span(
-                attributes=shared.Attributes(
-                    attribute_map={
-                        "magni": shared.AttributeValue(
-                            bool_value=False,
-                            int_value="eveniet",
-                            string_value=shared.TruncatableString(
-                                truncated_byte_count=1872124498889570851,
-                                value="qui",
-                            ),
-                        ),
-                        "fugit": shared.AttributeValue(
-                            bool_value=False,
-                            int_value="ducimus",
-                            string_value=shared.TruncatableString(
-                                truncated_byte_count=4611970130455200035,
-                                value="quia",
-                            ),
-                        ),
-                    },
-                    dropped_attributes_count=5837814512825710107,
-                ),
-                child_span_count=3689584114546443757,
-                display_name=shared.TruncatableString(
-                    truncated_byte_count=8253050329645548112,
-                    value="dolorum",
-                ),
-                end_time="in",
-                links=shared.Links(
-                    dropped_links_count=745925676084747689,
-                    link=[
-                        shared.Link(
-                            attributes=shared.Attributes(
-                                attribute_map={
-                                    "explicabo": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="consequatur",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=714048778457649626,
-                                            value="blanditiis",
-                                        ),
-                                    ),
-                                },
-                                dropped_attributes_count=3382536036547342098,
-                            ),
-                            span_id="nemo",
-                            trace_id="ad",
-                            type="PARENT_LINKED_SPAN",
-                        ),
-                        shared.Link(
-                            attributes=shared.Attributes(
-                                attribute_map={
-                                    "velit": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="eum",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=5387308147037031214,
-                                            value="atque",
-                                        ),
-                                    ),
-                                    "et": shared.AttributeValue(
-                                        bool_value=True,
-                                        int_value="saepe",
-                                        string_value=shared.TruncatableString(
-                                            truncated_byte_count=6765931371440523951,
-                                            value="amet",
-                                        ),
-                                    ),
-                                },
-                                dropped_attributes_count=647415043653186772,
-                            ),
-                            span_id="consectetur",
-                            trace_id="quo",
-                            type="PARENT_LINKED_SPAN",
-                        ),
-                    ],
-                ),
-                name="vel",
-                parent_span_id="molestiae",
-                same_process_as_parent_span=True,
-                span_id="dolor",
-                span_kind="PRODUCER",
-                stack_trace=shared.StackTrace(
-                    stack_frames=shared.StackFrames(
-                        dropped_frames_count=7497798725426883901,
-                        frame=[
-                            shared.StackFrame(
-                                column_number="debitis",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=8357011285286565884,
-                                    value="et",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=5074184114943908484,
-                                    value="consequuntur",
-                                ),
-                                line_number="ea",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=5548937277649397644,
-                                        value="voluptas",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=2306189342091941383,
-                                        value="temporibus",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=7990343170107771072,
-                                    value="eius",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=2757753363505179891,
-                                    value="illo",
-                                ),
-                            ),
-                            shared.StackFrame(
-                                column_number="debitis",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=4816527767106693013,
-                                    value="ut",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=7541775597248545568,
-                                    value="mollitia",
-                                ),
-                                line_number="voluptas",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=6890724580885051093,
-                                        value="libero",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=1130388397918876596,
-                                        value="optio",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=2522083041826811291,
-                                    value="dicta",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=4568021486366470855,
-                                    value="quis",
-                                ),
-                            ),
-                            shared.StackFrame(
-                                column_number="aut",
-                                file_name=shared.TruncatableString(
-                                    truncated_byte_count=1443724628196768607,
-                                    value="officiis",
-                                ),
-                                function_name=shared.TruncatableString(
-                                    truncated_byte_count=8446368677072091442,
-                                    value="non",
-                                ),
-                                line_number="sit",
-                                load_module=shared.Module(
-                                    build_id=shared.TruncatableString(
-                                        truncated_byte_count=5120365771785343002,
-                                        value="sapiente",
-                                    ),
-                                    module=shared.TruncatableString(
-                                        truncated_byte_count=4567861104280258440,
-                                        value="facilis",
-                                    ),
-                                ),
-                                original_function_name=shared.TruncatableString(
-                                    truncated_byte_count=1006122998850990026,
-                                    value="dolor",
-                                ),
-                                source_version=shared.TruncatableString(
-                                    truncated_byte_count=2459444971568688245,
-                                    value="ut",
-                                ),
-                            ),
-                        ],
-                    ),
-                    stack_trace_hash_id="quisquam",
-                ),
-                start_time="incidunt",
-                status=shared.Status(
-                    code=4922047298306025132,
-                    details=[
-                        {
-                            "quae": "distinctio",
-                        },
-                        {
-                            "omnis": "dolores",
-                            "architecto": "labore",
-                            "sit": "placeat",
-                        },
-                    ],
-                    message="aut",
-                ),
-                time_events=shared.TimeEvents(
-                    dropped_annotations_count=1305834826686730245,
-                    dropped_message_events_count=6068238350177432791,
-                    time_event=[
-                        shared.TimeEvent(
-                            annotation=shared.Annotation(
-                                attributes=shared.Attributes(
-                                    attribute_map={
-                                        "excepturi": shared.AttributeValue(
-                                            bool_value=True,
-                                            int_value="recusandae",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=31602809576134454,
-                                                value="cumque",
-                                            ),
-                                        ),
-                                    },
-                                    dropped_attributes_count=7895267545288934660,
-                                ),
-                                description=shared.TruncatableString(
-                                    truncated_byte_count=6791283100892614221,
-                                    value="ipsa",
-                                ),
-                            ),
-                            message_event=shared.MessageEvent(
-                                compressed_size_bytes="quaerat",
-                                id="voluptates",
-                                type="TYPE_UNSPECIFIED",
-                                uncompressed_size_bytes="quis",
-                            ),
-                            time="qui",
+                            time="officia",
                         ),
                         shared.TimeEvent(
                             annotation=shared.Annotation(
                                 attributes=shared.Attributes(
                                     attribute_map={
-                                        "nesciunt": shared.AttributeValue(
-                                            bool_value=False,
-                                            int_value="deserunt",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=5287675374053131560,
-                                                value="sit",
-                                            ),
-                                        ),
-                                        "consequatur": shared.AttributeValue(
+                                        "sint": shared.AttributeValue(
                                             bool_value=True,
-                                            int_value="nihil",
+                                            int_value="ut",
                                             string_value=shared.TruncatableString(
-                                                truncated_byte_count=8928422274497150829,
-                                                value="ipsum",
-                                            ),
-                                        ),
-                                        "illum": shared.AttributeValue(
-                                            bool_value=False,
-                                            int_value="provident",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=3137147292797088911,
-                                                value="temporibus",
+                                                truncated_byte_count=3799826807051379439,
+                                                value="quibusdam",
                                             ),
                                         ),
                                     },
-                                    dropped_attributes_count=4375435975116264586,
+                                    dropped_attributes_count=3932272906123601688,
                                 ),
                                 description=shared.TruncatableString(
-                                    truncated_byte_count=8731453672231866571,
-                                    value="fugit",
+                                    truncated_byte_count=7760242436643299824,
+                                    value="fuga",
                                 ),
                             ),
                             message_event=shared.MessageEvent(
-                                compressed_size_bytes="velit",
-                                id="repellat",
+                                compressed_size_bytes="est",
+                                id="explicabo",
                                 type="SENT",
-                                uncompressed_size_bytes="nesciunt",
+                                uncompressed_size_bytes="voluptas",
                             ),
-                            time="ab",
-                        ),
-                        shared.TimeEvent(
-                            annotation=shared.Annotation(
-                                attributes=shared.Attributes(
-                                    attribute_map={
-                                        "ut": shared.AttributeValue(
-                                            bool_value=False,
-                                            int_value="libero",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=1561017435673571789,
-                                                value="dolorum",
-                                            ),
-                                        ),
-                                        "qui": shared.AttributeValue(
-                                            bool_value=True,
-                                            int_value="ea",
-                                            string_value=shared.TruncatableString(
-                                                truncated_byte_count=8362301776994056438,
-                                                value="aut",
-                                            ),
-                                        ),
-                                    },
-                                    dropped_attributes_count=376069413832377877,
-                                ),
-                                description=shared.TruncatableString(
-                                    truncated_byte_count=1228101723310582998,
-                                    value="dignissimos",
-                                ),
-                            ),
-                            message_event=shared.MessageEvent(
-                                compressed_size_bytes="et",
-                                id="perferendis",
-                                type="SENT",
-                                uncompressed_size_bytes="quos",
-                            ),
-                            time="voluptates",
+                            time="quis",
                         ),
                     ],
                 ),

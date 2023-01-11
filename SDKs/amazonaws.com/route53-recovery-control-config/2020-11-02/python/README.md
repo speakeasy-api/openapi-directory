@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CreateClusterRequest(
     headers=operations.CreateClusterHeaders(
-        x_amz_algorithm="ipsa",
-        x_amz_content_sha256="quibusdam",
-        x_amz_credential="quis",
-        x_amz_date="necessitatibus",
-        x_amz_security_token="sint",
-        x_amz_signature="enim",
-        x_amz_signed_headers="quia",
+        x_amz_algorithm="omnis",
+        x_amz_content_sha256="velit",
+        x_amz_credential="commodi",
+        x_amz_date="ut",
+        x_amz_security_token="aut",
+        x_amz_signature="explicabo",
+        x_amz_signed_headers="sit",
     ),
     request=operations.CreateClusterRequestBody(
-        client_token="voluptatem",
-        cluster_name="suscipit",
+        client_token="sed",
+        cluster_name="est",
     ),
 )
     
-res = s.sdk.create_cluster(req)
+res = s.create_cluster(req)
 
 if res.create_cluster_response is not None:
     # handle response

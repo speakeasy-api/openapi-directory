@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Players:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerSeasonStat]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerSeasonStat]])
                 res.player_season_stats = out
         elif r.status_code == 400:
             pass
@@ -68,7 +68,7 @@ class Players:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerUsage]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerUsage]])
                 res.player_usages = out
         elif r.status_code == 400:
             pass
@@ -96,7 +96,7 @@ class Players:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReturningProduction]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReturningProduction]])
                 res.returning_productions = out
         elif r.status_code == 400:
             pass
@@ -124,7 +124,7 @@ class Players:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayerSearchResult]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayerSearchResult]])
                 res.player_search_results = out
         elif r.status_code == 400:
             pass

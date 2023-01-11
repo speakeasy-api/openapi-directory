@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbproxytargetgroup as shared_dbproxytargetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbProxyTargetGroupsResponse:
-    marker: Optional[str] = field(default=None)
-    target_groups: Optional[List[DbProxyTargetGroup]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    target_groups: Optional[list[shared_dbproxytargetgroup.DbProxyTargetGroup]] = dataclasses.field(default=None)
     

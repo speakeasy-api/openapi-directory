@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchLinkAggregationPathParams:
-    link_aggregation_id: str = field(metadata={'path_param': { 'field_name': 'linkAggregationId', 'style': 'simple', 'explode': False }})
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    link_aggregation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'linkAggregationId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchLinkAggregationRequest:
-    path_params: DeleteNetworkSwitchLinkAggregationPathParams = field()
+    path_params: DeleteNetworkSwitchLinkAggregationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchLinkAggregationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

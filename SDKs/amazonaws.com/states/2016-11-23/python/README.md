@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,27 @@ s.config_security(
     
 req = operations.CreateActivityRequest(
     headers=operations.CreateActivityHeaders(
-        x_amz_algorithm="aperiam",
-        x_amz_content_sha256="ut",
-        x_amz_credential="illum",
-        x_amz_date="hic",
-        x_amz_security_token="quisquam",
-        x_amz_signature="sit",
-        x_amz_signed_headers="autem",
+        x_amz_algorithm="laboriosam",
+        x_amz_content_sha256="totam",
+        x_amz_credential="atque",
+        x_amz_date="corrupti",
+        x_amz_security_token="quibusdam",
+        x_amz_signature="dolorum",
+        x_amz_signed_headers="placeat",
         x_amz_target="AWSStepFunctions.CreateActivity",
     ),
     request=shared.CreateActivityInput(
-        name="itaque",
+        name="laborum",
         tags=[
             shared.Tag(
-                key="et",
+                key="numquam",
                 value="et",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_activity(req)
+res = s.create_activity(req)
 
 if res.create_activity_output is not None:
     # handle response

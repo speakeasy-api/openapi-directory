@@ -1,24 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import taxratescreaterequest as shared_taxratescreaterequest
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import taxratesresponse as shared_taxratesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaxRatesSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaxRatesRequest:
-    request: shared.TaxRatesCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateTaxRatesSecurity = field()
+    request: shared_taxratescreaterequest.TaxRatesCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateTaxRatesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaxRatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    tax_rates_response: Optional[shared.TaxRatesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    tax_rates_response: Optional[shared_taxratesresponse.TaxRatesResponse] = dataclasses.field(default=None)
     

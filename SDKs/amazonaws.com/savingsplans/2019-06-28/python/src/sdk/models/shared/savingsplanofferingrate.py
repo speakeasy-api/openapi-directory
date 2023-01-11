@@ -1,24 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import savingsplanproducttype_enum as shared_savingsplanproducttype_enum
+from ..shared import parentsavingsplanoffering as shared_parentsavingsplanoffering
+from ..shared import savingsplanrateservicecode_enum as shared_savingsplanrateservicecode_enum
+from ..shared import savingsplanrateunit_enum as shared_savingsplanrateunit_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SavingsPlanOfferingRate:
     r"""SavingsPlanOfferingRate
     Information about a Savings Plan offering rate.
     """
     
-    operation: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
-    product_type: Optional[SavingsPlanProductTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('productType') }})
-    properties: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
-    rate: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rate') }})
-    savings_plan_offering: Optional[ParentSavingsPlanOffering] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanOffering') }})
-    service_code: Optional[SavingsPlanRateServiceCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceCode') }})
-    unit: Optional[SavingsPlanRateUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
-    usage_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('usageType') }})
+    operation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
+    product_type: Optional[shared_savingsplanproducttype_enum.SavingsPlanProductTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('productType') }})
+    properties: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('properties') }})
+    rate: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rate') }})
+    savings_plan_offering: Optional[shared_parentsavingsplanoffering.ParentSavingsPlanOffering] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('savingsPlanOffering') }})
+    service_code: Optional[shared_savingsplanrateservicecode_enum.SavingsPlanRateServiceCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceCode') }})
+    unit: Optional[shared_savingsplanrateunit_enum.SavingsPlanRateUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unit') }})
+    usage_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('usageType') }})
     

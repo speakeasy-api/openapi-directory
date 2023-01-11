@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -30,18 +30,18 @@ class ConnectivityWifiAvailableExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Connectivity:
     r"""Connectivity
     The ways in which the property provides guests with the ability to access the internet.
     """
     
-    free_wifi: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWifi') }})
-    free_wifi_exception: Optional[ConnectivityFreeWifiExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWifiException') }})
-    public_area_wifi_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicAreaWifiAvailable') }})
-    public_area_wifi_available_exception: Optional[ConnectivityPublicAreaWifiAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicAreaWifiAvailableException') }})
-    public_internet_terminal: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicInternetTerminal') }})
-    public_internet_terminal_exception: Optional[ConnectivityPublicInternetTerminalExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicInternetTerminalException') }})
-    wifi_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wifiAvailable') }})
-    wifi_available_exception: Optional[ConnectivityWifiAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wifiAvailableException') }})
+    free_wifi: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWifi') }})
+    free_wifi_exception: Optional[ConnectivityFreeWifiExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeWifiException') }})
+    public_area_wifi_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicAreaWifiAvailable') }})
+    public_area_wifi_available_exception: Optional[ConnectivityPublicAreaWifiAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicAreaWifiAvailableException') }})
+    public_internet_terminal: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicInternetTerminal') }})
+    public_internet_terminal_exception: Optional[ConnectivityPublicInternetTerminalExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicInternetTerminalException') }})
+    wifi_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wifiAvailable') }})
+    wifi_available_exception: Optional[ConnectivityWifiAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wifiAvailableException') }})
     

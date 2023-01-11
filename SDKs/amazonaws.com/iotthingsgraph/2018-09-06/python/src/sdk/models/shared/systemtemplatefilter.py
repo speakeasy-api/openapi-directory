@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import systemtemplatefiltername_enum as shared_systemtemplatefiltername_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SystemTemplateFilter:
     r"""SystemTemplateFilter
     An object that filters a system search.
     """
     
-    name: SystemTemplateFilterNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    value: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    name: shared_systemtemplatefiltername_enum.SystemTemplateFilterNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    value: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

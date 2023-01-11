@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,43 +18,42 @@ s = sdk.SDK()
     
 req = operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest(
     security=operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity(
-        hapikey=shared.SchemeHapikey(
+        private_apps_legacy=shared.SchemePrivateAppsLegacy(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     path_params=operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreatePathParams(
-        external_event_id="at",
-        subscriber_state="alias",
+        external_event_id="veniam",
+        subscriber_state="nam",
     ),
     query_params=operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateQueryParams(
-        external_account_id="itaque",
+        external_account_id="velit",
     ),
     request=shared.BatchInputMarketingEventSubscriber(
         inputs=[
             shared.MarketingEventSubscriber(
-                interaction_date_time=2302967267970027547,
+                interaction_date_time=2417915545820237958,
                 properties={
-                    "molestias": "unde",
-                    "est": "magni",
+                    "ut": "porro",
+                    "ut": "vitae",
+                    "culpa": "quaerat",
                 },
-                vid=7565841782221576307,
+                vid=5166240153220924713,
             ),
             shared.MarketingEventSubscriber(
-                interaction_date_time=2142591452447809195,
+                interaction_date_time=4937055844692512394,
                 properties={
-                    "sed": "et",
-                    "aut": "magni",
-                    "suscipit": "itaque",
+                    "tempore": "molestiae",
+                    "doloribus": "perferendis",
                 },
-                vid=1952180925797314726,
+                vid=5709488542962643959,
             ),
             shared.MarketingEventSubscriber(
-                interaction_date_time=5471217105972249296,
+                interaction_date_time=2902389675343405999,
                 properties={
-                    "laudantium": "molestiae",
-                    "omnis": "maiores",
+                    "deleniti": "eos",
                 },
-                vid=1075583259233509778,
+                vid=7665706851115156798,
             ),
         ],
     ),

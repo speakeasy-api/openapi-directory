@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesDeleteRequest:
-    path_params: VirtualizationInterfacesDeletePathParams = field()
+    path_params: VirtualizationInterfacesDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationInterfacesDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class VatComprehensivePathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatComprehensiveRequestBody:
-    vat_number: str = field(metadata={'form': { 'field_name': 'vatNumber' }})
-    company_address: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'companyAddress' }})
-    company_name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'companyName' }})
-    company_number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'companyNumber' }})
+    vat_number: str = dataclasses.field(metadata={'form': { 'field_name': 'vatNumber' }})
+    company_address: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'companyAddress' }})
+    company_name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'companyName' }})
+    company_number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'companyNumber' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatComprehensiveSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VatComprehensiveRequest:
-    path_params: VatComprehensivePathParams = field()
-    request: VatComprehensiveRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: VatComprehensiveSecurity = field()
+    path_params: VatComprehensivePathParams = dataclasses.field()
+    request: VatComprehensiveRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: VatComprehensiveSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VatComprehensiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vat_comprehensive_200_application_json_any: Optional[Any] = field(default=None)
-    vat_comprehensive_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vat_comprehensive_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    vat_comprehensive_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

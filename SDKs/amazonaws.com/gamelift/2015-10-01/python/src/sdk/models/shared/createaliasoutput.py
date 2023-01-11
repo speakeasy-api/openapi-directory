@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import alias as shared_alias
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAliasOutput:
     r"""CreateAliasOutput
     Represents the returned data in response to a request operation.
     """
     
-    alias: Optional[Alias] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Alias') }})
+    alias: Optional[shared_alias.Alias] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Alias') }})
     

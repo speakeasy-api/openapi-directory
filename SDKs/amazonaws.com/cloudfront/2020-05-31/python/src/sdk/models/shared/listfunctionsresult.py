@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import functionlist as shared_functionlist
 
 
-@dataclass
+@dataclasses.dataclass
 class ListFunctionsResult:
-    function_list: Optional[FunctionList] = field(default=None)
+    function_list: Optional[shared_functionlist.FunctionList] = dataclasses.field(default=None)
     

@@ -1,0 +1,41 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.PlaycustomappAccountsCustomAppsCreateRequest(
+    security=operations.PlaycustomappAccountsCustomAppsCreateSecurity(
+        oauth2=shared.SchemeOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+        oauth2c=shared.SchemeOauth2c(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    path_params=operations.PlaycustomappAccountsCustomAppsCreatePathParams(
+        account="delectus",
+    ),
+    query_params=operations.PlaycustomappAccountsCustomAppsCreateQueryParams(
+        dollar_xgafv="1",
+        access_token="totam",
+        alt="proto",
+        callback="quia",
+        fields="id",
+        key="sint",
+        oauth_token="amet",
+        pretty_print=False,
+        quota_user="qui",
+        upload_type="vel",
+        upload_protocol="porro",
+    ),
+    request="tenetur".encode(),
+)
+    
+res = s.accounts.playcustomapp_accounts_custom_apps_create(req)
+
+if res.custom_app is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

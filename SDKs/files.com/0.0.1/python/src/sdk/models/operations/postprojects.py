@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import projectentity as shared_projectentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectsRequestBody:
-    global_access: str = field(metadata={'multipart_form': { 'field_name': 'global_access' }})
+    global_access: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'global_access' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectsRequest:
-    request: PostProjectsRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostProjectsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project_entity: Optional[shared.ProjectEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project_entity: Optional[shared_projectentity.ProjectEntity] = dataclasses.field(default=None)
     

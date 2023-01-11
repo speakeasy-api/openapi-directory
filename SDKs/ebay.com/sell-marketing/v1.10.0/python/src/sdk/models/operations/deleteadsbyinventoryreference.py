@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deleteadsbyinventoryreferencerequest as shared_deleteadsbyinventoryreferencerequest
+from ..shared import adids as shared_adids
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdsByInventoryReferencePathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdsByInventoryReferenceSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdsByInventoryReferenceRequest:
-    path_params: DeleteAdsByInventoryReferencePathParams = field()
-    request: shared.DeleteAdsByInventoryReferenceRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: DeleteAdsByInventoryReferenceSecurity = field()
+    path_params: DeleteAdsByInventoryReferencePathParams = dataclasses.field()
+    request: shared_deleteadsbyinventoryreferencerequest.DeleteAdsByInventoryReferenceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: DeleteAdsByInventoryReferenceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAdsByInventoryReferenceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ad_ids: Optional[shared.AdIds] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ad_ids: Optional[shared_adids.AdIds] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyFieldLevelEncryptionEncryptionEntities:
     r"""TooManyFieldLevelEncryptionEncryptionEntities
     The maximum number of encryption entities for field-level encryption have been created.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

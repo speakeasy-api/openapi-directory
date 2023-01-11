@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import returnpolicy as shared_returnpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyPathParams:
-    return_policy_id: str = field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
+    return_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'return_policy_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyRequest:
-    path_params: GetReturnPolicyPathParams = field()
-    security: GetReturnPolicySecurity = field()
+    path_params: GetReturnPolicyPathParams = dataclasses.field()
+    security: GetReturnPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturnPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    return_policy: Optional[shared.ReturnPolicy] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    return_policy: Optional[shared_returnpolicy.ReturnPolicy] = dataclasses.field(default=None)
     

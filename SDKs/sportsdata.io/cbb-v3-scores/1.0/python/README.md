@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -30,7 +29,7 @@ req = operations.AreGamesInProgressRequest(
     ),
 )
     
-res = s.sdk.are_games_in_progress(req)
+res = s.are_games_in_progress(req)
 
 if res.are_games_in_progress_200_application_json_boolean is not None:
     # handle response

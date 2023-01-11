@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import commit_comparison as shared_commit_comparison
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposCompareCommitsPathParams:
-    base: str = field(metadata={'path_param': { 'field_name': 'base', 'style': 'simple', 'explode': False }})
-    head: str = field(metadata={'path_param': { 'field_name': 'head', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    base: str = dataclasses.field(metadata={'path_param': { 'field_name': 'base', 'style': 'simple', 'explode': False }})
+    head: str = dataclasses.field(metadata={'path_param': { 'field_name': 'head', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposCompareCommitsRequest:
-    path_params: ReposCompareCommitsPathParams = field()
+    path_params: ReposCompareCommitsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposCompareCommitsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    commit_comparison: Optional[shared.CommitComparison] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    commit_comparison: Optional[shared_commit_comparison.CommitComparison] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import generatedapkspersigningkey as shared_generatedapkspersigningkey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GeneratedApksListResponse:
     r"""GeneratedApksListResponse
     Response to list generated APKs.
     """
     
-    generated_apks: Optional[List[GeneratedApksPerSigningKey]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generatedApks') }})
+    generated_apks: Optional[list[shared_generatedapkspersigningkey.GeneratedApksPerSigningKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('generatedApks') }})
     

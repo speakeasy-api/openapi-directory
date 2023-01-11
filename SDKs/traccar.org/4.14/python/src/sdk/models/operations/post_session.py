@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSessionRequest:
-    request: Any = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSessionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user: Optional[shared.User] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user: Optional[shared_user.User] = dataclasses.field(default=None)
     

@@ -42,3 +42,5 @@ from .textstream import *
 from .videostream import *
 from .vp9codecsettings import *
 from .yadifconfig import *
+
+__all__ = ["XgafvEnum","AdBreak","AltEnum","Animation","AnimationEnd","AnimationFadeFadeTypeEnum","AnimationFade","AnimationStatic","Audio","AudioMapping","AudioStream","BwdifConfig","Color","Crop","Deblock","Deinterlace","Denoise","EditAtom","ElementaryStream","H264CodecSettings","H265CodecSettings","Image","Input","JobStateEnum","Job","JobInput","JobConfig","JobTemplate","ListJobsResponse","ListJobTemplatesResponse","ManifestTypeEnum","Manifest","MuxStream","NormalizedCoordinate","Output","Overlay","Pad","PreprocessingConfig","PubsubDestination","SchemeOauth2","SchemeOauth2c","SegmentSettings","SpriteSheet","Status","TextMapping","TextStream","VideoStream","Vp9CodecSettings","YadifConfig"]

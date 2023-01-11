@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import aquaconfiguration as shared_aquaconfiguration
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyAquaOutputMessage:
-    aqua_configuration: Optional[AquaConfiguration] = field(default=None)
+    aqua_configuration: Optional[shared_aquaconfiguration.AquaConfiguration] = dataclasses.field(default=None)
     

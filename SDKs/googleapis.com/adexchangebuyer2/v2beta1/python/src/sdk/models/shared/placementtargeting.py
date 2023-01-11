@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import mobileapplicationtargeting as shared_mobileapplicationtargeting
+from ..shared import urltargeting as shared_urltargeting
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PlacementTargeting:
     r"""PlacementTargeting
     Represents targeting about where the ads can appear, for example, certain sites or mobile applications. Different placement targeting types will be logically OR'ed.
     """
     
-    mobile_application_targeting: Optional[MobileApplicationTargeting] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationTargeting') }})
-    url_targeting: Optional[URLTargeting] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('urlTargeting') }})
+    mobile_application_targeting: Optional[shared_mobileapplicationtargeting.MobileApplicationTargeting] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileApplicationTargeting') }})
+    url_targeting: Optional[shared_urltargeting.URLTargeting] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('urlTargeting') }})
     

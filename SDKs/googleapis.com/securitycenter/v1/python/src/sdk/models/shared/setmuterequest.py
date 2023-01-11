@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class SetMuteRequestMuteEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetMuteRequest:
     r"""SetMuteRequest
     Request message for updating a finding's mute status.
     """
     
-    mute: Optional[SetMuteRequestMuteEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mute') }})
+    mute: Optional[SetMuteRequestMuteEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mute') }})
     

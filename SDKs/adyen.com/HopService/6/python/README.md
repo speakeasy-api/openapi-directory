@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,10 +23,10 @@ req = operations.PostGetOnboardingURLRequest(
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="in",
+    request="vel",
 )
     
-res = s.sdk.post_get_onboarding_url(req)
+res = s.hosted_onboarding_page.post_get_onboarding_url(req)
 
 if res.get_onboarding_url_response is not None:
     # handle response
@@ -37,9 +36,12 @@ if res.get_onboarding_url_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Hosted Onboarding Page
 
 * `post_get_onboarding_url` - Get a link to a Adyen-hosted onboarding page.
+
+### PCI Compliance Questionnaire Page
+
 * `post_get_pci_questionnaire_url` - Get a link to a PCI compliance questionnaire.
 
 <!-- End SDK Available Operations -->

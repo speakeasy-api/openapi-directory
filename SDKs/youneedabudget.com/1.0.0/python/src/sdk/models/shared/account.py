@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,19 +19,19 @@ class AccountTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Account:
-    balance: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('balance') }})
-    cleared_balance: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cleared_balance') }})
-    closed: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('closed') }})
-    deleted: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleted') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    on_budget: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('on_budget') }})
-    transfer_payee_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transfer_payee_id') }})
-    type: AccountTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    uncleared_balance: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uncleared_balance') }})
-    direct_import_in_error: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_import_in_error') }})
-    direct_import_linked: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_import_linked') }})
-    note: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
+    balance: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('balance') }})
+    cleared_balance: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cleared_balance') }})
+    closed: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('closed') }})
+    deleted: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleted') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    on_budget: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('on_budget') }})
+    transfer_payee_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transfer_payee_id') }})
+    type: AccountTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    uncleared_balance: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('uncleared_balance') }})
+    direct_import_in_error: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_import_in_error') }})
+    direct_import_linked: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('direct_import_linked') }})
+    note: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
     

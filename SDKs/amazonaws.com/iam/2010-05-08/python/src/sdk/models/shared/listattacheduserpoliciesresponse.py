@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import attachedpolicy as shared_attachedpolicy
 
 
-@dataclass
+@dataclasses.dataclass
 class ListAttachedUserPoliciesResponse:
     r"""ListAttachedUserPoliciesResponse
     Contains the response to a successful <a>ListAttachedUserPolicies</a> request. 
     """
     
-    attached_policies: Optional[List[AttachedPolicy]] = field(default=None)
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    attached_policies: Optional[list[shared_attachedpolicy.AttachedPolicy]] = dataclasses.field(default=None)
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

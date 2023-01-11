@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.HscerRequest(
     security=operations.HscerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.HscerRequestBody(
         certificate_parameters=operations.HscerRequestBodyCertificateParameters(
-            certificate_type="ullam",
-            dob="laborum",
-            full_name="impedit",
-            rroll="magni",
-            month="id",
-            year="eius",
+            certificate_type="et",
+            dob="eaque",
+            full_name="veritatis",
+            rroll="id",
+            month="optio",
+            year="inventore",
         ),
-        consent_artifact="fugiat",
+        consent_artifact="illo",
         format="pdf",
-        txn_id="praesentium",
+        txn_id="culpa",
     ),
 )
     
-res = s.sdk.hscer(req)
+res = s.ap_is.hscer(req)
 
 if res.status_code == 200:
     # handle response
@@ -51,7 +50,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hscer` - Class XII Marksheet
 * `sscer` - Class X Marksheet

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,37 +20,37 @@ req = operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest(
     security=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams(
-        parent="porro",
+        parent="adipisci",
     ),
     query_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="expedita",
-        alt="json",
-        callback="et",
-        fields="totam",
-        hub_id="non",
-        key="sit",
-        oauth_token="non",
+        dollar_xgafv="1",
+        access_token="sit",
+        alt="proto",
+        callback="omnis",
+        fields="sint",
+        hub_id="molestias",
+        key="nemo",
+        oauth_token="provident",
         pretty_print=False,
-        quota_user="est",
-        request_id="ut",
-        upload_type="ducimus",
-        upload_protocol="odio",
+        quota_user="vel",
+        request_id="quia",
+        upload_type="voluptatem",
+        upload_protocol="inventore",
     ),
     request=shared.HubInput(
-        create_time="quaerat",
-        description="iure",
+        create_time="at",
+        description="et",
         labels={
-            "distinctio": "quia",
+            "atque": "corrupti",
         },
-        name="eveniet",
-        update_time="id",
+        name="eligendi",
+        update_time="magni",
     ),
 )
     

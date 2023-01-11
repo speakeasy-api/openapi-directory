@@ -38,3 +38,5 @@ from .searchresponse import *
 from .submitpodcastform import *
 from .submitpodcastresponse import *
 from .typeaheadresponse import *
+
+__all__ = ["BestPodcastsResponse","CuratedListFull","CuratedListSearchResult","CuratedListSimple","CustomAudio","DeletedItem","DeletePodcastResponseStatusEnum","DeletePodcastResponse","EpisodeFull","EpisodeMinimum","EpisodeSearchResult","EpisodeSearchResultPodcast","EpisodeSimple","Genre","GetCuratedPodcastsResponse","GetEpisodeRecommendationsResponse","GetEpisodesInBatchForm","GetEpisodesInBatchResponse","GetGenresResponse","GetLanguagesResponse","GetPodcastRecommendationsResponse","GetPodcastsInBatchForm","GetPodcastsInBatchResponse","GetRegionsResponse","PlaylistItemTypeEnum","PlaylistItem","PlaylistResponseTypeEnum","PlaylistResponse","PlaylistsResponse","PlaylistsResponsePlaylists","PlaylistVisibilityFieldEnum","PodcastExtraField","PodcastFull","PodcastLookingForField","PodcastMinimum","PodcastSearchResult","PodcastSimple","PodcastTypeaheadResult","PodcastTypeFieldEnum","SearchResponse","SubmitPodcastForm","SubmitPodcastResponseStatusEnum","SubmitPodcastResponse","TypeaheadResponse"]

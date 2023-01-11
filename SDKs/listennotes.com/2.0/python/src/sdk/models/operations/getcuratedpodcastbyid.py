@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import curatedlistfull as shared_curatedlistfull
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastByIDHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastByIDRequest:
-    headers: GetCuratedPodcastByIDHeaders = field()
-    path_params: GetCuratedPodcastByIDPathParams = field()
+    headers: GetCuratedPodcastByIDHeaders = dataclasses.field()
+    path_params: GetCuratedPodcastByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastByIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    curated_list_full: Optional[shared.CuratedListFull] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    curated_list_full: Optional[shared_curatedlistfull.CuratedListFull] = dataclasses.field(default=None)
     

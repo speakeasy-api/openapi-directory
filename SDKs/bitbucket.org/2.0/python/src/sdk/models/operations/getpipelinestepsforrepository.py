@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_pipeline_steps as shared_paginated_pipeline_steps
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineStepsForRepositoryPathParams:
-    pipeline_uuid: str = field(metadata={'path_param': { 'field_name': 'pipeline_uuid', 'style': 'simple', 'explode': False }})
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    pipeline_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'pipeline_uuid', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineStepsForRepositoryRequest:
-    path_params: GetPipelineStepsForRepositoryPathParams = field()
+    path_params: GetPipelineStepsForRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPipelineStepsForRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_pipeline_steps: Optional[shared.PaginatedPipelineSteps] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_pipeline_steps: Optional[shared_paginated_pipeline_steps.PaginatedPipelineSteps] = dataclasses.field(default=None)
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -116,15 +116,15 @@ class MitreAttackPrimaryTechniquesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MitreAttack:
     r"""MitreAttack
     MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
     """
     
-    additional_tactics: Optional[List[MitreAttackAdditionalTacticsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalTactics') }})
-    additional_techniques: Optional[List[MitreAttackAdditionalTechniquesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalTechniques') }})
-    primary_tactic: Optional[MitreAttackPrimaryTacticEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTactic') }})
-    primary_techniques: Optional[List[MitreAttackPrimaryTechniquesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTechniques') }})
-    version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    additional_tactics: Optional[list[MitreAttackAdditionalTacticsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalTactics') }})
+    additional_techniques: Optional[list[MitreAttackAdditionalTechniquesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additionalTechniques') }})
+    primary_tactic: Optional[MitreAttackPrimaryTacticEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTactic') }})
+    primary_techniques: Optional[list[MitreAttackPrimaryTechniquesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primaryTechniques') }})
+    version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import location as shared_location
 
 class JobDerivedInfoJobCategoriesEnum(str, Enum):
     JOB_CATEGORY_UNSPECIFIED = "JOB_CATEGORY_UNSPECIFIED"
@@ -40,12 +40,12 @@ class JobDerivedInfoJobCategoriesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class JobDerivedInfo:
     r"""JobDerivedInfo
     Derived details about the job posting.
     """
     
-    job_categories: Optional[List[JobDerivedInfoJobCategoriesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobCategories') }})
-    locations: Optional[List[Location]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locations') }})
+    job_categories: Optional[list[JobDerivedInfoJobCategoriesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobCategories') }})
+    locations: Optional[list[shared_location.Location]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locations') }})
     

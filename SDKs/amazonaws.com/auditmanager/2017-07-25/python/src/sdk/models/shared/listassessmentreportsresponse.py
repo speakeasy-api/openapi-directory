@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import assessmentreportmetadata as shared_assessmentreportmetadata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAssessmentReportsResponse:
-    assessment_reports: Optional[List[AssessmentReportMetadata]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assessmentReports') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    assessment_reports: Optional[list[shared_assessmentreportmetadata.AssessmentReportMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assessmentReports') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

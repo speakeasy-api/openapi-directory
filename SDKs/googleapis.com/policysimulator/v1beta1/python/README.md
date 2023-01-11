@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,126 +20,222 @@ req = operations.PolicysimulatorProjectsLocationsReplaysCreateRequest(
     security=operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.PolicysimulatorProjectsLocationsReplaysCreatePathParams(
-        parent="dignissimos",
+        parent="tenetur",
     ),
     query_params=operations.PolicysimulatorProjectsLocationsReplaysCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="officiis",
-        alt="json",
-        callback="officiis",
-        fields="nihil",
-        key="omnis",
-        oauth_token="maxime",
-        pretty_print=False,
-        quota_user="quos",
-        upload_type="et",
-        upload_protocol="omnis",
+        dollar_xgafv="1",
+        access_token="est",
+        alt="proto",
+        callback="aut",
+        fields="rerum",
+        key="iure",
+        oauth_token="explicabo",
+        pretty_print=True,
+        quota_user="ducimus",
+        upload_type="nisi",
+        upload_protocol="ut",
     ),
     request=shared.GoogleCloudPolicysimulatorV1beta1ReplayInput(
         config=shared.GoogleCloudPolicysimulatorV1beta1ReplayConfig(
-            log_source="RECENT_ACCESSES",
+            log_source="LOG_SOURCE_UNSPECIFIED",
             policy_overlay={
-                "repudiandae": shared.GoogleIamV1Policy(
+                "reiciendis": shared.GoogleIamV1Policy(
                     audit_configs=[
                         shared.GoogleIamV1AuditConfig(
                             audit_log_configs=[
                                 shared.GoogleIamV1AuditLogConfig(
                                     exempted_members=[
-                                        "aut",
-                                        "velit",
-                                        "est",
+                                        "ut",
                                     ],
                                     log_type="DATA_WRITE",
                                 ),
+                            ],
+                            service="tempora",
+                        ),
+                    ],
+                    bindings=[
+                        shared.GoogleIamV1Binding(
+                            condition=shared.GoogleTypeExpr(
+                                description="id",
+                                expression="eos",
+                                location="dolores",
+                                title="aut",
+                            ),
+                            members=[
+                                "ad",
+                                "dicta",
+                                "neque",
+                            ],
+                            role="facere",
+                        ),
+                        shared.GoogleIamV1Binding(
+                            condition=shared.GoogleTypeExpr(
+                                description="dicta",
+                                expression="sed",
+                                location="rerum",
+                                title="consequatur",
+                            ),
+                            members=[
+                                "quod",
+                            ],
+                            role="deleniti",
+                        ),
+                        shared.GoogleIamV1Binding(
+                            condition=shared.GoogleTypeExpr(
+                                description="molestiae",
+                                expression="perferendis",
+                                location="qui",
+                                title="nulla",
+                            ),
+                            members=[
+                                "expedita",
+                            ],
+                            role="tenetur",
+                        ),
+                    ],
+                    etag="omnis",
+                    version=5999729721690653849,
+                ),
+                "quo": shared.GoogleIamV1Policy(
+                    audit_configs=[
+                        shared.GoogleIamV1AuditConfig(
+                            audit_log_configs=[
                                 shared.GoogleIamV1AuditLogConfig(
                                     exempted_members=[
-                                        "quae",
-                                        "et",
+                                        "velit",
                                     ],
                                     log_type="ADMIN_READ",
                                 ),
+                                shared.GoogleIamV1AuditLogConfig(
+                                    exempted_members=[
+                                        "voluptas",
+                                        "aut",
+                                        "repellat",
+                                    ],
+                                    log_type="DATA_READ",
+                                ),
                             ],
-                            service="enim",
+                            service="eligendi",
                         ),
                         shared.GoogleIamV1AuditConfig(
                             audit_log_configs=[
                                 shared.GoogleIamV1AuditLogConfig(
                                     exempted_members=[
-                                        "accusantium",
+                                        "qui",
+                                        "nihil",
+                                    ],
+                                    log_type="ADMIN_READ",
+                                ),
+                                shared.GoogleIamV1AuditLogConfig(
+                                    exempted_members=[
+                                        "quo",
+                                    ],
+                                    log_type="LOG_TYPE_UNSPECIFIED",
+                                ),
+                                shared.GoogleIamV1AuditLogConfig(
+                                    exempted_members=[
+                                        "earum",
+                                    ],
+                                    log_type="ADMIN_READ",
+                                ),
+                            ],
+                            service="officia",
+                        ),
+                        shared.GoogleIamV1AuditConfig(
+                            audit_log_configs=[
+                                shared.GoogleIamV1AuditLogConfig(
+                                    exempted_members=[
+                                        "voluptas",
+                                        "et",
+                                        "sint",
+                                    ],
+                                    log_type="ADMIN_READ",
+                                ),
+                                shared.GoogleIamV1AuditLogConfig(
+                                    exempted_members=[
+                                        "totam",
+                                        "atque",
                                         "ut",
                                     ],
                                     log_type="DATA_READ",
                                 ),
                                 shared.GoogleIamV1AuditLogConfig(
                                     exempted_members=[
-                                        "iure",
-                                        "odit",
+                                        "ut",
+                                        "ad",
                                     ],
-                                    log_type="ADMIN_READ",
-                                ),
-                                shared.GoogleIamV1AuditLogConfig(
-                                    exempted_members=[
-                                        "amet",
-                                        "pariatur",
-                                    ],
-                                    log_type="ADMIN_READ",
+                                    log_type="DATA_WRITE",
                                 ),
                             ],
-                            service="tempore",
-                        ),
-                        shared.GoogleIamV1AuditConfig(
-                            audit_log_configs=[
-                                shared.GoogleIamV1AuditLogConfig(
-                                    exempted_members=[
-                                        "quia",
-                                    ],
-                                    log_type="ADMIN_READ",
-                                ),
-                            ],
-                            service="quo",
+                            service="molestias",
                         ),
                     ],
                     bindings=[
                         shared.GoogleIamV1Binding(
                             condition=shared.GoogleTypeExpr(
-                                description="aut",
-                                expression="molestiae",
-                                location="blanditiis",
-                                title="et",
+                                description="impedit",
+                                expression="deserunt",
+                                location="vero",
+                                title="error",
                             ),
                             members=[
-                                "dicta",
-                                "enim",
+                                "beatae",
                             ],
-                            role="ratione",
+                            role="qui",
+                        ),
+                        shared.GoogleIamV1Binding(
+                            condition=shared.GoogleTypeExpr(
+                                description="molestiae",
+                                expression="deleniti",
+                                location="suscipit",
+                                title="aut",
+                            ),
+                            members=[
+                                "labore",
+                                "et",
+                            ],
+                            role="omnis",
+                        ),
+                        shared.GoogleIamV1Binding(
+                            condition=shared.GoogleTypeExpr(
+                                description="blanditiis",
+                                expression="itaque",
+                                location="doloremque",
+                                title="est",
+                            ),
+                            members=[
+                                "est",
+                                "fuga",
+                            ],
+                            role="inventore",
                         ),
                     ],
-                    etag="commodi",
-                    version=8785782413205295304,
+                    etag="impedit",
+                    version=4818883313715258669,
                 ),
             },
         ),
         results_summary=shared.GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary(
-            difference_count=7841242247132918320,
-            error_count=2156911971396190993,
-            log_count=5590233000876705772,
+            difference_count=8366996419462768188,
+            error_count=8473441131434798447,
+            log_count=9063643206236667702,
             newest_date=shared.GoogleTypeDate(
-                day=4031732429361760447,
-                month=5797452881319356845,
-                year=2197377284877921821,
+                day=6678564548261309100,
+                month=4344067411313220386,
+                year=5948743529736996933,
             ),
             oldest_date=shared.GoogleTypeDate(
-                day=4588745654855075331,
-                month=2360021394080816363,
-                year=587545568868920246,
+                day=7733308612172317981,
+                month=6367668452330419632,
+                year=7502313555217038947,
             ),
-            unchanged_count=6171314581856648447,
+            unchanged_count=3760236141729247733,
         ),
     ),
 )

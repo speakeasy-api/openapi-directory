@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,12 +15,12 @@ class DatabaseTypeProviderEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DatabaseType:
     r"""DatabaseType
     A message defining the database engine and provider.
     """
     
-    engine: Optional[DatabaseTypeEngineEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('engine') }})
-    provider: Optional[DatabaseTypeProviderEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
+    engine: Optional[DatabaseTypeEngineEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('engine') }})
+    provider: Optional[DatabaseTypeProviderEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
     

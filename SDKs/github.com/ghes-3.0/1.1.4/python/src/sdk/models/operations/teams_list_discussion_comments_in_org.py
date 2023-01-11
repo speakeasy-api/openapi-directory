@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import direction_enum as shared_direction_enum
+from ..shared import team_discussion_comment as shared_team_discussion_comment
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionCommentsInOrgPathParams:
-    discussion_number: int = field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    discussion_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionCommentsInOrgQueryParams:
-    direction: Optional[shared.DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_direction_enum.DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionCommentsInOrgRequest:
-    path_params: TeamsListDiscussionCommentsInOrgPathParams = field()
-    query_params: TeamsListDiscussionCommentsInOrgQueryParams = field()
+    path_params: TeamsListDiscussionCommentsInOrgPathParams = dataclasses.field()
+    query_params: TeamsListDiscussionCommentsInOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListDiscussionCommentsInOrgResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    team_discussion_comments: Optional[List[shared.TeamDiscussionComment]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_discussion_comments: Optional[list[shared_team_discussion_comment.TeamDiscussionComment]] = dataclasses.field(default=None)
     

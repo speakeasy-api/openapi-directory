@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import apikeyentity as shared_apikeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAPIKeysIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class PatchAPIKeysIDRequestBodyPermissionSetEnum(str, Enum):
     NONE = "none"
@@ -20,22 +20,22 @@ class PatchAPIKeysIDRequestBodyPermissionSetEnum(str, Enum):
     MOBILE_APP = "mobile_app"
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAPIKeysIDRequestBody:
-    expires_at: Optional[datetime] = field(default=None, metadata={'multipart_form': { 'field_name': 'expires_at' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    permission_set: Optional[PatchAPIKeysIDRequestBodyPermissionSetEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'permission_set' }})
+    expires_at: Optional[datetime] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'expires_at' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    permission_set: Optional[PatchAPIKeysIDRequestBodyPermissionSetEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'permission_set' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAPIKeysIDRequest:
-    path_params: PatchAPIKeysIDPathParams = field()
-    request: Optional[PatchAPIKeysIDRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchAPIKeysIDPathParams = dataclasses.field()
+    request: Optional[PatchAPIKeysIDRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAPIKeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key_entity: Optional[shared.APIKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key_entity: Optional[shared_apikeyentity.APIKeyEntity] = dataclasses.field(default=None)
     

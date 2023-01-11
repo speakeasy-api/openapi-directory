@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,26 +21,26 @@ req = operations.YoutubeAnalyticsGroupItemsDeleteRequest(
         option1=operations.YoutubeAnalyticsGroupItemsDeleteSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.YoutubeAnalyticsGroupItemsDeleteQueryParams(
         dollar_xgafv="2",
-        access_token="sequi",
+        access_token="consequatur",
         alt="proto",
-        callback="officia",
-        fields="ad",
-        id="eum",
-        key="autem",
-        oauth_token="sint",
-        on_behalf_of_content_owner="rem",
+        callback="et",
+        fields="quis",
+        id="unde",
+        key="dolor",
+        oauth_token="id",
+        on_behalf_of_content_owner="mollitia",
         pretty_print=True,
-        quota_user="a",
-        upload_type="alias",
-        upload_protocol="quisquam",
+        quota_user="dolores",
+        upload_type="qui",
+        upload_protocol="et",
     ),
 )
     

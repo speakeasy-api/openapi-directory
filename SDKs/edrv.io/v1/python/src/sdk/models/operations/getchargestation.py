@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetChargeStationPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChargeStationQueryParams:
-    include_evses: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_evses', 'style': 'form', 'explode': True }})
-    include_location: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_location', 'style': 'form', 'explode': True }})
-    include_organization: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_organization', 'style': 'form', 'explode': True }})
+    include_evses: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_evses', 'style': 'form', 'explode': True }})
+    include_location: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_location', 'style': 'form', 'explode': True }})
+    include_organization: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_organization', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChargeStationRequest:
-    path_params: GetChargeStationPathParams = field()
-    query_params: GetChargeStationQueryParams = field()
+    path_params: GetChargeStationPathParams = dataclasses.field()
+    query_params: GetChargeStationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetChargeStationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

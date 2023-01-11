@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.SkmstRequest(
     security=operations.SkmstSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.SkmstRequestBody(
         certificate_parameters=operations.SkmstRequestBodyCertificateParameters(
-            txt10th_roll_no="sapiente",
-            txt_candidate_app_seq="iure",
-            txt_exam_date="assumenda",
+            txt10th_roll_no="nostrum",
+            txt_candidate_app_seq="porro",
+            txt_exam_date="et",
         ),
-        consent_artifact="dolore",
+        consent_artifact="maxime",
         format="pdf",
-        txn_id="ut",
+        txn_id="est",
     ),
 )
     
-res = s.sdk.skmst(req)
+res = s.ap_is.skmst(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `skmst` - Skill Marksheet/ Score Card
 

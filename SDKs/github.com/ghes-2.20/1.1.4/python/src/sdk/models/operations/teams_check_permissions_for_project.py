@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import team_project as shared_team_project
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForProjectPathParams:
-    project_id: int = field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    project_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForProjectHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForProjectRequest:
-    headers: TeamsCheckPermissionsForProjectHeaders = field()
-    path_params: TeamsCheckPermissionsForProjectPathParams = field()
+    headers: TeamsCheckPermissionsForProjectHeaders = dataclasses.field()
+    path_params: TeamsCheckPermissionsForProjectPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsCheckPermissionsForProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_project: Optional[shared.TeamProject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_project: Optional[shared_team_project.TeamProject] = dataclasses.field(default=None)
     

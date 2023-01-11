@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GetContentproSearchRequest(
     query_params=operations.GetContentproSearchQueryParams(
-        terms="aliquam",
+        terms="nisi",
     ),
 )
     
-res = s.sdk.get_contentpro_search(req)
+res = s.contentpro_search.get_contentpro_search(req)
 
 if res.get_contentpro_search_200_application_json_object is not None:
     # handle response
@@ -33,12 +32,21 @@ if res.get_contentpro_search_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### contentpro-search
 
 * `get_contentpro_search` - Send search terms to receive the most relevant articles and companies.
-* `get_search` - Send search terms to receive the most relevant companies along with text snippets.
-* `get_similar` - Send a company website to receive a list of companies related to them.
+
+### contentpro-similar-text
+
 * `post_contentpro_similar_text` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+
+### search
+
+* `get_search` - Send search terms to receive the most relevant companies along with text snippets.
+
+### similar
+
+* `get_similar` - Send a company website to receive a list of companies related to them.
 
 <!-- End SDK Available Operations -->
 

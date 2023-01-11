@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createinventorytaskrequest as shared_createinventorytaskrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateInventoryTaskHeaders:
-    x_ebay_c_marketplace_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateInventoryTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateInventoryTaskRequest:
-    headers: CreateInventoryTaskHeaders = field()
-    request: shared.CreateInventoryTaskRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateInventoryTaskSecurity = field()
+    headers: CreateInventoryTaskHeaders = dataclasses.field()
+    request: shared_createinventorytaskrequest.CreateInventoryTaskRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateInventoryTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateInventoryTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

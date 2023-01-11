@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import auditfinding as shared_auditfinding
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeAuditFindingResponse:
-    finding: Optional[AuditFinding] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finding') }})
+    finding: Optional[shared_auditfinding.AuditFinding] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('finding') }})
     

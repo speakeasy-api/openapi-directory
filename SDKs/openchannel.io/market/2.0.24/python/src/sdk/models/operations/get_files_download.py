@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesDownloadQueryParams:
-    file_id: str = field(metadata={'query_param': { 'field_name': 'fileId', 'style': 'form', 'explode': True }})
-    valid_seconds: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'validSeconds', 'style': 'form', 'explode': True }})
+    file_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'fileId', 'style': 'form', 'explode': True }})
+    valid_seconds: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'validSeconds', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesDownloadRequest:
-    query_params: GetFilesDownloadQueryParams = field()
+    query_params: GetFilesDownloadQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesDownloadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

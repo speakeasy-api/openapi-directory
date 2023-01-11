@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tag as shared_tag
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTagsCreateRequest:
-    request: shared.TagInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_tag.TagInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTagsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag: Optional[shared.Tag] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag: Optional[shared_tag.Tag] = dataclasses.field(default=None)
     

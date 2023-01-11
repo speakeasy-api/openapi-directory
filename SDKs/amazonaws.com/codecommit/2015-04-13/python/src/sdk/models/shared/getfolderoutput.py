@@ -1,18 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import file as shared_file
+from ..shared import folder as shared_folder
+from ..shared import submodule as shared_submodule
+from ..shared import symboliclink as shared_symboliclink
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFolderOutput:
-    commit_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('commitId') }})
-    folder_path: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folderPath') }})
-    files: Optional[List[File]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('files') }})
-    sub_folders: Optional[List[Folder]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subFolders') }})
-    sub_modules: Optional[List[SubModule]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subModules') }})
-    symbolic_links: Optional[List[SymbolicLink]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('symbolicLinks') }})
-    tree_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treeId') }})
+    commit_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('commitId') }})
+    folder_path: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('folderPath') }})
+    files: Optional[list[shared_file.File]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('files') }})
+    sub_folders: Optional[list[shared_folder.Folder]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subFolders') }})
+    sub_modules: Optional[list[shared_submodule.SubModule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subModules') }})
+    symbolic_links: Optional[list[shared_symboliclink.SymbolicLink]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('symbolicLinks') }})
+    tree_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('treeId') }})
     

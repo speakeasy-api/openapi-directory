@@ -1,11 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import messagedata as shared_messagedata
+from ..shared import metricdataresult as shared_metricdataresult
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMetricDataOutput:
-    messages: Optional[List[MessageData]] = field(default=None)
-    metric_data_results: Optional[List[MetricDataResult]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    messages: Optional[list[shared_messagedata.MessageData]] = dataclasses.field(default=None)
+    metric_data_results: Optional[list[shared_metricdataresult.MetricDataResult]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

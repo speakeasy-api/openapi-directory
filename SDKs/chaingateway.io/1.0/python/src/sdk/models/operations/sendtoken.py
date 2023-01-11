@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sendtokenrequest as shared_sendtokenrequest
+from ..shared import sendtoken as shared_sendtoken
 
 
-@dataclass
+@dataclasses.dataclass
 class SendTokenHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendTokenRequest:
-    headers: SendTokenHeaders = field()
-    request: shared.SendTokenRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SendTokenHeaders = dataclasses.field()
+    request: shared_sendtokenrequest.SendTokenRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    send_token: Optional[shared.SendToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    send_token: Optional[shared_sendtoken.SendToken] = dataclasses.field(default=None)
     

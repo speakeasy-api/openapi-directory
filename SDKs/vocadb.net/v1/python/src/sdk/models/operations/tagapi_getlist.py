@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_tagforapicontract_ as shared_partialfindresult_tagforapicontract_
 
 class TagAPIGetListFieldsEnum(str, Enum):
     NONE = "None"
@@ -46,31 +46,31 @@ class TagAPIGetListTargetEnum(str, Enum):
     ALL = "All"
 
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetListQueryParams:
-    allow_children: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'allowChildren', 'style': 'form', 'explode': True }})
-    category_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'categoryName', 'style': 'form', 'explode': True }})
-    fields: Optional[TagAPIGetListFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    lang: Optional[TagAPIGetListLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[TagAPIGetListNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    prefer_accurate_matches: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'preferAccurateMatches', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[TagAPIGetListSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    target: Optional[TagAPIGetListTargetEnum] = field(default=None, metadata={'query_param': { 'field_name': 'target', 'style': 'form', 'explode': True }})
+    allow_children: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'allowChildren', 'style': 'form', 'explode': True }})
+    category_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categoryName', 'style': 'form', 'explode': True }})
+    fields: Optional[TagAPIGetListFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    lang: Optional[TagAPIGetListLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[TagAPIGetListNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    prefer_accurate_matches: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'preferAccurateMatches', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[TagAPIGetListSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    target: Optional[TagAPIGetListTargetEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'target', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetListRequest:
-    query_params: TagAPIGetListQueryParams = field()
+    query_params: TagAPIGetListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_tag_for_api_contract_: Optional[shared.PartialFindResultTagForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_tag_for_api_contract_: Optional[shared_partialfindresult_tagforapicontract_.PartialFindResultTagForAPIContract] = dataclasses.field(default=None)
     

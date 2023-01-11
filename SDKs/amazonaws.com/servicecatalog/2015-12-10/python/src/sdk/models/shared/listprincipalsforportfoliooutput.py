@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import principal as shared_principal
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPrincipalsForPortfolioOutput:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    principals: Optional[List[Principal]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Principals') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    principals: Optional[list[shared_principal.Principal]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Principals') }})
     

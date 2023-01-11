@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.PreviewsReadRequest(
     path_params=operations.PreviewsReadPathParams(
-        file_id="quidem",
+        file_id="optio",
     ),
 )
     
-res = s.sdk.previews_read(req)
+res = s.previews.previews_read(req)
 
 if res.preview_response is not None:
     # handle response
@@ -40,17 +39,32 @@ if res.preview_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### previews
 
 * `previews_read` - Get preview image of uploaded file
+
+### processes
+
 * `processes_list` - Get process list.
+
+### projects
+
 * `projects_create` - Create a new project.
 * `projects_list` - Get user project list.
 * `projects_read` - Get project details.
+
+### reports
+
 * `reports_create` - Create a new report.
 * `reports_list` - Get user report list.
 * `reports_read` - Get report details.
+
+### results
+
 * `results_read` - Get the result from image processing
+
+### uploads
+
 * `uploads_create` - Upload a new image
 
 <!-- End SDK Available Operations -->

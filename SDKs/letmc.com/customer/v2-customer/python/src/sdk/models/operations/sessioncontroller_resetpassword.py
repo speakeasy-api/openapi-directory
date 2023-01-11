@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerResetPasswordPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerResetPasswordQueryParams:
-    email: str = field(metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
+    email: str = dataclasses.field(metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerResetPasswordRequest:
-    path_params: SessionControllerResetPasswordPathParams = field()
-    query_params: SessionControllerResetPasswordQueryParams = field()
+    path_params: SessionControllerResetPasswordPathParams = dataclasses.field()
+    query_params: SessionControllerResetPasswordQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionControllerResetPasswordResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

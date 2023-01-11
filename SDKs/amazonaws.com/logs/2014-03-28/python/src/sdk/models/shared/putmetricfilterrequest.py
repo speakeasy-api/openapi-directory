@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metrictransformation as shared_metrictransformation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutMetricFilterRequest:
-    filter_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterName') }})
-    filter_pattern: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterPattern') }})
-    log_group_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logGroupName') }})
-    metric_transformations: List[MetricTransformation] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricTransformations') }})
+    filter_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterName') }})
+    filter_pattern: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterPattern') }})
+    log_group_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logGroupName') }})
+    metric_transformations: list[shared_metrictransformation.MetricTransformation] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricTransformations') }})
     

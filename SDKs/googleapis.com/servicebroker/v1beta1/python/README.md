@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,32 @@ req = operations.ServicebrokerProjectsBrokersCreateRequest(
     security=operations.ServicebrokerProjectsBrokersCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ServicebrokerProjectsBrokersCreatePathParams(
-        parent="voluptatem",
+        parent="consequatur",
     ),
     query_params=operations.ServicebrokerProjectsBrokersCreateQueryParams(
         dollar_xgafv="2",
-        access_token="placeat",
+        access_token="non",
         alt="proto",
-        callback="itaque",
-        fields="animi",
-        key="eum",
-        oauth_token="non",
+        callback="earum",
+        fields="voluptatem",
+        key="quidem",
+        oauth_token="et",
         pretty_print=False,
-        quota_user="vel",
-        upload_type="nulla",
-        upload_protocol="qui",
+        quota_user="nam",
+        upload_type="veritatis",
+        upload_protocol="ad",
     ),
     request=shared.GoogleCloudServicebrokerV1beta1Broker(
-        create_time="veritatis",
-        name="laboriosam",
-        title="illum",
-        url="nemo",
+        create_time="dolores",
+        name="quia",
+        title="animi",
+        url="dicta",
     ),
 )
     

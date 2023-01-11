@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import taglist as shared_taglist
 
 
-@dataclass
+@dataclasses.dataclass
 class TagListMessage:
-    tag_list: Optional[List[Tag]] = field(default=None)
+    tag_list: Optional[list[shared_taglist.TagList]] = dataclasses.field(default=None)
     

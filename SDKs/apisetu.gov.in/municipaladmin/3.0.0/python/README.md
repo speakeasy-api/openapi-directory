@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.KecerRequest(
     security=operations.KecerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.KecerRequestBody(
         certificate_parameters=operations.KecerRequestBodyCertificateParameters(
-            document_number="enim",
+            document_number="ut",
         ),
-        consent_artifact="quia",
+        consent_artifact="praesentium",
         format="pdf",
-        txn_id="omnis",
+        txn_id="vel",
     ),
 )
     
-res = s.sdk.kecer(req)
+res = s.ap_is.kecer(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `kecer` - Khatha Extract / Certificate
 * `tapcn` - New Tap Connection

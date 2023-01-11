@@ -1,10 +1,19 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class ReplaceRouteTableAssociationResultAssociationState:
+    r"""ReplaceRouteTableAssociationResultAssociationState
+    The state of the association.
+    """
+    
+    state: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    status_message: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class ReplaceRouteTableAssociationResult:
-    association_state: Optional[RouteTableAssociationState] = field(default=None)
-    new_association_id: Optional[str] = field(default=None)
+    association_state: Optional[ReplaceRouteTableAssociationResultAssociationState] = dataclasses.field(default=None)
+    new_association_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import settingname_enum as shared_settingname_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutAccountSettingDefaultRequest:
-    name: SettingNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    name: shared_settingname_enum.SettingNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

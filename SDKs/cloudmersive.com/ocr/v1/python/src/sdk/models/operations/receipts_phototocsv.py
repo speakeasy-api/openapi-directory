@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptsPhotoToCsvRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptsPhotoToCsvRequestBody:
-    image_file: ReceiptsPhotoToCsvRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: ReceiptsPhotoToCsvRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptsPhotoToCsvSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptsPhotoToCsvRequest:
-    request: ReceiptsPhotoToCsvRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: ReceiptsPhotoToCsvSecurity = field()
+    request: ReceiptsPhotoToCsvRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: ReceiptsPhotoToCsvSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReceiptsPhotoToCsvResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    receipts_photo_to_csv_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
-    receipts_photo_to_csv_200_text_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    receipts_photo_to_csv_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    receipts_photo_to_csv_200_text_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

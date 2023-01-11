@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlefirebaseappcheckv1recaptchaenterpriseconfig as shared_googlefirebaseappcheckv1recaptchaenterpriseconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse:
     r"""GoogleFirebaseAppcheckV1BatchGetRecaptchaEnterpriseConfigsResponse
     Response message for the BatchGetRecaptchaEnterpriseConfigs method.
     """
     
-    configs: Optional[List[GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configs') }})
+    configs: Optional[list[shared_googlefirebaseappcheckv1recaptchaenterpriseconfig.GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configs') }})
     

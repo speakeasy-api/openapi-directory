@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,9 +12,9 @@ class RegeneratePolicies200ApplicationJSONDataPoliciesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegeneratePolicies200ApplicationJSONData:
-    policies: RegeneratePolicies200ApplicationJSONDataPoliciesEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    policies: RegeneratePolicies200ApplicationJSONDataPoliciesEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
     
 class RegeneratePolicies200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -22,16 +22,16 @@ class RegeneratePolicies200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegeneratePolicies200ApplicationJSON:
-    action: RegeneratePolicies200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: RegeneratePolicies200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: RegeneratePolicies200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: RegeneratePolicies200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: RegeneratePolicies200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: RegeneratePolicies200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegeneratePoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    regenerate_policies_200_application_json_object: Optional[RegeneratePolicies200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    regenerate_policies_200_application_json_object: Optional[RegeneratePolicies200ApplicationJSON] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import textanswer as shared_textanswer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TextAnswers:
     r"""TextAnswers
     A question's answers as text.
     """
     
-    answers: Optional[List[TextAnswer]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answers') }})
+    answers: Optional[list[shared_textanswer.TextAnswer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answers') }})
     

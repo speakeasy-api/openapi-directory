@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import error as shared_error
 
 class DeleteGlobalRuleRuleEnum(str, Enum):
     VALIDITY = "VALIDITY"
     COMPATIBILITY = "COMPATIBILITY"
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalRulePathParams:
-    rule: DeleteGlobalRuleRuleEnum = field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
+    rule: DeleteGlobalRuleRuleEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'rule', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalRuleRequest:
-    path_params: DeleteGlobalRulePathParams = field()
+    path_params: DeleteGlobalRulePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalRuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

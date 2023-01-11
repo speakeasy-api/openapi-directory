@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import obaccount6 as shared_obaccount6
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ObReadDataAccount5:
-    account: Optional[List[ObAccount6]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Account') }})
+    account: Optional[list[shared_obaccount6.ObAccount6]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Account') }})
     

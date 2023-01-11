@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,12 +23,12 @@ req = operations.UserCtrlGetUserByIDRequest(
         ),
     ),
     path_params=operations.UserCtrlGetUserByIDPathParams(
-        account_id="quam",
-        user_id=35.099998,
+        account_id="odit",
+        user_id=63.200001,
     ),
 )
     
-res = s.sdk.user_ctrl_get_user_by_id(req)
+res = s.user_ctrl_get_user_by_id(req)
 
 if res.user_hal_response is not None:
     # handle response

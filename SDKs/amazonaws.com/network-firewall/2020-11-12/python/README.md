@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,24 @@ s.config_security(
     
 req = operations.AssociateFirewallPolicyRequest(
     headers=operations.AssociateFirewallPolicyHeaders(
-        x_amz_algorithm="ipsa",
-        x_amz_content_sha256="est",
-        x_amz_credential="autem",
-        x_amz_date="magni",
-        x_amz_security_token="recusandae",
-        x_amz_signature="et",
-        x_amz_signed_headers="dolorem",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="et",
+        x_amz_credential="et",
+        x_amz_date="a",
+        x_amz_security_token="quis",
+        x_amz_signature="est",
+        x_amz_signed_headers="dolorum",
         x_amz_target="NetworkFirewall_20201112.AssociateFirewallPolicy",
     ),
     request=shared.AssociateFirewallPolicyRequest(
-        firewall_arn="minus",
-        firewall_name="inventore",
-        firewall_policy_arn="est",
-        update_token="dolor",
+        firewall_arn="veniam",
+        firewall_name="est",
+        firewall_policy_arn="blanditiis",
+        update_token="aliquid",
     ),
 )
     
-res = s.sdk.associate_firewall_policy(req)
+res = s.associate_firewall_policy(req)
 
 if res.associate_firewall_policy_response is not None:
     # handle response

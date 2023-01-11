@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
 FETCH_EVIDENCE_CONTENT_SERVERS = [
@@ -8,33 +8,33 @@ FETCH_EVIDENCE_CONTENT_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchEvidenceContentPathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchEvidenceContentQueryParams:
-    evidence_id: str = field(metadata={'query_param': { 'field_name': 'evidence_id', 'style': 'form', 'explode': True }})
-    file_id: str = field(metadata={'query_param': { 'field_name': 'file_id', 'style': 'form', 'explode': True }})
+    evidence_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'evidence_id', 'style': 'form', 'explode': True }})
+    file_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'file_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchEvidenceContentSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchEvidenceContentRequest:
-    path_params: FetchEvidenceContentPathParams = field()
-    query_params: FetchEvidenceContentQueryParams = field()
-    security: FetchEvidenceContentSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: FetchEvidenceContentPathParams = dataclasses.field()
+    query_params: FetchEvidenceContentQueryParams = dataclasses.field()
+    security: FetchEvidenceContentSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchEvidenceContentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

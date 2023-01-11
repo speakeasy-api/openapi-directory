@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class KinesisFirehoseDestinationDetails:
     r"""KinesisFirehoseDestinationDetails
     The configuration details of the Kinesis Data Firehose destination.
     """
     
-    delivery_stream: Optional[str] = field(default=None)
+    delivery_stream: Optional[str] = dataclasses.field(default=None)
     

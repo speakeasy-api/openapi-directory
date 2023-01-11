@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import directive as shared_directive
+from ..shared import directive_new as shared_directive_new
 
 class CreateDirective200ApplicationJSONActionEnum(str, Enum):
     CREATE_DIRECTIVE = "createDirective"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDirective200ApplicationJSONData:
-    directives: List[shared.Directive] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
+    directives: list[shared_directive.Directive] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('directives') }})
     
 class CreateDirective200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -20,21 +21,21 @@ class CreateDirective200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDirective200ApplicationJSON:
-    action: CreateDirective200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: CreateDirective200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: CreateDirective200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: CreateDirective200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: CreateDirective200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: CreateDirective200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDirectiveRequest:
-    request: Optional[shared.DirectiveNew] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_directive_new.DirectiveNew] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateDirectiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_directive_200_application_json_object: Optional[CreateDirective200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_directive_200_application_json_object: Optional[CreateDirective200ApplicationJSON] = dataclasses.field(default=None)
     

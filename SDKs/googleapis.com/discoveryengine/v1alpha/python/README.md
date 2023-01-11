@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,36 +20,38 @@ req = operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCrea
     security=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams(
-        parent="hic",
+        parent="labore",
     ),
     query_params=operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="sed",
+        dollar_xgafv="2",
+        access_token="doloribus",
         alt="media",
-        callback="ut",
-        document_id="perspiciatis",
-        fields="sunt",
-        key="qui",
-        oauth_token="sit",
+        callback="labore",
+        document_id="pariatur",
+        fields="natus",
+        key="optio",
+        oauth_token="praesentium",
         pretty_print=False,
-        quota_user="est",
-        upload_type="et",
-        upload_protocol="rerum",
+        quota_user="accusantium",
+        upload_type="in",
+        upload_protocol="voluptatum",
     ),
     request=shared.GoogleCloudDiscoveryengineV1alphaDocument(
-        id="odio",
-        json_data="et",
-        name="voluptas",
-        parent_document_id="est",
-        schema_id="aut",
+        id="reprehenderit",
+        json_data="veniam",
+        name="eos",
+        parent_document_id="ut",
+        schema_id="laboriosam",
         struct_data={
-            "vero": "nostrum",
+            "labore": "est",
+            "similique": "aliquam",
+            "commodi": "hic",
         },
     ),
 )

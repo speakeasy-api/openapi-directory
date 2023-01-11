@@ -1,47 +1,48 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import installation_ghes_2 as shared_installation_ghes_2
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUserQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUserHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUser200ApplicationJSON:
-    installations: List[shared.InstallationGhes2] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('installations') }})
-    total_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    installations: list[shared_installation_ghes_2.InstallationGhes2] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('installations') }})
+    total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUser415ApplicationJSON:
-    documentation_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUserRequest:
-    headers: AppsListInstallationsForAuthenticatedUserHeaders = field()
-    query_params: AppsListInstallationsForAuthenticatedUserQueryParams = field()
+    headers: AppsListInstallationsForAuthenticatedUserHeaders = dataclasses.field()
+    query_params: AppsListInstallationsForAuthenticatedUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListInstallationsForAuthenticatedUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    apps_list_installations_for_authenticated_user_200_application_json_object: Optional[AppsListInstallationsForAuthenticatedUser200ApplicationJSON] = field(default=None)
-    apps_list_installations_for_authenticated_user_415_application_json_object: Optional[AppsListInstallationsForAuthenticatedUser415ApplicationJSON] = field(default=None)
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    apps_list_installations_for_authenticated_user_200_application_json_object: Optional[AppsListInstallationsForAuthenticatedUser200ApplicationJSON] = dataclasses.field(default=None)
+    apps_list_installations_for_authenticated_user_415_application_json_object: Optional[AppsListInstallationsForAuthenticatedUser415ApplicationJSON] = dataclasses.field(default=None)
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

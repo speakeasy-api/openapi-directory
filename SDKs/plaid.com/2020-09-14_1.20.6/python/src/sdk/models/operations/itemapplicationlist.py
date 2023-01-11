@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itemapplicationlistrequest as shared_itemapplicationlistrequest
+from ..shared import itemapplicationlistresponse as shared_itemapplicationlistresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemApplicationListRequest:
-    request: shared.ItemApplicationListRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itemapplicationlistrequest.ItemApplicationListRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemApplicationListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    item_application_list_response: Optional[shared.ItemApplicationListResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    item_application_list_response: Optional[shared_itemapplicationlistresponse.ItemApplicationListResponse] = dataclasses.field(default=None)
     

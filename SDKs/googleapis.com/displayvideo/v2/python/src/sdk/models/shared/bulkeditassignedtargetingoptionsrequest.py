@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import createassignedtargetingoptionsrequest as shared_createassignedtargetingoptionsrequest
+from ..shared import deleteassignedtargetingoptionsrequest as shared_deleteassignedtargetingoptionsrequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BulkEditAssignedTargetingOptionsRequestInput:
     r"""BulkEditAssignedTargetingOptionsRequestInput
     Request message for BulkEditLineItemsAssignedTargetingOptions.
     """
     
-    create_requests: Optional[List[CreateAssignedTargetingOptionsRequestInput]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createRequests') }})
-    delete_requests: Optional[List[DeleteAssignedTargetingOptionsRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteRequests') }})
-    line_item_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineItemIds') }})
+    create_requests: Optional[list[shared_createassignedtargetingoptionsrequest.CreateAssignedTargetingOptionsRequestInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createRequests') }})
+    delete_requests: Optional[list[shared_deleteassignedtargetingoptionsrequest.DeleteAssignedTargetingOptionsRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deleteRequests') }})
+    line_item_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lineItemIds') }})
     

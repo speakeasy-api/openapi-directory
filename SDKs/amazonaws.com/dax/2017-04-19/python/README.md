@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,46 +25,47 @@ s.config_security(
     
 req = operations.CreateClusterRequest(
     headers=operations.CreateClusterHeaders(
-        x_amz_algorithm="incidunt",
-        x_amz_content_sha256="inventore",
-        x_amz_credential="voluptatem",
-        x_amz_date="voluptates",
-        x_amz_security_token="quisquam",
-        x_amz_signature="architecto",
-        x_amz_signed_headers="sunt",
+        x_amz_algorithm="dolor",
+        x_amz_content_sha256="dolor",
+        x_amz_credential="ducimus",
+        x_amz_date="in",
+        x_amz_security_token="enim",
+        x_amz_signature="iusto",
+        x_amz_signed_headers="dolor",
         x_amz_target="AmazonDAXV3.CreateCluster",
     ),
     request=shared.CreateClusterRequest(
         availability_zones=[
-            "ut",
-            "et",
+            "dolores",
         ],
         cluster_endpoint_encryption_type="TLS",
-        cluster_name="et",
-        description="ipsam",
-        iam_role_arn="magni",
-        node_type="et",
-        notification_topic_arn="inventore",
-        parameter_group_name="impedit",
-        preferred_maintenance_window="molestiae",
-        replication_factor=8112620927975136660,
+        cluster_name="voluptatem",
+        description="rerum",
+        iam_role_arn="reiciendis",
+        node_type="aut",
+        notification_topic_arn="unde",
+        parameter_group_name="saepe",
+        preferred_maintenance_window="ratione",
+        replication_factor=2367153732642039729,
         sse_specification=shared.SseSpecification(
-            enabled=True,
+            enabled=False,
         ),
         security_group_ids=[
-            "repellendus",
+            "veniam",
+            "consequatur",
+            "corporis",
         ],
-        subnet_group_name="molestias",
+        subnet_group_name="est",
         tags=[
             shared.Tag(
-                key="quia",
-                value="ipsa",
+                key="adipisci",
+                value="est",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_cluster(req)
+res = s.create_cluster(req)
 
 if res.create_cluster_response is not None:
     # handle response

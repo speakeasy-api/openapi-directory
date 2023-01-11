@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.DeleteSessionRequest(
     path_params=operations.DeleteSessionPathParams(
-        bot_alias="consequatur",
-        bot_name="delectus",
-        user_id="qui",
+        bot_alias="ex",
+        bot_name="magnam",
+        user_id="a",
     ),
     headers=operations.DeleteSessionHeaders(
         x_amz_algorithm="et",
-        x_amz_content_sha256="quaerat",
-        x_amz_credential="voluptatem",
-        x_amz_date="et",
+        x_amz_content_sha256="omnis",
+        x_amz_credential="dicta",
+        x_amz_date="in",
         x_amz_security_token="et",
-        x_amz_signature="qui",
-        x_amz_signed_headers="deleniti",
+        x_amz_signature="enim",
+        x_amz_signed_headers="saepe",
     ),
 )
     
-res = s.sdk.delete_session(req)
+res = s.delete_session(req)
 
 if res.delete_session_response is not None:
     # handle response

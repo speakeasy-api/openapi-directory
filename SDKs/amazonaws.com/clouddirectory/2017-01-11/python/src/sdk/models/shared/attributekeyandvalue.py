@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attributekey as shared_attributekey
+from ..shared import typedattributevalue as shared_typedattributevalue
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AttributeKeyAndValue:
     r"""AttributeKeyAndValue
     The combination of an attribute key and an attribute value.
     """
     
-    key: AttributeKey = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Key') }})
-    value: TypedAttributeValue = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Value') }})
+    key: shared_attributekey.AttributeKey = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Key') }})
+    value: shared_typedattributevalue.TypedAttributeValue = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Value') }})
     

@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import order as shared_order
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderPathParams:
-    order_id: str = field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
+    order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'orderId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderQueryParams:
-    field_groups: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fieldGroups', 'style': 'form', 'explode': True }})
+    field_groups: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fieldGroups', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderRequest:
-    path_params: GetOrderPathParams = field()
-    query_params: GetOrderQueryParams = field()
-    security: GetOrderSecurity = field()
+    path_params: GetOrderPathParams = dataclasses.field()
+    query_params: GetOrderQueryParams = dataclasses.field()
+    security: GetOrderSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrderResponse:
-    content_type: str = field()
-    status_code: int = field()
-    order: Optional[shared.Order] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    order: Optional[shared_order.Order] = dataclasses.field(default=None)
     

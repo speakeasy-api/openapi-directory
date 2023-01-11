@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import showfollow as shared_showfollow
 
 
-@dataclass
+@dataclasses.dataclass
 class PutUserFollowsShowsShowIDPathParams:
-    show_id: int = field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
+    show_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserFollowsShowsShowIDRequest:
-    path_params: PutUserFollowsShowsShowIDPathParams = field()
+    path_params: PutUserFollowsShowsShowIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserFollowsShowsShowIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    show_follow: Optional[shared.ShowFollow] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    show_follow: Optional[shared_showfollow.ShowFollow] = dataclasses.field(default=None)
     

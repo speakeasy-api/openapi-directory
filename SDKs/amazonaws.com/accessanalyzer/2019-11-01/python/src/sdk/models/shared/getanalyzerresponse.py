@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import analyzersummary as shared_analyzersummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAnalyzerResponse:
     r"""GetAnalyzerResponse
     The response to the request.
     """
     
-    analyzer: AnalyzerSummary = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyzer') }})
+    analyzer: shared_analyzersummary.AnalyzerSummary = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('analyzer') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messageentity as shared_messageentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDRequest:
-    path_params: GetMessagesIDPathParams = field()
+    path_params: GetMessagesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessagesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_entity: Optional[shared.MessageEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_entity: Optional[shared_messageentity.MessageEntity] = dataclasses.field(default=None)
     

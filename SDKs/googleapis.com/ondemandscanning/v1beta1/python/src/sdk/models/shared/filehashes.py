@@ -1,16 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hash as shared_hash
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FileHashes:
-    r"""FileHashes
-    Container message for hashes of byte content of files, used in source messages to verify integrity of source input to the build.
-    """
-    
-    file_hash: Optional[List[Hash]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fileHash') }})
+    file_hash: Optional[list[shared_hash.Hash]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fileHash') }})
     

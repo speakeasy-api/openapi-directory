@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nesteddevicetype as shared_nesteddevicetype
+from ..shared import nestedrearporttemplate as shared_nestedrearporttemplate
 
 class FrontPortTemplateTypeLabelEnum(str, Enum):
     EIGHT_P8_C = "8P8C"
@@ -39,19 +40,19 @@ class FrontPortTemplateTypeValueEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FrontPortTemplateType:
-    label: FrontPortTemplateTypeLabelEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: FrontPortTemplateTypeValueEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: FrontPortTemplateTypeLabelEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: FrontPortTemplateTypeValueEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FrontPortTemplate:
-    device_type: NestedDeviceType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    rear_port: NestedRearPortTemplate = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rear_port') }})
-    type: FrontPortTemplateType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    rear_port_position: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rear_port_position') }})
+    device_type: shared_nesteddevicetype.NestedDeviceType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('device_type') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    rear_port: shared_nestedrearporttemplate.NestedRearPortTemplate = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rear_port') }})
+    type: FrontPortTemplateType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    rear_port_position: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rear_port_position') }})
     

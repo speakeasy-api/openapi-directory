@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import companyviewmodel as shared_companyviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CompaniesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_view_model: Optional[shared.CompanyViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_view_model: Optional[shared_companyviewmodel.CompanyViewModel] = dataclasses.field(default=None)
     

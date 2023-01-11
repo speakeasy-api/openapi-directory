@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import origincustomheaderslist as shared_origincustomheaderslist
 
 
-@dataclass
+@dataclasses.dataclass
 class CustomHeaders:
     r"""CustomHeaders
     A complex type that contains the list of Custom Headers for each origin. 
     """
     
-    quantity: int = field()
-    items: Optional[List[OriginCustomHeader]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[shared_origincustomheaderslist.OriginCustomHeadersList]] = dataclasses.field(default=None)
     

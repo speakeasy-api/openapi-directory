@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import taxrate as shared_taxrate
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTaxRatePathParams:
-    tax_rate_uuid: str = field(metadata={'path_param': { 'field_name': 'taxRateUuid', 'style': 'simple', 'explode': False }})
+    tax_rate_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'taxRateUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaxRateSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaxRateRequest:
-    path_params: GetTaxRatePathParams = field()
-    security: GetTaxRateSecurity = field()
+    path_params: GetTaxRatePathParams = dataclasses.field()
+    security: GetTaxRateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTaxRateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tax_rate: Optional[shared.TaxRate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tax_rate: Optional[shared_taxrate.TaxRate] = dataclasses.field(default=None)
     

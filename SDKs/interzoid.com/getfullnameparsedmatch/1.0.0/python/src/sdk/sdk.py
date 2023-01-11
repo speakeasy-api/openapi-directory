@@ -1,11 +1,10 @@
 
 __doc__ = """ SDK Documentation: https://www.interzoid.com/services/getfullnameparsedmatch - API home page and documentation"""
 import requests
-from typing import Optional
-from sdk.models import operations
+
 from . import utils
 
-
+from .full_name_parsed_similarity_key import FullNameParsedSimilarityKey
 
 
 SERVERS = [
@@ -15,6 +14,7 @@ SERVERS = [
 
 class SDK:
     r"""SDK Documentation: https://www.interzoid.com/services/getfullnameparsedmatch - API home page and documentation"""
+    full_name_parsed_similarity_key: FullNameParsedSimilarityKey
 
     _client: requests.Session
     _security_client: requests.Session
@@ -27,7 +27,7 @@ class SDK:
     def __init__(self) -> None:
         self._client = requests.Session()
         self._security_client = requests.Session()
-        
+        self._init_sdks()
 
 
     def config_server_url(self, server_url: str, params: dict[str, str]):
@@ -36,48 +36,23 @@ class SDK:
         else:
             self._server_url = server_url
 
-        
+        self._init_sdks()
     
 
     def config_client(self, client: requests.Session):
         self._client = client
-        
+        self._init_sdks()
     
     
+    def _init_sdks(self):
+        
+        self.full_name_parsed_similarity_key = FullNameParsedSimilarityKey(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
     
-    def getfullnameparsedmatch(self, request: operations.GetfullnameparsedmatchRequest) -> operations.GetfullnameparsedmatchResponse:
-        r"""Gets a similarity key for matching purposes for parsed full name data
-        Gets a similarity key for matching purposes for parsed full name data, where the first name and last name are split into separate fields in the source data rather than combined.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/getfullnameparsedmatch"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetfullnameparsedmatchResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[operations.Getfullnameparsedmatch200ApplicationJSON])
-                res.getfullnameparsedmatch_200_application_json_object = out
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
-
     

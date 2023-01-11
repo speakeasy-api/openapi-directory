@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import apppkgsubscriptionlinklist_links as shared_apppkgsubscriptionlinklist_links
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppPkgSubscriptionLinkList:
     r"""AppPkgSubscriptionLinkList
     'The data type represents a subscription link list of notification on application package management'
     """
     
-    links: AppPkgSubscriptionLinkListLinks = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
+    links: shared_apppkgsubscriptionlinklist_links.AppPkgSubscriptionLinkListLinks = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
     

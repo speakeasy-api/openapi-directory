@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apikey as shared_apikey
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPIKeyFromGroupPathParams:
-    group_id: str = field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPIKeyFromGroupSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPIKeyFromGroupRequest:
-    path_params: CreateAPIKeyFromGroupPathParams = field()
-    security: CreateAPIKeyFromGroupSecurity = field()
-    request: Optional[shared.APIKey] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateAPIKeyFromGroupPathParams = dataclasses.field()
+    security: CreateAPIKeyFromGroupSecurity = dataclasses.field()
+    request: Optional[shared_apikey.APIKey] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAPIKeyFromGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key: Optional[shared.APIKey] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key: Optional[shared_apikey.APIKey] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.AecmwRequest(
     security=operations.AecmwSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AecmwRequestBody(
         certificate_parameters=operations.AecmwRequestBodyCertificateParameters(
-            udf1="omnis",
+            udf1="distinctio",
         ),
-        consent_artifact="voluptas",
+        consent_artifact="repellendus",
         format="pdf",
-        txn_id="reprehenderit",
+        txn_id="omnis",
     ),
 )
     
-res = s.sdk.aecmw(req)
+res = s.ap_is.aecmw(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `aecmw` - Application for Renewal of Contractor Migrant Workmen license
 * `aemtw` - Application for Renewal of Motor Transport Worker Registration

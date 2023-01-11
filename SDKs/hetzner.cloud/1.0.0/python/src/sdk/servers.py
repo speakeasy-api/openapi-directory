@@ -64,8 +64,6 @@ class Servers:
         res = operations.GetServersResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
-            res.headers = r.headers
-            
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[operations.GetServers200ApplicationJSON])
                 res.get_servers_200_application_json_object = out
@@ -157,13 +155,13 @@ class Servers:
         url = base_url.removesuffix("/") + "/servers"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostServersResponse(status_code=r.status_code, content_type=content_type)
@@ -188,13 +186,13 @@ class Servers:
         url = utils.generate_url(base_url, "/servers/{id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PutServersIDResponse(status_code=r.status_code, content_type=content_type)

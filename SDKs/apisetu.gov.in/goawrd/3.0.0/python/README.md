@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.ErcerRequest(
     security=operations.ErcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.ErcerRequestBody(
         certificate_parameters=operations.ErcerRequestBodyCertificateParameters(
-            full_name="quibusdam",
-            registration="consectetur",
+            full_name="vero",
+            registration="eius",
         ),
-        consent_artifact="aperiam",
+        consent_artifact="veniam",
         format="pdf",
-        txn_id="enim",
+        txn_id="et",
     ),
 )
     
-res = s.sdk.ercer(req)
+res = s.ap_is.ercer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ercer` - Registration Certificate of Establishment Employing Contract Labour
 * `pfdaw` - Permission/ Certificate for Well

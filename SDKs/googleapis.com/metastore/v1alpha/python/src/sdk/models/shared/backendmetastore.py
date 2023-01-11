@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,8 @@ class BackendMetastoreMetastoreTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BackendMetastore:
-    r"""BackendMetastore
-    Represents a backend metastore for the federation.
-    """
-    
-    metastore_type: Optional[BackendMetastoreMetastoreTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metastoreType') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    metastore_type: Optional[BackendMetastoreMetastoreTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metastoreType') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

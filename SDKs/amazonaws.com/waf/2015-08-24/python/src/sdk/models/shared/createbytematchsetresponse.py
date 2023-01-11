@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bytematchset as shared_bytematchset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateByteMatchSetResponse:
-    byte_match_set: Optional[ByteMatchSet] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSet') }})
-    change_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
+    byte_match_set: Optional[shared_bytematchset.ByteMatchSet] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ByteMatchSet') }})
+    change_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeToken') }})
     

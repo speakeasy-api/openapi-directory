@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import document as shared_document
 
 class AnalyzeEntitySentimentRequestEncodingTypeEnum(str, Enum):
     NONE = "NONE"
@@ -13,12 +13,12 @@ class AnalyzeEntitySentimentRequestEncodingTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AnalyzeEntitySentimentRequest:
     r"""AnalyzeEntitySentimentRequest
     The entity-level sentiment analysis request message.
     """
     
-    document: Optional[Document] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('document') }})
-    encoding_type: Optional[AnalyzeEntitySentimentRequestEncodingTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encodingType') }})
+    document: Optional[shared_document.Document] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('document') }})
+    encoding_type: Optional[AnalyzeEntitySentimentRequestEncodingTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encodingType') }})
     

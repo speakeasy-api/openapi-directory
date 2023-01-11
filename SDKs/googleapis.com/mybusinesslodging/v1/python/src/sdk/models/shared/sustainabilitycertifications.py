@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ecocertification as shared_ecocertification
 
 class SustainabilityCertificationsBreeamCertificationEnum(str, Enum):
     BREEAM_CERTIFICATION_UNSPECIFIED = "BREEAM_CERTIFICATION_UNSPECIFIED"
@@ -36,15 +36,15 @@ class SustainabilityCertificationsLeedCertificationExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SustainabilityCertifications:
     r"""SustainabilityCertifications
     Sustainability certifications the hotel has been awarded.
     """
     
-    breeam_certification: Optional[SustainabilityCertificationsBreeamCertificationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('breeamCertification') }})
-    breeam_certification_exception: Optional[SustainabilityCertificationsBreeamCertificationExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('breeamCertificationException') }})
-    eco_certifications: Optional[List[EcoCertification]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ecoCertifications') }})
-    leed_certification: Optional[SustainabilityCertificationsLeedCertificationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leedCertification') }})
-    leed_certification_exception: Optional[SustainabilityCertificationsLeedCertificationExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leedCertificationException') }})
+    breeam_certification: Optional[SustainabilityCertificationsBreeamCertificationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('breeamCertification') }})
+    breeam_certification_exception: Optional[SustainabilityCertificationsBreeamCertificationExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('breeamCertificationException') }})
+    eco_certifications: Optional[list[shared_ecocertification.EcoCertification]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ecoCertifications') }})
+    leed_certification: Optional[SustainabilityCertificationsLeedCertificationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leedCertification') }})
+    leed_certification_exception: Optional[SustainabilityCertificationsLeedCertificationExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('leedCertificationException') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,42 +18,39 @@ s = sdk.SDK()
     
 req = operations.PatchAttractionRequest(
     path_params=operations.PatchAttractionPathParams(
-        id="molestiae",
+        id="dolorem",
     ),
     headers=operations.PatchAttractionHeaders(
-        tmps_correlation_id="autem",
+        tmps_correlation_id="dolores",
     ),
     request=shared.AugmentationData(
         changes=[
             shared.Change(
-                from_="sed",
+                from_="illo",
                 op="add",
-                path="et",
+                path="reiciendis",
                 value={
-                    "maiores": "praesentium",
-                    "molestiae": "praesentium",
+                    "esse": "omnis",
                 },
             ),
             shared.Change(
-                from_="facere",
-                op="replace",
-                path="voluptate",
+                from_="velit",
+                op="add",
+                path="consequatur",
                 value={
-                    "ut": "deserunt",
-                    "est": "esse",
-                    "at": "atque",
+                    "quo": "consequatur",
                 },
             ),
         ],
-        related_entity_id="alias",
+        related_entity_id="dolor",
         related_entity_type="event",
-        score=64.099998,
-        source="itaque",
-        version_number=8426159091266627890,
+        score=34.200001,
+        source="eius",
+        version_number=4361261286928758480,
     ),
 )
     
-res = s.sdk.patch_attraction(req)
+res = s.patch_attraction(req)
 
 if res.body is not None:
     # handle response

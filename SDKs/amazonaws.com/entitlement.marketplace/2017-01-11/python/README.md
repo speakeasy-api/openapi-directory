@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,30 +25,29 @@ s.config_security(
     
 req = operations.GetEntitlementsRequest(
     headers=operations.GetEntitlementsHeaders(
-        x_amz_algorithm="harum",
-        x_amz_content_sha256="enim",
-        x_amz_credential="est",
-        x_amz_date="recusandae",
-        x_amz_security_token="neque",
-        x_amz_signature="quia",
-        x_amz_signed_headers="qui",
+        x_amz_algorithm="fugit",
+        x_amz_content_sha256="cumque",
+        x_amz_credential="corporis",
+        x_amz_date="adipisci",
+        x_amz_security_token="aliquid",
+        x_amz_signature="accusantium",
+        x_amz_signed_headers="exercitationem",
         x_amz_target="AWSMPEntitlementService.GetEntitlements",
     ),
     request=shared.GetEntitlementsRequest(
         filter={
-            "aliquam": [
-                "iure",
-                "hic",
-                "maxime",
+            "perspiciatis": [
+                "inventore",
+                "voluptatem",
             ],
         },
-        max_results=9121163751201800243,
-        next_token="repudiandae",
-        product_code="et",
+        max_results=2441923158078746440,
+        next_token="ut",
+        product_code="ullam",
     ),
 )
     
-res = s.sdk.get_entitlements(req)
+res = s.get_entitlements(req)
 
 if res.get_entitlements_result is not None:
     # handle response

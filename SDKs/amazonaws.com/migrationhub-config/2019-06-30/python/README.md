@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,26 @@ s.config_security(
     
 req = operations.CreateHomeRegionControlRequest(
     headers=operations.CreateHomeRegionControlHeaders(
-        x_amz_algorithm="accusantium",
-        x_amz_content_sha256="non",
-        x_amz_credential="et",
-        x_amz_date="molestias",
-        x_amz_security_token="voluptas",
-        x_amz_signature="deserunt",
-        x_amz_signed_headers="amet",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="deleniti",
+        x_amz_credential="laudantium",
+        x_amz_date="fuga",
+        x_amz_security_token="doloribus",
+        x_amz_signature="quasi",
+        x_amz_signed_headers="et",
         x_amz_target="AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
     ),
     request=shared.CreateHomeRegionControlRequest(
         dry_run=False,
-        home_region="et",
+        home_region="doloremque",
         target=shared.Target(
-            id="dolorem",
+            id="minus",
             type="ACCOUNT",
         ),
     ),
 )
     
-res = s.sdk.create_home_region_control(req)
+res = s.create_home_region_control(req)
 
 if res.create_home_region_control_result is not None:
     # handle response

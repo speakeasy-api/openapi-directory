@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ValidateMatchmakingRuleSetInput:
     r"""ValidateMatchmakingRuleSetInput
     Represents the input for a request operation.
     """
     
-    rule_set_body: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleSetBody') }})
+    rule_set_body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleSetBody') }})
     

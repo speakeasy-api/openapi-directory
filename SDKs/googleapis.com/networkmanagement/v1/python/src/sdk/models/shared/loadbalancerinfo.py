@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import loadbalancerbackend as shared_loadbalancerbackend
 
 class LoadBalancerInfoBackendTypeEnum(str, Enum):
     BACKEND_TYPE_UNSPECIFIED = "BACKEND_TYPE_UNSPECIFIED"
@@ -21,15 +21,15 @@ class LoadBalancerInfoLoadBalancerTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LoadBalancerInfo:
     r"""LoadBalancerInfo
     For display only. Metadata associated with a load balancer.
     """
     
-    backend_type: Optional[LoadBalancerInfoBackendTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backendType') }})
-    backend_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backendUri') }})
-    backends: Optional[List[LoadBalancerBackend]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backends') }})
-    health_check_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('healthCheckUri') }})
-    load_balancer_type: Optional[LoadBalancerInfoLoadBalancerTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancerType') }})
+    backend_type: Optional[LoadBalancerInfoBackendTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backendType') }})
+    backend_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backendUri') }})
+    backends: Optional[list[shared_loadbalancerbackend.LoadBalancerBackend]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backends') }})
+    health_check_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('healthCheckUri') }})
+    load_balancer_type: Optional[LoadBalancerInfoLoadBalancerTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancerType') }})
     

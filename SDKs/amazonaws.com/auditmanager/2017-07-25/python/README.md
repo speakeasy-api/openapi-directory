@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AssociateAssessmentReportEvidenceFolderRequest(
     path_params=operations.AssociateAssessmentReportEvidenceFolderPathParams(
-        assessment_id="quo",
+        assessment_id="cum",
     ),
     headers=operations.AssociateAssessmentReportEvidenceFolderHeaders(
-        x_amz_algorithm="minus",
-        x_amz_content_sha256="facilis",
-        x_amz_credential="facilis",
-        x_amz_date="officia",
-        x_amz_security_token="vel",
-        x_amz_signature="magni",
-        x_amz_signed_headers="saepe",
+        x_amz_algorithm="hic",
+        x_amz_content_sha256="qui",
+        x_amz_credential="cum",
+        x_amz_date="facilis",
+        x_amz_security_token="consequatur",
+        x_amz_signature="molestiae",
+        x_amz_signed_headers="laudantium",
     ),
     request=operations.AssociateAssessmentReportEvidenceFolderRequestBody(
-        evidence_folder_id="ut",
+        evidence_folder_id="tempore",
     ),
 )
     
-res = s.sdk.associate_assessment_report_evidence_folder(req)
+res = s.associate_assessment_report_evidence_folder(req)
 
 if res.associate_assessment_report_evidence_folder_response is not None:
     # handle response

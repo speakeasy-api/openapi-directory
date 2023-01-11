@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.GenerateTokenV2Request(
     request=operations.GenerateTokenV2RequestBody(
-        assertion="dolorem",
-        grant_type="urn:ietf:params:oauth:grant-type:jwt-bearer",
-        refresh_token="distinctio",
-        scope="error",
-        valid_for=8073439294806826991,
+        assertion="numquam",
+        grant_type="refresh_token",
+        refresh_token="tempora",
+        scope="id",
+        valid_for=4762912909714962691,
     ),
 )
     

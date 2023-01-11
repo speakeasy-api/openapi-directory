@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFunctionCodeSigningConfigResponse:
-    code_signing_config_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CodeSigningConfigArn') }})
-    function_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FunctionName') }})
+    code_signing_config_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CodeSigningConfigArn') }})
+    function_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('FunctionName') }})
     

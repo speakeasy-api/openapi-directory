@@ -1,39 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import getsnapshotlimitsrequest as shared_getsnapshotlimitsrequest
+from ..shared import getsnapshotlimitsresult as shared_getsnapshotlimitsresult
 
 class GetSnapshotLimitsXAmzTargetEnum(str, Enum):
     DIRECTORY_SERVICE_20150416_GET_SNAPSHOT_LIMITS = "DirectoryService_20150416.GetSnapshotLimits"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSnapshotLimitsHeaders:
-    x_amz_target: GetSnapshotLimitsXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: GetSnapshotLimitsXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnapshotLimitsRequest:
-    headers: GetSnapshotLimitsHeaders = field()
-    request: shared.GetSnapshotLimitsRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetSnapshotLimitsHeaders = dataclasses.field()
+    request: shared_getsnapshotlimitsrequest.GetSnapshotLimitsRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSnapshotLimitsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    client_exception: Optional[Any] = field(default=None)
-    entity_does_not_exist_exception: Optional[Any] = field(default=None)
-    get_snapshot_limits_result: Optional[shared.GetSnapshotLimitsResult] = field(default=None)
-    service_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    client_exception: Optional[Any] = dataclasses.field(default=None)
+    entity_does_not_exist_exception: Optional[Any] = dataclasses.field(default=None)
+    get_snapshot_limits_result: Optional[shared_getsnapshotlimitsresult.GetSnapshotLimitsResult] = dataclasses.field(default=None)
+    service_exception: Optional[Any] = dataclasses.field(default=None)
     

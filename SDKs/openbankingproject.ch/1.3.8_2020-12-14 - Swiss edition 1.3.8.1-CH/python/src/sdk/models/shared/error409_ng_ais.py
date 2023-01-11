@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hreftype as shared_hreftype
+from ..shared import tppmessage409_ais as shared_tppmessage409_ais
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Error409NgAis:
     r"""Error409NgAis
     NextGen specific definition of reporting error information in case of a HTTP error code 409.
     
     """
     
-    links: Optional[dict[str, HrefType]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
-    tpp_messages: Optional[List[TppMessage409Ais]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tppMessages') }})
+    links: Optional[dict[str, shared_hreftype.HrefType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
+    tpp_messages: Optional[list[shared_tppmessage409_ais.TppMessage409Ais]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tppMessages') }})
     

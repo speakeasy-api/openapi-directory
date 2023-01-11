@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import campaign as shared_campaign
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCampaignPathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCampaignSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCampaignRequest:
-    path_params: GetCampaignPathParams = field()
-    security: GetCampaignSecurity = field()
+    path_params: GetCampaignPathParams = dataclasses.field()
+    security: GetCampaignSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCampaignResponse:
-    content_type: str = field()
-    status_code: int = field()
-    campaign: Optional[shared.Campaign] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    campaign: Optional[shared_campaign.Campaign] = dataclasses.field(default=None)
     

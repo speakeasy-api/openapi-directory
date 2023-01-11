@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import user as shared_user
+from ..shared import responsedefaultresource as shared_responsedefaultresource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddUserSecurity:
-    cookie_sid: shared.SchemeCookieSid = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
+    cookie_sid: shared_security.SchemeCookieSid = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddUserRequest:
-    request: shared.UserInput = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddUserSecurity = field()
+    request: shared_user.UserInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddUserSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_default_resource: Optional[shared.ResponseDefaultResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_default_resource: Optional[shared_responsedefaultresource.ResponseDefaultResource] = dataclasses.field(default=None)
     

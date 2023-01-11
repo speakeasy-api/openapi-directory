@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import recoveryoptiontype as shared_recoveryoptiontype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountRecoverySettingType:
     r"""AccountRecoverySettingType
     The data type for <code>AccountRecoverySetting</code>.
     """
     
-    recovery_mechanisms: Optional[List[RecoveryOptionType]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecoveryMechanisms') }})
+    recovery_mechanisms: Optional[list[shared_recoveryoptiontype.RecoveryOptionType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RecoveryMechanisms') }})
     

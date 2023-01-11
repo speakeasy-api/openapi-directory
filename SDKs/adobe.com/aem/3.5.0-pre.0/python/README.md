@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,14 +24,7 @@ s.config_security(
     )
 )
     
-req = operations.DeleteAgentRequest(
-    path_params=operations.DeleteAgentPathParams(
-        name="eveniet",
-        runmode="modi",
-    ),
-)
-    
-res = s.sdk.delete_agent(req)
+res = s.console.get_aem_product_info()
 
 if res.status_code == 200:
     # handle response
@@ -42,55 +34,70 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### console
+
+* `get_aem_product_info`
+* `get_config_mgr`
+* `post_bundle`
+* `post_jmx_repository`
+* `post_saml_configuration`
+
+### cq
+
+* `get_login_page`
+* `post_cq_actions`
+
+### crx
+
+* `get_crxde_status`
+* `get_install_status`
+* `get_package_manager_servlet`
+* `post_package_service`
+* `post_package_service_json`
+* `post_package_update`
+* `post_set_password`
+
+### custom
+
+* `get_aem_health_check`
+* `post_config_aem_health_check_servlet`
+* `post_config_aem_password_reset`
+
+### granite
+
+* `ssl_setup`
+
+### sling
 
 * `delete_agent`
 * `delete_node`
-* `get_aem_health_check`
-* `get_aem_product_info`
 * `get_agent`
 * `get_agents`
 * `get_authorizable_keystore`
-* `get_config_mgr`
-* `get_crxde_status`
-* `get_install_status`
 * `get_keystore`
-* `get_login_page`
 * `get_node`
 * `get_package`
 * `get_package_filter`
-* `get_package_manager_servlet`
 * `get_query`
 * `get_truststore`
 * `get_truststore_info`
 * `post_agent`
 * `post_authorizable_keystore`
 * `post_authorizables`
-* `post_bundle`
 * `post_config_adobe_granite_saml_authentication_handler`
-* `post_config_aem_health_check_servlet`
-* `post_config_aem_password_reset`
 * `post_config_apache_felix_jetty_based_http_service`
 * `post_config_apache_http_components_proxy_configuration`
 * `post_config_apache_sling_dav_ex_servlet`
 * `post_config_apache_sling_get_servlet`
 * `post_config_apache_sling_referrer_filter`
 * `post_config_property`
-* `post_cq_actions`
-* `post_jmx_repository`
 * `post_node`
 * `post_node_rw`
-* `post_package_service`
-* `post_package_service_json`
-* `post_package_update`
 * `post_path`
 * `post_query`
-* `post_saml_configuration`
-* `post_set_password`
 * `post_tree_activation`
 * `post_truststore`
 * `post_truststore_pkcs12`
-* `ssl_setup`
 
 <!-- End SDK Available Operations -->
 

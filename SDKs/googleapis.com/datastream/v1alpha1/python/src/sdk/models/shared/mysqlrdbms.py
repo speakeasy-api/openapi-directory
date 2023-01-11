@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import mysqldatabase as shared_mysqldatabase
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MysqlRdbms:
     r"""MysqlRdbms
     MySQL database structure
     """
     
-    mysql_databases: Optional[List[MysqlDatabase]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mysqlDatabases') }})
+    mysql_databases: Optional[list[shared_mysqldatabase.MysqlDatabase]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mysqlDatabases') }})
     

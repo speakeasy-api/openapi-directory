@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,48 +20,48 @@ req = operations.AppengineAppsAuthorizedCertificatesCreateRequest(
     security=operations.AppengineAppsAuthorizedCertificatesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AppengineAppsAuthorizedCertificatesCreatePathParams(
-        apps_id="illum",
+        apps_id="ut",
     ),
     query_params=operations.AppengineAppsAuthorizedCertificatesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="quas",
-        alt="proto",
-        callback="adipisci",
-        fields="deleniti",
-        key="corrupti",
-        oauth_token="fuga",
+        dollar_xgafv="1",
+        access_token="eos",
+        alt="json",
+        callback="quaerat",
+        fields="quod",
+        key="nihil",
+        oauth_token="sapiente",
         pretty_print=False,
-        quota_user="omnis",
-        upload_type="qui",
-        upload_protocol="et",
+        quota_user="alias",
+        upload_type="rerum",
+        upload_protocol="qui",
     ),
     request=shared.AuthorizedCertificate(
         certificate_raw_data=shared.CertificateRawData(
-            private_key="possimus",
-            public_certificate="rerum",
+            private_key="quis",
+            public_certificate="sed",
         ),
-        display_name="odio",
-        domain_mappings_count=5943836182714085786,
+        display_name="magni",
+        domain_mappings_count=8132118161408055480,
         domain_names=[
-            "ea",
+            "inventore",
+            "vel",
         ],
-        expire_time="quam",
-        id="dolorum",
+        expire_time="alias",
+        id="quidem",
         managed_certificate=shared.ManagedCertificate(
-            last_renewal_time="consequatur",
-            status="FAILED_RETRYING_NOT_VISIBLE",
+            last_renewal_time="nostrum",
+            status="PENDING",
         ),
-        name="natus",
+        name="molestiae",
         visible_domain_mappings=[
-            "id",
-            "ad",
-            "non",
+            "qui",
+            "pariatur",
         ],
     ),
 )

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import subscriptionlistresponse as shared_subscriptionlistresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsGetAllPathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsGetAllSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsGetAllRequest:
-    path_params: GetWebhooksV3AppIDSubscriptionsGetAllPathParams = field()
-    security: GetWebhooksV3AppIDSubscriptionsGetAllSecurity = field()
+    path_params: GetWebhooksV3AppIDSubscriptionsGetAllPathParams = dataclasses.field()
+    security: GetWebhooksV3AppIDSubscriptionsGetAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksV3AppIDSubscriptionsGetAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    subscription_list_response: Optional[shared.SubscriptionListResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    subscription_list_response: Optional[shared_subscriptionlistresponse.SubscriptionListResponse] = dataclasses.field(default=None)
     

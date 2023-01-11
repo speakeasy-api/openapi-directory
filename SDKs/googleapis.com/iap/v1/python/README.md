@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,30 +20,30 @@ req = operations.IapProjectsBrandsCreateRequest(
     security=operations.IapProjectsBrandsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.IapProjectsBrandsCreatePathParams(
-        parent="laboriosam",
+        parent="et",
     ),
     query_params=operations.IapProjectsBrandsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="porro",
+        dollar_xgafv="2",
+        access_token="voluptatem",
         alt="json",
-        callback="et",
-        fields="sed",
-        key="ut",
-        oauth_token="voluptatem",
-        pretty_print=True,
-        quota_user="molestias",
-        upload_type="vel",
-        upload_protocol="dolorem",
+        callback="quibusdam",
+        fields="velit",
+        key="rerum",
+        oauth_token="blanditiis",
+        pretty_print=False,
+        quota_user="et",
+        upload_type="accusamus",
+        upload_protocol="occaecati",
     ),
     request=shared.BrandInput(
-        application_title="id",
-        support_email="iste",
+        application_title="accusamus",
+        support_email="maiores",
     ),
 )
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,41 @@ s.config_security(
     
 req = operations.CreateDevicePoolRequest(
     headers=operations.CreateDevicePoolHeaders(
-        x_amz_algorithm="ex",
-        x_amz_content_sha256="doloribus",
-        x_amz_credential="qui",
-        x_amz_date="eius",
-        x_amz_security_token="dolorum",
-        x_amz_signature="ea",
-        x_amz_signed_headers="enim",
+        x_amz_algorithm="aperiam",
+        x_amz_content_sha256="est",
+        x_amz_credential="ab",
+        x_amz_date="molestias",
+        x_amz_security_token="molestias",
+        x_amz_signature="voluptas",
+        x_amz_signed_headers="animi",
         x_amz_target="DeviceFarm_20150623.CreateDevicePool",
     ),
     request=shared.CreateDevicePoolRequest(
-        description="quos",
-        max_devices=4962863351805660991,
-        name="iusto",
-        project_arn="et",
+        description="nihil",
+        max_devices=5987901294680041728,
+        name="hic",
+        project_arn="vitae",
         rules=[
             shared.Rule(
-                attribute="APPIUM_VERSION",
-                operator="GREATER_THAN",
-                value="itaque",
+                attribute="FLEET_TYPE",
+                operator="EQUALS",
+                value="pariatur",
+            ),
+            shared.Rule(
+                attribute="INSTANCE_ARN",
+                operator="GREATER_THAN_OR_EQUALS",
+                value="architecto",
+            ),
+            shared.Rule(
+                attribute="INSTANCE_LABELS",
+                operator="LESS_THAN",
+                value="rem",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_device_pool(req)
+res = s.create_device_pool(req)
 
 if res.create_device_pool_result is not None:
     # handle response

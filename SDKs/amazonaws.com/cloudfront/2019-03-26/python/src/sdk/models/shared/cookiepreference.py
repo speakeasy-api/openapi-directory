@@ -1,15 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import itemselection_enum as shared_itemselection_enum
+from ..shared import cookienames as shared_cookienames
 
 
-@dataclass
+@dataclasses.dataclass
 class CookiePreference:
     r"""CookiePreference
     A complex type that specifies whether you want CloudFront to forward cookies to the origin and, if so, which ones. For more information about forwarding cookies to the origin, see <a href=\"https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html\">Caching Content Based on Cookies</a> in the <i>Amazon CloudFront Developer Guide</i>.
     """
     
-    forward: ItemSelectionEnum = field()
-    whitelisted_names: Optional[CookieNames] = field(default=None)
+    forward: shared_itemselection_enum.ItemSelectionEnum = dataclasses.field()
+    whitelisted_names: Optional[shared_cookienames.CookieNames] = dataclasses.field(default=None)
     

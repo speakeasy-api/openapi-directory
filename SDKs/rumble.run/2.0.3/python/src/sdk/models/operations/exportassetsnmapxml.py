@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportAssetsNmapXMLQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportAssetsNmapXMLSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportAssetsNmapXMLRequest:
-    query_params: ExportAssetsNmapXMLQueryParams = field()
-    security: ExportAssetsNmapXMLSecurity = field()
+    query_params: ExportAssetsNmapXMLQueryParams = dataclasses.field()
+    security: ExportAssetsNmapXMLSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportAssetsNmapXMLResponse:
-    content_type: str = field()
-    status_code: int = field()
-    export_assets_nmap_xml_200_text_xml_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    export_assets_nmap_xml_200_text_xml_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

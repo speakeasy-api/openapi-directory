@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import speechmarktype_enum as shared_speechmarktype_enum
+from ..shared import synthesizespeechoutput as shared_synthesizespeechoutput
 
 
-@dataclass
+@dataclasses.dataclass
 class SynthesizeSpeechHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 class SynthesizeSpeechRequestBodyEngineEnum(str, Enum):
     STANDARD = "standard"
@@ -135,37 +136,37 @@ class SynthesizeSpeechRequestBodyVoiceIDEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SynthesizeSpeechRequestBody:
-    output_format: SynthesizeSpeechRequestBodyOutputFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputFormat') }})
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
-    voice_id: SynthesizeSpeechRequestBodyVoiceIDEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceId') }})
-    engine: Optional[SynthesizeSpeechRequestBodyEngineEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Engine') }})
-    language_code: Optional[SynthesizeSpeechRequestBodyLanguageCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
-    lexicon_names: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LexiconNames') }})
-    sample_rate: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SampleRate') }})
-    speech_mark_types: Optional[List[shared.SpeechMarkTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SpeechMarkTypes') }})
-    text_type: Optional[SynthesizeSpeechRequestBodyTextTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextType') }})
+    output_format: SynthesizeSpeechRequestBodyOutputFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OutputFormat') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
+    voice_id: SynthesizeSpeechRequestBodyVoiceIDEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('VoiceId') }})
+    engine: Optional[SynthesizeSpeechRequestBodyEngineEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Engine') }})
+    language_code: Optional[SynthesizeSpeechRequestBodyLanguageCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
+    lexicon_names: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LexiconNames') }})
+    sample_rate: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SampleRate') }})
+    speech_mark_types: Optional[list[shared_speechmarktype_enum.SpeechMarkTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SpeechMarkTypes') }})
+    text_type: Optional[SynthesizeSpeechRequestBodyTextTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TextType') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SynthesizeSpeechRequest:
-    headers: SynthesizeSpeechHeaders = field()
-    request: SynthesizeSpeechRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SynthesizeSpeechHeaders = dataclasses.field()
+    request: SynthesizeSpeechRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SynthesizeSpeechResponse:
-    content_type: str = field()
-    status_code: int = field()
-    engine_not_supported_exception: Optional[Any] = field(default=None)
-    invalid_sample_rate_exception: Optional[Any] = field(default=None)
-    invalid_ssml_exception: Optional[Any] = field(default=None)
-    language_not_supported_exception: Optional[Any] = field(default=None)
-    lexicon_not_found_exception: Optional[Any] = field(default=None)
-    marks_not_supported_for_format_exception: Optional[Any] = field(default=None)
-    service_failure_exception: Optional[Any] = field(default=None)
-    ssml_marks_not_supported_for_text_type_exception: Optional[Any] = field(default=None)
-    synthesize_speech_output: Optional[shared.SynthesizeSpeechOutput] = field(default=None)
-    text_length_exceeded_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    engine_not_supported_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_sample_rate_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_ssml_exception: Optional[Any] = dataclasses.field(default=None)
+    language_not_supported_exception: Optional[Any] = dataclasses.field(default=None)
+    lexicon_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    marks_not_supported_for_format_exception: Optional[Any] = dataclasses.field(default=None)
+    service_failure_exception: Optional[Any] = dataclasses.field(default=None)
+    ssml_marks_not_supported_for_text_type_exception: Optional[Any] = dataclasses.field(default=None)
+    synthesize_speech_output: Optional[shared_synthesizespeechoutput.SynthesizeSpeechOutput] = dataclasses.field(default=None)
+    text_length_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
     

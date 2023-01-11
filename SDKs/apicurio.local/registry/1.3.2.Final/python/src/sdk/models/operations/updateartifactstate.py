@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import updatestate as shared_updatestate
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateArtifactStatePathParams:
-    artifact_id: str = field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
+    artifact_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'artifactId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateArtifactStateRequest:
-    path_params: UpdateArtifactStatePathParams = field()
-    request: shared.UpdateState = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateArtifactStatePathParams = dataclasses.field()
+    request: shared_updatestate.UpdateState = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateArtifactStateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

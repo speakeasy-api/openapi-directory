@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.AssociateMemberAccountRequest(
     headers=operations.AssociateMemberAccountHeaders(
-        x_amz_algorithm="assumenda",
-        x_amz_content_sha256="fugiat",
-        x_amz_credential="eos",
-        x_amz_date="aut",
-        x_amz_security_token="laborum",
-        x_amz_signature="praesentium",
-        x_amz_signed_headers="aut",
+        x_amz_algorithm="qui",
+        x_amz_content_sha256="harum",
+        x_amz_credential="fuga",
+        x_amz_date="facilis",
+        x_amz_security_token="blanditiis",
+        x_amz_signature="dicta",
+        x_amz_signed_headers="ea",
         x_amz_target="MacieService.AssociateMemberAccount",
     ),
     request=shared.AssociateMemberAccountRequest(
-        member_account_id="aspernatur",
+        member_account_id="non",
     ),
 )
     
-res = s.sdk.associate_member_account(req)
+res = s.associate_member_account(req)
 
 if res.status_code == 200:
     # handle response

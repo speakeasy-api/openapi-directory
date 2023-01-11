@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,31 +20,31 @@ req = operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest(
     security=operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams(
-        name="quisquam",
+        name="facilis",
     ),
     query_params=operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams(
         dollar_xgafv="2",
-        access_token="ea",
+        access_token="vero",
         alt="media",
-        callback="veniam",
-        fields="perspiciatis",
+        callback="quia",
+        fields="dolorem",
         key="et",
-        oauth_token="qui",
+        oauth_token="doloremque",
         pretty_print=False,
-        quota_user="officia",
-        upload_type="iure",
-        upload_protocol="quis",
+        quota_user="delectus",
+        upload_type="nemo",
+        upload_protocol="consequatur",
     ),
     request=shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest(
-        command="tempora",
+        command="laudantium",
         params={
-            "et": "quia",
+            "earum": "est",
         },
     ),
 )

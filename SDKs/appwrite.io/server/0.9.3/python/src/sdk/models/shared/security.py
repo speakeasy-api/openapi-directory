@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeJwt:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Appwrite-JWT' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Appwrite-JWT' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Appwrite-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Appwrite-Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeLocale:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Appwrite-Locale' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Appwrite-Locale' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeProject:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Appwrite-Project' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Appwrite-Project' }})
     

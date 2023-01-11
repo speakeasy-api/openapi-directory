@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import group as shared_group
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsQueryParams:
-    all: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
+    all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'all', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsRequest:
-    query_params: GetGroupsQueryParams = field()
+    query_params: GetGroupsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGroupsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    groups: Optional[List[shared.Group]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    groups: Optional[list[shared_group.Group]] = dataclasses.field(default=None)
     

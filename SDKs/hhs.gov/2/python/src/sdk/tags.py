@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,8 +40,66 @@ class Tags:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagMarshallerWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TagMarshallerWrapped]])
                 res.tag_marshaller_wrappeds = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 500:
+            pass
+
+        return res
+
+    
+    def get_resources_tags_tag_languages_format_(self, request: operations.GetResourcesTagsTagLanguagesFormatRequest) -> operations.GetResourcesTagsTagLanguagesFormatResponse:
+        r"""Get TagLanguages
+        List of Tag Languages
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/tags/tagLanguages.{format}", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourcesTagsTagLanguagesFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TagLanguageMarshallerWrapped]])
+                res.tag_language_marshaller_wrappeds = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 500:
+            pass
+
+        return res
+
+    
+    def get_resources_tags_tag_types_format_(self, request: operations.GetResourcesTagsTagTypesFormatRequest) -> operations.GetResourcesTagsTagTypesFormatResponse:
+        r"""Get MediaItems for Tag
+        List of Types
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/tags/tagTypes.{format}", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourcesTagsTagTypesFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TagTypeMarshallerWrapped]])
+                res.tag_type_marshaller_wrappeds = out
         elif r.status_code == 400:
             pass
         elif r.status_code == 500:
@@ -69,7 +127,7 @@ class Tags:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagMarshallerWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TagMarshallerWrapped]])
                 res.tag_marshaller_wrappeds = out
         elif r.status_code == 400:
             pass
@@ -99,7 +157,7 @@ class Tags:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MediaItemWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MediaItemWrapped]])
                 res.media_item_wrappeds = out
         elif r.status_code == 400:
             pass
@@ -129,7 +187,7 @@ class Tags:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagMarshallerWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.TagMarshallerWrapped]])
                 res.tag_marshaller_wrappeds = out
         elif r.status_code == 400:
             pass
@@ -160,64 +218,6 @@ class Tags:
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
                 res.get_resources_tags_id_syndicate_format_200_application_json_string = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
-
-    
-    def get_resources_tags_tag_languages_format_(self, request: operations.GetResourcesTagsTagLanguagesFormatRequest) -> operations.GetResourcesTagsTagLanguagesFormatResponse:
-        r"""Get TagLanguages
-        List of Tag Languages
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/resources/tags/tagLanguages.{format}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetResourcesTagsTagLanguagesFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagLanguageMarshallerWrapped]])
-                res.tag_language_marshaller_wrappeds = out
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
-
-    
-    def get_resources_tags_tag_types_format_(self, request: operations.GetResourcesTagsTagTypesFormatRequest) -> operations.GetResourcesTagsTagTypesFormatResponse:
-        r"""Get MediaItems for Tag
-        List of Types
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/resources/tags/tagTypes.{format}", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetResourcesTagsTagTypesFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.TagTypeMarshallerWrapped]])
-                res.tag_type_marshaller_wrappeds = out
         elif r.status_code == 400:
             pass
         elif r.status_code == 500:

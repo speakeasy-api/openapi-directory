@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSandboxSandboxIDPathParams:
-    sandbox_id: str = field(metadata={'path_param': { 'field_name': 'sandboxId', 'style': 'simple', 'explode': False }})
+    sandbox_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sandboxId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSandboxSandboxIDSecurity:
-    authorization_code_token: shared.SchemeAuthorizationCodeToken = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    client_id: shared.SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    authorization_code_token: shared_security.SchemeAuthorizationCodeToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    client_id: shared_security.SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSandboxSandboxIDRequest:
-    path_params: DeleteSandboxSandboxIDPathParams = field()
-    security: DeleteSandboxSandboxIDSecurity = field()
+    path_params: DeleteSandboxSandboxIDPathParams = dataclasses.field()
+    security: DeleteSandboxSandboxIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteSandboxSandboxIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

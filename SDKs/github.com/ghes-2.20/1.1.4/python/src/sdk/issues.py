@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -31,13 +31,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesAddAssigneesResponse(status_code=r.status_code, content_type=content_type)
@@ -60,20 +60,20 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesAddLabelsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
         elif r.status_code == 410:
             if utils.match_content_type(content_type, "application/json"):
@@ -132,13 +132,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -184,13 +184,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesCreateCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -231,13 +231,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/labels", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesCreateLabelResponse(status_code=r.status_code, content_type=content_type)
@@ -270,13 +270,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/milestones", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesCreateMilestoneResponse(status_code=r.status_code, content_type=content_type)
@@ -577,7 +577,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Issue]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Issue]])
                 res.issues = out
         elif r.status_code == 304:
             pass
@@ -616,7 +616,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -649,7 +649,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueComment]])
                 res.issue_comments = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -686,7 +686,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueComment]])
                 res.issue_comments = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -722,7 +722,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueEventForIssue]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueEventForIssue]])
                 res.issue_event_for_issues = out
         elif r.status_code == 410:
             if utils.match_content_type(content_type, "application/json"):
@@ -754,7 +754,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueEvent]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueEvent]])
                 res.issue_events = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -786,7 +786,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueEventForIssue]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueEventForIssue]])
                 res.issue_event_for_issues = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -832,7 +832,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Issue]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Issue]])
                 res.issues = out
         elif r.status_code == 304:
             pass
@@ -872,7 +872,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Issue]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Issue]])
                 res.issues = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -910,7 +910,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.IssueSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.IssueSimple]])
                 res.issue_simples = out
         elif r.status_code == 301:
             if utils.match_content_type(content_type, "application/json"):
@@ -950,7 +950,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
 
         return res
@@ -978,7 +978,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1010,7 +1010,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
         elif r.status_code == 410:
             if utils.match_content_type(content_type, "application/json"):
@@ -1042,7 +1042,7 @@ class Issues:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Milestone]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Milestone]])
                 res.milestones = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1065,13 +1065,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesLockResponse(status_code=r.status_code, content_type=content_type)
@@ -1136,13 +1136,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesRemoveAssigneesResponse(status_code=r.status_code, content_type=content_type)
@@ -1175,7 +1175,7 @@ class Issues:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1200,20 +1200,20 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesSetLabelsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Label]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Label]])
                 res.labels = out
         elif r.status_code == 410:
             if utils.match_content_type(content_type, "application/json"):
@@ -1270,13 +1270,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/{issue_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -1323,13 +1323,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesUpdateCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -1356,13 +1356,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/labels/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesUpdateLabelResponse(status_code=r.status_code, content_type=content_type)
@@ -1385,13 +1385,13 @@ class Issues:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IssuesUpdateMilestoneResponse(status_code=r.status_code, content_type=content_type)

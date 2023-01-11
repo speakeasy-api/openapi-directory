@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,33 +21,33 @@ req = operations.FirebasehostingProjectsSitesCreateRequest(
         option1=operations.FirebasehostingProjectsSitesCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FirebasehostingProjectsSitesCreatePathParams(
-        parent="ipsam",
+        parent="quia",
     ),
     query_params=operations.FirebasehostingProjectsSitesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="et",
+        dollar_xgafv="2",
+        access_token="sit",
         alt="json",
-        callback="est",
-        fields="dolor",
-        key="placeat",
-        oauth_token="a",
-        pretty_print=True,
-        quota_user="aut",
-        site_id="facere",
-        upload_type="ut",
-        upload_protocol="doloremque",
+        callback="nesciunt",
+        fields="vero",
+        key="quae",
+        oauth_token="modi",
+        pretty_print=False,
+        quota_user="ad",
+        site_id="animi",
+        upload_type="iusto",
+        upload_protocol="laudantium",
     ),
     request=shared.SiteInput(
-        app_id="perferendis",
+        app_id="repellendus",
         labels={
-            "dolor": "reiciendis",
+            "facilis": "vitae",
         },
     ),
 )

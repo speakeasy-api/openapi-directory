@@ -1,7 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import associationsession as shared_associationsession
 
 class AdsensehostAssociationsessionsStartProductCodeEnum(str, Enum):
     AFC = "AFC"
@@ -11,37 +14,37 @@ class AdsensehostAssociationsessionsStartProductCodeEnum(str, Enum):
     AFV = "AFV"
 
 
-@dataclass
+@dataclasses.dataclass
 class AdsensehostAssociationsessionsStartQueryParams:
-    product_code: List[AdsensehostAssociationsessionsStartProductCodeEnum] = field(metadata={'query_param': { 'field_name': 'productCode', 'style': 'form', 'explode': True }})
-    website_url: str = field(metadata={'query_param': { 'field_name': 'websiteUrl', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    callback_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callbackUrl', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    user_ip: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
-    user_locale: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'userLocale', 'style': 'form', 'explode': True }})
-    website_locale: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'websiteLocale', 'style': 'form', 'explode': True }})
+    product_code: list[AdsensehostAssociationsessionsStartProductCodeEnum] = dataclasses.field(metadata={'query_param': { 'field_name': 'productCode', 'style': 'form', 'explode': True }})
+    website_url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'websiteUrl', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    callback_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callbackUrl', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    user_ip: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userIp', 'style': 'form', 'explode': True }})
+    user_locale: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'userLocale', 'style': 'form', 'explode': True }})
+    website_locale: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'websiteLocale', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AdsensehostAssociationsessionsStartSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2c: shared.SchemeOauth2c = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2c: shared_security.SchemeOauth2c = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AdsensehostAssociationsessionsStartRequest:
-    query_params: AdsensehostAssociationsessionsStartQueryParams = field()
-    security: AdsensehostAssociationsessionsStartSecurity = field()
+    query_params: AdsensehostAssociationsessionsStartQueryParams = dataclasses.field()
+    security: AdsensehostAssociationsessionsStartSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AdsensehostAssociationsessionsStartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    association_session: Optional[shared.AssociationSession] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    association_session: Optional[shared_associationsession.AssociationSession] = dataclasses.field(default=None)
     

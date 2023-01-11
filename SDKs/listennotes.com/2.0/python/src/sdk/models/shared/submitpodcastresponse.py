@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import podcastminimum as shared_podcastminimum
 
 class SubmitPodcastResponseStatusEnum(str, Enum):
     FOUND = "found"
@@ -10,8 +10,8 @@ class SubmitPodcastResponseStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubmitPodcastResponse:
-    podcast: PodcastMinimum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('podcast') }})
-    status: SubmitPodcastResponseStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    podcast: shared_podcastminimum.PodcastMinimum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('podcast') }})
+    status: SubmitPodcastResponseStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

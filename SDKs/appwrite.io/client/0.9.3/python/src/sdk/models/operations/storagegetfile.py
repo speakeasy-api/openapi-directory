@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import file as shared_file
 
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFilePathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFileSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFileRequest:
-    path_params: StorageGetFilePathParams = field()
-    security: StorageGetFileSecurity = field()
+    path_params: StorageGetFilePathParams = dataclasses.field()
+    security: StorageGetFileSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StorageGetFileResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file: Optional[shared.File] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file: Optional[shared_file.File] = dataclasses.field(default=None)
     

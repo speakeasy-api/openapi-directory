@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.AlsfcRequest(
     security=operations.AlsfcSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AlsfcRequestBody(
         certificate_parameters=operations.AlsfcRequestBodyCertificateParameters(
-            uid="sit",
+            uid="et",
             lino="voluptas",
         ),
-        consent_artifact="velit",
+        consent_artifact="et",
         format="pdf",
-        txn_id="et",
+        txn_id="consequatur",
     ),
 )
     
-res = s.sdk.alsfc(req)
+res = s.ap_is.alsfc(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alsfc` - Application/ License for Factory
 * `clcer` - Registration Certificate for Contract Labour License

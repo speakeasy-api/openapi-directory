@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import refreshtokeninforesponse as shared_refreshtokeninforesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOauthV1RefreshTokensTokenGetRefreshTokenPathParams:
-    token: str = field(metadata={'path_param': { 'field_name': 'token', 'style': 'simple', 'explode': False }})
+    token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOauthV1RefreshTokensTokenGetRefreshTokenRequest:
-    path_params: GetOauthV1RefreshTokensTokenGetRefreshTokenPathParams = field()
+    path_params: GetOauthV1RefreshTokensTokenGetRefreshTokenPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOauthV1RefreshTokensTokenGetRefreshTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    refresh_token_info_response: Optional[shared.RefreshTokenInfoResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    refresh_token_info_response: Optional[shared_refreshtokeninforesponse.RefreshTokenInfoResponse] = dataclasses.field(default=None)
     

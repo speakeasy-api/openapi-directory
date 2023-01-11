@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,40 +21,39 @@ req = operations.CloudprofilerProjectsProfilesCreateRequest(
         option1=operations.CloudprofilerProjectsProfilesCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.CloudprofilerProjectsProfilesCreatePathParams(
-        parent="perferendis",
+        parent="quis",
     ),
     query_params=operations.CloudprofilerProjectsProfilesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="praesentium",
+        dollar_xgafv="1",
+        access_token="sapiente",
         alt="media",
         callback="omnis",
-        fields="et",
-        key="magni",
-        oauth_token="ratione",
-        pretty_print=True,
-        quota_user="maiores",
-        upload_type="quisquam",
-        upload_protocol="mollitia",
+        fields="placeat",
+        key="expedita",
+        oauth_token="quis",
+        pretty_print=False,
+        quota_user="rem",
+        upload_type="enim",
+        upload_protocol="tempora",
     ),
     request=shared.CreateProfileRequest(
         deployment=shared.Deployment(
             labels={
-                "nemo": "perferendis",
-                "corporis": "assumenda",
+                "ab": "alias",
             },
-            project_id="inventore",
-            target="voluptatem",
+            project_id="libero",
+            target="voluptatum",
         ),
         profile_type=[
-            "THREADS",
-            "WALL",
+            "CPU",
+            "CONTENTION",
         ],
     ),
 )

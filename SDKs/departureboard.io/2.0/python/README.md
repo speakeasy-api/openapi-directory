@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.GetArrivalsAndDeparturesByCrsRequest(
     path_params=operations.GetArrivalsAndDeparturesByCrsPathParams(
-        crs="quasi",
+        crs="voluptas",
     ),
     query_params=operations.GetArrivalsAndDeparturesByCrsQueryParams(
-        api_key="dolorum",
-        filter_station="consectetur",
-        filter_type="quas",
-        num_services=1032291537367353830,
-        service_details=True,
-        time_offset=242193190197934238,
-        time_window=6389419317176445298,
+        api_key="veniam",
+        filter_station="dolorum",
+        filter_type="id",
+        num_services=5235212334792799739,
+        service_details=False,
+        time_offset=5575187088826678383,
+        time_window=6278711762470794999,
     ),
 )
     
-res = s.sdk.get_arrivals_and_departures_by_crs(req)
+res = s.departures_and_arrivals.get_arrivals_and_departures_by_crs(req)
 
 if res.status_code == 200:
     # handle response
@@ -42,13 +41,19 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Departures & Arrivals
 
 * `get_arrivals_and_departures_by_crs` - getArrivalsAndDeparturesByCRS is used to get a list of services arriving to and departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 * `get_arrivals_by_crs` - getArrivalsByCRS is used to get a list of services arriving to a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 * `get_departures_by_crs` - getDeparturesByCRS is used to get a list of services departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
+
+### Fastest and Next Departures
+
 * `get_fastest_departures_by_crs` - getFastestDeparturesByCRS is used to get the fastest next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place.
 * `get_next_departures_by_crs` - getNextDeparturesByCRS is used to get the next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place. This will return the next departures for each of the filterList stations specified. It may not return the fastest next service. To get the fastest next service use the getFastestDeparturesByCRS endpoint.
+
+### Service Information
+
 * `get_service_details_by_id` - getServiceDetailsByID is used to get information on a service, by the Service ID. This will typically return a train service, but will also return a bus and ferry services. The Service ID must be provided in the serviceIDUrlSafe format that is provided in the response for Arrival and Departure Boards. A service ID is specific to a station, and can only be looked up for a short time after a train/bus/ferry arrives at, or departs from a station. This is a National Rail limitation.
 
 <!-- End SDK Available Operations -->

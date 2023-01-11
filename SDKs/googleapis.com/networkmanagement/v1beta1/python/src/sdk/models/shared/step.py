@@ -1,9 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import abortinfo as shared_abortinfo
+from ..shared import appengineversioninfo as shared_appengineversioninfo
+from ..shared import cloudfunctioninfo as shared_cloudfunctioninfo
+from ..shared import cloudrunrevisioninfo as shared_cloudrunrevisioninfo
+from ..shared import cloudsqlinstanceinfo as shared_cloudsqlinstanceinfo
+from ..shared import deliverinfo as shared_deliverinfo
+from ..shared import dropinfo as shared_dropinfo
+from ..shared import endpointinfo as shared_endpointinfo
+from ..shared import firewallinfo as shared_firewallinfo
+from ..shared import forwardinfo as shared_forwardinfo
+from ..shared import forwardingruleinfo as shared_forwardingruleinfo
+from ..shared import gkemasterinfo as shared_gkemasterinfo
+from ..shared import instanceinfo as shared_instanceinfo
+from ..shared import loadbalancerinfo as shared_loadbalancerinfo
+from ..shared import networkinfo as shared_networkinfo
+from ..shared import routeinfo as shared_routeinfo
+from ..shared import vpcconnectorinfo as shared_vpcconnectorinfo
+from ..shared import vpngatewayinfo as shared_vpngatewayinfo
+from ..shared import vpntunnelinfo as shared_vpntunnelinfo
 
 class StepStateEnum(str, Enum):
     STATE_UNSPECIFIED = "STATE_UNSPECIFIED"
@@ -36,33 +54,33 @@ class StepStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Step:
     r"""Step
     A simulated forwarding path is composed of multiple steps. Each step has a well-defined state and an associated configuration.
     """
     
-    abort: Optional[AbortInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('abort') }})
-    app_engine_version: Optional[AppEngineVersionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appEngineVersion') }})
-    causes_drop: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('causesDrop') }})
-    cloud_function: Optional[CloudFunctionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudFunction') }})
-    cloud_run_revision: Optional[CloudRunRevisionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudRunRevision') }})
-    cloud_sql_instance: Optional[CloudSQLInstanceInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudSqlInstance') }})
-    deliver: Optional[DeliverInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deliver') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    drop: Optional[DropInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('drop') }})
-    endpoint: Optional[EndpointInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint') }})
-    firewall: Optional[FirewallInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewall') }})
-    forward: Optional[ForwardInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forward') }})
-    forwarding_rule: Optional[ForwardingRuleInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forwardingRule') }})
-    gke_master: Optional[GkeMasterInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gkeMaster') }})
-    instance: Optional[InstanceInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
-    load_balancer: Optional[LoadBalancerInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancer') }})
-    network: Optional[NetworkInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
-    project_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectId') }})
-    route: Optional[RouteInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('route') }})
-    state: Optional[StepStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    vpc_connector: Optional[VpcConnectorInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpcConnector') }})
-    vpn_gateway: Optional[VpnGatewayInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnGateway') }})
-    vpn_tunnel: Optional[VpnTunnelInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnTunnel') }})
+    abort: Optional[shared_abortinfo.AbortInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('abort') }})
+    app_engine_version: Optional[shared_appengineversioninfo.AppEngineVersionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appEngineVersion') }})
+    causes_drop: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('causesDrop') }})
+    cloud_function: Optional[shared_cloudfunctioninfo.CloudFunctionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudFunction') }})
+    cloud_run_revision: Optional[shared_cloudrunrevisioninfo.CloudRunRevisionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudRunRevision') }})
+    cloud_sql_instance: Optional[shared_cloudsqlinstanceinfo.CloudSQLInstanceInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloudSqlInstance') }})
+    deliver: Optional[shared_deliverinfo.DeliverInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deliver') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    drop: Optional[shared_dropinfo.DropInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('drop') }})
+    endpoint: Optional[shared_endpointinfo.EndpointInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint') }})
+    firewall: Optional[shared_firewallinfo.FirewallInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewall') }})
+    forward: Optional[shared_forwardinfo.ForwardInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forward') }})
+    forwarding_rule: Optional[shared_forwardingruleinfo.ForwardingRuleInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('forwardingRule') }})
+    gke_master: Optional[shared_gkemasterinfo.GkeMasterInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gkeMaster') }})
+    instance: Optional[shared_instanceinfo.InstanceInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instance') }})
+    load_balancer: Optional[shared_loadbalancerinfo.LoadBalancerInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('loadBalancer') }})
+    network: Optional[shared_networkinfo.NetworkInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('network') }})
+    project_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projectId') }})
+    route: Optional[shared_routeinfo.RouteInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('route') }})
+    state: Optional[StepStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    vpc_connector: Optional[shared_vpcconnectorinfo.VpcConnectorInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpcConnector') }})
+    vpn_gateway: Optional[shared_vpngatewayinfo.VpnGatewayInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnGateway') }})
+    vpn_tunnel: Optional[shared_vpntunnelinfo.VpnTunnelInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpnTunnel') }})
     

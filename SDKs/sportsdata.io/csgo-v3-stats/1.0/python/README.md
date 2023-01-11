@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -30,7 +29,7 @@ req = operations.AreasCountriesRequest(
     ),
 )
     
-res = s.sdk.areas_countries(req)
+res = s.areas_countries(req)
 
 if res.areas is not None:
     # handle response

@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import files as shared_files
 
 class GetFilesSortEnum(str, Enum):
     NAME = "Name"
@@ -9,33 +10,33 @@ class GetFilesSortEnum(str, Enum):
     CREATED_DATE_UTC = "CreatedDateUTC"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    pagesize: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
-    sort: Optional[GetFilesSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    pagesize: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pagesize', 'style': 'form', 'explode': True }})
+    sort: Optional[GetFilesSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesRequest:
-    headers: GetFilesHeaders = field()
-    query_params: GetFilesQueryParams = field()
-    security: GetFilesSecurity = field()
+    headers: GetFilesHeaders = dataclasses.field()
+    query_params: GetFilesQueryParams = dataclasses.field()
+    security: GetFilesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    files: Optional[shared.Files] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    files: Optional[shared_files.Files] = dataclasses.field(default=None)
     

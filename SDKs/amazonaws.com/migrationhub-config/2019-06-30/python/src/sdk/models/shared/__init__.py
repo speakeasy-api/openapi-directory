@@ -7,3 +7,5 @@ from .homeregioncontrol import *
 from .security import *
 from .target import *
 from .targettype_enum import *
+
+__all__ = ["CreateHomeRegionControlRequest","CreateHomeRegionControlResult","DescribeHomeRegionControlsRequest","DescribeHomeRegionControlsResult","GetHomeRegionResult","HomeRegionControl","SchemeHmac","Security","Target","TargetTypeEnum"]

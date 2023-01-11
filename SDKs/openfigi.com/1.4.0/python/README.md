@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.GetMappingValuesKeyRequest(
     path_params=operations.GetMappingValuesKeyPathParams(
-        key="securityType2",
+        key="micCode",
     ),
 )
     
-res = s.sdk.get_mapping_values_key_(req)
+res = s.get_mapping_values_key_(req)
 
 if res.get_mapping_values_key_200_application_json_object is not None:
     # handle response

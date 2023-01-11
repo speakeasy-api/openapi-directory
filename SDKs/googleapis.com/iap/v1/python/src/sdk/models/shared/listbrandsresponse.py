@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import brand as shared_brand
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListBrandsResponse:
     r"""ListBrandsResponse
     Response message for ListBrands.
     """
     
-    brands: Optional[List[Brand]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brands') }})
+    brands: Optional[list[shared_brand.Brand]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brands') }})
     

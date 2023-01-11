@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import realtimemetricssubscriptionconfig as shared_realtimemetricssubscriptionconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class MonitoringSubscription:
     r"""MonitoringSubscription
     A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
     """
     
-    realtime_metrics_subscription_config: Optional[RealtimeMetricsSubscriptionConfig] = field(default=None)
+    realtime_metrics_subscription_config: Optional[shared_realtimemetricssubscriptionconfig.RealtimeMetricsSubscriptionConfig] = dataclasses.field(default=None)
     

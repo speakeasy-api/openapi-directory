@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import changesetsummarylistitem as shared_changesetsummarylistitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListChangeSetsResponse:
-    change_set_summary_list: Optional[List[ChangeSetSummaryListItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeSetSummaryList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    change_set_summary_list: Optional[list[shared_changesetsummarylistitem.ChangeSetSummaryListItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ChangeSetSummaryList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudVideointelligenceV1p2beta1SpeechContext:
     r"""GoogleCloudVideointelligenceV1p2beta1SpeechContext
     Provides \"hints\" to the speech recognizer to favor specific words and phrases in the results.
     """
     
-    phrases: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phrases') }})
+    phrases: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phrases') }})
     

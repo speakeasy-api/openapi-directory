@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interaction_limit_response as shared_interaction_limit_response
 
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsGetRestrictionsForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsGetRestrictionsForOrgRequest:
-    path_params: InteractionsGetRestrictionsForOrgPathParams = field()
+    path_params: InteractionsGetRestrictionsForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsGetRestrictionsForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interaction_limit_response: Optional[shared.InteractionLimitResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interaction_limit_response: Optional[shared_interaction_limit_response.InteractionLimitResponse] = dataclasses.field(default=None)
     

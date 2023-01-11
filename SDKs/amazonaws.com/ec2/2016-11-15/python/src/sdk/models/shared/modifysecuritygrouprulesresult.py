@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifySecurityGroupRulesResult:
-    return_: Optional[bool] = field(default=None)
+    return_: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

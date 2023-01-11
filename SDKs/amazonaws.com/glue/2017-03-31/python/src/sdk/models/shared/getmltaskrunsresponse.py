@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import taskrun as shared_taskrun
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetMlTaskRunsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    task_runs: Optional[List[TaskRun]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaskRuns') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    task_runs: Optional[list[shared_taskrun.TaskRun]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TaskRuns') }})
     

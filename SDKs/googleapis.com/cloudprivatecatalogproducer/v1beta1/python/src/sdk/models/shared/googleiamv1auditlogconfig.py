@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -12,7 +12,7 @@ class GoogleIamV1AuditLogConfigLogTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleIamV1AuditLogConfig:
     r"""GoogleIamV1AuditLogConfig
     Provides the configuration for logging a type of permissions.
@@ -36,6 +36,6 @@ class GoogleIamV1AuditLogConfig:
     jose@example.com from DATA_READ logging.
     """
     
-    exempted_members: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exemptedMembers') }})
-    log_type: Optional[GoogleIamV1AuditLogConfigLogTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logType') }})
+    exempted_members: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exemptedMembers') }})
+    log_type: Optional[GoogleIamV1AuditLogConfigLogTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logType') }})
     

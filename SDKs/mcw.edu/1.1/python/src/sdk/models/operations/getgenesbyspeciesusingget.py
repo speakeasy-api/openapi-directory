@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGenesBySpeciesUsingGetPathParams:
-    species_type_key: int = field(metadata={'path_param': { 'field_name': 'speciesTypeKey', 'style': 'simple', 'explode': False }})
+    species_type_key: int = dataclasses.field(metadata={'path_param': { 'field_name': 'speciesTypeKey', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenesBySpeciesUsingGetRequest:
-    path_params: GetGenesBySpeciesUsingGetPathParams = field()
+    path_params: GetGenesBySpeciesUsingGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGenesBySpeciesUsingGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

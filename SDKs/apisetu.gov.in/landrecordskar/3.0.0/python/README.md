@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.CncerRequest(
     security=operations.CncerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.CncerRequestBody(
         certificate_parameters=operations.CncerRequestBodyCertificateParameters(
-            document_number="veniam",
+            document_number="qui",
         ),
-        consent_artifact="eligendi",
+        consent_artifact="quis",
         format="xml",
-        txn_id="facere",
+        txn_id="et",
     ),
 )
     
-res = s.sdk.cncer(req)
+res = s.ap_is.cncer(req)
 
 if res.body is not None:
     # handle response
@@ -46,7 +45,7 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cncer` - Conversion Certificate
 * `mutan` - Mutation Report/ePattadar Passbook

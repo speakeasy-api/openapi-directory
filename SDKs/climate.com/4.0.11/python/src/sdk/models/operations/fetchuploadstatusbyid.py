@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import uploadstatus as shared_uploadstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class FetchUploadStatusByIDPathParams:
-    upload_id: str = field(metadata={'path_param': { 'field_name': 'uploadId', 'style': 'simple', 'explode': False }})
+    upload_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'uploadId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchUploadStatusByIDSecurity:
-    api_key: Optional[shared.SchemeAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    oauth2_authorization_code: Optional[shared.SchemeOauth2AuthorizationCode] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_key: Optional[shared_security.SchemeAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    oauth2_authorization_code: Optional[shared_security.SchemeOauth2AuthorizationCode] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchUploadStatusByIDRequest:
-    path_params: FetchUploadStatusByIDPathParams = field()
-    security: FetchUploadStatusByIDSecurity = field()
+    path_params: FetchUploadStatusByIDPathParams = dataclasses.field()
+    security: FetchUploadStatusByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FetchUploadStatusByIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    upload_status: Optional[shared.UploadStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    upload_status: Optional[shared_uploadstatus.UploadStatus] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,40 +20,40 @@ req = operations.NotebooksProjectsLocationsEnvironmentsCreateRequest(
     security=operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams(
-        parent="tempora",
+        parent="corrupti",
     ),
     query_params=operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="ipsum",
-        alt="media",
-        callback="fugiat",
-        environment_id="magnam",
-        fields="porro",
-        key="eos",
-        oauth_token="consequatur",
+        dollar_xgafv="1",
+        access_token="sit",
+        alt="json",
+        callback="possimus",
+        environment_id="illo",
+        fields="perferendis",
+        key="vitae",
+        oauth_token="aperiam",
         pretty_print=False,
-        quota_user="laudantium",
-        upload_type="officia",
-        upload_protocol="quidem",
+        quota_user="sit",
+        upload_type="et",
+        upload_protocol="dolorum",
     ),
     request=shared.EnvironmentInput(
         container_image=shared.ContainerImage(
-            repository="voluptatem",
-            tag="nesciunt",
+            repository="et",
+            tag="velit",
         ),
-        description="provident",
-        display_name="perferendis",
-        post_startup_script="suscipit",
+        description="cupiditate",
+        display_name="ex",
+        post_startup_script="sequi",
         vm_image=shared.VMImage(
-            image_family="sunt",
-            image_name="aut",
-            project="non",
+            image_family="laborum",
+            image_name="reprehenderit",
+            project="modi",
         ),
     ),
 )

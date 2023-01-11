@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import artifactmetadata as shared_artifactmetadata
+from ..shared import error as shared_error
 
 class CreateArtifactIfExistsEnum(str, Enum):
     FAIL = "FAIL"
@@ -10,9 +11,9 @@ class CreateArtifactIfExistsEnum(str, Enum):
     RETURN_OR_UPDATE = "RETURN_OR_UPDATE"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateArtifactQueryParams:
-    if_exists: Optional[CreateArtifactIfExistsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'ifExists', 'style': 'form', 'explode': True }})
+    if_exists: Optional[CreateArtifactIfExistsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ifExists', 'style': 'form', 'explode': True }})
     
 class CreateArtifactXRegistryArtifactTypeEnum(str, Enum):
     AVRO = "AVRO"
@@ -28,23 +29,23 @@ class CreateArtifactXRegistryArtifactTypeEnum(str, Enum):
     XML = "XML"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateArtifactHeaders:
-    x_registry_artifact_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Registry-ArtifactId', 'style': 'simple', 'explode': False }})
-    x_registry_artifact_type: Optional[CreateArtifactXRegistryArtifactTypeEnum] = field(default=None, metadata={'header': { 'field_name': 'X-Registry-ArtifactType', 'style': 'simple', 'explode': False }})
+    x_registry_artifact_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Registry-ArtifactId', 'style': 'simple', 'explode': False }})
+    x_registry_artifact_type: Optional[CreateArtifactXRegistryArtifactTypeEnum] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Registry-ArtifactType', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateArtifactRequest:
-    headers: CreateArtifactHeaders = field()
-    query_params: CreateArtifactQueryParams = field()
-    request: bytes = field(metadata={'request': { 'media_type': '*/*' }})
+    headers: CreateArtifactHeaders = dataclasses.field()
+    query_params: CreateArtifactQueryParams = dataclasses.field()
+    request: bytes = dataclasses.field(metadata={'request': { 'media_type': '*/*' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateArtifactResponse:
-    content_type: str = field()
-    status_code: int = field()
-    artifact_meta_data: Optional[shared.ArtifactMetaData] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    artifact_meta_data: Optional[shared_artifactmetadata.ArtifactMetaData] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

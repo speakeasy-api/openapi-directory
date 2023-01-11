@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNamePathParams:
-    organization_name: str = field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
+    organization_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameRequest:
-    path_params: GetSettingsOrganizationsOrganizationNamePathParams = field()
-    security: GetSettingsOrganizationsOrganizationNameSecurity = field()
+    path_params: GetSettingsOrganizationsOrganizationNamePathParams = dataclasses.field()
+    security: GetSettingsOrganizationsOrganizationNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingsOrganizationsOrganizationNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organization: Optional[shared.Organization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization: Optional[shared_organization.Organization] = dataclasses.field(default=None)
     

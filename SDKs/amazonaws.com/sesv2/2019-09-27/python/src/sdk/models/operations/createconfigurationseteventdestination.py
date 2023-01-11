@@ -1,67 +1,71 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import cloudwatchdestination as shared_cloudwatchdestination
+from ..shared import kinesisfirehosedestination as shared_kinesisfirehosedestination
+from ..shared import eventtype_enum as shared_eventtype_enum
+from ..shared import pinpointdestination as shared_pinpointdestination
+from ..shared import snsdestination as shared_snsdestination
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationPathParams:
-    configuration_set_name: str = field(metadata={'path_param': { 'field_name': 'ConfigurationSetName', 'style': 'simple', 'explode': False }})
+    configuration_set_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ConfigurationSetName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationRequestBodyEventDestination:
     r"""CreateConfigurationSetEventDestinationRequestBodyEventDestination
     An object that defines the event destination. Specifically, it defines which services receive events from emails sent using the configuration set that the event destination is associated with. Also defines the types of events that are sent to the event destination.
     """
     
-    cloud_watch_destination: Optional[shared.CloudWatchDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchDestination') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Enabled') }})
-    kinesis_firehose_destination: Optional[shared.KinesisFirehoseDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KinesisFirehoseDestination') }})
-    matching_event_types: Optional[List[shared.EventTypeEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MatchingEventTypes') }})
-    pinpoint_destination: Optional[shared.PinpointDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PinpointDestination') }})
-    sns_destination: Optional[shared.SnsDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnsDestination') }})
+    cloud_watch_destination: Optional[shared_cloudwatchdestination.CloudWatchDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CloudWatchDestination') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Enabled') }})
+    kinesis_firehose_destination: Optional[shared_kinesisfirehosedestination.KinesisFirehoseDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('KinesisFirehoseDestination') }})
+    matching_event_types: Optional[list[shared_eventtype_enum.EventTypeEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MatchingEventTypes') }})
+    pinpoint_destination: Optional[shared_pinpointdestination.PinpointDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PinpointDestination') }})
+    sns_destination: Optional[shared_snsdestination.SnsDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnsDestination') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationRequestBody:
-    event_destination: CreateConfigurationSetEventDestinationRequestBodyEventDestination = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventDestination') }})
-    event_destination_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventDestinationName') }})
+    event_destination: CreateConfigurationSetEventDestinationRequestBodyEventDestination = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventDestination') }})
+    event_destination_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EventDestinationName') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationRequest:
-    headers: CreateConfigurationSetEventDestinationHeaders = field()
-    path_params: CreateConfigurationSetEventDestinationPathParams = field()
-    request: CreateConfigurationSetEventDestinationRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateConfigurationSetEventDestinationHeaders = dataclasses.field()
+    path_params: CreateConfigurationSetEventDestinationPathParams = dataclasses.field()
+    request: CreateConfigurationSetEventDestinationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConfigurationSetEventDestinationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    already_exists_exception: Optional[Any] = field(default=None)
-    bad_request_exception: Optional[Any] = field(default=None)
-    create_configuration_set_event_destination_response: Optional[dict[str, Any]] = field(default=None)
-    limit_exceeded_exception: Optional[Any] = field(default=None)
-    not_found_exception: Optional[Any] = field(default=None)
-    too_many_requests_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    already_exists_exception: Optional[Any] = dataclasses.field(default=None)
+    bad_request_exception: Optional[Any] = dataclasses.field(default=None)
+    create_configuration_set_event_destination_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    too_many_requests_exception: Optional[Any] = dataclasses.field(default=None)
     

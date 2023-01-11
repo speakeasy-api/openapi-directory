@@ -1,19 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tagresource as shared_tagresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTagsResponseLinks:
-    next: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
-    prev: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
+    next: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
+    prev: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListTagsResponse:
     r"""ListTagsResponse
     Successful response to get all tags. This returns a paginated list of
@@ -22,6 +21,6 @@ class ListTagsResponse:
     
     """
     
-    data: List[TagResource] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    links: ListTagsResponseLinks = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    data: list[shared_tagresource.TagResource] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    links: ListTagsResponseLinks = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     

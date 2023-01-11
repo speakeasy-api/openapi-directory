@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LegislativeSession:
-    classification: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('classification') }})
-    end_date: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_date') }})
-    identifier: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identifier') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    start_date: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_date') }})
+    classification: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('classification') }})
+    end_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('end_date') }})
+    identifier: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identifier') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    start_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_date') }})
     

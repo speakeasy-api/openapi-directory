@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import publickeyentity as shared_publickeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysRequest:
-    query_params: GetPublicKeysQueryParams = field()
+    query_params: GetPublicKeysQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPublicKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_key_entities: Optional[List[shared.PublicKeyEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_key_entities: Optional[list[shared_publickeyentity.PublicKeyEntity]] = dataclasses.field(default=None)
     

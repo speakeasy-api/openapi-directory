@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import installstatus as shared_installstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInstallStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    install_status: Optional[shared.InstallStatus] = field(default=None)
-    get_install_status_default_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    install_status: Optional[shared_installstatus.InstallStatus] = dataclasses.field(default=None)
+    get_install_status_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     

@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseePathParams:
-    licensee_number: str = field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
+    licensee_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licenseeNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeRequestBody:
-    active: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'active' }})
-    marked_for_transfer: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'markedForTransfer' }})
-    name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'name' }})
-    number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'number' }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'active' }})
+    marked_for_transfer: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'markedForTransfer' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'name' }})
+    number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'number' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeRequest:
-    path_params: UpdateLicenseePathParams = field()
-    security: UpdateLicenseeSecurity = field()
-    request: Optional[UpdateLicenseeRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: UpdateLicenseePathParams = dataclasses.field()
+    security: UpdateLicenseeSecurity = dataclasses.field()
+    request: Optional[UpdateLicenseeRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

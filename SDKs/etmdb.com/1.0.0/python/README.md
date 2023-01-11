@@ -8,22 +8,21 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CinemaDetailSearchReadRequest(
-    path_params=operations.CinemaDetailSearchReadPathParams(
-        cinema_name="ut",
+req = operations.CinemaSearchReadRequest(
+    path_params=operations.CinemaSearchReadPathParams(
+        id="tempore",
     ),
 )
     
-res = s.sdk.cinema_detail_search_read(req)
+res = s.cinema.cinema_search_read(req)
 
 if res.status_code == 200:
     # handle response
@@ -33,33 +32,84 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cinema
+
+* `cinema_search_read` - Return cinema search result
+
+### cinema-detail
 
 * `cinema_detail_search_read` - Return cinema details search result
+
+### cinema-schedule
+
 * `cinema_schedule_search_read` - Return cinema schedule search result
 * `cinema_schedule_searchall_read` - Return cinema schedule search result
+
+### cinema-shedule-showtime
+
 * `cinema_shedule_showtime_search_read` - Return cinema schedule and showtime search result
 * `cinema_shedule_showtime_searchall_read` - Return cinema schedule and showtime search result
-* `cinema_search_read` - Return cinema search result
+
+### company
+
+* `company_search_read` - Return company search result
+
+### company-credits
+
 * `company_credits_search_read` - Return company credits search result
 * `company_credits_searchall_read` - Return company credits search result
-* `company_search_read` - Return company search result
-* `filmography_type_search_read` - Return filmography type search result
+
+### filmography
+
 * `filmography_search_read` - Return filmography search result
 * `filmography_searchall_read` - Return filmography search result
-* `genre_type_search_read` - Return genre type search result
+
+### filmography-type
+
+* `filmography_type_search_read` - Return filmography type search result
+
+### genre
+
 * `genre_search_read` - Return movie genre search result
 * `genre_searchall_read` - Return movie genre search result
+
+### genre-type
+
+* `genre_type_search_read` - Return genre type search result
+
+### job
+
 * `job_search_read` - Return job details search result
 * `job_searchall_read` - Return job details search result
+
+### media
+
 * `media_search_read` - Return movie media search result
 * `media_searchall_read` - Return cast media search result
+
+### movie
+
+* `movie_search_read` - Return movie search result
+
+### movie-cast
+
 * `movie_cast_search_read` - Return movie cast search result
 * `movie_cast_searchall_read` - Return movie cast search result
-* `movie_search_read` - Return movie search result
+
+### news
+
 * `news_search_read` - Return news or article search result
+
+### people
+
 * `people_search_read` - Return cast search result
+
+### showtime
+
 * `showtime_searchall_read` - Return showtime search result
+
+### watchlist
+
 * `watchlist_search_read` - Return watchlist search result
 * `watchlist_searchall_read` - Return watchlist search result
 

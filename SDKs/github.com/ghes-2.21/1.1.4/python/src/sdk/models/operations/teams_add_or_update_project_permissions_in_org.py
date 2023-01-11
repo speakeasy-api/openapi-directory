@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,11 +8,11 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateProjectPermissionsInOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    project_id: int = field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    project_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 class TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum(str, Enum):
     READ = "read"
@@ -21,27 +21,27 @@ class TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum(str, Enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateProjectPermissionsInOrgRequestBody:
-    permission: Optional[TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permission') }})
+    permission: Optional[TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permission') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON:
-    documentation_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateProjectPermissionsInOrgRequest:
-    path_params: TeamsAddOrUpdateProjectPermissionsInOrgPathParams = field()
-    request: Optional[TeamsAddOrUpdateProjectPermissionsInOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TeamsAddOrUpdateProjectPermissionsInOrgPathParams = dataclasses.field()
+    request: Optional[TeamsAddOrUpdateProjectPermissionsInOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsAddOrUpdateProjectPermissionsInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    teams_add_or_update_project_permissions_in_org_403_application_json_object: Optional[TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    teams_add_or_update_project_permissions_in_org_403_application_json_object: Optional[TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSON] = dataclasses.field(default=None)
     

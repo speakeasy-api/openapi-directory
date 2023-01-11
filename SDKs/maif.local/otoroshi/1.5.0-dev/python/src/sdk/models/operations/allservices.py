@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import service as shared_service
 
 
-@dataclass
+@dataclasses.dataclass
 class AllServicesSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AllServicesRequest:
-    security: AllServicesSecurity = field()
+    security: AllServicesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AllServicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    services: Optional[List[shared.Service]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    services: Optional[list[shared_service.Service]] = dataclasses.field(default=None)
     

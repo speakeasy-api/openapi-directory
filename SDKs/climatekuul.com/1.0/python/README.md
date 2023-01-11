@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,22 +18,22 @@ s = sdk.SDK()
     
 req = operations.AirtravelCoordinatesRequest(
     headers=operations.AirtravelCoordinatesHeaders(
-        content_type="repellat",
+        content_type="et",
     ),
     request=operations.AirtravelCoordinatesRequestBody(
-        api_key_l1="alias",
-        api_key_l2="rem",
-        destination_airport_latitude=60.200001,
-        destination_airport_longitude=75.199997,
-        number_of_passengers=2666378789136499828,
-        origin_airport_latitude=14.200000,
-        origin_airport_longitude=76.199997,
-        travel_class="cumque",
-        travel_mode="sunt",
+        api_key_l1="laudantium",
+        api_key_l2="voluptatibus",
+        destination_airport_latitude=16.200001,
+        destination_airport_longitude=65.199997,
+        number_of_passengers=5496595919472461343,
+        origin_airport_latitude=88.199997,
+        origin_airport_longitude=31.200001,
+        travel_class="necessitatibus",
+        travel_mode="aspernatur",
     ),
 )
     
-res = s.sdk.airtravel_coordinates(req)
+res = s.airtravel_coordinates.airtravel_coordinates(req)
 
 if res.status_code == 200:
     # handle response
@@ -44,34 +43,49 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AirtravelCoordinates
 
 * `airtravel_coordinates` - airtravelCoordinates
-* `airtravel_multileg` - airtravelMultileg
-* `confirm_carbon_offset` - confirmCarbonOffset
-* `confirm_carbon_offset1` - confirmCarbonOffset
-* `confirm_carbon_offset3` - confirmCarbonOffset
 * `confirm_carbon_offset4` - confirmCarbonOffset
-* `confirm_carbon_offset5` - confirmCarbonOffset
-* `confirm_payment` - confirmPayment
-* `confirm_payment1` - confirmPayment
-* `confirm_payment3` - confirmPayment
 * `confirm_payment4` - confirmPayment
-* `confirm_payment5` - confirmPayment
-* `confirm_payment_of_transaction` - confirmTransaction
-* `confirm_payment_of_transaction1` - confirmTransaction
-* `confirm_payment_of_transaction3` - confirmTransaction
 * `confirm_payment_of_transaction4` - confirmTransaction
-* `confirm_payment_of_transaction5` - confirmTransaction
-* `confirms_planting` - confirmPlanting
-* `confirms_planting2` - confirmPlanting
-* `confirms_planting3` - confirmPlanting
 * `confirms_planting4` - confirmPlanting
-* `confirms_planting5` - confirmPlanting
+
+### EcommerceDelivery
+
+* `confirm_carbon_offset1` - confirmCarbonOffset
+* `confirm_payment1` - confirmPayment
+* `confirm_payment_of_transaction1` - confirmTransaction
+* `confirms_planting2` - confirmPlanting
 * `ecommerce_delivery` - ecommerceDelivery
+
+### Request Api Key
+
 * `request_api_key` - requestApiKey
+
+### RoadDistance
+
+* `confirm_carbon_offset5` - confirmCarbonOffset
+* `confirm_payment5` - confirmPayment
+* `confirm_payment_of_transaction5` - confirmTransaction
+* `confirms_planting5` - confirmPlanting
 * `road_distance` - RoadDistance
+
+### UrbanDelivery
+
+* `confirm_carbon_offset` - confirmCarbonOffset
+* `confirm_payment` - confirmPayment
+* `confirm_payment_of_transaction` - confirmTransaction
+* `confirms_planting` - confirmPlanting
 * `urban_delivery` - urbanDelivery
+
+### airtravelMultileg
+
+* `airtravel_multileg` - airtravelMultileg
+* `confirm_carbon_offset3` - confirmCarbonOffset
+* `confirm_payment3` - confirmPayment
+* `confirm_payment_of_transaction3` - confirmTransaction
+* `confirms_planting3` - confirmPlanting
 
 <!-- End SDK Available Operations -->
 

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clonecontext as shared_clonecontext
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InstancesCloneRequest:
     r"""InstancesCloneRequest
     Database instance clone request.
     """
     
-    clone_context: Optional[CloneContext] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloneContext') }})
+    clone_context: Optional[shared_clonecontext.CloneContext] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cloneContext') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OpenIDConnectProviderListEntry:
     r"""OpenIDConnectProviderListEntry
     Contains the Amazon Resource Name (ARN) for an IAM OpenID Connect provider.
     """
     
-    arn: Optional[str] = field(default=None)
+    arn: Optional[str] = dataclasses.field(default=None)
     

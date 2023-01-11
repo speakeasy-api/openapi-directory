@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,33 +7,33 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateUsernameForUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateUsernameForUserRequestBody:
-    login: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
+    login: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateUsernameForUser202ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateUsernameForUserRequest:
-    path_params: EnterpriseAdminUpdateUsernameForUserPathParams = field()
-    request: Optional[EnterpriseAdminUpdateUsernameForUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminUpdateUsernameForUserPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminUpdateUsernameForUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminUpdateUsernameForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    enterprise_admin_update_username_for_user_202_application_json_object: Optional[EnterpriseAdminUpdateUsernameForUser202ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    enterprise_admin_update_username_for_user_202_application_json_object: Optional[EnterpriseAdminUpdateUsernameForUser202ApplicationJSON] = dataclasses.field(default=None)
     

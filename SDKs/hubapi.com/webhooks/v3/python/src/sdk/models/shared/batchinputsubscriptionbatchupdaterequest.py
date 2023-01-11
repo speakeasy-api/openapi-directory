@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import subscriptionbatchupdaterequest as shared_subscriptionbatchupdaterequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchInputSubscriptionBatchUpdateRequest:
-    inputs: List[SubscriptionBatchUpdateRequest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputs') }})
+    inputs: list[shared_subscriptionbatchupdaterequest.SubscriptionBatchUpdateRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputs') }})
     

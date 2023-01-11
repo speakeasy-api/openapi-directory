@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,37 +20,35 @@ req = operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate
     security=operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivatePathParams(
-        name="tempora",
+        name="occaecati",
     ),
     query_params=operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateQueryParams(
-        dollar_xgafv="1",
-        access_token="consequatur",
-        alt="proto",
-        callback="eveniet",
-        fields="reiciendis",
-        key="voluptatem",
-        oauth_token="porro",
-        pretty_print=False,
-        quota_user="dolores",
-        upload_type="dicta",
-        upload_protocol="autem",
+        dollar_xgafv="2",
+        access_token="enim",
+        alt="media",
+        callback="et",
+        fields="voluptatum",
+        key="vitae",
+        oauth_token="asperiores",
+        pretty_print=True,
+        quota_user="corrupti",
+        upload_type="quibusdam",
+        upload_protocol="consequatur",
     ),
     request=shared.ActivateCertificateAuthorityRequest(
-        pem_ca_certificate="ut",
-        request_id="dignissimos",
+        pem_ca_certificate="totam",
+        request_id="aperiam",
         subordinate_config=shared.SubordinateConfig(
-            certificate_authority="corporis",
+            certificate_authority="ea",
             pem_issuer_chain=shared.SubordinateConfigChain(
                 pem_certificates=[
-                    "et",
-                    "et",
-                    "corporis",
+                    "vero",
                 ],
             ),
         ),

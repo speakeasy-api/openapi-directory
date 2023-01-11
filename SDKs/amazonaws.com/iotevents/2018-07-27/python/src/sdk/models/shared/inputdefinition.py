@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attribute as shared_attribute
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InputDefinition:
     r"""InputDefinition
     The definition of the input.
     """
     
-    attributes: List[Attribute] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
+    attributes: list[shared_attribute.Attribute] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
     

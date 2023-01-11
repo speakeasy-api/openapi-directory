@@ -26,3 +26,5 @@ from .speechrecognitionresult import *
 from .status import *
 from .transcriptoutputconfig import *
 from .wordinfo import *
+
+__all__ = ["XgafvEnum","AltEnum","ClassItem","CreateCustomClassRequest","CreatePhraseSetRequest","CustomClass","ListCustomClassesResponse","ListOperationsResponse","ListPhraseSetResponse","LongRunningRecognizeRequestInput","Operation","Phrase","PhraseSet","RecognitionAudio","RecognitionConfigEncodingEnum","RecognitionConfigInput","RecognitionMetadataInteractionTypeEnum","RecognitionMetadataMicrophoneDistanceEnum","RecognitionMetadataOriginalMediaTypeEnum","RecognitionMetadataRecordingDeviceTypeEnum","RecognitionMetadata","RecognizeRequestInput","RecognizeResponse","SchemeOauth2","SchemeOauth2c","SpeakerDiarizationConfigInput","SpeechAdaptation","SpeechAdaptationInfo","SpeechContext","SpeechRecognitionAlternative","SpeechRecognitionResult","Status","TranscriptOutputConfig","WordInfo"]

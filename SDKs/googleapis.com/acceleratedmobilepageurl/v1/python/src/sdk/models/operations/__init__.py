@@ -1,1 +1,3 @@
 from .acceleratedmobilepageurl_ampurls_batchget import *
+
+__all__ = ["AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams","AcceleratedmobilepageurlAmpUrlsBatchGetRequest","AcceleratedmobilepageurlAmpUrlsBatchGetResponse"]

@@ -1,37 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import addresslookupresponseschema as shared_addresslookupresponseschema
+from ..shared import licenseelistresponseschema as shared_licenseelistresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class ListLicenseesPathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListLicenseesQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    starting_after: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'starting_after', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    starting_after: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'starting_after', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListLicenseesSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListLicenseesRequest:
-    path_params: ListLicenseesPathParams = field()
-    query_params: ListLicenseesQueryParams = field()
-    security: ListLicenseesSecurity = field()
+    path_params: ListLicenseesPathParams = dataclasses.field()
+    query_params: ListLicenseesQueryParams = dataclasses.field()
+    security: ListLicenseesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListLicenseesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    address_lookup_response_schema: Optional[shared.AddressLookupResponseSchema] = field(default=None)
-    licensee_list_response_schema: Optional[shared.LicenseeListResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    address_lookup_response_schema: Optional[shared_addresslookupresponseschema.AddressLookupResponseSchema] = dataclasses.field(default=None)
+    licensee_list_response_schema: Optional[shared_licenseelistresponseschema.LicenseeListResponseSchema] = dataclasses.field(default=None)
     

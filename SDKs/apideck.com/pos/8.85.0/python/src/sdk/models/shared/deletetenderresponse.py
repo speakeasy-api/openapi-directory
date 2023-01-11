@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import unifiedid as shared_unifiedid
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteTenderResponse:
-    data: UnifiedID = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    operation: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
-    resource: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
-    service: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    status_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
+    data: shared_unifiedid.UnifiedID = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    operation: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('operation') }})
+    resource: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource') }})
+    service: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('service') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status_code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
     

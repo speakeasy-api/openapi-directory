@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import certificate as shared_certificate
 
 
-@dataclass
+@dataclasses.dataclass
 class AddListenerCertificatesOutput:
-    certificates: Optional[List[Certificate]] = field(default=None)
+    certificates: Optional[list[shared_certificate.Certificate]] = dataclasses.field(default=None)
     

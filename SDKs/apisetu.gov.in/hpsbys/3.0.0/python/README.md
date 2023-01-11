@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.RsbycRequest(
     security=operations.RsbycSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.RsbycRequestBody(
         certificate_parameters=operations.RsbycRequestBodyCertificateParameters(
-            uid="sit",
+            uid="facere",
         ),
-        consent_artifact="aut",
+        consent_artifact="sunt",
         format="pdf",
-        txn_id="totam",
+        txn_id="nulla",
     ),
 )
     
-res = s.sdk.rsbyc(req)
+res = s.ap_is.rsbyc(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `rsbyc` - Health Card/ Certificate
 

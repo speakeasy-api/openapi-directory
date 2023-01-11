@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getlistingsresponse as shared_getlistingsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ListingsAllPathParams:
-    ecosystem_id: str = field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
+    ecosystem_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ecosystem_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListingsAllQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    external_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'external_id', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_id', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListingsAllRequest:
-    path_params: ListingsAllPathParams = field()
-    query_params: ListingsAllQueryParams = field()
+    path_params: ListingsAllPathParams = dataclasses.field()
+    query_params: ListingsAllQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListingsAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_listings_response: Optional[shared.GetListingsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_listings_response: Optional[shared_getlistingsresponse.GetListingsResponse] = dataclasses.field(default=None)
     

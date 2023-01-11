@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesJsonlQueryParams:
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesJsonlSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesJsonlRequest:
-    query_params: ExportServicesJsonlQueryParams = field()
-    security: ExportServicesJsonlSecurity = field()
+    query_params: ExportServicesJsonlQueryParams = dataclasses.field()
+    security: ExportServicesJsonlSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportServicesJsonlResponse:
-    content_type: str = field()
-    status_code: int = field()
-    export_services_jsonl_200_application_json_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    export_services_jsonl_200_application_json_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

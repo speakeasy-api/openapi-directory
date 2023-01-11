@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TerminateClientVpnConnectionsResult:
-    client_vpn_endpoint_id: Optional[str] = field(default=None)
-    connection_statuses: Optional[List[TerminateConnectionStatus]] = field(default=None)
-    username: Optional[str] = field(default=None)
+    client_vpn_endpoint_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    connection_statuses: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    username: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

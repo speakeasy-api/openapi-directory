@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import backup as shared_backup
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListBackupsResponse:
     r"""ListBackupsResponse
     ListBackupsResponse is the result of ListBackupsRequest.
     """
     
-    backups: Optional[List[Backup]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backups') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    backups: Optional[list[shared_backup.Backup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backups') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

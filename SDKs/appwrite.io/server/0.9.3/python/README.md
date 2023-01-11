@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,14 +20,14 @@ req = operations.AccountCreateRecoveryRequest(
     security=operations.AccountCreateRecoverySecurity(
         jwt=shared.SchemeJwt(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         project=shared.SchemeProject(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AccountCreateRecoveryRequestBody(
-        email="quasi",
-        url="aliquid",
+        email="amet",
+        url="sequi",
     ),
 )
     

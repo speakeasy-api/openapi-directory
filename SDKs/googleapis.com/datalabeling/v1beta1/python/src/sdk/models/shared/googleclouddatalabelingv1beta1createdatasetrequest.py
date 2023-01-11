@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleclouddatalabelingv1beta1dataset as shared_googleclouddatalabelingv1beta1dataset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudDatalabelingV1beta1CreateDatasetRequest:
     r"""GoogleCloudDatalabelingV1beta1CreateDatasetRequest
     Request message for CreateDataset.
     """
     
-    dataset: Optional[GoogleCloudDatalabelingV1beta1Dataset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataset') }})
+    dataset: Optional[shared_googleclouddatalabelingv1beta1dataset.GoogleCloudDatalabelingV1beta1Dataset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataset') }})
     

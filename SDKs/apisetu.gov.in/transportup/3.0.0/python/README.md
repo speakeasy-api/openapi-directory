@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.DrvlcRequest(
     security=operations.DrvlcSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.DrvlcRequestBody(
         certificate_parameters=operations.DrvlcRequestBodyCertificateParameters(
-            dob="earum",
-            full_name="laborum",
-            uid="mollitia",
-            dlno="quo",
+            dob="expedita",
+            full_name="aut",
+            uid="non",
+            dlno="necessitatibus",
         ),
-        consent_artifact="est",
-        format="xml",
-        txn_id="autem",
+        consent_artifact="reprehenderit",
+        format="pdf",
+        txn_id="suscipit",
     ),
 )
     
-res = s.sdk.drvlc(req)
+res = s.ap_is.drvlc(req)
 
 if res.body is not None:
     # handle response
@@ -49,7 +48,7 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `drvlc` - Driving License
 * `rvcer` - Registration of Vehicles

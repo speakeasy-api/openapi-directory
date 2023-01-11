@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SendTemplatedEmailResponse:
-    message_id: str = field()
+    message_id: str = dataclasses.field()
     

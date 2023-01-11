@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeVpnGatewaysResult:
     r"""DescribeVpnGatewaysResult
     Contains the output of DescribeVpnGateways.
     """
     
-    vpn_gateways: Optional[List[VpnGateway]] = field(default=None)
+    vpn_gateways: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

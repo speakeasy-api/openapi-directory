@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import auth as shared_auth
+from ..shared import error as shared_error
 
 class ClientAuthRequestBodyGrantTypeEnum(str, Enum):
     CLIENT_CREDENTIALS = "client_credentials"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClientAuthRequestBody:
-    grant_type: ClientAuthRequestBodyGrantTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('grant_type') }})
-    scope: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
+    grant_type: ClientAuthRequestBodyGrantTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('grant_type') }})
+    scope: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClientAuthRequest:
-    request: ClientAuthRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.auth+json' }})
+    request: ClientAuthRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.auth+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ClientAuthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    auth: Optional[shared.Auth] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    auth: Optional[shared_auth.Auth] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

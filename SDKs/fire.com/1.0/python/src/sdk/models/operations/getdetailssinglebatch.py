@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import onebatches_get_responses_200_content_application_1json_schema_properties_items_items as shared_onebatches_get_responses_200_content_application_1json_schema_properties_items_items
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDetailsSingleBatchPathParams:
-    batch_uuid: str = field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
+    batch_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDetailsSingleBatchRequest:
-    path_params: GetDetailsSingleBatchPathParams = field()
+    path_params: GetDetailsSingleBatchPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDetailsSingleBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    onebatches_get_responses_200_content_application_1json_schema_properties_items_items: Optional[shared.OnebatchesGetResponses200ContentApplication1jsonSchemaPropertiesItemsItems] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    onebatches_get_responses_200_content_application_1json_schema_properties_items_items: Optional[shared_onebatches_get_responses_200_content_application_1json_schema_properties_items_items.OnebatchesGetResponses200ContentApplication1jsonSchemaPropertiesItemsItems] = dataclasses.field(default=None)
     

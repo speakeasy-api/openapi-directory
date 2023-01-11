@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,14 +17,14 @@ class GatewayConfigGatewayTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GatewayConfig:
     r"""GatewayConfig
     Gateway-related configuration and state.
     """
     
-    gateway_auth_method: Optional[GatewayConfigGatewayAuthMethodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayAuthMethod') }})
-    gateway_type: Optional[GatewayConfigGatewayTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayType') }})
-    last_accessed_gateway_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastAccessedGatewayId') }})
-    last_accessed_gateway_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastAccessedGatewayTime') }})
+    gateway_auth_method: Optional[GatewayConfigGatewayAuthMethodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayAuthMethod') }})
+    gateway_type: Optional[GatewayConfigGatewayTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayType') }})
+    last_accessed_gateway_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastAccessedGatewayId') }})
+    last_accessed_gateway_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastAccessedGatewayTime') }})
     

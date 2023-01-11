@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import approleassignmentlistresult as shared_approleassignmentlistresult
+from ..shared import grapherror as shared_grapherror
 
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListAppRoleAssignedToPathParams:
-    object_id: str = field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'objectId', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListAppRoleAssignedToQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListAppRoleAssignedToRequest:
-    path_params: ServicePrincipalsListAppRoleAssignedToPathParams = field()
-    query_params: ServicePrincipalsListAppRoleAssignedToQueryParams = field()
+    path_params: ServicePrincipalsListAppRoleAssignedToPathParams = dataclasses.field()
+    query_params: ServicePrincipalsListAppRoleAssignedToQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ServicePrincipalsListAppRoleAssignedToResponse:
-    content_type: str = field()
-    status_code: int = field()
-    app_role_assignment_list_result: Optional[shared.AppRoleAssignmentListResult] = field(default=None)
-    graph_error: Optional[shared.GraphError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    app_role_assignment_list_result: Optional[shared_approleassignmentlistresult.AppRoleAssignmentListResult] = dataclasses.field(default=None)
+    graph_error: Optional[shared_grapherror.GraphError] = dataclasses.field(default=None)
     

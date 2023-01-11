@@ -8,75 +8,63 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.TexttospeechTextSynthesizeRequest(
-    security=operations.TexttospeechTextSynthesizeSecurity(
+req = operations.TexttospeechOperationsCancelRequest(
+    security=operations.TexttospeechOperationsCancelSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
-    query_params=operations.TexttospeechTextSynthesizeQueryParams(
-        dollar_xgafv="1",
-        access_token="quam",
+    path_params=operations.TexttospeechOperationsCancelPathParams(
+        name="sunt",
+    ),
+    query_params=operations.TexttospeechOperationsCancelQueryParams(
+        dollar_xgafv="2",
+        access_token="consequatur",
         alt="json",
-        callback="mollitia",
-        fields="qui",
-        key="perspiciatis",
-        oauth_token="debitis",
+        callback="et",
+        fields="ullam",
+        key="aliquid",
+        oauth_token="quia",
         pretty_print=True,
-        quota_user="hic",
-        upload_type="voluptatem",
-        upload_protocol="voluptas",
+        quota_user="minus",
+        upload_type="dolorum",
+        upload_protocol="illo",
     ),
-    request=shared.SynthesizeSpeechRequest(
-        audio_config=shared.AudioConfig(
-            audio_encoding="OGG_OPUS",
-            effects_profile_id=[
-                "quis",
-                "molestias",
-                "labore",
-            ],
-            pitch=74.199997,
-            sample_rate_hertz=762565853273289943,
-            speaking_rate=85.199997,
-            volume_gain_db=59.200001,
-        ),
-        input=shared.SynthesisInput(
-            ssml="adipisci",
-            text="aspernatur",
-        ),
-        voice=shared.VoiceSelectionParams(
-            custom_voice=shared.CustomVoiceParams(
-                model="quis",
-                reported_usage="REPORTED_USAGE_UNSPECIFIED",
-            ),
-            language_code="modi",
-            name="consequuntur",
-            ssml_gender="SSML_VOICE_GENDER_UNSPECIFIED",
-        ),
-    ),
+    request={
+        "hic": "consequatur",
+    },
 )
     
-res = s.text.texttospeech_text_synthesize(req)
+res = s.operations.texttospeech_operations_cancel(req)
 
-if res.synthesize_speech_response is not None:
+if res.empty is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
+### operations
+
+* `texttospeech_operations_cancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* `texttospeech_operations_delete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* `texttospeech_operations_list` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+
+### projects
+
+* `texttospeech_projects_locations_voices_synthesize_long_audio` - Synthesizes long form text asynchronously.
 
 ### text
 

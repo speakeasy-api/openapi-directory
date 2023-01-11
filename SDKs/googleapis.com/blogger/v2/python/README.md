@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.BloggerBlogsGetRequest(
     security=operations.BloggerBlogsGetSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.BloggerBlogsGetPathParams(
-        blog_id="et",
+        blog_id="qui",
     ),
     query_params=operations.BloggerBlogsGetQueryParams(
-        dollar_xgafv="2",
-        access_token="quod",
-        alt="media",
-        callback="at",
-        fields="ut",
-        key="numquam",
-        oauth_token="dolores",
-        pretty_print=True,
-        quota_user="distinctio",
-        upload_type="incidunt",
-        upload_protocol="ut",
+        dollar_xgafv="1",
+        access_token="ut",
+        alt="proto",
+        callback="consequuntur",
+        fields="vitae",
+        key="cupiditate",
+        oauth_token="non",
+        pretty_print=False,
+        quota_user="deserunt",
+        upload_type="nihil",
+        upload_protocol="rerum",
     ),
 )
     

@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKeyHeaderAuth:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Api-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Api-Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKeyQueryAuth:
-    api_key: str = field(metadata={'security': { 'field_name': 'api_key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'api_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'api_key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'api_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    api_key_header_auth: SchemeAPIKeyHeaderAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    api_key_query_auth: SchemeAPIKeyQueryAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    api_key: SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key_header_auth: SchemeAPIKeyHeaderAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_query_auth: SchemeAPIKeyQueryAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     

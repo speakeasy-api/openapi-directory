@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class EinVerificationBasicQueryParams:
-    ein: str = field(metadata={'query_param': { 'field_name': 'ein', 'style': 'form', 'explode': True }})
+    ein: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ein', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EinVerificationBasicSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EinVerificationBasicRequest:
-    query_params: EinVerificationBasicQueryParams = field()
-    security: EinVerificationBasicSecurity = field()
+    query_params: EinVerificationBasicQueryParams = dataclasses.field()
+    security: EinVerificationBasicSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EinVerificationBasicResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ein_verification_basic_200_application_json_any: Optional[Any] = field(default=None)
-    ein_verification_basic_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ein_verification_basic_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    ein_verification_basic_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

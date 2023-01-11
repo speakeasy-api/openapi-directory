@@ -1,21 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import aliases as shared_aliases
+from ..shared import streamingloggingconfig as shared_streamingloggingconfig
+from ..shared import priceclass_enum as shared_priceclass_enum
+from ..shared import s3origin as shared_s3origin
+from ..shared import trustedsigners as shared_trustedsigners
 
 
-@dataclass
+@dataclasses.dataclass
 class StreamingDistributionConfig:
     r"""StreamingDistributionConfig
     The RTMP distribution's configuration information.
     """
     
-    caller_reference: str = field()
-    comment: str = field()
-    enabled: bool = field()
-    s3_origin: S3Origin = field()
-    trusted_signers: TrustedSigners = field()
-    aliases: Optional[Aliases] = field(default=None)
-    logging: Optional[StreamingLoggingConfig] = field(default=None)
-    price_class: Optional[PriceClassEnum] = field(default=None)
+    caller_reference: str = dataclasses.field()
+    comment: str = dataclasses.field()
+    enabled: bool = dataclasses.field()
+    s3_origin: shared_s3origin.S3Origin = dataclasses.field()
+    trusted_signers: shared_trustedsigners.TrustedSigners = dataclasses.field()
+    aliases: Optional[shared_aliases.Aliases] = dataclasses.field(default=None)
+    logging: Optional[shared_streamingloggingconfig.StreamingLoggingConfig] = dataclasses.field(default=None)
+    price_class: Optional[shared_priceclass_enum.PriceClassEnum] = dataclasses.field(default=None)
     

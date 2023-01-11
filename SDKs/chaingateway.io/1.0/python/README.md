@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.DeleteAddressRequest(
     headers=operations.DeleteAddressHeaders(
-        authorization="error",
+        authorization="dolores",
     ),
     request=shared.DeleteAddressRequest(
-        ethereumaddress="porro",
-        password="eos",
+        ethereumaddress="sit",
+        password="id",
     ),
 )
     

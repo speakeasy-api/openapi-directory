@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import registry as shared_registry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeRegistriesResponse:
-    registries: List[Registry] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registries') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    registries: list[shared_registry.Registry] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('registries') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

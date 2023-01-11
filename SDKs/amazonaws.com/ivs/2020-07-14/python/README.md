@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.BatchGetChannelRequest(
     headers=operations.BatchGetChannelHeaders(
-        x_amz_algorithm="ipsum",
-        x_amz_content_sha256="voluptas",
-        x_amz_credential="est",
-        x_amz_date="voluptates",
-        x_amz_security_token="repellat",
-        x_amz_signature="eligendi",
-        x_amz_signed_headers="adipisci",
+        x_amz_algorithm="debitis",
+        x_amz_content_sha256="est",
+        x_amz_credential="animi",
+        x_amz_date="distinctio",
+        x_amz_security_token="hic",
+        x_amz_signature="mollitia",
+        x_amz_signed_headers="qui",
     ),
     request=operations.BatchGetChannelRequestBody(
         arns=[
-            "optio",
+            "labore",
         ],
     ),
 )
     
-res = s.sdk.batch_get_channel(req)
+res = s.batch_get_channel(req)
 
 if res.batch_get_channel_response is not None:
     # handle response

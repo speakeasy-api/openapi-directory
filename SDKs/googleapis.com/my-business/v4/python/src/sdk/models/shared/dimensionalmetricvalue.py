@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timedimension as shared_timedimension
 
 class DimensionalMetricValueMetricOptionEnum(str, Enum):
     METRIC_OPTION_UNSPECIFIED = "METRIC_OPTION_UNSPECIFIED"
@@ -14,13 +14,13 @@ class DimensionalMetricValueMetricOptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DimensionalMetricValue:
     r"""DimensionalMetricValue
     A value for a single metric with a given time dimension.
     """
     
-    metric_option: Optional[DimensionalMetricValueMetricOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricOption') }})
-    time_dimension: Optional[TimeDimension] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeDimension') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    metric_option: Optional[DimensionalMetricValueMetricOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricOption') }})
+    time_dimension: Optional[shared_timedimension.TimeDimension] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeDimension') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

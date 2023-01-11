@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.AbusiveexperiencereportSitesGetRequest(
     path_params=operations.AbusiveexperiencereportSitesGetPathParams(
-        name="vero",
+        name="rerum",
     ),
     query_params=operations.AbusiveexperiencereportSitesGetQueryParams(
-        dollar_xgafv="1",
-        access_token="alias",
-        alt="proto",
-        callback="itaque",
-        fields="adipisci",
-        key="consequatur",
-        oauth_token="necessitatibus",
+        dollar_xgafv="2",
+        access_token="quia",
+        alt="media",
+        callback="qui",
+        fields="hic",
+        key="eum",
+        oauth_token="debitis",
         pretty_print=True,
-        quota_user="eius",
-        upload_type="officia",
-        upload_protocol="labore",
+        quota_user="cupiditate",
+        upload_type="reiciendis",
+        upload_protocol="minus",
     ),
 )
     

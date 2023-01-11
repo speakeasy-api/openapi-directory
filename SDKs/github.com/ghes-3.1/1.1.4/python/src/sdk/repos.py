@@ -1,5 +1,5 @@
 import requests
-from typing import Any,List,Optional
+from typing import Any,Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -74,20 +74,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposAddAppAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[dict[str, Any]]])
+                out = utils.unmarshal_json(r.text, Optional[list[dict[str, Any]]])
                 res.integrations = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -118,13 +118,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/collaborators/{username}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposAddCollaboratorResponse(status_code=r.status_code, content_type=content_type)
@@ -158,20 +158,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposAddStatusCheckContextsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.repos_add_status_check_contexts_200_application_json_strings = out
         elif r.status_code == 403:
             if utils.match_content_type(content_type, "application/json"):
@@ -206,20 +206,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposAddTeamAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -246,20 +246,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposAddUserAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -384,13 +384,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/commits/{commit_sha}/comments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateCommitCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -458,13 +458,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/statuses/{sha}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateCommitStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -490,13 +490,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/keys", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateDeployKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -570,13 +570,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/deployments", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateDeploymentResponse(status_code=r.status_code, content_type=content_type)
@@ -612,13 +612,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateDeploymentStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -657,13 +657,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/dispatches", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateDispatchEventResponse(status_code=r.status_code, content_type=content_type)
@@ -696,13 +696,13 @@ class Repos:
         url = base_url.removesuffix("/") + "/user/repos"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateForAuthenticatedUserResponse(status_code=r.status_code, content_type=content_type)
@@ -755,13 +755,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/forks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateForkResponse(status_code=r.status_code, content_type=content_type)
@@ -811,13 +811,13 @@ class Repos:
         url = utils.generate_url(base_url, "/orgs/{org}/repos", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateInOrgResponse(status_code=r.status_code, content_type=content_type)
@@ -851,13 +851,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/contents/{path}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateOrUpdateFileContentsResponse(status_code=r.status_code, content_type=content_type)
@@ -897,13 +897,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pages", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreatePagesSiteResponse(status_code=r.status_code, content_type=content_type)
@@ -941,13 +941,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/releases", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateReleaseResponse(status_code=r.status_code, content_type=content_type)
@@ -984,13 +984,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{template_owner}/{template_repo}/generate", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateUsingTemplateResponse(status_code=r.status_code, content_type=content_type)
@@ -1017,13 +1017,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/hooks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposCreateWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -1347,13 +1347,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/contents/{path}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposDeleteFileResponse(status_code=r.status_code, content_type=content_type)
@@ -1718,7 +1718,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.repos_get_all_status_check_contexts_200_application_json_strings = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1784,7 +1784,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[dict[str, Any]]])
+                out = utils.unmarshal_json(r.text, Optional[list[dict[str, Any]]])
                 res.integrations = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -1881,7 +1881,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[List[int]]])
+                out = utils.unmarshal_json(r.text, Optional[list[list[int]]])
                 res.code_frequency_stats = out
         elif r.status_code == 202:
             if utils.match_content_type(content_type, "application/json"):
@@ -2056,7 +2056,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.CommitActivity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.CommitActivity]])
                 res.commit_activities = out
         elif r.status_code == 202:
             if utils.match_content_type(content_type, "application/json"):
@@ -2227,7 +2227,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ContributorActivity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ContributorActivity]])
                 res.contributor_activities = out
         elif r.status_code == 202:
             if utils.match_content_type(content_type, "application/json"):
@@ -2522,7 +2522,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[List[int]]])
+                out = utils.unmarshal_json(r.text, Optional[list[list[int]]])
                 res.code_frequency_stats = out
         elif r.status_code == 204:
             pass
@@ -2752,7 +2752,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -2784,7 +2784,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -2874,7 +2874,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ShortBranch]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ShortBranch]])
                 res.short_branches = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -2906,7 +2906,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.BranchShort]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.BranchShort]])
                 res.branch_shorts = out
         elif r.status_code == 415:
             if utils.match_content_type(content_type, "application/json"):
@@ -2945,7 +2945,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Collaborator]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Collaborator]])
                 res.collaborators = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -2978,7 +2978,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.CommitComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.CommitComment]])
                 res.commit_comments = out
 
         return res
@@ -3009,7 +3009,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.CommitComment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.CommitComment]])
                 res.commit_comments = out
 
         return res
@@ -3040,7 +3040,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Status]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Status]])
                 res.statuses = out
         elif r.status_code == 301:
             if utils.match_content_type(content_type, "application/json"):
@@ -3100,7 +3100,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Commit]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Commit]])
                 res.commits = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):
@@ -3150,7 +3150,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Contributor]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Contributor]])
                 res.contributors = out
         elif r.status_code == 204:
             pass
@@ -3188,7 +3188,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DeployKey]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DeployKey]])
                 res.deploy_keys = out
 
         return res
@@ -3217,7 +3217,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.DeploymentStatus]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.DeploymentStatus]])
                 res.deployment_statuses = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -3250,7 +3250,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Deployment]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Deployment]])
                 res.deployments = out
 
         return res
@@ -3279,7 +3279,7 @@ class Repos:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Repository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Repository]])
                 res.repositories = out
         elif r.status_code == 304:
             pass
@@ -3322,7 +3322,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
 
         return res
@@ -3351,7 +3351,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
 
         return res
@@ -3379,7 +3379,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
         elif r.status_code == 400:
             if utils.match_content_type(content_type, "application/json"):
@@ -3415,7 +3415,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.RepositoryInvitation]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.RepositoryInvitation]])
                 res.repository_invitations = out
 
         return res
@@ -3444,7 +3444,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.RepositoryInvitation]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.RepositoryInvitation]])
                 res.repository_invitations = out
         elif r.status_code == 304:
             pass
@@ -3512,7 +3512,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PageBuild]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PageBuild]])
                 res.page_builds = out
 
         return res
@@ -3545,7 +3545,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.MinimalRepository]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.MinimalRepository]])
                 res.minimal_repositories = out
         elif r.status_code == 304:
             pass
@@ -3580,7 +3580,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PullRequestSimple]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PullRequestSimple]])
                 res.pull_request_simples = out
         elif r.status_code == 415:
             if utils.match_content_type(content_type, "application/json"):
@@ -3612,7 +3612,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReleaseAsset]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReleaseAsset]])
                 res.release_assets = out
 
         return res
@@ -3643,7 +3643,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Release]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Release]])
                 res.releases = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -3675,7 +3675,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Tag]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Tag]])
                 res.tags = out
 
         return res
@@ -3703,7 +3703,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
 
         return res
@@ -3731,7 +3731,7 @@ class Repos:
             res.headers = r.headers
             
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Hook]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Hook]])
                 res.hooks = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -3751,13 +3751,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/merges", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposMergeResponse(status_code=r.status_code, content_type=content_type)
@@ -3829,20 +3829,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposRemoveAppAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[dict[str, Any]]])
+                out = utils.unmarshal_json(r.text, Optional[list[dict[str, Any]]])
                 res.integrations = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -3886,20 +3886,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposRemoveStatusCheckContextsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.repos_remove_status_check_contexts_200_application_json_strings = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -3954,20 +3954,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposRemoveTeamAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -3994,20 +3994,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposRemoveUserAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -4042,13 +4042,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/rename", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposRenameBranchResponse(status_code=r.status_code, content_type=content_type)
@@ -4083,13 +4083,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/topics", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposReplaceAllTopicsResponse(status_code=r.status_code, content_type=content_type)
@@ -4187,20 +4187,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposSetAppAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[dict[str, Any]]])
+                out = utils.unmarshal_json(r.text, Optional[list[dict[str, Any]]])
                 res.integrations = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -4221,20 +4221,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposSetStatusCheckContextsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[str]])
+                out = utils.unmarshal_json(r.text, Optional[list[str]])
                 res.repos_set_status_check_contexts_200_application_json_strings = out
         elif r.status_code == 404:
             if utils.match_content_type(content_type, "application/json"):
@@ -4265,20 +4265,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposSetTeamAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Team]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Team]])
                 res.teams = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -4305,20 +4305,20 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposSetUserAccessRestrictionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.SimpleUser]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.SimpleUser]])
                 res.simple_users = out
         elif r.status_code == 422:
             if utils.match_content_type(content_type, "application/json"):
@@ -4369,13 +4369,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/transfer", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposTransferResponse(status_code=r.status_code, content_type=content_type)
@@ -4399,13 +4399,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -4451,13 +4451,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateBranchProtectionResponse(status_code=r.status_code, content_type=content_type)
@@ -4496,13 +4496,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/comments/{comment_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateCommitCommentResponse(status_code=r.status_code, content_type=content_type)
@@ -4530,13 +4530,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/pages", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PUT", url, data=data, files=form, headers=headers)
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateInformationAboutPagesSiteResponse(status_code=r.status_code, content_type=content_type)
@@ -4568,13 +4568,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/invitations/{invitation_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateInvitationResponse(status_code=r.status_code, content_type=content_type)
@@ -4602,13 +4602,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdatePullRequestReviewProtectionResponse(status_code=r.status_code, content_type=content_type)
@@ -4636,13 +4636,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/releases/{release_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateReleaseResponse(status_code=r.status_code, content_type=content_type)
@@ -4666,13 +4666,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateReleaseAssetResponse(status_code=r.status_code, content_type=content_type)
@@ -4698,13 +4698,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateStatusCheckProtectionResponse(status_code=r.status_code, content_type=content_type)
@@ -4736,13 +4736,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/hooks/{hook_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -4776,13 +4776,13 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/hooks/{hook_id}/config", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUpdateWebhookConfigForRepoResponse(status_code=r.status_code, content_type=content_type)
@@ -4826,14 +4826,14 @@ class Repos:
         url = utils.generate_url(base_url, "/repos/{owner}/{repo}/releases/{release_id}/assets", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ReposUploadReleaseAssetResponse(status_code=r.status_code, content_type=content_type)

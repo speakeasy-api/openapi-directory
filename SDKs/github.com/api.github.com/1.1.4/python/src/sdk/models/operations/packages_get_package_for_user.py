@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import package_type_enum as shared_package_type_enum
+from ..shared import package as shared_package
 
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetPackageForUserPathParams:
-    package_name: str = field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
-    package_type: shared.PackageTypeEnum = field(metadata={'path_param': { 'field_name': 'package_type', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    package_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
+    package_type: shared_package_type_enum.PackageTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'package_type', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetPackageForUserRequest:
-    path_params: PackagesGetPackageForUserPathParams = field()
+    path_params: PackagesGetPackageForUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetPackageForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    package: Optional[shared.Package] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    package: Optional[shared_package.Package] = dataclasses.field(default=None)
     

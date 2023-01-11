@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import comment as shared_comment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentThreadReplies:
     r"""CommentThreadReplies
     Comments written in (direct or indirect) reply to the top level comment.
     """
     
-    comments: Optional[List[Comment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
+    comments: Optional[list[shared_comment.Comment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
     

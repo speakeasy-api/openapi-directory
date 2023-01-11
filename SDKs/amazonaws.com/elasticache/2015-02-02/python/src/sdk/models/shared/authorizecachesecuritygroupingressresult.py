@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import cachesecuritygroup as shared_cachesecuritygroup
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthorizeCacheSecurityGroupIngressResult:
-    cache_security_group: Optional[CacheSecurityGroup] = field(default=None)
+    cache_security_group: Optional[shared_cachesecuritygroup.CacheSecurityGroup] = dataclasses.field(default=None)
     

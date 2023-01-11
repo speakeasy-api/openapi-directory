@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import deployment as shared_deployment
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposListDeploymentsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListDeploymentsQueryParams:
-    environment: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'environment', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    ref: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ref', 'style': 'form', 'explode': True }})
-    sha: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sha', 'style': 'form', 'explode': True }})
-    task: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'task', 'style': 'form', 'explode': True }})
+    environment: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'environment', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    ref: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ref', 'style': 'form', 'explode': True }})
+    sha: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sha', 'style': 'form', 'explode': True }})
+    task: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'task', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListDeploymentsRequest:
-    path_params: ReposListDeploymentsPathParams = field()
-    query_params: ReposListDeploymentsQueryParams = field()
+    path_params: ReposListDeploymentsPathParams = dataclasses.field()
+    query_params: ReposListDeploymentsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListDeploymentsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    deployments: Optional[List[shared.Deployment]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deployments: Optional[list[shared_deployment.Deployment]] = dataclasses.field(default=None)
     

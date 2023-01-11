@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfigurationOptionSetting:
     r"""ConfigurationOptionSetting
     A specification identifying an individual configuration option along with its current value. For a list of possible namespaces and option values, see <a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html\">Option Values</a> in the <i>AWS Elastic Beanstalk Developer Guide</i>. 
     """
     
-    namespace: Optional[str] = field(default=None)
-    option_name: Optional[str] = field(default=None)
-    resource_name: Optional[str] = field(default=None)
-    value: Optional[str] = field(default=None)
+    namespace: Optional[str] = dataclasses.field(default=None)
+    option_name: Optional[str] = dataclasses.field(default=None)
+    resource_name: Optional[str] = dataclasses.field(default=None)
+    value: Optional[str] = dataclasses.field(default=None)
     

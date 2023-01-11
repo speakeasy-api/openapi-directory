@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class LoadBalancerTargetGroupState:
     r"""LoadBalancerTargetGroupState
     Describes the state of a target group.
     """
     
-    load_balancer_target_group_arn: Optional[str] = field(default=None)
-    state: Optional[str] = field(default=None)
+    load_balancer_target_group_arn: Optional[str] = dataclasses.field(default=None)
+    state: Optional[str] = dataclasses.field(default=None)
     

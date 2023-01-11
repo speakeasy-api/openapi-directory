@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class KeywordExtractionRequestBody:
-    api_key: str = field(metadata={'form': { 'field_name': 'api_key' }})
-    n: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'n' }})
-    text: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'text' }})
+    api_key: str = dataclasses.field(metadata={'form': { 'field_name': 'api_key' }})
+    n: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'n' }})
+    text: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'text' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class KeywordExtractionRequest:
-    request: Optional[KeywordExtractionRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    request: Optional[KeywordExtractionRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class KeywordExtractionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

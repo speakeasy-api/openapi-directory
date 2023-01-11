@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import mediaitemwrapped as shared_mediaitemwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaMostPopularMediaFormatPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaMostPopularMediaFormatQueryParams:
-    max: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
+    max: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': False }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaMostPopularMediaFormatRequest:
-    path_params: GetResourcesMediaMostPopularMediaFormatPathParams = field()
-    query_params: GetResourcesMediaMostPopularMediaFormatQueryParams = field()
+    path_params: GetResourcesMediaMostPopularMediaFormatPathParams = dataclasses.field()
+    query_params: GetResourcesMediaMostPopularMediaFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesMediaMostPopularMediaFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    media_item_wrappeds: Optional[List[shared.MediaItemWrapped]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    media_item_wrappeds: Optional[list[shared_mediaitemwrapped.MediaItemWrapped]] = dataclasses.field(default=None)
     

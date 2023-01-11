@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryUpdateProjectPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryUpdateProjectQueryParams:
-    update_mask: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'update_mask', 'style': 'form', 'explode': True }})
+    update_mask: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'update_mask', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryUpdateProjectRequest:
-    path_params: RegistryUpdateProjectPathParams = field()
-    query_params: RegistryUpdateProjectQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: RegistryUpdateProjectPathParams = dataclasses.field()
+    query_params: RegistryUpdateProjectQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryUpdateProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project: Optional[Any] = dataclasses.field(default=None)
     

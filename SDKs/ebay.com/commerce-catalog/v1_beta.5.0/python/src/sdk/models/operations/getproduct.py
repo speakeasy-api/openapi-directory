@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import product as shared_product
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProductPathParams:
-    epid: str = field(metadata={'path_param': { 'field_name': 'epid', 'style': 'simple', 'explode': False }})
+    epid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'epid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductRequest:
-    path_params: GetProductPathParams = field()
-    security: GetProductSecurity = field()
+    path_params: GetProductPathParams = dataclasses.field()
+    security: GetProductSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductResponse:
-    content_type: str = field()
-    status_code: int = field()
-    product: Optional[shared.Product] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product: Optional[shared_product.Product] = dataclasses.field(default=None)
     

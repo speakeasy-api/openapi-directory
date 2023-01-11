@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetstateabbreviationRequest(
     query_params=operations.GetstateabbreviationQueryParams(
-        license="placeat",
-        state="eum",
+        license="voluptas",
+        state="sed",
     ),
 )
     
-res = s.sdk.getstateabbreviation(req)
+res = s.state_data_standardization.getstateabbreviation(req)
 
 if res.getstateabbreviation_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getstateabbreviation_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### State Data Standardization
 
 * `getstateabbreviation` - Gets a two-letter abbreviation for a state or province name data
 

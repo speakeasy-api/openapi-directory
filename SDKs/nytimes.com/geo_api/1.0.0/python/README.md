@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.GetQueryJSONRequest(
     query_params=operations.GetQueryJSONQueryParams(
-        date_range="aut",
-        elevation=4088759659408494563,
-        facets=2233668648628867046,
-        filter="et",
-        latitude="est",
-        limit=1376335282631291362,
-        longitude="dolore",
-        name="rerum",
-        offset=4281730421960989148,
-        query="eaque",
-        sort="nisi",
-        sw="ut",
+        date_range="ut",
+        elevation=3532929727473047315,
+        facets=6728514527585200019,
+        filter="laborum",
+        latitude="ab",
+        limit=8131292705867972818,
+        longitude="ex",
+        name="est",
+        offset=7726756373010514897,
+        query="nulla",
+        sort="natus",
+        sw="commodi",
     ),
 )
     
-res = s.sdk.get_query_json(req)
+res = s.events.get_query_json(req)
 
 if res.get_query_json_200_application_json_object is not None:
     # handle response
@@ -51,7 +50,7 @@ if res.get_query_json_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Events
 
 * `get_query_json` - Geographic API
 

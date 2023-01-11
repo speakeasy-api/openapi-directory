@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import useroptions as shared_useroptions
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountUserPathParams:
-    user_id: str = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountUserSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountUserRequest:
-    path_params: UpdateAccountUserPathParams = field()
-    request: shared.UserOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateAccountUserSecurity = field()
+    path_params: UpdateAccountUserPathParams = dataclasses.field()
+    request: shared_useroptions.UserOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateAccountUserSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

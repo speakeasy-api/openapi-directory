@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import reportmetadata as shared_reportmetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReportMetadataForReportTypePathParams:
-    report_type: str = field(metadata={'path_param': { 'field_name': 'report_type', 'style': 'simple', 'explode': False }})
+    report_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportMetadataForReportTypeSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportMetadataForReportTypeRequest:
-    path_params: GetReportMetadataForReportTypePathParams = field()
-    security: GetReportMetadataForReportTypeSecurity = field()
+    path_params: GetReportMetadataForReportTypePathParams = dataclasses.field()
+    security: GetReportMetadataForReportTypeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReportMetadataForReportTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    report_metadata: Optional[shared.ReportMetadata] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    report_metadata: Optional[shared_reportmetadata.ReportMetadata] = dataclasses.field(default=None)
     

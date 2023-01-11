@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.AgcerRequest(
     security=operations.AgcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.AgcerRequestBody(
         certificate_parameters=operations.AgcerRequestBodyCertificateParameters(
-            name="enim",
-            ref_no="minima",
+            name="ullam",
+            ref_no="est",
         ),
-        consent_artifact="incidunt",
+        consent_artifact="eos",
         format="pdf",
-        txn_id="autem",
+        txn_id="minus",
     ),
 )
     
-res = s.sdk.agcer(req)
+res = s.ap_is.agcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `agcer` - Agriculture/ Agriculturist Certificate
 * `bacer` - Backward Area Certificate

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import eventrecord as shared_eventrecord
 
 class GetEventsTypeEnum(str, Enum):
     ALL = "all"
@@ -9,24 +9,24 @@ class GetEventsTypeEnum(str, Enum):
     CONTACTS = "contacts"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsQueryParams:
-    company: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'company', 'style': 'form', 'explode': True }})
-    deal: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'deal', 'style': 'form', 'explode': True }})
-    nexttoken: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'nexttoken', 'style': 'form', 'explode': True }})
-    queryexecutionid: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'queryexecutionid', 'style': 'form', 'explode': True }})
-    site: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
-    type: Optional[GetEventsTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    company: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'company', 'style': 'form', 'explode': True }})
+    deal: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deal', 'style': 'form', 'explode': True }})
+    nexttoken: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nexttoken', 'style': 'form', 'explode': True }})
+    queryexecutionid: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'queryexecutionid', 'style': 'form', 'explode': True }})
+    site: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
+    type: Optional[GetEventsTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsRequest:
-    query_params: GetEventsQueryParams = field()
+    query_params: GetEventsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    event_records: Optional[List[shared.EventRecord]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_records: Optional[list[shared_eventrecord.EventRecord]] = dataclasses.field(default=None)
     

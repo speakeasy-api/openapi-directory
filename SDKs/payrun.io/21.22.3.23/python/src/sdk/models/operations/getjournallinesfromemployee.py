@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errormodel as shared_errormodel
+from ..shared import linkcollection as shared_linkcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLinesFromEmployeePathParams:
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'EmployeeId', 'style': 'simple', 'explode': False }})
-    employer_id: str = field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployeeId', 'style': 'simple', 'explode': False }})
+    employer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployerId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLinesFromEmployeeHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLinesFromEmployeeRequest:
-    headers: GetJournalLinesFromEmployeeHeaders = field()
-    path_params: GetJournalLinesFromEmployeePathParams = field()
+    headers: GetJournalLinesFromEmployeeHeaders = dataclasses.field()
+    path_params: GetJournalLinesFromEmployeePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJournalLinesFromEmployeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    link_collection: Optional[shared.LinkCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    link_collection: Optional[shared_linkcollection.LinkCollection] = dataclasses.field(default=None)
     

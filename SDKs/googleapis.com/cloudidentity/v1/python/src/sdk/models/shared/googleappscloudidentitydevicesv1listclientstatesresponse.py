@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleappscloudidentitydevicesv1clientstate as shared_googleappscloudidentitydevicesv1clientstate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsCloudidentityDevicesV1ListClientStatesResponse:
     r"""GoogleAppsCloudidentityDevicesV1ListClientStatesResponse
     Response message that is returned in ListClientStates.
     """
     
-    client_states: Optional[List[GoogleAppsCloudidentityDevicesV1ClientState]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientStates') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    client_states: Optional[list[shared_googleappscloudidentitydevicesv1clientstate.GoogleAppsCloudidentityDevicesV1ClientState]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientStates') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

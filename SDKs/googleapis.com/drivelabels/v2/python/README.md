@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,22 +18,22 @@ s = sdk.SDK()
     
 req = operations.DrivelabelsLabelsGetRequest(
     path_params=operations.DrivelabelsLabelsGetPathParams(
-        name="cum",
+        name="aspernatur",
     ),
     query_params=operations.DrivelabelsLabelsGetQueryParams(
         dollar_xgafv="1",
-        access_token="provident",
-        alt="json",
-        callback="sit",
-        fields="esse",
-        key="ea",
-        language_code="et",
-        oauth_token="est",
-        pretty_print=False,
-        quota_user="culpa",
-        upload_type="omnis",
-        upload_protocol="rerum",
-        use_admin_access=False,
+        access_token="dolor",
+        alt="media",
+        callback="et",
+        fields="a",
+        key="quo",
+        language_code="vero",
+        oauth_token="dolorem",
+        pretty_print=True,
+        quota_user="placeat",
+        upload_type="hic",
+        upload_protocol="et",
+        use_admin_access=True,
         view="LABEL_VIEW_BASIC",
     ),
 )

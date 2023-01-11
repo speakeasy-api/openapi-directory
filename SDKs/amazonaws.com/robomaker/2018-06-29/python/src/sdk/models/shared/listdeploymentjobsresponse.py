@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deploymentjob as shared_deploymentjob
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDeploymentJobsResponse:
-    deployment_jobs: Optional[List[DeploymentJob]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deploymentJobs') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    deployment_jobs: Optional[list[shared_deploymentjob.DeploymentJob]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deploymentJobs') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

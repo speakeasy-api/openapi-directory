@@ -8,28 +8,26 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.DeleteAppsAppIDNamespacesNamespaceIDRequest(
-    security=operations.DeleteAppsAppIDNamespacesNamespaceIDSecurity(
+req = operations.DeleteAppsIDRequest(
+    security=operations.DeleteAppsIDSecurity(
         bearer_auth=shared.SchemeBearerAuth(
             authorization="Bearer YOUR_BEARER_TOKEN_HERE",
         ),
     ),
-    path_params=operations.DeleteAppsAppIDNamespacesNamespaceIDPathParams(
-        app_id="odio",
-        namespace_id="qui",
+    path_params=operations.DeleteAppsIDPathParams(
+        id="et",
     ),
 )
     
-res = s.sdk.delete_apps_app_id_namespaces_namespace_id_(req)
+res = s.apps.delete_apps_id_(req)
 
 if res.status_code == 200:
     # handle response
@@ -39,30 +37,45 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### apps
 
-* `delete_apps_app_id_namespaces_namespace_id_` - Deletes a namespace
-* `delete_apps_app_id_queues_queue_id_` - Deletes a queue
-* `delete_apps_app_id_rules_rule_id_` - Deletes a Reactor rule
 * `delete_apps_id_` - Deletes an app
 * `get_accounts_account_id_apps` - Lists apps
-* `get_apps_app_id_keys` - Lists app keys
-* `get_apps_app_id_namespaces` - Lists namespaces
-* `get_apps_app_id_queues` - Lists queues
-* `get_apps_app_id_rules` - Lists Reactor rules
-* `get_apps_app_id_rules_rule_id_` - Gets a reactor rule by rule ID
-* `get_me` - Get token details
-* `patch_apps_app_id_keys_key_id_` - Updates a key
-* `patch_apps_app_id_namespaces_namespace_id_` - Updates a namespace
-* `patch_apps_app_id_rules_rule_id_` - Updates a Reactor rule
 * `patch_apps_id_` - Updates an app
 * `post_accounts_account_id_apps` - Creates an app
+* `post_apps_id_pkcs12` - Updates app's APNs info from a `.p12` file
+
+### keys
+
+* `get_apps_app_id_keys` - Lists app keys
+* `patch_apps_app_id_keys_key_id_` - Updates a key
 * `post_apps_app_id_keys` - Creates a key
 * `post_apps_app_id_keys_key_id_revoke` - Revokes a key
+
+### namespaces
+
+* `delete_apps_app_id_namespaces_namespace_id_` - Deletes a namespace
+* `get_apps_app_id_namespaces` - Lists namespaces
+* `patch_apps_app_id_namespaces_namespace_id_` - Updates a namespace
 * `post_apps_app_id_namespaces` - Creates a namespace
+
+### queues
+
+* `delete_apps_app_id_queues_queue_id_` - Deletes a queue
+* `get_apps_app_id_queues` - Lists queues
 * `post_apps_app_id_queues` - Creates a queue
+
+### rules
+
+* `delete_apps_app_id_rules_rule_id_` - Deletes a Reactor rule
+* `get_apps_app_id_rules` - Lists Reactor rules
+* `get_apps_app_id_rules_rule_id_` - Gets a reactor rule by rule ID
+* `patch_apps_app_id_rules_rule_id_` - Updates a Reactor rule
 * `post_apps_app_id_rules` - Creates a Reactor rule
-* `post_apps_id_pkcs12` - Updates app's APNs info from a `.p12` file
+
+### tokens
+
+* `get_me` - Get token details
 
 <!-- End SDK Available Operations -->
 

@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import savetransactionswrapper as shared_savetransactionswrapper
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import savetransactionsresponse as shared_savetransactionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionRequest:
-    path_params: CreateTransactionPathParams = field()
-    request: shared.SaveTransactionsWrapper = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateTransactionPathParams = dataclasses.field()
+    request: shared_savetransactionswrapper.SaveTransactionsWrapper = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTransactionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    save_transactions_response: Optional[shared.SaveTransactionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    save_transactions_response: Optional[shared_savetransactionsresponse.SaveTransactionsResponse] = dataclasses.field(default=None)
     

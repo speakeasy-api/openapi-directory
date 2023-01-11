@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import servicecalendarinputmodel as shared_servicecalendarinputmodel
+from ..shared import servicecalendarviewmodel as shared_servicecalendarviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ServicesCalendarRequests:
-    service_calendar_input_model: Optional[shared.ServiceCalendarInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    service_calendar_input_model1: Optional[shared.ServiceCalendarInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    service_calendar_input_model2: Optional[shared.ServiceCalendarInputModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    service_calendar_input_model3: Optional[shared.ServiceCalendarInputModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    service_calendar_input_model: Optional[shared_servicecalendarinputmodel.ServiceCalendarInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    service_calendar_input_model1: Optional[shared_servicecalendarinputmodel.ServiceCalendarInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    service_calendar_input_model2: Optional[shared_servicecalendarinputmodel.ServiceCalendarInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    service_calendar_input_model3: Optional[shared_servicecalendarinputmodel.ServiceCalendarInputModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ServicesCalendarRequest:
-    request: Optional[PostSetupV1ServicesCalendarRequests] = field(default=None)
+    request: Optional[PostSetupV1ServicesCalendarRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSetupV1ServicesCalendarResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_calendar_view_model: Optional[shared.ServiceCalendarViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_calendar_view_model: Optional[shared_servicecalendarviewmodel.ServiceCalendarViewModel] = dataclasses.field(default=None)
     

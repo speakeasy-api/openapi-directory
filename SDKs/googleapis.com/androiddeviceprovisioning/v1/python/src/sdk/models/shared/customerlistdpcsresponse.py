@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dpc as shared_dpc
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CustomerListDpcsResponse:
     r"""CustomerListDpcsResponse
     Response message of customer's listing DPCs.
     """
     
-    dpcs: Optional[List[Dpc]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dpcs') }})
+    dpcs: Optional[list[shared_dpc.Dpc]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dpcs') }})
     

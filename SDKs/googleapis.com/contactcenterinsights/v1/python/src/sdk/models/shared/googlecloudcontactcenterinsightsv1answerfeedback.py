@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,13 +12,13 @@ class GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum(str, 
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudContactcenterinsightsV1AnswerFeedback:
     r"""GoogleCloudContactcenterinsightsV1AnswerFeedback
     The feedback that the customer has about a certain answer in the conversation.
     """
     
-    clicked: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clicked') }})
-    correctness_level: Optional[GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('correctnessLevel') }})
-    displayed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayed') }})
+    clicked: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clicked') }})
+    correctness_level: Optional[GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('correctnessLevel') }})
+    displayed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayed') }})
     

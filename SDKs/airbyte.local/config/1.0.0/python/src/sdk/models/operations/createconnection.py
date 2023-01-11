@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import connectioncreate as shared_connectioncreate
+from ..shared import connectionread as shared_connectionread
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateConnectionRequest:
-    request: shared.ConnectionCreate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_connectioncreate.ConnectionCreate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateConnectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    connection_read: Optional[shared.ConnectionRead] = field(default=None)
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    connection_read: Optional[shared_connectionread.ConnectionRead] = dataclasses.field(default=None)
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
     

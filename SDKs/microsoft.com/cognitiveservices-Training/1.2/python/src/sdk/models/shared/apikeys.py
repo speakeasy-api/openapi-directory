@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keypair as shared_keypair
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class APIKeys:
-    prediction_keys: Optional[KeyPair] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PredictionKeys') }})
-    training_keys: Optional[KeyPair] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrainingKeys') }})
+    prediction_keys: Optional[shared_keypair.KeyPair] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PredictionKeys') }})
+    training_keys: Optional[shared_keypair.KeyPair] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrainingKeys') }})
     

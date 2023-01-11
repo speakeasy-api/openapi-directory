@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import session as shared_session
 
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDGetPathParams:
-    session_id: str = field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
+    session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDGetQueryParams:
-    include_relationships: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_relationships', 'style': 'form', 'explode': True }})
+    include_relationships: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_relationships', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDGetRequest:
-    path_params: SessionIDGetPathParams = field()
-    query_params: SessionIDGetQueryParams = field()
+    path_params: SessionIDGetPathParams = dataclasses.field()
+    query_params: SessionIDGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SessionIDGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    session: Optional[shared.Session] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    session: Optional[shared_session.Session] = dataclasses.field(default=None)
     

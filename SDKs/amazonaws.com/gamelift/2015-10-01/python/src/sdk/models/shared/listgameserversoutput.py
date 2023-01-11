@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gameserver as shared_gameserver
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGameServersOutput:
-    game_servers: Optional[List[GameServer]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GameServers') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    game_servers: Optional[list[shared_gameserver.GameServer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GameServers') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

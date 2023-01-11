@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import passwordpolicytype as shared_passwordpolicytype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserPoolPolicyType:
     r"""UserPoolPolicyType
     The policy associated with a user pool.
     """
     
-    password_policy: Optional[PasswordPolicyType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PasswordPolicy') }})
+    password_policy: Optional[shared_passwordpolicytype.PasswordPolicyType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PasswordPolicy') }})
     

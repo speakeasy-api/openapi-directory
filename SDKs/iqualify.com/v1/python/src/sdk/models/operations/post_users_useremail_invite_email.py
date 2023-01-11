@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailInviteEmailPathParams:
-    user_email: str = field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
+    user_email: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userEmail', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailInviteEmailRequest:
-    path_params: PostUsersUserEmailInviteEmailPathParams = field()
+    path_params: PostUsersUserEmailInviteEmailPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserEmailInviteEmailResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

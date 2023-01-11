@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablepowerporttemplate as shared_writablepowerporttemplate
+from ..shared import powerporttemplate as shared_powerporttemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortTemplatesPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortTemplatesPartialUpdateRequest:
-    path_params: DcimPowerPortTemplatesPartialUpdatePathParams = field()
-    request: shared.WritablePowerPortTemplateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimPowerPortTemplatesPartialUpdatePathParams = dataclasses.field()
+    request: shared_writablepowerporttemplate.WritablePowerPortTemplateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPortTemplatesPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_port_template: Optional[shared.PowerPortTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_port_template: Optional[shared_powerporttemplate.PowerPortTemplate] = dataclasses.field(default=None)
     

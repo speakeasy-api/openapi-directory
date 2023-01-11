@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import serviceinventory as shared_serviceinventory
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInventoryPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInventoryRequest:
-    path_params: ShowServiceInventoryPathParams = field()
+    path_params: ShowServiceInventoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceInventoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    service_inventory: Optional[shared.ServiceInventory] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    service_inventory: Optional[shared_serviceinventory.ServiceInventory] = dataclasses.field(default=None)
     

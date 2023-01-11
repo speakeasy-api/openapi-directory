@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnameparsedout as shared_personalnameparsedout
 
 
-@dataclass
+@dataclasses.dataclass
 class ParseNamePathParams:
-    name_full: str = field(metadata={'path_param': { 'field_name': 'nameFull', 'style': 'simple', 'explode': False }})
+    name_full: str = dataclasses.field(metadata={'path_param': { 'field_name': 'nameFull', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseNameSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseNameRequest:
-    path_params: ParseNamePathParams = field()
-    security: ParseNameSecurity = field()
+    path_params: ParseNamePathParams = dataclasses.field()
+    security: ParseNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ParseNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_parsed_out: Optional[shared.PersonalNameParsedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_parsed_out: Optional[shared_personalnameparsedout.PersonalNameParsedOut] = dataclasses.field(default=None)
     

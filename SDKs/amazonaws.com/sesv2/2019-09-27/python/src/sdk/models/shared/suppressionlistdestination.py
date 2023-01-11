@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import suppressionlistimportaction_enum as shared_suppressionlistimportaction_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SuppressionListDestination:
     r"""SuppressionListDestination
     An object that contains details about the action of suppression list.
     """
     
-    suppression_list_import_action: SuppressionListImportActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SuppressionListImportAction') }})
+    suppression_list_import_action: shared_suppressionlistimportaction_enum.SuppressionListImportActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SuppressionListImportAction') }})
     

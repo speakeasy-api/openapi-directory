@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -14,14 +14,14 @@ class MaintenanceWindowUpdateTrackEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MaintenanceWindow:
     r"""MaintenanceWindow
     Maintenance window. This specifies when a Cloud SQL instance is restarted for system maintenance purposes.
     """
     
-    day: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('day') }})
-    hour: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hour') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    update_track: Optional[MaintenanceWindowUpdateTrackEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTrack') }})
+    day: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('day') }})
+    hour: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hour') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    update_track: Optional[MaintenanceWindowUpdateTrackEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('updateTrack') }})
     

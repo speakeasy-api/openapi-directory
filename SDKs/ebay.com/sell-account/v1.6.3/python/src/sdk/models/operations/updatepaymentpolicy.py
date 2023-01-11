@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import paymentpolicyrequest as shared_paymentpolicyrequest
+from ..shared import setpaymentpolicyresponse as shared_setpaymentpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentPolicyPathParams:
-    payment_policy_id: str = field(metadata={'path_param': { 'field_name': 'payment_policy_id', 'style': 'simple', 'explode': False }})
+    payment_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_policy_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentPolicyRequest:
-    path_params: UpdatePaymentPolicyPathParams = field()
-    request: shared.PaymentPolicyRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdatePaymentPolicySecurity = field()
+    path_params: UpdatePaymentPolicyPathParams = dataclasses.field()
+    request: shared_paymentpolicyrequest.PaymentPolicyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdatePaymentPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_payment_policy_response: Optional[shared.SetPaymentPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_payment_policy_response: Optional[shared_setpaymentpolicyresponse.SetPaymentPolicyResponse] = dataclasses.field(default=None)
     

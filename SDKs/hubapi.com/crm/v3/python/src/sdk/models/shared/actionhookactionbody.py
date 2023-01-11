@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actionconfirmationbody as shared_actionconfirmationbody
 
 class ActionHookActionBodyHTTPMethodEnum(str, Enum):
     CONNECT = "CONNECT"
@@ -21,12 +21,12 @@ class ActionHookActionBodyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionHookActionBody:
-    http_method: ActionHookActionBodyHTTPMethodEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpMethod') }})
-    property_names_included: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('propertyNamesIncluded') }})
-    type: ActionHookActionBodyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    confirmation: Optional[ActionConfirmationBody] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmation') }})
-    label: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    http_method: ActionHookActionBodyHTTPMethodEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpMethod') }})
+    property_names_included: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('propertyNamesIncluded') }})
+    type: ActionHookActionBodyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    confirmation: Optional[shared_actionconfirmationbody.ActionConfirmationBody] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confirmation') }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
     

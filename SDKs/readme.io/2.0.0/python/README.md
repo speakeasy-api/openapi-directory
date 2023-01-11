@@ -8,31 +8,27 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.CreateChangelogRequest(
-    security=operations.CreateChangelogSecurity(
+req = operations.DeleteAPISpecificationRequest(
+    security=operations.DeleteAPISpecificationSecurity(
         api_key=shared.SchemeAPIKey(
             password="YOUR_PASSWORD_HERE",
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request=shared.Changelog(
-        body="nesciunt",
-        hidden=True,
-        title="qui",
-        type="deprecated",
+    path_params=operations.DeleteAPISpecificationPathParams(
+        id="earum",
     ),
 )
     
-res = s.sdk.create_changelog(req)
+res = s.api_specification.delete_api_specification(req)
 
 if res.status_code == 200:
     # handle response
@@ -42,39 +38,63 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### API Specification
 
-* `create_changelog` - Create changelog
-* `create_custom_page` - Create custom page
-* `create_doc` - Create doc
-* `create_version` - Create version
 * `delete_api_specification` - Delete an API specification in ReadMe
-* `delete_changelog` - Delete changelog
-* `delete_custom_page` - Delete custom page
-* `delete_doc` - Delete doc
-* `delete_swagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe
-* `delete_version` - Delete version
 * `get_api_specification` - Get API specification metadata
+* `update_api_specification` - Update an API specification in ReadMe
+* `upload_api_specification` - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
+
+### Categories
+
 * `get_category` - Get category
 * `get_category_docs` - Get docs for category
+
+### Changelog
+
+* `create_changelog` - Create changelog
+* `delete_changelog` - Delete changelog
 * `get_changelog` - Get changelog
 * `get_changelogs` - Get changelogs
+* `update_changelog` - Update changelog
+
+### Custom Pages
+
+* `create_custom_page` - Create custom page
+* `delete_custom_page` - Delete custom page
 * `get_custom_page` - Get custom page
 * `get_custom_pages` - Get custom pages
+* `update_custom_page` - Update custom page
+
+### Docs
+
+* `create_doc` - Create doc
+* `delete_doc` - Delete doc
 * `get_doc` - Get doc
+* `search_docs` - Search docs
+* `update_doc` - Update doc
+
+### Errors
+
 * `get_errors` - Get errors
+
+### Projects
+
 * `get_project` - Get metadata about the current project
+
+### Swagger
+
+* `delete_swagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe
+* `update_swagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file.
+* `upload_swagger` - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe
+
+### Version
+
+* `create_version` - Create version
+* `delete_version` - Delete version
 * `get_version` - Get version
 * `get_versions` - Get versions
-* `search_docs` - Search docs
-* `update_api_specification` - Update an API specification in ReadMe
-* `update_changelog` - Update changelog
-* `update_custom_page` - Update custom page
-* `update_doc` - Update doc
-* `update_swagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file.
 * `update_version` - Update version
-* `upload_api_specification` - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
-* `upload_swagger` - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe
 
 <!-- End SDK Available Operations -->
 

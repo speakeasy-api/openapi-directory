@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import stacktrace as shared_stacktrace
+from ..shared import any as shared_any
 
 class TestIssueCategoryEnum(str, Enum):
     UNSPECIFIED_CATEGORY = "unspecifiedCategory"
@@ -53,16 +54,16 @@ class TestIssueTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TestIssue:
     r"""TestIssue
     An issue detected occurring during a test execution.
     """
     
-    category: Optional[TestIssueCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
-    error_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
-    severity: Optional[TestIssueSeverityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('severity') }})
-    stack_trace: Optional[StackTrace] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stackTrace') }})
-    type: Optional[TestIssueTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    warning: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warning') }})
+    category: Optional[TestIssueCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    error_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorMessage') }})
+    severity: Optional[TestIssueSeverityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('severity') }})
+    stack_trace: Optional[shared_stacktrace.StackTrace] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stackTrace') }})
+    type: Optional[TestIssueTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    warning: Optional[shared_any.Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('warning') }})
     

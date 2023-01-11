@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,13 +12,13 @@ class InstanceStatusProvisioningModelEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InstanceStatus:
     r"""InstanceStatus
     VM instance status.
     """
     
-    machine_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
-    provisioning_model: Optional[InstanceStatusProvisioningModelEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provisioningModel') }})
-    task_pack: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taskPack') }})
+    machine_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('machineType') }})
+    provisioning_model: Optional[InstanceStatusProvisioningModelEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('provisioningModel') }})
+    task_pack: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('taskPack') }})
     

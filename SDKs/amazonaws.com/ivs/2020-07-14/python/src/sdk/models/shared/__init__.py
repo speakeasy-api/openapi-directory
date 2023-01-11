@@ -35,3 +35,5 @@ from .streamkeysummary import *
 from .streamstate_enum import *
 from .streamsummary import *
 from .updatechannelresponse import *
+
+__all__ = ["BatchError","BatchGetChannelResponse","BatchGetStreamKeyResponse","Channel","ChannelLatencyModeEnum","ChannelSummary","ChannelTypeEnum","CreateChannelResponse","CreateRecordingConfigurationResponse","CreateStreamKeyResponse","DestinationConfiguration","GetChannelResponse","GetPlaybackKeyPairResponse","GetRecordingConfigurationResponse","GetStreamKeyResponse","GetStreamResponse","ImportPlaybackKeyPairResponse","ListChannelsResponse","ListPlaybackKeyPairsResponse","ListRecordingConfigurationsResponse","ListStreamKeysResponse","ListStreamsResponse","ListTagsForResourceResponse","PlaybackKeyPair","PlaybackKeyPairSummary","RecordingConfiguration","RecordingConfigurationStateEnum","RecordingConfigurationSummary","S3DestinationConfiguration","SchemeHmac","Security","Stream","StreamHealthEnum","StreamKey","StreamKeySummary","StreamStateEnum","StreamSummary","UpdateChannelResponse"]

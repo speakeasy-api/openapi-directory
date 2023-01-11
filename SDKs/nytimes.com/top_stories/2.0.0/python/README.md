@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,15 +25,15 @@ s.config_security(
     
 req = operations.GetSectionFormatRequest(
     path_params=operations.GetSectionFormatPathParams(
-        format="jsonp",
-        section="movies",
+        format="json",
+        section="national",
     ),
     query_params=operations.GetSectionFormatQueryParams(
-        callback="fugit",
+        callback="consequatur",
     ),
 )
     
-res = s.sdk.get_section_format_(req)
+res = s.stories.get_section_format_(req)
 
 if res.get_section_format_200_application_json_object is not None:
     # handle response
@@ -44,7 +43,7 @@ if res.get_section_format_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `get_section_format_` - Top Stories
 

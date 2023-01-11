@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    trace: int = field(metadata={'path_param': { 'field_name': 'trace', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    trace: int = dataclasses.field(metadata={'path_param': { 'field_name': 'trace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetTraceRequest:
-    path_params: SetTracePathParams = field()
+    path_params: SetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_trace_200_application_json_int32_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_trace_200_application_json_int32_integer: Optional[int] = dataclasses.field(default=None)
     

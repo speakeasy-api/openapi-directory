@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import activityattemptopenresponse as shared_activityattemptopenresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsActivitiesResponsesPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsActivitiesResponsesRequest:
-    path_params: GetOfferingsOfferingIDAnalyticsActivitiesResponsesPathParams = field()
+    path_params: GetOfferingsOfferingIDAnalyticsActivitiesResponsesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDAnalyticsActivitiesResponsesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    activity_attempt_open_responses: Optional[List[shared.ActivityAttemptOpenResponse]] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    activity_attempt_open_responses: Optional[list[shared_activityattemptopenresponse.ActivityAttemptOpenResponse]] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

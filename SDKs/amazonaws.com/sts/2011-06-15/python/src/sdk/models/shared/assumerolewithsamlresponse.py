@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import assumedroleuser as shared_assumedroleuser
+from ..shared import credentials as shared_credentials
 
 
-@dataclass
+@dataclasses.dataclass
 class AssumeRoleWithSamlResponse:
     r"""AssumeRoleWithSamlResponse
     Contains the response to a successful <a>AssumeRoleWithSAML</a> request, including temporary Amazon Web Services credentials that can be used to make Amazon Web Services requests. 
     """
     
-    assumed_role_user: Optional[AssumedRoleUser] = field(default=None)
-    audience: Optional[str] = field(default=None)
-    credentials: Optional[Credentials] = field(default=None)
-    issuer: Optional[str] = field(default=None)
-    name_qualifier: Optional[str] = field(default=None)
-    packed_policy_size: Optional[int] = field(default=None)
-    source_identity: Optional[str] = field(default=None)
-    subject: Optional[str] = field(default=None)
-    subject_type: Optional[str] = field(default=None)
+    assumed_role_user: Optional[shared_assumedroleuser.AssumedRoleUser] = dataclasses.field(default=None)
+    audience: Optional[str] = dataclasses.field(default=None)
+    credentials: Optional[shared_credentials.Credentials] = dataclasses.field(default=None)
+    issuer: Optional[str] = dataclasses.field(default=None)
+    name_qualifier: Optional[str] = dataclasses.field(default=None)
+    packed_policy_size: Optional[int] = dataclasses.field(default=None)
+    source_identity: Optional[str] = dataclasses.field(default=None)
+    subject: Optional[str] = dataclasses.field(default=None)
+    subject_type: Optional[str] = dataclasses.field(default=None)
     

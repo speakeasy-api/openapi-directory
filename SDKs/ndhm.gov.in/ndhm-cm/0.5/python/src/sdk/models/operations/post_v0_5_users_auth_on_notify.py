@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import patientauthnotificationacknowledgement as shared_patientauthnotificationacknowledgement
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnNotifyHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnNotifyRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    patient_auth_notification_acknowledgement: Optional[shared.PatientAuthNotificationAcknowledgement] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    patient_auth_notification_acknowledgement: Optional[shared_patientauthnotificationacknowledgement.PatientAuthNotificationAcknowledgement] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnNotifyRequest:
-    headers: PostV05UsersAuthOnNotifyHeaders = field()
-    request: PostV05UsersAuthOnNotifyRequests = field()
+    headers: PostV05UsersAuthOnNotifyHeaders = dataclasses.field()
+    request: PostV05UsersAuthOnNotifyRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnNotifyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

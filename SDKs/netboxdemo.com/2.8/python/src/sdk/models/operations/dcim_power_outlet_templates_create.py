@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablepoweroutlettemplate as shared_writablepoweroutlettemplate
+from ..shared import poweroutlettemplate as shared_poweroutlettemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesCreateRequest:
-    request: shared.WritablePowerOutletTemplateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablepoweroutlettemplate.WritablePowerOutletTemplateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_outlet_template: Optional[shared.PowerOutletTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_outlet_template: Optional[shared_poweroutlettemplate.PowerOutletTemplate] = dataclasses.field(default=None)
     

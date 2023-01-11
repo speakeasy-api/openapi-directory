@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import insightrulecontributor as shared_insightrulecontributor
+from ..shared import insightrulemetricdatapoint as shared_insightrulemetricdatapoint
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInsightRuleReportOutput:
-    aggregate_value: Optional[float] = field(default=None)
-    aggregation_statistic: Optional[str] = field(default=None)
-    approximate_unique_count: Optional[int] = field(default=None)
-    contributors: Optional[List[InsightRuleContributor]] = field(default=None)
-    key_labels: Optional[List[str]] = field(default=None)
-    metric_datapoints: Optional[List[InsightRuleMetricDatapoint]] = field(default=None)
+    aggregate_value: Optional[float] = dataclasses.field(default=None)
+    aggregation_statistic: Optional[str] = dataclasses.field(default=None)
+    approximate_unique_count: Optional[int] = dataclasses.field(default=None)
+    contributors: Optional[list[shared_insightrulecontributor.InsightRuleContributor]] = dataclasses.field(default=None)
+    key_labels: Optional[list[str]] = dataclasses.field(default=None)
+    metric_datapoints: Optional[list[shared_insightrulemetricdatapoint.InsightRuleMetricDatapoint]] = dataclasses.field(default=None)
     

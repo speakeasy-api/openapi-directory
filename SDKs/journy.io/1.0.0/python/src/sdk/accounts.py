@@ -30,7 +30,7 @@ class Accounts:
         url = utils.generate_url(base_url, "/accounts/{accountId}/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -38,7 +38,7 @@ class Accounts:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AddUserToAccountResponse(status_code=r.status_code, content_type=content_type)
@@ -87,7 +87,7 @@ class Accounts:
         url = utils.generate_url(base_url, "/accounts/{accountId}/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -95,7 +95,7 @@ class Accounts:
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.RemoveUserFromAccountResponse(status_code=r.status_code, content_type=content_type)
@@ -150,7 +150,7 @@ class Accounts:
         url = base_url.removesuffix("/") + "/accounts/upsert"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -158,7 +158,7 @@ class Accounts:
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.UpsertAccountResponse(status_code=r.status_code, content_type=content_type)

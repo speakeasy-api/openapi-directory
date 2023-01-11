@@ -1,17 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import instancestatus as shared_instancestatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TaskGroupStatus:
-    r"""TaskGroupStatus
-    Aggregated task status for a TaskGroup.
-    """
-    
-    counts: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
-    instances: Optional[List[InstanceStatus]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instances') }})
+    counts: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('counts') }})
+    instances: Optional[list[shared_instancestatus.InstanceStatus]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instances') }})
     

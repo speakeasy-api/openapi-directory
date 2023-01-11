@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,26 +25,25 @@ s.config_security(
     
 req = operations.AcceptMatchRequest(
     headers=operations.AcceptMatchHeaders(
-        x_amz_algorithm="nam",
-        x_amz_content_sha256="molestiae",
-        x_amz_credential="deserunt",
-        x_amz_date="voluptates",
-        x_amz_security_token="possimus",
-        x_amz_signature="et",
-        x_amz_signed_headers="deserunt",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="ea",
+        x_amz_credential="quia",
+        x_amz_date="sed",
+        x_amz_security_token="dolorem",
+        x_amz_signature="accusamus",
+        x_amz_signed_headers="ut",
         x_amz_target="GameLift.AcceptMatch",
     ),
     request=shared.AcceptMatchInput(
-        acceptance_type="ACCEPT",
+        acceptance_type="REJECT",
         player_ids=[
-            "tempore",
-            "rem",
+            "accusamus",
         ],
-        ticket_id="cum",
+        ticket_id="quisquam",
     ),
 )
     
-res = s.sdk.accept_match(req)
+res = s.accept_match(req)
 
 if res.accept_match_output is not None:
     # handle response

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdatePrimaryEmailAddressRequest:
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Email') }})
-    entity_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EntityId') }})
-    organization_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Email') }})
+    entity_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EntityId') }})
+    organization_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
     

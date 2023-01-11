@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workspacebundle as shared_workspacebundle
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeWorkspaceBundlesResult:
-    bundles: Optional[List[WorkspaceBundle]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Bundles') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    bundles: Optional[list[shared_workspacebundle.WorkspaceBundle]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Bundles') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

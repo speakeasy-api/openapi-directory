@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import code_of_conduct as shared_code_of_conduct
 
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetForRepoRequest:
-    path_params: CodesOfConductGetForRepoPathParams = field()
+    path_params: CodesOfConductGetForRepoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CodesOfConductGetForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    code_of_conduct: Optional[shared.CodeOfConduct] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    code_of_conduct: Optional[shared_code_of_conduct.CodeOfConduct] = dataclasses.field(default=None)
     

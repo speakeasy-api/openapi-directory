@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messagecommentreactionentity as shared_messagecommentreactionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentReactionsRequestBody:
-    emoji: str = field(metadata={'multipart_form': { 'field_name': 'emoji' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    emoji: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'emoji' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentReactionsRequest:
-    request: Optional[PostMessageCommentReactionsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostMessageCommentReactionsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentReactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_comment_reaction_entity: Optional[shared.MessageCommentReactionEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_comment_reaction_entity: Optional[shared_messagecommentreactionentity.MessageCommentReactionEntity] = dataclasses.field(default=None)
     

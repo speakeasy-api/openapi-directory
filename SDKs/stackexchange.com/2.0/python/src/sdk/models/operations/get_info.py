@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoQueryParams:
-    site: str = field(metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
+    site: str = dataclasses.field(metadata={'query_param': { 'field_name': 'site', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoRequest:
-    query_params: GetInfoQueryParams = field()
+    query_params: GetInfoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

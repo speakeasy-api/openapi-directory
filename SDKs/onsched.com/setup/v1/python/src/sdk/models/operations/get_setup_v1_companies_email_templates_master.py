@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import masteremailtemplatesettingsviewmodel as shared_masteremailtemplatesettingsviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1CompaniesEmailTemplatesMasterResponse:
-    content_type: str = field()
-    status_code: int = field()
-    master_email_template_settings_view_model: Optional[shared.MasterEmailTemplateSettingsViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    master_email_template_settings_view_model: Optional[shared_masteremailtemplatesettingsviewmodel.MasterEmailTemplateSettingsViewModel] = dataclasses.field(default=None)
     

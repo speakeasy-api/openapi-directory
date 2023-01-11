@@ -1,79 +1,79 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceAttributes:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceLinks:
-    self: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
+    self: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsChildrenData:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsChildrenLinks:
-    related: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
+    related: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsChildren:
-    data: List[CategoryResourceRelationshipsChildrenData] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    links: Optional[CategoryResourceRelationshipsChildrenLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    data: list[CategoryResourceRelationshipsChildrenData] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    links: Optional[CategoryResourceRelationshipsChildrenLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsParentData:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsParentLinks:
-    related: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
+    related: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationshipsParent:
-    data: CategoryResourceRelationshipsParentData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    links: Optional[CategoryResourceRelationshipsParentLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    data: CategoryResourceRelationshipsParentData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    links: Optional[CategoryResourceRelationshipsParentLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResourceRelationships:
-    children: CategoryResourceRelationshipsChildren = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('children') }})
-    parent: CategoryResourceRelationshipsParent = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
+    children: CategoryResourceRelationshipsChildren = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('children') }})
+    parent: CategoryResourceRelationshipsParent = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parent') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResource:
     r"""CategoryResource
     Provides information about a category and its ancestry.
     
     """
     
-    attributes: CategoryResourceAttributes = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    relationships: CategoryResourceRelationships = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationships') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    links: Optional[CategoryResourceLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    attributes: CategoryResourceAttributes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    relationships: CategoryResourceRelationships = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationships') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    links: Optional[CategoryResourceLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     

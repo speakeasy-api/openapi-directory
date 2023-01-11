@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeMovingAddressesResult:
-    moving_address_statuses: Optional[List[MovingAddressStatus]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    moving_address_statuses: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

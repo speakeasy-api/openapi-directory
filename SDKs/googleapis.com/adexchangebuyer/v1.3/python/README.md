@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.AdexchangebuyerAccountsGetRequest(
     security=operations.AdexchangebuyerAccountsGetSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AdexchangebuyerAccountsGetPathParams(
-        id=5544575166878453129,
+        id=3833738016273364856,
     ),
     query_params=operations.AdexchangebuyerAccountsGetQueryParams(
         alt="json",
-        fields="corporis",
-        key="et",
-        oauth_token="molestiae",
-        pretty_print=True,
-        quota_user="sed",
-        user_ip="voluptatibus",
+        fields="et",
+        key="dicta",
+        oauth_token="sed",
+        pretty_print=False,
+        quota_user="cumque",
+        user_ip="cupiditate",
     ),
 )
     

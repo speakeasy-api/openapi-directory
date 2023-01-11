@@ -1,0 +1,34 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.GetEventsV3EventsGetPageRequest(
+    security=operations.GetEventsV3EventsGetPageSecurity(
+        hapikey=shared.SchemeHapikey(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    ),
+    query_params=operations.GetEventsV3EventsGetPageQueryParams(
+        after="illum",
+        before="non",
+        event_type="omnis",
+        limit=2518897347341021606,
+        object_id=6625460606341040745,
+        object_type="quod",
+        occurred_after="2014-04-14T23:19:12Z",
+        occurred_before="2009-12-07T17:37:59Z",
+        sort=[
+            "repellendus",
+        ],
+    ),
+)
+    
+res = s.events.get_events_v3_events_get_page(req)
+
+if res.collection_response_external_unified_event is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

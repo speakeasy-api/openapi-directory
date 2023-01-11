@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabletopologymap as shared_writabletopologymap
+from ..shared import topologymap as shared_topologymap
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsUpdateRequest:
-    path_params: ExtrasTopologyMapsUpdatePathParams = field()
-    request: shared.WritableTopologyMapInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ExtrasTopologyMapsUpdatePathParams = dataclasses.field()
+    request: shared_writabletopologymap.WritableTopologyMapInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTopologyMapsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    topology_map: Optional[shared.TopologyMap] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    topology_map: Optional[shared_topologymap.TopologyMap] = dataclasses.field(default=None)
     

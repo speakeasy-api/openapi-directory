@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import replicationtask as shared_replicationtask
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeReplicationTasksResponse:
     r"""DescribeReplicationTasksResponse
     <p/>
     """
     
-    marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
-    replication_tasks: Optional[List[ReplicationTask]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReplicationTasks') }})
+    marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Marker') }})
+    replication_tasks: Optional[list[shared_replicationtask.ReplicationTask]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReplicationTasks') }})
     

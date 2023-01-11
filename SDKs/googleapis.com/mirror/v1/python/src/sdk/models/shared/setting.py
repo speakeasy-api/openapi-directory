@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Setting:
     r"""Setting
     A setting for Glass.
     """
     
-    id: Optional[str] = field(default=None)
-    kind: Optional[str] = field(default=None)
-    value: Optional[str] = field(default=None)
+    id: Optional[str] = dataclasses.field(default=None)
+    kind: Optional[str] = dataclasses.field(default=None)
+    value: Optional[str] = dataclasses.field(default=None)
     

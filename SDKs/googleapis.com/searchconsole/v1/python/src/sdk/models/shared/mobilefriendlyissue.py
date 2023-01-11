@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,11 +15,11 @@ class MobileFriendlyIssueRuleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MobileFriendlyIssue:
     r"""MobileFriendlyIssue
     Mobile-friendly issue.
     """
     
-    rule: Optional[MobileFriendlyIssueRuleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rule') }})
+    rule: Optional[MobileFriendlyIssueRuleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rule') }})
     

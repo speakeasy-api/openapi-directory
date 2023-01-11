@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import deviceinterface as shared_deviceinterface
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesTracePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesTraceRequest:
-    path_params: DcimInterfacesTracePathParams = field()
+    path_params: DcimInterfacesTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfacesTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_interface: Optional[shared.DeviceInterface] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_interface: Optional[shared_deviceinterface.DeviceInterface] = dataclasses.field(default=None)
     

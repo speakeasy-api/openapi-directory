@@ -1,4 +1,4 @@
-# WealthOS Python SDK
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,12 +23,12 @@ req = operations.UpdateBankAccountRequest(
         ),
     ),
     path_params=operations.UpdateBankAccountPathParams(
-        bank_account_id="sit",
+        bank_account_id="modi",
     ),
     headers=operations.UpdateBankAccountHeaders(
-        x_api_key="voluptas",
+        x_api_key="ad",
     ),
-    request="culpa",
+    request="autem",
 )
     
 res = s.bank_accounts.update_bank_account(req)

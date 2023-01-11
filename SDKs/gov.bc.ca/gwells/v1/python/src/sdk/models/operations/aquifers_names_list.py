@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import aquiferserializerbasic as shared_aquiferserializerbasic
 
 
-@dataclass
+@dataclasses.dataclass
 class AquifersNamesListQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AquifersNamesListRequest:
-    query_params: AquifersNamesListQueryParams = field()
+    query_params: AquifersNamesListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AquifersNamesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    aquifer_serializer_basics: Optional[List[shared.AquiferSerializerBasic]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    aquifer_serializer_basics: Optional[list[shared_aquiferserializerbasic.AquiferSerializerBasic]] = dataclasses.field(default=None)
     

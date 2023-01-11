@@ -1,18 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import webbackendconnectionrequestbody as shared_webbackendconnectionrequestbody
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
+from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexceptioninfo
+from ..shared import webbackendconnectionread as shared_webbackendconnectionread
 
 
-@dataclass
+@dataclasses.dataclass
 class WebBackendGetConnectionRequest:
-    request: shared.WebBackendConnectionRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_webbackendconnectionrequestbody.WebBackendConnectionRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WebBackendGetConnectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
-    not_found_known_exception_info: Optional[shared.NotFoundKnownExceptionInfo] = field(default=None)
-    web_backend_connection_read: Optional[shared.WebBackendConnectionRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
+    not_found_known_exception_info: Optional[shared_notfoundknownexceptioninfo.NotFoundKnownExceptionInfo] = dataclasses.field(default=None)
+    web_backend_connection_read: Optional[shared_webbackendconnectionread.WebBackendConnectionRead] = dataclasses.field(default=None)
     

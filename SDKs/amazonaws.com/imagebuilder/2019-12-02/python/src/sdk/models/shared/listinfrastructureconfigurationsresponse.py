@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import infrastructureconfigurationsummary as shared_infrastructureconfigurationsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListInfrastructureConfigurationsResponse:
-    infrastructure_configuration_summary_list: Optional[List[InfrastructureConfigurationSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('infrastructureConfigurationSummaryList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    infrastructure_configuration_summary_list: Optional[list[shared_infrastructureconfigurationsummary.InfrastructureConfigurationSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('infrastructureConfigurationSummaryList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
     

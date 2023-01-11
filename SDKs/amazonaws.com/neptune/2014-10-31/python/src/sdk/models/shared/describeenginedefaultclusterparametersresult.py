@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import enginedefaults as shared_enginedefaults
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeEngineDefaultClusterParametersResult:
-    engine_defaults: Optional[EngineDefaults] = field(default=None)
+    engine_defaults: Optional[shared_enginedefaults.EngineDefaults] = dataclasses.field(default=None)
     

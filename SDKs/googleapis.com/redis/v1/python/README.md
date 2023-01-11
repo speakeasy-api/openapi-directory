@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,88 +20,88 @@ req = operations.RedisProjectsLocationsInstancesCreateRequest(
     security=operations.RedisProjectsLocationsInstancesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.RedisProjectsLocationsInstancesCreatePathParams(
-        parent="distinctio",
+        parent="molestiae",
     ),
     query_params=operations.RedisProjectsLocationsInstancesCreateQueryParams(
         dollar_xgafv="1",
-        access_token="corporis",
+        access_token="voluptatem",
         alt="media",
-        callback="necessitatibus",
-        fields="commodi",
-        instance_id="nulla",
-        key="quo",
-        oauth_token="aperiam",
+        callback="officia",
+        fields="architecto",
+        instance_id="labore",
+        key="laboriosam",
+        oauth_token="in",
         pretty_print=False,
-        quota_user="quasi",
-        upload_type="similique",
-        upload_protocol="quod",
+        quota_user="beatae",
+        upload_type="blanditiis",
+        upload_protocol="beatae",
     ),
     request=shared.InstanceInput(
-        alternative_location_id="et",
+        alternative_location_id="voluptate",
         auth_enabled=False,
-        authorized_network="est",
-        connect_mode="PRIVATE_SERVICE_ACCESS",
-        customer_managed_key="et",
-        display_name="occaecati",
+        authorized_network="molestiae",
+        connect_mode="DIRECT_PEERING",
+        customer_managed_key="ut",
+        display_name="ipsam",
         labels={
-            "numquam": "quo",
-            "dolor": "aspernatur",
-            "officiis": "quo",
+            "atque": "molestias",
+            "ut": "dolores",
+            "voluptas": "omnis",
         },
-        location_id="at",
+        location_id="id",
         maintenance_policy=shared.MaintenancePolicyInput(
-            description="inventore",
+            description="nostrum",
             weekly_maintenance_window=[
                 shared.WeeklyMaintenanceWindowInput(
-                    day="DAY_OF_WEEK_UNSPECIFIED",
+                    day="TUESDAY",
                     start_time=shared.TimeOfDay(
-                        hours=4589677787592018309,
-                        minutes=4871412941294140056,
-                        nanos=4695694551733737161,
-                        seconds=1737807491654169512,
+                        hours=7207637891447502103,
+                        minutes=8622083641679649735,
+                        nanos=6406047390230794463,
+                        seconds=8648367394506910482,
                     ),
                 ),
                 shared.WeeklyMaintenanceWindowInput(
-                    day="SUNDAY",
+                    day="DAY_OF_WEEK_UNSPECIFIED",
                     start_time=shared.TimeOfDay(
-                        hours=6597343676242190148,
-                        minutes=2077057246974141476,
-                        nanos=6789962086798724761,
-                        seconds=5773450730765709866,
+                        hours=102516519619783577,
+                        minutes=2317600410149429910,
+                        nanos=4401454000593110478,
+                        seconds=3498630052342442269,
                     ),
                 ),
             ],
         ),
         maintenance_schedule=shared.MaintenanceScheduleInput(
-            can_reschedule=True,
+            can_reschedule=False,
         ),
-        memory_size_gb=4466320768410931399,
-        name="nobis",
+        memory_size_gb=2306973576407439514,
+        name="reprehenderit",
         persistence_config=shared.PersistenceConfigInput(
-            persistence_mode="DISABLED",
-            rdb_snapshot_period="SIX_HOURS",
-            rdb_snapshot_start_time="distinctio",
+            persistence_mode="PERSISTENCE_MODE_UNSPECIFIED",
+            rdb_snapshot_period="TWELVE_HOURS",
+            rdb_snapshot_start_time="eveniet",
         ),
-        read_replicas_mode="READ_REPLICAS_MODE_UNSPECIFIED",
+        read_replicas_mode="READ_REPLICAS_DISABLED",
         redis_configs={
-            "voluptates": "dolores",
+            "quasi": "voluptates",
         },
-        redis_version="veniam",
-        replica_count=6344519173458084389,
-        reserved_ip_range="quo",
-        secondary_ip_range="adipisci",
+        redis_version="eligendi",
+        replica_count=4525063102438322793,
+        reserved_ip_range="deserunt",
+        secondary_ip_range="ea",
         suspension_reasons=[
-            "SUSPENSION_REASON_UNSPECIFIED",
-            "SUSPENSION_REASON_UNSPECIFIED",
+            "CUSTOMER_MANAGED_KEY_ISSUE",
+            "CUSTOMER_MANAGED_KEY_ISSUE",
         ],
         tier="TIER_UNSPECIFIED",
-        transit_encryption_mode="DISABLED",
+        transit_encryption_mode="TRANSIT_ENCRYPTION_MODE_UNSPECIFIED",
     ),
 )
     

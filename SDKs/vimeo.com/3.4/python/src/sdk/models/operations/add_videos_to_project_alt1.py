@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AddVideosToProjectAlt1PathParams:
-    project_id: float = field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
+    project_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideosToProjectAlt1QueryParams:
-    uris: str = field(metadata={'query_param': { 'field_name': 'uris', 'style': 'form', 'explode': True }})
+    uris: str = dataclasses.field(metadata={'query_param': { 'field_name': 'uris', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideosToProjectAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideosToProjectAlt1Request:
-    path_params: AddVideosToProjectAlt1PathParams = field()
-    query_params: AddVideosToProjectAlt1QueryParams = field()
-    security: AddVideosToProjectAlt1Security = field()
+    path_params: AddVideosToProjectAlt1PathParams = dataclasses.field()
+    query_params: AddVideosToProjectAlt1QueryParams = dataclasses.field()
+    security: AddVideosToProjectAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddVideosToProjectAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

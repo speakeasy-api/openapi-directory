@@ -1,0 +1,535 @@
+import requests
+from typing import Optional
+from sdk.models import shared, operations
+from . import utils
+
+class Pension:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def delete_pension(self, request: operations.DeletePensionRequest) -> operations.DeletePensionResponse:
+        r"""Delete a Pension
+        Delete the specified ppension
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("DELETE", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePensionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def delete_pension_revision(self, request: operations.DeletePensionRevisionRequest) -> operations.DeletePensionRevisionResponse:
+        r"""Delete an Pension revision matching the specified revision date.
+        Deletes the specified pension revision for the matching revision date
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("DELETE", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePensionRevisionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def delete_pension_revision_by_number(self, request: operations.DeletePensionRevisionByNumberRequest) -> operations.DeletePensionRevisionByNumberResponse:
+        r"""Delete an Pension revision matching the specified revision number.
+        Deletes the specified pension revision for the matching revision number
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("DELETE", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeletePensionRevisionByNumberResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pension_by_effective_date(self, request: operations.GetPensionByEffectiveDateRequest) -> operations.GetPensionByEffectiveDateResponse:
+        r"""Get pension by effective date.
+        Returns the penion's state at the specified effective date.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionByEffectiveDateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Pension])
+                res.pension = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pension_from_employer(self, request: operations.GetPensionFromEmployerRequest) -> operations.GetPensionFromEmployerResponse:
+        r"""Get pension from employer
+        Gets the specified pension from employer by pension code.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionFromEmployerResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Pension])
+                res.pension = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pension_revision_by_number(self, request: operations.GetPensionRevisionByNumberRequest) -> operations.GetPensionRevisionByNumberResponse:
+        r"""Gets the pension by revision number
+        Get the pension revision matching the specified revision number
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionRevisionByNumberResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Pension])
+                res.pension = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pension_revisions(self, request: operations.GetPensionRevisionsRequest) -> operations.GetPensionRevisionsResponse:
+        r"""Get all pension revisions
+        Returns links to all revisions of the pension
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}/Revisions", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionRevisionsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.LinkCollection])
+                res.link_collection = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pensions_by_effective_date(self, request: operations.GetPensionsByEffectiveDateRequest) -> operations.GetPensionsByEffectiveDateResponse:
+        r"""Get pensions from employer at a given effective date.
+        Get links to all pensions for the employer on specified effective date.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pensions/{EffectiveDate}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionsByEffectiveDateResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.LinkCollection])
+                res.link_collection = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def get_pensions_from_employer(self, request: operations.GetPensionsFromEmployerRequest) -> operations.GetPensionsFromEmployerResponse:
+        r"""Get pensions from employer.
+        Get links to all pensions for the specified employer.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pensions", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("GET", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPensionsFromEmployerResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.LinkCollection])
+                res.link_collection = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def patch_pension(self, request: operations.PatchPensionRequest) -> operations.PatchPensionResponse:
+        r"""Patches the pension
+        Patches the specified pension with the supplied values
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._client
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PatchPensionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Pension])
+                res.pension = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def post_pension_into_employer(self, request: operations.PostPensionIntoEmployerRequest) -> operations.PostPensionIntoEmployerResponse:
+        r"""Create a new Pension
+        Create a new pension object
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pensions", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostPensionIntoEmployerResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Link])
+                res.link = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    
+    def put_pension_into_employer(self, request: operations.PutPensionIntoEmployerRequest) -> operations.PutPensionIntoEmployerResponse:
+        r"""Updates the Pension
+        Updates existing or inserts the specified pension object
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/Employer/{EmployerId}/Pension/{PensionId}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        if data is None and form is None:
+           raise Exception('request body is required')
+        
+        client = self._client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PutPensionIntoEmployerResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Pension])
+                res.pension = out
+        elif r.status_code == 400:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 401:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 404:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+        elif r.status_code == 500:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ErrorModel])
+                res.error_model = out
+
+        return res
+
+    

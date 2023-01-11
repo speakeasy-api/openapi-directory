@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import share as shared_share
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSharesResponse:
     r"""ListSharesResponse
     ListSharesResponse is the result of ListSharesRequest.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    shares: Optional[List[Share]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shares') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    shares: Optional[list[shared_share.Share]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('shares') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

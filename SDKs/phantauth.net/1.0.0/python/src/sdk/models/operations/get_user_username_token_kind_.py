@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,25 +11,25 @@ class GetUserUsernameTokenKindKindEnum(str, Enum):
     PLAIN_ = "'plain'"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUsernameTokenKindPathParams:
-    kind: GetUserUsernameTokenKindKindEnum = field(metadata={'path_param': { 'field_name': 'kind', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    kind: GetUserUsernameTokenKindKindEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'kind', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUsernameTokenKindQueryParams:
-    scope: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'scope', 'style': 'form', 'explode': True }})
+    scope: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scope', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUsernameTokenKindRequest:
-    path_params: GetUserUsernameTokenKindPathParams = field()
-    query_params: GetUserUsernameTokenKindQueryParams = field()
+    path_params: GetUserUsernameTokenKindPathParams = dataclasses.field()
+    query_params: GetUserUsernameTokenKindQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUsernameTokenKindResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

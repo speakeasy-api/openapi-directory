@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 
 
-@dataclass
+
+@dataclasses.dataclass
 class DeleteImageTagsPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageTagsQueryParams:
-    image_ids: List[str] = field(metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
-    tag_ids: List[str] = field(metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
+    image_ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'imageIds', 'style': 'form', 'explode': False }})
+    tag_ids: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'tagIds', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageTagsHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageTagsRequest:
-    headers: DeleteImageTagsHeaders = field()
-    path_params: DeleteImageTagsPathParams = field()
-    query_params: DeleteImageTagsQueryParams = field()
+    headers: DeleteImageTagsHeaders = dataclasses.field()
+    path_params: DeleteImageTagsPathParams = dataclasses.field()
+    query_params: DeleteImageTagsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteImageTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

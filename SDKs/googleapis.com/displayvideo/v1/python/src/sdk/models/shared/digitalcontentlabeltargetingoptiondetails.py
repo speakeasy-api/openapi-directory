@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,11 +14,11 @@ class DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DigitalContentLabelTargetingOptionDetails:
     r"""DigitalContentLabelTargetingOptionDetails
     Represents a targetable digital content label rating tier. This will be populated in the digital_content_label_details field of the TargetingOption when targeting_type is `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`.
     """
     
-    content_rating_tier: Optional[DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentRatingTier') }})
+    content_rating_tier: Optional[DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentRatingTier') }})
     

@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import expression as shared_expression
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class ExpressionStatus:
     r"""ExpressionStatus
     The value of an <code>Expression</code> and its current status.
     """
     
-    options: Expression = field()
-    status: OptionStatus = field()
+    options: shared_expression.Expression = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportPdfBelegeBelegUUIDPathParams:
-    beleg_uuid: str = field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
+    beleg_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportPdfBelegeBelegUUIDRequest:
-    path_params: GetExportPdfBelegeBelegUUIDPathParams = field()
+    path_params: GetExportPdfBelegeBelegUUIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportPdfBelegeBelegUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

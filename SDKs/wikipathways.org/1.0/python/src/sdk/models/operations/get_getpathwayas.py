@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,21 +11,21 @@ class GetGetPathwayAsFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayAsQueryParams:
-    file_type: str = field(metadata={'query_param': { 'field_name': 'fileType', 'style': 'form', 'explode': True }})
-    pw_id: str = field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
-    format: Optional[GetGetPathwayAsFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    revision: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'revision', 'style': 'form', 'explode': True }})
+    file_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'fileType', 'style': 'form', 'explode': True }})
+    pw_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pwId', 'style': 'form', 'explode': True }})
+    format: Optional[GetGetPathwayAsFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    revision: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'revision', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayAsRequest:
-    query_params: GetGetPathwayAsQueryParams = field()
+    query_params: GetGetPathwayAsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetPathwayAsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

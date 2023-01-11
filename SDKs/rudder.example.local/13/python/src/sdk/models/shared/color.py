@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Color:
-    alpha: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('alpha') }})
-    blue: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('blue') }})
-    green: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('green') }})
-    red: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('red') }})
+    alpha: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('alpha') }})
+    blue: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('blue') }})
+    green: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('green') }})
+    red: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('red') }})
     

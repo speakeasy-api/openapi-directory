@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRolePolicyResponse:
     r"""GetRolePolicyResponse
     Contains the response to a successful <a>GetRolePolicy</a> request. 
     """
     
-    policy_document: str = field()
-    policy_name: str = field()
-    role_name: str = field()
+    policy_document: str = dataclasses.field()
+    policy_name: str = dataclasses.field()
+    role_name: str = dataclasses.field()
     

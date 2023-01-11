@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -174,85 +174,8 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Build]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Build]])
                 res.builds = out
-
-        return res
-
-    
-    def get_project_username_project_build_num_(self, request: operations.GetProjectUsernameProjectBuildNumRequest) -> operations.GetProjectUsernameProjectBuildNumResponse:
-        r"""Full details for a single build. The response includes all of the fields from the build summary.
-        This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetProjectUsernameProjectBuildNumResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.BuildDetail])
-                res.build_detail = out
-
-        return res
-
-    
-    def get_project_username_project_build_num_artifacts(self, request: operations.GetProjectUsernameProjectBuildNumArtifactsRequest) -> operations.GetProjectUsernameProjectBuildNumArtifactsResponse:
-        r"""List the artifacts produced by a given build.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/artifacts", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetProjectUsernameProjectBuildNumArtifactsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Artifact]])
-                res.artifacts = out
-
-        return res
-
-    
-    def get_project_username_project_build_num_tests(self, request: operations.GetProjectUsernameProjectBuildNumTestsRequest) -> operations.GetProjectUsernameProjectBuildNumTestsResponse:
-        r"""Provides test metadata for a build
-        Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/tests", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetProjectUsernameProjectBuildNumTestsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Tests])
-                res.tests = out
 
         return res
 
@@ -276,7 +199,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Key]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Key]])
                 res.keys = out
 
         return res
@@ -326,7 +249,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Envvar]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Envvar]])
                 res.envvars = out
 
         return res
@@ -357,6 +280,83 @@ class SDK:
         return res
 
     
+    def get_project_username_project_build_num_(self, request: operations.GetProjectUsernameProjectBuildNumRequest) -> operations.GetProjectUsernameProjectBuildNumResponse:
+        r"""Full details for a single build. The response includes all of the fields from the build summary.
+        This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetProjectUsernameProjectBuildNumResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.BuildDetail])
+                res.build_detail = out
+
+        return res
+
+    
+    def get_project_username_project_build_num_artifacts(self, request: operations.GetProjectUsernameProjectBuildNumArtifactsRequest) -> operations.GetProjectUsernameProjectBuildNumArtifactsResponse:
+        r"""List the artifacts produced by a given build.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/artifacts", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetProjectUsernameProjectBuildNumArtifactsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Artifact]])
+                res.artifacts = out
+
+        return res
+
+    
+    def get_project_username_project_build_num_tests(self, request: operations.GetProjectUsernameProjectBuildNumTestsRequest) -> operations.GetProjectUsernameProjectBuildNumTestsResponse:
+        r"""Provides test metadata for a build
+        Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/tests", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetProjectUsernameProjectBuildNumTestsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Tests])
+                res.tests = out
+
+        return res
+
+    
     def get_projects(self) -> operations.GetProjectsResponse:
         r"""List of all the projects you're following on CircleCI, with build information organized by branch.
         
@@ -376,7 +376,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Project]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Project]])
                 res.projects = out
 
         return res
@@ -402,7 +402,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Build]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Build]])
                 res.builds = out
 
         return res
@@ -418,13 +418,13 @@ class SDK:
         url = utils.generate_url(base_url, "/project/{username}/{project}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostProjectUsernameProjectResponse(status_code=r.status_code, content_type=content_type)
@@ -433,56 +433,6 @@ class SDK:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.BuildSummary])
                 res.build_summary = out
-
-        return res
-
-    
-    def post_project_username_project_build_num_cancel(self, request: operations.PostProjectUsernameProjectBuildNumCancelRequest) -> operations.PostProjectUsernameProjectBuildNumCancelResponse:
-        r"""Cancels the build, returns a summary of the build.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/cancel", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("POST", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostProjectUsernameProjectBuildNumCancelResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Build])
-                res.build = out
-
-        return res
-
-    
-    def post_project_username_project_build_num_retry(self, request: operations.PostProjectUsernameProjectBuildNumRetryRequest) -> operations.PostProjectUsernameProjectBuildNumRetryResponse:
-        r"""Retries the build, returns a summary of the new build.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/retry", request.path_params)
-        
-        
-        client = self._security_client
-        
-        r = client.request("POST", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.PostProjectUsernameProjectBuildNumRetryResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[shared.Build])
-                res.build = out
 
         return res
 
@@ -498,13 +448,13 @@ class SDK:
         url = utils.generate_url(base_url, "/project/{username}/{project}/checkout-key", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostProjectUsernameProjectCheckoutKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -552,7 +502,7 @@ class SDK:
         url = utils.generate_url(base_url, "/project/{username}/{project}/ssh-key", request.path_params)
         
         headers = utils.get_headers(request.headers)
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -560,7 +510,7 @@ class SDK:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostProjectUsernameProjectSSHKeyResponse(status_code=r.status_code, content_type=content_type)
@@ -586,13 +536,13 @@ class SDK:
         url = utils.generate_url(base_url, "/project/{username}/{project}/tree/{branch}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostProjectUsernameProjectTreeBranchResponse(status_code=r.status_code, content_type=content_type)
@@ -600,6 +550,56 @@ class SDK:
         if r.status_code == 201:
             res.headers = r.headers
             
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Build])
+                res.build = out
+
+        return res
+
+    
+    def post_project_username_project_build_num_cancel(self, request: operations.PostProjectUsernameProjectBuildNumCancelRequest) -> operations.PostProjectUsernameProjectBuildNumCancelResponse:
+        r"""Cancels the build, returns a summary of the build.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/cancel", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("POST", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostProjectUsernameProjectBuildNumCancelResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.Build])
+                res.build = out
+
+        return res
+
+    
+    def post_project_username_project_build_num_retry(self, request: operations.PostProjectUsernameProjectBuildNumRetryRequest) -> operations.PostProjectUsernameProjectBuildNumRetryResponse:
+        r"""Retries the build, returns a summary of the new build.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/project/{username}/{project}/{build_num}/retry", request.path_params)
+        
+        
+        client = self._security_client
+        
+        r = client.request("POST", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostProjectUsernameProjectBuildNumRetryResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
                 out = utils.unmarshal_json(r.text, Optional[shared.Build])
                 res.build = out

@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import patientauthmodequeryresponse as shared_patientauthmodequeryresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnFetchModesHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_hip_id: str = field(metadata={'header': { 'field_name': 'X-HIP-ID', 'style': 'simple', 'explode': False }})
-    x_hiu_id: str = field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_hip_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-HIP-ID', 'style': 'simple', 'explode': False }})
+    x_hiu_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnFetchModesRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    patient_auth_mode_query_response: Optional[shared.PatientAuthModeQueryResponse] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    patient_auth_mode_query_response: Optional[shared_patientauthmodequeryresponse.PatientAuthModeQueryResponse] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnFetchModesRequest:
-    headers: PostV05UsersAuthOnFetchModesHeaders = field()
-    request: PostV05UsersAuthOnFetchModesRequests = field()
+    headers: PostV05UsersAuthOnFetchModesHeaders = dataclasses.field()
+    request: PostV05UsersAuthOnFetchModesRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05UsersAuthOnFetchModesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

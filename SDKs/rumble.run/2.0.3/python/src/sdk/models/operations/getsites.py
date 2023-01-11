@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesRequest:
-    security: GetSitesSecurity = field()
+    security: GetSitesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSitesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sites: Optional[List[shared.Site]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sites: Optional[list[shared_site.Site]] = dataclasses.field(default=None)
     

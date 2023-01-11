@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import userentity as shared_userentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersIDRequest:
-    path_params: GetUsersIDPathParams = field()
+    path_params: GetUsersIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUsersIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user_entity: Optional[shared.UserEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user_entity: Optional[shared_userentity.UserEntity] = dataclasses.field(default=None)
     

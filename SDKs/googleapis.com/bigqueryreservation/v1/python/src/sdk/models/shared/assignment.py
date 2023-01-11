@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,25 +18,25 @@ class AssignmentStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AssignmentInput:
     r"""AssignmentInput
     An assignment allows a project to submit jobs of a certain type using slots from the specified reservation.
     """
     
-    assignee: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignee') }})
-    job_type: Optional[AssignmentJobTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobType') }})
+    assignee: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignee') }})
+    job_type: Optional[AssignmentJobTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobType') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Assignment:
     r"""Assignment
     An assignment allows a project to submit jobs of a certain type using slots from the specified reservation.
     """
     
-    assignee: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignee') }})
-    job_type: Optional[AssignmentJobTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobType') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    state: Optional[AssignmentStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    assignee: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignee') }})
+    job_type: Optional[AssignmentJobTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobType') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    state: Optional[AssignmentStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
     

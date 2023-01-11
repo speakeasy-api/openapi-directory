@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import clickwrapentity as shared_clickwrapentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsIDRequest:
-    path_params: GetClickwrapsIDPathParams = field()
+    path_params: GetClickwrapsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    clickwrap_entity: Optional[shared.ClickwrapEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    clickwrap_entity: Optional[shared_clickwrapentity.ClickwrapEntity] = dataclasses.field(default=None)
     

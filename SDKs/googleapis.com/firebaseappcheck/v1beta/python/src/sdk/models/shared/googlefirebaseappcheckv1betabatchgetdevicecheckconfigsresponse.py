@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlefirebaseappcheckv1betadevicecheckconfig as shared_googlefirebaseappcheckv1betadevicecheckconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleFirebaseAppcheckV1betaBatchGetDeviceCheckConfigsResponse:
     r"""GoogleFirebaseAppcheckV1betaBatchGetDeviceCheckConfigsResponse
     Response message for the BatchGetDeviceCheckConfigs method.
     """
     
-    configs: Optional[List[GoogleFirebaseAppcheckV1betaDeviceCheckConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configs') }})
+    configs: Optional[list[shared_googlefirebaseappcheckv1betadevicecheckconfig.GoogleFirebaseAppcheckV1betaDeviceCheckConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configs') }})
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tagdescription as shared_tagdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeTagsOutput:
     r"""DescribeTagsOutput
     Contains the output for DescribeTags.
     """
     
-    tag_descriptions: Optional[List[TagDescription]] = field(default=None)
+    tag_descriptions: Optional[list[shared_tagdescription.TagDescription]] = dataclasses.field(default=None)
     

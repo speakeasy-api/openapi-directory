@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class LeaderboardFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class LeaderboardPathParams:
-    format: LeaderboardFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    tournamentid: str = field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
+    format: LeaderboardFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    tournamentid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tournamentid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LeaderboardRequest:
-    path_params: LeaderboardPathParams = field()
+    path_params: LeaderboardPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LeaderboardResponse:
-    content_type: str = field()
-    status_code: int = field()
-    leaderboard: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    leaderboard: Optional[Any] = dataclasses.field(default=None)
     

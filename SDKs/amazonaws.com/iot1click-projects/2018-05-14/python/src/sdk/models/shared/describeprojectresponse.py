@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import projectdescription as shared_projectdescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeProjectResponse:
-    project: ProjectDescription = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('project') }})
+    project: shared_projectdescription.ProjectDescription = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('project') }})
     

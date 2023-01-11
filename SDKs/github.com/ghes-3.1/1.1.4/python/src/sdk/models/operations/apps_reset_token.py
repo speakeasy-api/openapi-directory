@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import authorization as shared_authorization
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetTokenPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppsResetTokenRequestBody:
-    access_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    access_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetTokenRequest:
-    path_params: AppsResetTokenPathParams = field()
-    request: Optional[AppsResetTokenRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AppsResetTokenPathParams = dataclasses.field()
+    request: Optional[AppsResetTokenRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsResetTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authorization: Optional[shared.Authorization] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authorization: Optional[shared_authorization.Authorization] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

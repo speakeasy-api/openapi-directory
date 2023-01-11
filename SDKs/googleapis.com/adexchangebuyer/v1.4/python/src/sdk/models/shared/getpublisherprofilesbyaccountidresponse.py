@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import publisherprofileapiproto as shared_publisherprofileapiproto
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetPublisherProfilesByAccountIDResponse:
-    profiles: Optional[List[PublisherProfileAPIProto]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profiles') }})
+    profiles: Optional[list[shared_publisherprofileapiproto.PublisherProfileAPIProto]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('profiles') }})
     

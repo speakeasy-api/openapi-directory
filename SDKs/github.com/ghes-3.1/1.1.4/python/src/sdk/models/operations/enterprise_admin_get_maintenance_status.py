@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import maintenance_status as shared_maintenance_status
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetMaintenanceStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    maintenance_status: Optional[shared.MaintenanceStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    maintenance_status: Optional[shared_maintenance_status.MaintenanceStatus] = dataclasses.field(default=None)
     

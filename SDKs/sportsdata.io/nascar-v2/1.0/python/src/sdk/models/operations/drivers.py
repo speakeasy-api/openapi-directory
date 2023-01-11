@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class DriversFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class DriversFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class DriversPathParams:
-    format: DriversFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: DriversFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DriversRequest:
-    path_params: DriversPathParams = field()
+    path_params: DriversPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DriversResponse:
-    content_type: str = field()
-    status_code: int = field()
-    drivers: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    drivers: Optional[list[Any]] = dataclasses.field(default=None)
     

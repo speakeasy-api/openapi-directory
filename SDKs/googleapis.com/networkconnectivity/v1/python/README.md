@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,46 +20,38 @@ req = operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest(
     security=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams(
-        parent="dolorem",
+        parent="non",
     ),
     query_params=operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="sed",
+        dollar_xgafv="2",
+        access_token="in",
         alt="media",
-        callback="ea",
-        fields="ex",
-        hub_id="consequatur",
-        key="dolorum",
-        oauth_token="debitis",
+        callback="magni",
+        fields="est",
+        hub_id="doloremque",
+        key="libero",
+        oauth_token="dolor",
         pretty_print=False,
-        quota_user="eligendi",
-        request_id="laboriosam",
-        upload_type="est",
-        upload_protocol="et",
+        quota_user="minus",
+        request_id="numquam",
+        upload_type="neque",
+        upload_protocol="sint",
     ),
     request=shared.HubInput(
-        description="molestias",
+        description="et",
         labels={
-            "ut": "omnis",
-            "similique": "totam",
-            "ullam": "et",
+            "pariatur": "perspiciatis",
         },
-        name="dolorem",
+        name="laboriosam",
         routing_vpcs=[
             shared.RoutingVpcInput(
-                uri="sint",
-            ),
-            shared.RoutingVpcInput(
-                uri="dolore",
-            ),
-            shared.RoutingVpcInput(
-                uri="maiores",
+                uri="est",
             ),
         ],
     ),

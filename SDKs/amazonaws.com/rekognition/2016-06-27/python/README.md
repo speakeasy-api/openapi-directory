@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,38 +25,38 @@ s.config_security(
     
 req = operations.CompareFacesRequest(
     headers=operations.CompareFacesHeaders(
-        x_amz_algorithm="cum",
-        x_amz_content_sha256="necessitatibus",
-        x_amz_credential="sequi",
-        x_amz_date="velit",
-        x_amz_security_token="nobis",
-        x_amz_signature="nulla",
-        x_amz_signed_headers="iusto",
+        x_amz_algorithm="dolorum",
+        x_amz_content_sha256="blanditiis",
+        x_amz_credential="culpa",
+        x_amz_date="est",
+        x_amz_security_token="soluta",
+        x_amz_signature="omnis",
+        x_amz_signed_headers="sint",
         x_amz_target="RekognitionService.CompareFaces",
     ),
     request=shared.CompareFacesRequest(
-        quality_filter="MEDIUM",
-        similarity_threshold=48.099998,
+        quality_filter="NONE",
+        similarity_threshold=87.099998,
         source_image=shared.Image(
-            bytes="voluptatem",
+            bytes="labore",
             s3_object=shared.S3Object(
-                bucket="dignissimos",
-                name="velit",
-                version="magnam",
+                bucket="maxime",
+                name="eaque",
+                version="sed",
             ),
         ),
         target_image=shared.Image(
-            bytes="vitae",
+            bytes="ut",
             s3_object=shared.S3Object(
-                bucket="quasi",
-                name="ipsum",
-                version="incidunt",
+                bucket="expedita",
+                name="modi",
+                version="aliquam",
             ),
         ),
     ),
 )
     
-res = s.sdk.compare_faces(req)
+res = s.compare_faces(req)
 
 if res.compare_faces_response is not None:
     # handle response

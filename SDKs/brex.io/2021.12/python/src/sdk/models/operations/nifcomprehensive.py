@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class NifComprehensivePathParams:
-    country: str = field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
+    country: str = dataclasses.field(metadata={'path_param': { 'field_name': 'country', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NifComprehensiveRequestBody:
-    nif_number: str = field(metadata={'form': { 'field_name': 'nifNumber' }})
-    company_address: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'companyAddress' }})
-    company_name: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'companyName' }})
+    nif_number: str = dataclasses.field(metadata={'form': { 'field_name': 'nifNumber' }})
+    company_address: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'companyAddress' }})
+    company_name: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'companyName' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NifComprehensiveSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NifComprehensiveRequest:
-    path_params: NifComprehensivePathParams = field()
-    request: NifComprehensiveRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: NifComprehensiveSecurity = field()
+    path_params: NifComprehensivePathParams = dataclasses.field()
+    request: NifComprehensiveRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: NifComprehensiveSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NifComprehensiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    nif_comprehensive_200_application_json_any: Optional[Any] = field(default=None)
-    nif_comprehensive_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    nif_comprehensive_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    nif_comprehensive_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

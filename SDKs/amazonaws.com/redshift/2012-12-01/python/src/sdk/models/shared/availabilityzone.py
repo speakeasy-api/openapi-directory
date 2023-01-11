@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import supportedplatformslist as shared_supportedplatformslist
 
 
-@dataclass
+@dataclasses.dataclass
 class AvailabilityZone:
     r"""AvailabilityZone
     Describes an availability zone.
     """
     
-    name: Optional[str] = field(default=None)
-    supported_platforms: Optional[List[SupportedPlatform]] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    supported_platforms: Optional[list[shared_supportedplatformslist.SupportedPlatformsList]] = dataclasses.field(default=None)
     

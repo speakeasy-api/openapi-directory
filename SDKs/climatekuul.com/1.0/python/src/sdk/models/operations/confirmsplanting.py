@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
@@ -7,22 +7,22 @@ CONFIRMS_PLANTING_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmsPlantingRequestBody:
-    api_key_l1: str = field(metadata={'form': { 'field_name': 'apiKey_l1' }})
-    api_key_l2: str = field(metadata={'form': { 'field_name': 'apiKey_l2' }})
-    confirm_planting: str = field(metadata={'form': { 'field_name': 'confirmPlanting' }})
-    transaction_id: str = field(metadata={'form': { 'field_name': 'transaction_id' }})
+    api_key_l1: str = dataclasses.field(metadata={'form': { 'field_name': 'apiKey_l1' }})
+    api_key_l2: str = dataclasses.field(metadata={'form': { 'field_name': 'apiKey_l2' }})
+    confirm_planting: str = dataclasses.field(metadata={'form': { 'field_name': 'confirmPlanting' }})
+    transaction_id: str = dataclasses.field(metadata={'form': { 'field_name': 'transaction_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmsPlantingRequest:
-    request: Optional[ConfirmsPlantingRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    server_url: Optional[str] = field(default=None)
+    request: Optional[ConfirmsPlantingRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class ConfirmsPlantingResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

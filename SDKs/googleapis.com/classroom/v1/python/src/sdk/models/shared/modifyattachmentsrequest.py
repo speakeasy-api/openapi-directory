@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attachment as shared_attachment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ModifyAttachmentsRequest:
     r"""ModifyAttachmentsRequest
     Request to modify the attachments of a student submission.
     """
     
-    add_attachments: Optional[List[Attachment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addAttachments') }})
+    add_attachments: Optional[list[shared_attachment.Attachment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addAttachments') }})
     

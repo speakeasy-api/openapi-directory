@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,32 +21,32 @@ req = operations.RuntimeconfigOperationsCancelRequest(
         option1=operations.RuntimeconfigOperationsCancelSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.RuntimeconfigOperationsCancelPathParams(
-        name="est",
+        name="ut",
     ),
     query_params=operations.RuntimeconfigOperationsCancelQueryParams(
-        dollar_xgafv="1",
-        access_token="neque",
-        alt="json",
-        callback="suscipit",
-        fields="alias",
-        key="id",
-        oauth_token="porro",
-        pretty_print=False,
-        quota_user="ullam",
-        upload_type="omnis",
-        upload_protocol="libero",
+        dollar_xgafv="2",
+        access_token="aut",
+        alt="media",
+        callback="porro",
+        fields="voluptatibus",
+        key="est",
+        oauth_token="exercitationem",
+        pretty_print=True,
+        quota_user="velit",
+        upload_type="fuga",
+        upload_protocol="in",
     ),
     request={
-        "laboriosam": "deleniti",
-        "aperiam": "omnis",
-        "laborum": "quod",
+        "id": "ipsam",
+        "temporibus": "molestiae",
+        "eum": "quod",
     },
 )
     

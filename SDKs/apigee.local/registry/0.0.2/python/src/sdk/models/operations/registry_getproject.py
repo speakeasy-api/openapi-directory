@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetProjectPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetProjectRequest:
-    path_params: RegistryGetProjectPathParams = field()
+    path_params: RegistryGetProjectPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryGetProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    project: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    project: Optional[Any] = dataclasses.field(default=None)
     

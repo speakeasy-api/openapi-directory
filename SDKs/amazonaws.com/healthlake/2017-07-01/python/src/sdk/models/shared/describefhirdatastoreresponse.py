@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datastoreproperties as shared_datastoreproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeFhirDatastoreResponse:
-    datastore_properties: DatastoreProperties = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatastoreProperties') }})
+    datastore_properties: shared_datastoreproperties.DatastoreProperties = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DatastoreProperties') }})
     

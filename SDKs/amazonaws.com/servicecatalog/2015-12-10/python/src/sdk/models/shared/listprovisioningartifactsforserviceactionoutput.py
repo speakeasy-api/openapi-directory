@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import provisioningartifactview as shared_provisioningartifactview
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListProvisioningArtifactsForServiceActionOutput:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    provisioning_artifact_views: Optional[List[ProvisioningArtifactView]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisioningArtifactViews') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    provisioning_artifact_views: Optional[list[shared_provisioningartifactview.ProvisioningArtifactView]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisioningArtifactViews') }})
     

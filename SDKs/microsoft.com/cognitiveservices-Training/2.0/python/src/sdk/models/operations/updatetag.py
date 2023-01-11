@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import tag as shared_tag
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTagPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
-    tag_id: str = field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    tag_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTagHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTagRequestsInput:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    text_xml: bytes = field(metadata={'request': { 'media_type': 'text/xml' }})
-    tag: Optional[shared.TagInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    tag1: Optional[shared.TagInput] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    tag2: Optional[shared.TagInput] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    text_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'text/xml' }})
+    tag: Optional[shared_tag.TagInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    tag1: Optional[shared_tag.TagInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    tag2: Optional[shared_tag.TagInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTagRequest:
-    headers: UpdateTagHeaders = field()
-    path_params: UpdateTagPathParams = field()
-    request: UpdateTagRequestsInput = field()
+    headers: UpdateTagHeaders = dataclasses.field()
+    path_params: UpdateTagPathParams = dataclasses.field()
+    request: UpdateTagRequestsInput = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    tag: Optional[shared.Tag] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    tag: Optional[shared_tag.Tag] = dataclasses.field(default=None)
     

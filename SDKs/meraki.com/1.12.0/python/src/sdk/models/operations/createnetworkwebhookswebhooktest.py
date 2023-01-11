@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateNetworkWebhooksWebhookTestPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateNetworkWebhooksWebhookTestRequestBody:
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    shared_secret: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedSecret') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    shared_secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sharedSecret') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateNetworkWebhooksWebhookTestRequest:
-    path_params: CreateNetworkWebhooksWebhookTestPathParams = field()
-    request: CreateNetworkWebhooksWebhookTestRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateNetworkWebhooksWebhookTestPathParams = dataclasses.field()
+    request: CreateNetworkWebhooksWebhookTestRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateNetworkWebhooksWebhookTestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_network_webhooks_webhook_test_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_network_webhooks_webhook_test_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

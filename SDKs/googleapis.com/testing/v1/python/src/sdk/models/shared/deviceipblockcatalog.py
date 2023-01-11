@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deviceipblock as shared_deviceipblock
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceIPBlockCatalog:
     r"""DeviceIPBlockCatalog
     List of IP blocks used by the Firebase Test Lab
     """
     
-    ip_blocks: Optional[List[DeviceIPBlock]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipBlocks') }})
+    ip_blocks: Optional[list[shared_deviceipblock.DeviceIPBlock]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ipBlocks') }})
     

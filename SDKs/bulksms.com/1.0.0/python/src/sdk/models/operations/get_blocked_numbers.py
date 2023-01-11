@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import blockednumber as shared_blockednumber
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockedNumbersQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    min_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'min-id', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    min_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'min-id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockedNumbersSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockedNumbersRequest:
-    query_params: GetBlockedNumbersQueryParams = field()
-    security: GetBlockedNumbersSecurity = field()
+    query_params: GetBlockedNumbersQueryParams = dataclasses.field()
+    security: GetBlockedNumbersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockedNumbersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    blocked_number: Optional[shared.BlockedNumber] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    blocked_number: Optional[shared_blockednumber.BlockedNumber] = dataclasses.field(default=None)
     

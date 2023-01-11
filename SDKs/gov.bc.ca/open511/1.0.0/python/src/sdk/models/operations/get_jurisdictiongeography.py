@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,18 +7,18 @@ class GetJurisdictiongeographyFormatEnum(str, Enum):
     XML = "xml"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetJurisdictiongeographyQueryParams:
-    format: Optional[GetJurisdictiongeographyFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    format: Optional[GetJurisdictiongeographyFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJurisdictiongeographyRequest:
-    query_params: GetJurisdictiongeographyQueryParams = field()
+    query_params: GetJurisdictiongeographyQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJurisdictiongeographyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

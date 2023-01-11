@@ -43,30 +43,6 @@ class Intersections:
         return res
 
     
-    def get_intersections_intersection_id_output_format_(self, request: operations.GetIntersectionsIntersectionIDOutputFormatRequest) -> operations.GetIntersectionsIntersectionIDOutputFormatResponse:
-        r"""Get an intersection by its unique ID
-        Represents a individual intersection
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/intersections/{intersectionID}.{outputFormat}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetIntersectionsIntersectionIDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
-    
     def get_intersections_near_output_format_(self, request: operations.GetIntersectionsNearOutputFormatRequest) -> operations.GetIntersectionsNearOutputFormatResponse:
         r"""Find intersections near to a geographic point
         Represents intersections near a given point
@@ -132,6 +108,30 @@ class Intersections:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetIntersectionsWithinOutputFormatResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            pass
+
+        return res
+
+    
+    def get_intersections_intersection_id_output_format_(self, request: operations.GetIntersectionsIntersectionIDOutputFormatRequest) -> operations.GetIntersectionsIntersectionIDOutputFormatResponse:
+        r"""Get an intersection by its unique ID
+        Represents a individual intersection
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/intersections/{intersectionID}.{outputFormat}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetIntersectionsIntersectionIDOutputFormatResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             pass

@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import globaljwtverifier as shared_globaljwtverifier
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalJwtVerifierPathParams:
-    verifier_id: str = field(metadata={'path_param': { 'field_name': 'verifierId', 'style': 'simple', 'explode': False }})
+    verifier_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'verifierId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalJwtVerifierSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalJwtVerifierRequest:
-    path_params: UpdateGlobalJwtVerifierPathParams = field()
-    security: UpdateGlobalJwtVerifierSecurity = field()
-    request: Optional[shared.GlobalJwtVerifier] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateGlobalJwtVerifierPathParams = dataclasses.field()
+    security: UpdateGlobalJwtVerifierSecurity = dataclasses.field()
+    request: Optional[shared_globaljwtverifier.GlobalJwtVerifier] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateGlobalJwtVerifierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_jwt_verifier: Optional[shared.GlobalJwtVerifier] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_jwt_verifier: Optional[shared_globaljwtverifier.GlobalJwtVerifier] = dataclasses.field(default=None)
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import eventdescription as shared_eventdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class EventDescriptionsMessage:
     r"""EventDescriptionsMessage
     Result message wrapping a list of event descriptions.
     """
     
-    events: Optional[List[EventDescription]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    events: Optional[list[shared_eventdescription.EventDescription]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

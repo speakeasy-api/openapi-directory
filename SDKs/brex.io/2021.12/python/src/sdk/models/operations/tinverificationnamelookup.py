@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class TinVerificationNameLookupQueryParams:
-    tin: str = field(metadata={'query_param': { 'field_name': 'tin', 'style': 'form', 'explode': True }})
+    tin: str = dataclasses.field(metadata={'query_param': { 'field_name': 'tin', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TinVerificationNameLookupSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TinVerificationNameLookupRequest:
-    query_params: TinVerificationNameLookupQueryParams = field()
-    security: TinVerificationNameLookupSecurity = field()
+    query_params: TinVerificationNameLookupQueryParams = dataclasses.field()
+    security: TinVerificationNameLookupSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TinVerificationNameLookupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tin_verification_name_lookup_200_application_json_any: Optional[Any] = field(default=None)
-    tin_verification_name_lookup_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tin_verification_name_lookup_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    tin_verification_name_lookup_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,21 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetTypeStatsPathParams:
-    type: str = field(metadata={'path_param': { 'field_name': 'type', 'style': 'simple', 'explode': False }})
+    type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetTypeStatsRequest:
-    path_params: EnterpriseAdminGetTypeStatsPathParams = field()
+    path_params: EnterpriseAdminGetTypeStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetTypeStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    enterprise_admin_get_type_stats_200_application_json_any_of: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    enterprise_admin_get_type_stats_200_application_json_any_of: Optional[Any] = dataclasses.field(default=None)
     

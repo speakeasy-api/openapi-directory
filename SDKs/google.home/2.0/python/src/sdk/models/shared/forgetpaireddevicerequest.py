@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ForgetpaireddeviceRequest:
-    bond: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bond') }})
-    mac_address: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac_address') }})
+    bond: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('bond') }})
+    mac_address: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mac_address') }})
     

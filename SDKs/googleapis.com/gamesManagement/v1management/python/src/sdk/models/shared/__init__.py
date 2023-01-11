@@ -14,3 +14,5 @@ from .playerscoreresetresponse import *
 from .profilesettings import *
 from .scoresresetmultipleforallrequest import *
 from .security import *
+
+__all__ = ["XgafvEnum","AchievementResetAllResponse","AchievementResetMultipleForAllRequest","AchievementResetResponse","AltEnum","EventsResetMultipleForAllRequest","GamesPlayerExperienceInfoResource","GamesPlayerLevelResource","HiddenPlayer","HiddenPlayerList","PlayerName","Player","PlayerScoreResetAllResponse","PlayerScoreResetResponse","ProfileSettings","ScoresResetMultipleForAllRequest","SchemeOauth2","SchemeOauth2c"]

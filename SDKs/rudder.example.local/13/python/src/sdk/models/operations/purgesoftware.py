@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -13,16 +13,16 @@ class PurgeSoftware200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PurgeSoftware200ApplicationJSON:
-    action: PurgeSoftware200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: PurgeSoftware200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: PurgeSoftware200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: PurgeSoftware200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PurgeSoftwareResponse:
-    content_type: str = field()
-    status_code: int = field()
-    purge_software_200_application_json_object: Optional[PurgeSoftware200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    purge_software_200_application_json_object: Optional[PurgeSoftware200ApplicationJSON] = dataclasses.field(default=None)
     

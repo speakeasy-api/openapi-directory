@@ -19,3 +19,5 @@ from .salestaxjurisdiction import *
 from .salestaxjurisdictions import *
 from .security import *
 from .timeduration import *
+
+__all__ = ["AutomotivePartsCompatibilityPolicy","AutomotivePartsCompatibilityPolicyResponse","Error","ErrorParameter","Exclusion","ItemCondition","ItemConditionPolicy","ItemConditionPolicyResponse","ListingStructurePolicy","ListingStructurePolicyResponse","NegotiatedPricePolicy","NegotiatedPricePolicyResponse","ProductAdoptionPolicy","ProductAdoptionPolicyResponse","ReturnPolicy","ReturnPolicyDetails","ReturnPolicyResponse","SalesTaxJurisdiction","SalesTaxJurisdictions","SchemeAPIAuth","TimeDuration"]

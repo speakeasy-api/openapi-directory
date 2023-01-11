@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,28 +20,28 @@ req = operations.DisplayvideoAdvertisersAssetsUploadRequest(
     security=operations.DisplayvideoAdvertisersAssetsUploadSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DisplayvideoAdvertisersAssetsUploadPathParams(
-        advertiser_id="est",
+        advertiser_id="fuga",
     ),
     query_params=operations.DisplayvideoAdvertisersAssetsUploadQueryParams(
         dollar_xgafv="1",
-        access_token="pariatur",
-        alt="proto",
-        callback="cumque",
-        fields="enim",
-        key="quisquam",
-        oauth_token="quo",
-        pretty_print=False,
-        quota_user="ipsam",
-        upload_type="non",
-        upload_protocol="sed",
+        access_token="libero",
+        alt="json",
+        callback="quibusdam",
+        fields="explicabo",
+        key="vel",
+        oauth_token="earum",
+        pretty_print=True,
+        quota_user="voluptatem",
+        upload_type="assumenda",
+        upload_protocol="vitae",
     ),
-    request="reprehenderit".encode(),
+    request="harum".encode(),
 )
     
 res = s.advertisers.displayvideo_advertisers_assets_upload(req)

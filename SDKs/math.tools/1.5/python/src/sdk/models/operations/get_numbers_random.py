@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNumbersRandomQueryParams:
-    max: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': True }})
-    min: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'min', 'style': 'form', 'explode': True }})
-    total: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'total', 'style': 'form', 'explode': True }})
+    max: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'max', 'style': 'form', 'explode': True }})
+    min: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'min', 'style': 'form', 'explode': True }})
+    total: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'total', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNumbersRandomSecurity:
-    x_mathtools_api_secret: shared.SchemeXMathtoolsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_mathtools_api_secret: shared_security.SchemeXMathtoolsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNumbersRandomRequest:
-    query_params: GetNumbersRandomQueryParams = field()
-    security: GetNumbersRandomSecurity = field()
+    query_params: GetNumbersRandomQueryParams = dataclasses.field()
+    security: GetNumbersRandomSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNumbersRandomResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

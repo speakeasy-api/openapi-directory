@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ResolveCustomerRequest:
     r"""ResolveCustomerRequest
     Contains input to the ResolveCustomer operation.
     """
     
-    registration_token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegistrationToken') }})
+    registration_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RegistrationToken') }})
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import authorization_with_user as shared_authorization_with_user
 
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsResetAuthorizationPathParams:
-    access_token: str = field(metadata={'path_param': { 'field_name': 'access_token', 'style': 'simple', 'explode': False }})
-    client_id: str = field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
+    access_token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'access_token', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsResetAuthorizationRequest:
-    path_params: OauthAuthorizationsResetAuthorizationPathParams = field()
+    path_params: OauthAuthorizationsResetAuthorizationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OauthAuthorizationsResetAuthorizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authorization_with_user: Optional[shared.AuthorizationWithUser] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authorization_with_user: Optional[shared_authorization_with_user.AuthorizationWithUser] = dataclasses.field(default=None)
     

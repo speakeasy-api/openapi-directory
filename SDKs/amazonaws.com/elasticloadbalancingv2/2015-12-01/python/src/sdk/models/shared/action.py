@@ -1,21 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import authenticatecognitoactionconfig as shared_authenticatecognitoactionconfig
+from ..shared import authenticateoidcactionconfig as shared_authenticateoidcactionconfig
+from ..shared import fixedresponseactionconfig as shared_fixedresponseactionconfig
+from ..shared import forwardactionconfig as shared_forwardactionconfig
+from ..shared import redirectactionconfig as shared_redirectactionconfig
+from ..shared import actiontypeenum_enum as shared_actiontypeenum_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class Action:
     r"""Action
     <p>Information about an action.</p> <p>Each rule must include exactly one of the following types of actions: <code>forward</code>, <code>fixed-response</code>, or <code>redirect</code>, and it must be the last action to be performed.</p>
     """
     
-    type: ActionTypeEnumEnum = field()
-    authenticate_cognito_config: Optional[AuthenticateCognitoActionConfig] = field(default=None)
-    authenticate_oidc_config: Optional[AuthenticateOidcActionConfig] = field(default=None)
-    fixed_response_config: Optional[FixedResponseActionConfig] = field(default=None)
-    forward_config: Optional[ForwardActionConfig] = field(default=None)
-    order: Optional[int] = field(default=None)
-    redirect_config: Optional[RedirectActionConfig] = field(default=None)
-    target_group_arn: Optional[str] = field(default=None)
+    type: shared_actiontypeenum_enum.ActionTypeEnumEnum = dataclasses.field()
+    authenticate_cognito_config: Optional[shared_authenticatecognitoactionconfig.AuthenticateCognitoActionConfig] = dataclasses.field(default=None)
+    authenticate_oidc_config: Optional[shared_authenticateoidcactionconfig.AuthenticateOidcActionConfig] = dataclasses.field(default=None)
+    fixed_response_config: Optional[shared_fixedresponseactionconfig.FixedResponseActionConfig] = dataclasses.field(default=None)
+    forward_config: Optional[shared_forwardactionconfig.ForwardActionConfig] = dataclasses.field(default=None)
+    order: Optional[int] = dataclasses.field(default=None)
+    redirect_config: Optional[shared_redirectactionconfig.RedirectActionConfig] = dataclasses.field(default=None)
+    target_group_arn: Optional[str] = dataclasses.field(default=None)
     

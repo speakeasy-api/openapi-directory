@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,10 +23,10 @@ req = operations.PostDisableRequest(
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="qui",
+    request="voluptas",
 )
     
-res = s.sdk.post_disable(req)
+res = s.general.post_disable(req)
 
 if res.disable_result is not None:
     # handle response
@@ -37,7 +36,7 @@ if res.disable_result is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `post_disable` - Disables stored payment details.
 * `post_list_recurring_details` - Retrieves stored payment details for a shopper.

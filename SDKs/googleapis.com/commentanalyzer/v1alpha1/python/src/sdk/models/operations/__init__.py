@@ -1,2 +1,4 @@
 from .commentanalyzer_comments_analyze import *
 from .commentanalyzer_comments_suggestscore import *
+
+__all__ = ["CommentanalyzerCommentsAnalyzeQueryParams","CommentanalyzerCommentsAnalyzeSecurity","CommentanalyzerCommentsAnalyzeRequest","CommentanalyzerCommentsAnalyzeResponse","CommentanalyzerCommentsSuggestscoreQueryParams","CommentanalyzerCommentsSuggestscoreSecurity","CommentanalyzerCommentsSuggestscoreRequest","CommentanalyzerCommentsSuggestscoreResponse"]

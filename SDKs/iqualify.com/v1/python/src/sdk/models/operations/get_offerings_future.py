@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import error as shared_error
+from ..shared import offeringmetadataresponse as shared_offeringmetadataresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsFutureResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    offering_metadata_responses: Optional[List[shared.OfferingMetadataResponse]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    offering_metadata_responses: Optional[list[shared_offeringmetadataresponse.OfferingMetadataResponse]] = dataclasses.field(default=None)
     

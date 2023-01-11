@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablerearport as shared_writablerearport
+from ..shared import rearport as shared_rearport
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsUpdateRequest:
-    path_params: DcimRearPortsUpdatePathParams = field()
-    request: shared.WritableRearPortInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimRearPortsUpdatePathParams = dataclasses.field()
+    request: shared_writablerearport.WritableRearPortInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRearPortsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rear_port: Optional[shared.RearPort] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rear_port: Optional[shared_rearport.RearPort] = dataclasses.field(default=None)
     

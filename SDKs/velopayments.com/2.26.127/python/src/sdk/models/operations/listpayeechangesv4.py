@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import payeedeltaresponse_2 as shared_payeedeltaresponse_2
 
 
-@dataclass
+@dataclasses.dataclass
 class ListPayeeChangesV4QueryParams:
-    payor_id: str = field(metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
-    updated_since: datetime = field(metadata={'query_param': { 'field_name': 'updatedSince', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    payor_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
+    updated_since: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'updatedSince', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListPayeeChangesV4Request:
-    query_params: ListPayeeChangesV4QueryParams = field()
+    query_params: ListPayeeChangesV4QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListPayeeChangesV4Response:
-    content_type: str = field()
-    status_code: int = field()
-    payee_delta_response_2: Optional[shared.PayeeDeltaResponse2] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payee_delta_response_2: Optional[shared_payeedeltaresponse_2.PayeeDeltaResponse2] = dataclasses.field(default=None)
     

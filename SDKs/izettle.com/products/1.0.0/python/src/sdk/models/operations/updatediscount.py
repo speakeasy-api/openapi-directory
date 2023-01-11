@@ -1,40 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import discountrequest as shared_discountrequest
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDiscountPathParams:
-    discount_uuid: str = field(metadata={'path_param': { 'field_name': 'discountUuid', 'style': 'simple', 'explode': False }})
-    organization_uuid: str = field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
+    discount_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'discountUuid', 'style': 'simple', 'explode': False }})
+    organization_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDiscountHeaders:
-    if_match: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Match', 'style': 'simple', 'explode': False }})
+    if_match: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Match', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDiscountSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDiscountRequest:
-    headers: UpdateDiscountHeaders = field()
-    path_params: UpdateDiscountPathParams = field()
-    request: shared.DiscountRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateDiscountSecurity = field()
+    headers: UpdateDiscountHeaders = dataclasses.field()
+    path_params: UpdateDiscountPathParams = dataclasses.field()
+    request: shared_discountrequest.DiscountRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateDiscountSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDiscountResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

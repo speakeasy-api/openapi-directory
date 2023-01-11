@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,21 +26,21 @@ s.config_security(
 req = operations.GetDecodeAuthorizationMessageRequest(
     query_params=operations.GetDecodeAuthorizationMessageQueryParams(
         action="DecodeAuthorizationMessage",
-        encoded_message="nobis",
+        encoded_message="autem",
         version="2011-06-15",
     ),
     headers=operations.GetDecodeAuthorizationMessageHeaders(
-        x_amz_algorithm="corrupti",
-        x_amz_content_sha256="et",
-        x_amz_credential="aut",
-        x_amz_date="expedita",
-        x_amz_security_token="laudantium",
-        x_amz_signature="soluta",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="consequatur",
+        x_amz_content_sha256="delectus",
+        x_amz_credential="qui",
+        x_amz_date="et",
+        x_amz_security_token="quaerat",
+        x_amz_signature="voluptatem",
+        x_amz_signed_headers="et",
     ),
 )
     
-res = s.sdk.get_decode_authorization_message(req)
+res = s.get_decode_authorization_message(req)
 
 if res.body is not None:
     # handle response

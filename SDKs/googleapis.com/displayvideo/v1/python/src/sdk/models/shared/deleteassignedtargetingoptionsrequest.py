@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -54,12 +54,12 @@ class DeleteAssignedTargetingOptionsRequestTargetingTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteAssignedTargetingOptionsRequest:
     r"""DeleteAssignedTargetingOptionsRequest
     A request listing which assigned targeting options of a given targeting type should be deleted.
     """
     
-    assigned_targeting_option_ids: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignedTargetingOptionIds') }})
-    targeting_type: Optional[DeleteAssignedTargetingOptionsRequestTargetingTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingType') }})
+    assigned_targeting_option_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('assignedTargetingOptionIds') }})
+    targeting_type: Optional[DeleteAssignedTargetingOptionsRequestTargetingTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingType') }})
     

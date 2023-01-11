@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -9,14 +9,14 @@ class QueueInformation200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QueueInformation200ApplicationJSONData:
     r"""QueueInformation200ApplicationJSONData
     Information about the service
     """
     
-    queue_max_size: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('queueMaxSize') }})
-    queue_saturated: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('queueSaturated') }})
+    queue_max_size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('queueMaxSize') }})
+    queue_saturated: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('queueSaturated') }})
     
 class QueueInformation200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -24,16 +24,16 @@ class QueueInformation200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class QueueInformation200ApplicationJSON:
-    action: QueueInformation200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: QueueInformation200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: QueueInformation200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: QueueInformation200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: QueueInformation200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: QueueInformation200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class QueueInformationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    queue_information_200_application_json_object: Optional[QueueInformation200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    queue_information_200_application_json_object: Optional[QueueInformation200ApplicationJSON] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCrea
     security=operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreatePathParams(
-        parent="minima",
+        parent="dolores",
     ),
     query_params=operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="a",
-        alt="json",
-        callback="porro",
-        fields="omnis",
-        key="sequi",
-        oauth_token="voluptatem",
-        pretty_print=True,
-        quota_user="animi",
-        upload_type="suscipit",
-        upload_protocol="blanditiis",
+        access_token="sed",
+        alt="proto",
+        callback="numquam",
+        fields="soluta",
+        key="culpa",
+        oauth_token="quia",
+        pretty_print=False,
+        quota_user="facilis",
+        upload_type="sequi",
+        upload_protocol="molestias",
     ),
     request=shared.GoogleCloudContactcenterinsightsV1AnalysisInput(
         analysis_result=shared.GoogleCloudContactcenterinsightsV1AnalysisResult(
@@ -48,190 +47,162 @@ req = operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCrea
                 annotations=[
                     shared.GoogleCloudContactcenterinsightsV1CallAnnotation(
                         annotation_end_boundary=shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary(
-                            transcript_index=5178477850341511234,
-                            word_index=8923859297648267097,
+                            transcript_index=740017356361478876,
+                            word_index=1368575382608709523,
                         ),
                         annotation_start_boundary=shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary(
-                            transcript_index=50550707071805504,
-                            word_index=5498835279959267408,
+                            transcript_index=6981855267861832531,
+                            word_index=7852834454093480811,
                         ),
-                        channel_tag=3850862362532702916,
+                        channel_tag=202253746349016182,
                         entity_mention_data=shared.GoogleCloudContactcenterinsightsV1EntityMentionData(
-                            entity_unique_id="dolorum",
+                            entity_unique_id="esse",
                             sentiment=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                                magnitude=77.199997,
-                                score=31.200001,
+                                magnitude=53.200001,
+                                score=93.199997,
                             ),
-                            type="PROPER",
+                            type="COMMON",
                         ),
                         hold_data={
-                            "aspernatur": "placeat",
-                            "inventore": "voluptatem",
-                            "minima": "quia",
+                            "possimus": "quia",
                         },
                         intent_match_data=shared.GoogleCloudContactcenterinsightsV1IntentMatchData(
-                            intent_unique_id="officiis",
+                            intent_unique_id="recusandae",
                         ),
                         interruption_data={
-                            "dolores": "aliquam",
+                            "ut": "qui",
+                            "fuga": "pariatur",
+                            "voluptatibus": "corporis",
                         },
                         issue_match_data=shared.GoogleCloudContactcenterinsightsV1IssueMatchData(
                             issue_assignment=shared.GoogleCloudContactcenterinsightsV1IssueAssignment(
-                                display_name="sunt",
-                                issue="ipsa",
-                                score=61.200001,
+                                display_name="ipsum",
+                                issue="aut",
+                                score=63.200001,
                             ),
                         ),
                         phrase_match_data=shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
-                            display_name="esse",
-                            phrase_matcher="sed",
+                            display_name="ut",
+                            phrase_matcher="aut",
                         ),
                         sentiment_data=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=59.099998,
-                            score=56.200001,
+                            magnitude=51.200001,
+                            score=97.099998,
                         ),
                         silence_data={
-                            "odio": "sunt",
-                        },
-                    ),
-                    shared.GoogleCloudContactcenterinsightsV1CallAnnotation(
-                        annotation_end_boundary=shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary(
-                            transcript_index=8693142301946000333,
-                            word_index=7594060307782908627,
-                        ),
-                        annotation_start_boundary=shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary(
-                            transcript_index=6649830033022959116,
-                            word_index=4645727424483645119,
-                        ),
-                        channel_tag=5016276992496389162,
-                        entity_mention_data=shared.GoogleCloudContactcenterinsightsV1EntityMentionData(
-                            entity_unique_id="vel",
-                            sentiment=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                                magnitude=82.199997,
-                                score=51.099998,
-                            ),
-                            type="MENTION_TYPE_UNSPECIFIED",
-                        ),
-                        hold_data={
-                            "nihil": "et",
-                            "aut": "totam",
-                        },
-                        intent_match_data=shared.GoogleCloudContactcenterinsightsV1IntentMatchData(
-                            intent_unique_id="ad",
-                        ),
-                        interruption_data={
-                            "ea": "temporibus",
-                        },
-                        issue_match_data=shared.GoogleCloudContactcenterinsightsV1IssueMatchData(
-                            issue_assignment=shared.GoogleCloudContactcenterinsightsV1IssueAssignment(
-                                display_name="rerum",
-                                issue="illum",
-                                score=35.200001,
-                            ),
-                        ),
-                        phrase_match_data=shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
-                            display_name="repellat",
-                            phrase_matcher="qui",
-                        ),
-                        sentiment_data=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=59.200001,
-                            score=23.200001,
-                        ),
-                        silence_data={
-                            "et": "est",
+                            "voluptatibus": "a",
+                            "qui": "numquam",
+                            "tenetur": "placeat",
                         },
                     ),
                 ],
                 entities={
-                    "voluptates": shared.GoogleCloudContactcenterinsightsV1Entity(
-                        display_name="possimus",
+                    "porro": shared.GoogleCloudContactcenterinsightsV1Entity(
+                        display_name="est",
                         metadata={
-                            "ut": "doloribus",
-                            "et": "debitis",
-                            "et": "laboriosam",
+                            "sunt": "non",
+                            "est": "sunt",
+                            "animi": "aspernatur",
                         },
-                        salience=86.099998,
+                        salience=82.199997,
                         sentiment=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=57.200001,
-                            score=58.200001,
+                            magnitude=96.199997,
+                            score=73.199997,
                         ),
-                        type="ADDRESS",
+                        type="PRICE",
                     ),
-                    "sit": shared.GoogleCloudContactcenterinsightsV1Entity(
-                        display_name="harum",
+                    "omnis": shared.GoogleCloudContactcenterinsightsV1Entity(
+                        display_name="aliquam",
                         metadata={
-                            "inventore": "et",
+                            "est": "alias",
+                            "at": "ea",
                         },
-                        salience=60.200001,
+                        salience=36.099998,
                         sentiment=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=51.099998,
-                            score=8.100000,
+                            magnitude=62.099998,
+                            score=33.099998,
                         ),
-                        type="CONSUMER_GOOD",
+                        type="TYPE_UNSPECIFIED",
                     ),
                 },
                 intents={
-                    "nisi": shared.GoogleCloudContactcenterinsightsV1Intent(
-                        display_name="delectus",
-                        id="iste",
+                    "soluta": shared.GoogleCloudContactcenterinsightsV1Intent(
+                        display_name="harum",
+                        id="ut",
+                    ),
+                    "itaque": shared.GoogleCloudContactcenterinsightsV1Intent(
+                        display_name="corporis",
+                        id="id",
                     ),
                 },
                 issue_model_result=shared.GoogleCloudContactcenterinsightsV1IssueModelResult(
-                    issue_model="accusamus",
+                    issue_model="omnis",
                     issues=[
                         shared.GoogleCloudContactcenterinsightsV1IssueAssignment(
-                            display_name="non",
-                            issue="excepturi",
-                            score=88.199997,
-                        ),
-                        shared.GoogleCloudContactcenterinsightsV1IssueAssignment(
-                            display_name="aperiam",
-                            issue="adipisci",
-                            score=18.200001,
+                            display_name="ut",
+                            issue="consequatur",
+                            score=42.200001,
                         ),
                     ],
                 ),
                 phrase_matchers={
-                    "ut": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
-                        display_name="provident",
-                        phrase_matcher="rerum",
+                    "rerum": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
+                        display_name="alias",
+                        phrase_matcher="corrupti",
                     ),
-                    "est": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
-                        display_name="placeat",
-                        phrase_matcher="recusandae",
+                    "odit": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
+                        display_name="tenetur",
+                        phrase_matcher="est",
                     ),
-                    "et": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
-                        display_name="repudiandae",
-                        phrase_matcher="autem",
+                    "ipsam": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData(
+                        display_name="natus",
+                        phrase_matcher="earum",
                     ),
                 },
                 sentiments=[
                     shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment(
-                        channel_tag=5435594425185608590,
+                        channel_tag=3584840443636536604,
                         sentiment_data=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=69.099998,
-                            score=18.100000,
+                            magnitude=94.199997,
+                            score=45.200001,
                         ),
                     ),
                     shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment(
-                        channel_tag=8132631544243459716,
+                        channel_tag=3964366772056344135,
                         sentiment_data=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=55.200001,
-                            score=70.199997,
+                            magnitude=27.100000,
+                            score=55.200001,
                         ),
                     ),
                     shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment(
-                        channel_tag=3716120439908127514,
+                        channel_tag=4331683424612488860,
                         sentiment_data=shared.GoogleCloudContactcenterinsightsV1SentimentData(
-                            magnitude=93.099998,
-                            score=99.099998,
+                            magnitude=3.100000,
+                            score=52.200001,
                         ),
                     ),
                 ],
             ),
-            end_time="odio",
+            end_time="sint",
         ),
-        name="distinctio",
+        annotator_selector=shared.GoogleCloudContactcenterinsightsV1AnnotatorSelector(
+            issue_models=[
+                "et",
+                "laboriosam",
+                "molestiae",
+            ],
+            phrase_matchers=[
+                "veritatis",
+            ],
+            run_entity_annotator=False,
+            run_intent_annotator=True,
+            run_interruption_annotator=False,
+            run_issue_model_annotator=True,
+            run_phrase_matcher_annotator=False,
+            run_sentiment_annotator=True,
+            run_silence_annotator=False,
+        ),
+        name="ut",
     ),
 )
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import siteverificationwebresourceresource as shared_siteverificationwebresourceresource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SiteVerificationWebResourceListResponse:
-    items: Optional[List[SiteVerificationWebResourceResource]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
+    items: Optional[list[shared_siteverificationwebresourceresource.SiteVerificationWebResourceResource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
     

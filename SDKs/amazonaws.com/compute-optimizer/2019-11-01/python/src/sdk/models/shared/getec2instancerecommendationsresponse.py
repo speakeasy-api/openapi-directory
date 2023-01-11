@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import getrecommendationerror as shared_getrecommendationerror
+from ..shared import instancerecommendation as shared_instancerecommendation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetEc2InstanceRecommendationsResponse:
-    errors: Optional[List[GetRecommendationError]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    instance_recommendations: Optional[List[InstanceRecommendation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceRecommendations') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    errors: Optional[list[shared_getrecommendationerror.GetRecommendationError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    instance_recommendations: Optional[list[shared_instancerecommendation.InstanceRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('instanceRecommendations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

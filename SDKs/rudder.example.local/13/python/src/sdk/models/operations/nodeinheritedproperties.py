@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import node_inherited_properties as shared_node_inherited_properties
 
 
-@dataclass
+@dataclasses.dataclass
 class NodeInheritedPropertiesPathParams:
-    node_id: str = field(metadata={'path_param': { 'field_name': 'nodeId', 'style': 'simple', 'explode': False }})
+    node_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'nodeId', 'style': 'simple', 'explode': False }})
     
 class NodeInheritedProperties200ApplicationJSONActionEnum(str, Enum):
     NODE_INHERITED_PROPERTIES = "nodeInheritedProperties"
@@ -19,21 +19,21 @@ class NodeInheritedProperties200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NodeInheritedProperties200ApplicationJSON:
-    action: NodeInheritedProperties200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: List[shared.NodeInheritedProperties] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: NodeInheritedProperties200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: NodeInheritedProperties200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: list[shared_node_inherited_properties.NodeInheritedProperties] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: NodeInheritedProperties200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NodeInheritedPropertiesRequest:
-    path_params: NodeInheritedPropertiesPathParams = field()
+    path_params: NodeInheritedPropertiesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NodeInheritedPropertiesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    node_inherited_properties_200_application_json_object: Optional[NodeInheritedProperties200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    node_inherited_properties_200_application_json_object: Optional[NodeInheritedProperties200ApplicationJSON] = dataclasses.field(default=None)
     

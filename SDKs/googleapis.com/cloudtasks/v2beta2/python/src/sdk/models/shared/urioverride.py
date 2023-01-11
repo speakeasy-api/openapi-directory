@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,16 +16,16 @@ class URIOverrideURIOverrideEnforceModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class URIOverride:
     r"""URIOverride
     Uri Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
     """
     
-    host: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
-    path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    query: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
-    scheme: Optional[URIOverrideSchemeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scheme') }})
-    uri_override_enforce_mode: Optional[URIOverrideURIOverrideEnforceModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uriOverrideEnforceMode') }})
+    host: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('host') }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
+    scheme: Optional[URIOverrideSchemeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scheme') }})
+    uri_override_enforce_mode: Optional[URIOverrideURIOverrideEnforceModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uriOverrideEnforceMode') }})
     

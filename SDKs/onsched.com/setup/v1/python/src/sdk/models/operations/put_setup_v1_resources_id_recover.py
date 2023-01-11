@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceviewmodel as shared_resourceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRecoverPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRecoverQueryParams:
-    google_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
-    outlook_auth_return_url: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
+    google_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'googleAuthReturnUrl', 'style': 'form', 'explode': True }})
+    outlook_auth_return_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outlookAuthReturnUrl', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRecoverRequest:
-    path_params: PutSetupV1ResourcesIDRecoverPathParams = field()
-    query_params: PutSetupV1ResourcesIDRecoverQueryParams = field()
+    path_params: PutSetupV1ResourcesIDRecoverPathParams = dataclasses.field()
+    query_params: PutSetupV1ResourcesIDRecoverQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSetupV1ResourcesIDRecoverResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_view_model: Optional[shared.ResourceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_view_model: Optional[shared_resourceviewmodel.ResourceViewModel] = dataclasses.field(default=None)
     

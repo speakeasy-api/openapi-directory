@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import category as shared_category
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoCategoriesPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoCategoriesRequest:
-    path_params: GetVideoCategoriesPathParams = field()
+    path_params: GetVideoCategoriesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoCategoriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    categories: Optional[List[shared.Category]] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    categories: Optional[list[shared_category.Category]] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

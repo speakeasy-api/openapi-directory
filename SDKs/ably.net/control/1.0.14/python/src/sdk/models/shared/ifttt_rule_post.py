@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rule_source as shared_rule_source
 
 class IftttRulePostRequestModeEnum(str, Enum):
     SINGLE = "single"
@@ -17,18 +17,18 @@ class IftttRulePostStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IftttRulePostTarget:
-    event_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventName') }})
-    webhook_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhookKey') }})
+    event_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventName') }})
+    webhook_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhookKey') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IftttRulePost:
-    request_mode: IftttRulePostRequestModeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestMode') }})
-    rule_type: IftttRulePostRuleTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleType') }})
-    source: RuleSource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
-    target: IftttRulePostTarget = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
-    status: Optional[IftttRulePostStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_mode: IftttRulePostRequestModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestMode') }})
+    rule_type: IftttRulePostRuleTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleType') }})
+    source: shared_rule_source.RuleSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    target: IftttRulePostTarget = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('target') }})
+    status: Optional[IftttRulePostStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

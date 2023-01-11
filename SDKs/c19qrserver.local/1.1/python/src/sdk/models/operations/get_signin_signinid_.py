@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import invalidtoken as shared_invalidtoken
+from ..shared import signin as shared_signin
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninSigninIDPathParams:
-    signin_id: int = field(metadata={'path_param': { 'field_name': 'signinId', 'style': 'simple', 'explode': False }})
+    signin_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'signinId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninSigninIDRequest:
-    path_params: GetSigninSigninIDPathParams = field()
+    path_params: GetSigninSigninIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSigninSigninIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
-    signin: Optional[shared.Signin] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
+    signin: Optional[shared_signin.Signin] = dataclasses.field(default=None)
     

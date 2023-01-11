@@ -8,18 +8,62 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-res = s.sdk.get_v0_5_certs()
+req = operations.PostV05CareContextsDiscoverRequest(
+    headers=operations.PostV05CareContextsDiscoverHeaders(
+        authorization="nostrum",
+        x_hip_id="architecto",
+    ),
+    request=operations.PostV05CareContextsDiscoverRequests(
+        application_xml="quisquam".encode(),
+        patient_discovery_request=shared.PatientDiscoveryRequest(
+            patient=shared.PatientDiscoveryRequestPatient(
+                gender="O",
+                id="voluptatem",
+                name="eos",
+                unverified_identifiers=[
+                    shared.Identifier(
+                        type="HEALTH_ID",
+                        value="impedit",
+                    ),
+                    shared.Identifier(
+                        type="NDHM_HEALTH_NUMBER",
+                        value="exercitationem",
+                    ),
+                    shared.Identifier(
+                        type="HEALTH_ID",
+                        value="quia",
+                    ),
+                ],
+                verified_identifiers=[
+                    shared.Identifier(
+                        type="HEALTH_ID",
+                        value="sit",
+                    ),
+                    shared.Identifier(
+                        type="HEALTH_ID",
+                        value="debitis",
+                    ),
+                ],
+                year_of_birth=1476005494591598575,
+            ),
+            request_id="quia",
+            timestamp="1999-05-24T06:05:34Z",
+            transaction_id="repellendus",
+        ),
+    ),
+)
+    
+res = s.cm_facing.post_v0_5_care_contexts_discover(req)
 
-if res.certs is not None:
+if res.status_code == 200:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -27,14 +71,33 @@ if res.certs is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cm facing
 
-* `get_v0_5_certs` - Get certs for JWT verification
-* `get_v0_5_heartbeat` - Get consent request status
-* `get_v0_5_hi_services_service_id_` - Get bridge service details/profile by the serviceId provided.
-* `get_v0_5_well_known_openid_configuration` - Get openid configuration
 * `post_v0_5_care_contexts_discover` - Discover patient's accounts
 * `post_v0_5_care_contexts_on_discover` - Response to patient's account discovery request
+* `post_v0_5_consent_requests_on_init` - Response to consent request
+* `post_v0_5_consent_requests_on_status` - Result of consent request status
+* `post_v0_5_consents_hip_notify` - Consent notification
+* `post_v0_5_consents_hiu_notify` - Consent notification
+* `post_v0_5_consents_on_fetch` - Result of fetch request for a consent artefact
+* `post_v0_5_health_information_cm_on_request` - Health information data request
+* `post_v0_5_health_information_hip_request` - Health information data request
+* `post_v0_5_links_link_confirm` - Token submission by Consent Manager for link confirmation
+* `post_v0_5_links_link_init` - Link patient's care contexts
+* `post_v0_5_links_link_on_add_contexts` - callback API for HIP initiated patient linking /link/add-context
+* `post_v0_5_patients_on_find` - Identification result for a consent-manager user-id
+* `post_v0_5_patients_profile_share` - Share patient profile details
+* `post_v0_5_patients_sms_on_notify` - Acknowledgment response for SMS notification sent to patient by HIP
+* `post_v0_5_subscription_requests_cm_on_init` - callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
+* `post_v0_5_subscription_requests_hiu_notify` - Notification for subscription grant/deny/revoke
+* `post_v0_5_subscriptions_hiu_notify` - Notification to HIU on basis of a granted subscription
+* `post_v0_5_users_auth_notify` - notification API in case of DIRECT mode of authentication by the CM
+* `post_v0_5_users_auth_on_confirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `post_v0_5_users_auth_on_fetch_modes` - Identification result for a consent-manager user-id
+* `post_v0_5_users_auth_on_init` - Response to user authentication initialization from HIP
+
+### consent flow
+
 * `post_v0_5_consent_requests_init` - Create consent request
 * `post_v0_5_consent_requests_on_init` - Response to consent request
 * `post_v0_5_consent_requests_on_status` - Result of consent request status
@@ -45,30 +108,100 @@ if res.certs is not None:
 * `post_v0_5_consents_hiu_notify` - Consent notification
 * `post_v0_5_consents_hiu_on_notify` - Consent notification
 * `post_v0_5_consents_on_fetch` - Result of fetch request for a consent artefact
+
+### data flow
+
 * `post_v0_5_health_information_cm_on_request` - Health information data request
 * `post_v0_5_health_information_cm_request` - Health information data request
 * `post_v0_5_health_information_hip_on_request` - Health information data request
 * `post_v0_5_health_information_hip_request` - Health information data request
 * `post_v0_5_health_information_notify` - Notifications corresponding to events during data flow
+
+### discovery
+
+* `post_v0_5_care_contexts_discover` - Discover patient's accounts
+* `post_v0_5_care_contexts_on_discover` - Response to patient's account discovery request
+
+### hip facing
+
+* `post_v0_5_consents_hip_on_notify` - Consent notification
+* `post_v0_5_health_information_hip_on_request` - Health information data request
+* `post_v0_5_health_information_notify` - Notifications corresponding to events during data flow
+* `post_v0_5_links_link_add_contexts` - API for HIP initiated care-context linking for patient
+* `post_v0_5_links_link_on_confirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `post_v0_5_links_link_on_init` - Response to patient's care context link request
+* `post_v0_5_patients_sms_notify` - API for HIP to send SMS notifications to patients
+* `post_v0_5_users_auth_confirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_fetch_modes` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_init` - Initialize authentication from HIP
+* `post_v0_5_users_auth_on_notify` - callback API by HIU/HIPs as acknowledgement of auth notification
+
+### hiu facing
+
+* `post_v0_5_consent_requests_init` - Create consent request
+* `post_v0_5_consent_requests_status` - Get consent request status
+* `post_v0_5_consents_fetch` - Get consent artefact
+* `post_v0_5_consents_hiu_on_notify` - Consent notification
+* `post_v0_5_health_information_cm_request` - Health information data request
+* `post_v0_5_health_information_notify` - Notifications corresponding to events during data flow
+* `post_v0_5_patients_find` - Identify a patient by her consent-manager user-id
+* `post_v0_5_subscription_requests_cm_init` - Request for subscription
+* `post_v0_5_subscription_requests_hiu_on_notify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
+* `post_v0_5_subscriptions_hiu_on_notify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+* `post_v0_5_users_auth_confirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `post_v0_5_users_auth_fetch_modes` - Get a patient's authentication modes relevant to specified purpose
+* `post_v0_5_users_auth_init` - Initialize authentication from HIP
+* `post_v0_5_users_auth_on_notify` - callback API by HIU/HIPs as acknowledgement of auth notification
+
+### identification
+
+* `post_v0_5_patients_find` - Identify a patient by her consent-manager user-id
+* `post_v0_5_patients_on_find` - Identification result for a consent-manager user-id
+
+### link
+
 * `post_v0_5_links_link_add_contexts` - API for HIP initiated care-context linking for patient
 * `post_v0_5_links_link_confirm` - Token submission by Consent Manager for link confirmation
 * `post_v0_5_links_link_init` - Link patient's care contexts
 * `post_v0_5_links_link_on_add_contexts` - callback API for HIP initiated patient linking /link/add-context
 * `post_v0_5_links_link_on_confirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
 * `post_v0_5_links_link_on_init` - Response to patient's care context link request
-* `post_v0_5_patients_find` - Identify a patient by her consent-manager user-id
-* `post_v0_5_patients_on_find` - Identification result for a consent-manager user-id
-* `post_v0_5_patients_profile_on_share` - Response to patient's share profile request
-* `post_v0_5_patients_profile_share` - Share patient profile details
+
+### monitoring
+
+* `get_v0_5_heartbeat` - Get consent request status
+
+### patient notification
+
 * `post_v0_5_patients_sms_notify` - API for HIP to send SMS notifications to patients
 * `post_v0_5_patients_sms_on_notify` - Acknowledgment response for SMS notification sent to patient by HIP
+
+### profile
+
+* `post_v0_5_patients_profile_on_share` - Response to patient's share profile request
+* `post_v0_5_patients_profile_share` - Share patient profile details
+
+### services
+
+* `get_v0_5_hi_services_service_id_` - Get bridge service details/profile by the serviceId provided.
+
+### sessions
+
+* `get_v0_5_well_known_openid_configuration` - Get openid configuration
+* `get_v0_5_certs` - Get certs for JWT verification
 * `post_v0_5_sessions` - Get access token
+
+### subscriptions
+
 * `post_v0_5_subscription_requests_cm_init` - Request for subscription
 * `post_v0_5_subscription_requests_cm_on_init` - callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
 * `post_v0_5_subscription_requests_hiu_notify` - Notification for subscription grant/deny/revoke
 * `post_v0_5_subscription_requests_hiu_on_notify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `post_v0_5_subscriptions_hiu_notify` - Notification to HIU on basis of a granted subscription
 * `post_v0_5_subscriptions_hiu_on_notify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+
+### user auth
+
 * `post_v0_5_users_auth_confirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
 * `post_v0_5_users_auth_fetch_modes` - Get a patient's authentication modes relevant to specified purpose
 * `post_v0_5_users_auth_init` - Initialize authentication from HIP

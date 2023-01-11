@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import leaveapplications as shared_leaveapplications
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLeaveApplicationPathParams:
-    leave_application_id: str = field(metadata={'path_param': { 'field_name': 'LeaveApplicationID', 'style': 'simple', 'explode': False }})
+    leave_application_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'LeaveApplicationID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLeaveApplicationHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLeaveApplicationSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLeaveApplicationRequest:
-    headers: GetLeaveApplicationHeaders = field()
-    path_params: GetLeaveApplicationPathParams = field()
-    security: GetLeaveApplicationSecurity = field()
+    headers: GetLeaveApplicationHeaders = dataclasses.field()
+    path_params: GetLeaveApplicationPathParams = dataclasses.field()
+    security: GetLeaveApplicationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLeaveApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    leave_applications: Optional[shared.LeaveApplications] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    leave_applications: Optional[shared_leaveapplications.LeaveApplications] = dataclasses.field(default=None)
     

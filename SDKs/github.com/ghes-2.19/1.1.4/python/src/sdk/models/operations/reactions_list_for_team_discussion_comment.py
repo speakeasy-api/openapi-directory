@@ -1,49 +1,40 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import comment_number_enum as shared_comment_number_enum
+from ..shared import reaction as shared_reaction
 
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsListForTeamDiscussionCommentPathParams:
-    comment_number: int = field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
-    discussion_number: int = field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    comment_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_number', 'style': 'simple', 'explode': False }})
+    discussion_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'discussion_number', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-class ReactionsListForTeamDiscussionCommentContentEnum(str, Enum):
-    PLUS_1 = "+1"
-    MINUS_1 = "-1"
-    LAUGH = "laugh"
-    CONFUSED = "confused"
-    HEART = "heart"
-    HOORAY = "hooray"
-    ROCKET = "rocket"
-    EYES = "eyes"
 
-
-@dataclass
+@dataclasses.dataclass
 class ReactionsListForTeamDiscussionCommentQueryParams:
-    content: Optional[ReactionsListForTeamDiscussionCommentContentEnum] = field(default=None, metadata={'query_param': { 'field_name': 'content', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    content: Optional[shared_comment_number_enum.CommentNumberEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'content', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsListForTeamDiscussionCommentHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsListForTeamDiscussionCommentRequest:
-    headers: ReactionsListForTeamDiscussionCommentHeaders = field()
-    path_params: ReactionsListForTeamDiscussionCommentPathParams = field()
-    query_params: ReactionsListForTeamDiscussionCommentQueryParams = field()
+    headers: ReactionsListForTeamDiscussionCommentHeaders = dataclasses.field()
+    path_params: ReactionsListForTeamDiscussionCommentPathParams = dataclasses.field()
+    query_params: ReactionsListForTeamDiscussionCommentQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReactionsListForTeamDiscussionCommentResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    reactions: Optional[List[shared.Reaction]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reactions: Optional[list[shared_reaction.Reaction]] = dataclasses.field(default=None)
     

@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import employees as shared_employees
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeePathParams:
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'EmployeeID', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployeeID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeRequest:
-    headers: GetEmployeeHeaders = field()
-    path_params: GetEmployeePathParams = field()
-    security: GetEmployeeSecurity = field()
+    headers: GetEmployeeHeaders = dataclasses.field()
+    path_params: GetEmployeePathParams = dataclasses.field()
+    security: GetEmployeeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEmployeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employees: Optional[shared.Employees] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employees: Optional[shared_employees.Employees] = dataclasses.field(default=None)
     

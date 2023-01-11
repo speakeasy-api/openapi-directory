@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,27 +21,27 @@ req = operations.CloudresourcemanagerEffectiveTagsListRequest(
         option1=operations.CloudresourcemanagerEffectiveTagsListSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.CloudresourcemanagerEffectiveTagsListQueryParams(
-        dollar_xgafv="1",
-        access_token="est",
+        dollar_xgafv="2",
+        access_token="mollitia",
         alt="media",
-        callback="magnam",
-        fields="nihil",
-        key="sint",
-        oauth_token="est",
-        page_size=1587585381886736164,
-        page_token="veritatis",
-        parent="quisquam",
+        callback="non",
+        fields="id",
+        key="consequatur",
+        oauth_token="aspernatur",
+        page_size=304540307133973153,
+        page_token="similique",
+        parent="rerum",
         pretty_print=False,
-        quota_user="et",
-        upload_type="autem",
-        upload_protocol="nisi",
+        quota_user="ea",
+        upload_type="odit",
+        upload_protocol="vitae",
     ),
 )
     

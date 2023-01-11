@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import clusterconfiguration as shared_clusterconfiguration
+from ..shared import clustersetting as shared_clustersetting
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateClusterRequest:
-    cluster: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
-    configuration: Optional[ClusterConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
-    settings: Optional[List[ClusterSetting]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
+    cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
+    configuration: Optional[shared_clusterconfiguration.ClusterConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('configuration') }})
+    settings: Optional[list[shared_clustersetting.ClusterSetting]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
     

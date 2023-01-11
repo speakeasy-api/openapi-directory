@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,139 +20,132 @@ req = operations.DataprocProjectsLocationsBatchesCreateRequest(
     security=operations.DataprocProjectsLocationsBatchesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DataprocProjectsLocationsBatchesCreatePathParams(
-        parent="facilis",
+        parent="dolorem",
     ),
     query_params=operations.DataprocProjectsLocationsBatchesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="nam",
-        alt="proto",
-        batch_id="aut",
-        callback="enim",
-        fields="iusto",
-        key="cumque",
-        oauth_token="doloribus",
-        pretty_print=False,
-        quota_user="excepturi",
-        request_id="id",
-        upload_type="quo",
-        upload_protocol="quia",
+        dollar_xgafv="2",
+        access_token="adipisci",
+        alt="json",
+        batch_id="officia",
+        callback="eligendi",
+        fields="doloremque",
+        key="et",
+        oauth_token="perspiciatis",
+        pretty_print=True,
+        quota_user="esse",
+        request_id="est",
+        upload_type="accusamus",
+        upload_protocol="quibusdam",
     ),
     request=shared.BatchInput(
         environment_config=shared.EnvironmentConfig(
             execution_config=shared.ExecutionConfig(
-                idle_ttl="quibusdam",
-                kms_key="eum",
+                idle_ttl="reiciendis",
+                kms_key="esse",
                 network_tags=[
-                    "itaque",
+                    "expedita",
+                    "nulla",
                 ],
-                network_uri="impedit",
-                service_account="placeat",
-                subnetwork_uri="esse",
+                network_uri="quaerat",
+                service_account="odit",
+                subnetwork_uri="veritatis",
             ),
             peripherals_config=shared.PeripheralsConfig(
-                metastore_service="sunt",
+                metastore_service="iusto",
                 spark_history_server_config=shared.SparkHistoryServerConfig(
-                    dataproc_cluster="sapiente",
+                    dataproc_cluster="deserunt",
                 ),
             ),
         ),
         labels={
-            "perspiciatis": "laboriosam",
-            "fuga": "beatae",
-            "itaque": "amet",
+            "unde": "architecto",
+            "qui": "dolor",
         },
         pyspark_batch=shared.PySparkBatch(
             archive_uris=[
-                "nulla",
+                "voluptatem",
             ],
             args=[
-                "dolores",
-                "voluptatem",
-                "deserunt",
+                "aut",
+                "qui",
             ],
             file_uris=[
-                "voluptatem",
-                "eum",
+                "rerum",
             ],
             jar_file_uris=[
-                "qui",
-                "harum",
-                "autem",
+                "molestias",
+                "et",
+                "officia",
             ],
-            main_python_file_uri="unde",
+            main_python_file_uri="ipsum",
             python_file_uris=[
-                "quaerat",
+                "velit",
             ],
         ),
         runtime_config=shared.RuntimeConfig(
-            container_image="qui",
+            container_image="sed",
             properties={
-                "et": "magni",
-                "et": "et",
-                "saepe": "ratione",
+                "nisi": "eos",
+                "in": "expedita",
             },
-            version="voluptas",
+            version="quisquam",
         ),
         runtime_info=shared.RuntimeInfoInput(
             approximate_usage=shared.UsageMetrics(
-                milli_dcu_seconds="quaerat",
-                shuffle_storage_gb_seconds="architecto",
+                milli_dcu_seconds="consequatur",
+                shuffle_storage_gb_seconds="aperiam",
             ),
         ),
         spark_batch=shared.SparkBatch(
             archive_uris=[
-                "tempora",
-                "officiis",
-                "nulla",
+                "consequatur",
+                "alias",
             ],
             args=[
-                "odit",
-                "provident",
-                "illum",
+                "quia",
+                "quibusdam",
+                "error",
             ],
             file_uris=[
-                "voluptate",
-                "quo",
+                "architecto",
+                "hic",
+                "quia",
             ],
             jar_file_uris=[
-                "et",
-                "quibusdam",
-                "odio",
+                "voluptatem",
+                "recusandae",
             ],
-            main_class="non",
-            main_jar_file_uri="exercitationem",
+            main_class="a",
+            main_jar_file_uri="ipsam",
         ),
         spark_r_batch=shared.SparkRBatch(
             archive_uris=[
-                "est",
-                "quo",
-                "nobis",
+                "temporibus",
+                "qui",
             ],
             args=[
-                "non",
-                "commodi",
+                "ex",
             ],
             file_uris=[
-                "in",
+                "sed",
             ],
-            main_r_file_uri="eos",
+            main_r_file_uri="dolorum",
         ),
         spark_sql_batch=shared.SparkSQLBatch(
             jar_file_uris=[
-                "vel",
-                "est",
+                "ut",
+                "corporis",
             ],
-            query_file_uri="id",
+            query_file_uri="nesciunt",
             query_variables={
-                "et": "possimus",
-                "vitae": "vel",
-                "est": "minus",
+                "in": "consequatur",
+                "dolores": "a",
             },
         ),
     ),

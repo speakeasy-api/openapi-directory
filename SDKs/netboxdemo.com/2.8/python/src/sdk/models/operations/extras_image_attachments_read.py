@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imageattachment as shared_imageattachment
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsReadRequest:
-    path_params: ExtrasImageAttachmentsReadPathParams = field()
+    path_params: ExtrasImageAttachmentsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    image_attachment: Optional[shared.ImageAttachment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    image_attachment: Optional[shared_imageattachment.ImageAttachment] = dataclasses.field(default=None)
     

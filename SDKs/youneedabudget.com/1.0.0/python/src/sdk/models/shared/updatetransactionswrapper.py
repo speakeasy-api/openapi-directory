@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import updatetransaction as shared_updatetransaction
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateTransactionsWrapper:
-    transactions: List[UpdateTransaction] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
+    transactions: list[shared_updatetransaction.UpdateTransaction] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
     

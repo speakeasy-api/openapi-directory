@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ResourcesAPIGetListPathParams:
-    culture_code: str = field(metadata={'path_param': { 'field_name': 'cultureCode', 'style': 'simple', 'explode': False }})
+    culture_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cultureCode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResourcesAPIGetListQueryParams:
-    set_names: List[str] = field(metadata={'query_param': { 'field_name': 'setNames', 'style': 'form', 'explode': True }})
+    set_names: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'setNames', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResourcesAPIGetListRequest:
-    path_params: ResourcesAPIGetListPathParams = field()
-    query_params: ResourcesAPIGetListQueryParams = field()
+    path_params: ResourcesAPIGetListPathParams = dataclasses.field()
+    query_params: ResourcesAPIGetListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ResourcesAPIGetListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resources_api_get_list_200_application_json_object: Optional[dict[str, dict[str, str]]] = field(default=None)
-    resources_api_get_list_200_text_json_object: Optional[dict[str, dict[str, str]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resources_api_get_list_200_application_json_object: Optional[dict[str, dict[str, str]]] = dataclasses.field(default=None)
+    resources_api_get_list_200_text_json_object: Optional[dict[str, dict[str, str]]] = dataclasses.field(default=None)
     

@@ -1,37 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceVideosInAlbumPathParams:
-    album_id: float = field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    album_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'album_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReplaceVideosInAlbumRequestBody:
-    videos: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
+    videos: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('videos') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceVideosInAlbumSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceVideosInAlbumRequest:
-    path_params: ReplaceVideosInAlbumPathParams = field()
-    request: ReplaceVideosInAlbumRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: ReplaceVideosInAlbumSecurity = field()
+    path_params: ReplaceVideosInAlbumPathParams = dataclasses.field()
+    request: ReplaceVideosInAlbumRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: ReplaceVideosInAlbumSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceVideosInAlbumResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

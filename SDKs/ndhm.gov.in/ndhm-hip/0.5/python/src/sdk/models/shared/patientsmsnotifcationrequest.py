@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,26 +8,26 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientSmsNotifcationRequestNotificationHip:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientSmsNotifcationRequestNotification:
-    care_context_info: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContextInfo') }})
-    hip: PatientSmsNotifcationRequestNotificationHip = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hip') }})
-    phone_no: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phoneNo') }})
-    deeplink_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deeplinkUrl') }})
-    receiver_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('receiverName') }})
+    care_context_info: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContextInfo') }})
+    hip: PatientSmsNotifcationRequestNotificationHip = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hip') }})
+    phone_no: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('phoneNo') }})
+    deeplink_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deeplinkUrl') }})
+    receiver_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('receiverName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientSmsNotifcationRequest:
-    notification: PatientSmsNotifcationRequestNotification = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notification') }})
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    timestamp: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    notification: PatientSmsNotifcationRequestNotification = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notification') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

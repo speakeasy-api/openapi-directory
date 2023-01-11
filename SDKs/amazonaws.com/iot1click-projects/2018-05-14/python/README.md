@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,25 @@ s.config_security(
     
 req = operations.AssociateDeviceWithPlacementRequest(
     path_params=operations.AssociateDeviceWithPlacementPathParams(
-        device_template_name="fugit",
-        placement_name="dolore",
-        project_name="voluptatem",
+        device_template_name="voluptatem",
+        placement_name="magnam",
+        project_name="recusandae",
     ),
     headers=operations.AssociateDeviceWithPlacementHeaders(
-        x_amz_algorithm="recusandae",
-        x_amz_content_sha256="impedit",
-        x_amz_credential="odio",
-        x_amz_date="vel",
-        x_amz_security_token="tempora",
-        x_amz_signature="atque",
-        x_amz_signed_headers="repellendus",
+        x_amz_algorithm="quos",
+        x_amz_content_sha256="aspernatur",
+        x_amz_credential="veniam",
+        x_amz_date="minima",
+        x_amz_security_token="harum",
+        x_amz_signature="et",
+        x_amz_signed_headers="alias",
     ),
     request=operations.AssociateDeviceWithPlacementRequestBody(
-        device_id="ut",
+        device_id="aliquam",
     ),
 )
     
-res = s.sdk.associate_device_with_placement(req)
+res = s.associate_device_with_placement(req)
 
 if res.associate_device_with_placement_response is not None:
     # handle response

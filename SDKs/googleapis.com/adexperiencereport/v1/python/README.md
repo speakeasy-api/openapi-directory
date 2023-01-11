@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.AdexperiencereportSitesGetRequest(
     path_params=operations.AdexperiencereportSitesGetPathParams(
-        name="consequatur",
+        name="in",
     ),
     query_params=operations.AdexperiencereportSitesGetQueryParams(
         dollar_xgafv="2",
-        access_token="natus",
-        alt="json",
-        callback="qui",
-        fields="excepturi",
-        key="ex",
-        oauth_token="maxime",
-        pretty_print=True,
-        quota_user="rerum",
-        upload_type="commodi",
-        upload_protocol="voluptatum",
+        access_token="illum",
+        alt="media",
+        callback="earum",
+        fields="temporibus",
+        key="earum",
+        oauth_token="esse",
+        pretty_print=False,
+        quota_user="doloremque",
+        upload_type="deserunt",
+        upload_protocol="maiores",
     ),
 )
     

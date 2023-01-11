@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountaccess as shared_accountaccess
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Scopes:
     r"""Scopes
     The scopes object
     """
     
-    accounts: Optional[List[AccountAccess]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
-    new_accounts: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_accounts') }})
-    product_access: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('product_access') }})
+    accounts: Optional[list[shared_accountaccess.AccountAccess]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
+    new_accounts: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_accounts') }})
+    product_access: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('product_access') }})
     

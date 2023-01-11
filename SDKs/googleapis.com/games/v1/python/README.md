@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.GamesAchievementDefinitionsListRequest(
     security=operations.GamesAchievementDefinitionsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.GamesAchievementDefinitionsListQueryParams(
-        dollar_xgafv="2",
-        access_token="iusto",
-        alt="proto",
-        callback="accusantium",
-        fields="eaque",
-        key="eaque",
-        language="dicta",
-        max_results=1126920409312496146,
-        oauth_token="ea",
-        page_token="delectus",
+        dollar_xgafv="1",
+        access_token="quod",
+        alt="json",
+        callback="sunt",
+        fields="nostrum",
+        key="et",
+        language="sed",
+        max_results=1042231653372785846,
+        oauth_token="omnis",
+        page_token="similique",
         pretty_print=True,
-        quota_user="hic",
-        upload_type="quasi",
-        upload_protocol="eum",
+        quota_user="consequatur",
+        upload_type="alias",
+        upload_protocol="voluptas",
     ),
 )
     

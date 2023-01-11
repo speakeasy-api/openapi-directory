@@ -1,5 +1,4 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -9,10 +8,10 @@ class ConditionalSingleFieldDependencyDependencyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConditionalSingleFieldDependency:
-    controlling_field_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('controllingFieldName') }})
-    controlling_field_value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('controllingFieldValue') }})
-    dependency_type: ConditionalSingleFieldDependencyDependencyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencyType') }})
-    dependent_field_names: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependentFieldNames') }})
+    controlling_field_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('controllingFieldName') }})
+    controlling_field_value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('controllingFieldValue') }})
+    dependency_type: ConditionalSingleFieldDependencyDependencyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependencyType') }})
+    dependent_field_names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dependentFieldNames') }})
     

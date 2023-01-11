@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import aggregate as shared_aggregate
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamAggregatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamAggregatesReadRequest:
-    path_params: IpamAggregatesReadPathParams = field()
+    path_params: IpamAggregatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamAggregatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    aggregate: Optional[shared.Aggregate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    aggregate: Optional[shared_aggregate.Aggregate] = dataclasses.field(default=None)
     

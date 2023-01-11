@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ElasticIPStatus:
     r"""ElasticIPStatus
     Describes the status of the elastic IP (EIP) address.
     """
     
-    elastic_ip: Optional[str] = field(default=None)
-    status: Optional[str] = field(default=None)
+    elastic_ip: Optional[str] = dataclasses.field(default=None)
+    status: Optional[str] = dataclasses.field(default=None)
     

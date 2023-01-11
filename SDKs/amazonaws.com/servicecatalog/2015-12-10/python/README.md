@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AcceptPortfolioShareRequest(
     headers=operations.AcceptPortfolioShareHeaders(
-        x_amz_algorithm="facilis",
-        x_amz_content_sha256="rerum",
-        x_amz_credential="commodi",
-        x_amz_date="non",
-        x_amz_security_token="rerum",
-        x_amz_signature="at",
-        x_amz_signed_headers="debitis",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="optio",
+        x_amz_credential="iste",
+        x_amz_date="nisi",
+        x_amz_security_token="repudiandae",
+        x_amz_signature="amet",
+        x_amz_signed_headers="impedit",
         x_amz_target="AWS242ServiceCatalogService.AcceptPortfolioShare",
     ),
     request=shared.AcceptPortfolioShareInput(
-        accept_language="dolorum",
-        portfolio_id="saepe",
+        accept_language="eum",
+        portfolio_id="et",
         portfolio_share_type="AWS_SERVICECATALOG",
     ),
 )
     
-res = s.sdk.accept_portfolio_share(req)
+res = s.accept_portfolio_share(req)
 
 if res.accept_portfolio_share_output is not None:
     # handle response

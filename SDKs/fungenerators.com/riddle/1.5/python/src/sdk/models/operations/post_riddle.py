@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PostRiddleQueryParams:
-    answer: str = field(metadata={'query_param': { 'field_name': 'answer', 'style': 'form', 'explode': True }})
-    category: str = field(metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
-    question: str = field(metadata={'query_param': { 'field_name': 'question', 'style': 'form', 'explode': True }})
+    answer: str = dataclasses.field(metadata={'query_param': { 'field_name': 'answer', 'style': 'form', 'explode': True }})
+    category: str = dataclasses.field(metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
+    question: str = dataclasses.field(metadata={'query_param': { 'field_name': 'question', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRiddleSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRiddleRequest:
-    query_params: PostRiddleQueryParams = field()
-    security: PostRiddleSecurity = field()
+    query_params: PostRiddleQueryParams = dataclasses.field()
+    security: PostRiddleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostRiddleResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

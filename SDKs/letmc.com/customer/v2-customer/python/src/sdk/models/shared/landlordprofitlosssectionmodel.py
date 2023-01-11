@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import landlordprofitlossrowmodel as shared_landlordprofitlossrowmodel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LandlordProfitLossSectionModel:
     r"""LandlordProfitLossSectionModel
     Class for a group of entries.
     """
     
-    rows: Optional[List[LandlordProfitLossRowModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rows') }})
+    rows: Optional[list[shared_landlordprofitlossrowmodel.LandlordProfitLossRowModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Rows') }})
     

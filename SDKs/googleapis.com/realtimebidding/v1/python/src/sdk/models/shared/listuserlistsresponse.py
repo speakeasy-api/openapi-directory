@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import userlist as shared_userlist
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListUserListsResponse:
     r"""ListUserListsResponse
     The list user list response.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    user_lists: Optional[List[UserList]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userLists') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    user_lists: Optional[list[shared_userlist.UserList]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userLists') }})
     

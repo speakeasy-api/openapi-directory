@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import buttonaction_enum as shared_buttonaction_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OverrideButtonConfiguration:
     r"""OverrideButtonConfiguration
     Override button configuration.
     """
     
-    button_action: ButtonActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ButtonAction') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Link') }})
+    button_action: shared_buttonaction_enum.ButtonActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ButtonAction') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Link') }})
     

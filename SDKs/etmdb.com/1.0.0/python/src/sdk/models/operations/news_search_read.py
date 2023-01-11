@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class NewsSearchReadPathParams:
-    title: str = field(metadata={'path_param': { 'field_name': 'title', 'style': 'simple', 'explode': False }})
+    title: str = dataclasses.field(metadata={'path_param': { 'field_name': 'title', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsSearchReadRequest:
-    path_params: NewsSearchReadPathParams = field()
+    path_params: NewsSearchReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NewsSearchReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,19 +25,19 @@ s.config_security(
     
 req = operations.BookingAvailabilityRequest(
     headers=operations.BookingAvailabilityHeaders(
-        accept_language="fugit",
+        accept_language="error",
     ),
     request=operations.BookingAvailabilityRequestBody(
         age_bands=[
             operations.BookingAvailabilityRequestBodyAgeBands(
-                band_id=2837564563700335116,
-                count=7814107300403322708,
+                band_id=6802467659962633827,
+                count=8090787409856992088,
             ),
         ],
-        currency_code="laudantium",
-        month="voluptatem",
-        product_code="voluptatem",
-        year="dolor",
+        currency_code="nisi",
+        month="officia",
+        product_code="ut",
+        year="repellendus",
     ),
 )
     

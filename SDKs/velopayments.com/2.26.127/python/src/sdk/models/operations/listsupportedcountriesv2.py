@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import supportedcountriesresponsev2 as shared_supportedcountriesresponsev2
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSupportedCountriesV2Response:
-    content_type: str = field()
-    status_code: int = field()
-    supported_countries_response_v2: Optional[shared.SupportedCountriesResponseV2] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    supported_countries_response_v2: Optional[shared_supportedcountriesresponsev2.SupportedCountriesResponseV2] = dataclasses.field(default=None)
     

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import actioncategory_enum as shared_actioncategory_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetActionTypeInput:
-    category: ActionCategoryEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
-    owner: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('owner') }})
-    provider: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
-    version: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    category: shared_actioncategory_enum.ActionCategoryEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    owner: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('owner') }})
+    provider: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('provider') }})
+    version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

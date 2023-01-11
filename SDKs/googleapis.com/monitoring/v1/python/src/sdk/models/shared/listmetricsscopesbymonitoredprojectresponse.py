@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metricsscope as shared_metricsscope
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListMetricsScopesByMonitoredProjectResponse:
     r"""ListMetricsScopesByMonitoredProjectResponse
     Response for the ListMetricsScopesByMonitoredProject method.
     """
     
-    metrics_scopes: Optional[List[MetricsScope]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricsScopes') }})
+    metrics_scopes: Optional[list[shared_metricsscope.MetricsScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricsScopes') }})
     

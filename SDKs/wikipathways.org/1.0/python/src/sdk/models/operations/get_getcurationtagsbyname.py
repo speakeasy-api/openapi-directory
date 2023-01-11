@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,19 +11,19 @@ class GetGetCurationTagsByNameFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGetCurationTagsByNameQueryParams:
-    tag_name: str = field(metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
-    format: Optional[GetGetCurationTagsByNameFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    tag_name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'tagName', 'style': 'form', 'explode': True }})
+    format: Optional[GetGetCurationTagsByNameFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetCurationTagsByNameRequest:
-    query_params: GetGetCurationTagsByNameQueryParams = field()
+    query_params: GetGetCurationTagsByNameQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGetCurationTagsByNameResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

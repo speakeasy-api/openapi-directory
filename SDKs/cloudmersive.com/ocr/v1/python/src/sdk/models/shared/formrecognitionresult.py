@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import fieldresult as shared_fieldresult
+from ..shared import tableresult as shared_tableresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FormRecognitionResult:
     r"""FormRecognitionResult
     The result of extracting form field values
     """
     
-    best_match_form_setting_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BestMatchFormSettingName') }})
-    diagnostics: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Diagnostics') }})
-    field_value_extraction_result: Optional[List[FieldResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FieldValueExtractionResult') }})
-    successful: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successful') }})
-    table_value_extraction_results: Optional[List[TableResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableValueExtractionResults') }})
+    best_match_form_setting_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BestMatchFormSettingName') }})
+    diagnostics: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Diagnostics') }})
+    field_value_extraction_result: Optional[list[shared_fieldresult.FieldResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FieldValueExtractionResult') }})
+    successful: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successful') }})
+    table_value_extraction_results: Optional[list[shared_tableresult.TableResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableValueExtractionResults') }})
     

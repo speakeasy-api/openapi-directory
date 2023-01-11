@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbclustersnapshot as shared_dbclustersnapshot
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteDbClusterSnapshotResult:
-    db_cluster_snapshot: Optional[DbClusterSnapshot] = field(default=None)
+    db_cluster_snapshot: Optional[shared_dbclustersnapshot.DbClusterSnapshot] = dataclasses.field(default=None)
     

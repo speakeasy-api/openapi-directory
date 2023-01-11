@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetcountrystandardQueryParams:
-    country: str = field(metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
-    license: str = field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
+    country: str = dataclasses.field(metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
+    license: str = dataclasses.field(metadata={'query_param': { 'field_name': 'license', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Getcountrystandard200ApplicationJSON:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
-    country_standard: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountryStandard') }})
-    credits: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Code') }})
+    country_standard: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountryStandard') }})
+    credits: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Credits') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetcountrystandardRequest:
-    query_params: GetcountrystandardQueryParams = field()
+    query_params: GetcountrystandardQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetcountrystandardResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getcountrystandard_200_application_json_object: Optional[Getcountrystandard200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getcountrystandard_200_application_json_object: Optional[Getcountrystandard200ApplicationJSON] = dataclasses.field(default=None)
     

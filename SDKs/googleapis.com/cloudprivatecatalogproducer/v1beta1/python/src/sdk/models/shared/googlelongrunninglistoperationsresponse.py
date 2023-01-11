@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import googlelongrunningoperation as shared_googlelongrunningoperation
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleLongrunningListOperationsResponse:
     r"""GoogleLongrunningListOperationsResponse
     The response message for Operations.ListOperations.
     """
     
-    next_page_token: Optional[str] = field(default=None)
-    operations: Optional[List[GoogleLongrunningOperation]] = field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
+    operations: Optional[list[shared_googlelongrunningoperation.GoogleLongrunningOperation]] = dataclasses.field(default=None)
     

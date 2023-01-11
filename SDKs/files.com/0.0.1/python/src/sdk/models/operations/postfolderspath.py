@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import fileentity as shared_fileentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostFoldersPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFoldersPathRequest:
-    path_params: PostFoldersPathPathParams = field()
+    path_params: PostFoldersPathPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFoldersPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_entity: Optional[shared.FileEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_entity: Optional[shared_fileentity.FileEntity] = dataclasses.field(default=None)
     

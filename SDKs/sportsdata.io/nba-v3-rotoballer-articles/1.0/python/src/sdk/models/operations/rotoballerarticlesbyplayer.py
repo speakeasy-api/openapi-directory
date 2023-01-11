@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class RotoballerArticlesByPlayerFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class RotoballerArticlesByPlayerFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class RotoballerArticlesByPlayerPathParams:
-    format: RotoballerArticlesByPlayerFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    format: RotoballerArticlesByPlayerFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RotoballerArticlesByPlayerRequest:
-    path_params: RotoballerArticlesByPlayerPathParams = field()
+    path_params: RotoballerArticlesByPlayerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RotoballerArticlesByPlayerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    articles: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    articles: Optional[list[Any]] = dataclasses.field(default=None)
     

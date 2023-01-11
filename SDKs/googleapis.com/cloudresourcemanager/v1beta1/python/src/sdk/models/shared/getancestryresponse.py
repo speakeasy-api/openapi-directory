@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ancestor as shared_ancestor
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAncestryResponse:
     r"""GetAncestryResponse
     Response from the projects.getAncestry method.
     """
     
-    ancestor: Optional[List[Ancestor]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ancestor') }})
+    ancestor: Optional[list[shared_ancestor.Ancestor]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ancestor') }})
     

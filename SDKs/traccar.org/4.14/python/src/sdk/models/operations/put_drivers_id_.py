@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import driver as shared_driver
 
 
-@dataclass
+@dataclasses.dataclass
 class PutDriversIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutDriversIDRequest:
-    path_params: PutDriversIDPathParams = field()
-    request: shared.Driver = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutDriversIDPathParams = dataclasses.field()
+    request: shared_driver.Driver = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutDriversIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    driver: Optional[shared.Driver] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    driver: Optional[shared_driver.Driver] = dataclasses.field(default=None)
     

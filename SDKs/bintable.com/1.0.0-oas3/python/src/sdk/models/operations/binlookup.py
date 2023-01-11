@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import responseitem as shared_responseitem
 
 
-@dataclass
+@dataclasses.dataclass
 class BinLookupPathParams:
-    bin: str = field(metadata={'path_param': { 'field_name': 'bin', 'style': 'simple', 'explode': False }})
+    bin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'bin', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BinLookupQueryParams:
-    api_key: str = field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BinLookupRequest:
-    path_params: BinLookupPathParams = field()
-    query_params: BinLookupQueryParams = field()
+    path_params: BinLookupPathParams = dataclasses.field()
+    query_params: BinLookupQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BinLookupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_items: Optional[List[shared.ResponseItem]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_items: Optional[list[shared_responseitem.ResponseItem]] = dataclasses.field(default=None)
     

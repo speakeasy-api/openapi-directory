@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import _linkssigningbasket as shared__linkssigningbasket
+from ..shared import transactionstatus_sbs_enum as shared_transactionstatus_sbs_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SigningBasketResponse200:
     r"""SigningBasketResponse200
     Body of the JSON response for a successful get signing basket request.
@@ -19,8 +20,8 @@ class SigningBasketResponse200:
     
     """
     
-    transaction_status: TransactionStatusSbsEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionStatus') }})
-    links: Optional[LinksSigningBasket] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
-    consents: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consents') }})
-    payments: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payments') }})
+    transaction_status: shared_transactionstatus_sbs_enum.TransactionStatusSbsEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionStatus') }})
+    links: Optional[shared__linkssigningbasket.LinksSigningBasket] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('_links') }})
+    consents: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consents') }})
+    payments: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payments') }})
     

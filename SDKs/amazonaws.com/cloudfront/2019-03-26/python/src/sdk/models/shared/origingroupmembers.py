@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import origingroupmemberlist as shared_origingroupmemberlist
 
 
-@dataclass
+@dataclasses.dataclass
 class OriginGroupMembers:
     r"""OriginGroupMembers
     A complex data type for the origins included in an origin group.
     """
     
-    items: List[OriginGroupMember] = field()
-    quantity: int = field()
+    items: list[shared_origingroupmemberlist.OriginGroupMemberList] = dataclasses.field()
+    quantity: int = dataclasses.field()
     

@@ -1,20 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attributekeyandvalue as shared_attributekeyandvalue
+from ..shared import objectreference as shared_objectreference
+from ..shared import schemafacet as shared_schemafacet
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchCreateObject:
     r"""BatchCreateObject
     Represents the output of a <a>CreateObject</a> operation.
     """
     
-    object_attribute_list: List[AttributeKeyAndValue] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ObjectAttributeList') }})
-    schema_facet: List[SchemaFacet] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaFacet') }})
-    batch_reference_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BatchReferenceName') }})
-    link_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LinkName') }})
-    parent_reference: Optional[ObjectReference] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentReference') }})
+    object_attribute_list: list[shared_attributekeyandvalue.AttributeKeyAndValue] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ObjectAttributeList') }})
+    schema_facet: list[shared_schemafacet.SchemaFacet] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SchemaFacet') }})
+    batch_reference_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BatchReferenceName') }})
+    link_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LinkName') }})
+    parent_reference: Optional[shared_objectreference.ObjectReference] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentReference') }})
     

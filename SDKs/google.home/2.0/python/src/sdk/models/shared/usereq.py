@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import highshelf as shared_highshelf
+from ..shared import lowshelf as shared_lowshelf
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserEq:
-    high_shelf: HighShelf = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('high_shelf') }})
-    low_shelf: LowShelf = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('low_shelf') }})
-    max_peaking_eqs: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_peaking_eqs') }})
-    peaking_eqs: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('peaking_eqs') }})
+    high_shelf: shared_highshelf.HighShelf = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('high_shelf') }})
+    low_shelf: shared_lowshelf.LowShelf = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('low_shelf') }})
+    max_peaking_eqs: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('max_peaking_eqs') }})
+    peaking_eqs: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('peaking_eqs') }})
     

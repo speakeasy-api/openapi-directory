@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Privileges:
-    description: Optional[str] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    short_description: Optional[str] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    short_description: Optional[str] = dataclasses.field(default=None)
     

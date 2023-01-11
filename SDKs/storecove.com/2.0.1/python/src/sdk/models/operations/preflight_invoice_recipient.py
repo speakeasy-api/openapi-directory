@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import invoicerecipientpreflight as shared_invoicerecipientpreflight
+from ..shared import preflightinvoicerecipientresult as shared_preflightinvoicerecipientresult
 
 
-@dataclass
+@dataclasses.dataclass
 class PreflightInvoiceRecipientRequest:
-    request: shared.InvoiceRecipientPreflight = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_invoicerecipientpreflight.InvoiceRecipientPreflight = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PreflightInvoiceRecipientResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_models: Optional[List[Any]] = field(default=None)
-    preflight_invoice_recipient_result: Optional[shared.PreflightInvoiceRecipientResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_models: Optional[list[Any]] = dataclasses.field(default=None)
+    preflight_invoice_recipient_result: Optional[shared_preflightinvoicerecipientresult.PreflightInvoiceRecipientResult] = dataclasses.field(default=None)
     

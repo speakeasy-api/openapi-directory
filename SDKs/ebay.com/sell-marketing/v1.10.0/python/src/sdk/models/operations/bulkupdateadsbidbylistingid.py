@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import bulkcreateadrequest as shared_bulkcreateadrequest
+from ..shared import bulkadresponse as shared_bulkadresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BulkUpdateAdsBidByListingIDPathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkUpdateAdsBidByListingIDSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkUpdateAdsBidByListingIDRequest:
-    path_params: BulkUpdateAdsBidByListingIDPathParams = field()
-    request: shared.BulkCreateAdRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: BulkUpdateAdsBidByListingIDSecurity = field()
+    path_params: BulkUpdateAdsBidByListingIDPathParams = dataclasses.field()
+    request: shared_bulkcreateadrequest.BulkCreateAdRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: BulkUpdateAdsBidByListingIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkUpdateAdsBidByListingIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bulk_ad_response: Optional[shared.BulkAdResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bulk_ad_response: Optional[shared_bulkadresponse.BulkAdResponse] = dataclasses.field(default=None)
     

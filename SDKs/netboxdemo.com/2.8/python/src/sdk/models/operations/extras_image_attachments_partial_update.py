@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import imageattachment as shared_imageattachment
+from ..shared import imageattachment as shared_imageattachment
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsPartialUpdateRequest:
-    path_params: ExtrasImageAttachmentsPartialUpdatePathParams = field()
-    request: shared.ImageAttachmentInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ExtrasImageAttachmentsPartialUpdatePathParams = dataclasses.field()
+    request: shared_imageattachment.ImageAttachmentInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasImageAttachmentsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    image_attachment: Optional[shared.ImageAttachment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    image_attachment: Optional[shared_imageattachment.ImageAttachment] = dataclasses.field(default=None)
     

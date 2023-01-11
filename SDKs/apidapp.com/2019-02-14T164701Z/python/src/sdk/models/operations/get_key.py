@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetKeyQueryParams:
-    token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKeyRequest:
-    query_params: GetKeyQueryParams = field()
+    query_params: GetKeyQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    empty: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    empty: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

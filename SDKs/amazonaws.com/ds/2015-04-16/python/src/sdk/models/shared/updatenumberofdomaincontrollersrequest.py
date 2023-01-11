@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,8 +7,8 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNumberOfDomainControllersRequest:
-    desired_number: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DesiredNumber') }})
-    directory_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
+    desired_number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DesiredNumber') }})
+    directory_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DirectoryId') }})
     

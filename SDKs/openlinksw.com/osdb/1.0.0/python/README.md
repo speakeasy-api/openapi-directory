@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.ActionHelpRequest(
     path_params=operations.ActionHelpPathParams(
-        action_id="ea",
-        service_id="consequatur",
+        action_id="molestias",
+        service_id="praesentium",
     ),
 )
     
-res = s.sdk.action_help(req)
+res = s.osdb.action_help(req)
 
 if res.action_help_response is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.action_help_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### OSDB
 
 * `action_help` - Action help
 * `describe_action` - Describe action

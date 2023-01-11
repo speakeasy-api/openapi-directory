@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams:
-    a_wb_number: str = field(metadata={'path_param': { 'field_name': 'aWBNumber', 'style': 'simple', 'explode': False }})
-    a_wb_prefix: str = field(metadata={'path_param': { 'field_name': 'aWBPrefix', 'style': 'simple', 'explode': False }})
+    a_wb_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'aWBNumber', 'style': 'simple', 'explode': False }})
+    a_wb_prefix: str = dataclasses.field(metadata={'path_param': { 'field_name': 'aWBPrefix', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetRequest:
-    headers: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetHeaders = field()
-    path_params: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams = field()
-    security: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetSecurity = field()
+    headers: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetHeaders = dataclasses.field()
+    path_params: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams = dataclasses.field()
+    security: CargoShipmentTrackingByAwbPrefixAndAwbNumberGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cargo_shipment_tracking_by_awb_prefix_and_awb_number_get_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cargo_shipment_tracking_by_awb_prefix_and_awb_number_get_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

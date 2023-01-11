@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,29 +21,29 @@ req = operations.SQLBackupRunsDeleteRequest(
         option1=operations.SQLBackupRunsDeleteSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.SQLBackupRunsDeletePathParams(
-        id="aut",
-        instance="tempora",
-        project="incidunt",
+        id="ut",
+        instance="quia",
+        project="laboriosam",
     ),
     query_params=operations.SQLBackupRunsDeleteQueryParams(
-        dollar_xgafv="1",
-        access_token="minus",
-        alt="json",
-        callback="officia",
-        fields="nesciunt",
-        key="perferendis",
-        oauth_token="in",
+        dollar_xgafv="2",
+        access_token="molestiae",
+        alt="proto",
+        callback="sed",
+        fields="quibusdam",
+        key="odit",
+        oauth_token="similique",
         pretty_print=False,
-        quota_user="iusto",
-        upload_type="et",
-        upload_protocol="aperiam",
+        quota_user="porro",
+        upload_type="optio",
+        upload_protocol="atque",
     ),
 )
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import commentsforpullrequest as shared_commentsforpullrequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetCommentsForPullRequestOutput:
-    comments_for_pull_request_data: Optional[List[CommentsForPullRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commentsForPullRequestData') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    comments_for_pull_request_data: Optional[list[shared_commentsforpullrequest.CommentsForPullRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commentsForPullRequestData') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rir as shared_rir
+from ..shared import rir as shared_rir
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsCreateRequest:
-    request: shared.RirInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_rir.RirInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamRirsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rir: Optional[shared.Rir] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rir: Optional[shared_rir.Rir] = dataclasses.field(default=None)
     

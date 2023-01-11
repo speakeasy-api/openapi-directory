@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import servicetemplate as shared_servicetemplate
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetServiceTemplateOutput:
-    service_template: ServiceTemplate = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceTemplate') }})
+    service_template: shared_servicetemplate.ServiceTemplate = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('serviceTemplate') }})
     

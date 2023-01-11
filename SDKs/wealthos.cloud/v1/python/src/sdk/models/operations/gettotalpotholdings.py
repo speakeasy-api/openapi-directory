@@ -1,39 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotHoldingsPathParams:
-    investor_id: str = field(metadata={'path_param': { 'field_name': 'investor_id', 'style': 'simple', 'explode': False }})
+    investor_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'investor_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotHoldingsHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotHoldingsSecurity:
-    api_secret_key: shared.SchemeAPISecretKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_secret_key: shared_security.SchemeAPISecretKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotHoldingsRequest:
-    headers: GetTotalPotHoldingsHeaders = field()
-    path_params: GetTotalPotHoldingsPathParams = field()
-    security: GetTotalPotHoldingsSecurity = field()
+    headers: GetTotalPotHoldingsHeaders = dataclasses.field()
+    path_params: GetTotalPotHoldingsPathParams = dataclasses.field()
+    security: GetTotalPotHoldingsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTotalPotHoldingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_total_pot_holdings_200_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_holdings_401_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_holdings_403_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_holdings_404_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_holdings_429_application_json_any: Optional[Any] = field(default=None)
-    get_total_pot_holdings_500_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_total_pot_holdings_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_holdings_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_holdings_403_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_holdings_404_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_holdings_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_total_pot_holdings_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

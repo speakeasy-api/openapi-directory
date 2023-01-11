@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import deleteaddressrequest as shared_deleteaddressrequest
+from ..shared import deleteaddress as shared_deleteaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAddressHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAddressRequest:
-    headers: DeleteAddressHeaders = field()
-    request: shared.DeleteAddressRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DeleteAddressHeaders = dataclasses.field()
+    request: shared_deleteaddressrequest.DeleteAddressRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_address: Optional[shared.DeleteAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_address: Optional[shared_deleteaddress.DeleteAddress] = dataclasses.field(default=None)
     

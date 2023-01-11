@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import availabilityoptionsstatus as shared_availabilityoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAvailabilityOptionsResponse:
     r"""DescribeAvailabilityOptionsResponse
     The result of a <code>DescribeAvailabilityOptions</code> request. Indicates whether or not the Multi-AZ option is enabled for the domain specified in the request. 
     """
     
-    availability_options: Optional[AvailabilityOptionsStatus] = field(default=None)
+    availability_options: Optional[shared_availabilityoptionsstatus.AvailabilityOptionsStatus] = dataclasses.field(default=None)
     

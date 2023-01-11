@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import companydomainviewmodel as shared_companydomainviewmodel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CompanyDomainListViewModel:
-    data: Optional[List[CompanyDomainViewModel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    object_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectName') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    data: Optional[list[shared_companydomainviewmodel.CompanyDomainViewModel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    object_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('objectName') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

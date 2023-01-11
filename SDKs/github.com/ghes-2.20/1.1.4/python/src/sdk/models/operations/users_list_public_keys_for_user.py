@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import key_simple as shared_key_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersListPublicKeysForUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListPublicKeysForUserQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListPublicKeysForUserRequest:
-    path_params: UsersListPublicKeysForUserPathParams = field()
-    query_params: UsersListPublicKeysForUserQueryParams = field()
+    path_params: UsersListPublicKeysForUserPathParams = dataclasses.field()
+    query_params: UsersListPublicKeysForUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersListPublicKeysForUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    key_simples: Optional[List[shared.KeySimple]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    key_simples: Optional[list[shared_key_simple.KeySimple]] = dataclasses.field(default=None)
     

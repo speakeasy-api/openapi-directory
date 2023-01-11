@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import registrierkasse as shared_registrierkasse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRegistrierkassePathParams:
-    registrierkasse_uuid: str = field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
+    registrierkasse_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegistrierkasseRequest:
-    path_params: GetRegistrierkassePathParams = field()
+    path_params: GetRegistrierkassePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegistrierkasseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    registrierkasse: Optional[shared.Registrierkasse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    registrierkasse: Optional[shared_registrierkasse.Registrierkasse] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,11 +24,11 @@ req = operations.DeleteFaxRequest(
         ),
     ),
     path_params=operations.DeleteFaxPathParams(
-        sid="error",
+        sid="quae",
     ),
 )
     
-res = s.sdk.delete_fax(req)
+res = s.delete_fax(req)
 
 if res.status_code == 200:
     # handle response

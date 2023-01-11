@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apiresponsefailure as shared_apiresponsefailure
+from ..shared import apiresponsesuccess as shared_apiresponsesuccess
 
 
-@dataclass
+@dataclasses.dataclass
 class WkhtmltopdfFromURLGetQueryParams:
-    url: str = field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
-    output: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
+    url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
+    output: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'output', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WkhtmltopdfFromURLGetSecurity:
-    query_api_key: shared.SchemeQueryAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    query_api_key: shared_security.SchemeQueryAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WkhtmltopdfFromURLGetRequest:
-    query_params: WkhtmltopdfFromURLGetQueryParams = field()
-    security: WkhtmltopdfFromURLGetSecurity = field()
+    query_params: WkhtmltopdfFromURLGetQueryParams = dataclasses.field()
+    security: WkhtmltopdfFromURLGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WkhtmltopdfFromURLGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_response_failure: Optional[shared.APIResponseFailure] = field(default=None)
-    api_response_success: Optional[shared.APIResponseSuccess] = field(default=None)
-    wkhtmltopdf_from_url_get_200_application_pdf_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_response_failure: Optional[shared_apiresponsefailure.APIResponseFailure] = dataclasses.field(default=None)
+    api_response_success: Optional[shared_apiresponsesuccess.APIResponseSuccess] = dataclasses.field(default=None)
+    wkhtmltopdf_from_url_get_200_application_pdf_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

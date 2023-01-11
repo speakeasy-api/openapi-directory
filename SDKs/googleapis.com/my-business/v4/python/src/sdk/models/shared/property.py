@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -33,18 +33,18 @@ class PropertyRoomsCountExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Property:
     r"""Property
     General factual information about the property's physical structure and important dates.
     """
     
-    built_year: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtYear') }})
-    built_year_exception: Optional[PropertyBuiltYearExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtYearException') }})
-    floors_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floorsCount') }})
-    floors_count_exception: Optional[PropertyFloorsCountExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floorsCountException') }})
-    last_renovated_year: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastRenovatedYear') }})
-    last_renovated_year_exception: Optional[PropertyLastRenovatedYearExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastRenovatedYearException') }})
-    rooms_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roomsCount') }})
-    rooms_count_exception: Optional[PropertyRoomsCountExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roomsCountException') }})
+    built_year: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtYear') }})
+    built_year_exception: Optional[PropertyBuiltYearExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('builtYearException') }})
+    floors_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floorsCount') }})
+    floors_count_exception: Optional[PropertyFloorsCountExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floorsCountException') }})
+    last_renovated_year: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastRenovatedYear') }})
+    last_renovated_year_exception: Optional[PropertyLastRenovatedYearExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastRenovatedYearException') }})
+    rooms_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roomsCount') }})
+    rooms_count_exception: Optional[PropertyRoomsCountExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roomsCountException') }})
     

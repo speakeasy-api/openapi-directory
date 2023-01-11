@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleclouddatalabelingv1beta1feedbackthread as shared_googleclouddatalabelingv1beta1feedbackthread
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse:
     r"""GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse
     Results for listing FeedbackThreads.
     """
     
-    feedback_threads: Optional[List[GoogleCloudDatalabelingV1beta1FeedbackThread]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feedbackThreads') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    feedback_threads: Optional[list[shared_googleclouddatalabelingv1beta1feedbackthread.GoogleCloudDatalabelingV1beta1FeedbackThread]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feedbackThreads') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

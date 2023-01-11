@@ -27,3 +27,5 @@ from .serviceidentity import *
 from .shieldedinstanceconfig import *
 from .status import *
 from .symptom import *
+
+__all__ = ["XgafvEnum","AcceleratorType","AccessConfig","AltEnum","AttachedDiskModeEnum","AttachedDisk","GenerateServiceIdentityResponse","GetGuestAttributesRequest","GetGuestAttributesResponse","GuestAttributes","GuestAttributesEntry","GuestAttributesValue","ListAcceleratorTypesResponse","ListLocationsResponse","ListNodesResponse","ListOperationsResponse","ListRuntimeVersionsResponse","Location","NetworkConfig","NetworkEndpoint","NodeHealthEnum","NodeInput","NodeAPIVersionEnum","NodeStateEnum","Node","Operation","RuntimeVersion","SchedulingConfig","SchemeOauth2","SchemeOauth2c","ServiceAccount","ServiceIdentity","ShieldedInstanceConfig","Status","SymptomSymptomTypeEnum","Symptom"]

@@ -1,18 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import upsertaction_enum as shared_upsertaction_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpsertRowsResult:
-    r"""UpsertRowsResult
-     An object that represents the result of a single upsert row request. 
-    """
-    
-    row_ids: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rowIds') }})
-    upsert_action: UpsertActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upsertAction') }})
+    row_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rowIds') }})
+    upsert_action: Optional[shared_upsertaction_enum.UpsertActionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('upsertAction') }})
     

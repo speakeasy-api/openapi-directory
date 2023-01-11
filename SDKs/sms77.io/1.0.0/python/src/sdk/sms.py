@@ -39,7 +39,7 @@ class Sms:
                 out = utils.unmarshal_json(r.text, Optional[operations.Sms200ApplicationJSON])
                 res.sms_200_application_json_object = out
             if utils.match_content_type(content_type, "text/plain"):
-                res.body = r.content
+                res.sms_200_text_plain_object = r.content
 
         return res
 

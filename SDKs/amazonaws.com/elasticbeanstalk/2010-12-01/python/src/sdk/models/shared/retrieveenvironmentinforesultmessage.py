@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import environmentinfodescription as shared_environmentinfodescription
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveEnvironmentInfoResultMessage:
     r"""RetrieveEnvironmentInfoResultMessage
     Result message containing a description of the requested environment info.
     """
     
-    environment_info: Optional[List[EnvironmentInfoDescription]] = field(default=None)
+    environment_info: Optional[list[shared_environmentinfodescription.EnvironmentInfoDescription]] = dataclasses.field(default=None)
     

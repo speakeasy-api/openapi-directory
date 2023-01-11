@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEgressOnlyInternetGatewayResult:
-    return_code: Optional[bool] = field(default=None)
+    return_code: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

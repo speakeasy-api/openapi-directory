@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getpodcastsinbatchform as shared_getpodcastsinbatchform
+from ..shared import getpodcastsinbatchresponse as shared_getpodcastsinbatchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastsInBatchHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastsInBatchRequest:
-    headers: GetPodcastsInBatchHeaders = field()
-    request: Optional[shared.GetPodcastsInBatchForm] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    headers: GetPodcastsInBatchHeaders = dataclasses.field()
+    request: Optional[shared_getpodcastsinbatchform.GetPodcastsInBatchForm] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPodcastsInBatchResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_podcasts_in_batch_response: Optional[shared.GetPodcastsInBatchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_podcasts_in_batch_response: Optional[shared_getpodcastsinbatchresponse.GetPodcastsInBatchResponse] = dataclasses.field(default=None)
     

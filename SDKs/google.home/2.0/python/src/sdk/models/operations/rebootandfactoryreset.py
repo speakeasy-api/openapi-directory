@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rebootandfactoryresetrequest as shared_rebootandfactoryresetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class RebootandFactoryResetRequest:
-    request: shared.RebootandFactoryResetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_rebootandfactoryresetrequest.RebootandFactoryResetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RebootandFactoryResetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rebootand_factory_reset_200_text_plain_object: Optional[str] = dataclasses.field(default=None)
     

@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import as2keyentity as shared_as2keyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAs2KeysRequestBody:
-    as2_partnership_name: str = field(metadata={'multipart_form': { 'field_name': 'as2_partnership_name' }})
-    public_key: str = field(metadata={'multipart_form': { 'field_name': 'public_key' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    as2_partnership_name: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'as2_partnership_name' }})
+    public_key: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'public_key' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAs2KeysRequest:
-    request: Optional[PostAs2KeysRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostAs2KeysRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAs2KeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    as2_key_entity: Optional[shared.As2KeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    as2_key_entity: Optional[shared_as2keyentity.As2KeyEntity] = dataclasses.field(default=None)
     

@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import grpcrouterouteaction as shared_grpcrouterouteaction
+from ..shared import grpcrouteroutematch as shared_grpcrouteroutematch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GrpcRouteRouteRule:
     r"""GrpcRouteRouteRule
     Describes how to route traffic.
     """
     
-    action: Optional[GrpcRouteRouteAction] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    matches: Optional[List[GrpcRouteRouteMatch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matches') }})
+    action: Optional[shared_grpcrouterouteaction.GrpcRouteRouteAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    matches: Optional[list[shared_grpcrouteroutematch.GrpcRouteRouteMatch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matches') }})
     

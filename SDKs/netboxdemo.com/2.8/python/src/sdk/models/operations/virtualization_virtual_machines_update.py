@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablevirtualmachinewithconfigcontext as shared_writablevirtualmachinewithconfigcontext
+from ..shared import virtualmachinewithconfigcontext as shared_virtualmachinewithconfigcontext
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationVirtualMachinesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationVirtualMachinesUpdateRequest:
-    path_params: VirtualizationVirtualMachinesUpdatePathParams = field()
-    request: shared.WritableVirtualMachineWithConfigContextInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: VirtualizationVirtualMachinesUpdatePathParams = dataclasses.field()
+    request: shared_writablevirtualmachinewithconfigcontext.WritableVirtualMachineWithConfigContextInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationVirtualMachinesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    virtual_machine_with_config_context: Optional[shared.VirtualMachineWithConfigContext] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    virtual_machine_with_config_context: Optional[shared_virtualmachinewithconfigcontext.VirtualMachineWithConfigContext] = dataclasses.field(default=None)
     

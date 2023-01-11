@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AssociateTrackerConsumerRequest(
     path_params=operations.AssociateTrackerConsumerPathParams(
-        tracker_name="quis",
+        tracker_name="omnis",
     ),
     headers=operations.AssociateTrackerConsumerHeaders(
-        x_amz_algorithm="est",
-        x_amz_content_sha256="dolorum",
-        x_amz_credential="ut",
-        x_amz_date="veniam",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="dolores",
+        x_amz_credential="voluptatem",
+        x_amz_date="consectetur",
         x_amz_security_token="est",
-        x_amz_signature="blanditiis",
-        x_amz_signed_headers="aliquid",
+        x_amz_signature="ducimus",
+        x_amz_signed_headers="adipisci",
     ),
     request=operations.AssociateTrackerConsumerRequestBody(
-        consumer_arn="asperiores",
+        consumer_arn="ut",
     ),
 )
     
-res = s.sdk.associate_tracker_consumer(req)
+res = s.associate_tracker_consumer(req)
 
 if res.associate_tracker_consumer_response is not None:
     # handle response

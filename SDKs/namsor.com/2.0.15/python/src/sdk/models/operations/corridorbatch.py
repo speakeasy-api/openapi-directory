@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchcorridorin as shared_batchcorridorin
+from ..shared import batchcorridorout as shared_batchcorridorout
 
 
-@dataclass
+@dataclasses.dataclass
 class CorridorBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CorridorBatchRequest:
-    security: CorridorBatchSecurity = field()
-    request: Optional[shared.BatchCorridorIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: CorridorBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchcorridorin.BatchCorridorIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CorridorBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_corridor_out: Optional[shared.BatchCorridorOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_corridor_out: Optional[shared_batchcorridorout.BatchCorridorOut] = dataclasses.field(default=None)
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import invalidtoken as shared_invalidtoken
+from ..shared import userrecord as shared_userrecord
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUserIDPathParams:
-    user_id: int = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    user_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUserIDRequest:
-    path_params: GetUserUserIDPathParams = field()
+    path_params: GetUserUserIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserUserIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
-    user_record: Optional[shared.UserRecord] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
+    user_record: Optional[shared_userrecord.UserRecord] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkSmUserDeviceProfilesPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    user_id: str = field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkSmUserDeviceProfilesRequest:
-    path_params: GetNetworkSmUserDeviceProfilesPathParams = field()
+    path_params: GetNetworkSmUserDeviceProfilesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNetworkSmUserDeviceProfilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_network_sm_user_device_profiles_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_network_sm_user_device_profiles_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

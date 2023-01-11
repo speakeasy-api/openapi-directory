@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablesite as shared_writablesite
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimSitesCreateRequest:
-    request: shared.WritableSiteInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablesite.WritableSiteInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimSitesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site: Optional[shared.Site] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site: Optional[shared_site.Site] = dataclasses.field(default=None)
     

@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import repository_subscription as shared_repository_subscription
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetRepoSubscriptionPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetRepoSubscriptionRequest:
-    path_params: ActivityGetRepoSubscriptionPathParams = field()
+    path_params: ActivityGetRepoSubscriptionPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActivityGetRepoSubscriptionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    repository_subscription: Optional[shared.RepositorySubscription] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    repository_subscription: Optional[shared_repository_subscription.RepositorySubscription] = dataclasses.field(default=None)
     

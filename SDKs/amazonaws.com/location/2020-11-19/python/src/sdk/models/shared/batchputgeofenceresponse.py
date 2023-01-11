@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchputgeofenceerror as shared_batchputgeofenceerror
+from ..shared import batchputgeofencesuccess as shared_batchputgeofencesuccess
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchPutGeofenceResponse:
-    errors: List[BatchPutGeofenceError] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
-    successes: List[BatchPutGeofenceSuccess] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successes') }})
+    errors: list[shared_batchputgeofenceerror.BatchPutGeofenceError] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
+    successes: list[shared_batchputgeofencesuccess.BatchPutGeofenceSuccess] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successes') }})
     

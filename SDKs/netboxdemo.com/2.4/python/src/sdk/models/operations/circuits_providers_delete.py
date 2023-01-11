@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersDeleteRequest:
-    path_params: CircuitsProvidersDeletePathParams = field()
+    path_params: CircuitsProvidersDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CircuitsProvidersDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

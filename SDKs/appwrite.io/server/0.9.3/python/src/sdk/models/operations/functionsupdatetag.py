@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import function as shared_function
 
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsUpdateTagPathParams:
-    function_id: str = field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
+    function_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FunctionsUpdateTagRequestBody:
-    tag: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
+    tag: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsUpdateTagSecurity:
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsUpdateTagRequest:
-    path_params: FunctionsUpdateTagPathParams = field()
-    security: FunctionsUpdateTagSecurity = field()
-    request: Optional[FunctionsUpdateTagRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: FunctionsUpdateTagPathParams = dataclasses.field()
+    security: FunctionsUpdateTagSecurity = dataclasses.field()
+    request: Optional[FunctionsUpdateTagRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FunctionsUpdateTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    function: Optional[shared.Function] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    function: Optional[shared_function.Function] = dataclasses.field(default=None)
     

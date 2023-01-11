@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deployment as shared_deployment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeDeploymentsResult:
     r"""DescribeDeploymentsResult
     Contains the response to a <code>DescribeDeployments</code> request.
     """
     
-    deployments: Optional[List[Deployment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Deployments') }})
+    deployments: Optional[list[shared_deployment.Deployment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Deployments') }})
     

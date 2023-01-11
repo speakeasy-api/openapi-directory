@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import hsmconfiguration as shared_hsmconfiguration
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateHsmConfigurationResult:
-    hsm_configuration: Optional[HsmConfiguration] = field(default=None)
+    hsm_configuration: Optional[shared_hsmconfiguration.HsmConfiguration] = dataclasses.field(default=None)
     

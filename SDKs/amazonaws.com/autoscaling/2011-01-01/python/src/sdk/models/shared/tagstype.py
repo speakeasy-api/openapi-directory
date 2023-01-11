@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tagdescription as shared_tagdescription
 
 
-@dataclass
+@dataclasses.dataclass
 class TagsType:
-    next_token: Optional[str] = field(default=None)
-    tags: Optional[List[TagDescription]] = field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
+    tags: Optional[list[shared_tagdescription.TagDescription]] = dataclasses.field(default=None)
     

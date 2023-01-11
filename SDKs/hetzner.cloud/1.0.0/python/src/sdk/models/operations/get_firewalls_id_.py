@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesServer:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum(str, Enum):
     SERVER = "server"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResources:
-    server: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesServer] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('server') }})
-    type: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    server: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesServer] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('server') }})
+    type: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallAppliedToLabelSelector:
-    selector: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('selector') }})
+    selector: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('selector') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallAppliedToServer:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum(str, Enum):
     SERVER = "server"
@@ -43,12 +43,12 @@ class GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallAppliedTo:
-    type: GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    applied_to_resources: Optional[List[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResources]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applied_to_resources') }})
-    label_selector: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToLabelSelector] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label_selector') }})
-    server: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToServer] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('server') }})
+    type: GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    applied_to_resources: Optional[list[GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResources]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applied_to_resources') }})
+    label_selector: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToLabelSelector] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label_selector') }})
+    server: Optional[GetFirewallsIDFirewallResponseFirewallAppliedToServer] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('server') }})
     
 class GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum(str, Enum):
     IN = "in"
@@ -63,41 +63,41 @@ class GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewallRule:
-    direction: GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('direction') }})
-    protocol: GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    destination_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination_ips') }})
-    port: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
-    source_ips: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source_ips') }})
+    direction: GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('direction') }})
+    protocol: GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('protocol') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    destination_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destination_ips') }})
+    port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('port') }})
+    source_ips: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source_ips') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponseFirewall:
-    applied_to: List[GetFirewallsIDFirewallResponseFirewallAppliedTo] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('applied_to') }})
-    created: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    rules: List[GetFirewallsIDFirewallResponseFirewallRule] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    applied_to: list[GetFirewallsIDFirewallResponseFirewallAppliedTo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('applied_to') }})
+    created: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    rules: list[GetFirewallsIDFirewallResponseFirewallRule] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDFirewallResponse:
-    firewall: GetFirewallsIDFirewallResponseFirewall = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewall') }})
+    firewall: GetFirewallsIDFirewallResponseFirewall = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('firewall') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDRequest:
-    path_params: GetFirewallsIDPathParams = field()
+    path_params: GetFirewallsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFirewallsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    firewall_response: Optional[GetFirewallsIDFirewallResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    firewall_response: Optional[GetFirewallsIDFirewallResponse] = dataclasses.field(default=None)
     

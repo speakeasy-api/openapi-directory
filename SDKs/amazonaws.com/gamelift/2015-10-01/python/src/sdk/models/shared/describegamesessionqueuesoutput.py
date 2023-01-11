@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gamesessionqueue as shared_gamesessionqueue
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeGameSessionQueuesOutput:
     r"""DescribeGameSessionQueuesOutput
     Represents the returned data in response to a request operation.
     """
     
-    game_session_queues: Optional[List[GameSessionQueue]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GameSessionQueues') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    game_session_queues: Optional[list[shared_gamesessionqueue.GameSessionQueue]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GameSessionQueues') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

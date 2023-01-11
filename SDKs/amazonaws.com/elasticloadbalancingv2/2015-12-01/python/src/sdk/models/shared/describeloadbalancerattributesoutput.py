@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import loadbalancerattribute as shared_loadbalancerattribute
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeLoadBalancerAttributesOutput:
-    attributes: Optional[List[LoadBalancerAttribute]] = field(default=None)
+    attributes: Optional[list[shared_loadbalancerattribute.LoadBalancerAttribute]] = dataclasses.field(default=None)
     

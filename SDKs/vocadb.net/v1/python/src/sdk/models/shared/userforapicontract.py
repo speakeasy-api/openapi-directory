@@ -1,12 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import userknownlanguagecontract as shared_userknownlanguagecontract
+from ..shared import entrythumbforapicontract as shared_entrythumbforapicontract
+from ..shared import oldusernamecontract as shared_oldusernamecontract
 
 class UserForAPIContractGroupIDEnum(str, Enum):
     NOTHING = "Nothing"
@@ -18,15 +20,15 @@ class UserForAPIContractGroupIDEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserForAPIContract:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    group_id: Optional[UserForAPIContractGroupIDEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupId') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    known_languages: Optional[List[UserKnownLanguageContract]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('knownLanguages') }})
-    main_picture: Optional[EntryThumbForAPIContract] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mainPicture') }})
-    member_since: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memberSince'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    old_usernames: Optional[List[OldUsernameContract]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldUsernames') }})
-    verified_artist: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verifiedArtist') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    group_id: Optional[UserForAPIContractGroupIDEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupId') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    known_languages: Optional[list[shared_userknownlanguagecontract.UserKnownLanguageContract]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('knownLanguages') }})
+    main_picture: Optional[shared_entrythumbforapicontract.EntryThumbForAPIContract] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mainPicture') }})
+    member_since: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memberSince'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    old_usernames: Optional[list[shared_oldusernamecontract.OldUsernameContract]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('oldUsernames') }})
+    verified_artist: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verifiedArtist') }})
     

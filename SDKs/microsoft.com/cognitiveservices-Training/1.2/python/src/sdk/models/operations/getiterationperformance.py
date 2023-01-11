@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import iterationperformance as shared_iterationperformance
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIterationPerformancePathParams:
-    iteration_id: str = field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    iteration_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'iterationId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIterationPerformanceQueryParams:
-    threshold: float = field(metadata={'query_param': { 'field_name': 'threshold', 'style': 'form', 'explode': True }})
+    threshold: float = dataclasses.field(metadata={'query_param': { 'field_name': 'threshold', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIterationPerformanceHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIterationPerformanceRequest:
-    headers: GetIterationPerformanceHeaders = field()
-    path_params: GetIterationPerformancePathParams = field()
-    query_params: GetIterationPerformanceQueryParams = field()
+    headers: GetIterationPerformanceHeaders = dataclasses.field()
+    path_params: GetIterationPerformancePathParams = dataclasses.field()
+    query_params: GetIterationPerformanceQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIterationPerformanceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    iteration_performance: Optional[shared.IterationPerformance] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    iteration_performance: Optional[shared_iterationperformance.IterationPerformance] = dataclasses.field(default=None)
     

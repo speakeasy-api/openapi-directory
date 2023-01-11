@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import version as shared_version
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateVersionSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVersionRequest:
-    request: shared.Version = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateVersionSecurity = field()
+    request: shared_version.Version = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateVersionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

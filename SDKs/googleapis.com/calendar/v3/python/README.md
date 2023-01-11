@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.CalendarACLDeleteRequest(
     security=operations.CalendarACLDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.CalendarACLDeletePathParams(
-        calendar_id="eius",
-        rule_id="voluptatem",
+        calendar_id="perferendis",
+        rule_id="ut",
     ),
     query_params=operations.CalendarACLDeleteQueryParams(
         alt="json",
-        fields="pariatur",
-        key="reprehenderit",
-        oauth_token="rerum",
+        fields="voluptate",
+        key="in",
+        oauth_token="dolorem",
         pretty_print=False,
-        quota_user="ut",
-        user_ip="omnis",
+        quota_user="mollitia",
+        user_ip="quasi",
     ),
 )
     

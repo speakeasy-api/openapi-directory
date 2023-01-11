@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,13 +25,13 @@ s.config_security(
     
 req = operations.GetTimestagsRequest(
     query_params=operations.GetTimestagsQueryParams(
-        filter="Per",
-        max=4978267807534720283,
-        query="excepturi",
+        filter="Des",
+        max=629466435034479331,
+        query="reprehenderit",
     ),
 )
     
-res = s.sdk.get_timestags(req)
+res = s.get_timestags(req)
 
 if res.get_timestags_200_application_json_arrays is not None:
     # handle response

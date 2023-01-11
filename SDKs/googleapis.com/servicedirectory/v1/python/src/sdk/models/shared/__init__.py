@@ -19,3 +19,5 @@ from .service import *
 from .setiampolicyrequest import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","Binding","Endpoint","EndpointInput","Expr","GetIamPolicyRequest","GetPolicyOptions","ListEndpointsResponse","ListLocationsResponse","ListNamespacesResponse","ListServicesResponse","Location","Namespace","NamespaceInput","Policy","ResolveServiceRequest","ResolveServiceResponse","SchemeOauth2","SchemeOauth2c","Service","ServiceInput","SetIamPolicyRequest","TestIamPermissionsRequest","TestIamPermissionsResponse"]

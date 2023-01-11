@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import externalevententity as shared_externalevententity
 
 class PostExternalEventsRequestBodyStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -9,20 +9,20 @@ class PostExternalEventsRequestBodyStatusEnum(str, Enum):
     PARTIAL_FAILURE = "partial_failure"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostExternalEventsRequestBody:
-    body: str = field(metadata={'multipart_form': { 'field_name': 'body' }})
-    status: PostExternalEventsRequestBodyStatusEnum = field(metadata={'multipart_form': { 'field_name': 'status' }})
+    body: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'body' }})
+    status: PostExternalEventsRequestBodyStatusEnum = dataclasses.field(metadata={'multipart_form': { 'field_name': 'status' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostExternalEventsRequest:
-    request: PostExternalEventsRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostExternalEventsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostExternalEventsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    external_event_entity: Optional[shared.ExternalEventEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    external_event_entity: Optional[shared_externalevententity.ExternalEventEntity] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyR
     security=operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicySecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyPathParams(
-        resource="suscipit",
+        resource="sint",
     ),
     query_params=operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyQueryParams(
         dollar_xgafv="1",
-        access_token="ipsa",
-        alt="proto",
-        callback="tempora",
-        fields="minus",
-        key="numquam",
-        oauth_token="eos",
-        options_requested_policy_version=8562947669453034156,
-        pretty_print=True,
-        quota_user="sed",
-        upload_type="illo",
-        upload_protocol="dignissimos",
+        access_token="aut",
+        alt="media",
+        callback="debitis",
+        fields="neque",
+        key="inventore",
+        oauth_token="quasi",
+        options_requested_policy_version=1791742271808730576,
+        pretty_print=False,
+        quota_user="nobis",
+        upload_type="rerum",
+        upload_protocol="eaque",
     ),
 )
     

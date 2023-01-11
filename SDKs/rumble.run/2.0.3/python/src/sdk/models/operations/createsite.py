@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import siteoptions as shared_siteoptions
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateSiteSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSiteRequest:
-    request: shared.SiteOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateSiteSecurity = field()
+    request: shared_siteoptions.SiteOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateSiteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    site: Optional[shared.Site] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    site: Optional[shared_site.Site] = dataclasses.field(default=None)
     

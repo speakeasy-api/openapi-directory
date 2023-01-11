@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import webhookentry as shared_webhookentry
+from ..shared import error as shared_error
+from ..shared import webhook as shared_webhook
 
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksIDRequest:
-    path_params: PostWebhooksIDPathParams = field()
-    request: shared.WebhookEntry = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostWebhooksIDPathParams = dataclasses.field()
+    request: shared_webhookentry.WebhookEntry = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostWebhooksIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    webhook: Optional[shared.Webhook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None)
     

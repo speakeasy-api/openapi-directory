@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import example as shared_example
 
 
-@dataclass
+@dataclasses.dataclass
 class AddExamplePathParams:
-    dataset_id: str = field(metadata={'path_param': { 'field_name': 'datasetId', 'style': 'simple', 'explode': False }})
+    dataset_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'datasetId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddExampleRequestBody:
-    data: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
-    label_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'labelId' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    data: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'data' }})
+    label_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'labelId' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddExampleSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddExampleRequest:
-    path_params: AddExamplePathParams = field()
-    security: AddExampleSecurity = field()
-    request: Optional[AddExampleRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: AddExamplePathParams = dataclasses.field()
+    security: AddExampleSecurity = dataclasses.field()
+    request: Optional[AddExampleRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddExampleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example: Optional[shared.Example] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example: Optional[shared_example.Example] = dataclasses.field(default=None)
     

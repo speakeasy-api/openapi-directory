@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostNodeRwPathParams:
-    name: str = field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostNodeRwQueryParams:
-    add_members: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'addMembers', 'style': 'form', 'explode': True }})
+    add_members: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'addMembers', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostNodeRwRequest:
-    path_params: PostNodeRwPathParams = field()
-    query_params: PostNodeRwQueryParams = field()
+    path_params: PostNodeRwPathParams = dataclasses.field()
+    query_params: PostNodeRwQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostNodeRwResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

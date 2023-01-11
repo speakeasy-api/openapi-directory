@@ -1,177 +1,201 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventRequestBodyIdentificationAccount:
     r"""TrackJourneyEventRequestBodyIdentificationAccount
     Account identification requires an accountId, domain or both
     """
     
-    account_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
-    domain: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
+    account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accountId') }})
+    domain: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventRequestBodyIdentificationUser:
     r"""TrackJourneyEventRequestBodyIdentificationUser
     User identification requires a userId, email or both
     """
     
-    email: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    user_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    user_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventRequestBodyIdentification:
     r"""TrackJourneyEventRequestBodyIdentification
     Event identification requires a user, account or both
     """
     
-    account: Optional[TrackJourneyEventRequestBodyIdentificationAccount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
-    user: Optional[TrackJourneyEventRequestBodyIdentificationUser] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    account: Optional[TrackJourneyEventRequestBodyIdentificationAccount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('account') }})
+    user: Optional[TrackJourneyEventRequestBodyIdentificationUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventRequestBody:
     r"""TrackJourneyEventRequestBody
     Event for a user or an account
     """
     
-    identification: TrackJourneyEventRequestBodyIdentification = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identification') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    metadata: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    triggered_at: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('triggeredAt') }})
+    identification: TrackJourneyEventRequestBodyIdentification = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('identification') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    metadata: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    triggered_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('triggeredAt') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent201ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent201ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent201ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent201ApplicationJSON
+    The object was created
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent201ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent400ApplicationJSONErrorsParameters:
     r"""TrackJourneyEvent400ApplicationJSONErrorsParameters
     All query-, header- and path- parameters that seemed incorrect
     """
     
-    header: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
-    path: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    query: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
+    header: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('header') }})
+    path: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    query: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent400ApplicationJSONErrors:
     r"""TrackJourneyEvent400ApplicationJSONErrors
     Map that sums up all received values that seemed incorrect
     """
     
-    fields: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fields') }})
-    parameters: Optional[TrackJourneyEvent400ApplicationJSONErrorsParameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    fields: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fields') }})
+    parameters: Optional[TrackJourneyEvent400ApplicationJSONErrorsParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent400ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent400ApplicationJSON:
-    errors: TrackJourneyEvent400ApplicationJSONErrors = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent400ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent400ApplicationJSON
+    Specify the fields and/ or parameters that had errors
+    """
+    
+    errors: TrackJourneyEvent400ApplicationJSONErrors = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent400ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent401ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent401ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent401ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent401ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent401ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent403ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent403ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent403ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent403ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent403ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent429ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent429ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent429ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent429ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent429ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent500ApplicationJSONMeta:
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    status: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    status: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEvent500ApplicationJSON:
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    meta: TrackJourneyEvent500ApplicationJSONMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    r"""TrackJourneyEvent500ApplicationJSON
+    The error message should specify what cause the error
+    """
+    
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    meta: TrackJourneyEvent500ApplicationJSONMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventRequest:
-    request: TrackJourneyEventRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: TrackJourneyEventRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrackJourneyEventResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    track_journey_event_201_application_json_object: Optional[TrackJourneyEvent201ApplicationJSON] = field(default=None)
-    track_journey_event_400_application_json_object: Optional[TrackJourneyEvent400ApplicationJSON] = field(default=None)
-    track_journey_event_401_application_json_object: Optional[TrackJourneyEvent401ApplicationJSON] = field(default=None)
-    track_journey_event_403_application_json_object: Optional[TrackJourneyEvent403ApplicationJSON] = field(default=None)
-    track_journey_event_429_application_json_object: Optional[TrackJourneyEvent429ApplicationJSON] = field(default=None)
-    track_journey_event_500_application_json_object: Optional[TrackJourneyEvent500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    track_journey_event_201_application_json_object: Optional[TrackJourneyEvent201ApplicationJSON] = dataclasses.field(default=None)
+    track_journey_event_400_application_json_object: Optional[TrackJourneyEvent400ApplicationJSON] = dataclasses.field(default=None)
+    track_journey_event_401_application_json_object: Optional[TrackJourneyEvent401ApplicationJSON] = dataclasses.field(default=None)
+    track_journey_event_403_application_json_object: Optional[TrackJourneyEvent403ApplicationJSON] = dataclasses.field(default=None)
+    track_journey_event_429_application_json_object: Optional[TrackJourneyEvent429ApplicationJSON] = dataclasses.field(default=None)
+    track_journey_event_500_application_json_object: Optional[TrackJourneyEvent500ApplicationJSON] = dataclasses.field(default=None)
     

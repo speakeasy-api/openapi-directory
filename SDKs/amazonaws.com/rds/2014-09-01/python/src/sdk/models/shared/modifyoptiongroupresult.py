@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import optiongroup as shared_optiongroup
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyOptionGroupResult:
-    option_group: Optional[OptionGroup] = field(default=None)
+    option_group: Optional[shared_optiongroup.OptionGroup] = dataclasses.field(default=None)
     

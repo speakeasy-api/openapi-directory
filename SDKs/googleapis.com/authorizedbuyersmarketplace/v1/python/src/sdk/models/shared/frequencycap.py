@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,13 +17,13 @@ class FrequencyCapTimeUnitTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FrequencyCap:
     r"""FrequencyCap
     Message contains details about publisher-set frequency caps of the delivery.
     """
     
-    max_impressions: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxImpressions') }})
-    time_unit_type: Optional[FrequencyCapTimeUnitTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeUnitType') }})
-    time_units_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeUnitsCount') }})
+    max_impressions: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxImpressions') }})
+    time_unit_type: Optional[FrequencyCapTimeUnitTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeUnitType') }})
+    time_units_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeUnitsCount') }})
     

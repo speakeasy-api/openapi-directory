@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,33 +25,33 @@ s.config_security(
     
 req = operations.CreateConnectionRequest(
     headers=operations.CreateConnectionHeaders(
-        x_amz_algorithm="quo",
-        x_amz_content_sha256="quo",
-        x_amz_credential="id",
-        x_amz_date="illo",
-        x_amz_security_token="enim",
+        x_amz_algorithm="nobis",
+        x_amz_content_sha256="libero",
+        x_amz_credential="cumque",
+        x_amz_date="accusamus",
+        x_amz_security_token="voluptates",
         x_amz_signature="est",
-        x_amz_signed_headers="aut",
+        x_amz_signed_headers="inventore",
         x_amz_target="com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
     ),
     request=shared.CreateConnectionInput(
-        connection_name="mollitia",
-        host_arn="praesentium",
-        provider_type="Bitbucket",
+        connection_name="minima",
+        host_arn="iusto",
+        provider_type="GitHub",
         tags=[
             shared.Tag(
-                key="sint",
-                value="quaerat",
+                key="sed",
+                value="quo",
             ),
             shared.Tag(
-                key="sed",
-                value="omnis",
+                key="animi",
+                value="et",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_connection(req)
+res = s.create_connection(req)
 
 if res.create_connection_output is not None:
     # handle response

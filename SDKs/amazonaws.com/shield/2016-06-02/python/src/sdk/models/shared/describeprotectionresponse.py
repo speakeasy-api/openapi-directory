@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import protection as shared_protection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeProtectionResponse:
-    protection: Optional[Protection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Protection') }})
+    protection: Optional[shared_protection.Protection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Protection') }})
     

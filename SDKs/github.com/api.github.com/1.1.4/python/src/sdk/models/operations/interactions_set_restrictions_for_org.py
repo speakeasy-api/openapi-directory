@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interaction_limit as shared_interaction_limit
+from ..shared import interaction_limit_response as shared_interaction_limit_response
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForOrgRequest:
-    path_params: InteractionsSetRestrictionsForOrgPathParams = field()
-    request: Optional[shared.InteractionLimit] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: InteractionsSetRestrictionsForOrgPathParams = dataclasses.field()
+    request: Optional[shared_interaction_limit.InteractionLimit] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InteractionsSetRestrictionsForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interaction_limit_response: Optional[shared.InteractionLimitResponse] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interaction_limit_response: Optional[shared_interaction_limit_response.InteractionLimitResponse] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

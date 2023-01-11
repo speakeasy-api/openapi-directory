@@ -1,41 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLocationsID200ApplicationJSONLocation:
-    city: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('city') }})
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    id: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    latitude: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('latitude') }})
-    longitude: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('longitude') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    network_zone: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('network_zone') }})
+    city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('city') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    id: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    latitude: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('latitude') }})
+    longitude: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('longitude') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    network_zone: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('network_zone') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetLocationsID200ApplicationJSON:
-    location: GetLocationsID200ApplicationJSONLocation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    location: GetLocationsID200ApplicationJSONLocation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationsIDRequest:
-    path_params: GetLocationsIDPathParams = field()
+    path_params: GetLocationsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_locations_id_200_application_json_object: Optional[GetLocationsID200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_locations_id_200_application_json_object: Optional[GetLocationsID200ApplicationJSON] = dataclasses.field(default=None)
     

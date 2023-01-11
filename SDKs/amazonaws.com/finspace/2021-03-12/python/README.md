@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,37 +25,39 @@ s.config_security(
     
 req = operations.CreateEnvironmentRequest(
     headers=operations.CreateEnvironmentHeaders(
-        x_amz_algorithm="sequi",
-        x_amz_content_sha256="corrupti",
-        x_amz_credential="porro",
-        x_amz_date="at",
-        x_amz_security_token="saepe",
-        x_amz_signature="id",
-        x_amz_signed_headers="consequatur",
+        x_amz_algorithm="vitae",
+        x_amz_content_sha256="nulla",
+        x_amz_credential="voluptatem",
+        x_amz_date="dolor",
+        x_amz_security_token="expedita",
+        x_amz_signature="ea",
+        x_amz_signed_headers="iure",
     ),
     request=operations.CreateEnvironmentRequestBody(
-        description="quis",
-        federation_mode="LOCAL",
+        description="ratione",
+        federation_mode="FEDERATED",
         federation_parameters=operations.CreateEnvironmentRequestBodyFederationParameters(
-            application_call_back_url="molestiae",
+            application_call_back_url="sed",
             attribute_map={
-                "similique": "neque",
-                "deserunt": "ab",
+                "quae": "officia",
+                "aperiam": "molestiae",
             },
-            federation_provider_name="earum",
-            federation_urn="omnis",
-            saml_metadata_document="est",
-            saml_metadata_url="aliquid",
+            federation_provider_name="voluptatem",
+            federation_urn="impedit",
+            saml_metadata_document="debitis",
+            saml_metadata_url="quae",
         ),
-        kms_key_id="quia",
-        name="animi",
+        kms_key_id="rerum",
+        name="ut",
         tags={
-            "repudiandae": "non",
+            "excepturi": "et",
+            "asperiores": "fugit",
+            "perspiciatis": "ratione",
         },
     ),
 )
     
-res = s.sdk.create_environment(req)
+res = s.create_environment(req)
 
 if res.create_environment_response is not None:
     # handle response

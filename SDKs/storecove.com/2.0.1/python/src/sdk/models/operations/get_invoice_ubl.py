@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class GetInvoiceUblPackagingEnum(str, Enum):
     UBL = "ubl"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblPathParams:
-    guid: str = field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
-    packaging: GetInvoiceUblPackagingEnum = field(metadata={'path_param': { 'field_name': 'packaging', 'style': 'simple', 'explode': False }})
+    guid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'guid', 'style': 'simple', 'explode': False }})
+    packaging: GetInvoiceUblPackagingEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'packaging', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblRequest:
-    path_params: GetInvoiceUblPathParams = field()
+    path_params: GetInvoiceUblPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInvoiceUblResponse:
-    content_type: str = field()
-    status_code: int = field()
-    purchase_invoice_ubl: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    purchase_invoice_ubl: Optional[Any] = dataclasses.field(default=None)
     

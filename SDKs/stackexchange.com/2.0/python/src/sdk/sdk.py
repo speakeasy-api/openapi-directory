@@ -426,116 +426,6 @@ class SDK:
         return res
 
     
-    def get_badges_ids_(self, request: operations.GetBadgesIdsRequest) -> operations.GetBadgesIdsResponse:
-        r"""Gets the badges identified in id.
-         
-        Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
-         
-        Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
-         
-        This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
-         
-        For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
-         
-        rank is the default sort.
-         
-        {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-         
-        This method returns a list of badges.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/badges/{ids}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetBadgesIdsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_badges_ids_recipients(self, request: operations.GetBadgesIdsRecipientsRequest) -> operations.GetBadgesIdsRecipientsResponse:
-        r"""Returns recently awarded badges in the system, constrained to a certain set of badges.
-         
-        As these badges have been awarded, they will have the badge.user property set.
-         
-        {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
-         
-        This method returns a list of badges.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/badges/{ids}/recipients", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetBadgesIdsRecipientsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
     def get_badges_name(self, request: operations.GetBadgesNameRequest) -> operations.GetBadgesNameResponse:
         r"""Gets all explicitly named badges in the system.
          
@@ -661,6 +551,116 @@ class SDK:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetBadgesTagsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_badges_ids_(self, request: operations.GetBadgesIdsRequest) -> operations.GetBadgesIdsResponse:
+        r"""Gets the badges identified in id.
+         
+        Note that badge ids are not constant across sites, and thus should be looked up via the /badges method. A badge id on a single site is, however, guaranteed to be stable.
+         
+        Badge sorts are a tad complicated. For the purposes of sorting (and min/max) tag_based is considered to be greater than named.
+         
+        This means that you can get a list of all tag based badges by passing min=tag_based, and conversely all the named badges by passing max=named, with sort=type.
+         
+        For ranks, bronze is greater than silver which is greater than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver for just silver, and min=bronze for just bronze.
+         
+        rank is the default sort.
+         
+        {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+         
+        This method returns a list of badges.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/badges/{ids}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetBadgesIdsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_badges_ids_recipients(self, request: operations.GetBadgesIdsRecipientsRequest) -> operations.GetBadgesIdsRecipientsResponse:
+        r"""Returns recently awarded badges in the system, constrained to a certain set of badges.
+         
+        As these badges have been awarded, they will have the badge.user property set.
+         
+        {ids} can contain up to 100 semicolon delimited ids, to find ids programatically look for badge_id on badge objects.
+         
+        This method returns a list of badges.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/badges/{ids}/recipients", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetBadgesIdsRecipientsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):
@@ -3205,6 +3205,132 @@ class SDK:
         return res
 
     
+    def get_questions_no_answers(self, request: operations.GetQuestionsNoAnswersRequest) -> operations.GetQuestionsNoAnswersResponse:
+        r"""Returns questions which have received no answers.
+         
+        Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
+         
+        This method corresponds roughly with the this site tab.
+         
+        To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+         
+        The sorts accepted by this method operate on the follow fields of the question object:
+         - activity - last_activity_date
+         - creation - creation_date
+         - votes - score
+          activity is the default sort.
+         
+         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+        
+         
+        This method returns a list of questions.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/questions/no-answers"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetQuestionsNoAnswersResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_questions_unanswered(self, request: operations.GetQuestionsUnansweredRequest) -> operations.GetQuestionsUnansweredResponse:
+        r"""Returns questions the site considers to be unanswered.
+         
+        Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
+         
+        To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
+         
+        Compare with /questions/no-answers.
+         
+        This method corresponds roughly with the unanswered tab.
+         
+        The sorts accepted by this method operate on the follow fields of the question object:
+         - activity - last_activity_date
+         - creation - creation_date
+         - votes - score
+          activity is the default sort.
+         
+         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+        
+         
+        This method returns a list of questions.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/questions/unanswered"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetQuestionsUnansweredResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
     def get_questions_ids_(self, request: operations.GetQuestionsIdsRequest) -> operations.GetQuestionsIdsResponse:
         r"""Returns the questions identified in {ids}.
          
@@ -3533,132 +3659,6 @@ class SDK:
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetQuestionsIdsTimelineResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_questions_no_answers(self, request: operations.GetQuestionsNoAnswersRequest) -> operations.GetQuestionsNoAnswersResponse:
-        r"""Returns questions which have received no answers.
-         
-        Compare with /questions/unanswered which mearly returns questions that the sites consider insufficiently well answered.
-         
-        This method corresponds roughly with the this site tab.
-         
-        To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-         
-        The sorts accepted by this method operate on the follow fields of the question object:
-         - activity - last_activity_date
-         - creation - creation_date
-         - votes - score
-          activity is the default sort.
-         
-         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-        
-         
-        This method returns a list of questions.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/questions/no-answers"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetQuestionsNoAnswersResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_questions_unanswered(self, request: operations.GetQuestionsUnansweredRequest) -> operations.GetQuestionsUnansweredResponse:
-        r"""Returns questions the site considers to be unanswered.
-         
-        Note that just because a question has an answer, that does not mean it is considered answered. While the rules are subject to change, at this time a question must have at least one upvoted answer to be considered answered.
-         
-        To constrain questions returned to those with a set of tags, use the tagged parameter with a semi-colon delimited list of tags. This is an and contraint, passing tagged=c;java will return only those questions with both tags. As such, passing more than 5 tags will always return zero results.
-         
-        Compare with /questions/no-answers.
-         
-        This method corresponds roughly with the unanswered tab.
-         
-        The sorts accepted by this method operate on the follow fields of the question object:
-         - activity - last_activity_date
-         - creation - creation_date
-         - votes - score
-          activity is the default sort.
-         
-         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-        
-         
-        This method returns a list of questions.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/questions/unanswered"
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetQuestionsUnansweredResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):
@@ -4333,104 +4333,6 @@ class SDK:
         return res
 
     
-    def get_tags_tag_top_answerers_period_(self, request: operations.GetTagsTagTopAnswerersPeriodRequest) -> operations.GetTagsTagTopAnswerersPeriodResponse:
-        r"""Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
-         
-        This is a view onto the data presented on the tag info page on the sites.
-         
-        This method returns a list of tag score objects.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/tags/{tag}/top-answerers/{period}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetTagsTagTopAnswerersPeriodResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_tags_tag_top_askers_period_(self, request: operations.GetTagsTagTopAskersPeriodRequest) -> operations.GetTagsTagTopAskersPeriodResponse:
-        r"""Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
-         
-        This is a view onto the data presented on the tag info page on the sites.
-         
-        This method returns a list of tag score objects.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/tags/{tag}/top-askers/{period}", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetTagsTagTopAskersPeriodResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
     def get_tags_tags_faq(self, request: operations.GetTagsTagsFaqRequest) -> operations.GetTagsTagsFaqResponse:
         r"""Returns the frequently asked questions for the given set of tags in {tags}.
          
@@ -4701,6 +4603,104 @@ class SDK:
         return res
 
     
+    def get_tags_tag_top_answerers_period_(self, request: operations.GetTagsTagTopAnswerersPeriodRequest) -> operations.GetTagsTagTopAnswerersPeriodResponse:
+        r"""Returns the top 30 answerers active in a single tag, of either all-time or the last 30 days.
+         
+        This is a view onto the data presented on the tag info page on the sites.
+         
+        This method returns a list of tag score objects.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/tags/{tag}/top-answerers/{period}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetTagsTagTopAnswerersPeriodResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_tags_tag_top_askers_period_(self, request: operations.GetTagsTagTopAskersPeriodRequest) -> operations.GetTagsTagTopAskersPeriodResponse:
+        r"""Returns the top 30 askers active in a single tag, of either all-time or the last 30 days.
+         
+        This is a view onto the data presented on the tag info page on the sites.
+         
+        This method returns a list of tag score objects.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/tags/{tag}/top-askers/{period}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetTagsTagTopAskersPeriodResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
     def get_users(self, request: operations.GetUsersRequest) -> operations.GetUsersResponse:
         r"""Returns all users on a site.
          
@@ -4760,331 +4760,28 @@ class SDK:
         return res
 
     
-    def get_users_id_inbox(self, request: operations.GetUsersIDInboxRequest) -> operations.GetUsersIDInboxResponse:
-        r"""Returns a user's inbox.
+    def get_users_moderators(self, request: operations.GetUsersModeratorsRequest) -> operations.GetUsersModeratorsResponse:
+        r"""Gets those users on a site who can exercise moderation powers.
          
-        This method requires an access_token, with a scope containing \"read_inbox\".
+        Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
          
-        This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-         
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-         
-        This method returns a list of inbox items.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/inbox", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDInboxResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_inbox_unread(self, request: operations.GetUsersIDInboxUnreadRequest) -> operations.GetUsersIDInboxUnreadResponse:
-        r"""Returns the unread items in a user's inbox.
-         
-        This method requires an access_token, with a scope containing \"read_inbox\".
-         
-        This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
-         
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-         
-        This method returns a list of inbox items.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/inbox/unread", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDInboxUnreadResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_notifications(self, request: operations.GetUsersIDNotificationsRequest) -> operations.GetUsersIDNotificationsResponse:
-        r"""Returns a user's notifications.
-         
-        This method requires an access_token, with a scope containing \"read_inbox\".
-         
-        This method returns a list of notifications.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/notifications", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDNotificationsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_notifications_unread(self, request: operations.GetUsersIDNotificationsUnreadRequest) -> operations.GetUsersIDNotificationsUnreadResponse:
-        r"""Returns a user's unread notifications.
-         
-        This method requires an access_token, with a scope containing \"read_inbox\".
-         
-        This method returns a list of notifications.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/notifications/unread", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDNotificationsUnreadResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_privileges(self, request: operations.GetUsersIDPrivilegesRequest) -> operations.GetUsersIDPrivilegesResponse:
-        r"""Returns the privileges a user has.
-         
-        Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
-         
-        {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
-         
-        This method returns a list of privileges.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/privileges", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDPrivilegesResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_reputation_history_full(self, request: operations.GetUsersIDReputationHistoryFullRequest) -> operations.GetUsersIDReputationHistoryFullResponse:
-        r"""Returns a user's full reputation history, including private events.
-         
-        This method requires an access_token, with a scope containing \"private_info\".
-         
-        This method returns a list of reputation_history.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/reputation-history/full", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDReputationHistoryFullResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_tags_tags_top_answers(self, request: operations.GetUsersIDTagsTagsTopAnswersRequest) -> operations.GetUsersIDTagsTagsTopAnswersResponse:
-        r"""Returns the top 30 answers a user has posted in response to questions with the given tags.
-         
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
-         
-        The sorts accepted by this method operate on the follow fields of the answer object:
-         - activity - last_activity_date
+        The sorts accepted by this method operate on the follow fields of the user object:
+         - reputation - reputation
          - creation - creation_date
-         - votes - score
-          activity is the default sort.
+         - name - display_name
+         - modified - last_modified_date
+          reputation is the default sort.
          
          It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
         
          
-        This method returns a list of answers.
+        This method returns a list of users.
         
         """
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, "/users/{id}/tags/{tags}/top-answers", request.path_params)
+        url = base_url.removesuffix("/") + "/users/moderators"
         
         query_params = utils.get_query_params(request.query_params)
         
@@ -5093,7 +4790,7 @@ class SDK:
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
 
-        res = operations.GetUsersIDTagsTagsTopAnswersResponse(status_code=r.status_code, content_type=content_type)
+        res = operations.GetUsersModeratorsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):
@@ -5122,27 +4819,28 @@ class SDK:
         return res
 
     
-    def get_users_id_tags_tags_top_questions(self, request: operations.GetUsersIDTagsTagsTopQuestionsRequest) -> operations.GetUsersIDTagsTagsTopQuestionsResponse:
-        r"""Returns the top 30 questions a user has asked with the given tags.
+    def get_users_moderators_elected(self, request: operations.GetUsersModeratorsElectedRequest) -> operations.GetUsersModeratorsElectedResponse:
+        r"""Returns those users on a site who both have moderator powers, and were actually elected.
          
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+        This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
          
-        The sorts accepted by this method operate on the follow fields of the question object:
-         - activity - last_activity_date
+        The sorts accepted by this method operate on the follow fields of the user object:
+         - reputation - reputation
          - creation - creation_date
-         - votes - score
-          activity is the default sort.
+         - name - display_name
+         - modified - last_modified_date
+          reputation is the default sort.
          
          It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
         
          
-        This method returns a list of questions.
+        This method returns a list of users.
         
         """
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, "/users/{id}/tags/{tags}/top-questions", request.path_params)
+        url = base_url.removesuffix("/") + "/users/moderators/elected"
         
         query_params = utils.get_query_params(request.query_params)
         
@@ -5151,160 +4849,7 @@ class SDK:
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
 
-        res = operations.GetUsersIDTagsTagsTopQuestionsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_top_answer_tags(self, request: operations.GetUsersIDTopAnswerTagsRequest) -> operations.GetUsersIDTopAnswerTagsResponse:
-        r"""Returns a single user's top tags by answer score.
-         
-        This a subset of the data returned on a user's tags tab.
-         
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-         
-        This method returns a list of top_tag objects.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/top-answer-tags", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDTopAnswerTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_top_question_tags(self, request: operations.GetUsersIDTopQuestionTagsRequest) -> operations.GetUsersIDTopQuestionTagsResponse:
-        r"""Returns a single user's top tags by question score.
-         
-        This a subset of the data returned on a user's tags tab.
-         
-        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
-         
-        This method returns a list of top_tag objects.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/top-question-tags", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDTopQuestionTagsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "*/*"):
-                res.body = r.content
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 401:
-            pass
-        elif r.status_code == 402:
-            pass
-        elif r.status_code == 403:
-            pass
-        elif r.status_code == 404:
-            pass
-        elif r.status_code == 405:
-            pass
-        elif r.status_code == 406:
-            pass
-        elif r.status_code == 500:
-            pass
-        elif r.status_code == 502:
-            pass
-        elif r.status_code == 503:
-            pass
-
-        return res
-
-    
-    def get_users_id_write_permissions(self, request: operations.GetUsersIDWritePermissionsRequest) -> operations.GetUsersIDWritePermissionsResponse:
-        r"""Returns the write permissions a user has via the api.
-         
-        The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
-         
-        This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
-         
-        This method returns a list of write_permissions.
-        
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/users/{id}/write-permissions", request.path_params)
-        
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._client
-        
-        r = client.request("GET", url, params=query_params)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetUsersIDWritePermissionsResponse(status_code=r.status_code, content_type=content_type)
+        res = operations.GetUsersModeratorsElectedResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):
@@ -6412,28 +5957,22 @@ class SDK:
         return res
 
     
-    def get_users_moderators(self, request: operations.GetUsersModeratorsRequest) -> operations.GetUsersModeratorsResponse:
-        r"""Gets those users on a site who can exercise moderation powers.
+    def get_users_id_inbox(self, request: operations.GetUsersIDInboxRequest) -> operations.GetUsersIDInboxResponse:
+        r"""Returns a user's inbox.
          
-        Note, employees of Stack Exchange Inc. will be returned if they have been granted moderation powers on a site even if they have never been appointed or elected explicitly. This method checks abilities, not the manner in which they were obtained.
+        This method requires an access_token, with a scope containing \"read_inbox\".
          
-        The sorts accepted by this method operate on the follow fields of the user object:
-         - reputation - reputation
-         - creation - creation_date
-         - name - display_name
-         - modified - last_modified_date
-          reputation is the default sort.
+        This method is effectively an alias for /inbox. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
          
-         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-        
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
          
-        This method returns a list of users.
+        This method returns a list of inbox items.
         
         """
         
         base_url = self._server_url
         
-        url = base_url.removesuffix("/") + "/users/moderators"
+        url = utils.generate_url(base_url, "/users/{id}/inbox", request.path_params)
         
         query_params = utils.get_query_params(request.query_params)
         
@@ -6442,7 +5981,7 @@ class SDK:
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
 
-        res = operations.GetUsersModeratorsResponse(status_code=r.status_code, content_type=content_type)
+        res = operations.GetUsersIDInboxResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):
@@ -6471,28 +6010,22 @@ class SDK:
         return res
 
     
-    def get_users_moderators_elected(self, request: operations.GetUsersModeratorsElectedRequest) -> operations.GetUsersModeratorsElectedResponse:
-        r"""Returns those users on a site who both have moderator powers, and were actually elected.
+    def get_users_id_inbox_unread(self, request: operations.GetUsersIDInboxUnreadRequest) -> operations.GetUsersIDInboxUnreadResponse:
+        r"""Returns the unread items in a user's inbox.
          
-        This method excludes Stack Exchange Inc. employees, unless they were actually elected moderators on a site (which can only have happened prior to their employment).
+        This method requires an access_token, with a scope containing \"read_inbox\".
          
-        The sorts accepted by this method operate on the follow fields of the user object:
-         - reputation - reputation
-         - creation - creation_date
-         - name - display_name
-         - modified - last_modified_date
-          reputation is the default sort.
+        This method is effectively an alias for /inbox/unread. It is provided for consumers who make strong assumptions about operating within the context of a single site rather than the Stack Exchange network as a whole.
          
-         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
-        
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
          
-        This method returns a list of users.
+        This method returns a list of inbox items.
         
         """
         
         base_url = self._server_url
         
-        url = base_url.removesuffix("/") + "/users/moderators/elected"
+        url = utils.generate_url(base_url, "/users/{id}/inbox/unread", request.path_params)
         
         query_params = utils.get_query_params(request.query_params)
         
@@ -6501,7 +6034,474 @@ class SDK:
         r = client.request("GET", url, params=query_params)
         content_type = r.headers.get("Content-Type")
 
-        res = operations.GetUsersModeratorsElectedResponse(status_code=r.status_code, content_type=content_type)
+        res = operations.GetUsersIDInboxUnreadResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_notifications(self, request: operations.GetUsersIDNotificationsRequest) -> operations.GetUsersIDNotificationsResponse:
+        r"""Returns a user's notifications.
+         
+        This method requires an access_token, with a scope containing \"read_inbox\".
+         
+        This method returns a list of notifications.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/notifications", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDNotificationsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_notifications_unread(self, request: operations.GetUsersIDNotificationsUnreadRequest) -> operations.GetUsersIDNotificationsUnreadResponse:
+        r"""Returns a user's unread notifications.
+         
+        This method requires an access_token, with a scope containing \"read_inbox\".
+         
+        This method returns a list of notifications.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/notifications/unread", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDNotificationsUnreadResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_privileges(self, request: operations.GetUsersIDPrivilegesRequest) -> operations.GetUsersIDPrivilegesResponse:
+        r"""Returns the privileges a user has.
+         
+        Applications are encouraged to calculate privileges themselves, without repeated queries to this method. A simple check against the results returned by /privileges and user.user_type would be sufficient.
+         
+        {id} can contain only a single, to find it programatically look for user_id on user or shallow_user objects.
+         
+        This method returns a list of privileges.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/privileges", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDPrivilegesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_reputation_history_full(self, request: operations.GetUsersIDReputationHistoryFullRequest) -> operations.GetUsersIDReputationHistoryFullResponse:
+        r"""Returns a user's full reputation history, including private events.
+         
+        This method requires an access_token, with a scope containing \"private_info\".
+         
+        This method returns a list of reputation_history.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/reputation-history/full", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDReputationHistoryFullResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_tags_tags_top_answers(self, request: operations.GetUsersIDTagsTagsTopAnswersRequest) -> operations.GetUsersIDTagsTagsTopAnswersResponse:
+        r"""Returns the top 30 answers a user has posted in response to questions with the given tags.
+         
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+         
+        The sorts accepted by this method operate on the follow fields of the answer object:
+         - activity - last_activity_date
+         - creation - creation_date
+         - votes - score
+          activity is the default sort.
+         
+         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+        
+         
+        This method returns a list of answers.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/tags/{tags}/top-answers", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDTagsTagsTopAnswersResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_tags_tags_top_questions(self, request: operations.GetUsersIDTagsTagsTopQuestionsRequest) -> operations.GetUsersIDTagsTagsTopQuestionsResponse:
+        r"""Returns the top 30 questions a user has asked with the given tags.
+         
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects. {tags} is limited to 5 tags, passing more will result in an error.
+         
+        The sorts accepted by this method operate on the follow fields of the question object:
+         - activity - last_activity_date
+         - creation - creation_date
+         - votes - score
+          activity is the default sort.
+         
+         It is possible to create moderately complex queries using sort, min, max, fromdate, and todate.
+        
+         
+        This method returns a list of questions.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/tags/{tags}/top-questions", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDTagsTagsTopQuestionsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_top_answer_tags(self, request: operations.GetUsersIDTopAnswerTagsRequest) -> operations.GetUsersIDTopAnswerTagsResponse:
+        r"""Returns a single user's top tags by answer score.
+         
+        This a subset of the data returned on a user's tags tab.
+         
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+         
+        This method returns a list of top_tag objects.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/top-answer-tags", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDTopAnswerTagsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_top_question_tags(self, request: operations.GetUsersIDTopQuestionTagsRequest) -> operations.GetUsersIDTopQuestionTagsResponse:
+        r"""Returns a single user's top tags by question score.
+         
+        This a subset of the data returned on a user's tags tab.
+         
+        {id} can contain a single id, to find it programatically look for user_id on user or shallow_user objects.
+         
+        This method returns a list of top_tag objects.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/top-question-tags", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDTopQuestionTagsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 401:
+            pass
+        elif r.status_code == 402:
+            pass
+        elif r.status_code == 403:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 405:
+            pass
+        elif r.status_code == 406:
+            pass
+        elif r.status_code == 500:
+            pass
+        elif r.status_code == 502:
+            pass
+        elif r.status_code == 503:
+            pass
+
+        return res
+
+    
+    def get_users_id_write_permissions(self, request: operations.GetUsersIDWritePermissionsRequest) -> operations.GetUsersIDWritePermissionsResponse:
+        r"""Returns the write permissions a user has via the api.
+         
+        The Stack Exchange API gives users the ability to create, edit, and delete certain types. This method returns whether the passed user is capable of performing those actions at all, as well as how many times a day they can.
+         
+        This method does not consider the user's current quota (ie. if they've already exhausted it for today) nor any additional restrictions on write access, such as editing deleted comments.
+         
+        This method returns a list of write_permissions.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/users/{id}/write-permissions", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetUsersIDWritePermissionsResponse(status_code=r.status_code, content_type=content_type)
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "*/*"):

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -52,21 +52,21 @@ class CvsSv3UserInteractionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CvsSv3:
     r"""CvsSv3
     Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss/specification-document
     """
     
-    attack_complexity: Optional[CvsSv3AttackComplexityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackComplexity') }})
-    attack_vector: Optional[CvsSv3AttackVectorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackVector') }})
-    availability_impact: Optional[CvsSv3AvailabilityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityImpact') }})
-    base_score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseScore') }})
-    confidentiality_impact: Optional[CvsSv3ConfidentialityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidentialityImpact') }})
-    exploitability_score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exploitabilityScore') }})
-    impact_score: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impactScore') }})
-    integrity_impact: Optional[CvsSv3IntegrityImpactEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('integrityImpact') }})
-    privileges_required: Optional[CvsSv3PrivilegesRequiredEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privilegesRequired') }})
-    scope: Optional[CvsSv3ScopeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
-    user_interaction: Optional[CvsSv3UserInteractionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInteraction') }})
+    attack_complexity: Optional[CvsSv3AttackComplexityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackComplexity') }})
+    attack_vector: Optional[CvsSv3AttackVectorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attackVector') }})
+    availability_impact: Optional[CvsSv3AvailabilityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('availabilityImpact') }})
+    base_score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('baseScore') }})
+    confidentiality_impact: Optional[CvsSv3ConfidentialityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('confidentialityImpact') }})
+    exploitability_score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exploitabilityScore') }})
+    impact_score: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('impactScore') }})
+    integrity_impact: Optional[CvsSv3IntegrityImpactEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('integrityImpact') }})
+    privileges_required: Optional[CvsSv3PrivilegesRequiredEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privilegesRequired') }})
+    scope: Optional[CvsSv3ScopeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scope') }})
+    user_interaction: Optional[CvsSv3UserInteractionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInteraction') }})
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import logevent as shared_logevent
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetRelationalDatabaseLogEventsResult:
-    next_backward_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextBackwardToken') }})
-    next_forward_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextForwardToken') }})
-    resource_log_events: Optional[List[LogEvent]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceLogEvents') }})
+    next_backward_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextBackwardToken') }})
+    next_forward_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextForwardToken') }})
+    resource_log_events: Optional[list[shared_logevent.LogEvent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceLogEvents') }})
     

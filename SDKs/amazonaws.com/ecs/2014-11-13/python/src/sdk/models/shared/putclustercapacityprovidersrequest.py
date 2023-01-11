@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import capacityproviderstrategyitem as shared_capacityproviderstrategyitem
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutClusterCapacityProvidersRequest:
-    capacity_providers: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityProviders') }})
-    cluster: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
-    default_capacity_provider_strategy: List[CapacityProviderStrategyItem] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCapacityProviderStrategy') }})
+    capacity_providers: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityProviders') }})
+    cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
+    default_capacity_provider_strategy: list[shared_capacityproviderstrategyitem.CapacityProviderStrategyItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultCapacityProviderStrategy') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -18,10 +17,10 @@ from sdk.models import operations, shared
 s = sdk.SDK()
     
 req = operations.PostOriginKeysRequest(
-    request="tempore",
+    request="iste",
 )
     
-res = s.sdk.post_origin_keys(req)
+res = s.post_origin_keys(req)
 
 if res.checkout_utility_response is not None:
     # handle response

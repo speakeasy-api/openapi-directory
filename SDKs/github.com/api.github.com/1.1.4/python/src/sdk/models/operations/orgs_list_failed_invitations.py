@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import basic_error as shared_basic_error
+from ..shared import organization_invitation as shared_organization_invitation
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListFailedInvitationsPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListFailedInvitationsQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListFailedInvitationsRequest:
-    path_params: OrgsListFailedInvitationsPathParams = field()
-    query_params: OrgsListFailedInvitationsQueryParams = field()
+    path_params: OrgsListFailedInvitationsPathParams = dataclasses.field()
+    query_params: OrgsListFailedInvitationsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListFailedInvitationsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    organization_invitations: Optional[List[shared.OrganizationInvitation]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    organization_invitations: Optional[list[shared_organization_invitation.OrganizationInvitation]] = dataclasses.field(default=None)
     

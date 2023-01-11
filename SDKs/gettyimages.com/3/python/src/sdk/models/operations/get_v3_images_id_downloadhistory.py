@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import assetdownloadhistoryresults as shared_assetdownloadhistoryresults
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDDownloadhistoryPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDDownloadhistoryQueryParams:
-    company_downloads: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'company_downloads', 'style': 'form', 'explode': True }})
+    company_downloads: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'company_downloads', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDDownloadhistoryHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDDownloadhistoryRequest:
-    headers: GetV3ImagesIDDownloadhistoryHeaders = field()
-    path_params: GetV3ImagesIDDownloadhistoryPathParams = field()
-    query_params: GetV3ImagesIDDownloadhistoryQueryParams = field()
+    headers: GetV3ImagesIDDownloadhistoryHeaders = dataclasses.field()
+    path_params: GetV3ImagesIDDownloadhistoryPathParams = dataclasses.field()
+    query_params: GetV3ImagesIDDownloadhistoryQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3ImagesIDDownloadhistoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_download_history_results: Optional[shared.AssetDownloadHistoryResults] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_download_history_results: Optional[shared_assetdownloadhistoryresults.AssetDownloadHistoryResults] = dataclasses.field(default=None)
     

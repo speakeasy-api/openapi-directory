@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import aggregatemetrics as shared_aggregatemetrics
 
 class BusinessCallsInsightsMetricTypeEnum(str, Enum):
     METRIC_TYPE_UNSPECIFIED = "METRIC_TYPE_UNSPECIFIED"
@@ -11,13 +11,13 @@ class BusinessCallsInsightsMetricTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BusinessCallsInsights:
     r"""BusinessCallsInsights
     Insights for calls made to a location.
     """
     
-    aggregate_metrics: Optional[AggregateMetrics] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aggregateMetrics') }})
-    metric_type: Optional[BusinessCallsInsightsMetricTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricType') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    aggregate_metrics: Optional[shared_aggregatemetrics.AggregateMetrics] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aggregateMetrics') }})
+    metric_type: Optional[BusinessCallsInsightsMetricTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metricType') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

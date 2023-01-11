@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CancelChangeSetRequest(
     query_params=operations.CancelChangeSetQueryParams(
-        catalog="voluptas",
-        change_set_id="atque",
+        catalog="error",
+        change_set_id="voluptatem",
     ),
     headers=operations.CancelChangeSetHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="nobis",
-        x_amz_credential="ipsum",
-        x_amz_date="dolor",
-        x_amz_security_token="est",
-        x_amz_signature="est",
-        x_amz_signed_headers="id",
+        x_amz_algorithm="quia",
+        x_amz_content_sha256="enim",
+        x_amz_credential="aut",
+        x_amz_date="impedit",
+        x_amz_security_token="ratione",
+        x_amz_signature="adipisci",
+        x_amz_signed_headers="eius",
     ),
 )
     
-res = s.sdk.cancel_change_set(req)
+res = s.cancel_change_set(req)
 
 if res.cancel_change_set_response is not None:
     # handle response

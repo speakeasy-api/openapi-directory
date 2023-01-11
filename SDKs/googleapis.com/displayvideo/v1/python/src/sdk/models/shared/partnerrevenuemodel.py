@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,12 +12,12 @@ class PartnerRevenueModelMarkupTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PartnerRevenueModel:
     r"""PartnerRevenueModel
     Settings that control how partner revenue is calculated.
     """
     
-    markup_amount: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('markupAmount') }})
-    markup_type: Optional[PartnerRevenueModelMarkupTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('markupType') }})
+    markup_amount: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('markupAmount') }})
+    markup_type: Optional[PartnerRevenueModelMarkupTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('markupType') }})
     

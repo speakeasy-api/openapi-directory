@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class VenueAPIPostReportPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class VenueAPIPostReportReportTypeEnum(str, Enum):
     INVALID_INFO = "InvalidInfo"
@@ -13,21 +13,21 @@ class VenueAPIPostReportReportTypeEnum(str, Enum):
     OTHER = "Other"
 
 
-@dataclass
+@dataclasses.dataclass
 class VenueAPIPostReportQueryParams:
-    notes: str = field(metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
-    report_type: VenueAPIPostReportReportTypeEnum = field(metadata={'query_param': { 'field_name': 'reportType', 'style': 'form', 'explode': True }})
-    version_number: int = field(metadata={'query_param': { 'field_name': 'versionNumber', 'style': 'form', 'explode': True }})
+    notes: str = dataclasses.field(metadata={'query_param': { 'field_name': 'notes', 'style': 'form', 'explode': True }})
+    report_type: VenueAPIPostReportReportTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'reportType', 'style': 'form', 'explode': True }})
+    version_number: int = dataclasses.field(metadata={'query_param': { 'field_name': 'versionNumber', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VenueAPIPostReportRequest:
-    path_params: VenueAPIPostReportPathParams = field()
-    query_params: VenueAPIPostReportQueryParams = field()
+    path_params: VenueAPIPostReportPathParams = dataclasses.field()
+    query_params: VenueAPIPostReportQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VenueAPIPostReportResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

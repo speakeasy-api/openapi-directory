@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoTagsPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoTagsRequest:
-    path_params: GetVideoTagsPathParams = field()
+    path_params: GetVideoTagsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVideoTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tags: Optional[List[shared.Tag]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None)
     

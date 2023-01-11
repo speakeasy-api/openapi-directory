@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import runner_no_labels as shared_runner_no_labels
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    runner_id: int = field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    runner_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForRepoRequest:
-    path_params: ActionsGetSelfHostedRunnerForRepoPathParams = field()
+    path_params: ActionsGetSelfHostedRunnerForRepoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_no_labels: Optional[shared.RunnerNoLabels] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_no_labels: Optional[shared_runner_no_labels.RunnerNoLabels] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,31 +21,31 @@ req = operations.PubsubSubscriptionsAcknowledgeRequest(
         option1=operations.PubsubSubscriptionsAcknowledgeSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.PubsubSubscriptionsAcknowledgeQueryParams(
         dollar_xgafv="1",
-        access_token="est",
-        alt="proto",
-        callback="inventore",
-        fields="eum",
-        key="modi",
-        oauth_token="esse",
+        access_token="dicta",
+        alt="media",
+        callback="voluptas",
+        fields="ut",
+        key="accusantium",
+        oauth_token="eum",
         pretty_print=False,
-        quota_user="facilis",
-        upload_type="doloremque",
-        upload_protocol="atque",
+        quota_user="dolorem",
+        upload_type="at",
+        upload_protocol="omnis",
     ),
     request=shared.AcknowledgeRequest(
         ack_id=[
-            "porro",
-            "error",
+            "autem",
+            "ad",
         ],
-        subscription="et",
+        subscription="ut",
     ),
 )
     

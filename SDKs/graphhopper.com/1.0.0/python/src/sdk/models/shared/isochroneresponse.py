@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import isochroneresponsepolygon as shared_isochroneresponsepolygon
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IsochroneResponse:
-    copyrights: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyrights') }})
-    polygons: Optional[List[IsochroneResponsePolygon]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('polygons') }})
+    copyrights: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyrights') }})
+    polygons: Optional[list[shared_isochroneresponsepolygon.IsochroneResponsePolygon]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('polygons') }})
     

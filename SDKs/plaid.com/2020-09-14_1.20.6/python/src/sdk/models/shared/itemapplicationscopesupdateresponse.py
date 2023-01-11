@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,11 +7,11 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ItemApplicationScopesUpdateResponse:
     r"""ItemApplicationScopesUpdateResponse
     ItemApplicationScopesUpdateResponse defines the response schema for `/item/application/scopes/update`
     """
     
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     

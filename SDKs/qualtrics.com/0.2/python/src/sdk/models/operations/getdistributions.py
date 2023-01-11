@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import distributionsresponse as shared_distributionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributionsQueryParams:
-    survey_id: str = field(metadata={'query_param': { 'field_name': 'surveyId', 'style': 'form', 'explode': True }})
+    survey_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'surveyId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributionsRequest:
-    query_params: GetDistributionsQueryParams = field()
+    query_params: GetDistributionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    distributions_response: Optional[shared.DistributionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    distributions_response: Optional[shared_distributionsresponse.DistributionsResponse] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import servercertificate as shared_servercertificate
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServerCertificateResponse:
     r"""GetServerCertificateResponse
     Contains the response to a successful <a>GetServerCertificate</a> request. 
     """
     
-    server_certificate: ServerCertificate = field()
+    server_certificate: shared_servercertificate.ServerCertificate = dataclasses.field()
     

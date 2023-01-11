@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import comment as shared_comment
 
 
-@dataclass
+@dataclasses.dataclass
 class Review:
-    author_name: Optional[str] = field(default=None)
-    comments: Optional[List[Comment]] = field(default=None)
-    review_id: Optional[str] = field(default=None)
+    author_name: Optional[str] = dataclasses.field(default=None)
+    comments: Optional[list[shared_comment.Comment]] = dataclasses.field(default=None)
+    review_id: Optional[str] = dataclasses.field(default=None)
     

@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import scim_error as shared_scim_error
+from ..shared import scim_user as shared_scim_user
 
 
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    scim_user_id: str = field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    scim_user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
     
 class ScimUpdateAttributeForUserRequestBodyOperationsOpEnum(str, Enum):
     ADD = "add"
@@ -21,48 +23,48 @@ class ScimUpdateAttributeForUserRequestBodyOperationsOpEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserRequestBodyOperationsValue1:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    external_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalId') }})
-    family_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('familyName') }})
-    given_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('givenName') }})
-    user_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userName') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('externalId') }})
+    family_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('familyName') }})
+    given_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('givenName') }})
+    user_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserRequestBodyOperationsValue2:
-    primary: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    primary: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserRequestBodyOperations:
-    op: ScimUpdateAttributeForUserRequestBodyOperationsOpEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
-    path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    value: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    op: ScimUpdateAttributeForUserRequestBodyOperationsOpEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    value: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserRequestBody:
-    operations: List[ScimUpdateAttributeForUserRequestBodyOperations] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Operations') }})
-    schemas: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemas') }})
+    operations: list[ScimUpdateAttributeForUserRequestBodyOperations] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Operations') }})
+    schemas: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemas') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserRequest:
-    path_params: ScimUpdateAttributeForUserPathParams = field()
-    request: Optional[ScimUpdateAttributeForUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ScimUpdateAttributeForUserPathParams = dataclasses.field()
+    request: Optional[ScimUpdateAttributeForUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScimUpdateAttributeForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    scim_error: Optional[shared.ScimError] = field(default=None)
-    scim_user: Optional[shared.ScimUser] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    scim_error: Optional[shared_scim_error.ScimError] = dataclasses.field(default=None)
+    scim_user: Optional[shared_scim_user.ScimUser] = dataclasses.field(default=None)
     

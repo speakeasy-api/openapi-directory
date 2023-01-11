@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,20 @@ s.config_security(
     
 req = operations.CompileRequest(
     path_params=operations.CompilePathParams(
-        template_token="qui",
+        template_token="rerum",
     ),
     query_params=operations.CompileQueryParams(
         doc_file_name="et",
-        doc_url_expires_in=25486664550251904,
-        latex_compiler="lualatex",
-        latex_runs=8784083526164144924,
-        main_file_name="expedita",
+        doc_url_expires_in=815808886711016184,
+        latex_compiler="pdflatex",
+        latex_runs=8966549739029418275,
+        main_file_name="dolores",
     ),
     headers=operations.CompileHeaders(
-        content_type="ipsa",
+        content_type="dolorum",
     ),
     request={
-        "neque": "repellendus",
-        "et": "atque",
+        "rerum": "dolor",
     },
 )
     

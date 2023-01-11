@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import scim_enterprise_group as shared_scim_enterprise_group
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    scim_group_id: str = field(metadata={'path_param': { 'field_name': 'scim_group_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    scim_group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scim_group_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams:
-    excluded_attributes: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'excludedAttributes', 'style': 'form', 'explode': True }})
+    excluded_attributes: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludedAttributes', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest:
-    path_params: EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams = field()
-    query_params: EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams = field()
+    path_params: EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams = dataclasses.field()
+    query_params: EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scim_enterprise_group: Optional[shared.ScimEnterpriseGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scim_enterprise_group: Optional[shared_scim_enterprise_group.ScimEnterpriseGroup] = dataclasses.field(default=None)
     

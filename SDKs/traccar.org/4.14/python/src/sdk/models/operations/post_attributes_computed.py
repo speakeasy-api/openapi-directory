@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import attribute as shared_attribute
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAttributesComputedRequest:
-    request: shared.Attribute = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_attribute.Attribute = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAttributesComputedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    attribute: Optional[shared.Attribute] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    attribute: Optional[shared_attribute.Attribute] = dataclasses.field(default=None)
     

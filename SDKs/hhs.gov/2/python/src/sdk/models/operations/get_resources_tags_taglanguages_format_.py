@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import taglanguagemarshallerwrapped as shared_taglanguagemarshallerwrapped
 
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagLanguagesFormatPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagLanguagesFormatRequest:
-    path_params: GetResourcesTagsTagLanguagesFormatPathParams = field()
+    path_params: GetResourcesTagsTagLanguagesFormatPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetResourcesTagsTagLanguagesFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_language_marshaller_wrappeds: Optional[List[shared.TagLanguageMarshallerWrapped]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_language_marshaller_wrappeds: Optional[list[shared_taglanguagemarshallerwrapped.TagLanguageMarshallerWrapped]] = dataclasses.field(default=None)
     

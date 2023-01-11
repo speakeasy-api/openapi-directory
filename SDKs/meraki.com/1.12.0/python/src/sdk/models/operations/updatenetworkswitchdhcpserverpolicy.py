@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchDhcpServerPolicyPathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
     
 class UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum(str, Enum):
     ALLOW = "allow"
@@ -18,22 +18,22 @@ class UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum(str, Enum)
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchDhcpServerPolicyRequestBody:
-    allowed_servers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedServers') }})
-    blocked_servers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blockedServers') }})
-    default_policy: Optional[UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultPolicy') }})
+    allowed_servers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedServers') }})
+    blocked_servers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('blockedServers') }})
+    default_policy: Optional[UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('defaultPolicy') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchDhcpServerPolicyRequest:
-    path_params: UpdateNetworkSwitchDhcpServerPolicyPathParams = field()
-    request: Optional[UpdateNetworkSwitchDhcpServerPolicyRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkSwitchDhcpServerPolicyPathParams = dataclasses.field()
+    request: Optional[UpdateNetworkSwitchDhcpServerPolicyRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkSwitchDhcpServerPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_switch_dhcp_server_policy_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_switch_dhcp_server_policy_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

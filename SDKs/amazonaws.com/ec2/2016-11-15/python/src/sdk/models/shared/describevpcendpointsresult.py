@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeVpcEndpointsResult:
     r"""DescribeVpcEndpointsResult
     Contains the output of DescribeVpcEndpoints.
     """
     
-    next_token: Optional[str] = field(default=None)
-    vpc_endpoints: Optional[List[VpcEndpoint]] = field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    vpc_endpoints: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

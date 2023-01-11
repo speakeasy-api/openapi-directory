@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -39,16 +39,16 @@ class WritableCableTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WritableCableInput:
-    termination_a_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_a_id') }})
-    termination_a_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_a_type') }})
-    termination_b_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_b_id') }})
-    termination_b_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_b_type') }})
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    label: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    length: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
-    length_unit: Optional[WritableCableLengthUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('length_unit') }})
-    status: Optional[WritableCableStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    type: Optional[WritableCableTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    termination_a_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_a_id') }})
+    termination_a_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_a_type') }})
+    termination_b_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_b_id') }})
+    termination_b_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('termination_b_type') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    label: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    length: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
+    length_unit: Optional[WritableCableLengthUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('length_unit') }})
+    status: Optional[WritableCableStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    type: Optional[WritableCableTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

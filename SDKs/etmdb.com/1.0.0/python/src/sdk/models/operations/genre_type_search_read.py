@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GenreTypeSearchReadPathParams:
-    genre_description: str = field(metadata={'path_param': { 'field_name': 'genre_description', 'style': 'simple', 'explode': False }})
+    genre_description: str = dataclasses.field(metadata={'path_param': { 'field_name': 'genre_description', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenreTypeSearchReadRequest:
-    path_params: GenreTypeSearchReadPathParams = field()
+    path_params: GenreTypeSearchReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GenreTypeSearchReadResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

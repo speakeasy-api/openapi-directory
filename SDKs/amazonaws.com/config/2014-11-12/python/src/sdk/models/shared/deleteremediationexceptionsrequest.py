@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import remediationexceptionresourcekey as shared_remediationexceptionresourcekey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteRemediationExceptionsRequest:
-    config_rule_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConfigRuleName') }})
-    resource_keys: List[RemediationExceptionResourceKey] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceKeys') }})
+    config_rule_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConfigRuleName') }})
+    resource_keys: list[shared_remediationexceptionresourcekey.RemediationExceptionResourceKey] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResourceKeys') }})
     

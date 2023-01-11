@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import unsubscribeaddressrequest as shared_unsubscribeaddressrequest
+from ..shared import unsubscribeaddress as shared_unsubscribeaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class UnsubscribeAddressHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UnsubscribeAddressRequest:
-    headers: UnsubscribeAddressHeaders = field()
-    request: shared.UnsubscribeAddressRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: UnsubscribeAddressHeaders = dataclasses.field()
+    request: shared_unsubscribeaddressrequest.UnsubscribeAddressRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UnsubscribeAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    unsubscribe_address: Optional[shared.UnsubscribeAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    unsubscribe_address: Optional[shared_unsubscribeaddress.UnsubscribeAddress] = dataclasses.field(default=None)
     

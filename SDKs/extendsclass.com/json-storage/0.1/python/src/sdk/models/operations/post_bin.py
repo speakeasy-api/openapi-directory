@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostBinResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_status: Optional[Any] = field(default=None)
-    error: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_status: Optional[Any] = dataclasses.field(default=None)
+    error: Optional[Any] = dataclasses.field(default=None)
     

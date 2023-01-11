@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import template as shared_template
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTemplateResponse:
-    template: Optional[Template] = field(default=None)
+    template: Optional[shared_template.Template] = dataclasses.field(default=None)
     

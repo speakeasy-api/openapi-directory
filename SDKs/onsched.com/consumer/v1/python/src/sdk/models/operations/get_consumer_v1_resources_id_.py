@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceviewmodel as shared_resourceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ResourcesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ResourcesIDRequest:
-    path_params: GetConsumerV1ResourcesIDPathParams = field()
+    path_params: GetConsumerV1ResourcesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1ResourcesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_view_model: Optional[shared.ResourceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_view_model: Optional[shared_resourceviewmodel.ResourceViewModel] = dataclasses.field(default=None)
     

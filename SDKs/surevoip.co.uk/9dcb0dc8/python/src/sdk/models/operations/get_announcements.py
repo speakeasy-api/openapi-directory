@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import one_get_responses_200_content_application_1json_schema as shared_one_get_responses_200_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAnnouncementsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    one_get_responses_200_content_application_1json_schema: Optional[shared.OneGetResponses200ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    one_get_responses_200_content_application_1json_schema: Optional[shared_one_get_responses_200_content_application_1json_schema.OneGetResponses200ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

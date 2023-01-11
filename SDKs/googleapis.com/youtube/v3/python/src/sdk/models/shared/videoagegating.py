@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,9 +12,9 @@ class VideoAgeGatingVideoGameRatingEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VideoAgeGating:
-    alcohol_content: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alcoholContent') }})
-    restricted: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restricted') }})
-    video_game_rating: Optional[VideoAgeGatingVideoGameRatingEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoGameRating') }})
+    alcohol_content: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alcoholContent') }})
+    restricted: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restricted') }})
+    video_game_rating: Optional[VideoAgeGatingVideoGameRatingEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('videoGameRating') }})
     

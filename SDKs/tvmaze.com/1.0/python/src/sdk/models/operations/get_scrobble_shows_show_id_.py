@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import markedepisode as shared_markedepisode
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScrobbleShowsShowIDPathParams:
-    show_id: int = field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
+    show_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'show_id', 'style': 'simple', 'explode': False }})
     
 class GetScrobbleShowsShowIDEmbedEnum(str, Enum):
     EPISODE = "episode"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetScrobbleShowsShowIDQueryParams:
-    embed: Optional[GetScrobbleShowsShowIDEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetScrobbleShowsShowIDEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScrobbleShowsShowIDRequest:
-    path_params: GetScrobbleShowsShowIDPathParams = field()
-    query_params: GetScrobbleShowsShowIDQueryParams = field()
+    path_params: GetScrobbleShowsShowIDPathParams = dataclasses.field()
+    query_params: GetScrobbleShowsShowIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetScrobbleShowsShowIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    marked_episodes: Optional[List[shared.MarkedEpisode]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    marked_episodes: Optional[list[shared_markedepisode.MarkedEpisode]] = dataclasses.field(default=None)
     

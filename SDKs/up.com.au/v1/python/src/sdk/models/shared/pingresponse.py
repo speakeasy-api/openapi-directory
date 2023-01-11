@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PingResponseMeta:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    status_emoji: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusEmoji') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    status_emoji: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusEmoji') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PingResponse:
     r"""PingResponse
     Basic ping response to verify authentication.
     
     """
     
-    meta: PingResponseMeta = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    meta: PingResponseMeta = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     

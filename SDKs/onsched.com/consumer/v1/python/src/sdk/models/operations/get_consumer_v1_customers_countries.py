@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import countryviewmodel as shared_countryviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersCountriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    country_view_models: Optional[List[shared.CountryViewModel]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    country_view_models: Optional[list[shared_countryviewmodel.CountryViewModel]] = dataclasses.field(default=None)
     

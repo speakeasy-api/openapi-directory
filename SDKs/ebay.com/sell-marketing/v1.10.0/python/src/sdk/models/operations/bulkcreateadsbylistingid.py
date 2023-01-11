@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import bulkcreateadrequest as shared_bulkcreateadrequest
+from ..shared import bulkadresponse as shared_bulkadresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class BulkCreateAdsByListingIDPathParams:
-    campaign_id: str = field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
+    campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkCreateAdsByListingIDSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkCreateAdsByListingIDRequest:
-    path_params: BulkCreateAdsByListingIDPathParams = field()
-    request: shared.BulkCreateAdRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: BulkCreateAdsByListingIDSecurity = field()
+    path_params: BulkCreateAdsByListingIDPathParams = dataclasses.field()
+    request: shared_bulkcreateadrequest.BulkCreateAdRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: BulkCreateAdsByListingIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BulkCreateAdsByListingIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bulk_ad_response: Optional[shared.BulkAdResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bulk_ad_response: Optional[shared_bulkadresponse.BulkAdResponse] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeAPIKeyAuth:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-API-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-API-Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    api_key_auth: SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     

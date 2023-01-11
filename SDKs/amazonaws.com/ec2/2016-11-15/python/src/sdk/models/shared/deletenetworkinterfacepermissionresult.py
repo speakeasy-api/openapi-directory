@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkInterfacePermissionResult:
     r"""DeleteNetworkInterfacePermissionResult
     Contains the output for DeleteNetworkInterfacePermission.
     """
     
-    return_: Optional[bool] = field(default=None)
+    return_: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

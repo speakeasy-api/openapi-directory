@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,10 +19,10 @@ s.config_security(
     security=shared.Security(
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         plaid_version=shared.SchemePlaidVersion(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         secret=shared.SchemeSecret(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -32,17 +31,15 @@ s.config_security(
     
 req = operations.AccountsBalanceGetRequest(
     request=shared.AccountsBalanceGetRequest(
-        access_token="exercitationem",
-        client_id="est",
+        access_token="dolorem",
+        client_id="officia",
         options=shared.AccountsBalanceGetRequestOptions(
             account_ids=[
-                "quos",
-                "voluptate",
-                "nihil",
+                "dolorum",
             ],
-            min_last_updated_datetime="2008-07-30T06:26:29Z",
+            min_last_updated_datetime="1995-12-11T01:46:46Z",
         ),
-        secret="autem",
+        secret="sed",
     ),
 )
     

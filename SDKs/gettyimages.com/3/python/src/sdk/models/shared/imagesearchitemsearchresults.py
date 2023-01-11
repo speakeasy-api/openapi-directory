@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import imagesearchitem as shared_imagesearchitem
+from ..shared import relatedsearch as shared_relatedsearch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ImageSearchItemSearchResults:
-    images: Optional[List[ImageSearchItem]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('images') }})
-    related_searches: Optional[List[RelatedSearch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('related_searches') }})
-    result_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result_count') }})
+    images: Optional[list[shared_imagesearchitem.ImageSearchItem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('images') }})
+    related_searches: Optional[list[shared_relatedsearch.RelatedSearch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('related_searches') }})
+    result_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result_count') }})
     

@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PostTransfersSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTransfersRequest:
-    security: PostTransfersSecurity = field()
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: PostTransfersSecurity = dataclasses.field()
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTransfersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rest_service_error: Optional[Any] = field(default=None)
-    transfer: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rest_service_error: Optional[Any] = dataclasses.field(default=None)
+    transfer: Optional[Any] = dataclasses.field(default=None)
     

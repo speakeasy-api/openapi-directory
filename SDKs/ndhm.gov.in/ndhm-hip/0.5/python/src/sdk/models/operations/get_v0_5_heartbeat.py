@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import heartbeatresponse as shared_heartbeatresponse
 
 
 GET_V0_5_HEARTBEAT_SERVERS = [
@@ -8,15 +8,15 @@ GET_V0_5_HEARTBEAT_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HeartbeatRequest:
-    server_url: Optional[str] = field(default=None)
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HeartbeatResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    heartbeat_response: Optional[shared.HeartbeatResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    heartbeat_response: Optional[shared_heartbeatresponse.HeartbeatResponse] = dataclasses.field(default=None)
     

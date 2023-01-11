@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -24,13 +24,13 @@ class ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum(str, Enum)
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigManagementGatekeeperDeploymentState:
     r"""ConfigManagementGatekeeperDeploymentState
     State of Policy Controller installation.
     """
     
-    gatekeeper_audit: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperAudit') }})
-    gatekeeper_controller_manager_state: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperControllerManagerState') }})
-    gatekeeper_mutation: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperMutation') }})
+    gatekeeper_audit: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperAudit') }})
+    gatekeeper_controller_manager_state: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperControllerManagerState') }})
+    gatekeeper_mutation: Optional[ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatekeeperMutation') }})
     

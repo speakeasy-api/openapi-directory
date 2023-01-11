@@ -1,36 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import team_id_enum1 as shared_team_id_enum1
+from ..shared import simple_user as shared_simple_user
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListMembersPathParams:
-    team_id: int = field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
+    team_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-class TeamsListMembersRoleEnum(str, Enum):
-    MEMBER = "member"
-    MAINTAINER = "maintainer"
-    ALL = "all"
 
-
-@dataclass
+@dataclasses.dataclass
 class TeamsListMembersQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    role: Optional[TeamsListMembersRoleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    role: Optional[shared_team_id_enum1.TeamIDEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'role', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListMembersRequest:
-    path_params: TeamsListMembersPathParams = field()
-    query_params: TeamsListMembersQueryParams = field()
+    path_params: TeamsListMembersPathParams = dataclasses.field()
+    query_params: TeamsListMembersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListMembersResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
     

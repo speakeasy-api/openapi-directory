@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.DgcerRequest(
     security=operations.DgcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.DgcerRequestBody(
         certificate_parameters=operations.DgcerRequestBodyCertificateParameters(
-            cname="id",
-            regno="expedita",
-            rroll="fugit",
-            year="quia",
+            cname="et",
+            regno="aspernatur",
+            rroll="voluptates",
+            year="necessitatibus",
         ),
-        consent_artifact="nisi",
+        consent_artifact="totam",
         format="pdf",
-        txn_id="facere",
+        txn_id="molestiae",
     ),
 )
     
-res = s.sdk.dgcer(req)
+res = s.ap_is.dgcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dgcer` - Degree/ Diploma Certificate
 

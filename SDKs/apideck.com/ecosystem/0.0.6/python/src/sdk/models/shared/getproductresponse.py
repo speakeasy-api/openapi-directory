@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import product as shared_product
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetProductResponse:
-    data: Product = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    status_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
+    data: shared_product.Product = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status_code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
     

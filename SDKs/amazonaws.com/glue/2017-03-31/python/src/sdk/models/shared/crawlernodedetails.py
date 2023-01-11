@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import crawl as shared_crawl
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CrawlerNodeDetails:
     r"""CrawlerNodeDetails
     The details of a Crawler node present in the workflow.
     """
     
-    crawls: Optional[List[Crawl]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawls') }})
+    crawls: Optional[list[shared_crawl.Crawl]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawls') }})
     

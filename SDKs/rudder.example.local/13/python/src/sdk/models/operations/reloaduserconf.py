@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -9,15 +9,15 @@ class ReloadUserConf200ApplicationJSONActionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReloadUserConf200ApplicationJSONDataReload:
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReloadUserConf200ApplicationJSONData:
-    reload: ReloadUserConf200ApplicationJSONDataReload = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reload') }})
+    reload: ReloadUserConf200ApplicationJSONDataReload = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('reload') }})
     
 class ReloadUserConf200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,16 +25,16 @@ class ReloadUserConf200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReloadUserConf200ApplicationJSON:
-    action: ReloadUserConf200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ReloadUserConf200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ReloadUserConf200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ReloadUserConf200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ReloadUserConf200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ReloadUserConf200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReloadUserConfResponse:
-    content_type: str = field()
-    status_code: int = field()
-    reload_user_conf_200_application_json_object: Optional[ReloadUserConf200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    reload_user_conf_200_application_json_object: Optional[ReloadUserConf200ApplicationJSON] = dataclasses.field(default=None)
     

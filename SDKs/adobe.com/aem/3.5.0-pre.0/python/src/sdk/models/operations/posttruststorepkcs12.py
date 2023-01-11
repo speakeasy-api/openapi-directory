@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststorePkcs12RequestBodyTruststoreP12:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    truststore_p12: str = field(metadata={'multipart_form': { 'field_name': 'truststore.p12' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    truststore_p12: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'truststore.p12' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststorePkcs12RequestBody:
-    truststore_p12: Optional[PostTruststorePkcs12RequestBodyTruststoreP12] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    truststore_p12: Optional[PostTruststorePkcs12RequestBodyTruststoreP12] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststorePkcs12Request:
-    request: Optional[PostTruststorePkcs12RequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostTruststorePkcs12RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststorePkcs12Response:
-    content_type: str = field()
-    status_code: int = field()
-    post_truststore_pkcs12_default_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_truststore_pkcs12_default_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

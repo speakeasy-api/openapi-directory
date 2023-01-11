@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMatchTimeseriesPathParams:
-    match_key: str = field(metadata={'path_param': { 'field_name': 'match_key', 'style': 'simple', 'explode': False }})
+    match_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'match_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatchTimeseriesHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatchTimeseriesSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatchTimeseriesRequest:
-    headers: GetMatchTimeseriesHeaders = field()
-    path_params: GetMatchTimeseriesPathParams = field()
-    security: GetMatchTimeseriesSecurity = field()
+    headers: GetMatchTimeseriesHeaders = dataclasses.field()
+    path_params: GetMatchTimeseriesPathParams = dataclasses.field()
+    security: GetMatchTimeseriesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMatchTimeseriesResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_match_timeseries_200_application_json_objects: Optional[List[dict[str, Any]]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_match_timeseries_200_application_json_objects: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

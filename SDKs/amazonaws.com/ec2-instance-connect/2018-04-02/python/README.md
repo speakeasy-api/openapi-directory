@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,24 @@ s.config_security(
     
 req = operations.SendSSHPublicKeyRequest(
     headers=operations.SendSSHPublicKeyHeaders(
-        x_amz_algorithm="praesentium",
-        x_amz_content_sha256="voluptates",
-        x_amz_credential="inventore",
-        x_amz_date="voluptatem",
-        x_amz_security_token="deleniti",
-        x_amz_signature="facere",
-        x_amz_signed_headers="numquam",
+        x_amz_algorithm="doloribus",
+        x_amz_content_sha256="ratione",
+        x_amz_credential="voluptas",
+        x_amz_date="omnis",
+        x_amz_security_token="rerum",
+        x_amz_signature="possimus",
+        x_amz_signed_headers="quo",
         x_amz_target="AWSEC2InstanceConnectService.SendSSHPublicKey",
     ),
     request=shared.SendSSHPublicKeyRequest(
-        availability_zone="explicabo",
-        instance_id="id",
-        instance_os_user="blanditiis",
-        ssh_public_key="explicabo",
+        availability_zone="eos",
+        instance_id="enim",
+        instance_os_user="temporibus",
+        ssh_public_key="exercitationem",
     ),
 )
     
-res = s.sdk.send_ssh_public_key(req)
+res = s.send_ssh_public_key(req)
 
 if res.send_ssh_public_key_response is not None:
     # handle response

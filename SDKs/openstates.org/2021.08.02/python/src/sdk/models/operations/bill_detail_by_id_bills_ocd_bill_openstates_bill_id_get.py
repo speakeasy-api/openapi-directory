@@ -1,36 +1,38 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import billinclude_enum as shared_billinclude_enum
+from ..shared import bill as shared_bill
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class BillDetailByIDBillsOcdBillOpenstatesBillIDGetPathParams:
-    openstates_bill_id: str = field(metadata={'path_param': { 'field_name': 'openstates_bill_id', 'style': 'simple', 'explode': False }})
+    openstates_bill_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'openstates_bill_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BillDetailByIDBillsOcdBillOpenstatesBillIDGetQueryParams:
-    apikey: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'apikey', 'style': 'form', 'explode': True }})
-    include: Optional[List[shared.BillIncludeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    apikey: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apikey', 'style': 'form', 'explode': True }})
+    include: Optional[list[shared_billinclude_enum.BillIncludeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BillDetailByIDBillsOcdBillOpenstatesBillIDGetHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BillDetailByIDBillsOcdBillOpenstatesBillIDGetRequest:
-    headers: BillDetailByIDBillsOcdBillOpenstatesBillIDGetHeaders = field()
-    path_params: BillDetailByIDBillsOcdBillOpenstatesBillIDGetPathParams = field()
-    query_params: BillDetailByIDBillsOcdBillOpenstatesBillIDGetQueryParams = field()
+    headers: BillDetailByIDBillsOcdBillOpenstatesBillIDGetHeaders = dataclasses.field()
+    path_params: BillDetailByIDBillsOcdBillOpenstatesBillIDGetPathParams = dataclasses.field()
+    query_params: BillDetailByIDBillsOcdBillOpenstatesBillIDGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BillDetailByIDBillsOcdBillOpenstatesBillIDGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bill: Optional[shared.Bill] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bill: Optional[shared_bill.Bill] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

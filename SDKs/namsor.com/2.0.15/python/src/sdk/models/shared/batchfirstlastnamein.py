@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import firstlastnamein as shared_firstlastnamein
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchFirstLastNameIn:
-    personal_names: Optional[List[FirstLastNameIn]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNames') }})
+    personal_names: Optional[list[shared_firstlastnamein.FirstLastNameIn]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('personalNames') }})
     

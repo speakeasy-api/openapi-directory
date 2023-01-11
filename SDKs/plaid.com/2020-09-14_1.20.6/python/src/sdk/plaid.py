@@ -31,7 +31,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/accounts/balance/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -39,7 +39,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountsBalanceGetResponse(status_code=r.status_code, content_type=content_type)
@@ -65,7 +65,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/accounts/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -73,7 +73,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AccountsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -100,7 +100,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/application/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -108,7 +108,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ApplicationGetResponse(status_code=r.status_code, content_type=content_type)
@@ -138,7 +138,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/audit_copy/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -146,7 +146,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportAuditCopyCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -170,7 +170,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/audit_copy/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -178,7 +178,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportAuditCopyGetResponse(status_code=r.status_code, content_type=content_type)
@@ -202,7 +202,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/audit_copy/remove"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -210,7 +210,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportAuditCopyRemoveResponse(status_code=r.status_code, content_type=content_type)
@@ -238,7 +238,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -246,7 +246,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -276,7 +276,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/filter"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -284,7 +284,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportFilterResponse(status_code=r.status_code, content_type=content_type)
@@ -312,7 +312,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -320,7 +320,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportGetResponse(status_code=r.status_code, content_type=content_type)
@@ -348,7 +348,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/pdf/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -356,7 +356,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportPdfGetResponse(status_code=r.status_code, content_type=content_type)
@@ -381,7 +381,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/refresh"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -389,7 +389,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportRefreshResponse(status_code=r.status_code, content_type=content_type)
@@ -415,7 +415,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/asset_report/remove"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -423,7 +423,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssetReportRemoveResponse(status_code=r.status_code, content_type=content_type)
@@ -451,7 +451,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/auth/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -459,7 +459,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AuthGetResponse(status_code=r.status_code, content_type=content_type)
@@ -491,7 +491,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/balance/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -499,7 +499,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferBalanceGetResponse(status_code=r.status_code, content_type=content_type)
@@ -527,7 +527,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/cancel"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -535,7 +535,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferCancelResponse(status_code=r.status_code, content_type=content_type)
@@ -563,7 +563,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -571,7 +571,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -599,7 +599,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/event/list"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -607,7 +607,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferEventListResponse(status_code=r.status_code, content_type=content_type)
@@ -635,7 +635,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/event/sync"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -643,7 +643,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferEventSyncResponse(status_code=r.status_code, content_type=content_type)
@@ -671,7 +671,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -679,7 +679,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferGetResponse(status_code=r.status_code, content_type=content_type)
@@ -708,7 +708,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/list"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -716,7 +716,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferListResponse(status_code=r.status_code, content_type=content_type)
@@ -744,7 +744,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/bank_transfer/migrate_account"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -752,7 +752,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.BankTransferMigrateAccountResponse(status_code=r.status_code, content_type=content_type)
@@ -780,15 +780,15 @@ class Plaid:
         url = base_url.removesuffix("/") + "/categories/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
            raise Exception('request body is required')
         
-        client = self._client
+        client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CategoriesGetResponse(status_code=r.status_code, content_type=content_type)
@@ -818,7 +818,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/payment/token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -826,7 +826,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.CreatePaymentTokenResponse(status_code=r.status_code, content_type=content_type)
@@ -850,7 +850,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/deposit_switch/alt/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -858,7 +858,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DepositSwitchAltCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -882,7 +882,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/deposit_switch/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -890,7 +890,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DepositSwitchCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -914,7 +914,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/deposit_switch/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -922,7 +922,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DepositSwitchGetResponse(status_code=r.status_code, content_type=content_type)
@@ -947,7 +947,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/deposit_switch/token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -955,7 +955,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.DepositSwitchTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -981,7 +981,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/employers/search"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -989,7 +989,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.EmployersSearchResponse(status_code=r.status_code, content_type=content_type)
@@ -1015,7 +1015,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/identity/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1023,7 +1023,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IdentityGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1047,7 +1047,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/income/verification/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1055,7 +1055,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IncomeVerificationCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1083,7 +1083,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/income/verification/documents/download"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1091,7 +1091,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IncomeVerificationDocumentsDownloadResponse(status_code=r.status_code, content_type=content_type)
@@ -1114,7 +1114,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/income/verification/paystubs/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1122,7 +1122,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IncomeVerificationPaystubsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1146,7 +1146,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/income/verification/refresh"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1154,7 +1154,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IncomeVerificationRefreshResponse(status_code=r.status_code, content_type=content_type)
@@ -1182,7 +1182,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/income/verification/summary/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1190,7 +1190,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.IncomeVerificationSummaryGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1218,7 +1218,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/institutions/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1226,7 +1226,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InstitutionsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1254,7 +1254,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/institutions/get_by_id"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1262,7 +1262,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InstitutionsGetByIDResponse(status_code=r.status_code, content_type=content_type)
@@ -1290,7 +1290,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/institutions/search"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1298,7 +1298,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InstitutionsSearchResponse(status_code=r.status_code, content_type=content_type)
@@ -1326,7 +1326,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/investments/holdings/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1334,7 +1334,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InvestmentsHoldingsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1362,7 +1362,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/investments/transactions/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1370,7 +1370,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.InvestmentsTransactionsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1397,7 +1397,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/access_token/invalidate"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1405,7 +1405,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemAccessTokenInvalidateResponse(status_code=r.status_code, content_type=content_type)
@@ -1428,7 +1428,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/application/list"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1436,7 +1436,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemApplicationListResponse(status_code=r.status_code, content_type=content_type)
@@ -1463,7 +1463,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/application/scopes/update"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1471,7 +1471,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemApplicationScopesUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -1505,7 +1505,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/public_token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1513,7 +1513,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemCreatePublicTokenResponse(status_code=r.status_code, content_type=content_type)
@@ -1537,7 +1537,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1545,7 +1545,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1574,7 +1574,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/import"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1582,7 +1582,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemImportResponse(status_code=r.status_code, content_type=content_type)
@@ -1608,7 +1608,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/public_token/exchange"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1616,7 +1616,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemPublicTokenExchangeResponse(status_code=r.status_code, content_type=content_type)
@@ -1644,7 +1644,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/remove"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1652,7 +1652,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemRemoveResponse(status_code=r.status_code, content_type=content_type)
@@ -1680,7 +1680,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/item/webhook/update"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1688,7 +1688,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ItemWebhookUpdateResponse(status_code=r.status_code, content_type=content_type)
@@ -1716,7 +1716,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/liabilities/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1724,7 +1724,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.LiabilitiesGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1750,7 +1750,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/link/token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1758,7 +1758,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.LinkTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1783,7 +1783,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/link/token/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1791,7 +1791,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.LinkTokenGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1819,7 +1819,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/payment/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1827,7 +1827,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationPaymentCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1851,7 +1851,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/payment/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1859,7 +1859,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationPaymentGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1883,7 +1883,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/payment/list"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1891,7 +1891,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationPaymentListResponse(status_code=r.status_code, content_type=content_type)
@@ -1918,7 +1918,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/recipient/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1926,7 +1926,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationRecipientCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -1950,7 +1950,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/recipient/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1958,7 +1958,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationRecipientGetResponse(status_code=r.status_code, content_type=content_type)
@@ -1982,7 +1982,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/payment_initiation/recipient/list"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -1990,7 +1990,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PaymentInitiationRecipientListResponse(status_code=r.status_code, content_type=content_type)
@@ -2014,7 +2014,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/apex/processor_token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2022,7 +2022,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorApexProcessorTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2046,7 +2046,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/auth/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2054,7 +2054,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorAuthGetResponse(status_code=r.status_code, content_type=content_type)
@@ -2078,7 +2078,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/balance/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2086,7 +2086,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorBalanceGetResponse(status_code=r.status_code, content_type=content_type)
@@ -2110,7 +2110,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/bank_transfer/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2118,7 +2118,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorBankTransferCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2146,7 +2146,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/identity/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2154,7 +2154,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorIdentityGetResponse(status_code=r.status_code, content_type=content_type)
@@ -2178,7 +2178,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/stripe/bank_account_token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2186,7 +2186,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorStripeBankAccountTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2210,7 +2210,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/processor/token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2218,7 +2218,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ProcessorTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2242,7 +2242,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/bank_transfer/fire_webhook"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2250,7 +2250,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxBankTransferFireWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -2278,7 +2278,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/bank_transfer/simulate"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2286,7 +2286,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxBankTransferSimulateResponse(status_code=r.status_code, content_type=content_type)
@@ -2314,7 +2314,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/income/fire_webhook"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2322,7 +2322,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxIncomeFireWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -2350,7 +2350,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/item/fire_webhook"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2358,7 +2358,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxItemFireWebhookResponse(status_code=r.status_code, content_type=content_type)
@@ -2389,7 +2389,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/item/reset_login"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2397,7 +2397,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxItemResetLoginResponse(status_code=r.status_code, content_type=content_type)
@@ -2425,7 +2425,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/item/set_verification_status"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2433,7 +2433,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxItemSetVerificationStatusResponse(status_code=r.status_code, content_type=content_type)
@@ -2455,7 +2455,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/oauth/select_accounts"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2463,7 +2463,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxOauthSelectAccountsResponse(status_code=r.status_code, content_type=content_type)
@@ -2491,7 +2491,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/processor_token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2499,7 +2499,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxProcessorTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2527,7 +2527,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/sandbox/public_token/create"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2535,7 +2535,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SandboxPublicTokenCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -2563,7 +2563,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/signal/decision/report"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2571,7 +2571,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SignalDecisionReportResponse(status_code=r.status_code, content_type=content_type)
@@ -2601,7 +2601,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/signal/evaluate"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2609,7 +2609,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SignalEvaluateResponse(status_code=r.status_code, content_type=content_type)
@@ -2637,7 +2637,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/signal/return/report"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2645,7 +2645,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.SignalReturnReportResponse(status_code=r.status_code, content_type=content_type)
@@ -2681,7 +2681,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/transactions/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2689,7 +2689,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TransactionsGetResponse(status_code=r.status_code, content_type=content_type)
@@ -2719,7 +2719,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/transactions/refresh"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2727,7 +2727,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.TransactionsRefreshResponse(status_code=r.status_code, content_type=content_type)
@@ -2757,7 +2757,7 @@ class Plaid:
         url = base_url.removesuffix("/") + "/webhook_verification_key/get"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         if data is None and form is None:
@@ -2765,7 +2765,7 @@ class Plaid:
         
         client = self._security_client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.WebhookVerificationKeyGetResponse(status_code=r.status_code, content_type=content_type)

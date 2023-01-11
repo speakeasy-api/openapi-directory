@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbproxy as shared_dbproxy
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDbProxyResponse:
-    db_proxy: Optional[DbProxy] = field(default=None)
+    db_proxy: Optional[shared_dbproxy.DbProxy] = dataclasses.field(default=None)
     

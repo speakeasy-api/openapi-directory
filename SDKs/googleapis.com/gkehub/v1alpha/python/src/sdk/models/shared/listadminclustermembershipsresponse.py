@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import membership as shared_membership
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAdminClusterMembershipsResponse:
     r"""ListAdminClusterMembershipsResponse
     Response message for the `GkeHub.ListAdminClusterMemberships` method.
     """
     
-    admin_cluster_memberships: Optional[List[Membership]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adminClusterMemberships') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    admin_cluster_memberships: Optional[list[shared_membership.Membership]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adminClusterMemberships') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

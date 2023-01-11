@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,42 +25,42 @@ s.config_security(
     
 req = operations.CountClosedWorkflowExecutionsRequest(
     headers=operations.CountClosedWorkflowExecutionsHeaders(
-        x_amz_algorithm="magnam",
-        x_amz_content_sha256="a",
-        x_amz_credential="nulla",
-        x_amz_date="harum",
-        x_amz_security_token="et",
-        x_amz_signature="quaerat",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="illo",
+        x_amz_content_sha256="aut",
+        x_amz_credential="omnis",
+        x_amz_date="eos",
+        x_amz_security_token="dolore",
+        x_amz_signature="aut",
+        x_amz_signed_headers="dolor",
         x_amz_target="SimpleWorkflowService.CountClosedWorkflowExecutions",
     ),
     request=shared.CountClosedWorkflowExecutionsInput(
         close_status_filter=shared.CloseStatusFilter(
-            status="TERMINATED",
+            status="COMPLETED",
         ),
         close_time_filter=shared.ExecutionTimeFilter(
-            latest_date="2015-09-10T12:47:14Z",
-            oldest_date="1982-08-21T10:42:10Z",
+            latest_date="1983-08-05T17:33:17Z",
+            oldest_date="1997-05-27T09:53:03Z",
         ),
-        domain="sed",
+        domain="iste",
         execution_filter=shared.WorkflowExecutionFilter(
-            workflow_id="labore",
+            workflow_id="voluptatibus",
         ),
         start_time_filter=shared.ExecutionTimeFilter(
-            latest_date="2001-12-16T13:15:49Z",
-            oldest_date="1992-03-13T13:34:52Z",
+            latest_date="1980-03-26T04:47:11Z",
+            oldest_date="1983-07-03T09:45:43Z",
         ),
         tag_filter=shared.TagFilter(
-            tag="voluptatum",
+            tag="debitis",
         ),
         type_filter=shared.WorkflowTypeFilter(
-            name="minima",
-            version="necessitatibus",
+            name="quam",
+            version="excepturi",
         ),
     ),
 )
     
-res = s.sdk.count_closed_workflow_executions(req)
+res = s.count_closed_workflow_executions(req)
 
 if res.workflow_execution_count is not None:
     # handle response

@@ -1,0 +1,39 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.CreateFundsConfirmationConsentsRequest(
+    security=operations.CreateFundsConfirmationConsentsSecurity(
+        tppo_auth2_security=shared.SchemeTppoAuth2Security(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    headers=operations.CreateFundsConfirmationConsentsHeaders(
+        authorization="sit",
+        x_customer_user_agent="tempore",
+        x_fapi_auth_date="beatae",
+        x_fapi_customer_ip_address="aut",
+        x_fapi_interaction_id="quis",
+    ),
+    request=shared.ObFundsConfirmationConsent1(
+        data=shared.ObFundsConfirmationConsent1Data(
+            debtor_account=shared.ObFundsConfirmationConsent1DataDebtorAccount(
+                identification="odio",
+                name="ducimus",
+                scheme_name="consectetur",
+                secondary_identification="eius",
+            ),
+            expiration_date_time="1975-08-27T06:18:01Z",
+        ),
+    ),
+)
+    
+res = s.funds_confirmations.create_funds_confirmation_consents(req)
+
+if res.ob_funds_confirmation_consent_response1 is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

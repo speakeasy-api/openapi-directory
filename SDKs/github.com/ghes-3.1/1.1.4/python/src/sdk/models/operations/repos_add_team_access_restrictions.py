@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import team as shared_team
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposAddTeamAccessRestrictionsPathParams:
-    branch: str = field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposAddTeamAccessRestrictionsRequestBody1:
-    teams: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('teams') }})
+    teams: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('teams') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposAddTeamAccessRestrictionsRequest:
-    path_params: ReposAddTeamAccessRestrictionsPathParams = field()
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ReposAddTeamAccessRestrictionsPathParams = dataclasses.field()
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposAddTeamAccessRestrictionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    teams: Optional[List[shared.Team]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    teams: Optional[list[shared_team.Team]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

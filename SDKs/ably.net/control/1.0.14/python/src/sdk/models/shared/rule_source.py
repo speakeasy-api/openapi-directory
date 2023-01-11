@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -11,8 +11,8 @@ class RuleSourceTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RuleSource:
-    channel_filter: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelFilter') }})
-    type: RuleSourceTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    channel_filter: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('channelFilter') }})
+    type: RuleSourceTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import songinalbumforapicontract as shared_songinalbumforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class AlbumAPIGetTracksFieldsEnum(str, Enum):
     NONE = "None"
@@ -29,22 +29,22 @@ class AlbumAPIGetTracksLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksQueryParams:
-    fields: Optional[AlbumAPIGetTracksFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[AlbumAPIGetTracksLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[AlbumAPIGetTracksFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[AlbumAPIGetTracksLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksRequest:
-    path_params: AlbumAPIGetTracksPathParams = field()
-    query_params: AlbumAPIGetTracksQueryParams = field()
+    path_params: AlbumAPIGetTracksPathParams = dataclasses.field()
+    query_params: AlbumAPIGetTracksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetTracksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_in_album_for_api_contracts: Optional[List[shared.SongInAlbumForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_in_album_for_api_contracts: Optional[list[shared_songinalbumforapicontract.SongInAlbumForAPIContract]] = dataclasses.field(default=None)
     

@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFiltersCreateQueryParams:
-    base: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'base', 'style': 'form', 'explode': True }})
-    exclude: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': True }})
-    include: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
-    unsafe: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'unsafe', 'style': 'form', 'explode': True }})
+    base: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'base', 'style': 'form', 'explode': True }})
+    exclude: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': True }})
+    include: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    unsafe: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'unsafe', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFiltersCreateRequest:
-    query_params: GetFiltersCreateQueryParams = field()
+    query_params: GetFiltersCreateQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFiltersCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

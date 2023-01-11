@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import imageclassificationrequest as shared_imageclassificationrequest
+from ..shared import security as shared_security
+from ..shared import imageclassificationresponse as shared_imageclassificationresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PredictMultipartRequests:
-    image_classification_request: Optional[shared.ImageClassificationRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    image_classification_request1: Optional[shared.ImageClassificationRequest] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    image_classification_request: Optional[shared_imageclassificationrequest.ImageClassificationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    image_classification_request1: Optional[shared_imageclassificationrequest.ImageClassificationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictMultipartSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictMultipartRequest:
-    security: PredictMultipartSecurity = field()
-    request: Optional[PredictMultipartRequests] = field(default=None)
+    security: PredictMultipartSecurity = dataclasses.field()
+    request: Optional[PredictMultipartRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PredictMultipartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    image_classification_response: Optional[shared.ImageClassificationResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    image_classification_response: Optional[shared_imageclassificationresponse.ImageClassificationResponse] = dataclasses.field(default=None)
     

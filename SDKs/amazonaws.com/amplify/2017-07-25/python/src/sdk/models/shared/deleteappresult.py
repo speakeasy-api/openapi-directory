@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import app as shared_app
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteAppResult:
     r"""DeleteAppResult
      The result structure for the delete app request. 
     """
     
-    app: App = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
+    app: shared_app.App = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
     

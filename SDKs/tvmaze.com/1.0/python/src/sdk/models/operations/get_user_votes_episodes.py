@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import episodevote as shared_episodevote
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesEpisodesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    episode_votes: Optional[List[shared.EpisodeVote]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    episode_votes: Optional[list[shared_episodevote.EpisodeVote]] = dataclasses.field(default=None)
     

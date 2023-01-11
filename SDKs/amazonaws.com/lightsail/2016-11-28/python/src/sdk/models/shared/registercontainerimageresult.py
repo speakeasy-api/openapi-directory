@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import containerimage as shared_containerimage
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegisterContainerImageResult:
-    container_image: Optional[ContainerImage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
+    container_image: Optional[shared_containerimage.ContainerImage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('containerImage') }})
     

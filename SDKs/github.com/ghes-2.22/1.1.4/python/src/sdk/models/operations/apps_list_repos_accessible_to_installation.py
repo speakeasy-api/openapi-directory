@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import repository as shared_repository
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsListReposAccessibleToInstallationQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppsListReposAccessibleToInstallation200ApplicationJSON:
-    repositories: List[shared.Repository] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repositories') }})
-    total_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
-    repository_selection: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_selection') }})
+    repositories: list[shared_repository.Repository] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repositories') }})
+    total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    repository_selection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('repository_selection') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListReposAccessibleToInstallationRequest:
-    query_params: AppsListReposAccessibleToInstallationQueryParams = field()
+    query_params: AppsListReposAccessibleToInstallationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListReposAccessibleToInstallationResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    apps_list_repos_accessible_to_installation_200_application_json_object: Optional[AppsListReposAccessibleToInstallation200ApplicationJSON] = field(default=None)
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    apps_list_repos_accessible_to_installation_200_application_json_object: Optional[AppsListReposAccessibleToInstallation200ApplicationJSON] = dataclasses.field(default=None)
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

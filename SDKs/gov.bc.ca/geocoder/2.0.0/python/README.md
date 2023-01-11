@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,40 +25,40 @@ s.config_security(
     
 req = operations.GetAddressesOutputFormatRequest(
     path_params=operations.GetAddressesOutputFormatPathParams(
-        output_format="json",
+        output_format="gml",
     ),
     query_params=operations.GetAddressesOutputFormatQueryParams(
-        address_string="adipisci",
+        address_string="quia",
         auto_complete=True,
-        bbox="nesciunt",
-        brief=True,
-        centre="ut",
-        civic_number="eaque",
-        civic_number_suffix="sint",
+        bbox="sapiente",
+        brief=False,
+        centre="voluptatem",
+        civic_number="quia",
+        civic_number_suffix="inventore",
         echo=False,
         extrapolate=True,
-        interpolation="adaptive",
-        localities="qui",
-        locality_name="occaecati",
-        location_descriptor="frontDoorPoint",
-        match_precision="est",
-        match_precision_not="voluptates",
-        max_distance=52.099998,
-        max_results=427930109320837905,
-        min_score=4622879939173555609,
+        interpolation="none",
+        localities="officia",
+        locality_name="ut",
+        location_descriptor="routingPoint",
+        match_precision="officiis",
+        match_precision_not="qui",
+        max_distance=47.200001,
+        max_results=5879687173104419379,
+        min_score=3085065235994805466,
         not_localities="aut",
-        output_srs=1463774971675998561,
-        parcel_point="quo",
-        province_code="et",
-        set_back=4124723190876299895,
+        output_srs=2188229587528031884,
+        parcel_point="autem",
+        province_code="suscipit",
+        set_back=6312999475177175595,
         site_name="saepe",
-        street_direction="SW",
-        street_name="qui",
-        street_qualifier="ea",
-        street_type="voluptas",
-        unit_designator="SUITE",
-        unit_number="rerum",
-        unit_number_suffix="iste",
+        street_direction="NO",
+        street_name="labore",
+        street_qualifier="possimus",
+        street_type="qui",
+        unit_designator="UNIT",
+        unit_number="repudiandae",
+        unit_number_suffix="alias",
     ),
 )
     
@@ -76,18 +75,18 @@ if res.status_code == 200:
 ### intersections
 
 * `get_addresses_output_format_` - Geocode an address
-* `get_intersections_intersection_id_output_format_` - Get an intersection by its unique ID
 * `get_intersections_near_output_format_` - Find intersections near to a geographic point
 * `get_intersections_nearest_output_format_` - Find nearest intersection to a geographic point
 * `get_intersections_within_output_format_` - Find intersections in a geographic area
+* `get_intersections_intersection_id_output_format_` - Get an intersection by its unique ID
 
 ### occupants
 
 * `get_occupants_addresses_output_format_` - Geocode an address and identify site occupants
 * `get_occupants_near_output_format_` - Find occupants of sites near to a geographic point
 * `get_occupants_nearest_output_format_` - Find occupants of the site nearest to a geographic point
-* `get_occupants_occupant_id_output_format_` - Get an occupant (of a site) by its unique ID
 * `get_occupants_within_output_format_` - Find occupants of sites in a geographic area
+* `get_occupants_occupant_id_output_format_` - Get an occupant (of a site) by its unique ID
 
 ### parcels
 
@@ -98,9 +97,9 @@ if res.status_code == 200:
 * `get_addresses_output_format_` - Geocode an address
 * `get_sites_near_output_format_` - Find sites near to a geographic point
 * `get_sites_nearest_output_format_` - Find the site nearest to a geographic point
+* `get_sites_within_output_format_` - Find sites in a geographic area
 * `get_sites_site_id_output_format_` - Get a site by its unique ID
 * `get_sites_site_id_subsites_output_format_` - Represents all subsites of a given site
-* `get_sites_within_output_format_` - Find sites in a geographic area
 
 <!-- End SDK Available Operations -->
 

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class BoxScoreFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class BoxScoreFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class BoxScorePathParams:
-    format: BoxScoreFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    gameid: str = field(metadata={'path_param': { 'field_name': 'gameid', 'style': 'simple', 'explode': False }})
+    format: BoxScoreFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    gameid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gameid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoreRequest:
-    path_params: BoxScorePathParams = field()
+    path_params: BoxScorePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class BoxScoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    box_scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    box_scores: Optional[list[Any]] = dataclasses.field(default=None)
     

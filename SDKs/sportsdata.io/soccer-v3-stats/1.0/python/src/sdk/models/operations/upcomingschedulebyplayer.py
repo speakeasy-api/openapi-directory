@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class UpcomingScheduleByPlayerFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class UpcomingScheduleByPlayerFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingScheduleByPlayerPathParams:
-    format: UpcomingScheduleByPlayerFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    playerid: str = field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
+    format: UpcomingScheduleByPlayerFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    playerid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'playerid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingScheduleByPlayerRequest:
-    path_params: UpcomingScheduleByPlayerPathParams = field()
+    path_params: UpcomingScheduleByPlayerPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpcomingScheduleByPlayerResponse:
-    content_type: str = field()
-    status_code: int = field()
-    games: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    games: Optional[list[Any]] = dataclasses.field(default=None)
     

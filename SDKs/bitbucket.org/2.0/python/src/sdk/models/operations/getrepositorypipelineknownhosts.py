@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_pipeline_known_hosts as shared_paginated_pipeline_known_hosts
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineKnownHostsPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineKnownHostsRequest:
-    path_params: GetRepositoryPipelineKnownHostsPathParams = field()
+    path_params: GetRepositoryPipelineKnownHostsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRepositoryPipelineKnownHostsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_pipeline_known_hosts: Optional[shared.PaginatedPipelineKnownHosts] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_pipeline_known_hosts: Optional[shared_paginated_pipeline_known_hosts.PaginatedPipelineKnownHosts] = dataclasses.field(default=None)
     

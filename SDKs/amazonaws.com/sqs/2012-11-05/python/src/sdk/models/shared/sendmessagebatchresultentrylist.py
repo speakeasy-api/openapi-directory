@@ -1,0 +1,17 @@
+import dataclasses
+from typing import Optional
+
+
+@dataclasses.dataclass
+class SendMessageBatchResultEntryList:
+    r"""SendMessageBatchResultEntryList
+    Encloses a <code>MessageId</code> for a successfully-enqueued message in a <code> <a>SendMessageBatch</a>.</code> 
+    """
+    
+    id: str = dataclasses.field()
+    md5_of_message_body: str = dataclasses.field()
+    message_id: str = dataclasses.field()
+    md5_of_message_attributes: Optional[str] = dataclasses.field(default=None)
+    md5_of_message_system_attributes: Optional[str] = dataclasses.field(default=None)
+    sequence_number: Optional[str] = dataclasses.field(default=None)
+    

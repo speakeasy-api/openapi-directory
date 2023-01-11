@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentMethodPathParams:
-    payment_method_number: str = field(metadata={'path_param': { 'field_name': 'paymentMethodNumber', 'style': 'simple', 'explode': False }})
+    payment_method_number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'paymentMethodNumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentMethodRequestBody:
-    active: Optional[bool] = field(default=None, metadata={'form': { 'field_name': 'active' }})
-    paypal_subject: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'paypal.subject' }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'active' }})
+    paypal_subject: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'paypal.subject' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentMethodSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentMethodRequest:
-    path_params: UpdatePaymentMethodPathParams = field()
-    security: UpdatePaymentMethodSecurity = field()
-    request: Optional[UpdatePaymentMethodRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    path_params: UpdatePaymentMethodPathParams = dataclasses.field()
+    security: UpdatePaymentMethodSecurity = dataclasses.field()
+    request: Optional[UpdatePaymentMethodRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePaymentMethodResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_usermessagecontract_ as shared_partialfindresult_usermessagecontract_
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessagesPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class UserAPIGetMessagesInboxEnum(str, Enum):
     NOTHING = "Nothing"
@@ -15,26 +15,26 @@ class UserAPIGetMessagesInboxEnum(str, Enum):
     NOTIFICATIONS = "Notifications"
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessagesQueryParams:
-    another_user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'anotherUserId', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    inbox: Optional[UserAPIGetMessagesInboxEnum] = field(default=None, metadata={'query_param': { 'field_name': 'inbox', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    unread: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'unread', 'style': 'form', 'explode': True }})
+    another_user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'anotherUserId', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    inbox: Optional[UserAPIGetMessagesInboxEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'inbox', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    unread: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'unread', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessagesRequest:
-    path_params: UserAPIGetMessagesPathParams = field()
-    query_params: UserAPIGetMessagesQueryParams = field()
+    path_params: UserAPIGetMessagesPathParams = dataclasses.field()
+    query_params: UserAPIGetMessagesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetMessagesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_user_message_contract_: Optional[shared.PartialFindResultUserMessageContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_user_message_contract_: Optional[shared_partialfindresult_usermessagecontract_.PartialFindResultUserMessageContract] = dataclasses.field(default=None)
     

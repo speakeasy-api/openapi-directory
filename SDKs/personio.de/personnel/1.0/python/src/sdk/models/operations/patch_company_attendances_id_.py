@@ -1,26 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import updateattendanceperiodrequest as shared_updateattendanceperiodrequest
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import response as shared_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchCompanyAttendancesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchCompanyAttendancesIDRequest:
-    path_params: PatchCompanyAttendancesIDPathParams = field()
-    request: shared.UpdateAttendancePeriodRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchCompanyAttendancesIDPathParams = dataclasses.field()
+    request: shared_updateattendanceperiodrequest.UpdateAttendancePeriodRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchCompanyAttendancesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    response: Optional[shared.Response] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    response: Optional[shared_response.Response] = dataclasses.field(default=None)
     

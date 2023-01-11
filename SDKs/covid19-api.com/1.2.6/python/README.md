@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetDailyReportAllCountriesRequest(
     query_params=operations.GetDailyReportAllCountriesQueryParams(
-        date_="quia",
-        date_format="MM-DD-YYYY",
+        date_="ipsam",
+        date_format="YYYY-MM-DD",
         format="xml",
     ),
 )
     
-res = s.sdk.get_daily_report_all_countries(req)
+res = s.country.get_daily_report_all_countries(req)
 
 if res.get_daily_report_all_countries_200_application_json_objects is not None:
     # handle response
@@ -35,17 +34,23 @@ if res.get_daily_report_all_countries_200_application_json_objects is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country
 
 * `get_daily_report_all_countries` - getDailyReportAllCountries
 * `get_daily_report_by_country_code` - getDailyReportByCountryCode
 * `get_daily_report_by_country_name` - getDailyReportByCountryName
-* `get_daily_report_totals` - getDailyReportTotals
 * `get_latest_all_countries` - getLatestAllCountries
 * `get_latest_country_data_by_code` - getLatestCountryDataByCode
 * `get_latest_country_data_by_name` - getLatestCountryDataByName
-* `get_latest_totals` - getLatestTotals
+
+### Help
+
 * `get_list_of_countries` - getListOfCountries
+
+### Totals
+
+* `get_daily_report_totals` - getDailyReportTotals
+* `get_latest_totals` - getLatestTotals
 
 <!-- End SDK Available Operations -->
 

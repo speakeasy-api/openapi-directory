@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import contactinfolist as shared_contactinfolist
+from ..shared import mobiledeviceidlist as shared_mobiledeviceidlist
 
 class FirstAndThirdPartyAudienceAudienceSourceEnum(str, Enum):
     AUDIENCE_SOURCE_UNSPECIFIED = "AUDIENCE_SOURCE_UNSPECIFIED"
@@ -32,45 +33,45 @@ class FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FirstAndThirdPartyAudience:
     r"""FirstAndThirdPartyAudience
     Describes a first or third party audience list used for targeting. First party audiences are created via usage of client data. Third party audiences are provided by Third Party data providers and can only be licensed to customers.
     """
     
-    active_display_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDisplayAudienceSize') }})
-    app_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
-    audience_source: Optional[FirstAndThirdPartyAudienceAudienceSourceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceSource') }})
-    audience_type: Optional[FirstAndThirdPartyAudienceAudienceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceType') }})
-    contact_info_list: Optional[ContactInfoList] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactInfoList') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    display_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayAudienceSize') }})
-    display_desktop_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayDesktopAudienceSize') }})
-    display_mobile_app_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayMobileAppAudienceSize') }})
-    display_mobile_web_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayMobileWebAudienceSize') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    first_and_third_party_audience_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceId') }})
-    first_and_third_party_audience_type: Optional[FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceType') }})
-    gmail_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmailAudienceSize') }})
-    membership_duration_days: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipDurationDays') }})
-    mobile_device_id_list: Optional[MobileDeviceIDList] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileDeviceIdList') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    youtube_audience_size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('youtubeAudienceSize') }})
+    active_display_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('activeDisplayAudienceSize') }})
+    app_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
+    audience_source: Optional[FirstAndThirdPartyAudienceAudienceSourceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceSource') }})
+    audience_type: Optional[FirstAndThirdPartyAudienceAudienceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceType') }})
+    contact_info_list: Optional[shared_contactinfolist.ContactInfoList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactInfoList') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    display_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayAudienceSize') }})
+    display_desktop_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayDesktopAudienceSize') }})
+    display_mobile_app_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayMobileAppAudienceSize') }})
+    display_mobile_web_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayMobileWebAudienceSize') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    first_and_third_party_audience_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceId') }})
+    first_and_third_party_audience_type: Optional[FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceType') }})
+    gmail_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gmailAudienceSize') }})
+    membership_duration_days: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipDurationDays') }})
+    mobile_device_id_list: Optional[shared_mobiledeviceidlist.MobileDeviceIDList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileDeviceIdList') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    youtube_audience_size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('youtubeAudienceSize') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FirstAndThirdPartyAudienceInput:
     r"""FirstAndThirdPartyAudienceInput
     Describes a first or third party audience list used for targeting. First party audiences are created via usage of client data. Third party audiences are provided by Third Party data providers and can only be licensed to customers.
     """
     
-    app_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
-    audience_type: Optional[FirstAndThirdPartyAudienceAudienceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceType') }})
-    contact_info_list: Optional[ContactInfoList] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactInfoList') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    first_and_third_party_audience_type: Optional[FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceType') }})
-    membership_duration_days: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipDurationDays') }})
-    mobile_device_id_list: Optional[MobileDeviceIDList] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileDeviceIdList') }})
+    app_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
+    audience_type: Optional[FirstAndThirdPartyAudienceAudienceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audienceType') }})
+    contact_info_list: Optional[shared_contactinfolist.ContactInfoList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contactInfoList') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    first_and_third_party_audience_type: Optional[FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceType') }})
+    membership_duration_days: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('membershipDurationDays') }})
+    mobile_device_id_list: Optional[shared_mobiledeviceidlist.MobileDeviceIDList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobileDeviceIdList') }})
     

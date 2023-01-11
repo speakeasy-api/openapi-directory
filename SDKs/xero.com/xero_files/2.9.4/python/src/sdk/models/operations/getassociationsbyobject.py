@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import association as shared_association
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociationsByObjectPathParams:
-    object_id: str = field(metadata={'path_param': { 'field_name': 'ObjectId', 'style': 'simple', 'explode': False }})
+    object_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ObjectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociationsByObjectHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociationsByObjectSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociationsByObjectRequest:
-    headers: GetAssociationsByObjectHeaders = field()
-    path_params: GetAssociationsByObjectPathParams = field()
-    security: GetAssociationsByObjectSecurity = field()
+    headers: GetAssociationsByObjectHeaders = dataclasses.field()
+    path_params: GetAssociationsByObjectPathParams = dataclasses.field()
+    security: GetAssociationsByObjectSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociationsByObjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    associations: Optional[List[shared.Association]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    associations: Optional[list[shared_association.Association]] = dataclasses.field(default=None)
     

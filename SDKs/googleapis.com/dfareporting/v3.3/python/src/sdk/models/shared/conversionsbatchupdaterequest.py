@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import conversion as shared_conversion
+from ..shared import encryptioninfo as shared_encryptioninfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConversionsBatchUpdateRequest:
     r"""ConversionsBatchUpdateRequest
     Update Conversions Request.
     """
     
-    conversions: Optional[List[Conversion]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversions') }})
-    encryption_info: Optional[EncryptionInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionInfo') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    conversions: Optional[list[shared_conversion.Conversion]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversions') }})
+    encryption_info: Optional[shared_encryptioninfo.EncryptionInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionInfo') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import reportdefinition as shared_reportdefinition
+from ..shared import errormodel as shared_errormodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PutReportDefinitionPathParams:
-    report_definition_id: str = field(metadata={'path_param': { 'field_name': 'ReportDefinitionId', 'style': 'simple', 'explode': False }})
+    report_definition_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ReportDefinitionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutReportDefinitionHeaders:
-    api_version: str = field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    api_version: str = dataclasses.field(metadata={'header': { 'field_name': 'Api-Version', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutReportDefinitionRequest:
-    headers: PutReportDefinitionHeaders = field()
-    path_params: PutReportDefinitionPathParams = field()
-    request: shared.ReportDefinition = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PutReportDefinitionHeaders = dataclasses.field()
+    path_params: PutReportDefinitionPathParams = dataclasses.field()
+    request: shared_reportdefinition.ReportDefinition = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutReportDefinitionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_model: Optional[shared.ErrorModel] = field(default=None)
-    report_definition: Optional[shared.ReportDefinition] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_model: Optional[shared_errormodel.ErrorModel] = dataclasses.field(default=None)
+    report_definition: Optional[shared_reportdefinition.ReportDefinition] = dataclasses.field(default=None)
     

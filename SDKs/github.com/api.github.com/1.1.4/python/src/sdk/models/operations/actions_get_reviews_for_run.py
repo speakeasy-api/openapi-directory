@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import environment_approvals as shared_environment_approvals
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetReviewsForRunPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
-    run_id: int = field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    run_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'run_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetReviewsForRunRequest:
-    path_params: ActionsGetReviewsForRunPathParams = field()
+    path_params: ActionsGetReviewsForRunPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetReviewsForRunResponse:
-    content_type: str = field()
-    status_code: int = field()
-    environment_approvals: Optional[List[shared.EnvironmentApprovals]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    environment_approvals: Optional[list[shared_environment_approvals.EnvironmentApprovals]] = dataclasses.field(default=None)
     

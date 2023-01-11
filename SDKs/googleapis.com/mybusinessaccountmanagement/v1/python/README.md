@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,43 +18,44 @@ s = sdk.SDK()
     
 req = operations.MybusinessaccountmanagementAccountsCreateRequest(
     query_params=operations.MybusinessaccountmanagementAccountsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="animi",
+        dollar_xgafv="1",
+        access_token="atque",
         alt="proto",
-        callback="adipisci",
-        fields="nam",
-        key="hic",
-        oauth_token="quia",
+        callback="nobis",
+        fields="quod",
+        key="ipsam",
+        oauth_token="quibusdam",
         pretty_print=False,
-        quota_user="dolor",
-        upload_type="temporibus",
-        upload_protocol="quaerat",
+        quota_user="itaque",
+        upload_type="quae",
+        upload_protocol="aliquid",
     ),
     request=shared.AccountInput(
-        account_name="quo",
-        name="suscipit",
+        account_name="ut",
+        name="magni",
         organization_info=shared.OrganizationInfoInput(
             address=shared.PostalAddress(
                 address_lines=[
-                    "autem",
+                    "facilis",
+                    "fugiat",
                 ],
-                administrative_area="autem",
-                language_code="ut",
-                locality="quis",
-                organization="alias",
-                postal_code="enim",
+                administrative_area="dolorem",
+                language_code="quas",
+                locality="sed",
+                organization="quo",
+                postal_code="cum",
                 recipients=[
-                    "et",
-                    "temporibus",
+                    "culpa",
+                    "omnis",
                 ],
-                region_code="fugit",
-                revision=347043070683153108,
-                sorting_code="officia",
-                sublocality="illo",
+                region_code="sit",
+                revision=5851310603061245360,
+                sorting_code="totam",
+                sublocality="magnam",
             ),
         ),
-        primary_owner="consequuntur",
-        type="PERSONAL",
+        primary_owner="culpa",
+        type="USER_GROUP",
     ),
 )
     

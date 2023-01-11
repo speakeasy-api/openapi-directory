@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Builder:
     r"""Builder
     The builder used to build the custom platform.
     """
     
-    arn: Optional[str] = field(default=None)
+    arn: Optional[str] = dataclasses.field(default=None)
     

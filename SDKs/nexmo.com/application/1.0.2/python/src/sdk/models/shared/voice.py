@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -14,19 +14,19 @@ class VoiceWebhooksHTTPMethodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VoiceWebhooks:
-    endpoint: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint') }})
-    endpoint_type: VoiceWebhooksEndpointTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint_type') }})
-    http_method: VoiceWebhooksHTTPMethodEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('http_method') }})
+    endpoint: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint') }})
+    endpoint_type: VoiceWebhooksEndpointTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endpoint_type') }})
+    http_method: VoiceWebhooksHTTPMethodEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('http_method') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Voice:
     r"""Voice
     The Nexmo product that you access with this application.
     """
     
-    webhooks: Optional[List[VoiceWebhooks]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhooks') }})
+    webhooks: Optional[list[VoiceWebhooks]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('webhooks') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AbortMultipartUploadRequest(
     path_params=operations.AbortMultipartUploadPathParams(
-        account_id="ut",
-        upload_id="inventore",
-        vault_name="officiis",
+        account_id="similique",
+        upload_id="recusandae",
+        vault_name="error",
     ),
     headers=operations.AbortMultipartUploadHeaders(
-        x_amz_algorithm="aliquam",
-        x_amz_content_sha256="ratione",
-        x_amz_credential="adipisci",
-        x_amz_date="hic",
-        x_amz_security_token="inventore",
-        x_amz_signature="qui",
-        x_amz_signed_headers="molestiae",
+        x_amz_algorithm="hic",
+        x_amz_content_sha256="atque",
+        x_amz_credential="rerum",
+        x_amz_date="voluptates",
+        x_amz_security_token="iste",
+        x_amz_signature="reiciendis",
+        x_amz_signed_headers="ipsam",
     ),
 )
     
-res = s.sdk.abort_multipart_upload(req)
+res = s.abort_multipart_upload(req)
 
 if res.status_code == 200:
     # handle response

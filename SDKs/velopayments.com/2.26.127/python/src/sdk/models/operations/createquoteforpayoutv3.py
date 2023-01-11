@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import quoteresponsev3 as shared_quoteresponsev3
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateQuoteForPayoutV3PathParams:
-    payout_id: str = field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
+    payout_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateQuoteForPayoutV3Request:
-    path_params: CreateQuoteForPayoutV3PathParams = field()
+    path_params: CreateQuoteForPayoutV3PathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateQuoteForPayoutV3Response:
-    content_type: str = field()
-    status_code: int = field()
-    quote_response_v3: Optional[shared.QuoteResponseV3] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
-    inline_response_409: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    quote_response_v3: Optional[shared_quoteresponsev3.QuoteResponseV3] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
+    inline_response_409: Optional[Any] = dataclasses.field(default=None)
     

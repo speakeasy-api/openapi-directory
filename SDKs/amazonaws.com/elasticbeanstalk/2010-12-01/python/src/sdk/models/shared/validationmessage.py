@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import validationseverity_enum as shared_validationseverity_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class ValidationMessage:
     r"""ValidationMessage
     An error or warning for a desired configuration option value.
     """
     
-    message: Optional[str] = field(default=None)
-    namespace: Optional[str] = field(default=None)
-    option_name: Optional[str] = field(default=None)
-    severity: Optional[ValidationSeverityEnum] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
+    namespace: Optional[str] = dataclasses.field(default=None)
+    option_name: Optional[str] = dataclasses.field(default=None)
+    severity: Optional[shared_validationseverity_enum.ValidationSeverityEnum] = dataclasses.field(default=None)
     

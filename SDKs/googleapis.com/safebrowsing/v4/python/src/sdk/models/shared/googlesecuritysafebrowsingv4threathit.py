@@ -1,9 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlesecuritysafebrowsingv4clientinfo as shared_googlesecuritysafebrowsingv4clientinfo
+from ..shared import googlesecuritysafebrowsingv4threatentry as shared_googlesecuritysafebrowsingv4threatentry
+from ..shared import googlesecuritysafebrowsingv4threathitthreatsource as shared_googlesecuritysafebrowsingv4threathitthreatsource
+from ..shared import googlesecuritysafebrowsingv4threathituserinfo as shared_googlesecuritysafebrowsingv4threathituserinfo
 
 class GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum(str, Enum):
     PLATFORM_TYPE_UNSPECIFIED = "PLATFORM_TYPE_UNSPECIFIED"
@@ -39,12 +42,12 @@ class GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSecuritySafebrowsingV4ThreatHit:
-    client_info: Optional[GoogleSecuritySafebrowsingV4ClientInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientInfo') }})
-    entry: Optional[GoogleSecuritySafebrowsingV4ThreatEntry] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entry') }})
-    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
-    resources: Optional[List[GoogleSecuritySafebrowsingV4ThreatHitThreatSource]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
-    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
-    user_info: Optional[GoogleSecuritySafebrowsingV4ThreatHitUserInfo] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInfo') }})
+    client_info: Optional[shared_googlesecuritysafebrowsingv4clientinfo.GoogleSecuritySafebrowsingV4ClientInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientInfo') }})
+    entry: Optional[shared_googlesecuritysafebrowsingv4threatentry.GoogleSecuritySafebrowsingV4ThreatEntry] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entry') }})
+    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
+    resources: Optional[list[shared_googlesecuritysafebrowsingv4threathitthreatsource.GoogleSecuritySafebrowsingV4ThreatHitThreatSource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
+    user_info: Optional[shared_googlesecuritysafebrowsingv4threathituserinfo.GoogleSecuritySafebrowsingV4ThreatHitUserInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userInfo') }})
     

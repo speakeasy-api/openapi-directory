@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import namematchcandidatesout as shared_namematchcandidatesout
 
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidates1PathParams:
-    japanese_given_name_latin: str = field(metadata={'path_param': { 'field_name': 'japaneseGivenNameLatin', 'style': 'simple', 'explode': False }})
-    japanese_surname_latin: str = field(metadata={'path_param': { 'field_name': 'japaneseSurnameLatin', 'style': 'simple', 'explode': False }})
+    japanese_given_name_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseGivenNameLatin', 'style': 'simple', 'explode': False }})
+    japanese_surname_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseSurnameLatin', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidates1Security:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidates1Request:
-    path_params: JapaneseNameKanjiCandidates1PathParams = field()
-    security: JapaneseNameKanjiCandidates1Security = field()
+    path_params: JapaneseNameKanjiCandidates1PathParams = dataclasses.field()
+    security: JapaneseNameKanjiCandidates1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidates1Response:
-    content_type: str = field()
-    status_code: int = field()
-    name_match_candidates_out: Optional[shared.NameMatchCandidatesOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    name_match_candidates_out: Optional[shared_namematchcandidatesout.NameMatchCandidatesOut] = dataclasses.field(default=None)
     

@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import validation_error_simple as shared_validation_error_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsMoveColumnPathParams:
-    column_id: int = field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
+    column_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'column_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProjectsMoveColumnRequestBody:
-    position: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
+    position: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('position') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsMoveColumnRequest:
-    path_params: ProjectsMoveColumnPathParams = field()
-    request: Optional[ProjectsMoveColumnRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ProjectsMoveColumnPathParams = dataclasses.field()
+    request: Optional[ProjectsMoveColumnRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsMoveColumnResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    projects_move_column_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
-    validation_error_simple: Optional[shared.ValidationErrorSimple] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    projects_move_column_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    validation_error_simple: Optional[shared_validation_error_simple.ValidationErrorSimple] = dataclasses.field(default=None)
     

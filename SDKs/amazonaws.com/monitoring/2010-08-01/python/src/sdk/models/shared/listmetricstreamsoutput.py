@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import metricstreamentry as shared_metricstreamentry
 
 
-@dataclass
+@dataclasses.dataclass
 class ListMetricStreamsOutput:
-    entries: Optional[List[MetricStreamEntry]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    entries: Optional[list[shared_metricstreamentry.MetricStreamEntry]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

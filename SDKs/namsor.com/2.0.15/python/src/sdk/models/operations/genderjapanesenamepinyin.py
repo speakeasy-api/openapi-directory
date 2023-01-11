@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import firstlastnamegenderedout as shared_firstlastnamegenderedout
 
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNamePinyinPathParams:
-    japanese_given_name: str = field(metadata={'path_param': { 'field_name': 'japaneseGivenName', 'style': 'simple', 'explode': False }})
-    japanese_surname: str = field(metadata={'path_param': { 'field_name': 'japaneseSurname', 'style': 'simple', 'explode': False }})
+    japanese_given_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseGivenName', 'style': 'simple', 'explode': False }})
+    japanese_surname: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseSurname', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNamePinyinSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNamePinyinRequest:
-    path_params: GenderJapaneseNamePinyinPathParams = field()
-    security: GenderJapaneseNamePinyinSecurity = field()
+    path_params: GenderJapaneseNamePinyinPathParams = dataclasses.field()
+    security: GenderJapaneseNamePinyinSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderJapaneseNamePinyinResponse:
-    content_type: str = field()
-    status_code: int = field()
-    first_last_name_gendered_out: Optional[shared.FirstLastNameGenderedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    first_last_name_gendered_out: Optional[shared_firstlastnamegenderedout.FirstLastNameGenderedOut] = dataclasses.field(default=None)
     

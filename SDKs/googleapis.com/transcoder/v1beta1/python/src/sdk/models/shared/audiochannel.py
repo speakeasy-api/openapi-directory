@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import audiochannelinput as shared_audiochannelinput
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AudioChannel:
     r"""AudioChannel
     The audio channel.
     """
     
-    inputs: Optional[List[AudioChannelInput]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputs') }})
+    inputs: Optional[list[shared_audiochannelinput.AudioChannelInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inputs') }})
     

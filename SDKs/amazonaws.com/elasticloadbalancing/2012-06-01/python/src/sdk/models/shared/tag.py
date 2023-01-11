@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Tag:
     r"""Tag
     Information about a tag.
     """
     
-    key: str = field()
-    value: Optional[str] = field(default=None)
+    key: str = dataclasses.field()
+    value: Optional[str] = dataclasses.field(default=None)
     

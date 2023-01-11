@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import unprocessedaccount as shared_unprocessedaccount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteInvitationsResponse:
-    unprocessed_accounts: Optional[List[UnprocessedAccount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unprocessedAccounts') }})
+    unprocessed_accounts: Optional[list[shared_unprocessedaccount.UnprocessedAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unprocessedAccounts') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -65,26 +65,26 @@ class AppEntitySsoStrategyTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppEntity:
     r"""AppEntity
     List Apps
     """
     
-    app_type: Optional[AppEntityAppTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('app_type') }})
-    documentation_links: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_links') }})
-    extended_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('extended_description') }})
-    external_homepage_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_homepage_url') }})
-    featured: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('featured') }})
-    folder_behavior_type: Optional[AppEntityFolderBehaviorTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('folder_behavior_type') }})
-    icon_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icon_url') }})
-    logo_thumbnail_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_thumbnail_url') }})
-    logo_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_url') }})
-    marketing_youtube_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('marketing_youtube_url') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    remote_server_type: Optional[AppEntityRemoteServerTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remote_server_type') }})
-    screenshot_list_urls: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('screenshot_list_urls') }})
-    short_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('short_description') }})
-    sso_strategy_type: Optional[AppEntitySsoStrategyTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sso_strategy_type') }})
-    tutorial_youtube_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tutorial_youtube_url') }})
+    app_type: Optional[AppEntityAppTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('app_type') }})
+    documentation_links: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_links') }})
+    extended_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('extended_description') }})
+    external_homepage_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('external_homepage_url') }})
+    featured: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('featured') }})
+    folder_behavior_type: Optional[AppEntityFolderBehaviorTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('folder_behavior_type') }})
+    icon_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('icon_url') }})
+    logo_thumbnail_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_thumbnail_url') }})
+    logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logo_url') }})
+    marketing_youtube_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('marketing_youtube_url') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    remote_server_type: Optional[AppEntityRemoteServerTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remote_server_type') }})
+    screenshot_list_urls: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('screenshot_list_urls') }})
+    short_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('short_description') }})
+    sso_strategy_type: Optional[AppEntitySsoStrategyTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sso_strategy_type') }})
+    tutorial_youtube_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tutorial_youtube_url') }})
     

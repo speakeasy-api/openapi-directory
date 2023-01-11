@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import category as shared_category
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResponseData:
-    category: Category = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    category: shared_category.Category = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryResponse:
-    data: CategoryResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: CategoryResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

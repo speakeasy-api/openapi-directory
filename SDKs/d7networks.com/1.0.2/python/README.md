@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,7 +24,7 @@ s.config_security(
     )
 )
     
-res = s.sdk.balance_get()
+res = s.balance_get()
 
 if res.status_code == 200:
     # handle response

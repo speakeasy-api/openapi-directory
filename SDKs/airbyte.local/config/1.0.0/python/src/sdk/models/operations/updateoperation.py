@@ -1,20 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import operationupdate as shared_operationupdate
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
+from ..shared import operationread as shared_operationread
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateOperationRequest:
-    request: shared.OperationUpdate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_operationupdate.OperationUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateOperationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
-    operation_read: Optional[shared.OperationRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
+    operation_read: Optional[shared_operationread.OperationRead] = dataclasses.field(default=None)
     

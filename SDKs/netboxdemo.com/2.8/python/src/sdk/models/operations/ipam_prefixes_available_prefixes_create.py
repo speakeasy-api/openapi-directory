@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import writableprefix as shared_writableprefix
+from ..shared import availableprefix as shared_availableprefix
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesCreatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesCreateRequest:
-    path_params: IpamPrefixesAvailablePrefixesCreatePathParams = field()
-    request: shared.WritablePrefixInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: IpamPrefixesAvailablePrefixesCreatePathParams = dataclasses.field()
+    request: shared_writableprefix.WritablePrefixInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailablePrefixesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    available_prefixes: Optional[List[shared.AvailablePrefix]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    available_prefixes: Optional[list[shared_availableprefix.AvailablePrefix]] = dataclasses.field(default=None)
     

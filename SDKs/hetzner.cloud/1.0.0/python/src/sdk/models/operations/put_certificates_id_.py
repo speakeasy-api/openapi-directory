@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDUpdateCertificateRequest:
-    labels: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    labels: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDCertificateResponseCertificateStatusError:
     r"""PutCertificatesIDCertificateResponseCertificateStatusError
     If issuance or renewal reports `failed`, this property contains information about what happened
     """
     
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 class PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum(str, Enum):
     PENDING = "pending"
@@ -43,15 +43,15 @@ class PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum(str, Enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDCertificateResponseCertificateStatus:
     r"""PutCertificatesIDCertificateResponseCertificateStatus
     Current status of a type `managed` Certificate, always *null* for type `uploaded` Certificates
     """
     
-    error: Optional[PutCertificatesIDCertificateResponseCertificateStatusError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    issuance: Optional[PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('issuance') }})
-    renewal: Optional[PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renewal') }})
+    error: Optional[PutCertificatesIDCertificateResponseCertificateStatusError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    issuance: Optional[PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('issuance') }})
+    renewal: Optional[PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renewal') }})
     
 class PutCertificatesIDCertificateResponseCertificateTypeEnum(str, Enum):
     UPLOADED = "uploaded"
@@ -59,44 +59,44 @@ class PutCertificatesIDCertificateResponseCertificateTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDCertificateResponseCertificateUsedBy:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDCertificateResponseCertificate:
-    certificate: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
-    created: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
-    domain_names: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain_names') }})
-    fingerprint: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    labels: dict[str, str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    not_valid_after: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('not_valid_after') }})
-    not_valid_before: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('not_valid_before') }})
-    used_by: List[PutCertificatesIDCertificateResponseCertificateUsedBy] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used_by') }})
-    status: Optional[PutCertificatesIDCertificateResponseCertificateStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    type: Optional[PutCertificatesIDCertificateResponseCertificateTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    certificate: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
+    created: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('created') }})
+    domain_names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domain_names') }})
+    fingerprint: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fingerprint') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    labels: dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    not_valid_after: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('not_valid_after') }})
+    not_valid_before: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('not_valid_before') }})
+    used_by: list[PutCertificatesIDCertificateResponseCertificateUsedBy] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('used_by') }})
+    status: Optional[PutCertificatesIDCertificateResponseCertificateStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    type: Optional[PutCertificatesIDCertificateResponseCertificateTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDCertificateResponse:
-    certificate: PutCertificatesIDCertificateResponseCertificate = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
+    certificate: PutCertificatesIDCertificateResponseCertificate = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDRequest:
-    path_params: PutCertificatesIDPathParams = field()
-    request: Optional[PutCertificatesIDUpdateCertificateRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutCertificatesIDPathParams = dataclasses.field()
+    request: Optional[PutCertificatesIDUpdateCertificateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutCertificatesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    certificate_response: Optional[PutCertificatesIDCertificateResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    certificate_response: Optional[PutCertificatesIDCertificateResponse] = dataclasses.field(default=None)
     

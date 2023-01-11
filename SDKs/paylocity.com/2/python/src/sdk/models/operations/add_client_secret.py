@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import addclientsecret as shared_addclientsecret
+from ..shared import clientcredentialsresponse as shared_clientcredentialsresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AddClientSecretSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddClientSecretRequest:
-    request: shared.AddClientSecret = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddClientSecretSecurity = field()
+    request: shared_addclientsecret.AddClientSecret = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddClientSecretSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddClientSecretResponse:
-    content_type: str = field()
-    status_code: int = field()
-    client_credentials_responses: Optional[List[shared.ClientCredentialsResponse]] = field(default=None)
-    errors: Optional[List[shared.Error]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    client_credentials_responses: Optional[list[shared_clientcredentialsresponse.ClientCredentialsResponse]] = dataclasses.field(default=None)
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
     

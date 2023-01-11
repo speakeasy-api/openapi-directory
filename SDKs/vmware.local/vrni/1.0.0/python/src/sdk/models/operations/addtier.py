@@ -1,29 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import tierrequest as shared_tierrequest
+from ..shared import apierror as shared_apierror
+from ..shared import tier as shared_tier
 
 
-@dataclass
+@dataclasses.dataclass
 class AddTierPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddTierSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddTierRequest:
-    path_params: AddTierPathParams = field()
-    request: shared.TierRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddTierSecurity = field()
+    path_params: AddTierPathParams = dataclasses.field()
+    request: shared_tierrequest.TierRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddTierSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddTierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    tier: Optional[shared.Tier] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    tier: Optional[shared_tier.Tier] = dataclasses.field(default=None)
     

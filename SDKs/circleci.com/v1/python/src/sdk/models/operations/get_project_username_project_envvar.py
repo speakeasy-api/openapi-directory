@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import envvar as shared_envvar
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectEnvvarPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectEnvvarRequest:
-    path_params: GetProjectUsernameProjectEnvvarPathParams = field()
+    path_params: GetProjectUsernameProjectEnvvarPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectEnvvarResponse:
-    content_type: str = field()
-    status_code: int = field()
-    envvars: Optional[List[shared.Envvar]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    envvars: Optional[list[shared_envvar.Envvar]] = dataclasses.field(default=None)
     

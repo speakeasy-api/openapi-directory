@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionsAPIDeleteSubscription2PathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionsAPIDeleteSubscription2QueryParams:
-    keep: bool = field(metadata={'query_param': { 'field_name': 'keep', 'style': 'form', 'explode': True }})
+    keep: bool = dataclasses.field(metadata={'query_param': { 'field_name': 'keep', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionsAPIDeleteSubscription2Headers:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionsAPIDeleteSubscription2Request:
-    headers: SubscriptionsAPIDeleteSubscription2Headers = field()
-    path_params: SubscriptionsAPIDeleteSubscription2PathParams = field()
-    query_params: SubscriptionsAPIDeleteSubscription2QueryParams = field()
+    headers: SubscriptionsAPIDeleteSubscription2Headers = dataclasses.field()
+    path_params: SubscriptionsAPIDeleteSubscription2PathParams = dataclasses.field()
+    query_params: SubscriptionsAPIDeleteSubscription2QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscriptionsAPIDeleteSubscription2Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

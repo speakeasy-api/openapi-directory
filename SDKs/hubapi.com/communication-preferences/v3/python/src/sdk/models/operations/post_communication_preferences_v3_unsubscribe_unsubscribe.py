@@ -1,30 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import publicupdatesubscriptionstatusrequest as shared_publicupdatesubscriptionstatusrequest
+from ..shared import publicsubscriptionstatus as shared_publicsubscriptionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity:
-    hapikey: Optional[shared.SchemeHapikey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    oauth2_legacy: Optional[shared.SchemeOauth2Legacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    oauth2_legacy1: Optional[shared.SchemeOauth2Legacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
-    private_apps_legacy: Optional[shared.SchemePrivateAppsLegacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    private_apps_legacy1: Optional[shared.SchemePrivateAppsLegacy] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    hapikey: Optional[shared_security.SchemeHapikey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    oauth2_legacy: Optional[shared_security.SchemeOauth2Legacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2_legacy1: Optional[shared_security.SchemeOauth2Legacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    private_apps_legacy: Optional[shared_security.SchemePrivateAppsLegacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    private_apps_legacy1: Optional[shared_security.SchemePrivateAppsLegacy] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCommunicationPreferencesV3UnsubscribeUnsubscribeRequest:
-    request: shared.PublicUpdateSubscriptionStatusRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity = field()
+    request: shared_publicupdatesubscriptionstatusrequest.PublicUpdateSubscriptionStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    public_subscription_status: Optional[shared.PublicSubscriptionStatus] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    public_subscription_status: Optional[shared_publicsubscriptionstatus.PublicSubscriptionStatus] = dataclasses.field(default=None)
     

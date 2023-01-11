@@ -30,3 +30,5 @@ from .serviceprincipalobjectresult import *
 from .serviceprincipalupdateparameters import *
 from .usergetmembergroupsresult import *
 from .userlistresult import *
+
+__all__ = ["ApplicationCreateParameters","ApplicationListResult","ApplicationUpdateParameters","AppRole","AppRoleAssignmentListResult","DirectoryObjectListResult","DomainListResult","ErrorMessage","GraphError","GroupGetMemberGroupsResult","GroupListResult","GroupMembershipClaimsEnum","InformationalURL","KeyCredentialListResult","KeyCredentialsUpdateParameters","OAuth2Permission","OAuth2PermissionGrantListResult","OdataError","OptionalClaim","OptionalClaims","PasswordCredentialListResult","PasswordCredentialsUpdateParameters","PreAuthorizedApplication","PreAuthorizedApplicationExtension","PreAuthorizedApplicationPermission","SchemeAzureAuth","Security","ServicePrincipalCreateParameters","ServicePrincipalListResult","ServicePrincipalObjectResult","ServicePrincipalUpdateParameters","UserGetMemberGroupsResult","UserListResult"]

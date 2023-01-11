@@ -1,14 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import originlist as shared_originlist
 
 
-@dataclass
+@dataclasses.dataclass
 class Origins:
     r"""Origins
     Contains information about the origins for this distribution.
     """
     
-    items: List[Origin] = field()
-    quantity: int = field()
+    items: list[shared_originlist.OriginList] = dataclasses.field()
+    quantity: int = dataclasses.field()
     

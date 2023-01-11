@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apiservicesout as shared_apiservicesout
 
 
-@dataclass
+@dataclasses.dataclass
 class AvailableServicesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_services_out: Optional[shared.APIServicesOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_services_out: Optional[shared_apiservicesout.APIServicesOut] = dataclasses.field(default=None)
     

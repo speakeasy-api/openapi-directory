@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class TopOndQueryParams:
-    catalogues: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
-    origin: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'origin', 'style': 'form', 'explode': True }})
+    catalogues: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
+    origin: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'origin', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TopOndHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TopOndSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TopOndRequest:
-    headers: TopOndHeaders = field()
-    query_params: TopOndQueryParams = field()
-    security: TopOndSecurity = field()
+    headers: TopOndHeaders = dataclasses.field()
+    query_params: TopOndQueryParams = dataclasses.field()
+    security: TopOndSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TopOndResponse:
-    content_type: str = field()
-    status_code: int = field()
-    top_ond_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    top_ond_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

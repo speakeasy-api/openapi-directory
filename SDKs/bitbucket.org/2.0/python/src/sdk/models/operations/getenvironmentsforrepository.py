@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import paginated_environments as shared_paginated_environments
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEnvironmentsForRepositoryPathParams:
-    repo_slug: str = field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
-    workspace: str = field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
+    repo_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo_slug', 'style': 'simple', 'explode': False }})
+    workspace: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEnvironmentsForRepositoryRequest:
-    path_params: GetEnvironmentsForRepositoryPathParams = field()
+    path_params: GetEnvironmentsForRepositoryPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEnvironmentsForRepositoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paginated_environments: Optional[shared.PaginatedEnvironments] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paginated_environments: Optional[shared_paginated_environments.PaginatedEnvironments] = dataclasses.field(default=None)
     

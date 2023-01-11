@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbinstanceautomatedbackup as shared_dbinstanceautomatedbackup
 
 
-@dataclass
+@dataclasses.dataclass
 class StopDbInstanceAutomatedBackupsReplicationResult:
-    db_instance_automated_backup: Optional[DbInstanceAutomatedBackup] = field(default=None)
+    db_instance_automated_backup: Optional[shared_dbinstanceautomatedbackup.DbInstanceAutomatedBackup] = dataclasses.field(default=None)
     

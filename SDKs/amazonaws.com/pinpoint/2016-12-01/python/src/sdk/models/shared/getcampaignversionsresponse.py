@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import campaignsresponse as shared_campaignsresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetCampaignVersionsResponse:
-    campaigns_response: CampaignsResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CampaignsResponse') }})
+    campaigns_response: shared_campaignsresponse.CampaignsResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CampaignsResponse') }})
     

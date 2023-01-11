@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import crawler as shared_crawler
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchGetCrawlersResponse:
-    crawlers: Optional[List[Crawler]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawlers') }})
-    crawlers_not_found: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CrawlersNotFound') }})
+    crawlers: Optional[list[shared_crawler.Crawler]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Crawlers') }})
+    crawlers_not_found: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CrawlersNotFound') }})
     

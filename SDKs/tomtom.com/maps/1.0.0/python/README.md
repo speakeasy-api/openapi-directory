@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,17 +23,17 @@ s.config_security(
     )
 )
     
-req = operations.GetMapVersionNumberCopyrightsCaptionFormatRequest(
-    path_params=operations.GetMapVersionNumberCopyrightsCaptionFormatPathParams(
-        format="json",
-        version_number=3490182019411094151,
+req = operations.GetMapVersionNumberCopyrightsFormatRequest(
+    path_params=operations.GetMapVersionNumberCopyrightsFormatPathParams(
+        format="jsonp",
+        version_number=915297440270195576,
     ),
-    query_params=operations.GetMapVersionNumberCopyrightsCaptionFormatQueryParams(
-        callback="suscipit",
+    query_params=operations.GetMapVersionNumberCopyrightsFormatQueryParams(
+        callback="harum",
     ),
 )
     
-res = s.sdk.get_map_version_number_copyrights_caption_format_(req)
+res = s.copyrights.get_map_version_number_copyrights_format_(req)
 
 if res.status_code == 200:
     # handle response
@@ -44,18 +43,27 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Copyrights
 
-* `get_map_version_number_copyrights_caption_format_` - Captions
 * `get_map_version_number_copyrights_format_` - Copyrights whole world
+* `get_map_version_number_copyrights_caption_format_` - Captions
 * `get_map_version_number_copyrights_min_lon_min_lat_max_lon_max_lat_format_` - Copyrights bounding box
 * `get_map_version_number_copyrights_zoom_x_y_format_` - Copyrights tile
+
+### Raster
+
 * `get_map_version_number_staticimage` - Static Image
 * `get_map_version_number_tile_layer_style_zoom_x_y_format_` - Tile
+
+### Vector
+
 * `get_map_version_number_tile_layer_style_zoom_x_y_pbf` - Tile
-* `get_map_version_number_wmts_key_wmts_version_wmts_capabilities_xml` - WMTS
+
+### WMS / WMTS
+
 * `get_capabilities` - GetCapabilities
 * `get_map` - GetMap
+* `get_map_version_number_wmts_key_wmts_version_wmts_capabilities_xml` - WMTS
 
 <!-- End SDK Available Operations -->
 

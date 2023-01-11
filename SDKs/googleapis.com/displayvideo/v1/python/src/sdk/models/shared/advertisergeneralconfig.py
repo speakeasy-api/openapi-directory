@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdvertiserGeneralConfig:
     r"""AdvertiserGeneralConfig
     General settings of an advertiser.
     """
     
-    currency_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyCode') }})
-    domain_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainUrl') }})
-    time_zone: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeZone') }})
+    currency_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyCode') }})
+    domain_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainUrl') }})
+    time_zone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeZone') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdvertiserGeneralConfigInput:
     r"""AdvertiserGeneralConfigInput
     General settings of an advertiser.
     """
     
-    currency_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyCode') }})
-    domain_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainUrl') }})
+    currency_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyCode') }})
+    domain_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainUrl') }})
     

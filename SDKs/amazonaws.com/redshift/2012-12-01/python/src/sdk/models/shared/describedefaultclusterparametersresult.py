@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import defaultclusterparameters as shared_defaultclusterparameters
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDefaultClusterParametersResult:
-    default_cluster_parameters: Optional[DefaultClusterParameters] = field(default=None)
+    default_cluster_parameters: Optional[shared_defaultclusterparameters.DefaultClusterParameters] = dataclasses.field(default=None)
     

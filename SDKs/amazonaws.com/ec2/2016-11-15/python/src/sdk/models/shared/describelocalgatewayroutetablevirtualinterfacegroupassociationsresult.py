@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult:
-    local_gateway_route_table_virtual_interface_group_associations: Optional[List[LocalGatewayRouteTableVirtualInterfaceGroupAssociation]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    local_gateway_route_table_virtual_interface_group_associations: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

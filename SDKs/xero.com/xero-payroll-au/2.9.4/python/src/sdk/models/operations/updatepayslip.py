@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import paysliplines as shared_paysliplines
+from ..shared import payslips as shared_payslips
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayslipPathParams:
-    payslip_id: str = field(metadata={'path_param': { 'field_name': 'PayslipID', 'style': 'simple', 'explode': False }})
+    payslip_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PayslipID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayslipHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayslipSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayslipRequest:
-    headers: UpdatePayslipHeaders = field()
-    path_params: UpdatePayslipPathParams = field()
-    security: UpdatePayslipSecurity = field()
-    request: Optional[List[shared.PayslipLines]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: UpdatePayslipHeaders = dataclasses.field()
+    path_params: UpdatePayslipPathParams = dataclasses.field()
+    security: UpdatePayslipSecurity = dataclasses.field()
+    request: Optional[list[shared_paysliplines.PayslipLines]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdatePayslipResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payslips: Optional[shared.Payslips] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payslips: Optional[shared_payslips.Payslips] = dataclasses.field(default=None)
     

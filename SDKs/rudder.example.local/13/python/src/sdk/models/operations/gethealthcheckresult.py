@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import check as shared_check
 
 class GetHealthcheckResult200ApplicationJSONActionEnum(str, Enum):
     GET_HEALTHCHECK_RESULT = "getHealthcheckResult"
@@ -14,16 +14,16 @@ class GetHealthcheckResult200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetHealthcheckResult200ApplicationJSON:
-    action: GetHealthcheckResult200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: List[shared.Check] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: GetHealthcheckResult200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: GetHealthcheckResult200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: list[shared_check.Check] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: GetHealthcheckResult200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHealthcheckResultResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_healthcheck_result_200_application_json_object: Optional[GetHealthcheckResult200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_healthcheck_result_200_application_json_object: Optional[GetHealthcheckResult200ApplicationJSON] = dataclasses.field(default=None)
     

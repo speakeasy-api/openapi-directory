@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import depositswitchcreaterequest as shared_depositswitchcreaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class DepositSwitchCreateRequest:
-    request: shared.DepositSwitchCreateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_depositswitchcreaterequest.DepositSwitchCreateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DepositSwitchCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deposit_switch_create_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deposit_switch_create_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

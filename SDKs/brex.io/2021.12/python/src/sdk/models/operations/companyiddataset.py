@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class CompanyIDDatasetDatasetEnum(str, Enum):
     UNKNOWN = ""
@@ -11,10 +11,10 @@ class CompanyIDDatasetDatasetEnum(str, Enum):
     REFRESH = "refresh"
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDDatasetPathParams:
-    dataset: CompanyIDDatasetDatasetEnum = field(metadata={'path_param': { 'field_name': 'dataset', 'style': 'simple', 'explode': False }})
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    dataset: CompanyIDDatasetDatasetEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'dataset', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class CompanyIDDatasetLangEnum(str, Enum):
     UNKNOWN = ""
@@ -23,28 +23,28 @@ class CompanyIDDatasetLangEnum(str, Enum):
     FR = "FR"
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDDatasetQueryParams:
-    check_stock_listing: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'check_stock_listing', 'style': 'form', 'explode': True }})
-    lang: Optional[CompanyIDDatasetLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    check_stock_listing: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'check_stock_listing', 'style': 'form', 'explode': True }})
+    lang: Optional[CompanyIDDatasetLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDDatasetSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDDatasetRequest:
-    path_params: CompanyIDDatasetPathParams = field()
-    query_params: CompanyIDDatasetQueryParams = field()
-    security: CompanyIDDatasetSecurity = field()
+    path_params: CompanyIDDatasetPathParams = dataclasses.field()
+    query_params: CompanyIDDatasetQueryParams = dataclasses.field()
+    security: CompanyIDDatasetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyIDDatasetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_id_dataset_default_application_json_any: Optional[Any] = field(default=None)
-    oneapi_1v1_1company_1deepsearch_1lei_1_percent_7_bnumber_percent_7_d_get_responses_200_content_application_1json_schema_properties_company: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_id_dataset_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    oneapi_1v1_1company_1deepsearch_1lei_1_percent_7_bnumber_percent_7_d_get_responses_200_content_application_1json_schema_properties_company: Optional[Any] = dataclasses.field(default=None)
     

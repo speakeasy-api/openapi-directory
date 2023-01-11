@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableconfigcontext as shared_writableconfigcontext
+from ..shared import configcontext as shared_configcontext
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsUpdateRequest:
-    path_params: ExtrasConfigContextsUpdatePathParams = field()
-    request: shared.WritableConfigContextInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ExtrasConfigContextsUpdatePathParams = dataclasses.field()
+    request: shared_writableconfigcontext.WritableConfigContextInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_context: Optional[shared.ConfigContext] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_context: Optional[shared_configcontext.ConfigContext] = dataclasses.field(default=None)
     

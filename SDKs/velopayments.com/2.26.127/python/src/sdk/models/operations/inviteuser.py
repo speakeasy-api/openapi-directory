@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import inviteuserrequest as shared_inviteuserrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class InviteUserRequest:
-    request: shared.InviteUserRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_inviteuserrequest.InviteUserRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InviteUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_409: Optional[Any] = field(default=None)
-    inline_response_412: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_409: Optional[Any] = dataclasses.field(default=None)
+    inline_response_412: Optional[Any] = dataclasses.field(default=None)
     

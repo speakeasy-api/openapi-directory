@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import indexfieldstatus as shared_indexfieldstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeIndexFieldsResponse:
     r"""DescribeIndexFieldsResponse
     The result of a <code>DescribeIndexFields</code> request. Contains the index fields configured for the domain specified in the request.
     """
     
-    index_fields: List[IndexFieldStatus] = field()
+    index_fields: list[shared_indexfieldstatus.IndexFieldStatus] = dataclasses.field()
     

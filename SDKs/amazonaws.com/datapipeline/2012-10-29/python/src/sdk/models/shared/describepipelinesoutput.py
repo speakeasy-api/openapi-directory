@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pipelinedescription as shared_pipelinedescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribePipelinesOutput:
     r"""DescribePipelinesOutput
     Contains the output of DescribePipelines.
     """
     
-    pipeline_description_list: List[PipelineDescription] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipelineDescriptionList') }})
+    pipeline_description_list: list[shared_pipelinedescription.PipelineDescription] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipelineDescriptionList') }})
     

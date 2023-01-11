@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,12 +10,12 @@ class XxePayloadLocationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Xxe:
     r"""Xxe
     Information reported for an XXE.
     """
     
-    payload_location: Optional[XxePayloadLocationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payloadLocation') }})
-    payload_value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payloadValue') }})
+    payload_location: Optional[XxePayloadLocationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payloadLocation') }})
+    payload_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payloadValue') }})
     

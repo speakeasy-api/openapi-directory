@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import encryptionkeytype_enum as shared_encryptionkeytype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EncryptionKey:
     r"""EncryptionKey
     The encryption key used to encrypt this object.
     """
     
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Id') }})
-    type: EncryptionKeyTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Id') }})
+    type: shared_encryptionkeytype_enum.EncryptionKeyTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
     

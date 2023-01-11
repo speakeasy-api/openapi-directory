@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dynamiclinkeventstat as shared_dynamiclinkeventstat
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DynamicLinkStats:
     r"""DynamicLinkStats
     Analytics stats of a Dynamic Link for a given timeframe.
     """
     
-    link_event_stats: Optional[List[DynamicLinkEventStat]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkEventStats') }})
+    link_event_stats: Optional[list[shared_dynamiclinkeventstat.DynamicLinkEventStat]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkEventStats') }})
     

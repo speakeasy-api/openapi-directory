@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import getcustomerservicemetricresponse as shared_getcustomerservicemetricresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricPathParams:
-    customer_service_metric_type: str = field(metadata={'path_param': { 'field_name': 'customer_service_metric_type', 'style': 'simple', 'explode': False }})
-    evaluation_type: str = field(metadata={'path_param': { 'field_name': 'evaluation_type', 'style': 'simple', 'explode': False }})
+    customer_service_metric_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'customer_service_metric_type', 'style': 'simple', 'explode': False }})
+    evaluation_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'evaluation_type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricQueryParams:
-    evaluation_marketplace_id: str = field(metadata={'query_param': { 'field_name': 'evaluation_marketplace_id', 'style': 'form', 'explode': True }})
+    evaluation_marketplace_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'evaluation_marketplace_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricRequest:
-    path_params: GetCustomerServiceMetricPathParams = field()
-    query_params: GetCustomerServiceMetricQueryParams = field()
-    security: GetCustomerServiceMetricSecurity = field()
+    path_params: GetCustomerServiceMetricPathParams = dataclasses.field()
+    query_params: GetCustomerServiceMetricQueryParams = dataclasses.field()
+    security: GetCustomerServiceMetricSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomerServiceMetricResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_customer_service_metric_response: Optional[shared.GetCustomerServiceMetricResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_customer_service_metric_response: Optional[shared_getcustomerservicemetricresponse.GetCustomerServiceMetricResponse] = dataclasses.field(default=None)
     

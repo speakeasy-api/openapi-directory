@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import environmentresourcedescription as shared_environmentresourcedescription
 
 
-@dataclass
+@dataclasses.dataclass
 class EnvironmentResourceDescriptionsMessage:
     r"""EnvironmentResourceDescriptionsMessage
     Result message containing a list of environment resource descriptions.
     """
     
-    environment_resources: Optional[EnvironmentResourceDescription] = field(default=None)
+    environment_resources: Optional[shared_environmentresourcedescription.EnvironmentResourceDescription] = dataclasses.field(default=None)
     

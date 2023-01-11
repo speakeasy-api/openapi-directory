@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CancelBatchPaymentPathParams:
-    batch_uuid: str = field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
+    batch_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelBatchPaymentRequest:
-    path_params: CancelBatchPaymentPathParams = field()
+    path_params: CancelBatchPaymentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CancelBatchPaymentResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

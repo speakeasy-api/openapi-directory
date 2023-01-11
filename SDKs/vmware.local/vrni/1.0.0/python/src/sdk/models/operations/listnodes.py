@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import nodelistresult as shared_nodelistresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ListNodesSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListNodesRequest:
-    security: ListNodesSecurity = field()
+    security: ListNodesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListNodesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    node_list_result: Optional[shared.NodeListResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    node_list_result: Optional[shared_nodelistresult.NodeListResult] = dataclasses.field(default=None)
     

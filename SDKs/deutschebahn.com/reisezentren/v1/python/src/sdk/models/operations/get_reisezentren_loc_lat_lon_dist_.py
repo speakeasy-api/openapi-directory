@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import travelcenter as shared_travelcenter
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenLocLatLonDistPathParams:
-    dist: float = field(metadata={'path_param': { 'field_name': 'dist', 'style': 'simple', 'explode': False }})
-    lat: float = field(metadata={'path_param': { 'field_name': 'lat', 'style': 'simple', 'explode': False }})
-    lon: float = field(metadata={'path_param': { 'field_name': 'lon', 'style': 'simple', 'explode': False }})
+    dist: float = dataclasses.field(metadata={'path_param': { 'field_name': 'dist', 'style': 'simple', 'explode': False }})
+    lat: float = dataclasses.field(metadata={'path_param': { 'field_name': 'lat', 'style': 'simple', 'explode': False }})
+    lon: float = dataclasses.field(metadata={'path_param': { 'field_name': 'lon', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenLocLatLonDistRequest:
-    path_params: GetReisezentrenLocLatLonDistPathParams = field()
+    path_params: GetReisezentrenLocLatLonDistPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReisezentrenLocLatLonDistResponse:
-    content_type: str = field()
-    status_code: int = field()
-    travel_center: Optional[shared.TravelCenter] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    travel_center: Optional[shared_travelcenter.TravelCenter] = dataclasses.field(default=None)
     

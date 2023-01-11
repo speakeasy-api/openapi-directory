@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.TrcerRequest(
     security=operations.TrcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.TrcerRequestBody(
         certificate_parameters=operations.TrcerRequestBodyCertificateParameters(
-            dob="provident",
-            full_name="voluptatem",
-            reg_no="sunt",
+            dob="nisi",
+            full_name="et",
+            reg_no="quos",
         ),
-        consent_artifact="quia",
+        consent_artifact="sunt",
         format="pdf",
-        txn_id="nobis",
+        txn_id="occaecati",
     ),
 )
     
-res = s.sdk.trcer(req)
+res = s.ap_is.trcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `trcer` - Transfer Certificate
 

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import eventsubscriptionsresponse as shared_eventsubscriptionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventSubscriptionsPathParams:
-    subscription_id: str = field(metadata={'path_param': { 'field_name': 'SubscriptionId', 'style': 'simple', 'explode': False }})
+    subscription_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'SubscriptionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventSubscriptionsRequest:
-    path_params: GetEventSubscriptionsPathParams = field()
+    path_params: GetEventSubscriptionsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventSubscriptionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    event_subscriptions_response: Optional[shared.EventSubscriptionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_subscriptions_response: Optional[shared_eventsubscriptionsresponse.EventSubscriptionsResponse] = dataclasses.field(default=None)
     

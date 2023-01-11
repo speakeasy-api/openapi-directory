@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,7 +23,7 @@ s.config_security(
     )
 )
     
-res = s.sdk.get_api_pdf()
+res = s.pdf.get_api_pdf()
 
 if res.status_code == 200:
     # handle response
@@ -34,7 +33,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Pdf
 
 * `get_api_pdf` - Basic method to verify api is up and running
 * `post_api_pdf_wkhtmltopdf` - Generate pdf file from url using the excellent tool wkhtmltopdf.

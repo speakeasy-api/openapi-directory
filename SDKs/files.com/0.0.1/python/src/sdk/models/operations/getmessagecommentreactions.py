@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import messagecommentreactionentity as shared_messagecommentreactionentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageCommentReactionsQueryParams:
-    message_comment_id: int = field(metadata={'query_param': { 'field_name': 'message_comment_id', 'style': 'form', 'explode': True }})
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    user_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    message_comment_id: int = dataclasses.field(metadata={'query_param': { 'field_name': 'message_comment_id', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageCommentReactionsRequest:
-    query_params: GetMessageCommentReactionsQueryParams = field()
+    query_params: GetMessageCommentReactionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMessageCommentReactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_comment_reaction_entities: Optional[List[shared.MessageCommentReactionEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_comment_reaction_entities: Optional[list[shared_messagecommentreactionentity.MessageCommentReactionEntity]] = dataclasses.field(default=None)
     

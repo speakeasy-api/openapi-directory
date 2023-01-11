@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reusableconfigwrapper as shared_reusableconfigwrapper
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AllowedConfigList:
-    allowed_config_values: Optional[List[ReusableConfigWrapper]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedConfigValues') }})
+    allowed_config_values: Optional[list[shared_reusableconfigwrapper.ReusableConfigWrapper]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowedConfigValues') }})
     

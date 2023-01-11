@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import authentication_token as shared_authentication_token
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForRepoRequest:
-    path_params: ActionsCreateRemoveTokenForRepoPathParams = field()
+    path_params: ActionsCreateRemoveTokenForRepoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsCreateRemoveTokenForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    authentication_token: Optional[shared.AuthenticationToken] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    authentication_token: Optional[shared_authentication_token.AuthenticationToken] = dataclasses.field(default=None)
     

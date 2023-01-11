@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetcountrymatchRequest(
     query_params=operations.GetcountrymatchQueryParams(
-        country="eum",
-        license="debitis",
+        country="magni",
+        license="officiis",
     ),
 )
     
-res = s.sdk.getcountrymatch(req)
+res = s.country_match_similarity_key.getcountrymatch(req)
 
 if res.getcountrymatch_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getcountrymatch_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country Match Similarity Key
 
 * `getcountrymatch` - Gets a similarity key for matching purposes for country name data
 

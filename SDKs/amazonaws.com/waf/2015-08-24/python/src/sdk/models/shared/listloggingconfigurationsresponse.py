@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import loggingconfiguration as shared_loggingconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListLoggingConfigurationsResponse:
-    logging_configurations: Optional[List[LoggingConfiguration]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LoggingConfigurations') }})
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    logging_configurations: Optional[list[shared_loggingconfiguration.LoggingConfiguration]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LoggingConfigurations') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
     

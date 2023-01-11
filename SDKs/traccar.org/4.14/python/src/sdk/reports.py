@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class Reports:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Event]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Event]])
                 res.events = out
             if utils.match_content_type(content_type, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
                 res.body = r.content
@@ -68,7 +68,7 @@ class Reports:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Position]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Position]])
                 res.positions = out
             if utils.match_content_type(content_type, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
                 res.body = r.content
@@ -96,7 +96,7 @@ class Reports:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReportStops]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReportStops]])
                 res.report_stops = out
             if utils.match_content_type(content_type, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
                 res.body = r.content
@@ -124,7 +124,7 @@ class Reports:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReportSummary]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReportSummary]])
                 res.report_summaries = out
             if utils.match_content_type(content_type, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
                 res.body = r.content
@@ -152,7 +152,7 @@ class Reports:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.ReportTrips]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.ReportTrips]])
                 res.report_trips = out
             if utils.match_content_type(content_type, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
                 res.body = r.content

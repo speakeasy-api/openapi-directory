@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCachedImagePathParams:
-    image_id: str = field(metadata={'path_param': { 'field_name': 'imageID', 'style': 'simple', 'explode': False }})
-    listing_id: str = field(metadata={'path_param': { 'field_name': 'listingID', 'style': 'simple', 'explode': False }})
+    image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageID', 'style': 'simple', 'explode': False }})
+    listing_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'listingID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCachedImageQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCachedImageRequest:
-    path_params: GetCachedImagePathParams = field()
-    query_params: GetCachedImageQueryParams = field()
+    path_params: GetCachedImagePathParams = dataclasses.field()
+    query_params: GetCachedImageQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCachedImageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cache_image_response: Optional[bytes] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cache_image_response: Optional[bytes] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

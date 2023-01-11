@@ -1,0 +1,184 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        bearer_auth=shared.SchemeBearerAuth(
+            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
+        ),
+    )
+)
+    
+req = operations.CreateConnectionRequest(
+    request=shared.ConnectionCreate(
+        destination_id="sed",
+        name="officiis",
+        namespace_definition="destination",
+        namespace_format="consectetur",
+        operation_ids=[
+            "odio",
+        ],
+        prefix="qui",
+        resource_requirements=shared.ResourceRequirements(
+            cpu_limit="recusandae",
+            cpu_request="at",
+            memory_limit="ipsum",
+            memory_request="eveniet",
+        ),
+        schedule=shared.ConnectionSchedule(
+            time_unit="months",
+            units=7338728586234333996,
+        ),
+        source_id="inventore",
+        status="deprecated",
+        sync_catalog=shared.AirbyteCatalog(
+            streams=[
+                shared.AirbyteStreamAndConfiguration(
+                    config=shared.AirbyteStreamConfiguration(
+                        alias_name="aut",
+                        cursor_field=[
+                            "tempore",
+                        ],
+                        destination_sync_mode="append",
+                        primary_key=[
+                            [
+                                "beatae",
+                                "veritatis",
+                            ],
+                            [
+                                "et",
+                                "omnis",
+                                "ipsum",
+                            ],
+                            [
+                                "dolores",
+                            ],
+                        ],
+                        selected=True,
+                        sync_mode="full_refresh",
+                    ),
+                    stream=shared.AirbyteStream(
+                        default_cursor_field=[
+                            "mollitia",
+                            "voluptas",
+                            "quam",
+                        ],
+                        json_schema={
+                            "qui": "qui",
+                        },
+                        name="unde",
+                        namespace="in",
+                        source_defined_cursor=False,
+                        source_defined_primary_key=[
+                            [
+                                "itaque",
+                                "ab",
+                                "neque",
+                            ],
+                        ],
+                        supported_sync_modes=[
+                            "full_refresh",
+                            "full_refresh",
+                            "full_refresh",
+                        ],
+                    ),
+                ),
+                shared.AirbyteStreamAndConfiguration(
+                    config=shared.AirbyteStreamConfiguration(
+                        alias_name="architecto",
+                        cursor_field=[
+                            "velit",
+                        ],
+                        destination_sync_mode="overwrite",
+                        primary_key=[
+                            [
+                                "voluptates",
+                                "magni",
+                            ],
+                        ],
+                        selected=False,
+                        sync_mode="incremental",
+                    ),
+                    stream=shared.AirbyteStream(
+                        default_cursor_field=[
+                            "earum",
+                        ],
+                        json_schema={
+                            "omnis": "ut",
+                        },
+                        name="consequatur",
+                        namespace="dolor",
+                        source_defined_cursor=True,
+                        source_defined_primary_key=[
+                            [
+                                "consectetur",
+                            ],
+                        ],
+                        supported_sync_modes=[
+                            "incremental",
+                        ],
+                    ),
+                ),
+                shared.AirbyteStreamAndConfiguration(
+                    config=shared.AirbyteStreamConfiguration(
+                        alias_name="laboriosam",
+                        cursor_field=[
+                            "a",
+                            "soluta",
+                            "aut",
+                        ],
+                        destination_sync_mode="append_dedup",
+                        primary_key=[
+                            [
+                                "autem",
+                            ],
+                            [
+                                "expedita",
+                            ],
+                            [
+                                "perferendis",
+                            ],
+                        ],
+                        selected=False,
+                        sync_mode="incremental",
+                    ),
+                    stream=shared.AirbyteStream(
+                        default_cursor_field=[
+                            "explicabo",
+                            "ea",
+                            "maxime",
+                        ],
+                        json_schema={
+                            "perferendis": "et",
+                        },
+                        name="rerum",
+                        namespace="reiciendis",
+                        source_defined_cursor=False,
+                        source_defined_primary_key=[
+                            [
+                                "necessitatibus",
+                            ],
+                            [
+                                "quis",
+                                "eum",
+                            ],
+                        ],
+                        supported_sync_modes=[
+                            "incremental",
+                        ],
+                    ),
+                ),
+            ],
+        ),
+    ),
+)
+    
+res = s.connection.create_connection(req)
+
+if res.connection_read is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

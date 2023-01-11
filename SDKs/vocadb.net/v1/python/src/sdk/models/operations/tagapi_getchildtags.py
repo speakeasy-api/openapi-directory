@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import tagforapicontract as shared_tagforapicontract
 
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetChildTagsPathParams:
-    tag_id: int = field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
+    tag_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
     
 class TagAPIGetChildTagsFieldsEnum(str, Enum):
     NONE = "None"
@@ -27,22 +27,22 @@ class TagAPIGetChildTagsLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetChildTagsQueryParams:
-    fields: Optional[TagAPIGetChildTagsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[TagAPIGetChildTagsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[TagAPIGetChildTagsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[TagAPIGetChildTagsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetChildTagsRequest:
-    path_params: TagAPIGetChildTagsPathParams = field()
-    query_params: TagAPIGetChildTagsQueryParams = field()
+    path_params: TagAPIGetChildTagsPathParams = dataclasses.field()
+    query_params: TagAPIGetChildTagsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIGetChildTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    tag_for_api_contracts: Optional[List[shared.TagForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    tag_for_api_contracts: Optional[list[shared_tagforapicontract.TagForAPIContract]] = dataclasses.field(default=None)
     

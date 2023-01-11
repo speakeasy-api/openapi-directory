@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TooManyDistributionsWithLambdaAssociations:
     r"""TooManyDistributionsWithLambdaAssociations
     Processing your request would cause the maximum number of distributions with Lambda function associations per owner to be exceeded.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

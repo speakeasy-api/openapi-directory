@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -23,21 +23,21 @@ class ExternalEventEntityStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExternalEventEntity:
     r"""ExternalEventEntity
     List External Events
     """
     
-    body: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
-    body_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_url') }})
-    bytes_synced: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bytes_synced') }})
-    created_at: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    errored_files: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errored_files') }})
-    event_type: Optional[ExternalEventEntityEventTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type') }})
-    folder_behavior_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('folder_behavior_id') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    remote_server_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remote_server_type') }})
-    status: Optional[ExternalEventEntityStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    successful_files: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('successful_files') }})
+    body: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    body_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body_url') }})
+    bytes_synced: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bytes_synced') }})
+    created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    errored_files: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errored_files') }})
+    event_type: Optional[ExternalEventEntityEventTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('event_type') }})
+    folder_behavior_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('folder_behavior_id') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    remote_server_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('remote_server_type') }})
+    status: Optional[ExternalEventEntityStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    successful_files: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('successful_files') }})
     

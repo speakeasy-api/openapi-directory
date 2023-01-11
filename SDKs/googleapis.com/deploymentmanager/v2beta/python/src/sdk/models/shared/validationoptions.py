@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -23,12 +23,12 @@ class ValidationOptionsUndeclaredPropertiesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ValidationOptions:
     r"""ValidationOptions
     Options for how to validate and process properties on a resource.
     """
     
-    schema_validation: Optional[ValidationOptionsSchemaValidationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemaValidation') }})
-    undeclared_properties: Optional[ValidationOptionsUndeclaredPropertiesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('undeclaredProperties') }})
+    schema_validation: Optional[ValidationOptionsSchemaValidationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemaValidation') }})
+    undeclared_properties: Optional[ValidationOptionsUndeclaredPropertiesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('undeclaredProperties') }})
     

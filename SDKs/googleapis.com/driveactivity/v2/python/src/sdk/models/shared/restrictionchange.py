@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,12 +18,12 @@ class RestrictionChangeNewRestrictionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RestrictionChange:
     r"""RestrictionChange
     Information about restriction policy changes to a feature.
     """
     
-    feature: Optional[RestrictionChangeFeatureEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feature') }})
-    new_restriction: Optional[RestrictionChangeNewRestrictionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newRestriction') }})
+    feature: Optional[RestrictionChangeFeatureEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('feature') }})
+    new_restriction: Optional[RestrictionChangeNewRestrictionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newRestriction') }})
     

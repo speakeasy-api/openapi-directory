@@ -16,3 +16,5 @@ from .resourcerecord import *
 from .security import *
 from .sslsettings import *
 from .status import *
+
+__all__ = ["XgafvEnum","AltEnum","AuthorizedCertificate","AuthorizedDomain","CertificateRawData","DomainMapping","ListAuthorizedCertificatesResponse","ListAuthorizedDomainsResponse","ListDomainMappingsResponse","ListLocationsResponse","ListOperationsResponse","Location","ManagedCertificateStatusEnum","ManagedCertificate","Operation","ResourceRecordTypeEnum","ResourceRecord","SchemeOauth2","SchemeOauth2c","SslSettings","Status"]

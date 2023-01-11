@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import configmanagementhierarchycontrollerdeploymentstate as shared_configmanagementhierarchycontrollerdeploymentstate
+from ..shared import configmanagementhierarchycontrollerversion as shared_configmanagementhierarchycontrollerversion
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigManagementHierarchyControllerState:
     r"""ConfigManagementHierarchyControllerState
     State for Hierarchy Controller
     """
     
-    state: Optional[ConfigManagementHierarchyControllerDeploymentState] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    version: Optional[ConfigManagementHierarchyControllerVersion] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    state: Optional[shared_configmanagementhierarchycontrollerdeploymentstate.ConfigManagementHierarchyControllerDeploymentState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    version: Optional[shared_configmanagementhierarchycontrollerversion.ConfigManagementHierarchyControllerVersion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
     

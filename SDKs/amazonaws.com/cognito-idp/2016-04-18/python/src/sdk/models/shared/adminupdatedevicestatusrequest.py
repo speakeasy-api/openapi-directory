@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,18 +6,18 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import devicerememberedstatustype_enum as shared_devicerememberedstatustype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdminUpdateDeviceStatusRequest:
     r"""AdminUpdateDeviceStatusRequest
     The request to update the device status, as an administrator.
     """
     
-    device_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeviceKey') }})
-    user_pool_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserPoolId') }})
-    username: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Username') }})
-    device_remembered_status: Optional[DeviceRememberedStatusTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeviceRememberedStatus') }})
+    device_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeviceKey') }})
+    user_pool_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserPoolId') }})
+    username: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Username') }})
+    device_remembered_status: Optional[shared_devicerememberedstatustype_enum.DeviceRememberedStatusTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeviceRememberedStatus') }})
     

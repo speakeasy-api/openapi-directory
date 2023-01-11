@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,8 +23,8 @@ req = operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest(
         ),
     ),
     path_params=operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams(
-        id="et",
-        member_id="ducimus",
+        id="ipsum",
+        member_id="commodi",
         workspace_id="qui",
     ),
 )

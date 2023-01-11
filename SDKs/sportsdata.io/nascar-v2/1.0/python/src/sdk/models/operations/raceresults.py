@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class RaceResultsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class RaceResultsPathParams:
-    format: RaceResultsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    raceid: str = field(metadata={'path_param': { 'field_name': 'raceid', 'style': 'simple', 'explode': False }})
+    format: RaceResultsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    raceid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'raceid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RaceResultsRequest:
-    path_params: RaceResultsPathParams = field()
+    path_params: RaceResultsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RaceResultsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    race_result: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    race_result: Optional[Any] = dataclasses.field(default=None)
     

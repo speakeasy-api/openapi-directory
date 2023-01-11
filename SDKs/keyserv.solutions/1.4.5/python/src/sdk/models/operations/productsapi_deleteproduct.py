@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIDeleteProductPathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIDeleteProductHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIDeleteProductRequest:
-    headers: ProductsAPIDeleteProductHeaders = field()
-    path_params: ProductsAPIDeleteProductPathParams = field()
+    headers: ProductsAPIDeleteProductHeaders = dataclasses.field()
+    path_params: ProductsAPIDeleteProductPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductsAPIDeleteProductResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

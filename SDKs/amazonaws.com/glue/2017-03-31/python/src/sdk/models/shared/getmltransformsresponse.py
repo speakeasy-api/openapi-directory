@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import mltransform as shared_mltransform
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetMlTransformsResponse:
-    transforms: List[MlTransform] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Transforms') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    transforms: list[shared_mltransform.MlTransform] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Transforms') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

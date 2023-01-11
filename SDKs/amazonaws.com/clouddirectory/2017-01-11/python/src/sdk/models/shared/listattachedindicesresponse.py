@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import indexattachment as shared_indexattachment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAttachedIndicesResponse:
-    index_attachments: Optional[List[IndexAttachment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IndexAttachments') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    index_attachments: Optional[list[shared_indexattachment.IndexAttachment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IndexAttachments') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

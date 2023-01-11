@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createoffersrequest as shared_createoffersrequest
+from ..shared import sendoffertointerestedbuyerscollectionresponse as shared_sendoffertointerestedbuyerscollectionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SendOfferToInterestedBuyersHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendOfferToInterestedBuyersSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendOfferToInterestedBuyersRequest:
-    headers: SendOfferToInterestedBuyersHeaders = field()
-    security: SendOfferToInterestedBuyersSecurity = field()
-    request: Optional[shared.CreateOffersRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: SendOfferToInterestedBuyersHeaders = dataclasses.field()
+    security: SendOfferToInterestedBuyersSecurity = dataclasses.field()
+    request: Optional[shared_createoffersrequest.CreateOffersRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SendOfferToInterestedBuyersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    send_offer_to_interested_buyers_collection_response: Optional[shared.SendOfferToInterestedBuyersCollectionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    send_offer_to_interested_buyers_collection_response: Optional[shared_sendoffertointerestedbuyerscollectionresponse.SendOfferToInterestedBuyersCollectionResponse] = dataclasses.field(default=None)
     

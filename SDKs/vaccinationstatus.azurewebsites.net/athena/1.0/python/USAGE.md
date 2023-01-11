@@ -1,0 +1,26 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.GetVaccineStatusRequest(
+    headers=operations.GetVaccineStatusHeaders(
+        accept="numquam",
+        authorization="illum",
+        content_type="fugiat",
+    ),
+    request=shared.VaccineStatusRequest(
+        department_id="dolores",
+        patient_id="possimus",
+        token="voluptatibus",
+    ),
+)
+    
+res = s.athena_api.get_vaccine_status(req)
+
+if res.vaccine_response is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

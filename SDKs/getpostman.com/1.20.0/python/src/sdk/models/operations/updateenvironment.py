@@ -1,74 +1,74 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentPathParams:
-    environment_uid: str = field(metadata={'path_param': { 'field_name': 'environment_uid', 'style': 'simple', 'explode': False }})
+    environment_uid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environment_uid', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentRequestBodyEnvironmentValues:
-    key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentRequestBodyEnvironment:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    values: Optional[List[UpdateEnvironmentRequestBodyEnvironmentValues]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    values: Optional[list[UpdateEnvironmentRequestBodyEnvironmentValues]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentRequestBody:
-    environment: Optional[UpdateEnvironmentRequestBodyEnvironment] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
+    environment: Optional[UpdateEnvironmentRequestBodyEnvironment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironment200ApplicationJSONEnvironment:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uid') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironment200ApplicationJSON:
-    environment: Optional[UpdateEnvironment200ApplicationJSONEnvironment] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
+    environment: Optional[UpdateEnvironment200ApplicationJSONEnvironment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('environment') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironment400ApplicationJSONError:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironment400ApplicationJSON:
-    error: Optional[UpdateEnvironment400ApplicationJSONError] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    error: Optional[UpdateEnvironment400ApplicationJSONError] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentRequest:
-    path_params: UpdateEnvironmentPathParams = field()
-    request: Optional[UpdateEnvironmentRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateEnvironmentPathParams = dataclasses.field()
+    request: Optional[UpdateEnvironmentRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnvironmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_environment_200_application_json_object: Optional[UpdateEnvironment200ApplicationJSON] = field(default=None)
-    update_environment_400_application_json_object: Optional[UpdateEnvironment400ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_environment_200_application_json_object: Optional[UpdateEnvironment200ApplicationJSON] = dataclasses.field(default=None)
+    update_environment_400_application_json_object: Optional[UpdateEnvironment400ApplicationJSON] = dataclasses.field(default=None)
     

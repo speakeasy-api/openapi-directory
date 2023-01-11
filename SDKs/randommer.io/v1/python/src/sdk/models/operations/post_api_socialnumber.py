@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import idtype_enum as shared_idtype_enum
+from ..shared import numbervalidation as shared_numbervalidation
 
 
-@dataclass
+@dataclasses.dataclass
 class PostAPISocialNumberQueryParams:
-    id_type: shared.IDTypeEnum = field(metadata={'query_param': { 'field_name': 'idType', 'style': 'form', 'explode': True }})
+    id_type: shared_idtype_enum.IDTypeEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'idType', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPISocialNumberHeaders:
-    x_api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
+    x_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Api-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPISocialNumberRequests:
-    number_validation: Optional[shared.NumberValidation] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    number_validation1: Optional[shared.NumberValidation] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    number_validation2: Optional[shared.NumberValidation] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    number_validation3: Optional[shared.NumberValidation] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    number_validation: Optional[shared_numbervalidation.NumberValidation] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    number_validation1: Optional[shared_numbervalidation.NumberValidation] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    number_validation2: Optional[shared_numbervalidation.NumberValidation] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    number_validation3: Optional[shared_numbervalidation.NumberValidation] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPISocialNumberRequest:
-    headers: PostAPISocialNumberHeaders = field()
-    query_params: PostAPISocialNumberQueryParams = field()
-    request: PostAPISocialNumberRequests = field()
+    headers: PostAPISocialNumberHeaders = dataclasses.field()
+    query_params: PostAPISocialNumberQueryParams = dataclasses.field()
+    request: PostAPISocialNumberRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostAPISocialNumberResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

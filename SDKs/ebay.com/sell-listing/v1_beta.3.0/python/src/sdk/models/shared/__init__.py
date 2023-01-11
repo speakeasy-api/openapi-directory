@@ -6,3 +6,5 @@ from .itemdraftresponse import *
 from .pricingsummary import *
 from .product import *
 from .security import *
+
+__all__ = ["Amount","Aspect","Charity","ItemDraft","ItemDraftResponse","PricingSummary","Product","SchemeAPIAuth"]

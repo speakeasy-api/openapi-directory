@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import record as shared_record
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutRecordInput:
-    delivery_stream_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryStreamName') }})
-    record: Record = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Record') }})
+    delivery_stream_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryStreamName') }})
+    record: shared_record.Record = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Record') }})
     

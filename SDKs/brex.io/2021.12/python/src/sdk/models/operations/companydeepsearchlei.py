@@ -1,34 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyDeepsearchLeiPathParams:
-    number: str = field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
+    number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyDeepsearchLeiQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyDeepsearchLeiSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyDeepsearchLeiRequest:
-    path_params: CompanyDeepsearchLeiPathParams = field()
-    query_params: CompanyDeepsearchLeiQueryParams = field()
-    security: CompanyDeepsearchLeiSecurity = field()
+    path_params: CompanyDeepsearchLeiPathParams = dataclasses.field()
+    query_params: CompanyDeepsearchLeiQueryParams = dataclasses.field()
+    security: CompanyDeepsearchLeiSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyDeepsearchLeiResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_deepsearch_lei_200_application_json_any: Optional[Any] = field(default=None)
-    company_deepsearch_lei_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_deepsearch_lei_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    company_deepsearch_lei_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

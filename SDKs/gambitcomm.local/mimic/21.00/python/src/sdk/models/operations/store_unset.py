@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StoreUnsetPathParams:
-    var: str = field(metadata={'path_param': { 'field_name': 'var', 'style': 'simple', 'explode': False }})
+    var: str = dataclasses.field(metadata={'path_param': { 'field_name': 'var', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoreUnsetRequest:
-    path_params: StoreUnsetPathParams = field()
+    path_params: StoreUnsetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoreUnsetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    store_unset_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    store_unset_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

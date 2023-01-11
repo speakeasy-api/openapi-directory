@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,11 +13,11 @@ class FleetLifecycleStateCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FleetLifecycleState:
     r"""FleetLifecycleState
     FleetLifecycleState describes the state of a Fleet resource.
     """
     
-    code: Optional[FleetLifecycleStateCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    code: Optional[FleetLifecycleStateCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
     

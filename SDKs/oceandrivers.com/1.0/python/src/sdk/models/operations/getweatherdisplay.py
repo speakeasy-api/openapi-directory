@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWeatherDisplayPathParams:
-    station_name: str = field(metadata={'path_param': { 'field_name': 'stationName', 'style': 'simple', 'explode': False }})
+    station_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'stationName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWeatherDisplayQueryParams:
-    period: str = field(metadata={'query_param': { 'field_name': 'period', 'style': 'form', 'explode': True }})
+    period: str = dataclasses.field(metadata={'query_param': { 'field_name': 'period', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWeatherDisplayRequest:
-    path_params: GetWeatherDisplayPathParams = field()
-    query_params: GetWeatherDisplayQueryParams = field()
+    path_params: GetWeatherDisplayPathParams = dataclasses.field()
+    query_params: GetWeatherDisplayQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWeatherDisplayResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

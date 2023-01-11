@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import taginstance as shared_taginstance
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserTagsTagIDShowsPathParams:
-    tag_id: int = field(metadata={'path_param': { 'field_name': 'tag_id', 'style': 'simple', 'explode': False }})
+    tag_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'tag_id', 'style': 'simple', 'explode': False }})
     
 class GetUserTagsTagIDShowsEmbedEnum(str, Enum):
     SHOW = "show"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserTagsTagIDShowsQueryParams:
-    embed: Optional[GetUserTagsTagIDShowsEmbedEnum] = field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
+    embed: Optional[GetUserTagsTagIDShowsEmbedEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserTagsTagIDShowsRequest:
-    path_params: GetUserTagsTagIDShowsPathParams = field()
-    query_params: GetUserTagsTagIDShowsQueryParams = field()
+    path_params: GetUserTagsTagIDShowsPathParams = dataclasses.field()
+    query_params: GetUserTagsTagIDShowsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserTagsTagIDShowsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag_instances: Optional[List[shared.TagInstance]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag_instances: Optional[list[shared_taginstance.TagInstance]] = dataclasses.field(default=None)
     

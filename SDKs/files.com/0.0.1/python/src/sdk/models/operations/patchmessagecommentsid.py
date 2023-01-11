@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messagecommententity as shared_messagecommententity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchMessageCommentsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMessageCommentsIDRequestBody:
-    body: str = field(metadata={'multipart_form': { 'field_name': 'body' }})
+    body: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'body' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMessageCommentsIDRequest:
-    path_params: PatchMessageCommentsIDPathParams = field()
-    request: PatchMessageCommentsIDRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchMessageCommentsIDPathParams = dataclasses.field()
+    request: PatchMessageCommentsIDRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchMessageCommentsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_comment_entity: Optional[shared.MessageCommentEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_comment_entity: Optional[shared_messagecommententity.MessageCommentEntity] = dataclasses.field(default=None)
     

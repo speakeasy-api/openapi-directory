@@ -1,9 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteFlowLogsResult:
-    unsuccessful: Optional[List[UnsuccessfulItem]] = field(default=None)
+    unsuccessful: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

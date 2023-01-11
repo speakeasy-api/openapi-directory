@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import accessibilityrequest as shared_accessibilityrequest
+from ..shared import getcurrentvalues as shared_getcurrentvalues
 
 
-@dataclass
+@dataclasses.dataclass
 class AccessibilityRequest:
-    request: shared.AccessibilityRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_accessibilityrequest.AccessibilityRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AccessibilityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getcurrentvalues: Optional[shared.Getcurrentvalues] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getcurrentvalues: Optional[shared_getcurrentvalues.Getcurrentvalues] = dataclasses.field(default=None)
     

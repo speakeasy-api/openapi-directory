@@ -1,7 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Any,Enum,List,Optional
+import dataclasses
+from typing import Any,Optional
+from enum import Enum
 from dataclasses_json import dataclass_json
-from sdk.models import shared
+from sdk import utils
+from ..shared import onev2_11_clicks_get_responses_401_content_application_1json_schema as shared_onev2_11_clicks_get_responses_401_content_application_1json_schema
 
 class CreateRegistryRequestBodySubscriptionTierSlugEnum(str, Enum):
     STARTER = "starter"
@@ -10,31 +12,31 @@ class CreateRegistryRequestBodySubscriptionTierSlugEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateRegistryRequestBody:
-    name: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'name' }})
-    subscription_tier_slug: CreateRegistryRequestBodySubscriptionTierSlugEnum = field(default=None, metadata={'dataclasses_json': { 'field_name': 'subscription_tier_slug' }})
-    
-
-@dataclass
-class CreateRegistryRequest:
-    request: CreateRegistryRequestBody = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    subscription_tier_slug: CreateRegistryRequestBodySubscriptionTierSlugEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscription_tier_slug') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateRegistry401ApplicationJSON:
-    id: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'id' }})
-    message: str = field(default=None, metadata={'dataclasses_json': { 'field_name': 'message' }})
-    request_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'field_name': 'request_id' }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    request_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
     
 
-@dataclass
+@dataclasses.dataclass
+class CreateRegistryRequest:
+    request: CreateRegistryRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    
+
+@dataclasses.dataclass
 class CreateRegistryResponse:
-    content_type: str = field(default=None)
-    headers: dict[str, List[str]] = field(default=None)
-    status_code: int = field(default=None)
-    create_registry_201_application_json_any: Optional[Any] = field(default=None)
-    create_registry_401_application_json_object: Optional[CreateRegistry401ApplicationJSON] = field(default=None)
-    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_registry_201_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    create_registry_401_application_json_object: Optional[CreateRegistry401ApplicationJSON] = dataclasses.field(default=None)
+    onev2_11_clicks_get_responses_401_content_application_1json_schema: Optional[shared_onev2_11_clicks_get_responses_401_content_application_1json_schema.Onev211ClicksGetResponses401ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import engineattribute as shared_engineattribute
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExportServerEngineAttributeRequest:
-    export_attribute_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExportAttributeName') }})
-    server_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServerName') }})
-    input_attributes: Optional[List[EngineAttribute]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputAttributes') }})
+    export_attribute_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ExportAttributeName') }})
+    server_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServerName') }})
+    input_attributes: Optional[list[shared_engineattribute.EngineAttribute]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('InputAttributes') }})
     

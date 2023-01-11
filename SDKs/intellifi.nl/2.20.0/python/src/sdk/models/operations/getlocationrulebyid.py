@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import locationrule as shared_locationrule
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationRuleByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationRuleByIDRequest:
-    path_params: GetLocationRuleByIDPathParams = field()
+    path_params: GetLocationRuleByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationRuleByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    location_rule: Optional[shared.LocationRule] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    location_rule: Optional[shared_locationrule.LocationRule] = dataclasses.field(default=None)
     

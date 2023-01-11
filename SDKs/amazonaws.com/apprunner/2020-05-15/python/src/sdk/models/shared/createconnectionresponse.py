@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connection as shared_connection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateConnectionResponse:
-    connection: Connection = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Connection') }})
+    connection: shared_connection.Connection = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Connection') }})
     

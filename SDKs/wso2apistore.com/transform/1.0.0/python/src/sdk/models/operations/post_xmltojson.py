@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostXmltojsonRequest:
-    request: str = field(metadata={'request': { 'media_type': 'text/xml' }})
+    request: str = dataclasses.field(metadata={'request': { 'media_type': 'text/xml' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostXmltojsonResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

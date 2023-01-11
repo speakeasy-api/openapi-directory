@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetConnectionLogonPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    connection_id: int = field(metadata={'path_param': { 'field_name': 'connectionID', 'style': 'simple', 'explode': False }})
-    password: str = field(metadata={'path_param': { 'field_name': 'password', 'style': 'simple', 'explode': False }})
-    user: str = field(metadata={'path_param': { 'field_name': 'user', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    connection_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'connectionID', 'style': 'simple', 'explode': False }})
+    password: str = dataclasses.field(metadata={'path_param': { 'field_name': 'password', 'style': 'simple', 'explode': False }})
+    user: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetConnectionLogonRequest:
-    path_params: ProtocolTelnetConnectionLogonPathParams = field()
+    path_params: ProtocolTelnetConnectionLogonPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetConnectionLogonResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_telnet_connection_logon_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_telnet_connection_logon_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

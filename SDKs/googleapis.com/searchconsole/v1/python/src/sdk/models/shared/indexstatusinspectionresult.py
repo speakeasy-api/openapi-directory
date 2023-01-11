@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -44,21 +44,21 @@ class IndexStatusInspectionResultVerdictEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IndexStatusInspectionResult:
     r"""IndexStatusInspectionResult
     Results of index status inspection for either the live page or the version in Google's index, depending on whether you requested a live inspection or not. For more information, see the [Index coverage report documentation](https://support.google.com/webmasters/answer/7440203).
     """
     
-    coverage_state: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coverageState') }})
-    crawled_as: Optional[IndexStatusInspectionResultCrawledAsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crawledAs') }})
-    google_canonical: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleCanonical') }})
-    indexing_state: Optional[IndexStatusInspectionResultIndexingStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indexingState') }})
-    last_crawl_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastCrawlTime') }})
-    page_fetch_state: Optional[IndexStatusInspectionResultPageFetchStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pageFetchState') }})
-    referring_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('referringUrls') }})
-    robots_txt_state: Optional[IndexStatusInspectionResultRobotsTxtStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('robotsTxtState') }})
-    sitemap: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sitemap') }})
-    user_canonical: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userCanonical') }})
-    verdict: Optional[IndexStatusInspectionResultVerdictEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verdict') }})
+    coverage_state: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('coverageState') }})
+    crawled_as: Optional[IndexStatusInspectionResultCrawledAsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crawledAs') }})
+    google_canonical: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleCanonical') }})
+    indexing_state: Optional[IndexStatusInspectionResultIndexingStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('indexingState') }})
+    last_crawl_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastCrawlTime') }})
+    page_fetch_state: Optional[IndexStatusInspectionResultPageFetchStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pageFetchState') }})
+    referring_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('referringUrls') }})
+    robots_txt_state: Optional[IndexStatusInspectionResultRobotsTxtStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('robotsTxtState') }})
+    sitemap: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sitemap') }})
+    user_canonical: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('userCanonical') }})
+    verdict: Optional[IndexStatusInspectionResultVerdictEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verdict') }})
     

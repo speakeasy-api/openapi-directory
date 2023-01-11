@@ -1,40 +1,34 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import direction_enum as shared_direction_enum
+from ..shared import direction_enum2 as shared_direction_enum2
+from ..shared import repository_pre_receive_hook as shared_repository_pre_receive_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveHooksForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
-class EnterpriseAdminListPreReceiveHooksForRepoSortEnum(str, Enum):
-    CREATED = "created"
-    UPDATED = "updated"
-    NAME = "name"
 
-
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveHooksForRepoQueryParams:
-    direction: Optional[shared.DirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[EnterpriseAdminListPreReceiveHooksForRepoSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_direction_enum.DirectionEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_direction_enum2.DirectionEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveHooksForRepoRequest:
-    path_params: EnterpriseAdminListPreReceiveHooksForRepoPathParams = field()
-    query_params: EnterpriseAdminListPreReceiveHooksForRepoQueryParams = field()
+    path_params: EnterpriseAdminListPreReceiveHooksForRepoPathParams = dataclasses.field()
+    query_params: EnterpriseAdminListPreReceiveHooksForRepoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminListPreReceiveHooksForRepoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    repository_pre_receive_hooks: Optional[List[shared.RepositoryPreReceiveHook]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    repository_pre_receive_hooks: Optional[list[shared_repository_pre_receive_hook.RepositoryPreReceiveHook]] = dataclasses.field(default=None)
     

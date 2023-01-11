@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import loggingconfiguration as shared_loggingconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutLoggingConfigurationRequest:
-    logging_configuration: LoggingConfiguration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LoggingConfiguration') }})
+    logging_configuration: shared_loggingconfiguration.LoggingConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LoggingConfiguration') }})
     

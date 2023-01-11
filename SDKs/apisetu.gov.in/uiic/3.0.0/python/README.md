@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.CripcRequest(
     security=operations.CripcSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.CripcRequestBody(
         certificate_parameters=operations.CripcRequestBodyCertificateParameters(
-            dob="corporis",
-            full_name="dicta",
-            udf1="sapiente",
-            udf2="qui",
-            udf3="voluptatem",
-            uid="odio",
+            dob="nesciunt",
+            full_name="eaque",
+            udf1="suscipit",
+            udf2="labore",
+            udf3="voluptatum",
+            uid="quisquam",
         ),
-        consent_artifact="voluptas",
+        consent_artifact="pariatur",
         format="pdf",
-        txn_id="culpa",
+        txn_id="incidunt",
     ),
 )
     
-res = s.sdk.cripc(req)
+res = s.ap_is.cripc(req)
 
 if res.status_code == 200:
     # handle response
@@ -51,7 +50,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cripc` - Insurance Policy - Car
 * `twipc` - Insurance Policy - Two Wheeler

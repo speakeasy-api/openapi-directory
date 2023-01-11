@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CopyImageResult:
     r"""CopyImageResult
     Contains the output of CopyImage.
     """
     
-    image_id: Optional[str] = field(default=None)
+    image_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

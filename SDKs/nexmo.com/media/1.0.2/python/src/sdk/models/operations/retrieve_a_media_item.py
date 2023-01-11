@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import media as shared_media
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveAMediaItemResponse:
-    content_type: str = field()
-    status_code: int = field()
-    media: Optional[shared.Media] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    media: Optional[shared_media.Media] = dataclasses.field(default=None)
     

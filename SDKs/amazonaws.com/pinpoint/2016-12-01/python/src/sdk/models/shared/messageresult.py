@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,19 +6,15 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deliverystatus_enum as shared_deliverystatus_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MessageResult:
-    r"""MessageResult
-    Provides information about the results of sending a message directly to an endpoint address.
-    """
-    
-    delivery_status: DeliveryStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryStatus') }})
-    status_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatusCode') }})
-    message_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MessageId') }})
-    status_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatusMessage') }})
-    updated_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UpdatedToken') }})
+    delivery_status: Optional[shared_deliverystatus_enum.DeliveryStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryStatus') }})
+    message_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MessageId') }})
+    status_code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatusCode') }})
+    status_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StatusMessage') }})
+    updated_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UpdatedToken') }})
     

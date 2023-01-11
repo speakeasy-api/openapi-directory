@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StandardSchedulerSettings:
     r"""StandardSchedulerSettings
     Scheduler settings for standard environment.
     """
     
-    max_instances: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxInstances') }})
-    min_instances: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minInstances') }})
-    target_cpu_utilization: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetCpuUtilization') }})
-    target_throughput_utilization: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetThroughputUtilization') }})
+    max_instances: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxInstances') }})
+    min_instances: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minInstances') }})
+    target_cpu_utilization: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetCpuUtilization') }})
+    target_throughput_utilization: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetThroughputUtilization') }})
     

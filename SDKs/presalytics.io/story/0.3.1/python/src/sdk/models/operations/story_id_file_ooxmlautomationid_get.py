@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidGetPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    ooxml_automation_id: str = field(metadata={'path_param': { 'field_name': 'ooxml_automation_id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    ooxml_automation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ooxml_automation_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidGetRequest:
-    path_params: StoryIDFileOoxmlautomationidGetPathParams = field()
+    path_params: StoryIDFileOoxmlautomationidGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFileOoxmlautomationidGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    excel_spreadsheet: Optional[bytes] = field(default=None)
-    powerpoint_presentation: Optional[bytes] = field(default=None)
-    word_document: Optional[bytes] = field(default=None)
-    problem_detail: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    excel_spreadsheet: Optional[bytes] = dataclasses.field(default=None)
+    powerpoint_presentation: Optional[bytes] = dataclasses.field(default=None)
+    word_document: Optional[bytes] = dataclasses.field(default=None)
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
     

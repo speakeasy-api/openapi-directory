@@ -1,0 +1,41 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.VerifiedaccessChallengeCreateRequest(
+    security=operations.VerifiedaccessChallengeCreateSecurity(
+        oauth2=shared.SchemeOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+        oauth2c=shared.SchemeOauth2c(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    query_params=operations.VerifiedaccessChallengeCreateQueryParams(
+        dollar_xgafv="2",
+        access_token="tenetur",
+        alt="media",
+        callback="sunt",
+        fields="qui",
+        key="consequuntur",
+        oauth_token="illo",
+        pretty_print=False,
+        quota_user="sequi",
+        upload_type="dolorem",
+        upload_protocol="ullam",
+    ),
+    request={
+        "eum": "omnis",
+        "qui": "ut",
+    },
+)
+    
+res = s.challenge.verifiedaccess_challenge_create(req)
+
+if res.challenge is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

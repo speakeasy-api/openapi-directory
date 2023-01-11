@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -44,7 +44,7 @@ class Positions:
             if utils.match_content_type(content_type, "text/csv"):
                 res.body = r.content
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Position]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Position]])
                 res.positions = out
 
         return res

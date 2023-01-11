@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -13,16 +13,16 @@ class DisallowedResourceProblemSectionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DisallowedResourceProblem:
     r"""DisallowedResourceProblem
     A problem that indicates that the resource requested violates the precepts of this API.
     """
     
-    detail: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    resource_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_id') }})
-    resource_type: DisallowedResourceProblemResourceTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_type') }})
-    section: DisallowedResourceProblemSectionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    detail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    resource_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_id') }})
+    resource_type: DisallowedResourceProblemResourceTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resource_type') }})
+    section: DisallowedResourceProblemSectionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('section') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

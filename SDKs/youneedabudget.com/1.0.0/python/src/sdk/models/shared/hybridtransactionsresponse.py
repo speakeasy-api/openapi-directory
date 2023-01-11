@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hybridtransaction as shared_hybridtransaction
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HybridTransactionsResponseData:
-    transactions: List[HybridTransaction] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
+    transactions: list[shared_hybridtransaction.HybridTransaction] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactions') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HybridTransactionsResponse:
-    data: HybridTransactionsResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: HybridTransactionsResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

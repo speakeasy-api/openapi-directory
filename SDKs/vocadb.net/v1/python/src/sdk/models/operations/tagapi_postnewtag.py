@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import tagbasecontract as shared_tagbasecontract
 
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIPostNewTagQueryParams:
-    name: str = field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIPostNewTagRequest:
-    query_params: TagAPIPostNewTagQueryParams = field()
+    query_params: TagAPIPostNewTagQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TagAPIPostNewTagResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    tag_base_contract: Optional[shared.TagBaseContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    tag_base_contract: Optional[shared_tagbasecontract.TagBaseContract] = dataclasses.field(default=None)
     

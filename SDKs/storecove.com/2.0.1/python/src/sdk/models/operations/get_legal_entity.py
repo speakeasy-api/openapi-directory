@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import legalentity as shared_legalentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLegalEntityPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLegalEntityRequest:
-    path_params: GetLegalEntityPathParams = field()
+    path_params: GetLegalEntityPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLegalEntityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legal_entity: Optional[shared.LegalEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legal_entity: Optional[shared_legalentity.LegalEntity] = dataclasses.field(default=None)
     

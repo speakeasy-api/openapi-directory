@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class AppDIDPutPathParams:
-    app_d_id: str = field(metadata={'path_param': { 'field_name': 'appDId', 'style': 'simple', 'explode': False }})
+    app_d_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appDId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppDIDPutRequest:
-    path_params: AppDIDPutPathParams = field()
-    request: Optional[bytes] = field(default=None, metadata={'request': { 'media_type': 'application/zip' }})
+    path_params: AppDIDPutPathParams = dataclasses.field()
+    request: Optional[bytes] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/zip' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppDIDPutResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteTrafficMirrorTargetResult:
-    traffic_mirror_target_id: Optional[str] = field(default=None)
+    traffic_mirror_target_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

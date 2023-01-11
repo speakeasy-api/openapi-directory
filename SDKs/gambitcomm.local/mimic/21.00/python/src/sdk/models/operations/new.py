@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import triplet as shared_triplet
 
 
-@dataclass
+@dataclasses.dataclass
 class NewPathParams:
-    ip: str = field(metadata={'path_param': { 'field_name': 'IP', 'style': 'simple', 'explode': False }})
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    ip: str = dataclasses.field(metadata={'path_param': { 'field_name': 'IP', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NewRequest:
-    path_params: NewPathParams = field()
-    request: List[shared.Triplet] = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: NewPathParams = dataclasses.field()
+    request: list[shared_triplet.Triplet] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NewResponse:
-    content_type: str = field()
-    status_code: int = field()
-    new_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    new_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

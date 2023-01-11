@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import streaminfo as shared_streaminfo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListStreamsOutput:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    stream_info_list: Optional[List[StreamInfo]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamInfoList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    stream_info_list: Optional[list[shared_streaminfo.StreamInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreamInfoList') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -19,14 +19,14 @@ class GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum(str, 
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleChromeManagementV1TotalMemoryEncryptionInfo:
     r"""GoogleChromeManagementV1TotalMemoryEncryptionInfo
     Memory encryption information of a device. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
     """
     
-    encryption_algorithm: Optional[GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionAlgorithm') }})
-    encryption_state: Optional[GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionState') }})
-    key_length: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyLength') }})
-    max_keys: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxKeys') }})
+    encryption_algorithm: Optional[GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionAlgorithm') }})
+    encryption_state: Optional[GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('encryptionState') }})
+    key_length: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('keyLength') }})
+    max_keys: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('maxKeys') }})
     

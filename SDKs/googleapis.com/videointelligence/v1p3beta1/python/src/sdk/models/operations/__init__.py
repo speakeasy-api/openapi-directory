@@ -1,1 +1,3 @@
 from .videointelligence_videos_annotate import *
+
+__all__ = ["VideointelligenceVideosAnnotateQueryParams","VideointelligenceVideosAnnotateSecurity","VideointelligenceVideosAnnotateRequest","VideointelligenceVideosAnnotateResponse"]

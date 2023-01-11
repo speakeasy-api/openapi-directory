@@ -9,3 +9,5 @@ from .getproductsrequest import *
 from .getproductsresponse import *
 from .security import *
 from .service import *
+
+__all__ = ["AttributeValue","DescribeServicesRequest","DescribeServicesResponse","Filter","FilterTypeEnum","GetAttributeValuesRequest","GetAttributeValuesResponse","GetProductsRequest","GetProductsResponse","SchemeHmac","Security","Service"]

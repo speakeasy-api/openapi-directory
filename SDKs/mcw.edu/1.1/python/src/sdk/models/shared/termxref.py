@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TermXRef:
-    key: Optional[int] = field(default=None)
-    term_acc: Optional[str] = field(default=None)
-    xref_description: Optional[str] = field(default=None)
-    xref_value: Optional[str] = field(default=None)
+    key: Optional[int] = dataclasses.field(default=None)
+    term_acc: Optional[str] = dataclasses.field(default=None)
+    xref_description: Optional[str] = dataclasses.field(default=None)
+    xref_value: Optional[str] = dataclasses.field(default=None)
     

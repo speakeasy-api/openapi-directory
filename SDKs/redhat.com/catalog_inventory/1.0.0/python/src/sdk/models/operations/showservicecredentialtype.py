@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errornotfound as shared_errornotfound
+from ..shared import servicecredentialtype as shared_servicecredentialtype
 
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceCredentialTypePathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceCredentialTypeRequest:
-    path_params: ShowServiceCredentialTypePathParams = field()
+    path_params: ShowServiceCredentialTypePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ShowServiceCredentialTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_not_found: Optional[shared.ErrorNotFound] = field(default=None)
-    service_credential_type: Optional[shared.ServiceCredentialType] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_not_found: Optional[shared_errornotfound.ErrorNotFound] = dataclasses.field(default=None)
+    service_credential_type: Optional[shared_servicecredentialtype.ServiceCredentialType] = dataclasses.field(default=None)
     

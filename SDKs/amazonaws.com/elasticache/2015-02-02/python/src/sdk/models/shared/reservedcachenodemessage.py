@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import reservedcachenodelist as shared_reservedcachenodelist
 
 
-@dataclass
+@dataclasses.dataclass
 class ReservedCacheNodeMessage:
     r"""ReservedCacheNodeMessage
     Represents the output of a <code>DescribeReservedCacheNodes</code> operation.
     """
     
-    marker: Optional[str] = field(default=None)
-    reserved_cache_nodes: Optional[List[ReservedCacheNode]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    reserved_cache_nodes: Optional[list[shared_reservedcachenodelist.ReservedCacheNodeList]] = dataclasses.field(default=None)
     

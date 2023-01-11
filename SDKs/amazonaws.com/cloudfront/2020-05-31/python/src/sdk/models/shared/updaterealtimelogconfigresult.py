@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from . import *
+from ..shared import realtimelogconfig as shared_realtimelogconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateRealtimeLogConfigResult:
-    realtime_log_config: Optional[RealtimeLogConfig] = field(default=None)
+    realtime_log_config: Optional[shared_realtimelogconfig.RealtimeLogConfig] = dataclasses.field(default=None)
     

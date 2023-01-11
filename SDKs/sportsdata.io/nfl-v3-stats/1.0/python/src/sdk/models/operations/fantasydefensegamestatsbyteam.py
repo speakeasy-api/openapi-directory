@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,22 +7,22 @@ class FantasyDefenseGameStatsByTeamFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class FantasyDefenseGameStatsByTeamPathParams:
-    format: FantasyDefenseGameStatsByTeamFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
-    team: str = field(metadata={'path_param': { 'field_name': 'team', 'style': 'simple', 'explode': False }})
-    week: str = field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
+    format: FantasyDefenseGameStatsByTeamFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    team: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team', 'style': 'simple', 'explode': False }})
+    week: str = dataclasses.field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FantasyDefenseGameStatsByTeamRequest:
-    path_params: FantasyDefenseGameStatsByTeamPathParams = field()
+    path_params: FantasyDefenseGameStatsByTeamPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FantasyDefenseGameStatsByTeamResponse:
-    content_type: str = field()
-    status_code: int = field()
-    fantasy_defense_game: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    fantasy_defense_game: Optional[Any] = dataclasses.field(default=None)
     

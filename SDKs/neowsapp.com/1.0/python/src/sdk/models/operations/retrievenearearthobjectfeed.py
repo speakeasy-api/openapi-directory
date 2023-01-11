@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import nearearthobjectlist as shared_nearearthobjectlist
 
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNearEarthObjectFeedQueryParams:
-    detailed: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'detailed', 'style': 'form', 'explode': True }})
-    end_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
-    start_date: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
+    detailed: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'detailed', 'style': 'form', 'explode': True }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNearEarthObjectFeedRequest:
-    query_params: RetrieveNearEarthObjectFeedQueryParams = field()
+    query_params: RetrieveNearEarthObjectFeedQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RetrieveNearEarthObjectFeedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    near_earth_object_list: Optional[shared.NearEarthObjectList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    near_earth_object_list: Optional[shared_nearearthobjectlist.NearEarthObjectList] = dataclasses.field(default=None)
     

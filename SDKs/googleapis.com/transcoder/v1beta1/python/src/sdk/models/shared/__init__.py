@@ -45,3 +45,5 @@ from .textatom import *
 from .textinput import *
 from .textstream import *
 from .videostream import *
+
+__all__ = ["XgafvEnum","AdBreak","Aes128Encryption","AltEnum","Animation","AnimationEnd","AnimationFadeFadeTypeEnum","AnimationFade","AnimationStatic","Audio","AudioAtom","AudioChannel","AudioChannelInput","AudioStream","Color","Crop","Deblock","Denoise","EditAtom","ElementaryStream","Encryption","FailureDetail","Image","Input","JobStateEnum","Job","JobInput","JobConfig","JobTemplate","ListJobsResponse","ListJobTemplatesResponse","ManifestTypeEnum","Manifest","MpegCommonEncryption","MuxStream","NormalizedCoordinate","OriginURI","Output","Overlay","Pad","PreprocessingConfig","Progress","PubsubDestination","SampleAesEncryption","SchemeOauth2","SchemeOauth2c","SegmentSettings","SpriteSheet","TextAtom","TextInput","TextStream","VideoStream"]

@@ -1,7 +1,7 @@
 
 
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -65,7 +65,7 @@ class SDK:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[List[shared.Forecast]]])
+                out = utils.unmarshal_json(r.text, Optional[list[list[shared.Forecast]]])
                 res.forecast_results = out
 
         return res

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import networkfollow as shared_networkfollow
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksNetworkIDPathParams:
-    network_id: int = field(metadata={'path_param': { 'field_name': 'network_id', 'style': 'simple', 'explode': False }})
+    network_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'network_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksNetworkIDRequest:
-    path_params: GetUserFollowsNetworksNetworkIDPathParams = field()
+    path_params: GetUserFollowsNetworksNetworkIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsNetworksNetworkIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    network_follow: Optional[shared.NetworkFollow] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    network_follow: Optional[shared_networkfollow.NetworkFollow] = dataclasses.field(default=None)
     

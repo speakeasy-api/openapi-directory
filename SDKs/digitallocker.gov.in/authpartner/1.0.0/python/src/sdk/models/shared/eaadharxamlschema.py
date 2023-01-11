@@ -1,129 +1,129 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureKeyInfoX509Data:
-    x509_certificate: str = field()
-    x509_subject_name: str = field()
+    x509_certificate: str = dataclasses.field()
+    x509_subject_name: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureKeyInfo:
-    x509_data: EaadharXamlSchemaKycResSignatureKeyInfoX509Data = field()
+    x509_data: EaadharXamlSchemaKycResSignatureKeyInfoX509Data = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoCanonicalizationMethod:
-    algorithm: str = field()
+    algorithm: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoReferenceDigestMethod:
-    algorithm: str = field()
+    algorithm: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransformsTransform:
-    algorithm: str = field()
+    algorithm: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransforms:
-    transform: EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransformsTransform = field()
+    transform: EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransformsTransform = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoReference:
-    digest_method: EaadharXamlSchemaKycResSignatureSignedInfoReferenceDigestMethod = field()
-    digest_value: str = field()
-    transforms: EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransforms = field()
-    uri: str = field()
+    digest_method: EaadharXamlSchemaKycResSignatureSignedInfoReferenceDigestMethod = dataclasses.field()
+    digest_value: str = dataclasses.field()
+    transforms: EaadharXamlSchemaKycResSignatureSignedInfoReferenceTransforms = dataclasses.field()
+    uri: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfoSignatureMethod:
-    algorithm: str = field()
+    algorithm: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignatureSignedInfo:
-    canonicalization_method: EaadharXamlSchemaKycResSignatureSignedInfoCanonicalizationMethod = field()
-    reference: EaadharXamlSchemaKycResSignatureSignedInfoReference = field()
-    signature_method: EaadharXamlSchemaKycResSignatureSignedInfoSignatureMethod = field()
+    canonicalization_method: EaadharXamlSchemaKycResSignatureSignedInfoCanonicalizationMethod = dataclasses.field()
+    reference: EaadharXamlSchemaKycResSignatureSignedInfoReference = dataclasses.field()
+    signature_method: EaadharXamlSchemaKycResSignatureSignedInfoSignatureMethod = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResSignature:
-    key_info: EaadharXamlSchemaKycResSignatureKeyInfo = field()
-    signature_value: str = field()
-    signed_info: EaadharXamlSchemaKycResSignatureSignedInfo = field()
-    xmlns: str = field()
+    key_info: EaadharXamlSchemaKycResSignatureKeyInfo = dataclasses.field()
+    signature_value: str = dataclasses.field()
+    signed_info: EaadharXamlSchemaKycResSignatureSignedInfo = dataclasses.field()
+    xmlns: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResUIDDataLData:
-    co: str = field()
-    country: str = field()
-    dist: str = field()
-    lang: str = field()
-    lm: str = field()
-    loc: str = field()
-    name: str = field()
-    pc: str = field()
-    state: str = field()
-    vtc: str = field()
+    co: str = dataclasses.field()
+    country: str = dataclasses.field()
+    dist: str = dataclasses.field()
+    lang: str = dataclasses.field()
+    lm: str = dataclasses.field()
+    loc: str = dataclasses.field()
+    name: str = dataclasses.field()
+    pc: str = dataclasses.field()
+    state: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResUIDDataPoa:
-    co: str = field()
-    country: str = field()
-    dist: str = field()
-    lm: str = field()
-    loc: str = field()
-    pc: str = field()
-    state: str = field()
-    vtc: str = field()
+    co: str = dataclasses.field()
+    country: str = dataclasses.field()
+    dist: str = dataclasses.field()
+    lm: str = dataclasses.field()
+    loc: str = dataclasses.field()
+    pc: str = dataclasses.field()
+    state: str = dataclasses.field()
+    vtc: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResUIDDataPoi:
-    dob: str = field()
-    gender: str = field()
-    name: str = field()
+    dob: str = dataclasses.field()
+    gender: str = dataclasses.field()
+    name: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResUIDDataPrn:
-    text: str = field()
-    type: str = field()
+    text: str = dataclasses.field()
+    type: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycResUIDData:
-    l_data: EaadharXamlSchemaKycResUIDDataLData = field()
-    pht: str = field()
-    poa: EaadharXamlSchemaKycResUIDDataPoa = field()
-    poi: EaadharXamlSchemaKycResUIDDataPoi = field()
-    prn: EaadharXamlSchemaKycResUIDDataPrn = field()
-    tkn: str = field()
-    uid: str = field()
+    l_data: EaadharXamlSchemaKycResUIDDataLData = dataclasses.field()
+    pht: str = dataclasses.field()
+    poa: EaadharXamlSchemaKycResUIDDataPoa = dataclasses.field()
+    poi: EaadharXamlSchemaKycResUIDDataPoi = dataclasses.field()
+    prn: EaadharXamlSchemaKycResUIDDataPrn = dataclasses.field()
+    tkn: str = dataclasses.field()
+    uid: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchemaKycRes:
-    rar: str = field()
-    signature: EaadharXamlSchemaKycResSignature = field()
-    uid_data: EaadharXamlSchemaKycResUIDData = field()
-    code: str = field()
-    ret: str = field()
-    ts: str = field()
-    ttl: str = field()
-    txn: str = field()
+    rar: str = dataclasses.field()
+    signature: EaadharXamlSchemaKycResSignature = dataclasses.field()
+    uid_data: EaadharXamlSchemaKycResUIDData = dataclasses.field()
+    code: str = dataclasses.field()
+    ret: str = dataclasses.field()
+    ts: str = dataclasses.field()
+    ttl: str = dataclasses.field()
+    txn: str = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EaadharXamlSchema:
-    kyc_res: EaadharXamlSchemaKycRes = field()
+    kyc_res: EaadharXamlSchemaKycRes = dataclasses.field()
     

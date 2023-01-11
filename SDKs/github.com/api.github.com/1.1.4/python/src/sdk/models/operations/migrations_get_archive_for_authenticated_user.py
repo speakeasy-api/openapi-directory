@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
 
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetArchiveForAuthenticatedUserPathParams:
-    migration_id: int = field(metadata={'path_param': { 'field_name': 'migration_id', 'style': 'simple', 'explode': False }})
+    migration_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'migration_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetArchiveForAuthenticatedUserRequest:
-    path_params: MigrationsGetArchiveForAuthenticatedUserPathParams = field()
+    path_params: MigrationsGetArchiveForAuthenticatedUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetArchiveForAuthenticatedUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
     

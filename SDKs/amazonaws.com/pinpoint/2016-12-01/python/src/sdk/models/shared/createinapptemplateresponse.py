@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import templatecreatemessagebody as shared_templatecreatemessagebody
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateInAppTemplateResponse:
-    template_create_message_body: TemplateCreateMessageBody = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TemplateCreateMessageBody') }})
+    template_create_message_body: shared_templatecreatemessagebody.TemplateCreateMessageBody = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TemplateCreateMessageBody') }})
     

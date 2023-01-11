@@ -1,33 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import migration_id_enum as shared_migration_id_enum
+from ..shared import basic_error as shared_basic_error
+from ..shared import migration as shared_migration
 
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetStatusForOrgPathParams:
-    migration_id: int = field(metadata={'path_param': { 'field_name': 'migration_id', 'style': 'simple', 'explode': False }})
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    migration_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'migration_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
-class MigrationsGetStatusForOrgExcludeEnum(str, Enum):
-    REPOSITORIES = "repositories"
 
-
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetStatusForOrgQueryParams:
-    exclude: Optional[List[MigrationsGetStatusForOrgExcludeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': True }})
+    exclude: Optional[list[shared_migration_id_enum.MigrationIDEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetStatusForOrgRequest:
-    path_params: MigrationsGetStatusForOrgPathParams = field()
-    query_params: MigrationsGetStatusForOrgQueryParams = field()
+    path_params: MigrationsGetStatusForOrgPathParams = dataclasses.field()
+    query_params: MigrationsGetStatusForOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class MigrationsGetStatusForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    migration: Optional[shared.Migration] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    migration: Optional[shared_migration.Migration] = dataclasses.field(default=None)
     

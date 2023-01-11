@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.IlpmtRequest(
     security=operations.IlpmtSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.IlpmtRequestBody(
         certificate_parameters=operations.IlpmtRequestBodyCertificateParameters(
-            full_name="dicta",
-            uid="impedit",
-            e_ilp_app_id="illum",
-            e_ilp_contact_number="quibusdam",
+            full_name="saepe",
+            uid="eius",
+            e_ilp_app_id="delectus",
+            e_ilp_contact_number="sint",
         ),
-        consent_artifact="cum",
+        consent_artifact="dolor",
         format="pdf",
-        txn_id="repellendus",
+        txn_id="molestiae",
     ),
 )
     
-res = s.sdk.ilpmt(req)
+res = s.ap_is.ilpmt(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ilpmt` - Inner Line Permit
 

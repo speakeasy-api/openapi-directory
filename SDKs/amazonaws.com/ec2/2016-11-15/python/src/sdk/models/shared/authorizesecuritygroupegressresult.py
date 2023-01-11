@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AuthorizeSecurityGroupEgressResult:
-    return_: Optional[bool] = field(default=None)
-    security_group_rules: Optional[List[SecurityGroupRule]] = field(default=None)
+    return_: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    security_group_rules: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

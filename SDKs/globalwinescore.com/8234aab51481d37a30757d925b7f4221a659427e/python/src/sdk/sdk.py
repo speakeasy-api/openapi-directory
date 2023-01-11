@@ -1,10 +1,10 @@
 
 
 import requests
-from sdk.models import shared, operations
+from sdk.models import shared
 from . import utils
 
-
+from .globalwinescore import GlobalWineScore
 
 
 SERVERS = [
@@ -14,6 +14,7 @@ SERVERS = [
 
 class SDK:
     
+    global_wine_score: GlobalWineScore
 
     _client: requests.Session
     _security_client: requests.Session
@@ -26,7 +27,7 @@ class SDK:
     def __init__(self) -> None:
         self._client = requests.Session()
         self._security_client = requests.Session()
-        
+        self._init_sdks()
 
 
     def config_server_url(self, server_url: str, params: dict[str, str]):
@@ -35,7 +36,7 @@ class SDK:
         else:
             self._server_url = server_url
 
-        
+        self._init_sdks()
     
 
     def config_client(self, client: requests.Session):
@@ -43,63 +44,24 @@ class SDK:
         
         if self._security is not None:
             self._security_client = utils.configure_security_client(self._client, self._security)
-        
+        self._init_sdks()
     
 
     def config_security(self, security: shared.Security):
         self._security = security
         self._security_client = utils.configure_security_client(self._client, security)
-        
+        self._init_sdks()
     
     
+    def _init_sdks(self):
+        
+        self.global_wine_score = GlobalWineScore(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
     
-    def get_globalwinescores_latest_(self, request: operations.GetGlobalwinescoresLatestRequest) -> operations.GetGlobalwinescoresLatestResponse:
-        r"""List all latest GWS
-        Returns the latest GWS available per wine/vintage.
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/globalwinescores/latest/"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetGlobalwinescoresLatestResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
-    
-    def list_historical_gws(self, request: operations.ListHistoricalGwsRequest) -> operations.ListHistoricalGwsResponse:
-        r"""List all historical GWS
-        Returns all available GWS
-        """
-        
-        base_url = self._server_url
-        
-        url = base_url.removesuffix("/") + "/globalwinescores/"
-        
-        headers = utils.get_headers(request.headers)
-        query_params = utils.get_query_params(request.query_params)
-        
-        client = self._security_client
-        
-        r = client.request("GET", url, params=query_params, headers=headers)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.ListHistoricalGwsResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            pass
-
-        return res
-
     

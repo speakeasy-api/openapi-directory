@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -34,50 +33,51 @@ req = operations.ItemsAddRequest(
         raw=False,
     ),
     headers=operations.ItemsAddHeaders(
-        x_apideck_app_id="non",
-        x_apideck_consumer_id="doloribus",
-        x_apideck_service_id="illo",
+        x_apideck_app_id="voluptas",
+        x_apideck_consumer_id="dolorem",
+        x_apideck_service_id="placeat",
     ),
     request=shared.ItemInput(
-        abbreviation="molestias",
+        abbreviation="aut",
         absent_at_location_ids=[
-            "asperiores",
+            "saepe",
         ],
-        available=False,
+        available=True,
         available_for_pickup=True,
-        available_online=False,
+        available_online=True,
         categories=[
-            "odio",
+            "iusto",
         ],
-        code="qui",
-        cost=37.099998,
+        code="quo",
+        cost=96.199997,
         deleted=False,
-        description="dolore",
-        hidden=False,
-        id="explicabo",
-        idempotency_key="repudiandae",
+        description="enim",
+        hidden=True,
+        id="nam",
+        idempotency_key="placeat",
         modifier_groups=[
-            "nesciunt",
-            "ab",
-            "ab",
+            "eum",
+            "qui",
         ],
-        name="ullam",
+        name="et",
         options=[
-            "eos",
-            "et",
+            "ab",
+            "in",
         ],
-        present_at_all_locations=True,
-        price_amount=16.200001,
-        price_currency="MNT",
+        present_at_all_locations=False,
+        price_amount=70.099998,
+        price_currency="AZN",
         pricing_type="per_unit",
         product_type="other",
-        sku="in",
+        sku="aperiam",
         tax_ids=[
-            "nesciunt",
-            "hic",
+            "non",
+            "tenetur",
+            "quia",
         ],
         variations=[
-            "quod",
+            "iste",
+            "fuga",
         ],
     ),
 )

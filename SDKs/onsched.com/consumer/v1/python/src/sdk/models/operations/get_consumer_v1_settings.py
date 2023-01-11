@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import onlinesettingsviewmodel as shared_onlinesettingsviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1SettingsQueryParams:
-    location_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
+    location_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1SettingsRequest:
-    query_params: GetConsumerV1SettingsQueryParams = field()
+    query_params: GetConsumerV1SettingsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1SettingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    online_settings_view_model: Optional[shared.OnlineSettingsViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    online_settings_view_model: Optional[shared_onlinesettingsviewmodel.OnlineSettingsViewModel] = dataclasses.field(default=None)
     

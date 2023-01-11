@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import sshpublickeymetadata as shared_sshpublickeymetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSSHPublicKeysResponse:
     r"""ListSSHPublicKeysResponse
     Contains the response to a successful <a>ListSSHPublicKeys</a> request.
     """
     
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
-    ssh_public_keys: Optional[List[SSHPublicKeyMetadata]] = field(default=None)
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    ssh_public_keys: Optional[list[shared_sshpublickeymetadata.SSHPublicKeyMetadata]] = dataclasses.field(default=None)
     

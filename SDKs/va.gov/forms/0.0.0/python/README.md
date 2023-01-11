@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.FindFormByFormNameRequest(
         ),
     ),
     path_params=operations.FindFormByFormNamePathParams(
-        form_name="qui",
+        form_name="quis",
     ),
 )
     
-res = s.sdk.find_form_by_form_name(req)
+res = s.forms.find_form_by_form_name(req)
 
 if res.find_form_by_form_name_200_application_json_object is not None:
     # handle response
@@ -38,7 +37,7 @@ if res.find_form_by_form_name_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Forms
 
 * `find_form_by_form_name` - Find form by form name
 * `find_forms` - Returns all VA Forms and their last revision date

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,19 +7,19 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Execution:
     r"""Execution
     Execution
     """
     
-    dollar_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('$id') }})
-    date_created: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated') }})
-    exit_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('exitCode') }})
-    function_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionId') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    stderr: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stderr') }})
-    stdout: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stdout') }})
-    time: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time') }})
-    trigger: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trigger') }})
+    dollar_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('$id') }})
+    date_created: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated') }})
+    exit_code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('exitCode') }})
+    function_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('functionId') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    stderr: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stderr') }})
+    stdout: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stdout') }})
+    time: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time') }})
+    trigger: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('trigger') }})
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import itempublictokenexchangerequest as shared_itempublictokenexchangerequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ItemPublicTokenExchangeRequest:
-    request: shared.ItemPublicTokenExchangeRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_itempublictokenexchangerequest.ItemPublicTokenExchangeRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ItemPublicTokenExchangeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_public_token_exchange_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_public_token_exchange_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

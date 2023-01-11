@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import servicespecificcredentialmetadata as shared_servicespecificcredentialmetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class ListServiceSpecificCredentialsResponse:
-    service_specific_credentials: Optional[List[ServiceSpecificCredentialMetadata]] = field(default=None)
+    service_specific_credentials: Optional[list[shared_servicespecificcredentialmetadata.ServiceSpecificCredentialMetadata]] = dataclasses.field(default=None)
     

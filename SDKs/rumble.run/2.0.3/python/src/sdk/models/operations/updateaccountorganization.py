@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import orgoptions as shared_orgoptions
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountOrganizationPathParams:
-    org_id: str = field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
+    org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountOrganizationSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountOrganizationRequest:
-    path_params: UpdateAccountOrganizationPathParams = field()
-    request: shared.OrgOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateAccountOrganizationSecurity = field()
+    path_params: UpdateAccountOrganizationPathParams = dataclasses.field()
+    request: shared_orgoptions.OrgOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateAccountOrganizationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAccountOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organization: Optional[shared.Organization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization: Optional[shared_organization.Organization] = dataclasses.field(default=None)
     

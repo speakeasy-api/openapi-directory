@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import clustergroup as shared_clustergroup
+from ..shared import clustergroup as shared_clustergroup
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClusterGroupsPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClusterGroupsPartialUpdateRequest:
-    path_params: VirtualizationClusterGroupsPartialUpdatePathParams = field()
-    request: shared.ClusterGroupInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: VirtualizationClusterGroupsPartialUpdatePathParams = dataclasses.field()
+    request: shared_clustergroup.ClusterGroupInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClusterGroupsPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cluster_group: Optional[shared.ClusterGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cluster_group: Optional[shared_clustergroup.ClusterGroup] = dataclasses.field(default=None)
     

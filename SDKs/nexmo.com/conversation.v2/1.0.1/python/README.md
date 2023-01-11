@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetUsersRequest(
     query_params=operations.GetUsersQueryParams(
-        cursor="vero",
+        cursor="qui",
         order="asc",
-        page_size=8474321493487099614,
+        page_size=416485071681452520,
     ),
 )
     
-res = s.sdk.get_users(req)
+res = s.get_users(req)
 
 if res.get_users_200_application_json_any is not None:
     # handle response

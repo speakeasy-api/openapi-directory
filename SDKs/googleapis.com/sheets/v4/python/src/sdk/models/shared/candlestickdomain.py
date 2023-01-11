@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import chartdata as shared_chartdata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CandlestickDomain:
     r"""CandlestickDomain
     The domain of a CandlestickChart.
     """
     
-    data: Optional[ChartData] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    reversed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reversed') }})
+    data: Optional[shared_chartdata.ChartData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    reversed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reversed') }})
     

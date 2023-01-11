@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteFollowedTagPathParams:
-    tag_id: int = field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
+    tag_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'tagId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteFollowedTagRequest:
-    path_params: UserAPIDeleteFollowedTagPathParams = field()
+    path_params: UserAPIDeleteFollowedTagPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIDeleteFollowedTagResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

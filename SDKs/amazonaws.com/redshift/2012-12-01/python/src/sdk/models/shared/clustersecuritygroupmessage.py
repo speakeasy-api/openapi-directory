@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import clustersecuritygroups as shared_clustersecuritygroups
 
 
-@dataclass
+@dataclasses.dataclass
 class ClusterSecurityGroupMessage:
     r"""ClusterSecurityGroupMessage
     <p/>
     """
     
-    cluster_security_groups: Optional[List[ClusterSecurityGroup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    cluster_security_groups: Optional[list[shared_clustersecuritygroups.ClusterSecurityGroups]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

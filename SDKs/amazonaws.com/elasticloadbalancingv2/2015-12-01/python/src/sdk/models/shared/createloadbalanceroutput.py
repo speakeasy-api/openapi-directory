@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import loadbalancer as shared_loadbalancer
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateLoadBalancerOutput:
-    load_balancers: Optional[List[LoadBalancer]] = field(default=None)
+    load_balancers: Optional[list[shared_loadbalancer.LoadBalancer]] = dataclasses.field(default=None)
     

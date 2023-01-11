@@ -1,37 +1,36 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import package_type_enum as shared_package_type_enum
+from ..shared import per_page_enum as shared_per_page_enum
+from ..shared import basic_error as shared_basic_error
+from ..shared import package_version as shared_package_version
 
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    package_name: str = field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
-    package_type: shared.PackageTypeEnum = field(metadata={'path_param': { 'field_name': 'package_type', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    package_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'package_name', 'style': 'simple', 'explode': False }})
+    package_type: shared_package_type_enum.PackageTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'package_type', 'style': 'simple', 'explode': False }})
     
-class PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum(str, Enum):
-    ACTIVE = "active"
-    DELETED = "deleted"
 
-
-@dataclass
+@dataclasses.dataclass
 class PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    state: Optional[PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    state: Optional[shared_per_page_enum.PerPageEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest:
-    path_params: PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams = field()
-    query_params: PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams = field()
+    path_params: PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams = dataclasses.field()
+    query_params: PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PackagesGetAllPackageVersionsForPackageOwnedByOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    package_versions: Optional[List[shared.PackageVersion]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    package_versions: Optional[list[shared_package_version.PackageVersion]] = dataclasses.field(default=None)
     

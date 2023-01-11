@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import listener as shared_listener
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateListenerOutput:
-    listeners: Optional[List[Listener]] = field(default=None)
+    listeners: Optional[list[shared_listener.Listener]] = dataclasses.field(default=None)
     

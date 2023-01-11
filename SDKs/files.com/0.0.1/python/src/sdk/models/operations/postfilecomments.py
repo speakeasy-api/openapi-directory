@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import filecommententity as shared_filecommententity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostFileCommentsRequestBody:
-    body: str = field(metadata={'multipart_form': { 'field_name': 'body' }})
-    path: str = field(metadata={'multipart_form': { 'field_name': 'path' }})
+    body: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'body' }})
+    path: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'path' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFileCommentsRequest:
-    request: PostFileCommentsRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostFileCommentsRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostFileCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_comment_entity: Optional[shared.FileCommentEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_comment_entity: Optional[shared_filecommententity.FileCommentEntity] = dataclasses.field(default=None)
     

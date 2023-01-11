@@ -1,23 +1,27 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keyid as shared_keyid
+from ..shared import certificatefingerprint as shared_certificatefingerprint
+from ..shared import publickey as shared_publickey
+from ..shared import subjectdescription as shared_subjectdescription
+from ..shared import x509parameters as shared_x509parameters
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CertificateDescription:
     r"""CertificateDescription
     A CertificateDescription describes an X.509 certificate or CSR that has been issued, as an alternative to using ASN.1 / X.509.
     """
     
-    aia_issuing_certificate_urls: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aiaIssuingCertificateUrls') }})
-    authority_key_id: Optional[KeyID] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorityKeyId') }})
-    cert_fingerprint: Optional[CertificateFingerprint] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certFingerprint') }})
-    crl_distribution_points: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crlDistributionPoints') }})
-    public_key: Optional[PublicKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKey') }})
-    subject_description: Optional[SubjectDescription] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectDescription') }})
-    subject_key_id: Optional[KeyID] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectKeyId') }})
-    x509_description: Optional[X509Parameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('x509Description') }})
+    aia_issuing_certificate_urls: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aiaIssuingCertificateUrls') }})
+    authority_key_id: Optional[shared_keyid.KeyID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorityKeyId') }})
+    cert_fingerprint: Optional[shared_certificatefingerprint.CertificateFingerprint] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certFingerprint') }})
+    crl_distribution_points: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('crlDistributionPoints') }})
+    public_key: Optional[shared_publickey.PublicKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publicKey') }})
+    subject_description: Optional[shared_subjectdescription.SubjectDescription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectDescription') }})
+    subject_key_id: Optional[shared_keyid.KeyID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subjectKeyId') }})
+    x509_description: Optional[shared_x509parameters.X509Parameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('x509Description') }})
     

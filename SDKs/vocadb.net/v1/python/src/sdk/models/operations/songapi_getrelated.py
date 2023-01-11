@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import relatedsongscontract as shared_relatedsongscontract
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRelatedPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class SongAPIGetRelatedFieldsEnum(str, Enum):
     NONE = "None"
@@ -29,22 +29,22 @@ class SongAPIGetRelatedLangEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRelatedQueryParams:
-    fields: Optional[SongAPIGetRelatedFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    lang: Optional[SongAPIGetRelatedLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    fields: Optional[SongAPIGetRelatedFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    lang: Optional[SongAPIGetRelatedLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRelatedRequest:
-    path_params: SongAPIGetRelatedPathParams = field()
-    query_params: SongAPIGetRelatedQueryParams = field()
+    path_params: SongAPIGetRelatedPathParams = dataclasses.field()
+    query_params: SongAPIGetRelatedQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetRelatedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    related_songs_contract: Optional[shared.RelatedSongsContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    related_songs_contract: Optional[shared_relatedsongscontract.RelatedSongsContract] = dataclasses.field(default=None)
     

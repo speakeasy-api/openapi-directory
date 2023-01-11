@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class FieldLevelEncryptionProfileSizeExceeded:
     r"""FieldLevelEncryptionProfileSizeExceeded
     The maximum size of a profile for field-level encryption was exceeded.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

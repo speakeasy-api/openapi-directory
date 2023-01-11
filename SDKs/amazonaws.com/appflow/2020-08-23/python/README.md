@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,214 +25,216 @@ s.config_security(
     
 req = operations.CreateConnectorProfileRequest(
     headers=operations.CreateConnectorProfileHeaders(
-        x_amz_algorithm="laboriosam",
-        x_amz_content_sha256="velit",
-        x_amz_credential="ea",
-        x_amz_date="tempore",
-        x_amz_security_token="fugit",
-        x_amz_signature="aut",
-        x_amz_signed_headers="tempora",
+        x_amz_algorithm="fuga",
+        x_amz_content_sha256="aliquid",
+        x_amz_credential="vero",
+        x_amz_date="aut",
+        x_amz_security_token="et",
+        x_amz_signature="voluptatem",
+        x_amz_signed_headers="sunt",
     ),
     request=operations.CreateConnectorProfileRequestBody(
-        connection_mode="Public",
+        connection_mode="Private",
         connector_profile_config=operations.CreateConnectorProfileRequestBodyConnectorProfileConfig(
             connector_profile_credentials=shared.ConnectorProfileCredentials(
                 amplitude=shared.AmplitudeConnectorProfileCredentials(
-                    api_key="mollitia",
-                    secret_key="non",
+                    api_key="placeat",
+                    secret_key="vitae",
                 ),
                 datadog=shared.DatadogConnectorProfileCredentials(
-                    api_key="magni",
-                    application_key="recusandae",
+                    api_key="rerum",
+                    application_key="officiis",
                 ),
                 dynatrace=shared.DynatraceConnectorProfileCredentials(
-                    api_token="illum",
+                    api_token="commodi",
                 ),
                 google_analytics=shared.GoogleAnalyticsConnectorProfileCredentials(
-                    access_token="consequatur",
-                    client_id="dolores",
-                    client_secret="hic",
+                    access_token="sed",
+                    client_id="voluptates",
+                    client_secret="enim",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="nihil",
-                        redirect_uri="explicabo",
+                        auth_code="eos",
+                        redirect_uri="ipsa",
                     ),
-                    refresh_token="ex",
+                    refresh_token="cum",
                 ),
                 honeycode=shared.HoneycodeConnectorProfileCredentials(
-                    access_token="iure",
+                    access_token="sint",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="et",
-                        redirect_uri="quos",
+                        auth_code="aut",
+                        redirect_uri="eaque",
                     ),
-                    refresh_token="et",
+                    refresh_token="facilis",
                 ),
                 infor_nexus=shared.InforNexusConnectorProfileCredentials(
-                    access_key_id="explicabo",
-                    datakey="necessitatibus",
-                    secret_access_key="veniam",
-                    user_id="qui",
+                    access_key_id="et",
+                    datakey="ut",
+                    secret_access_key="et",
+                    user_id="quam",
                 ),
                 marketo=shared.MarketoConnectorProfileCredentials(
-                    access_token="in",
-                    client_id="odit",
-                    client_secret="molestias",
+                    access_token="sit",
+                    client_id="voluptate",
+                    client_secret="eaque",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="corporis",
-                        redirect_uri="tenetur",
+                        auth_code="consequuntur",
+                        redirect_uri="et",
                     ),
                 ),
                 redshift=shared.RedshiftConnectorProfileCredentials(
-                    password="esse",
-                    username="similique",
+                    password="amet",
+                    username="distinctio",
                 ),
                 sapo_data=shared.SapoDataConnectorProfileCredentials(
                     basic_auth_credentials=shared.BasicAuthCredentials(
-                        password="mollitia",
-                        username="id",
+                        password="in",
+                        username="consectetur",
                     ),
                     o_auth_credentials=shared.OAuthCredentials(
-                        access_token="laboriosam",
-                        client_id="quam",
-                        client_secret="maiores",
+                        access_token="minima",
+                        client_id="sequi",
+                        client_secret="et",
                         o_auth_request=shared.ConnectorOAuthRequest(
-                            auth_code="totam",
-                            redirect_uri="iusto",
+                            auth_code="consequatur",
+                            redirect_uri="eum",
                         ),
-                        refresh_token="aperiam",
+                        refresh_token="sunt",
                     ),
                 ),
                 salesforce=shared.SalesforceConnectorProfileCredentials(
-                    access_token="repellendus",
-                    client_credentials_arn="sunt",
+                    access_token="cupiditate",
+                    client_credentials_arn="quam",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="eum",
-                        redirect_uri="earum",
+                        auth_code="repellendus",
+                        redirect_uri="dolores",
                     ),
-                    refresh_token="et",
+                    refresh_token="nihil",
                 ),
                 service_now=shared.ServiceNowConnectorProfileCredentials(
-                    password="officia",
-                    username="aut",
+                    password="ullam",
+                    username="architecto",
                 ),
                 singular=shared.SingularConnectorProfileCredentials(
-                    api_key="dolor",
+                    api_key="architecto",
                 ),
                 slack=shared.SlackConnectorProfileCredentials(
-                    access_token="quia",
-                    client_id="quaerat",
-                    client_secret="ea",
+                    access_token="beatae",
+                    client_id="consequatur",
+                    client_secret="veniam",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="et",
-                        redirect_uri="expedita",
+                        auth_code="hic",
+                        redirect_uri="beatae",
                     ),
                 ),
                 snowflake=shared.SnowflakeConnectorProfileCredentials(
-                    password="recusandae",
-                    username="qui",
+                    password="veritatis",
+                    username="architecto",
                 ),
                 trendmicro=shared.TrendmicroConnectorProfileCredentials(
-                    api_secret_key="qui",
+                    api_secret_key="voluptas",
                 ),
                 veeva=shared.VeevaConnectorProfileCredentials(
-                    password="aut",
-                    username="explicabo",
+                    password="voluptatibus",
+                    username="maiores",
                 ),
                 zendesk=shared.ZendeskConnectorProfileCredentials(
-                    access_token="cupiditate",
-                    client_id="temporibus",
-                    client_secret="saepe",
+                    access_token="consectetur",
+                    client_id="modi",
+                    client_secret="eos",
                     o_auth_request=shared.ConnectorOAuthRequest(
-                        auth_code="sed",
-                        redirect_uri="voluptatem",
+                        auth_code="praesentium",
+                        redirect_uri="itaque",
                     ),
                 ),
             ),
             connector_profile_properties=shared.ConnectorProfileProperties(
                 amplitude={
-                    "fugiat": "nesciunt",
-                    "et": "qui",
+                    "natus": "quas",
                 },
                 datadog=shared.DatadogConnectorProfileProperties(
-                    instance_url="quis",
+                    instance_url="nesciunt",
                 ),
                 dynatrace=shared.DynatraceConnectorProfileProperties(
-                    instance_url="eligendi",
+                    instance_url="nostrum",
                 ),
                 google_analytics={
-                    "fuga": "aliquid",
+                    "repudiandae": "eius",
+                    "totam": "amet",
                 },
                 honeycode={
-                    "aut": "et",
-                    "voluptatem": "sunt",
+                    "unde": "nihil",
+                    "asperiores": "quaerat",
                 },
                 infor_nexus=shared.InforNexusConnectorProfileProperties(
-                    instance_url="quae",
+                    instance_url="hic",
                 ),
                 marketo=shared.MarketoConnectorProfileProperties(
-                    instance_url="placeat",
+                    instance_url="quo",
                 ),
                 redshift=shared.RedshiftConnectorProfileProperties(
-                    bucket_name="vitae",
-                    bucket_prefix="rerum",
-                    database_url="officiis",
-                    role_arn="commodi",
+                    bucket_name="est",
+                    bucket_prefix="nostrum",
+                    database_url="pariatur",
+                    role_arn="enim",
                 ),
                 sapo_data=shared.SapoDataConnectorProfileProperties(
-                    application_host_url="sed",
-                    application_service_path="voluptates",
-                    client_number="enim",
-                    logon_language="eos",
+                    application_host_url="occaecati",
+                    application_service_path="possimus",
+                    client_number="temporibus",
+                    logon_language="laborum",
                     o_auth_properties=shared.OAuthProperties(
-                        auth_code_url="ipsa",
+                        auth_code_url="voluptas",
                         o_auth_scopes=[
-                            "sint",
+                            "atque",
+                            "soluta",
                         ],
-                        token_url="aut",
+                        token_url="tempora",
                     ),
-                    port_number=8912790974007895797,
-                    private_link_service_name="facilis",
+                    port_number=4542131346235756591,
+                    private_link_service_name="nihil",
                 ),
                 salesforce=shared.SalesforceConnectorProfileProperties(
-                    instance_url="et",
-                    is_sandbox_environment=False,
+                    instance_url="quas",
+                    is_sandbox_environment=True,
                 ),
                 service_now=shared.ServiceNowConnectorProfileProperties(
-                    instance_url="et",
+                    instance_url="eveniet",
                 ),
                 singular={
-                    "sit": "voluptate",
+                    "fuga": "error",
+                    "autem": "eaque",
+                    "omnis": "esse",
                 },
                 slack=shared.SlackConnectorProfileProperties(
-                    instance_url="eaque",
+                    instance_url="veritatis",
                 ),
                 snowflake=shared.SnowflakeConnectorProfileProperties(
-                    account_name="consequuntur",
-                    bucket_name="et",
-                    bucket_prefix="amet",
-                    private_link_service_name="distinctio",
-                    region="in",
-                    stage="consectetur",
-                    warehouse="minima",
+                    account_name="voluptas",
+                    bucket_name="incidunt",
+                    bucket_prefix="sit",
+                    private_link_service_name="saepe",
+                    region="est",
+                    stage="odio",
+                    warehouse="delectus",
                 ),
                 trendmicro={
-                    "et": "consequatur",
-                    "eum": "sunt",
+                    "voluptatem": "et",
                 },
                 veeva=shared.VeevaConnectorProfileProperties(
-                    instance_url="cupiditate",
+                    instance_url="et",
                 ),
                 zendesk=shared.ZendeskConnectorProfileProperties(
-                    instance_url="quam",
+                    instance_url="in",
                 ),
             ),
         ),
-        connector_profile_name="repellendus",
-        connector_type="Trendmicro",
-        kms_arn="nihil",
+        connector_profile_name="ipsa",
+        connector_type="Salesforce",
+        kms_arn="deleniti",
     ),
 )
     
-res = s.sdk.create_connector_profile(req)
+res = s.create_connector_profile(req)
 
 if res.create_connector_profile_response is not None:
     # handle response

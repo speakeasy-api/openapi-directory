@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,108 +21,112 @@ req = operations.VisionFilesAnnotateRequest(
         option1=operations.VisionFilesAnnotateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.VisionFilesAnnotateQueryParams(
-        dollar_xgafv="1",
-        access_token="necessitatibus",
-        alt="proto",
-        callback="inventore",
-        fields="sapiente",
-        key="reprehenderit",
-        oauth_token="et",
+        dollar_xgafv="2",
+        access_token="perspiciatis",
+        alt="json",
+        callback="quae",
+        fields="quo",
+        key="nobis",
+        oauth_token="vitae",
         pretty_print=True,
-        quota_user="expedita",
-        upload_type="et",
-        upload_protocol="omnis",
+        quota_user="est",
+        upload_type="explicabo",
+        upload_protocol="in",
     ),
     request=shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest(
-        parent="maxime",
+        parent="dicta",
         requests=[
             shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest(
                 features=[
                     shared.GoogleCloudVisionV1p2beta1Feature(
-                        max_results=1213201996933488666,
-                        model="voluptatibus",
-                        type="PRODUCT_SEARCH",
-                    ),
-                    shared.GoogleCloudVisionV1p2beta1Feature(
-                        max_results=3456238072829815161,
-                        model="sed",
+                        max_results=5028166937415380028,
+                        model="voluptate",
                         type="OBJECT_LOCALIZATION",
-                    ),
-                    shared.GoogleCloudVisionV1p2beta1Feature(
-                        max_results=6642228921464980690,
-                        model="sit",
-                        type="DOCUMENT_TEXT_DETECTION",
                     ),
                 ],
                 image_context=shared.GoogleCloudVisionV1p2beta1ImageContext(
                     crop_hints_params=shared.GoogleCloudVisionV1p2beta1CropHintsParams(
                         aspect_ratios=[
-                            90.199997,
+                            95.099998,
+                            47.200001,
                         ],
                     ),
                     language_hints=[
-                        "fugit",
-                        "aperiam",
-                        "repudiandae",
+                        "ut",
+                        "molestiae",
                     ],
                     lat_long_rect=shared.GoogleCloudVisionV1p2beta1LatLongRect(
                         max_lat_lng=shared.LatLng(
-                            latitude=28.100000,
-                            longitude=9.200000,
+                            latitude=56.200001,
+                            longitude=5.100000,
                         ),
                         min_lat_lng=shared.LatLng(
-                            latitude=21.100000,
-                            longitude=23.200001,
+                            latitude=64.099998,
+                            longitude=34.099998,
                         ),
                     ),
                     product_search_params=shared.GoogleCloudVisionV1p2beta1ProductSearchParams(
                         bounding_poly=shared.GoogleCloudVisionV1p2beta1BoundingPoly(
                             normalized_vertices=[
                                 shared.GoogleCloudVisionV1p2beta1NormalizedVertex(
-                                    x=12.100000,
-                                    y=36.200001,
+                                    x=69.099998,
+                                    y=13.100000,
+                                ),
+                                shared.GoogleCloudVisionV1p2beta1NormalizedVertex(
+                                    x=67.099998,
+                                    y=29.200001,
+                                ),
+                                shared.GoogleCloudVisionV1p2beta1NormalizedVertex(
+                                    x=41.099998,
+                                    y=82.199997,
                                 ),
                             ],
                             vertices=[
                                 shared.GoogleCloudVisionV1p2beta1Vertex(
-                                    x=3381637034097052270,
-                                    y=7257984784277687128,
+                                    x=3181428753883207237,
+                                    y=3059598609751937721,
+                                ),
+                                shared.GoogleCloudVisionV1p2beta1Vertex(
+                                    x=6736358041285325865,
+                                    y=3681302652654899017,
                                 ),
                             ],
                         ),
-                        filter="voluptate",
+                        filter="sed",
                         product_categories=[
-                            "inventore",
+                            "illo",
+                            "aliquam",
                         ],
-                        product_set="ab",
+                        product_set="culpa",
                     ),
                     text_detection_params=shared.GoogleCloudVisionV1p2beta1TextDetectionParams(
                         advanced_ocr_options=[
-                            "provident",
-                            "doloremque",
+                            "fuga",
+                            "suscipit",
+                            "nulla",
                         ],
                         enable_text_detection_confidence_score=True,
                     ),
                     web_detection_params=shared.GoogleCloudVisionV1p2beta1WebDetectionParams(
-                        include_geo_results=False,
+                        include_geo_results=True,
                     ),
                 ),
                 input_config=shared.GoogleCloudVisionV1p2beta1InputConfig(
-                    content="voluptas",
+                    content="cumque",
                     gcs_source=shared.GoogleCloudVisionV1p2beta1GcsSource(
-                        uri="optio",
+                        uri="incidunt",
                     ),
-                    mime_type="veritatis",
+                    mime_type="nostrum",
                 ),
                 pages=[
-                    8333952790492756531,
+                    4139992464823148597,
                 ],
             ),
         ],

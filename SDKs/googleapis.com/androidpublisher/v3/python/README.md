@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest(
     security=operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams(
-        package_name="quo",
+        package_name="quasi",
     ),
     query_params=operations.AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams(
         dollar_xgafv="2",
-        access_token="eos",
-        allow_unknown_devices=False,
-        alt="proto",
-        callback="consequatur",
-        fields="aspernatur",
-        key="dolores",
-        oauth_token="voluptatibus",
+        access_token="molestiae",
+        allow_unknown_devices=True,
+        alt="media",
+        callback="laborum",
+        fields="modi",
+        key="molestiae",
+        oauth_token="dolorem",
         pretty_print=True,
-        quota_user="omnis",
-        upload_type="et",
-        upload_protocol="est",
+        quota_user="ut",
+        upload_type="distinctio",
+        upload_protocol="reprehenderit",
     ),
     request=shared.DeviceTierConfigInput(
         device_groups=[
@@ -49,93 +48,234 @@ req = operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest(
                 device_selectors=[
                     shared.DeviceSelector(
                         device_ram=shared.DeviceRAM(
-                            max_bytes="repudiandae",
-                            min_bytes="delectus",
+                            max_bytes="culpa",
+                            min_bytes="facilis",
                         ),
                         excluded_device_ids=[
                             shared.DeviceID(
-                                build_brand="et",
-                                build_device="tenetur",
+                                build_brand="est",
+                                build_device="praesentium",
                             ),
                             shared.DeviceID(
-                                build_brand="labore",
-                                build_device="est",
-                            ),
-                            shared.DeviceID(
-                                build_brand="voluptatem",
-                                build_device="provident",
+                                build_brand="molestias",
+                                build_device="et",
                             ),
                         ],
                         forbidden_system_features=[
                             shared.SystemFeature(
-                                name="mollitia",
+                                name="repudiandae",
                             ),
                             shared.SystemFeature(
-                                name="vitae",
+                                name="eius",
+                            ),
+                            shared.SystemFeature(
+                                name="aut",
                             ),
                         ],
                         included_device_ids=[
                             shared.DeviceID(
-                                build_brand="magni",
-                                build_device="iusto",
-                            ),
-                            shared.DeviceID(
-                                build_brand="autem",
-                                build_device="et",
-                            ),
-                            shared.DeviceID(
-                                build_brand="aut",
-                                build_device="explicabo",
+                                build_brand="perferendis",
+                                build_device="amet",
                             ),
                         ],
                         required_system_features=[
                             shared.SystemFeature(
-                                name="quia",
+                                name="sit",
+                            ),
+                            shared.SystemFeature(
+                                name="nostrum",
+                            ),
+                            shared.SystemFeature(
+                                name="sit",
                             ),
                         ],
                     ),
                 ],
-                name="veniam",
+                name="quae",
             ),
             shared.DeviceGroup(
                 device_selectors=[
                     shared.DeviceSelector(
                         device_ram=shared.DeviceRAM(
-                            max_bytes="ducimus",
-                            min_bytes="soluta",
+                            max_bytes="nostrum",
+                            min_bytes="aut",
                         ),
                         excluded_device_ids=[
                             shared.DeviceID(
-                                build_brand="cumque",
-                                build_device="aut",
-                            ),
-                            shared.DeviceID(
-                                build_brand="explicabo",
-                                build_device="maxime",
+                                build_brand="aut",
+                                build_device="rerum",
                             ),
                         ],
                         forbidden_system_features=[
                             shared.SystemFeature(
-                                name="ut",
+                                name="aliquam",
+                            ),
+                            shared.SystemFeature(
+                                name="soluta",
+                            ),
+                            shared.SystemFeature(
+                                name="accusantium",
                             ),
                         ],
                         included_device_ids=[
                             shared.DeviceID(
-                                build_brand="placeat",
-                                build_device="modi",
+                                build_brand="est",
+                                build_device="explicabo",
                             ),
                             shared.DeviceID(
-                                build_brand="et",
-                                build_device="qui",
+                                build_brand="non",
+                                build_device="molestias",
                             ),
                             shared.DeviceID(
-                                build_brand="quo",
-                                build_device="rerum",
+                                build_brand="mollitia",
+                                build_device="saepe",
                             ),
                         ],
                         required_system_features=[
                             shared.SystemFeature(
+                                name="et",
+                            ),
+                        ],
+                    ),
+                    shared.DeviceSelector(
+                        device_ram=shared.DeviceRAM(
+                            max_bytes="omnis",
+                            min_bytes="minus",
+                        ),
+                        excluded_device_ids=[
+                            shared.DeviceID(
+                                build_brand="distinctio",
+                                build_device="laboriosam",
+                            ),
+                            shared.DeviceID(
+                                build_brand="provident",
+                                build_device="cumque",
+                            ),
+                            shared.DeviceID(
+                                build_brand="quibusdam",
+                                build_device="distinctio",
+                            ),
+                        ],
+                        forbidden_system_features=[
+                            shared.SystemFeature(
+                                name="qui",
+                            ),
+                            shared.SystemFeature(
+                                name="dicta",
+                            ),
+                            shared.SystemFeature(
+                                name="id",
+                            ),
+                        ],
+                        included_device_ids=[
+                            shared.DeviceID(
+                                build_brand="quos",
+                                build_device="iste",
+                            ),
+                        ],
+                        required_system_features=[
+                            shared.SystemFeature(
+                                name="vel",
+                            ),
+                            shared.SystemFeature(
+                                name="tempora",
+                            ),
+                        ],
+                    ),
+                    shared.DeviceSelector(
+                        device_ram=shared.DeviceRAM(
+                            max_bytes="iusto",
+                            min_bytes="exercitationem",
+                        ),
+                        excluded_device_ids=[
+                            shared.DeviceID(
+                                build_brand="quia",
+                                build_device="iste",
+                            ),
+                            shared.DeviceID(
+                                build_brand="repellat",
+                                build_device="accusantium",
+                            ),
+                        ],
+                        forbidden_system_features=[
+                            shared.SystemFeature(
+                                name="et",
+                            ),
+                            shared.SystemFeature(
+                                name="enim",
+                            ),
+                            shared.SystemFeature(
+                                name="quia",
+                            ),
+                        ],
+                        included_device_ids=[
+                            shared.DeviceID(
+                                build_brand="enim",
+                                build_device="possimus",
+                            ),
+                            shared.DeviceID(
+                                build_brand="consectetur",
+                                build_device="quidem",
+                            ),
+                            shared.DeviceID(
+                                build_brand="in",
+                                build_device="fugiat",
+                            ),
+                        ],
+                        required_system_features=[
+                            shared.SystemFeature(
+                                name="dolores",
+                            ),
+                        ],
+                    ),
+                ],
+                name="asperiores",
+            ),
+            shared.DeviceGroup(
+                device_selectors=[
+                    shared.DeviceSelector(
+                        device_ram=shared.DeviceRAM(
+                            max_bytes="commodi",
+                            min_bytes="facilis",
+                        ),
+                        excluded_device_ids=[
+                            shared.DeviceID(
+                                build_brand="fugiat",
+                                build_device="est",
+                            ),
+                            shared.DeviceID(
+                                build_brand="culpa",
+                                build_device="modi",
+                            ),
+                            shared.DeviceID(
+                                build_brand="sit",
+                                build_device="laudantium",
+                            ),
+                        ],
+                        forbidden_system_features=[
+                            shared.SystemFeature(
+                                name="porro",
+                            ),
+                            shared.SystemFeature(
                                 name="dolor",
+                            ),
+                        ],
+                        included_device_ids=[
+                            shared.DeviceID(
+                                build_brand="dicta",
+                                build_device="laudantium",
+                            ),
+                            shared.DeviceID(
+                                build_brand="aliquam",
+                                build_device="fugit",
+                            ),
+                        ],
+                        required_system_features=[
+                            shared.SystemFeature(
+                                name="esse",
+                            ),
+                            shared.SystemFeature(
+                                name="quisquam",
                             ),
                             shared.SystemFeature(
                                 name="exercitationem",
@@ -143,16 +283,24 @@ req = operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest(
                         ],
                     ),
                 ],
-                name="inventore",
+                name="labore",
             ),
         ],
         device_tier_set=shared.DeviceTierSet(
             device_tiers=[
                 shared.DeviceTier(
                     device_group_names=[
-                        "sunt",
+                        "tenetur",
+                        "rem",
+                        "ipsum",
                     ],
-                    level=8374802233122473252,
+                    level=2235017238539277004,
+                ),
+                shared.DeviceTier(
+                    device_group_names=[
+                        "porro",
+                    ],
+                    level=2478786586424327152,
                 ),
             ],
         ),

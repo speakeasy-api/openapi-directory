@@ -1,61 +1,61 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreatedCommentOwnerBadgeCounts:
-    bronze: Optional[int] = field(default=None)
-    gold: Optional[int] = field(default=None)
-    silver: Optional[int] = field(default=None)
+    bronze: Optional[int] = dataclasses.field(default=None)
+    gold: Optional[int] = dataclasses.field(default=None)
+    silver: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatedCommentOwner:
-    accept_rate: Optional[int] = field(default=None)
-    badge_counts: Optional[CreatedCommentOwnerBadgeCounts] = field(default=None)
-    display_name: Optional[str] = field(default=None)
-    link: Optional[str] = field(default=None)
-    profile_image: Optional[str] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    user_id: Optional[int] = field(default=None)
-    user_type: Optional[str] = field(default=None)
+    accept_rate: Optional[int] = dataclasses.field(default=None)
+    badge_counts: Optional[CreatedCommentOwnerBadgeCounts] = dataclasses.field(default=None)
+    display_name: Optional[str] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    profile_image: Optional[str] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
+    user_type: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatedCommentReplyToUserBadgeCounts:
-    bronze: Optional[int] = field(default=None)
-    gold: Optional[int] = field(default=None)
-    silver: Optional[int] = field(default=None)
+    bronze: Optional[int] = dataclasses.field(default=None)
+    gold: Optional[int] = dataclasses.field(default=None)
+    silver: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatedCommentReplyToUser:
-    accept_rate: Optional[int] = field(default=None)
-    badge_counts: Optional[CreatedCommentReplyToUserBadgeCounts] = field(default=None)
-    display_name: Optional[str] = field(default=None)
-    link: Optional[str] = field(default=None)
-    profile_image: Optional[str] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    user_id: Optional[int] = field(default=None)
-    user_type: Optional[str] = field(default=None)
+    accept_rate: Optional[int] = dataclasses.field(default=None)
+    badge_counts: Optional[CreatedCommentReplyToUserBadgeCounts] = dataclasses.field(default=None)
+    display_name: Optional[str] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    profile_image: Optional[str] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
+    user_type: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class CreatedComment:
-    body: Optional[str] = field(default=None)
-    body_markdown: Optional[str] = field(default=None)
-    can_flag: Optional[bool] = field(default=None)
-    comment_id: Optional[int] = field(default=None)
-    creation_date: Optional[int] = field(default=None)
-    edited: Optional[bool] = field(default=None)
-    link: Optional[str] = field(default=None)
-    owner: Optional[CreatedCommentOwner] = field(default=None)
-    post_id: Optional[int] = field(default=None)
-    post_type: Optional[str] = field(default=None)
-    reply_to_user: Optional[CreatedCommentReplyToUser] = field(default=None)
-    score: Optional[int] = field(default=None)
-    upvoted: Optional[bool] = field(default=None)
+    body: Optional[str] = dataclasses.field(default=None)
+    body_markdown: Optional[str] = dataclasses.field(default=None)
+    can_flag: Optional[bool] = dataclasses.field(default=None)
+    comment_id: Optional[int] = dataclasses.field(default=None)
+    creation_date: Optional[int] = dataclasses.field(default=None)
+    edited: Optional[bool] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    owner: Optional[CreatedCommentOwner] = dataclasses.field(default=None)
+    post_id: Optional[int] = dataclasses.field(default=None)
+    post_type: Optional[str] = dataclasses.field(default=None)
+    reply_to_user: Optional[CreatedCommentReplyToUser] = dataclasses.field(default=None)
+    score: Optional[int] = dataclasses.field(default=None)
+    upvoted: Optional[bool] = dataclasses.field(default=None)
     

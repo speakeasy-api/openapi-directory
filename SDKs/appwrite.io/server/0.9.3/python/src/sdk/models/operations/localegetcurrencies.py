@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import currencylist as shared_currencylist
 
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCurrenciesSecurity:
-    jwt: shared.SchemeJwt = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    key: shared.SchemeKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    project: shared.SchemeProject = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    jwt: shared_security.SchemeJwt = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    key: shared_security.SchemeKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    project: shared_security.SchemeProject = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCurrenciesRequest:
-    security: LocaleGetCurrenciesSecurity = field()
+    security: LocaleGetCurrenciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LocaleGetCurrenciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    currency_list: Optional[shared.CurrencyList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    currency_list: Optional[shared_currencylist.CurrencyList] = dataclasses.field(default=None)
     

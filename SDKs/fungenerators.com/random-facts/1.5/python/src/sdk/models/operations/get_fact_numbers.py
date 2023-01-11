@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFactNumbersQueryParams:
-    number: int = field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
+    number: int = dataclasses.field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactNumbersSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactNumbersRequest:
-    query_params: GetFactNumbersQueryParams = field()
-    security: GetFactNumbersSecurity = field()
+    query_params: GetFactNumbersQueryParams = dataclasses.field()
+    security: GetFactNumbersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFactNumbersResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

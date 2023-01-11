@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import leg as shared_leg
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Bet:
-    legs: List[Leg] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('legs') }})
-    number: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
-    stake: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stake') }})
-    type_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeCode') }})
-    delayed_bet_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delayedBetId') }})
-    free_bet_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBetId') }})
+    legs: list[shared_leg.Leg] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('legs') }})
+    number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    stake: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stake') }})
+    type_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('typeCode') }})
+    delayed_bet_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delayedBetId') }})
+    free_bet_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeBetId') }})
     

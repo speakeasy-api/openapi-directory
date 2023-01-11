@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import cluster as shared_cluster
 
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersReadRequest:
-    path_params: VirtualizationClustersReadPathParams = field()
+    path_params: VirtualizationClustersReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VirtualizationClustersReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    cluster: Optional[shared.Cluster] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    cluster: Optional[shared_cluster.Cluster] = dataclasses.field(default=None)
     

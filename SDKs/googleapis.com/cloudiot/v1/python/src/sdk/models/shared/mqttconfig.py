@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,11 +11,11 @@ class MqttConfigMqttEnabledStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MqttConfig:
     r"""MqttConfig
     The configuration of MQTT for a device registry.
     """
     
-    mqtt_enabled_state: Optional[MqttConfigMqttEnabledStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mqttEnabledState') }})
+    mqtt_enabled_state: Optional[MqttConfigMqttEnabledStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mqttEnabledState') }})
     

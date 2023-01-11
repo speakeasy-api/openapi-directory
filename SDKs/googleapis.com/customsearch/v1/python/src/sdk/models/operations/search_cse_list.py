@@ -1,10 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import _xgafv_enum as shared__xgafv_enum
+from ..shared import alt_enum as shared_alt_enum
+from ..shared import search as shared_search
 
 class SearchCseListImgColorTypeEnum(str, Enum):
     IMG_COLOR_TYPE_UNDEFINED = "imgColorTypeUndefined"
@@ -64,60 +66,60 @@ class SearchCseListSiteSearchFilterEnum(str, Enum):
     I = "i"
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchCseListQueryParams:
-    dollar_xgafv: Optional[shared.XgafvEnum] = field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
-    access_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
-    alt: Optional[shared.AltEnum] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    c2coff: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'c2coff', 'style': 'form', 'explode': True }})
-    callback: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
-    cr: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cr', 'style': 'form', 'explode': True }})
-    cx: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cx', 'style': 'form', 'explode': True }})
-    date_restrict: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'dateRestrict', 'style': 'form', 'explode': True }})
-    exact_terms: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'exactTerms', 'style': 'form', 'explode': True }})
-    exclude_terms: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'excludeTerms', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    file_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fileType', 'style': 'form', 'explode': True }})
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    gl: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'gl', 'style': 'form', 'explode': True }})
-    googlehost: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'googlehost', 'style': 'form', 'explode': True }})
-    high_range: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'highRange', 'style': 'form', 'explode': True }})
-    hl: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'hl', 'style': 'form', 'explode': True }})
-    hq: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'hq', 'style': 'form', 'explode': True }})
-    img_color_type: Optional[SearchCseListImgColorTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'imgColorType', 'style': 'form', 'explode': True }})
-    img_dominant_color: Optional[SearchCseListImgDominantColorEnum] = field(default=None, metadata={'query_param': { 'field_name': 'imgDominantColor', 'style': 'form', 'explode': True }})
-    img_size: Optional[SearchCseListImgSizeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'imgSize', 'style': 'form', 'explode': True }})
-    img_type: Optional[SearchCseListImgTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'imgType', 'style': 'form', 'explode': True }})
-    key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
-    link_site: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'linkSite', 'style': 'form', 'explode': True }})
-    low_range: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lowRange', 'style': 'form', 'explode': True }})
-    lr: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lr', 'style': 'form', 'explode': True }})
-    num: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'num', 'style': 'form', 'explode': True }})
-    oauth_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
-    or_terms: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'orTerms', 'style': 'form', 'explode': True }})
-    pretty_print: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    quota_user: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
-    related_site: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'relatedSite', 'style': 'form', 'explode': True }})
-    rights: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'rights', 'style': 'form', 'explode': True }})
-    safe: Optional[SearchCseListSafeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'safe', 'style': 'form', 'explode': True }})
-    search_type: Optional[SearchCseListSearchTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'searchType', 'style': 'form', 'explode': True }})
-    site_search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'siteSearch', 'style': 'form', 'explode': True }})
-    site_search_filter: Optional[SearchCseListSiteSearchFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'siteSearchFilter', 'style': 'form', 'explode': True }})
-    sort: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    upload_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
-    upload_protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
+    dollar_xgafv: Optional[shared__xgafv_enum.XgafvEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': '$.xgafv', 'style': 'form', 'explode': True }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'access_token', 'style': 'form', 'explode': True }})
+    alt: Optional[shared_alt_enum.AltEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    c2coff: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'c2coff', 'style': 'form', 'explode': True }})
+    callback: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'callback', 'style': 'form', 'explode': True }})
+    cr: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cr', 'style': 'form', 'explode': True }})
+    cx: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cx', 'style': 'form', 'explode': True }})
+    date_restrict: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dateRestrict', 'style': 'form', 'explode': True }})
+    exact_terms: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exactTerms', 'style': 'form', 'explode': True }})
+    exclude_terms: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeTerms', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    file_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fileType', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    gl: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'gl', 'style': 'form', 'explode': True }})
+    googlehost: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'googlehost', 'style': 'form', 'explode': True }})
+    high_range: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'highRange', 'style': 'form', 'explode': True }})
+    hl: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hl', 'style': 'form', 'explode': True }})
+    hq: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hq', 'style': 'form', 'explode': True }})
+    img_color_type: Optional[SearchCseListImgColorTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imgColorType', 'style': 'form', 'explode': True }})
+    img_dominant_color: Optional[SearchCseListImgDominantColorEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imgDominantColor', 'style': 'form', 'explode': True }})
+    img_size: Optional[SearchCseListImgSizeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imgSize', 'style': 'form', 'explode': True }})
+    img_type: Optional[SearchCseListImgTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imgType', 'style': 'form', 'explode': True }})
+    key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'key', 'style': 'form', 'explode': True }})
+    link_site: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'linkSite', 'style': 'form', 'explode': True }})
+    low_range: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lowRange', 'style': 'form', 'explode': True }})
+    lr: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lr', 'style': 'form', 'explode': True }})
+    num: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'num', 'style': 'form', 'explode': True }})
+    oauth_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'oauth_token', 'style': 'form', 'explode': True }})
+    or_terms: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'orTerms', 'style': 'form', 'explode': True }})
+    pretty_print: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'prettyPrint', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    quota_user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'quotaUser', 'style': 'form', 'explode': True }})
+    related_site: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'relatedSite', 'style': 'form', 'explode': True }})
+    rights: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rights', 'style': 'form', 'explode': True }})
+    safe: Optional[SearchCseListSafeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'safe', 'style': 'form', 'explode': True }})
+    search_type: Optional[SearchCseListSearchTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'searchType', 'style': 'form', 'explode': True }})
+    site_search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'siteSearch', 'style': 'form', 'explode': True }})
+    site_search_filter: Optional[SearchCseListSiteSearchFilterEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'siteSearchFilter', 'style': 'form', 'explode': True }})
+    sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    upload_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'uploadType', 'style': 'form', 'explode': True }})
+    upload_protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'upload_protocol', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchCseListRequest:
-    query_params: SearchCseListQueryParams = field()
+    query_params: SearchCseListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchCseListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    search: Optional[shared.Search] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    search: Optional[shared_search.Search] = dataclasses.field(default=None)
     

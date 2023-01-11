@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import resetpasswordrequest as shared_resetpasswordrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ResetPasswordRequest:
-    request: shared.ResetPasswordRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_resetpasswordrequest.ResetPasswordRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResetPasswordResponse:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
     

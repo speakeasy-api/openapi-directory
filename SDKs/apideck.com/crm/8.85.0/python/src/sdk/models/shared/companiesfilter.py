@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CompaniesFilter:
-    name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'name' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name' }})
     

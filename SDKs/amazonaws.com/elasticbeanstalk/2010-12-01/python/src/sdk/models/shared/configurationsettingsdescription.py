@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import configurationdeploymentstatus_enum as shared_configurationdeploymentstatus_enum
+from ..shared import configurationoptionsetting as shared_configurationoptionsetting
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfigurationSettingsDescription:
     r"""ConfigurationSettingsDescription
     Describes the settings for a configuration set.
     """
     
-    application_name: Optional[str] = field(default=None)
-    date_created: Optional[datetime] = field(default=None)
-    date_updated: Optional[datetime] = field(default=None)
-    deployment_status: Optional[ConfigurationDeploymentStatusEnum] = field(default=None)
-    description: Optional[str] = field(default=None)
-    environment_name: Optional[str] = field(default=None)
-    option_settings: Optional[List[ConfigurationOptionSetting]] = field(default=None)
-    platform_arn: Optional[str] = field(default=None)
-    solution_stack_name: Optional[str] = field(default=None)
-    template_name: Optional[str] = field(default=None)
+    application_name: Optional[str] = dataclasses.field(default=None)
+    date_created: Optional[datetime] = dataclasses.field(default=None)
+    date_updated: Optional[datetime] = dataclasses.field(default=None)
+    deployment_status: Optional[shared_configurationdeploymentstatus_enum.ConfigurationDeploymentStatusEnum] = dataclasses.field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    environment_name: Optional[str] = dataclasses.field(default=None)
+    option_settings: Optional[list[shared_configurationoptionsetting.ConfigurationOptionSetting]] = dataclasses.field(default=None)
+    platform_arn: Optional[str] = dataclasses.field(default=None)
+    solution_stack_name: Optional[str] = dataclasses.field(default=None)
+    template_name: Optional[str] = dataclasses.field(default=None)
     

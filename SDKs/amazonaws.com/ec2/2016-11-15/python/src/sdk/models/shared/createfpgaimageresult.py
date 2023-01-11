@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateFpgaImageResult:
-    fpga_image_global_id: Optional[str] = field(default=None)
-    fpga_image_id: Optional[str] = field(default=None)
+    fpga_image_global_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    fpga_image_id: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

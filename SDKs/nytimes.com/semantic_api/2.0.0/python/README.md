@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,16 +25,16 @@ s.config_security(
     
 req = operations.GetNameConceptTypeSpecificConceptJSONRequest(
     path_params=operations.GetNameConceptTypeSpecificConceptJSONPathParams(
-        concept_type="nytd_geo",
-        specific_concept="nam",
+        concept_type="nytd_des",
+        specific_concept="dicta",
     ),
     query_params=operations.GetNameConceptTypeSpecificConceptJSONQueryParams(
         fields="all",
-        query="voluptatem",
+        query="ea",
     ),
 )
     
-res = s.sdk.get_name_concept_type_specific_concept_json(req)
+res = s.get_name_concept_type_specific_concept_json(req)
 
 if res.get_name_concept_type_specific_concept_json_200_application_json_object is not None:
     # handle response

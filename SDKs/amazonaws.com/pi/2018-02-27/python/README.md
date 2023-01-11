@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,47 +25,48 @@ s.config_security(
     
 req = operations.DescribeDimensionKeysRequest(
     headers=operations.DescribeDimensionKeysHeaders(
-        x_amz_algorithm="hic",
-        x_amz_content_sha256="doloribus",
-        x_amz_credential="porro",
-        x_amz_date="est",
-        x_amz_security_token="deserunt",
-        x_amz_signature="eum",
-        x_amz_signed_headers="sit",
+        x_amz_algorithm="mollitia",
+        x_amz_content_sha256="distinctio",
+        x_amz_credential="ipsam",
+        x_amz_date="dolor",
+        x_amz_security_token="aut",
+        x_amz_signature="veniam",
+        x_amz_signed_headers="ullam",
         x_amz_target="PerformanceInsightsv20180227.DescribeDimensionKeys",
     ),
     request=shared.DescribeDimensionKeysRequest(
-        end_time="2005-09-27T11:01:37Z",
+        end_time="1986-12-15T18:29:59Z",
         filter={
-            "totam": "omnis",
+            "inventore": "est",
+            "nisi": "consequatur",
+            "fugiat": "tenetur",
         },
         group_by=shared.DimensionGroup(
             dimensions=[
-                "neque",
-                "officia",
-                "quo",
+                "aliquam",
             ],
-            group="alias",
-            limit=7931175086771856082,
+            group="aspernatur",
+            limit=4017103272747439088,
         ),
-        identifier="non",
-        max_results=4192957126934884321,
-        metric="sed",
-        next_token="consequatur",
+        identifier="inventore",
+        max_results=3526406646607909592,
+        metric="saepe",
+        next_token="voluptas",
         partition_by=shared.DimensionGroup(
             dimensions=[
-                "maiores",
+                "optio",
+                "omnis",
             ],
-            group="aliquid",
-            limit=7497142883454927133,
+            group="ut",
+            limit=8667532264838713382,
         ),
-        period_in_seconds=3056127560860615106,
+        period_in_seconds=8056810507064755208,
         service_type="RDS",
-        start_time="1973-01-06T21:40:06Z",
+        start_time="1976-11-04T06:14:44Z",
     ),
 )
     
-res = s.sdk.describe_dimension_keys(req)
+res = s.describe_dimension_keys(req)
 
 if res.describe_dimension_keys_response is not None:
     # handle response

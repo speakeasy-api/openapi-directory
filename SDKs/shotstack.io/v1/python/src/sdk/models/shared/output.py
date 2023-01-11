@@ -1,9 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import shotstackdestination as shared_shotstackdestination
+from ..shared import poster as shared_poster
+from ..shared import range as shared_range
+from ..shared import size as shared_size
+from ..shared import thumbnail as shared_thumbnail
 
 class OutputAspectRatioEnum(str, Enum):
     SIXTEEN_9 = "16:9"
@@ -41,21 +45,21 @@ class OutputScaleToEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Output:
     r"""Output
     The output format, render range and type of media to generate.
     """
     
-    format: OutputFormatEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    aspect_ratio: Optional[OutputAspectRatioEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aspectRatio') }})
-    destinations: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
-    fps: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fps') }})
-    poster: Optional[Poster] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poster') }})
-    quality: Optional[OutputQualityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quality') }})
-    range: Optional[Range] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
-    resolution: Optional[OutputResolutionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolution') }})
-    scale_to: Optional[OutputScaleToEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleTo') }})
-    size: Optional[Size] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
-    thumbnail: Optional[Thumbnail] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thumbnail') }})
+    format: OutputFormatEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    aspect_ratio: Optional[OutputAspectRatioEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aspectRatio') }})
+    destinations: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('destinations') }})
+    fps: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fps') }})
+    poster: Optional[shared_poster.Poster] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('poster') }})
+    quality: Optional[OutputQualityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('quality') }})
+    range: Optional[shared_range.Range] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
+    resolution: Optional[OutputResolutionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('resolution') }})
+    scale_to: Optional[OutputScaleToEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaleTo') }})
+    size: Optional[shared_size.Size] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    thumbnail: Optional[shared_thumbnail.Thumbnail] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thumbnail') }})
     

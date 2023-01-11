@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeChangeTypeRequest:
-    load_balancer_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('load_balancer_type') }})
+    load_balancer_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('load_balancer_type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeActionResponseActionError:
     r"""PostLoadBalancersIDActionsChangeTypeActionResponseActionError
     Error message for the Action if error occurred, otherwise null
     """
     
-    code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeActionResponseActionResources:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 class PostLoadBalancersIDActionsChangeTypeActionResponseActionStatusEnum(str, Enum):
     SUCCESS = "success"
@@ -40,33 +40,33 @@ class PostLoadBalancersIDActionsChangeTypeActionResponseActionStatusEnum(str, En
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeActionResponseAction:
-    command: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
-    error: PostLoadBalancersIDActionsChangeTypeActionResponseActionError = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
-    finished: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    progress: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
-    resources: List[PostLoadBalancersIDActionsChangeTypeActionResponseActionResources] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
-    started: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
-    status: PostLoadBalancersIDActionsChangeTypeActionResponseActionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    command: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('command') }})
+    error: PostLoadBalancersIDActionsChangeTypeActionResponseActionError = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('error') }})
+    finished: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('finished') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    progress: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('progress') }})
+    resources: list[PostLoadBalancersIDActionsChangeTypeActionResponseActionResources] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resources') }})
+    started: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('started') }})
+    status: PostLoadBalancersIDActionsChangeTypeActionResponseActionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeActionResponse:
-    action: PostLoadBalancersIDActionsChangeTypeActionResponseAction = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    action: PostLoadBalancersIDActionsChangeTypeActionResponseAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeRequest:
-    path_params: PostLoadBalancersIDActionsChangeTypePathParams = field()
-    request: Optional[PostLoadBalancersIDActionsChangeTypeChangeTypeRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostLoadBalancersIDActionsChangeTypePathParams = dataclasses.field()
+    request: Optional[PostLoadBalancersIDActionsChangeTypeChangeTypeRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostLoadBalancersIDActionsChangeTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    action_response: Optional[PostLoadBalancersIDActionsChangeTypeActionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    action_response: Optional[PostLoadBalancersIDActionsChangeTypeActionResponse] = dataclasses.field(default=None)
     

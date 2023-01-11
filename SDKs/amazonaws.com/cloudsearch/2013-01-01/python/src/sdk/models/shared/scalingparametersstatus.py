@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import scalingparameters as shared_scalingparameters
+from ..shared import optionstatus as shared_optionstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class ScalingParametersStatus:
     r"""ScalingParametersStatus
     The status and configuration of a search domain's scaling parameters. 
     """
     
-    options: ScalingParameters = field()
-    status: OptionStatus = field()
+    options: shared_scalingparameters.ScalingParameters = dataclasses.field()
+    status: shared_optionstatus.OptionStatus = dataclasses.field()
     

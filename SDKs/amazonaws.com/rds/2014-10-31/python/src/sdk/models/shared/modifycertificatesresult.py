@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import certificate as shared_certificate
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyCertificatesResult:
-    certificate: Optional[Certificate] = field(default=None)
+    certificate: Optional[shared_certificate.Certificate] = dataclasses.field(default=None)
     

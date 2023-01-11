@@ -1,46 +1,46 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestMinimalBaseRepo:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestMinimalBase:
-    ref: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
-    repo: PullRequestMinimalBaseRepo = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repo') }})
-    sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    ref: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
+    repo: PullRequestMinimalBaseRepo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repo') }})
+    sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestMinimalHeadRepo:
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestMinimalHead:
-    ref: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
-    repo: PullRequestMinimalHeadRepo = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repo') }})
-    sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    ref: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ref') }})
+    repo: PullRequestMinimalHeadRepo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repo') }})
+    sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PullRequestMinimal:
-    base: PullRequestMinimalBase = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('base') }})
-    head: PullRequestMinimalHead = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    number: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    base: PullRequestMinimalBase = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('base') }})
+    head: PullRequestMinimalHead = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    number: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

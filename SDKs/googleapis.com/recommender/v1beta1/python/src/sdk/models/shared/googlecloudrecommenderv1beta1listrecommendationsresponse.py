@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudrecommenderv1beta1recommendation as shared_googlecloudrecommenderv1beta1recommendation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudRecommenderV1beta1ListRecommendationsResponse:
     r"""GoogleCloudRecommenderV1beta1ListRecommendationsResponse
     Response to the `ListRecommendations` method.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    recommendations: Optional[List[GoogleCloudRecommenderV1beta1Recommendation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendations') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    recommendations: Optional[list[shared_googlecloudrecommenderv1beta1recommendation.GoogleCloudRecommenderV1beta1Recommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendations') }})
     

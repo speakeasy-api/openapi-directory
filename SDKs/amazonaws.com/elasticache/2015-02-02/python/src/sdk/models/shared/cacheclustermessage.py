@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import cacheclusterlist as shared_cacheclusterlist
 
 
-@dataclass
+@dataclasses.dataclass
 class CacheClusterMessage:
     r"""CacheClusterMessage
     Represents the output of a <code>DescribeCacheClusters</code> operation.
     """
     
-    cache_clusters: Optional[List[CacheCluster]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    cache_clusters: Optional[list[shared_cacheclusterlist.CacheClusterList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

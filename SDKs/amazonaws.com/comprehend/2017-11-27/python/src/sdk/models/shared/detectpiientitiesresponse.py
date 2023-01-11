@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import piientity as shared_piientity
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectPiiEntitiesResponse:
-    entities: Optional[List[PiiEntity]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entities') }})
+    entities: Optional[list[shared_piientity.PiiEntity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Entities') }})
     

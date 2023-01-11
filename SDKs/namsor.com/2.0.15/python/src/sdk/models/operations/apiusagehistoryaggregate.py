@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apiusageaggregatedout as shared_apiusageaggregatedout
 
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageHistoryAggregateSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageHistoryAggregateRequest:
-    security: APIUsageHistoryAggregateSecurity = field()
+    security: APIUsageHistoryAggregateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class APIUsageHistoryAggregateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_usage_aggregated_out: Optional[shared.APIUsageAggregatedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_usage_aggregated_out: Optional[shared_apiusageaggregatedout.APIUsageAggregatedOut] = dataclasses.field(default=None)
     

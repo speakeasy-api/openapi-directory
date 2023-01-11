@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportWirelessCsvQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportWirelessCsvSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportWirelessCsvRequest:
-    query_params: ExportWirelessCsvQueryParams = field()
-    security: ExportWirelessCsvSecurity = field()
+    query_params: ExportWirelessCsvQueryParams = dataclasses.field()
+    security: ExportWirelessCsvSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportWirelessCsvResponse:
-    content_type: str = field()
-    status_code: int = field()
-    export_wireless_csv_200_text_csv_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    export_wireless_csv_200_text_csv_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

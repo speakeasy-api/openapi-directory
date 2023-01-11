@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import organizationconfigrulestatus as shared_organizationconfigrulestatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeOrganizationConfigRuleStatusesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    organization_config_rule_statuses: Optional[List[OrganizationConfigRuleStatus]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationConfigRuleStatuses') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    organization_config_rule_statuses: Optional[list[shared_organizationconfigrulestatus.OrganizationConfigRuleStatus]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationConfigRuleStatuses') }})
     

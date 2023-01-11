@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import v3_stopgps as shared_v3_stopgps
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class V3StopLocation:
-    gps: Optional[V3StopGps] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gps') }})
+    gps: Optional[shared_v3_stopgps.V3StopGps] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gps') }})
     

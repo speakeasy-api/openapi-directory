@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
 
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsCreateRequest:
-    request: dict[str, Any] = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

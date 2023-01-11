@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import userrequestin as shared_userrequestin
+from ..shared import dependenciesout as shared_dependenciesout
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class ReadDependenciesV1EnCoreWebSmDependenciesPostRequest:
-    request: shared.UserRequestIn = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_userrequestin.UserRequestIn = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReadDependenciesV1EnCoreWebSmDependenciesPostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    dependencies_out: Optional[shared.DependenciesOut] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dependencies_out: Optional[shared_dependenciesout.DependenciesOut] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

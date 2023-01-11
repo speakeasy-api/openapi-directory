@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import charitysearchresponse as shared_charitysearchresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgsQueryParams:
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    q: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    registration_ids: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'registration_ids', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    registration_ids: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'registration_ids', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgsHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgsSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgsRequest:
-    headers: GetCharityOrgsHeaders = field()
-    query_params: GetCharityOrgsQueryParams = field()
-    security: GetCharityOrgsSecurity = field()
+    headers: GetCharityOrgsHeaders = dataclasses.field()
+    query_params: GetCharityOrgsQueryParams = dataclasses.field()
+    security: GetCharityOrgsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    charity_search_response: Optional[shared.CharitySearchResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    charity_search_response: Optional[shared_charitysearchresponse.CharitySearchResponse] = dataclasses.field(default=None)
     

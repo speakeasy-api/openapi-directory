@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 class CreateOrganizationAdminRequestBodyAuthenticationMethodEnum(str, Enum):
     EMAIL = "Email"
@@ -21,10 +21,10 @@ class CreateOrganizationAdminRequestBodyNetworksAccessEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminRequestBodyNetworks:
-    access: CreateOrganizationAdminRequestBodyNetworksAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    access: CreateOrganizationAdminRequestBodyNetworksAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class CreateOrganizationAdminRequestBodyOrgAccessEnum(str, Enum):
     FULL = "full"
@@ -40,32 +40,32 @@ class CreateOrganizationAdminRequestBodyTagsAccessEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminRequestBodyTags:
-    access: CreateOrganizationAdminRequestBodyTagsAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    tag: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
+    access: CreateOrganizationAdminRequestBodyTagsAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    tag: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminRequestBody:
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    org_access: CreateOrganizationAdminRequestBodyOrgAccessEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orgAccess') }})
-    authentication_method: Optional[CreateOrganizationAdminRequestBodyAuthenticationMethodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticationMethod') }})
-    networks: Optional[List[CreateOrganizationAdminRequestBodyNetworks]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
-    tags: Optional[List[CreateOrganizationAdminRequestBodyTags]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    org_access: CreateOrganizationAdminRequestBodyOrgAccessEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('orgAccess') }})
+    authentication_method: Optional[CreateOrganizationAdminRequestBodyAuthenticationMethodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticationMethod') }})
+    networks: Optional[list[CreateOrganizationAdminRequestBodyNetworks]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
+    tags: Optional[list[CreateOrganizationAdminRequestBodyTags]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminRequest:
-    path_params: CreateOrganizationAdminPathParams = field()
-    request: CreateOrganizationAdminRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CreateOrganizationAdminPathParams = dataclasses.field()
+    request: CreateOrganizationAdminRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateOrganizationAdminResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_organization_admin_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_organization_admin_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

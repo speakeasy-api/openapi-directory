@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,13 +17,13 @@ class RevokedCertificateRevocationReasonEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RevokedCertificate:
     r"""RevokedCertificate
     Describes a revoked Certificate.
     """
     
-    certificate: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
-    hex_serial_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hexSerialNumber') }})
-    revocation_reason: Optional[RevokedCertificateRevocationReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revocationReason') }})
+    certificate: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('certificate') }})
+    hex_serial_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hexSerialNumber') }})
+    revocation_reason: Optional[RevokedCertificateRevocationReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('revocationReason') }})
     

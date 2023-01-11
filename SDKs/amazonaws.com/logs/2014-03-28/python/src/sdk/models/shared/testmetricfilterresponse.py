@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import metricfiltermatchrecord as shared_metricfiltermatchrecord
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TestMetricFilterResponse:
-    matches: Optional[List[MetricFilterMatchRecord]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matches') }})
+    matches: Optional[list[shared_metricfiltermatchrecord.MetricFilterMatchRecord]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('matches') }})
     

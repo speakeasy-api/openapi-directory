@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDeviceEventsResponse:
-    events: Optional[List[DeviceEvent]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Events') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    events: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Events') }})
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

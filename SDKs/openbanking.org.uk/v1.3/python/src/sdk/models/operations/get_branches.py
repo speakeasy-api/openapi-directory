@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBranchesHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
-    if_none_match: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_none_match: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
     
 class GetBranches400ErrorObjectDescriptionEnum(str, Enum):
     YOU_HAVE_SENT_A_REQUEST_WHICH_COULD_NOT_BE_UNDERSTOOD_ = "You have sent a request which could not be understood."
@@ -24,11 +24,11 @@ class GetBranches400ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches400ErrorObject:
-    description: GetBranches400ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetBranches400ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetBranches400ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetBranches400ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetBranches400ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetBranches400ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetBranches408ErrorObjectDescriptionEnum(str, Enum):
     YOUR_CLIENT_HAS_FAILED_TO_SUBMIT_A_REQUEST_AND_A_TIMEOUT_HAS_OCCURRED_ = "Your client has failed to submit a request, and a timeout has occurred."
@@ -41,11 +41,11 @@ class GetBranches408ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches408ErrorObject:
-    description: GetBranches408ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetBranches408ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetBranches408ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetBranches408ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetBranches408ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetBranches408ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetBranches429ErrorObjectDescriptionEnum(str, Enum):
     YOU_HAVE_REQUESTED_THIS_RESOURCE_TOO_OFTEN_SLOW_DOWN_ = "You have requested this resource too often. Slow down."
@@ -58,11 +58,11 @@ class GetBranches429ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches429ErrorObject:
-    description: GetBranches429ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetBranches429ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetBranches429ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetBranches429ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetBranches429ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetBranches429ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetBranches500ErrorObjectDescriptionEnum(str, Enum):
     AN_ERROR_OCCURRED_ON_THE_SERVER_NO_FURTHER_INFORMATION_IS_AVAILABLE_ = "An error occurred on the server. No further information is available."
@@ -75,11 +75,11 @@ class GetBranches500ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches500ErrorObject:
-    description: GetBranches500ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetBranches500ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetBranches500ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetBranches500ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetBranches500ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetBranches500ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetBranches503ErrorObjectDescriptionEnum(str, Enum):
     THE_SERVICE_IS_TEMPORARILY_UNAVAILABLE_ = "The service is temporarily unavailable."
@@ -92,19 +92,19 @@ class GetBranches503ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches503ErrorObject:
-    description: GetBranches503ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetBranches503ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetBranches503ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetBranches503ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetBranches503ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetBranches503ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranchesErrorObject:
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum(str, Enum):
     AUDIO_CASH_MACHINE = "AudioCashMachine"
@@ -120,30 +120,30 @@ class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibil
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAddress:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAddress
     Postal Address
     """
     
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Country') }})
-    building_number_or_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BuildingNumberOrName') }})
-    country_sub_division: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountrySubDivision') }})
-    optional_address_field: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptionalAddressField') }})
-    post_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PostCode') }})
-    street_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreetName') }})
-    town_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TownName') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Country') }})
+    building_number_or_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BuildingNumberOrName') }})
+    country_sub_division: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountrySubDivision') }})
+    optional_address_field: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptionalAddressField') }})
+    post_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PostCode') }})
+    street_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreetName') }})
+    town_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TownName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAlternatePhone:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAlternatePhone
     Alternative Phone Number
     """
     
-    alternate_telephone_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternateTelephoneNumber') }})
-    alternate_telephone_number_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternateTelephoneNumberDescription') }})
+    alternate_telephone_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternateTelephoneNumber') }})
+    alternate_telephone_number_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternateTelephoneNumberDescription') }})
     
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum(str, Enum):
     BUSINESS_IT_SUPPORT = "BusinessITSupport"
@@ -200,14 +200,14 @@ class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSe
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchGeographicLocation:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchGeographicLocation
     Geographic Coordinates
     """
     
-    latitude: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Latitude') }})
-    longitude: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Longitude') }})
+    latitude: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Latitude') }})
+    longitude: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Longitude') }})
     
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum(str, Enum):
     MONDAY = "Monday"
@@ -221,13 +221,13 @@ class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTim
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimes:
-    closing_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClosingTime') }})
-    opening_day: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningDay') }})
-    opening_time: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningTime') }})
-    unavailable_finish_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnavailableFinishTime') }})
-    unavailable_start_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnavailableStartTime') }})
+    closing_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClosingTime') }})
+    opening_day: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningDay') }})
+    opening_time: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningTime') }})
+    unavailable_finish_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnavailableFinishTime') }})
+    unavailable_start_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnavailableStartTime') }})
     
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum(str, Enum):
     UK = "UK"
@@ -235,90 +235,90 @@ class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisati
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand
     Brand
     """
     
-    trademark_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkID') }})
-    trademark_ipo_code: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkIPOCode') }})
+    trademark_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkID') }})
+    trademark_ipo_code: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIpoCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkIPOCode') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName
     Organisation Name
     """
     
-    legal_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LegalName') }})
+    legal_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LegalName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation
     Parent organisation
     """
     
-    organisation_name: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganisationName') }})
-    bic: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BIC') }})
-    lei: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LEI') }})
+    organisation_name: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisationOrganisationName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganisationName') }})
+    bic: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BIC') }})
+    lei: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LEI') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisation:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisation
     Organisation
     """
     
-    brand: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Brand') }})
-    parent_organisation: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentOrganisation') }})
+    brand: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrand = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Brand') }})
+    parent_organisation: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationParentOrganisation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentOrganisation') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchPlannedBranchClosure:
     r"""GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchPlannedBranchClosure
     Planned branch closure
     """
     
-    end_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndDate') }})
-    start_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StartDate') }})
+    end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EndDate') }})
+    start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StartDate') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranch:
-    atm_at_branch: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMAtBranch') }})
-    address: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAddress = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Address') }})
-    branch_identification: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchIdentification') }})
-    branch_type: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchType') }})
-    customer_segment: List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomerSegment') }})
-    opening_times: List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimes] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningTimes') }})
-    organisation: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Organisation') }})
-    telephone_number: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TelephoneNumber') }})
-    accessibility_types: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessibilityTypes') }})
-    alternate_phone: Optional[List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAlternatePhone]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternatePhone') }})
-    arrival_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ArrivalTime') }})
-    branch_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchDescription') }})
-    branch_facilities_name: Optional[List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchFacilitiesName') }})
-    branch_mediated_service_name: Optional[List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchMediatedServiceName') }})
-    branch_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchName') }})
-    branch_other_facilities: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherFacilities') }})
-    branch_other_mediated_services: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherMediatedServices') }})
-    branch_other_self_services: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherSelfServices') }})
-    branch_photo: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchPhoto') }})
-    branch_self_serve_service_name: Optional[List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchSelfServeServiceName') }})
-    days_of_the_week: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DaysOfTheWeek') }})
-    departure_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DepartureTime') }})
-    fax_number: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FaxNumber') }})
-    geographic_location: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchGeographicLocation] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GeographicLocation') }})
-    parking_location: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParkingLocation') }})
-    planned_branch_closure: Optional[List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchPlannedBranchClosure]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlannedBranchClosure') }})
-    stop_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StopName') }})
+    atm_at_branch: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMAtBranch') }})
+    address: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Address') }})
+    branch_identification: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchIdentification') }})
+    branch_type: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchType') }})
+    customer_segment: list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('CustomerSegment') }})
+    opening_times: list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimes] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OpeningTimes') }})
+    organisation: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Organisation') }})
+    telephone_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TelephoneNumber') }})
+    accessibility_types: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessibilityTypes') }})
+    alternate_phone: Optional[list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAlternatePhone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AlternatePhone') }})
+    arrival_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ArrivalTime') }})
+    branch_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchDescription') }})
+    branch_facilities_name: Optional[list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchFacilitiesName') }})
+    branch_mediated_service_name: Optional[list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchMediatedServiceName') }})
+    branch_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchName') }})
+    branch_other_facilities: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherFacilities') }})
+    branch_other_mediated_services: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherMediatedServices') }})
+    branch_other_self_services: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchOtherSelfServices') }})
+    branch_photo: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchPhoto') }})
+    branch_self_serve_service_name: Optional[list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchSelfServeServiceName') }})
+    days_of_the_week: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DaysOfTheWeek') }})
+    departure_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DepartureTime') }})
+    fax_number: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FaxNumber') }})
+    geographic_location: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchGeographicLocation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GeographicLocation') }})
+    parking_location: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParkingLocation') }})
+    planned_branch_closure: Optional[list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchPlannedBranchClosure]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PlannedBranchClosure') }})
+    stop_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('StopName') }})
     
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(str, Enum):
     USE_OF_THE_AP_IS_AND_ANY_RELATED_DATA_WILL_BE_SUBJECT_TO_THE_TERMS_OF_THE_OPEN_LICENCE_AND_SUBJECT_TO_TERMS_AND_CONDITIONS = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
@@ -331,37 +331,37 @@ class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfU
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData:
-    agreement: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agreement') }})
-    last_updated: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LastUpdated'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    license: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('License') }})
-    terms_of_use: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TermsOfUse') }})
-    total_results: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResults') }})
+    agreement: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agreement') }})
+    last_updated: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LastUpdated'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    license: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('License') }})
+    terms_of_use: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TermsOfUse') }})
+    total_results: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResults') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSON:
-    data: List[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranch] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    meta: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    data: list[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranch] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    meta: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBranchesRequest:
-    headers: GetBranchesHeaders = field()
+    headers: GetBranchesHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBranchesResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    four_hundred_error_object: Optional[GetBranches400ErrorObject] = field(default=None)
-    four_hundred_and_eight_error_object: Optional[GetBranches408ErrorObject] = field(default=None)
-    four_hundred_and_twenty_nine_error_object: Optional[GetBranches429ErrorObject] = field(default=None)
-    five_hundred_error_object: Optional[GetBranches500ErrorObject] = field(default=None)
-    five_hundred_and_three_error_object: Optional[GetBranches503ErrorObject] = field(default=None)
-    error_object: Optional[GetBranchesErrorObject] = field(default=None)
-    get_branches_200_application_prs_openbanking_opendata_v1_3_plus_json_object: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred_error_object: Optional[GetBranches400ErrorObject] = dataclasses.field(default=None)
+    four_hundred_and_eight_error_object: Optional[GetBranches408ErrorObject] = dataclasses.field(default=None)
+    four_hundred_and_twenty_nine_error_object: Optional[GetBranches429ErrorObject] = dataclasses.field(default=None)
+    five_hundred_error_object: Optional[GetBranches500ErrorObject] = dataclasses.field(default=None)
+    five_hundred_and_three_error_object: Optional[GetBranches503ErrorObject] = dataclasses.field(default=None)
+    error_object: Optional[GetBranchesErrorObject] = dataclasses.field(default=None)
+    get_branches_200_application_prs_openbanking_opendata_v1_3_plus_json_object: Optional[GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSON] = dataclasses.field(default=None)
     

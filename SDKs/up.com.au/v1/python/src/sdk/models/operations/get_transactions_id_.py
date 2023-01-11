@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gettransactionresponse as shared_gettransactionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDRequest:
-    path_params: GetTransactionsIDPathParams = field()
+    path_params: GetTransactionsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_transaction_response: Optional[shared.GetTransactionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_transaction_response: Optional[shared_gettransactionresponse.GetTransactionResponse] = dataclasses.field(default=None)
     

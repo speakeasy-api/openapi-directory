@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import identitydescription as shared_identitydescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListIdentitiesResponse:
     r"""ListIdentitiesResponse
     The response to a ListIdentities request.
     """
     
-    identities: Optional[List[IdentityDescription]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Identities') }})
-    identity_pool_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdentityPoolId') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    identities: Optional[list[shared_identitydescription.IdentityDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Identities') }})
+    identity_pool_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdentityPoolId') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

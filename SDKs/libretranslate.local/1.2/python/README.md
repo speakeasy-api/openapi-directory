@@ -8,16 +8,15 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-res = s.sdk.get_frontend_settings()
+res = s.frontend.get_frontend_settings()
 
 if res.body is not None:
     # handle response
@@ -27,9 +26,12 @@ if res.body is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### frontend
 
 * `get_frontend_settings` - Retrieve frontend specific settings
+
+### translate
+
 * `get_languages` - Retrieve list of supported languages
 * `post_detect` - Detect the language of a single text
 * `post_languages` - Retrieve list of supported languages

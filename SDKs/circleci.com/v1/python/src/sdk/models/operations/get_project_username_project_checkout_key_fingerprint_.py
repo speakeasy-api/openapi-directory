@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import key as shared_key
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyFingerprintPathParams:
-    fingerprint: str = field(metadata={'path_param': { 'field_name': 'fingerprint', 'style': 'simple', 'explode': False }})
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    fingerprint: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fingerprint', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyFingerprintRequest:
-    path_params: GetProjectUsernameProjectCheckoutKeyFingerprintPathParams = field()
+    path_params: GetProjectUsernameProjectCheckoutKeyFingerprintPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectUsernameProjectCheckoutKeyFingerprintResponse:
-    content_type: str = field()
-    status_code: int = field()
-    key: Optional[shared.Key] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    key: Optional[shared_key.Key] = dataclasses.field(default=None)
     

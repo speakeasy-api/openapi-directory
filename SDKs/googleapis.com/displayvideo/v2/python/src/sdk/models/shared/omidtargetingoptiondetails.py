@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,11 +10,11 @@ class OmidTargetingOptionDetailsOmidEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OmidTargetingOptionDetails:
     r"""OmidTargetingOptionDetails
     Represents a targetable Open Measurement enabled inventory type. This will be populated in the omid_details field when targeting_type is `TARGETING_TYPE_OMID`.
     """
     
-    omid: Optional[OmidTargetingOptionDetailsOmidEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('omid') }})
+    omid: Optional[OmidTargetingOptionDetailsOmidEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('omid') }})
     

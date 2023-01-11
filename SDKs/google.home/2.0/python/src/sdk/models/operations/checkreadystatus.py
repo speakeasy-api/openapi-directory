@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import checkreadystatusrequest as shared_checkreadystatusrequest
+from ..shared import example13 as shared_example13
 
 
-@dataclass
+@dataclasses.dataclass
 class CheckReadyStatusRequest:
-    request: shared.CheckReadyStatusRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_checkreadystatusrequest.CheckReadyStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CheckReadyStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example13: Optional[shared.Example13] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example13: Optional[shared_example13.Example13] = dataclasses.field(default=None)
     

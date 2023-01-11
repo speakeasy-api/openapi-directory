@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import paymentdispute as shared_paymentdispute
 
 
 GET_PAYMENT_DISPUTE_SERVERS = [
@@ -8,26 +9,26 @@ GET_PAYMENT_DISPUTE_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDisputePathParams:
-    payment_dispute_id: str = field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
+    payment_dispute_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_dispute_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDisputeSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDisputeRequest:
-    path_params: GetPaymentDisputePathParams = field()
-    security: GetPaymentDisputeSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    path_params: GetPaymentDisputePathParams = dataclasses.field()
+    security: GetPaymentDisputeSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentDisputeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_dispute: Optional[shared.PaymentDispute] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_dispute: Optional[shared_paymentdispute.PaymentDispute] = dataclasses.field(default=None)
     

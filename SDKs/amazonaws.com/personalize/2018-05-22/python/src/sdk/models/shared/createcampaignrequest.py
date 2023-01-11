@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import campaignconfig as shared_campaignconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateCampaignRequest:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    solution_version_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('solutionVersionArn') }})
-    campaign_config: Optional[CampaignConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('campaignConfig') }})
-    min_provisioned_tps: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minProvisionedTPS') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    solution_version_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('solutionVersionArn') }})
+    campaign_config: Optional[shared_campaignconfig.CampaignConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('campaignConfig') }})
+    min_provisioned_tps: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minProvisionedTPS') }})
     

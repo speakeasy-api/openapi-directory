@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -31,15 +31,15 @@ class ConditionSysEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Condition:
     r"""Condition
     A condition to be met.
     """
     
-    iam: Optional[ConditionIamEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('iam') }})
-    op: Optional[ConditionOpEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
-    svc: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('svc') }})
-    sys: Optional[ConditionSysEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sys') }})
-    values: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    iam: Optional[ConditionIamEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('iam') }})
+    op: Optional[ConditionOpEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('op') }})
+    svc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('svc') }})
+    sys: Optional[ConditionSysEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sys') }})
+    values: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     

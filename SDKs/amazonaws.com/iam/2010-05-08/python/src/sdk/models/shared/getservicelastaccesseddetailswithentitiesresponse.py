@@ -1,19 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import entitydetails as shared_entitydetails
+from ..shared import errordetails as shared_errordetails
+from ..shared import jobstatustype_enum as shared_jobstatustype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetServiceLastAccessedDetailsWithEntitiesResponse:
-    entity_details_list: List[EntityDetails] = field()
-    job_completion_date: datetime = field()
-    job_creation_date: datetime = field()
-    job_status: JobStatusTypeEnum = field()
-    error: Optional[ErrorDetails] = field(default=None)
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    entity_details_list: list[shared_entitydetails.EntityDetails] = dataclasses.field()
+    job_completion_date: datetime = dataclasses.field()
+    job_creation_date: datetime = dataclasses.field()
+    job_status: shared_jobstatustype_enum.JobStatusTypeEnum = dataclasses.field()
+    error: Optional[shared_errordetails.ErrorDetails] = dataclasses.field(default=None)
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

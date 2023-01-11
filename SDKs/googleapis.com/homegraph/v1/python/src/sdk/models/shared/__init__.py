@@ -19,3 +19,5 @@ from .stateandnotificationpayload import *
 from .syncrequest import *
 from .syncresponse import *
 from .syncresponsepayload import *
+
+__all__ = ["XgafvEnum","AgentDeviceID","AgentOtherDeviceID","AltEnum","Device","DeviceInfo","DeviceNames","QueryRequest","QueryRequestInput","QueryRequestPayload","QueryResponse","QueryResponsePayload","ReportStateAndNotificationDevice","ReportStateAndNotificationRequest","ReportStateAndNotificationResponse","RequestSyncDevicesRequest","SchemeOauth2","SchemeOauth2c","StateAndNotificationPayload","SyncRequest","SyncResponse","SyncResponsePayload"]

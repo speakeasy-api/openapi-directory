@@ -9,3 +9,5 @@ from .security import *
 from .translatetextrequest import *
 from .translationslistresponse import *
 from .translationsresource import *
+
+__all__ = ["XgafvEnum","AltEnum","DetectionsListResponse","DetectionsResource","DetectLanguageRequest","LanguagesListResponse","LanguagesResource","SchemeOauth2","SchemeOauth2c","TranslateTextRequest","TranslationsListResponse","TranslationsResource"]

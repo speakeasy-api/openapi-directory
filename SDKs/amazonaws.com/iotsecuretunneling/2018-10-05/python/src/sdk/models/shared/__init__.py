@@ -18,3 +18,5 @@ from .tunnel import *
 from .tunnelstatus_enum import *
 from .tunnelsummary import *
 from .untagresourcerequest import *
+
+__all__ = ["CloseTunnelRequest","ConnectionState","ConnectionStatusEnum","DescribeTunnelRequest","DescribeTunnelResponse","DestinationConfig","ListTagsForResourceRequest","ListTagsForResourceResponse","ListTunnelsRequest","ListTunnelsResponse","OpenTunnelRequest","OpenTunnelResponse","SchemeHmac","Security","Tag","TagResourceRequest","TimeoutConfig","Tunnel","TunnelStatusEnum","TunnelSummary","UntagResourceRequest"]

@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import assettype as shared_assettype
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAssetTypeHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAssetTypeSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAssetTypeRequest:
-    headers: CreateAssetTypeHeaders = field()
-    security: CreateAssetTypeSecurity = field()
-    request: Optional[shared.AssetType] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateAssetTypeHeaders = dataclasses.field()
+    security: CreateAssetTypeSecurity = dataclasses.field()
+    request: Optional[shared_assettype.AssetType] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAssetTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset_type: Optional[shared.AssetType] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset_type: Optional[shared_assettype.AssetType] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,13 +8,13 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SalesforceSourceProperties:
     r"""SalesforceSourceProperties
     The properties that are applied when Salesforce is being used as a source.
     """
     
-    object: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Object') }})
-    enable_dynamic_field_update: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EnableDynamicFieldUpdate') }})
-    include_deleted_records: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IncludeDeletedRecords') }})
+    object: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Object') }})
+    enable_dynamic_field_update: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EnableDynamicFieldUpdate') }})
+    include_deleted_records: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IncludeDeletedRecords') }})
     

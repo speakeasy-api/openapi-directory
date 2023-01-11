@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import listfailedipns as shared_listfailedipns
 
 
-@dataclass
+@dataclasses.dataclass
 class ListFailedIPNsHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFailedIPNsRequest:
-    headers: ListFailedIPNsHeaders = field()
+    headers: ListFailedIPNsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListFailedIPNsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_failed_ip_ns: Optional[shared.ListFailedIPNs] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_failed_ip_ns: Optional[shared_listfailedipns.ListFailedIPNs] = dataclasses.field(default=None)
     

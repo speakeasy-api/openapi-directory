@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class ScoresByWeekSimulationFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class ScoresByWeekSimulationFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByWeekSimulationPathParams:
-    format: ScoresByWeekSimulationFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    numberofplays: str = field(metadata={'path_param': { 'field_name': 'numberofplays', 'style': 'simple', 'explode': False }})
+    format: ScoresByWeekSimulationFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    numberofplays: str = dataclasses.field(metadata={'path_param': { 'field_name': 'numberofplays', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByWeekSimulationRequest:
-    path_params: ScoresByWeekSimulationPathParams = field()
+    path_params: ScoresByWeekSimulationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresByWeekSimulationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scores: Optional[list[Any]] = dataclasses.field(default=None)
     

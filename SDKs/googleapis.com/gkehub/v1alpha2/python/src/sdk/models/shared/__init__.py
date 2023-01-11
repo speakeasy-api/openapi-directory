@@ -32,3 +32,5 @@ from .setiampolicyrequest import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
 from .typemeta import *
+
+__all__ = ["XgafvEnum","AltEnum","ApplianceCluster","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","AuthorityInput","Authority","Binding","ConnectAgentResource","EdgeCluster","Expr","GenerateConnectManifestResponse","GkeClusterInput","GkeCluster","GoogleRPCStatus","InitializeHubResponse","KubernetesMetadata","KubernetesResourceInput","KubernetesResource","ListLocationsResponse","ListMembershipsResponse","ListOperationsResponse","Location","MembershipInfrastructureTypeEnum","MembershipInput","Membership","MembershipEndpointInput","MembershipEndpoint","MembershipStateCodeEnum","MembershipState","MultiCloudClusterInput","MultiCloudCluster","OnPremClusterClusterTypeEnum","OnPremClusterInput","OnPremCluster","Operation","Policy","ResourceManifest","ResourceOptions","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","TestIamPermissionsRequest","TestIamPermissionsResponse","TypeMeta"]

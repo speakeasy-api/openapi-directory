@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,9 +7,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateMailboxQuotaRequest:
-    mailbox_quota: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MailboxQuota') }})
-    organization_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
-    user_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserId') }})
+    mailbox_quota: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('MailboxQuota') }})
+    organization_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganizationId') }})
+    user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UserId') }})
     

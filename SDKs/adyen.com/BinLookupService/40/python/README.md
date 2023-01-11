@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,10 +23,10 @@ req = operations.PostGet3dsAvailabilityRequest(
             username="YOUR_USERNAME_HERE",
         ),
     ),
-    request="aut",
+    request="et",
 )
     
-res = s.sdk.post_get3ds_availability(req)
+res = s.general.post_get3ds_availability(req)
 
 if res.three_ds_availability_response is not None:
     # handle response
@@ -37,7 +36,7 @@ if res.three_ds_availability_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
 
 * `post_get3ds_availability` - Checks 3D Secure availability.
 * `post_get_cost_estimate` - Gets a cost estimate.

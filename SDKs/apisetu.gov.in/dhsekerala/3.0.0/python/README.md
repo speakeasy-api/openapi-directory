@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.HpcerRequest(
     security=operations.HpcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.HpcerRequestBody(
         certificate_parameters=operations.HpcerRequestBodyCertificateParameters(
-            dob="vel",
-            full_name="exercitationem",
-            regno="accusantium",
-            type="voluptatem",
-            year="porro",
+            dob="illo",
+            full_name="id",
+            regno="est",
+            type="architecto",
+            year="officiis",
         ),
-        consent_artifact="amet",
+        consent_artifact="deserunt",
         format="pdf",
-        txn_id="nihil",
+        txn_id="est",
     ),
 )
     
-res = s.sdk.hpcer(req)
+res = s.ap_is.hpcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -50,7 +49,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hpcer` - Class XII Passing Certificate
 

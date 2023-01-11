@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -112,13 +112,13 @@ class UserDefinedVariableConfigurationVariableTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UserDefinedVariableConfiguration:
     r"""UserDefinedVariableConfiguration
     User Defined Variable configuration.
     """
     
-    data_type: Optional[UserDefinedVariableConfigurationDataTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataType') }})
-    report_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportName') }})
-    variable_type: Optional[UserDefinedVariableConfigurationVariableTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('variableType') }})
+    data_type: Optional[UserDefinedVariableConfigurationDataTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataType') }})
+    report_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reportName') }})
+    variable_type: Optional[UserDefinedVariableConfigurationVariableTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('variableType') }})
     

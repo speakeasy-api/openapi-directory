@@ -245,3 +245,28 @@ class Customers:
         return res
 
     
+    def chromemanagement_customers_telemetry_events_list(self, request: operations.ChromemanagementCustomersTelemetryEventsListRequest) -> operations.ChromemanagementCustomersTelemetryEventsListResponse:
+        r"""List telemetry events.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1/{parent}/telemetry/events", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ChromemanagementCustomersTelemetryEventsListResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.GoogleChromeManagementV1ListTelemetryEventsResponse])
+                res.google_chrome_management_v1_list_telemetry_events_response = out
+
+        return res
+
+    

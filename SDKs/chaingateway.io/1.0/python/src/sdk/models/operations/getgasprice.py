@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getgasprice as shared_getgasprice
 
 
-@dataclass
+@dataclasses.dataclass
 class GetGasPriceHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGasPriceRequest:
-    headers: GetGasPriceHeaders = field()
+    headers: GetGasPriceHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetGasPriceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_gas_price: Optional[shared.GetGasPrice] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_gas_price: Optional[shared_getgasprice.GetGasPrice] = dataclasses.field(default=None)
     

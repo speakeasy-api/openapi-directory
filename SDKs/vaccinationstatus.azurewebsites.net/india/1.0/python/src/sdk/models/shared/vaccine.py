@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,14 +8,14 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Vaccine:
-    dose: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dose') }})
-    identity_type: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('identityType') }})
-    identity_value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('identityValue') }})
-    vaccinated_by: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinatedBy') }})
-    vaccination_date: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationDate') }})
-    vaccination_place: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationPlace') }})
-    vaccination_status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationStatus') }})
-    vaccine_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccineName') }})
+    dose: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dose') }})
+    identity_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('identityType') }})
+    identity_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('identityValue') }})
+    vaccinated_by: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinatedBy') }})
+    vaccination_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationDate') }})
+    vaccination_place: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationPlace') }})
+    vaccination_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccinationStatus') }})
+    vaccine_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vaccineName') }})
     

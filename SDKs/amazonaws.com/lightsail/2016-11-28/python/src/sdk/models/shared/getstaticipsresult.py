@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import staticip as shared_staticip
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetStaticIpsResult:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    static_ips: Optional[List[StaticIP]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('staticIps') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    static_ips: Optional[list[shared_staticip.StaticIP]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('staticIps') }})
     

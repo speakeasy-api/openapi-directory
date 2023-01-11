@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,12 +10,12 @@ class DiscoveredParticipantCodeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DiscoveredParticipant:
     r"""DiscoveredParticipant
     A public identifier for this customer.
     """
     
-    code: Optional[DiscoveredParticipantCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    email: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    code: Optional[DiscoveredParticipantCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    email: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
     

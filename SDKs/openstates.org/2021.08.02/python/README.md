@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,23 +18,22 @@ s = sdk.SDK()
     
 req = operations.BillDetailBillsJurisdictionSessionBillIDGetRequest(
     path_params=operations.BillDetailBillsJurisdictionSessionBillIDGetPathParams(
-        bill_id="et",
-        jurisdiction="consectetur",
-        session="laborum",
+        bill_id="voluptates",
+        jurisdiction="eos",
+        session="ducimus",
     ),
     query_params=operations.BillDetailBillsJurisdictionSessionBillIDGetQueryParams(
-        apikey="laudantium",
+        apikey="esse",
         include=[
-            "actions",
-            "sponsorships",
+            "other_identifiers",
         ],
     ),
     headers=operations.BillDetailBillsJurisdictionSessionBillIDGetHeaders(
-        x_api_key="ullam",
+        x_api_key="qui",
     ),
 )
     
-res = s.sdk.bill_detail_bills_jurisdiction_session_bill_id_get(req)
+res = s.bills.bill_detail_bills_jurisdiction_session_bill_id_get(req)
 
 if res.bill is not None:
     # handle response
@@ -45,15 +43,24 @@ if res.bill is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### bills
 
 * `bill_detail_bills_jurisdiction_session_bill_id_get` - Bill Detail
 * `bill_detail_by_id_bills_ocd_bill_openstates_bill_id_get` - Bill Detail By Id
 * `bills_search_bills_get` - Bills Search
+
+### committees
+
 * `committee_detail_committees_committee_id_get` - Committee Detail
 * `committee_list_committees_get` - Committee List
+
+### jurisdictions
+
 * `jurisdiction_detail_jurisdictions_jurisdiction_id_get` - Jurisdiction Detail
 * `jurisdiction_list_jurisdictions_get` - Jurisdiction List
+
+### people
+
 * `people_geo_people_geo_get` - People Geo
 * `people_search_people_get` - People Search
 

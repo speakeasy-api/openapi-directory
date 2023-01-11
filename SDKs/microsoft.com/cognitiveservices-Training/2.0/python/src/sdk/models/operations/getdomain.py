@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import domain as shared_domain
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainPathParams:
-    domain_id: str = field(metadata={'path_param': { 'field_name': 'domainId', 'style': 'simple', 'explode': False }})
+    domain_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'domainId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainRequest:
-    headers: GetDomainHeaders = field()
-    path_params: GetDomainPathParams = field()
+    headers: GetDomainHeaders = dataclasses.field()
+    path_params: GetDomainPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDomainResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    domain: Optional[shared.Domain] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    domain: Optional[shared_domain.Domain] = dataclasses.field(default=None)
     

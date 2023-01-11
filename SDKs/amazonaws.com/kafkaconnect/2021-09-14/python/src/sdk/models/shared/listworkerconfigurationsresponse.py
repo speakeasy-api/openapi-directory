@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workerconfigurationsummary as shared_workerconfigurationsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWorkerConfigurationsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    worker_configurations: Optional[List[WorkerConfigurationSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerConfigurations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    worker_configurations: Optional[list[shared_workerconfigurationsummary.WorkerConfigurationSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerConfigurations') }})
     

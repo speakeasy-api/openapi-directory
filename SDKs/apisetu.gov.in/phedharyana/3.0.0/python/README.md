@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,22 +20,22 @@ req = operations.EtcerRequest(
     security=operations.EtcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.EtcerRequestBody(
         certificate_parameters=operations.EtcerRequestBodyCertificateParameters(
-            unique_code="placeat",
+            unique_code="incidunt",
         ),
-        consent_artifact="quo",
+        consent_artifact="qui",
         format="pdf",
-        txn_id="soluta",
+        txn_id="reprehenderit",
     ),
 )
     
-res = s.sdk.etcer(req)
+res = s.ap_is.etcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `etcer` - Enlistment Certificate
 * `govid` - ID Card

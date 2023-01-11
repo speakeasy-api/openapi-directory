@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import lien as shared_lien
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListLiensResponse:
     r"""ListLiensResponse
     The response message for Liens.ListLiens.
     """
     
-    liens: Optional[List[Lien]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('liens') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    liens: Optional[list[shared_lien.Lien]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('liens') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

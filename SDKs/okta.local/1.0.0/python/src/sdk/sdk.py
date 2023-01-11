@@ -61,13 +61,13 @@ class SDK:
         url = utils.generate_url(base_url, "/api/v1/users/{userId}/sessions", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("DELETE", url, data=data, files=form, headers=headers)
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ClearUserSessionsResponse(status_code=r.status_code, content_type=content_type)
@@ -88,14 +88,14 @@ class SDK:
         url = base_url.removesuffix("/") + "/api/v1/users"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = self._client
         
-        r = client.request("GET", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("GET", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.FindUserResponse(status_code=r.status_code, content_type=content_type)
@@ -116,13 +116,13 @@ class SDK:
         url = utils.generate_url(base_url, "/api/v1/users/{userId}/appLinks", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("GET", url, data=data, files=form, headers=headers)
+        r = client.request("GET", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetAssignedAppLinksResponse(status_code=r.status_code, content_type=content_type)
@@ -143,13 +143,13 @@ class SDK:
         url = base_url.removesuffix("/") + "/api/v1/users/me"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("GET", url, data=data, files=form, headers=headers)
+        r = client.request("GET", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetCurrentUserResponse(status_code=r.status_code, content_type=content_type)
@@ -170,13 +170,13 @@ class SDK:
         url = utils.generate_url(base_url, "/api/v1/users/{userId}/groups", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("GET", url, data=data, files=form, headers=headers)
+        r = client.request("GET", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetGroupsForUserResponse(status_code=r.status_code, content_type=content_type)
@@ -197,13 +197,13 @@ class SDK:
         url = utils.generate_url(base_url, "/api/v1/users/{userId}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("GET", url, data=data, files=form, headers=headers)
+        r = client.request("GET", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.GetUserResponse(status_code=r.status_code, content_type=content_type)
@@ -224,13 +224,13 @@ class SDK:
         url = utils.generate_url(base_url, "/api/v1/users/{userId}/lifecycle/reset_factors", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.ResetFactorsResponse(status_code=r.status_code, content_type=content_type)

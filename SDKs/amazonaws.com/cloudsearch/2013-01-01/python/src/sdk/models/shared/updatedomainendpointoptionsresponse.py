@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from . import *
+from ..shared import domainendpointoptionsstatus as shared_domainendpointoptionsstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDomainEndpointOptionsResponse:
     r"""UpdateDomainEndpointOptionsResponse
     The result of a <code>UpdateDomainEndpointOptions</code> request. Contains the configuration and status of the domain's endpoint options. 
     """
     
-    domain_endpoint_options: Optional[DomainEndpointOptionsStatus] = field(default=None)
+    domain_endpoint_options: Optional[shared_domainendpointoptionsstatus.DomainEndpointOptionsStatus] = dataclasses.field(default=None)
     

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import hsmclientcertificatelist as shared_hsmclientcertificatelist
 
 
-@dataclass
+@dataclasses.dataclass
 class HsmClientCertificateMessage:
     r"""HsmClientCertificateMessage
     <p/>
     """
     
-    hsm_client_certificates: Optional[List[HsmClientCertificate]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    hsm_client_certificates: Optional[list[shared_hsmclientcertificatelist.HsmClientCertificateList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

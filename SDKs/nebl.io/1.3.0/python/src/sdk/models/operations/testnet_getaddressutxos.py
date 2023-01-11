@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getaddressutxosresponse as shared_getaddressutxosresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressUtxosPathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressUtxosRequest:
-    path_params: TestnetGetAddressUtxosPathParams = field()
+    path_params: TestnetGetAddressUtxosPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetGetAddressUtxosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_address_utxos_response: Optional[List[shared.GetAddressUtxosResponse]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_address_utxos_response: Optional[list[shared_getaddressutxosresponse.GetAddressUtxosResponse]] = dataclasses.field(default=None)
     

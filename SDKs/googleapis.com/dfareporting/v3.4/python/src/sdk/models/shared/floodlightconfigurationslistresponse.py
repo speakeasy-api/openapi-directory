@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import floodlightconfiguration as shared_floodlightconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FloodlightConfigurationsListResponse:
     r"""FloodlightConfigurationsListResponse
     Floodlight Configuration List Response
     """
     
-    floodlight_configurations: Optional[List[FloodlightConfiguration]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floodlightConfigurations') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    floodlight_configurations: Optional[list[shared_floodlightconfiguration.FloodlightConfiguration]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('floodlightConfigurations') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
     

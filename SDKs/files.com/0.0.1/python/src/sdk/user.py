@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -40,7 +40,7 @@ class User:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.APIKeyEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.APIKeyEntity]])
                 res.api_key_entities = out
         elif r.status_code == 400:
             pass
@@ -86,7 +86,7 @@ class User:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.As2KeyEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.As2KeyEntity]])
                 res.as2_key_entities = out
         elif r.status_code == 400:
             pass
@@ -132,7 +132,7 @@ class User:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GroupUserEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GroupUserEntity]])
                 res.group_user_entities = out
         elif r.status_code == 400:
             pass
@@ -178,7 +178,7 @@ class User:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PublicKeyEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PublicKeyEntity]])
                 res.public_key_entities = out
         elif r.status_code == 400:
             pass
@@ -214,13 +214,13 @@ class User:
         url = base_url.removesuffix("/") + "/user"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchUserResponse(status_code=r.status_code, content_type=content_type)
@@ -263,13 +263,13 @@ class User:
         url = base_url.removesuffix("/") + "/user/api_keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUserAPIKeysResponse(status_code=r.status_code, content_type=content_type)
@@ -312,13 +312,13 @@ class User:
         url = base_url.removesuffix("/") + "/user/as2_keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUserAs2KeysResponse(status_code=r.status_code, content_type=content_type)
@@ -361,13 +361,13 @@ class User:
         url = base_url.removesuffix("/") + "/user/public_keys"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostUserPublicKeysResponse(status_code=r.status_code, content_type=content_type)

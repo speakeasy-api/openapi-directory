@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2value as shared_googleprivacydlpv2value
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2ReplaceValueConfig:
     r"""GooglePrivacyDlpV2ReplaceValueConfig
     Replace each input value with a given `Value`.
     """
     
-    new_value: Optional[GooglePrivacyDlpV2Value] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newValue') }})
+    new_value: Optional[shared_googleprivacydlpv2value.GooglePrivacyDlpV2Value] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newValue') }})
     

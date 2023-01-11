@@ -1,51 +1,36 @@
-from dataclasses import dataclass, field
-from datetime import date, datetime
-from marshmallow import fields
-import dateutil.parser
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import username_enum4 as shared_username_enum4
+from ..shared import username_enum3 as shared_username_enum3
+from ..shared import username_enum2 as shared_username_enum2
+from ..shared import minimal_repository as shared_minimal_repository
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposListForUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
-class ReposListForUserDirectionEnum(str, Enum):
-    ASC = "asc"
-    DESC = "desc"
 
-class ReposListForUserSortEnum(str, Enum):
-    CREATED = "created"
-    UPDATED = "updated"
-    PUSHED = "pushed"
-    FULL_NAME = "full_name"
-
-class ReposListForUserTypeEnum(str, Enum):
-    ALL = "all"
-    OWNER = "owner"
-    MEMBER = "member"
-
-
-@dataclass
+@dataclasses.dataclass
 class ReposListForUserQueryParams:
-    direction: Optional[ReposListForUserDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[ReposListForUserSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    type: Optional[ReposListForUserTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_username_enum4.UsernameEnum4] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_username_enum3.UsernameEnum3] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    type: Optional[shared_username_enum2.UsernameEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListForUserRequest:
-    path_params: ReposListForUserPathParams = field()
-    query_params: ReposListForUserQueryParams = field()
+    path_params: ReposListForUserPathParams = dataclasses.field()
+    query_params: ReposListForUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposListForUserResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    minimal_repositories: Optional[List[shared.MinimalRepository]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    minimal_repositories: Optional[list[shared_minimal_repository.MinimalRepository]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,43 +25,46 @@ s.config_security(
     
 req = operations.CreateNotificationRuleRequest(
     headers=operations.CreateNotificationRuleHeaders(
-        x_amz_algorithm="consectetur",
-        x_amz_content_sha256="ducimus",
-        x_amz_credential="consequatur",
-        x_amz_date="non",
-        x_amz_security_token="vel",
-        x_amz_signature="at",
-        x_amz_signed_headers="cumque",
+        x_amz_algorithm="labore",
+        x_amz_content_sha256="est",
+        x_amz_credential="quod",
+        x_amz_date="et",
+        x_amz_security_token="sit",
+        x_amz_signature="quo",
+        x_amz_signed_headers="omnis",
     ),
     request=operations.CreateNotificationRuleRequestBody(
-        client_request_token="occaecati",
-        detail_type="FULL",
+        client_request_token="reprehenderit",
+        detail_type="BASIC",
         event_type_ids=[
-            "deserunt",
-            "maiores",
-            "error",
+            "veniam",
         ],
-        name="eius",
-        resource="dolorem",
-        status="ENABLED",
+        name="impedit",
+        resource="ex",
+        status="DISABLED",
         tags={
-            "excepturi": "voluptates",
-            "quo": "est",
+            "sunt": "incidunt",
+            "sed": "repellendus",
+            "error": "nostrum",
         },
         targets=[
             shared.Target(
-                target_address="optio",
-                target_type="at",
+                target_address="nihil",
+                target_type="ipsa",
             ),
             shared.Target(
-                target_address="a",
-                target_type="rerum",
+                target_address="nihil",
+                target_type="sed",
+            ),
+            shared.Target(
+                target_address="autem",
+                target_type="consequatur",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_notification_rule(req)
+res = s.create_notification_rule(req)
 
 if res.create_notification_rule_result is not None:
     # handle response

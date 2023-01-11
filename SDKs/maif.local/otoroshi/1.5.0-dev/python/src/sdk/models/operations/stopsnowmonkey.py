@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import done as shared_done
 
 
-@dataclass
+@dataclasses.dataclass
 class StopSnowMonkeySecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StopSnowMonkeyRequest:
-    security: StopSnowMonkeySecurity = field()
+    security: StopSnowMonkeySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StopSnowMonkeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    done: Optional[shared.Done] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    done: Optional[shared_done.Done] = dataclasses.field(default=None)
     

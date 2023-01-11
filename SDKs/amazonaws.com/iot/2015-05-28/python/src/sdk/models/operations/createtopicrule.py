@@ -1,66 +1,66 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import action as shared_action
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRulePathParams:
-    rule_name: str = field(metadata={'path_param': { 'field_name': 'ruleName', 'style': 'simple', 'explode': False }})
+    rule_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ruleName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRuleHeaders:
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
-    x_amz_tagging: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'x-amz-tagging', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_tagging: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-amz-tagging', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRuleRequestBodyTopicRulePayload:
     r"""CreateTopicRuleRequestBodyTopicRulePayload
     Describes a rule.
     """
     
-    actions: Optional[List[shared.Action]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
-    aws_iot_sql_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('awsIotSqlVersion') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    error_action: Optional[shared.Action] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorAction') }})
-    rule_disabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleDisabled') }})
-    sql: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sql') }})
+    actions: Optional[list[shared_action.Action]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actions') }})
+    aws_iot_sql_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('awsIotSqlVersion') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    error_action: Optional[shared_action.Action] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorAction') }})
+    rule_disabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ruleDisabled') }})
+    sql: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sql') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRuleRequestBody:
-    topic_rule_payload: CreateTopicRuleRequestBodyTopicRulePayload = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicRulePayload') }})
+    topic_rule_payload: CreateTopicRuleRequestBodyTopicRulePayload = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicRulePayload') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRuleRequest:
-    headers: CreateTopicRuleHeaders = field()
-    path_params: CreateTopicRulePathParams = field()
-    request: CreateTopicRuleRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: CreateTopicRuleHeaders = dataclasses.field()
+    path_params: CreateTopicRulePathParams = dataclasses.field()
+    request: CreateTopicRuleRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTopicRuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    conflicting_resource_update_exception: Optional[Any] = field(default=None)
-    internal_exception: Optional[Any] = field(default=None)
-    invalid_request_exception: Optional[Any] = field(default=None)
-    resource_already_exists_exception: Optional[Any] = field(default=None)
-    service_unavailable_exception: Optional[Any] = field(default=None)
-    sql_parse_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    conflicting_resource_update_exception: Optional[Any] = dataclasses.field(default=None)
+    internal_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_request_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_already_exists_exception: Optional[Any] = dataclasses.field(default=None)
+    service_unavailable_exception: Optional[Any] = dataclasses.field(default=None)
+    sql_parse_exception: Optional[Any] = dataclasses.field(default=None)
     

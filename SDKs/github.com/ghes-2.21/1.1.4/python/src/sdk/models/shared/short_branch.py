@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import branch_protection as shared_branch_protection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ShortBranchCommit:
-    sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ShortBranch:
     r"""ShortBranch
     Short Branch
     """
     
-    commit: ShortBranchCommit = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('commit') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    protected: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('protected') }})
-    protection: Optional[BranchProtection] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protection') }})
-    protection_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protection_url') }})
+    commit: ShortBranchCommit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('commit') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    protected: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('protected') }})
+    protection: Optional[shared_branch_protection.BranchProtection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protection') }})
+    protection_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('protection_url') }})
     

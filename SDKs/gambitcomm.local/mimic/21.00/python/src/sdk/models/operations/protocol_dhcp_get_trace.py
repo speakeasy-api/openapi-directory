@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configdhcp as shared_configdhcp
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpGetTracePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpGetTraceRequest:
-    path_params: ProtocolDhcpGetTracePathParams = field()
+    path_params: ProtocolDhcpGetTracePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolDhcpGetTraceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_dhcp: Optional[shared.ConfigDhcp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_dhcp: Optional[shared_configdhcp.ConfigDhcp] = dataclasses.field(default=None)
     

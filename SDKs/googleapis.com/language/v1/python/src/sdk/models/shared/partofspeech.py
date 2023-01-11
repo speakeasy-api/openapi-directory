@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -112,22 +112,22 @@ class PartOfSpeechVoiceEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PartOfSpeech:
     r"""PartOfSpeech
     Represents part of speech information for a token. Parts of speech are as defined in http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
     """
     
-    aspect: Optional[PartOfSpeechAspectEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aspect') }})
-    case: Optional[PartOfSpeechCaseEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('case') }})
-    form: Optional[PartOfSpeechFormEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('form') }})
-    gender: Optional[PartOfSpeechGenderEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gender') }})
-    mood: Optional[PartOfSpeechMoodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mood') }})
-    number: Optional[PartOfSpeechNumberEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
-    person: Optional[PartOfSpeechPersonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('person') }})
-    proper: Optional[PartOfSpeechProperEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proper') }})
-    reciprocity: Optional[PartOfSpeechReciprocityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reciprocity') }})
-    tag: Optional[PartOfSpeechTagEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
-    tense: Optional[PartOfSpeechTenseEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tense') }})
-    voice: Optional[PartOfSpeechVoiceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('voice') }})
+    aspect: Optional[PartOfSpeechAspectEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('aspect') }})
+    case: Optional[PartOfSpeechCaseEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('case') }})
+    form: Optional[PartOfSpeechFormEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('form') }})
+    gender: Optional[PartOfSpeechGenderEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gender') }})
+    mood: Optional[PartOfSpeechMoodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mood') }})
+    number: Optional[PartOfSpeechNumberEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('number') }})
+    person: Optional[PartOfSpeechPersonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('person') }})
+    proper: Optional[PartOfSpeechProperEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proper') }})
+    reciprocity: Optional[PartOfSpeechReciprocityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reciprocity') }})
+    tag: Optional[PartOfSpeechTagEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tag') }})
+    tense: Optional[PartOfSpeechTenseEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tense') }})
+    voice: Optional[PartOfSpeechVoiceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('voice') }})
     

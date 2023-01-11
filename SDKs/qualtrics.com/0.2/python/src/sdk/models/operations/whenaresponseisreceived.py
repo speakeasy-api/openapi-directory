@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import subscribetoeventbody as shared_subscribetoeventbody
+from ..shared import eventsubscriptionsresponse as shared_eventsubscriptionsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class WhenAResponseIsReceivedRequest:
-    request: shared.SubscribeToEventBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_subscribetoeventbody.SubscribeToEventBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WhenAResponseIsReceivedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    event_subscriptions_response: Optional[shared.EventSubscriptionsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_subscriptions_response: Optional[shared_eventsubscriptionsresponse.EventSubscriptionsResponse] = dataclasses.field(default=None)
     

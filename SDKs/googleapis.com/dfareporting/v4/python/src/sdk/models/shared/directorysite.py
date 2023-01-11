@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dimensionvalue as shared_dimensionvalue
+from ..shared import directorysitesettings as shared_directorysitesettings
 
 class DirectorySiteInpageTagFormatsEnum(str, Enum):
     STANDARD = "STANDARD"
@@ -18,18 +19,18 @@ class DirectorySiteInterstitialTagFormatsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DirectorySite:
     r"""DirectorySite
     DirectorySites contains properties of a website from the Site Directory. Sites need to be added to an account via the Sites resource before they can be assigned to a placement.
     """
     
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    id_dimension_value: Optional[DimensionValue] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idDimensionValue') }})
-    inpage_tag_formats: Optional[List[DirectorySiteInpageTagFormatsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inpageTagFormats') }})
-    interstitial_tag_formats: Optional[List[DirectorySiteInterstitialTagFormatsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interstitialTagFormats') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    settings: Optional[DirectorySiteSettings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id_dimension_value: Optional[shared_dimensionvalue.DimensionValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('idDimensionValue') }})
+    inpage_tag_formats: Optional[list[DirectorySiteInpageTagFormatsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('inpageTagFormats') }})
+    interstitial_tag_formats: Optional[list[DirectorySiteInterstitialTagFormatsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('interstitialTagFormats') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    settings: Optional[shared_directorysitesettings.DirectorySiteSettings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('settings') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

@@ -3,3 +3,5 @@ from .libraryagent_shelves_books_get import *
 from .libraryagent_shelves_books_list import *
 from .libraryagent_shelves_books_return import *
 from .libraryagent_shelves_list import *
+
+__all__ = ["LibraryagentShelvesBooksBorrowPathParams","LibraryagentShelvesBooksBorrowQueryParams","LibraryagentShelvesBooksBorrowSecurity","LibraryagentShelvesBooksBorrowRequest","LibraryagentShelvesBooksBorrowResponse","LibraryagentShelvesBooksGetPathParams","LibraryagentShelvesBooksGetQueryParams","LibraryagentShelvesBooksGetSecurity","LibraryagentShelvesBooksGetRequest","LibraryagentShelvesBooksGetResponse","LibraryagentShelvesBooksListPathParams","LibraryagentShelvesBooksListQueryParams","LibraryagentShelvesBooksListSecurity","LibraryagentShelvesBooksListRequest","LibraryagentShelvesBooksListResponse","LibraryagentShelvesBooksReturnPathParams","LibraryagentShelvesBooksReturnQueryParams","LibraryagentShelvesBooksReturnSecurity","LibraryagentShelvesBooksReturnRequest","LibraryagentShelvesBooksReturnResponse","LibraryagentShelvesListQueryParams","LibraryagentShelvesListSecurity","LibraryagentShelvesListRequest","LibraryagentShelvesListResponse"]

@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EvaluateExpressionOutput:
     r"""EvaluateExpressionOutput
     Contains the output of EvaluateExpression.
     """
     
-    evaluated_expression: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluatedExpression') }})
+    evaluated_expression: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluatedExpression') }})
     

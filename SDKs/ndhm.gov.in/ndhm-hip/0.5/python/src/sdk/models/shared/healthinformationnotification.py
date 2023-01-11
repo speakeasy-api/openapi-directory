@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -13,10 +13,10 @@ class HealthInformationNotificationNotificationNotifierTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HealthInformationNotificationNotificationNotifier:
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: Optional[HealthInformationNotificationNotificationNotifierTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: Optional[HealthInformationNotificationNotificationNotifierTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 class HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum(str, Enum):
     TRANSFERRED = "TRANSFERRED"
@@ -29,35 +29,35 @@ class HealthInformationNotificationNotificationStatusNotificationStatusResponses
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HealthInformationNotificationNotificationStatusNotificationStatusResponses:
-    care_context_reference: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContextReference') }})
-    hi_status: HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hiStatus') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    care_context_reference: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('careContextReference') }})
+    hi_status: HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hiStatus') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HealthInformationNotificationNotificationStatusNotification:
-    hip_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hipId') }})
-    session_status: HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionStatus') }})
-    status_responses: Optional[List[HealthInformationNotificationNotificationStatusNotificationStatusResponses]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusResponses') }})
+    hip_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('hipId') }})
+    session_status: HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionStatus') }})
+    status_responses: Optional[list[HealthInformationNotificationNotificationStatusNotificationStatusResponses]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusResponses') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HealthInformationNotificationNotification:
-    consent_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentId') }})
-    done_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('doneAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    notifier: HealthInformationNotificationNotificationNotifier = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notifier') }})
-    status_notification: HealthInformationNotificationNotificationStatusNotification = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusNotification') }})
-    transaction_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionId') }})
+    consent_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentId') }})
+    done_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('doneAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    notifier: HealthInformationNotificationNotificationNotifier = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notifier') }})
+    status_notification: HealthInformationNotificationNotificationStatusNotification = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('statusNotification') }})
+    transaction_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('transactionId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class HealthInformationNotification:
-    notification: HealthInformationNotificationNotification = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notification') }})
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    timestamp: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    notification: HealthInformationNotificationNotification = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('notification') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

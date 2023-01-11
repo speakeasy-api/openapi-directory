@@ -1,37 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import picture as shared_picture
 
 
-@dataclass
+@dataclasses.dataclass
 class EditPicturePathParams:
-    portraitset_id: float = field(metadata={'path_param': { 'field_name': 'portraitset_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    portraitset_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'portraitset_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EditPictureRequestBody:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditPictureSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditPictureRequest:
-    path_params: EditPicturePathParams = field()
-    security: EditPictureSecurity = field()
-    request: Optional[EditPictureRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.picture+json' }})
+    path_params: EditPicturePathParams = dataclasses.field()
+    security: EditPictureSecurity = dataclasses.field()
+    request: Optional[EditPictureRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.picture+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditPictureResponse:
-    content_type: str = field()
-    status_code: int = field()
-    picture: Optional[shared.Picture] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    picture: Optional[shared_picture.Picture] = dataclasses.field(default=None)
     

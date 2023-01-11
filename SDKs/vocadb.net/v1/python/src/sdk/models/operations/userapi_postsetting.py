@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostSettingPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    setting_name: str = field(metadata={'path_param': { 'field_name': 'settingName', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    setting_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'settingName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostSettingRequests:
-    string: Optional[str] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    string1: Optional[str] = field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    string2: Optional[str] = field(default=None, metadata={'request': { 'media_type': 'application/xml' }})
-    string3: Optional[str] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
-    string4: Optional[str] = field(default=None, metadata={'request': { 'media_type': 'text/xml' }})
+    string: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    string1: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    string2: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/xml' }})
+    string3: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    string4: Optional[str] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/xml' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostSettingRequest:
-    path_params: UserAPIPostSettingPathParams = field()
-    request: UserAPIPostSettingRequests = field()
+    path_params: UserAPIPostSettingPathParams = dataclasses.field()
+    request: UserAPIPostSettingRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIPostSettingResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

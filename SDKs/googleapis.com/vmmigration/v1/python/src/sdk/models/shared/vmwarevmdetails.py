@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,42 +17,42 @@ class VmwareVMDetailsPowerStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VmwareVMDetails:
     r"""VmwareVMDetails
     VmwareVmDetails describes a VM in vCenter.
     """
     
-    boot_option: Optional[VmwareVMDetailsBootOptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootOption') }})
-    committed_storage_mb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageMb') }})
-    cpu_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuCount') }})
-    datacenter_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterDescription') }})
-    datacenter_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterId') }})
-    disk_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskCount') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    guest_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestDescription') }})
-    memory_mb: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memoryMb') }})
-    power_state: Optional[VmwareVMDetailsPowerStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('powerState') }})
-    uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
-    vm_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmId') }})
+    boot_option: Optional[VmwareVMDetailsBootOptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bootOption') }})
+    committed_storage_mb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageMb') }})
+    cpu_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuCount') }})
+    datacenter_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterDescription') }})
+    datacenter_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterId') }})
+    disk_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskCount') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    guest_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestDescription') }})
+    memory_mb: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memoryMb') }})
+    power_state: Optional[VmwareVMDetailsPowerStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('powerState') }})
+    uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
+    vm_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class VmwareVMDetailsInput:
     r"""VmwareVMDetailsInput
     VmwareVmDetails describes a VM in vCenter.
     """
     
-    committed_storage_mb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageMb') }})
-    cpu_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuCount') }})
-    datacenter_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterDescription') }})
-    datacenter_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterId') }})
-    disk_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskCount') }})
-    display_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
-    guest_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestDescription') }})
-    memory_mb: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memoryMb') }})
-    power_state: Optional[VmwareVMDetailsPowerStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('powerState') }})
-    uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
-    vm_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmId') }})
+    committed_storage_mb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committedStorageMb') }})
+    cpu_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuCount') }})
+    datacenter_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterDescription') }})
+    datacenter_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('datacenterId') }})
+    disk_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('diskCount') }})
+    display_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('displayName') }})
+    guest_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestDescription') }})
+    memory_mb: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memoryMb') }})
+    power_state: Optional[VmwareVMDetailsPowerStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('powerState') }})
+    uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('uuid') }})
+    vm_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vmId') }})
     

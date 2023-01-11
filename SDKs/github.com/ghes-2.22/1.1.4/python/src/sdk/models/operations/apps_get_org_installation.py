@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import installation_ghes_2 as shared_installation_ghes_2
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetOrgInstallationPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetOrgInstallationRequest:
-    path_params: AppsGetOrgInstallationPathParams = field()
+    path_params: AppsGetOrgInstallationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsGetOrgInstallationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    installation_ghes_2: Optional[shared.InstallationGhes2] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    installation_ghes_2: Optional[shared_installation_ghes_2.InstallationGhes2] = dataclasses.field(default=None)
     

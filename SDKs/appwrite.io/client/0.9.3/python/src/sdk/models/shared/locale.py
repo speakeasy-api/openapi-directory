@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Locale:
     r"""Locale
     Locale
     """
     
-    continent: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('continent') }})
-    continent_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('continentCode') }})
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
-    country_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('countryCode') }})
-    currency: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
-    eu: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eu') }})
-    ip: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
+    continent: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('continent') }})
+    continent_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('continentCode') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
+    country_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('countryCode') }})
+    currency: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
+    eu: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eu') }})
+    ip: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ip') }})
     

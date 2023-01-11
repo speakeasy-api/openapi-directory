@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.AcceptResourceShareInvitationRequest(
     headers=operations.AcceptResourceShareInvitationHeaders(
-        x_amz_algorithm="nam",
-        x_amz_content_sha256="non",
-        x_amz_credential="doloremque",
-        x_amz_date="qui",
-        x_amz_security_token="quaerat",
-        x_amz_signature="natus",
-        x_amz_signed_headers="illo",
+        x_amz_algorithm="quis",
+        x_amz_content_sha256="tempora",
+        x_amz_credential="esse",
+        x_amz_date="rerum",
+        x_amz_security_token="tempora",
+        x_amz_signature="culpa",
+        x_amz_signed_headers="deserunt",
     ),
     request=operations.AcceptResourceShareInvitationRequestBody(
-        client_token="optio",
-        resource_share_invitation_arn="reprehenderit",
+        client_token="nihil",
+        resource_share_invitation_arn="aut",
     ),
 )
     
-res = s.sdk.accept_resource_share_invitation(req)
+res = s.accept_resource_share_invitation(req)
 
 if res.accept_resource_share_invitation_response is not None:
     # handle response

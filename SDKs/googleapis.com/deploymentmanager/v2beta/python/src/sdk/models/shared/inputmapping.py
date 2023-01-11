@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -13,14 +13,14 @@ class InputMappingLocationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InputMapping:
     r"""InputMapping
     InputMapping creates a 'virtual' property that will be injected into the properties before sending the request to the underlying API.
     """
     
-    field_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldName') }})
-    location: Optional[InputMappingLocationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    method_match: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('methodMatch') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    field_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldName') }})
+    location: Optional[InputMappingLocationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    method_match: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('methodMatch') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

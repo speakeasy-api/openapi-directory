@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import extensionactiondefinition as shared_extensionactiondefinition
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationV4ActionsAppIDDefinitionIDGetByIDPathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
-    definition_id: str = field(metadata={'path_param': { 'field_name': 'definitionId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    definition_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'definitionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationV4ActionsAppIDDefinitionIDGetByIDQueryParams:
-    archived: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'archived', 'style': 'form', 'explode': True }})
+    archived: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'archived', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationV4ActionsAppIDDefinitionIDGetByIDRequest:
-    path_params: GetAutomationV4ActionsAppIDDefinitionIDGetByIDPathParams = field()
-    query_params: GetAutomationV4ActionsAppIDDefinitionIDGetByIDQueryParams = field()
-    security: GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity = field()
+    path_params: GetAutomationV4ActionsAppIDDefinitionIDGetByIDPathParams = dataclasses.field()
+    query_params: GetAutomationV4ActionsAppIDDefinitionIDGetByIDQueryParams = dataclasses.field()
+    security: GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAutomationV4ActionsAppIDDefinitionIDGetByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    extension_action_definition: Optional[shared.ExtensionActionDefinition] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    extension_action_definition: Optional[shared_extensionactiondefinition.ExtensionActionDefinition] = dataclasses.field(default=None)
     

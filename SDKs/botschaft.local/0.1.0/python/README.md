@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,11 +18,11 @@ s = sdk.SDK()
     
 req = operations.ConfigConfigGetRequest(
     headers=operations.ConfigConfigGetHeaders(
-        authorization="eaque",
+        authorization="ut",
     ),
 )
     
-res = s.sdk.config_config_get(req)
+res = s.config_config_get(req)
 
 if res.config is not None:
     # handle response
@@ -36,13 +35,25 @@ if res.config is not None:
 ### SDK SDK
 
 * `config_config_get` - Config
+* `topic_topic_topic_name_get` - Topic
+
+### discord
+
 * `discord_get_discord_get` - Discord Get
 * `discord_post_discord_post` - Discord Post
+
+### slack
+
 * `slack_get_slack_get` - Slack Get
 * `slack_post_slack_post` - Slack Post
+
+### sns
+
 * `sns_get_sns_get` - Sns Get
 * `sns_post_sns_post` - Sns Post
-* `topic_topic_topic_name_get` - Topic
+
+### twilio
+
 * `twilio_message_get_twilio_get` - Twilio Message Get
 * `twilio_message_post_twilio_post` - Twilio Message Post
 

@@ -1,43 +1,33 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import offeringid_enum1 as shared_offeringid_enum1
+from ..shared import error as shared_error
+from ..shared import offeringuserresponse as shared_offeringuserresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
-class GetOfferingsOfferingIDUsersFacilitatorsEnum(str, Enum):
-    TRUE = "true"
-    FALSE = "false"
 
-class GetOfferingsOfferingIDUsersLearnersEnum(str, Enum):
-    TRUE = "true"
-    FALSE = "false"
-
-class GetOfferingsOfferingIDUsersMarkersEnum(str, Enum):
-    TRUE = "true"
-    FALSE = "false"
-
-
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersQueryParams:
-    facilitators: Optional[GetOfferingsOfferingIDUsersFacilitatorsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'facilitators', 'style': 'form', 'explode': True }})
-    learners: Optional[GetOfferingsOfferingIDUsersLearnersEnum] = field(default=None, metadata={'query_param': { 'field_name': 'learners', 'style': 'form', 'explode': True }})
-    markers: Optional[GetOfferingsOfferingIDUsersMarkersEnum] = field(default=None, metadata={'query_param': { 'field_name': 'markers', 'style': 'form', 'explode': True }})
+    facilitators: Optional[shared_offeringid_enum1.OfferingIDEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'facilitators', 'style': 'form', 'explode': True }})
+    learners: Optional[shared_offeringid_enum1.OfferingIDEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'learners', 'style': 'form', 'explode': True }})
+    markers: Optional[shared_offeringid_enum1.OfferingIDEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'markers', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersRequest:
-    path_params: GetOfferingsOfferingIDUsersPathParams = field()
-    query_params: GetOfferingsOfferingIDUsersQueryParams = field()
+    path_params: GetOfferingsOfferingIDUsersPathParams = dataclasses.field()
+    query_params: GetOfferingsOfferingIDUsersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOfferingsOfferingIDUsersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    offering_user_responses: Optional[List[shared.OfferingUserResponse]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    offering_user_responses: Optional[list[shared_offeringuserresponse.OfferingUserResponse]] = dataclasses.field(default=None)
     

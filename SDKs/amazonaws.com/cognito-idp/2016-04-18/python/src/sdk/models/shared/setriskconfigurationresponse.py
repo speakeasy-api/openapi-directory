@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import riskconfigurationtype as shared_riskconfigurationtype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SetRiskConfigurationResponse:
-    risk_configuration: RiskConfigurationType = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RiskConfiguration') }})
+    risk_configuration: shared_riskconfigurationtype.RiskConfigurationType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('RiskConfiguration') }})
     

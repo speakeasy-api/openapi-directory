@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Filters:
-    filter: Optional[str] = field(default=None)
-    filter_type: Optional[str] = field(default=None)
-    included_fields: Optional[List[Any]] = field(default=None)
+    filter: Optional[str] = dataclasses.field(default=None)
+    filter_type: Optional[str] = dataclasses.field(default=None)
+    included_fields: Optional[list[Any]] = dataclasses.field(default=None)
     

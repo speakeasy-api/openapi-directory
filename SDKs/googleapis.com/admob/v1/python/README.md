@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,28 +20,28 @@ req = operations.AdmobAccountsAdUnitsListRequest(
     security=operations.AdmobAccountsAdUnitsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AdmobAccountsAdUnitsListPathParams(
-        parent="quia",
+        parent="itaque",
     ),
     query_params=operations.AdmobAccountsAdUnitsListQueryParams(
-        dollar_xgafv="2",
-        access_token="sed",
+        dollar_xgafv="1",
+        access_token="molestiae",
         alt="media",
-        callback="dolorum",
-        fields="aut",
-        key="qui",
-        oauth_token="at",
-        page_size=1613862810283166010,
-        page_token="laborum",
+        callback="odit",
+        fields="qui",
+        key="itaque",
+        oauth_token="voluptas",
+        page_size=3470849913966832319,
+        page_token="vel",
         pretty_print=False,
-        quota_user="non",
-        upload_type="ut",
-        upload_protocol="non",
+        quota_user="est",
+        upload_type="omnis",
+        upload_protocol="assumenda",
     ),
 )
     

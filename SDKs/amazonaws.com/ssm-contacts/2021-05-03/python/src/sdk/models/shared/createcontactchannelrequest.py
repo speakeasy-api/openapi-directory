@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import contactchanneladdress as shared_contactchanneladdress
+from ..shared import channeltype_enum as shared_channeltype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateContactChannelRequest:
-    contact_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ContactId') }})
-    delivery_address: ContactChannelAddress = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryAddress') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
-    type: ChannelTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
-    defer_activation: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeferActivation') }})
-    idempotency_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdempotencyToken') }})
+    contact_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ContactId') }})
+    delivery_address: shared_contactchanneladdress.ContactChannelAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeliveryAddress') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Name') }})
+    type: shared_channeltype_enum.ChannelTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Type') }})
+    defer_activation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeferActivation') }})
+    idempotency_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('IdempotencyToken') }})
     

@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPathQueryParams:
-    name: str = field(metadata={'query_param': { 'field_name': ':name', 'style': 'form', 'explode': True }})
-    jcr_primary_type: str = field(metadata={'query_param': { 'field_name': 'jcr:primaryType', 'style': 'form', 'explode': True }})
+    name: str = dataclasses.field(metadata={'query_param': { 'field_name': ':name', 'style': 'form', 'explode': True }})
+    jcr_primary_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jcr:primaryType', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPathRequest:
-    path_params: PostPathPathParams = field()
-    query_params: PostPathQueryParams = field()
+    path_params: PostPathPathParams = dataclasses.field()
+    query_params: PostPathQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostPathResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

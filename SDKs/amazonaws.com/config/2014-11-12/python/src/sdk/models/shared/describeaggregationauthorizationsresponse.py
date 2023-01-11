@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import aggregationauthorization as shared_aggregationauthorization
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeAggregationAuthorizationsResponse:
-    aggregation_authorizations: Optional[List[AggregationAuthorization]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AggregationAuthorizations') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    aggregation_authorizations: Optional[list[shared_aggregationauthorization.AggregationAuthorization]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AggregationAuthorizations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

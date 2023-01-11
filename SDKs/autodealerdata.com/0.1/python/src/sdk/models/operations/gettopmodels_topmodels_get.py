@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import topmodelresp as shared_topmodelresp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTopModelsTopModelsGetQueryParams:
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
-    region_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    region_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'regionName', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTopModelsTopModelsGetRequest:
-    query_params: GetTopModelsTopModelsGetQueryParams = field()
+    query_params: GetTopModelsTopModelsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTopModelsTopModelsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    top_model_resp: Optional[shared.TopModelResp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    top_model_resp: Optional[shared_topmodelresp.TopModelResp] = dataclasses.field(default=None)
     

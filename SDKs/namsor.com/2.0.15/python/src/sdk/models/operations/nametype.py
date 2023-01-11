@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import propernouncategorizedout as shared_propernouncategorizedout
 
 
-@dataclass
+@dataclasses.dataclass
 class NameTypePathParams:
-    proper_noun: str = field(metadata={'path_param': { 'field_name': 'properNoun', 'style': 'simple', 'explode': False }})
+    proper_noun: str = dataclasses.field(metadata={'path_param': { 'field_name': 'properNoun', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeRequest:
-    path_params: NameTypePathParams = field()
-    security: NameTypeSecurity = field()
+    path_params: NameTypePathParams = dataclasses.field()
+    security: NameTypeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class NameTypeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    proper_noun_categorized_out: Optional[shared.ProperNounCategorizedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    proper_noun_categorized_out: Optional[shared_propernouncategorizedout.ProperNounCategorizedOut] = dataclasses.field(default=None)
     

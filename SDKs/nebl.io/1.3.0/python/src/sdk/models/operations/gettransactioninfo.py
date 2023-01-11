@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import gettransactioninforesponse as shared_gettransactioninforesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionInfoPathParams:
-    txid: str = field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
+    txid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'txid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionInfoRequest:
-    path_params: GetTransactionInfoPathParams = field()
+    path_params: GetTransactionInfoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    get_transaction_info_response: Optional[shared.GetTransactionInfoResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    get_transaction_info_response: Optional[shared_gettransactioninforesponse.GetTransactionInfoResponse] = dataclasses.field(default=None)
     

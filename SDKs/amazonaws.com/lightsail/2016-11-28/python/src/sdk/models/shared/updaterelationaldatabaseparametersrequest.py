@@ -1,16 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import relationaldatabaseparameter as shared_relationaldatabaseparameter
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateRelationalDatabaseParametersRequest:
-    parameters: List[RelationalDatabaseParameter] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
-    relational_database_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationalDatabaseName') }})
+    parameters: list[shared_relationaldatabaseparameter.RelationalDatabaseParameter] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('parameters') }})
+    relational_database_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationalDatabaseName') }})
     

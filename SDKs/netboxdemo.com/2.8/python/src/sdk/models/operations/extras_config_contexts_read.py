@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configcontext as shared_configcontext
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsReadRequest:
-    path_params: ExtrasConfigContextsReadPathParams = field()
+    path_params: ExtrasConfigContextsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasConfigContextsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_context: Optional[shared.ConfigContext] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_context: Optional[shared_configcontext.ConfigContext] = dataclasses.field(default=None)
     

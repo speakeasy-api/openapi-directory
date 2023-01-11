@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import lyricsforsongcontract as shared_lyricsforsongcontract
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetLyricsPathParams:
-    lyrics_id: int = field(metadata={'path_param': { 'field_name': 'lyricsId', 'style': 'simple', 'explode': False }})
+    lyrics_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'lyricsId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetLyricsRequest:
-    path_params: SongAPIGetLyricsPathParams = field()
+    path_params: SongAPIGetLyricsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetLyricsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    lyrics_for_song_contract: Optional[shared.LyricsForSongContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    lyrics_for_song_contract: Optional[shared_lyricsforsongcontract.LyricsForSongContract] = dataclasses.field(default=None)
     

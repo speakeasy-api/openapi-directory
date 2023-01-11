@@ -18,3 +18,5 @@ from .shipmentcancellation import *
 from .shippingquote import *
 from .shippingquoterequest import *
 from .weight import *
+
+__all__ = ["AdditionalOption","Amount","Contact","ContactAddress","CreateShipmentFromQuoteRequest","Dimensions","Error","ErrorParameter","Order","PackageSpecification","PhoneNumber","PickupSlot","PurchasedRate","Rate","SchemeAPIAuth","Shipment","ShipmentCancellation","ShippingQuote","ShippingQuoteRequest","Weight"]

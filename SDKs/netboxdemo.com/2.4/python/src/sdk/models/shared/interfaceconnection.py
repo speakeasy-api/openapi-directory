@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nestedinterface as shared_nestedinterface
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InterfaceConnectionConnectionStatus:
-    label: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
-    value: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    label: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('label') }})
+    value: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InterfaceConnection:
-    interface_a: NestedInterface = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_a') }})
-    interface_b: NestedInterface = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_b') }})
-    connection_status: Optional[InterfaceConnectionConnectionStatus] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    interface_a: shared_nestedinterface.NestedInterface = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_a') }})
+    interface_b: shared_nestedinterface.NestedInterface = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('interface_b') }})
+    connection_status: Optional[InterfaceConnectionConnectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('connection_status') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     

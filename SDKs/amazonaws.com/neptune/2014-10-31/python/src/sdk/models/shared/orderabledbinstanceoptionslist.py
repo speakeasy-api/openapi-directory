@@ -1,0 +1,32 @@
+import dataclasses
+from typing import Optional
+from ..shared import availabilityzonelist as shared_availabilityzonelist
+
+
+@dataclasses.dataclass
+class OrderableDbInstanceOptionsList:
+    r"""OrderableDbInstanceOptionsList
+    <p>Contains a list of available options for a DB instance.</p> <p> This data type is used as a response element in the <a>DescribeOrderableDBInstanceOptions</a> action.</p>
+    """
+    
+    availability_zones: Optional[list[shared_availabilityzonelist.AvailabilityZoneList]] = dataclasses.field(default=None)
+    db_instance_class: Optional[str] = dataclasses.field(default=None)
+    engine: Optional[str] = dataclasses.field(default=None)
+    engine_version: Optional[str] = dataclasses.field(default=None)
+    license_model: Optional[str] = dataclasses.field(default=None)
+    max_iops_per_db_instance: Optional[int] = dataclasses.field(default=None)
+    max_iops_per_gib: Optional[float] = dataclasses.field(default=None)
+    max_storage_size: Optional[int] = dataclasses.field(default=None)
+    min_iops_per_db_instance: Optional[int] = dataclasses.field(default=None)
+    min_iops_per_gib: Optional[float] = dataclasses.field(default=None)
+    min_storage_size: Optional[int] = dataclasses.field(default=None)
+    multi_az_capable: Optional[bool] = dataclasses.field(default=None)
+    read_replica_capable: Optional[bool] = dataclasses.field(default=None)
+    storage_type: Optional[str] = dataclasses.field(default=None)
+    supports_enhanced_monitoring: Optional[bool] = dataclasses.field(default=None)
+    supports_iam_database_authentication: Optional[bool] = dataclasses.field(default=None)
+    supports_iops: Optional[bool] = dataclasses.field(default=None)
+    supports_performance_insights: Optional[bool] = dataclasses.field(default=None)
+    supports_storage_encryption: Optional[bool] = dataclasses.field(default=None)
+    vpc: Optional[bool] = dataclasses.field(default=None)
+    

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import sandboxitemfirewebhookrequest as shared_sandboxitemfirewebhookrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class SandboxItemFireWebhookRequest:
-    request: shared.SandboxItemFireWebhookRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_sandboxitemfirewebhookrequest.SandboxItemFireWebhookRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SandboxItemFireWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    sandbox_item_fire_webhook_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    sandbox_item_fire_webhook_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

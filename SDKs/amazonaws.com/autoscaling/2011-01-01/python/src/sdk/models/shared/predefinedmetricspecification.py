@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import metrictype_enum as shared_metrictype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class PredefinedMetricSpecification:
     r"""PredefinedMetricSpecification
     Represents a predefined metric for a target tracking scaling policy to use with Amazon EC2 Auto Scaling.
     """
     
-    predefined_metric_type: MetricTypeEnum = field()
-    resource_label: Optional[str] = field(default=None)
+    predefined_metric_type: shared_metrictype_enum.MetricTypeEnum = dataclasses.field()
+    resource_label: Optional[str] = dataclasses.field(default=None)
     

@@ -1,40 +1,41 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import startcallanalyticsjobrequest as shared_startcallanalyticsjobrequest
+from ..shared import startcallanalyticsjobresponse as shared_startcallanalyticsjobresponse
 
 class StartCallAnalyticsJobXAmzTargetEnum(str, Enum):
     TRANSCRIBE_START_CALL_ANALYTICS_JOB = "Transcribe.StartCallAnalyticsJob"
 
 
-@dataclass
+@dataclasses.dataclass
 class StartCallAnalyticsJobHeaders:
-    x_amz_target: StartCallAnalyticsJobXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: StartCallAnalyticsJobXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartCallAnalyticsJobRequest:
-    headers: StartCallAnalyticsJobHeaders = field()
-    request: shared.StartCallAnalyticsJobRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: StartCallAnalyticsJobHeaders = dataclasses.field()
+    request: shared_startcallanalyticsjobrequest.StartCallAnalyticsJobRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StartCallAnalyticsJobResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bad_request_exception: Optional[Any] = field(default=None)
-    conflict_exception: Optional[Any] = field(default=None)
-    internal_failure_exception: Optional[Any] = field(default=None)
-    limit_exceeded_exception: Optional[Any] = field(default=None)
-    start_call_analytics_job_response: Optional[shared.StartCallAnalyticsJobResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bad_request_exception: Optional[Any] = dataclasses.field(default=None)
+    conflict_exception: Optional[Any] = dataclasses.field(default=None)
+    internal_failure_exception: Optional[Any] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    start_call_analytics_job_response: Optional[shared_startcallanalyticsjobresponse.StartCallAnalyticsJobResponse] = dataclasses.field(default=None)
     

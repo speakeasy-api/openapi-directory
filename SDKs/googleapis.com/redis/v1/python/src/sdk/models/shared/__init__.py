@@ -25,3 +25,5 @@ from .timeofday import *
 from .tlscertificate import *
 from .upgradeinstancerequest import *
 from .weeklymaintenancewindow import *
+
+__all__ = ["XgafvEnum","AltEnum","ExportInstanceRequest","FailoverInstanceRequestDataProtectionModeEnum","FailoverInstanceRequest","GcsDestination","GcsSource","ImportInstanceRequest","InputConfig","InstanceConnectModeEnum","InstanceReadReplicasModeEnum","InstanceSuspensionReasonsEnum","InstanceTierEnum","InstanceTransitEncryptionModeEnum","InstanceInput","InstanceStateEnum","Instance","InstanceAuthString","ListInstancesResponse","ListLocationsResponse","ListOperationsResponse","Location","MaintenancePolicyInput","MaintenancePolicy","MaintenanceScheduleInput","MaintenanceSchedule","NodeInfo","Operation","OutputConfig","PersistenceConfigPersistenceModeEnum","PersistenceConfigRdbSnapshotPeriodEnum","PersistenceConfigInput","PersistenceConfig","RescheduleMaintenanceRequestRescheduleTypeEnum","RescheduleMaintenanceRequest","SchemeOauth2","SchemeOauth2c","Status","TimeOfDay","TLSCertificate","UpgradeInstanceRequest","WeeklyMaintenanceWindowDayEnum","WeeklyMaintenanceWindowInput","WeeklyMaintenanceWindow"]

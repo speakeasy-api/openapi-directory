@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import apidestination as shared_apidestination
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAPIDestinationsResponse:
-    api_destinations: Optional[List[APIDestination]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApiDestinations') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    api_destinations: Optional[list[shared_apidestination.APIDestination]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApiDestinations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

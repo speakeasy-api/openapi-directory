@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAssociatedIpv6PoolCidrsResult:
-    ipv6_cidr_associations: Optional[List[Ipv6CidrAssociation]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    ipv6_cidr_associations: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

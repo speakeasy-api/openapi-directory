@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import messagecommententity as shared_messagecommententity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentsRequestBody:
-    body: str = field(metadata={'multipart_form': { 'field_name': 'body' }})
-    user_id: Optional[int] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
+    body: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'body' }})
+    user_id: Optional[int] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_id' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentsRequest:
-    request: Optional[PostMessageCommentsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostMessageCommentsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostMessageCommentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    message_comment_entity: Optional[shared.MessageCommentEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    message_comment_entity: Optional[shared_messagecommententity.MessageCommentEntity] = dataclasses.field(default=None)
     

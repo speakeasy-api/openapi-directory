@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import customroutinglistener as shared_customroutinglistener
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeCustomRoutingListenerResponse:
-    listener: Optional[CustomRoutingListener] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Listener') }})
+    listener: Optional[shared_customroutinglistener.CustomRoutingListener] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Listener') }})
     

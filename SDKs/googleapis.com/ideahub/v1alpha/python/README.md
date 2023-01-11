@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,22 +18,22 @@ s = sdk.SDK()
     
 req = operations.IdeahubIdeasListRequest(
     query_params=operations.IdeahubIdeasListQueryParams(
-        dollar_xgafv="1",
-        access_token="autem",
-        alt="proto",
-        callback="atque",
-        fields="recusandae",
-        filter="aliquid",
-        key="non",
-        oauth_token="ad",
-        order_by="itaque",
-        page_size=1482325010943640930,
-        page_token="et",
-        parent="magni",
+        dollar_xgafv="2",
+        access_token="sed",
+        alt="json",
+        callback="mollitia",
+        fields="nulla",
+        filter="voluptatem",
+        key="dolor",
+        oauth_token="labore",
+        order_by="voluptatem",
+        page_size=2574732703467464352,
+        page_token="animi",
+        parent="possimus",
         pretty_print=False,
-        quota_user="voluptatem",
-        upload_type="inventore",
-        upload_protocol="nostrum",
+        quota_user="maiores",
+        upload_type="nobis",
+        upload_protocol="id",
     ),
 )
     

@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum(str, Enum):
@@ -7,21 +7,21 @@ class GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams:
-    format: GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
-    week: str = field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
+    format: GameStatsByWeekDeprecatedUseTeamGameStatsInsteadFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    week: str = dataclasses.field(metadata={'path_param': { 'field_name': 'week', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest:
-    path_params: GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams = field()
+    path_params: GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    games: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    games: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import item as shared_item
 
 
-@dataclass
+@dataclasses.dataclass
 class GetItemByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemByIDRequest:
-    path_params: GetItemByIDPathParams = field()
+    path_params: GetItemByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item: Optional[shared.Item] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item: Optional[shared_item.Item] = dataclasses.field(default=None)
     

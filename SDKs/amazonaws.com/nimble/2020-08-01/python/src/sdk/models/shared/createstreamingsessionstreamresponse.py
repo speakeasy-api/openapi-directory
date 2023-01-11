@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import streamingsessionstream as shared_streamingsessionstream
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateStreamingSessionStreamResponse:
-    stream: Optional[StreamingSessionStream] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stream') }})
+    stream: Optional[shared_streamingsessionstream.StreamingSessionStream] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stream') }})
     

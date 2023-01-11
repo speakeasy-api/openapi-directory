@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -42,22 +42,22 @@ class WaterConservationWaterSavingToiletsExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WaterConservation:
     r"""WaterConservation
     Water conservation practices implemented at the hotel.
     """
     
-    independent_organization_audits_water_use: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('independentOrganizationAuditsWaterUse') }})
-    independent_organization_audits_water_use_exception: Optional[WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('independentOrganizationAuditsWaterUseException') }})
-    linen_reuse_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linenReuseProgram') }})
-    linen_reuse_program_exception: Optional[WaterConservationLinenReuseProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linenReuseProgramException') }})
-    towel_reuse_program: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('towelReuseProgram') }})
-    towel_reuse_program_exception: Optional[WaterConservationTowelReuseProgramExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('towelReuseProgramException') }})
-    water_saving_showers: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingShowers') }})
-    water_saving_showers_exception: Optional[WaterConservationWaterSavingShowersExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingShowersException') }})
-    water_saving_sinks: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingSinks') }})
-    water_saving_sinks_exception: Optional[WaterConservationWaterSavingSinksExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingSinksException') }})
-    water_saving_toilets: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingToilets') }})
-    water_saving_toilets_exception: Optional[WaterConservationWaterSavingToiletsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingToiletsException') }})
+    independent_organization_audits_water_use: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('independentOrganizationAuditsWaterUse') }})
+    independent_organization_audits_water_use_exception: Optional[WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('independentOrganizationAuditsWaterUseException') }})
+    linen_reuse_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linenReuseProgram') }})
+    linen_reuse_program_exception: Optional[WaterConservationLinenReuseProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linenReuseProgramException') }})
+    towel_reuse_program: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('towelReuseProgram') }})
+    towel_reuse_program_exception: Optional[WaterConservationTowelReuseProgramExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('towelReuseProgramException') }})
+    water_saving_showers: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingShowers') }})
+    water_saving_showers_exception: Optional[WaterConservationWaterSavingShowersExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingShowersException') }})
+    water_saving_sinks: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingSinks') }})
+    water_saving_sinks_exception: Optional[WaterConservationWaterSavingSinksExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingSinksException') }})
+    water_saving_toilets: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingToilets') }})
+    water_saving_toilets_exception: Optional[WaterConservationWaterSavingToiletsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('waterSavingToiletsException') }})
     

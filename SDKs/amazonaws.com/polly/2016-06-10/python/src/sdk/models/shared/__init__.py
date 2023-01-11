@@ -19,3 +19,5 @@ from .taskstatus_enum import *
 from .texttype_enum import *
 from .voice import *
 from .voiceid_enum import *
+
+__all__ = ["DescribeVoicesOutput","EngineEnum","GenderEnum","GetLexiconOutput","GetSpeechSynthesisTaskOutput","LanguageCodeEnum","Lexicon","LexiconAttributes","LexiconDescription","ListLexiconsOutput","ListSpeechSynthesisTasksOutput","OutputFormatEnum","SchemeHmac","Security","SpeechMarkTypeEnum","StartSpeechSynthesisTaskOutput","SynthesisTask","SynthesizeSpeechOutput","TaskStatusEnum","TextTypeEnum","Voice","VoiceIDEnum"]

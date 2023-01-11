@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import license as shared_license
 
 
-@dataclass
+@dataclasses.dataclass
 class LicensesGetPathParams:
-    license: str = field(metadata={'path_param': { 'field_name': 'license', 'style': 'simple', 'explode': False }})
+    license: str = dataclasses.field(metadata={'path_param': { 'field_name': 'license', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LicensesGetRequest:
-    path_params: LicensesGetPathParams = field()
+    path_params: LicensesGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LicensesGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    license: Optional[shared.License] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    license: Optional[shared_license.License] = dataclasses.field(default=None)
     

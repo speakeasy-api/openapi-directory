@@ -1,21 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import destinationdefinitionupdate as shared_destinationdefinitionupdate
+from ..shared import destinationdefinitionread as shared_destinationdefinitionread
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
+from ..shared import notfoundknownexceptioninfo as shared_notfoundknownexceptioninfo
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDestinationDefinitionRequest:
-    request: shared.DestinationDefinitionUpdate = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_destinationdefinitionupdate.DestinationDefinitionUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDestinationDefinitionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    destination_definition_read: Optional[shared.DestinationDefinitionRead] = field(default=None)
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
-    not_found_known_exception_info: Optional[shared.NotFoundKnownExceptionInfo] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    destination_definition_read: Optional[shared_destinationdefinitionread.DestinationDefinitionRead] = dataclasses.field(default=None)
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
+    not_found_known_exception_info: Optional[shared_notfoundknownexceptioninfo.NotFoundKnownExceptionInfo] = dataclasses.field(default=None)
     

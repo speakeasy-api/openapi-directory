@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import vlangroup as shared_vlangroup
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlanGroupsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlanGroupsReadRequest:
-    path_params: IpamVlanGroupsReadPathParams = field()
+    path_params: IpamVlanGroupsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamVlanGroupsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    vlan_group: Optional[shared.VlanGroup] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    vlan_group: Optional[shared_vlangroup.VlanGroup] = dataclasses.field(default=None)
     

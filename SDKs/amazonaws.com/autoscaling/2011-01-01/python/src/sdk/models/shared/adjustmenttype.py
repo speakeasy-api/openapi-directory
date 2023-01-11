@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AdjustmentType:
     r"""AdjustmentType
     Describes a policy adjustment type.
     """
     
-    adjustment_type: Optional[str] = field(default=None)
+    adjustment_type: Optional[str] = dataclasses.field(default=None)
     

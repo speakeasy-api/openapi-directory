@@ -1,72 +1,72 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGetQueryParams:
-    author_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'authorID', 'style': 'form', 'explode': True }})
+    author_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'authorID', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet200ApplicationJSONDataSessions:
-    author_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorID') }})
-    group_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupID') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    valid_until: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validUntil') }})
+    author_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorID') }})
+    group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groupID') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    valid_until: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('validUntil') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet200ApplicationJSONData:
-    sessions: Optional[List[ListSessionsOfAuthorUsingGet200ApplicationJSONDataSessions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessions') }})
+    sessions: Optional[list[ListSessionsOfAuthorUsingGet200ApplicationJSONDataSessions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessions') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet200ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[ListSessionsOfAuthorUsingGet200ApplicationJSONData] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[ListSessionsOfAuthorUsingGet200ApplicationJSONData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet400ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet401ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGet500ApplicationJSON:
-    code: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    data: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGetRequest:
-    query_params: ListSessionsOfAuthorUsingGetQueryParams = field()
+    query_params: ListSessionsOfAuthorUsingGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListSessionsOfAuthorUsingGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    list_sessions_of_author_using_get_200_application_json_object: Optional[ListSessionsOfAuthorUsingGet200ApplicationJSON] = field(default=None)
-    list_sessions_of_author_using_get_400_application_json_object: Optional[ListSessionsOfAuthorUsingGet400ApplicationJSON] = field(default=None)
-    list_sessions_of_author_using_get_401_application_json_object: Optional[ListSessionsOfAuthorUsingGet401ApplicationJSON] = field(default=None)
-    list_sessions_of_author_using_get_500_application_json_object: Optional[ListSessionsOfAuthorUsingGet500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    list_sessions_of_author_using_get_200_application_json_object: Optional[ListSessionsOfAuthorUsingGet200ApplicationJSON] = dataclasses.field(default=None)
+    list_sessions_of_author_using_get_400_application_json_object: Optional[ListSessionsOfAuthorUsingGet400ApplicationJSON] = dataclasses.field(default=None)
+    list_sessions_of_author_using_get_401_application_json_object: Optional[ListSessionsOfAuthorUsingGet401ApplicationJSON] = dataclasses.field(default=None)
+    list_sessions_of_author_using_get_500_application_json_object: Optional[ListSessionsOfAuthorUsingGet500ApplicationJSON] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.GetCriticsResourceTypeJSONRequest(
     path_params=operations.GetCriticsResourceTypeJSONPathParams(
-        resource_type="dolor",
+        resource_type="quae",
     ),
 )
     
-res = s.sdk.get_critics_resource_type_json(req)
+res = s.get_critics_resource_type_json(req)
 
 if res.get_critics_resource_type_json_200_application_json_object is not None:
     # handle response
@@ -43,8 +42,8 @@ if res.get_critics_resource_type_json_200_application_json_object is not None:
 ### SDK SDK
 
 * `get_critics_resource_type_json`
-* `get_reviews_resource_type_json`
 * `get_reviews_search_json`
+* `get_reviews_resource_type_json`
 
 <!-- End SDK Available Operations -->
 

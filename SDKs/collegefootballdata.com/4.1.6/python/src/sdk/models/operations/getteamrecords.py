@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import teamrecord as shared_teamrecord
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamRecordsQueryParams:
-    conference: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    conference: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamRecordsRequest:
-    query_params: GetTeamRecordsQueryParams = field()
+    query_params: GetTeamRecordsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeamRecordsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    team_records: Optional[List[shared.TeamRecord]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_records: Optional[list[shared_teamrecord.TeamRecord]] = dataclasses.field(default=None)
     

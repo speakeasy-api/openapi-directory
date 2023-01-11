@@ -23,3 +23,5 @@ from .serviceaccount import *
 from .tag import *
 from .template import *
 from .vmparams import *
+
+__all__ = ["AccessConfig","Action","AltEnum","DiskAttachment","EnvVariable","ExistingDisk","HealthCheck","Label","Metadata","MetadataItem","NetworkInterface","NewDisk","NewDiskInitializeParams","Pool","PoolsDeleteRequest","PoolsListResponse","Replica","ReplicasDeleteRequest","ReplicasListResponse","ReplicaStatus","SchemeOauth2","SchemeOauth2c","ServiceAccount","Tag","Template","VMParams"]

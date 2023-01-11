@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import batchfirstlastnamegeozippedin as shared_batchfirstlastnamegeozippedin
+from ..shared import batchfirstlastnameusraceethnicityout as shared_batchfirstlastnameusraceethnicityout
 
 
-@dataclass
+@dataclasses.dataclass
 class UsZipRaceEthnicityBatchSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsZipRaceEthnicityBatchRequest:
-    security: UsZipRaceEthnicityBatchSecurity = field()
-    request: Optional[shared.BatchFirstLastNameGeoZippedIn] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: UsZipRaceEthnicityBatchSecurity = dataclasses.field()
+    request: Optional[shared_batchfirstlastnamegeozippedin.BatchFirstLastNameGeoZippedIn] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsZipRaceEthnicityBatchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    batch_first_last_name_us_race_ethnicity_out: Optional[shared.BatchFirstLastNameUsRaceEthnicityOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    batch_first_last_name_us_race_ethnicity_out: Optional[shared_batchfirstlastnameusraceethnicityout.BatchFirstLastNameUsRaceEthnicityOut] = dataclasses.field(default=None)
     

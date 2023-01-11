@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,23 +18,23 @@ s = sdk.SDK()
     
 req = operations.PaymentsresellersubscriptionPartnersProductsListRequest(
     path_params=operations.PaymentsresellersubscriptionPartnersProductsListPathParams(
-        parent="quidem",
+        parent="velit",
     ),
     query_params=operations.PaymentsresellersubscriptionPartnersProductsListQueryParams(
-        dollar_xgafv="1",
-        access_token="cum",
-        alt="media",
-        callback="culpa",
-        fields="earum",
-        filter="quidem",
-        key="rem",
-        oauth_token="autem",
-        page_size=5947808151841881503,
-        page_token="et",
+        dollar_xgafv="2",
+        access_token="sint",
+        alt="json",
+        callback="fuga",
+        fields="modi",
+        filter="illo",
+        key="autem",
+        oauth_token="dolores",
+        page_size=4740378950094471264,
+        page_token="blanditiis",
         pretty_print=True,
-        quota_user="corporis",
-        upload_type="omnis",
-        upload_protocol="veniam",
+        quota_user="fuga",
+        upload_type="alias",
+        upload_protocol="quas",
     ),
 )
     
@@ -57,7 +56,7 @@ if res.google_cloud_payments_reseller_subscription_v1_list_products_response is 
 * `paymentsresellersubscription_partners_subscriptions_cancel` - Used by partners to cancel a subscription service either immediately or by the end of the current billing cycle for their customers. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscription_partners_subscriptions_create` - Used by partners to create a subscription for their customers. The created subscription is associated with the end user inferred from the end user credentials. This API must be authorized by the end user using OAuth.
 * `paymentsresellersubscription_partners_subscriptions_entitle` - Used by partners to entitle a previously provisioned subscription to the current end user. The end user identity is inferred from the authorized credential of the request. This API must be authorized by the end user using OAuth.
-* `paymentsresellersubscription_partners_subscriptions_extend` - Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
+* `paymentsresellersubscription_partners_subscriptions_extend` - [Deprecated] New partners should be on auto-extend by default. Used by partners to extend a subscription service for their customers on an ongoing basis for the subscription to remain active and renewable. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscription_partners_subscriptions_get` - Used by partners to get a subscription by id. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscription_partners_subscriptions_provision` - Used by partners to provision a subscription for their customers. This creates a subscription without associating it with the end user account. EntitleSubscription must be called separately using OAuth in order for the end user account to be associated with the subscription. It should be called directly by the partner using service accounts.
 * `paymentsresellersubscription_partners_subscriptions_undo_cancel` - Used by partners to revoke the pending cancellation of a subscription, which is currently in `STATE_CANCEL_AT_END_OF_CYCLE` state. If the subscription is already cancelled, the request will fail. It should be called directly by the partner using service accounts.

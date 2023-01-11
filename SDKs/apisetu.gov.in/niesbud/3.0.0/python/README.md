@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.SkcerRequest(
     security=operations.SkcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.SkcerRequestBody(
         certificate_parameters=operations.SkcerRequestBodyCertificateParameters(
-            course_no="placeat",
-            full_name="tempora",
-            certificate_type="aut",
+            course_no="nihil",
+            full_name="cumque",
+            certificate_type="recusandae",
         ),
-        consent_artifact="et",
+        consent_artifact="omnis",
         format="pdf",
-        txn_id="deleniti",
+        txn_id="vel",
     ),
 )
     
-res = s.sdk.skcer(req)
+res = s.ap_is.skcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `skcer` - Skill Certificate
 

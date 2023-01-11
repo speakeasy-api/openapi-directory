@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import manufacturer as shared_manufacturer
+from ..shared import manufacturer as shared_manufacturer
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimManufacturersUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimManufacturersUpdateRequest:
-    path_params: DcimManufacturersUpdatePathParams = field()
-    request: shared.ManufacturerInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimManufacturersUpdatePathParams = dataclasses.field()
+    request: shared_manufacturer.ManufacturerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimManufacturersUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    manufacturer: Optional[shared.Manufacturer] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    manufacturer: Optional[shared_manufacturer.Manufacturer] = dataclasses.field(default=None)
     

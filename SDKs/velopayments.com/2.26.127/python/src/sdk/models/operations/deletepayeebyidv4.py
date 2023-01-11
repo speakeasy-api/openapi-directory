@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeletePayeeByIDV4PathParams:
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePayeeByIDV4Request:
-    path_params: DeletePayeeByIDV4PathParams = field()
+    path_params: DeletePayeeByIDV4PathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeletePayeeByIDV4Response:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

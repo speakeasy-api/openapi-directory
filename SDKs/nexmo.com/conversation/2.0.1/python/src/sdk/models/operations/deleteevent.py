@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEventPathParams:
-    conversation_id: str = field(metadata={'path_param': { 'field_name': 'conversation_id', 'style': 'simple', 'explode': False }})
-    event_id: str = field(metadata={'path_param': { 'field_name': 'event_id', 'style': 'simple', 'explode': False }})
+    conversation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'conversation_id', 'style': 'simple', 'explode': False }})
+    event_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'event_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEventRequest:
-    path_params: DeleteEventPathParams = field()
+    path_params: DeleteEventPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteEventResponse:
-    content_type: str = field()
-    status_code: int = field()
-    delete_event_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    delete_event_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

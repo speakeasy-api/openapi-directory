@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import sort_enum1 as shared_sort_enum1
+from ..shared import sort_enum as shared_sort_enum
+from ..shared import basic_error as shared_basic_error
+from ..shared import marketplace_purchase as shared_marketplace_purchase
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsListAccountsForPlanPathParams:
-    plan_id: int = field(metadata={'path_param': { 'field_name': 'plan_id', 'style': 'simple', 'explode': False }})
+    plan_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'plan_id', 'style': 'simple', 'explode': False }})
     
-class AppsListAccountsForPlanDirectionEnum(str, Enum):
-    ASC = "asc"
-    DESC = "desc"
 
-
-@dataclass
+@dataclasses.dataclass
 class AppsListAccountsForPlanQueryParams:
-    direction: Optional[AppsListAccountsForPlanDirectionEnum] = field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    sort: Optional[shared.SortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    direction: Optional[shared_sort_enum1.SortEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'direction', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    sort: Optional[shared_sort_enum.SortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListAccountsForPlanRequest:
-    path_params: AppsListAccountsForPlanPathParams = field()
-    query_params: AppsListAccountsForPlanQueryParams = field()
+    path_params: AppsListAccountsForPlanPathParams = dataclasses.field()
+    query_params: AppsListAccountsForPlanQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsListAccountsForPlanResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    marketplace_purchases: Optional[List[shared.MarketplacePurchase]] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    marketplace_purchases: Optional[list[shared_marketplace_purchase.MarketplacePurchase]] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

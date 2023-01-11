@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import devicestatus_enum as shared_devicestatus_enum
+from ..shared import devicetype_enum as shared_devicetype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceSummary:
     r"""DeviceSummary
     Includes information about the device.
     """
     
-    device_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceArn') }})
-    device_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceName') }})
-    device_status: DeviceStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceStatus') }})
-    device_type: DeviceTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceType') }})
-    provider_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('providerName') }})
+    device_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceArn') }})
+    device_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceName') }})
+    device_status: shared_devicestatus_enum.DeviceStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceStatus') }})
+    device_type: shared_devicetype_enum.DeviceTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('deviceType') }})
+    provider_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('providerName') }})
     

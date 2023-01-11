@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudpaymentsresellersubscriptionv1amount as shared_googlecloudpaymentsresellersubscriptionv1amount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec:
     r"""GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec
     The duration of an introductory pricing promotion.
     """
     
-    discount_amount: Optional[GoogleCloudPaymentsResellerSubscriptionV1Amount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountAmount') }})
-    discount_ratio_micros: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountRatioMicros') }})
-    recurrence_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recurrenceCount') }})
-    region_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('regionCode') }})
+    discount_amount: Optional[shared_googlecloudpaymentsresellersubscriptionv1amount.GoogleCloudPaymentsResellerSubscriptionV1Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountAmount') }})
+    discount_ratio_micros: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountRatioMicros') }})
+    recurrence_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recurrenceCount') }})
+    region_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('regionCode') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput:
     r"""GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpecInput
     The duration of an introductory pricing promotion.
     """
     
-    discount_amount: Optional[GoogleCloudPaymentsResellerSubscriptionV1Amount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountAmount') }})
+    discount_amount: Optional[shared_googlecloudpaymentsresellersubscriptionv1amount.GoogleCloudPaymentsResellerSubscriptionV1Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discountAmount') }})
     

@@ -1,9 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
+class RevokeClientVpnIngressResultStatus:
+    r"""RevokeClientVpnIngressResultStatus
+    The current state of the authorization rule.
+    """
+    
+    code: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    message: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    
+
+@dataclasses.dataclass
 class RevokeClientVpnIngressResult:
-    status: Optional[ClientVpnAuthorizationRuleStatus] = field(default=None)
+    status: Optional[RevokeClientVpnIngressResultStatus] = dataclasses.field(default=None)
     

@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resourcetype_enum as shared_resourcetype_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AnalyzedResourceSummary:
     r"""AnalyzedResourceSummary
     Contains the ARN of the analyzed resource.
     """
     
-    resource_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceArn') }})
-    resource_owner_account: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceOwnerAccount') }})
-    resource_type: ResourceTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceType') }})
+    resource_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceArn') }})
+    resource_owner_account: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceOwnerAccount') }})
+    resource_type: shared_resourcetype_enum.ResourceTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceType') }})
     

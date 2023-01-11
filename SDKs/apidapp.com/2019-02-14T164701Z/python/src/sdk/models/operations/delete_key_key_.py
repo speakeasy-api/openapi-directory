@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteKeyKeyPathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteKeyKeyRequest:
-    path_params: DeleteKeyKeyPathParams = field()
+    path_params: DeleteKeyKeyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteKeyKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    empty: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    empty: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

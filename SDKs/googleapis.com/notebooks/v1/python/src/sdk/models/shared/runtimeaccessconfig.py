@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,24 +11,24 @@ class RuntimeAccessConfigAccessTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RuntimeAccessConfigInput:
     r"""RuntimeAccessConfigInput
     Specifies the login configuration for Runtime
     """
     
-    access_type: Optional[RuntimeAccessConfigAccessTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessType') }})
-    runtime_owner: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtimeOwner') }})
+    access_type: Optional[RuntimeAccessConfigAccessTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessType') }})
+    runtime_owner: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtimeOwner') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RuntimeAccessConfig:
     r"""RuntimeAccessConfig
     Specifies the login configuration for Runtime
     """
     
-    access_type: Optional[RuntimeAccessConfigAccessTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessType') }})
-    proxy_uri: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proxyUri') }})
-    runtime_owner: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtimeOwner') }})
+    access_type: Optional[RuntimeAccessConfigAccessTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessType') }})
+    proxy_uri: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('proxyUri') }})
+    runtime_owner: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('runtimeOwner') }})
     

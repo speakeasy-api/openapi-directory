@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from . import *
+from ..shared import invalidationbatch as shared_invalidationbatch
 
 
-@dataclass
+@dataclasses.dataclass
 class Invalidation:
     r"""Invalidation
     An invalidation. 
     """
     
-    create_time: datetime = field()
-    id: str = field()
-    invalidation_batch: InvalidationBatch = field()
-    status: str = field()
+    create_time: datetime = dataclasses.field()
+    id: str = dataclasses.field()
+    invalidation_batch: shared_invalidationbatch.InvalidationBatch = dataclasses.field()
+    status: str = dataclasses.field()
     

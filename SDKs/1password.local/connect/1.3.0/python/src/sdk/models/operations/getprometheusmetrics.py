@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
@@ -7,14 +7,14 @@ GET_PROMETHEUS_METRICS_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPrometheusMetricsRequest:
-    server_url: Optional[str] = field(default=None)
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPrometheusMetricsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_prometheus_metrics_200_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_prometheus_metrics_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

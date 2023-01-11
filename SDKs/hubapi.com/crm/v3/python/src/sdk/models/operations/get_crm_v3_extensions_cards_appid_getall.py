@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import cardlistresponse as shared_cardlistresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCrmV3ExtensionsCardsAppIDGetAllPathParams:
-    app_id: int = field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
+    app_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCrmV3ExtensionsCardsAppIDGetAllSecurity:
-    developer_hapikey: shared.SchemeDeveloperHapikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    developer_hapikey: shared_security.SchemeDeveloperHapikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCrmV3ExtensionsCardsAppIDGetAllRequest:
-    path_params: GetCrmV3ExtensionsCardsAppIDGetAllPathParams = field()
-    security: GetCrmV3ExtensionsCardsAppIDGetAllSecurity = field()
+    path_params: GetCrmV3ExtensionsCardsAppIDGetAllPathParams = dataclasses.field()
+    security: GetCrmV3ExtensionsCardsAppIDGetAllSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCrmV3ExtensionsCardsAppIDGetAllResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    card_list_response: Optional[shared.CardListResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    card_list_response: Optional[shared_cardlistresponse.CardListResponse] = dataclasses.field(default=None)
     

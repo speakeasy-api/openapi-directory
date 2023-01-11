@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import conformancepackrulecompliance as shared_conformancepackrulecompliance
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeConformancePackComplianceResponse:
-    conformance_pack_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConformancePackName') }})
-    conformance_pack_rule_compliance_list: List[ConformancePackRuleCompliance] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConformancePackRuleComplianceList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    conformance_pack_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConformancePackName') }})
+    conformance_pack_rule_compliance_list: list[shared_conformancepackrulecompliance.ConformancePackRuleCompliance] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConformancePackRuleComplianceList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

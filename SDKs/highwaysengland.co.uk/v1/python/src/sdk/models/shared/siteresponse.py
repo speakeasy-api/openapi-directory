@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import siteresult as shared_siteresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SiteResponse:
-    row_count: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('row_count') }})
-    sites: Optional[List[SiteResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sites') }})
+    row_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('row_count') }})
+    sites: Optional[list[shared_siteresult.SiteResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sites') }})
     

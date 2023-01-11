@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import datasource as shared_datasource
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDatasetImportJobRequest:
-    data_source: DataSource = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataSource') }})
-    dataset_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasetArn') }})
-    job_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobName') }})
-    role_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roleArn') }})
+    data_source: shared_datasource.DataSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('dataSource') }})
+    dataset_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('datasetArn') }})
+    job_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('jobName') }})
+    role_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('roleArn') }})
     

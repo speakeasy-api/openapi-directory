@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,55 +25,61 @@ s.config_security(
     
 req = operations.CreateAPIRequest(
     headers=operations.CreateAPIHeaders(
-        x_amz_algorithm="quae",
-        x_amz_content_sha256="qui",
-        x_amz_credential="magni",
-        x_amz_date="minus",
-        x_amz_security_token="sit",
-        x_amz_signature="aut",
-        x_amz_signed_headers="neque",
+        x_amz_algorithm="ex",
+        x_amz_content_sha256="iure",
+        x_amz_credential="et",
+        x_amz_date="quos",
+        x_amz_security_token="et",
+        x_amz_signature="explicabo",
+        x_amz_signed_headers="necessitatibus",
     ),
     request=operations.CreateAPIRequestBody(
-        api_key_selection_expression="iusto",
+        api_key_selection_expression="veniam",
         cors_configuration=operations.CreateAPIRequestBodyCorsConfiguration(
-            allow_credentials=False,
-            allow_headers=[
-                "debitis",
-                "autem",
-            ],
-            allow_methods=[
-                "enim",
-                "ut",
-            ],
-            allow_origins=[
-                "nihil",
-                "laborum",
-                "recusandae",
-            ],
-            expose_headers=[
-                "exercitationem",
-                "iste",
-            ],
-            max_age=2856324619161861976,
+            allow_credentials={
+                "in": "odit",
+            },
+            allow_headers={
+                "corporis": "tenetur",
+                "esse": "similique",
+                "mollitia": "id",
+            },
+            allow_methods={
+                "quam": "maiores",
+                "totam": "iusto",
+                "aperiam": "repellendus",
+            },
+            allow_origins={
+                "eum": "earum",
+                "et": "officia",
+            },
+            expose_headers={
+                "dolor": "quia",
+            },
+            max_age={
+                "ea": "et",
+                "expedita": "recusandae",
+            },
         ),
-        credentials_arn="id",
-        description="autem",
-        disable_execute_api_endpoint=True,
-        disable_schema_validation=False,
-        name="omnis",
-        protocol_type="HTTP",
-        route_key="qui",
-        route_selection_expression="omnis",
+        credentials_arn="qui",
+        description="qui",
+        disable_execute_api_endpoint=False,
+        disable_schema_validation=True,
+        name="cupiditate",
+        protocol_type="WEBSOCKET",
+        route_key="saepe",
+        route_selection_expression="sed",
         tags={
-            "nostrum": "non",
-            "sit": "repellat",
+            "vel": "fugiat",
+            "nesciunt": "et",
+            "qui": "quis",
         },
-        target="quo",
-        version="dolorum",
+        target="eligendi",
+        version="velit",
     ),
 )
     
-res = s.sdk.create_api(req)
+res = s.create_api(req)
 
 if res.create_api_response is not None:
     # handle response

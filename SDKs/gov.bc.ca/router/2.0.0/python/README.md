@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,18 +25,18 @@ s.config_security(
     
 req = operations.GetDirectionsOutputFormatRequest(
     path_params=operations.GetDirectionsOutputFormatPathParams(
-        output_format="html",
+        output_format="kml",
     ),
     query_params=operations.GetDirectionsOutputFormatQueryParams(
-        correct_side=True,
-        criteria="fastest",
-        departure="2022-04-20T05:16:47Z",
-        disable="omnis",
+        correct_side=False,
+        criteria="shortest",
+        departure="2012-09-29T14:14:23Z",
+        disable="quia",
         distance_unit="mi",
-        output_srs=7152912201065642640,
-        points="voluptatibus",
-        round_trip=True,
-        route_description="dolor",
+        output_srs=2629240772588096916,
+        points="distinctio",
+        round_trip=False,
+        route_description="nesciunt",
     ),
 )
     
@@ -64,14 +63,14 @@ if res.status_code == 200:
 
 ### distance
 
-* `get_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
 * `get_distance_output_format_` - Get distance and travel time between two geographic points
-* `get_truck_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points for a commercial vehicle
+* `get_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
 * `get_truck_distance_output_format_` - Get distance and travel time between two geographic points for a commercial vehicle
-* `post_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
+* `get_truck_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points for a commercial vehicle
 * `post_distance_output_format_` - Get distance and travel time between two geographic points
-* `post_truck_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
+* `post_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
 * `post_truck_distance_output_format_` - Get distance and travel time between two geographic points
+* `post_truck_distance_between_pairs_output_format_` - Get distance and travel time between each pair of geographic points
 
 ### route
 

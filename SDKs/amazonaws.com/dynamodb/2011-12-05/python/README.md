@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,260 +25,58 @@ s.config_security(
     
 req = operations.BatchGetItemRequest(
     query_params=operations.BatchGetItemQueryParams(
-        request_items="aut",
+        request_items="occaecati",
     ),
     headers=operations.BatchGetItemHeaders(
-        x_amz_algorithm="voluptate",
-        x_amz_content_sha256="a",
-        x_amz_credential="consequatur",
-        x_amz_date="dolore",
-        x_amz_security_token="assumenda",
-        x_amz_signature="rerum",
-        x_amz_signed_headers="non",
+        x_amz_algorithm="error",
+        x_amz_content_sha256="aliquam",
+        x_amz_credential="eaque",
+        x_amz_date="non",
+        x_amz_security_token="earum",
+        x_amz_signature="voluptatem",
+        x_amz_signed_headers="impedit",
         x_amz_target="DynamoDB_20111205.BatchGetItem",
     ),
     request=shared.BatchGetItemInput(
         request_items={
-            "labore": shared.KeysAndAttributes(
+            "ut": shared.KeysAndAttributes(
                 attributes_to_get=[
-                    "iure",
+                    "ab",
+                    "consequatur",
                 ],
-                consistent_read=False,
+                consistent_read=True,
                 keys=[
-                    shared.Key(
-                        hash_key_element=shared.AttributeValue(
-                            b="molestiae",
-                            bs=[
-                                "nostrum",
-                                "aut",
-                            ],
-                            n="ut",
-                            ns=[
-                                "pariatur",
-                            ],
-                            s="enim",
-                            ss=[
-                                "aut",
-                                "ea",
-                                "magnam",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="et",
-                            bs=[
-                                "pariatur",
-                                "eum",
-                                "quaerat",
-                            ],
-                            n="modi",
-                            ns=[
-                                "doloremque",
-                                "nulla",
-                            ],
-                            s="et",
-                            ss=[
-                                "praesentium",
-                                "labore",
-                                "accusamus",
-                            ],
-                        ),
-                    ),
-                    shared.Key(
-                        hash_key_element=shared.AttributeValue(
-                            b="aut",
-                            bs=[
-                                "impedit",
-                            ],
-                            n="aperiam",
-                            ns=[
-                                "dolorum",
-                                "iusto",
-                            ],
-                            s="quos",
-                            ss=[
-                                "adipisci",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="quo",
-                            bs=[
-                                "ipsum",
-                                "delectus",
-                                "tenetur",
-                            ],
-                            n="expedita",
-                            ns=[
-                                "ut",
-                                "sed",
-                            ],
-                            s="qui",
-                            ss=[
-                                "autem",
-                            ],
-                        ),
-                    ),
                     shared.Key(
                         hash_key_element=shared.AttributeValue(
                             b="fuga",
                             bs=[
-                                "aliquid",
-                                "molestias",
+                                "neque",
                             ],
-                            n="nihil",
+                            n="necessitatibus",
                             ns=[
-                                "quae",
-                                "et",
-                                "quae",
-                            ],
-                            s="natus",
-                            ss=[
-                                "corrupti",
-                                "ipsum",
-                                "asperiores",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="eligendi",
-                            bs=[
+                                "non",
                                 "sit",
                             ],
-                            n="reiciendis",
-                            ns=[
-                                "sit",
-                                "eaque",
-                            ],
-                            s="debitis",
+                            s="est",
                             ss=[
-                                "sapiente",
-                                "eum",
-                            ],
-                        ),
-                    ),
-                ],
-            ),
-            "incidunt": shared.KeysAndAttributes(
-                attributes_to_get=[
-                    "neque",
-                    "quo",
-                    "omnis",
-                ],
-                consistent_read=False,
-                keys=[
-                    shared.Key(
-                        hash_key_element=shared.AttributeValue(
-                            b="cupiditate",
-                            bs=[
-                                "odit",
-                                "hic",
-                            ],
-                            n="porro",
-                            ns=[
-                                "minima",
-                                "at",
-                                "maiores",
-                            ],
-                            s="rem",
-                            ss=[
-                                "aliquid",
-                                "iste",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="at",
-                            bs=[
-                                "qui",
-                                "ea",
-                                "illo",
-                            ],
-                            n="voluptas",
-                            ns=[
-                                "debitis",
                                 "in",
-                                "at",
                             ],
-                            s="vero",
-                            ss=[
-                                "nisi",
-                                "qui",
+                        ),
+                        range_key_element=shared.AttributeValue(
+                            b="mollitia",
+                            bs=[
+                                "et",
+                            ],
+                            n="consequuntur",
+                            ns=[
+                                "officia",
+                                "quidem",
                                 "quasi",
                             ],
-                        ),
-                    ),
-                    shared.Key(
-                        hash_key_element=shared.AttributeValue(
-                            b="quis",
-                            bs=[
-                                "nesciunt",
-                            ],
-                            n="fugit",
-                            ns=[
-                                "consequuntur",
-                                "dignissimos",
-                                "magni",
-                            ],
-                            s="ipsum",
+                            s="odit",
                             ss=[
-                                "quia",
-                                "sit",
-                                "qui",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="qui",
-                            bs=[
-                                "excepturi",
-                                "sapiente",
-                                "doloribus",
-                            ],
-                            n="accusantium",
-                            ns=[
-                                "rem",
-                                "corporis",
-                                "pariatur",
-                            ],
-                            s="maiores",
-                            ss=[
-                                "animi",
-                                "minima",
-                                "beatae",
-                            ],
-                        ),
-                    ),
-                    shared.Key(
-                        hash_key_element=shared.AttributeValue(
-                            b="iste",
-                            bs=[
-                                "fuga",
-                                "corporis",
-                                "quo",
-                            ],
-                            n="laborum",
-                            ns=[
-                                "ad",
-                            ],
-                            s="voluptatem",
-                            ss=[
-                                "et",
-                                "sunt",
-                                "ratione",
-                            ],
-                        ),
-                        range_key_element=shared.AttributeValue(
-                            b="quidem",
-                            bs=[
-                                "iure",
-                                "incidunt",
-                                "iusto",
-                            ],
-                            n="voluptatibus",
-                            ns=[
-                                "quia",
-                                "tenetur",
-                            ],
-                            s="et",
-                            ss=[
-                                "accusamus",
-                                "aliquam",
+                                "aperiam",
+                                "omnis",
                             ],
                         ),
                     ),
@@ -289,7 +86,7 @@ req = operations.BatchGetItemRequest(
     ),
 )
     
-res = s.sdk.batch_get_item(req)
+res = s.batch_get_item(req)
 
 if res.batch_get_item_output is not None:
     # handle response

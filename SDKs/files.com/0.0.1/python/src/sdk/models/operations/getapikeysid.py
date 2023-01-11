@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apikeyentity as shared_apikeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIKeysIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIKeysIDRequest:
-    path_params: GetAPIKeysIDPathParams = field()
+    path_params: GetAPIKeysIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIKeysIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key_entity: Optional[shared.APIKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key_entity: Optional[shared_apikeyentity.APIKeyEntity] = dataclasses.field(default=None)
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Tag:
     r"""Tag
     A tag consisting of a name/value pair for a resource.
     """
     
-    key: Optional[str] = field(default=None)
-    value: Optional[str] = field(default=None)
+    key: Optional[str] = dataclasses.field(default=None)
+    value: Optional[str] = dataclasses.field(default=None)
     

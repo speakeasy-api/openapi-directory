@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccessPointOutput:
     r"""CreateAccessPointOutput
     Contains the output for CreateLoadBalancer.
     """
     
-    dns_name: Optional[str] = field(default=None)
+    dns_name: Optional[str] = dataclasses.field(default=None)
     

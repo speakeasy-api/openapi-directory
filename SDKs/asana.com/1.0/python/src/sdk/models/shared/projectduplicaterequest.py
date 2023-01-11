@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -23,22 +23,22 @@ class ProjectDuplicateRequestIncludeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProjectDuplicateRequestScheduleDates:
     r"""ProjectDuplicateRequestScheduleDates
     A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires either `start_on` or `due_on`, but not both.
     """
     
-    should_skip_weekends: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('should_skip_weekends') }})
-    due_on: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('due_on') }})
-    start_on: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_on') }})
+    should_skip_weekends: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('should_skip_weekends') }})
+    due_on: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('due_on') }})
+    start_on: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('start_on') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProjectDuplicateRequest:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    include: Optional[ProjectDuplicateRequestIncludeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
-    schedule_dates: Optional[ProjectDuplicateRequestScheduleDates] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule_dates') }})
-    team: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    include: Optional[ProjectDuplicateRequestIncludeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
+    schedule_dates: Optional[ProjectDuplicateRequestScheduleDates] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schedule_dates') }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('team') }})
     

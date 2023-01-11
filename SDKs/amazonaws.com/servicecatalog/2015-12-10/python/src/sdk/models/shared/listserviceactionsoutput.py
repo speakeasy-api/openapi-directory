@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import serviceactionsummary as shared_serviceactionsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListServiceActionsOutput:
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    service_action_summaries: Optional[List[ServiceActionSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServiceActionSummaries') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    service_action_summaries: Optional[list[shared_serviceactionsummary.ServiceActionSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServiceActionSummaries') }})
     

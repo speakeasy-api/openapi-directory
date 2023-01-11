@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableinterfaceconnection as shared_writableinterfaceconnection
+from ..shared import interfaceconnection as shared_interfaceconnection
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceConnectionsCreateRequest:
-    request: shared.WritableInterfaceConnectionInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableinterfaceconnection.WritableInterfaceConnectionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceConnectionsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interface_connection: Optional[shared.InterfaceConnection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interface_connection: Optional[shared_interfaceconnection.InterfaceConnection] = dataclasses.field(default=None)
     

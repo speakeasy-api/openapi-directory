@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -15,14 +15,14 @@ class UploadContentTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Upload:
     r"""Upload
     Client request to upload data for a user.
     """
     
-    content_type: UploadContentTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentType') }})
-    length: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
-    md5: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('md5') }})
-    metadata: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    content_type: UploadContentTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentType') }})
+    length: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('length') }})
+    md5: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('md5') }})
+    metadata: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
     

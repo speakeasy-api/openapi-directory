@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import project as shared_project
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectQueryParams:
-    name: str = field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    description: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
-    domain_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'domainId', 'style': 'form', 'explode': True }})
+    name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'description', 'style': 'form', 'explode': True }})
+    domain_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'domainId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectRequest:
-    headers: CreateProjectHeaders = field()
-    query_params: CreateProjectQueryParams = field()
+    headers: CreateProjectHeaders = dataclasses.field()
+    query_params: CreateProjectQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    project: Optional[shared.Project] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    project: Optional[shared_project.Project] = dataclasses.field(default=None)
     

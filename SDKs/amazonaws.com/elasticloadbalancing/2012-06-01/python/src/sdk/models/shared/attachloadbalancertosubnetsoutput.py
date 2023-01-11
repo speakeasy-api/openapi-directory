@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AttachLoadBalancerToSubnetsOutput:
     r"""AttachLoadBalancerToSubnetsOutput
     Contains the output of AttachLoadBalancerToSubnets.
     """
     
-    subnets: Optional[List[str]] = field(default=None)
+    subnets: Optional[list[str]] = dataclasses.field(default=None)
     

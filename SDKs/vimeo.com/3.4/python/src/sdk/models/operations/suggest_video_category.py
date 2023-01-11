@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import category as shared_category
+from ..shared import legacy_error as shared_legacy_error
 
 
-@dataclass
+@dataclasses.dataclass
 class SuggestVideoCategoryPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SuggestVideoCategoryRequestBody:
-    category: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    category: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SuggestVideoCategorySecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SuggestVideoCategoryRequest:
-    path_params: SuggestVideoCategoryPathParams = field()
-    request: SuggestVideoCategoryRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.category+json' }})
-    security: SuggestVideoCategorySecurity = field()
+    path_params: SuggestVideoCategoryPathParams = dataclasses.field()
+    request: SuggestVideoCategoryRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.category+json' }})
+    security: SuggestVideoCategorySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SuggestVideoCategoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    category: Optional[shared.Category] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    category: Optional[shared_category.Category] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

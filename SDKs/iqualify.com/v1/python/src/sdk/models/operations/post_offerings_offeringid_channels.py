@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import channelrequired as shared_channelrequired
+from ..shared import channelresponse as shared_channelresponse
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDChannelsPathParams:
-    offering_id: str = field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
+    offering_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'offeringId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDChannelsRequest:
-    path_params: PostOfferingsOfferingIDChannelsPathParams = field()
-    request: shared.ChannelRequired = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostOfferingsOfferingIDChannelsPathParams = dataclasses.field()
+    request: shared_channelrequired.ChannelRequired = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostOfferingsOfferingIDChannelsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    channel_response: Optional[shared.ChannelResponse] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    channel_response: Optional[shared_channelresponse.ChannelResponse] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

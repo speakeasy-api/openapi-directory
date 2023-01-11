@@ -1,9 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import album as shared_album
+from ..shared import legacy_error as shared_legacy_error
 
 class CreateAlbumAlt1RequestBodyLayoutEnum(str, Enum):
     GRID = "grid"
@@ -31,35 +33,35 @@ class CreateAlbumAlt1RequestBodyThemeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumAlt1RequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    brand_color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brand_color') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    hide_nav: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hide_nav') }})
-    layout: Optional[CreateAlbumAlt1RequestBodyLayoutEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('layout') }})
-    password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
-    privacy: Optional[CreateAlbumAlt1RequestBodyPrivacyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
-    review_mode: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_mode') }})
-    sort: Optional[CreateAlbumAlt1RequestBodySortEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
-    theme: Optional[CreateAlbumAlt1RequestBodyThemeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('theme') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    brand_color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('brand_color') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    hide_nav: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hide_nav') }})
+    layout: Optional[CreateAlbumAlt1RequestBodyLayoutEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('layout') }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    privacy: Optional[CreateAlbumAlt1RequestBodyPrivacyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    review_mode: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_mode') }})
+    sort: Optional[CreateAlbumAlt1RequestBodySortEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sort') }})
+    theme: Optional[CreateAlbumAlt1RequestBodyThemeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('theme') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumAlt1Request:
-    request: CreateAlbumAlt1RequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.album+json' }})
-    security: CreateAlbumAlt1Security = field()
+    request: CreateAlbumAlt1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.album+json' }})
+    security: CreateAlbumAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAlbumAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    album: Optional[shared.Album] = field(default=None)
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album: Optional[shared_album.Album] = dataclasses.field(default=None)
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
     

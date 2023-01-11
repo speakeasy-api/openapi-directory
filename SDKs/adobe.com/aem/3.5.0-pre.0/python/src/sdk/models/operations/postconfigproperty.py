@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigPropertyPathParams:
-    config_node_name: str = field(metadata={'path_param': { 'field_name': 'configNodeName', 'style': 'simple', 'explode': False }})
+    config_node_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'configNodeName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigPropertyRequest:
-    path_params: PostConfigPropertyPathParams = field()
+    path_params: PostConfigPropertyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConfigPropertyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

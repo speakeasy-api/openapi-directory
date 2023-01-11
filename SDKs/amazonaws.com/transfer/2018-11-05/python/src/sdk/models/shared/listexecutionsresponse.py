@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import listedexecution as shared_listedexecution
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListExecutionsResponse:
-    executions: List[ListedExecution] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Executions') }})
-    workflow_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('WorkflowId') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    executions: list[shared_listedexecution.ListedExecution] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Executions') }})
+    workflow_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('WorkflowId') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import customersubscriptionviewmodel as shared_customersubscriptionviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersSubscriptionsIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersSubscriptionsIDRequest:
-    path_params: GetConsumerV1CustomersSubscriptionsIDPathParams = field()
+    path_params: GetConsumerV1CustomersSubscriptionsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersSubscriptionsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    customer_subscription_view_model: Optional[shared.CustomerSubscriptionViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    customer_subscription_view_model: Optional[shared_customersubscriptionviewmodel.CustomerSubscriptionViewModel] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attestor as shared_attestor
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAttestorsResponse:
     r"""ListAttestorsResponse
     Response message for BinauthzManagementService.ListAttestors.
     """
     
-    attestors: Optional[List[Attestor]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestors') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    attestors: Optional[list[shared_attestor.Attestor]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attestors') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import albumforapicontract as shared_albumforapicontract
 
 class AlbumAPIGetNewAlbumsFieldsEnum(str, Enum):
     NONE = "None"
@@ -25,21 +25,21 @@ class AlbumAPIGetNewAlbumsLanguagePreferenceEnum(str, Enum):
     ENGLISH = "English"
 
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetNewAlbumsQueryParams:
-    fields: Optional[AlbumAPIGetNewAlbumsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    language_preference: Optional[AlbumAPIGetNewAlbumsLanguagePreferenceEnum] = field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
+    fields: Optional[AlbumAPIGetNewAlbumsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    language_preference: Optional[AlbumAPIGetNewAlbumsLanguagePreferenceEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetNewAlbumsRequest:
-    query_params: AlbumAPIGetNewAlbumsQueryParams = field()
+    query_params: AlbumAPIGetNewAlbumsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AlbumAPIGetNewAlbumsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    album_for_api_contracts: Optional[List[shared.AlbumForAPIContract]] = field(default=None)
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    album_for_api_contracts: Optional[list[shared_albumforapicontract.AlbumForAPIContract]] = dataclasses.field(default=None)
+    body: Optional[bytes] = dataclasses.field(default=None)
     

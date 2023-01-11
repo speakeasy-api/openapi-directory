@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import serviceviewmodel as shared_serviceviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDRequest:
-    path_params: GetSetupV1ServicesIDPathParams = field()
+    path_params: GetSetupV1ServicesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ServicesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    service_view_model: Optional[shared.ServiceViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    service_view_model: Optional[shared_serviceviewmodel.ServiceViewModel] = dataclasses.field(default=None)
     

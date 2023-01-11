@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import scalingpolicy as shared_scalingpolicy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeScalingPoliciesOutput:
     r"""DescribeScalingPoliciesOutput
     Represents the returned data in response to a request operation.
     """
     
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    scaling_policies: Optional[List[ScalingPolicy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ScalingPolicies') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    scaling_policies: Optional[list[shared_scalingpolicy.ScalingPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ScalingPolicies') }})
     

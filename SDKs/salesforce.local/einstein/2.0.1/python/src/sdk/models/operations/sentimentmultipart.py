@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sentimentpredictrequest as shared_sentimentpredictrequest
+from ..shared import security as shared_security
+from ..shared import sentimentpredictresponse as shared_sentimentpredictresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class SentimentMultipartRequests:
-    sentiment_predict_request: Optional[shared.SentimentPredictRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    sentiment_predict_request1: Optional[shared.SentimentPredictRequest] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    sentiment_predict_request: Optional[shared_sentimentpredictrequest.SentimentPredictRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    sentiment_predict_request1: Optional[shared_sentimentpredictrequest.SentimentPredictRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SentimentMultipartSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SentimentMultipartRequest:
-    security: SentimentMultipartSecurity = field()
-    request: Optional[SentimentMultipartRequests] = field(default=None)
+    security: SentimentMultipartSecurity = dataclasses.field()
+    request: Optional[SentimentMultipartRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class SentimentMultipartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sentiment_predict_response: Optional[shared.SentimentPredictResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sentiment_predict_response: Optional[shared_sentimentpredictresponse.SentimentPredictResponse] = dataclasses.field(default=None)
     

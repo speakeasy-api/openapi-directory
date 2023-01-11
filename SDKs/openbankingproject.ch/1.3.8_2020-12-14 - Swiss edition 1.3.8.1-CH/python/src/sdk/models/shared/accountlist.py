@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountdetails as shared_accountdetails
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AccountList:
     r"""AccountList
     List of accounts with details.
     
     """
     
-    accounts: List[AccountDetails] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
+    accounts: list[shared_accountdetails.AccountDetails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accounts') }})
     

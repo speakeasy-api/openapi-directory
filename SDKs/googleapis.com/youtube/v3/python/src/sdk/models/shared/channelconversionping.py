@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class ChannelConversionPingContextEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChannelConversionPing:
     r"""ChannelConversionPing
     Pings that the app shall fire (authenticated by biscotti cookie). Each ping has a context, in which the app must fire the ping, and a url identifying the ping.
     """
     
-    context: Optional[ChannelConversionPingContextEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
-    conversion_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversionUrl') }})
+    context: Optional[ChannelConversionPingContextEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
+    conversion_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversionUrl') }})
     

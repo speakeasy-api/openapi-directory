@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import permissionsetprovisioningstatusmetadata as shared_permissionsetprovisioningstatusmetadata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPermissionSetProvisioningStatusResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    permission_sets_provisioning_status: Optional[List[PermissionSetProvisioningStatusMetadata]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PermissionSetsProvisioningStatus') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    permission_sets_provisioning_status: Optional[list[shared_permissionsetprovisioningstatusmetadata.PermissionSetProvisioningStatusMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PermissionSetsProvisioningStatus') }})
     

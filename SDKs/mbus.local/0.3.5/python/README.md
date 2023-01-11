@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.GetRequest(
     path_params=operations.GetPathParams(
-        address="ipsa",
-        baudrate=9145527300725650771,
-        device="sit",
+        address="sed",
+        baudrate=4461333086959994164,
+        device="tenetur",
     ),
 )
     
-res = s.sdk.get(req)
+res = s.get(req)
 
 if res.mbus_data is not None:
     # handle response

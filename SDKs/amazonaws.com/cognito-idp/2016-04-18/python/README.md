@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,13 +25,13 @@ s.config_security(
     
 req = operations.AddCustomAttributesRequest(
     headers=operations.AddCustomAttributesHeaders(
-        x_amz_algorithm="deserunt",
-        x_amz_content_sha256="sed",
-        x_amz_credential="sint",
-        x_amz_date="est",
-        x_amz_security_token="est",
-        x_amz_signature="omnis",
-        x_amz_signed_headers="reiciendis",
+        x_amz_algorithm="consectetur",
+        x_amz_content_sha256="voluptatibus",
+        x_amz_credential="doloremque",
+        x_amz_date="neque",
+        x_amz_security_token="sint",
+        x_amz_signature="iste",
+        x_amz_signed_headers="temporibus",
         x_amz_target="AWSCognitoIdentityProviderService.AddCustomAttributes",
     ),
     request=shared.AddCustomAttributesRequest(
@@ -41,27 +40,27 @@ req = operations.AddCustomAttributesRequest(
                 attribute_data_type="Boolean",
                 developer_only_attribute=False,
                 mutable=True,
-                name="pariatur",
+                name="ducimus",
                 number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="voluptatum",
-                    min_value="tenetur",
+                    max_value="ut",
+                    min_value="incidunt",
                 ),
-                required=True,
+                required=False,
                 string_attribute_constraints=shared.StringAttributeConstraintsType(
-                    max_length="autem",
-                    min_length="enim",
+                    max_length="voluptatem",
+                    min_length="voluptates",
                 ),
             ),
             shared.SchemaAttributeType(
                 attribute_data_type="DateTime",
-                developer_only_attribute=False,
-                mutable=True,
-                name="numquam",
+                developer_only_attribute=True,
+                mutable=False,
+                name="ut",
                 number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="et",
-                    min_value="officiis",
+                    max_value="quaerat",
+                    min_value="ut",
                 ),
-                required=False,
+                required=True,
                 string_attribute_constraints=shared.StringAttributeConstraintsType(
                     max_length="vel",
                     min_length="et",
@@ -70,24 +69,24 @@ req = operations.AddCustomAttributesRequest(
             shared.SchemaAttributeType(
                 attribute_data_type="DateTime",
                 developer_only_attribute=False,
-                mutable=False,
-                name="asperiores",
+                mutable=True,
+                name="inventore",
                 number_attribute_constraints=shared.NumberAttributeConstraintsType(
-                    max_value="tempora",
-                    min_value="voluptate",
+                    max_value="impedit",
+                    min_value="molestiae",
                 ),
-                required=True,
+                required=False,
                 string_attribute_constraints=shared.StringAttributeConstraintsType(
-                    max_length="nostrum",
-                    min_length="mollitia",
+                    max_length="dignissimos",
+                    min_length="consectetur",
                 ),
             ),
         ],
-        user_pool_id="aut",
+        user_pool_id="repellendus",
     ),
 )
     
-res = s.sdk.add_custom_attributes(req)
+res = s.add_custom_attributes(req)
 
 if res.add_custom_attributes_response is not None:
     # handle response

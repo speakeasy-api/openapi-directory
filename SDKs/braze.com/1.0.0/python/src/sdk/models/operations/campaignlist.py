@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CampaignListQueryParams:
-    include_archived: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'include_archived', 'style': 'form', 'explode': True }})
-    last_edit_time_gt_: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'last_edit.time[gt]', 'style': 'form', 'explode': True }})
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    sort_direction: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sort_direction', 'style': 'form', 'explode': True }})
+    include_archived: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_archived', 'style': 'form', 'explode': True }})
+    last_edit_time_gt_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'last_edit.time[gt]', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    sort_direction: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_direction', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CampaignListRequest:
-    query_params: CampaignListQueryParams = field()
+    query_params: CampaignListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CampaignListResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

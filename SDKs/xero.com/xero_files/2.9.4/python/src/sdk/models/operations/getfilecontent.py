@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetFileContentPathParams:
-    file_id: str = field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
+    file_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'FileId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileContentHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'xero-tenant-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileContentSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileContentRequest:
-    headers: GetFileContentHeaders = field()
-    path_params: GetFileContentPathParams = field()
-    security: GetFileContentSecurity = field()
+    headers: GetFileContentHeaders = dataclasses.field()
+    path_params: GetFileContentPathParams = dataclasses.field()
+    security: GetFileContentSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetFileContentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_file_content_200_application_octet_stream_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_file_content_200_application_octet_stream_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

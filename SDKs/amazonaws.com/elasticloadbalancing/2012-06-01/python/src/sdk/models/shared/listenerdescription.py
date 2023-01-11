@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import listener as shared_listener
 
 
-@dataclass
+@dataclasses.dataclass
 class ListenerDescription:
     r"""ListenerDescription
     The policies enabled for a listener.
     """
     
-    listener: Optional[Listener] = field(default=None)
-    policy_names: Optional[List[str]] = field(default=None)
+    listener: Optional[shared_listener.Listener] = dataclasses.field(default=None)
+    policy_names: Optional[list[str]] = dataclasses.field(default=None)
     

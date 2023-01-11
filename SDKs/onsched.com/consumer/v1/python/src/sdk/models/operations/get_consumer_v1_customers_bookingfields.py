@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import bookingfieldlistviewmodel as shared_bookingfieldlistviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersBookingfieldsQueryParams:
-    location_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
+    location_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersBookingfieldsRequest:
-    query_params: GetConsumerV1CustomersBookingfieldsQueryParams = field()
+    query_params: GetConsumerV1CustomersBookingfieldsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetConsumerV1CustomersBookingfieldsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    booking_field_list_view_model: Optional[shared.BookingFieldListViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    booking_field_list_view_model: Optional[shared_bookingfieldlistviewmodel.BookingFieldListViewModel] = dataclasses.field(default=None)
     

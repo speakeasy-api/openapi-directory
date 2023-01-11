@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlefirebaseappcheckv1debugtoken as shared_googlefirebaseappcheckv1debugtoken
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleFirebaseAppcheckV1ListDebugTokensResponse:
     r"""GoogleFirebaseAppcheckV1ListDebugTokensResponse
     Response message for the ListDebugTokens method.
     """
     
-    debug_tokens: Optional[List[GoogleFirebaseAppcheckV1DebugToken]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debugTokens') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    debug_tokens: Optional[list[shared_googlefirebaseappcheckv1debugtoken.GoogleFirebaseAppcheckV1DebugToken]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('debugTokens') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Paths:
     r"""Paths
     A complex type that contains information about the objects that you want to invalidate. For more information, see <a href=\"http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#invalidation-specifying-objects\">Specifying the Objects to Invalidate</a> in the <i>Amazon CloudFront Developer Guide</i>. 
     """
     
-    quantity: int = field()
-    items: Optional[List[str]] = field(default=None)
+    quantity: int = dataclasses.field()
+    items: Optional[list[dict[str, Any]]] = dataclasses.field(default=None)
     

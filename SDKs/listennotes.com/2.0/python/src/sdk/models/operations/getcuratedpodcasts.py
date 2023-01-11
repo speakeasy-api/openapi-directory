@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import getcuratedpodcastsresponse as shared_getcuratedpodcastsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastsQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastsHeaders:
-    x_listen_api_key: str = field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
+    x_listen_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'X-ListenAPI-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastsRequest:
-    headers: GetCuratedPodcastsHeaders = field()
-    query_params: GetCuratedPodcastsQueryParams = field()
+    headers: GetCuratedPodcastsHeaders = dataclasses.field()
+    query_params: GetCuratedPodcastsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCuratedPodcastsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    get_curated_podcasts_response: Optional[shared.GetCuratedPodcastsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_curated_podcasts_response: Optional[shared_getcuratedpodcastsresponse.GetCuratedPodcastsResponse] = dataclasses.field(default=None)
     

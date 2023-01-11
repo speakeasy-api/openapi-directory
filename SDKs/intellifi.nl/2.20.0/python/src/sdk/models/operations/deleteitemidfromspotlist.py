@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import responselistresource as shared_responselistresource
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemIDFromSpotListPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    item_id: str = field(metadata={'path_param': { 'field_name': 'itemId', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    item_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'itemId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemIDFromSpotListRequest:
-    path_params: DeleteItemIDFromSpotListPathParams = field()
+    path_params: DeleteItemIDFromSpotListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteItemIDFromSpotListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_list_resource: Optional[shared.ResponseListResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_list_resource: Optional[shared_responselistresource.ResponseListResource] = dataclasses.field(default=None)
     

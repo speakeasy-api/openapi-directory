@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sendtxrequest as shared_sendtxrequest
+from ..shared import error as shared_error
+from ..shared import broadcasttxresponse as shared_broadcasttxresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TestnetSendTxRequest:
-    request: shared.SendTxRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_sendtxrequest.SendTxRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestnetSendTxResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    broadcast_tx_response: Optional[shared.BroadcastTxResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    broadcast_tx_response: Optional[shared_broadcasttxresponse.BroadcastTxResponse] = dataclasses.field(default=None)
     

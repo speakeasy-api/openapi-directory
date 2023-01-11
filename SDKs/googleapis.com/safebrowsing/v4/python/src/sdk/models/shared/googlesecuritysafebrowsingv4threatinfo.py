@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlesecuritysafebrowsingv4threatentry as shared_googlesecuritysafebrowsingv4threatentry
 
 class GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum(str, Enum):
     PLATFORM_TYPE_UNSPECIFIED = "PLATFORM_TYPE_UNSPECIFIED"
@@ -48,14 +48,14 @@ class GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSecuritySafebrowsingV4ThreatInfo:
     r"""GoogleSecuritySafebrowsingV4ThreatInfo
     The information regarding one or more threats that a client submits when checking for matches in threat lists.
     """
     
-    platform_types: Optional[List[GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformTypes') }})
-    threat_entries: Optional[List[GoogleSecuritySafebrowsingV4ThreatEntry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntries') }})
-    threat_entry_types: Optional[List[GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryTypes') }})
-    threat_types: Optional[List[GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatTypes') }})
+    platform_types: Optional[list[GoogleSecuritySafebrowsingV4ThreatInfoPlatformTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformTypes') }})
+    threat_entries: Optional[list[shared_googlesecuritysafebrowsingv4threatentry.GoogleSecuritySafebrowsingV4ThreatEntry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntries') }})
+    threat_entry_types: Optional[list[GoogleSecuritySafebrowsingV4ThreatInfoThreatEntryTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryTypes') }})
+    threat_types: Optional[list[GoogleSecuritySafebrowsingV4ThreatInfoThreatTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatTypes') }})
     

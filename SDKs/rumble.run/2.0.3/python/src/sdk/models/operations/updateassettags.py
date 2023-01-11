@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import assettags as shared_assettags
+from ..shared import asset as shared_asset
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetTagsPathParams:
-    asset_id: str = field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
+    asset_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'asset_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetTagsSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetTagsRequest:
-    path_params: UpdateAssetTagsPathParams = field()
-    request: shared.AssetTags = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateAssetTagsSecurity = field()
+    path_params: UpdateAssetTagsPathParams = dataclasses.field()
+    request: shared_assettags.AssetTags = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateAssetTagsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAssetTagsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    asset: Optional[shared.Asset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    asset: Optional[shared_asset.Asset] = dataclasses.field(default=None)
     

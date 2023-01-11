@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,66 +20,60 @@ req = operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest(
     security=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams(
-        parent="voluptatem",
+        parent="optio",
     ),
     query_params=operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="impedit",
-        alt="json",
-        callback="modi",
-        endpoint_policy_id="error",
-        fields="voluptate",
-        key="est",
-        oauth_token="inventore",
+        access_token="accusamus",
+        alt="proto",
+        callback="dolorum",
+        endpoint_policy_id="veritatis",
+        fields="doloribus",
+        key="in",
+        oauth_token="maxime",
         pretty_print=False,
-        quota_user="voluptatibus",
-        upload_type="ut",
-        upload_protocol="consequuntur",
+        quota_user="corporis",
+        upload_type="nam",
+        upload_protocol="assumenda",
     ),
     request=shared.EndpointPolicyInput(
-        authorization_policy="similique",
-        client_tls_policy="praesentium",
-        description="assumenda",
+        authorization_policy="molestias",
+        client_tls_policy="aut",
+        description="esse",
         endpoint_matcher=shared.EndpointMatcher(
             metadata_label_matcher=shared.EndpointMatcherMetadataLabelMatcher(
-                metadata_label_match_criteria="MATCH_ANY",
+                metadata_label_match_criteria="MATCH_ALL",
                 metadata_labels=[
                     shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
-                        label_name="repellat",
-                        label_value="ut",
+                        label_name="cumque",
+                        label_value="aut",
                     ),
                     shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
-                        label_name="maiores",
-                        label_value="odit",
-                    ),
-                    shared.EndpointMatcherMetadataLabelMatcherMetadataLabels(
-                        label_name="alias",
-                        label_value="voluptatum",
+                        label_name="qui",
+                        label_value="incidunt",
                     ),
                 ],
             ),
         ),
         labels={
-            "voluptas": "ducimus",
-            "modi": "ducimus",
-            "voluptatem": "laborum",
+            "possimus": "qui",
+            "possimus": "alias",
         },
-        name="omnis",
-        server_tls_policy="tempore",
+        name="ipsam",
+        server_tls_policy="commodi",
         traffic_port_selector=shared.TrafficPortSelector(
             ports=[
-                "qui",
-                "ut",
-                "odio",
+                "corrupti",
+                "voluptatem",
             ],
         ),
-        type="GRPC_SERVER",
+        type="SIDECAR_PROXY",
     ),
 )
     

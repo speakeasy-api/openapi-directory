@@ -1,39 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import repo_enum2 as shared_repo_enum2
+from ..shared import basic_error as shared_basic_error
+from ..shared import project as shared_project
+from ..shared import validation_error_simple as shared_validation_error_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForRepoPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
-class ProjectsListForRepoStateEnum(str, Enum):
-    OPEN = "open"
-    CLOSED = "closed"
-    ALL = "all"
 
-
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForRepoQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    state: Optional[ProjectsListForRepoStateEnum] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    state: Optional[shared_repo_enum2.RepoEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForRepoRequest:
-    path_params: ProjectsListForRepoPathParams = field()
-    query_params: ProjectsListForRepoQueryParams = field()
+    path_params: ProjectsListForRepoPathParams = dataclasses.field()
+    query_params: ProjectsListForRepoQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForRepoResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    projects: Optional[List[shared.Project]] = field(default=None)
-    validation_error_simple: Optional[shared.ValidationErrorSimple] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    projects: Optional[list[shared_project.Project]] = dataclasses.field(default=None)
+    validation_error_simple: Optional[shared_validation_error_simple.ValidationErrorSimple] = dataclasses.field(default=None)
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import salestaxes as shared_salestaxes
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSalesTaxesQueryParams:
-    country_code: str = field(metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
+    country_code: str = dataclasses.field(metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSalesTaxesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSalesTaxesRequest:
-    query_params: GetSalesTaxesQueryParams = field()
-    security: GetSalesTaxesSecurity = field()
+    query_params: GetSalesTaxesQueryParams = dataclasses.field()
+    security: GetSalesTaxesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSalesTaxesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sales_taxes: Optional[shared.SalesTaxes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sales_taxes: Optional[shared_salestaxes.SalesTaxes] = dataclasses.field(default=None)
     

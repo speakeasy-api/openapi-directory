@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import partialfindresult_artistforuserforapicontract_ as shared_partialfindresult_artistforuserforapicontract_
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetFollowedArtistsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 class UserAPIGetFollowedArtistsArtistTypeEnum(str, Enum):
     UNKNOWN = "Unknown"
@@ -65,30 +65,30 @@ class UserAPIGetFollowedArtistsSortEnum(str, Enum):
     FOLLOWER_COUNT = "FollowerCount"
 
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetFollowedArtistsQueryParams:
-    artist_type: Optional[UserAPIGetFollowedArtistsArtistTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'artistType', 'style': 'form', 'explode': True }})
-    fields: Optional[UserAPIGetFollowedArtistsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    get_total_count: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
-    lang: Optional[UserAPIGetFollowedArtistsLangEnum] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[UserAPIGetFollowedArtistsNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
-    sort: Optional[UserAPIGetFollowedArtistsSortEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    start: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
-    tag_id: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
+    artist_type: Optional[UserAPIGetFollowedArtistsArtistTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artistType', 'style': 'form', 'explode': True }})
+    fields: Optional[UserAPIGetFollowedArtistsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    get_total_count: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'getTotalCount', 'style': 'form', 'explode': True }})
+    lang: Optional[UserAPIGetFollowedArtistsLangEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[UserAPIGetFollowedArtistsNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    sort: Optional[UserAPIGetFollowedArtistsSortEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
+    start: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
+    tag_id: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tagId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetFollowedArtistsRequest:
-    path_params: UserAPIGetFollowedArtistsPathParams = field()
-    query_params: UserAPIGetFollowedArtistsQueryParams = field()
+    path_params: UserAPIGetFollowedArtistsPathParams = dataclasses.field()
+    query_params: UserAPIGetFollowedArtistsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UserAPIGetFollowedArtistsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    partial_find_result_artist_for_user_for_api_contract_: Optional[shared.PartialFindResultArtistForUserForAPIContract] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    partial_find_result_artist_for_user_for_api_contract_: Optional[shared_partialfindresult_artistforuserforapicontract_.PartialFindResultArtistForUserForAPIContract] = dataclasses.field(default=None)
     

@@ -18,3 +18,5 @@ from .suiterunstatus_enum import *
 from .testcaserun import *
 from .testresult import *
 from .updatesuitedefinitionresponse import *
+
+__all__ = ["CreateSuiteDefinitionResponse","DeviceUnderTest","GetSuiteDefinitionResponse","GetSuiteRunReportResponse","GetSuiteRunResponse","GroupResult","ListSuiteDefinitionsResponse","ListSuiteRunsResponse","ListTagsForResourceResponse","SchemeHmac","Security","StartSuiteRunResponse","StatusEnum","SuiteDefinitionConfiguration","SuiteDefinitionInformation","SuiteRunConfiguration","SuiteRunInformation","SuiteRunStatusEnum","TestCaseRun","TestResult","UpdateSuiteDefinitionResponse"]

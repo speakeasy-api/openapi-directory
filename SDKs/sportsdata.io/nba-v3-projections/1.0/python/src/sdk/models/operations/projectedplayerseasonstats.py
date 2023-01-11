@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class ProjectedPlayerSeasonStatsFormatEnum(str, Enum):
@@ -7,20 +7,20 @@ class ProjectedPlayerSeasonStatsFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsPathParams:
-    format: ProjectedPlayerSeasonStatsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: ProjectedPlayerSeasonStatsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsRequest:
-    path_params: ProjectedPlayerSeasonStatsPathParams = field()
+    path_params: ProjectedPlayerSeasonStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectedPlayerSeasonStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    player_season_projections: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    player_season_projections: Optional[list[Any]] = dataclasses.field(default=None)
     

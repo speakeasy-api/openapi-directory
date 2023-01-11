@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -12,25 +12,25 @@ class GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum(str, Enum):
     SHPZ = "shpz"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsIntersectionIDOutputFormatPathParams:
-    intersection_id: str = field(metadata={'path_param': { 'field_name': 'intersectionID', 'style': 'simple', 'explode': False }})
-    output_format: GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    intersection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'intersectionID', 'style': 'simple', 'explode': False }})
+    output_format: GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsIntersectionIDOutputFormatQueryParams:
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsIntersectionIDOutputFormatRequest:
-    path_params: GetIntersectionsIntersectionIDOutputFormatPathParams = field()
-    query_params: GetIntersectionsIntersectionIDOutputFormatQueryParams = field()
+    path_params: GetIntersectionsIntersectionIDOutputFormatPathParams = dataclasses.field()
+    query_params: GetIntersectionsIntersectionIDOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntersectionsIntersectionIDOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

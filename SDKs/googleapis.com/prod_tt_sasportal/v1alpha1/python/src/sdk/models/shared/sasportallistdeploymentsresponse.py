@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import sasportaldeployment as shared_sasportaldeployment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SasPortalListDeploymentsResponse:
     r"""SasPortalListDeploymentsResponse
     Response for ListDeployments.
     """
     
-    deployments: Optional[List[SasPortalDeployment]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployments') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    deployments: Optional[list[shared_sasportaldeployment.SasPortalDeployment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deployments') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

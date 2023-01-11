@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import sshpublickey as shared_sshpublickey
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSSHPublicKeyResponse:
     r"""GetSSHPublicKeyResponse
     Contains the response to a successful <a>GetSSHPublicKey</a> request.
     """
     
-    ssh_public_key: Optional[SSHPublicKey] = field(default=None)
+    ssh_public_key: Optional[shared_sshpublickey.SSHPublicKey] = dataclasses.field(default=None)
     

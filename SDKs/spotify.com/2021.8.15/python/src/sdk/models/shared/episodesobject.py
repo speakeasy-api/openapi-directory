@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import episodeobject as shared_episodeobject
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EpisodesObject:
-    episodes: Optional[List[EpisodeObject]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('episodes') }})
+    episodes: Optional[list[shared_episodeobject.EpisodeObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('episodes') }})
     

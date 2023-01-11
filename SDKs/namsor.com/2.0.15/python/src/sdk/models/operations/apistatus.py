@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apiclassifiersstatusout as shared_apiclassifiersstatusout
 
 
-@dataclass
+@dataclasses.dataclass
 class APIStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_classifiers_status_out: Optional[shared.APIClassifiersStatusOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_classifiers_status_out: Optional[shared_apiclassifiersstatusout.APIClassifiersStatusOut] = dataclasses.field(default=None)
     

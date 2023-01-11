@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -48,17 +48,17 @@ class ConfigManagementConfigSyncDeploymentStateSyncerEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ConfigManagementConfigSyncDeploymentState:
     r"""ConfigManagementConfigSyncDeploymentState
     The state of ConfigSync's deployment on a cluster
     """
     
-    admission_webhook: Optional[ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('admissionWebhook') }})
-    git_sync: Optional[ConfigManagementConfigSyncDeploymentStateGitSyncEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gitSync') }})
-    importer: Optional[ConfigManagementConfigSyncDeploymentStateImporterEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importer') }})
-    monitor: Optional[ConfigManagementConfigSyncDeploymentStateMonitorEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitor') }})
-    reconciler_manager: Optional[ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reconcilerManager') }})
-    root_reconciler: Optional[ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rootReconciler') }})
-    syncer: Optional[ConfigManagementConfigSyncDeploymentStateSyncerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('syncer') }})
+    admission_webhook: Optional[ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('admissionWebhook') }})
+    git_sync: Optional[ConfigManagementConfigSyncDeploymentStateGitSyncEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gitSync') }})
+    importer: Optional[ConfigManagementConfigSyncDeploymentStateImporterEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importer') }})
+    monitor: Optional[ConfigManagementConfigSyncDeploymentStateMonitorEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monitor') }})
+    reconciler_manager: Optional[ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reconcilerManager') }})
+    root_reconciler: Optional[ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rootReconciler') }})
+    syncer: Optional[ConfigManagementConfigSyncDeploymentStateSyncerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('syncer') }})
     

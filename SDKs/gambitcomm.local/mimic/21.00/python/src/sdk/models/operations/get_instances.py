@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInstancesPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    object: str = field(metadata={'path_param': { 'field_name': 'object', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    object: str = dataclasses.field(metadata={'path_param': { 'field_name': 'object', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInstancesRequest:
-    path_params: GetInstancesPathParams = field()
+    path_params: GetInstancesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetInstancesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_instances_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_instances_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

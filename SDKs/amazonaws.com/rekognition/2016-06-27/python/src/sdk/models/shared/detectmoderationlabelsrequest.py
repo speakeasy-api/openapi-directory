@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import humanloopconfig as shared_humanloopconfig
+from ..shared import image as shared_image
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectModerationLabelsRequest:
-    image: Image = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Image') }})
-    human_loop_config: Optional[HumanLoopConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('HumanLoopConfig') }})
-    min_confidence: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MinConfidence') }})
+    image: shared_image.Image = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Image') }})
+    human_loop_config: Optional[shared_humanloopconfig.HumanLoopConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('HumanLoopConfig') }})
+    min_confidence: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MinConfidence') }})
     

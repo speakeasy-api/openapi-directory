@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,7 +20,7 @@ req = operations.NncerRequest(
     security=operations.NncerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
@@ -30,13 +29,13 @@ req = operations.NncerRequest(
         certificate_parameters=operations.NncerRequestBodyCertificateParameters(
             ref_no="consequatur",
         ),
-        consent_artifact="praesentium",
+        consent_artifact="sit",
         format="pdf",
-        txn_id="aut",
+        txn_id="quaerat",
     ),
 )
     
-res = s.sdk.nncer(req)
+res = s.ap_is.nncer(req)
 
 if res.status_code == 200:
     # handle response
@@ -46,7 +45,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `nncer` - Non-Encumbrance Certificate
 

@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googletypeexpr as shared_googletypeexpr
+from ..shared import googlecloudpolicytroubleshooterv1betabindingexplanationannotatedmembership as shared_googlecloudpolicytroubleshooterv1betabindingexplanationannotatedmembership
 
 class GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum(str, Enum):
     ACCESS_STATE_UNSPECIFIED = "ACCESS_STATE_UNSPECIFIED"
@@ -30,17 +31,17 @@ class GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelev
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPolicytroubleshooterV1betaBindingExplanation:
     r"""GoogleCloudPolicytroubleshooterV1betaBindingExplanation
     Details about how a binding in a policy affects a member's ability to use a permission.
     """
     
-    access: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
-    condition: Optional[GoogleTypeExpr] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('condition') }})
-    memberships: Optional[dict[str, GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memberships') }})
-    relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relevance') }})
-    role: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
-    role_permission: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rolePermission') }})
-    role_permission_relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rolePermissionRelevance') }})
+    access: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access') }})
+    condition: Optional[shared_googletypeexpr.GoogleTypeExpr] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('condition') }})
+    memberships: Optional[dict[str, shared_googlecloudpolicytroubleshooterv1betabindingexplanationannotatedmembership.GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('memberships') }})
+    relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relevance') }})
+    role: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    role_permission: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rolePermission') }})
+    role_permission_relevance: Optional[GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rolePermissionRelevance') }})
     

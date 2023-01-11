@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import googlecloudservicebrokerv1beta1_service as shared_googlecloudservicebrokerv1beta1_service
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudServicebrokerV1beta1ListCatalogResponse:
     r"""GoogleCloudServicebrokerV1beta1ListCatalogResponse
     Response message for the `ListCatalog()` method.
     """
     
-    description: Optional[str] = field(default=None)
-    next_page_token: Optional[str] = field(default=None)
-    services: Optional[List[GoogleCloudServicebrokerV1beta1Service]] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
+    services: Optional[list[shared_googlecloudservicebrokerv1beta1_service.GoogleCloudServicebrokerV1beta1Service]] = dataclasses.field(default=None)
     

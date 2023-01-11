@@ -16,3 +16,5 @@ from .setiampolicyrequest import *
 from .status import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","Binding","EndpointSeverityEnum","EndpointStateEnum","Endpoint","EndpointInput","Expr","ListEndpointsResponse","ListLocationsResponse","ListOperationsResponse","Location","Operation","Policy","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","TestIamPermissionsRequest","TestIamPermissionsResponse"]

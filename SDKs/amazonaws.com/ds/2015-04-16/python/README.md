@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.AcceptSharedDirectoryRequest(
     headers=operations.AcceptSharedDirectoryHeaders(
-        x_amz_algorithm="accusantium",
-        x_amz_content_sha256="facere",
-        x_amz_credential="pariatur",
-        x_amz_date="ipsum",
-        x_amz_security_token="doloremque",
-        x_amz_signature="architecto",
-        x_amz_signed_headers="temporibus",
+        x_amz_algorithm="quis",
+        x_amz_content_sha256="saepe",
+        x_amz_credential="illo",
+        x_amz_date="aliquam",
+        x_amz_security_token="qui",
+        x_amz_signature="quia",
+        x_amz_signed_headers="aperiam",
         x_amz_target="DirectoryService_20150416.AcceptSharedDirectory",
     ),
     request=shared.AcceptSharedDirectoryRequest(
-        shared_directory_id="rem",
+        shared_directory_id="voluptatem",
     ),
 )
     
-res = s.sdk.accept_shared_directory(req)
+res = s.accept_shared_directory(req)
 
 if res.accept_shared_directory_result is not None:
     # handle response

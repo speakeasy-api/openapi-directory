@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import artistcontract as shared_artistcontract
 
 class ArtistForArtistForAPIContractLinkTypeEnum(str, Enum):
     CHARACTER_DESIGNER = "CharacterDesigner"
@@ -14,8 +14,8 @@ class ArtistForArtistForAPIContractLinkTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ArtistForArtistForAPIContract:
-    artist: Optional[ArtistContract] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artist') }})
-    link_type: Optional[ArtistForArtistForAPIContractLinkTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkType') }})
+    artist: Optional[shared_artistcontract.ArtistContract] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('artist') }})
+    link_type: Optional[ArtistForArtistForAPIContractLinkTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('linkType') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,38 +21,38 @@ req = operations.WebmastersSearchanalyticsQueryRequest(
         option1=operations.WebmastersSearchanalyticsQuerySecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.WebmastersSearchanalyticsQueryPathParams(
-        site_url="dolore",
+        site_url="adipisci",
     ),
     query_params=operations.WebmastersSearchanalyticsQueryQueryParams(
-        dollar_xgafv="1",
-        access_token="odit",
-        alt="json",
-        callback="omnis",
-        fields="hic",
-        key="eum",
-        oauth_token="quae",
+        dollar_xgafv="2",
+        access_token="sequi",
+        alt="media",
+        callback="et",
+        fields="id",
+        key="impedit",
+        oauth_token="et",
         pretty_print=True,
-        quota_user="quis",
-        upload_type="eius",
-        upload_protocol="et",
+        quota_user="consequuntur",
+        upload_type="fugit",
+        upload_protocol="aut",
     ),
     request=shared.SearchAnalyticsQueryRequest(
-        aggregation_type="BY_PROPERTY",
-        data_state="FINAL",
+        aggregation_type="AUTO",
+        data_state="ALL",
         dimension_filter_groups=[
             shared.APIDimensionFilterGroup(
                 filters=[
                     shared.APIDimensionFilter(
                         dimension="PAGE",
-                        expression="libero",
-                        operator="NOT_CONTAINS",
+                        expression="delectus",
+                        operator="CONTAINS",
                     ),
                 ],
                 group_type="AND",
@@ -61,15 +60,15 @@ req = operations.WebmastersSearchanalyticsQueryRequest(
         ],
         dimensions=[
             "DATE",
-            "COUNTRY",
-            "PAGE",
+            "SEARCH_APPEARANCE",
+            "QUERY",
         ],
-        end_date="ducimus",
-        row_limit=6882839132048010878,
-        search_type="IMAGE",
-        start_date="praesentium",
-        start_row=8542795201567454831,
-        type="IMAGE",
+        end_date="assumenda",
+        row_limit=7714857476425061931,
+        search_type="VIDEO",
+        start_date="delectus",
+        start_row=7876677448085170865,
+        type="NEWS",
     ),
 )
     

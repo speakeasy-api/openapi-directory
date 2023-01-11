@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import dataset as shared_dataset
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDatasetPathParams:
-    dataset_id: str = field(metadata={'path_param': { 'field_name': 'datasetId', 'style': 'simple', 'explode': False }})
+    dataset_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'datasetId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatasetSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatasetRequest:
-    path_params: GetDatasetPathParams = field()
-    security: GetDatasetSecurity = field()
+    path_params: GetDatasetPathParams = dataclasses.field()
+    security: GetDatasetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDatasetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    dataset: Optional[shared.Dataset] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    dataset: Optional[shared_dataset.Dataset] = dataclasses.field(default=None)
     

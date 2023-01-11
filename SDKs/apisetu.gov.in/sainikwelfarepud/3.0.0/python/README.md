@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.DpcerRequest(
     security=operations.DpcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.DpcerRequestBody(
         certificate_parameters=operations.DpcerRequestBodyCertificateParameters(
-            full_name="nesciunt",
-            uid="vel",
-            cert_no="quaerat",
+            full_name="qui",
+            uid="maiores",
+            cert_no="ipsam",
         ),
-        consent_artifact="qui",
+        consent_artifact="non",
         format="pdf",
-        txn_id="et",
+        txn_id="veritatis",
     ),
 )
     
-res = s.sdk.dpcer(req)
+res = s.ap_is.dpcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `dpcer` - Dependency Certificate
 

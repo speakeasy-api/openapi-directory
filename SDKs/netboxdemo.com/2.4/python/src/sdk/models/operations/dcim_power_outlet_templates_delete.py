@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesDeleteRequest:
-    path_params: DcimPowerOutletTemplatesDeletePathParams = field()
+    path_params: DcimPowerOutletTemplatesDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerOutletTemplatesDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

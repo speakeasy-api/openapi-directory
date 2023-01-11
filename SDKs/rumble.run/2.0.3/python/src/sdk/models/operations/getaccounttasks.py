@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import task as shared_task
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountTasksQueryParams:
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountTasksSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountTasksRequest:
-    query_params: GetAccountTasksQueryParams = field()
-    security: GetAccountTasksSecurity = field()
+    query_params: GetAccountTasksQueryParams = dataclasses.field()
+    security: GetAccountTasksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAccountTasksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tasks: Optional[List[shared.Task]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tasks: Optional[list[shared_task.Task]] = dataclasses.field(default=None)
     

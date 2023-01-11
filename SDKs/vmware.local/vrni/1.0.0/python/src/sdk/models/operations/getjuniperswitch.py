@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import switchdatasource as shared_switchdatasource
 
 
-@dataclass
+@dataclasses.dataclass
 class GetJuniperSwitchPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJuniperSwitchSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJuniperSwitchRequest:
-    path_params: GetJuniperSwitchPathParams = field()
-    security: GetJuniperSwitchSecurity = field()
+    path_params: GetJuniperSwitchPathParams = dataclasses.field()
+    security: GetJuniperSwitchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetJuniperSwitchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    switch_data_source: Optional[shared.SwitchDataSource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    switch_data_source: Optional[shared_switchdatasource.SwitchDataSource] = dataclasses.field(default=None)
     

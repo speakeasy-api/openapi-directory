@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnamegeoout as shared_personalnamegeoout
 
 
-@dataclass
+@dataclasses.dataclass
 class CountryPathParams:
-    personal_name_full: str = field(metadata={'path_param': { 'field_name': 'personalNameFull', 'style': 'simple', 'explode': False }})
+    personal_name_full: str = dataclasses.field(metadata={'path_param': { 'field_name': 'personalNameFull', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CountrySecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CountryRequest:
-    path_params: CountryPathParams = field()
-    security: CountrySecurity = field()
+    path_params: CountryPathParams = dataclasses.field()
+    security: CountrySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CountryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_geo_out: Optional[shared.PersonalNameGeoOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_geo_out: Optional[shared_personalnamegeoout.PersonalNameGeoOut] = dataclasses.field(default=None)
     

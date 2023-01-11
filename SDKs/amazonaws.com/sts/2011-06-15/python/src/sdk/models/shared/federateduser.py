@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class FederatedUser:
     r"""FederatedUser
     Identifiers for the federated user that is associated with the credentials.
     """
     
-    arn: str = field()
-    federated_user_id: str = field()
+    arn: str = dataclasses.field()
+    federated_user_id: str = dataclasses.field()
     

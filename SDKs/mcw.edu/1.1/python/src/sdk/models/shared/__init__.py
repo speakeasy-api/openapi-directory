@@ -22,3 +22,5 @@ from .status import *
 from .strain import *
 from .term import *
 from .termxref import *
+
+__all__ = ["AnnotatedGeneRequest","Annotation","AnnotationRequest","Chromosome","EnrichmentGeneRequest","EnrichmentRequest","Gene","Map","MapPair","MappedGene","MappedGenePosition","MappedQtl","MappedSslp","OrthologRequest","Pathway","PathwayObject","Qtl","Reference","RgdidListRequest","Sslp","Status","Strain","Term","TermXRef"]

@@ -1,66 +1,68 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import file_commit as shared_file_commit
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsRequestBodyAuthor:
     r"""ReposCreateOrUpdateFileContentsRequestBodyAuthor
     The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
     """
     
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    date_: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    date_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsRequestBodyCommitter:
     r"""ReposCreateOrUpdateFileContentsRequestBodyCommitter
     The person that committed the file. Default: the authenticated user.
     """
     
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    date_: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    date_: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('date') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsRequestBody:
-    content: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
-    author: Optional[ReposCreateOrUpdateFileContentsRequestBodyAuthor] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('author') }})
-    branch: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('branch') }})
-    committer: Optional[ReposCreateOrUpdateFileContentsRequestBodyCommitter] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committer') }})
-    sha: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    content: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    author: Optional[ReposCreateOrUpdateFileContentsRequestBodyAuthor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('author') }})
+    branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('branch') }})
+    committer: Optional[ReposCreateOrUpdateFileContentsRequestBodyCommitter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('committer') }})
+    sha: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsRequest:
-    path_params: ReposCreateOrUpdateFileContentsPathParams = field()
-    request: Optional[ReposCreateOrUpdateFileContentsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ReposCreateOrUpdateFileContentsPathParams = dataclasses.field()
+    request: Optional[ReposCreateOrUpdateFileContentsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposCreateOrUpdateFileContentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    file_commit: Optional[shared.FileCommit] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    file_commit: Optional[shared_file_commit.FileCommit] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

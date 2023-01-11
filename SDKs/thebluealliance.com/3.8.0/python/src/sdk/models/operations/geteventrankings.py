@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import event_ranking as shared_event_ranking
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRankingsPathParams:
-    event_key: str = field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
+    event_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRankingsHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRankingsSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRankingsRequest:
-    headers: GetEventRankingsHeaders = field()
-    path_params: GetEventRankingsPathParams = field()
-    security: GetEventRankingsSecurity = field()
+    headers: GetEventRankingsHeaders = dataclasses.field()
+    path_params: GetEventRankingsPathParams = dataclasses.field()
+    security: GetEventRankingsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventRankingsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    event_ranking: Optional[shared.EventRanking] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    event_ranking: Optional[shared_event_ranking.EventRanking] = dataclasses.field(default=None)
     

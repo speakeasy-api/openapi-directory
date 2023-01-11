@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class PublishAttractionVideosPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishAttractionVideosHeaders:
-    tmps_correlation_id: str = field(metadata={'header': { 'field_name': 'TMPS-Correlation-Id', 'style': 'simple', 'explode': False }})
+    tmps_correlation_id: str = dataclasses.field(metadata={'header': { 'field_name': 'TMPS-Correlation-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishAttractionVideosRequest:
-    headers: PublishAttractionVideosHeaders = field()
-    path_params: PublishAttractionVideosPathParams = field()
-    request: shared.Video = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PublishAttractionVideosHeaders = dataclasses.field()
+    path_params: PublishAttractionVideosPathParams = dataclasses.field()
+    request: shared_video.Video = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishAttractionVideosResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

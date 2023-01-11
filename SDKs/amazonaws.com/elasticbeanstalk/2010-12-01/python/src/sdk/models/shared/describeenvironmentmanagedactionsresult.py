@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import managedaction as shared_managedaction
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeEnvironmentManagedActionsResult:
     r"""DescribeEnvironmentManagedActionsResult
     The result message containing a list of managed actions.
     """
     
-    managed_actions: Optional[List[ManagedAction]] = field(default=None)
+    managed_actions: Optional[list[shared_managedaction.ManagedAction]] = dataclasses.field(default=None)
     

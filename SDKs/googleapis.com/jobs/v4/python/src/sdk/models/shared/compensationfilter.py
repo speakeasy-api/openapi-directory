@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import compensationrange as shared_compensationrange
 
 class CompensationFilterTypeEnum(str, Enum):
     FILTER_TYPE_UNSPECIFIED = "FILTER_TYPE_UNSPECIFIED"
@@ -24,14 +24,14 @@ class CompensationFilterUnitsEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CompensationFilter:
     r"""CompensationFilter
     Filter on job compensation type and amount.
     """
     
-    include_jobs_with_unspecified_compensation_range: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeJobsWithUnspecifiedCompensationRange') }})
-    range: Optional[CompensationRange] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
-    type: Optional[CompensationFilterTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    units: Optional[List[CompensationFilterUnitsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('units') }})
+    include_jobs_with_unspecified_compensation_range: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('includeJobsWithUnspecifiedCompensationRange') }})
+    range: Optional[shared_compensationrange.CompensationRange] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('range') }})
+    type: Optional[CompensationFilterTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    units: Optional[list[CompensationFilterUnitsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('units') }})
     

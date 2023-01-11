@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,17 +23,17 @@ req = operations.GetListsBestSellersHistoryJSONRequest(
         ),
     ),
     query_params=operations.GetListsBestSellersHistoryJSONQueryParams(
-        age_group="sed",
-        author="non",
-        contributor="voluptatibus",
-        isbn="sint",
-        price="provident",
-        publisher="doloremque",
-        title="possimus",
+        age_group="dolores",
+        author="autem",
+        contributor="voluptates",
+        isbn="qui",
+        price="et",
+        publisher="ut",
+        title="consequuntur",
     ),
 )
     
-res = s.sdk.get_lists_best_sellers_history_json(req)
+res = s.get_lists_best_sellers_history_json(req)
 
 if res.get_lists_best_sellers_history_json_200_application_json_object is not None:
     # handle response

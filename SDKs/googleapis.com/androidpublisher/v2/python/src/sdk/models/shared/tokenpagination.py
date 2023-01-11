@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TokenPagination:
-    next_page_token: Optional[str] = field(default=None)
-    previous_page_token: Optional[str] = field(default=None)
+    next_page_token: Optional[str] = dataclasses.field(default=None)
+    previous_page_token: Optional[str] = dataclasses.field(default=None)
     

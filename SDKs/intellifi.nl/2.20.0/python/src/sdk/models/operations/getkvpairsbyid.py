@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import keyvaluepair as shared_keyvaluepair
 
 
-@dataclass
+@dataclasses.dataclass
 class GetKvPairsByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKvPairsByIDRequest:
-    path_params: GetKvPairsByIDPathParams = field()
+    path_params: GetKvPairsByIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetKvPairsByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    key_value_pair: Optional[shared.KeyValuePair] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    key_value_pair: Optional[shared_keyvaluepair.KeyValuePair] = dataclasses.field(default=None)
     

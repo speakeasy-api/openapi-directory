@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writablesecret as shared_writablesecret
+from ..shared import secret as shared_secret
 
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretsCreateRequest:
-    request: shared.WritableSecretInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writablesecret.WritableSecretInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SecretsSecretsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    secret: Optional[shared.Secret] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    secret: Optional[shared_secret.Secret] = dataclasses.field(default=None)
     

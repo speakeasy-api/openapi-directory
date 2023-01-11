@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -36,11 +36,11 @@ class OsTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Os:
-    full_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fullName') }})
-    name: OsNameEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: OsTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    version: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
-    service_pack: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servicePack') }})
+    full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fullName') }})
+    name: OsNameEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: OsTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    version: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('version') }})
+    service_pack: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servicePack') }})
     

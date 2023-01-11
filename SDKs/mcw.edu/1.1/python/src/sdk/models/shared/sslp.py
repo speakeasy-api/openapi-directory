@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Sslp:
-    expected_size: Optional[int] = field(default=None)
-    forward_seq: Optional[str] = field(default=None)
-    key: Optional[int] = field(default=None)
-    name: Optional[str] = field(default=None)
-    notes: Optional[str] = field(default=None)
-    reverse_seq: Optional[str] = field(default=None)
-    rgd_id: Optional[int] = field(default=None)
-    species_type_key: Optional[int] = field(default=None)
-    sslp_type: Optional[str] = field(default=None)
-    template_seq: Optional[str] = field(default=None)
+    expected_size: Optional[int] = dataclasses.field(default=None)
+    forward_seq: Optional[str] = dataclasses.field(default=None)
+    key: Optional[int] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    notes: Optional[str] = dataclasses.field(default=None)
+    reverse_seq: Optional[str] = dataclasses.field(default=None)
+    rgd_id: Optional[int] = dataclasses.field(default=None)
+    species_type_key: Optional[int] = dataclasses.field(default=None)
+    sslp_type: Optional[str] = dataclasses.field(default=None)
+    template_seq: Optional[str] = dataclasses.field(default=None)
     

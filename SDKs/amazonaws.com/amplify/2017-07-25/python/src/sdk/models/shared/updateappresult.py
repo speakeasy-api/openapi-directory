@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import app as shared_app
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateAppResult:
     r"""UpdateAppResult
      The result structure for an Amplify app update request. 
     """
     
-    app: App = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
+    app: shared_app.App = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('app') }})
     

@@ -4,3 +4,5 @@ from .ampurl import *
 from .ampurlerror import *
 from .batchgetampurlsrequest import *
 from .batchgetampurlsresponse import *
+
+__all__ = ["XgafvEnum","AltEnum","AmpURL","AmpURLErrorErrorCodeEnum","AmpURLError","BatchGetAmpUrlsRequestLookupStrategyEnum","BatchGetAmpUrlsRequest","BatchGetAmpUrlsResponse"]

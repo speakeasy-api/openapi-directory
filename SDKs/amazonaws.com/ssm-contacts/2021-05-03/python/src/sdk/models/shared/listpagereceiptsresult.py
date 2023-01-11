@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import receipt as shared_receipt
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListPageReceiptsResult:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    receipts: Optional[List[Receipt]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Receipts') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    receipts: Optional[list[shared_receipt.Receipt]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Receipts') }})
     

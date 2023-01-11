@@ -8,26 +8,26 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.GetAuthIntrospectRequest(
-    security=operations.GetAuthIntrospectSecurity(
+req = operations.GetItemUsagesRequest(
+    security=operations.GetItemUsagesSecurity(
         jwtsa=shared.SchemeJwtsa(
             authorization="Bearer YOUR_BEARER_TOKEN_HERE",
         ),
     ),
+    request="sit",
 )
     
-res = s.sdk.get_auth_introspect(req)
+res = s.api_v1.get_item_usages(req)
 
-if res.introspection is not None:
+if res.get_item_usages_200_application_json_any is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -35,11 +35,14 @@ if res.introspection is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### api-v1
 
-* `get_auth_introspect` - Performs introspection of the provided Bearer JWT token
 * `get_item_usages` - Retrieves item usages
 * `get_sign_in_attempts` - Retrieves sign-in attempts
+
+### auth
+
+* `get_auth_introspect` - Performs introspection of the provided Bearer JWT token
 
 <!-- End SDK Available Operations -->
 

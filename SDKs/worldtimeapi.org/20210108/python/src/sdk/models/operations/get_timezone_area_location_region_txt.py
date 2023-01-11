@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaLocationRegionTxtPathParams:
-    area: str = field(metadata={'path_param': { 'field_name': 'area', 'style': 'simple', 'explode': False }})
-    location: str = field(metadata={'path_param': { 'field_name': 'location', 'style': 'simple', 'explode': False }})
-    region: str = field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
+    area: str = dataclasses.field(metadata={'path_param': { 'field_name': 'area', 'style': 'simple', 'explode': False }})
+    location: str = dataclasses.field(metadata={'path_param': { 'field_name': 'location', 'style': 'simple', 'explode': False }})
+    region: str = dataclasses.field(metadata={'path_param': { 'field_name': 'region', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaLocationRegionTxtRequest:
-    path_params: GetTimezoneAreaLocationRegionTxtPathParams = field()
+    path_params: GetTimezoneAreaLocationRegionTxtPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaLocationRegionTxtResponse:
-    content_type: str = field()
-    status_code: int = field()
-    date_time_text_response: Optional[str] = field(default=None)
-    error_text_response: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    date_time_text_response: Optional[str] = dataclasses.field(default=None)
+    error_text_response: Optional[str] = dataclasses.field(default=None)
     

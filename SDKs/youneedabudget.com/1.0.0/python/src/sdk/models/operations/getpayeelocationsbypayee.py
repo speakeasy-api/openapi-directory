@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import payeelocationsresponse as shared_payeelocationsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeLocationsByPayeePathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payee_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payee_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeLocationsByPayeeRequest:
-    path_params: GetPayeeLocationsByPayeePathParams = field()
+    path_params: GetPayeeLocationsByPayeePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayeeLocationsByPayeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    payee_locations_response: Optional[shared.PayeeLocationsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    payee_locations_response: Optional[shared_payeelocationsresponse.PayeeLocationsResponse] = dataclasses.field(default=None)
     

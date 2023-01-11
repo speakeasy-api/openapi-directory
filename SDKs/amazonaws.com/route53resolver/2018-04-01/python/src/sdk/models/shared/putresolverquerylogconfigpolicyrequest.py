@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutResolverQueryLogConfigPolicyRequest:
-    arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Arn') }})
-    resolver_query_log_config_policy: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverQueryLogConfigPolicy') }})
+    arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Arn') }})
+    resolver_query_log_config_policy: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverQueryLogConfigPolicy') }})
     

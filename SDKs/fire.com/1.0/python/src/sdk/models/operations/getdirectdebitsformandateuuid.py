@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import oneaccounts_get_responses_200_content_application_1json_schema_properties_accounts_items_properties_currency as shared_oneaccounts_get_responses_200_content_application_1json_schema_properties_accounts_items_properties_currency
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitsForMandateUUIDQueryParams:
-    mandate_uuid: str = field(metadata={'query_param': { 'field_name': 'mandateUuid', 'style': 'form', 'explode': True }})
+    mandate_uuid: str = dataclasses.field(metadata={'query_param': { 'field_name': 'mandateUuid', 'style': 'form', 'explode': True }})
     
 class GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitSchemeRejectReasonCodeEnum(str, Enum):
     ZERO = "0"
@@ -50,42 +50,42 @@ class GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitsForMandateUUIDDirectDebitsDirectDebit:
-    amount: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
-    currency: Optional[shared.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
-    date_created: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    direct_debit_reference: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directDebitReference') }})
-    direct_debit_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directDebitUuid') }})
-    is_ddic: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isDDIC') }})
-    last_updated: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastUpdated'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    mandate_u_uid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandateUUid') }})
-    originator_alias: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorAlias') }})
-    originator_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorName') }})
-    originator_reference: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorReference') }})
-    scheme_reject_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemeRejectReason') }})
-    scheme_reject_reason_code: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitSchemeRejectReasonCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemeRejectReasonCode') }})
-    status: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    target_ican: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetIcan') }})
-    target_payee_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetPayeeId') }})
-    type: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    amount: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    currency: Optional[shared_oneaccounts_get_responses_200_content_application_1json_schema_properties_accounts_items_properties_currency.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('currency') }})
+    date_created: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dateCreated'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    direct_debit_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directDebitReference') }})
+    direct_debit_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directDebitUuid') }})
+    is_ddic: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isDDIC') }})
+    last_updated: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('lastUpdated'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    mandate_u_uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mandateUUid') }})
+    originator_alias: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorAlias') }})
+    originator_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorName') }})
+    originator_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('originatorReference') }})
+    scheme_reject_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemeRejectReason') }})
+    scheme_reject_reason_code: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitSchemeRejectReasonCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemeRejectReasonCode') }})
+    status: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    target_ican: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetIcan') }})
+    target_payee_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetPayeeId') }})
+    type: Optional[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebitTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitsForMandateUUIDDirectDebits:
-    directdebits: Optional[List[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebit]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directdebits') }})
-    total: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
+    directdebits: Optional[list[GetDirectDebitsForMandateUUIDDirectDebitsDirectDebit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('directdebits') }})
+    total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitsForMandateUUIDRequest:
-    query_params: GetDirectDebitsForMandateUUIDQueryParams = field()
+    query_params: GetDirectDebitsForMandateUUIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDirectDebitsForMandateUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    direct_debits: Optional[GetDirectDebitsForMandateUUIDDirectDebits] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    direct_debits: Optional[GetDirectDebitsForMandateUUIDDirectDebits] = dataclasses.field(default=None)
     

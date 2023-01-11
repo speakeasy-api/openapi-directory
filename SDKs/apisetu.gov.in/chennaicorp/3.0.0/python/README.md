@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.BtcerRequest(
     security=operations.BtcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.BtcerRequestBody(
         certificate_parameters=operations.BtcerRequestBodyCertificateParameters(
-            dateofbirth="et",
-            regno="eveniet",
+            dateofbirth="pariatur",
+            regno="vel",
         ),
-        consent_artifact="ut",
+        consent_artifact="et",
         format="pdf",
-        txn_id="totam",
+        txn_id="animi",
     ),
 )
     
-res = s.sdk.btcer(req)
+res = s.ap_is.btcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `btcer` - Birth Certificate
 * `dtcer` - Death Certificate

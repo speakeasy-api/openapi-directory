@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,13 +11,13 @@ class BusinessCallsSettingsCallsStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BusinessCallsSettings:
     r"""BusinessCallsSettings
     Business calls settings for a location.
     """
     
-    calls_state: Optional[BusinessCallsSettingsCallsStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callsState') }})
-    consent_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentTime') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    calls_state: Optional[BusinessCallsSettingsCallsStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('callsState') }})
+    consent_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('consentTime') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

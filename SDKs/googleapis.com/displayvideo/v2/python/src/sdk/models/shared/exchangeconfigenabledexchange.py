@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -77,14 +77,14 @@ class ExchangeConfigEnabledExchangeExchangeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExchangeConfigEnabledExchange:
     r"""ExchangeConfigEnabledExchange
     An enabled exchange in the partner.
     """
     
-    exchange: Optional[ExchangeConfigEnabledExchangeExchangeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
-    google_ad_manager_agency_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleAdManagerAgencyId') }})
-    google_ad_manager_buyer_network_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleAdManagerBuyerNetworkId') }})
-    seat_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('seatId') }})
+    exchange: Optional[ExchangeConfigEnabledExchangeExchangeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('exchange') }})
+    google_ad_manager_agency_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleAdManagerAgencyId') }})
+    google_ad_manager_buyer_network_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('googleAdManagerBuyerNetworkId') }})
+    seat_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('seatId') }})
     

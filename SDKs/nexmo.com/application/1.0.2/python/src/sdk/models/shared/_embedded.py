@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import application as shared_application
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Embedded:
-    applications: Optional[List[Application]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
+    applications: Optional[list[shared_application.Application]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('applications') }})
     

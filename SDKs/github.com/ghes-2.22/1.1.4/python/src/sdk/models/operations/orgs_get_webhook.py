@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import org_hook as shared_org_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetWebhookPathParams:
-    hook_id: int = field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetWebhookRequest:
-    path_params: OrgsGetWebhookPathParams = field()
+    path_params: OrgsGetWebhookPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsGetWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    org_hook: Optional[shared.OrgHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    org_hook: Optional[shared_org_hook.OrgHook] = dataclasses.field(default=None)
     

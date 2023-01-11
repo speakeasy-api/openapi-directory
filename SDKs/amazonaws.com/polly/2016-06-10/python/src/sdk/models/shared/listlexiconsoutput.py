@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import lexicondescription as shared_lexicondescription
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListLexiconsOutput:
-    lexicons: Optional[List[LexiconDescription]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Lexicons') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    lexicons: Optional[list[shared_lexicondescription.LexiconDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Lexicons') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import transactionsimportresponse as shared_transactionsimportresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportTransactionsPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportTransactionsRequest:
-    path_params: ImportTransactionsPathParams = field()
+    path_params: ImportTransactionsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportTransactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    transactions_import_response: Optional[shared.TransactionsImportResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    transactions_import_response: Optional[shared_transactionsimportresponse.TransactionsImportResponse] = dataclasses.field(default=None)
     

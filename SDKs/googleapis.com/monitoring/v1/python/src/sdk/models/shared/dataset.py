@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timeseriesquery as shared_timeseriesquery
 
 class DataSetPlotTypeEnum(str, Enum):
     PLOT_TYPE_UNSPECIFIED = "PLOT_TYPE_UNSPECIFIED"
@@ -19,15 +19,15 @@ class DataSetTargetAxisEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DataSet:
     r"""DataSet
     Groups a time series query definition with charting options.
     """
     
-    legend_template: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legendTemplate') }})
-    min_alignment_period: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minAlignmentPeriod') }})
-    plot_type: Optional[DataSetPlotTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plotType') }})
-    target_axis: Optional[DataSetTargetAxisEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetAxis') }})
-    time_series_query: Optional[TimeSeriesQuery] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeSeriesQuery') }})
+    legend_template: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('legendTemplate') }})
+    min_alignment_period: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('minAlignmentPeriod') }})
+    plot_type: Optional[DataSetPlotTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('plotType') }})
+    target_axis: Optional[DataSetTargetAxisEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetAxis') }})
+    time_series_query: Optional[shared_timeseriesquery.TimeSeriesQuery] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeSeriesQuery') }})
     

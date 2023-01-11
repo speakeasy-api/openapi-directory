@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class LaunchConfiguration:
     r"""LaunchConfiguration
     Describes an Auto Scaling launch configuration.
     """
     
-    name: Optional[str] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     

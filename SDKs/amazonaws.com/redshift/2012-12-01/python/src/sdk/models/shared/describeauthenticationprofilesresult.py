@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import authenticationprofile as shared_authenticationprofile
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAuthenticationProfilesResult:
-    authentication_profiles: Optional[List[AuthenticationProfile]] = field(default=None)
+    authentication_profiles: Optional[list[shared_authenticationprofile.AuthenticationProfile]] = dataclasses.field(default=None)
     

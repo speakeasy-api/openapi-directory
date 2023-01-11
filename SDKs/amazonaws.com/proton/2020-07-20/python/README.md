@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.AcceptEnvironmentAccountConnectionRequest(
     headers=operations.AcceptEnvironmentAccountConnectionHeaders(
-        x_amz_algorithm="numquam",
-        x_amz_content_sha256="quod",
-        x_amz_credential="quisquam",
-        x_amz_date="ex",
-        x_amz_security_token="id",
-        x_amz_signature="ea",
-        x_amz_signed_headers="non",
+        x_amz_algorithm="possimus",
+        x_amz_content_sha256="ullam",
+        x_amz_credential="eveniet",
+        x_amz_date="alias",
+        x_amz_security_token="tenetur",
+        x_amz_signature="dolorem",
+        x_amz_signed_headers="porro",
         x_amz_target="AwsProton20200720.AcceptEnvironmentAccountConnection",
     ),
     request=shared.AcceptEnvironmentAccountConnectionInput(
-        id="quam",
+        id="sed",
     ),
 )
     
-res = s.sdk.accept_environment_account_connection(req)
+res = s.accept_environment_account_connection(req)
 
 if res.accept_environment_account_connection_output is not None:
     # handle response

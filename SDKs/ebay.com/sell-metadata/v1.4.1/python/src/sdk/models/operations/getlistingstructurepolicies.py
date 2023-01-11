@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import listingstructurepolicyresponse as shared_listingstructurepolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingStructurePoliciesPathParams:
-    marketplace_id: str = field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
+    marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingStructurePoliciesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingStructurePoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingStructurePoliciesRequest:
-    path_params: GetListingStructurePoliciesPathParams = field()
-    query_params: GetListingStructurePoliciesQueryParams = field()
-    security: GetListingStructurePoliciesSecurity = field()
+    path_params: GetListingStructurePoliciesPathParams = dataclasses.field()
+    query_params: GetListingStructurePoliciesQueryParams = dataclasses.field()
+    security: GetListingStructurePoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingStructurePoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    listing_structure_policy_response: Optional[shared.ListingStructurePolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    listing_structure_policy_response: Optional[shared_listingstructurepolicyresponse.ListingStructurePolicyResponse] = dataclasses.field(default=None)
     

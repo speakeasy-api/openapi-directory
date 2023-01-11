@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,19 +18,19 @@ s = sdk.SDK()
     
 req = operations.GetAPIVVersionCurrenciesHistoryRequest(
     path_params=operations.GetAPIVVersionCurrenciesHistoryPathParams(
-        version="nemo",
+        version="ullam",
     ),
     query_params=operations.GetAPIVVersionCurrenciesHistoryQueryParams(
-        end="2007-07-14T23:04:49Z",
-        format="json",
-        interval="rerum",
-        pairs="aut",
-        start="2009-02-03T05:16:44Z",
-        token="deserunt",
+        end="1974-09-26T22:18:28Z",
+        format="xml",
+        interval="minus",
+        pairs="nihil",
+        start="2004-07-30T20:45:49Z",
+        token="facilis",
     ),
 )
     
-res = s.sdk.get_api_v_version_currencies_history(req)
+res = s.currencies.get_api_v_version_currencies_history(req)
 
 if res.interval_collection_responses is not None:
     # handle response
@@ -41,7 +40,7 @@ if res.interval_collection_responses is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currencies
 
 * `get_api_v_version_currencies_history` - Get historical prices for requested currency pairs
 * `get_api_v_version_currencies_history_supported` - Get list of currency pairs supported by the history endpoint
@@ -49,6 +48,9 @@ if res.interval_collection_responses is not None:
 * `get_api_v_version_currencies_rate_supported` - Get list of currencies supported by the rate endpoint
 * `get_api_v_version_currencies_summary` - Get latest Summary for requested currency pairs
 * `get_api_v_version_currencies_summary_supported` - Get list of currency pairs supported by the Summary endpoint
+
+### Metals
+
 * `get_api_v_version_metals_benchmark_history` - Get historical benchmark prices for requested metals
 * `get_api_v_version_metals_benchmark_summary` - Get latest Benchmark prices for requested metals
 * `get_api_v_version_metals_benchmark_supported` - Get list of symbols supported by the benchmark endpoints

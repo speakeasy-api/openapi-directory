@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getblockindexresponse as shared_getblockindexresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockIndexPathParams:
-    blockindex: float = field(metadata={'path_param': { 'field_name': 'blockindex', 'style': 'simple', 'explode': False }})
+    blockindex: float = dataclasses.field(metadata={'path_param': { 'field_name': 'blockindex', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockIndexRequest:
-    path_params: GetBlockIndexPathParams = field()
+    path_params: GetBlockIndexPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBlockIndexResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_block_index_response: Optional[shared.GetBlockIndexResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_block_index_response: Optional[shared_getblockindexresponse.GetBlockIndexResponse] = dataclasses.field(default=None)
     

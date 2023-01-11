@@ -1,23 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import signin as shared_signin
+from ..shared import invalidtoken as shared_invalidtoken
+from ..shared import userrecord as shared_userrecord
 
 
-@dataclass
+@dataclasses.dataclass
 class PutSigninSigninIDPathParams:
-    signin_id: int = field(metadata={'path_param': { 'field_name': 'signinId', 'style': 'simple', 'explode': False }})
+    signin_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'signinId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSigninSigninIDRequest:
-    path_params: PutSigninSigninIDPathParams = field()
-    request: Optional[shared.Signin] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutSigninSigninIDPathParams = dataclasses.field()
+    request: Optional[shared_signin.Signin] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutSigninSigninIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
-    user_record: Optional[shared.UserRecord] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
+    user_record: Optional[shared_userrecord.UserRecord] = dataclasses.field(default=None)
     

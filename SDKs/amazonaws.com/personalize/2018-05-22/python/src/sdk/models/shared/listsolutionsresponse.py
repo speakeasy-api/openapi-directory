@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import solutionsummary as shared_solutionsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListSolutionsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    solutions: Optional[List[SolutionSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('solutions') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    solutions: Optional[list[shared_solutionsummary.SolutionSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('solutions') }})
     

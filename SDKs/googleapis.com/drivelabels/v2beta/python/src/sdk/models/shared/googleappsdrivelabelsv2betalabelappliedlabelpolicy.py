@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy:
     r"""GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy
     Behavior of this label when it's applied to Drive items.
     """
     
-    copy_mode: Optional[GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyMode') }})
+    copy_mode: Optional[GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('copyMode') }})
     

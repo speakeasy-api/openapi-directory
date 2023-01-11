@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import rulegroupsummary as shared_rulegroupsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRuleGroupsResponse:
-    next_marker: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
-    rule_groups: Optional[List[RuleGroupSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleGroups') }})
+    next_marker: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextMarker') }})
+    rule_groups: Optional[list[shared_rulegroupsummary.RuleGroupSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('RuleGroups') }})
     

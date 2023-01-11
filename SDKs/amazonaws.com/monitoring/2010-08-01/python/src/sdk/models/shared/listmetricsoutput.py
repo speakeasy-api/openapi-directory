@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import metric as shared_metric
 
 
-@dataclass
+@dataclasses.dataclass
 class ListMetricsOutput:
-    metrics: Optional[List[Metric]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    metrics: Optional[list[shared_metric.Metric]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

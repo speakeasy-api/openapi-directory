@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import scalabletarget as shared_scalabletarget
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeScalableTargetsResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    scalable_targets: Optional[List[ScalableTarget]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ScalableTargets') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    scalable_targets: Optional[list[shared_scalabletarget.ScalableTarget]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ScalableTargets') }})
     

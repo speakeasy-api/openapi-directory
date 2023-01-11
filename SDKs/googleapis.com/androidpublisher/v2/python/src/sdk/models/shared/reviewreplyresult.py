@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import timestamp as shared_timestamp
 
 
-@dataclass
+@dataclasses.dataclass
 class ReviewReplyResult:
-    last_edited: Optional[Timestamp] = field(default=None)
-    reply_text: Optional[str] = field(default=None)
+    last_edited: Optional[shared_timestamp.Timestamp] = dataclasses.field(default=None)
+    reply_text: Optional[str] = dataclasses.field(default=None)
     

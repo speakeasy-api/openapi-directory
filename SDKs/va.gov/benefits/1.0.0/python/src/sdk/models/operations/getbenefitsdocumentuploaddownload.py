@@ -1,70 +1,70 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownloadPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownloadSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownload401ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownload403ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownload404ApplicationJSON:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    detail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownload429ApplicationJSON:
-    message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
+    message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownload500ApplicationJSON:
-    code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
-    detail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
-    status: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('code') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('detail') }})
+    status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownloadRequest:
-    path_params: GetBenefitsDocumentUploadDownloadPathParams = field()
-    security: GetBenefitsDocumentUploadDownloadSecurity = field()
+    path_params: GetBenefitsDocumentUploadDownloadPathParams = dataclasses.field()
+    security: GetBenefitsDocumentUploadDownloadSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBenefitsDocumentUploadDownloadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_benefits_document_upload_download_200_application_zip_binary_string: Optional[bytes] = field(default=None)
-    get_benefits_document_upload_download_401_application_json_object: Optional[GetBenefitsDocumentUploadDownload401ApplicationJSON] = field(default=None)
-    get_benefits_document_upload_download_403_application_json_object: Optional[GetBenefitsDocumentUploadDownload403ApplicationJSON] = field(default=None)
-    get_benefits_document_upload_download_404_application_json_object: Optional[GetBenefitsDocumentUploadDownload404ApplicationJSON] = field(default=None)
-    get_benefits_document_upload_download_429_application_json_object: Optional[GetBenefitsDocumentUploadDownload429ApplicationJSON] = field(default=None)
-    get_benefits_document_upload_download_500_application_json_object: Optional[GetBenefitsDocumentUploadDownload500ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_benefits_document_upload_download_200_application_zip_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    get_benefits_document_upload_download_401_application_json_object: Optional[GetBenefitsDocumentUploadDownload401ApplicationJSON] = dataclasses.field(default=None)
+    get_benefits_document_upload_download_403_application_json_object: Optional[GetBenefitsDocumentUploadDownload403ApplicationJSON] = dataclasses.field(default=None)
+    get_benefits_document_upload_download_404_application_json_object: Optional[GetBenefitsDocumentUploadDownload404ApplicationJSON] = dataclasses.field(default=None)
+    get_benefits_document_upload_download_429_application_json_object: Optional[GetBenefitsDocumentUploadDownload429ApplicationJSON] = dataclasses.field(default=None)
+    get_benefits_document_upload_download_500_application_json_object: Optional[GetBenefitsDocumentUploadDownload500ApplicationJSON] = dataclasses.field(default=None)
     

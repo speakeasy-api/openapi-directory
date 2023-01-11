@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import domainentry as shared_domainentry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateDomainEntryRequest:
-    domain_entry: DomainEntry = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainEntry') }})
-    domain_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
+    domain_entry: shared_domainentry.DomainEntry = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainEntry') }})
+    domain_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('domainName') }})
     

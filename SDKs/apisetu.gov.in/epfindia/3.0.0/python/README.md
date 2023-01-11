@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.EpfscRequest(
     security=operations.EpfscSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.EpfscRequestBody(
         certificate_parameters=operations.EpfscRequestBodyCertificateParameters(
-            dob="nam",
-            full_name="a",
-            scno="sed",
+            dob="explicabo",
+            full_name="repudiandae",
+            scno="sapiente",
         ),
-        consent_artifact="sint",
+        consent_artifact="nesciunt",
         format="pdf",
-        txn_id="impedit",
+        txn_id="ab",
     ),
 )
     
-res = s.sdk.epfsc(req)
+res = s.ap_is.epfsc(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `epfsc` - Scheme Certificate
 * `pecer` - Pension Certificate

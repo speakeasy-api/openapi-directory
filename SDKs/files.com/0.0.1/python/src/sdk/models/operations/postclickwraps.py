@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import clickwrapentity as shared_clickwrapentity
 
 class PostClickwrapsRequestBodyUseWithBundlesEnum(str, Enum):
     NONE = "none"
@@ -18,23 +18,23 @@ class PostClickwrapsRequestBodyUseWithUsersEnum(str, Enum):
     REQUIRE = "require"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostClickwrapsRequestBody:
-    body: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'body' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    use_with_bundles: Optional[PostClickwrapsRequestBodyUseWithBundlesEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_bundles' }})
-    use_with_inboxes: Optional[PostClickwrapsRequestBodyUseWithInboxesEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_inboxes' }})
-    use_with_users: Optional[PostClickwrapsRequestBodyUseWithUsersEnum] = field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_users' }})
+    body: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'body' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    use_with_bundles: Optional[PostClickwrapsRequestBodyUseWithBundlesEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_bundles' }})
+    use_with_inboxes: Optional[PostClickwrapsRequestBodyUseWithInboxesEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_inboxes' }})
+    use_with_users: Optional[PostClickwrapsRequestBodyUseWithUsersEnum] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'use_with_users' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostClickwrapsRequest:
-    request: Optional[PostClickwrapsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostClickwrapsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostClickwrapsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    clickwrap_entity: Optional[shared.ClickwrapEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    clickwrap_entity: Optional[shared_clickwrapentity.ClickwrapEntity] = dataclasses.field(default=None)
     

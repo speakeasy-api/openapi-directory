@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import httpvalidationerror as shared_httpvalidationerror
+from ..shared import regionresp as shared_regionresp
 
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsGetRegionsGetQueryParams:
-    jwt: str = field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
+    jwt: str = dataclasses.field(metadata={'query_param': { 'field_name': 'jwt', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsGetRegionsGetRequest:
-    query_params: GetRegionsGetRegionsGetQueryParams = field()
+    query_params: GetRegionsGetRegionsGetQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetRegionsGetRegionsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
-    region_resp: Optional[shared.RegionResp] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
+    region_resp: Optional[shared_regionresp.RegionResp] = dataclasses.field(default=None)
     

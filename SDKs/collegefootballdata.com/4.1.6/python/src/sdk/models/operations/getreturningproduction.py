@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import returningproduction as shared_returningproduction
 
 
-@dataclass
+@dataclasses.dataclass
 class GetReturningProductionQueryParams:
-    conference: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
-    team: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
-    year: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
+    conference: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'conference', 'style': 'form', 'explode': True }})
+    team: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'team', 'style': 'form', 'explode': True }})
+    year: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'year', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturningProductionRequest:
-    query_params: GetReturningProductionQueryParams = field()
+    query_params: GetReturningProductionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetReturningProductionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    returning_productions: Optional[List[shared.ReturningProduction]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    returning_productions: Optional[list[shared_returningproduction.ReturningProduction]] = dataclasses.field(default=None)
     

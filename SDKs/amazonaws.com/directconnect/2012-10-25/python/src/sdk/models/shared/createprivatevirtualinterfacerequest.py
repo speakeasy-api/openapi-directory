@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import newprivatevirtualinterface as shared_newprivatevirtualinterface
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePrivateVirtualInterfaceRequest:
-    connection_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionId') }})
-    new_private_virtual_interface: NewPrivateVirtualInterface = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPrivateVirtualInterface') }})
+    connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('connectionId') }})
+    new_private_virtual_interface: shared_newprivatevirtualinterface.NewPrivateVirtualInterface = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('newPrivateVirtualInterface') }})
     

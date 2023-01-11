@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import personfollow as shared_personfollow
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeoplePersonIDPathParams:
-    person_id: int = field(metadata={'path_param': { 'field_name': 'person_id', 'style': 'simple', 'explode': False }})
+    person_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'person_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeoplePersonIDRequest:
-    path_params: GetUserFollowsPeoplePersonIDPathParams = field()
+    path_params: GetUserFollowsPeoplePersonIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserFollowsPeoplePersonIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    person_follow: Optional[shared.PersonFollow] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    person_follow: Optional[shared_personfollow.PersonFollow] = dataclasses.field(default=None)
     

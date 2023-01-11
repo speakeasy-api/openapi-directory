@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import publickeyentity as shared_publickeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDPublicKeysPathParams:
-    user_id: int = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDPublicKeysRequestBody:
-    public_key: str = field(metadata={'multipart_form': { 'field_name': 'public_key' }})
-    title: str = field(metadata={'multipart_form': { 'field_name': 'title' }})
+    public_key: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'public_key' }})
+    title: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'title' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDPublicKeysRequest:
-    path_params: PostUsersUserIDPublicKeysPathParams = field()
-    request: PostUsersUserIDPublicKeysRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PostUsersUserIDPublicKeysPathParams = dataclasses.field()
+    request: PostUsersUserIDPublicKeysRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDPublicKeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    public_key_entity: Optional[shared.PublicKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    public_key_entity: Optional[shared_publickeyentity.PublicKeyEntity] = dataclasses.field(default=None)
     

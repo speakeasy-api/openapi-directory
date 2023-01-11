@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class ListInstanceProfileTagsResponse:
-    tags: List[Tag] = field()
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    tags: list[shared_tag.Tag] = dataclasses.field()
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

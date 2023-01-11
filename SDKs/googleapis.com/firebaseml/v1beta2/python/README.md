@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,57 +20,56 @@ req = operations.FirebasemlProjectsModelsCreateRequest(
     security=operations.FirebasemlProjectsModelsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.FirebasemlProjectsModelsCreatePathParams(
-        parent="magnam",
+        parent="laudantium",
     ),
     query_params=operations.FirebasemlProjectsModelsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="non",
+        dollar_xgafv="2",
+        access_token="a",
         alt="media",
-        callback="atque",
-        fields="sunt",
-        key="voluptatibus",
-        oauth_token="sint",
+        callback="dolor",
+        fields="et",
+        key="amet",
+        oauth_token="exercitationem",
         pretty_print=False,
-        quota_user="voluptatem",
-        upload_type="quos",
-        upload_protocol="deserunt",
+        quota_user="aut",
+        upload_type="corrupti",
+        upload_protocol="consequuntur",
     ),
     request=shared.ModelInput(
-        display_name="quidem",
-        name="sed",
+        display_name="repellat",
+        name="consequatur",
         state=shared.ModelState(
             published=True,
             validation_error=shared.Status(
-                code=8138891359880252570,
+                code=6350045115577120987,
                 details=[
                     {
-                        "earum": "hic",
-                        "non": "et",
+                        "accusantium": "quibusdam",
+                        "et": "recusandae",
+                        "voluptatibus": "consequatur",
                     },
                     {
-                        "nisi": "optio",
-                        "iure": "accusantium",
-                        "sapiente": "rerum",
-                    },
-                    {
-                        "dolorem": "sit",
+                        "consequatur": "sit",
+                        "amet": "quia",
+                        "sed": "ut",
                     },
                 ],
-                message="culpa",
+                message="dolorem",
             ),
         ),
         tags=[
-            "quis",
+            "tempore",
+            "et",
         ],
         tflite_model=shared.TfLiteModelInput(
-            automl_model="hic",
-            gcs_tflite_uri="accusamus",
+            automl_model="aut",
+            gcs_tflite_uri="iure",
         ),
     ),
 )

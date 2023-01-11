@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest(
     security=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams(
-        group="quas",
+        group="nobis",
     ),
     query_params=operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams(
         dollar_xgafv="1",
-        access_token="maiores",
-        alt="proto",
-        callback="rerum",
-        fields="non",
-        key="laboriosam",
-        oauth_token="labore",
-        pretty_print=True,
-        quota_user="beatae",
-        upload_type="hic",
-        upload_protocol="et",
+        access_token="quia",
+        alt="json",
+        callback="doloremque",
+        fields="dignissimos",
+        key="ut",
+        oauth_token="at",
+        pretty_print=False,
+        quota_user="aut",
+        upload_type="dolorum",
+        upload_protocol="aut",
     ),
     request=shared.AddGroupMigrationRequest(
-        migrating_vm="qui",
+        migrating_vm="eos",
     ),
 )
     

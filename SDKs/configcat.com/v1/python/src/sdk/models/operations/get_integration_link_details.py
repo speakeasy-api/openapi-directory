@@ -1,23 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import integrationlinktype_enum as shared_integrationlinktype_enum
+from ..shared import integrationlinkdetailsmodel as shared_integrationlinkdetailsmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIntegrationLinkDetailsPathParams:
-    integration_link_type: shared.IntegrationLinkTypeEnum = field(metadata={'path_param': { 'field_name': 'integrationLinkType', 'style': 'simple', 'explode': False }})
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    integration_link_type: shared_integrationlinktype_enum.IntegrationLinkTypeEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'integrationLinkType', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntegrationLinkDetailsRequest:
-    path_params: GetIntegrationLinkDetailsPathParams = field()
+    path_params: GetIntegrationLinkDetailsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetIntegrationLinkDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    integration_link_details_model: Optional[shared.IntegrationLinkDetailsModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    integration_link_details_model: Optional[shared_integrationlinkdetailsmodel.IntegrationLinkDetailsModel] = dataclasses.field(default=None)
     

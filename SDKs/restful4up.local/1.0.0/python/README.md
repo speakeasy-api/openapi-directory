@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -18,10 +17,10 @@ from sdk.models import operations, shared
 s = sdk.SDK()
     
 req = operations.ApplyYaraRulesRequest(
-    request="quo",
+    request="quibusdam",
 )
     
-res = s.sdk.apply_yara_rules(req)
+res = s.apply_yara_rules(req)
 
 if res.body is not None:
     # handle response

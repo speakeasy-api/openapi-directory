@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.BuildBotLocaleRequest(
     path_params=operations.BuildBotLocalePathParams(
-        bot_id="ea",
-        bot_version="voluptate",
-        locale_id="et",
+        bot_id="dolor",
+        bot_version="voluptatibus",
+        locale_id="aut",
     ),
     headers=operations.BuildBotLocaleHeaders(
-        x_amz_algorithm="consequatur",
-        x_amz_content_sha256="aliquam",
-        x_amz_credential="molestiae",
-        x_amz_date="repellat",
-        x_amz_security_token="ut",
-        x_amz_signature="necessitatibus",
-        x_amz_signed_headers="deserunt",
+        x_amz_algorithm="repellendus",
+        x_amz_content_sha256="et",
+        x_amz_credential="sunt",
+        x_amz_date="exercitationem",
+        x_amz_security_token="voluptatem",
+        x_amz_signature="natus",
+        x_amz_signed_headers="ea",
     ),
 )
     
-res = s.sdk.build_bot_locale(req)
+res = s.build_bot_locale(req)
 
 if res.build_bot_locale_response is not None:
     # handle response

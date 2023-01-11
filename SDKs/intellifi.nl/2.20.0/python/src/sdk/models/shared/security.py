@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeCookieSid:
-    api_key: str = field(metadata={'security': { 'field_name': 'brain.sid' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'brain.sid' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeHeaderAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-Api-Key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-Api-Key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeQueryAPIKey:
-    api_key: str = field(metadata={'security': { 'field_name': 'key' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    cookie_sid: Optional[SchemeCookieSid] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
-    header_api_key: Optional[SchemeHeaderAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    query_api_key: Optional[SchemeQueryAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    cookie_sid: Optional[SchemeCookieSid] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'cookie' }})
+    header_api_key: Optional[SchemeHeaderAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    query_api_key: Optional[SchemeQueryAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     

@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import capabilitysyncstatus_enum as shared_capabilitysyncstatus_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeGatewayCapabilityConfigurationResponse:
-    capability_configuration: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilityConfiguration') }})
-    capability_namespace: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilityNamespace') }})
-    capability_sync_status: CapabilitySyncStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilitySyncStatus') }})
-    gateway_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayId') }})
+    capability_configuration: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilityConfiguration') }})
+    capability_namespace: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilityNamespace') }})
+    capability_sync_status: shared_capabilitysyncstatus_enum.CapabilitySyncStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('capabilitySyncStatus') }})
+    gateway_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayId') }})
     

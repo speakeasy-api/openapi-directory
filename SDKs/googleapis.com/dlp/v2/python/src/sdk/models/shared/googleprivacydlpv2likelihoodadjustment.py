@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,12 +14,12 @@ class GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2LikelihoodAdjustment:
     r"""GooglePrivacyDlpV2LikelihoodAdjustment
     Message for specifying an adjustment to the likelihood of a finding as part of a detection rule.
     """
     
-    fixed_likelihood: Optional[GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fixedLikelihood') }})
-    relative_likelihood: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relativeLikelihood') }})
+    fixed_likelihood: Optional[GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fixedLikelihood') }})
+    relative_likelihood: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('relativeLikelihood') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ScoresBySeasonPathParams:
-    format: str = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: str = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresBySeasonRequest:
-    path_params: ScoresBySeasonPathParams = field()
+    path_params: ScoresBySeasonPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ScoresBySeasonResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scores: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scores: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,40 +20,40 @@ req = operations.IdentitytoolkitRelyingpartyCreateAuthURIRequest(
     security=operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.IdentitytoolkitRelyingpartyCreateAuthURIQueryParams(
         alt="json",
-        fields="tempora",
-        key="sit",
-        oauth_token="ut",
+        fields="provident",
+        key="maxime",
+        oauth_token="error",
         pretty_print=True,
-        quota_user="eum",
-        user_ip="sed",
+        quota_user="quaerat",
+        user_ip="omnis",
     ),
     request=shared.IdentitytoolkitRelyingpartyCreateAuthURIRequest(
-        app_id="dolore",
-        auth_flow_type="reprehenderit",
-        client_id="odio",
-        context="aut",
-        continue_uri="et",
+        app_id="et",
+        auth_flow_type="sed",
+        client_id="dolorum",
+        context="numquam",
+        continue_uri="nostrum",
         custom_parameter={
-            "aperiam": "sunt",
-            "aut": "in",
+            "autem": "harum",
+            "veritatis": "in",
         },
-        hosted_domain="expedita",
-        identifier="maiores",
-        oauth_consumer_key="ut",
-        oauth_scope="et",
-        openid_realm="nesciunt",
-        ota_app="quidem",
-        provider_id="voluptas",
-        session_id="asperiores",
-        tenant_id="enim",
-        tenant_project_number="perferendis",
+        hosted_domain="totam",
+        identifier="aut",
+        oauth_consumer_key="dolores",
+        oauth_scope="temporibus",
+        openid_realm="molestias",
+        ota_app="fugit",
+        provider_id="quae",
+        session_id="sed",
+        tenant_id="voluptate",
+        tenant_project_number="autem",
     ),
 )
     

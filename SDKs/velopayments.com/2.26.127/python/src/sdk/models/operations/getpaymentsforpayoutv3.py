@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import pagedpaymentsresponsev3 as shared_pagedpaymentsresponsev3
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV3PathParams:
-    payout_id: str = field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
+    payout_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payoutId', 'style': 'simple', 'explode': False }})
     
 class GetPaymentsForPayoutV3StatusEnum(str, Enum):
     ACCEPTED = "ACCEPTED"
@@ -20,28 +20,28 @@ class GetPaymentsForPayoutV3TransmissionTypeEnum(str, Enum):
     WIRE = "WIRE"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV3QueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
-    payment_memo: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'paymentMemo', 'style': 'form', 'explode': True }})
-    payor_payment_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'payorPaymentId', 'style': 'form', 'explode': True }})
-    remote_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'remoteId', 'style': 'form', 'explode': True }})
-    source_account_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'sourceAccountName', 'style': 'form', 'explode': True }})
-    status: Optional[GetPaymentsForPayoutV3StatusEnum] = field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
-    transmission_type: Optional[GetPaymentsForPayoutV3TransmissionTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'transmissionType', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    payment_memo: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'paymentMemo', 'style': 'form', 'explode': True }})
+    payor_payment_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payorPaymentId', 'style': 'form', 'explode': True }})
+    remote_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'remoteId', 'style': 'form', 'explode': True }})
+    source_account_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceAccountName', 'style': 'form', 'explode': True }})
+    status: Optional[GetPaymentsForPayoutV3StatusEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': True }})
+    transmission_type: Optional[GetPaymentsForPayoutV3TransmissionTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'transmissionType', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV3Request:
-    path_params: GetPaymentsForPayoutV3PathParams = field()
-    query_params: GetPaymentsForPayoutV3QueryParams = field()
+    path_params: GetPaymentsForPayoutV3PathParams = dataclasses.field()
+    query_params: GetPaymentsForPayoutV3QueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPaymentsForPayoutV3Response:
-    content_type: str = field()
-    status_code: int = field()
-    paged_payments_response_v3: Optional[shared.PagedPaymentsResponseV3] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paged_payments_response_v3: Optional[shared_pagedpaymentsresponsev3.PagedPaymentsResponseV3] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

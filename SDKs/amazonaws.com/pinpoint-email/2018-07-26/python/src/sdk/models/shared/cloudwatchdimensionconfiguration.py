@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dimensionvaluesource_enum as shared_dimensionvaluesource_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CloudWatchDimensionConfiguration:
     r"""CloudWatchDimensionConfiguration
     An object that defines the dimension configuration to use when you send Amazon Pinpoint email events to Amazon CloudWatch.
     """
     
-    default_dimension_value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DefaultDimensionValue') }})
-    dimension_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DimensionName') }})
-    dimension_value_source: DimensionValueSourceEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DimensionValueSource') }})
+    default_dimension_value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DefaultDimensionValue') }})
+    dimension_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DimensionName') }})
+    dimension_value_source: shared_dimensionvaluesource_enum.DimensionValueSourceEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('DimensionValueSource') }})
     

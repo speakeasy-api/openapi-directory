@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CPUInfo:
-    cpu_processor: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuProcessor') }})
-    cpu_speed_in_ghz: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuSpeedInGhz') }})
-    number_of_cores: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfCores') }})
+    cpu_processor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuProcessor') }})
+    cpu_speed_in_ghz: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cpuSpeedInGhz') }})
+    number_of_cores: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('numberOfCores') }})
     

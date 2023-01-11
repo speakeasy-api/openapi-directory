@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,47 +21,46 @@ req = operations.JobsProjectsClientEventsCreateRequest(
         option1=operations.JobsProjectsClientEventsCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.JobsProjectsClientEventsCreatePathParams(
-        parent="sunt",
+        parent="aut",
     ),
     query_params=operations.JobsProjectsClientEventsCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="sit",
-        alt="json",
-        callback="iste",
-        fields="dignissimos",
-        key="id",
-        oauth_token="qui",
-        pretty_print=False,
-        quota_user="error",
-        upload_type="ut",
-        upload_protocol="ratione",
+        dollar_xgafv="1",
+        access_token="ipsam",
+        alt="media",
+        callback="similique",
+        fields="est",
+        key="optio",
+        oauth_token="dolor",
+        pretty_print=True,
+        quota_user="dolore",
+        upload_type="itaque",
+        upload_protocol="hic",
     ),
     request=shared.CreateClientEventRequest(
         client_event=shared.ClientEvent(
-            create_time="temporibus",
-            event_id="rerum",
+            create_time="velit",
+            event_id="ad",
             extra_info={
-                "perspiciatis": "provident",
-                "rerum": "sit",
-                "magnam": "sit",
+                "sit": "similique",
+                "reprehenderit": "vero",
             },
             job_event=shared.JobEvent(
                 jobs=[
-                    "quaerat",
-                    "hic",
-                    "eum",
+                    "tempora",
+                    "harum",
+                    "aut",
                 ],
-                type="APPLICATION_QUICK_SUBMISSION",
+                type="APPLICATION_START_FROM_SEARCH",
             ),
-            parent_event_id="nostrum",
-            request_id="quod",
+            parent_event_id="mollitia",
+            request_id="et",
         ),
     ),
 )

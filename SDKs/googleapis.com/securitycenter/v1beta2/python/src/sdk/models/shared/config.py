@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,12 +12,8 @@ class ConfigModuleEnablementStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Config:
-    r"""Config
-    Configuration of a module.
-    """
-    
-    module_enablement_state: Optional[ConfigModuleEnablementStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('moduleEnablementState') }})
-    value: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    module_enablement_state: Optional[ConfigModuleEnablementStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('moduleEnablementState') }})
+    value: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

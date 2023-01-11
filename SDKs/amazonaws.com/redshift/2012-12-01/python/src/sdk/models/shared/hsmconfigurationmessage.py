@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import hsmconfigurationlist as shared_hsmconfigurationlist
 
 
-@dataclass
+@dataclasses.dataclass
 class HsmConfigurationMessage:
     r"""HsmConfigurationMessage
     <p/>
     """
     
-    hsm_configurations: Optional[List[HsmConfiguration]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    hsm_configurations: Optional[list[shared_hsmconfigurationlist.HsmConfigurationList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

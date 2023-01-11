@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import inspectorevent_enum as shared_inspectorevent_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SubscribeToEventRequest:
-    event: InspectorEventEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event') }})
-    resource_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceArn') }})
-    topic_arn: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicArn') }})
+    event: shared_inspectorevent_enum.InspectorEventEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('event') }})
+    resource_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('resourceArn') }})
+    topic_arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('topicArn') }})
     

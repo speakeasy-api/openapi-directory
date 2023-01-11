@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInPathParams:
-    ticketnumber: str = field(metadata={'path_param': { 'field_name': 'ticketnumber', 'style': 'simple', 'explode': False }})
+    ticketnumber: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticketnumber', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInQueryParams:
-    email_address: str = field(metadata={'query_param': { 'field_name': 'emailAddress', 'style': 'form', 'explode': True }})
+    email_address: str = dataclasses.field(metadata={'query_param': { 'field_name': 'emailAddress', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInRequest:
-    headers: AutoCheckInHeaders = field()
-    path_params: AutoCheckInPathParams = field()
-    query_params: AutoCheckInQueryParams = field()
-    security: AutoCheckInSecurity = field()
+    headers: AutoCheckInHeaders = dataclasses.field()
+    path_params: AutoCheckInPathParams = dataclasses.field()
+    query_params: AutoCheckInQueryParams = dataclasses.field()
+    security: AutoCheckInSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AutoCheckInResponse:
-    content_type: str = field()
-    status_code: int = field()
-    auto_check_in_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    auto_check_in_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

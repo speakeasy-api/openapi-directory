@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class HatOnResponse:
-    content_type: str = field()
-    status_code: int = field()
-    text_error: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    text_error: Optional[str] = dataclasses.field(default=None)
     

@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class AddIpaliasPathParams:
-    ip: str = field(metadata={'path_param': { 'field_name': 'IP', 'style': 'simple', 'explode': False }})
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    interface: str = field(metadata={'path_param': { 'field_name': 'interface', 'style': 'simple', 'explode': False }})
-    mask: str = field(metadata={'path_param': { 'field_name': 'mask', 'style': 'simple', 'explode': False }})
-    port: int = field(metadata={'path_param': { 'field_name': 'port', 'style': 'simple', 'explode': False }})
+    ip: str = dataclasses.field(metadata={'path_param': { 'field_name': 'IP', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    interface: str = dataclasses.field(metadata={'path_param': { 'field_name': 'interface', 'style': 'simple', 'explode': False }})
+    mask: str = dataclasses.field(metadata={'path_param': { 'field_name': 'mask', 'style': 'simple', 'explode': False }})
+    port: int = dataclasses.field(metadata={'path_param': { 'field_name': 'port', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddIpaliasRequest:
-    path_params: AddIpaliasPathParams = field()
+    path_params: AddIpaliasPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddIpaliasResponse:
-    content_type: str = field()
-    status_code: int = field()
-    add_ipalias_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    add_ipalias_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

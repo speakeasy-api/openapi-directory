@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import countrieslist as shared_countrieslist
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CountriesHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CountriesRequest:
-    headers: GetV3CountriesHeaders = field()
+    headers: GetV3CountriesHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3CountriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    countries_list: Optional[shared.CountriesList] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    countries_list: Optional[shared_countrieslist.CountriesList] = dataclasses.field(default=None)
     

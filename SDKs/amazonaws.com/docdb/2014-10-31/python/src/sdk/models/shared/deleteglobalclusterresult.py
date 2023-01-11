@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import globalcluster as shared_globalcluster
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteGlobalClusterResult:
-    global_cluster: Optional[GlobalCluster] = field(default=None)
+    global_cluster: Optional[shared_globalcluster.GlobalCluster] = dataclasses.field(default=None)
     

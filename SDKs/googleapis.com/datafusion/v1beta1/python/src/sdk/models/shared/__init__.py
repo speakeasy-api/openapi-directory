@@ -27,3 +27,5 @@ from .status import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
 from .version import *
+
+__all__ = ["XgafvEnum","AcceleratorAcceleratorTypeEnum","Accelerator","AltEnum","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","Binding","CryptoKeyConfig","DNSPeering","EventPublishConfig","Expr","IamPolicy","InstanceTypeEnum","InstanceInput","InstanceDisabledReasonEnum","InstanceStateEnum","Instance","ListAvailableVersionsResponse","ListDNSPeeringsResponse","ListInstancesResponse","ListLocationsResponse","ListNamespacesResponse","ListOperationsResponse","Location","Namespace","NetworkConfig","Operation","Policy","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","TestIamPermissionsRequest","TestIamPermissionsResponse","VersionTypeEnum","Version"]

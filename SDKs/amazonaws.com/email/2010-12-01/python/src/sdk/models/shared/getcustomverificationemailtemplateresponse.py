@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCustomVerificationEmailTemplateResponse:
     r"""GetCustomVerificationEmailTemplateResponse
     The content of the custom verification email template.
     """
     
-    failure_redirection_url: Optional[str] = field(default=None)
-    from_email_address: Optional[str] = field(default=None)
-    success_redirection_url: Optional[str] = field(default=None)
-    template_content: Optional[str] = field(default=None)
-    template_name: Optional[str] = field(default=None)
-    template_subject: Optional[str] = field(default=None)
+    failure_redirection_url: Optional[str] = dataclasses.field(default=None)
+    from_email_address: Optional[str] = dataclasses.field(default=None)
+    success_redirection_url: Optional[str] = dataclasses.field(default=None)
+    template_content: Optional[str] = dataclasses.field(default=None)
+    template_name: Optional[str] = dataclasses.field(default=None)
+    template_subject: Optional[str] = dataclasses.field(default=None)
     

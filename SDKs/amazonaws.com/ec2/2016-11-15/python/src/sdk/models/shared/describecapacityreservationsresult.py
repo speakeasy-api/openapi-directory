@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeCapacityReservationsResult:
-    capacity_reservations: Optional[List[CapacityReservation]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    capacity_reservations: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

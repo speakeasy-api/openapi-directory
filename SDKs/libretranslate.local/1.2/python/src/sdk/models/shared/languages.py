@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Languages:
-    code: Optional[str] = field(default=None)
-    name: Optional[str] = field(default=None)
+    code: Optional[str] = dataclasses.field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
     

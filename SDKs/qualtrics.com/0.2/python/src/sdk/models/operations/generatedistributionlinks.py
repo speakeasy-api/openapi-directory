@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import createdistributionlinks as shared_createdistributionlinks
 
 
-@dataclass
+@dataclasses.dataclass
 class GenerateDistributionLinksRequest:
-    request: shared.CreateDistributionLinks = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_createdistributionlinks.CreateDistributionLinks = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenerateDistributionLinksResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

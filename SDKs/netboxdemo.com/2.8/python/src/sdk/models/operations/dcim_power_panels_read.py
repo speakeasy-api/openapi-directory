@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import powerpanel as shared_powerpanel
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPanelsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPanelsReadRequest:
-    path_params: DcimPowerPanelsReadPathParams = field()
+    path_params: DcimPowerPanelsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimPowerPanelsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    power_panel: Optional[shared.PowerPanel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    power_panel: Optional[shared_powerpanel.PowerPanel] = dataclasses.field(default=None)
     

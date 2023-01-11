@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import target as shared_target
 
 
-@dataclass
+@dataclasses.dataclass
 class ServiceTargetsPathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceTargetsSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceTargetsRequest:
-    path_params: ServiceTargetsPathParams = field()
-    security: ServiceTargetsSecurity = field()
+    path_params: ServiceTargetsPathParams = dataclasses.field()
+    security: ServiceTargetsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ServiceTargetsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    targets: Optional[List[shared.Target]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    targets: Optional[list[shared_target.Target]] = dataclasses.field(default=None)
     

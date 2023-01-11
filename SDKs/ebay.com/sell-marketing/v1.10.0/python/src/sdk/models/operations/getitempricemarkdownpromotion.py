@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import itempricemarkdown as shared_itempricemarkdown
 
 
-@dataclass
+@dataclasses.dataclass
 class GetItemPriceMarkdownPromotionPathParams:
-    promotion_id: str = field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
+    promotion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemPriceMarkdownPromotionSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemPriceMarkdownPromotionRequest:
-    path_params: GetItemPriceMarkdownPromotionPathParams = field()
-    security: GetItemPriceMarkdownPromotionSecurity = field()
+    path_params: GetItemPriceMarkdownPromotionPathParams = dataclasses.field()
+    security: GetItemPriceMarkdownPromotionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemPriceMarkdownPromotionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_price_markdown: Optional[shared.ItemPriceMarkdown] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_price_markdown: Optional[shared_itempricemarkdown.ItemPriceMarkdown] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,32 +20,32 @@ req = operations.EventarcProjectsLocationsChannelConnectionsCreateRequest(
     security=operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams(
-        parent="et",
+        parent="minima",
     ),
     query_params=operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="aut",
-        alt="media",
-        callback="nostrum",
+        dollar_xgafv="2",
+        access_token="neque",
+        alt="proto",
+        callback="dolorem",
         channel_connection_id="nihil",
-        fields="vel",
-        key="provident",
-        oauth_token="numquam",
-        pretty_print=False,
-        quota_user="qui",
-        upload_type="itaque",
-        upload_protocol="culpa",
+        fields="delectus",
+        key="dolore",
+        oauth_token="sequi",
+        pretty_print=True,
+        quota_user="placeat",
+        upload_type="qui",
+        upload_protocol="est",
     ),
     request=shared.ChannelConnectionInput(
-        activation_token="nesciunt",
-        channel="eaque",
-        name="adipisci",
+        activation_token="ut",
+        channel="nihil",
+        name="odit",
     ),
 )
     

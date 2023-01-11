@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import Any,List
+import dataclasses
+from typing import Any
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IssuerResponse:
-    issuers: List[Any] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('issuers') }})
+    issuers: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('issuers') }})
     

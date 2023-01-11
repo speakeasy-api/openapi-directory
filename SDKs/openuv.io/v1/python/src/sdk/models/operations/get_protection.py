@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import protectionresult as shared_protectionresult
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProtectionQueryParams:
-    from_: float = field(metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
-    lat: float = field(metadata={'query_param': { 'field_name': 'lat', 'style': 'form', 'explode': True }})
-    lng: float = field(metadata={'query_param': { 'field_name': 'lng', 'style': 'form', 'explode': True }})
-    to: float = field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
-    alt: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
-    ozone: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'ozone', 'style': 'form', 'explode': True }})
+    from_: float = dataclasses.field(metadata={'query_param': { 'field_name': 'from', 'style': 'form', 'explode': True }})
+    lat: float = dataclasses.field(metadata={'query_param': { 'field_name': 'lat', 'style': 'form', 'explode': True }})
+    lng: float = dataclasses.field(metadata={'query_param': { 'field_name': 'lng', 'style': 'form', 'explode': True }})
+    to: float = dataclasses.field(metadata={'query_param': { 'field_name': 'to', 'style': 'form', 'explode': True }})
+    alt: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'alt', 'style': 'form', 'explode': True }})
+    ozone: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ozone', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProtectionHeaders:
-    x_access_token: str = field(metadata={'header': { 'field_name': 'x-access-token', 'style': 'simple', 'explode': False }})
+    x_access_token: str = dataclasses.field(metadata={'header': { 'field_name': 'x-access-token', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProtectionRequest:
-    headers: GetProtectionHeaders = field()
-    query_params: GetProtectionQueryParams = field()
+    headers: GetProtectionHeaders = dataclasses.field()
+    query_params: GetProtectionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProtectionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protection_result: Optional[shared.ProtectionResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protection_result: Optional[shared_protectionresult.ProtectionResult] = dataclasses.field(default=None)
     

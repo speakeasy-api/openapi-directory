@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountOrganizationPathParams:
-    org_id: str = field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
+    org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountOrganizationSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountOrganizationRequest:
-    path_params: RemoveAccountOrganizationPathParams = field()
-    security: RemoveAccountOrganizationSecurity = field()
+    path_params: RemoveAccountOrganizationPathParams = dataclasses.field()
+    security: RemoveAccountOrganizationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RemoveAccountOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

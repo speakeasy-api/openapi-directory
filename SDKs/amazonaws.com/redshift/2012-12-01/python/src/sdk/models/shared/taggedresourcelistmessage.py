@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import taggedresourcelist as shared_taggedresourcelist
 
 
-@dataclass
+@dataclasses.dataclass
 class TaggedResourceListMessage:
     r"""TaggedResourceListMessage
     <p/>
     """
     
-    marker: Optional[str] = field(default=None)
-    tagged_resources: Optional[List[TaggedResource]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    tagged_resources: Optional[list[shared_taggedresourcelist.TaggedResourceList]] = dataclasses.field(default=None)
     

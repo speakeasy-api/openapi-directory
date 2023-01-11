@@ -1,19 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awsecsclusterclustersettingsdetails as shared_awsecsclusterclustersettingsdetails
+from ..shared import awsecsclusterconfigurationdetails as shared_awsecsclusterconfigurationdetails
+from ..shared import awsecsclusterdefaultcapacityproviderstrategydetails as shared_awsecsclusterdefaultcapacityproviderstrategydetails
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AwsEcsClusterDetails:
     r"""AwsEcsClusterDetails
     provides details about an ECS cluster.
     """
     
-    capacity_providers: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CapacityProviders') }})
-    cluster_settings: Optional[List[AwsEcsClusterClusterSettingsDetails]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClusterSettings') }})
-    configuration: Optional[AwsEcsClusterConfigurationDetails] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Configuration') }})
-    default_capacity_provider_strategy: Optional[List[AwsEcsClusterDefaultCapacityProviderStrategyDetails]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DefaultCapacityProviderStrategy') }})
+    capacity_providers: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CapacityProviders') }})
+    cluster_settings: Optional[list[shared_awsecsclusterclustersettingsdetails.AwsEcsClusterClusterSettingsDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ClusterSettings') }})
+    configuration: Optional[shared_awsecsclusterconfigurationdetails.AwsEcsClusterConfigurationDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Configuration') }})
+    default_capacity_provider_strategy: Optional[list[shared_awsecsclusterdefaultcapacityproviderstrategydetails.AwsEcsClusterDefaultCapacityProviderStrategyDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DefaultCapacityProviderStrategy') }})
     

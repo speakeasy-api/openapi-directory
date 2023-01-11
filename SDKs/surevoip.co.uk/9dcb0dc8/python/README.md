@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,12 +26,12 @@ s.config_security(
     
 req = operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest(
     path_params=operations.DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams(
-        account=8709764731653600972,
-        announcement_id="libero",
+        account=5609172597249597820,
+        announcement_id="id",
     ),
 )
     
-res = s.sdk.delete_customers_account_announcements_announcement_id_(req)
+res = s.announcements.delete_customers_account_announcements_announcement_id_(req)
 
 if res.status_code == 200:
     # handle response
@@ -42,38 +41,92 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### announcements
 
 * `delete_customers_account_announcements_announcement_id_` - Delete an announcement audio file
-* `get_` - List global resources
 * `get_announcements` - List global announcements
-* `get_areacodes` - List areacodes
-* `get_billing` - List global billing detail
-* `get_calls` - Validate a phone number by calling it once
-* `get_charges` - List charges
-* `get_contacts` - List contacts
-* `get_customers` - List all customers or find your own account
 * `get_customers_account_announcements` - List of announcement audio files
 * `get_customers_account_announcements_announcement_id_` - Represents an announcement audio file
-* `get_faxes` - List global ongoing faxes
-* `get_hosted` - List Hosted VoIP domains
-* `get_ip_address` - Return the IP address from where your API request originated
-* `get_mobile` - List mobile accounts
-* `get_numbers` - List available SureVoIP Ofcom number allocations for purchase
+* `post_announcements` - Add a new announcement audio file
+
+### areacodes
+
+* `get_areacodes` - List areacodes
 * `get_numbers_areacodes` - Search available numbers by areacode
+
+### billing
+
+* `get_billing` - List global billing detail
+
+### calls
+
+* `get_calls` - Validate a phone number by calling it once
+* `post_calls` - Create phone calls with or without announcements and scheduled hangups
+
+### charges
+
+* `get_charges` - List charges
+* `post_charges` - Create charges for invoices
+
+### contacts
+
+* `get_contacts` - List contacts
+
+### customers
+
+* `get_customer` - Represents a customer
+* `get_customers` - List all customers or find your own account
+
+### echo
+
+* `post_support_echo` - Return your POSTed data for testing
+
+### faxes
+
+* `get_faxes` - List global ongoing faxes
+
+### global
+
+* `get_` - List global resources
+
+### hosted
+
+* `get_hosted` - List Hosted VoIP domains
+
+### mobile
+
+* `get_mobile` - List mobile accounts
+
+### numbers
+
+* `get_numbers` - List available SureVoIP Ofcom number allocations for purchase
+
+### partners
+
 * `get_partners` - List SureVoIP Partner accounts
+
+### porting
+
 * `get_porting` - List ported numbers
-* `get_service_status` - List all Service Status messages
+
+### sip
+
 * `get_sip` - List all SIP accounts
+
+### sms
+
 * `get_sms` - List SMS
+
+### support
+
+* `get_ip_address` - Return the IP address from where your API request originated
+* `get_service_status` - List all Service Status messages
 * `get_support_ip_address` - Return the IP address from where your API request originated
 * `get_support_service_status` - List all Service Status messages
+
+### topups
+
 * `get_topups` - List all account credit topups
-* `post_announcements` - Add a new announcement audio file
-* `post_calls` - Create phone calls with or without announcements and scheduled hangups
-* `post_charges` - Create charges for invoices
-* `post_support_echo` - Return your POSTed data for testing
-* `get_customer` - Represents a customer
 
 <!-- End SDK Available Operations -->
 

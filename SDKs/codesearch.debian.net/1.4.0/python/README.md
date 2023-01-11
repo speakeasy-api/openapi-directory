@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,7 +24,7 @@ req = operations.SearchRequest(
     ),
     query_params=operations.SearchQueryParams(
         match_mode="regexp",
-        query="dolorum",
+        query="ullam",
     ),
 )
     

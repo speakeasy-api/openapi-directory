@@ -8,3 +8,5 @@ from .realtimecontactanalysissegment import *
 from .security import *
 from .sentimentvalue_enum import *
 from .transcript import *
+
+__all__ = ["Categories","CategoryDetails","CharacterOffsets","IssueDetected","ListRealtimeContactAnalysisSegmentsResponse","PointOfInterest","RealtimeContactAnalysisSegment","SchemeHmac","Security","SentimentValueEnum","Transcript"]

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -18,11 +18,11 @@ class BadgeExpiryTimeframeUnitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BadgeExpiry:
-    expiration_date: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expirationDate'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    expires: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires') }})
-    expiry_type: Optional[BadgeExpiryExpiryTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expiryType') }})
-    timeframe_amount: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeframeAmount') }})
-    timeframe_unit: Optional[BadgeExpiryTimeframeUnitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeframeUnit') }})
+    expiration_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expirationDate'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    expires: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expires') }})
+    expiry_type: Optional[BadgeExpiryExpiryTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('expiryType') }})
+    timeframe_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeframeAmount') }})
+    timeframe_unit: Optional[BadgeExpiryTimeframeUnitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeframeUnit') }})
     

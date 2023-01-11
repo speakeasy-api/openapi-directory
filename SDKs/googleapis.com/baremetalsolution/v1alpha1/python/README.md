@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,186 +20,173 @@ req = operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigReque
     security=operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams(
-        location="omnis",
-        project="molestiae",
+        location="accusamus",
+        project="et",
     ),
     query_params=operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams(
-        dollar_xgafv="1",
-        access_token="rerum",
+        dollar_xgafv="2",
+        access_token="consequatur",
         alt="proto",
-        callback="minima",
-        fields="dignissimos",
-        key="quas",
-        oauth_token="ut",
-        pretty_print=True,
-        quota_user="omnis",
-        upload_type="laboriosam",
-        upload_protocol="quaerat",
+        callback="ipsa",
+        fields="voluptatem",
+        key="velit",
+        oauth_token="expedita",
+        pretty_print=False,
+        quota_user="maiores",
+        upload_type="sunt",
+        upload_protocol="odio",
     ),
     request=shared.SubmitProvisioningConfigRequest(
-        email="at",
+        email="quo",
         provisioning_config=shared.ProvisioningConfig(
             instances=[
                 shared.InstanceConfig(
                     client_network=shared.NetworkAddress(
-                        address="voluptas",
-                        existing_network_id="doloremque",
-                        network_id="sint",
-                    ),
-                    hyperthreading=True,
-                    id="incidunt",
-                    instance_type="ad",
-                    location="explicabo",
-                    os_image="sunt",
-                    private_network=shared.NetworkAddress(
-                        address="qui",
-                        existing_network_id="at",
-                        network_id="expedita",
-                    ),
-                    user_note="rerum",
-                ),
-                shared.InstanceConfig(
-                    client_network=shared.NetworkAddress(
-                        address="iste",
-                        existing_network_id="modi",
-                        network_id="error",
-                    ),
-                    hyperthreading=True,
-                    id="ut",
-                    instance_type="temporibus",
-                    location="sint",
-                    os_image="harum",
-                    private_network=shared.NetworkAddress(
-                        address="minima",
-                        existing_network_id="quia",
-                        network_id="quisquam",
-                    ),
-                    user_note="minus",
-                ),
-                shared.InstanceConfig(
-                    client_network=shared.NetworkAddress(
-                        address="provident",
-                        existing_network_id="aut",
-                        network_id="illo",
+                        address="eos",
+                        existing_network_id="perspiciatis",
+                        network_id="similique",
                     ),
                     hyperthreading=False,
-                    id="aspernatur",
-                    instance_type="illo",
-                    location="ut",
-                    os_image="et",
+                    id="voluptatem",
+                    instance_type="ut",
+                    location="rerum",
+                    os_image="labore",
                     private_network=shared.NetworkAddress(
-                        address="non",
-                        existing_network_id="aliquam",
-                        network_id="ipsa",
+                        address="quasi",
+                        existing_network_id="occaecati",
+                        network_id="voluptatem",
                     ),
-                    user_note="expedita",
+                    user_note="delectus",
+                ),
+                shared.InstanceConfig(
+                    client_network=shared.NetworkAddress(
+                        address="excepturi",
+                        existing_network_id="consequuntur",
+                        network_id="provident",
+                    ),
+                    hyperthreading=False,
+                    id="eos",
+                    instance_type="sapiente",
+                    location="sit",
+                    os_image="quos",
+                    private_network=shared.NetworkAddress(
+                        address="numquam",
+                        existing_network_id="neque",
+                        network_id="ullam",
+                    ),
+                    user_note="qui",
                 ),
             ],
             networks=[
                 shared.NetworkConfig(
-                    bandwidth="BW_5_GBPS",
-                    cidr="temporibus",
-                    id="quidem",
-                    location="rerum",
-                    service_cidr="HIGH_28",
-                    type="CLIENT",
-                    user_note="voluptatem",
-                    vlan_attachments=[
-                        shared.VlanAttachment(
-                            id="asperiores",
-                            pairing_key="sit",
-                        ),
-                        shared.VlanAttachment(
-                            id="dolorum",
-                            pairing_key="animi",
-                        ),
-                        shared.VlanAttachment(
-                            id="aperiam",
-                            pairing_key="omnis",
-                        ),
-                    ],
-                ),
-                shared.NetworkConfig(
-                    bandwidth="BW_2_GBPS",
-                    cidr="consectetur",
-                    id="repudiandae",
-                    location="quasi",
-                    service_cidr="SERVICE_CIDR_UNSPECIFIED",
-                    type="PRIVATE",
-                    user_note="necessitatibus",
-                    vlan_attachments=[
-                        shared.VlanAttachment(
-                            id="sit",
-                            pairing_key="expedita",
-                        ),
-                        shared.VlanAttachment(
-                            id="sunt",
-                            pairing_key="ut",
-                        ),
-                    ],
-                ),
-                shared.NetworkConfig(
                     bandwidth="BW_1_GBPS",
-                    cidr="sapiente",
-                    id="culpa",
-                    location="sed",
-                    service_cidr="HIGH_28",
+                    cidr="ex",
+                    id="excepturi",
+                    location="esse",
+                    service_cidr="DISABLED",
                     type="PRIVATE",
-                    user_note="rerum",
+                    user_note="doloremque",
                     vlan_attachments=[
                         shared.VlanAttachment(
                             id="quis",
-                            pairing_key="aliquam",
-                        ),
-                        shared.VlanAttachment(
-                            id="quam",
-                            pairing_key="officiis",
-                        ),
-                        shared.VlanAttachment(
-                            id="sequi",
-                            pairing_key="magni",
+                            pairing_key="repellat",
                         ),
                     ],
                 ),
             ],
-            ticket_id="et",
+            ticket_id="omnis",
             volumes=[
                 shared.VolumeConfig(
-                    id="ducimus",
-                    location="distinctio",
+                    id="aperiam",
+                    location="omnis",
                     lun_ranges=[
                         shared.LunRange(
-                            quantity=740268334717324780,
-                            size_gb=7481213423248665986,
+                            quantity=458688950231060521,
+                            size_gb=5181082227017011102,
+                        ),
+                        shared.LunRange(
+                            quantity=4760998959768933036,
+                            size_gb=8113560356109833465,
                         ),
                     ],
                     machine_ids=[
-                        "et",
-                        "rerum",
-                        "accusamus",
+                        "maxime",
+                        "a",
+                        "magni",
                     ],
                     nfs_exports=[
                         shared.NfsExport(
-                            allow_dev=True,
+                            allow_dev=False,
                             allow_suid=False,
-                            cidr="ut",
-                            machine_id="placeat",
-                            network_id="consectetur",
+                            cidr="qui",
+                            machine_id="hic",
+                            network_id="excepturi",
+                            no_root_squash=False,
+                            permissions="READ_WRITE",
+                        ),
+                        shared.NfsExport(
+                            allow_dev=False,
+                            allow_suid=False,
+                            cidr="est",
+                            machine_id="ad",
+                            network_id="voluptatem",
                             no_root_squash=True,
                             permissions="PERMISSIONS_UNSPECIFIED",
                         ),
+                        shared.NfsExport(
+                            allow_dev=True,
+                            allow_suid=False,
+                            cidr="quaerat",
+                            machine_id="placeat",
+                            network_id="numquam",
+                            no_root_squash=True,
+                            permissions="READ_ONLY",
+                        ),
                     ],
                     protocol="PROTOCOL_NFS",
-                    size_gb=2389271512943804651,
-                    snapshots_enabled=True,
-                    type="FLASH",
-                    user_note="exercitationem",
+                    size_gb=8901295938499372629,
+                    snapshots_enabled=False,
+                    type="DISK",
+                    user_note="et",
+                ),
+                shared.VolumeConfig(
+                    id="hic",
+                    location="eaque",
+                    lun_ranges=[
+                        shared.LunRange(
+                            quantity=6914298819298796509,
+                            size_gb=1342322133068639698,
+                        ),
+                        shared.LunRange(
+                            quantity=1173538578675765645,
+                            size_gb=1370582653008256608,
+                        ),
+                    ],
+                    machine_ids=[
+                        "ab",
+                    ],
+                    nfs_exports=[
+                        shared.NfsExport(
+                            allow_dev=False,
+                            allow_suid=True,
+                            cidr="sit",
+                            machine_id="omnis",
+                            network_id="qui",
+                            no_root_squash=False,
+                            permissions="READ_WRITE",
+                        ),
+                    ],
+                    protocol="PROTOCOL_FC",
+                    size_gb=6582010836045928126,
+                    snapshots_enabled=False,
+                    type="DISK",
+                    user_note="minus",
                 ),
             ],
         ),

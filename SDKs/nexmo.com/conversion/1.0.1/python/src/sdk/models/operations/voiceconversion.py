@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
 
 
-@dataclass
+@dataclasses.dataclass
 class VoiceConversionQueryParams:
-    delivered: Any = field(metadata={'query_param': { 'field_name': 'delivered', 'style': 'form', 'explode': True }})
-    message_id: str = field(metadata={'query_param': { 'field_name': 'message-id', 'style': 'form', 'explode': True }})
-    timestamp: str = field(metadata={'query_param': { 'field_name': 'timestamp', 'style': 'form', 'explode': True }})
+    delivered: Any = dataclasses.field(metadata={'query_param': { 'field_name': 'delivered', 'style': 'form', 'explode': True }})
+    message_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'message-id', 'style': 'form', 'explode': True }})
+    timestamp: str = dataclasses.field(metadata={'query_param': { 'field_name': 'timestamp', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class VoiceConversionRequest:
-    query_params: VoiceConversionQueryParams = field()
+    query_params: VoiceConversionQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class VoiceConversionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,14 +18,14 @@ s = sdk.SDK()
     
 req = operations.ConvertcurrencyRequest(
     query_params=operations.ConvertcurrencyQueryParams(
-        amount="rerum",
-        from_="atque",
-        license="expedita",
-        to="aut",
+        amount="nobis",
+        from_="mollitia",
+        license="sed",
+        to="soluta",
     ),
 )
     
-res = s.sdk.convertcurrency(req)
+res = s.live_currency_rate_conversion.convertcurrency(req)
 
 if res.convertcurrency_200_application_json_object is not None:
     # handle response
@@ -36,7 +35,7 @@ if res.convertcurrency_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Live Currency Rate Conversion
 
 * `convertcurrency` - Converts amount in one currency to that of another
 

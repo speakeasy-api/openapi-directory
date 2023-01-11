@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.ReadDependenciesV1EnCoreWebSmDependenciesPostRequest(
     request=shared.UserRequestIn(
-        text="dignissimos",
+        text="sapiente",
     ),
 )
     
-res = s.sdk.read_dependencies_v1_en_core_web_sm_dependencies_post(req)
+res = s.read_dependencies_v1_en_core_web_sm_dependencies_post(req)
 
 if res.dependencies_out is not None:
     # handle response

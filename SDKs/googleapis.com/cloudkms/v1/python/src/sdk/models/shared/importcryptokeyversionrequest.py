@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -37,15 +37,15 @@ class ImportCryptoKeyVersionRequestAlgorithmEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ImportCryptoKeyVersionRequest:
     r"""ImportCryptoKeyVersionRequest
     Request message for KeyManagementService.ImportCryptoKeyVersion.
     """
     
-    algorithm: Optional[ImportCryptoKeyVersionRequestAlgorithmEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
-    crypto_key_version: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cryptoKeyVersion') }})
-    import_job: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importJob') }})
-    rsa_aes_wrapped_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rsaAesWrappedKey') }})
-    wrapped_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wrappedKey') }})
+    algorithm: Optional[ImportCryptoKeyVersionRequestAlgorithmEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('algorithm') }})
+    crypto_key_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cryptoKeyVersion') }})
+    import_job: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('importJob') }})
+    rsa_aes_wrapped_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rsaAesWrappedKey') }})
+    wrapped_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('wrappedKey') }})
     

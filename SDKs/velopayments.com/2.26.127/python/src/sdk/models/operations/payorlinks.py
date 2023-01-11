@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import payorlinksresponse as shared_payorlinksresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PayorLinksQueryParams:
-    descendants_of_payor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'descendantsOfPayor', 'style': 'form', 'explode': True }})
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    parent_of_payor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'parentOfPayor', 'style': 'form', 'explode': True }})
+    descendants_of_payor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'descendantsOfPayor', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    parent_of_payor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'parentOfPayor', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorLinksRequest:
-    query_params: PayorLinksQueryParams = field()
+    query_params: PayorLinksQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PayorLinksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payor_links_response: Optional[shared.PayorLinksResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payor_links_response: Optional[shared_payorlinksresponse.PayorLinksResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

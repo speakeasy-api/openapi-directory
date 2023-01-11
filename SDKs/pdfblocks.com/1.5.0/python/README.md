@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,19 +26,19 @@ s.config_security(
 req = operations.AddImageWatermarkV1Request(
     request=operations.AddImageWatermarkV1RequestBody(
         file=operations.AddImageWatermarkV1RequestBodyFile(
-            content="itaque".encode(),
-            file="nesciunt",
+            content="illum".encode(),
+            file="deleniti",
         ),
         image=operations.AddImageWatermarkV1RequestBodyImage(
-            content="optio".encode(),
-            image="eos",
+            content="eius".encode(),
+            image="sed",
         ),
-        margin=98.099998,
-        transparency=3868947486814090347,
+        margin=58.200001,
+        transparency=830999398038749909,
     ),
 )
     
-res = s.sdk.add_image_watermark_v1(req)
+res = s.add_image_watermark_v1(req)
 
 if res.add_image_watermark_v1_200_application_pdf_binary_string is not None:
     # handle response

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetglobaltimeRequest(
     query_params=operations.GetglobaltimeQueryParams(
-        license="vero",
-        locale="a",
+        license="quo",
+        locale="ea",
     ),
 )
     
-res = s.sdk.getglobaltime(req)
+res = s.current_global_time.getglobaltime(req)
 
 if res.getglobaltime_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getglobaltime_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Current Global Time
 
 * `getglobaltime` - Gets the current time for a global locale
 

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import styleentity as shared_styleentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStylesPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStylesPathRequest:
-    path_params: GetStylesPathPathParams = field()
+    path_params: GetStylesPathPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStylesPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    style_entity: Optional[shared.StyleEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    style_entity: Optional[shared_styleentity.StyleEntity] = dataclasses.field(default=None)
     

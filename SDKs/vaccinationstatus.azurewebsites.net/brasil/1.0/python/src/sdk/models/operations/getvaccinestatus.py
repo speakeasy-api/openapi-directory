@@ -1,25 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import vaccinestatusrequest as shared_vaccinestatusrequest
+from ..shared import problem as shared_problem
+from ..shared import vaccineresponse as shared_vaccineresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVaccineStatusHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVaccineStatusRequest:
-    headers: GetVaccineStatusHeaders = field()
-    request: shared.VaccineStatusRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetVaccineStatusHeaders = dataclasses.field()
+    request: shared_vaccinestatusrequest.VaccineStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVaccineStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem: Optional[shared.Problem] = field(default=None)
-    vaccine_response: Optional[shared.VaccineResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem: Optional[shared_problem.Problem] = dataclasses.field(default=None)
+    vaccine_response: Optional[shared_vaccineresponse.VaccineResponse] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,8 +23,8 @@ req = operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest(
         ),
     ),
     path_params=operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams(
-        app_id=7768000191674194381,
-        card_id="placeat",
+        app_id=7811612559882029157,
+        card_id="et",
     ),
 )
     

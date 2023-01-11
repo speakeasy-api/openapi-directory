@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -16,12 +16,12 @@ class MaintenanceWindowDayOfWeekEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MaintenanceWindow:
     r"""MaintenanceWindow
     Maintenance window. This specifies when Dataproc Metastore may perform system maintenance operation to the service.
     """
     
-    day_of_week: Optional[MaintenanceWindowDayOfWeekEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfWeek') }})
-    hour_of_day: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hourOfDay') }})
+    day_of_week: Optional[MaintenanceWindowDayOfWeekEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfWeek') }})
+    hour_of_day: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hourOfDay') }})
     

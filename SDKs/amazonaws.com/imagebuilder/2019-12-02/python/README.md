@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,21 +25,21 @@ s.config_security(
     
 req = operations.CancelImageCreationRequest(
     headers=operations.CancelImageCreationHeaders(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="quo",
-        x_amz_credential="ea",
-        x_amz_date="quis",
-        x_amz_security_token="culpa",
-        x_amz_signature="est",
-        x_amz_signed_headers="rem",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="ut",
+        x_amz_credential="occaecati",
+        x_amz_date="eum",
+        x_amz_security_token="ut",
+        x_amz_signature="assumenda",
+        x_amz_signed_headers="fuga",
     ),
     request=operations.CancelImageCreationRequestBody(
-        client_token="non",
-        image_build_version_arn="aperiam",
+        client_token="aut",
+        image_build_version_arn="corrupti",
     ),
 )
     
-res = s.sdk.cancel_image_creation(req)
+res = s.cancel_image_creation(req)
 
 if res.cancel_image_creation_response is not None:
     # handle response

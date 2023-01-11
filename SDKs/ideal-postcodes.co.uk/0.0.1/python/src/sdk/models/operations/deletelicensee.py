@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import addresslookupresponseschema as shared_addresslookupresponseschema
+from ..shared import deletelicenseeresponseschema as shared_deletelicenseeresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseePathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
-    licensee_key: str = field(metadata={'path_param': { 'field_name': 'licensee_key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    licensee_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licensee_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeRequest:
-    path_params: DeleteLicenseePathParams = field()
-    security: DeleteLicenseeSecurity = field()
+    path_params: DeleteLicenseePathParams = dataclasses.field()
+    security: DeleteLicenseeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLicenseeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    address_lookup_response_schema: Optional[shared.AddressLookupResponseSchema] = field(default=None)
-    delete_licensee_response_schema: Optional[shared.DeleteLicenseeResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    address_lookup_response_schema: Optional[shared_addresslookupresponseschema.AddressLookupResponseSchema] = dataclasses.field(default=None)
+    delete_licensee_response_schema: Optional[shared_deletelicenseeresponseschema.DeleteLicenseeResponseSchema] = dataclasses.field(default=None)
     

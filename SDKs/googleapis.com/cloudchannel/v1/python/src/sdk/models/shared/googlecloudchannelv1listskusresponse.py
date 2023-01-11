@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudchannelv1sku as shared_googlecloudchannelv1sku
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudChannelV1ListSkusResponse:
     r"""GoogleCloudChannelV1ListSkusResponse
     Response message for ListSkus.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    skus: Optional[List[GoogleCloudChannelV1Sku]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skus') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    skus: Optional[list[shared_googlecloudchannelv1sku.GoogleCloudChannelV1Sku]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skus') }})
     

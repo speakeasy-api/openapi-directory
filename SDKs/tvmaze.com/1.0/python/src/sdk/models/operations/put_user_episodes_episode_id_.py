@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import markedepisode as shared_markedepisode
+from ..shared import markedepisode as shared_markedepisode
 
 
-@dataclass
+@dataclasses.dataclass
 class PutUserEpisodesEpisodeIDPathParams:
-    episode_id: int = field(metadata={'path_param': { 'field_name': 'episode_id', 'style': 'simple', 'explode': False }})
+    episode_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'episode_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserEpisodesEpisodeIDRequest:
-    path_params: PutUserEpisodesEpisodeIDPathParams = field()
-    request: Optional[shared.MarkedEpisodeInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutUserEpisodesEpisodeIDPathParams = dataclasses.field()
+    request: Optional[shared_markedepisode.MarkedEpisodeInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutUserEpisodesEpisodeIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    marked_episode: Optional[shared.MarkedEpisode] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    marked_episode: Optional[shared_markedepisode.MarkedEpisode] = dataclasses.field(default=None)
     

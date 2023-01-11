@@ -1,37 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ocrpredictresponse as shared_ocrpredictresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class OcrMultipartRequestBodySampleContent:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    sample_content: str = field(metadata={'multipart_form': { 'field_name': 'sampleContent' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    sample_content: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'sampleContent' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OcrMultipartRequestBody:
-    model_id: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'modelId' }})
-    sample_content: Optional[OcrMultipartRequestBodySampleContent] = field(default=None, metadata={'multipart_form': { 'file': True }})
-    sample_id: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'sampleId' }})
-    sample_location: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'sampleLocation' }})
-    task: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'task' }})
+    model_id: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'modelId' }})
+    sample_content: Optional[OcrMultipartRequestBodySampleContent] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
+    sample_id: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'sampleId' }})
+    sample_location: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'sampleLocation' }})
+    task: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'task' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OcrMultipartSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OcrMultipartRequest:
-    security: OcrMultipartSecurity = field()
-    request: Optional[OcrMultipartRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: OcrMultipartSecurity = dataclasses.field()
+    request: Optional[OcrMultipartRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OcrMultipartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ocr_predict_response: Optional[shared.OcrPredictResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ocr_predict_response: Optional[shared_ocrpredictresponse.OcrPredictResponse] = dataclasses.field(default=None)
     

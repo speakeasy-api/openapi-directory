@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import updatesettingvaluemodel as shared_updatesettingvaluemodel
+from ..shared import settingvaluemodel as shared_settingvaluemodel
+from ..shared import settingvaluemodel_haljson as shared_settingvaluemodel_haljson
 
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceSettingValuePathParams:
-    environment_id: str = field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
-    setting_id: int = field(metadata={'path_param': { 'field_name': 'settingId', 'style': 'simple', 'explode': False }})
+    environment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
+    setting_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'settingId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceSettingValueQueryParams:
-    reason: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'reason', 'style': 'form', 'explode': True }})
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'reason', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceSettingValueRequests:
-    update_setting_value_model: Optional[shared.UpdateSettingValueModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    update_setting_value_model1: Optional[shared.UpdateSettingValueModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    update_setting_value_model2: Optional[shared.UpdateSettingValueModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    update_setting_value_model: Optional[shared_updatesettingvaluemodel.UpdateSettingValueModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    update_setting_value_model1: Optional[shared_updatesettingvaluemodel.UpdateSettingValueModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    update_setting_value_model2: Optional[shared_updatesettingvaluemodel.UpdateSettingValueModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceSettingValueRequest:
-    path_params: ReplaceSettingValuePathParams = field()
-    query_params: ReplaceSettingValueQueryParams = field()
-    request: ReplaceSettingValueRequests = field()
+    path_params: ReplaceSettingValuePathParams = dataclasses.field()
+    query_params: ReplaceSettingValueQueryParams = dataclasses.field()
+    request: ReplaceSettingValueRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReplaceSettingValueResponse:
-    content_type: str = field()
-    status_code: int = field()
-    setting_value_model: Optional[shared.SettingValueModel] = field(default=None)
-    setting_value_model_haljson: Optional[shared.SettingValueModelHaljson] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    setting_value_model: Optional[shared_settingvaluemodel.SettingValueModel] = dataclasses.field(default=None)
+    setting_value_model_haljson: Optional[shared_settingvaluemodel_haljson.SettingValueModelHaljson] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accountreference16_ch as shared_accountreference16_ch
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AdditionalInformationAccess:
     r"""AdditionalInformationAccess
     Optional if supported by API provider.
@@ -20,6 +20,6 @@ class AdditionalInformationAccess:
     
     """
     
-    owner_name: Optional[List[AccountReference16Ch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ownerName') }})
-    trusted_beneficiaries: Optional[List[AccountReference16Ch]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trustedBeneficiaries') }})
+    owner_name: Optional[list[shared_accountreference16_ch.AccountReference16Ch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ownerName') }})
+    trusted_beneficiaries: Optional[list[shared_accountreference16_ch.AccountReference16Ch]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('trustedBeneficiaries') }})
     

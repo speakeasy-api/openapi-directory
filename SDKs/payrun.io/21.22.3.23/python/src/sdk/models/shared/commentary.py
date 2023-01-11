@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,40 +8,40 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentaryCommentaryEmployee:
     r"""CommentaryCommentaryEmployee
     The commentarys' employee
     """
     
-    at_href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@href') }})
-    at_rel: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@rel') }})
-    at_title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@title') }})
+    at_href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@href') }})
+    at_rel: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@rel') }})
+    at_title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentaryCommentaryPayRun:
     r"""CommentaryCommentaryPayRun
     The commentarys' pay run
     """
     
-    at_href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@href') }})
-    at_rel: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@rel') }})
-    at_title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@title') }})
+    at_href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@href') }})
+    at_rel: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@rel') }})
+    at_title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('@title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CommentaryCommentary:
-    created: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Created'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    detail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Detail') }})
-    employee: Optional[CommentaryCommentaryEmployee] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Employee') }})
-    pay_run: Optional[CommentaryCommentaryPayRun] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PayRun') }})
+    created: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Created'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    detail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Detail') }})
+    employee: Optional[CommentaryCommentaryEmployee] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Employee') }})
+    pay_run: Optional[CommentaryCommentaryPayRun] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PayRun') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Commentary:
-    commentary: Optional[CommentaryCommentary] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Commentary') }})
+    commentary: Optional[CommentaryCommentary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Commentary') }})
     

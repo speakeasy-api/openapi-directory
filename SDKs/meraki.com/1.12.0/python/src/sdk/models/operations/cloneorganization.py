@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class CloneOrganizationPathParams:
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CloneOrganizationRequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CloneOrganizationRequest:
-    path_params: CloneOrganizationPathParams = field()
-    request: CloneOrganizationRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: CloneOrganizationPathParams = dataclasses.field()
+    request: CloneOrganizationRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CloneOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    clone_organization_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    clone_organization_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

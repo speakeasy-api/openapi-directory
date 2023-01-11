@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableregion as shared_writableregion
+from ..shared import region as shared_region
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRegionsCreateRequest:
-    request: shared.WritableRegionInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_writableregion.WritableRegionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRegionsCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    region: Optional[shared.Region] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    region: Optional[shared_region.Region] = dataclasses.field(default=None)
     

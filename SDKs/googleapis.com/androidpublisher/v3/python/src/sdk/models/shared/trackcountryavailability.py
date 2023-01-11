@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import tracktargetedcountry as shared_tracktargetedcountry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TrackCountryAvailability:
     r"""TrackCountryAvailability
     Resource for per-track country availability information.
     """
     
-    countries: Optional[List[TrackTargetedCountry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('countries') }})
-    rest_of_world: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restOfWorld') }})
-    sync_with_production: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('syncWithProduction') }})
+    countries: Optional[list[shared_tracktargetedcountry.TrackTargetedCountry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('countries') }})
+    rest_of_world: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('restOfWorld') }})
+    sync_with_production: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('syncWithProduction') }})
     

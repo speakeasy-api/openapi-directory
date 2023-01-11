@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberStaticimagePathParams:
-    version_number: int = field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
+    version_number: int = dataclasses.field(metadata={'path_param': { 'field_name': 'versionNumber', 'style': 'simple', 'explode': False }})
     
 class GetMapVersionNumberStaticimageFormatEnum(str, Enum):
     PNG = "png"
@@ -26,27 +26,27 @@ class GetMapVersionNumberStaticimageViewEnum(str, Enum):
     IN = "IN"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberStaticimageQueryParams:
-    bbox: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
-    center: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'center', 'style': 'form', 'explode': True }})
-    format: Optional[GetMapVersionNumberStaticimageFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
-    height: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'height', 'style': 'form', 'explode': True }})
-    layer: Optional[GetMapVersionNumberStaticimageLayerEnum] = field(default=None, metadata={'query_param': { 'field_name': 'layer', 'style': 'form', 'explode': True }})
-    style: Optional[GetMapVersionNumberStaticimageStyleEnum] = field(default=None, metadata={'query_param': { 'field_name': 'style', 'style': 'form', 'explode': True }})
-    view: Optional[GetMapVersionNumberStaticimageViewEnum] = field(default=None, metadata={'query_param': { 'field_name': 'view', 'style': 'form', 'explode': True }})
-    width: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
-    zoom: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'zoom', 'style': 'form', 'explode': True }})
+    bbox: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'bbox', 'style': 'form', 'explode': True }})
+    center: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'center', 'style': 'form', 'explode': True }})
+    format: Optional[GetMapVersionNumberStaticimageFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    height: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'height', 'style': 'form', 'explode': True }})
+    layer: Optional[GetMapVersionNumberStaticimageLayerEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'layer', 'style': 'form', 'explode': True }})
+    style: Optional[GetMapVersionNumberStaticimageStyleEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'style', 'style': 'form', 'explode': True }})
+    view: Optional[GetMapVersionNumberStaticimageViewEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'view', 'style': 'form', 'explode': True }})
+    width: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
+    zoom: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'zoom', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberStaticimageRequest:
-    path_params: GetMapVersionNumberStaticimagePathParams = field()
-    query_params: GetMapVersionNumberStaticimageQueryParams = field()
+    path_params: GetMapVersionNumberStaticimagePathParams = dataclasses.field()
+    query_params: GetMapVersionNumberStaticimageQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetMapVersionNumberStaticimageResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

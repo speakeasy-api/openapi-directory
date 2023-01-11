@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,47 +21,43 @@ req = operations.DatastoreProjectsExportRequest(
         option1=operations.DatastoreProjectsExportSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.DatastoreProjectsExportPathParams(
-        project_id="dolor",
+        project_id="sint",
     ),
     query_params=operations.DatastoreProjectsExportQueryParams(
-        dollar_xgafv="1",
-        access_token="natus",
-        alt="json",
-        callback="error",
-        fields="ea",
-        key="possimus",
-        oauth_token="ipsum",
-        pretty_print=True,
-        quota_user="culpa",
-        upload_type="fugit",
-        upload_protocol="eaque",
+        dollar_xgafv="2",
+        access_token="odio",
+        alt="proto",
+        callback="reiciendis",
+        fields="velit",
+        key="non",
+        oauth_token="in",
+        pretty_print=False,
+        quota_user="omnis",
+        upload_type="enim",
+        upload_protocol="aspernatur",
     ),
     request=shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest(
         entity_filter=shared.GoogleDatastoreAdminV1beta1EntityFilter(
             kinds=[
-                "in",
-                "voluptas",
-                "suscipit",
+                "blanditiis",
             ],
             namespace_ids=[
-                "qui",
-                "eaque",
-                "hic",
+                "voluptas",
+                "perspiciatis",
             ],
         ),
         labels={
-            "voluptatem": "inventore",
-            "molestias": "quisquam",
-            "et": "in",
+            "explicabo": "ut",
+            "consequuntur": "tenetur",
         },
-        output_url_prefix="eveniet",
+        output_url_prefix="eos",
     ),
 )
     

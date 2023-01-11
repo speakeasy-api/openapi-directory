@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import groupinformation as shared_groupinformation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListGroupsResponse:
-    groups: Optional[List[GroupInformation]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Groups') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    groups: Optional[list[shared_groupinformation.GroupInformation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Groups') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

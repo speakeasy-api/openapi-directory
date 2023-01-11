@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,12 +18,12 @@ s = sdk.SDK()
     
 req = operations.GetcurrencyrateRequest(
     query_params=operations.GetcurrencyrateQueryParams(
-        license="odio",
+        license="cupiditate",
         symbol="ut",
     ),
 )
     
-res = s.sdk.getcurrencyrate(req)
+res = s.currency_rates.getcurrencyrate(req)
 
 if res.getcurrencyrate_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getcurrencyrate_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Currency Rates
 
 * `getcurrencyrate` - Gets a foreign currency rate for one US Dollar
 

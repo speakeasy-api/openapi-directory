@@ -1,33 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDMembersMemberIDNotesPathParams:
-    member_id: str = field(metadata={'path_param': { 'field_name': 'member_id', 'style': 'simple', 'explode': False }})
-    workspace_id: str = field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
+    member_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'member_id', 'style': 'simple', 'explode': False }})
+    workspace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDMembersMemberIDNotesQueryParams:
-    page: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDMembersMemberIDNotesSecurity:
-    bearer: shared.SchemeBearer = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    bearer: shared_security.SchemeBearer = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDMembersMemberIDNotesRequest:
-    path_params: GetWorkspaceIDMembersMemberIDNotesPathParams = field()
-    query_params: GetWorkspaceIDMembersMemberIDNotesQueryParams = field()
-    security: GetWorkspaceIDMembersMemberIDNotesSecurity = field()
+    path_params: GetWorkspaceIDMembersMemberIDNotesPathParams = dataclasses.field()
+    query_params: GetWorkspaceIDMembersMemberIDNotesQueryParams = dataclasses.field()
+    security: GetWorkspaceIDMembersMemberIDNotesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWorkspaceIDMembersMemberIDNotesResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudServicebrokerV1beta1Operation:
     r"""GoogleCloudServicebrokerV1beta1Operation
     Describes a long running operation, which conforms to OpenService API.
     """
     
-    description: Optional[str] = field(default=None)
-    state: Optional[str] = field(default=None)
+    description: Optional[str] = dataclasses.field(default=None)
+    state: Optional[str] = dataclasses.field(default=None)
     

@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import key_patch as shared_key_patch
+from ..shared import error as shared_error
+from ..shared import key_response as shared_key_response
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDKeysKeyIDPathParams:
-    app_id: str = field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
-    key_id: str = field(metadata={'path_param': { 'field_name': 'key_id', 'style': 'simple', 'explode': False }})
+    app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'app_id', 'style': 'simple', 'explode': False }})
+    key_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDKeysKeyIDSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDKeysKeyIDRequest:
-    path_params: PatchAppsAppIDKeysKeyIDPathParams = field()
-    security: PatchAppsAppIDKeysKeyIDSecurity = field()
-    request: Optional[shared.KeyPatch] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PatchAppsAppIDKeysKeyIDPathParams = dataclasses.field()
+    security: PatchAppsAppIDKeysKeyIDSecurity = dataclasses.field()
+    request: Optional[shared_key_patch.KeyPatch] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchAppsAppIDKeysKeyIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    key_response: Optional[shared.KeyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    key_response: Optional[shared_key_response.KeyResponse] = dataclasses.field(default=None)
     

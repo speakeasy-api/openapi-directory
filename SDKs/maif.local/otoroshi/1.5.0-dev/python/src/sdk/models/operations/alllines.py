@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class AllLinesSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AllLinesRequest:
-    security: AllLinesSecurity = field()
+    security: AllLinesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AllLinesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    environment: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    environment: Optional[str] = dataclasses.field(default=None)
     

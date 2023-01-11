@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import firewallrule as shared_firewallrule
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateFirewallRuleResponse:
-    firewall_rule: Optional[FirewallRule] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirewallRule') }})
+    firewall_rule: Optional[shared_firewallrule.FirewallRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('FirewallRule') }})
     

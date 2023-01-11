@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -126,7 +126,7 @@ class Groups:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GroupEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GroupEntity]])
                 res.group_entities = out
         elif r.status_code == 400:
             pass
@@ -172,7 +172,7 @@ class Groups:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PermissionEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PermissionEntity]])
                 res.permission_entities = out
         elif r.status_code == 400:
             pass
@@ -218,7 +218,7 @@ class Groups:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.GroupUserEntity]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.GroupUserEntity]])
                 res.group_user_entities = out
         elif r.status_code == 400:
             pass
@@ -299,13 +299,13 @@ class Groups:
         url = utils.generate_url(base_url, "/groups/{group_id}/memberships/{user_id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchGroupsGroupIDMembershipsUserIDResponse(status_code=r.status_code, content_type=content_type)
@@ -348,13 +348,13 @@ class Groups:
         url = utils.generate_url(base_url, "/groups/{id}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("PATCH", url, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PatchGroupsIDResponse(status_code=r.status_code, content_type=content_type)
@@ -397,13 +397,13 @@ class Groups:
         url = base_url.removesuffix("/") + "/groups"
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGroupsResponse(status_code=r.status_code, content_type=content_type)
@@ -446,13 +446,13 @@ class Groups:
         url = utils.generate_url(base_url, "/groups/{group_id}/users", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         
         client = self._client
         
-        r = client.request("POST", url, data=data, files=form, headers=headers)
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.PostGroupsGroupIDUsersResponse(status_code=r.status_code, content_type=content_type)

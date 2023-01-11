@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest:
     r"""GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest
     Request message for cancelling an unfinished user account wipe.
     """
     
-    customer: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer') }})
+    customer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customer') }})
     

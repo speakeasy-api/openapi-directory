@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,15 +17,15 @@ class ChannelStatusPrivacyStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChannelStatus:
     r"""ChannelStatus
     JSON template for the status part of a channel.
     """
     
-    is_linked: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isLinked') }})
-    long_uploads_status: Optional[ChannelStatusLongUploadsStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('longUploadsStatus') }})
-    made_for_kids: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('madeForKids') }})
-    privacy_status: Optional[ChannelStatusPrivacyStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
-    self_declared_made_for_kids: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfDeclaredMadeForKids') }})
+    is_linked: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isLinked') }})
+    long_uploads_status: Optional[ChannelStatusLongUploadsStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('longUploadsStatus') }})
+    made_for_kids: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('madeForKids') }})
+    privacy_status: Optional[ChannelStatusPrivacyStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacyStatus') }})
+    self_declared_made_for_kids: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfDeclaredMadeForKids') }})
     

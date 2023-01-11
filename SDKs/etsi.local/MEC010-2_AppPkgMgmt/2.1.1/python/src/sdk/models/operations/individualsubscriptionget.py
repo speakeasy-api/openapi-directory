@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apppkgsubscriptioninfo as shared_apppkgsubscriptioninfo
+from ..shared import problemdetails as shared_problemdetails
 
 
-@dataclass
+@dataclasses.dataclass
 class IndividualSubscriptionGetPathParams:
-    subscription_id: str = field(metadata={'path_param': { 'field_name': 'subscriptionId', 'style': 'simple', 'explode': False }})
+    subscription_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'subscriptionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IndividualSubscriptionGetRequest:
-    path_params: IndividualSubscriptionGetPathParams = field()
+    path_params: IndividualSubscriptionGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IndividualSubscriptionGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    app_pkg_subscription_info: Optional[shared.AppPkgSubscriptionInfo] = field(default=None)
-    problem_details: Optional[shared.ProblemDetails] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    app_pkg_subscription_info: Optional[shared_apppkgsubscriptioninfo.AppPkgSubscriptionInfo] = dataclasses.field(default=None)
+    problem_details: Optional[shared_problemdetails.ProblemDetails] = dataclasses.field(default=None)
     

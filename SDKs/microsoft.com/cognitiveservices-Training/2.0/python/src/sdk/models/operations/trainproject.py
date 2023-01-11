@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import iteration as shared_iteration
 
 
-@dataclass
+@dataclasses.dataclass
 class TrainProjectPathParams:
-    project_id: str = field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
+    project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'projectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainProjectHeaders:
-    training_key: str = field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
+    training_key: str = dataclasses.field(metadata={'header': { 'field_name': 'Training-Key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainProjectRequest:
-    headers: TrainProjectHeaders = field()
-    path_params: TrainProjectPathParams = field()
+    headers: TrainProjectHeaders = dataclasses.field()
+    path_params: TrainProjectPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TrainProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    iteration: Optional[shared.Iteration] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    iteration: Optional[shared_iteration.Iteration] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ChecksRerequestSuitePathParams:
-    check_suite_id: int = field(metadata={'path_param': { 'field_name': 'check_suite_id', 'style': 'simple', 'explode': False }})
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    check_suite_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'check_suite_id', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChecksRerequestSuiteRequest:
-    path_params: ChecksRerequestSuitePathParams = field()
+    path_params: ChecksRerequestSuitePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ChecksRerequestSuiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    checks_rerequest_suite_201_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    checks_rerequest_suite_201_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

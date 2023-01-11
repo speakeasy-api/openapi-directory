@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import vpceconfiguration as shared_vpceconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListVpceConfigurationsResult:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
-    vpce_configurations: Optional[List[VpceConfiguration]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpceConfigurations') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    vpce_configurations: Optional[list[shared_vpceconfiguration.VpceConfiguration]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vpceConfigurations') }})
     

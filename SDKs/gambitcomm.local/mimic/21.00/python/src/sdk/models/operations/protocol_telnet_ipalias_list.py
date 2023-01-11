@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import ipalias as shared_ipalias
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetIpaliasListPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetIpaliasListRequest:
-    path_params: ProtocolTelnetIpaliasListPathParams = field()
+    path_params: ProtocolTelnetIpaliasListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolTelnetIpaliasListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ip_aliases: Optional[List[shared.IPAlias]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ip_aliases: Optional[list[shared_ipalias.IPAlias]] = dataclasses.field(default=None)
     

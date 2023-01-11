@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbsnapshotattributesresult as shared_dbsnapshotattributesresult
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbSnapshotAttributesResult:
-    db_snapshot_attributes_result: Optional[DbSnapshotAttributesResult] = field(default=None)
+    db_snapshot_attributes_result: Optional[shared_dbsnapshotattributesresult.DbSnapshotAttributesResult] = dataclasses.field(default=None)
     

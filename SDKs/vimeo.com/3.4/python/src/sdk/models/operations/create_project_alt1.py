@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import error as shared_error
+from ..shared import project as shared_project
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateProjectAlt1RequestBody:
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectAlt1Request:
-    request: CreateProjectAlt1RequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateProjectAlt1Security = field()
+    request: CreateProjectAlt1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateProjectAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProjectAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    project: Optional[shared.Project] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    project: Optional[shared_project.Project] = dataclasses.field(default=None)
     

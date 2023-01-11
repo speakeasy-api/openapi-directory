@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import districtadminsresponse as shared_districtadminsresponse
+from ..shared import notfound as shared_notfound
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminsForDistrictPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminsForDistrictRequest:
-    path_params: GetAdminsForDistrictPathParams = field()
+    path_params: GetAdminsForDistrictPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAdminsForDistrictResponse:
-    content_type: str = field()
-    status_code: int = field()
-    district_admins_response: Optional[shared.DistrictAdminsResponse] = field(default=None)
-    not_found: Optional[shared.NotFound] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    district_admins_response: Optional[shared_districtadminsresponse.DistrictAdminsResponse] = dataclasses.field(default=None)
+    not_found: Optional[shared_notfound.NotFound] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class MetricCollectionType:
     r"""MetricCollectionType
     Describes a metric.
     """
     
-    metric: Optional[str] = field(default=None)
+    metric: Optional[str] = dataclasses.field(default=None)
     

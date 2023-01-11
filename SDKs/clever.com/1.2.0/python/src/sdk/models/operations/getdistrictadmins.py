@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import districtadminsresponse as shared_districtadminsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictAdminsQueryParams:
-    ending_before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'ending_before', 'style': 'form', 'explode': True }})
-    show_links: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'show_links', 'style': 'form', 'explode': True }})
-    starting_after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'starting_after', 'style': 'form', 'explode': True }})
+    ending_before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ending_before', 'style': 'form', 'explode': True }})
+    show_links: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'show_links', 'style': 'form', 'explode': True }})
+    starting_after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'starting_after', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictAdminsRequest:
-    query_params: GetDistrictAdminsQueryParams = field()
+    query_params: GetDistrictAdminsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictAdminsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    district_admins_response: Optional[shared.DistrictAdminsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    district_admins_response: Optional[shared_districtadminsresponse.DistrictAdminsResponse] = dataclasses.field(default=None)
     

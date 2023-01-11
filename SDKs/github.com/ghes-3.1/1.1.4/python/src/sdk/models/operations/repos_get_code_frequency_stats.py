@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCodeFrequencyStatsPathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCodeFrequencyStatsRequest:
-    path_params: ReposGetCodeFrequencyStatsPathParams = field()
+    path_params: ReposGetCodeFrequencyStatsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ReposGetCodeFrequencyStatsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    code_frequency_stats: Optional[List[List[int]]] = field(default=None)
-    repos_get_code_frequency_stats_202_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    code_frequency_stats: Optional[list[list[int]]] = dataclasses.field(default=None)
+    repos_get_code_frequency_stats_202_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

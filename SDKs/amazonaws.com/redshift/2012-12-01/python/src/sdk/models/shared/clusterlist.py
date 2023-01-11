@@ -1,0 +1,82 @@
+import dataclasses
+from datetime import date, datetime
+from marshmallow import fields
+import dateutil.parser
+from typing import Optional
+from enum import Enum
+from ..shared import aquaconfiguration as shared_aquaconfiguration
+from ..shared import clusternode as shared_clusternode
+from ..shared import clusterparametergroupstatuslist as shared_clusterparametergroupstatuslist
+from ..shared import clustersecuritygroupmembershiplist as shared_clustersecuritygroupmembershiplist
+from ..shared import clustersnapshotcopystatus as shared_clustersnapshotcopystatus
+from ..shared import datatransferprogress as shared_datatransferprogress
+from ..shared import deferredmaintenancewindowslist as shared_deferredmaintenancewindowslist
+from ..shared import elasticipstatus as shared_elasticipstatus
+from ..shared import endpoint as shared_endpoint
+from ..shared import hsmstatus as shared_hsmstatus
+from ..shared import clusteriamrolelist as shared_clusteriamrolelist
+from ..shared import pendingmodifiedvalues as shared_pendingmodifiedvalues
+from ..shared import resizeinfo as shared_resizeinfo
+from ..shared import restorestatus as shared_restorestatus
+from ..shared import schedulestate_enum as shared_schedulestate_enum
+from ..shared import taglist as shared_taglist
+from ..shared import vpcsecuritygroupmembershiplist as shared_vpcsecuritygroupmembershiplist
+
+
+@dataclasses.dataclass
+class ClusterList:
+    r"""ClusterList
+    Describes a cluster.
+    """
+    
+    allow_version_upgrade: Optional[bool] = dataclasses.field(default=None)
+    aqua_configuration: Optional[shared_aquaconfiguration.AquaConfiguration] = dataclasses.field(default=None)
+    automated_snapshot_retention_period: Optional[int] = dataclasses.field(default=None)
+    availability_zone: Optional[str] = dataclasses.field(default=None)
+    availability_zone_relocation_status: Optional[str] = dataclasses.field(default=None)
+    cluster_availability_status: Optional[str] = dataclasses.field(default=None)
+    cluster_create_time: Optional[datetime] = dataclasses.field(default=None)
+    cluster_identifier: Optional[str] = dataclasses.field(default=None)
+    cluster_namespace_arn: Optional[str] = dataclasses.field(default=None)
+    cluster_nodes: Optional[list[shared_clusternode.ClusterNode]] = dataclasses.field(default=None)
+    cluster_parameter_groups: Optional[list[shared_clusterparametergroupstatuslist.ClusterParameterGroupStatusList]] = dataclasses.field(default=None)
+    cluster_public_key: Optional[str] = dataclasses.field(default=None)
+    cluster_revision_number: Optional[str] = dataclasses.field(default=None)
+    cluster_security_groups: Optional[list[shared_clustersecuritygroupmembershiplist.ClusterSecurityGroupMembershipList]] = dataclasses.field(default=None)
+    cluster_snapshot_copy_status: Optional[shared_clustersnapshotcopystatus.ClusterSnapshotCopyStatus] = dataclasses.field(default=None)
+    cluster_status: Optional[str] = dataclasses.field(default=None)
+    cluster_subnet_group_name: Optional[str] = dataclasses.field(default=None)
+    cluster_version: Optional[str] = dataclasses.field(default=None)
+    db_name: Optional[str] = dataclasses.field(default=None)
+    data_transfer_progress: Optional[shared_datatransferprogress.DataTransferProgress] = dataclasses.field(default=None)
+    deferred_maintenance_windows: Optional[list[shared_deferredmaintenancewindowslist.DeferredMaintenanceWindowsList]] = dataclasses.field(default=None)
+    elastic_ip_status: Optional[shared_elasticipstatus.ElasticIPStatus] = dataclasses.field(default=None)
+    elastic_resize_number_of_node_options: Optional[str] = dataclasses.field(default=None)
+    encrypted: Optional[bool] = dataclasses.field(default=None)
+    endpoint: Optional[shared_endpoint.Endpoint] = dataclasses.field(default=None)
+    enhanced_vpc_routing: Optional[bool] = dataclasses.field(default=None)
+    expected_next_snapshot_schedule_time: Optional[datetime] = dataclasses.field(default=None)
+    expected_next_snapshot_schedule_time_status: Optional[str] = dataclasses.field(default=None)
+    hsm_status: Optional[shared_hsmstatus.HsmStatus] = dataclasses.field(default=None)
+    iam_roles: Optional[list[shared_clusteriamrolelist.ClusterIamRoleList]] = dataclasses.field(default=None)
+    kms_key_id: Optional[str] = dataclasses.field(default=None)
+    maintenance_track_name: Optional[str] = dataclasses.field(default=None)
+    manual_snapshot_retention_period: Optional[int] = dataclasses.field(default=None)
+    master_username: Optional[str] = dataclasses.field(default=None)
+    modify_status: Optional[str] = dataclasses.field(default=None)
+    next_maintenance_window_start_time: Optional[datetime] = dataclasses.field(default=None)
+    node_type: Optional[str] = dataclasses.field(default=None)
+    number_of_nodes: Optional[int] = dataclasses.field(default=None)
+    pending_actions: Optional[list[str]] = dataclasses.field(default=None)
+    pending_modified_values: Optional[shared_pendingmodifiedvalues.PendingModifiedValues] = dataclasses.field(default=None)
+    preferred_maintenance_window: Optional[str] = dataclasses.field(default=None)
+    publicly_accessible: Optional[bool] = dataclasses.field(default=None)
+    resize_info: Optional[shared_resizeinfo.ResizeInfo] = dataclasses.field(default=None)
+    restore_status: Optional[shared_restorestatus.RestoreStatus] = dataclasses.field(default=None)
+    snapshot_schedule_identifier: Optional[str] = dataclasses.field(default=None)
+    snapshot_schedule_state: Optional[shared_schedulestate_enum.ScheduleStateEnum] = dataclasses.field(default=None)
+    tags: Optional[list[shared_taglist.TagList]] = dataclasses.field(default=None)
+    total_storage_capacity_in_mega_bytes: Optional[int] = dataclasses.field(default=None)
+    vpc_id: Optional[str] = dataclasses.field(default=None)
+    vpc_security_groups: Optional[list[shared_vpcsecuritygroupmembershiplist.VpcSecurityGroupMembershipList]] = dataclasses.field(default=None)
+    

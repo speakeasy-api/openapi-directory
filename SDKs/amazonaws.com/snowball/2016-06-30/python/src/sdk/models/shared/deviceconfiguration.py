@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import snowconedeviceconfiguration as shared_snowconedeviceconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeviceConfiguration:
     r"""DeviceConfiguration
     The container for <code>SnowconeDeviceConfiguration</code>. 
     """
     
-    snowcone_device_configuration: Optional[SnowconeDeviceConfiguration] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnowconeDeviceConfiguration') }})
+    snowcone_device_configuration: Optional[shared_snowconedeviceconfiguration.SnowconeDeviceConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SnowconeDeviceConfiguration') }})
     

@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apiexception as shared_apiexception
+from ..shared import payrollcalendars as shared_payrollcalendars
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPayrollCalendarPathParams:
-    payroll_calendar_id: str = field(metadata={'path_param': { 'field_name': 'PayrollCalendarID', 'style': 'simple', 'explode': False }})
+    payroll_calendar_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'PayrollCalendarID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayrollCalendarHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayrollCalendarSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayrollCalendarRequest:
-    headers: GetPayrollCalendarHeaders = field()
-    path_params: GetPayrollCalendarPathParams = field()
-    security: GetPayrollCalendarSecurity = field()
+    headers: GetPayrollCalendarHeaders = dataclasses.field()
+    path_params: GetPayrollCalendarPathParams = dataclasses.field()
+    security: GetPayrollCalendarSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPayrollCalendarResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_exception: Optional[shared.APIException] = field(default=None)
-    payroll_calendars: Optional[shared.PayrollCalendars] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_exception: Optional[shared_apiexception.APIException] = dataclasses.field(default=None)
+    payroll_calendars: Optional[shared_payrollcalendars.PayrollCalendars] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import cachepolicysummarylist as shared_cachepolicysummarylist
 
 
-@dataclass
+@dataclasses.dataclass
 class CachePolicyList:
     r"""CachePolicyList
     A list of cache policies.
     """
     
-    max_items: int = field()
-    quantity: int = field()
-    items: Optional[List[CachePolicySummary]] = field(default=None)
-    next_marker: Optional[str] = field(default=None)
+    max_items: int = dataclasses.field()
+    quantity: int = dataclasses.field()
+    items: Optional[list[shared_cachepolicysummarylist.CachePolicySummaryList]] = dataclasses.field(default=None)
+    next_marker: Optional[str] = dataclasses.field(default=None)
     

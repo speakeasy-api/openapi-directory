@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetShakespeareTranslateQueryParams:
-    text: str = field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
+    text: str = dataclasses.field(metadata={'query_param': { 'field_name': 'text', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShakespeareTranslateSecurity:
-    x_fungenerators_api_secret: shared.SchemeXFungeneratorsAPISecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    x_fungenerators_api_secret: shared_security.SchemeXFungeneratorsAPISecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShakespeareTranslateRequest:
-    query_params: GetShakespeareTranslateQueryParams = field()
-    security: GetShakespeareTranslateSecurity = field()
+    query_params: GetShakespeareTranslateQueryParams = dataclasses.field()
+    security: GetShakespeareTranslateSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetShakespeareTranslateResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import exporttemplate as shared_exporttemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasExportTemplatesReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasExportTemplatesReadRequest:
-    path_params: ExtrasExportTemplatesReadPathParams = field()
+    path_params: ExtrasExportTemplatesReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasExportTemplatesReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    export_template: Optional[shared.ExportTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    export_template: Optional[shared_exporttemplate.ExportTemplate] = dataclasses.field(default=None)
     

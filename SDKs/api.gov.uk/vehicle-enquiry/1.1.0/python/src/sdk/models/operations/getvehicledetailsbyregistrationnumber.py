@@ -1,24 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import vehiclerequest as shared_vehiclerequest
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import vehicle as shared_vehicle
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVehicleDetailsByRegistrationNumberHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
-    x_correlation_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Correlation-Id', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_correlation_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Correlation-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVehicleDetailsByRegistrationNumberRequest:
-    headers: GetVehicleDetailsByRegistrationNumberHeaders = field()
-    request: shared.VehicleRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetVehicleDetailsByRegistrationNumberHeaders = dataclasses.field()
+    request: shared_vehiclerequest.VehicleRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVehicleDetailsByRegistrationNumberResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    vehicle: Optional[shared.Vehicle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    vehicle: Optional[shared_vehicle.Vehicle] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import rack as shared_rack
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksUnitsPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksUnitsRequest:
-    path_params: DcimRacksUnitsPathParams = field()
+    path_params: DcimRacksUnitsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimRacksUnitsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    rack: Optional[shared.Rack] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rack: Optional[shared_rack.Rack] = dataclasses.field(default=None)
     

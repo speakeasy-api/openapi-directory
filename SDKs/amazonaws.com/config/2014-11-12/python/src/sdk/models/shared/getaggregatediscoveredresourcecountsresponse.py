@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import groupedresourcecount as shared_groupedresourcecount
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAggregateDiscoveredResourceCountsResponse:
-    total_discovered_resources: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalDiscoveredResources') }})
-    group_by_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupByKey') }})
-    grouped_resource_counts: Optional[List[GroupedResourceCount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupedResourceCounts') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    total_discovered_resources: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalDiscoveredResources') }})
+    group_by_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupByKey') }})
+    grouped_resource_counts: Optional[list[shared_groupedresourcecount.GroupedResourceCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('GroupedResourceCounts') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

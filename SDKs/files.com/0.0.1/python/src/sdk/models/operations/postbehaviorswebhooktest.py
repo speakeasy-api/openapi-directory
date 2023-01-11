@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import statusentity as shared_statusentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostBehaviorsWebhookTestRequestBody:
-    url: str = field(metadata={'multipart_form': { 'field_name': 'url' }})
-    action: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'action' }})
-    body: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'body', 'json': True }})
-    encoding: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
-    headers: Optional[dict[str, Any]] = field(default=None, metadata={'multipart_form': { 'field_name': 'headers', 'json': True }})
-    method: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'method' }})
+    url: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'url' }})
+    action: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'action' }})
+    body: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'body', 'json': True }})
+    encoding: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
+    headers: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'headers', 'json': True }})
+    method: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'method' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBehaviorsWebhookTestRequest:
-    request: PostBehaviorsWebhookTestRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: PostBehaviorsWebhookTestRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBehaviorsWebhookTestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    status_entity: Optional[shared.StatusEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    status_entity: Optional[shared_statusentity.StatusEntity] = dataclasses.field(default=None)
     

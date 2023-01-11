@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.RatcrRequest(
     security=operations.RatcrSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.RatcrRequestBody(
         certificate_parameters=operations.RatcrRequestBodyCertificateParameters(
-            full_name="ipsum",
-            card_no="consequatur",
+            full_name="vel",
+            card_no="nesciunt",
         ),
-        consent_artifact="facilis",
+        consent_artifact="hic",
         format="pdf",
-        txn_id="quas",
+        txn_id="quod",
     ),
 )
     
-res = s.sdk.ratcr(req)
+res = s.ap_is.ratcr(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ratcr` - Ration Card
 

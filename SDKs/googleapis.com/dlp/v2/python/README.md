@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,27 +20,27 @@ req = operations.DlpInfoTypesListRequest(
     security=operations.DlpInfoTypesListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     query_params=operations.DlpInfoTypesListQueryParams(
         dollar_xgafv="2",
-        access_token="laborum",
-        alt="proto",
-        callback="temporibus",
-        fields="nemo",
-        filter="odio",
-        key="possimus",
-        language_code="aspernatur",
-        location_id="eaque",
-        oauth_token="nostrum",
-        parent="qui",
+        access_token="ad",
+        alt="media",
+        callback="non",
+        fields="nihil",
+        filter="incidunt",
+        key="dolore",
+        language_code="asperiores",
+        location_id="labore",
+        oauth_token="dolorum",
+        parent="ipsum",
         pretty_print=False,
-        quota_user="quas",
-        upload_type="commodi",
-        upload_protocol="quas",
+        quota_user="molestiae",
+        upload_type="aut",
+        upload_protocol="voluptatum",
     ),
 )
     

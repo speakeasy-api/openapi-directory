@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationLicensePathParams:
-    license_id: str = field(metadata={'path_param': { 'field_name': 'licenseId', 'style': 'simple', 'explode': False }})
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    license_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'licenseId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationLicenseRequest:
-    path_params: GetOrganizationLicensePathParams = field()
+    path_params: GetOrganizationLicensePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetOrganizationLicenseResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_organization_license_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_organization_license_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

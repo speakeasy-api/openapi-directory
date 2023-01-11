@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,13 +12,13 @@ class GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudDatalabelingV1beta1ImageClassificationConfig:
     r"""GoogleCloudDatalabelingV1beta1ImageClassificationConfig
     Config for image classification human labeling task.
     """
     
-    allow_multi_label: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowMultiLabel') }})
-    annotation_spec_set: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotationSpecSet') }})
-    answer_aggregation_type: Optional[GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answerAggregationType') }})
+    allow_multi_label: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('allowMultiLabel') }})
+    annotation_spec_set: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('annotationSpecSet') }})
+    answer_aggregation_type: Optional[GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('answerAggregationType') }})
     

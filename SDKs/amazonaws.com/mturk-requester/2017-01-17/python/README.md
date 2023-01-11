@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AcceptQualificationRequestRequest(
     headers=operations.AcceptQualificationRequestHeaders(
-        x_amz_algorithm="non",
-        x_amz_content_sha256="qui",
-        x_amz_credential="eum",
-        x_amz_date="corporis",
-        x_amz_security_token="magni",
-        x_amz_signature="illum",
-        x_amz_signed_headers="occaecati",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="sit",
+        x_amz_credential="minus",
+        x_amz_date="iste",
+        x_amz_security_token="tempora",
+        x_amz_signature="officia",
+        x_amz_signed_headers="ducimus",
         x_amz_target="MTurkRequesterServiceV20170117.AcceptQualificationRequest",
     ),
     request=shared.AcceptQualificationRequestRequest(
-        integer_value=2383187586169418805,
-        qualification_request_id="qui",
+        integer_value=8893427221521046744,
+        qualification_request_id="perferendis",
     ),
 )
     
-res = s.sdk.accept_qualification_request(req)
+res = s.accept_qualification_request(req)
 
 if res.accept_qualification_request_response is not None:
     # handle response

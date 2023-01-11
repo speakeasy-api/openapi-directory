@@ -1,29 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dayofexecution_enum as shared_dayofexecution_enum
+from ..shared import executionrule_enum as shared_executionrule_enum
+from ..shared import frequencycode_enum as shared_frequencycode_enum
+from ..shared import amount as shared_amount
+from ..shared import monthsofexecution_enum as shared_monthsofexecution_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StandingOrderDetails:
     r"""StandingOrderDetails
     Details of underlying standing orders.
     
     """
     
-    frequency: FrequencyCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequency') }})
-    start_date: date = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startDate'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    day_of_execution: Optional[DayOfExecutionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfExecution') }})
-    end_date: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    execution_rule: Optional[ExecutionRuleEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('executionRule') }})
-    limit_amount: Optional[Amount] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitAmount') }})
-    months_of_execution: Optional[List[MonthsOfExecutionEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monthsOfExecution') }})
-    multiplicator: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multiplicator') }})
-    within_a_month_flag: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('withinAMonthFlag') }})
+    frequency: shared_frequencycode_enum.FrequencyCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('frequency') }})
+    start_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startDate'), 'encoder': utils.dateisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    day_of_execution: Optional[shared_dayofexecution_enum.DayOfExecutionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dayOfExecution') }})
+    end_date: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('endDate'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    execution_rule: Optional[shared_executionrule_enum.ExecutionRuleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('executionRule') }})
+    limit_amount: Optional[shared_amount.Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('limitAmount') }})
+    months_of_execution: Optional[list[shared_monthsofexecution_enum.MonthsOfExecutionEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('monthsOfExecution') }})
+    multiplicator: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('multiplicator') }})
+    within_a_month_flag: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('withinAMonthFlag') }})
     

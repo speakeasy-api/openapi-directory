@@ -1,30 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import createlicenseeschema as shared_createlicenseeschema
+from ..shared import addresslookupresponseschema as shared_addresslookupresponseschema
+from ..shared import licenseeresponseschema as shared_licenseeresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateLicenseePathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateLicenseeSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateLicenseeRequest:
-    path_params: CreateLicenseePathParams = field()
-    request: shared.CreateLicenseeSchema = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateLicenseeSecurity = field()
+    path_params: CreateLicenseePathParams = dataclasses.field()
+    request: shared_createlicenseeschema.CreateLicenseeSchema = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateLicenseeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateLicenseeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    address_lookup_response_schema: Optional[shared.AddressLookupResponseSchema] = field(default=None)
-    licensee_response_schema: Optional[shared.LicenseeResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    address_lookup_response_schema: Optional[shared_addresslookupresponseschema.AddressLookupResponseSchema] = dataclasses.field(default=None)
+    licensee_response_schema: Optional[shared_licenseeresponseschema.LicenseeResponseSchema] = dataclasses.field(default=None)
     

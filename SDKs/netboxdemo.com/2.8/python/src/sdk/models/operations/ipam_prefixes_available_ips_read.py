@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import availableip as shared_availableip
 
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailableIpsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailableIpsReadRequest:
-    path_params: IpamPrefixesAvailableIpsReadPathParams = field()
+    path_params: IpamPrefixesAvailableIpsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IpamPrefixesAvailableIpsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    available_ips: Optional[List[shared.AvailableIP]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    available_ips: Optional[list[shared_availableip.AvailableIP]] = dataclasses.field(default=None)
     

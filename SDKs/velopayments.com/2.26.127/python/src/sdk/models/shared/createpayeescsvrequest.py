@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -6,7 +6,7 @@ from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import payeetype_enum as shared_payeetype_enum
 
 class CreatePayeesCsvRequestAddressCountryEnum(str, Enum):
     AF = "AF"
@@ -517,35 +517,35 @@ class CreatePayeesCsvRequestPaymentChannelCurrencyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePayeesCsvRequest:
-    address_city: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCity') }})
-    address_country: CreatePayeesCsvRequestAddressCountryEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCountry') }})
-    address_line1: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine1') }})
-    address_zip_or_postcode: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressZipOrPostcode') }})
-    email: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
-    remote_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('remoteId') }})
-    type: PayeeTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    address_county_or_province: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCountyOrProvince') }})
-    address_line2: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine2') }})
-    address_line3: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine3') }})
-    address_line4: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine4') }})
-    challenge_description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('challengeDescription') }})
-    challenge_value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('challengeValue') }})
-    company_ein: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyEIN') }})
-    company_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyName') }})
-    company_operating_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyOperatingName') }})
-    individual_date_of_birth: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualDateOfBirth'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    individual_first_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualFirstName') }})
-    individual_last_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualLastName') }})
-    individual_national_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualNationalIdentification') }})
-    individual_other_names: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualOtherNames') }})
-    individual_title: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualTitle') }})
-    payee_language: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payeeLanguage') }})
-    payment_channel_account_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelAccountName') }})
-    payment_channel_account_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelAccountNumber') }})
-    payment_channel_country_code: Optional[CreatePayeesCsvRequestPaymentChannelCountryCodeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelCountryCode') }})
-    payment_channel_currency: Optional[CreatePayeesCsvRequestPaymentChannelCurrencyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelCurrency') }})
-    payment_channel_iban: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelIban') }})
-    payment_channel_routing_number: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelRoutingNumber') }})
+    address_city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCity') }})
+    address_country: CreatePayeesCsvRequestAddressCountryEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCountry') }})
+    address_line1: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine1') }})
+    address_zip_or_postcode: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressZipOrPostcode') }})
+    email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('email') }})
+    remote_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('remoteId') }})
+    type: shared_payeetype_enum.PayeeTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    address_county_or_province: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressCountyOrProvince') }})
+    address_line2: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine2') }})
+    address_line3: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine3') }})
+    address_line4: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('addressLine4') }})
+    challenge_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('challengeDescription') }})
+    challenge_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('challengeValue') }})
+    company_ein: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyEIN') }})
+    company_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyName') }})
+    company_operating_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('companyOperatingName') }})
+    individual_date_of_birth: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualDateOfBirth'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    individual_first_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualFirstName') }})
+    individual_last_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualLastName') }})
+    individual_national_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualNationalIdentification') }})
+    individual_other_names: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualOtherNames') }})
+    individual_title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('individualTitle') }})
+    payee_language: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('payeeLanguage') }})
+    payment_channel_account_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelAccountName') }})
+    payment_channel_account_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelAccountNumber') }})
+    payment_channel_country_code: Optional[CreatePayeesCsvRequestPaymentChannelCountryCodeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelCountryCode') }})
+    payment_channel_currency: Optional[CreatePayeesCsvRequestPaymentChannelCurrencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelCurrency') }})
+    payment_channel_iban: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelIban') }})
+    payment_channel_routing_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentChannelRoutingNumber') }})
     

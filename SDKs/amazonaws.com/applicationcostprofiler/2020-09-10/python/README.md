@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,20 +25,20 @@ s.config_security(
     
 req = operations.DeleteReportDefinitionRequest(
     path_params=operations.DeleteReportDefinitionPathParams(
-        report_id="laborum",
+        report_id="voluptatem",
     ),
     headers=operations.DeleteReportDefinitionHeaders(
-        x_amz_algorithm="voluptas",
-        x_amz_content_sha256="modi",
-        x_amz_credential="atque",
-        x_amz_date="soluta",
-        x_amz_security_token="tempora",
-        x_amz_signature="qui",
-        x_amz_signed_headers="nihil",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="maiores",
+        x_amz_credential="est",
+        x_amz_date="expedita",
+        x_amz_security_token="qui",
+        x_amz_signature="ex",
+        x_amz_signed_headers="quo",
     ),
 )
     
-res = s.sdk.delete_report_definition(req)
+res = s.delete_report_definition(req)
 
 if res.delete_report_definition_result is not None:
     # handle response

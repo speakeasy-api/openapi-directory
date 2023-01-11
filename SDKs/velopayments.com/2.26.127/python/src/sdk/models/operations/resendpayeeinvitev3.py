@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import invitepayeerequest as shared_invitepayeerequest
 
 
-@dataclass
+@dataclasses.dataclass
 class ResendPayeeInviteV3PathParams:
-    payee_id: str = field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
+    payee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payeeId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResendPayeeInviteV3Request:
-    path_params: ResendPayeeInviteV3PathParams = field()
-    request: shared.InvitePayeeRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ResendPayeeInviteV3PathParams = dataclasses.field()
+    request: shared_invitepayeerequest.InvitePayeeRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ResendPayeeInviteV3Response:
-    content_type: str = field()
-    status_code: int = field()
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
-    inline_response_409: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
+    inline_response_409: Optional[Any] = dataclasses.field(default=None)
     

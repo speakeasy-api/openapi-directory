@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,8 +23,8 @@ req = operations.GetCertificatePdfRequest(
         ),
     ),
     request=shared.CertificateRequest(
-        beneficiary_id="dolores",
-        mobile="modi",
+        beneficiary_id="et",
+        mobile="vitae",
     ),
 )
     

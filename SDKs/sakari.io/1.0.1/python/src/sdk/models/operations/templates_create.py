@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import templaterequest as shared_templaterequest
+from ..shared import templatesresponse as shared_templatesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesCreatePathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesCreateSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesCreateRequest:
-    path_params: TemplatesCreatePathParams = field()
-    security: TemplatesCreateSecurity = field()
-    request: Optional[shared.TemplateRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: TemplatesCreatePathParams = dataclasses.field()
+    security: TemplatesCreateSecurity = dataclasses.field()
+    request: Optional[shared_templaterequest.TemplateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TemplatesCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    templates_response: Optional[shared.TemplatesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    templates_response: Optional[shared_templatesresponse.TemplatesResponse] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AttachManagedPolicyToPermissionSetRequest(
     headers=operations.AttachManagedPolicyToPermissionSetHeaders(
-        x_amz_algorithm="nobis",
-        x_amz_content_sha256="possimus",
-        x_amz_credential="voluptate",
-        x_amz_date="illum",
-        x_amz_security_token="iusto",
-        x_amz_signature="sunt",
-        x_amz_signed_headers="saepe",
+        x_amz_algorithm="ea",
+        x_amz_content_sha256="pariatur",
+        x_amz_credential="eligendi",
+        x_amz_date="sit",
+        x_amz_security_token="libero",
+        x_amz_signature="quia",
+        x_amz_signed_headers="ipsa",
         x_amz_target="SWBExternalService.AttachManagedPolicyToPermissionSet",
     ),
     request=shared.AttachManagedPolicyToPermissionSetRequest(
-        instance_arn="quod",
-        managed_policy_arn="ducimus",
-        permission_set_arn="esse",
+        instance_arn="quis",
+        managed_policy_arn="necessitatibus",
+        permission_set_arn="sint",
     ),
 )
     
-res = s.sdk.attach_managed_policy_to_permission_set(req)
+res = s.attach_managed_policy_to_permission_set(req)
 
 if res.attach_managed_policy_to_permission_set_response is not None:
     # handle response

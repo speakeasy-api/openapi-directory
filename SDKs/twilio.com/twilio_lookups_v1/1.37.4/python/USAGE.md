@@ -1,0 +1,41 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.FetchPhoneNumberRequest(
+    security=operations.FetchPhoneNumberSecurity(
+        account_sid_auth_token=shared.SchemeAccountSidAuthToken(
+            password="YOUR_PASSWORD_HERE",
+            username="YOUR_USERNAME_HERE",
+        ),
+    ),
+    path_params=operations.FetchPhoneNumberPathParams(
+        phone_number="enim",
+    ),
+    query_params=operations.FetchPhoneNumberQueryParams(
+        add_ons=[
+            "soluta",
+            "reiciendis",
+        ],
+        add_ons_data={
+            "qui": "ex",
+            "repudiandae": "placeat",
+            "non": "voluptas",
+        },
+        country_code="autem",
+        type=[
+            "autem",
+            "voluptas",
+        ],
+    ),
+)
+    
+res = s.fetch_phone_number(req)
+
+if res.lookups_v1_phone_number is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

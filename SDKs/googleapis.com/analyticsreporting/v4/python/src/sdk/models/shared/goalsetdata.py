@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import goaldata as shared_goaldata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoalSetData:
     r"""GoalSetData
     Represents a set of goals that were reached in an activity.
     """
     
-    goals: Optional[List[GoalData]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('goals') }})
+    goals: Optional[list[shared_goaldata.GoalData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('goals') }})
     

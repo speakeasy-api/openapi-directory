@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -27,22 +26,22 @@ s.config_security(
 req = operations.GetAddClientIDToOpenIDConnectProviderRequest(
     query_params=operations.GetAddClientIDToOpenIDConnectProviderQueryParams(
         action="AddClientIDToOpenIDConnectProvider",
-        client_id="rem",
-        open_id_connect_provider_arn="provident",
+        client_id="aperiam",
+        open_id_connect_provider_arn="earum",
         version="2010-05-08",
     ),
     headers=operations.GetAddClientIDToOpenIDConnectProviderHeaders(
-        x_amz_algorithm="quas",
-        x_amz_content_sha256="dolorum",
-        x_amz_credential="dolores",
-        x_amz_date="aut",
-        x_amz_security_token="sit",
-        x_amz_signature="fugiat",
-        x_amz_signed_headers="doloribus",
+        x_amz_algorithm="earum",
+        x_amz_content_sha256="est",
+        x_amz_credential="error",
+        x_amz_date="ipsa",
+        x_amz_security_token="sint",
+        x_amz_signature="saepe",
+        x_amz_signed_headers="qui",
     ),
 )
     
-res = s.sdk.get_add_client_id_to_open_id_connect_provider(req)
+res = s.get_add_client_id_to_open_id_connect_provider(req)
 
 if res.status_code == 200:
     # handle response

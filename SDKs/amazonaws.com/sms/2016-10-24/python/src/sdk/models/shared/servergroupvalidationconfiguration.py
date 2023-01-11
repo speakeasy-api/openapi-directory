@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import servervalidationconfiguration as shared_servervalidationconfiguration
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ServerGroupValidationConfiguration:
     r"""ServerGroupValidationConfiguration
     Configuration for validating an instance.
     """
     
-    server_group_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverGroupId') }})
-    server_validation_configurations: Optional[List[ServerValidationConfiguration]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverValidationConfigurations') }})
+    server_group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverGroupId') }})
+    server_validation_configurations: Optional[list[shared_servervalidationconfiguration.ServerValidationConfiguration]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serverValidationConfigurations') }})
     

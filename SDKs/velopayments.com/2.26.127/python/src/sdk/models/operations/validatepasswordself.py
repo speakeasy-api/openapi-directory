@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import passwordrequest as shared_passwordrequest
+from ..shared import validatepasswordresponse as shared_validatepasswordresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ValidatePasswordSelfRequest:
-    request: shared.PasswordRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_passwordrequest.PasswordRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidatePasswordSelfResponse:
-    content_type: str = field()
-    status_code: int = field()
-    validate_password_response: Optional[shared.ValidatePasswordResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    validate_password_response: Optional[shared_validatepasswordresponse.ValidatePasswordResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
     

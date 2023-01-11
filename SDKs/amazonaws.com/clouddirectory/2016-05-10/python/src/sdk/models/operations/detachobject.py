@@ -1,60 +1,69 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import accessdeniedexception as shared_accessdeniedexception
+from ..shared import detachobjectresponse as shared_detachobjectresponse
+from ..shared import directorynotenabledexception as shared_directorynotenabledexception
+from ..shared import internalserviceexception as shared_internalserviceexception
+from ..shared import invalidarnexception as shared_invalidarnexception
+from ..shared import limitexceededexception as shared_limitexceededexception
+from ..shared import notnodeexception as shared_notnodeexception
+from ..shared import resourcenotfoundexception as shared_resourcenotfoundexception
+from ..shared import retryableconflictexception as shared_retryableconflictexception
+from ..shared import validationexception as shared_validationexception
 
 
-@dataclass
+@dataclasses.dataclass
 class DetachObjectHeaders:
-    x_amz_data_partition: str = field(metadata={'header': { 'field_name': 'x-amz-data-partition', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_data_partition: str = dataclasses.field(metadata={'header': { 'field_name': 'x-amz-data-partition', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetachObjectRequestBodyParentReference:
     r"""DetachObjectRequestBodyParentReference
     The reference that identifies an object.
     """
     
-    selector: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Selector') }})
+    selector: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Selector') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetachObjectRequestBody:
-    link_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LinkName') }})
-    parent_reference: DetachObjectRequestBodyParentReference = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentReference') }})
+    link_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LinkName') }})
+    parent_reference: DetachObjectRequestBodyParentReference = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentReference') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetachObjectRequest:
-    headers: DetachObjectHeaders = field()
-    request: DetachObjectRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: DetachObjectHeaders = dataclasses.field()
+    request: DetachObjectRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetachObjectResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied_exception: Optional[shared.AccessDeniedException] = field(default=None)
-    detach_object_response: Optional[shared.DetachObjectResponse] = field(default=None)
-    directory_not_enabled_exception: Optional[shared.DirectoryNotEnabledException] = field(default=None)
-    internal_service_exception: Optional[shared.InternalServiceException] = field(default=None)
-    invalid_arn_exception: Optional[shared.InvalidArnException] = field(default=None)
-    limit_exceeded_exception: Optional[shared.LimitExceededException] = field(default=None)
-    not_node_exception: Optional[shared.NotNodeException] = field(default=None)
-    resource_not_found_exception: Optional[shared.ResourceNotFoundException] = field(default=None)
-    retryable_conflict_exception: Optional[shared.RetryableConflictException] = field(default=None)
-    validation_exception: Optional[shared.ValidationException] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied_exception: Optional[shared_accessdeniedexception.AccessDeniedException] = dataclasses.field(default=None)
+    detach_object_response: Optional[shared_detachobjectresponse.DetachObjectResponse] = dataclasses.field(default=None)
+    directory_not_enabled_exception: Optional[shared_directorynotenabledexception.DirectoryNotEnabledException] = dataclasses.field(default=None)
+    internal_service_exception: Optional[shared_internalserviceexception.InternalServiceException] = dataclasses.field(default=None)
+    invalid_arn_exception: Optional[shared_invalidarnexception.InvalidArnException] = dataclasses.field(default=None)
+    limit_exceeded_exception: Optional[shared_limitexceededexception.LimitExceededException] = dataclasses.field(default=None)
+    not_node_exception: Optional[shared_notnodeexception.NotNodeException] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[shared_resourcenotfoundexception.ResourceNotFoundException] = dataclasses.field(default=None)
+    retryable_conflict_exception: Optional[shared_retryableconflictexception.RetryableConflictException] = dataclasses.field(default=None)
+    validation_exception: Optional[shared_validationexception.ValidationException] = dataclasses.field(default=None)
     

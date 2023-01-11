@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import workspacerequest as shared_workspacerequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateWorkspacesRequest:
-    workspaces: List[WorkspaceRequest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Workspaces') }})
+    workspaces: list[shared_workspacerequest.WorkspaceRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Workspaces') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -25,10 +24,10 @@ s.config_security(
 )
     
 req = operations.PostAssetsCorrelationMatrixRequest(
-    request="accusamus",
+    request="aperiam",
 )
     
-res = s.sdk.post_assets_correlation_matrix(req)
+res = s.assets_correlation_matrix.post_assets_correlation_matrix(req)
 
 if res.post_assets_correlation_matrix_200_application_json_object is not None:
     # handle response
@@ -38,22 +37,40 @@ if res.post_assets_correlation_matrix_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Assets Correlation Matrix
 
 * `post_assets_correlation_matrix` - Correlation Matrix
 * `post_assets_correlation_matrix_nearest` - Nearest Correlation Matrix
 * `post_assets_correlation_matrix_shrinkage` - Correlation Matrix Shrinkage
 * `post_assets_correlation_matrix_validation` - Correlation Matrix Validation
+
+### Assets Covariance Matrix
+
 * `post_assets_covariance_matrix` - Covariance Matrix
 * `post_assets_covariance_matrix_sample` - Sample Covariance Matrix
 * `post_assets_covariance_matrix_validation` - Covariance Matrix Validation
+
+### Assets Returns
+
 * `post_assets_returns` - Arithmetic Returns
 * `post_assets_returns_average` - Arithmetic Average Return
+
+### Assets Variance
+
 * `post_assets_variance` - Variance
 * `post_assets_variance_sample` - Sample variance
+
+### Assets Volatility
+
 * `post_assets_volatility` - Volatility
 * `post_assets_volatility_sample` - Sample volatility
+
+### Factors
+
 * `post_factors_residualization` - Residualization
+
+### Portfolio Analysis
+
 * `post_portfolio_analysis_alpha` - Alpha
 * `post_portfolio_analysis_beta` - Beta
 * `post_portfolio_analysis_contributions_return` - Return Contributions
@@ -68,9 +85,15 @@ if res.post_assets_correlation_matrix_200_application_json_object is not None:
 * `post_portfolio_analysis_sharpe_ratio` - Sharpe Ratio
 * `post_portfolio_analysis_tracking_error` - Tracking Error
 * `post_portfolio_analysis_volatility` - Volatility
+
+### Portfolio Construction
+
 * `post_portfolio_construction_investable` - Investable Portfolio
 * `post_portfolio_construction_mimicking` - Mimicking Portfolio
 * `post_portfolio_construction_random` - Random Portfolio
+
+### Portfolio Optimization
+
 * `post_portfolio_optimization_equal_risk_contributions` - Equal Risk Contributions Portfolio
 * `post_portfolio_optimization_equal_sharpe_ratio_contributions` - Equal Sharpe Ratio Contributions Portfolio
 * `post_portfolio_optimization_equal_weighted` - Equal Weighted Portfolio
@@ -84,6 +107,9 @@ if res.post_assets_correlation_matrix_200_application_json_object is not None:
 * `post_portfolio_optimization_minimum_correlation` - Minimum Correlation Portfolio
 * `post_portfolio_optimization_minimum_variance` - Minimum Variance Portfolio
 * `post_portfolio_optimization_most_diversified` - Most Diversified Portfolio
+
+### Portfolio Simulation
+
 * `post_portfolio_simulation_rebalancing_drift_weight` - Drift-weight Portfolio Rebalancing
 * `post_portfolio_simulation_rebalancing_fixed_weight` - Fixed-weight Portfolio Rebalancing
 * `post_portfolio_simulation_rebalancing_random_weight` - Random-weight Portfolio Rebalancing

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class XMLFormatSchemaSignatureKeyInfo:
-    x509_data: Optional[Any] = field(default=None)
+    x509_data: Optional[Any] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class XMLFormatSchemaSignature:
-    key_info: XMLFormatSchemaSignatureKeyInfo = field()
-    signature_value: Optional[Any] = field(default=None)
-    signed_info: Optional[Any] = field(default=None)
+    key_info: XMLFormatSchemaSignatureKeyInfo = dataclasses.field()
+    signature_value: Optional[Any] = dataclasses.field(default=None)
+    signed_info: Optional[Any] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class XMLFormatSchema:
-    certificate_data: List[Any] = field()
-    signature: XMLFormatSchemaSignature = field()
+    certificate_data: list[Any] = dataclasses.field()
+    signature: XMLFormatSchemaSignature = dataclasses.field()
     

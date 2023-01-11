@@ -1,21 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import sellingprivileges as shared_sellingprivileges
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPrivilegesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPrivilegesRequest:
-    security: GetPrivilegesSecurity = field()
+    security: GetPrivilegesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPrivilegesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    selling_privileges: Optional[shared.SellingPrivileges] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    selling_privileges: Optional[shared_sellingprivileges.SellingPrivileges] = dataclasses.field(default=None)
     

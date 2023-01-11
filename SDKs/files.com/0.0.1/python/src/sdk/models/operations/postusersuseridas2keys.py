@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import as2keyentity as shared_as2keyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDAs2KeysPathParams:
-    user_id: int = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDAs2KeysRequestBody:
-    as2_partnership_name: str = field(metadata={'multipart_form': { 'field_name': 'as2_partnership_name' }})
-    public_key: str = field(metadata={'multipart_form': { 'field_name': 'public_key' }})
+    as2_partnership_name: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'as2_partnership_name' }})
+    public_key: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'public_key' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDAs2KeysRequest:
-    path_params: PostUsersUserIDAs2KeysPathParams = field()
-    request: PostUsersUserIDAs2KeysRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PostUsersUserIDAs2KeysPathParams = dataclasses.field()
+    request: PostUsersUserIDAs2KeysRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostUsersUserIDAs2KeysResponse:
-    content_type: str = field()
-    status_code: int = field()
-    as2_key_entity: Optional[shared.As2KeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    as2_key_entity: Optional[shared_as2keyentity.As2KeyEntity] = dataclasses.field(default=None)
     

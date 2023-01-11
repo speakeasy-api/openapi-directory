@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import video_versions as shared_video_versions
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoVersionPathParams:
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 class CreateVideoVersionRequestBodyUploadApproachEnum(str, Enum):
     POST = "post"
@@ -18,31 +19,31 @@ class CreateVideoVersionRequestBodyUploadApproachEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVideoVersionRequestBodyUpload:
-    approach: CreateVideoVersionRequestBodyUploadApproachEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('approach') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    redirect_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('redirect_url') }})
-    size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    approach: CreateVideoVersionRequestBodyUploadApproachEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('approach') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('redirect_url') }})
+    size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateVideoVersionRequestBody:
-    file_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('file_name') }})
-    upload: CreateVideoVersionRequestBodyUpload = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload') }})
+    file_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('file_name') }})
+    upload: CreateVideoVersionRequestBodyUpload = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoVersionRequest:
-    path_params: CreateVideoVersionPathParams = field()
-    request: CreateVideoVersionRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video.version+json' }})
+    path_params: CreateVideoVersionPathParams = dataclasses.field()
+    request: CreateVideoVersionRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video.version+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateVideoVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    video_versions: Optional[shared.VideoVersions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    video_versions: Optional[shared_video_versions.VideoVersions] = dataclasses.field(default=None)
     

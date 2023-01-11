@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import post as shared_post
+from ..shared import topicsentimentoutput as shared_topicsentimentoutput
 
 class TopicSentimentDomainEnum(str, Enum):
     ECOM = "Ecom"
@@ -10,20 +11,20 @@ class TopicSentimentDomainEnum(str, Enum):
     RESTAURANT = "Restaurant"
 
 
-@dataclass
+@dataclasses.dataclass
 class TopicSentimentQueryParams:
-    domain: Optional[TopicSentimentDomainEnum] = field(default=None, metadata={'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': True }})
+    domain: Optional[TopicSentimentDomainEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'domain', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TopicSentimentRequest:
-    query_params: TopicSentimentQueryParams = field()
-    request: Optional[List[shared.Post]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    query_params: TopicSentimentQueryParams = dataclasses.field()
+    request: Optional[list[shared_post.Post]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TopicSentimentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    topic_sentiment_response: Optional[List[shared.TopicSentimentOutput]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    topic_sentiment_response: Optional[list[shared_topicsentimentoutput.TopicSentimentOutput]] = dataclasses.field(default=None)
     

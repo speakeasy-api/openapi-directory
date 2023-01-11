@@ -1,31 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DownloadFileByIDPathParams:
-    file_uuid: str = field(metadata={'path_param': { 'field_name': 'fileUuid', 'style': 'simple', 'explode': False }})
-    item_uuid: str = field(metadata={'path_param': { 'field_name': 'itemUuid', 'style': 'simple', 'explode': False }})
-    vault_uuid: str = field(metadata={'path_param': { 'field_name': 'vaultUuid', 'style': 'simple', 'explode': False }})
+    file_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fileUuid', 'style': 'simple', 'explode': False }})
+    item_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'itemUuid', 'style': 'simple', 'explode': False }})
+    vault_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vaultUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DownloadFileByIDSecurity:
-    connect_token: shared.SchemeConnectToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    connect_token: shared_security.SchemeConnectToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DownloadFileByIDRequest:
-    path_params: DownloadFileByIDPathParams = field()
-    security: DownloadFileByIDSecurity = field()
+    path_params: DownloadFileByIDPathParams = dataclasses.field()
+    security: DownloadFileByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DownloadFileByIDResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    download_file_by_id_200_application_octet_stream_binary_string: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    download_file_by_id_200_application_octet_stream_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

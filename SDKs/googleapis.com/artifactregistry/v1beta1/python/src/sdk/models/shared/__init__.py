@@ -22,3 +22,5 @@ from .tag import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
 from .version import *
+
+__all__ = ["XgafvEnum","AltEnum","Binding","Expr","File","HashTypeEnum","Hash","ListFilesResponse","ListLocationsResponse","ListPackagesResponse","ListRepositoriesResponse","ListTagsResponse","ListVersionsResponse","Location","Operation","Package","Policy","RepositoryFormatEnum","Repository","RepositoryInput","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Status","Tag","TestIamPermissionsRequest","TestIamPermissionsResponse","Version"]

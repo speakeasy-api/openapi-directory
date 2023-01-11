@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gatewayroutedata as shared_gatewayroutedata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateGatewayRouteOutput:
-    gateway_route: GatewayRouteData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayRoute') }})
+    gateway_route: shared_gatewayroutedata.GatewayRouteData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gatewayRoute') }})
     

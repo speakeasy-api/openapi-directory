@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class LookupQueryParams:
-    number: List[str] = field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': False }})
-    type: str = field(metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
-    json: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'json', 'style': 'form', 'explode': True }})
+    number: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'number', 'style': 'form', 'explode': False }})
+    type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    json: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'json', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LookupRequest:
-    query_params: LookupQueryParams = field()
+    query_params: LookupQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LookupResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

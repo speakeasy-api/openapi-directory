@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,23 +25,23 @@ s.config_security(
     
 req = operations.AssociateServiceQuotaTemplateRequest(
     headers=operations.AssociateServiceQuotaTemplateHeaders(
-        x_amz_algorithm="ut",
-        x_amz_content_sha256="et",
-        x_amz_credential="est",
-        x_amz_date="consectetur",
-        x_amz_security_token="dignissimos",
-        x_amz_signature="ut",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="dolore",
+        x_amz_content_sha256="eveniet",
+        x_amz_credential="aut",
+        x_amz_date="velit",
+        x_amz_security_token="omnis",
+        x_amz_signature="amet",
+        x_amz_signed_headers="numquam",
         x_amz_target="ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
     ),
     request={
-        "veritatis": "molestiae",
-        "ad": "aut",
-        "esse": "rerum",
+        "ex": "id",
+        "ea": "non",
+        "non": "quam",
     },
 )
     
-res = s.sdk.associate_service_quota_template(req)
+res = s.associate_service_quota_template(req)
 
 if res.associate_service_quota_template_response is not None:
     # handle response

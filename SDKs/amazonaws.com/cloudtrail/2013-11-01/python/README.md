@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,31 +25,31 @@ s.config_security(
     
 req = operations.AddTagsRequest(
     headers=operations.AddTagsHeaders(
-        x_amz_algorithm="dolorem",
-        x_amz_content_sha256="odit",
-        x_amz_credential="maxime",
+        x_amz_algorithm="est",
+        x_amz_content_sha256="aut",
+        x_amz_credential="dignissimos",
         x_amz_date="et",
-        x_amz_security_token="ipsa",
-        x_amz_signature="dolore",
-        x_amz_signed_headers="est",
+        x_amz_security_token="alias",
+        x_amz_signature="vitae",
+        x_amz_signed_headers="ipsum",
         x_amz_target="com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
     ),
     request=shared.AddTagsRequest(
-        resource_id="eveniet",
+        resource_id="magni",
         tags_list=[
             shared.Tag(
-                key="facilis",
-                value="omnis",
+                key="ea",
+                value="dolor",
             ),
             shared.Tag(
-                key="mollitia",
-                value="velit",
+                key="consequatur",
+                value="assumenda",
             ),
         ],
     ),
 )
     
-res = s.sdk.add_tags(req)
+res = s.add_tags(req)
 
 if res.add_tags_response is not None:
     # handle response

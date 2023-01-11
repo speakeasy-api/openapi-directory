@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionPathParams:
-    version_id: str = field(metadata={'path_param': { 'field_name': 'versionId', 'style': 'simple', 'explode': False }})
+    version_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'versionId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionRequest:
-    path_params: GetVersionPathParams = field()
-    security: GetVersionSecurity = field()
+    path_params: GetVersionPathParams = dataclasses.field()
+    security: GetVersionSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

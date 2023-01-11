@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,11 +12,11 @@ class GooglePrivacyDlpV2SensitivityScoreScoreEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2SensitivityScore:
     r"""GooglePrivacyDlpV2SensitivityScore
     Score is a summary of all elements in the data profile. A higher number means more sensitive.
     """
     
-    score: Optional[GooglePrivacyDlpV2SensitivityScoreScoreEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
+    score: Optional[GooglePrivacyDlpV2SensitivityScoreScoreEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('score') }})
     

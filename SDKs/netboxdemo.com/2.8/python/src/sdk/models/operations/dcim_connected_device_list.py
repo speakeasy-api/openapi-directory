@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import device as shared_device
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConnectedDeviceListQueryParams:
-    peer_device: str = field(metadata={'query_param': { 'field_name': 'peer_device', 'style': 'form', 'explode': True }})
-    peer_interface: str = field(metadata={'query_param': { 'field_name': 'peer_interface', 'style': 'form', 'explode': True }})
+    peer_device: str = dataclasses.field(metadata={'query_param': { 'field_name': 'peer_device', 'style': 'form', 'explode': True }})
+    peer_interface: str = dataclasses.field(metadata={'query_param': { 'field_name': 'peer_interface', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConnectedDeviceListRequest:
-    query_params: DcimConnectedDeviceListQueryParams = field()
+    query_params: DcimConnectedDeviceListQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConnectedDeviceListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device: Optional[shared.Device] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device: Optional[shared_device.Device] = dataclasses.field(default=None)
     

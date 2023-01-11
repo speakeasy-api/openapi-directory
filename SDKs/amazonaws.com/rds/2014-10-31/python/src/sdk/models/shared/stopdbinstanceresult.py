@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbinstance as shared_dbinstance
 
 
-@dataclass
+@dataclasses.dataclass
 class StopDbInstanceResult:
-    db_instance: Optional[DbInstance] = field(default=None)
+    db_instance: Optional[shared_dbinstance.DbInstance] = dataclasses.field(default=None)
     

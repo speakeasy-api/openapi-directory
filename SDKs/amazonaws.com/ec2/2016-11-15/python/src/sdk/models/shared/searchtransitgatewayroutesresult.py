@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchTransitGatewayRoutesResult:
-    additional_routes_available: Optional[bool] = field(default=None)
-    routes: Optional[List[TransitGatewayRoute]] = field(default=None)
+    additional_routes_available: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    routes: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

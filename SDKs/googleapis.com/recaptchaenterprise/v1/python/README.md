@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,34 +20,32 @@ req = operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest(
     security=operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams(
-        name="ipsum",
+        name="vel",
     ),
     query_params=operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams(
-        dollar_xgafv="1",
-        access_token="ut",
-        alt="media",
-        callback="voluptates",
-        fields="possimus",
-        key="ipsa",
-        oauth_token="sint",
-        pretty_print=True,
-        quota_user="exercitationem",
-        upload_type="et",
-        upload_protocol="qui",
+        dollar_xgafv="2",
+        access_token="sint",
+        alt="json",
+        callback="voluptatem",
+        fields="eligendi",
+        key="ratione",
+        oauth_token="exercitationem",
+        pretty_print=False,
+        quota_user="voluptatem",
+        upload_type="qui",
+        upload_protocol="cumque",
     ),
     request=shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest(
-        annotation="ANNOTATION_UNSPECIFIED",
-        hashed_account_id="quaerat",
+        annotation="FRAUDULENT",
+        hashed_account_id="ullam",
         reasons=[
-            "INITIATED_TWO_FACTOR",
             "INCORRECT_PASSWORD",
-            "REFUND_FRAUD",
         ],
     ),
 )

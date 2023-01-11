@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import validationauthority as shared_validationauthority
 
 
-@dataclass
+@dataclasses.dataclass
 class FindClientValidatorByIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindClientValidatorByIDSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindClientValidatorByIDRequest:
-    path_params: FindClientValidatorByIDPathParams = field()
-    security: FindClientValidatorByIDSecurity = field()
+    path_params: FindClientValidatorByIDPathParams = dataclasses.field()
+    security: FindClientValidatorByIDSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindClientValidatorByIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    validation_authority: Optional[shared.ValidationAuthority] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    validation_authority: Optional[shared_validationauthority.ValidationAuthority] = dataclasses.field(default=None)
     

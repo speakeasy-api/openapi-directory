@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchdisassociateapprovalruletemplatefromrepositorieserror as shared_batchdisassociateapprovalruletemplatefromrepositorieserror
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput:
-    disassociated_repository_names: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('disassociatedRepositoryNames') }})
-    errors: List[BatchDisassociateApprovalRuleTemplateFromRepositoriesError] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    disassociated_repository_names: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('disassociatedRepositoryNames') }})
+    errors: list[shared_batchdisassociateapprovalruletemplatefromrepositorieserror.BatchDisassociateApprovalRuleTemplateFromRepositoriesError] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

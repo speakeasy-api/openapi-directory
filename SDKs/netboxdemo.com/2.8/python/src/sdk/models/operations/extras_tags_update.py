@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import tag as shared_tag
+from ..shared import tag as shared_tag
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTagsUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTagsUpdateRequest:
-    path_params: ExtrasTagsUpdatePathParams = field()
-    request: shared.TagInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ExtrasTagsUpdatePathParams = dataclasses.field()
+    request: shared_tag.TagInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasTagsUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tag: Optional[shared.Tag] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tag: Optional[shared_tag.Tag] = dataclasses.field(default=None)
     

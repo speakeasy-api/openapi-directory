@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import apigatewaygateway as shared_apigatewaygateway
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ApigatewayListGatewaysResponse:
     r"""ApigatewayListGatewaysResponse
     Response message for ApiGatewayService.ListGateways
     """
     
-    gateways: Optional[List[ApigatewayGateway]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gateways') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    unreachable_locations: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachableLocations') }})
+    gateways: Optional[list[shared_apigatewaygateway.ApigatewayGateway]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gateways') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    unreachable_locations: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachableLocations') }})
     

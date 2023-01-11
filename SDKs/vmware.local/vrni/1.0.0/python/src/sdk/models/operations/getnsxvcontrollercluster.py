@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import nsxcontrollerdatacollection as shared_nsxcontrollerdatacollection
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxvControllerClusterPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxvControllerClusterSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxvControllerClusterRequest:
-    path_params: GetNsxvControllerClusterPathParams = field()
-    security: GetNsxvControllerClusterSecurity = field()
+    path_params: GetNsxvControllerClusterPathParams = dataclasses.field()
+    security: GetNsxvControllerClusterSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNsxvControllerClusterResponse:
-    content_type: str = field()
-    status_code: int = field()
-    nsx_controller_data_collection: Optional[shared.NsxControllerDataCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    nsx_controller_data_collection: Optional[shared_nsxcontrollerdatacollection.NsxControllerDataCollection] = dataclasses.field(default=None)
     

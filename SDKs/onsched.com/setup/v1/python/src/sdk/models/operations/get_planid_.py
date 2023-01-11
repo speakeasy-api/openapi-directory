@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetPlanIDPathParams:
-    plan_id: str = field(metadata={'path_param': { 'field_name': 'planId', 'style': 'simple', 'explode': False }})
+    plan_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'planId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPlanIDQueryParams:
-    location_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
+    location_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'locationId', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPlanIDRequest:
-    path_params: GetPlanIDPathParams = field()
-    query_params: GetPlanIDQueryParams = field()
+    path_params: GetPlanIDPathParams = dataclasses.field()
+    query_params: GetPlanIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetPlanIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

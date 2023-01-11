@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SchemeClientID:
-    api_key: str = field(metadata={'security': { 'field_name': 'PLAID-CLIENT-ID' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'PLAID-CLIENT-ID' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemePlaidVersion:
-    api_key: str = field(metadata={'security': { 'field_name': 'Plaid-Version' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'Plaid-Version' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SchemeSecret:
-    api_key: str = field(metadata={'security': { 'field_name': 'PLAID-SECRET' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'PLAID-SECRET' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class Security:
-    client_id: SchemeClientID = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    plaid_version: SchemePlaidVersion = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    secret: SchemeSecret = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    client_id: SchemeClientID = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    plaid_version: SchemePlaidVersion = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    secret: SchemeSecret = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     

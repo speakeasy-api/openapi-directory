@@ -15,3 +15,5 @@ from .nexthref import *
 from .prevhref import *
 from .security import *
 from .selfhref import *
+
+__all__ = ["Account","AccountEmbeddedObject","AccountHalResponse","Address","AddressWithTimeZone","FirstHref","LastHref","Links","Location","LocationEmbeddedObject","LocationHalResponse","LocationsEmbeddedObject","LocationsHalResponse","NextHref","PrevHref","SchemeBearerAuth","SelfHref"]

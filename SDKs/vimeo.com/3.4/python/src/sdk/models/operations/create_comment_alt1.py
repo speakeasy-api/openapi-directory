@@ -1,38 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import comment as shared_comment
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateCommentAlt1PathParams:
-    channel_id: float = field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    channel_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'channel_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateCommentAlt1RequestBody:
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCommentAlt1Security:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCommentAlt1Request:
-    path_params: CreateCommentAlt1PathParams = field()
-    request: CreateCommentAlt1RequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.comment+json' }})
-    security: CreateCommentAlt1Security = field()
+    path_params: CreateCommentAlt1PathParams = dataclasses.field()
+    request: CreateCommentAlt1RequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.comment+json' }})
+    security: CreateCommentAlt1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateCommentAlt1Response:
-    content_type: str = field()
-    status_code: int = field()
-    comment: Optional[shared.Comment] = field(default=None)
-    error: Optional[shared.Error] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    comment: Optional[shared_comment.Comment] = dataclasses.field(default=None)
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
     

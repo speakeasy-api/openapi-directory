@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -24,12 +24,12 @@ class DoubleVerifyDisplayViewabilityViewableDuringEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DoubleVerifyDisplayViewability:
     r"""DoubleVerifyDisplayViewability
     Details of DoubleVerify display viewability settings.
     """
     
-    iab: Optional[DoubleVerifyDisplayViewabilityIabEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('iab') }})
-    viewable_during: Optional[DoubleVerifyDisplayViewabilityViewableDuringEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewableDuring') }})
+    iab: Optional[DoubleVerifyDisplayViewabilityIabEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('iab') }})
+    viewable_during: Optional[DoubleVerifyDisplayViewabilityViewableDuringEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewableDuring') }})
     

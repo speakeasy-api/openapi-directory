@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import paymentchannelcountry as shared_paymentchannelcountry
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaymentChannelRulesResponse:
-    bank: Optional[List[PaymentChannelCountry]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bank') }})
+    bank: Optional[list[shared_paymentchannelcountry.PaymentChannelCountry]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bank') }})
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import metrics as shared_metrics
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainedModelMetrics1PathParams:
-    model_id: str = field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
+    model_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'modelId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainedModelMetrics1Security:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainedModelMetrics1Request:
-    path_params: GetTrainedModelMetrics1PathParams = field()
-    security: GetTrainedModelMetrics1Security = field()
+    path_params: GetTrainedModelMetrics1PathParams = dataclasses.field()
+    security: GetTrainedModelMetrics1Security = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTrainedModelMetrics1Response:
-    content_type: str = field()
-    status_code: int = field()
-    metrics: Optional[shared.Metrics] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    metrics: Optional[shared_metrics.Metrics] = dataclasses.field(default=None)
     

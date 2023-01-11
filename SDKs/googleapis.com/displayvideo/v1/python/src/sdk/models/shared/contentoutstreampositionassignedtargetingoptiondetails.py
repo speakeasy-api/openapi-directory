@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -20,24 +20,24 @@ class ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPosi
 
 
 @dataclass_json
-@dataclass
-class ContentOutstreamPositionAssignedTargetingOptionDetailsInput:
-    r"""ContentOutstreamPositionAssignedTargetingOptionDetailsInput
-    Assigned content outstream position targeting option details. This will be populated in the content_outstream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
-    """
-    
-    content_outstream_position: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ContentOutstreamPositionAssignedTargetingOptionDetails:
     r"""ContentOutstreamPositionAssignedTargetingOptionDetails
     Assigned content outstream position targeting option details. This will be populated in the content_outstream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
     """
     
-    ad_type: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adType') }})
-    content_outstream_position: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    ad_type: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('adType') }})
+    content_outstream_position: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class ContentOutstreamPositionAssignedTargetingOptionDetailsInput:
+    r"""ContentOutstreamPositionAssignedTargetingOptionDetailsInput
+    Assigned content outstream position targeting option details. This will be populated in the content_outstream_position_details field when targeting_type is `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
+    """
+    
+    content_outstream_position: Optional[ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentOutstreamPosition') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     

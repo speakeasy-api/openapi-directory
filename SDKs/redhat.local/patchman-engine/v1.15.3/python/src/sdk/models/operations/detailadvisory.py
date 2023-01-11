@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import controllers_advisorydetailresponse as shared_controllers_advisorydetailresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DetailAdvisoryPathParams:
-    advisory_id: str = field(metadata={'path_param': { 'field_name': 'advisory_id', 'style': 'simple', 'explode': False }})
+    advisory_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'advisory_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetailAdvisorySecurity:
-    rh_identity: shared.SchemeRhIdentity = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    rh_identity: shared_security.SchemeRhIdentity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetailAdvisoryRequest:
-    path_params: DetailAdvisoryPathParams = field()
-    security: DetailAdvisorySecurity = field()
+    path_params: DetailAdvisoryPathParams = dataclasses.field()
+    security: DetailAdvisorySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DetailAdvisoryResponse:
-    content_type: str = field()
-    status_code: int = field()
-    controllers_advisory_detail_response: Optional[shared.ControllersAdvisoryDetailResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    controllers_advisory_detail_response: Optional[shared_controllers_advisorydetailresponse.ControllersAdvisoryDetailResponse] = dataclasses.field(default=None)
     

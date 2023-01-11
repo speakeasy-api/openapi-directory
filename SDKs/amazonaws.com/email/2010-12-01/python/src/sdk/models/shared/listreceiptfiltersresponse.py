@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import receiptfilter as shared_receiptfilter
 
 
-@dataclass
+@dataclasses.dataclass
 class ListReceiptFiltersResponse:
     r"""ListReceiptFiltersResponse
     A list of IP address filters that exist under your AWS account.
     """
     
-    filters: Optional[List[ReceiptFilter]] = field(default=None)
+    filters: Optional[list[shared_receiptfilter.ReceiptFilter]] = dataclasses.field(default=None)
     

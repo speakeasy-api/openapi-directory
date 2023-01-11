@@ -1,16 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pointofinterest as shared_pointofinterest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CategoryDetails:
-    r"""CategoryDetails
-    Provides information about the category rule that was matched.
-    """
-    
-    points_of_interest: List[PointOfInterest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PointsOfInterest') }})
+    points_of_interest: Optional[list[shared_pointofinterest.PointOfInterest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('PointsOfInterest') }})
     

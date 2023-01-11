@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import spotsetcreate as shared_spotsetcreate
+from ..shared import responsedefaultresource as shared_responsedefaultresource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddSpotSetPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddSpotSetRequest:
-    path_params: AddSpotSetPathParams = field()
-    request: shared.SpotSetCreateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AddSpotSetPathParams = dataclasses.field()
+    request: shared_spotsetcreate.SpotSetCreateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddSpotSetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_default_resource: Optional[shared.ResponseDefaultResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_default_resource: Optional[shared_responsedefaultresource.ResponseDefaultResource] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import responselistresource as shared_responselistresource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddItemIdsSpotListPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddItemIdsSpotListRequest:
-    path_params: AddItemIdsSpotListPathParams = field()
-    request: List[str] = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AddItemIdsSpotListPathParams = dataclasses.field()
+    request: list[str] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddItemIdsSpotListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    response_list_resource: Optional[shared.ResponseListResource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    response_list_resource: Optional[shared_responselistresource.ResponseListResource] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -28,44 +27,44 @@ req = operations.AsyncClusteringProblemRequest(
     request=shared.ClusterRequest(
         configuration=shared.ClusterConfiguration(
             clustering=shared.ClusterConfigurationClustering(
-                max_quantity=17.200001,
-                min_quantity=37.200001,
-                num_clusters=98.199997,
+                max_quantity=59.099998,
+                min_quantity=79.099998,
+                num_clusters=14.100000,
             ),
-            response_type="hic",
+            response_type="nesciunt",
             routing=shared.ClusterConfigurationRouting(
-                cost_per_meter=62.099998,
-                cost_per_second=98.199997,
-                profile="et",
+                cost_per_meter=84.099998,
+                cost_per_second=47.200001,
+                profile="voluptatem",
             ),
         ),
         customers=[
             shared.ClusterCustomer(
                 address=shared.ClusterCustomerAddress(
-                    lat=44.099998,
-                    lon=79.199997,
-                    street_hint="nam",
-                ),
-                id="vel",
-                quantity=12.100000,
-            ),
-            shared.ClusterCustomer(
-                address=shared.ClusterCustomerAddress(
-                    lat=74.099998,
+                    lat=43.200001,
                     lon=96.199997,
-                    street_hint="quod",
+                    street_hint="quis",
                 ),
-                id="consequatur",
-                quantity=80.099998,
+                id="laborum",
+                quantity=43.099998,
             ),
             shared.ClusterCustomer(
                 address=shared.ClusterCustomerAddress(
-                    lat=63.200001,
-                    lon=47.200001,
-                    street_hint="sed",
+                    lat=32.099998,
+                    lon=7.200000,
+                    street_hint="atque",
                 ),
-                id="dolores",
-                quantity=32.200001,
+                id="quo",
+                quantity=34.099998,
+            ),
+            shared.ClusterCustomer(
+                address=shared.ClusterCustomerAddress(
+                    lat=67.099998,
+                    lon=52.099998,
+                    street_hint="aut",
+                ),
+                id="et",
+                quantity=8.100000,
             ),
         ],
     ),
@@ -114,8 +113,8 @@ if res.job_id is not None:
 
 ### Routing API
 
-* `get_route_info` - Coverage information
 * `get_route` - GET Route Endpoint
+* `get_route_info` - Coverage information
 * `post_route` - POST Route Endpoint
 
 <!-- End SDK Available Operations -->

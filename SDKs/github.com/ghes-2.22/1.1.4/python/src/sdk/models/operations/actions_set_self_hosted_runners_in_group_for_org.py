@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelfHostedRunnersInGroupForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    runner_group_id: int = field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    runner_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelfHostedRunnersInGroupForOrgRequestBody:
-    runners: List[int] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runners') }})
+    runners: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runners') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelfHostedRunnersInGroupForOrgRequest:
-    path_params: ActionsSetSelfHostedRunnersInGroupForOrgPathParams = field()
-    request: Optional[ActionsSetSelfHostedRunnersInGroupForOrgRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ActionsSetSelfHostedRunnersInGroupForOrgPathParams = dataclasses.field()
+    request: Optional[ActionsSetSelfHostedRunnersInGroupForOrgRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsSetSelfHostedRunnersInGroupForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

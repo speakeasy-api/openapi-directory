@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import bundleentity as shared_bundleentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBundlesIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBundlesIDRequest:
-    path_params: GetBundlesIDPathParams = field()
+    path_params: GetBundlesIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBundlesIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bundle_entity: Optional[shared.BundleEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bundle_entity: Optional[shared_bundleentity.BundleEntity] = dataclasses.field(default=None)
     

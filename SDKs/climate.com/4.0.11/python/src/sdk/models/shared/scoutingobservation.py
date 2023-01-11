@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List
+from typing import Any
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import scoutingtag as shared_scoutingtag
 
 class ScoutingObservationLocationDisplayColorEnum(str, Enum):
     NUMBER_307AF7 = "#307af7"
@@ -27,18 +27,18 @@ class ScoutingObservationTimespanEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ScoutingObservation:
-    end_time: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    field_ids: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldIds') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    location: Any = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
-    location_display_color: ScoutingObservationLocationDisplayColorEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationDisplayColor') }})
-    note: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
-    start_time: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    status: ScoutingObservationStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    tags: List[ScoutingTag] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
-    timespan: ScoutingObservationTimespanEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timespan') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    updated_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updatedAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    end_time: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('endTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    field_ids: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('fieldIds') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    location: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('location') }})
+    location_display_color: ScoutingObservationLocationDisplayColorEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('locationDisplayColor') }})
+    note: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('note') }})
+    start_time: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('startTime'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    status: ScoutingObservationStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    tags: list[shared_scoutingtag.ScoutingTag] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    timespan: ScoutingObservationTimespanEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timespan') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('updatedAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

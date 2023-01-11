@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabledevicebaytemplate as shared_writabledevicebaytemplate
+from ..shared import devicebaytemplate as shared_devicebaytemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesPartialUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesPartialUpdateRequest:
-    path_params: DcimDeviceBayTemplatesPartialUpdatePathParams = field()
-    request: shared.WritableDeviceBayTemplateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimDeviceBayTemplatesPartialUpdatePathParams = dataclasses.field()
+    request: shared_writabledevicebaytemplate.WritableDeviceBayTemplateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBayTemplatesPartialUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_bay_template: Optional[shared.DeviceBayTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_bay_template: Optional[shared_devicebaytemplate.DeviceBayTemplate] = dataclasses.field(default=None)
     

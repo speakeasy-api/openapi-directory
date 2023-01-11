@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import gettransactionsrequest as shared_gettransactionsrequest
+from ..shared import gettransactions as shared_gettransactions
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsRequest:
-    headers: GetTransactionsHeaders = field()
-    request: shared.GetTransactionsRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetTransactionsHeaders = dataclasses.field()
+    request: shared_gettransactionsrequest.GetTransactionsRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTransactionsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_transactions: Optional[shared.GetTransactions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_transactions: Optional[shared_gettransactions.GetTransactions] = dataclasses.field(default=None)
     

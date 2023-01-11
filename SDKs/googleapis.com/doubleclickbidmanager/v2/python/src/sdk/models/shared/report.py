@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import reportkey as shared_reportkey
+from ..shared import reportmetadata as shared_reportmetadata
+from ..shared import parameters as shared_parameters
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Report:
     r"""Report
     Represents a report.
     """
     
-    key: Optional[ReportKey] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
-    metadata: Optional[ReportMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
-    params: Optional[Parameters] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('params') }})
+    key: Optional[shared_reportkey.ReportKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('key') }})
+    metadata: Optional[shared_reportmetadata.ReportMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('metadata') }})
+    params: Optional[shared_parameters.Parameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('params') }})
     

@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportGobdRegistrierkassenRegistrierkasseUUIDPathParams:
-    registrierkasse_uuid: str = field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
+    registrierkasse_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registrierkasseUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportGobdRegistrierkassenRegistrierkasseUUIDQueryParams:
-    after: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
-    before: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
+    after: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'after', 'style': 'form', 'explode': True }})
+    before: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'before', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportGobdRegistrierkassenRegistrierkasseUUIDRequest:
-    path_params: GetExportGobdRegistrierkassenRegistrierkasseUUIDPathParams = field()
-    query_params: GetExportGobdRegistrierkassenRegistrierkasseUUIDQueryParams = field()
+    path_params: GetExportGobdRegistrierkassenRegistrierkasseUUIDPathParams = dataclasses.field()
+    query_params: GetExportGobdRegistrierkassenRegistrierkasseUUIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportGobdRegistrierkassenRegistrierkasseUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

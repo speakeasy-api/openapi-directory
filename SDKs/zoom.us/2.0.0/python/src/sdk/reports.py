@@ -1,0 +1,532 @@
+import requests
+from typing import Any,Optional
+from sdk.models import operations
+from . import utils
+
+class Reports:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def report_cloud_recording(self, request: operations.ReportCloudRecordingRequest) -> operations.ReportCloudRecordingResponse:
+        r"""Get cloud recording usage report
+        Retrieve cloud recording usage report for a specified period. You can only get cloud recording reports that is one day ealier than the current date and for the most recent period of 6 months. The date gap between from and to dates should be smaller or equal to 30 days. <br>
+        **Prerequisites**<br>
+        * Pro or higher plan.<br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/cloud_recording"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportCloudRecordingResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportCloudRecording200ApplicationJSON])
+                res.report_cloud_recording_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+
+        return res
+
+    
+    def report_daily(self, request: operations.ReportDailyRequest) -> operations.ReportDailyResponse:
+        r"""Get daily usage report
+        Retrieve daily report to access the account-wide usage of Zoom services for each day in a given month. It lists the number of new users, meetings, participants, and meeting minutes.<br>
+        **Prerequisites**<br>
+        * Pro or higher plan.<br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/daily"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportDailyResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[Any])
+                res.report_daily_200_application_json_any = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+
+        return res
+
+    
+    def report_meeting_details(self, request: operations.ReportMeetingDetailsRequest) -> operations.ReportMeetingDetailsResponse:
+        r"""Get meeting detail reports
+        Get a detailed report for a past meeting. <br>
+        **Scopes:** `report:read:admin`<br>
+        \
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan.<br>
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/meetings/{meetingId}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportMeetingDetailsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportMeetingDetails200ApplicationJSON])
+                res.report_meeting_details_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_meeting_participants(self, request: operations.ReportMeetingParticipantsRequest) -> operations.ReportMeetingParticipantsResponse:
+        r"""Get meeting participant reports
+        Get participant report for a past meeting.<br><br>
+        **Scopes:** `report:read:admin`<br>
+        \
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan.<br>
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/meetings/{meetingId}/participants", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportMeetingParticipantsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportMeetingParticipants200ApplicationJSON])
+                res.report_meeting_participants_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_meeting_polls(self, request: operations.ReportMeetingPollsRequest) -> operations.ReportMeetingPollsResponse:
+        r"""Get meeting poll reports
+        Retrieve a report of [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) results for a past meeting. <br><br>
+        **Scopes:** `report:read:admin`<br>
+        \
+        **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan.<br>
+         
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/meetings/{meetingId}/polls", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportMeetingPollsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportMeetingPolls200ApplicationJSON])
+                res.report_meeting_polls_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_meetings(self, request: operations.ReportMeetingsRequest) -> operations.ReportMeetingsResponse:
+        r"""Get meeting reports
+        Retrieve [report](https://support.zoom.us/hc/en-us/articles/216378603-Meeting-Reporting) on a past meeting for a specified period of time. The time range for the report is limited to a month and the month should fall under the past six months.
+        
+        Meetings will only be returned in the response if the meeting has two or more unique participants.  <br><br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or higher plan.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/users/{userId}/meetings", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportMeetingsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportMeetings200ApplicationJSON])
+                res.report_meetings_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_operation_logs(self, request: operations.ReportOperationLogsRequest) -> operations.ReportOperationLogsResponse:
+        r"""Get operation logs report
+        The [Operations Logs](https://support.zoom.us/hc/en-us/articles/360032748331-Operation-Logs) report allows you to audit admin and user activity, such as adding a new user, changing account settings, and deleting recordings.<br>
+        Use this API to retrieve operation logs report for a specified period of time.<br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or higher plan.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/operationlogs"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportOperationLogsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportOperationLogs200ApplicationJSON])
+                res.report_operation_logs_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+
+        return res
+
+    
+    def report_sign_in_sign_out_activities(self, request: operations.ReportSignInSignOutActivitiesRequest) -> operations.ReportSignInSignOutActivitiesResponse:
+        r"""Get sign In / sign out activity report
+        Retrieve a list of sign in / sign out activity logs [report](https://support.zoom.us/hc/en-us/articles/201363213-Getting-Started-with-Reports) of users under a Zoom account.<br>
+        **Prerequisites**<br>
+        * Pro or higher plan.<br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/activities"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportSignInSignOutActivitiesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportSignInSignOutActivities200ApplicationJSON])
+                res.report_sign_in_sign_out_activities_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+
+        return res
+
+    
+    def report_telephone(self, request: operations.ReportTelephoneRequest) -> operations.ReportTelephoneResponse:
+        r"""Get telephone reports
+        The [telephone report](https://support.zoom.us/hc/en-us/articles/206514816-Telephone-reports) allows you to view who dialed into meetings via phone (Audio Conferencing or SIP Connected Audio) and which number they dialed into and other details. Use this API to get telephone report for a specified period of time.
+        
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>**Prerequisites:**<br>
+        * Pro or higher plan.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/telephone"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportTelephoneResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportTelephone200ApplicationJSON])
+                res.report_telephone_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+
+        return res
+
+    
+    def report_users(self, request: operations.ReportUsersRequest) -> operations.ReportUsersResponse:
+        r"""Get active/inactive host reports
+        A user is considered to be an active host during the month specified in the \"from\" and \"to\" range, if the user has hosted at least one meeting during this period. If the user didn't host any meetings during this period, the user is considered to be inactive.<br>The Active Hosts report displays a list of meetings, participants, and meeting minutes for a specific time range, up to one month. The month should fall within the last six months.<br>The Inactive Hosts report pulls a list of users who were not active during a specific period of time. 
+        Use this API to retrieve an active or inactive host report for a specified period of time. The time range for the report is limited to a month and the month should fall under the past six months. <br>You can specify the type of report and date range using the query parameters.<br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or higher plan.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/report/users"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportUsersResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportUsers200ApplicationJSON])
+                res.report_users_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+
+        return res
+
+    
+    def report_webinar_details(self, request: operations.ReportWebinarDetailsRequest) -> operations.ReportWebinarDetailsResponse:
+        r"""Get webinar detail reports
+        Retrieve a [report](https://support.zoom.us/hc/en-us/articles/201393719-Webinar-Reporting) containing past webinar details.  <br><br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or higher plan with Webinar add-on.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/webinars/{webinarId}", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportWebinarDetailsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportWebinarDetails200ApplicationJSON])
+                res.report_webinar_details_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_webinar_participants(self, request: operations.ReportWebinarParticipantsRequest) -> operations.ReportWebinarParticipantsResponse:
+        r"""Get webinar participant reports
+        Get detailed report on each attendee of a webinar.<br><br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan with Webinar add-on enabled.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/webinars/{webinarId}/participants", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportWebinarParticipantsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportWebinarParticipants200ApplicationJSON])
+                res.report_webinar_participants_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 300:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_webinar_polls(self, request: operations.ReportWebinarPollsRequest) -> operations.ReportWebinarPollsResponse:
+        r"""Get webinar poll reports
+        Retrieve a report on past [webinar polls](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars).<br><br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan with Webinar add-on enabled.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/webinars/{webinarId}/polls", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportWebinarPollsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportWebinarPolls200ApplicationJSON])
+                res.report_webinar_polls_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def report_webinar_qa(self, request: operations.ReportWebinarQaRequest) -> operations.ReportWebinarQaResponse:
+        r"""Get webinar Q&A report
+        The Question & Answer (Q&A) feature for webinars allows attendees to ask questions during the webinar and for the panelists, co-hosts and host to answer their questions.
+        
+        Use this API to retrieve a report on question and answers from past webinars. <br><br>
+        **Scopes:** `report:read:admin`<br>
+         
+         **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+        **Prerequisites:**<br>
+        * Pro or a higher plan with Webinar add-on enabled.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/report/webinars/{webinarId}/qa", request.path_params)
+        
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ReportWebinarQaResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[operations.ReportWebinarQa200ApplicationJSON])
+                res.report_webinar_qa_200_application_json_object = out
+            if utils.match_content_type(content_type, "application/xml"):
+                res.body = r.content
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    

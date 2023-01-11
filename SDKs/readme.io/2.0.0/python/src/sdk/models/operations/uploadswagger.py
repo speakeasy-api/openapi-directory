@@ -1,32 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadSwaggerRequestBodySwagger:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    swagger: str = field(metadata={'multipart_form': { 'field_name': 'swagger' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    swagger: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'swagger' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadSwaggerRequestBody:
-    swagger: Optional[UploadSwaggerRequestBodySwagger] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    swagger: Optional[UploadSwaggerRequestBodySwagger] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadSwaggerSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadSwaggerRequest:
-    request: UploadSwaggerRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: UploadSwaggerSecurity = field()
+    request: UploadSwaggerRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: UploadSwaggerSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadSwaggerResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

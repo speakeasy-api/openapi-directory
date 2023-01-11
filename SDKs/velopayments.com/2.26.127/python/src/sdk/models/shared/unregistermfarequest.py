@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -10,8 +10,8 @@ class UnregisterMfaRequestMfaTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UnregisterMfaRequest:
-    mfa_type: UnregisterMfaRequestMfaTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mfaType') }})
-    verification_code: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verificationCode') }})
+    mfa_type: UnregisterMfaRequestMfaTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mfaType') }})
+    verification_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('verificationCode') }})
     

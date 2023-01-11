@@ -1,37 +1,39 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import employee as shared_employee
+from ..shared import employees as shared_employees
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEmployeePathParams:
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'EmployeeID', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'EmployeeID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEmployeeHeaders:
-    xero_tenant_id: str = field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
+    xero_tenant_id: str = dataclasses.field(metadata={'header': { 'field_name': 'Xero-Tenant-Id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEmployeeSecurity:
-    o_auth2: shared.SchemeOAuth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    o_auth2: shared_security.SchemeOAuth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEmployeeRequest:
-    headers: UpdateEmployeeHeaders = field()
-    path_params: UpdateEmployeePathParams = field()
-    security: UpdateEmployeeSecurity = field()
-    request: Optional[List[shared.EmployeeInput]] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: UpdateEmployeeHeaders = dataclasses.field()
+    path_params: UpdateEmployeePathParams = dataclasses.field()
+    security: UpdateEmployeeSecurity = dataclasses.field()
+    request: Optional[list[shared_employee.EmployeeInput]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEmployeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employees: Optional[shared.Employees] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employees: Optional[shared_employees.Employees] = dataclasses.field(default=None)
     

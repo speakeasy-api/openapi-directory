@@ -20,3 +20,5 @@ from .s3resourceclassificationupdate import *
 from .security import *
 from .updates3resourcesrequest import *
 from .updates3resourcesresult import *
+
+__all__ = ["AssociateMemberAccountRequest","AssociateS3ResourcesRequest","AssociateS3ResourcesResult","ClassificationType","ClassificationTypeUpdate","DisassociateMemberAccountRequest","DisassociateS3ResourcesRequest","DisassociateS3ResourcesResult","FailedS3Resource","ListMemberAccountsRequest","ListMemberAccountsResult","ListS3ResourcesRequest","ListS3ResourcesResult","MemberAccount","S3ContinuousClassificationTypeEnum","S3OneTimeClassificationTypeEnum","S3Resource","S3ResourceClassification","S3ResourceClassificationUpdate","SchemeHmac","Security","UpdateS3ResourcesRequest","UpdateS3ResourcesResult"]

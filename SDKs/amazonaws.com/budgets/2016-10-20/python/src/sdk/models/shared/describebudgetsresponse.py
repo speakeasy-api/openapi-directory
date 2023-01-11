@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import budget as shared_budget
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeBudgetsResponse:
     r"""DescribeBudgetsResponse
      Response of DescribeBudgets 
     """
     
-    budgets: Optional[List[Budget]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Budgets') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    budgets: Optional[list[shared_budget.Budget]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Budgets') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

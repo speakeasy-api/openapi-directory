@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import key as shared_key
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectCheckoutKeyPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
 class PostProjectUsernameProjectCheckoutKeyRequestBodyEnum(str, Enum):
     DEPLOY_KEY = "deploy-key"
     GITHUB_USER_KEY = "github-user-key"
 
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectCheckoutKeyRequest:
-    path_params: PostProjectUsernameProjectCheckoutKeyPathParams = field()
-    request: Optional[PostProjectUsernameProjectCheckoutKeyRequestBodyEnum] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PostProjectUsernameProjectCheckoutKeyPathParams = dataclasses.field()
+    request: Optional[PostProjectUsernameProjectCheckoutKeyRequestBodyEnum] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostProjectUsernameProjectCheckoutKeyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    key: Optional[shared.Key] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    key: Optional[shared_key.Key] = dataclasses.field(default=None)
     

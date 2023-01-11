@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,57 +25,71 @@ s.config_security(
     
 req = operations.AddFacetToObjectRequest(
     headers=operations.AddFacetToObjectHeaders(
-        x_amz_algorithm="ex",
-        x_amz_content_sha256="sint",
-        x_amz_credential="eos",
-        x_amz_date="quas",
-        x_amz_security_token="et",
-        x_amz_signature="temporibus",
-        x_amz_signed_headers="voluptas",
-        x_amz_data_partition="tempora",
+        x_amz_algorithm="doloremque",
+        x_amz_content_sha256="animi",
+        x_amz_credential="exercitationem",
+        x_amz_date="quia",
+        x_amz_security_token="ut",
+        x_amz_signature="hic",
+        x_amz_signed_headers="veniam",
+        x_amz_data_partition="et",
     ),
     request=operations.AddFacetToObjectRequestBody(
         object_attribute_list=[
             shared.AttributeKeyAndValue(
                 key=shared.AttributeKey(
-                    facet_name="deleniti",
-                    name="eum",
-                    schema_arn="ut",
+                    facet_name="animi",
+                    name="atque",
+                    schema_arn="omnis",
                 ),
                 value=shared.TypedAttributeValue(
-                    binary_value="dolorum",
+                    binary_value="unde",
                     boolean_value=True,
-                    datetime_value="1976-08-08T07:42:07Z",
-                    number_value="inventore",
-                    string_value="exercitationem",
+                    datetime_value="2005-01-16T03:32:55Z",
+                    number_value="et",
+                    string_value="quia",
                 ),
             ),
             shared.AttributeKeyAndValue(
                 key=shared.AttributeKey(
-                    facet_name="voluptas",
-                    name="neque",
-                    schema_arn="libero",
+                    facet_name="qui",
+                    name="voluptates",
+                    schema_arn="consequatur",
                 ),
                 value=shared.TypedAttributeValue(
-                    binary_value="sit",
+                    binary_value="explicabo",
+                    boolean_value=True,
+                    datetime_value="1975-12-26T09:00:02Z",
+                    number_value="ipsum",
+                    string_value="autem",
+                ),
+            ),
+            shared.AttributeKeyAndValue(
+                key=shared.AttributeKey(
+                    facet_name="perferendis",
+                    name="dolorem",
+                    schema_arn="odit",
+                ),
+                value=shared.TypedAttributeValue(
+                    binary_value="maxime",
                     boolean_value=False,
-                    datetime_value="2008-12-07T12:03:55Z",
-                    number_value="est",
-                    string_value="cupiditate",
+                    datetime_value="2000-05-18T09:59:51Z",
+                    number_value="dolore",
+                    string_value="est",
                 ),
             ),
         ],
         object_reference=operations.AddFacetToObjectRequestBodyObjectReference(
-            selector="culpa",
+            selector="velit",
         ),
         schema_facet=operations.AddFacetToObjectRequestBodySchemaFacet(
-            facet_name="est",
-            schema_arn="veniam",
+            facet_name="eveniet",
+            schema_arn="nam",
         ),
     ),
 )
     
-res = s.sdk.add_facet_to_object(req)
+res = s.add_facet_to_object(req)
 
 if res.add_facet_to_object_response is not None:
     # handle response

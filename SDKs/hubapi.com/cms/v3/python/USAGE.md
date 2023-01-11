@@ -1,0 +1,37 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.GetCmsV3DomainsGetPageRequest(
+    security=operations.GetCmsV3DomainsGetPageSecurity(
+        private_apps_legacy=shared.SchemePrivateAppsLegacy(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    ),
+    query_params=operations.GetCmsV3DomainsGetPageQueryParams(
+        after="sint",
+        archived=True,
+        created_after="1979-06-18T08:47:49Z",
+        created_at="1996-07-01T20:51:37Z",
+        created_before="1975-07-12T06:10:33Z",
+        limit=5059578240158743690,
+        sort=[
+            "officiis",
+            "provident",
+            "aspernatur",
+        ],
+        updated_after="2008-10-11T04:42:47Z",
+        updated_at="1970-09-06T10:10:38Z",
+        updated_before="2002-08-08T17:15:15Z",
+    ),
+)
+    
+res = s.domains.get_cms_v3_domains_get_page(req)
+
+if res.collection_response_with_total_domain_forward_paging is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

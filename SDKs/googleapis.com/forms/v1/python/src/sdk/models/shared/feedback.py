@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import extramaterial as shared_extramaterial
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Feedback:
     r"""Feedback
     Feedback for a respondent about their response to a question.
     """
     
-    material: Optional[List[ExtraMaterial]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('material') }})
-    text: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
+    material: Optional[list[shared_extramaterial.ExtraMaterial]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('material') }})
+    text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('text') }})
     

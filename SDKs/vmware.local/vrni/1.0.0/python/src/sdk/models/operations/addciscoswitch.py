@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import ciscoswitchdatasourcerequest as shared_ciscoswitchdatasourcerequest
+from ..shared import apierror as shared_apierror
+from ..shared import ciscoswitchdatasource as shared_ciscoswitchdatasource
 
 
-@dataclass
+@dataclasses.dataclass
 class AddCiscoSwitchSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddCiscoSwitchRequest:
-    security: AddCiscoSwitchSecurity = field()
-    request: Optional[shared.CiscoSwitchDataSourceRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: AddCiscoSwitchSecurity = dataclasses.field()
+    request: Optional[shared_ciscoswitchdatasourcerequest.CiscoSwitchDataSourceRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddCiscoSwitchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    cisco_switch_data_source: Optional[shared.CiscoSwitchDataSource] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    cisco_switch_data_source: Optional[shared_ciscoswitchdatasource.CiscoSwitchDataSource] = dataclasses.field(default=None)
     

@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import clickwrapentity as shared_clickwrapentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsQueryParams:
-    cursor: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsRequest:
-    query_params: GetClickwrapsQueryParams = field()
+    query_params: GetClickwrapsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetClickwrapsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    clickwrap_entities: Optional[List[shared.ClickwrapEntity]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    clickwrap_entities: Optional[list[shared_clickwrapentity.ClickwrapEntity]] = dataclasses.field(default=None)
     

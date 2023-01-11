@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class IDSourceEnum(str, Enum):
     ADE = "ADE"
 
 
-@dataclass
+@dataclasses.dataclass
 class IDQueryParams:
-    q: str = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
-    source: IDSourceEnum = field(metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
+    q: str = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    source: IDSourceEnum = dataclasses.field(metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class IDRequest:
-    query_params: IDQueryParams = field()
+    query_params: IDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class IDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    id_200_application_x_suggestions_plus_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    id_200_application_x_suggestions_plus_json_string: Optional[str] = dataclasses.field(default=None)
     

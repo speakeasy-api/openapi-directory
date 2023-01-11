@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowResumePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowResumeRequest:
-    path_params: ProtocolSflowResumePathParams = field()
+    path_params: ProtocolSflowResumePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolSflowResumeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_sflow_resume_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_sflow_resume_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

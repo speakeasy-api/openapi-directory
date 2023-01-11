@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,25 +21,25 @@ req = operations.ApikeysKeysLookupKeyRequest(
         option1=operations.ApikeysKeysLookupKeySecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.ApikeysKeysLookupKeyQueryParams(
-        dollar_xgafv="1",
-        access_token="labore",
-        alt="proto",
-        callback="doloribus",
-        fields="blanditiis",
-        key="labore",
-        key_string="pariatur",
-        oauth_token="natus",
+        dollar_xgafv="2",
+        access_token="quo",
+        alt="json",
+        callback="quis",
+        fields="veniam",
+        key="earum",
+        key_string="omnis",
+        oauth_token="sunt",
         pretty_print=False,
-        quota_user="praesentium",
-        upload_type="minima",
-        upload_protocol="accusantium",
+        quota_user="corrupti",
+        upload_type="quia",
+        upload_protocol="commodi",
     ),
 )
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.GovidRequest(
     security=operations.GovidSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.GovidRequestBody(
         certificate_parameters=operations.GovidRequestBodyCertificateParameters(
-            dob="assumenda",
-            full_name="eaque",
-            regn_no="non",
-            uid="quo",
+            dob="quia",
+            full_name="sint",
+            regn_no="autem",
+            uid="similique",
         ),
-        consent_artifact="accusamus",
+        consent_artifact="et",
         format="pdf",
-        txn_id="ipsa",
+        txn_id="cum",
     ),
 )
     
-res = s.sdk.govid(req)
+res = s.ap_is.govid(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `govid` - ID Card
 * `phcer` - Pharmacist Registration Certificate

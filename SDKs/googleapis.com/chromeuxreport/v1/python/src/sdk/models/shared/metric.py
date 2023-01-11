@@ -1,17 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bin as shared_bin
+from ..shared import percentiles as shared_percentiles
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Metric:
-    r"""Metric
-    A `metric` is a set of user experience data for a single web performance metric, like \"first contentful paint\". It contains a summary histogram of real world Chrome usage as a series of `bins`.
-    """
-    
-    histogram: Optional[List[Bin]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('histogram') }})
-    percentiles: Optional[Percentiles] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percentiles') }})
+    histogram: Optional[list[shared_bin.Bin]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('histogram') }})
+    percentiles: Optional[shared_percentiles.Percentiles] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('percentiles') }})
     

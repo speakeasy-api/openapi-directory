@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
-class SchemeCustomkeys1:
-    api_key: str = field(metadata={'security': { 'field_name': 'X1123' }})
-    
-
-@dataclass
-class SchemeBearerAuth:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
-    
-
-@dataclass
-class SchemeOauthAuthorizeCode:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
-    
-
-@dataclass
-class SchemeOauthsecurity:
-    authorization: str = field(metadata={'security': { 'field_name': 'Authorization' }})
-    
-
-@dataclass
+@dataclasses.dataclass
 class SchemeCustomkey2:
-    api_key: str = field(metadata={'security': { 'field_name': 'X-2' }})
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X-2' }})
+    
+
+@dataclasses.dataclass
+class SchemeCustomkeys1:
+    api_key: str = dataclasses.field(metadata={'security': { 'field_name': 'X1123' }})
+    
+
+@dataclasses.dataclass
+class SchemeBearerAuth:
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
+    
+
+@dataclasses.dataclass
+class SchemeOauthAuthorizeCode:
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
+    
+
+@dataclasses.dataclass
+class SchemeOauthsecurity:
+    authorization: str = dataclasses.field(metadata={'security': { 'field_name': 'Authorization' }})
     

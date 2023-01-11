@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoThumbnailPathParams:
-    picture_id: float = field(metadata={'path_param': { 'field_name': 'picture_id', 'style': 'simple', 'explode': False }})
-    video_id: float = field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
+    picture_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'picture_id', 'style': 'simple', 'explode': False }})
+    video_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'video_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoThumbnailSecurity:
-    oauth2: shared.SchemeOauth2 = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauth2: shared_security.SchemeOauth2 = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoThumbnailRequest:
-    path_params: DeleteVideoThumbnailPathParams = field()
-    security: DeleteVideoThumbnailSecurity = field()
+    path_params: DeleteVideoThumbnailPathParams = dataclasses.field()
+    security: DeleteVideoThumbnailSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteVideoThumbnailResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

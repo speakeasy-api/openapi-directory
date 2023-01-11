@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import errorhandlingconfig as shared_errorhandlingconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RedshiftDestinationProperties:
     r"""RedshiftDestinationProperties
      The properties that are applied when Amazon Redshift is being used as a destination. 
     """
     
-    intermediate_bucket_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('intermediateBucketName') }})
-    object: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
-    bucket_prefix: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucketPrefix') }})
-    error_handling_config: Optional[ErrorHandlingConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorHandlingConfig') }})
+    intermediate_bucket_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('intermediateBucketName') }})
+    object: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('object') }})
+    bucket_prefix: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('bucketPrefix') }})
+    error_handling_config: Optional[shared_errorhandlingconfig.ErrorHandlingConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('errorHandlingConfig') }})
     

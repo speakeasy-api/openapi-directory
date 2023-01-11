@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import picture as shared_picture
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPostersPathParams:
-    ondemand_id: float = field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
+    ondemand_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'ondemand_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPostersQueryParams:
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPostersRequest:
-    path_params: GetVodPostersPathParams = field()
-    query_params: GetVodPostersQueryParams = field()
+    path_params: GetVodPostersPathParams = dataclasses.field()
+    query_params: GetVodPostersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetVodPostersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    pictures: Optional[List[shared.Picture]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    pictures: Optional[list[shared_picture.Picture]] = dataclasses.field(default=None)
     

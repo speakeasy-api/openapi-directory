@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesDeletePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesDeleteRequest:
-    path_params: DcimDeviceRolesDeletePathParams = field()
+    path_params: DcimDeviceRolesDeletePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceRolesDeleteResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

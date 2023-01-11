@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,38 +25,34 @@ s.config_security(
     
 req = operations.CreateSignalingChannelRequest(
     headers=operations.CreateSignalingChannelHeaders(
-        x_amz_algorithm="vel",
-        x_amz_content_sha256="sunt",
-        x_amz_credential="soluta",
-        x_amz_date="alias",
-        x_amz_security_token="aut",
-        x_amz_signature="voluptas",
-        x_amz_signed_headers="dolorum",
+        x_amz_algorithm="error",
+        x_amz_content_sha256="voluptate",
+        x_amz_credential="odit",
+        x_amz_date="exercitationem",
+        x_amz_security_token="hic",
+        x_amz_signature="perferendis",
+        x_amz_signed_headers="cupiditate",
     ),
     request=operations.CreateSignalingChannelRequestBody(
-        channel_name="nostrum",
+        channel_name="sed",
         channel_type="SINGLE_MASTER",
         single_master_configuration=operations.CreateSignalingChannelRequestBodySingleMasterConfiguration(
-            message_ttl_seconds=4412873106353383392,
+            message_ttl_seconds=7341080715805291804,
         ),
         tags=[
             shared.Tag(
-                key="doloribus",
-                value="at",
+                key="qui",
+                value="eius",
             ),
             shared.Tag(
-                key="dolore",
-                value="et",
-            ),
-            shared.Tag(
-                key="natus",
-                value="corrupti",
+                key="voluptas",
+                value="dicta",
             ),
         ],
     ),
 )
     
-res = s.sdk.create_signaling_channel(req)
+res = s.create_signaling_channel(req)
 
 if res.create_signaling_channel_output is not None:
     # handle response

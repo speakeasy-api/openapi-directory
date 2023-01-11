@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CareContextRepresentation:
-    display: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('display') }})
-    reference_number: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('referenceNumber') }})
+    display: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('display') }})
+    reference_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('referenceNumber') }})
     

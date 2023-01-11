@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import createtaskrequest as shared_createtaskrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaskHeaders:
-    x_ebay_c_marketplace_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaskSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaskRequest:
-    headers: CreateTaskHeaders = field()
-    request: shared.CreateTaskRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateTaskSecurity = field()
+    headers: CreateTaskHeaders = dataclasses.field()
+    request: shared_createtaskrequest.CreateTaskRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateTaskSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateTaskResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

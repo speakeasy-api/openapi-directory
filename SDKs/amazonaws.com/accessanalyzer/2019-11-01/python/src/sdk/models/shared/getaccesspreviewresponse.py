@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import accesspreview as shared_accesspreview
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAccessPreviewResponse:
-    access_preview: AccessPreview = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessPreview') }})
+    access_preview: shared_accesspreview.AccessPreview = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('accessPreview') }})
     

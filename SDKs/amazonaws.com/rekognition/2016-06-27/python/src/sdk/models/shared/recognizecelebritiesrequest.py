@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import image as shared_image
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RecognizeCelebritiesRequest:
-    image: Image = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Image') }})
+    image: shared_image.Image = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Image') }})
     

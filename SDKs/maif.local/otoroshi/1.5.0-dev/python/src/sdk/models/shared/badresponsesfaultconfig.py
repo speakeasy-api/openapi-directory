@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import badresponse as shared_badresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BadResponsesFaultConfig:
     r"""BadResponsesFaultConfig
     Config for bad requests injection fault
     """
     
-    ratio: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratio') }})
-    responses: List[BadResponse] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('responses') }})
+    ratio: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratio') }})
+    responses: list[shared_badresponse.BadResponse] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('responses') }})
     

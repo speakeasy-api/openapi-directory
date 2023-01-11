@@ -1,37 +1,34 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import org_enum1 as shared_org_enum1
+from ..shared import project as shared_project
+from ..shared import validation_error_simple as shared_validation_error_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
-class ProjectsListForOrgStateEnum(str, Enum):
-    OPEN = "open"
-    CLOSED = "closed"
-    ALL = "all"
 
-
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForOrgQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
-    state: Optional[ProjectsListForOrgStateEnum] = field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    state: Optional[shared_org_enum1.OrgEnum1] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForOrgRequest:
-    path_params: ProjectsListForOrgPathParams = field()
-    query_params: ProjectsListForOrgQueryParams = field()
+    path_params: ProjectsListForOrgPathParams = dataclasses.field()
+    query_params: ProjectsListForOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProjectsListForOrgResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    projects: Optional[List[shared.Project]] = field(default=None)
-    validation_error_simple: Optional[shared.ValidationErrorSimple] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    projects: Optional[list[shared_project.Project]] = dataclasses.field(default=None)
+    validation_error_simple: Optional[shared_validation_error_simple.ValidationErrorSimple] = dataclasses.field(default=None)
     

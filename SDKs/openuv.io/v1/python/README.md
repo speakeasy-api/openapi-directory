@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,18 +18,18 @@ s = sdk.SDK()
     
 req = operations.GetForecastRequest(
     query_params=operations.GetForecastQueryParams(
-        alt=61.099998,
-        dt="2008-12-17T23:36:58Z",
-        lat=87.199997,
-        lng=34.099998,
-        ozone=12.100000,
+        alt=20.200001,
+        dt="1985-12-02T13:43:44Z",
+        lat=17.100000,
+        lng=31.100000,
+        ozone=10.200000,
     ),
     headers=operations.GetForecastHeaders(
-        x_access_token="maxime",
+        x_access_token="delectus",
     ),
 )
     
-res = s.sdk.get_forecast(req)
+res = s.get_forecast(req)
 
 if res.forecast_results is not None:
     # handle response

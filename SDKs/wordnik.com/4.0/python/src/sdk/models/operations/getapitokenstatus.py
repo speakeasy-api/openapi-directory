@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPITokenStatusHeaders:
-    api_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'api_key', 'style': 'simple', 'explode': False }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'api_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPITokenStatusRequest:
-    headers: GetAPITokenStatusHeaders = field()
+    headers: GetAPITokenStatusHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAPITokenStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

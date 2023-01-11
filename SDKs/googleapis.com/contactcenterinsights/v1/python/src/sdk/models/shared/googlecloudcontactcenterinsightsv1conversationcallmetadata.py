@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudContactcenterinsightsV1ConversationCallMetadata:
     r"""GoogleCloudContactcenterinsightsV1ConversationCallMetadata
     Call-specific metadata.
     """
     
-    agent_channel: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agentChannel') }})
-    customer_channel: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customerChannel') }})
+    agent_channel: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('agentChannel') }})
+    customer_channel: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customerChannel') }})
     

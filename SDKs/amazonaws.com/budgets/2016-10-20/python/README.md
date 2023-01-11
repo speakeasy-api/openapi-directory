@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,72 +25,71 @@ s.config_security(
     
 req = operations.CreateBudgetRequest(
     headers=operations.CreateBudgetHeaders(
-        x_amz_algorithm="aut",
-        x_amz_content_sha256="quia",
-        x_amz_credential="debitis",
-        x_amz_date="harum",
-        x_amz_security_token="vel",
-        x_amz_signature="quo",
-        x_amz_signed_headers="non",
+        x_amz_algorithm="ea",
+        x_amz_content_sha256="ad",
+        x_amz_credential="et",
+        x_amz_date="nemo",
+        x_amz_security_token="illo",
+        x_amz_signature="animi",
+        x_amz_signed_headers="earum",
         x_amz_target="AWSBudgetServiceGateway.CreateBudget",
     ),
     request=shared.CreateBudgetRequest(
-        account_id="mollitia",
+        account_id="vero",
         budget=shared.Budget(
             budget_limit=shared.Spend(
-                amount="dolorum",
-                unit="at",
+                amount="et",
+                unit="quam",
             ),
-            budget_name="sunt",
-            budget_type="USAGE",
+            budget_name="iste",
+            budget_type="SAVINGS_PLANS_UTILIZATION",
             calculated_spend=shared.CalculatedSpend(
                 actual_spend=shared.Spend(
-                    amount="voluptate",
-                    unit="excepturi",
+                    amount="eos",
+                    unit="aut",
                 ),
                 forecasted_spend=shared.Spend(
-                    amount="illum",
-                    unit="labore",
+                    amount="ut",
+                    unit="enim",
                 ),
             ),
             cost_filters={
-                "officia": [
-                    "asperiores",
-                    "maxime",
-                    "ratione",
-                ],
-                "voluptatem": [
-                    "eum",
-                    "sed",
+                "cupiditate": [
+                    "id",
+                    "molestiae",
                 ],
             },
             cost_types=shared.CostTypes(
-                include_credit=False,
-                include_discount=False,
+                include_credit=True,
+                include_discount=True,
                 include_other_subscription=False,
                 include_recurring=False,
                 include_refund=False,
                 include_subscription=True,
-                include_support=False,
-                include_tax=True,
+                include_support=True,
+                include_tax=False,
                 include_upfront=True,
                 use_amortized=True,
-                use_blended=False,
+                use_blended=True,
             ),
-            last_updated_time="2022-04-10T14:52:19Z",
+            last_updated_time="2020-04-04T17:02:02Z",
             planned_budget_limits={
-                "doloremque": shared.Spend(
-                    amount="minus",
-                    unit="ex",
+                "modi": shared.Spend(
+                    amount="dolor",
+                    unit="omnis",
                 ),
-                "dolores": shared.Spend(
-                    amount="quaerat",
-                    unit="iste",
+                "explicabo": shared.Spend(
+                    amount="voluptatum",
+                    unit="quia",
+                ),
+                "perferendis": shared.Spend(
+                    amount="temporibus",
+                    unit="incidunt",
                 ),
             },
             time_period=shared.TimePeriod(
-                end="1976-06-20T13:22:12Z",
-                start="1997-07-28T05:01:15Z",
+                end="1983-11-22T04:40:57Z",
+                start="2006-01-09T19:38:06Z",
             ),
             time_unit="QUARTERLY",
         ),
@@ -99,30 +97,15 @@ req = operations.CreateBudgetRequest(
             shared.NotificationWithSubscribers(
                 notification=shared.Notification(
                     comparison_operator="EQUAL_TO",
-                    notification_state="ALARM",
-                    notification_type="ACTUAL",
-                    threshold=58.200001,
-                    threshold_type="ABSOLUTE_VALUE",
-                ),
-                subscribers=[
-                    shared.Subscriber(
-                        address="dolore",
-                        subscription_type="EMAIL",
-                    ),
-                ],
-            ),
-            shared.NotificationWithSubscribers(
-                notification=shared.Notification(
-                    comparison_operator="EQUAL_TO",
                     notification_state="OK",
                     notification_type="FORECASTED",
-                    threshold=81.199997,
+                    threshold=7.100000,
                     threshold_type="ABSOLUTE_VALUE",
                 ),
                 subscribers=[
                     shared.Subscriber(
-                        address="tenetur",
-                        subscription_type="SNS",
+                        address="iste",
+                        subscription_type="EMAIL",
                     ),
                 ],
             ),
@@ -130,7 +113,7 @@ req = operations.CreateBudgetRequest(
     ),
 )
     
-res = s.sdk.create_budget(req)
+res = s.create_budget(req)
 
 if res.create_budget_response is not None:
     # handle response

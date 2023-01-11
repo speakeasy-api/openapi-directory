@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import getcurrentstate as shared_getcurrentstate
 
 
-@dataclass
+@dataclasses.dataclass
 class DoNotDisturbHeaders:
-    content_type: str = field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
+    content_type: str = dataclasses.field(metadata={'header': { 'field_name': 'Content-Type', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DoNotDisturbRequest:
-    headers: DoNotDisturbHeaders = field()
+    headers: DoNotDisturbHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DoNotDisturbResponse:
-    content_type: str = field()
-    status_code: int = field()
-    getcurrentstate: Optional[shared.Getcurrentstate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    getcurrentstate: Optional[shared_getcurrentstate.Getcurrentstate] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,24 +20,24 @@ req = operations.EscerRequest(
     security=operations.EscerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.EscerRequestBody(
         certificate_parameters=operations.EscerRequestBodyCertificateParameters(
-            dob="omnis",
-            docid="doloribus",
-            full_name="rerum",
+            dob="impedit",
+            docid="molestiae",
+            full_name="dolorem",
         ),
-        consent_artifact="ratione",
+        consent_artifact="eligendi",
         format="pdf",
-        txn_id="recusandae",
+        txn_id="minus",
     ),
 )
     
-res = s.sdk.escer(req)
+res = s.ap_is.escer(req)
 
 if res.status_code == 200:
     # handle response
@@ -48,7 +47,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `escer` - Executive Skill Enhancement Certificate
 * `skcer` - Skill Certificate

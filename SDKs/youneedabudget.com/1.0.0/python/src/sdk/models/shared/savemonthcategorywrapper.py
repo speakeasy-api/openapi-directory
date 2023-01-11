@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import savemonthcategory as shared_savemonthcategory
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SaveMonthCategoryWrapper:
-    category: SaveMonthCategory = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    category: shared_savemonthcategory.SaveMonthCategory = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
     

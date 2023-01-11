@@ -1,36 +1,37 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import legacy_error as shared_legacy_error
+from ..shared import presets as shared_presets
 
 
-@dataclass
+@dataclasses.dataclass
 class EditEmbedPresetPathParams:
-    preset_id: float = field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    preset_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'preset_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 class EditEmbedPresetRequestBodyOutroEnum(str, Enum):
     NOTHING = "nothing"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EditEmbedPresetRequestBody:
-    outro: Optional[EditEmbedPresetRequestBodyOutroEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outro') }})
+    outro: Optional[EditEmbedPresetRequestBodyOutroEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('outro') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditEmbedPresetRequest:
-    path_params: EditEmbedPresetPathParams = field()
-    request: Optional[EditEmbedPresetRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.preset+json' }})
+    path_params: EditEmbedPresetPathParams = dataclasses.field()
+    request: Optional[EditEmbedPresetRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/vnd.vimeo.preset+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EditEmbedPresetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    legacy_error: Optional[shared.LegacyError] = field(default=None)
-    presets: Optional[shared.Presets] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    legacy_error: Optional[shared_legacy_error.LegacyError] = dataclasses.field(default=None)
+    presets: Optional[shared_presets.Presets] = dataclasses.field(default=None)
     

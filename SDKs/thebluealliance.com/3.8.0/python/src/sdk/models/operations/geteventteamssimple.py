@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import team_simple as shared_team_simple
 
 
-@dataclass
+@dataclasses.dataclass
 class GetEventTeamsSimplePathParams:
-    event_key: str = field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
+    event_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'event_key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventTeamsSimpleHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventTeamsSimpleSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventTeamsSimpleRequest:
-    headers: GetEventTeamsSimpleHeaders = field()
-    path_params: GetEventTeamsSimplePathParams = field()
-    security: GetEventTeamsSimpleSecurity = field()
+    headers: GetEventTeamsSimpleHeaders = dataclasses.field()
+    path_params: GetEventTeamsSimplePathParams = dataclasses.field()
+    security: GetEventTeamsSimpleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetEventTeamsSimpleResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    team_simples: Optional[List[shared.TeamSimple]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    team_simples: Optional[list[shared_team_simple.TeamSimple]] = dataclasses.field(default=None)
     

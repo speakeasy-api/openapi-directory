@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,34 +20,34 @@ req = operations.SecuritycenterOrganizationsAssetsGroupRequest(
     security=operations.SecuritycenterOrganizationsAssetsGroupSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.SecuritycenterOrganizationsAssetsGroupPathParams(
-        parent="maiores",
+        parent="dolorum",
     ),
     query_params=operations.SecuritycenterOrganizationsAssetsGroupQueryParams(
-        dollar_xgafv="1",
-        access_token="rerum",
-        alt="proto",
-        callback="architecto",
-        fields="in",
-        key="rerum",
-        oauth_token="numquam",
-        pretty_print=False,
-        quota_user="maiores",
-        upload_type="exercitationem",
-        upload_protocol="voluptatibus",
+        dollar_xgafv="2",
+        access_token="qui",
+        alt="media",
+        callback="et",
+        fields="aspernatur",
+        key="sint",
+        oauth_token="voluptatum",
+        pretty_print=True,
+        quota_user="porro",
+        upload_type="consequatur",
+        upload_protocol="est",
     ),
     request=shared.GroupAssetsRequest(
-        compare_duration="non",
-        filter="quisquam",
-        group_by="non",
-        page_size=6605198006308233273,
-        page_token="earum",
-        read_time="consequuntur",
+        compare_duration="quasi",
+        filter="quaerat",
+        group_by="sint",
+        page_size=1731799868784527392,
+        page_token="dolor",
+        read_time="ratione",
     ),
 )
     

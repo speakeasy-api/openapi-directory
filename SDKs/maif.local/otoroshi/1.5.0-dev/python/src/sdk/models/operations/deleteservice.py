@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import deleted as shared_deleted
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteServicePathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serviceId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteServiceSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteServiceRequest:
-    path_params: DeleteServicePathParams = field()
-    security: DeleteServiceSecurity = field()
+    path_params: DeleteServicePathParams = dataclasses.field()
+    security: DeleteServiceSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteServiceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    deleted: Optional[shared.Deleted] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    deleted: Optional[shared_deleted.Deleted] = dataclasses.field(default=None)
     

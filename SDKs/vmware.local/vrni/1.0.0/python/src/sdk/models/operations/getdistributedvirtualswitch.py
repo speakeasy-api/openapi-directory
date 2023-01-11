@@ -1,34 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import apierror as shared_apierror
+from ..shared import distributedvirtualswitch as shared_distributedvirtualswitch
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributedVirtualSwitchPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributedVirtualSwitchQueryParams:
-    time: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
+    time: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'time', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributedVirtualSwitchSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributedVirtualSwitchRequest:
-    path_params: GetDistributedVirtualSwitchPathParams = field()
-    query_params: GetDistributedVirtualSwitchQueryParams = field()
-    security: GetDistributedVirtualSwitchSecurity = field()
+    path_params: GetDistributedVirtualSwitchPathParams = dataclasses.field()
+    query_params: GetDistributedVirtualSwitchQueryParams = dataclasses.field()
+    security: GetDistributedVirtualSwitchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetDistributedVirtualSwitchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    distributed_virtual_switch: Optional[shared.DistributedVirtualSwitch] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    distributed_virtual_switch: Optional[shared_distributedvirtualswitch.DistributedVirtualSwitch] = dataclasses.field(default=None)
     

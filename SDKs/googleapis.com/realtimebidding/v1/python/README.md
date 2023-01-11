@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,31 +20,31 @@ req = operations.RealtimebiddingBiddersCreativesWatchRequest(
     security=operations.RealtimebiddingBiddersCreativesWatchSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.RealtimebiddingBiddersCreativesWatchPathParams(
-        parent="veritatis",
+        parent="autem",
     ),
     query_params=operations.RealtimebiddingBiddersCreativesWatchQueryParams(
         dollar_xgafv="2",
-        access_token="non",
+        access_token="quibusdam",
         alt="proto",
-        callback="saepe",
-        fields="necessitatibus",
-        key="harum",
-        oauth_token="et",
-        pretty_print=True,
-        quota_user="voluptate",
-        upload_type="natus",
-        upload_protocol="cum",
+        callback="incidunt",
+        fields="cupiditate",
+        key="qui",
+        oauth_token="quidem",
+        pretty_print=False,
+        quota_user="dolorum",
+        upload_type="iure",
+        upload_protocol="doloribus",
     ),
     request={
-        "quae": "iste",
-        "reiciendis": "asperiores",
-        "esse": "explicabo",
+        "eum": "fuga",
+        "natus": "voluptatem",
+        "assumenda": "repellat",
     },
 )
     

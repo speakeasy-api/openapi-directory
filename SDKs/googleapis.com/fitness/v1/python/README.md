@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,64 +21,63 @@ req = operations.FitnessUsersDataSourcesCreateRequest(
         option1=operations.FitnessUsersDataSourcesCreateSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     path_params=operations.FitnessUsersDataSourcesCreatePathParams(
-        user_id="rerum",
+        user_id="saepe",
     ),
     query_params=operations.FitnessUsersDataSourcesCreateQueryParams(
         dollar_xgafv="1",
-        access_token="culpa",
-        alt="proto",
-        callback="possimus",
-        fields="possimus",
-        key="voluptas",
-        oauth_token="et",
-        pretty_print=False,
-        quota_user="ducimus",
-        upload_type="exercitationem",
-        upload_protocol="totam",
+        access_token="hic",
+        alt="json",
+        callback="reprehenderit",
+        fields="voluptas",
+        key="porro",
+        oauth_token="saepe",
+        pretty_print=True,
+        quota_user="est",
+        upload_type="consectetur",
+        upload_protocol="ipsam",
     ),
     request=shared.DataSource(
         application=shared.Application(
-            details_url="atque",
-            name="ut",
-            package_name="mollitia",
-            version="impedit",
+            details_url="deserunt",
+            name="temporibus",
+            package_name="occaecati",
+            version="deleniti",
         ),
         data_quality_standard=[
-            "dataQualityBloodPressureEsh2002",
-            "dataQualityBloodPressureEsh2010",
+            "dataQualityBloodGlucoseIso151972013",
         ],
-        data_stream_id="molestias",
-        data_stream_name="corrupti",
+        data_stream_id="eligendi",
+        data_stream_name="ut",
         data_type=shared.DataType(
             field=[
                 shared.DataTypeField(
-                    format="string",
-                    name="vero",
+                    format="map",
+                    name="blanditiis",
                     optional=True,
                 ),
                 shared.DataTypeField(
-                    format="floatList",
-                    name="beatae",
-                    optional=False,
+                    format="map",
+                    name="voluptatem",
+                    optional=True,
                 ),
             ],
-            name="molestiae",
+            name="ratione",
         ),
         device=shared.Device(
-            manufacturer="deleniti",
-            model="suscipit",
-            type="phone",
-            uid="et",
-            version="labore",
+            manufacturer="qui",
+            model="nemo",
+            type="smartDisplay",
+            uid="saepe",
+            version="deleniti",
         ),
-        name="et",
+        name="ex",
         type="raw",
     ),
 )

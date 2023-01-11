@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import predefinedscalingmetrictype_enum as shared_predefinedscalingmetrictype_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class PredictiveScalingPredefinedScalingMetric:
     r"""PredictiveScalingPredefinedScalingMetric
     <p>Describes a scaling metric for a predictive scaling policy.</p> <p>When returned in the output of <code>DescribePolicies</code>, it indicates that a predictive scaling policy uses individually specified load and scaling metrics instead of a metric pair.</p>
     """
     
-    predefined_metric_type: PredefinedScalingMetricTypeEnum = field()
-    resource_label: Optional[str] = field(default=None)
+    predefined_metric_type: shared_predefinedscalingmetrictype_enum.PredefinedScalingMetricTypeEnum = dataclasses.field()
+    resource_label: Optional[str] = dataclasses.field(default=None)
     

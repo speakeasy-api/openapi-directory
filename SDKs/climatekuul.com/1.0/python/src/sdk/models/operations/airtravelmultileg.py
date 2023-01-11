@@ -1,6 +1,6 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import airtravelmultilegrequest as shared_airtravelmultilegrequest
 
 
 AIRTRAVEL_MULTILEG_SERVERS = [
@@ -8,14 +8,14 @@ AIRTRAVEL_MULTILEG_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class AirtravelMultilegRequest:
-    request: shared.AirtravelMultilegRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    server_url: Optional[str] = field(default=None)
+    request: shared_airtravelmultilegrequest.AirtravelMultilegRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class AirtravelMultilegResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

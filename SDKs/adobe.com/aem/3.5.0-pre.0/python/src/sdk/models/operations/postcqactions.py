@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class PostCqActionsQueryParams:
-    authorizable_id: str = field(metadata={'query_param': { 'field_name': 'authorizableId', 'style': 'form', 'explode': True }})
-    changelog: str = field(metadata={'query_param': { 'field_name': 'changelog', 'style': 'form', 'explode': True }})
+    authorizable_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'authorizableId', 'style': 'form', 'explode': True }})
+    changelog: str = dataclasses.field(metadata={'query_param': { 'field_name': 'changelog', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCqActionsRequest:
-    query_params: PostCqActionsQueryParams = field()
+    query_params: PostCqActionsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCqActionsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

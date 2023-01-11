@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import cryptokey as shared_cryptokey
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetPathParams:
-    firmware_hash: str = field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
+    firmware_hash: str = dataclasses.field(metadata={'path_param': { 'field_name': 'firmware_hash', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetSecurity:
-    api_key_header: shared.SchemeAPIKeyHeader = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_header: shared_security.SchemeAPIKeyHeader = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetRequest:
-    path_params: FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetPathParams = field()
-    security: FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetSecurity = field()
+    path_params: FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetPathParams = dataclasses.field()
+    security: FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    crypto_keys: Optional[List[shared.CryptoKey]] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    crypto_keys: Optional[list[shared_cryptokey.CryptoKey]] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

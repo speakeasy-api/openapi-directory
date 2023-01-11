@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import suggestionproto as shared_suggestionproto
 
 class SuggestionClusterProtoCategoryEnum(str, Enum):
     UNKNOWN_CATEGORY = "unknownCategory"
@@ -14,12 +14,12 @@ class SuggestionClusterProtoCategoryEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SuggestionClusterProto:
     r"""SuggestionClusterProto
     A set of similar suggestions that we suspect are closely related. This proto and most of the nested protos are branched from foxandcrown.prelaunchreport.service.SuggestionClusterProto, replacing PLR's dependencies with FTL's.
     """
     
-    category: Optional[SuggestionClusterProtoCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
-    suggestions: Optional[List[SuggestionProto]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suggestions') }})
+    category: Optional[SuggestionClusterProtoCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('category') }})
+    suggestions: Optional[list[shared_suggestionproto.SuggestionProto]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('suggestions') }})
     

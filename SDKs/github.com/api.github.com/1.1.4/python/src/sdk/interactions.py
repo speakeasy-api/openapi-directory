@@ -1,0 +1,274 @@
+import requests
+from typing import Optional
+from sdk.models import shared, operations
+from . import utils
+
+class Interactions:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def interactions_get_restrictions_for_authenticated_user(self) -> operations.InteractionsGetRestrictionsForAuthenticatedUserResponse:
+        r"""Get interaction restrictions for your public repositories
+        Shows which type of GitHub user can interact with your public repositories and when the restriction expires. If there are no restrictions, you will see an empty response.
+        https://docs.github.com/rest/reference/interactions#get-interaction-restrictions-for-your-public-repositories - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/user/interaction-limits"
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsGetRestrictionsForAuthenticatedUserResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+
+        return res
+
+    
+    def interactions_get_restrictions_for_org(self, request: operations.InteractionsGetRestrictionsForOrgRequest) -> operations.InteractionsGetRestrictionsForOrgResponse:
+        r"""Get interaction restrictions for an organization
+        Shows which type of GitHub user can interact with this organization and when the restriction expires. If there is no restrictions, you will see an empty response.
+        https://docs.github.com/rest/reference/interactions#get-interaction-restrictions-for-an-organization - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/orgs/{org}/interaction-limits", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsGetRestrictionsForOrgResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+
+        return res
+
+    
+    def interactions_get_restrictions_for_repo(self, request: operations.InteractionsGetRestrictionsForRepoRequest) -> operations.InteractionsGetRestrictionsForRepoResponse:
+        r"""Get interaction restrictions for a repository
+        Shows which type of GitHub user can interact with this repository and when the restriction expires. If there are no restrictions, you will see an empty response.
+        https://docs.github.com/rest/reference/interactions#get-interaction-restrictions-for-a-repository - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/repos/{owner}/{repo}/interaction-limits", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsGetRestrictionsForRepoResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+
+        return res
+
+    
+    def interactions_remove_restrictions_for_authenticated_user(self) -> operations.InteractionsRemoveRestrictionsForAuthenticatedUserResponse:
+        r"""Remove interaction restrictions from your public repositories
+        Removes any interaction restrictions from your public repositories.
+        https://docs.github.com/rest/reference/interactions#remove-interaction-restrictions-from-your-public-repositories - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/user/interaction-limits"
+        
+        
+        client = self._client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsRemoveRestrictionsForAuthenticatedUserResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+
+        return res
+
+    
+    def interactions_remove_restrictions_for_org(self, request: operations.InteractionsRemoveRestrictionsForOrgRequest) -> operations.InteractionsRemoveRestrictionsForOrgResponse:
+        r"""Remove interaction restrictions for an organization
+        Removes all interaction restrictions from public repositories in the given organization. You must be an organization owner to remove restrictions.
+        https://docs.github.com/rest/reference/interactions#remove-interaction-restrictions-for-an-organization - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/orgs/{org}/interaction-limits", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsRemoveRestrictionsForOrgResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+
+        return res
+
+    
+    def interactions_remove_restrictions_for_repo(self, request: operations.InteractionsRemoveRestrictionsForRepoRequest) -> operations.InteractionsRemoveRestrictionsForRepoResponse:
+        r"""Remove interaction restrictions for a repository
+        Removes all interaction restrictions from the given repository. You must have owner or admin access to remove restrictions. If the interaction limit is set for the user or organization that owns this repository, you will receive a `409 Conflict` response and will not be able to use this endpoint to change the interaction limit for a single repository.
+        https://docs.github.com/rest/reference/interactions#remove-interaction-restrictions-for-a-repository - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/repos/{owner}/{repo}/interaction-limits", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("DELETE", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsRemoveRestrictionsForRepoResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 204:
+            pass
+        elif r.status_code == 409:
+            pass
+
+        return res
+
+    
+    def interactions_set_restrictions_for_authenticated_user(self, request: operations.InteractionsSetRestrictionsForAuthenticatedUserRequest) -> operations.InteractionsSetRestrictionsForAuthenticatedUserResponse:
+        r"""Set interaction restrictions for your public repositories
+        Temporarily restricts which type of GitHub user can interact with your public repositories. Setting the interaction limit at the user level will overwrite any interaction limits that are set for individual repositories owned by the user.
+        https://docs.github.com/rest/reference/interactions#set-interaction-restrictions-for-your-public-repositories - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/user/interaction-limits"
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsSetRestrictionsForAuthenticatedUserResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+        elif r.status_code == 422:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ValidationError])
+                res.validation_error = out
+
+        return res
+
+    
+    def interactions_set_restrictions_for_org(self, request: operations.InteractionsSetRestrictionsForOrgRequest) -> operations.InteractionsSetRestrictionsForOrgResponse:
+        r"""Set interaction restrictions for an organization
+        Temporarily restricts interactions to a certain type of GitHub user in any public repository in the given organization. You must be an organization owner to set these restrictions. Setting the interaction limit at the organization level will overwrite any interaction limits that are set for individual repositories owned by the organization.
+        https://docs.github.com/rest/reference/interactions#set-interaction-restrictions-for-an-organization - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/orgs/{org}/interaction-limits", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsSetRestrictionsForOrgResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+        elif r.status_code == 422:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ValidationError])
+                res.validation_error = out
+
+        return res
+
+    
+    def interactions_set_restrictions_for_repo(self, request: operations.InteractionsSetRestrictionsForRepoRequest) -> operations.InteractionsSetRestrictionsForRepoResponse:
+        r"""Set interaction restrictions for a repository
+        Temporarily restricts interactions to a certain type of GitHub user within the given repository. You must have owner or admin access to set these restrictions. If an interaction limit is set for the user or organization that owns this repository, you will receive a `409 Conflict` response and will not be able to use this endpoint to change the interaction limit for a single repository.
+        https://docs.github.com/rest/reference/interactions#set-interaction-restrictions-for-a-repository - API method documentation
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/repos/{owner}/{repo}/interaction-limits", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("PUT", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.InteractionsSetRestrictionsForRepoResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.InteractionLimitResponse])
+                res.interaction_limit_response = out
+        elif r.status_code == 409:
+            pass
+
+        return res
+
+    

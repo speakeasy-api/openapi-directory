@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class KinesisStreamConfig:
     r"""KinesisStreamConfig
     Contains information about the Amazon Kinesis data stream where you are sending real-time log data.
     """
     
-    role_arn: str = field()
-    stream_arn: str = field()
+    role_arn: str = dataclasses.field()
+    stream_arn: str = dataclasses.field()
     

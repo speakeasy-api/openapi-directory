@@ -1,29 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class TagScoreObjectsUserBadgeCounts:
-    bronze: Optional[int] = field(default=None)
-    gold: Optional[int] = field(default=None)
-    silver: Optional[int] = field(default=None)
+    bronze: Optional[int] = dataclasses.field(default=None)
+    gold: Optional[int] = dataclasses.field(default=None)
+    silver: Optional[int] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class TagScoreObjectsUser:
-    accept_rate: Optional[int] = field(default=None)
-    badge_counts: Optional[TagScoreObjectsUserBadgeCounts] = field(default=None)
-    display_name: Optional[str] = field(default=None)
-    link: Optional[str] = field(default=None)
-    profile_image: Optional[str] = field(default=None)
-    reputation: Optional[int] = field(default=None)
-    user_id: Optional[int] = field(default=None)
-    user_type: Optional[str] = field(default=None)
+    accept_rate: Optional[int] = dataclasses.field(default=None)
+    badge_counts: Optional[TagScoreObjectsUserBadgeCounts] = dataclasses.field(default=None)
+    display_name: Optional[str] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    profile_image: Optional[str] = dataclasses.field(default=None)
+    reputation: Optional[int] = dataclasses.field(default=None)
+    user_id: Optional[int] = dataclasses.field(default=None)
+    user_type: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class TagScoreObjects:
-    post_count: Optional[int] = field(default=None)
-    score: Optional[int] = field(default=None)
-    user: Optional[TagScoreObjectsUser] = field(default=None)
+    post_count: Optional[int] = dataclasses.field(default=None)
+    score: Optional[int] = dataclasses.field(default=None)
+    user: Optional[TagScoreObjectsUser] = dataclasses.field(default=None)
     

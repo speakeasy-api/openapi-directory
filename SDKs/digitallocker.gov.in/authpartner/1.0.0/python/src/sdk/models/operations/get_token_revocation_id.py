@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class GetTokenRevocationIDRequestBodyTokenTypeHintEnum(str, Enum):
     REFRESH_TOKEN = "refresh_token"
@@ -11,25 +11,25 @@ class GetTokenRevocationIDRequestBodyTokenTypeHintEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetTokenRevocationIDRequestBody:
-    token: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
-    token_type_hint: Optional[GetTokenRevocationIDRequestBodyTokenTypeHintEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token_type_hint') }})
+    token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('token') }})
+    token_type_hint: Optional[GetTokenRevocationIDRequestBodyTokenTypeHintEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('token_type_hint') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenRevocationIDSecurity:
-    oauthsecurity: shared.SchemeOauthsecurity = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    oauthsecurity: shared_security.SchemeOauthsecurity = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenRevocationIDRequest:
-    security: GetTokenRevocationIDSecurity = field()
-    request: Optional[GetTokenRevocationIDRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: GetTokenRevocationIDSecurity = dataclasses.field()
+    request: Optional[GetTokenRevocationIDRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTokenRevocationIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

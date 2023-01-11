@@ -1,26 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationQueryParams:
-    include_chargestations: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_chargestations', 'style': 'form', 'explode': True }})
-    include_organization: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_organization', 'style': 'form', 'explode': True }})
+    include_chargestations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_chargestations', 'style': 'form', 'explode': True }})
+    include_organization: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_organization', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationRequest:
-    path_params: GetLocationPathParams = field()
-    query_params: GetLocationQueryParams = field()
+    path_params: GetLocationPathParams = dataclasses.field()
+    query_params: GetLocationQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLocationResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

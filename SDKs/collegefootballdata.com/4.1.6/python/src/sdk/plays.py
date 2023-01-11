@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -39,7 +39,7 @@ class Plays:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayStatType]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayStatType]])
                 res.play_stat_types = out
         elif r.status_code == 400:
             pass
@@ -67,7 +67,7 @@ class Plays:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayStat]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayStat]])
                 res.play_stats = out
         elif r.status_code == 400:
             pass
@@ -94,7 +94,7 @@ class Plays:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.PlayType]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.PlayType]])
                 res.play_types = out
 
         return res
@@ -120,7 +120,7 @@ class Plays:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.Play]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.Play]])
                 res.plays = out
 
         return res

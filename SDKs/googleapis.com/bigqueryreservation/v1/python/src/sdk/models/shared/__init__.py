@@ -14,3 +14,5 @@ from .security import *
 from .splitcapacitycommitmentrequest import *
 from .splitcapacitycommitmentresponse import *
 from .status import *
+
+__all__ = ["XgafvEnum","AltEnum","AssignmentJobTypeEnum","AssignmentInput","AssignmentStateEnum","Assignment","CapacityCommitmentPlanEnum","CapacityCommitmentRenewalPlanEnum","CapacityCommitmentStateEnum","CapacityCommitment","CapacityCommitmentInput","ListAssignmentsResponse","ListCapacityCommitmentsResponse","ListReservationsResponse","MergeCapacityCommitmentsRequest","MoveAssignmentRequest","Reservation","ReservationInput","SearchAllAssignmentsResponse","SearchAssignmentsResponse","SchemeOauth2","SchemeOauth2c","SplitCapacityCommitmentRequest","SplitCapacityCommitmentResponse","Status"]

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -10,9 +10,9 @@ class GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum(str, Enum):
     HTML = "html"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTruckDistanceBetweenPairsOutputFormatPathParams:
-    output_format: GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    output_format: GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 class GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum(str, Enum):
     SHORTEST = "shortest"
@@ -23,28 +23,28 @@ class GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum(str, Enum):
     MI = "mi"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTruckDistanceBetweenPairsOutputFormatQueryParams:
-    from_points: str = field(metadata={'query_param': { 'field_name': 'fromPoints', 'style': 'form', 'explode': True }})
-    to_points: str = field(metadata={'query_param': { 'field_name': 'toPoints', 'style': 'form', 'explode': True }})
-    correct_side: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'correctSide', 'style': 'form', 'explode': True }})
-    criteria: Optional[GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum] = field(default=None, metadata={'query_param': { 'field_name': 'criteria', 'style': 'form', 'explode': True }})
-    departure: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'departure', 'style': 'form', 'explode': True }})
-    disable: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'disable', 'style': 'form', 'explode': True }})
-    distance_unit: Optional[GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum] = field(default=None, metadata={'query_param': { 'field_name': 'distanceUnit', 'style': 'form', 'explode': True }})
-    max_pairs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxPairs', 'style': 'form', 'explode': True }})
-    output_srs: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
-    route_description: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'routeDescription', 'style': 'form', 'explode': True }})
+    from_points: str = dataclasses.field(metadata={'query_param': { 'field_name': 'fromPoints', 'style': 'form', 'explode': True }})
+    to_points: str = dataclasses.field(metadata={'query_param': { 'field_name': 'toPoints', 'style': 'form', 'explode': True }})
+    correct_side: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'correctSide', 'style': 'form', 'explode': True }})
+    criteria: Optional[GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'criteria', 'style': 'form', 'explode': True }})
+    departure: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'departure', 'style': 'form', 'explode': True }})
+    disable: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'disable', 'style': 'form', 'explode': True }})
+    distance_unit: Optional[GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'distanceUnit', 'style': 'form', 'explode': True }})
+    max_pairs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxPairs', 'style': 'form', 'explode': True }})
+    output_srs: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'outputSRS', 'style': 'form', 'explode': True }})
+    route_description: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'routeDescription', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTruckDistanceBetweenPairsOutputFormatRequest:
-    path_params: GetTruckDistanceBetweenPairsOutputFormatPathParams = field()
-    query_params: GetTruckDistanceBetweenPairsOutputFormatQueryParams = field()
+    path_params: GetTruckDistanceBetweenPairsOutputFormatPathParams = dataclasses.field()
+    query_params: GetTruckDistanceBetweenPairsOutputFormatQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTruckDistanceBetweenPairsOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import partnerintegrationinfolist as shared_partnerintegrationinfolist
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribePartnersOutputMessage:
-    partner_integration_info_list: Optional[List[PartnerIntegrationInfo]] = field(default=None)
+    partner_integration_info_list: Optional[list[shared_partnerintegrationinfolist.PartnerIntegrationInfoList]] = dataclasses.field(default=None)
     

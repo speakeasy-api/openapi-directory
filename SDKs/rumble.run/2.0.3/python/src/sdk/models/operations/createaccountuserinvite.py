@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import userinviteoptions as shared_userinviteoptions
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountUserInviteSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountUserInviteRequest:
-    request: shared.UserInviteOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAccountUserInviteSecurity = field()
+    request: shared_userinviteoptions.UserInviteOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAccountUserInviteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountUserInviteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    user: Optional[shared.User] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    user: Optional[shared_user.User] = dataclasses.field(default=None)
     

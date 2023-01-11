@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import entityrecognizerproperties as shared_entityrecognizerproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListEntityRecognizersResponse:
-    entity_recognizer_properties_list: Optional[List[EntityRecognizerProperties]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EntityRecognizerPropertiesList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    entity_recognizer_properties_list: Optional[list[shared_entityrecognizerproperties.EntityRecognizerProperties]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EntityRecognizerPropertiesList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

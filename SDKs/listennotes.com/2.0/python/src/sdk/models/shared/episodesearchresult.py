@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import episodesearchresult_podcast as shared_episodesearchresult_podcast
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EpisodeSearchResult:
     r"""EpisodeSearchResult
     When **type** is *episode*.
     """
     
-    audio: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio') }})
-    audio_length_sec: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio_length_sec') }})
-    description_highlighted: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description_highlighted') }})
-    description_original: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description_original') }})
-    explicit_content: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('explicit_content') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    image: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
-    itunes_id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itunes_id') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    listennotes_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('listennotes_url') }})
-    podcast: Optional[EpisodeSearchResultPodcast] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('podcast') }})
-    pub_date_ms: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pub_date_ms') }})
-    rss: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rss') }})
-    thumbnail: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thumbnail') }})
-    title_highlighted: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title_highlighted') }})
-    title_original: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title_original') }})
-    transcripts_highlighted: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transcripts_highlighted') }})
+    audio: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio') }})
+    audio_length_sec: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audio_length_sec') }})
+    description_highlighted: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description_highlighted') }})
+    description_original: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description_original') }})
+    explicit_content: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('explicit_content') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    image: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('image') }})
+    itunes_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('itunes_id') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    listennotes_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('listennotes_url') }})
+    podcast: Optional[shared_episodesearchresult_podcast.EpisodeSearchResultPodcast] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('podcast') }})
+    pub_date_ms: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pub_date_ms') }})
+    rss: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('rss') }})
+    thumbnail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('thumbnail') }})
+    title_highlighted: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title_highlighted') }})
+    title_original: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title_original') }})
+    transcripts_highlighted: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('transcripts_highlighted') }})
     

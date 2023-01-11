@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import process as shared_process
 
 
-@dataclass
+@dataclasses.dataclass
 class ProcessesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    process: Optional[shared.Process] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    process: Optional[shared_process.Process] = dataclasses.field(default=None)
     

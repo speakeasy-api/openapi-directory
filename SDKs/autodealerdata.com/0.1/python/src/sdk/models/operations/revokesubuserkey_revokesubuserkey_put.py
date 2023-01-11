@@ -1,24 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import genericresponse as shared_genericresponse
+from ..shared import httpvalidationerror as shared_httpvalidationerror
 
 
-@dataclass
+@dataclasses.dataclass
 class RevokeSubUserKeyRevokeSubUserKeyPutQueryParams:
-    api_id: str = field(metadata={'query_param': { 'field_name': 'apiID', 'style': 'form', 'explode': True }})
-    api_key: str = field(metadata={'query_param': { 'field_name': 'apiKey', 'style': 'form', 'explode': True }})
-    sub_user_key_uuid: str = field(metadata={'query_param': { 'field_name': 'subUserKeyUUID', 'style': 'form', 'explode': True }})
+    api_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'apiID', 'style': 'form', 'explode': True }})
+    api_key: str = dataclasses.field(metadata={'query_param': { 'field_name': 'apiKey', 'style': 'form', 'explode': True }})
+    sub_user_key_uuid: str = dataclasses.field(metadata={'query_param': { 'field_name': 'subUserKeyUUID', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RevokeSubUserKeyRevokeSubUserKeyPutRequest:
-    query_params: RevokeSubUserKeyRevokeSubUserKeyPutQueryParams = field()
+    query_params: RevokeSubUserKeyRevokeSubUserKeyPutQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RevokeSubUserKeyRevokeSubUserKeyPutResponse:
-    content_type: str = field()
-    status_code: int = field()
-    generic_response: Optional[shared.GenericResponse] = field(default=None)
-    http_validation_error: Optional[shared.HTTPValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    generic_response: Optional[shared_genericresponse.GenericResponse] = dataclasses.field(default=None)
+    http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     

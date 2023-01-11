@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import pipelinedeclaration as shared_pipelinedeclaration
+from ..shared import tag as shared_tag
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePipelineInput:
     r"""CreatePipelineInput
     Represents the input of a <code>CreatePipeline</code> action.
     """
     
-    pipeline: PipelineDeclaration = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipeline') }})
-    tags: Optional[List[Tag]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
+    pipeline: shared_pipelinedeclaration.PipelineDeclaration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pipeline') }})
+    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tags') }})
     

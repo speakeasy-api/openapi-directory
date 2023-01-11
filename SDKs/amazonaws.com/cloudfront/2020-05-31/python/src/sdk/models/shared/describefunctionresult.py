@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import functionsummary as shared_functionsummary
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeFunctionResult:
-    function_summary: Optional[FunctionSummary] = field(default=None)
+    function_summary: Optional[shared_functionsummary.FunctionSummary] = dataclasses.field(default=None)
     

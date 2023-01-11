@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,15 +23,15 @@ req = operations.CompanyAlternativeSearchRequest(
         ),
     ),
     path_params=operations.CompanyAlternativeSearchPathParams(
-        country="nihil",
+        country="quia",
     ),
     request=operations.CompanyAlternativeSearchRequestBody(
-        address="qui",
-        name="natus",
-        number="et",
-        phone="facere",
-        url="necessitatibus",
-        vat="iste",
+        address="velit",
+        name="sed",
+        number="occaecati",
+        phone="quidem",
+        url="maxime",
+        vat="eos",
     ),
 )
     

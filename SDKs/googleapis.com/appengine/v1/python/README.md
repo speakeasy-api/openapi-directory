@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,47 +20,48 @@ req = operations.AppengineAppsAuthorizedCertificatesCreateRequest(
     security=operations.AppengineAppsAuthorizedCertificatesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.AppengineAppsAuthorizedCertificatesCreatePathParams(
-        apps_id="in",
+        apps_id="et",
     ),
     query_params=operations.AppengineAppsAuthorizedCertificatesCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="reprehenderit",
+        dollar_xgafv="2",
+        access_token="saepe",
         alt="proto",
-        callback="eos",
-        fields="ut",
-        key="laboriosam",
-        oauth_token="corrupti",
+        callback="ducimus",
+        fields="rerum",
+        key="autem",
+        oauth_token="sint",
         pretty_print=False,
-        quota_user="est",
-        upload_type="similique",
-        upload_protocol="aliquam",
+        quota_user="blanditiis",
+        upload_type="impedit",
+        upload_protocol="sunt",
     ),
     request=shared.AuthorizedCertificate(
         certificate_raw_data=shared.CertificateRawData(
-            private_key="commodi",
-            public_certificate="hic",
+            private_key="ea",
+            public_certificate="asperiores",
         ),
-        display_name="aliquid",
-        domain_mappings_count=6358108789263637602,
+        display_name="ipsam",
+        domain_mappings_count=4423674668372831048,
         domain_names=[
-            "voluptates",
+            "eaque",
+            "esse",
         ],
-        expire_time="id",
-        id="non",
+        expire_time="ut",
+        id="sapiente",
         managed_certificate=shared.ManagedCertificate(
-            last_renewal_time="ipsam",
-            status="OK",
+            last_renewal_time="natus",
+            status="FAILED_RETRYING_CAA_CHECKING",
         ),
-        name="explicabo",
+        name="tempora",
         visible_domain_mappings=[
-            "sapiente",
-            "quia",
+            "ad",
+            "culpa",
         ],
     ),
 )

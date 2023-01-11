@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolNetflowSetFileNamePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    file_name: str = field(metadata={'path_param': { 'field_name': 'fileName', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    file_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fileName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolNetflowSetFileNameRequest:
-    path_params: ProtocolNetflowSetFileNamePathParams = field()
+    path_params: ProtocolNetflowSetFileNamePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProtocolNetflowSetFileNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    protocol_netflow_set_file_name_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    protocol_netflow_set_file_name_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

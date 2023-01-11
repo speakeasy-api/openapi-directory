@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import instanceprofile as shared_instanceprofile
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInstanceProfileResponse:
     r"""GetInstanceProfileResponse
     Contains the response to a successful <a>GetInstanceProfile</a> request. 
     """
     
-    instance_profile: InstanceProfile = field()
+    instance_profile: shared_instanceprofile.InstanceProfile = dataclasses.field()
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import clustersubnetgroup as shared_clustersubnetgroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateClusterSubnetGroupResult:
-    cluster_subnet_group: Optional[ClusterSubnetGroup] = field(default=None)
+    cluster_subnet_group: Optional[shared_clustersubnetgroup.ClusterSubnetGroup] = dataclasses.field(default=None)
     

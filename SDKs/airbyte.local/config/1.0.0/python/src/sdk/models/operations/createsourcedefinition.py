@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import sourcedefinitioncreate as shared_sourcedefinitioncreate
+from ..shared import invalidinputexceptioninfo as shared_invalidinputexceptioninfo
+from ..shared import sourcedefinitionread as shared_sourcedefinitionread
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateSourceDefinitionRequest:
-    request: Optional[shared.SourceDefinitionCreate] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_sourcedefinitioncreate.SourceDefinitionCreate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateSourceDefinitionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_input_exception_info: Optional[shared.InvalidInputExceptionInfo] = field(default=None)
-    source_definition_read: Optional[shared.SourceDefinitionRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_input_exception_info: Optional[shared_invalidinputexceptioninfo.InvalidInputExceptionInfo] = dataclasses.field(default=None)
+    source_definition_read: Optional[shared_sourcedefinitionread.SourceDefinitionRead] = dataclasses.field(default=None)
     

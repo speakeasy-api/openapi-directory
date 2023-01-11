@@ -1,17 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import state as shared_state
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectorModelDefinition:
     r"""DetectorModelDefinition
     Information that defines how a detector operates.
     """
     
-    initial_state_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('initialStateName') }})
-    states: List[State] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('states') }})
+    initial_state_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('initialStateName') }})
+    states: list[shared_state.State] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('states') }})
     

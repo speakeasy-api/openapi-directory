@@ -1,36 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import findlistingrecommendationrequest as shared_findlistingrecommendationrequest
+from ..shared import pagedlistingrecommendationcollection as shared_pagedlistingrecommendationcollection
 
 
-@dataclass
+@dataclasses.dataclass
 class FindListingRecommendationsQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    limit: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindListingRecommendationsHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindListingRecommendationsSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindListingRecommendationsRequest:
-    headers: FindListingRecommendationsHeaders = field()
-    query_params: FindListingRecommendationsQueryParams = field()
-    security: FindListingRecommendationsSecurity = field()
-    request: Optional[shared.FindListingRecommendationRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: FindListingRecommendationsHeaders = dataclasses.field()
+    query_params: FindListingRecommendationsQueryParams = dataclasses.field()
+    security: FindListingRecommendationsSecurity = dataclasses.field()
+    request: Optional[shared_findlistingrecommendationrequest.FindListingRecommendationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindListingRecommendationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    paged_listing_recommendation_collection: Optional[shared.PagedListingRecommendationCollection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    paged_listing_recommendation_collection: Optional[shared_pagedlistingrecommendationcollection.PagedListingRecommendationCollection] = dataclasses.field(default=None)
     

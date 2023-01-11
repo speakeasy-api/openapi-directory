@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,33 +21,33 @@ req = operations.LanguageDocumentsAnalyzeEntitiesRequest(
         option1=operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.LanguageDocumentsAnalyzeEntitiesQueryParams(
-        dollar_xgafv="2",
-        access_token="sed",
+        dollar_xgafv="1",
+        access_token="eligendi",
         alt="json",
-        callback="eum",
-        fields="sit",
-        key="et",
-        oauth_token="animi",
-        pretty_print=True,
-        quota_user="atque",
-        upload_type="ut",
-        upload_protocol="consequuntur",
+        callback="sed",
+        fields="maiores",
+        key="non",
+        oauth_token="expedita",
+        pretty_print=False,
+        quota_user="sint",
+        upload_type="quia",
+        upload_protocol="ea",
     ),
     request=shared.AnalyzeEntitiesRequest(
         document=shared.Document(
-            content="vel",
-            gcs_content_uri="consequuntur",
-            language="ut",
-            type="TYPE_UNSPECIFIED",
+            content="quia",
+            gcs_content_uri="pariatur",
+            language="aliquam",
+            type="HTML",
         ),
-        encoding_type="NONE",
+        encoding_type="UTF32",
     ),
 )
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import imagecreateresult as shared_imagecreateresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ImageCreateSummary:
-    images: Optional[List[ImageCreateResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('images') }})
-    is_batch_successful: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isBatchSuccessful') }})
+    images: Optional[list[shared_imagecreateresult.ImageCreateResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('images') }})
+    is_batch_successful: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('isBatchSuccessful') }})
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import monthdetail as shared_monthdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MonthDetailResponseData:
-    month: MonthDetail = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('month') }})
+    month: shared_monthdetail.MonthDetail = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('month') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MonthDetailResponse:
-    data: MonthDetailResponseData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    data: MonthDetailResponseData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
     

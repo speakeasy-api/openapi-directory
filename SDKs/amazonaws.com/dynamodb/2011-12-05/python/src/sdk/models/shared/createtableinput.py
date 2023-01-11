@@ -1,13 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import keyschema as shared_keyschema
+from ..shared import provisionedthroughput as shared_provisionedthroughput
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreateTableInput:
-    key_schema: KeySchema = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeySchema') }})
-    provisioned_throughput: ProvisionedThroughput = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisionedThroughput') }})
-    table_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableName') }})
+    key_schema: shared_keyschema.KeySchema = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('KeySchema') }})
+    provisioned_throughput: shared_provisionedthroughput.ProvisionedThroughput = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ProvisionedThroughput') }})
+    table_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TableName') }})
     

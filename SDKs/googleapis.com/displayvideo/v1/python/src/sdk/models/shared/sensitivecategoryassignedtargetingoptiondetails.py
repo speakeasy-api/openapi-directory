@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -26,22 +26,22 @@ class SensitiveCategoryAssignedTargetingOptionDetailsSensitiveCategoryEnum(str, 
 
 
 @dataclass_json
-@dataclass
-class SensitiveCategoryAssignedTargetingOptionDetailsInput:
-    r"""SensitiveCategoryAssignedTargetingOptionDetailsInput
-    Targeting details for sensitive category. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
-    """
-    
-    excluded_targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
-    
-
-@dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SensitiveCategoryAssignedTargetingOptionDetails:
     r"""SensitiveCategoryAssignedTargetingOptionDetails
     Targeting details for sensitive category. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
     """
     
-    excluded_targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
-    sensitive_category: Optional[SensitiveCategoryAssignedTargetingOptionDetailsSensitiveCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sensitiveCategory') }})
+    excluded_targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
+    sensitive_category: Optional[SensitiveCategoryAssignedTargetingOptionDetailsSensitiveCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sensitiveCategory') }})
+    
+
+@dataclass_json
+@dataclasses.dataclass
+class SensitiveCategoryAssignedTargetingOptionDetailsInput:
+    r"""SensitiveCategoryAssignedTargetingOptionDetailsInput
+    Targeting details for sensitive category. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`.
+    """
+    
+    excluded_targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('excludedTargetingOptionId') }})
     

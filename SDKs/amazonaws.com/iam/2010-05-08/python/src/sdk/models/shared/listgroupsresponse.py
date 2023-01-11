@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import group as shared_group
 
 
-@dataclass
+@dataclasses.dataclass
 class ListGroupsResponse:
     r"""ListGroupsResponse
     Contains the response to a successful <a>ListGroups</a> request. 
     """
     
-    groups: List[Group] = field()
-    is_truncated: Optional[bool] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    groups: list[shared_group.Group] = dataclasses.field()
+    is_truncated: Optional[bool] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

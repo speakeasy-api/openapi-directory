@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import envvariable as shared_envvariable
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Action:
     r"""Action
     An action that gets executed during initialization of the replicas.
     """
     
-    commands: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commands') }})
-    env_variables: Optional[List[EnvVariable]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('envVariables') }})
-    timeout_milli_seconds: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeoutMilliSeconds') }})
+    commands: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commands') }})
+    env_variables: Optional[list[shared_envvariable.EnvVariable]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('envVariables') }})
+    timeout_milli_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('timeoutMilliSeconds') }})
     

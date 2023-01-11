@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import invoicesubmission as shared_invoicesubmission
+from ..shared import invoicesubmissionresult as shared_invoicesubmissionresult
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateInvoiceSubmissionRequest:
-    request: shared.InvoiceSubmission = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_invoicesubmission.InvoiceSubmission = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateInvoiceSubmissionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_models: Optional[List[Any]] = field(default=None)
-    invoice_submission_result: Optional[shared.InvoiceSubmissionResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_models: Optional[list[Any]] = dataclasses.field(default=None)
+    invoice_submission_result: Optional[shared_invoicesubmissionresult.InvoiceSubmissionResult] = dataclasses.field(default=None)
     

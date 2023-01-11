@@ -4,6 +4,8 @@ import requests
 
 from . import utils
 
+from .operations import Operations
+from .projects import Projects
 from .text import Text
 from .voices import Voices
 
@@ -15,6 +17,8 @@ SERVERS = [
 
 class SDK:
     r"""SDK Documentation: https://cloud.google.com/text-to-speech/"""
+    operations: Operations
+    projects: Projects
     text: Text
     voices: Voices
 
@@ -47,6 +51,24 @@ class SDK:
     
     
     def _init_sdks(self):
+        
+        self.operations = Operations(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.projects = Projects(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
         
         self.text = Text(
             self._client,

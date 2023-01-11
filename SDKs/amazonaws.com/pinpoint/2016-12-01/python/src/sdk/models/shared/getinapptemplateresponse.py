@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import inapptemplateresponse as shared_inapptemplateresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetInAppTemplateResponse:
-    in_app_template_response: InAppTemplateResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InAppTemplateResponse') }})
+    in_app_template_response: shared_inapptemplateresponse.InAppTemplateResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('InAppTemplateResponse') }})
     

@@ -1,10 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeFastSnapshotRestoresResult:
-    fast_snapshot_restores: Optional[List[DescribeFastSnapshotRestoreSuccessItem]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    fast_snapshot_restores: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    next_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

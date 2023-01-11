@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,110 +20,100 @@ req = operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest(
     security=operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="expedita",
+        parent="animi",
     ),
     query_params=operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams(
-        dollar_xgafv="2",
-        access_token="eaque",
-        alt="json",
-        callback="consequatur",
-        connection_profile_id="laudantium",
-        fields="fugit",
-        key="a",
-        oauth_token="ducimus",
-        pretty_print=True,
-        quota_user="et",
-        request_id="amet",
-        upload_type="exercitationem",
-        upload_protocol="et",
+        dollar_xgafv="1",
+        access_token="qui",
+        alt="media",
+        callback="quis",
+        connection_profile_id="repudiandae",
+        fields="dolorem",
+        key="eum",
+        oauth_token="aut",
+        pretty_print=False,
+        quota_user="velit",
+        request_id="unde",
+        upload_type="esse",
+        upload_protocol="libero",
     ),
     request=shared.ConnectionProfileInput(
         cloudsql=shared.CloudSQLConnectionProfileInput(
             settings=shared.CloudSQLSettingsInput(
-                activation_policy="SQL_ACTIVATION_POLICY_UNSPECIFIED",
+                activation_policy="NEVER",
                 auto_storage_increase=False,
-                data_disk_size_gb="consequuntur",
-                data_disk_type="SQL_DATA_DISK_TYPE_UNSPECIFIED",
+                data_disk_size_gb="id",
+                data_disk_type="PD_HDD",
                 database_flags={
-                    "iusto": "est",
-                    "eveniet": "quia",
-                    "accusantium": "quibusdam",
+                    "molestiae": "est",
+                    "molestiae": "commodi",
+                    "impedit": "ipsa",
                 },
                 database_version="MYSQL_5_6",
                 ip_config=shared.SQLIPConfig(
                     authorized_networks=[
                         shared.SQLACLEntry(
-                            expire_time="voluptatibus",
-                            label="consequatur",
-                            ttl="tenetur",
-                            value="consequatur",
-                        ),
-                        shared.SQLACLEntry(
-                            expire_time="sit",
-                            label="amet",
-                            ttl="quia",
-                            value="sed",
-                        ),
-                        shared.SQLACLEntry(
-                            expire_time="ut",
-                            label="dolorem",
-                            ttl="repudiandae",
-                            value="tempore",
+                            expire_time="aut",
+                            label="aut",
+                            ttl="consequuntur",
+                            value="asperiores",
                         ),
                     ],
-                    enable_ipv4=True,
-                    private_network="aut",
+                    enable_ipv4=False,
+                    private_network="in",
                     require_ssl=True,
                 ),
-                root_password="voluptas",
-                source_id="sint",
-                storage_auto_resize_limit="animi",
-                tier="repudiandae",
+                root_password="molestiae",
+                source_id="dolores",
+                storage_auto_resize_limit="ut",
+                tier="eos",
                 user_labels={
-                    "eligendi": "iure",
-                    "est": "ut",
+                    "tempora": "excepturi",
+                    "repellendus": "nihil",
                 },
-                zone="distinctio",
+                zone="quasi",
             ),
         ),
         display_name="et",
         error=shared.Status(
-            code=3622039482314880459,
+            code=5616495351279140944,
             details=[
                 {
-                    "ipsa": "vel",
-                    "qui": "voluptatum",
-                    "inventore": "quis",
+                    "aut": "qui",
+                    "laborum": "quod",
+                    "eius": "officia",
+                },
+                {
+                    "itaque": "a",
                 },
             ],
-            message="quis",
+            message="minima",
         ),
         labels={
-            "quasi": "architecto",
-            "suscipit": "voluptates",
-            "ad": "laborum",
+            "est": "sed",
+            "odio": "non",
         },
         mysql=shared.MySQLConnectionProfileInput(
-            cloud_sql_id="id",
-            host="odio",
-            password="saepe",
-            port=5731875210557201765,
+            cloud_sql_id="aspernatur",
+            host="quod",
+            password="et",
+            port=8176960718989686902,
             ssl=shared.SslConfigInput(
-                ca_certificate="hic",
-                client_certificate="voluptate",
-                client_key="reprehenderit",
+                ca_certificate="corporis",
+                client_certificate="rerum",
+                client_key="ut",
             ),
-            username="voluptas",
+            username="asperiores",
         ),
-        name="porro",
-        provider="RDS",
-        state="DELETED",
+        name="animi",
+        provider="CLOUDSQL",
+        state="DELETING",
     ),
 )
     

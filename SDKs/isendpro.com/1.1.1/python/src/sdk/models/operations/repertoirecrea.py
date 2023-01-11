@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import repertoirecreaterequest as shared_repertoirecreaterequest
+from ..shared import erreur as shared_erreur
+from ..shared import repertoirecreatereponse as shared_repertoirecreatereponse
 
 
-@dataclass
+@dataclasses.dataclass
 class RepertoireCreaRequest:
-    request: shared.RepertoirEcreaterequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_repertoirecreaterequest.RepertoirEcreaterequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RepertoireCreaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    erreur: Optional[shared.Erreur] = field(default=None)
-    repertoir_ecreatereponse: Optional[shared.RepertoirEcreatereponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    erreur: Optional[shared_erreur.Erreur] = dataclasses.field(default=None)
+    repertoir_ecreatereponse: Optional[shared_repertoirecreatereponse.RepertoirEcreatereponse] = dataclasses.field(default=None)
     

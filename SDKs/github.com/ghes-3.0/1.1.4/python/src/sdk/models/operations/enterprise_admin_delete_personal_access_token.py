@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePersonalAccessTokenPathParams:
-    token_id: int = field(metadata={'path_param': { 'field_name': 'token_id', 'style': 'simple', 'explode': False }})
+    token_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'token_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePersonalAccessTokenRequest:
-    path_params: EnterpriseAdminDeletePersonalAccessTokenPathParams = field()
+    path_params: EnterpriseAdminDeletePersonalAccessTokenPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminDeletePersonalAccessTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,16 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import deductionline as shared_deductionline
+from ..shared import earningsline as shared_earningsline
+from ..shared import leaveline as shared_leaveline
+from ..shared import reimbursementline as shared_reimbursementline
+from ..shared import superline as shared_superline
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PayTemplate:
-    deduction_lines: Optional[List[DeductionLine]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeductionLines') }})
-    earnings_lines: Optional[List[EarningsLine]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EarningsLines') }})
-    leave_lines: Optional[List[LeaveLine]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LeaveLines') }})
-    reimbursement_lines: Optional[List[ReimbursementLine]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReimbursementLines') }})
-    super_lines: Optional[List[SuperLine]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SuperLines') }})
+    deduction_lines: Optional[list[shared_deductionline.DeductionLine]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DeductionLines') }})
+    earnings_lines: Optional[list[shared_earningsline.EarningsLine]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('EarningsLines') }})
+    leave_lines: Optional[list[shared_leaveline.LeaveLine]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LeaveLines') }})
+    reimbursement_lines: Optional[list[shared_reimbursementline.ReimbursementLine]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ReimbursementLines') }})
+    super_lines: Optional[list[shared_superline.SuperLine]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SuperLines') }})
     

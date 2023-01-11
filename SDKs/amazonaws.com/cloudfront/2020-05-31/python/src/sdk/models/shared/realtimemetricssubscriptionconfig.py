@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
-from . import *
+from ..shared import realtimemetricssubscriptionstatus_enum as shared_realtimemetricssubscriptionstatus_enum
 
 
-@dataclass
+@dataclasses.dataclass
 class RealtimeMetricsSubscriptionConfig:
     r"""RealtimeMetricsSubscriptionConfig
     A subscription configuration for additional CloudWatch metrics.
     """
     
-    realtime_metrics_subscription_status: RealtimeMetricsSubscriptionStatusEnum = field()
+    realtime_metrics_subscription_status: shared_realtimemetricssubscriptionstatus_enum.RealtimeMetricsSubscriptionStatusEnum = dataclasses.field()
     

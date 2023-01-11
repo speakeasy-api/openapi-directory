@@ -1,6 +1,8 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import rpcrequest as shared_rpcrequest
+from ..shared import rpcresponse as shared_rpcresponse
 
 
 JSON_RPC_SERVERS = [
@@ -9,22 +11,22 @@ JSON_RPC_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class JSONRPCSecurity:
-    rpc_auth: shared.SchemeRPCAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    rpc_auth: shared_security.SchemeRPCAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JSONRPCRequest:
-    request: shared.RPCRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: JSONRPCSecurity = field()
-    server_url: Optional[str] = field(default=None)
+    request: shared_rpcrequest.RPCRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: JSONRPCSecurity = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class JSONRPCResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    rpc_response: Optional[shared.RPCResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    rpc_response: Optional[shared_rpcresponse.RPCResponse] = dataclasses.field(default=None)
     

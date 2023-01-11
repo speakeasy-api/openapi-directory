@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CustomerStorageMessage:
-    total_backup_size_in_mega_bytes: Optional[float] = field(default=None)
-    total_provisioned_storage_in_mega_bytes: Optional[float] = field(default=None)
+    total_backup_size_in_mega_bytes: Optional[float] = dataclasses.field(default=None)
+    total_provisioned_storage_in_mega_bytes: Optional[float] = dataclasses.field(default=None)
     

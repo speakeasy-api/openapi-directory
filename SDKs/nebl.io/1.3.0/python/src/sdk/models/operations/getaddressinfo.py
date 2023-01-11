@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import getaddressinforesponse as shared_getaddressinforesponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressInfoPathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressInfoRequest:
-    path_params: GetAddressInfoPathParams = field()
+    path_params: GetAddressInfoPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    get_address_info_response: Optional[shared.GetAddressInfoResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    get_address_info_response: Optional[shared_getaddressinforesponse.GetAddressInfoResponse] = dataclasses.field(default=None)
     

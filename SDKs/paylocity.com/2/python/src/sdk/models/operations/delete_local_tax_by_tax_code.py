@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import error as shared_error
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLocalTaxByTaxCodePathParams:
-    company_id: str = field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
-    employee_id: str = field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
-    tax_code: str = field(metadata={'path_param': { 'field_name': 'taxCode', 'style': 'simple', 'explode': False }})
+    company_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'companyId', 'style': 'simple', 'explode': False }})
+    employee_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'employeeId', 'style': 'simple', 'explode': False }})
+    tax_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'taxCode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLocalTaxByTaxCodeSecurity:
-    paylocity_auth: shared.SchemePaylocityAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    paylocity_auth: shared_security.SchemePaylocityAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLocalTaxByTaxCodeRequest:
-    path_params: DeleteLocalTaxByTaxCodePathParams = field()
-    security: DeleteLocalTaxByTaxCodeSecurity = field()
+    path_params: DeleteLocalTaxByTaxCodePathParams = dataclasses.field()
+    security: DeleteLocalTaxByTaxCodeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteLocalTaxByTaxCodeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    errors: Optional[List[shared.Error]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None)
     

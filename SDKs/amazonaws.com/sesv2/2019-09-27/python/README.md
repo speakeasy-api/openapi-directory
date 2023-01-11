@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,55 +25,54 @@ s.config_security(
     
 req = operations.CreateConfigurationSetRequest(
     headers=operations.CreateConfigurationSetHeaders(
-        x_amz_algorithm="quis",
-        x_amz_content_sha256="nam",
-        x_amz_credential="et",
-        x_amz_date="saepe",
-        x_amz_security_token="esse",
-        x_amz_signature="facere",
-        x_amz_signed_headers="cumque",
+        x_amz_algorithm="nam",
+        x_amz_content_sha256="non",
+        x_amz_credential="doloremque",
+        x_amz_date="qui",
+        x_amz_security_token="quaerat",
+        x_amz_signature="natus",
+        x_amz_signed_headers="illo",
     ),
     request=operations.CreateConfigurationSetRequestBody(
-        configuration_set_name="accusamus",
+        configuration_set_name="optio",
         delivery_options=operations.CreateConfigurationSetRequestBodyDeliveryOptions(
-            sending_pool_name="placeat",
+            sending_pool_name="reprehenderit",
             tls_policy="REQUIRE",
         ),
         reputation_options=operations.CreateConfigurationSetRequestBodyReputationOptions(
-            last_fresh_start="1990-03-08T20:34:07Z",
-            reputation_metrics_enabled=True,
+            last_fresh_start="2000-05-10T08:14:20Z",
+            reputation_metrics_enabled=False,
         ),
         sending_options=operations.CreateConfigurationSetRequestBodySendingOptions(
-            sending_enabled=False,
+            sending_enabled=True,
         ),
         suppression_options=operations.CreateConfigurationSetRequestBodySuppressionOptions(
             suppressed_reasons=[
                 "BOUNCE",
-                "BOUNCE",
-                "BOUNCE",
+                "COMPLAINT",
             ],
         ),
         tags=[
             shared.Tag(
-                key="possimus",
-                value="ducimus",
+                key="iusto",
+                value="esse",
             ),
             shared.Tag(
-                key="placeat",
-                value="modi",
+                key="architecto",
+                value="est",
             ),
             shared.Tag(
-                key="amet",
-                value="modi",
+                key="aliquam",
+                value="aut",
             ),
         ],
         tracking_options=operations.CreateConfigurationSetRequestBodyTrackingOptions(
-            custom_redirect_domain="adipisci",
+            custom_redirect_domain="corporis",
         ),
     ),
 )
     
-res = s.sdk.create_configuration_set(req)
+res = s.create_configuration_set(req)
 
 if res.create_configuration_set_response is not None:
     # handle response

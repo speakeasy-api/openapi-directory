@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import exporttaskslist as shared_exporttaskslist
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportTasksMessage:
-    export_tasks: Optional[List[ExportTask]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    export_tasks: Optional[list[shared_exporttaskslist.ExportTasksList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

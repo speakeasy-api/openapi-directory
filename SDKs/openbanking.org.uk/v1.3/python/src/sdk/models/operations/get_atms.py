@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAtmsHeaders:
-    if_modified_since: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
-    if_none_match: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
+    if_modified_since: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-Modified-Since', 'style': 'simple', 'explode': False }})
+    if_none_match: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'If-None-Match', 'style': 'simple', 'explode': False }})
     
 class GetAtms400ErrorObjectDescriptionEnum(str, Enum):
     YOU_HAVE_SENT_A_REQUEST_WHICH_COULD_NOT_BE_UNDERSTOOD_ = "You have sent a request which could not be understood."
@@ -24,11 +24,11 @@ class GetAtms400ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms400ErrorObject:
-    description: GetAtms400ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetAtms400ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetAtms400ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetAtms400ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetAtms400ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetAtms400ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetAtms408ErrorObjectDescriptionEnum(str, Enum):
     YOUR_CLIENT_HAS_FAILED_TO_SUBMIT_A_REQUEST_AND_A_TIMEOUT_HAS_OCCURRED_ = "Your client has failed to submit a request, and a timeout has occurred."
@@ -41,11 +41,11 @@ class GetAtms408ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms408ErrorObject:
-    description: GetAtms408ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetAtms408ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetAtms408ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetAtms408ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetAtms408ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetAtms408ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetAtms429ErrorObjectDescriptionEnum(str, Enum):
     YOU_HAVE_REQUESTED_THIS_RESOURCE_TOO_OFTEN_SLOW_DOWN_ = "You have requested this resource too often. Slow down."
@@ -58,11 +58,11 @@ class GetAtms429ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms429ErrorObject:
-    description: GetAtms429ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetAtms429ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetAtms429ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetAtms429ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetAtms429ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetAtms429ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetAtms500ErrorObjectDescriptionEnum(str, Enum):
     AN_ERROR_OCCURRED_ON_THE_SERVER_NO_FURTHER_INFORMATION_IS_AVAILABLE_ = "An error occurred on the server. No further information is available."
@@ -75,11 +75,11 @@ class GetAtms500ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms500ErrorObject:
-    description: GetAtms500ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetAtms500ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetAtms500ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetAtms500ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetAtms500ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetAtms500ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetAtms503ErrorObjectDescriptionEnum(str, Enum):
     THE_SERVICE_IS_TEMPORARILY_UNAVAILABLE_ = "The service is temporarily unavailable."
@@ -92,19 +92,19 @@ class GetAtms503ErrorObjectTitleEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms503ErrorObject:
-    description: GetAtms503ErrorObjectDescriptionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: GetAtms503ErrorObjectStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: GetAtms503ErrorObjectTitleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: GetAtms503ErrorObjectDescriptionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: GetAtms503ErrorObjectStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: GetAtms503ErrorObjectTitleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtmsErrorObject:
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    title: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    title: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
     
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAtmServicesEnum(str, Enum):
     BALANCE = "Balance"
@@ -137,30 +137,30 @@ class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAccessibilityType
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAddress:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAddress
     Postal Address
     """
     
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Country') }})
-    post_code: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PostCode') }})
-    street_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreetName') }})
-    building_number_or_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BuildingNumberOrName') }})
-    country_sub_division: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountrySubDivision') }})
-    optional_address_field: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptionalAddressField') }})
-    town_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TownName') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Country') }})
+    post_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('PostCode') }})
+    street_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('StreetName') }})
+    building_number_or_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BuildingNumberOrName') }})
+    country_sub_division: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('CountrySubDivision') }})
+    optional_address_field: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('OptionalAddressField') }})
+    town_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('TownName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmGeographicLocation:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmGeographicLocation
     Geographic Coordinates
     """
     
-    latitude: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Latitude') }})
-    longitude: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Longitude') }})
+    latitude: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Latitude') }})
+    longitude: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Longitude') }})
     
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmLocationCategoryEnum(str, Enum):
     AIRPORT = "Airport"
@@ -210,66 +210,66 @@ class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrand
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrand:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrand
     Brand
     """
     
-    trademark_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkID') }})
-    trademark_ipo_code: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrandTrademarkIpoCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkIPOCode') }})
+    trademark_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkID') }})
+    trademark_ipo_code: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrandTrademarkIpoCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TrademarkIPOCode') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisationOrganisationName:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisationOrganisationName
     Organisation Name
     """
     
-    legal_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LegalName') }})
+    legal_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LegalName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisation:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisation
     Parent organisation
     """
     
-    organisation_name: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisationOrganisationName = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganisationName') }})
-    bic: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BIC') }})
-    lei: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LEI') }})
+    organisation_name: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisationOrganisationName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('OrganisationName') }})
+    bic: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BIC') }})
+    lei: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LEI') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisation:
     r"""GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisation
     Organisation
     """
     
-    brand: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrand = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Brand') }})
-    parent_organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentOrganisation') }})
+    brand: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationBrand = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Brand') }})
+    parent_organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisationParentOrganisation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ParentOrganisation') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtm:
-    atmid: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMID') }})
-    atm_services: List[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAtmServicesEnum] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMServices') }})
-    address: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAddress = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Address') }})
-    currency: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Currency') }})
-    geographic_location: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmGeographicLocation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('GeographicLocation') }})
-    organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Organisation') }})
-    supported_languages: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SupportedLanguages') }})
-    accessibility_types: Optional[List[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAccessibilityTypesEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessibilityTypes') }})
-    additional_atm_services: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AdditionalATMServices') }})
-    branch_identification: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchIdentification') }})
-    location_category: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmLocationCategoryEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LocationCategory') }})
-    minimum_value_dispensed: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmMinimumValueDispensedEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MinimumValueDispensed') }})
-    site_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SiteID') }})
-    site_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SiteName') }})
+    atmid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMID') }})
+    atm_services: list[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAtmServicesEnum] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ATMServices') }})
+    address: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Address') }})
+    currency: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Currency') }})
+    geographic_location: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmGeographicLocation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('GeographicLocation') }})
+    organisation: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmOrganisation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Organisation') }})
+    supported_languages: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('SupportedLanguages') }})
+    accessibility_types: Optional[list[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmAccessibilityTypesEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AccessibilityTypes') }})
+    additional_atm_services: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AdditionalATMServices') }})
+    branch_identification: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('BranchIdentification') }})
+    location_category: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmLocationCategoryEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('LocationCategory') }})
+    minimum_value_dispensed: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtmMinimumValueDispensedEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('MinimumValueDispensed') }})
+    site_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SiteID') }})
+    site_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SiteName') }})
     
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(str, Enum):
     USE_OF_THE_AP_IS_AND_ANY_RELATED_DATA_WILL_BE_SUBJECT_TO_THE_TERMS_OF_THE_OPEN_LICENCE_AND_SUBJECT_TO_TERMS_AND_CONDITIONS = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
@@ -282,37 +282,37 @@ class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEn
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData:
-    agreement: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agreement') }})
-    last_updated: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LastUpdated'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    license: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('License') }})
-    terms_of_use: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TermsOfUse') }})
-    total_results: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResults') }})
+    agreement: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Agreement') }})
+    last_updated: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LastUpdated'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    license: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('License') }})
+    terms_of_use: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TermsOfUse') }})
+    total_results: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('TotalResults') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSON:
-    data: List[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtm] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    meta: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
+    data: list[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONAtm] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    meta: GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('meta') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAtmsRequest:
-    headers: GetAtmsHeaders = field()
+    headers: GetAtmsHeaders = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAtmsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    four_hundred_error_object: Optional[GetAtms400ErrorObject] = field(default=None)
-    four_hundred_and_eight_error_object: Optional[GetAtms408ErrorObject] = field(default=None)
-    four_hundred_and_twenty_nine_error_object: Optional[GetAtms429ErrorObject] = field(default=None)
-    five_hundred_error_object: Optional[GetAtms500ErrorObject] = field(default=None)
-    five_hundred_and_three_error_object: Optional[GetAtms503ErrorObject] = field(default=None)
-    error_object: Optional[GetAtmsErrorObject] = field(default=None)
-    get_atms_200_application_prs_openbanking_opendata_v1_3_plus_json_object: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    four_hundred_error_object: Optional[GetAtms400ErrorObject] = dataclasses.field(default=None)
+    four_hundred_and_eight_error_object: Optional[GetAtms408ErrorObject] = dataclasses.field(default=None)
+    four_hundred_and_twenty_nine_error_object: Optional[GetAtms429ErrorObject] = dataclasses.field(default=None)
+    five_hundred_error_object: Optional[GetAtms500ErrorObject] = dataclasses.field(default=None)
+    five_hundred_and_three_error_object: Optional[GetAtms503ErrorObject] = dataclasses.field(default=None)
+    error_object: Optional[GetAtmsErrorObject] = dataclasses.field(default=None)
+    get_atms_200_application_prs_openbanking_opendata_v1_3_plus_json_object: Optional[GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSON] = dataclasses.field(default=None)
     

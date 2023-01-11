@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import project as shared_project
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProjectsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    projects: Optional[List[shared.Project]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    projects: Optional[list[shared_project.Project]] = dataclasses.field(default=None)
     

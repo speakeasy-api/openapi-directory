@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from . import *
+import dataclasses
+from ..shared import identitymailfromdomainattributes as shared_identitymailfromdomainattributes
 
 
-@dataclass
+@dataclasses.dataclass
 class GetIdentityMailFromDomainAttributesResponse:
     r"""GetIdentityMailFromDomainAttributesResponse
     Represents the custom MAIL FROM attributes for a list of identities.
     """
     
-    mail_from_domain_attributes: dict[str, IdentityMailFromDomainAttributes] = field()
+    mail_from_domain_attributes: dict[str, shared_identitymailfromdomainattributes.IdentityMailFromDomainAttributes] = dataclasses.field()
     

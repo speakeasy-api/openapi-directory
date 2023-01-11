@@ -1,35 +1,32 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import org_enum2 as shared_org_enum2
+from ..shared import simple_user as shared_simple_user
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListOutsideCollaboratorsPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
-class OrgsListOutsideCollaboratorsFilterEnum(str, Enum):
-    TWOFA_DISABLED = "2fa_disabled"
-    ALL = "all"
 
-
-@dataclass
+@dataclasses.dataclass
 class OrgsListOutsideCollaboratorsQueryParams:
-    filter: Optional[OrgsListOutsideCollaboratorsFilterEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    filter: Optional[shared_org_enum2.OrgEnum2] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListOutsideCollaboratorsRequest:
-    path_params: OrgsListOutsideCollaboratorsPathParams = field()
-    query_params: OrgsListOutsideCollaboratorsQueryParams = field()
+    path_params: OrgsListOutsideCollaboratorsPathParams = dataclasses.field()
+    query_params: OrgsListOutsideCollaboratorsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListOutsideCollaboratorsResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    simple_users: Optional[List[shared.SimpleUser]] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    simple_users: Optional[list[shared_simple_user.SimpleUser]] = dataclasses.field(default=None)
     

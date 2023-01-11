@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import fulfillmentpolicyrequest as shared_fulfillmentpolicyrequest
+from ..shared import setfulfillmentpolicyresponse as shared_setfulfillmentpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFulfillmentPolicyPathParams:
-    fulfillment_policy_id: str = field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
+    fulfillment_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'fulfillmentPolicyId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFulfillmentPolicySecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFulfillmentPolicyRequest:
-    path_params: UpdateFulfillmentPolicyPathParams = field()
-    request: shared.FulfillmentPolicyRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateFulfillmentPolicySecurity = field()
+    path_params: UpdateFulfillmentPolicyPathParams = dataclasses.field()
+    request: shared_fulfillmentpolicyrequest.FulfillmentPolicyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateFulfillmentPolicySecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateFulfillmentPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_fulfillment_policy_response: Optional[shared.SetFulfillmentPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_fulfillment_policy_response: Optional[shared_setfulfillmentpolicyresponse.SetFulfillmentPolicyResponse] = dataclasses.field(default=None)
     

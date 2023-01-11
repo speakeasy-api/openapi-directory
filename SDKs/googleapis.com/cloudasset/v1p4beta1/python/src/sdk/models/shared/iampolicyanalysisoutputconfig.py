@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import gcsdestination as shared_gcsdestination
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class IamPolicyAnalysisOutputConfig:
     r"""IamPolicyAnalysisOutputConfig
     Output configuration for export IAM policy analysis destination.
     """
     
-    gcs_destination: Optional[GcsDestination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gcsDestination') }})
+    gcs_destination: Optional[shared_gcsdestination.GcsDestination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gcsDestination') }})
     

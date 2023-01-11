@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notification as shared_notification
 
 
-@dataclass
+@dataclasses.dataclass
 class PutNotificationsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutNotificationsIDRequest:
-    path_params: PutNotificationsIDPathParams = field()
-    request: shared.Notification = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutNotificationsIDPathParams = dataclasses.field()
+    request: shared_notification.Notification = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutNotificationsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    notification: Optional[shared.Notification] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    notification: Optional[shared_notification.Notification] = dataclasses.field(default=None)
     

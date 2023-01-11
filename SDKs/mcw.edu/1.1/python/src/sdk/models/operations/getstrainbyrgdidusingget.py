@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetStrainByRgdIDUsingGetPathParams:
-    rgd_id: int = field(metadata={'path_param': { 'field_name': 'rgdId', 'style': 'simple', 'explode': False }})
+    rgd_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'rgdId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStrainByRgdIDUsingGetRequest:
-    path_params: GetStrainByRgdIDUsingGetPathParams = field()
+    path_params: GetStrainByRgdIDUsingGetPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetStrainByRgdIDUsingGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

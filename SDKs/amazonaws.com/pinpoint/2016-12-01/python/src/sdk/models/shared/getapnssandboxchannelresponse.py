@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import apnssandboxchannelresponse as shared_apnssandboxchannelresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetApnsSandboxChannelResponse:
-    apns_sandbox_channel_response: ApnsSandboxChannelResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('APNSSandboxChannelResponse') }})
+    apns_sandbox_channel_response: shared_apnssandboxchannelresponse.ApnsSandboxChannelResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('APNSSandboxChannelResponse') }})
     

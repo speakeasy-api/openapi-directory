@@ -1,32 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import namematchcandidatesout as shared_namematchcandidatesout
 
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidatesPathParams:
-    japanese_given_name_latin: str = field(metadata={'path_param': { 'field_name': 'japaneseGivenNameLatin', 'style': 'simple', 'explode': False }})
-    japanese_surname_latin: str = field(metadata={'path_param': { 'field_name': 'japaneseSurnameLatin', 'style': 'simple', 'explode': False }})
-    known_gender: str = field(metadata={'path_param': { 'field_name': 'knownGender', 'style': 'simple', 'explode': False }})
+    japanese_given_name_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseGivenNameLatin', 'style': 'simple', 'explode': False }})
+    japanese_surname_latin: str = dataclasses.field(metadata={'path_param': { 'field_name': 'japaneseSurnameLatin', 'style': 'simple', 'explode': False }})
+    known_gender: str = dataclasses.field(metadata={'path_param': { 'field_name': 'knownGender', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidatesSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidatesRequest:
-    path_params: JapaneseNameKanjiCandidatesPathParams = field()
-    security: JapaneseNameKanjiCandidatesSecurity = field()
+    path_params: JapaneseNameKanjiCandidatesPathParams = dataclasses.field()
+    security: JapaneseNameKanjiCandidatesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class JapaneseNameKanjiCandidatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    name_match_candidates_out: Optional[shared.NameMatchCandidatesOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    name_match_candidates_out: Optional[shared_namematchcandidatesout.NameMatchCandidatesOut] = dataclasses.field(default=None)
     

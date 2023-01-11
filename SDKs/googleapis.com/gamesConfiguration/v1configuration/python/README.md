@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.GamesConfigurationAchievementConfigurationsDeleteRequest(
     security=operations.GamesConfigurationAchievementConfigurationsDeleteSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.GamesConfigurationAchievementConfigurationsDeletePathParams(
-        achievement_id="occaecati",
+        achievement_id="earum",
     ),
     query_params=operations.GamesConfigurationAchievementConfigurationsDeleteQueryParams(
         dollar_xgafv="1",
-        access_token="consequatur",
-        alt="proto",
-        callback="officia",
-        fields="perspiciatis",
-        key="illo",
-        oauth_token="quam",
-        pretty_print=False,
-        quota_user="eum",
-        upload_type="ducimus",
-        upload_protocol="sed",
+        access_token="cum",
+        alt="json",
+        callback="dicta",
+        fields="consequatur",
+        key="et",
+        oauth_token="tempora",
+        pretty_print=True,
+        quota_user="aliquam",
+        upload_type="quaerat",
+        upload_protocol="voluptatem",
     ),
 )
     
@@ -61,10 +60,6 @@ if res.status_code == 200:
 * `games_configuration_achievement_configurations_insert` - Insert a new achievement configuration in this application.
 * `games_configuration_achievement_configurations_list` - Returns a list of the achievement configurations in this application.
 * `games_configuration_achievement_configurations_update` - Update the metadata of the achievement configuration with the given ID.
-
-### imageConfigurations
-
-* `games_configuration_image_configurations_upload` - Uploads an image for a resource with the given ID and image type.
 
 ### leaderboardConfigurations
 

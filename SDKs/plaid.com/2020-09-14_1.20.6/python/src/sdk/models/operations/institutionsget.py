@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import institutionsgetrequest as shared_institutionsgetrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsGetRequest:
-    request: shared.InstitutionsGetRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_institutionsgetrequest.InstitutionsGetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsGetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    institutions_get_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    institutions_get_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import emailchannelresponse as shared_emailchannelresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeleteEmailChannelResponse:
-    email_channel_response: EmailChannelResponse = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EmailChannelResponse') }})
+    email_channel_response: shared_emailchannelresponse.EmailChannelResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('EmailChannelResponse') }})
     

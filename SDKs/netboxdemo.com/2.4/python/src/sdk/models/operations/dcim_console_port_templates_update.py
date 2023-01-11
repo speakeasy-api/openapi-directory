@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writableconsoleporttemplate as shared_writableconsoleporttemplate
+from ..shared import consoleporttemplate as shared_consoleporttemplate
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesUpdateRequest:
-    path_params: DcimConsolePortTemplatesUpdatePathParams = field()
-    request: shared.WritableConsolePortTemplateInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimConsolePortTemplatesUpdatePathParams = dataclasses.field()
+    request: shared_writableconsoleporttemplate.WritableConsolePortTemplateInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimConsolePortTemplatesUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    console_port_template: Optional[shared.ConsolePortTemplate] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    console_port_template: Optional[shared_consoleporttemplate.ConsolePortTemplate] = dataclasses.field(default=None)
     

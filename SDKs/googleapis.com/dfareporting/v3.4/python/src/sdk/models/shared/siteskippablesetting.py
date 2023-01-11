@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import videooffset as shared_videooffset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SiteSkippableSetting:
     r"""SiteSkippableSetting
     Skippable Settings
     """
     
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    progress_offset: Optional[VideoOffset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('progressOffset') }})
-    skip_offset: Optional[VideoOffset] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skipOffset') }})
-    skippable: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippable') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    progress_offset: Optional[shared_videooffset.VideoOffset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('progressOffset') }})
+    skip_offset: Optional[shared_videooffset.VideoOffset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skipOffset') }})
+    skippable: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('skippable') }})
     

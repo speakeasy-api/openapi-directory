@@ -1,13 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List
-from . import *
+import dataclasses
+from ..shared import suggesterstatus as shared_suggesterstatus
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeSuggestersResponse:
     r"""DescribeSuggestersResponse
     The result of a <code>DescribeSuggesters</code> request.
     """
     
-    suggesters: List[SuggesterStatus] = field()
+    suggesters: list[shared_suggesterstatus.SuggesterStatus] = dataclasses.field()
     

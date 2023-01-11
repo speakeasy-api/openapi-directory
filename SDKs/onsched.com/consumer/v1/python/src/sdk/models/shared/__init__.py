@@ -37,3 +37,5 @@ from .servicegroupviewmodel import *
 from .serviceviewmodel import *
 from .stateviewmodel import *
 from .windowavailabilityviewmodel import *
+
+__all__ = ["AddressInputModel","AddressUpdateModel","AppointmentAuditViewModel","AppointmentBookModel","AppointmentCustomerViewModel","AppointmentInitialModel","AppointmentInitialViewModel","AppointmentRescheduleModel","AppointmentReserveModel","AppointmentResourceViewModel","AppointmentViewModel","Availability3ViewModel","AvailabilityDayViewModel","AvailabilityViewModel","BookingFieldListViewModel","ContactInputModel","ContactUpdateModel","CountryViewModel","CustomerInputModel","CustomerPlanViewModel","CustomerSubscriptionInputModel","CustomerSubscriptionUpdateModel","CustomerSubscriptionViewModel","CustomerUpdateModel","CustomerViewModel","CustomFieldDefinitionListViewModel","CustomFieldInputModel","CustomFieldUpdateModel","CustomFieldViewModel","LocationViewModel","OnlineSettingsViewModel","RepeatViewModel","ResourceViewModel","SchemeOauth2","Security","ServiceAllocationViewModel","ServiceGroupViewModel","ServiceViewModel","StateViewModel","WindowAvailabilityViewModel"]

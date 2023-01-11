@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import taskfield_enum as shared_taskfield_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeTasksRequest:
-    tasks: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tasks') }})
-    cluster: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
-    include: Optional[List[TaskFieldEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
+    tasks: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tasks') }})
+    cluster: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cluster') }})
+    include: Optional[list[shared_taskfield_enum.TaskFieldEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('include') }})
     

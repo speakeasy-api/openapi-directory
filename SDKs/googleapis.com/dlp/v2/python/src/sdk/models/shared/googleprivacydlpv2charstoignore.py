@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,12 +14,12 @@ class GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2CharsToIgnore:
     r"""GooglePrivacyDlpV2CharsToIgnore
     Characters to skip when doing deidentification of a value. These will be left alone and skipped.
     """
     
-    characters_to_skip: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('charactersToSkip') }})
-    common_characters_to_ignore: Optional[GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonCharactersToIgnore') }})
+    characters_to_skip: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('charactersToSkip') }})
+    common_characters_to_ignore: Optional[GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonCharactersToIgnore') }})
     

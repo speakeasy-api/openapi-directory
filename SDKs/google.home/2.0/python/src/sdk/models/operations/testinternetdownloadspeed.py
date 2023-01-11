@@ -1,16 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import testinternetdownloadspeedrequest as shared_testinternetdownloadspeedrequest
+from ..shared import example16 as shared_example16
 
 
-@dataclass
+@dataclasses.dataclass
 class TestInternetDownloadSpeedRequest:
-    request: shared.TestInternetDownloadSpeedRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_testinternetdownloadspeedrequest.TestInternetDownloadSpeedRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TestInternetDownloadSpeedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    example16: Optional[shared.Example16] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    example16: Optional[shared_example16.Example16] = dataclasses.field(default=None)
     

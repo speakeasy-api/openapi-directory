@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -38,12 +38,12 @@ class FirstAndThirdPartyAudienceTargetingSettingRecencyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FirstAndThirdPartyAudienceTargetingSetting:
     r"""FirstAndThirdPartyAudienceTargetingSetting
     Details of first and third party audience targeting setting.
     """
     
-    first_and_third_party_audience_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceId') }})
-    recency: Optional[FirstAndThirdPartyAudienceTargetingSettingRecencyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recency') }})
+    first_and_third_party_audience_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('firstAndThirdPartyAudienceId') }})
+    recency: Optional[FirstAndThirdPartyAudienceTargetingSettingRecencyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('recency') }})
     

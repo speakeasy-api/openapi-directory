@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,9 +8,9 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientIdentificationRequestQueryPatient:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 class PatientIdentificationRequestQueryRequesterTypeEnum(str, Enum):
     HIU = "HIU"
@@ -18,23 +18,23 @@ class PatientIdentificationRequestQueryRequesterTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientIdentificationRequestQueryRequester:
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    type: PatientIdentificationRequestQueryRequesterTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    type: PatientIdentificationRequestQueryRequesterTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientIdentificationRequestQuery:
-    patient: PatientIdentificationRequestQueryPatient = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('patient') }})
-    requester: PatientIdentificationRequestQueryRequester = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requester') }})
+    patient: PatientIdentificationRequestQueryPatient = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('patient') }})
+    requester: PatientIdentificationRequestQueryRequester = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requester') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PatientIdentificationRequest:
-    query: PatientIdentificationRequestQuery = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
-    timestamp: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    query: PatientIdentificationRequestQuery = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('query') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('requestId') }})
+    timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
     

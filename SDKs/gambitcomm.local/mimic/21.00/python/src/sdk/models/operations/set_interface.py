@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetInterfacePathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
-    interface: str = field(metadata={'path_param': { 'field_name': 'interface', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    interface: str = dataclasses.field(metadata={'path_param': { 'field_name': 'interface', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetInterfaceRequest:
-    path_params: SetInterfacePathParams = field()
+    path_params: SetInterfacePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SetInterfaceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_interface_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_interface_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

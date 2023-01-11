@@ -1,41 +1,42 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import video as shared_video
 
 
-@dataclass
+@dataclasses.dataclass
 class UploadVideoPathParams:
-    user_id: float = field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
+    user_id: float = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyEmbedButtons:
-    embed: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
-    fullscreen: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fullscreen') }})
-    hd: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hd') }})
-    like: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('like') }})
-    scaling: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaling') }})
-    share: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('share') }})
-    watchlater: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
+    embed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
+    fullscreen: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fullscreen') }})
+    hd: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('hd') }})
+    like: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('like') }})
+    scaling: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaling') }})
+    share: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('share') }})
+    watchlater: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('watchlater') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyEmbedLogosCustom:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    sticky: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sticky') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    sticky: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sticky') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyEmbedLogos:
-    custom: Optional[UploadVideoRequestBodyEmbedLogosCustom] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('custom') }})
-    vimeo: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vimeo') }})
+    custom: Optional[UploadVideoRequestBodyEmbedLogosCustom] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('custom') }})
+    vimeo: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('vimeo') }})
     
 class UploadVideoRequestBodyEmbedTitleNameEnum(str, Enum):
     HIDE = "hide"
@@ -54,22 +55,22 @@ class UploadVideoRequestBodyEmbedTitlePortraitEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyEmbedTitle:
-    name: Optional[UploadVideoRequestBodyEmbedTitleNameEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    owner: Optional[UploadVideoRequestBodyEmbedTitleOwnerEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('owner') }})
-    portrait: Optional[UploadVideoRequestBodyEmbedTitlePortraitEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portrait') }})
+    name: Optional[UploadVideoRequestBodyEmbedTitleNameEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    owner: Optional[UploadVideoRequestBodyEmbedTitleOwnerEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('owner') }})
+    portrait: Optional[UploadVideoRequestBodyEmbedTitlePortraitEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portrait') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyEmbed:
-    buttons: Optional[UploadVideoRequestBodyEmbedButtons] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buttons') }})
-    color: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
-    logos: Optional[UploadVideoRequestBodyEmbedLogos] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logos') }})
-    playbar: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playbar') }})
-    title: Optional[UploadVideoRequestBodyEmbedTitle] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
-    volume: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
+    buttons: Optional[UploadVideoRequestBodyEmbedButtons] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('buttons') }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('color') }})
+    logos: Optional[UploadVideoRequestBodyEmbedLogos] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('logos') }})
+    playbar: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('playbar') }})
+    title: Optional[UploadVideoRequestBodyEmbedTitle] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('title') }})
+    volume: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('volume') }})
     
 class UploadVideoRequestBodyLicenseEnum(str, Enum):
     BY = "by"
@@ -101,13 +102,13 @@ class UploadVideoRequestBodyPrivacyViewEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyPrivacy:
-    add: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
-    comments: Optional[UploadVideoRequestBodyPrivacyCommentsEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
-    download: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
-    embed: Optional[UploadVideoRequestBodyPrivacyEmbedEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
-    view: Optional[UploadVideoRequestBodyPrivacyViewEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
+    add: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('add') }})
+    comments: Optional[UploadVideoRequestBodyPrivacyCommentsEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comments') }})
+    download: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('download') }})
+    embed: Optional[UploadVideoRequestBodyPrivacyEmbedEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
+    view: Optional[UploadVideoRequestBodyPrivacyViewEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('view') }})
     
 class UploadVideoRequestBodyRatingsMpaaReasonEnum(str, Enum):
     AT = "at"
@@ -119,9 +120,9 @@ class UploadVideoRequestBodyRatingsMpaaReasonEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyRatingsMpaa:
-    reason: Optional[UploadVideoRequestBodyRatingsMpaaReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    reason: Optional[UploadVideoRequestBodyRatingsMpaaReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 class UploadVideoRequestBodyRatingsTvReasonEnum(str, Enum):
     D = "d"
@@ -132,31 +133,31 @@ class UploadVideoRequestBodyRatingsTvReasonEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyRatingsTv:
-    reason: Optional[UploadVideoRequestBodyRatingsTvReasonEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
+    reason: Optional[UploadVideoRequestBodyRatingsTvReasonEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('reason') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyRatings:
-    mpaa: Optional[UploadVideoRequestBodyRatingsMpaa] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mpaa') }})
-    tv: Optional[UploadVideoRequestBodyRatingsTv] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tv') }})
+    mpaa: Optional[UploadVideoRequestBodyRatingsMpaa] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mpaa') }})
+    tv: Optional[UploadVideoRequestBodyRatingsTv] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('tv') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyReviewPage:
-    active: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
+    active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodySpatialDirectorTimeline:
-    pitch: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pitch') }})
-    time_code: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time_code') }})
-    yaw: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('yaw') }})
-    roll: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roll') }})
+    pitch: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pitch') }})
+    time_code: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('time_code') }})
+    yaw: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('yaw') }})
+    roll: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roll') }})
     
 class UploadVideoRequestBodySpatialProjectionEnum(str, Enum):
     CUBICAL = "cubical"
@@ -172,12 +173,12 @@ class UploadVideoRequestBodySpatialStereoFormatEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodySpatial:
-    director_timeline: Optional[List[UploadVideoRequestBodySpatialDirectorTimeline]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('director_timeline') }})
-    field_of_view: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field_of_view') }})
-    projection: Optional[UploadVideoRequestBodySpatialProjectionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projection') }})
-    stereo_format: Optional[UploadVideoRequestBodySpatialStereoFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stereo_format') }})
+    director_timeline: Optional[list[UploadVideoRequestBodySpatialDirectorTimeline]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('director_timeline') }})
+    field_of_view: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('field_of_view') }})
+    projection: Optional[UploadVideoRequestBodySpatialProjectionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('projection') }})
+    stereo_format: Optional[UploadVideoRequestBodySpatialStereoFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stereo_format') }})
     
 class UploadVideoRequestBodyUploadApproachEnum(str, Enum):
     POST = "post"
@@ -187,41 +188,41 @@ class UploadVideoRequestBodyUploadApproachEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBodyUpload:
-    approach: UploadVideoRequestBodyUploadApproachEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('approach') }})
-    link: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
-    redirect_url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('redirect_url') }})
-    size: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
+    approach: UploadVideoRequestBodyUploadApproachEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('approach') }})
+    link: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('link') }})
+    redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('redirect_url') }})
+    size: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('size') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequestBody:
-    upload: UploadVideoRequestBodyUpload = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload') }})
-    content_rating: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_rating') }})
-    description: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    embed: Optional[UploadVideoRequestBodyEmbed] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
-    license: Optional[UploadVideoRequestBodyLicenseEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('license') }})
-    locale: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    password: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
-    privacy: Optional[UploadVideoRequestBodyPrivacy] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
-    ratings: Optional[UploadVideoRequestBodyRatings] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratings') }})
-    review_page: Optional[UploadVideoRequestBodyReviewPage] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_page') }})
-    spatial: Optional[UploadVideoRequestBodySpatial] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spatial') }})
+    upload: UploadVideoRequestBodyUpload = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('upload') }})
+    content_rating: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content_rating') }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    embed: Optional[UploadVideoRequestBodyEmbed] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('embed') }})
+    license: Optional[UploadVideoRequestBodyLicenseEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('license') }})
+    locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('locale') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('password') }})
+    privacy: Optional[UploadVideoRequestBodyPrivacy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('privacy') }})
+    ratings: Optional[UploadVideoRequestBodyRatings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ratings') }})
+    review_page: Optional[UploadVideoRequestBodyReviewPage] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('review_page') }})
+    spatial: Optional[UploadVideoRequestBodySpatial] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spatial') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadVideoRequest:
-    path_params: UploadVideoPathParams = field()
-    request: UploadVideoRequestBody = field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video+json' }})
+    path_params: UploadVideoPathParams = dataclasses.field()
+    request: UploadVideoRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/vnd.vimeo.video+json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UploadVideoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    video: Optional[shared.Video] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    video: Optional[shared_video.Video] = dataclasses.field(default=None)
     

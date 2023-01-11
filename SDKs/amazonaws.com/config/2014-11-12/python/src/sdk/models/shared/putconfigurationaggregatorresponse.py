@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import configurationaggregator as shared_configurationaggregator
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PutConfigurationAggregatorResponse:
-    configuration_aggregator: Optional[ConfigurationAggregator] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConfigurationAggregator') }})
+    configuration_aggregator: Optional[shared_configurationaggregator.ConfigurationAggregator] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConfigurationAggregator') }})
     

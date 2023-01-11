@@ -1,38 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import addresslookupresponseschema as shared_addresslookupresponseschema
+from ..shared import errorresponseschema as shared_errorresponseschema
+from ..shared import postcodetoaddressresponseschema as shared_postcodetoaddressresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class PostcodeToAddressesPathParams:
-    postcode: str = field(metadata={'path_param': { 'field_name': 'postcode', 'style': 'simple', 'explode': False }})
+    postcode: str = dataclasses.field(metadata={'path_param': { 'field_name': 'postcode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostcodeToAddressesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
-    licensee: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'licensee', 'style': 'form', 'explode': True }})
-    page: Optional[float] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    licensee: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'licensee', 'style': 'form', 'explode': True }})
+    page: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostcodeToAddressesSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostcodeToAddressesRequest:
-    path_params: PostcodeToAddressesPathParams = field()
-    query_params: PostcodeToAddressesQueryParams = field()
-    security: PostcodeToAddressesSecurity = field()
+    path_params: PostcodeToAddressesPathParams = dataclasses.field()
+    query_params: PostcodeToAddressesQueryParams = dataclasses.field()
+    security: PostcodeToAddressesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostcodeToAddressesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    address_lookup_response_schema: Optional[shared.AddressLookupResponseSchema] = field(default=None)
-    error_response_schema: Optional[shared.ErrorResponseSchema] = field(default=None)
-    postcode_to_address_response_schema: Optional[shared.PostcodeToAddressResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    address_lookup_response_schema: Optional[shared_addresslookupresponseschema.AddressLookupResponseSchema] = dataclasses.field(default=None)
+    error_response_schema: Optional[shared_errorresponseschema.ErrorResponseSchema] = dataclasses.field(default=None)
+    postcode_to_address_response_schema: Optional[shared_postcodetoaddressresponseschema.PostcodeToAddressResponseSchema] = dataclasses.field(default=None)
     

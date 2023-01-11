@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,19 +20,19 @@ s.config_security(
         option1=shared.SecurityOption1(
             api_key=shared.SchemeAPIKey(
                 api_key="YOUR_API_KEY_HERE",
-            )
+            ),
             api_secret=shared.SchemeAPISecret(
                 api_key="YOUR_API_KEY_HERE",
-            )
+            ),
         ),
     )
 )
     
 req = operations.SmsConversionRequest(
     query_params=operations.SmsConversionQueryParams(
-        delivered="animi",
-        message_id="a",
-        timestamp="voluptatem",
+        delivered="ab",
+        message_id="deserunt",
+        timestamp="iste",
     ),
 )
     

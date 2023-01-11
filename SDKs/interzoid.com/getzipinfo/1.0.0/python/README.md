@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,11 +19,11 @@ s = sdk.SDK()
 req = operations.GetzipcodeinfoRequest(
     query_params=operations.GetzipcodeinfoQueryParams(
         license="et",
-        zip="suscipit",
+        zip="architecto",
     ),
 )
     
-res = s.sdk.getzipcodeinfo(req)
+res = s.detailed_zip_code_information.getzipcodeinfo(req)
 
 if res.getzipcodeinfo_200_application_json_object is not None:
     # handle response
@@ -34,7 +33,7 @@ if res.getzipcodeinfo_200_application_json_object is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Detailed Zip Code Information
 
 * `getzipcodeinfo` - Gets detailed zip code information
 

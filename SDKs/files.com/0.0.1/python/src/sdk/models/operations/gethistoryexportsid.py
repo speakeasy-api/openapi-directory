@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import historyexportentity as shared_historyexportentity
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHistoryExportsIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHistoryExportsIDRequest:
-    path_params: GetHistoryExportsIDPathParams = field()
+    path_params: GetHistoryExportsIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHistoryExportsIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    history_export_entity: Optional[shared.HistoryExportEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    history_export_entity: Optional[shared_historyexportentity.HistoryExportEntity] = dataclasses.field(default=None)
     

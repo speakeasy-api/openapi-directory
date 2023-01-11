@@ -1,15 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceHeaders:
-    x_api_key: str = field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
+    x_api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'x-api-key', 'style': 'simple', 'explode': False }})
     
 class EvaluateRebalanceSwitchInstructionRequestTypeEnum(str, Enum):
     POT = "pot"
@@ -18,20 +17,20 @@ class EvaluateRebalanceSwitchInstructionRequestTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceSwitchInstructionRequest:
     r"""EvaluateRebalanceSwitchInstructionRequest
     Definition of Switch instruction
     """
     
-    request_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
-    type: EvaluateRebalanceSwitchInstructionRequestTypeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    values: list[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
+    request_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('request_id') }})
+    type: EvaluateRebalanceSwitchInstructionRequestTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    values: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('values') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceSecurity:
-    api_secret_key: shared.SchemeAPISecretKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_secret_key: shared_security.SchemeAPISecretKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum(str, Enum):
     ELIGIBLE = "eligible"
@@ -42,46 +41,46 @@ class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPo
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest:
     r"""EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest
     Each individual pot details on the rebalance request
     """
     
-    investor_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('investor_id') }})
-    pot_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pot_id') }})
-    rebalance_eligibility_status: EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rebalance_eligibility_status') }})
-    portfolio_deviation: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolio_deviation') }})
-    portfolio_template_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolio_template_id') }})
+    investor_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('investor_id') }})
+    pot_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('pot_id') }})
+    rebalance_eligibility_status: EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rebalance_eligibility_status') }})
+    portfolio_deviation: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolio_deviation') }})
+    portfolio_template_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('portfolio_template_id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot:
     r"""EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot
     contains array for pot details
     """
     
-    evaluation_response: list[EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluation_response') }})
+    evaluation_response: list[EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('evaluation_response') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceRequest:
-    headers: EvaluateRebalanceHeaders = field()
-    security: EvaluateRebalanceSecurity = field()
-    request: Optional[EvaluateRebalanceSwitchInstructionRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    headers: EvaluateRebalanceHeaders = dataclasses.field()
+    security: EvaluateRebalanceSecurity = dataclasses.field()
+    request: Optional[EvaluateRebalanceSwitchInstructionRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EvaluateRebalanceResponse:
-    content_type: str = field()
-    status_code: int = field()
-    evaluate_rebalance_400_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_401_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_403_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_404_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_409_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_429_application_json_any: Optional[Any] = field(default=None)
-    evaluate_rebalance_500_application_json_any: Optional[Any] = field(default=None)
-    this_is_the_return_object_with_evaluation_per_pot: Optional[EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    evaluate_rebalance_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_401_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_403_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_404_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_409_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    evaluate_rebalance_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    this_is_the_return_object_with_evaluation_per_pot: Optional[EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot] = dataclasses.field(default=None)
     

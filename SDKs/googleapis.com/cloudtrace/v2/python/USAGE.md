@@ -1,0 +1,329 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.CloudtraceProjectsTracesBatchWriteRequest(
+    security=operations.CloudtraceProjectsTracesBatchWriteSecurity(
+        option1=operations.CloudtraceProjectsTracesBatchWriteSecurityOption1(
+            oauth2=shared.SchemeOauth2(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+            oauth2c=shared.SchemeOauth2c(
+                authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+            ),
+        ),
+    ),
+    path_params=operations.CloudtraceProjectsTracesBatchWritePathParams(
+        name="sed",
+    ),
+    query_params=operations.CloudtraceProjectsTracesBatchWriteQueryParams(
+        dollar_xgafv="1",
+        access_token="voluptatem",
+        alt="proto",
+        callback="voluptatem",
+        fields="sequi",
+        key="fugiat",
+        oauth_token="rerum",
+        pretty_print=False,
+        quota_user="illo",
+        upload_type="consequuntur",
+        upload_protocol="distinctio",
+    ),
+    request=shared.BatchWriteSpansRequest(
+        spans=[
+            shared.Span(
+                attributes=shared.Attributes(
+                    attribute_map={
+                        "quidem": shared.AttributeValue(
+                            bool_value=False,
+                            int_value="aut",
+                            string_value=shared.TruncatableString(
+                                truncated_byte_count=8715475418672385544,
+                                value="aliquam",
+                            ),
+                        ),
+                        "voluptas": shared.AttributeValue(
+                            bool_value=False,
+                            int_value="earum",
+                            string_value=shared.TruncatableString(
+                                truncated_byte_count=8426579191464542008,
+                                value="officiis",
+                            ),
+                        ),
+                    },
+                    dropped_attributes_count=8701862092385727698,
+                ),
+                child_span_count=1375510182566394480,
+                display_name=shared.TruncatableString(
+                    truncated_byte_count=2667853516496602622,
+                    value="qui",
+                ),
+                end_time="ut",
+                links=shared.Links(
+                    dropped_links_count=4889365166711756349,
+                    link=[
+                        shared.Link(
+                            attributes=shared.Attributes(
+                                attribute_map={
+                                    "totam": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="aut",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=5173904636198102650,
+                                            value="quod",
+                                        ),
+                                    ),
+                                    "nemo": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="non",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=4098791226593642061,
+                                            value="iusto",
+                                        ),
+                                    ),
+                                    "qui": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="atque",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=3882091319042386722,
+                                            value="fuga",
+                                        ),
+                                    ),
+                                },
+                                dropped_attributes_count=4359438289431162146,
+                            ),
+                            span_id="accusantium",
+                            trace_id="deserunt",
+                            type="PARENT_LINKED_SPAN",
+                        ),
+                        shared.Link(
+                            attributes=shared.Attributes(
+                                attribute_map={
+                                    "quia": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="laudantium",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=8421933435429370482,
+                                            value="veniam",
+                                        ),
+                                    ),
+                                },
+                                dropped_attributes_count=5529399417018292483,
+                            ),
+                            span_id="qui",
+                            trace_id="in",
+                            type="CHILD_LINKED_SPAN",
+                        ),
+                        shared.Link(
+                            attributes=shared.Attributes(
+                                attribute_map={
+                                    "et": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="aut",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=5473806528995187397,
+                                            value="assumenda",
+                                        ),
+                                    ),
+                                    "voluptas": shared.AttributeValue(
+                                        bool_value=False,
+                                        int_value="inventore",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=1489145555310145027,
+                                            value="sit",
+                                        ),
+                                    ),
+                                    "aliquam": shared.AttributeValue(
+                                        bool_value=True,
+                                        int_value="delectus",
+                                        string_value=shared.TruncatableString(
+                                            truncated_byte_count=8494194552799514182,
+                                            value="voluptatum",
+                                        ),
+                                    ),
+                                },
+                                dropped_attributes_count=6504184864662289257,
+                            ),
+                            span_id="voluptas",
+                            trace_id="iste",
+                            type="CHILD_LINKED_SPAN",
+                        ),
+                    ],
+                ),
+                name="natus",
+                parent_span_id="voluptatem",
+                same_process_as_parent_span=True,
+                span_id="quod",
+                span_kind="PRODUCER",
+                stack_trace=shared.StackTrace(
+                    stack_frames=shared.StackFrames(
+                        dropped_frames_count=2358920126147056983,
+                        frame=[
+                            shared.StackFrame(
+                                column_number="debitis",
+                                file_name=shared.TruncatableString(
+                                    truncated_byte_count=8278747621504323425,
+                                    value="commodi",
+                                ),
+                                function_name=shared.TruncatableString(
+                                    truncated_byte_count=2627235105381626935,
+                                    value="aliquam",
+                                ),
+                                line_number="et",
+                                load_module=shared.Module(
+                                    build_id=shared.TruncatableString(
+                                        truncated_byte_count=5466498657175269736,
+                                        value="qui",
+                                    ),
+                                    module=shared.TruncatableString(
+                                        truncated_byte_count=2863387328857630046,
+                                        value="sed",
+                                    ),
+                                ),
+                                original_function_name=shared.TruncatableString(
+                                    truncated_byte_count=2827825157440231987,
+                                    value="explicabo",
+                                ),
+                                source_version=shared.TruncatableString(
+                                    truncated_byte_count=3270159172791425179,
+                                    value="et",
+                                ),
+                            ),
+                            shared.StackFrame(
+                                column_number="quia",
+                                file_name=shared.TruncatableString(
+                                    truncated_byte_count=7323224768096393255,
+                                    value="iste",
+                                ),
+                                function_name=shared.TruncatableString(
+                                    truncated_byte_count=9023388149142311413,
+                                    value="voluptatem",
+                                ),
+                                line_number="in",
+                                load_module=shared.Module(
+                                    build_id=shared.TruncatableString(
+                                        truncated_byte_count=6994506137373746828,
+                                        value="quis",
+                                    ),
+                                    module=shared.TruncatableString(
+                                        truncated_byte_count=5408533498458557761,
+                                        value="ut",
+                                    ),
+                                ),
+                                original_function_name=shared.TruncatableString(
+                                    truncated_byte_count=2919099918776042889,
+                                    value="in",
+                                ),
+                                source_version=shared.TruncatableString(
+                                    truncated_byte_count=3248081538846909880,
+                                    value="voluptas",
+                                ),
+                            ),
+                        ],
+                    ),
+                    stack_trace_hash_id="beatae",
+                ),
+                start_time="et",
+                status=shared.Status(
+                    code=8847373183400321540,
+                    details=[
+                        {
+                            "est": "quia",
+                            "voluptatibus": "quas",
+                            "illum": "voluptas",
+                        },
+                    ],
+                    message="accusantium",
+                ),
+                time_events=shared.TimeEvents(
+                    dropped_annotations_count=1261618183671180042,
+                    dropped_message_events_count=6271005194797273684,
+                    time_event=[
+                        shared.TimeEvent(
+                            annotation=shared.Annotation(
+                                attributes=shared.Attributes(
+                                    attribute_map={
+                                        "repudiandae": shared.AttributeValue(
+                                            bool_value=True,
+                                            int_value="et",
+                                            string_value=shared.TruncatableString(
+                                                truncated_byte_count=2227978087237540479,
+                                                value="alias",
+                                            ),
+                                        ),
+                                        "sit": shared.AttributeValue(
+                                            bool_value=False,
+                                            int_value="error",
+                                            string_value=shared.TruncatableString(
+                                                truncated_byte_count=1147601219165276827,
+                                                value="et",
+                                            ),
+                                        ),
+                                        "voluptatem": shared.AttributeValue(
+                                            bool_value=True,
+                                            int_value="ipsa",
+                                            string_value=shared.TruncatableString(
+                                                truncated_byte_count=1306744595110475852,
+                                                value="aliquam",
+                                            ),
+                                        ),
+                                    },
+                                    dropped_attributes_count=4817872680905293471,
+                                ),
+                                description=shared.TruncatableString(
+                                    truncated_byte_count=3266479277466968158,
+                                    value="eos",
+                                ),
+                            ),
+                            message_event=shared.MessageEvent(
+                                compressed_size_bytes="eius",
+                                id="quaerat",
+                                type="SENT",
+                                uncompressed_size_bytes="et",
+                            ),
+                            time="officia",
+                        ),
+                        shared.TimeEvent(
+                            annotation=shared.Annotation(
+                                attributes=shared.Attributes(
+                                    attribute_map={
+                                        "sint": shared.AttributeValue(
+                                            bool_value=True,
+                                            int_value="ut",
+                                            string_value=shared.TruncatableString(
+                                                truncated_byte_count=3799826807051379439,
+                                                value="quibusdam",
+                                            ),
+                                        ),
+                                    },
+                                    dropped_attributes_count=3932272906123601688,
+                                ),
+                                description=shared.TruncatableString(
+                                    truncated_byte_count=7760242436643299824,
+                                    value="fuga",
+                                ),
+                            ),
+                            message_event=shared.MessageEvent(
+                                compressed_size_bytes="est",
+                                id="explicabo",
+                                type="SENT",
+                                uncompressed_size_bytes="voluptas",
+                            ),
+                            time="quis",
+                        ),
+                    ],
+                ),
+            ),
+        ],
+    ),
+)
+    
+res = s.projects.cloudtrace_projects_traces_batch_write(req)
+
+if res.empty is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

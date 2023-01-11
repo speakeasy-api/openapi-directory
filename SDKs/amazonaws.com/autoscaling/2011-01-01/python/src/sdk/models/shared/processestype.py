@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import processtype as shared_processtype
 
 
-@dataclass
+@dataclasses.dataclass
 class ProcessesType:
-    processes: Optional[List[ProcessType]] = field(default=None)
+    processes: Optional[list[shared_processtype.ProcessType]] = dataclasses.field(default=None)
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaPathParams:
-    area: str = field(metadata={'path_param': { 'field_name': 'area', 'style': 'simple', 'explode': False }})
+    area: str = dataclasses.field(metadata={'path_param': { 'field_name': 'area', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaRequest:
-    path_params: GetTimezoneAreaPathParams = field()
+    path_params: GetTimezoneAreaPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTimezoneAreaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_json_response: Optional[Any] = field(default=None)
-    list_json_response: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_json_response: Optional[Any] = dataclasses.field(default=None)
+    list_json_response: Optional[list[str]] = dataclasses.field(default=None)
     

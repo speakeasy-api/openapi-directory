@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressTotalReceivedPathParams:
-    address: str = field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
+    address: str = dataclasses.field(metadata={'path_param': { 'field_name': 'address', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressTotalReceivedRequest:
-    path_params: GetAddressTotalReceivedPathParams = field()
+    path_params: GetAddressTotalReceivedPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAddressTotalReceivedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_address_total_received_response: Optional[float] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_address_total_received_response: Optional[float] = dataclasses.field(default=None)
     

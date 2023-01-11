@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import drive as shared_drive
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DriveList:
     r"""DriveList
     A list of shared drives.
     """
     
-    drives: Optional[List[Drive]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('drives') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    drives: Optional[list[shared_drive.Drive]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('drives') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

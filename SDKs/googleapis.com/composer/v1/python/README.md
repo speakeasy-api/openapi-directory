@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,159 +20,170 @@ req = operations.ComposerProjectsLocationsEnvironmentsCreateRequest(
     security=operations.ComposerProjectsLocationsEnvironmentsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.ComposerProjectsLocationsEnvironmentsCreatePathParams(
-        parent="corporis",
+        parent="libero",
     ),
     query_params=operations.ComposerProjectsLocationsEnvironmentsCreateQueryParams(
-        dollar_xgafv="1",
-        access_token="consequatur",
-        alt="media",
-        callback="tempora",
-        fields="in",
-        key="sed",
-        oauth_token="dolor",
-        pretty_print=True,
-        quota_user="assumenda",
-        upload_type="est",
-        upload_protocol="consequatur",
+        dollar_xgafv="2",
+        access_token="et",
+        alt="proto",
+        callback="vitae",
+        fields="ut",
+        key="debitis",
+        oauth_token="ea",
+        pretty_print=False,
+        quota_user="quia",
+        upload_type="deserunt",
+        upload_protocol="aliquid",
     ),
     request=shared.EnvironmentInput(
         config=shared.EnvironmentConfigInput(
-            airflow_uri="ipsa",
-            dag_gcs_prefix="ut",
+            airflow_uri="nihil",
+            dag_gcs_prefix="repellendus",
             database_config=shared.DatabaseConfig(
-                machine_type="iure",
+                machine_type="aut",
             ),
             encryption_config=shared.EncryptionConfig(
-                kms_key_name="dicta",
+                kms_key_name="omnis",
             ),
             environment_size="ENVIRONMENT_SIZE_UNSPECIFIED",
-            gke_cluster="voluptatem",
+            gke_cluster="ut",
             maintenance_window=shared.MaintenanceWindow(
-                end_time="sit",
-                recurrence="qui",
-                start_time="autem",
+                end_time="voluptatem",
+                recurrence="illum",
+                start_time="porro",
             ),
             master_authorized_networks_config=shared.MasterAuthorizedNetworksConfig(
                 cidr_blocks=[
                     shared.CidrBlock(
-                        cidr_block="fugiat",
-                        display_name="eligendi",
+                        cidr_block="quis",
+                        display_name="ipsum",
                     ),
                     shared.CidrBlock(
-                        cidr_block="quia",
-                        display_name="neque",
+                        cidr_block="qui",
+                        display_name="et",
+                    ),
+                    shared.CidrBlock(
+                        cidr_block="blanditiis",
+                        display_name="quia",
                     ),
                 ],
-                enabled=True,
+                enabled=False,
             ),
             node_config=shared.NodeConfig(
-                disk_size_gb=4168920819476378105,
+                disk_size_gb=311637717214665668,
                 enable_ip_masq_agent=True,
                 ip_allocation_policy=shared.IPAllocationPolicy(
-                    cluster_ipv4_cidr_block="aut",
-                    cluster_secondary_range_name="sit",
-                    services_ipv4_cidr_block="in",
-                    services_secondary_range_name="sunt",
+                    cluster_ipv4_cidr_block="cupiditate",
+                    cluster_secondary_range_name="laborum",
+                    services_ipv4_cidr_block="deserunt",
+                    services_secondary_range_name="dicta",
                     use_ip_aliases=True,
                 ),
-                location="ullam",
-                machine_type="consequuntur",
-                network="aperiam",
+                location="officiis",
+                machine_type="et",
+                network="enim",
                 oauth_scopes=[
-                    "repellendus",
-                    "natus",
-                    "consectetur",
+                    "consequatur",
+                    "rerum",
+                    "quis",
                 ],
-                service_account="unde",
-                subnetwork="ut",
+                service_account="ut",
+                subnetwork="porro",
                 tags=[
-                    "ut",
-                    "qui",
-                    "aspernatur",
+                    "quis",
+                    "vitae",
+                    "deserunt",
                 ],
             ),
-            node_count=2279341170733245843,
+            node_count=6099216200680606768,
             private_environment_config=shared.PrivateEnvironmentConfigInput(
-                cloud_composer_connection_subnetwork="quas",
-                cloud_composer_network_ipv4_cidr_block="distinctio",
-                cloud_sql_ipv4_cidr_block="saepe",
+                cloud_composer_connection_subnetwork="consequuntur",
+                cloud_composer_network_ipv4_cidr_block="aspernatur",
+                cloud_sql_ipv4_cidr_block="temporibus",
                 enable_private_environment=True,
                 enable_privately_used_public_ips=False,
                 networking_config=shared.NetworkingConfig(
-                    connection_type="CONNECTION_TYPE_UNSPECIFIED",
+                    connection_type="PRIVATE_SERVICE_CONNECT",
                 ),
                 private_cluster_config=shared.PrivateClusterConfigInput(
-                    enable_private_endpoint=False,
-                    master_ipv4_cidr_block="nesciunt",
+                    enable_private_endpoint=True,
+                    master_ipv4_cidr_block="in",
                 ),
-                web_server_ipv4_cidr_block="rem",
+                web_server_ipv4_cidr_block="facilis",
+            ),
+            recovery_config=shared.RecoveryConfig(
+                scheduled_snapshots_config=shared.ScheduledSnapshotsConfig(
+                    enabled=False,
+                    snapshot_creation_schedule="sequi",
+                    snapshot_location="reprehenderit",
+                    time_zone="consectetur",
+                ),
             ),
             software_config=shared.SoftwareConfig(
                 airflow_config_overrides={
-                    "ratione": "placeat",
-                    "quam": "odit",
-                    "voluptate": "ipsum",
+                    "fugit": "quisquam",
+                    "in": "iure",
                 },
                 env_variables={
-                    "pariatur": "dicta",
-                    "nulla": "tenetur",
+                    "sunt": "repellendus",
+                    "accusantium": "est",
+                    "esse": "maiores",
                 },
-                image_version="et",
+                image_version="voluptatem",
                 pypi_packages={
-                    "ut": "modi",
-                    "consequuntur": "ducimus",
-                    "molestiae": "voluptas",
+                    "laudantium": "quas",
+                    "dicta": "magnam",
                 },
-                python_version="facilis",
-                scheduler_count=2867322181936390622,
+                python_version="id",
+                scheduler_count=1908515449089205551,
             ),
             web_server_config=shared.WebServerConfig(
-                machine_type="modi",
+                machine_type="necessitatibus",
             ),
             web_server_network_access_control=shared.WebServerNetworkAccessControl(
                 allowed_ip_ranges=[
                     shared.AllowedIPRange(
-                        description="quasi",
-                        value="necessitatibus",
+                        description="in",
+                        value="quibusdam",
                     ),
                 ],
             ),
             workloads_config=shared.WorkloadsConfig(
                 scheduler=shared.SchedulerResource(
-                    count=3406083734481139106,
-                    cpu=7.100000,
-                    memory_gb=34.099998,
-                    storage_gb=50.099998,
+                    count=9121031162648800012,
+                    cpu=84.099998,
+                    memory_gb=63.099998,
+                    storage_gb=17.100000,
                 ),
                 web_server=shared.WebServerResource(
-                    cpu=80.099998,
-                    memory_gb=75.099998,
-                    storage_gb=88.199997,
+                    cpu=38.099998,
+                    memory_gb=89.199997,
+                    storage_gb=30.200001,
                 ),
                 worker=shared.WorkerResource(
-                    cpu=3.200000,
-                    max_count=8764901745431848692,
-                    memory_gb=61.099998,
-                    min_count=3415318281050260438,
-                    storage_gb=35.200001,
+                    cpu=55.099998,
+                    max_count=852588688461658516,
+                    memory_gb=55.099998,
+                    min_count=2104855243105749723,
+                    storage_gb=75.099998,
                 ),
             ),
         ),
-        create_time="dolores",
+        create_time="deserunt",
         labels={
-            "tempora": "aliquam",
-            "in": "iusto",
+            "ea": "id",
+            "omnis": "ut",
         },
-        name="reiciendis",
-        state="CREATING",
-        update_time="laudantium",
-        uuid="quae",
+        name="blanditiis",
+        state="DELETING",
+        update_time="et",
+        uuid="voluptas",
     ),
 )
     
@@ -191,7 +201,9 @@ if res.operation is not None:
 
 * `composer_projects_locations_environments_create` - Create a new environment.
 * `composer_projects_locations_environments_list` - List environments.
+* `composer_projects_locations_environments_load_snapshot` - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
 * `composer_projects_locations_environments_patch` - Update an environment.
+* `composer_projects_locations_environments_save_snapshot` - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
 * `composer_projects_locations_image_versions_list` - List ImageVersions for provided location.
 * `composer_projects_locations_operations_delete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `composer_projects_locations_operations_get` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.

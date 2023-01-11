@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import resolverdnssecconfig as shared_resolverdnssecconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetResolverDnssecConfigResponse:
-    resolver_dnssec_config: Optional[ResolverDnssecConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverDNSSECConfig') }})
+    resolver_dnssec_config: Optional[shared_resolverdnssecconfig.ResolverDnssecConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ResolverDNSSECConfig') }})
     

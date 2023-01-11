@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,19 +18,19 @@ s = sdk.SDK()
     
 req = operations.AccountListNodeAgentSkusRequest(
     query_params=operations.AccountListNodeAgentSkusQueryParams(
-        dollar_filter="nihil",
-        api_version="soluta",
-        maxresults=8214170773306648303,
-        timeout=3015821487863314727,
+        dollar_filter="excepturi",
+        api_version="accusamus",
+        maxresults=5930146565088317773,
+        timeout=3322950171773002856,
     ),
     headers=operations.AccountListNodeAgentSkusHeaders(
-        client_request_id="voluptates",
-        ocp_date="ea",
+        client_request_id="consectetur",
+        ocp_date="asperiores",
         return_client_request_id=True,
     ),
 )
     
-res = s.sdk.account_list_node_agent_skus(req)
+res = s.accounts.account_list_node_agent_skus(req)
 
 if res.account_list_node_agent_skus_result is not None:
     # handle response
@@ -41,16 +40,25 @@ if res.account_list_node_agent_skus_result is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Accounts
 
 * `account_list_node_agent_skus` - Lists all node agent SKUs supported by the Azure Batch service.
+
+### Applications
+
 * `application_get` - Gets information about the specified application.
 * `application_list` - Lists all of the applications available in the specified account.
+
+### Certificates
+
 * `certificate_add` - Adds a certificate to the specified account.
 * `certificate_cancel_deletion` - Cancels a failed deletion of a certificate from the specified account.
 * `certificate_delete` - Deletes a certificate from the specified account.
 * `certificate_get` - Gets information about the specified certificate.
 * `certificate_list` - Lists all of the certificates that have been added to the specified account.
+
+### ComputeNodes
+
 * `compute_node_add_user` - Adds a user account to the specified compute node.
 * `compute_node_delete_user` - Deletes a user account from the specified compute node.
 * `compute_node_disable_scheduling` - Disable task scheduling of the specified compute node.
@@ -62,6 +70,10 @@ if res.account_list_node_agent_skus_result is not None:
 * `compute_node_reboot` - Restarts the specified compute node.
 * `compute_node_reimage` - Reinstalls the operating system on the specified compute node.
 * `compute_node_update_user` - Updates the password or expiration time of a user account on the specified compute node.
+* `pool_remove_nodes` - Removes compute nodes from the specified pool.
+
+### Files
+
 * `file_delete_from_compute_node` - Deletes the specified task file from the compute node.
 * `file_delete_from_task` - Deletes the specified task file from the compute node where the task ran.
 * `file_get_from_compute_node` - Returns the content of the specified task file.
@@ -70,6 +82,9 @@ if res.account_list_node_agent_skus_result is not None:
 * `file_get_node_file_properties_from_task` - Gets the properties of the specified task file.
 * `file_list_from_compute_node` - Lists all of the files in task directories on the specified compute node.
 * `file_list_from_task` - Lists the files in a task's directory on its compute node.
+
+### JobSchedules
+
 * `job_schedule_add` - Adds a job schedule to the specified account.
 * `job_schedule_delete` - Deletes a job schedule from the specified account.
 * `job_schedule_disable` - Disables a job schedule.
@@ -80,6 +95,9 @@ if res.account_list_node_agent_skus_result is not None:
 * `job_schedule_patch` - Updates the properties of the specified job schedule.
 * `job_schedule_terminate` - Terminates a job schedule.
 * `job_schedule_update` - Updates the properties of the specified job schedule.
+
+### Jobs
+
 * `job_add` - Adds a job to the specified account.
 * `job_delete` - Deletes a job.
 * `job_disable` - Disables the specified job, preventing new tasks from running.
@@ -92,6 +110,9 @@ if res.account_list_node_agent_skus_result is not None:
 * `job_patch` - Updates the properties of a job.
 * `job_terminate` - Terminates the specified job, marking it as completed.
 * `job_update` - Updates the properties of a job.
+
+### Pools
+
 * `pool_add` - Adds a pool to the specified account.
 * `pool_delete` - Deletes a pool from the specified account.
 * `pool_disable_auto_scale` - Disables automatic scaling for a pool.
@@ -103,11 +124,13 @@ if res.account_list_node_agent_skus_result is not None:
 * `pool_list` - Lists all of the pools in the specified account.
 * `pool_list_pool_usage_metrics` - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
 * `pool_patch` - Updates the properties of a pool.
-* `pool_remove_nodes` - Removes compute nodes from the specified pool.
 * `pool_resize` - Changes the number of compute nodes that are assigned to a pool.
 * `pool_stop_resize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 * `pool_update_properties` - Updates the properties of a pool.
 * `pool_upgrade_os` - Upgrades the operating system of the specified pool.
+
+### Tasks
+
 * `task_add` - Adds a task to the specified job.
 * `task_add_collection` - Adds a collection of tasks to the specified job.
 * `task_delete` - Deletes a task from the specified job.

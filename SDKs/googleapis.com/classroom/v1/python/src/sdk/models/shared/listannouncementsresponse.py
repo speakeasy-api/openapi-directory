@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import announcement as shared_announcement
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAnnouncementsResponse:
     r"""ListAnnouncementsResponse
     Response when listing course work.
     """
     
-    announcements: Optional[List[Announcement]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('announcements') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    announcements: Optional[list[shared_announcement.Announcement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('announcements') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

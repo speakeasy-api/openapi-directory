@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import notfound as shared_notfound
+from ..shared import teacherresponse as shared_teacherresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetTeacherPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeacherQueryParams:
-    include: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
+    include: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeacherRequest:
-    path_params: GetTeacherPathParams = field()
-    query_params: GetTeacherQueryParams = field()
+    path_params: GetTeacherPathParams = dataclasses.field()
+    query_params: GetTeacherQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetTeacherResponse:
-    content_type: str = field()
-    status_code: int = field()
-    not_found: Optional[shared.NotFound] = field(default=None)
-    teacher_response: Optional[shared.TeacherResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    not_found: Optional[shared_notfound.NotFound] = dataclasses.field(default=None)
+    teacher_response: Optional[shared_teacherresponse.TeacherResponse] = dataclasses.field(default=None)
     

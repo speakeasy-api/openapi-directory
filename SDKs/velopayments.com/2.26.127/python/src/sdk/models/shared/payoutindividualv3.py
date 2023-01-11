@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import payoutnamev3 as shared_payoutnamev3
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PayoutIndividualV3:
-    name: PayoutNameV3 = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: shared_payoutnamev3.PayoutNameV3 = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

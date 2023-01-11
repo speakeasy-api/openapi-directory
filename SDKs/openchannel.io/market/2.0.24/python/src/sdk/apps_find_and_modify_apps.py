@@ -1,0 +1,438 @@
+import requests
+from sdk.models import operations
+from . import utils
+
+class AppsFindAndModifyApps:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def delete_apps_app_id_(self, request: operations.DeleteAppsAppIDRequest) -> operations.DeleteAppsAppIDResponse:
+        r"""Removes app and all versions
+        - This method is called on behalf of a developer.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("DELETE", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeleteAppsAppIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def delete_apps_app_id_versions_version_(self, request: operations.DeleteAppsAppIDVersionsVersionRequest) -> operations.DeleteAppsAppIDVersionsVersionResponse:
+        r"""Removes AppVersion
+        - This method is called on behalf of a developer.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/versions/{version}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("DELETE", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeleteAppsAppIDVersionsVersionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def get_apps(self, request: operations.GetAppsRequest) -> operations.GetAppsResponse:
+        r"""Returns a paginated list of APPROVED or SUSPENDED apps
+        - Results are paginated and the default is value is 1000 if no limit is provided
+        - If no query is specified, returns all APPROVED or SUSPENDED apps within the marketplace
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/apps"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_apps_by_safe_name_safe_name_(self, request: operations.GetAppsBySafeNameSafeNameRequest) -> operations.GetAppsBySafeNameSafeNameResponse:
+        r"""Returns a single APPROVED or SUSPENDED app
+        - A 'view' event is recorded when trackViews is set to true
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/bySafeName/{safeName}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsBySafeNameSafeNameResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_apps_text_search(self, request: operations.GetAppsTextSearchRequest) -> operations.GetAppsTextSearchResponse:
+        r"""Searches through the text of fields to find APPROVED or SUSPENDED apps
+        - Results are returned for the market provided within the basic authentication credentials
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/apps/textSearch"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsTextSearchResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_apps_versions(self, request: operations.GetAppsVersionsRequest) -> operations.GetAppsVersionsResponse:
+        r"""Returns a paginated list of AppVersions
+        - Results are paginated when limit is set, otherwise all results are returned
+        - If no query is specified, returns all AppVersions within the marketplace
+        - Only returns AppVersions owned by this developer
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/apps/versions"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsVersionsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_apps_app_id_(self, request: operations.GetAppsAppIDRequest) -> operations.GetAppsAppIDResponse:
+        r"""Returns a single APPROVED or SUSPENDED app
+        - A 'view' event is recorded when trackViews is set to true
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsAppIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def get_apps_app_id_versions_version_(self, request: operations.GetAppsAppIDVersionsVersionRequest) -> operations.GetAppsAppIDVersionsVersionResponse:
+        r"""Returns a single AppVersion
+        - Only returns AppVersions owned by this developer
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/versions/{version}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("GET", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetAppsAppIDVersionsVersionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def patch_apps_app_id_versions_version_(self, request: operations.PatchAppsAppIDVersionsVersionRequest) -> operations.PatchAppsAppIDVersionsVersionResponse:
+        r"""Updates the app fields or creates a new version
+        - This method is called on behalf of a developer.
+        - Price and is required if the model is 'single' or 'recurring'
+        - Returns the newly updated app
+        - This endpoint updates only the fields provided in the request (relative update). In contrast, the POST version of this method replaces the entire object to match the request (absolute update). 
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/versions/{version}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("PATCH", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PatchAppsAppIDVersionsVersionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 409:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def post_apps(self, request: operations.PostAppsRequest) -> operations.PostAppsResponse:
+        r"""Adds a new app for this developer
+        - This method is called on behalf of a developer.
+        - Price is required if the model is 'single' or 'recurring'
+        - Returns the newly created app
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/apps"
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostAppsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 409:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def post_apps_app_id_live(self, request: operations.PostAppsAppIDLiveRequest) -> operations.PostAppsAppIDLiveResponse:
+        r"""Change the live app to another, previously approved version
+        - This method is called on behalf of a developer.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/live", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostAppsAppIDLiveResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+
+        return res
+
+    
+    def post_apps_app_id_publish(self, request: operations.PostAppsAppIDPublishRequest) -> operations.PostAppsAppIDPublishResponse:
+        r"""Publishes the current working version of the app to the marketplace
+        - This method is called on behalf of a developer. 
+        - Only effects the current working version of the app.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/publish", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostAppsAppIDPublishResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 202:
+            pass
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 409:
+            pass
+
+        return res
+
+    
+    def post_apps_app_id_versions_version_(self, request: operations.PostAppsAppIDVersionsVersionRequest) -> operations.PostAppsAppIDVersionsVersionResponse:
+        r"""Updates the app or creates a new version
+        - This method is called on behalf of a developer.
+        - Price and is required if the model is 'single' or 'recurring'
+        - Returns the newly updated app
+        - This endpoint replaces the entire object to match the request (absolute update). In contrast, the PATCH version of this endpoint updates only the fields provided in the request (relative update).
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/versions/{version}", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostAppsAppIDVersionsVersionResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 409:
+            pass
+        else:
+            if utils.match_content_type(content_type, "*/*"):
+                res.body = r.content
+
+        return res
+
+    
+    def post_apps_app_id_versions_version_status(self, request: operations.PostAppsAppIDVersionsVersionStatusRequest) -> operations.PostAppsAppIDVersionsVersionStatusResponse:
+        r"""Allows a developer or administrator to change the status of apps
+        Only certain status changes are allowed. For instance, a developer is only able to suspend and unsuspend their app (which must already be approved). See here for a state change diagram of allowed status changes for administrators: https://support.openchannel.io/documentation/api/#415-apps-status-change
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/apps/{appId}/versions/{version}/status", request.path_params)
+        
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._security_client
+        
+        r = client.request("POST", url, params=query_params)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.PostAppsAppIDVersionsVersionStatusResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 400:
+            pass
+        elif r.status_code == 404:
+            pass
+        elif r.status_code == 412:
+            pass
+
+        return res
+
+    

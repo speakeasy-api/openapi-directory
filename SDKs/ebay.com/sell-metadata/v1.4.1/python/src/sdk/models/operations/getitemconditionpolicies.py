@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import itemconditionpolicyresponse as shared_itemconditionpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetItemConditionPoliciesPathParams:
-    marketplace_id: str = field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
+    marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemConditionPoliciesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemConditionPoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemConditionPoliciesRequest:
-    path_params: GetItemConditionPoliciesPathParams = field()
-    query_params: GetItemConditionPoliciesQueryParams = field()
-    security: GetItemConditionPoliciesSecurity = field()
+    path_params: GetItemConditionPoliciesPathParams = dataclasses.field()
+    query_params: GetItemConditionPoliciesQueryParams = dataclasses.field()
+    security: GetItemConditionPoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemConditionPoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    item_condition_policy_response: Optional[shared.ItemConditionPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    item_condition_policy_response: Optional[shared_itemconditionpolicyresponse.ItemConditionPolicyResponse] = dataclasses.field(default=None)
     

@@ -1,18 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import signin as shared_signin
+from ..shared import invalidtoken as shared_invalidtoken
+from ..shared import keyfailure as shared_keyfailure
+from ..shared import signinresponse as shared_signinresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostSigninRequest:
-    request: Optional[shared.Signin] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request: Optional[shared_signin.Signin] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostSigninResponse:
-    content_type: str = field()
-    status_code: int = field()
-    invalid_token: Optional[shared.InvalidToken] = field(default=None)
-    key_failure: Optional[shared.KeyFailure] = field(default=None)
-    signin_response: Optional[shared.SigninResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    invalid_token: Optional[shared_invalidtoken.InvalidToken] = dataclasses.field(default=None)
+    key_failure: Optional[shared_keyfailure.KeyFailure] = dataclasses.field(default=None)
+    signin_response: Optional[shared_signinresponse.SigninResponse] = dataclasses.field(default=None)
     

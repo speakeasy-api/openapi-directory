@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,15 +8,15 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class MethodMap:
     r"""MethodMap
     Deployment Manager will call these methods during the events of creation/deletion/update/get/setIamPolicy
     """
     
-    create: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('create') }})
-    delete: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delete') }})
-    get: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('get') }})
-    set_iam_policy: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('setIamPolicy') }})
-    update: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('update') }})
+    create: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('create') }})
+    delete: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('delete') }})
+    get: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('get') }})
+    set_iam_policy: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('setIamPolicy') }})
+    update: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('update') }})
     

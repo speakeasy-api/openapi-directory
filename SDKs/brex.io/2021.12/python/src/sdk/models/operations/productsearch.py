@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class ProductSearchPathParams:
-    subject_id: str = field(metadata={'path_param': { 'field_name': 'subjectId', 'style': 'simple', 'explode': False }})
+    subject_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'subjectId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductSearchSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductSearchRequest:
-    path_params: ProductSearchPathParams = field()
-    security: ProductSearchSecurity = field()
+    path_params: ProductSearchPathParams = dataclasses.field()
+    security: ProductSearchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ProductSearchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    product_search_200_application_json_anies: Optional[List[Any]] = field(default=None)
-    product_search_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_search_200_application_json_anies: Optional[list[Any]] = dataclasses.field(default=None)
+    product_search_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

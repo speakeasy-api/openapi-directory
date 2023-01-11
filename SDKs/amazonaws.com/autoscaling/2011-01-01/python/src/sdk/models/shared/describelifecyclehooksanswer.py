@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import lifecyclehook as shared_lifecyclehook
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeLifecycleHooksAnswer:
-    lifecycle_hooks: Optional[List[LifecycleHook]] = field(default=None)
+    lifecycle_hooks: Optional[list[shared_lifecyclehook.LifecycleHook]] = dataclasses.field(default=None)
     

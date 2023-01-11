@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import usagelimit as shared_usagelimit
 
 
-@dataclass
+@dataclasses.dataclass
 class UsageLimitList:
-    marker: Optional[str] = field(default=None)
-    usage_limits: Optional[List[UsageLimit]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    usage_limits: Optional[list[shared_usagelimit.UsageLimit]] = dataclasses.field(default=None)
     

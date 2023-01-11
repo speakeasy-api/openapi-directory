@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import samlproviderlistentry as shared_samlproviderlistentry
 
 
-@dataclass
+@dataclasses.dataclass
 class ListSamlProvidersResponse:
     r"""ListSamlProvidersResponse
     Contains the response to a successful <a>ListSAMLProviders</a> request. 
     """
     
-    saml_provider_list: Optional[List[SamlProviderListEntry]] = field(default=None)
+    saml_provider_list: Optional[list[shared_samlproviderlistentry.SamlProviderListEntry]] = dataclasses.field(default=None)
     

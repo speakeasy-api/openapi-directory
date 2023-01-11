@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import pre_receive_environment as shared_pre_receive_environment
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveEnvironmentPathParams:
-    pre_receive_environment_id: int = field(metadata={'path_param': { 'field_name': 'pre_receive_environment_id', 'style': 'simple', 'explode': False }})
+    pre_receive_environment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'pre_receive_environment_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveEnvironmentRequest:
-    path_params: EnterpriseAdminGetPreReceiveEnvironmentPathParams = field()
+    path_params: EnterpriseAdminGetPreReceiveEnvironmentPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetPreReceiveEnvironmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    pre_receive_environment: Optional[shared.PreReceiveEnvironment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    pre_receive_environment: Optional[shared_pre_receive_environment.PreReceiveEnvironment] = dataclasses.field(default=None)
     

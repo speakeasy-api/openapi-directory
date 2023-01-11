@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import qualificationtype as shared_qualificationtype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetQualificationTypeResponse:
-    qualification_type: Optional[QualificationType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QualificationType') }})
+    qualification_type: Optional[shared_qualificationtype.QualificationType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('QualificationType') }})
     

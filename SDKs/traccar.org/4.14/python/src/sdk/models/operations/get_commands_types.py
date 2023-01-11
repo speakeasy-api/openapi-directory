@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import commandtype as shared_commandtype
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCommandsTypesQueryParams:
-    device_id: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'deviceId', 'style': 'form', 'explode': True }})
-    protocol: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'protocol', 'style': 'form', 'explode': True }})
-    text_channel: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'textChannel', 'style': 'form', 'explode': True }})
+    device_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deviceId', 'style': 'form', 'explode': True }})
+    protocol: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'protocol', 'style': 'form', 'explode': True }})
+    text_channel: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'textChannel', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCommandsTypesRequest:
-    query_params: GetCommandsTypesQueryParams = field()
+    query_params: GetCommandsTypesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCommandsTypesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    command_types: Optional[List[shared.CommandType]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    command_types: Optional[list[shared_commandtype.CommandType]] = dataclasses.field(default=None)
     

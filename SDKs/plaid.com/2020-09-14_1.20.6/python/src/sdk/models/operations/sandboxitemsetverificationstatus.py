@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import sandboxitemsetverificationstatusrequest as shared_sandboxitemsetverificationstatusrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class SandboxItemSetVerificationStatusRequest:
-    request: shared.SandboxItemSetVerificationStatusRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_sandboxitemsetverificationstatusrequest.SandboxItemSetVerificationStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SandboxItemSetVerificationStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sandbox_item_set_verification_status_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sandbox_item_set_verification_status_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

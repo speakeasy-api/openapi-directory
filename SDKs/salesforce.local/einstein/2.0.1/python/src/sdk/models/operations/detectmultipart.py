@@ -1,28 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import objectdetectionrequest as shared_objectdetectionrequest
+from ..shared import security as shared_security
+from ..shared import objectdetectionresponse as shared_objectdetectionresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class DetectMultipartRequests:
-    object_detection_request: Optional[shared.ObjectDetectionRequest] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    object_detection_request1: Optional[shared.ObjectDetectionRequest] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    object_detection_request: Optional[shared_objectdetectionrequest.ObjectDetectionRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    object_detection_request1: Optional[shared_objectdetectionrequest.ObjectDetectionRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetectMultipartSecurity:
-    bearer_token: shared.SchemeBearerToken = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_token: shared_security.SchemeBearerToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DetectMultipartRequest:
-    security: DetectMultipartSecurity = field()
-    request: Optional[DetectMultipartRequests] = field(default=None)
+    security: DetectMultipartSecurity = dataclasses.field()
+    request: Optional[DetectMultipartRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class DetectMultipartResponse:
-    content_type: str = field()
-    status_code: int = field()
-    object_detection_response: Optional[shared.ObjectDetectionResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    object_detection_response: Optional[shared_objectdetectionresponse.ObjectDetectionResponse] = dataclasses.field(default=None)
     

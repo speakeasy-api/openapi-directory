@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import maintenance as shared_maintenance
 
 
-@dataclass
+@dataclasses.dataclass
 class PutMaintenanceIDPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutMaintenanceIDRequest:
-    path_params: PutMaintenanceIDPathParams = field()
-    request: shared.Maintenance = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: PutMaintenanceIDPathParams = dataclasses.field()
+    request: shared_maintenance.Maintenance = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PutMaintenanceIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    maintenance: Optional[shared.Maintenance] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    maintenance: Optional[shared_maintenance.Maintenance] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,37 +20,36 @@ req = operations.IdsProjectsLocationsEndpointsCreateRequest(
     security=operations.IdsProjectsLocationsEndpointsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.IdsProjectsLocationsEndpointsCreatePathParams(
-        parent="sit",
+        parent="pariatur",
     ),
     query_params=operations.IdsProjectsLocationsEndpointsCreateQueryParams(
         dollar_xgafv="1",
-        access_token="odit",
-        alt="proto",
-        callback="et",
-        endpoint_id="tempore",
-        fields="reprehenderit",
-        key="tempore",
-        oauth_token="perspiciatis",
+        access_token="itaque",
+        alt="json",
+        callback="assumenda",
+        endpoint_id="architecto",
+        fields="id",
+        key="et",
+        oauth_token="voluptate",
         pretty_print=False,
-        quota_user="et",
-        request_id="pariatur",
-        upload_type="sed",
-        upload_protocol="et",
+        quota_user="quo",
+        request_id="sint",
+        upload_type="magnam",
+        upload_protocol="quis",
     ),
     request=shared.EndpointInput(
-        description="debitis",
+        description="doloremque",
         labels={
-            "labore": "qui",
-            "voluptatem": "consequatur",
+            "ratione": "sequi",
         },
-        network="mollitia",
-        severity="INFORMATIONAL",
+        network="distinctio",
+        severity="HIGH",
         traffic_logs=False,
     ),
 )

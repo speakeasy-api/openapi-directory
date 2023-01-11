@@ -1,21 +1,24 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
+from ..shared import ldapauthmoduleconfig as shared_ldapauthmoduleconfig
+from ..shared import inmemoryauthmoduleconfig as shared_inmemoryauthmoduleconfig
+from ..shared import genericoauth2moduleconfig as shared_genericoauth2moduleconfig
 
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalAuthModulesSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalAuthModulesRequest:
-    security: FindAllGlobalAuthModulesSecurity = field()
+    security: FindAllGlobalAuthModulesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class FindAllGlobalAuthModulesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    find_all_global_auth_modules_200_application_json_oneoves: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    find_all_global_auth_modules_200_application_json_oneoves: Optional[list[Any]] = dataclasses.field(default=None)
     

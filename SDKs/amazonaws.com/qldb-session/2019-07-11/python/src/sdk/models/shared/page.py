@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import valueholder as shared_valueholder
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Page:
     r"""Page
     Contains details of the fetched page.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
-    values: Optional[List[ValueHolder]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Values') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextPageToken') }})
+    values: Optional[list[shared_valueholder.ValueHolder]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Values') }})
     

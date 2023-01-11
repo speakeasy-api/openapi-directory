@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import s3destination as shared_s3destination
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ExportDestination:
     r"""ExportDestination
     Describes the destination of the recommendations export and metadata files.
     """
     
-    s3: Optional[S3Destination] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3') }})
+    s3: Optional[shared_s3destination.S3Destination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('s3') }})
     

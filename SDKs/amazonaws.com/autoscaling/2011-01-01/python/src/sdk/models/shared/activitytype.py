@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import activity as shared_activity
 
 
-@dataclass
+@dataclasses.dataclass
 class ActivityType:
-    activity: Optional[Activity] = field(default=None)
+    activity: Optional[shared_activity.Activity] = dataclasses.field(default=None)
     

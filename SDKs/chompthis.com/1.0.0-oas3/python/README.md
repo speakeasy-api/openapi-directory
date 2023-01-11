@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,11 +23,11 @@ req = operations.GetFoodBrandedBarcodePhpRequest(
         ),
     ),
     query_params=operations.GetFoodBrandedBarcodePhpQueryParams(
-        code="quibusdam",
+        code="velit",
     ),
 )
     
-res = s.sdk.get_food_branded_barcode_php(req)
+res = s.get_food_branded_barcode_php(req)
 
 if res.branded_food_object is not None:
     # handle response

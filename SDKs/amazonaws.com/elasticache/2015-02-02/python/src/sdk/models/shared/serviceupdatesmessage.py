@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from . import *
+from typing import Optional
+from ..shared import serviceupdatelist as shared_serviceupdatelist
 
 
-@dataclass
+@dataclasses.dataclass
 class ServiceUpdatesMessage:
-    marker: Optional[str] = field(default=None)
-    service_updates: Optional[List[ServiceUpdate]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    service_updates: Optional[list[shared_serviceupdatelist.ServiceUpdateList]] = dataclasses.field(default=None)
     

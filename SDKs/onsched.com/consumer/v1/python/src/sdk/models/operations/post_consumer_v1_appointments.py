@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import appointmentinitialmodel as shared_appointmentinitialmodel
+from ..shared import appointmentinitialviewmodel as shared_appointmentinitialviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class PostConsumerV1AppointmentsQueryParams:
-    complete_booking: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'completeBooking', 'style': 'form', 'explode': True }})
+    complete_booking: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'completeBooking', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConsumerV1AppointmentsRequests:
-    appointment_initial_model: Optional[shared.AppointmentInitialModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    appointment_initial_model1: Optional[shared.AppointmentInitialModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    appointment_initial_model2: Optional[shared.AppointmentInitialModel] = field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
-    appointment_initial_model3: Optional[shared.AppointmentInitialModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    appointment_initial_model: Optional[shared_appointmentinitialmodel.AppointmentInitialModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    appointment_initial_model1: Optional[shared_appointmentinitialmodel.AppointmentInitialModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    appointment_initial_model2: Optional[shared_appointmentinitialmodel.AppointmentInitialModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json-patch+json' }})
+    appointment_initial_model3: Optional[shared_appointmentinitialmodel.AppointmentInitialModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConsumerV1AppointmentsRequest:
-    query_params: PostConsumerV1AppointmentsQueryParams = field()
-    request: Optional[PostConsumerV1AppointmentsRequests] = field(default=None)
+    query_params: PostConsumerV1AppointmentsQueryParams = dataclasses.field()
+    request: Optional[PostConsumerV1AppointmentsRequests] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostConsumerV1AppointmentsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    appointment_initial_view_model: Optional[shared.AppointmentInitialViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    appointment_initial_view_model: Optional[shared_appointmentinitialviewmodel.AppointmentInitialViewModel] = dataclasses.field(default=None)
     

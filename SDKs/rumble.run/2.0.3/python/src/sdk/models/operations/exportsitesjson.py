@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import site as shared_site
 
 
-@dataclass
+@dataclasses.dataclass
 class ExportSitesJSONQueryParams:
-    fields: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    search: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    fields: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportSitesJSONSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportSitesJSONRequest:
-    query_params: ExportSitesJSONQueryParams = field()
-    security: ExportSitesJSONSecurity = field()
+    query_params: ExportSitesJSONQueryParams = dataclasses.field()
+    security: ExportSitesJSONSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExportSitesJSONResponse:
-    content_type: str = field()
-    status_code: int = field()
-    sites: Optional[List[shared.Site]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    sites: Optional[list[shared_site.Site]] = dataclasses.field(default=None)
     

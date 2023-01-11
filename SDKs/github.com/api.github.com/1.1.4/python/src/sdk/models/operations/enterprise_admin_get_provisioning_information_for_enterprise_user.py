@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import scim_enterprise_user as shared_scim_enterprise_user
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    scim_user_id: str = field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    scim_user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest:
-    path_params: EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams = field()
+    path_params: EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetProvisioningInformationForEnterpriseUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scim_enterprise_user: Optional[shared.ScimEnterpriseUser] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scim_enterprise_user: Optional[shared_scim_enterprise_user.ScimEnterpriseUser] = dataclasses.field(default=None)
     

@@ -1,35 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class OndStatusQueryParams:
-    catalogues: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
-    new_routes: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'new-routes', 'style': 'form', 'explode': True }})
-    old_routes: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'old-routes', 'style': 'form', 'explode': True }})
+    catalogues: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'catalogues', 'style': 'form', 'explode': True }})
+    new_routes: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'new-routes', 'style': 'form', 'explode': True }})
+    old_routes: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'old-routes', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OndStatusHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OndStatusSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OndStatusRequest:
-    headers: OndStatusHeaders = field()
-    query_params: OndStatusQueryParams = field()
-    security: OndStatusSecurity = field()
+    headers: OndStatusHeaders = dataclasses.field()
+    query_params: OndStatusQueryParams = dataclasses.field()
+    security: OndStatusSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OndStatusResponse:
-    content_type: str = field()
-    status_code: int = field()
-    ond_status_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    ond_status_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

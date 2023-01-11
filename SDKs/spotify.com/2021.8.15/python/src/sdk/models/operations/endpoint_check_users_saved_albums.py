@@ -1,34 +1,35 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointCheckUsersSavedAlbumsQueryParams:
-    ids: str = field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    ids: str = dataclasses.field(metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointCheckUsersSavedAlbumsHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointCheckUsersSavedAlbumsSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointCheckUsersSavedAlbumsRequest:
-    headers: EndpointCheckUsersSavedAlbumsHeaders = field()
-    query_params: EndpointCheckUsersSavedAlbumsQueryParams = field()
-    security: EndpointCheckUsersSavedAlbumsSecurity = field()
+    headers: EndpointCheckUsersSavedAlbumsHeaders = dataclasses.field()
+    query_params: EndpointCheckUsersSavedAlbumsQueryParams = dataclasses.field()
+    security: EndpointCheckUsersSavedAlbumsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointCheckUsersSavedAlbumsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
-    endpoint_check_users_saved_albums_200_application_json_booleans: Optional[List[bool]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
+    endpoint_check_users_saved_albums_200_application_json_booleans: Optional[list[bool]] = dataclasses.field(default=None)
     

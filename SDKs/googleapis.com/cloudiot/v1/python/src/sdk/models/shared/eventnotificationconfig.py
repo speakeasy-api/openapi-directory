@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EventNotificationConfig:
     r"""EventNotificationConfig
     The configuration for forwarding telemetry events.
     """
     
-    pubsub_topic_name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pubsubTopicName') }})
-    subfolder_matches: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subfolderMatches') }})
+    pubsub_topic_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pubsubTopicName') }})
+    subfolder_matches: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('subfolderMatches') }})
     

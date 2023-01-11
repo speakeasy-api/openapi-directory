@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import credential_authorization as shared_credential_authorization
 
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListSamlSsoAuthorizationsPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListSamlSsoAuthorizationsRequest:
-    path_params: OrgsListSamlSsoAuthorizationsPathParams = field()
+    path_params: OrgsListSamlSsoAuthorizationsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OrgsListSamlSsoAuthorizationsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    credential_authorizations: Optional[List[shared.CredentialAuthorization]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    credential_authorizations: Optional[list[shared_credential_authorization.CredentialAuthorization]] = dataclasses.field(default=None)
     

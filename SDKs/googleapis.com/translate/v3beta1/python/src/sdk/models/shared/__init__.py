@@ -34,3 +34,5 @@ from .translatetextrequest import *
 from .translatetextresponse import *
 from .translation import *
 from .waitoperationrequest import *
+
+__all__ = ["XgafvEnum","AltEnum","BatchDocumentInputConfig","BatchDocumentOutputConfig","BatchTranslateDocumentRequest","BatchTranslateTextRequest","DetectedLanguage","DetectLanguageRequest","DetectLanguageResponse","DocumentInputConfig","DocumentOutputConfig","DocumentTranslation","GcsDestination","GcsSource","Glossary","GlossaryInput","GlossaryInputConfig","InputConfig","LanguageCodePair","LanguageCodesSet","ListGlossariesResponse","ListLocationsResponse","ListOperationsResponse","Location","Operation","OutputConfig","SchemeOauth2","SchemeOauth2c","Status","SupportedLanguage","SupportedLanguages","TranslateDocumentRequest","TranslateDocumentResponse","TranslateTextGlossaryConfig","TranslateTextRequest","TranslateTextResponse","Translation","WaitOperationRequest"]

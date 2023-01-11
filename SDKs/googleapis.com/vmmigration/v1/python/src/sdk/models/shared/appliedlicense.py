@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -12,12 +12,12 @@ class AppliedLicenseTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppliedLicense:
     r"""AppliedLicense
     AppliedLicense holds the license data returned by adaptation module report.
     """
     
-    os_license: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('osLicense') }})
-    type: Optional[AppliedLicenseTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    os_license: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('osLicense') }})
+    type: Optional[AppliedLicenseTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     

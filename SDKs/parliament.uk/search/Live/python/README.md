@@ -8,16 +8,15 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-res = s.sdk.get_description()
+res = s.description.get_description()
 
 if res.status_code == 200:
     # handle response
@@ -27,9 +26,12 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Description
 
 * `get_description` - OpenSearch description document
+
+### Query
+
 * `get_query` - Search results
 * `get_query_extension_` - Search results
 

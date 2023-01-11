@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -24,16 +24,16 @@ class HousekeepingTurndownServiceExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Housekeeping:
     r"""Housekeeping
     Conveniences provided in guest units to facilitate an easier, more comfortable stay.
     """
     
-    daily_housekeeping: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyHousekeeping') }})
-    daily_housekeeping_exception: Optional[HousekeepingDailyHousekeepingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyHousekeepingException') }})
-    housekeeping_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('housekeepingAvailable') }})
-    housekeeping_available_exception: Optional[HousekeepingHousekeepingAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('housekeepingAvailableException') }})
-    turndown_service: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('turndownService') }})
-    turndown_service_exception: Optional[HousekeepingTurndownServiceExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('turndownServiceException') }})
+    daily_housekeeping: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyHousekeeping') }})
+    daily_housekeeping_exception: Optional[HousekeepingDailyHousekeepingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('dailyHousekeepingException') }})
+    housekeeping_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('housekeepingAvailable') }})
+    housekeeping_available_exception: Optional[HousekeepingHousekeepingAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('housekeepingAvailableException') }})
+    turndown_service: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('turndownService') }})
+    turndown_service_exception: Optional[HousekeepingTurndownServiceExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('turndownServiceException') }})
     

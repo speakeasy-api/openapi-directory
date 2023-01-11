@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportServicesCsvSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportServicesCsvRequest:
-    security: SnowExportServicesCsvSecurity = field()
+    security: SnowExportServicesCsvSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SnowExportServicesCsvResponse:
-    content_type: str = field()
-    status_code: int = field()
-    snow_export_services_csv_200_text_csv_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    snow_export_services_csv_200_text_csv_binary_string: Optional[bytes] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,16 +23,15 @@ s.config_security(
     )
 )
     
-req = operations.DeleteAccountsAccountOrdersCustomerOrderIDRequest(
-    path_params=operations.DeleteAccountsAccountOrdersCustomerOrderIDPathParams(
-        customer_order_id="fuga",
-        account="ut",
+req = operations.GetAccountsRequest(
+    query_params=operations.GetAccountsQueryParams(
+        account="neque",
     ),
 )
     
-res = s.sdk.delete_accounts_account_orders_customer_order_id_(req)
+res = s.account_and_portfolio.get_accounts(req)
 
-if res.delete_accounts_account_orders_customer_order_id_200_application_json_objects is not None:
+if res.get_accounts_200_application_json_object is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -41,24 +39,42 @@ if res.delete_accounts_account_orders_customer_order_id_200_application_json_obj
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account & Portfolio
 
-* `delete_accounts_account_orders_customer_order_id_` - Cancel Order
 * `get_accounts` - Brokerage Accounts
-* `get_accounts_account_orders` - Open Orders
-* `get_accounts_account_orders_customer_order_id_` - Return specific order info
 * `get_accounts_account_positions` - Account Positions
 * `get_accounts_account_summary` - Account Values Summary
-* `get_accounts_account_trades` - Returns trades in account
+
+### Financial Instrument Definitions
+
+* `get_secdef` - Get security definition
+
+### Market Data
+
 * `get_marketdata_exchange_components` - Exchange Components
 * `get_marketdata_snapshot` - Market Data Snapshot
-* `get_secdef` - Get security definition
-* `post_accounts_account_order_impact` - Return margin impact info
-* `post_accounts_account_orders` - Place Order
+
+### OAuth
+
 * `post_oauth_access_token` - Obtain a access token
 * `post_oauth_live_session_token` - Obtain a live session token
 * `post_oauth_request_token` - Obtain a request token
+
+### Order Margin Requirements
+
+* `post_accounts_account_order_impact` - Return margin impact info
+
+### Orders
+
+* `delete_accounts_account_orders_customer_order_id_` - Cancel Order
+* `get_accounts_account_orders` - Open Orders
+* `get_accounts_account_orders_customer_order_id_` - Return specific order info
+* `post_accounts_account_orders` - Place Order
 * `put_accounts_account_orders_customer_order_id_` - Modify Order
+
+### Trades
+
+* `get_accounts_account_trades` - Returns trades in account
 
 <!-- End SDK Available Operations -->
 

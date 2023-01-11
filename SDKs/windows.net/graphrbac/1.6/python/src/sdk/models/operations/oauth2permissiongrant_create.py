@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantCreatePathParams:
-    tenant_id: str = field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
+    tenant_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tenantID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantCreateQueryParams:
-    api_version: str = field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
+    api_version: str = dataclasses.field(metadata={'query_param': { 'field_name': 'api-version', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantCreateRequest:
-    path_params: OAuth2PermissionGrantCreatePathParams = field()
-    query_params: OAuth2PermissionGrantCreateQueryParams = field()
-    request: Optional[Any] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: OAuth2PermissionGrantCreatePathParams = dataclasses.field()
+    query_params: OAuth2PermissionGrantCreateQueryParams = dataclasses.field()
+    request: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OAuth2PermissionGrantCreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    o_auth2_permission_grant: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    o_auth2_permission_grant: Optional[Any] = dataclasses.field(default=None)
     

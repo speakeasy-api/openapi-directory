@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class StatusScanPagePathParams:
-    scan_id: int = field(metadata={'path_param': { 'field_name': 'scanId', 'style': 'simple', 'explode': False }})
+    scan_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'scanId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StatusScanPageRequest:
-    path_params: StatusScanPagePathParams = field()
+    path_params: StatusScanPagePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class StatusScanPageResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_response: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_response: Optional[Any] = dataclasses.field(default=None)
     

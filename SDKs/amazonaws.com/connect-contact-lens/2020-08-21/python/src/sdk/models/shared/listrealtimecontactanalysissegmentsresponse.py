@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import realtimecontactanalysissegment as shared_realtimecontactanalysissegment
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListRealtimeContactAnalysisSegmentsResponse:
-    segments: List[RealtimeContactAnalysisSegment] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Segments') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    segments: list[shared_realtimecontactanalysissegment.RealtimeContactAnalysisSegment] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Segments') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

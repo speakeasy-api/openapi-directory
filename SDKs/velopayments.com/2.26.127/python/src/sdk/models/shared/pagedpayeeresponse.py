@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import getpayeelistresponse as shared_getpayeelistresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PagedPayeeResponse:
     r"""PagedPayeeResponse
     List Payees Response Object
     """
     
-    content: Optional[List[GetPayeeListResponse]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    links: Optional[List[Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
-    page: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
-    summary: Optional[Any] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summary') }})
+    content: Optional[list[shared_getpayeelistresponse.GetPayeeListResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    links: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    page: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('page') }})
+    summary: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('summary') }})
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,9 +18,9 @@ s = sdk.SDK()
     
 req = operations.AuthTokenRequest(
     request=shared.TokenRequest(
-        client_id="occaecati",
-        client_secret="debitis",
-        grant_type="et",
+        client_id="quis",
+        client_secret="beatae",
+        grant_type="eos",
     ),
 )
     
@@ -83,6 +82,7 @@ if res.token_response is not None:
 
 * `webhooks_fetch_all` - Fetch active webhooks
 * `webhooks_subscribe` - Subscribe to message events
+* `webhooks_unsubscribe` - Unsubscribe to message events
 
 <!-- End SDK Available Operations -->
 

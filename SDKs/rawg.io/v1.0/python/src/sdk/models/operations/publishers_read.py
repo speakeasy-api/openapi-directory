@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import publishersingle as shared_publishersingle
 
 
-@dataclass
+@dataclasses.dataclass
 class PublishersReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishersReadRequest:
-    path_params: PublishersReadPathParams = field()
+    path_params: PublishersReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PublishersReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    publisher_single: Optional[shared.PublisherSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    publisher_single: Optional[shared_publishersingle.PublisherSingle] = dataclasses.field(default=None)
     

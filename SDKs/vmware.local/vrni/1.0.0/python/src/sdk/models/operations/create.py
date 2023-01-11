@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import usercredential as shared_usercredential
+from ..shared import apierror as shared_apierror
+from ..shared import token as shared_token
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateRequest:
-    request: shared.UserCredential = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_usercredential.UserCredential = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    token: Optional[shared.Token] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    token: Optional[shared_token.Token] = dataclasses.field(default=None)
     

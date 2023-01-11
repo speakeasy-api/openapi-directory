@@ -1,0 +1,529 @@
+import requests
+from typing import Optional
+from sdk.models import shared, operations
+from . import utils
+
+class Resources:
+    _client: requests.Session
+    _security_client: requests.Session
+    _server_url: str
+    _language: str
+    _sdk_version: str
+    _gen_version: str
+
+    def __init__(self, client: requests.Session, security_client: requests.Session, server_url: str, language: str, sdk_version: str, gen_version: str) -> None:
+        self._client = client
+        self._security_client = security_client
+        self._server_url = server_url
+        self._language = language
+        self._sdk_version = sdk_version
+        self._gen_version = gen_version
+
+    
+    def add_folder(self, request: operations.AddFolderRequest) -> operations.AddFolderResponse:
+        r"""Create a folder
+        Create a new empty folder at the specified path. New files can be uploaded via the [/resources/upload](#operation/uploadFile) endpoint.
+        
+        **Notes:**
+        - Authenticated user should have modify permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AddFolderResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    
+    def compress_files(self, request: operations.CompressFilesRequest) -> operations.CompressFilesResponse:
+        r"""Compress resources
+        Create a zip archive containing the files from given set of paths. Note that this can be a very slow operation if you have indicated many files should be included in the archive.
+        
+        **Notes:**
+        - Authenticated user should have modify permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/compress"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.CompressFilesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    
+    def copy_resources(self, request: operations.CopyResourcesRequest) -> operations.CopyResourcesResponse:
+        r"""Copy resources
+        Copies a set of exisiting files/folders (provided by an array `resources`) to the requested `parentResource` in your account.
+        In the `resources` array, you may specify paths pointing files/folders throughout the account, but everything will be copied to the 
+        root of the `parentResource`.
+        
+        **Notes:**
+        - Authenticated user should have modify permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/copy"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.CopyResourcesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceCopyMove])
+                res.resource_copy_move = out
+        elif r.status_code == 207:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceMultiResponse])
+                res.resource_multi_response = out
+
+        return res
+
+    
+    def delete_resource_by_id(self, request: operations.DeleteResourceByIDRequest) -> operations.DeleteResourceByIDResponse:
+        r"""Delete a Resource
+        Delete a single file or folder resource. Deleting a folder will also delete all of the contents.
+        
+        **Notes:**
+        - Authenticated user should have [delete permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
+        - There is no way to un-delete a deleted resource.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/{id}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        
+        client = self._client
+        
+        r = client.request("DELETE", url, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeleteResourceByIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.EmptyResponse])
+                res.empty_response = out
+
+        return res
+
+    
+    def delete_resources(self, request: operations.DeleteResourcesRequest) -> operations.DeleteResourcesResponse:
+        r"""Delete Resources
+        Delete multiple file or folder resourcess. Deleting a folder resource will also delete any resources in that folder.
+        
+        **Notes:**
+        - Authenticated user should have [delete permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions).
+        - It is not possible to un-delete a deleted resource.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("DELETE", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DeleteResourcesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.EmptyResponse])
+                res.empty_response = out
+        elif r.status_code == 207:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceMultiResponse])
+                res.resource_multi_response = out
+
+        return res
+
+    
+    def download(self, request: operations.DownloadRequest) -> operations.DownloadResponse:
+        r"""Download a file
+        Downloads a file from the server. Whenever more than one file is being downloaded, the file are first zipped into  a single file before the download starts, and the resulting zip file is named to match the `downloadArchiveName` parameter.
+        
+        **NOTE**: Downloading many files at once  may result in a long delay before the API will return a response. You may need to override default timeout values in your API client, or download files individually.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/download"
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.DownloadResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/octet-stream"):
+                res.download_200_application_octet_stream_binary_string = r.content
+            if utils.match_content_type(content_type, "application/zip"):
+                res.download_200_application_zip_binary_string = r.content
+
+        return res
+
+    
+    def extract_files(self, request: operations.ExtractFilesRequest) -> operations.ExtractFilesResponse:
+        r"""Extract resources
+        Extract the contents of a zip archive to a specified directory. Note that this can be a very slow operation.
+        
+        **Notes:**
+        - You must have  [modify permission](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions) to do this.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/extract"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ExtractFilesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceCollectionResponse])
+                res.resource_collection_response = out
+
+        return res
+
+    
+    def get_preview_image(self, request: operations.GetPreviewImageRequest) -> operations.GetPreviewImageResponse:
+        r"""Preview a file
+        Returns a resized image of the specified document for supported file types.
+        
+        Image data returned is encoded in base64 format and can be viewed using the `<img>` element. 
+        
+        ```<img src='data:image/jpeg;base64' + meta.image/>```
+        
+        **Notes:**
+        - Supported files types are `'jpg'`, `'jpeg'`, `'gif'`, `'png'`, `'bmp'`, `'pdf'`, `'psd'`, `'doc'`
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/preview"
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetPreviewImageResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.PreviewFileResponse])
+                res.preview_file_response = out
+
+        return res
+
+    
+    def get_resource_info(self, request: operations.GetResourceInfoRequest) -> operations.GetResourceInfoResponse:
+        r"""Get Resource Properties
+        Returns details for specified file/folder id or hash, including upload date, size and type. For the full list of returned properties, see the response syntax, below.
+        
+        **Notes:**
+        - Authenticated user should have list permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources"
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourceInfoResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    
+    def get_resource_info_by_id(self, request: operations.GetResourceInfoByIDRequest) -> operations.GetResourceInfoByIDResponse:
+        r"""Get resource metadata
+        Returns metadata for specified file/folder path, including upload date, size and type. For the full list of returned properties, see the response syntax, below.
+        
+        **Notes:**
+        - Authenticated user should have list permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/{id}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourceInfoByIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    
+    def list_resource_contents(self, request: operations.ListResourceContentsRequest) -> operations.ListResourceContentsResponse:
+        r"""List contents of folder
+        Returns a list of files/folders for the parent resource ID. 
+        
+        You can use this API call to get information about all files and folders at a specified path. By default, the API returns basic metadata on each file/folder. An optional `include` parameter forces the return of additional metadata. As with all API calls, the path should be the full path relative to the user's home directory (e.g. **/myfiles/some_folder**).
+        
+        **Notes:**
+        - Authenticated user should have list permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/list/{id}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListResourceContentsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceCollectionResponse])
+                res.resource_collection_response = out
+
+        return res
+
+    
+    def list_resources(self, request: operations.ListResourcesRequest) -> operations.ListResourcesResponse:
+        r"""Get a list of all resources
+        Returns a list of files and folders in the account. Use the `resource` query parameter to indicate the folder you wish to search in (which can be /). 
+        
+        **Searching for Files and Folders**
+        
+        Using the `name` parameter triggers search mode, which will search the entire directory structure under the provided `resource` for files or folders with names matching the provided `name`. This supports wildcard matching such as:
+        
+        - \*Report\* would find any files or folders with \"Report\" in the name.
+        - Data\_202?-09-30.xlsx would match items such as \"Data\_2020-09-30.xlsx\", \"DATA\_2021-09-30.xlsx\", \"data\_2022-09-30.xlsx\" etc.
+        - sales\* would find any files or folders starting with the word \"Sales\"
+        - \*.csv would locate any files ending in \".csv\"
+        - \* matches everything within the directory tree starting at your given `resource`
+        
+        The search is not case-sensitive. Searching for Clients\* or clients\* or CLIENTS\*, etc. will provide identical results
+        
+        If you are using the `name` parameter to run a search, the `type` parameter will be ignored by the server.
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/list"
+        
+        headers = utils.get_headers(request.headers)
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("GET", url, params=query_params, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.ListResourcesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceCollectionResponse])
+                res.resource_collection_response = out
+
+        return res
+
+    
+    def move_resources(self, request: operations.MoveResourcesRequest) -> operations.MoveResourcesResponse:
+        r"""Move resources
+        Moves a set of exisiting files/folders (provided by an array `resources`) to the requested `parentResource` in your account.
+        In the `resources` array, you may specify paths pointing files/folders throughout the account, but everything will be moved to the root of the `parentResource`.
+        
+        **Notes:**
+        - Authenticated user should have modify permission.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/move"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("POST", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.MoveResourcesResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceCopyMove])
+                res.resource_copy_move = out
+        elif r.status_code == 207:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceMultiResponse])
+                res.resource_multi_response = out
+
+        return res
+
+    
+    def update_resource_by_id(self, request: operations.UpdateResourceByIDRequest) -> operations.UpdateResourceByIDResponse:
+        r"""Rename a resource.
+        Update the specified file or folder resource record's \"name\" parameter. The resource is identified by the numeric resource ID that is passed in as the last segment of the URI.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/{id}", request.path_params)
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        
+        client = self._client
+        
+        r = client.request("PATCH", url, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UpdateResourceByIDResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    
+    def upload_file(self, request: operations.UploadFileRequest) -> operations.UploadFileResponse:
+        r"""Upload a file
+        Uploads a file to a specified path, with optional support for resuming a partially uploaded existing file.
+        
+        """
+        
+        base_url = self._server_url
+        
+        url = base_url.removesuffix("/") + "/resources/upload"
+        
+        headers = utils.get_headers(request.headers)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = self._client
+        
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.UploadFileResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 201:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.ResourceResponse])
+                res.resource_response = out
+
+        return res
+
+    

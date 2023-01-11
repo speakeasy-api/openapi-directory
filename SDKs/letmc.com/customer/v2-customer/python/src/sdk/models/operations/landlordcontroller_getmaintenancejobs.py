@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import landlordmaintenancemodel as shared_landlordmaintenancemodel
 
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetMaintenanceJobsPathParams:
-    short_name: str = field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
+    short_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'shortName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetMaintenanceJobsQueryParams:
-    token: str = field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    token: str = dataclasses.field(metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetMaintenanceJobsRequest:
-    path_params: LandlordControllerGetMaintenanceJobsPathParams = field()
-    query_params: LandlordControllerGetMaintenanceJobsQueryParams = field()
+    path_params: LandlordControllerGetMaintenanceJobsPathParams = dataclasses.field()
+    query_params: LandlordControllerGetMaintenanceJobsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class LandlordControllerGetMaintenanceJobsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    landlord_maintenance_model: Optional[shared.LandlordMaintenanceModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    landlord_maintenance_model: Optional[shared_landlordmaintenancemodel.LandlordMaintenanceModel] = dataclasses.field(default=None)
     

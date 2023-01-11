@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import webhook as shared_webhook
 
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDRequest:
-    path_params: GetWebhooksIDPathParams = field()
+    path_params: GetWebhooksIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetWebhooksIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    webhook: Optional[shared.Webhook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None)
     

@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import entityname as shared_entityname
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NamesResponse:
-    entities: Optional[List[EntityName]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entities') }})
+    entities: Optional[list[shared_entityname.EntityName]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('entities') }})
     

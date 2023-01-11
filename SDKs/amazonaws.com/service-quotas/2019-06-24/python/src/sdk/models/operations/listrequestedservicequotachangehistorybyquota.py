@@ -1,49 +1,50 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import listrequestedservicequotachangehistorybyquotarequest as shared_listrequestedservicequotachangehistorybyquotarequest
+from ..shared import listrequestedservicequotachangehistorybyquotaresponse as shared_listrequestedservicequotachangehistorybyquotaresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ListRequestedServiceQuotaChangeHistoryByQuotaQueryParams:
-    max_results: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'MaxResults', 'style': 'form', 'explode': True }})
-    next_token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'NextToken', 'style': 'form', 'explode': True }})
+    max_results: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'MaxResults', 'style': 'form', 'explode': True }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'NextToken', 'style': 'form', 'explode': True }})
     
 class ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum(str, Enum):
     SERVICE_QUOTAS_V20190624_LIST_REQUESTED_SERVICE_QUOTA_CHANGE_HISTORY_BY_QUOTA = "ServiceQuotasV20190624.ListRequestedServiceQuotaChangeHistoryByQuota"
 
 
-@dataclass
+@dataclasses.dataclass
 class ListRequestedServiceQuotaChangeHistoryByQuotaHeaders:
-    x_amz_target: ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListRequestedServiceQuotaChangeHistoryByQuotaRequest:
-    headers: ListRequestedServiceQuotaChangeHistoryByQuotaHeaders = field()
-    query_params: ListRequestedServiceQuotaChangeHistoryByQuotaQueryParams = field()
-    request: shared.ListRequestedServiceQuotaChangeHistoryByQuotaRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ListRequestedServiceQuotaChangeHistoryByQuotaHeaders = dataclasses.field()
+    query_params: ListRequestedServiceQuotaChangeHistoryByQuotaQueryParams = dataclasses.field()
+    request: shared_listrequestedservicequotachangehistorybyquotarequest.ListRequestedServiceQuotaChangeHistoryByQuotaRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListRequestedServiceQuotaChangeHistoryByQuotaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied_exception: Optional[Any] = field(default=None)
-    illegal_argument_exception: Optional[Any] = field(default=None)
-    invalid_pagination_token_exception: Optional[Any] = field(default=None)
-    list_requested_service_quota_change_history_by_quota_response: Optional[shared.ListRequestedServiceQuotaChangeHistoryByQuotaResponse] = field(default=None)
-    no_such_resource_exception: Optional[Any] = field(default=None)
-    service_exception: Optional[Any] = field(default=None)
-    too_many_requests_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied_exception: Optional[Any] = dataclasses.field(default=None)
+    illegal_argument_exception: Optional[Any] = dataclasses.field(default=None)
+    invalid_pagination_token_exception: Optional[Any] = dataclasses.field(default=None)
+    list_requested_service_quota_change_history_by_quota_response: Optional[shared_listrequestedservicequotachangehistorybyquotaresponse.ListRequestedServiceQuotaChangeHistoryByQuotaResponse] = dataclasses.field(default=None)
+    no_such_resource_exception: Optional[Any] = dataclasses.field(default=None)
+    service_exception: Optional[Any] = dataclasses.field(default=None)
+    too_many_requests_exception: Optional[Any] = dataclasses.field(default=None)
     

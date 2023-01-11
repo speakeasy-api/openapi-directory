@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import institutionssearchrequest as shared_institutionssearchrequest
 
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsSearchRequest:
-    request: shared.InstitutionsSearchRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_institutionssearchrequest.InstitutionsSearchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class InstitutionsSearchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[dict[str, Any]] = field(default=None)
-    institutions_search_response: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    institutions_search_response: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

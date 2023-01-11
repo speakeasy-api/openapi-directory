@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import dominantlanguagedetectionjobproperties as shared_dominantlanguagedetectionjobproperties
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListDominantLanguageDetectionJobsResponse:
-    dominant_language_detection_job_properties_list: Optional[List[DominantLanguageDetectionJobProperties]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DominantLanguageDetectionJobPropertiesList') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    dominant_language_detection_job_properties_list: Optional[list[shared_dominantlanguagedetectionjobproperties.DominantLanguageDetectionJobProperties]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('DominantLanguageDetectionJobPropertiesList') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

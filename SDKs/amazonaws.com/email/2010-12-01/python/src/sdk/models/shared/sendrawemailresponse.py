@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class SendRawEmailResponse:
     r"""SendRawEmailResponse
     Represents a unique message ID.
     """
     
-    message_id: str = field()
+    message_id: str = dataclasses.field()
     

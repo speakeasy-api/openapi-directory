@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,17 +8,17 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CountryStats:
-    country: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
-    active_cases: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active_cases') }})
-    cases_per_mill_pop: Optional[float] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cases_per_mill_pop') }})
-    flag: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('flag') }})
-    last_update: Optional[datetime] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_update'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    new_cases: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_cases') }})
-    new_deaths: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_deaths') }})
-    serious_critical: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serious_critical') }})
-    total_cases: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_cases') }})
-    total_deaths: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_deaths') }})
-    total_recovered: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_recovered') }})
+    country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('country') }})
+    active_cases: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('active_cases') }})
+    cases_per_mill_pop: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cases_per_mill_pop') }})
+    flag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('flag') }})
+    last_update: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_update'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    new_cases: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_cases') }})
+    new_deaths: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('new_deaths') }})
+    serious_critical: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('serious_critical') }})
+    total_cases: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_cases') }})
+    total_deaths: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_deaths') }})
+    total_recovered: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_recovered') }})
     

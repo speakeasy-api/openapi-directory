@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import group_mapping as shared_group_mapping
 
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsInOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    team_slug: str = field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    team_slug: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_slug', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsInOrgRequest:
-    path_params: TeamsListIdpGroupsInOrgPathParams = field()
+    path_params: TeamsListIdpGroupsInOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TeamsListIdpGroupsInOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group_mapping: Optional[shared.GroupMapping] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_mapping: Optional[shared_group_mapping.GroupMapping] = dataclasses.field(default=None)
     

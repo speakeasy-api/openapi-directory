@@ -1,0 +1,14 @@
+import dataclasses
+from typing import Optional
+from dataclasses_json import dataclass_json
+from sdk import utils
+
+
+@dataclass_json
+@dataclasses.dataclass
+class PostPaymentMethodResponseDecryption:
+    amount: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    payment_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentId') }})
+    payment_method_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('paymentMethodId') }})
+    success: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('success') }})
+    

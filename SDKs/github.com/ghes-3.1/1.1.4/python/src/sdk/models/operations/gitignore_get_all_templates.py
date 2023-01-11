@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GitignoreGetAllTemplatesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    gitignore_get_all_templates_200_application_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    gitignore_get_all_templates_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

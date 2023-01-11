@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import agentsiteid as shared_agentsiteid
+from ..shared import agent as shared_agent
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAgentSitePathParams:
-    agent_id: str = field(metadata={'path_param': { 'field_name': 'agent_id', 'style': 'simple', 'explode': False }})
+    agent_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'agent_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAgentSiteSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAgentSiteRequest:
-    path_params: UpdateAgentSitePathParams = field()
-    request: shared.AgentSiteID = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateAgentSiteSecurity = field()
+    path_params: UpdateAgentSitePathParams = dataclasses.field()
+    request: shared_agentsiteid.AgentSiteID = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateAgentSiteSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateAgentSiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    agent: Optional[shared.Agent] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    agent: Optional[shared_agent.Agent] = dataclasses.field(default=None)
     

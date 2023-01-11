@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import optiongroupslist as shared_optiongroupslist
 
 
-@dataclass
+@dataclasses.dataclass
 class OptionGroups:
     r"""OptionGroups
     List of option groups.
     """
     
-    marker: Optional[str] = field(default=None)
-    option_groups_list: Optional[List[OptionGroup]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    option_groups_list: Optional[list[shared_optiongroupslist.OptionGroupsList]] = dataclasses.field(default=None)
     

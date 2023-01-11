@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class NoSuchCloudFrontOriginAccessIdentity:
     r"""NoSuchCloudFrontOriginAccessIdentity
     The specified origin access identity does not exist.
     """
     
-    message: Optional[str] = field(default=None)
+    message: Optional[str] = dataclasses.field(default=None)
     

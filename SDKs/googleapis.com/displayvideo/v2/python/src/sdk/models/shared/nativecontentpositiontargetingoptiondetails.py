@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,11 +14,11 @@ class NativeContentPositionTargetingOptionDetailsContentPositionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class NativeContentPositionTargetingOptionDetails:
     r"""NativeContentPositionTargetingOptionDetails
     Represents a targetable native content position. This will be populated in the native_content_position_details field when targeting_type is `TARGETING_TYPE_NATIVE_CONTENT_POSITION`.
     """
     
-    content_position: Optional[NativeContentPositionTargetingOptionDetailsContentPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentPosition') }})
+    content_position: Optional[NativeContentPositionTargetingOptionDetailsContentPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('contentPosition') }})
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -30,18 +30,18 @@ class AccessibilityMobilityAccessiblePoolExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Accessibility:
     r"""Accessibility
     Physical adaptations made to the property in consideration of varying levels of human physical ability.
     """
     
-    mobility_accessible: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessible') }})
-    mobility_accessible_elevator: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleElevator') }})
-    mobility_accessible_elevator_exception: Optional[AccessibilityMobilityAccessibleElevatorExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleElevatorException') }})
-    mobility_accessible_exception: Optional[AccessibilityMobilityAccessibleExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleException') }})
-    mobility_accessible_parking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleParking') }})
-    mobility_accessible_parking_exception: Optional[AccessibilityMobilityAccessibleParkingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleParkingException') }})
-    mobility_accessible_pool: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessiblePool') }})
-    mobility_accessible_pool_exception: Optional[AccessibilityMobilityAccessiblePoolExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessiblePoolException') }})
+    mobility_accessible: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessible') }})
+    mobility_accessible_elevator: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleElevator') }})
+    mobility_accessible_elevator_exception: Optional[AccessibilityMobilityAccessibleElevatorExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleElevatorException') }})
+    mobility_accessible_exception: Optional[AccessibilityMobilityAccessibleExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleException') }})
+    mobility_accessible_parking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleParking') }})
+    mobility_accessible_parking_exception: Optional[AccessibilityMobilityAccessibleParkingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessibleParkingException') }})
+    mobility_accessible_pool: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessiblePool') }})
+    mobility_accessible_pool_exception: Optional[AccessibilityMobilityAccessiblePoolExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mobilityAccessiblePoolException') }})
     

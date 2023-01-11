@@ -1,40 +1,40 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsPathParams:
-    aircraft_code: str = field(metadata={'path_param': { 'field_name': 'aircraftCode', 'style': 'simple', 'explode': False }})
-    cabin_code: str = field(metadata={'path_param': { 'field_name': 'cabinCode', 'style': 'simple', 'explode': False }})
+    aircraft_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'aircraftCode', 'style': 'simple', 'explode': False }})
+    cabin_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cabinCode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsQueryParams:
-    lang: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
+    lang: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'Accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsSecurity:
-    auth: shared.SchemeAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    auth: shared_security.SchemeAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsRequest:
-    headers: SeatDetailsHeaders = field()
-    path_params: SeatDetailsPathParams = field()
-    query_params: SeatDetailsQueryParams = field()
-    security: SeatDetailsSecurity = field()
+    headers: SeatDetailsHeaders = dataclasses.field()
+    path_params: SeatDetailsPathParams = dataclasses.field()
+    query_params: SeatDetailsQueryParams = dataclasses.field()
+    security: SeatDetailsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SeatDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    seat_details_200_application_json_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    seat_details_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     

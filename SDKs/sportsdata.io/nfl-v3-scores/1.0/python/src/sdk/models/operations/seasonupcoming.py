@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -7,19 +7,19 @@ class SeasonUpcomingFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class SeasonUpcomingPathParams:
-    format: SeasonUpcomingFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: SeasonUpcomingFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonUpcomingRequest:
-    path_params: SeasonUpcomingPathParams = field()
+    path_params: SeasonUpcomingPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SeasonUpcomingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    season_upcoming_200_application_json_integer: Optional[int] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    season_upcoming_200_application_json_integer: Optional[int] = dataclasses.field(default=None)
     

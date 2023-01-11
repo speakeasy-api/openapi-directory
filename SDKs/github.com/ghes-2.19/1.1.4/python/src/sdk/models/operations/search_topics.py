@@ -1,39 +1,39 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import topic_search_result_item as shared_topic_search_result_item
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchTopicsQueryParams:
-    q: str = field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
+    q: str = dataclasses.field(metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchTopics200ApplicationJSON:
-    incomplete_results: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('incomplete_results') }})
-    items: List[shared.TopicSearchResultItem] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
-    total_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    incomplete_results: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('incomplete_results') }})
+    items: list[shared_topic_search_result_item.TopicSearchResultItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('items') }})
+    total_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SearchTopics415ApplicationJSON:
-    documentation_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
-    message: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    documentation_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('documentation_url') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchTopicsRequest:
-    query_params: SearchTopicsQueryParams = field()
+    query_params: SearchTopicsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchTopicsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    search_topics_200_application_json_object: Optional[SearchTopics200ApplicationJSON] = field(default=None)
-    search_topics_415_application_json_object: Optional[SearchTopics415ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    search_topics_200_application_json_object: Optional[SearchTopics200ApplicationJSON] = dataclasses.field(default=None)
+    search_topics_415_application_json_object: Optional[SearchTopics415ApplicationJSON] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.CreateConversationRequest(
     request=operations.CreateConversationRequestBody(
-        display_name="eum",
-        image_url="aut",
+        display_name="repellendus",
+        image_url="minima",
         name="consequatur",
         properties=shared.ConversationProperties(
-            ttl=14.100000,
+            ttl=17.200001,
         ),
     ),
 )

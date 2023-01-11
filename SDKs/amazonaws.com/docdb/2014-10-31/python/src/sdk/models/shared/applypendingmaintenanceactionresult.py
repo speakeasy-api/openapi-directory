@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import resourcependingmaintenanceactions as shared_resourcependingmaintenanceactions
 
 
-@dataclass
+@dataclasses.dataclass
 class ApplyPendingMaintenanceActionResult:
-    resource_pending_maintenance_actions: Optional[ResourcePendingMaintenanceActions] = field(default=None)
+    resource_pending_maintenance_actions: Optional[shared_resourcependingmaintenanceactions.ResourcePendingMaintenanceActions] = dataclasses.field(default=None)
     

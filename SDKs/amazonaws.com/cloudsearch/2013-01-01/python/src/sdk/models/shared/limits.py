@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class Limits:
-    maximum_partition_count: int = field()
-    maximum_replication_count: int = field()
+    maximum_partition_count: int = dataclasses.field()
+    maximum_replication_count: int = dataclasses.field()
     

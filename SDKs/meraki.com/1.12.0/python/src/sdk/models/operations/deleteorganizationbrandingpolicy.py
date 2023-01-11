@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationBrandingPolicyPathParams:
-    branding_policy_id: str = field(metadata={'path_param': { 'field_name': 'brandingPolicyId', 'style': 'simple', 'explode': False }})
-    organization_id: str = field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
+    branding_policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'brandingPolicyId', 'style': 'simple', 'explode': False }})
+    organization_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'organizationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationBrandingPolicyRequest:
-    path_params: DeleteOrganizationBrandingPolicyPathParams = field()
+    path_params: DeleteOrganizationBrandingPolicyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteOrganizationBrandingPolicyResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

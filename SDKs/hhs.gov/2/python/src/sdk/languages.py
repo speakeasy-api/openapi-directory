@@ -1,5 +1,5 @@
 import requests
-from typing import List,Optional
+from typing import Optional
 from sdk.models import shared, operations
 from . import utils
 
@@ -18,35 +18,6 @@ class Languages:
         self._language = language
         self._sdk_version = sdk_version
         self._gen_version = gen_version
-
-    
-    def get_resources_languages_id_json(self, request: operations.GetResourcesLanguagesIDJSONRequest) -> operations.GetResourcesLanguagesIDJSONResponse:
-        r"""Get Language by ID
-        Information about a specific language
-        """
-        
-        base_url = self._server_url
-        
-        url = utils.generate_url(base_url, "/resources/languages/{id}.json", request.path_params)
-        
-        
-        client = self._client
-        
-        r = client.request("GET", url)
-        content_type = r.headers.get("Content-Type")
-
-        res = operations.GetResourcesLanguagesIDJSONResponse(status_code=r.status_code, content_type=content_type)
-        
-        if r.status_code == 200:
-            if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.LanguageWrapped]])
-                res.language_wrappeds = out
-        elif r.status_code == 400:
-            pass
-        elif r.status_code == 500:
-            pass
-
-        return res
 
     
     def get_resources_languages_json(self, request: operations.GetResourcesLanguagesJSONRequest) -> operations.GetResourcesLanguagesJSONResponse:
@@ -69,7 +40,36 @@ class Languages:
         
         if r.status_code == 200:
             if utils.match_content_type(content_type, "application/json"):
-                out = utils.unmarshal_json(r.text, Optional[List[shared.LanguageWrapped]])
+                out = utils.unmarshal_json(r.text, Optional[list[shared.LanguageWrapped]])
+                res.language_wrappeds = out
+        elif r.status_code == 400:
+            pass
+        elif r.status_code == 500:
+            pass
+
+        return res
+
+    
+    def get_resources_languages_id_json(self, request: operations.GetResourcesLanguagesIDJSONRequest) -> operations.GetResourcesLanguagesIDJSONResponse:
+        r"""Get Language by ID
+        Information about a specific language
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/resources/languages/{id}.json", request.path_params)
+        
+        
+        client = self._client
+        
+        r = client.request("GET", url)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.GetResourcesLanguagesIDJSONResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[list[shared.LanguageWrapped]])
                 res.language_wrappeds = out
         elif r.status_code == 400:
             pass

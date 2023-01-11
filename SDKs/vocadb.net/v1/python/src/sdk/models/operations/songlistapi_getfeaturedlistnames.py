@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 
 class SongListAPIGetFeaturedListNamesFeaturedCategoryEnum(str, Enum):
@@ -17,25 +17,25 @@ class SongListAPIGetFeaturedListNamesNameMatchModeEnum(str, Enum):
     WORDS = "Words"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListNamesQueryParams:
-    featured_category: Optional[SongListAPIGetFeaturedListNamesFeaturedCategoryEnum] = field(default=None, metadata={'query_param': { 'field_name': 'featuredCategory', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    name_match_mode: Optional[SongListAPIGetFeaturedListNamesNameMatchModeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
-    query: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
+    featured_category: Optional[SongListAPIGetFeaturedListNamesFeaturedCategoryEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'featuredCategory', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    name_match_mode: Optional[SongListAPIGetFeaturedListNamesNameMatchModeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameMatchMode', 'style': 'form', 'explode': True }})
+    query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListNamesRequest:
-    query_params: SongListAPIGetFeaturedListNamesQueryParams = field()
+    query_params: SongListAPIGetFeaturedListNamesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongListAPIGetFeaturedListNamesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_list_api_get_featured_list_names_200_application_json_strings: Optional[List[str]] = field(default=None)
-    song_list_api_get_featured_list_names_200_application_jsonp_strings: Optional[List[str]] = field(default=None)
-    song_list_api_get_featured_list_names_200_text_json_strings: Optional[List[str]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_list_api_get_featured_list_names_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
+    song_list_api_get_featured_list_names_200_application_jsonp_strings: Optional[list[str]] = dataclasses.field(default=None)
+    song_list_api_get_featured_list_names_200_text_json_strings: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import pingresponse as shared_pingresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUtilPingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    ping_response: Optional[shared.PingResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    ping_response: Optional[shared_pingresponse.PingResponse] = dataclasses.field(default=None)
     

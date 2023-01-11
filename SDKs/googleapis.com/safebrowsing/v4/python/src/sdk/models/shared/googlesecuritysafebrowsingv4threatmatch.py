@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlesecuritysafebrowsingv4threatentry as shared_googlesecuritysafebrowsingv4threatentry
+from ..shared import googlesecuritysafebrowsingv4threatentrymetadata as shared_googlesecuritysafebrowsingv4threatentrymetadata
 
 class GoogleSecuritySafebrowsingV4ThreatMatchPlatformTypeEnum(str, Enum):
     PLATFORM_TYPE_UNSPECIFIED = "PLATFORM_TYPE_UNSPECIFIED"
@@ -48,16 +49,16 @@ class GoogleSecuritySafebrowsingV4ThreatMatchThreatTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSecuritySafebrowsingV4ThreatMatch:
     r"""GoogleSecuritySafebrowsingV4ThreatMatch
     A match when checking a threat entry in the Safe Browsing threat lists.
     """
     
-    cache_duration: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cacheDuration') }})
-    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchPlatformTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
-    threat: Optional[GoogleSecuritySafebrowsingV4ThreatEntry] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threat') }})
-    threat_entry_metadata: Optional[GoogleSecuritySafebrowsingV4ThreatEntryMetadata] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryMetadata') }})
-    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchThreatEntryTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
-    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchThreatTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
+    cache_duration: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('cacheDuration') }})
+    platform_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchPlatformTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
+    threat: Optional[shared_googlesecuritysafebrowsingv4threatentry.GoogleSecuritySafebrowsingV4ThreatEntry] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threat') }})
+    threat_entry_metadata: Optional[shared_googlesecuritysafebrowsingv4threatentrymetadata.GoogleSecuritySafebrowsingV4ThreatEntryMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryMetadata') }})
+    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchThreatEntryTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
+    threat_type: Optional[GoogleSecuritySafebrowsingV4ThreatMatchThreatTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
     

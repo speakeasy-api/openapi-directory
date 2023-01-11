@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class RegistryDeleteProjectPathParams:
-    project: str = field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
+    project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryDeleteProjectRequest:
-    path_params: RegistryDeleteProjectPathParams = field()
+    path_params: RegistryDeleteProjectPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RegistryDeleteProjectResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

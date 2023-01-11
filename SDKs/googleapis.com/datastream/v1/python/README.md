@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,87 +20,85 @@ req = operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest(
     security=operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams(
-        parent="dignissimos",
+        parent="similique",
     ),
     query_params=operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams(
         dollar_xgafv="2",
-        access_token="quis",
-        alt="proto",
-        callback="dolores",
-        connection_profile_id="voluptatem",
-        fields="sed",
-        force=True,
-        key="et",
-        oauth_token="enim",
+        access_token="cumque",
+        alt="json",
+        callback="omnis",
+        connection_profile_id="ut",
+        fields="dicta",
+        force=False,
+        key="possimus",
+        oauth_token="eos",
         pretty_print=False,
-        quota_user="vero",
-        request_id="nisi",
-        upload_type="occaecati",
-        upload_protocol="qui",
+        quota_user="natus",
+        request_id="consequatur",
+        upload_type="aspernatur",
+        upload_protocol="dolores",
         validate_only=True,
     ),
     request=shared.ConnectionProfileInput(
         bigquery_profile={
-            "veritatis": "corporis",
+            "omnis": "et",
+            "est": "necessitatibus",
         },
-        display_name="fugiat",
+        display_name="velit",
         forward_ssh_connectivity=shared.ForwardSSHTunnelConnectivity(
-            hostname="dolor",
-            password="voluptatem",
-            port=88593726215372726,
-            private_key="quo",
-            username="aliquid",
+            hostname="repudiandae",
+            password="delectus",
+            port=5778884639584587050,
+            private_key="et",
+            username="tenetur",
         ),
         gcs_profile=shared.GcsProfile(
-            bucket="eum",
-            root_path="veniam",
+            bucket="labore",
+            root_path="est",
         ),
         labels={
-            "id": "neque",
-            "exercitationem": "architecto",
-            "suscipit": "dolores",
+            "provident": "perspiciatis",
+            "mollitia": "vitae",
         },
         mysql_profile=shared.MysqlProfileInput(
-            hostname="dolores",
-            password="maiores",
-            port=8619365412726495595,
+            hostname="ad",
+            password="magni",
+            port=3484971647339665490,
             ssl_config=shared.MysqlSslConfigInput(
-                ca_certificate="facilis",
-                client_certificate="enim",
-                client_key="accusantium",
+                ca_certificate="autem",
+                client_certificate="et",
+                client_key="aut",
             ),
-            username="nihil",
+            username="explicabo",
         ),
         oracle_profile=shared.OracleProfile(
             connection_attributes={
-                "velit": "libero",
+                "quia": "veniam",
             },
-            database_service="est",
-            hostname="tempora",
-            password="eius",
-            port=6426046401014374835,
-            username="non",
+            database_service="repellendus",
+            hostname="ducimus",
+            password="soluta",
+            port=1616641109373168718,
+            username="cumque",
         ),
         postgresql_profile=shared.PostgresqlProfile(
-            database="et",
-            hostname="sit",
-            password="qui",
-            port=5409926317833318634,
-            username="soluta",
+            database="aut",
+            hostname="explicabo",
+            password="maxime",
+            port=4805550021675459519,
+            username="ut",
         ),
         private_connectivity=shared.PrivateConnectivity(
-            private_connection="voluptatum",
+            private_connection="voluptas",
         ),
         static_service_ip_connectivity={
-            "delectus": "accusamus",
-            "suscipit": "doloremque",
-            "dolores": "quis",
+            "modi": "et",
         },
     ),
 )

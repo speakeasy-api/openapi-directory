@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class InvoiceDataConversionStrategyEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class InvoiceData:
     r"""InvoiceData
     The invoice to send, in base64 encoded format. Provide either invoice, or invoiceData, but not both.
     """
     
-    conversion_strategy: Optional[InvoiceDataConversionStrategyEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversionStrategy') }})
-    document: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('document') }})
+    conversion_strategy: Optional[InvoiceDataConversionStrategyEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('conversionStrategy') }})
+    document: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('document') }})
     

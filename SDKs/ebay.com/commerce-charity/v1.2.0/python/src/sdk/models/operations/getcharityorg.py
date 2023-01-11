@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import charityorg as shared_charityorg
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgPathParams:
-    charity_org_id: str = field(metadata={'path_param': { 'field_name': 'charity_org_id', 'style': 'simple', 'explode': False }})
+    charity_org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'charity_org_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgHeaders:
-    x_ebay_c_marketplace_id: str = field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
+    x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgRequest:
-    headers: GetCharityOrgHeaders = field()
-    path_params: GetCharityOrgPathParams = field()
-    security: GetCharityOrgSecurity = field()
+    headers: GetCharityOrgHeaders = dataclasses.field()
+    path_params: GetCharityOrgPathParams = dataclasses.field()
+    security: GetCharityOrgSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCharityOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    charity_org: Optional[shared.CharityOrg] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    charity_org: Optional[shared_charityorg.CharityOrg] = dataclasses.field(default=None)
     

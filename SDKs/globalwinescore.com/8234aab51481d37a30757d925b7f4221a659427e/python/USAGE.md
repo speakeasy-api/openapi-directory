@@ -1,0 +1,39 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        token_authentication=shared.SchemeTokenAuthentication(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.GetGlobalwinescoresLatestRequest(
+    query_params=operations.GetGlobalwinescoresLatestQueryParams(
+        color="pink",
+        is_primeurs=True,
+        limit=6308795235080022817,
+        lwin="molestiae",
+        lwin_11="error",
+        offset=9017080597034832094,
+        ordering="date",
+        vintage="accusantium",
+        wine_id=[
+            7904238630633999270,
+        ],
+    ),
+    headers=operations.GetGlobalwinescoresLatestHeaders(
+        authorization="labore",
+    ),
+)
+    
+res = s.global_wine_score.get_globalwinescores_latest_(req)
+
+if res.status_code == 200:
+    # handle response
+```
+<!-- End SDK Example Usage -->

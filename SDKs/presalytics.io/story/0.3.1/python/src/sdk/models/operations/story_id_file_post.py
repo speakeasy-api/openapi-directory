@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import story as shared_story
 
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFilePostPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFilePostQueryParams:
-    include_outline: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_outline', 'style': 'form', 'explode': True }})
-    obsolete_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'obsolete_id', 'style': 'form', 'explode': True }})
-    replace_existing: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'replace_existing', 'style': 'form', 'explode': True }})
+    include_outline: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_outline', 'style': 'form', 'explode': True }})
+    obsolete_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'obsolete_id', 'style': 'form', 'explode': True }})
+    replace_existing: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'replace_existing', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFilePostRequest:
-    path_params: StoryIDFilePostPathParams = field()
-    query_params: StoryIDFilePostQueryParams = field()
-    request: Any = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: StoryIDFilePostPathParams = dataclasses.field()
+    query_params: StoryIDFilePostQueryParams = dataclasses.field()
+    request: Any = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class StoryIDFilePostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    problem_detail: Optional[Any] = field(default=None)
-    story: Optional[shared.Story] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    problem_detail: Optional[Any] = dataclasses.field(default=None)
+    story: Optional[shared_story.Story] = dataclasses.field(default=None)
     

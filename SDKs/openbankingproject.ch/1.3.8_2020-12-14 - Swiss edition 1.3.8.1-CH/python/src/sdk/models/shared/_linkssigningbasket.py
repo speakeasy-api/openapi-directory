@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import hreftype as shared_hreftype
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LinksSigningBasket:
     r"""LinksSigningBasket
     A list of hyperlinks to be recognised by the TPP. The actual hyperlinks used in the
@@ -58,15 +58,15 @@ class LinksSigningBasket:
     
     """
     
-    sca_o_auth: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaOAuth') }})
-    sca_redirect: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaRedirect') }})
-    sca_status: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaStatus') }})
-    self: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
-    start_authorisation: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisation') }})
-    start_authorisation_with_authentication_method_selection: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithAuthenticationMethodSelection') }})
-    start_authorisation_with_encrypted_psu_authentication: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithEncryptedPsuAuthentication') }})
-    start_authorisation_with_psu_authentication: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithPsuAuthentication') }})
-    start_authorisation_with_psu_identification: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithPsuIdentification') }})
-    start_authorisation_with_transaction_authorisation: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithTransactionAuthorisation') }})
-    status: Optional[HrefType] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    sca_o_auth: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaOAuth') }})
+    sca_redirect: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaRedirect') }})
+    sca_status: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scaStatus') }})
+    self: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
+    start_authorisation: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisation') }})
+    start_authorisation_with_authentication_method_selection: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithAuthenticationMethodSelection') }})
+    start_authorisation_with_encrypted_psu_authentication: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithEncryptedPsuAuthentication') }})
+    start_authorisation_with_psu_authentication: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithPsuAuthentication') }})
+    start_authorisation_with_psu_identification: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithPsuIdentification') }})
+    start_authorisation_with_transaction_authorisation: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('startAuthorisationWithTransactionAuthorisation') }})
+    status: Optional[shared_hreftype.HrefType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
     

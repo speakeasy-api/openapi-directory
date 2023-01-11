@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
-from sdk.models import shared
+from ..shared import validationresult as shared_validationresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ValidateRequestBody:
-    filename: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
-    source: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
+    filename: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'filename' }})
+    source: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'source' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateRequest:
-    request: Optional[ValidateRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[ValidateRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ValidateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    validate_400_application_json_any: Optional[Any] = field(default=None)
-    validation_result: Optional[shared.ValidationResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    validate_400_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    validation_result: Optional[shared_validationresult.ValidationResult] = dataclasses.field(default=None)
     

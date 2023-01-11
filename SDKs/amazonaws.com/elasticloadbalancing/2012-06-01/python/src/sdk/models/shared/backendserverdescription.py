@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class BackendServerDescription:
     r"""BackendServerDescription
     Information about the configuration of an EC2 instance.
     """
     
-    instance_port: Optional[int] = field(default=None)
-    policy_names: Optional[List[str]] = field(default=None)
+    instance_port: Optional[int] = dataclasses.field(default=None)
+    policy_names: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,20 +18,20 @@ s = sdk.SDK()
     
 req = operations.CashinRequest(
     path_params=operations.CashinPathParams(
-        bet_id="tenetur",
+        bet_id="cupiditate",
     ),
     query_params=operations.CashinQueryParams(
-        cash_in_value=13.200000,
-        cashin_bet_delay_id="minus",
+        cash_in_value=76.099998,
+        cashin_bet_delay_id="et",
     ),
     headers=operations.CashinHeaders(
-        api_key="sint",
-        api_secret="est",
-        api_ticket="autem",
+        api_key="assumenda",
+        api_secret="perferendis",
+        api_ticket="ut",
     ),
 )
     
-res = s.sdk.cashin(req)
+res = s.bets.cashin(req)
 
 if res.cash_in_response is not None:
     # handle response
@@ -42,7 +41,7 @@ if res.cash_in_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Bets
 
 * `cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
 * `get_bet_history` - Retrieves the customer’s bet history.

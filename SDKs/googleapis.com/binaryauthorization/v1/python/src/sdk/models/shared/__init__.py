@@ -20,3 +20,5 @@ from .testiampermissionsresponse import *
 from .userownedgrafeasnote import *
 from .validateattestationoccurrencerequest import *
 from .validateattestationoccurrenceresponse import *
+
+__all__ = ["XgafvEnum","AdmissionRuleEnforcementModeEnum","AdmissionRuleEvaluationModeEnum","AdmissionRule","AdmissionWhitelistPattern","AltEnum","AttestationOccurrence","AttestorInput","Attestor","AttestorPublicKey","Binding","Expr","IamPolicy","Jwt","ListAttestorsResponse","PkixPublicKeySignatureAlgorithmEnum","PkixPublicKey","PolicyGlobalPolicyEvaluationModeEnum","Policy","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","Signature","TestIamPermissionsRequest","TestIamPermissionsResponse","UserOwnedGrafeasNoteInput","UserOwnedGrafeasNote","ValidateAttestationOccurrenceRequest","ValidateAttestationOccurrenceResponseResultEnum","ValidateAttestationOccurrenceResponse"]

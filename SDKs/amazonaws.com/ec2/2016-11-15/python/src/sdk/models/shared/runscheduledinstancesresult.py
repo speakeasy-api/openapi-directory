@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class RunScheduledInstancesResult:
     r"""RunScheduledInstancesResult
     Contains the output of RunScheduledInstances.
     """
     
-    instance_id_set: Optional[List[str]] = field(default=None)
+    instance_id_set: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

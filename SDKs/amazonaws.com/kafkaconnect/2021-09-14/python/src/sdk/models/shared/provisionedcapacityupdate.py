@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,12 +7,12 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProvisionedCapacityUpdate:
     r"""ProvisionedCapacityUpdate
     An update to a connector's fixed capacity.
     """
     
-    mcu_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mcuCount') }})
-    worker_count: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerCount') }})
+    mcu_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('mcuCount') }})
+    worker_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('workerCount') }})
     

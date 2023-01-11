@@ -1,28 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import onebatches_get_responses_200_content_application_1json_schema as shared_onebatches_get_responses_200_content_application_1json_schema
 
 
-@dataclass
+@dataclasses.dataclass
 class GetItemsBatchInternalTrasnferPathParams:
-    batch_uuid: str = field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
+    batch_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'batchUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemsBatchInternalTrasnferQueryParams:
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemsBatchInternalTrasnferRequest:
-    path_params: GetItemsBatchInternalTrasnferPathParams = field()
-    query_params: GetItemsBatchInternalTrasnferQueryParams = field()
+    path_params: GetItemsBatchInternalTrasnferPathParams = dataclasses.field()
+    query_params: GetItemsBatchInternalTrasnferQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetItemsBatchInternalTrasnferResponse:
-    content_type: str = field()
-    status_code: int = field()
-    onebatches_get_responses_200_content_application_1json_schema: Optional[shared.OnebatchesGetResponses200ContentApplication1jsonSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    onebatches_get_responses_200_content_application_1json_schema: Optional[shared_onebatches_get_responses_200_content_application_1json_schema.OnebatchesGetResponses200ContentApplication1jsonSchema] = dataclasses.field(default=None)
     

@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetMetricWidgetImageOutput:
-    metric_widget_image: Optional[str] = field(default=None)
+    metric_widget_image: Optional[str] = dataclasses.field(default=None)
     

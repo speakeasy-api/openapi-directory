@@ -1,0 +1,63 @@
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+s.config_security(
+    security=shared.Security(
+        api_key_auth=shared.SchemeAPIKeyAuth(
+            api_key="YOUR_API_KEY_HERE",
+        ),
+    )
+)
+    
+req = operations.GetRecordsFormatRequest(
+    path_params=operations.GetRecordsFormatPathParams(
+        format="xml",
+    ),
+    query_params=operations.GetRecordsFormatQueryParams(
+        and_category_="Audio",
+        and_century_="praesentium",
+        and_collection_="sint",
+        and_content_partner_="qui",
+        and_creator_="atque",
+        and_date_="iusto",
+        and_dc_type_="rem",
+        and_decade_="dolorum",
+        and_format_="ut",
+        and_has_large_thumbnail_url_="Y",
+        and_has_lat_lng_=False,
+        and_is_commercial_use_=True,
+        and_or_filter_field_="maiores",
+        and_placename_="ab",
+        and_primary_collection_="amet",
+        and_subject_="fugiat",
+        and_title_="est",
+        and_usage_="Share",
+        and_year_="consequatur",
+        api_key="quia",
+        direction="asc",
+        exclude_filters_from_facets=False,
+        facets=[
+            "creator",
+            "century",
+        ],
+        facets_page=7749255547755295069,
+        facets_per_page=2063540456602819,
+        fields="corporis",
+        geo_bbox="quaerat",
+        page=693839712308138010,
+        per_page=5270800729784320551,
+        sort="syndication_date",
+        text="quam",
+        without_filter_field_="autem",
+    ),
+)
+    
+res = s.api_calls.get_records_format_(req)
+
+if res.get_records_format_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->

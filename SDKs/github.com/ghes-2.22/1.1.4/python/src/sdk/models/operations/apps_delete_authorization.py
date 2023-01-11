@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteAuthorizationPathParams:
-    client_id: str = field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
+    client_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'client_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteAuthorizationRequestBody:
-    access_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
+    access_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('access_token') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteAuthorizationRequest:
-    path_params: AppsDeleteAuthorizationPathParams = field()
-    request: Optional[AppsDeleteAuthorizationRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: AppsDeleteAuthorizationPathParams = dataclasses.field()
+    request: Optional[AppsDeleteAuthorizationRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AppsDeleteAuthorizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

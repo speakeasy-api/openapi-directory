@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ListDeadLetterSourceQueuesResult:
     r"""ListDeadLetterSourceQueuesResult
     A list of your dead letter source queues.
     """
     
-    queue_urls: List[str] = field()
-    next_token: Optional[str] = field(default=None)
+    queue_urls: list[dict[str, Any]] = dataclasses.field()
+    next_token: Optional[str] = dataclasses.field(default=None)
     

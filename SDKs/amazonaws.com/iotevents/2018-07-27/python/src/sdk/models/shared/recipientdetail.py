@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ssoidentity as shared_ssoidentity
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RecipientDetail:
     r"""RecipientDetail
     The information that identifies the recipient.
     """
     
-    sso_identity: Optional[SsoIdentity] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssoIdentity') }})
+    sso_identity: Optional[shared_ssoidentity.SsoIdentity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ssoIdentity') }})
     

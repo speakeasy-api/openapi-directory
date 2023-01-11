@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import orgresponse as shared_orgresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    org_response: Optional[shared.OrgResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    org_response: Optional[shared_orgresponse.OrgResponse] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import applicationdetail as shared_applicationdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RollbackApplicationResponse:
-    application_detail: ApplicationDetail = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationDetail') }})
+    application_detail: shared_applicationdetail.ApplicationDetail = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ApplicationDetail') }})
     

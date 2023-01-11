@@ -54,14 +54,14 @@ class Organizations:
         url = utils.generate_url(base_url, "/v1/{parent}/workloads", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse(status_code=r.status_code, content_type=content_type)
@@ -124,6 +124,35 @@ class Organizations:
         return res
 
     
+    def assuredworkloads_organizations_locations_workloads_mutate_partner_permissions(self, request: operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest) -> operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse:
+        r"""Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
+        """
+        
+        base_url = self._server_url
+        
+        url = utils.generate_url(base_url, "/v1/{name}:mutatePartnerPermissions", request.path_params)
+        
+        headers = {}
+        req_content_type, data, json, files = utils.serialize_request_body(request)
+        if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
+            headers["content-type"] = req_content_type
+        query_params = utils.get_query_params(request.query_params)
+        
+        client = utils.configure_security_client(self._client, request.security)
+        
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
+        content_type = r.headers.get("Content-Type")
+
+        res = operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse(status_code=r.status_code, content_type=content_type)
+        
+        if r.status_code == 200:
+            if utils.match_content_type(content_type, "application/json"):
+                out = utils.unmarshal_json(r.text, Optional[shared.GoogleCloudAssuredworkloadsV1Workload])
+                res.google_cloud_assuredworkloads_v1_workload = out
+
+        return res
+
+    
     def assuredworkloads_organizations_locations_workloads_patch(self, request: operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest) -> operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse:
         r"""Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
         """
@@ -133,14 +162,14 @@ class Organizations:
         url = utils.generate_url(base_url, "/v1/{name}", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("PATCH", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("PATCH", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse(status_code=r.status_code, content_type=content_type)
@@ -162,14 +191,14 @@ class Organizations:
         url = utils.generate_url(base_url, "/v1/{name}:restrictAllowedResources", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse(status_code=r.status_code, content_type=content_type)
@@ -191,14 +220,14 @@ class Organizations:
         url = utils.generate_url(base_url, "/v1/{name}:acknowledge", request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, json, files = utils.serialize_request_body(request)
         if req_content_type != "multipart/form-data" and req_content_type != "multipart/mixed":
             headers["content-type"] = req_content_type
         query_params = utils.get_query_params(request.query_params)
         
         client = utils.configure_security_client(self._client, request.security)
         
-        r = client.request("POST", url, params=query_params, data=data, files=form, headers=headers)
+        r = client.request("POST", url, params=query_params, data=data, json=json, files=files, headers=headers)
         content_type = r.headers.get("Content-Type")
 
         res = operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse(status_code=r.status_code, content_type=content_type)

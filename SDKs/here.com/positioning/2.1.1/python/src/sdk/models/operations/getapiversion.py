@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apiversion as shared_apiversion
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAPIVersionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_version: Optional[shared.APIVersion] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_version: Optional[shared_apiversion.APIVersion] = dataclasses.field(default=None)
     

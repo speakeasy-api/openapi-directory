@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import websitecasummary as shared_websitecasummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListWebsiteCertificateAuthoritiesResponse:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    website_certificate_authorities: Optional[List[WebsiteCaSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WebsiteCertificateAuthorities') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    website_certificate_authorities: Optional[list[shared_websitecasummary.WebsiteCaSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('WebsiteCertificateAuthorities') }})
     

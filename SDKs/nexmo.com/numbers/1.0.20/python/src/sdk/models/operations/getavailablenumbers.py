@@ -1,39 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
-
-class GetAvailableNumbersFeaturesEnum(str, Enum):
-    SMS = "SMS"
-    VOICE = "VOICE"
-    SMS_VOICE = "SMS,VOICE"
-    MMS = "MMS"
-    SMS_MMS = "SMS,MMS"
-    VOICE_MMS = "VOICE,MMS"
-    SMS_MMS_VOICE = "SMS,MMS,VOICE"
+from ..shared import search_pattern_enum as shared_search_pattern_enum
+from ..shared import type_enum as shared_type_enum
+from ..shared import account_unauthorized as shared_account_unauthorized
+from ..shared import available_numbers as shared_available_numbers
 
 
-@dataclass
+@dataclasses.dataclass
 class GetAvailableNumbersQueryParams:
-    country: str = field(metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
-    features: Optional[GetAvailableNumbersFeaturesEnum] = field(default=None, metadata={'query_param': { 'field_name': 'features', 'style': 'form', 'explode': True }})
-    index: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'index', 'style': 'form', 'explode': True }})
-    pattern: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'pattern', 'style': 'form', 'explode': True }})
-    search_pattern: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'search_pattern', 'style': 'form', 'explode': True }})
-    size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
-    type: Optional[shared.TypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
+    country: str = dataclasses.field(metadata={'query_param': { 'field_name': 'country', 'style': 'form', 'explode': True }})
+    features: Optional[shared_search_pattern_enum.SearchPatternEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'features', 'style': 'form', 'explode': True }})
+    index: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'index', 'style': 'form', 'explode': True }})
+    pattern: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pattern', 'style': 'form', 'explode': True }})
+    search_pattern: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search_pattern', 'style': 'form', 'explode': True }})
+    size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
+    type: Optional[shared_type_enum.TypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAvailableNumbersRequest:
-    query_params: GetAvailableNumbersQueryParams = field()
+    query_params: GetAvailableNumbersQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetAvailableNumbersResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    account_unauthorized: Optional[shared.AccountUnauthorized] = field(default=None)
-    available_numbers: Optional[shared.AvailableNumbers] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    account_unauthorized: Optional[shared_account_unauthorized.AccountUnauthorized] = dataclasses.field(default=None)
+    available_numbers: Optional[shared_available_numbers.AvailableNumbers] = dataclasses.field(default=None)
     

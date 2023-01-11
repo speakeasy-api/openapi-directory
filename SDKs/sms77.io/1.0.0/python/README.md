@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,11 +25,11 @@ s.config_security(
     
 req = operations.AnalyticsRequest(
     query_params=operations.AnalyticsQueryParams(
-        end="hic",
-        group_by="date",
-        label="consequatur",
-        start="illum",
-        subaccounts="corporis",
+        end="id",
+        group_by="label",
+        label="quia",
+        start="amet",
+        subaccounts="omnis",
     ),
 )
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbproxyendpoint as shared_dbproxyendpoint
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeDbProxyEndpointsResponse:
-    db_proxy_endpoints: Optional[List[DbProxyEndpoint]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_proxy_endpoints: Optional[list[shared_dbproxyendpoint.DbProxyEndpoint]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

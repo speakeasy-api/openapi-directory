@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SetProtocolsPathParams:
-    agent_num: int = field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
+    agent_num: int = dataclasses.field(metadata={'path_param': { 'field_name': 'agentNum', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetProtocolsRequest:
-    path_params: SetProtocolsPathParams = field()
-    request: List[str] = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: SetProtocolsPathParams = dataclasses.field()
+    request: list[str] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SetProtocolsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    set_protocols_200_application_json_string_integers: Optional[List[int]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    set_protocols_200_application_json_string_integers: Optional[list[int]] = dataclasses.field(default=None)
     

@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import v3_errorresponse as shared_v3_errorresponse
+from ..shared import v3_routeresponse as shared_v3_routeresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class RoutesOneOrMoreRoutesQueryParams:
-    devid: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
-    route_name: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'route_name', 'style': 'form', 'explode': True }})
-    route_types: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'route_types', 'style': 'form', 'explode': True }})
-    signature: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
-    token: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
+    devid: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'devid', 'style': 'form', 'explode': True }})
+    route_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'route_name', 'style': 'form', 'explode': True }})
+    route_types: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'route_types', 'style': 'form', 'explode': True }})
+    signature: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'signature', 'style': 'form', 'explode': True }})
+    token: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'token', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RoutesOneOrMoreRoutesRequest:
-    query_params: RoutesOneOrMoreRoutesQueryParams = field()
+    query_params: RoutesOneOrMoreRoutesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RoutesOneOrMoreRoutesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    v3_error_response: Optional[shared.V3ErrorResponse] = field(default=None)
-    v3_route_response: Optional[shared.V3RouteResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    v3_error_response: Optional[shared_v3_errorresponse.V3ErrorResponse] = dataclasses.field(default=None)
+    v3_route_response: Optional[shared_v3_routeresponse.V3RouteResponse] = dataclasses.field(default=None)
     

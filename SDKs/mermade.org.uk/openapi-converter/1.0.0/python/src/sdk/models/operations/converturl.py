@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ConvertURLQueryParams:
-    url: str = field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
+    url: str = dataclasses.field(metadata={'query_param': { 'field_name': 'url', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConvertURLRequest:
-    query_params: ConvertURLQueryParams = field()
+    query_params: ConvertURLQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConvertURLResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    convert_url_200_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    convert_url_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

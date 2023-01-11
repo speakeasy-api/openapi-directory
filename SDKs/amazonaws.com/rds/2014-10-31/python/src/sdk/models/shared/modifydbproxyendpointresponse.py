@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbproxyendpoint as shared_dbproxyendpoint
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyDbProxyEndpointResponse:
-    db_proxy_endpoint: Optional[DbProxyEndpoint] = field(default=None)
+    db_proxy_endpoint: Optional[shared_dbproxyendpoint.DbProxyEndpoint] = dataclasses.field(default=None)
     

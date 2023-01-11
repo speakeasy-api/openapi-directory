@@ -1,23 +1,23 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import change_request as shared_change_request
 
 
-@dataclass
+@dataclasses.dataclass
 class ChangeRequestDetailsPathParams:
-    change_request_id: int = field(metadata={'path_param': { 'field_name': 'changeRequestId', 'style': 'simple', 'explode': False }})
+    change_request_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'changeRequestId', 'style': 'simple', 'explode': False }})
     
 class ChangeRequestDetails200ApplicationJSONActionEnum(str, Enum):
     CHANGE_REQUEST_DETAILS = "changeRequestDetails"
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChangeRequestDetails200ApplicationJSONData:
-    rules: List[shared.ChangeRequest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
+    rules: list[shared_change_request.ChangeRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('rules') }})
     
 class ChangeRequestDetails200ApplicationJSONResultEnum(str, Enum):
     SUCCESS = "success"
@@ -25,21 +25,21 @@ class ChangeRequestDetails200ApplicationJSONResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChangeRequestDetails200ApplicationJSON:
-    action: ChangeRequestDetails200ApplicationJSONActionEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
-    data: ChangeRequestDetails200ApplicationJSONData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    result: ChangeRequestDetails200ApplicationJSONResultEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    action: ChangeRequestDetails200ApplicationJSONActionEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('action') }})
+    data: ChangeRequestDetails200ApplicationJSONData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    result: ChangeRequestDetails200ApplicationJSONResultEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChangeRequestDetailsRequest:
-    path_params: ChangeRequestDetailsPathParams = field()
+    path_params: ChangeRequestDetailsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ChangeRequestDetailsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    change_request_details_200_application_json_object: Optional[ChangeRequestDetails200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    change_request_details_200_application_json_object: Optional[ChangeRequestDetails200ApplicationJSON] = dataclasses.field(default=None)
     

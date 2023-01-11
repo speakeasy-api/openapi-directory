@@ -12,3 +12,5 @@ from .listservicesresponse import *
 from .loginresponse import *
 from .logoutresponse import *
 from .servicedescription import *
+
+__all__ = ["ActionDescription","ActionHelp","ActionHelpResponseStatusEnum","ActionHelpResponse","DescribeActionResponseStatusEnum","DescribeActionResponse","DescribeServiceResponseStatusEnum","DescribeServiceResponse","EntryPointHTTPMethodEnum","EntryPoint","EntryPointParameterTypeEnum","EntryPointParameter","ErrorModelStatusEnum","ErrorModel","ExecBodyOsdbOutputTypeEnum","ExecBody","ListActionsResponseStatusEnum","ListActionsResponse","ListServicesResponseStatusEnum","ListServicesResponse","LoginResponseResponse","LoginResponseStatusEnum","LoginResponse","LogoutResponseResponse","LogoutResponseStatusEnum","LogoutResponse","ServiceDescription"]

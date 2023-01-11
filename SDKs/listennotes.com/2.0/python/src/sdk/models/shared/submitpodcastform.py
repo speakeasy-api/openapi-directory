@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class SubmitPodcastForm:
-    rss: str = field(metadata={'form': { 'field_name': 'rss' }})
-    email: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'email' }})
+    rss: str = dataclasses.field(metadata={'form': { 'field_name': 'rss' }})
+    email: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'email' }})
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import survey as shared_survey
 
 
-@dataclass
+@dataclasses.dataclass
 class SurveysListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    surveys: Optional[List[shared.Survey]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    surveys: Optional[list[shared_survey.Survey]] = dataclasses.field(default=None)
     

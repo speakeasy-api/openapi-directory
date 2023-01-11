@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import zone_info as shared_zone_info
 
 
-@dataclass
+@dataclasses.dataclass
 class GetInfoTldResponse:
-    content_type: str = field()
-    status_code: int = field()
-    zone_infos: Optional[List[shared.ZoneInfo]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    zone_infos: Optional[list[shared_zone_info.ZoneInfo]] = dataclasses.field(default=None)
     

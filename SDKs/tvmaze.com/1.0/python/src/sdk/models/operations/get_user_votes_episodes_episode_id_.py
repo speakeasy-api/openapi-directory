@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import episodevote as shared_episodevote
 
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesEpisodesEpisodeIDPathParams:
-    episode_id: int = field(metadata={'path_param': { 'field_name': 'episode_id', 'style': 'simple', 'explode': False }})
+    episode_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'episode_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesEpisodesEpisodeIDRequest:
-    path_params: GetUserVotesEpisodesEpisodeIDPathParams = field()
+    path_params: GetUserVotesEpisodesEpisodeIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetUserVotesEpisodesEpisodeIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    episode_vote: Optional[shared.EpisodeVote] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    episode_vote: Optional[shared_episodevote.EpisodeVote] = dataclasses.field(default=None)
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import templatemetadata as shared_templatemetadata
 
 
-@dataclass
+@dataclasses.dataclass
 class ListTemplatesResponse:
-    next_token: Optional[str] = field(default=None)
-    templates_metadata: Optional[List[TemplateMetadata]] = field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
+    templates_metadata: Optional[list[shared_templatemetadata.TemplateMetadata]] = dataclasses.field(default=None)
     

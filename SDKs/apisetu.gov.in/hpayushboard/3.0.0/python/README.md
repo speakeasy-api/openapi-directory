@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.PhcerRequest(
     security=operations.PhcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.PhcerRequestBody(
         certificate_parameters=operations.PhcerRequestBodyCertificateParameters(
-            full_name="rem",
-            registration_no="totam",
+            full_name="ut",
+            registration_no="ut",
         ),
-        consent_artifact="culpa",
+        consent_artifact="deleniti",
         format="pdf",
-        txn_id="eos",
+        txn_id="quam",
     ),
 )
     
-res = s.sdk.phcer(req)
+res = s.ap_is.phcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `phcer` - Pharmacist Registration Certificate
 * `rpcer` - Pharmacist Renewal certificate

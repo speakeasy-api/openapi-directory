@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class SeriesFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class SeriesFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class SeriesPathParams:
-    format: SeriesFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: SeriesFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SeriesRequest:
-    path_params: SeriesPathParams = field()
+    path_params: SeriesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SeriesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    series: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    series: Optional[list[Any]] = dataclasses.field(default=None)
     

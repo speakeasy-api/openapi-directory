@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -18,11 +18,11 @@ class ViewabilityAssignedTargetingOptionDetailsViewabilityEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ViewabilityAssignedTargetingOptionDetails:
     r"""ViewabilityAssignedTargetingOptionDetails
     Assigned viewability targeting option details. This will be populated in the viewability_details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_VIEWABILITY`.
     """
     
-    viewability: Optional[ViewabilityAssignedTargetingOptionDetailsViewabilityEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewability') }})
+    viewability: Optional[ViewabilityAssignedTargetingOptionDetailsViewabilityEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('viewability') }})
     

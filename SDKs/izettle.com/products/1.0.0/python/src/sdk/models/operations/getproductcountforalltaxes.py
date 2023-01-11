@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import taxrateproductcountresponse as shared_taxrateproductcountresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProductCountForAllTaxesSecurity:
-    zettle_api_key: Optional[shared.SchemeZettleAPIKey] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
-    zettle_oauth: Optional[shared.SchemeZettleOauth] = field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    zettle_api_key: Optional[shared_security.SchemeZettleAPIKey] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    zettle_oauth: Optional[shared_security.SchemeZettleOauth] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductCountForAllTaxesRequest:
-    security: GetProductCountForAllTaxesSecurity = field()
+    security: GetProductCountForAllTaxesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductCountForAllTaxesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tax_rate_product_count_response: Optional[shared.TaxRateProductCountResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tax_rate_product_count_response: Optional[shared_taxrateproductcountresponse.TaxRateProductCountResponse] = dataclasses.field(default=None)
     

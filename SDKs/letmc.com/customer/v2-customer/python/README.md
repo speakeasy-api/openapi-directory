@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,15 +18,15 @@ s = sdk.SDK()
     
 req = operations.BranchControllerGetBranchesRequest(
     path_params=operations.BranchControllerGetBranchesPathParams(
-        short_name="repellendus",
+        short_name="magni",
     ),
     query_params=operations.BranchControllerGetBranchesQueryParams(
-        count=6759572571242256861,
-        offset=3743037178764198971,
+        count=6068504787947082871,
+        offset=8515991310693167825,
     ),
 )
     
-res = s.sdk.branch_controller_get_branches(req)
+res = s.branch_controller.branch_controller_get_branches(req)
 
 if res.branch_model_results is not None:
     # handle response
@@ -37,10 +36,13 @@ if res.branch_model_results is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### BranchController
 
 * `branch_controller_get_branches` - All branches defined for a company
 * `get_v2_customer_short_name_branch_branches_branch_id_` - Get a specific branch given its unique Object ID (OID)
+
+### LandlordController
+
 * `landlord_controller_create_maintenance_preference` - Post tenancy maintenance preferences:-
 * `landlord_controller_get_accounts` - Get the accounting details for the landlord.
 * `landlord_controller_get_document` - Download a Document
@@ -55,8 +57,17 @@ if res.branch_model_results is not None:
 * `landlord_controller_get_summary_details` - Get the summary details for the landlord.
 * `landlord_controller_get_tenancy` - Get tenancy details.
 * `landlord_controller_get_tenancy_agreement_report` - Generate a Tenancy Agreement Copy (PDF)
+
+### PhotoController
+
 * `photo_controller_get_photo_download` - Downloads the photo of a property given the photo ID.
+
+### PropertyController
+
 * `property_controller_get_properties_photos` - A collection showing all the photos linked to a specific block, property or room
+
+### SessionController
+
 * `session_controller_change_password` - Change the password of a customer given their existing and new password.
 * `session_controller_create_landlord_login` - Send a request to the in-tray to create a landlord login.
 * `session_controller_get_session_info` - Gets information about the currently logged on customer.

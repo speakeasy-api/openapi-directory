@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import error as shared_error
+from ..shared import listingmedia as shared_listingmedia
 
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDMediaPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDMediaQueryParams:
-    api_key: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
+    api_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'api_key', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDMediaRequest:
-    path_params: GetListingHeavyEquipmentIDMediaPathParams = field()
-    query_params: GetListingHeavyEquipmentIDMediaQueryParams = field()
+    path_params: GetListingHeavyEquipmentIDMediaPathParams = dataclasses.field()
+    query_params: GetListingHeavyEquipmentIDMediaQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetListingHeavyEquipmentIDMediaResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error: Optional[shared.Error] = field(default=None)
-    listing_media: Optional[shared.ListingMedia] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error: Optional[shared_error.Error] = dataclasses.field(default=None)
+    listing_media: Optional[shared_listingmedia.ListingMedia] = dataclasses.field(default=None)
     

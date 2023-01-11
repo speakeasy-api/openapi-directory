@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import subscribeaddressrequest as shared_subscribeaddressrequest
+from ..shared import subscribeaddress as shared_subscribeaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class SubscribeAddressHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscribeAddressRequest:
-    headers: SubscribeAddressHeaders = field()
-    request: shared.SubscribeAddressRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: SubscribeAddressHeaders = dataclasses.field()
+    request: shared_subscribeaddressrequest.SubscribeAddressRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SubscribeAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    subscribe_address: Optional[shared.SubscribeAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    subscribe_address: Optional[shared_subscribeaddress.SubscribeAddress] = dataclasses.field(default=None)
     

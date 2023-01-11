@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import synthesistask as shared_synthesistask
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetSpeechSynthesisTaskOutput:
-    synthesis_task: Optional[SynthesisTask] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SynthesisTask') }})
+    synthesis_task: Optional[shared_synthesistask.SynthesisTask] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('SynthesisTask') }})
     

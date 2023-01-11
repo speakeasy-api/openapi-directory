@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import resourceavailabilityviewmodel as shared_resourceavailabilityviewmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesIDAvailabilityPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesIDAvailabilityRequest:
-    path_params: GetSetupV1ResourcesIDAvailabilityPathParams = field()
+    path_params: GetSetupV1ResourcesIDAvailabilityPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSetupV1ResourcesIDAvailabilityResponse:
-    content_type: str = field()
-    status_code: int = field()
-    resource_availability_view_model: Optional[shared.ResourceAvailabilityViewModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    resource_availability_view_model: Optional[shared_resourceavailabilityviewmodel.ResourceAvailabilityViewModel] = dataclasses.field(default=None)
     

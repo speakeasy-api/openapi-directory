@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class EnvironmentTier:
     r"""EnvironmentTier
     Describes the properties of an environment tier
     """
     
-    name: Optional[str] = field(default=None)
-    type: Optional[str] = field(default=None)
-    version: Optional[str] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    type: Optional[str] = dataclasses.field(default=None)
+    version: Optional[str] = dataclasses.field(default=None)
     

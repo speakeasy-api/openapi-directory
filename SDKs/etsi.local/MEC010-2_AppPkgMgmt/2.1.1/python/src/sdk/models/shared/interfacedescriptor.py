@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from . import *
+from ..shared import interfacetype_enum as shared_interfacetype_enum
+from ..shared import tunnelinfo as shared_tunnelinfo
 
 
-@dataclass
+@dataclasses.dataclass
 class InterfaceDescriptor:
-    interface_type: InterfaceTypeEnum = field()
-    dst_ip_address: Optional[str] = field(default=None)
-    dst_mac_address: Optional[str] = field(default=None)
-    src_mac_address: Optional[str] = field(default=None)
-    tunnel_info: Optional[TunnelInfo] = field(default=None)
+    interface_type: shared_interfacetype_enum.InterfaceTypeEnum = dataclasses.field()
+    dst_ip_address: Optional[str] = dataclasses.field(default=None)
+    dst_mac_address: Optional[str] = dataclasses.field(default=None)
+    src_mac_address: Optional[str] = dataclasses.field(default=None)
+    tunnel_info: Optional[shared_tunnelinfo.TunnelInfo] = dataclasses.field(default=None)
     

@@ -12,3 +12,5 @@ from .spanscore import *
 from .suggestcommentscorerequest import *
 from .suggestcommentscoreresponse import *
 from .textentry import *
+
+__all__ = ["XgafvEnum","AltEnum","AnalyzeCommentRequest","AnalyzeCommentResponse","ArticleAndParentComment","AttributeParametersScoreTypeEnum","AttributeParameters","AttributeScores","Context","ScoreTypeEnum","Score","SchemeOauth2","SchemeOauth2c","SpanScore","SuggestCommentScoreRequest","SuggestCommentScoreResponse","TextEntryTypeEnum","TextEntry"]

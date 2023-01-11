@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import managedzoneprivatevisibilityconfiggkecluster as shared_managedzoneprivatevisibilityconfiggkecluster
+from ..shared import managedzoneprivatevisibilityconfignetwork as shared_managedzoneprivatevisibilityconfignetwork
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ManagedZonePrivateVisibilityConfig:
-    gke_clusters: Optional[List[ManagedZonePrivateVisibilityConfigGkeCluster]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gkeClusters') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    networks: Optional[List[ManagedZonePrivateVisibilityConfigNetwork]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
+    gke_clusters: Optional[list[shared_managedzoneprivatevisibilityconfiggkecluster.ManagedZonePrivateVisibilityConfigGkeCluster]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('gkeClusters') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    networks: Optional[list[shared_managedzoneprivatevisibilityconfignetwork.ManagedZonePrivateVisibilityConfigNetwork]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networks') }})
     

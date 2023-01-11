@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class SpellsFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class SpellsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class SpellsPathParams:
-    format: SpellsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: SpellsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SpellsRequest:
-    path_params: SpellsPathParams = field()
+    path_params: SpellsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SpellsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    spells: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    spells: Optional[list[Any]] = dataclasses.field(default=None)
     

@@ -1,35 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import gist_comment as shared_gist_comment
 
 
-@dataclass
+@dataclasses.dataclass
 class GistsUpdateCommentPathParams:
-    comment_id: int = field(metadata={'path_param': { 'field_name': 'comment_id', 'style': 'simple', 'explode': False }})
-    gist_id: str = field(metadata={'path_param': { 'field_name': 'gist_id', 'style': 'simple', 'explode': False }})
+    comment_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'comment_id', 'style': 'simple', 'explode': False }})
+    gist_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gist_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GistsUpdateCommentRequestBody:
-    body: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsUpdateCommentRequest:
-    path_params: GistsUpdateCommentPathParams = field()
-    request: Optional[GistsUpdateCommentRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: GistsUpdateCommentPathParams = dataclasses.field()
+    request: Optional[GistsUpdateCommentRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GistsUpdateCommentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    gist_comment: Optional[shared.GistComment] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    gist_comment: Optional[shared_gist_comment.GistComment] = dataclasses.field(default=None)
     

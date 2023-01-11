@@ -21,3 +21,5 @@ from .setiampolicyrequest import *
 from .testiampermissionsrequest import *
 from .testiampermissionsresponse import *
 from .usermanaged import *
+
+__all__ = ["XgafvEnum","AccessSecretVersionResponse","AddSecretVersionRequest","AltEnum","AuditConfig","AuditLogConfigLogTypeEnum","AuditLogConfig","Binding","Expr","ListLocationsResponse","ListSecretsResponse","ListSecretVersionsResponse","Location","Policy","Replica","Replication","SecretInput","Secret","SecretPayload","SecretVersionStateEnum","SecretVersion","SchemeOauth2","SchemeOauth2c","SetIamPolicyRequest","TestIamPermissionsRequest","TestIamPermissionsResponse","UserManaged"]

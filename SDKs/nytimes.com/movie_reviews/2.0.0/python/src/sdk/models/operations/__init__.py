@@ -1,3 +1,5 @@
 from .get_critics_resource_type_json import *
 from .get_reviews_resource_type_json import *
 from .get_reviews_search_json import *
+
+__all__ = ["GetCriticsResourceTypeJSONPathParams","GetCriticsResourceTypeJSONRequest","GetCriticsResourceTypeJSON200ApplicationJSON","GetCriticsResourceTypeJSONResponse","GetReviewsResourceTypeJSONResourceTypeEnum","GetReviewsResourceTypeJSONPathParams","GetReviewsResourceTypeJSONOrderEnum","GetReviewsResourceTypeJSONQueryParams","GetReviewsResourceTypeJSONRequest","GetReviewsResourceTypeJSON200ApplicationJSON","GetReviewsResourceTypeJSONResponse","GetReviewsSearchJSONCriticsPickEnum","GetReviewsSearchJSONQueryParams","GetReviewsSearchJSONRequest","GetReviewsSearchJSON200ApplicationJSON","GetReviewsSearchJSONResponse"]

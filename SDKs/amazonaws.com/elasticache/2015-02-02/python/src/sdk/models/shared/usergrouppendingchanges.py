@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class UserGroupPendingChanges:
     r"""UserGroupPendingChanges
     Returns the updates being applied to the user group.
     """
     
-    user_ids_to_add: Optional[List[str]] = field(default=None)
-    user_ids_to_remove: Optional[List[str]] = field(default=None)
+    user_ids_to_add: Optional[list[str]] = dataclasses.field(default=None)
+    user_ids_to_remove: Optional[list[str]] = dataclasses.field(default=None)
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportThermalPrintBelegeBelegUUIDPathParams:
-    beleg_uuid: str = field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
+    beleg_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'belegUuid', 'style': 'simple', 'explode': False }})
     
 class GetExportThermalPrintBelegeBelegUUIDDialectEnum(str, Enum):
     ESCPOS = "escpos"
@@ -18,22 +18,22 @@ class GetExportThermalPrintBelegeBelegUUIDEncodingEnum(str, Enum):
     BASE64 = "base64"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetExportThermalPrintBelegeBelegUUIDQueryParams:
-    dialect: Optional[GetExportThermalPrintBelegeBelegUUIDDialectEnum] = field(default=None, metadata={'query_param': { 'field_name': 'dialect', 'style': 'form', 'explode': True }})
-    encoding: Optional[GetExportThermalPrintBelegeBelegUUIDEncodingEnum] = field(default=None, metadata={'query_param': { 'field_name': 'encoding', 'style': 'form', 'explode': True }})
-    qr: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'qr', 'style': 'form', 'explode': True }})
-    width: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
+    dialect: Optional[GetExportThermalPrintBelegeBelegUUIDDialectEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'dialect', 'style': 'form', 'explode': True }})
+    encoding: Optional[GetExportThermalPrintBelegeBelegUUIDEncodingEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'encoding', 'style': 'form', 'explode': True }})
+    qr: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'qr', 'style': 'form', 'explode': True }})
+    width: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'width', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportThermalPrintBelegeBelegUUIDRequest:
-    path_params: GetExportThermalPrintBelegeBelegUUIDPathParams = field()
-    query_params: GetExportThermalPrintBelegeBelegUUIDQueryParams = field()
+    path_params: GetExportThermalPrintBelegeBelegUUIDPathParams = dataclasses.field()
+    query_params: GetExportThermalPrintBelegeBelegUUIDQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetExportThermalPrintBelegeBelegUUIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

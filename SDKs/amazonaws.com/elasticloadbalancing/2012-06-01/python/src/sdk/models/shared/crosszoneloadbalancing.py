@@ -1,12 +1,12 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CrossZoneLoadBalancing:
     r"""CrossZoneLoadBalancing
     Information about the <code>CrossZoneLoadBalancing</code> attribute.
     """
     
-    enabled: bool = field()
+    enabled: bool = dataclasses.field()
     

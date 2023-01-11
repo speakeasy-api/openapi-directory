@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import environmenttemplateversionsummary as shared_environmenttemplateversionsummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListEnvironmentTemplateVersionsOutput:
-    template_versions: List[EnvironmentTemplateVersionSummary] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('templateVersions') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    template_versions: list[shared_environmenttemplateversionsummary.EnvironmentTemplateVersionSummary] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('templateVersions') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

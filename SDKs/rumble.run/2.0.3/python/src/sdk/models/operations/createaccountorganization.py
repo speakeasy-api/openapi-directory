@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import orgoptions as shared_orgoptions
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountOrganizationSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountOrganizationRequest:
-    request: shared.OrgOptions = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: CreateAccountOrganizationSecurity = field()
+    request: shared_orgoptions.OrgOptions = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateAccountOrganizationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateAccountOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organization: Optional[shared.Organization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization: Optional[shared_organization.Organization] = dataclasses.field(default=None)
     

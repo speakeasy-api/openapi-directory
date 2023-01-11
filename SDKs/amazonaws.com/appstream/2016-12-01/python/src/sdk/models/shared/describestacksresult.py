@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import stack as shared_stack
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeStacksResult:
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    stacks: Optional[List[Stack]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Stacks') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    stacks: Optional[list[shared_stack.Stack]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Stacks') }})
     

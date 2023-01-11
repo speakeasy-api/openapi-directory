@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -69,8 +69,8 @@ class ErrorCategoryHTTPStatusEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ErrorCategory:
-    http_status: ErrorCategoryHTTPStatusEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpStatus') }})
-    name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    http_status: ErrorCategoryHTTPStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('httpStatus') }})
+    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     

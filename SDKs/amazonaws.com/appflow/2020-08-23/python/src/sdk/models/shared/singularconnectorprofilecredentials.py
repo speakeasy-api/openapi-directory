@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SingularConnectorProfileCredentials:
     r"""SingularConnectorProfileCredentials
      The connector-specific profile credentials required when using Singular. 
     """
     
-    api_key: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
+    api_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('apiKey') }})
     

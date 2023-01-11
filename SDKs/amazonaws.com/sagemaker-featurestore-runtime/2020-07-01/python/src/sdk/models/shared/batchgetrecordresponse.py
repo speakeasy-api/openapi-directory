@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import batchgetrecorderror as shared_batchgetrecorderror
+from ..shared import batchgetrecordresultdetail as shared_batchgetrecordresultdetail
+from ..shared import batchgetrecordidentifier as shared_batchgetrecordidentifier
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchGetRecordResponse:
-    errors: List[BatchGetRecordError] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
-    records: List[BatchGetRecordResultDetail] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Records') }})
-    unprocessed_identifiers: List[BatchGetRecordIdentifier] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnprocessedIdentifiers') }})
+    errors: list[shared_batchgetrecorderror.BatchGetRecordError] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Errors') }})
+    records: list[shared_batchgetrecordresultdetail.BatchGetRecordResultDetail] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Records') }})
+    unprocessed_identifiers: list[shared_batchgetrecordidentifier.BatchGetRecordIdentifier] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('UnprocessedIdentifiers') }})
     

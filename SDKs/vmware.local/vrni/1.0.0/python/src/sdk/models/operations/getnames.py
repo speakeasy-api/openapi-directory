@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import namesrequest as shared_namesrequest
+from ..shared import namesresponse as shared_namesresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesRequest:
-    request: shared.NamesRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: GetNamesSecurity = field()
+    request: shared_namesrequest.NamesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: GetNamesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    names_response: Optional[shared.NamesResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    names_response: Optional[shared_namesresponse.NamesResponse] = dataclasses.field(default=None)
     

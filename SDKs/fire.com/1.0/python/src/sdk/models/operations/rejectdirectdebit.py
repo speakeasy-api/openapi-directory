@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class RejectDirectDebitPathParams:
-    direct_debit_uuid: str = field(metadata={'path_param': { 'field_name': 'directDebitUuid', 'style': 'simple', 'explode': False }})
+    direct_debit_uuid: str = dataclasses.field(metadata={'path_param': { 'field_name': 'directDebitUuid', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RejectDirectDebitRequest:
-    path_params: RejectDirectDebitPathParams = field()
+    path_params: RejectDirectDebitPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RejectDirectDebitResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

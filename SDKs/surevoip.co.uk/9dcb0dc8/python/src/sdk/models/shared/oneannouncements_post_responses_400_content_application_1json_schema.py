@@ -1,18 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OneannouncementsPostResponses400ContentApplication1jsonSchemaErrors:
-    field: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
-    message: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
+    field: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('field') }})
+    message: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('message') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OneannouncementsPostResponses400ContentApplication1jsonSchema:
-    errors: List[OneannouncementsPostResponses400ContentApplication1jsonSchemaErrors] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
+    errors: list[OneannouncementsPostResponses400ContentApplication1jsonSchemaErrors] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('errors') }})
     

@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import consumer as shared_consumer
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class RegisterStreamConsumerOutput:
-    consumer: Consumer = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Consumer') }})
+    consumer: shared_consumer.Consumer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Consumer') }})
     

@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import applicationrequest as shared_applicationrequest
+from ..shared import apierror as shared_apierror
+from ..shared import application as shared_application
 
 
-@dataclass
+@dataclasses.dataclass
 class AddApplicationSecurity:
-    api_key_auth: shared.SchemeAPIKeyAuth = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key_auth: shared_security.SchemeAPIKeyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class AddApplicationRequest:
-    request: shared.ApplicationRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: AddApplicationSecurity = field()
+    request: shared_applicationrequest.ApplicationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: AddApplicationSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class AddApplicationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_error: Optional[shared.APIError] = field(default=None)
-    application: Optional[shared.Application] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_error: Optional[shared_apierror.APIError] = dataclasses.field(default=None)
+    application: Optional[shared_application.Application] = dataclasses.field(default=None)
     

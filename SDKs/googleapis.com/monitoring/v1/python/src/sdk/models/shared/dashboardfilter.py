@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -14,14 +14,14 @@ class DashboardFilterFilterTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DashboardFilter:
     r"""DashboardFilter
     A filter to reduce the amount of data charted in relevant widgets.
     """
     
-    filter_type: Optional[DashboardFilterFilterTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterType') }})
-    label_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labelKey') }})
-    string_value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stringValue') }})
-    template_variable: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('templateVariable') }})
+    filter_type: Optional[DashboardFilterFilterTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('filterType') }})
+    label_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labelKey') }})
+    string_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('stringValue') }})
+    template_variable: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('templateVariable') }})
     

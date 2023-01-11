@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ocrwordelement as shared_ocrwordelement
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ImageToWordsWithLocationResult:
     r"""ImageToWordsWithLocationResult
     Result of an image to words-with-location OCR operation
     """
     
-    successful: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successful') }})
-    words: Optional[List[OcrWordElement]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Words') }})
+    successful: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Successful') }})
+    words: Optional[list[shared_ocrwordelement.OcrWordElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Words') }})
     

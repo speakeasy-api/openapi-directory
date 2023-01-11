@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -18,27 +18,27 @@ class OpenSearchSourceEnum(str, Enum):
     ADE = "ADE"
 
 
-@dataclass
+@dataclasses.dataclass
 class OpenSearchQueryParams:
-    count: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
-    end_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'endDate', 'style': 'form', 'explode': True }})
-    facet_filters: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'facetFilters', 'style': 'form', 'explode': True }})
-    search_terms: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'searchTerms', 'style': 'form', 'explode': True }})
-    sort_keys: Optional[OpenSearchSortKeysEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sortKeys', 'style': 'form', 'explode': True }})
-    source: Optional[OpenSearchSourceEnum] = field(default=None, metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
-    spatial: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'spatial', 'style': 'form', 'explode': True }})
-    start_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
-    start_index: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
+    count: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
+    end_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'endDate', 'style': 'form', 'explode': True }})
+    facet_filters: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'facetFilters', 'style': 'form', 'explode': True }})
+    search_terms: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'searchTerms', 'style': 'form', 'explode': True }})
+    sort_keys: Optional[OpenSearchSortKeysEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKeys', 'style': 'form', 'explode': True }})
+    source: Optional[OpenSearchSourceEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
+    spatial: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'spatial', 'style': 'form', 'explode': True }})
+    start_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
+    start_index: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startIndex', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class OpenSearchRequest:
-    query_params: OpenSearchQueryParams = field()
+    query_params: OpenSearchQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class OpenSearchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    open_search_200_application_atom_plus_xml_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    open_search_200_application_atom_plus_xml_string: Optional[str] = dataclasses.field(default=None)
     

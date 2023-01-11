@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 
 class GetNamesNameIDOutputFormatOutputFormatEnum(str, Enum):
@@ -9,19 +9,19 @@ class GetNamesNameIDOutputFormatOutputFormatEnum(str, Enum):
     HTML = "html"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesNameIDOutputFormatPathParams:
-    name_id: int = field(metadata={'path_param': { 'field_name': 'nameId', 'style': 'simple', 'explode': False }})
-    output_format: GetNamesNameIDOutputFormatOutputFormatEnum = field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
+    name_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'nameId', 'style': 'simple', 'explode': False }})
+    output_format: GetNamesNameIDOutputFormatOutputFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'outputFormat', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesNameIDOutputFormatRequest:
-    path_params: GetNamesNameIDOutputFormatPathParams = field()
+    path_params: GetNamesNameIDOutputFormatPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetNamesNameIDOutputFormatResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

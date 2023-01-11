@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudpaymentsresellersubscriptionv1serviceperiod as shared_googlecloudpaymentsresellersubscriptionv1serviceperiod
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails:
     r"""GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails
     Details for a ONE_TIME recurrence line item.
     """
     
-    service_period: Optional[GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servicePeriod') }})
+    service_period: Optional[shared_googlecloudpaymentsresellersubscriptionv1serviceperiod.GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('servicePeriod') }})
     

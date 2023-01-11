@@ -1,56 +1,69 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import ageofpeoplefiltertype_enum as shared_ageofpeoplefiltertype_enum
+from ..shared import collectionsfiltertype_enum as shared_collectionsfiltertype_enum
+from ..shared import compositionsfiltertype_enum as shared_compositionsfiltertype_enum
+from ..shared import ethnicityfiltertype_enum as shared_ethnicityfiltertype_enum
+from ..shared import createimagesearchfacetsfields_enum as shared_createimagesearchfacetsfields_enum
+from ..shared import creativeimagesfieldvalues_enum as shared_creativeimagesfieldvalues_enum
+from ..shared import searchfiletype_enum as shared_searchfiletype_enum
+from ..shared import graphicalstyle_enum as shared_graphicalstyle_enum
+from ..shared import graphicalstylesfiltertype_enum as shared_graphicalstylesfiltertype_enum
+from ..shared import teeshirtsize_enum as shared_teeshirtsize_enum
+from ..shared import numberofpeoplefiltertype_enum as shared_numberofpeoplefiltertype_enum
+from ..shared import orientationrequest_enum as shared_orientationrequest_enum
+from ..shared import creativeimagesortorder_enum as shared_creativeimagesortorder_enum
+from ..shared import creativeimagesearchresults as shared_creativeimagesearchresults
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV3SearchImagesCreativeQueryParams:
-    age_of_people: Optional[List[shared.AgeOfPeopleFilterTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'age_of_people', 'style': 'form', 'explode': False }})
-    artists: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'artists', 'style': 'form', 'explode': True }})
-    collection_codes: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'collection_codes', 'style': 'form', 'explode': False }})
-    collections_filter_type: Optional[shared.CollectionsFilterTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'collections_filter_type', 'style': 'form', 'explode': True }})
-    color: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'color', 'style': 'form', 'explode': True }})
-    compositions: Optional[List[shared.CompositionsFilterTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'compositions', 'style': 'form', 'explode': False }})
-    download_product: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'download_product', 'style': 'form', 'explode': True }})
-    embed_content_only: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'embed_content_only', 'style': 'form', 'explode': True }})
-    ethnicity: Optional[List[shared.EthnicityFilterTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'ethnicity', 'style': 'form', 'explode': False }})
-    exclude_editorial_use_only: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'exclude_editorial_use_only', 'style': 'form', 'explode': True }})
-    exclude_nudity: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'exclude_nudity', 'style': 'form', 'explode': True }})
-    facet_fields: Optional[List[shared.CreateImageSearchFacetsFieldsEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'facet_fields', 'style': 'form', 'explode': False }})
-    facet_max_count: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'facet_max_count', 'style': 'form', 'explode': True }})
-    fields: Optional[List[shared.CreativeImagesFieldValuesEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
-    file_types: Optional[List[shared.SearchFileTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'file_types', 'style': 'form', 'explode': False }})
-    graphical_styles: Optional[List[shared.GraphicalStyleEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'graphical_styles', 'style': 'form', 'explode': False }})
-    graphical_styles_filter_type: Optional[shared.GraphicalStylesFilterTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'graphical_styles_filter_type', 'style': 'form', 'explode': True }})
-    include_facets: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_facets', 'style': 'form', 'explode': True }})
-    include_related_searches: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'include_related_searches', 'style': 'form', 'explode': True }})
-    keyword_ids: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'keyword_ids', 'style': 'form', 'explode': False }})
-    minimum_size: Optional[shared.TeeShirtSizeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'minimum_size', 'style': 'form', 'explode': True }})
-    number_of_people: Optional[List[shared.NumberOfPeopleFilterTypeEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'number_of_people', 'style': 'form', 'explode': False }})
-    orientations: Optional[List[shared.OrientationRequestEnum]] = field(default=None, metadata={'query_param': { 'field_name': 'orientations', 'style': 'form', 'explode': False }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
-    phrase: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
-    safe_search: Optional[bool] = field(default=None, metadata={'query_param': { 'field_name': 'safe_search', 'style': 'form', 'explode': True }})
-    sort_order: Optional[shared.CreativeImageSortOrderEnum] = field(default=None, metadata={'query_param': { 'field_name': 'sort_order', 'style': 'form', 'explode': True }})
+    age_of_people: Optional[list[shared_ageofpeoplefiltertype_enum.AgeOfPeopleFilterTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'age_of_people', 'style': 'form', 'explode': False }})
+    artists: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'artists', 'style': 'form', 'explode': True }})
+    collection_codes: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'collection_codes', 'style': 'form', 'explode': False }})
+    collections_filter_type: Optional[shared_collectionsfiltertype_enum.CollectionsFilterTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'collections_filter_type', 'style': 'form', 'explode': True }})
+    color: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'color', 'style': 'form', 'explode': True }})
+    compositions: Optional[list[shared_compositionsfiltertype_enum.CompositionsFilterTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'compositions', 'style': 'form', 'explode': False }})
+    download_product: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'download_product', 'style': 'form', 'explode': True }})
+    embed_content_only: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'embed_content_only', 'style': 'form', 'explode': True }})
+    ethnicity: Optional[list[shared_ethnicityfiltertype_enum.EthnicityFilterTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ethnicity', 'style': 'form', 'explode': False }})
+    exclude_editorial_use_only: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude_editorial_use_only', 'style': 'form', 'explode': True }})
+    exclude_nudity: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude_nudity', 'style': 'form', 'explode': True }})
+    facet_fields: Optional[list[shared_createimagesearchfacetsfields_enum.CreateImageSearchFacetsFieldsEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'facet_fields', 'style': 'form', 'explode': False }})
+    facet_max_count: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'facet_max_count', 'style': 'form', 'explode': True }})
+    fields: Optional[list[shared_creativeimagesfieldvalues_enum.CreativeImagesFieldValuesEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    file_types: Optional[list[shared_searchfiletype_enum.SearchFileTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'file_types', 'style': 'form', 'explode': False }})
+    graphical_styles: Optional[list[shared_graphicalstyle_enum.GraphicalStyleEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'graphical_styles', 'style': 'form', 'explode': False }})
+    graphical_styles_filter_type: Optional[shared_graphicalstylesfiltertype_enum.GraphicalStylesFilterTypeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'graphical_styles_filter_type', 'style': 'form', 'explode': True }})
+    include_facets: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_facets', 'style': 'form', 'explode': True }})
+    include_related_searches: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_related_searches', 'style': 'form', 'explode': True }})
+    keyword_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'keyword_ids', 'style': 'form', 'explode': False }})
+    minimum_size: Optional[shared_teeshirtsize_enum.TeeShirtSizeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'minimum_size', 'style': 'form', 'explode': True }})
+    number_of_people: Optional[list[shared_numberofpeoplefiltertype_enum.NumberOfPeopleFilterTypeEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'number_of_people', 'style': 'form', 'explode': False }})
+    orientations: Optional[list[shared_orientationrequest_enum.OrientationRequestEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'orientations', 'style': 'form', 'explode': False }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
+    phrase: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'phrase', 'style': 'form', 'explode': True }})
+    safe_search: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'safe_search', 'style': 'form', 'explode': True }})
+    sort_order: Optional[shared_creativeimagesortorder_enum.CreativeImageSortOrderEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort_order', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3SearchImagesCreativeHeaders:
-    accept_language: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
-    gi_country_code: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'GI-Country-Code', 'style': 'simple', 'explode': False }})
+    accept_language: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'Accept-Language', 'style': 'simple', 'explode': False }})
+    gi_country_code: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'GI-Country-Code', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3SearchImagesCreativeRequest:
-    headers: GetV3SearchImagesCreativeHeaders = field()
-    query_params: GetV3SearchImagesCreativeQueryParams = field()
+    headers: GetV3SearchImagesCreativeHeaders = dataclasses.field()
+    query_params: GetV3SearchImagesCreativeQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV3SearchImagesCreativeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    creative_image_search_results: Optional[shared.CreativeImageSearchResults] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    creative_image_search_results: Optional[shared_creativeimagesearchresults.CreativeImageSearchResults] = dataclasses.field(default=None)
     

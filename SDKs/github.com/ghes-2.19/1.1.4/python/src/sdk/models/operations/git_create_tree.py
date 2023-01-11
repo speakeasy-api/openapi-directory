@@ -1,15 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import basic_error as shared_basic_error
+from ..shared import git_tree as shared_git_tree
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateTreePathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 class GitCreateTreeRequestBodyTreeModeEnum(str, Enum):
     ONE_HUNDRED_THOUSAND_SIX_HUNDRED_AND_FORTY_FOUR = "100644"
@@ -25,34 +27,34 @@ class GitCreateTreeRequestBodyTreeTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GitCreateTreeRequestBodyTree:
-    content: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
-    mode: Optional[GitCreateTreeRequestBodyTreeModeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
-    path: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
-    sha: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
-    type: Optional[GitCreateTreeRequestBodyTreeTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    content: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('content') }})
+    mode: Optional[GitCreateTreeRequestBodyTreeModeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mode') }})
+    path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('path') }})
+    sha: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sha') }})
+    type: Optional[GitCreateTreeRequestBodyTreeTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GitCreateTreeRequestBody:
-    tree: List[GitCreateTreeRequestBodyTree] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tree') }})
-    base_tree: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('base_tree') }})
+    tree: list[GitCreateTreeRequestBodyTree] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('tree') }})
+    base_tree: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('base_tree') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateTreeRequest:
-    path_params: GitCreateTreePathParams = field()
-    request: Optional[GitCreateTreeRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: GitCreateTreePathParams = dataclasses.field()
+    request: Optional[GitCreateTreeRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GitCreateTreeResponse:
-    content_type: str = field()
-    headers: dict[str, List[str]] = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    git_tree: Optional[shared.GitTree] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    headers: dict[str, list[str]] = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    git_tree: Optional[shared_git_tree.GitTree] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

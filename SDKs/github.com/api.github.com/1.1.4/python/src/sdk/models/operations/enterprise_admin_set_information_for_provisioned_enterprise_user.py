@@ -1,56 +1,56 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import scim_enterprise_user as shared_scim_enterprise_user
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserPathParams:
-    enterprise: str = field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
-    scim_user_id: str = field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
+    enterprise: str = dataclasses.field(metadata={'path_param': { 'field_name': 'enterprise', 'style': 'simple', 'explode': False }})
+    scim_user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'scim_user_id', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyEmails:
-    primary: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    value: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    primary: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyGroups:
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyName:
-    family_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('familyName') }})
-    given_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('givenName') }})
+    family_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('familyName') }})
+    given_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('givenName') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBody:
-    emails: List[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyEmails] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emails') }})
-    name: EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyName = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    schemas: List[str] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemas') }})
-    user_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userName') }})
-    groups: Optional[List[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyGroups]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
+    emails: list[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyEmails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('emails') }})
+    name: EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyName = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    schemas: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('schemas') }})
+    user_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('userName') }})
+    groups: Optional[list[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBodyGroups]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('groups') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequest:
-    path_params: EnterpriseAdminSetInformationForProvisionedEnterpriseUserPathParams = field()
-    request: Optional[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: EnterpriseAdminSetInformationForProvisionedEnterpriseUserPathParams = dataclasses.field()
+    request: Optional[EnterpriseAdminSetInformationForProvisionedEnterpriseUserRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminSetInformationForProvisionedEnterpriseUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    scim_enterprise_user: Optional[shared.ScimEnterpriseUser] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    scim_enterprise_user: Optional[shared_scim_enterprise_user.ScimEnterpriseUser] = dataclasses.field(default=None)
     

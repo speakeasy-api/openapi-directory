@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import itemlist as shared_itemlist
 
 
-@dataclass
+@dataclasses.dataclass
 class SelectResult:
-    items: Optional[List[Item]] = field(default=None)
-    next_token: Optional[str] = field(default=None)
+    items: Optional[list[shared_itemlist.ItemList]] = dataclasses.field(default=None)
+    next_token: Optional[str] = dataclasses.field(default=None)
     

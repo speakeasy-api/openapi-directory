@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import validationauthority as shared_validationauthority
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateClientValidatorSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateClientValidatorRequest:
-    security: CreateClientValidatorSecurity = field()
-    request: Optional[shared.ValidationAuthority] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateClientValidatorSecurity = dataclasses.field()
+    request: Optional[shared_validationauthority.ValidationAuthority] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateClientValidatorResponse:
-    content_type: str = field()
-    status_code: int = field()
-    validation_authority: Optional[shared.ValidationAuthority] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    validation_authority: Optional[shared_validationauthority.ValidationAuthority] = dataclasses.field(default=None)
     

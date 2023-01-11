@@ -1,44 +1,45 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import formrecognitionresult as shared_formrecognitionresult
 
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedHeaders:
-    bucket_id: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'bucketID', 'style': 'simple', 'explode': False }})
-    bucket_secret_key: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'bucketSecretKey', 'style': 'simple', 'explode': False }})
-    diagnostics: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'diagnostics', 'style': 'simple', 'explode': False }})
-    preprocessing: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
-    recognition_mode: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'recognitionMode', 'style': 'simple', 'explode': False }})
+    bucket_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'bucketID', 'style': 'simple', 'explode': False }})
+    bucket_secret_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'bucketSecretKey', 'style': 'simple', 'explode': False }})
+    diagnostics: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'diagnostics', 'style': 'simple', 'explode': False }})
+    preprocessing: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'preprocessing', 'style': 'simple', 'explode': False }})
+    recognition_mode: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'recognitionMode', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedRequestBody:
-    image_file: ImageOcrPhotoRecognizeFormAdvancedRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: ImageOcrPhotoRecognizeFormAdvancedRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedRequest:
-    headers: ImageOcrPhotoRecognizeFormAdvancedHeaders = field()
-    request: ImageOcrPhotoRecognizeFormAdvancedRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: ImageOcrPhotoRecognizeFormAdvancedSecurity = field()
+    headers: ImageOcrPhotoRecognizeFormAdvancedHeaders = dataclasses.field()
+    request: ImageOcrPhotoRecognizeFormAdvancedRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: ImageOcrPhotoRecognizeFormAdvancedSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ImageOcrPhotoRecognizeFormAdvancedResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    form_recognition_result: Optional[shared.FormRecognitionResult] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    form_recognition_result: Optional[shared_formrecognitionresult.FormRecognitionResult] = dataclasses.field(default=None)
     

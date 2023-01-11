@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,23 +20,23 @@ req = operations.PodocRequest(
     security=operations.PodocSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.PodocRequestBody(
         certificate_parameters=operations.PodocRequestBodyCertificateParameters(
-            full_name="velit",
-            policy_number="sed",
+            full_name="at",
+            policy_number="fuga",
         ),
-        consent_artifact="occaecati",
+        consent_artifact="dolorem",
         format="pdf",
-        txn_id="maxime",
+        txn_id="voluptatem",
     ),
 )
     
-res = s.sdk.podoc(req)
+res = s.ap_is.podoc(req)
 
 if res.status_code == 200:
     # handle response
@@ -47,7 +46,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `podoc` - Policy Document
 

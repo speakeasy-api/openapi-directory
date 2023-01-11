@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 
@@ -11,20 +11,20 @@ class GetLoginFormatEnum(str, Enum):
     PDF = "pdf"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetLoginQueryParams:
-    name: str = field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    pass_: str = field(metadata={'query_param': { 'field_name': 'pass', 'style': 'form', 'explode': True }})
-    format: Optional[GetLoginFormatEnum] = field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
+    name: str = dataclasses.field(metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
+    pass_: str = dataclasses.field(metadata={'query_param': { 'field_name': 'pass', 'style': 'form', 'explode': True }})
+    format: Optional[GetLoginFormatEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'format', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLoginRequest:
-    query_params: GetLoginQueryParams = field()
+    query_params: GetLoginQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetLoginResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

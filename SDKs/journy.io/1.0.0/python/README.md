@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,10 +18,10 @@ s = sdk.SDK()
     
 req = operations.AddUserToAccountRequest(
     path_params=operations.AddUserToAccountPathParams(
-        account_id="assumenda",
+        account_id="perferendis",
     ),
     request=operations.AddUserToAccountRequestBody(
-        user_id="repellat",
+        user_id="qui",
     ),
 )
     

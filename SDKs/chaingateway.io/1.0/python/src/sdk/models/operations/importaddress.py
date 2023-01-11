@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import importaddressrequest as shared_importaddressrequest
+from ..shared import importaddress as shared_importaddress
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportAddressHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportAddressRequest:
-    headers: ImportAddressHeaders = field()
-    request: shared.ImportAddressRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: ImportAddressHeaders = dataclasses.field()
+    request: shared_importaddressrequest.ImportAddressRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportAddressResponse:
-    content_type: str = field()
-    status_code: int = field()
-    import_address: Optional[shared.ImportAddress] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    import_address: Optional[shared_importaddress.ImportAddress] = dataclasses.field(default=None)
     

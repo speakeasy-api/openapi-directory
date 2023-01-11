@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,12 +11,12 @@ class ProcessingOptionsHTMLSanitizationEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ProcessingOptions:
     r"""ProcessingOptions
     Input only. Options for job processing.
     """
     
-    disable_street_address_resolution: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableStreetAddressResolution') }})
-    html_sanitization: Optional[ProcessingOptionsHTMLSanitizationEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('htmlSanitization') }})
+    disable_street_address_resolution: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('disableStreetAddressResolution') }})
+    html_sanitization: Optional[ProcessingOptionsHTMLSanitizationEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('htmlSanitization') }})
     

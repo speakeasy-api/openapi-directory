@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorChangeTypesListSecurity:
-    user_key: shared.SchemeUserKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    user_key: shared_security.SchemeUserKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorChangeTypesListRequest:
-    security: CompanyMonitorChangeTypesListSecurity = field()
+    security: CompanyMonitorChangeTypesListSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CompanyMonitorChangeTypesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    company_monitor_change_types_list_200_application_json_strings: Optional[List[str]] = field(default=None)
-    company_monitor_change_types_list_default_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    company_monitor_change_types_list_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
+    company_monitor_change_types_list_default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

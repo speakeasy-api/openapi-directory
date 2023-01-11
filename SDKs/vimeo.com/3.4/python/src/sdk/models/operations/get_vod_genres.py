@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import on_demand_genre as shared_on_demand_genre
 
 
-@dataclass
+@dataclasses.dataclass
 class GetVodGenresResponse:
-    content_type: str = field()
-    status_code: int = field()
-    on_demand_genres: Optional[List[shared.OnDemandGenre]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    on_demand_genres: Optional[list[shared_on_demand_genre.OnDemandGenre]] = dataclasses.field(default=None)
     

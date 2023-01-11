@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -11,22 +11,22 @@ class AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatus
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthorizedSellerStatusAssignedTargetingOptionDetails:
     r"""AuthorizedSellerStatusAssignedTargetingOptionDetails
     Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
     """
     
-    authorized_seller_status: Optional[AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorizedSellerStatus') }})
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    authorized_seller_status: Optional[AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authorizedSellerStatus') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AuthorizedSellerStatusAssignedTargetingOptionDetailsInput:
     r"""AuthorizedSellerStatusAssignedTargetingOptionDetailsInput
     Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
     """
     
-    targeting_option_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
+    targeting_option_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('targetingOptionId') }})
     

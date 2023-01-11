@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import interfaceconnection as shared_interfaceconnection
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceConnectionsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceConnectionsReadRequest:
-    path_params: DcimInterfaceConnectionsReadPathParams = field()
+    path_params: DcimInterfaceConnectionsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimInterfaceConnectionsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    interface_connection: Optional[shared.InterfaceConnection] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    interface_connection: Optional[shared_interfaceconnection.InterfaceConnection] = dataclasses.field(default=None)
     

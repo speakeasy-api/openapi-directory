@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import songforapicontract as shared_songforapicontract
 
 class SongAPIGetTopSongsFieldsEnum(str, Enum):
     NONE = "None"
@@ -38,26 +38,26 @@ class SongAPIGetTopSongsVocalistEnum(str, Enum):
     OTHER = "Other"
 
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetTopSongsQueryParams:
-    duration_hours: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'durationHours', 'style': 'form', 'explode': True }})
-    fields: Optional[SongAPIGetTopSongsFieldsEnum] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    filter_by: Optional[SongAPIGetTopSongsFilterByEnum] = field(default=None, metadata={'query_param': { 'field_name': 'filterBy', 'style': 'form', 'explode': True }})
-    language_preference: Optional[SongAPIGetTopSongsLanguagePreferenceEnum] = field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
-    max_results: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
-    start_date: Optional[datetime] = field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
-    vocalist: Optional[SongAPIGetTopSongsVocalistEnum] = field(default=None, metadata={'query_param': { 'field_name': 'vocalist', 'style': 'form', 'explode': True }})
+    duration_hours: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'durationHours', 'style': 'form', 'explode': True }})
+    fields: Optional[SongAPIGetTopSongsFieldsEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    filter_by: Optional[SongAPIGetTopSongsFilterByEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filterBy', 'style': 'form', 'explode': True }})
+    language_preference: Optional[SongAPIGetTopSongsLanguagePreferenceEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'languagePreference', 'style': 'form', 'explode': True }})
+    max_results: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    start_date: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'startDate', 'style': 'form', 'explode': True }})
+    vocalist: Optional[SongAPIGetTopSongsVocalistEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vocalist', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetTopSongsRequest:
-    query_params: SongAPIGetTopSongsQueryParams = field()
+    query_params: SongAPIGetTopSongsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SongAPIGetTopSongsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    song_for_api_contracts: Optional[List[shared.SongForAPIContract]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    song_for_api_contracts: Optional[list[shared_songforapicontract.SongForAPIContract]] = dataclasses.field(default=None)
     

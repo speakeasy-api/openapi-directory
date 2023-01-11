@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import user as shared_user
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeUsersResult:
-    marker: Optional[str] = field(default=None)
-    users: Optional[List[User]] = field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
+    users: Optional[list[shared_user.User]] = dataclasses.field(default=None)
     

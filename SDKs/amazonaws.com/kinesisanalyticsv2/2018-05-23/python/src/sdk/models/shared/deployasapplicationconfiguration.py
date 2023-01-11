@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import s3contentbaselocation as shared_s3contentbaselocation
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DeployAsApplicationConfiguration:
     r"""DeployAsApplicationConfiguration
     The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state..
     """
     
-    s3_content_location: S3ContentBaseLocation = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3ContentLocation') }})
+    s3_content_location: shared_s3contentbaselocation.S3ContentBaseLocation = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('S3ContentLocation') }})
     

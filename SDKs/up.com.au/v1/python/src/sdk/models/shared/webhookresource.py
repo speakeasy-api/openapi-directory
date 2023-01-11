@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -8,49 +8,49 @@ from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResourceAttributes:
-    created_at: datetime = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('createdAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    description: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    secret_key: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secretKey') }})
+    created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('createdAt'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('description') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    secret_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secretKey') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResourceLinks:
-    self: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
+    self: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('self') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResourceRelationshipsLogsLinks:
-    related: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
+    related: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('related') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResourceRelationshipsLogs:
-    links: Optional[WebhookResourceRelationshipsLogsLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    links: Optional[WebhookResourceRelationshipsLogsLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResourceRelationships:
-    logs: WebhookResourceRelationshipsLogs = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logs') }})
+    logs: WebhookResourceRelationshipsLogs = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('logs') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WebhookResource:
     r"""WebhookResource
     Provides information about a webhook.
     
     """
     
-    attributes: WebhookResourceAttributes = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
-    id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    relationships: WebhookResourceRelationships = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationships') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    links: Optional[WebhookResourceLinks] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
+    attributes: WebhookResourceAttributes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributes') }})
+    id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    relationships: WebhookResourceRelationships = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('relationships') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    links: Optional[WebhookResourceLinks] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('links') }})
     

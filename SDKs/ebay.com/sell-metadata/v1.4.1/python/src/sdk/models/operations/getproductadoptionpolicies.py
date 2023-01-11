@@ -1,33 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import productadoptionpolicyresponse as shared_productadoptionpolicyresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetProductAdoptionPoliciesPathParams:
-    marketplace_id: str = field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
+    marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductAdoptionPoliciesQueryParams:
-    filter: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
+    filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductAdoptionPoliciesSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductAdoptionPoliciesRequest:
-    path_params: GetProductAdoptionPoliciesPathParams = field()
-    query_params: GetProductAdoptionPoliciesQueryParams = field()
-    security: GetProductAdoptionPoliciesSecurity = field()
+    path_params: GetProductAdoptionPoliciesPathParams = dataclasses.field()
+    query_params: GetProductAdoptionPoliciesQueryParams = dataclasses.field()
+    security: GetProductAdoptionPoliciesSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetProductAdoptionPoliciesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    product_adoption_policy_response: Optional[shared.ProductAdoptionPolicyResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    product_adoption_policy_response: Optional[shared_productadoptionpolicyresponse.ProductAdoptionPolicyResponse] = dataclasses.field(default=None)
     

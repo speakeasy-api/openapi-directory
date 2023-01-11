@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteServiceLinkedRoleResponse:
-    deletion_task_id: str = field()
+    deletion_task_id: str = dataclasses.field()
     

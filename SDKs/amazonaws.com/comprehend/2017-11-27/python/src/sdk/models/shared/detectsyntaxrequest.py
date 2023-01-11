@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import syntaxlanguagecode_enum as shared_syntaxlanguagecode_enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectSyntaxRequest:
-    language_code: SyntaxLanguageCodeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
-    text: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
+    language_code: shared_syntaxlanguagecode_enum.SyntaxLanguageCodeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('LanguageCode') }})
+    text: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Text') }})
     

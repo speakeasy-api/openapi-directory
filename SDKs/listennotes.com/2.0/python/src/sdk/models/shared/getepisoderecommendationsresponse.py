@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import episodesimple as shared_episodesimple
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GetEpisodeRecommendationsResponse:
-    recommendations: List[EpisodeSimple] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendations') }})
+    recommendations: list[shared_episodesimple.EpisodeSimple] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('recommendations') }})
     

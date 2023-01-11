@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudorgpolicyv2policy as shared_googlecloudorgpolicyv2policy
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudOrgpolicyV2ListPoliciesResponse:
     r"""GoogleCloudOrgpolicyV2ListPoliciesResponse
     The response returned from the ListPolicies method. It will be empty if no `Policies` are set on the resource.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    policies: Optional[List[GoogleCloudOrgpolicyV2Policy]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    policies: Optional[list[shared_googlecloudorgpolicyv2policy.GoogleCloudOrgpolicyV2Policy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('policies') }})
     

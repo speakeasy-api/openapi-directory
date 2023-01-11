@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
 from enum import Enum
 
@@ -7,20 +7,20 @@ class TournamentHierarchyFormatEnum(str, Enum):
     JSON = "JSON"
 
 
-@dataclass
+@dataclasses.dataclass
 class TournamentHierarchyPathParams:
-    format: TournamentHierarchyFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
-    season: str = field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
+    format: TournamentHierarchyFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    season: str = dataclasses.field(metadata={'path_param': { 'field_name': 'season', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class TournamentHierarchyRequest:
-    path_params: TournamentHierarchyPathParams = field()
+    path_params: TournamentHierarchyPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class TournamentHierarchyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    tournament: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    tournament: Optional[Any] = dataclasses.field(default=None)
     

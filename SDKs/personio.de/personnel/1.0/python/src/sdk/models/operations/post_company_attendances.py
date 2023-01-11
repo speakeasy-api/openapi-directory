@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import newattendanceperiodrequest as shared_newattendanceperiodrequest
+from ..shared import detailederrorresponse as shared_detailederrorresponse
+from ..shared import newattendanceperiodresponse as shared_newattendanceperiodresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostCompanyAttendancesRequest:
-    request: shared.NewAttendancePeriodRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_newattendanceperiodrequest.NewAttendancePeriodRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostCompanyAttendancesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    detailed_error_response: Optional[shared.DetailedErrorResponse] = field(default=None)
-    new_attendance_period_response: Optional[shared.NewAttendancePeriodResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    detailed_error_response: Optional[shared_detailederrorresponse.DetailedErrorResponse] = dataclasses.field(default=None)
+    new_attendance_period_response: Optional[shared_newattendanceperiodresponse.NewAttendancePeriodResponse] = dataclasses.field(default=None)
     

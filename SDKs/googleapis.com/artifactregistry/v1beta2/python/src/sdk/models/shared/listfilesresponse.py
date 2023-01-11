@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googledevtoolsartifactregistryv1beta2file as shared_googledevtoolsartifactregistryv1beta2file
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListFilesResponse:
     r"""ListFilesResponse
     The response from listing files.
     """
     
-    files: Optional[List[GoogleDevtoolsArtifactregistryV1beta2File]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('files') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    files: Optional[list[shared_googledevtoolsartifactregistryv1beta2file.GoogleDevtoolsArtifactregistryV1beta2File]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('files') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

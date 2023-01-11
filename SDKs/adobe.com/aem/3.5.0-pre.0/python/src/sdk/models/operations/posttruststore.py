@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststoreQueryParams:
-    operation: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': ':operation', 'style': 'form', 'explode': True }})
-    key_store_type: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'keyStoreType', 'style': 'form', 'explode': True }})
-    new_password: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'newPassword', 'style': 'form', 'explode': True }})
-    re_password: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'rePassword', 'style': 'form', 'explode': True }})
-    remove_alias: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'removeAlias', 'style': 'form', 'explode': True }})
+    operation: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': ':operation', 'style': 'form', 'explode': True }})
+    key_store_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'keyStoreType', 'style': 'form', 'explode': True }})
+    new_password: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'newPassword', 'style': 'form', 'explode': True }})
+    re_password: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'rePassword', 'style': 'form', 'explode': True }})
+    remove_alias: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'removeAlias', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststoreRequestBodyCertificate:
-    certificate: str = field(metadata={'multipart_form': { 'field_name': 'certificate' }})
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
+    certificate: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'certificate' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststoreRequestBody:
-    certificate: Optional[PostTruststoreRequestBodyCertificate] = field(default=None, metadata={'multipart_form': { 'file': True }})
+    certificate: Optional[PostTruststoreRequestBodyCertificate] = dataclasses.field(default=None, metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststoreRequest:
-    query_params: PostTruststoreQueryParams = field()
-    request: Optional[PostTruststoreRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    query_params: PostTruststoreQueryParams = dataclasses.field()
+    request: Optional[PostTruststoreRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostTruststoreResponse:
-    content_type: str = field()
-    status_code: int = field()
-    post_truststore_default_text_plain_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    post_truststore_default_text_plain_string: Optional[str] = dataclasses.field(default=None)
     

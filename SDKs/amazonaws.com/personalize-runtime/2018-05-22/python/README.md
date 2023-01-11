@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,35 +25,34 @@ s.config_security(
     
 req = operations.GetPersonalizedRankingRequest(
     headers=operations.GetPersonalizedRankingHeaders(
-        x_amz_algorithm="magnam",
-        x_amz_content_sha256="a",
-        x_amz_credential="et",
-        x_amz_date="omnis",
-        x_amz_security_token="dicta",
-        x_amz_signature="in",
-        x_amz_signed_headers="et",
+        x_amz_algorithm="sapiente",
+        x_amz_content_sha256="molestiae",
+        x_amz_credential="aut",
+        x_amz_date="illo",
+        x_amz_security_token="sapiente",
+        x_amz_signature="quisquam",
+        x_amz_signed_headers="ad",
     ),
     request=operations.GetPersonalizedRankingRequestBody(
-        campaign_arn="enim",
+        campaign_arn="incidunt",
         context={
-            "dolores": "quasi",
-            "recusandae": "numquam",
-            "numquam": "occaecati",
+            "suscipit": "officiis",
+            "cum": "totam",
         },
-        filter_arn="aut",
+        filter_arn="mollitia",
         filter_values={
-            "occaecati": "et",
-            "et": "non",
-            "molestias": "aut",
+            "quos": "beatae",
         },
         input_list=[
-            "consequuntur",
+            "dolor",
+            "veritatis",
+            "dicta",
         ],
-        user_id="exercitationem",
+        user_id="consequatur",
     ),
 )
     
-res = s.sdk.get_personalized_ranking(req)
+res = s.get_personalized_ranking(req)
 
 if res.get_personalized_ranking_response is not None:
     # handle response

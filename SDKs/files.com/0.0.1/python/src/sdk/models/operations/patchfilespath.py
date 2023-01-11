@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import fileentity as shared_fileentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PatchFilesPathPathParams:
-    path: str = field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchFilesPathRequestBody:
-    priority_color: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'priority_color' }})
-    provided_mtime: Optional[datetime] = field(default=None, metadata={'multipart_form': { 'field_name': 'provided_mtime' }})
+    priority_color: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'priority_color' }})
+    provided_mtime: Optional[datetime] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'provided_mtime' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchFilesPathRequest:
-    path_params: PatchFilesPathPathParams = field()
-    request: Optional[PatchFilesPathRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    path_params: PatchFilesPathPathParams = dataclasses.field()
+    request: Optional[PatchFilesPathRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PatchFilesPathResponse:
-    content_type: str = field()
-    status_code: int = field()
-    file_entity: Optional[shared.FileEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    file_entity: Optional[shared_fileentity.FileEntity] = dataclasses.field(default=None)
     

@@ -1,17 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import discountresponse as shared_discountresponse
+from ..shared import productresponse as shared_productresponse
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LibraryResponse:
-    deleted_discounts: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletedDiscounts') }})
-    deleted_products: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletedProducts') }})
-    discounts: Optional[List[DiscountResponse]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discounts') }})
-    from_event_log_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fromEventLogUuid') }})
-    products: Optional[List[ProductResponse]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
-    until_event_log_uuid: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('untilEventLogUuid') }})
+    deleted_discounts: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletedDiscounts') }})
+    deleted_products: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('deletedProducts') }})
+    discounts: Optional[list[shared_discountresponse.DiscountResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('discounts') }})
+    from_event_log_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('fromEventLogUuid') }})
+    products: Optional[list[shared_productresponse.ProductResponse]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('products') }})
+    until_event_log_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('untilEventLogUuid') }})
     

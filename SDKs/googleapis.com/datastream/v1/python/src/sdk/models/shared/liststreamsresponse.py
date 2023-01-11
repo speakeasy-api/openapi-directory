@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import stream as shared_stream
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListStreamsResponse:
     r"""ListStreamsResponse
     Response message for listing streams.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    streams: Optional[List[Stream]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streams') }})
-    unreachable: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    streams: Optional[list[shared_stream.Stream]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('streams') }})
+    unreachable: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('unreachable') }})
     

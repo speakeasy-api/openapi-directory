@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import Any,List,Optional
+from typing import Any,Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20PathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    number: str = field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    number: str = dataclasses.field(metadata={'path_param': { 'field_name': 'number', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs:
-    mcc: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mcc') }})
-    mnc: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mnc') }})
+    mcc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mcc') }})
+    mnc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mnc') }})
     
 class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum(str, Enum):
     ONE = "1"
@@ -26,18 +26,18 @@ class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum(str, Enum
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods:
-    authentication_types: Optional[dict[str, Any]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticationTypes') }})
-    id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    authentication_types: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('authenticationTypes') }})
+    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms:
-    format: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
-    methods: Optional[List[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('methods') }})
-    realm: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('realm') }})
+    format: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('format') }})
+    methods: Optional[list[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('methods') }})
+    realm: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('realm') }})
     
 class UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum(str, Enum):
     PRIVATE_NETWORK = "Private network"
@@ -51,13 +51,13 @@ class UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum(str, En
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBodyOperator:
     r"""UpdateNetworkWirelessSsidHotspot20RequestBodyOperator
     Operator settings for this SSID
     """
     
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
     
 class UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum(str, Enum):
     UNSPECIFIED = "Unspecified"
@@ -129,38 +129,38 @@ class UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBodyVenue:
     r"""UpdateNetworkWirelessSsidHotspot20RequestBodyVenue
     Venue settings for this SSID
     """
     
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    type: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    type: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyVenueTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20RequestBody:
-    domains: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
-    enabled: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
-    mcc_mncs: Optional[List[UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mccMncs') }})
-    nai_realms: Optional[List[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('naiRealms') }})
-    network_access_type: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkAccessType') }})
-    operator: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyOperator] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operator') }})
-    roam_consort_ois: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roamConsortOis') }})
-    venue: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyVenue] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('venue') }})
+    domains: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('domains') }})
+    enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('enabled') }})
+    mcc_mncs: Optional[list[UpdateNetworkWirelessSsidHotspot20RequestBodyMccMncs]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('mccMncs') }})
+    nai_realms: Optional[list[UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealms]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('naiRealms') }})
+    network_access_type: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyNetworkAccessTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('networkAccessType') }})
+    operator: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyOperator] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('operator') }})
+    roam_consort_ois: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('roamConsortOis') }})
+    venue: Optional[UpdateNetworkWirelessSsidHotspot20RequestBodyVenue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('venue') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20Request:
-    path_params: UpdateNetworkWirelessSsidHotspot20PathParams = field()
-    request: Optional[UpdateNetworkWirelessSsidHotspot20RequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateNetworkWirelessSsidHotspot20PathParams = dataclasses.field()
+    request: Optional[UpdateNetworkWirelessSsidHotspot20RequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateNetworkWirelessSsidHotspot20Response:
-    content_type: str = field()
-    status_code: int = field()
-    update_network_wireless_ssid_hotspot20_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_network_wireless_ssid_hotspot20_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,25 +1,26 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import writabledevicebay as shared_writabledevicebay
+from ..shared import devicebay as shared_devicebay
 
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBaysUpdatePathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBaysUpdateRequest:
-    path_params: DcimDeviceBaysUpdatePathParams = field()
-    request: shared.WritableDeviceBayInput = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: DcimDeviceBaysUpdatePathParams = dataclasses.field()
+    request: shared_writabledevicebay.WritableDeviceBayInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DcimDeviceBaysUpdateResponse:
-    content_type: str = field()
-    status_code: int = field()
-    device_bay: Optional[shared.DeviceBay] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    device_bay: Optional[shared_devicebay.DeviceBay] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,25 +25,23 @@ s.config_security(
     
 req = operations.BatchDetectDominantLanguageRequest(
     headers=operations.BatchDetectDominantLanguageHeaders(
-        x_amz_algorithm="et",
-        x_amz_content_sha256="eum",
-        x_amz_credential="vero",
-        x_amz_date="totam",
-        x_amz_security_token="odio",
-        x_amz_signature="veritatis",
-        x_amz_signed_headers="fuga",
+        x_amz_algorithm="id",
+        x_amz_content_sha256="reprehenderit",
+        x_amz_credential="sit",
+        x_amz_date="at",
+        x_amz_security_token="ex",
+        x_amz_signature="doloribus",
+        x_amz_signed_headers="qui",
         x_amz_target="Comprehend_20171127.BatchDetectDominantLanguage",
     ),
     request=shared.BatchDetectDominantLanguageRequest(
         text_list=[
-            "consequatur",
-            "qui",
-            "numquam",
+            "ea",
         ],
     ),
 )
     
-res = s.sdk.batch_detect_dominant_language(req)
+res = s.batch_detect_dominant_language(req)
 
 if res.batch_detect_dominant_language_response is not None:
     # handle response

@@ -1,43 +1,43 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class WellsFilesListPathParams:
-    tag: str = field(metadata={'path_param': { 'field_name': 'tag', 'style': 'simple', 'explode': False }})
+    tag: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tag', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WellsFilesList200ApplicationJSONPrivate:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WellsFilesList200ApplicationJSONPublic:
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    url: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class WellsFilesList200ApplicationJSON:
-    private: Optional[List[WellsFilesList200ApplicationJSONPrivate]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private') }})
-    public: Optional[List[WellsFilesList200ApplicationJSONPublic]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('public') }})
+    private: Optional[list[WellsFilesList200ApplicationJSONPrivate]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('private') }})
+    public: Optional[list[WellsFilesList200ApplicationJSONPublic]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('public') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsFilesListRequest:
-    path_params: WellsFilesListPathParams = field()
+    path_params: WellsFilesListPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class WellsFilesListResponse:
-    content_type: str = field()
-    status_code: int = field()
-    wells_files_list_200_application_json_object: Optional[WellsFilesList200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    wells_files_list_200_application_json_object: Optional[WellsFilesList200ApplicationJSON] = dataclasses.field(default=None)
     

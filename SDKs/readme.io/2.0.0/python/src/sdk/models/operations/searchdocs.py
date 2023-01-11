@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class SearchDocsQueryParams:
-    search: str = field(metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
+    search: str = dataclasses.field(metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchDocsHeaders:
-    x_readme_version: str = field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
+    x_readme_version: str = dataclasses.field(metadata={'header': { 'field_name': 'x-readme-version', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchDocsSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchDocsRequest:
-    headers: SearchDocsHeaders = field()
-    query_params: SearchDocsQueryParams = field()
-    security: SearchDocsSecurity = field()
+    headers: SearchDocsHeaders = dataclasses.field()
+    query_params: SearchDocsQueryParams = dataclasses.field()
+    security: SearchDocsSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class SearchDocsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

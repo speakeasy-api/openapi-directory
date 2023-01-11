@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,22 +25,22 @@ s.config_security(
     
 req = operations.AssociateConnectionAliasRequest(
     headers=operations.AssociateConnectionAliasHeaders(
-        x_amz_algorithm="earum",
-        x_amz_content_sha256="itaque",
-        x_amz_credential="optio",
-        x_amz_date="voluptas",
-        x_amz_security_token="eos",
-        x_amz_signature="deleniti",
-        x_amz_signed_headers="ut",
+        x_amz_algorithm="hic",
+        x_amz_content_sha256="quisquam",
+        x_amz_credential="sit",
+        x_amz_date="autem",
+        x_amz_security_token="sed",
+        x_amz_signature="itaque",
+        x_amz_signed_headers="qui",
         x_amz_target="WorkspacesService.AssociateConnectionAlias",
     ),
     request=shared.AssociateConnectionAliasRequest(
-        alias_id="enim",
-        resource_id="quia",
+        alias_id="et",
+        resource_id="sequi",
     ),
 )
     
-res = s.sdk.associate_connection_alias(req)
+res = s.associate_connection_alias(req)
 
 if res.associate_connection_alias_result is not None:
     # handle response

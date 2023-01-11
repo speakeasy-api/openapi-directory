@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
-from typing import Optional
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class DisableSerialConsoleAccessResult:
-    serial_console_access_enabled: Optional[bool] = field(default=None)
+    serial_console_access_enabled: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

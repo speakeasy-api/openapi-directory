@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -28,22 +27,22 @@ req = operations.GetGlobalwinescoresLatestRequest(
     query_params=operations.GetGlobalwinescoresLatestQueryParams(
         color="pink",
         is_primeurs=True,
-        limit=8694339800263980817,
-        lwin="maxime",
-        lwin_11="perspiciatis",
-        offset=2259968901493884117,
-        ordering="-score",
-        vintage="sed",
+        limit=6308795235080022817,
+        lwin="molestiae",
+        lwin_11="error",
+        offset=9017080597034832094,
+        ordering="date",
+        vintage="accusantium",
         wine_id=[
-            5220847749626346733,
+            7904238630633999270,
         ],
     ),
     headers=operations.GetGlobalwinescoresLatestHeaders(
-        authorization="praesentium",
+        authorization="labore",
     ),
 )
     
-res = s.sdk.get_globalwinescores_latest_(req)
+res = s.global_wine_score.get_globalwinescores_latest_(req)
 
 if res.status_code == 200:
     # handle response
@@ -53,7 +52,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### GlobalWineScore
 
 * `get_globalwinescores_latest_` - List all latest GWS
 * `list_historical_gws` - List all historical GWS

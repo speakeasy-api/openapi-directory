@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import updaterowrequest as shared_updaterowrequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchUpdateRowsRequest:
     r"""BatchUpdateRowsRequest
     Request message for TablesService.BatchUpdateRows.
     """
     
-    requests: Optional[List[UpdateRowRequest]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requests') }})
+    requests: Optional[list[shared_updaterowrequest.UpdateRowRequest]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('requests') }})
     

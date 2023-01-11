@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchPortSchedulePathParams:
-    network_id: str = field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
-    port_schedule_id: str = field(metadata={'path_param': { 'field_name': 'portScheduleId', 'style': 'simple', 'explode': False }})
+    network_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'networkId', 'style': 'simple', 'explode': False }})
+    port_schedule_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'portScheduleId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchPortScheduleRequest:
-    path_params: DeleteNetworkSwitchPortSchedulePathParams = field()
+    path_params: DeleteNetworkSwitchPortSchedulePathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class DeleteNetworkSwitchPortScheduleResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import bulkdeploymentresult as shared_bulkdeploymentresult
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListBulkDeploymentDetailedReportsResponse:
-    deployments: Optional[List[BulkDeploymentResult]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Deployments') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    deployments: Optional[list[shared_bulkdeploymentresult.BulkDeploymentResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Deployments') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

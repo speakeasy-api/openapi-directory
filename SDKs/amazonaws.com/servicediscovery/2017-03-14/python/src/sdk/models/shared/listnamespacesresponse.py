@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import namespacesummary as shared_namespacesummary
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListNamespacesResponse:
-    namespaces: Optional[List[NamespaceSummary]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Namespaces') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    namespaces: Optional[list[shared_namespacesummary.NamespaceSummary]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Namespaces') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

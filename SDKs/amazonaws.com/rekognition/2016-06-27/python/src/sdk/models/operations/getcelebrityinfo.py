@@ -1,42 +1,43 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import getcelebrityinforequest as shared_getcelebrityinforequest
+from ..shared import getcelebrityinforesponse as shared_getcelebrityinforesponse
 
 class GetCelebrityInfoXAmzTargetEnum(str, Enum):
     REKOGNITION_SERVICE_GET_CELEBRITY_INFO = "RekognitionService.GetCelebrityInfo"
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCelebrityInfoHeaders:
-    x_amz_target: GetCelebrityInfoXAmzTargetEnum = field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
-    x_amz_algorithm: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
-    x_amz_content_sha256: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
-    x_amz_credential: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
-    x_amz_date: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
-    x_amz_security_token: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
-    x_amz_signature: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
-    x_amz_signed_headers: Optional[str] = field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
+    x_amz_target: GetCelebrityInfoXAmzTargetEnum = dataclasses.field(metadata={'header': { 'field_name': 'X-Amz-Target', 'style': 'simple', 'explode': False }})
+    x_amz_algorithm: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Algorithm', 'style': 'simple', 'explode': False }})
+    x_amz_content_sha256: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Content-Sha256', 'style': 'simple', 'explode': False }})
+    x_amz_credential: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Credential', 'style': 'simple', 'explode': False }})
+    x_amz_date: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Date', 'style': 'simple', 'explode': False }})
+    x_amz_security_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Security-Token', 'style': 'simple', 'explode': False }})
+    x_amz_signature: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-Signature', 'style': 'simple', 'explode': False }})
+    x_amz_signed_headers: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-Amz-SignedHeaders', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCelebrityInfoRequest:
-    headers: GetCelebrityInfoHeaders = field()
-    request: shared.GetCelebrityInfoRequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: GetCelebrityInfoHeaders = dataclasses.field()
+    request: shared_getcelebrityinforequest.GetCelebrityInfoRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCelebrityInfoResponse:
-    content_type: str = field()
-    status_code: int = field()
-    access_denied_exception: Optional[Any] = field(default=None)
-    get_celebrity_info_response: Optional[shared.GetCelebrityInfoResponse] = field(default=None)
-    internal_server_error: Optional[Any] = field(default=None)
-    invalid_parameter_exception: Optional[Any] = field(default=None)
-    provisioned_throughput_exceeded_exception: Optional[Any] = field(default=None)
-    resource_not_found_exception: Optional[Any] = field(default=None)
-    throttling_exception: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    access_denied_exception: Optional[Any] = dataclasses.field(default=None)
+    get_celebrity_info_response: Optional[shared_getcelebrityinforesponse.GetCelebrityInfoResponse] = dataclasses.field(default=None)
+    internal_server_error: Optional[Any] = dataclasses.field(default=None)
+    invalid_parameter_exception: Optional[Any] = dataclasses.field(default=None)
+    provisioned_throughput_exceeded_exception: Optional[Any] = dataclasses.field(default=None)
+    resource_not_found_exception: Optional[Any] = dataclasses.field(default=None)
+    throttling_exception: Optional[Any] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,24 @@ s.config_security(
     
 req = operations.BatchDeleteWorldsRequest(
     headers=operations.BatchDeleteWorldsHeaders(
-        x_amz_algorithm="totam",
-        x_amz_content_sha256="similique",
-        x_amz_credential="sunt",
-        x_amz_date="aut",
-        x_amz_security_token="quis",
-        x_amz_signature="quis",
-        x_amz_signed_headers="amet",
+        x_amz_algorithm="et",
+        x_amz_content_sha256="ea",
+        x_amz_credential="sapiente",
+        x_amz_date="consequatur",
+        x_amz_security_token="et",
+        x_amz_signature="voluptate",
+        x_amz_signed_headers="dolore",
     ),
     request=operations.BatchDeleteWorldsRequestBody(
         worlds=[
-            "totam",
-            "perspiciatis",
-            "cupiditate",
+            "quia",
+            "eum",
+            "iure",
         ],
     ),
 )
     
-res = s.sdk.batch_delete_worlds(req)
+res = s.batch_delete_worlds(req)
 
 if res.batch_delete_worlds_response is not None:
     # handle response

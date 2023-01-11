@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import nfsexportoptions as shared_nfsexportoptions
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class FileShareConfig:
     r"""FileShareConfig
     File share configuration for the instance.
     """
     
-    capacity_gb: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityGb') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    nfs_export_options: Optional[List[NfsExportOptions]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nfsExportOptions') }})
-    source_backup: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceBackup') }})
+    capacity_gb: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('capacityGb') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    nfs_export_options: Optional[list[shared_nfsexportoptions.NfsExportOptions]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nfsExportOptions') }})
+    source_backup: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sourceBackup') }})
     

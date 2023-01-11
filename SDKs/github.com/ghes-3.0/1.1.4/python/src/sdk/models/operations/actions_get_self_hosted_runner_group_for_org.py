@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import runner_groups_org as shared_runner_groups_org
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerGroupForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
-    runner_group_id: int = field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    runner_group_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'runner_group_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerGroupForOrgRequest:
-    path_params: ActionsGetSelfHostedRunnerGroupForOrgPathParams = field()
+    path_params: ActionsGetSelfHostedRunnerGroupForOrgPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetSelfHostedRunnerGroupForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    runner_groups_org: Optional[shared.RunnerGroupsOrg] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    runner_groups_org: Optional[shared_runner_groups_org.RunnerGroupsOrg] = dataclasses.field(default=None)
     

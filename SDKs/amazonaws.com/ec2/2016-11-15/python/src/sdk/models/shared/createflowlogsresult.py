@@ -1,11 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Any,Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateFlowLogsResult:
-    client_token: Optional[str] = field(default=None)
-    flow_log_ids: Optional[List[str]] = field(default=None)
-    unsuccessful: Optional[List[UnsuccessfulItem]] = field(default=None)
+    client_token: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    flow_log_ids: Optional[dict[str, Any]] = dataclasses.field(default=None)
+    unsuccessful: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import ospolicyresourcefile as shared_ospolicyresourcefile
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OsPolicyResourcePackageResourceRpm:
     r"""OsPolicyResourcePackageResourceRpm
     An RPM package file. RPM packages only support INSTALLED state.
     """
     
-    pull_deps: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullDeps') }})
-    source: Optional[OsPolicyResourceFile] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
+    pull_deps: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pullDeps') }})
+    source: Optional[shared_ospolicyresourcefile.OsPolicyResourceFile] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('source') }})
     

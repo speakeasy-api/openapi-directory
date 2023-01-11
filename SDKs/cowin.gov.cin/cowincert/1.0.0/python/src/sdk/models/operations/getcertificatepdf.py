@@ -1,20 +1,21 @@
-from dataclasses import dataclass, field
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
+from ..shared import certificaterequest as shared_certificaterequest
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCertificatePdfSecurity:
-    cert_auth: shared.SchemeCertAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    cert_auth: shared_security.SchemeCertAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCertificatePdfRequest:
-    request: shared.CertificateRequest = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: GetCertificatePdfSecurity = field()
+    request: shared_certificaterequest.CertificateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: GetCertificatePdfSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCertificatePdfResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import eventsubscription as shared_eventsubscription
 
 
-@dataclass
+@dataclasses.dataclass
 class ModifyEventSubscriptionResult:
-    event_subscription: Optional[EventSubscription] = field(default=None)
+    event_subscription: Optional[shared_eventsubscription.EventSubscription] = dataclasses.field(default=None)
     

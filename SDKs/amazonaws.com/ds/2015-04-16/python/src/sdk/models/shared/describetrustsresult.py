@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import trust as shared_trust
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeTrustsResult:
     r"""DescribeTrustsResult
     The result of a DescribeTrust request.
     """
     
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
-    trusts: Optional[List[Trust]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Trusts') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    trusts: Optional[list[shared_trust.Trust]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Trusts') }})
     

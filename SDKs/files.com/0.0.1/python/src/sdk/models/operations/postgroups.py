@@ -1,24 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import groupentity as shared_groupentity
 
 
-@dataclass
+@dataclasses.dataclass
 class PostGroupsRequestBody:
-    admin_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'admin_ids' }})
-    name: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
-    notes: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'notes' }})
-    user_ids: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
+    admin_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'admin_ids' }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'name' }})
+    notes: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'notes' }})
+    user_ids: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'user_ids' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostGroupsRequest:
-    request: Optional[PostGroupsRequestBody] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    request: Optional[PostGroupsRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostGroupsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    group_entity: Optional[shared.GroupEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    group_entity: Optional[shared_groupentity.GroupEntity] = dataclasses.field(default=None)
     

@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import dbclusterparametergrouplist as shared_dbclusterparametergrouplist
 
 
-@dataclass
+@dataclasses.dataclass
 class DbClusterParameterGroupsMessage:
-    db_cluster_parameter_groups: Optional[List[DbClusterParameterGroup]] = field(default=None)
-    marker: Optional[str] = field(default=None)
+    db_cluster_parameter_groups: Optional[list[shared_dbclusterparametergrouplist.DbClusterParameterGroupList]] = dataclasses.field(default=None)
+    marker: Optional[str] = dataclasses.field(default=None)
     

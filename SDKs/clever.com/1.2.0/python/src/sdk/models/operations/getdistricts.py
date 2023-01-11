@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import districtsresponse as shared_districtsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetDistrictsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    districts_response: Optional[shared.DistrictsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    districts_response: Optional[shared_districtsresponse.DistrictsResponse] = dataclasses.field(default=None)
     

@@ -1,22 +1,24 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import attributescores as shared_attributescores
+from ..shared import textentry as shared_textentry
+from ..shared import context as shared_context
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SuggestCommentScoreRequest:
     r"""SuggestCommentScoreRequest
     The comment score suggestion request message.
     """
     
-    attribute_scores: Optional[dict[str, AttributeScores]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributeScores') }})
-    client_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
-    comment: Optional[TextEntry] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
-    community_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communityId') }})
-    context: Optional[Context] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
-    languages: Optional[List[str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
-    session_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionId') }})
+    attribute_scores: Optional[dict[str, shared_attributescores.AttributeScores]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('attributeScores') }})
+    client_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('clientToken') }})
+    comment: Optional[shared_textentry.TextEntry] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('comment') }})
+    community_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('communityId') }})
+    context: Optional[shared_context.Context] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('context') }})
+    languages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('languages') }})
+    session_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sessionId') }})
     

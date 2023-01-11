@@ -1,22 +1,23 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import globaljwtverifier as shared_globaljwtverifier
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateGlobalJwtVerifierSecurity:
-    otoroshi_auth: shared.SchemeOtoroshiAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    otoroshi_auth: shared_security.SchemeOtoroshiAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateGlobalJwtVerifierRequest:
-    security: CreateGlobalJwtVerifierSecurity = field()
-    request: Optional[shared.GlobalJwtVerifier] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    security: CreateGlobalJwtVerifierSecurity = dataclasses.field()
+    request: Optional[shared_globaljwtverifier.GlobalJwtVerifier] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateGlobalJwtVerifierResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_jwt_verifier: Optional[shared.GlobalJwtVerifier] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_jwt_verifier: Optional[shared_globaljwtverifier.GlobalJwtVerifier] = dataclasses.field(default=None)
     

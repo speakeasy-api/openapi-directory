@@ -1,14 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googleprivacydlpv2bytecontentitem as shared_googleprivacydlpv2bytecontentitem
+from ..shared import googleprivacydlpv2table as shared_googleprivacydlpv2table
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GooglePrivacyDlpV2ContentItem:
-    byte_item: Optional[GooglePrivacyDlpV2ByteContentItem] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('byteItem') }})
-    table: Optional[GooglePrivacyDlpV2Table] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('table') }})
-    value: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
+    byte_item: Optional[shared_googleprivacydlpv2bytecontentitem.GooglePrivacyDlpV2ByteContentItem] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('byteItem') }})
+    table: Optional[shared_googleprivacydlpv2table.GooglePrivacyDlpV2Table] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('table') }})
+    value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('value') }})
     

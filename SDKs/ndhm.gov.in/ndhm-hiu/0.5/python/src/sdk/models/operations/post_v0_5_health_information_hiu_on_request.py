@@ -1,6 +1,7 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import hiuhealthinformationrequestresponse as shared_hiuhealthinformationrequestresponse
+from ..shared import errorresponse as shared_errorresponse
 
 
 POST_V0_5_HEALTH_INFORMATION_HIU_ON_REQUEST_SERVERS = [
@@ -8,29 +9,29 @@ POST_V0_5_HEALTH_INFORMATION_HIU_ON_REQUEST_SERVERS = [
 ]
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationHiuOnRequestHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_hiu_id: str = field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_hiu_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-HIU-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationHiuOnRequestRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    hiu_health_information_request_response: Optional[shared.HiuHealthInformationRequestResponse] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    hiu_health_information_request_response: Optional[shared_hiuhealthinformationrequestresponse.HiuHealthInformationRequestResponse] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationHiuOnRequestRequest:
-    headers: PostV05HealthInformationHiuOnRequestHeaders = field()
-    request: PostV05HealthInformationHiuOnRequestRequests = field()
-    server_url: Optional[str] = field(default=None)
+    headers: PostV05HealthInformationHiuOnRequestHeaders = dataclasses.field()
+    request: PostV05HealthInformationHiuOnRequestRequests = dataclasses.field()
+    server_url: Optional[str] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationHiuOnRequestResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

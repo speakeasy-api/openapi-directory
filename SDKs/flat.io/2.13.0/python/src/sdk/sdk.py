@@ -1,0 +1,124 @@
+
+
+import requests
+
+from . import utils
+
+from .account import Account
+from .class_ import Class
+from .collection import Collection
+from .group import Group
+from .organization import Organization
+from .score import Score
+from .user import User
+
+
+SERVERS = [
+	"https://api.flat.io/v2",
+]
+
+
+class SDK:
+    
+    account: Account
+    class_: Class
+    collection: Collection
+    group: Group
+    organization: Organization
+    score: Score
+    user: User
+
+    _client: requests.Session
+    _security_client: requests.Session
+    
+    _server_url: str = SERVERS[0]
+    _language: str = "python"
+    _sdk_version: str = "0.0.1"
+    _gen_version: str = "internal"
+
+    def __init__(self) -> None:
+        self._client = requests.Session()
+        self._security_client = requests.Session()
+        self._init_sdks()
+
+
+    def config_server_url(self, server_url: str, params: dict[str, str]):
+        if params is not None:
+            self._server_url = utils.replace_parameters(server_url, params)
+        else:
+            self._server_url = server_url
+
+        self._init_sdks()
+    
+
+    def config_client(self, client: requests.Session):
+        self._client = client
+        self._init_sdks()
+    
+    
+    def _init_sdks(self):
+        
+        self.account = Account(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.class_ = Class(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.collection = Collection(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.group = Group(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.organization = Organization(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.score = Score(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.user = User(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+    
+    

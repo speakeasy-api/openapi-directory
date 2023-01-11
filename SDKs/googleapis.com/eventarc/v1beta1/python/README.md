@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,29 +20,29 @@ req = operations.EventarcProjectsLocationsListRequest(
     security=operations.EventarcProjectsLocationsListSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.EventarcProjectsLocationsListPathParams(
-        name="quisquam",
+        name="saepe",
     ),
     query_params=operations.EventarcProjectsLocationsListQueryParams(
-        dollar_xgafv="2",
-        access_token="omnis",
-        alt="json",
-        callback="harum",
-        fields="consequuntur",
-        filter="dolore",
-        key="tempora",
-        oauth_token="numquam",
-        page_size=8221868533207517932,
-        page_token="fugit",
+        dollar_xgafv="1",
+        access_token="maxime",
+        alt="proto",
+        callback="aut",
+        fields="et",
+        filter="fugit",
+        key="nostrum",
+        oauth_token="quia",
+        page_size=862857162017981555,
+        page_token="quia",
         pretty_print=False,
-        quota_user="qui",
-        upload_type="ut",
-        upload_protocol="est",
+        quota_user="assumenda",
+        upload_type="doloremque",
+        upload_protocol="quia",
     ),
 )
     

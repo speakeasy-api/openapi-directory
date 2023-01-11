@@ -1,26 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import monthdetailresponse as shared_monthdetailresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetMonthPathParams:
-    budget_id: str = field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
-    month: date = field(metadata={'path_param': { 'field_name': 'month', 'style': 'simple', 'explode': False }})
+    budget_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'budget_id', 'style': 'simple', 'explode': False }})
+    month: date = dataclasses.field(metadata={'path_param': { 'field_name': 'month', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetMonthRequest:
-    path_params: GetBudgetMonthPathParams = field()
+    path_params: GetBudgetMonthPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBudgetMonthResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    month_detail_response: Optional[shared.MonthDetailResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    month_detail_response: Optional[shared_monthdetailresponse.MonthDetailResponse] = dataclasses.field(default=None)
     

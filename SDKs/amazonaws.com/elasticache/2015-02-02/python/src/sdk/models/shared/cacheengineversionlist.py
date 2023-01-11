@@ -1,0 +1,16 @@
+import dataclasses
+from typing import Optional
+
+
+@dataclasses.dataclass
+class CacheEngineVersionList:
+    r"""CacheEngineVersionList
+    Provides all of the details about a particular cache engine version.
+    """
+    
+    cache_engine_description: Optional[str] = dataclasses.field(default=None)
+    cache_engine_version_description: Optional[str] = dataclasses.field(default=None)
+    cache_parameter_group_family: Optional[str] = dataclasses.field(default=None)
+    engine: Optional[str] = dataclasses.field(default=None)
+    engine_version: Optional[str] = dataclasses.field(default=None)
+    

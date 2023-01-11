@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import apikeyentity as shared_apikeyentity
 
 
-@dataclass
+@dataclasses.dataclass
 class APIKeyFindCurrentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    api_key_entity: Optional[shared.APIKeyEntity] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    api_key_entity: Optional[shared_apikeyentity.APIKeyEntity] = dataclasses.field(default=None)
     

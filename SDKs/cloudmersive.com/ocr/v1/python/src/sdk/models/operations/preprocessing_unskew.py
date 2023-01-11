@@ -1,36 +1,36 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PreprocessingUnskewRequestBodyImageFile:
-    content: bytes = field(metadata={'multipart_form': { 'content': True }})
-    image_file: str = field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
+    content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
+    image_file: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'imageFile' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PreprocessingUnskewRequestBody:
-    image_file: PreprocessingUnskewRequestBodyImageFile = field(metadata={'multipart_form': { 'file': True }})
+    image_file: PreprocessingUnskewRequestBodyImageFile = dataclasses.field(metadata={'multipart_form': { 'file': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PreprocessingUnskewSecurity:
-    apikey: shared.SchemeApikey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    apikey: shared_security.SchemeApikey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PreprocessingUnskewRequest:
-    request: PreprocessingUnskewRequestBody = field(metadata={'request': { 'media_type': 'multipart/form-data' }})
-    security: PreprocessingUnskewSecurity = field()
+    request: PreprocessingUnskewRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
+    security: PreprocessingUnskewSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PreprocessingUnskewResponse:
-    content_type: str = field()
-    status_code: int = field()
-    preprocessing_unskew_200_application_json_byte_string: Optional[str] = field(default=None)
-    preprocessing_unskew_200_application_xml_byte_string: Optional[str] = field(default=None)
-    preprocessing_unskew_200_text_json_byte_string: Optional[str] = field(default=None)
-    preprocessing_unskew_200_text_xml_byte_string: Optional[str] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    preprocessing_unskew_200_application_json_byte_string: Optional[str] = dataclasses.field(default=None)
+    preprocessing_unskew_200_application_xml_byte_string: Optional[str] = dataclasses.field(default=None)
+    preprocessing_unskew_200_text_json_byte_string: Optional[str] = dataclasses.field(default=None)
+    preprocessing_unskew_200_text_xml_byte_string: Optional[str] = dataclasses.field(default=None)
     

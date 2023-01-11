@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import mitigationactionidentifier as shared_mitigationactionidentifier
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListMitigationActionsResponse:
-    action_identifiers: Optional[List[MitigationActionIdentifier]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionIdentifiers') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
+    action_identifiers: Optional[list[shared_mitigationactionidentifier.MitigationActionIdentifier]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('actionIdentifiers') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextToken') }})
     

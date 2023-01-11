@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import eventfilter as shared_eventfilter
 
 class PathFilterPathMatchPositionEnum(str, Enum):
     PATH_MATCH_POSITION_UNSPECIFIED = "PATH_MATCH_POSITION_UNSPECIFIED"
@@ -13,13 +13,13 @@ class PathFilterPathMatchPositionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PathFilter:
     r"""PathFilter
     Represents a DfaReporting path filter.
     """
     
-    event_filters: Optional[List[EventFilter]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventFilters') }})
-    kind: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
-    path_match_position: Optional[PathFilterPathMatchPositionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pathMatchPosition') }})
+    event_filters: Optional[list[shared_eventfilter.EventFilter]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventFilters') }})
+    kind: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('kind') }})
+    path_match_position: Optional[PathFilterPathMatchPositionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('pathMatchPosition') }})
     

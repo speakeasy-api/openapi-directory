@@ -1,31 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import itempromotion as shared_itempromotion
+from ..shared import baseresponse as shared_baseresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateItemPromotionPathParams:
-    promotion_id: str = field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
+    promotion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'promotion_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateItemPromotionSecurity:
-    api_auth: shared.SchemeAPIAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    api_auth: shared_security.SchemeAPIAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateItemPromotionRequest:
-    path_params: UpdateItemPromotionPathParams = field()
-    security: UpdateItemPromotionSecurity = field()
-    request: Optional[shared.ItemPromotion] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateItemPromotionPathParams = dataclasses.field()
+    security: UpdateItemPromotionSecurity = dataclasses.field()
+    request: Optional[shared_itempromotion.ItemPromotion] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateItemPromotionResponse:
-    content_type: str = field()
-    status_code: int = field()
-    base_response: Optional[shared.BaseResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    base_response: Optional[shared_baseresponse.BaseResponse] = dataclasses.field(default=None)
     

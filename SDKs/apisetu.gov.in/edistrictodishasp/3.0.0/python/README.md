@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,25 +20,25 @@ req = operations.EgcerRequest(
     security=operations.EgcerSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.EgcerRequestBody(
         certificate_parameters=operations.EgcerRequestBodyCertificateParameters(
-            full_name="officiis",
-            ref_no="quis",
-            token_no="ut",
-            uid="et",
+            full_name="qui",
+            ref_no="voluptatibus",
+            token_no="nulla",
+            uid="quia",
         ),
-        consent_artifact="sit",
+        consent_artifact="dolorem",
         format="pdf",
-        txn_id="eos",
+        txn_id="quis",
     ),
 )
     
-res = s.sdk.egcer(req)
+res = s.ap_is.egcer(req)
 
 if res.status_code == 200:
     # handle response
@@ -49,7 +48,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `egcer` - Economically Backward In General Caste Certificate
 * `ewcer` - Economically Weaker Section Certificate

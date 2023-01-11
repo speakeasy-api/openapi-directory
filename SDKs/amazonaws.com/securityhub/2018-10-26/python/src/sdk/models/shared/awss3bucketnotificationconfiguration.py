@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import awss3bucketnotificationconfigurationdetail as shared_awss3bucketnotificationconfigurationdetail
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class AwsS3BucketNotificationConfiguration:
     r"""AwsS3BucketNotificationConfiguration
     The notification configuration for the S3 bucket.
     """
     
-    configurations: Optional[List[AwsS3BucketNotificationConfigurationDetail]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Configurations') }})
+    configurations: Optional[list[shared_awss3bucketnotificationconfigurationdetail.AwsS3BucketNotificationConfigurationDetail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('Configurations') }})
     

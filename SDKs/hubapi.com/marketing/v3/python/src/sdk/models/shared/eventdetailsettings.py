@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EventDetailSettings:
-    app_id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
-    event_details_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventDetailsUrl') }})
+    app_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('appId') }})
+    event_details_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('eventDetailsUrl') }})
     

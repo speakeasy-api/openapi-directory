@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any
 
 
-@dataclass
+@dataclasses.dataclass
 class TransportDescriptor:
-    protocol: str = field()
-    security: Any = field()
-    type: str = field()
-    version: str = field()
+    protocol: str = dataclasses.field()
+    security: Any = dataclasses.field()
+    type: str = dataclasses.field()
+    version: str = dataclasses.field()
     

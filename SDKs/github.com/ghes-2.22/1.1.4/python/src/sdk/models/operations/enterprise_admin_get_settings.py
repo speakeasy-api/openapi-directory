@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import enterprise_settings as shared_enterprise_settings
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetSettingsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    enterprise_settings: Optional[shared.EnterpriseSettings] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    enterprise_settings: Optional[shared_enterprise_settings.EnterpriseSettings] = dataclasses.field(default=None)
     

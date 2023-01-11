@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import selected_actions as shared_selected_actions
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetAllowedActionsOrganizationPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetAllowedActionsOrganizationRequest:
-    path_params: ActionsGetAllowedActionsOrganizationPathParams = field()
+    path_params: ActionsGetAllowedActionsOrganizationPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsGetAllowedActionsOrganizationResponse:
-    content_type: str = field()
-    status_code: int = field()
-    selected_actions: Optional[shared.SelectedActions] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    selected_actions: Optional[shared_selected_actions.SelectedActions] = dataclasses.field(default=None)
     

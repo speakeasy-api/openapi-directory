@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import pendingmaintenanceactiondetails as shared_pendingmaintenanceactiondetails
 
 
-@dataclass
+@dataclasses.dataclass
 class ResourcePendingMaintenanceActions:
     r"""ResourcePendingMaintenanceActions
     Describes the pending maintenance actions for a resource.
     """
     
-    pending_maintenance_action_details: Optional[List[PendingMaintenanceAction]] = field(default=None)
-    resource_identifier: Optional[str] = field(default=None)
+    pending_maintenance_action_details: Optional[list[shared_pendingmaintenanceactiondetails.PendingMaintenanceActionDetails]] = dataclasses.field(default=None)
+    resource_identifier: Optional[str] = dataclasses.field(default=None)
     

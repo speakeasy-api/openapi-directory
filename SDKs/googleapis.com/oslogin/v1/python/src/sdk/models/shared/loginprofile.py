@@ -1,18 +1,19 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import posixaccount as shared_posixaccount
+from ..shared import sshpublickey as shared_sshpublickey
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class LoginProfile:
     r"""LoginProfile
     The user profile information used for logging in to a virtual machine on Google Compute Engine.
     """
     
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    posix_accounts: Optional[List[PosixAccount]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('posixAccounts') }})
-    ssh_public_keys: Optional[dict[str, SSHPublicKey]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sshPublicKeys') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    posix_accounts: Optional[list[shared_posixaccount.PosixAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('posixAccounts') }})
+    ssh_public_keys: Optional[dict[str, shared_sshpublickey.SSHPublicKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('sshPublicKeys') }})
     

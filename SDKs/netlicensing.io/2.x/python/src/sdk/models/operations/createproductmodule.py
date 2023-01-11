@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import security as shared_security
 
 class CreateProductModuleRequestBodyLicenseTemplateEnum(str, Enum):
     TIMEVOLUME = "TIMEVOLUME"
@@ -12,35 +12,35 @@ class CreateProductModuleRequestBodyNodeSecretModeEnum(str, Enum):
     CLIENT = "CLIENT"
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductModuleRequestBody:
-    active: bool = field(metadata={'form': { 'field_name': 'active' }})
-    licensing_model: str = field(metadata={'form': { 'field_name': 'licensingModel' }})
-    name: str = field(metadata={'form': { 'field_name': 'name' }})
-    product_number: str = field(metadata={'form': { 'field_name': 'productNumber' }})
-    license_template: Optional[List[CreateProductModuleRequestBodyLicenseTemplateEnum]] = field(default=None, metadata={'form': { 'field_name': 'licenseTemplate' }})
-    max_checkout_validity: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'maxCheckoutValidity' }})
-    node_secret_mode: Optional[List[CreateProductModuleRequestBodyNodeSecretModeEnum]] = field(default=None, metadata={'form': { 'field_name': 'nodeSecretMode' }})
-    number: Optional[str] = field(default=None, metadata={'form': { 'field_name': 'number' }})
-    red_threshold: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'redThreshold' }})
-    yellow_threshold: Optional[int] = field(default=None, metadata={'form': { 'field_name': 'yellowThreshold' }})
+    active: bool = dataclasses.field(metadata={'form': { 'field_name': 'active' }})
+    licensing_model: str = dataclasses.field(metadata={'form': { 'field_name': 'licensingModel' }})
+    name: str = dataclasses.field(metadata={'form': { 'field_name': 'name' }})
+    product_number: str = dataclasses.field(metadata={'form': { 'field_name': 'productNumber' }})
+    license_template: Optional[list[CreateProductModuleRequestBodyLicenseTemplateEnum]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'licenseTemplate' }})
+    max_checkout_validity: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'maxCheckoutValidity' }})
+    node_secret_mode: Optional[list[CreateProductModuleRequestBodyNodeSecretModeEnum]] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'nodeSecretMode' }})
+    number: Optional[str] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'number' }})
+    red_threshold: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'redThreshold' }})
+    yellow_threshold: Optional[int] = dataclasses.field(default=None, metadata={'form': { 'field_name': 'yellowThreshold' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductModuleSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductModuleRequest:
-    request: CreateProductModuleRequestBody = field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
-    security: CreateProductModuleSecurity = field()
+    request: CreateProductModuleRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/x-www-form-urlencoded' }})
+    security: CreateProductModuleSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateProductModuleResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    netlicensing: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    netlicensing: Optional[Any] = dataclasses.field(default=None)
     

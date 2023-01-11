@@ -1,0 +1,356 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+pip install openapi
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```python
+import sdk
+from sdk.models import operations, shared
+
+s = sdk.SDK()
+    
+req = operations.DoctorsListRequest(
+    security=operations.DoctorsListSecurity(
+        drchrono_oauth2=shared.SchemeDrchronoOauth2(
+            authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
+        ),
+    ),
+    query_params=operations.DoctorsListQueryParams(
+        cursor="est",
+        doctor=2873217883208899000,
+        page_size=749214027407528753,
+    ),
+)
+    
+res = s.administrative.doctors_list(req)
+
+if res.doctors_list_200_application_json_object is not None:
+    # handle response
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### Administrative
+
+* `doctors_list` - Retrieve or search doctors within practice group
+* `doctors_read` - Retrieve an existing dcotor
+* `user_groups_list` - Retrieve or search user groups
+* `user_groups_read` - Retrieve an existing user group
+* `users_list` - Retrieve or search users, `/api/users/current` can be used to identify logged in user, it will redirect to `/api/users/{current_user_id}`
+* `users_read` - Retrieve an existing user, `/api/users/current` can be used to identify logged in user, it will redirect to `/api/users/{current_user_id}`
+
+### Billing
+
+* `billing_profiles_list` - Retrieve or search billing profiles
+* `billing_profiles_read` - Retrieve an existing billing profiles
+* `comm_logs_create` - Create communication (phone call) logs
+* `comm_logs_list` - Retrieve or search communicatioin (phone call) logs
+* `comm_logs_partial_update` - Update an existing communication (phone call) logs
+* `comm_logs_read` - Retrieve an existing communication (phone call) logs
+* `comm_logs_update` - Update an existing communication (phone call) logs
+* `custom_insurance_plan_names_list` - Retrieve or search custom insurance plan names
+* `custom_insurance_plan_names_read` - Retrieve an existing custom insurance plan name
+* `eligibility_checks_list` - Retrieve or search past eligibility checks for patient
+* `eligibility_checks_read` - Retrieve an existing past eligibility check
+* `line_items_create` - Create billing line item for appointments
+* `line_items_delete`
+* `line_items_list` - Retrieve or search billing line items
+* `line_items_partial_update`
+* `line_items_read` - Retrieve an existing billing line item
+* `line_items_update`
+* `patient_payment_log_list` - Retrieve or search patient payment logs
+* `patient_payment_log_read` - Retrieve an existing patient payment log
+* `patient_payments_create` - Create patient payment
+* `patient_payments_list` - Retrieve or search patient payments
+* `patient_payments_read` - Retrieve an existing patient payment
+* `procedures_list`
+* `procedures_read`
+* `transactions_list` - Retrieve or search insurance transactions associated with billing line items
+* `transactions_read` - Retrieve an existing insurance transaction
+
+### Clinical
+
+* `allergies_create` - Create patient allergy
+* `allergies_list` - Retrieve or search patient allergies
+* `allergies_partial_update` - Update an existing patient allergy
+* `allergies_read` - Retrieve an existing patient allergy
+* `allergies_update` - Update an existing patient allergy
+* `amendments_create` - Create patient amendments to a patient's clinical records
+* `amendments_delete` - Delete an existing patient amendment, you can only interact with amendments created by your API application
+* `amendments_list` - Retrieve or search patient amendments. You can only interact with amendments created by your API application
+* `amendments_partial_update` - Update an existing patient amendment, you can only interact with amendments created by your API application
+* `amendments_read` - Retrieve an existing patient amendment, you can only interact with amendments created by your API application
+* `amendments_update` - Update an existing patient amendment, you can only interact with amendments created by your API application
+* `appointment_profiles_create` - Create appointment profiles for a doctor's calendar
+* `appointment_profiles_delete` - Delete an existing appointment profile
+* `appointment_profiles_list` - Retrieve or search appointment profiles for a doctor's calendar
+* `appointment_profiles_partial_update` - Update an existing appointment profile
+* `appointment_profiles_read` - Retrieve an existing appointment profile
+* `appointment_profiles_update` - Update an existing appointment profile
+* `appointment_templates_create` - Create appointment templates for a doctor's calendar
+* `appointment_templates_delete` - Delete an existing appointment template
+* `appointment_templates_list` - Retrieve or search appointment templates for a doctor's calendar
+* `appointment_templates_partial_update` - Update an existing appointment template
+* `appointment_templates_read` - Retrieve an existing appointment template
+* `appointment_templates_update` - Update an existing appointment template
+* `appointments_create` - Create a new appointment or break on doctor's calendar
+* `appointments_delete` - Delete an existing appointment or break
+* `appointments_list` - Retrieve or search appointment or breaks.
+<b>Note:</b> Either `since`, `date` or `date_range` parameter must be specified.
+            
+* `appointments_partial_update` - Update an existing appointment or break
+* `appointments_read` - Retrieve an existing appointment or break
+* `appointments_update` - Update an existing appointment or break
+* `care_plans_list` - Retrieve or search care plans
+* `care_plans_read` - Retrieve an existing care plan
+* `care_team_members_list`
+* `care_team_members_read`
+* `claim_billing_notes_create` - Create a new billing note
+* `claim_billing_notes_list` - Retrieve or search billing notes
+* `claim_billing_notes_read` - Retrieve an existing billing note
+* `clinical_note_field_types_list` - Retrieve or search clinical note field types
+* `clinical_note_field_types_read` - Retrieve an existing clinial note field type
+* `clinical_note_field_values_create` - Create clinical note field value
+* `clinical_note_field_values_list` - Retrieve or search clinical note field values
+* `clinical_note_field_values_partial_update` - Update an existing clinical note field value
+* `clinical_note_field_values_read` - Retrieve an existing clinical note field value
+* `clinical_note_field_values_update` - Update an existing clinical note field value
+* `clinical_note_templates_list` - Retrieve or search clinical note templates
+* `clinical_note_templates_read` - Retrieve an existing clinical note tempalte
+* `clinical_notes_list`
+* `clinical_notes_read`
+* `consent_forms_apply_to_appointment` - Assign (apply) a consent form to appointment
+* `consent_forms_create` - Create a patient consent form
+* `consent_forms_list` - Retrieve or search patient consent forms
+* `consent_forms_partial_update` - Update an existing patient consent form
+* `consent_forms_read` - Retrieve an existing patient consent form
+* `consent_forms_unapply_from_appointment` - Unassign (unapply) a consent form from appointment
+* `consent_forms_update` - Update an existing patient consent form
+* `custom_appointment_fields_create` - Create custom appointment fields
+* `custom_appointment_fields_list` - Retrieve or search custom appointment fields
+* `custom_appointment_fields_partial_update` - Update an existing custom appointment field
+* `custom_appointment_fields_read` - Retrieve an existing custom appointment field
+* `custom_appointment_fields_update` - Update an existing custom appointment field
+* `custom_demographics_create` - Create custom demographics fields
+* `custom_demographics_list` - Retrieve or search custom demographics fields
+* `custom_demographics_partial_update` - Update an existing custom demographics field
+* `custom_demographics_read` - Retrieve an existing custom demographics field
+* `custom_demographics_update` - Update an existing custom demographics field
+* `custom_vitals_list` - Retrieve or search custom vital types
+* `custom_vitals_read` - Retrieve an existing custom vital type
+* `documents_create` - Create documents
+* `documents_delete` - Delete an existing appointment template
+* `documents_list` - Retrieve or search documents
+* `documents_partial_update` - Update an existing appointment template
+* `documents_read` - Retrieve an existing appointment template
+* `documents_update` - Update an existing appointment template
+* `eobs_create` - Create EOB object
+* `eobs_list` - Retrieve or search EOB objects
+* `eobs_read` - Retrieve an existing EOB object
+* `fee_schedules_list`
+* `fee_schedules_read`
+* `implantable_devices_list` - Retrieve or search implantable devices
+* `implantable_devices_read` - Retrieve an existing implantable device
+* `insurances_list`
+* `insurances_read`
+* `lab_documents_create` - Create lab order documents. An example lab workflow is as following:
+
+- When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono.
+
+- When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
+
+- Update `/api/lab_orders` status
+
+* `lab_documents_delete` - Delete an existing lab order document
+* `lab_documents_list` - Retrieve or search lab order documents
+* `lab_documents_partial_update` - Update an existing lab order document
+* `lab_documents_read` - Retrieve an existing lab order document
+* `lab_documents_update` - Update an existing lab order document
+* `lab_orders_create` - Create lab orders. An example lab workflow is as following:
+
+- When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono.
+
+- When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
+
+- Update `/api/lab_orders` status
+
+* `lab_orders_delete` - Delete an existing lab order
+* `lab_orders_list` - Retrieve or search lab orders
+* `lab_orders_partial_update` - Update an existing lab order
+* `lab_orders_read` - Retrieve an existing lab order
+* `lab_orders_summary_list`
+* `lab_orders_summary_read`
+* `lab_orders_update` - Update an existing lab order
+* `lab_results_create` - Create lab results. An example lab workflow is as following:
+
+- When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono.
+
+- When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
+
+- Update `/api/lab_orders` status
+
+* `lab_results_delete` - Delete an existing lab result
+* `lab_results_list` - Retrieve or search lab results
+* `lab_results_partial_update` - Update an existing lab result
+* `lab_results_read` - Retrieve an existing lab result
+* `lab_results_update` - Update an existing lab result
+* `lab_tests_create` - Create lab tests. An example lab workflow is as following:
+
+- When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono.
+
+- When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
+
+- Update `/api/lab_orders` status
+
+* `lab_tests_delete` - Delete an existing lab test
+* `lab_tests_list` - Retrieve or search lab tests
+* `lab_tests_partial_update` - Update an existing lab test
+* `lab_tests_read` - Retrieve an existing lab test
+* `lab_tests_update` - Update an existing lab test
+* `medications_append_to_pharmacy_note` - Append a message to the "pharmacy_note" section of the prescription, in a new paragraph
+* `medications_create` - Create patient medications
+* `medications_list` - Retrieve or search patient medications
+* `medications_partial_update` - Update an existing patient medications
+* `medications_read` - Retrieve an existing patient medications
+* `medications_update` - Update an existing patient medications
+* `patient_communications_create` - Create patient communication for CQM
+* `patient_communications_list` - Retrieve or search patient communications for CQM
+* `patient_communications_partial_update` - Update an existing patient communication for CQM
+* `patient_communications_read` - Retrieve an existing patient communication for CQM
+* `patient_communications_update` - Update an existing patient communication for CQM
+* `patient_flag_types_create` - Create patient flag types
+* `patient_flag_types_list` - Retrieve or search patient flag types
+* `patient_flag_types_partial_update` - Update an existing patient flag type
+* `patient_flag_types_read` - Retrieve an existing patient flag type
+* `patient_flag_types_update` - Update an existing patient flag type
+* `patient_interventions_create` - Create patient intervention for CQM
+* `patient_interventions_list` - Retrieve or search patient interventions for CQM
+* `patient_interventions_partial_update` - Update an existing patient intervention for CQM
+* `patient_interventions_read` - Retrieve an existing patient intervention for CQM
+* `patient_interventions_update` - Update an existing patient intervention for CQM
+* `patient_lab_results_create`
+* `patient_lab_results_delete`
+* `patient_lab_results_list`
+* `patient_lab_results_partial_update`
+* `patient_lab_results_read`
+* `patient_lab_results_update`
+* `patient_messages_create`
+* `patient_messages_list`
+* `patient_messages_partial_update`
+* `patient_messages_read`
+* `patient_messages_update`
+* `patient_physical_exams_create` - Create patient physical exam for CQM
+* `patient_physical_exams_list` - Retrieve or search patient physical exams for CQM
+* `patient_physical_exams_partial_update` - Update an existing patient physical exam for CQM
+* `patient_physical_exams_read` - Retrieve an existing patient physical exam for CQM
+* `patient_physical_exams_update` - Update an existing patient physical exam for CQM
+* `patient_risk_assessments_create`
+* `patient_risk_assessments_list`
+* `patient_risk_assessments_partial_update`
+* `patient_risk_assessments_read`
+* `patient_risk_assessments_update`
+* `patient_vaccine_records_create` - Create patient vaccine records
+* `patient_vaccine_records_list` - Retrieve or search patient vaccine records
+* `patient_vaccine_records_partial_update` - Update an existing patient vaccine records
+* `patient_vaccine_records_read` - Retrieve an existing patient vaccine records
+* `patient_vaccine_records_update` - Update an existing patient vaccine records
+* `patients_ccda` - Retrieve patient CCDA
+* `patients_create` - Create patient
+* `patients_delete` - Delete an existing patient
+* `patients_list` - Retrieve or search patients
+* `patients_onpatient_access_create` - Send new onpatient invite to patient
+* `patients_onpatient_access_delete` - Revoke sent onpatient invites
+* `patients_onpatient_access_read` - Retrieve or search existing onpatient access invites
+* `patients_partial_update` - Update an existing patient
+* `patients_qrda1` - Retrieve patient QRDA1
+* `patients_read` - Retrieve an existing patient
+* `patients_summary_create`
+* `patients_summary_delete`
+* `patients_summary_list`
+* `patients_summary_partial_update`
+* `patients_summary_read`
+* `patients_summary_update`
+* `patients_update` - Update an existing patient
+* `prescription_messages_list` - Retrieve or search prescription messages
+* `prescription_messages_read` - Retrieve an existing prescription message
+* `problems_create` - Create patient problems
+* `problems_list` - Retrieve or search patient problems
+* `problems_partial_update` - Update an existing patient problems
+* `problems_read` - Retrieve an existing patient problems
+* `problems_update` - Update an existing patient problems
+* `reminder_profiles_create` - Create reminder profile
+* `reminder_profiles_delete` - Delete an existing reminder profile
+* `reminder_profiles_list` - Retrieve or search reminder profiles
+* `reminder_profiles_partial_update` - Update an existing reminder profile
+* `reminder_profiles_read` - Retrieve an existing reminder profile
+* `reminder_profiles_update` - Update an existing reminder profile
+* `sublabs_create` - Create sub-vendors
+
+- When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono.
+
+- When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
+
+- Update `/api/lab_orders` status
+
+* `sublabs_delete` - Delete an existing sub vendor
+* `sublabs_list` - Retrieve or search sub vendors
+* `sublabs_partial_update` - Update an existing sub vendor
+* `sublabs_read` - Retrieve an existing sub vendor
+* `sublabs_update` - Update an existing sub vendor
+
+### PracticeManagement
+
+* `inventory_categories_list` - Retrieve or search inventory categories
+* `inventory_categories_read` - Retrieve an existing inventory category
+* `inventory_vaccines_create` - Create vaccine inventory
+* `inventory_vaccines_list` - Retrieve or search vaccine inventories
+* `inventory_vaccines_read` - Retrieve an existing vaccine inventory
+* `messages_create` - Create messages in doctor's message center
+* `messages_delete` - Delete an existing message in doctor's message center
+* `messages_list` - Retrieve or search messages in doctor's message center
+* `messages_partial_update` - Update an existing message in doctor's message center
+* `messages_read` - Retrieve an existing message in doctor's message center
+* `messages_update` - Update an existing message in doctor's message center
+* `offices_add_exam_room` - Add an exam room to the office
+* `offices_list` - Retrieve or search offices
+* `offices_partial_update` - Update an existing office
+* `offices_read` - Retrieve an existing office
+* `offices_update` - Update an existing office
+* `task_categories_create` - Create a task category
+* `task_categories_list` - Retrieve or search task categories
+* `task_categories_partial_update` - Update an existing task category
+* `task_categories_read` - Retrieve an existing task category
+* `task_categories_update` - Update an existing task category
+* `task_notes_create` - Create a task note
+* `task_notes_list` - Retrieve or search task notes
+* `task_notes_partial_update` - Update an existing task note
+* `task_notes_read` - Retrieve an existing task note
+* `task_notes_update` - Update an existing task note
+* `task_statuses_create` - Create a task status
+* `task_statuses_list` - Retrieve or search task statuses
+* `task_statuses_partial_update` - Update an existing task status
+* `task_statuses_read` - Retrieve an existing task status
+* `task_statuses_update` - Update an existing task status
+* `task_templates_create` - Create a task template
+* `task_templates_list` - Retrieve or search task templates
+* `task_templates_partial_update` - Update an existing task template
+* `task_templates_read` - Retrieve an existing task template
+* `task_templates_update` - Update an existing task template
+* `tasks_create` - Create a task
+* `tasks_list` - Retrieve or search tasks
+* `tasks_partial_update` - Update an existing task
+* `tasks_read` - Retrieve an existing task
+* `tasks_update` - Update an existing task
+
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

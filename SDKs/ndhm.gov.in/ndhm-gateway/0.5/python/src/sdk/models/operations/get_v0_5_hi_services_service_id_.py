@@ -1,29 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import errorresponse as shared_errorresponse
+from ..shared import serviceprofileresponse as shared_serviceprofileresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HiServicesServiceIDPathParams:
-    service_id: str = field(metadata={'path_param': { 'field_name': 'service-id', 'style': 'simple', 'explode': False }})
+    service_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'service-id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HiServicesServiceIDHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HiServicesServiceIDRequest:
-    headers: GetV05HiServicesServiceIDHeaders = field()
-    path_params: GetV05HiServicesServiceIDPathParams = field()
+    headers: GetV05HiServicesServiceIDHeaders = dataclasses.field()
+    path_params: GetV05HiServicesServiceIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetV05HiServicesServiceIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
-    service_profile_response: Optional[shared.ServiceProfileResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
+    service_profile_response: Optional[shared_serviceprofileresponse.ServiceProfileResponse] = dataclasses.field(default=None)
     

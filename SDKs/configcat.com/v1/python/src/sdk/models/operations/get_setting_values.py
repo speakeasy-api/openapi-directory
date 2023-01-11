@@ -1,22 +1,22 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import configsettingvaluesmodel as shared_configsettingvaluesmodel
 
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValuesPathParams:
-    config_id: str = field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
-    environment_id: str = field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
+    config_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'configId', 'style': 'simple', 'explode': False }})
+    environment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'environmentId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValuesRequest:
-    path_params: GetSettingValuesPathParams = field()
+    path_params: GetSettingValuesPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetSettingValuesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    config_setting_values_model: Optional[shared.ConfigSettingValuesModel] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    config_setting_values_model: Optional[shared_configsettingvaluesmodel.ConfigSettingValuesModel] = dataclasses.field(default=None)
     

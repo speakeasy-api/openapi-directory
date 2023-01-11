@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import listedaccess as shared_listedaccess
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListAccessesResponse:
-    accesses: List[ListedAccess] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Accesses') }})
-    server_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServerId') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    accesses: list[shared_listedaccess.ListedAccess] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('Accesses') }})
+    server_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ServerId') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

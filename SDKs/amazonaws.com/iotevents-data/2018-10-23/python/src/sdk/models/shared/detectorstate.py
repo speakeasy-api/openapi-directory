@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import timer as shared_timer
+from ..shared import variable as shared_variable
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DetectorState:
     r"""DetectorState
     Information about the current state of the detector instance.
     """
     
-    state_name: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stateName') }})
-    timers: List[Timer] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timers') }})
-    variables: List[Variable] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('variables') }})
+    state_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('stateName') }})
+    timers: list[shared_timer.Timer] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('timers') }})
+    variables: list[shared_variable.Variable] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('variables') }})
     

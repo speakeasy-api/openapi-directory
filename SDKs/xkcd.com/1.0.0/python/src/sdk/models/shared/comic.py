@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Comic:
-    alt: Optional[str] = field(default=None)
-    day: Optional[str] = field(default=None)
-    img: Optional[str] = field(default=None)
-    link: Optional[str] = field(default=None)
-    month: Optional[str] = field(default=None)
-    news: Optional[str] = field(default=None)
-    num: Optional[float] = field(default=None)
-    safe_title: Optional[str] = field(default=None)
-    title: Optional[str] = field(default=None)
-    transcript: Optional[str] = field(default=None)
-    year: Optional[str] = field(default=None)
+    alt: Optional[str] = dataclasses.field(default=None)
+    day: Optional[str] = dataclasses.field(default=None)
+    img: Optional[str] = dataclasses.field(default=None)
+    link: Optional[str] = dataclasses.field(default=None)
+    month: Optional[str] = dataclasses.field(default=None)
+    news: Optional[str] = dataclasses.field(default=None)
+    num: Optional[float] = dataclasses.field(default=None)
+    safe_title: Optional[str] = dataclasses.field(default=None)
+    title: Optional[str] = dataclasses.field(default=None)
+    transcript: Optional[str] = dataclasses.field(default=None)
+    year: Optional[str] = dataclasses.field(default=None)
     

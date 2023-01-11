@@ -1,12 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlesecuritysafebrowsingv4threatentryset as shared_googlesecuritysafebrowsingv4threatentryset
+from ..shared import googlesecuritysafebrowsingv4checksum as shared_googlesecuritysafebrowsingv4checksum
 
 class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponsePlatformTypeEnum(str, Enum):
     PLATFORM_TYPE_UNSPECIFIED = "PLATFORM_TYPE_UNSPECIFIED"
@@ -56,18 +57,18 @@ class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateRespon
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse:
     r"""GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse
     An update to an individual list.
     """
     
-    additions: Optional[List[GoogleSecuritySafebrowsingV4ThreatEntrySet]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additions') }})
-    checksum: Optional[GoogleSecuritySafebrowsingV4Checksum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checksum') }})
-    new_client_state: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newClientState') }})
-    platform_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponsePlatformTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
-    removals: Optional[List[GoogleSecuritySafebrowsingV4ThreatEntrySet]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('removals') }})
-    response_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseResponseTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responseType') }})
-    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseThreatEntryTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
-    threat_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseThreatTypeEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
+    additions: Optional[list[shared_googlesecuritysafebrowsingv4threatentryset.GoogleSecuritySafebrowsingV4ThreatEntrySet]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('additions') }})
+    checksum: Optional[shared_googlesecuritysafebrowsingv4checksum.GoogleSecuritySafebrowsingV4Checksum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('checksum') }})
+    new_client_state: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('newClientState') }})
+    platform_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponsePlatformTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('platformType') }})
+    removals: Optional[list[shared_googlesecuritysafebrowsingv4threatentryset.GoogleSecuritySafebrowsingV4ThreatEntrySet]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('removals') }})
+    response_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseResponseTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('responseType') }})
+    threat_entry_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseThreatEntryTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatEntryType') }})
+    threat_type: Optional[GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponseThreatTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('threatType') }})
     

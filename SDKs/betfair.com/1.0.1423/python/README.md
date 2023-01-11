@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -18,10 +17,10 @@ from sdk.models import operations, shared
 s = sdk.SDK()
     
 req = operations.PostRequestRequest(
-    request="aspernatur",
+    request="reprehenderit",
 )
     
-res = s.sdk.post_request(req)
+res = s.post_request(req)
 
 if res.status_code == 200:
     # handle response

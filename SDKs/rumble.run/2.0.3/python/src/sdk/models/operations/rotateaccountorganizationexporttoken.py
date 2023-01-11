@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import organization as shared_organization
 
 
-@dataclass
+@dataclasses.dataclass
 class RotateAccountOrganizationExportTokenPathParams:
-    org_id: str = field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
+    org_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RotateAccountOrganizationExportTokenSecurity:
-    bearer_auth: shared.SchemeBearerAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
+    bearer_auth: shared_security.SchemeBearerAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class RotateAccountOrganizationExportTokenRequest:
-    path_params: RotateAccountOrganizationExportTokenPathParams = field()
-    security: RotateAccountOrganizationExportTokenSecurity = field()
+    path_params: RotateAccountOrganizationExportTokenPathParams = dataclasses.field()
+    security: RotateAccountOrganizationExportTokenSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class RotateAccountOrganizationExportTokenResponse:
-    content_type: str = field()
-    status_code: int = field()
-    organization: Optional[shared.Organization] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    organization: Optional[shared_organization.Organization] = dataclasses.field(default=None)
     

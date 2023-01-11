@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import partialfailure as shared_partialfailure
 
 
-@dataclass
+@dataclasses.dataclass
 class EnableInsightRulesOutput:
-    failures: Optional[List[PartialFailure]] = field(default=None)
+    failures: Optional[list[shared_partialfailure.PartialFailure]] = dataclasses.field(default=None)
     

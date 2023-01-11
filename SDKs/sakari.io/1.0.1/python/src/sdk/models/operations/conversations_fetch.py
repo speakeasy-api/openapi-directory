@@ -1,28 +1,29 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import conversationresponse as shared_conversationresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsFetchPathParams:
-    account_id: str = field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
-    conversation_id: str = field(metadata={'path_param': { 'field_name': 'conversationId', 'style': 'simple', 'explode': False }})
+    account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'accountId', 'style': 'simple', 'explode': False }})
+    conversation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'conversationId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsFetchSecurity:
-    sakari_auth: shared.SchemeSakariAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    sakari_auth: shared_security.SchemeSakariAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsFetchRequest:
-    path_params: ConversationsFetchPathParams = field()
-    security: ConversationsFetchSecurity = field()
+    path_params: ConversationsFetchPathParams = dataclasses.field()
+    security: ConversationsFetchSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ConversationsFetchResponse:
-    content_type: str = field()
-    status_code: int = field()
-    conversation_response: Optional[shared.ConversationResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    conversation_response: Optional[shared_conversationresponse.ConversationResponse] = dataclasses.field(default=None)
     

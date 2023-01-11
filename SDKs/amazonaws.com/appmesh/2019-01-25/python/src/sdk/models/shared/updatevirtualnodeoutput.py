@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import virtualnodedata as shared_virtualnodedata
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateVirtualNodeOutput:
     r"""UpdateVirtualNodeOutput
     <zonbook></zonbook><xhtml></xhtml>
     """
     
-    virtual_node: VirtualNodeData = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualNode') }})
+    virtual_node: shared_virtualnodedata.VirtualNodeData = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('virtualNode') }})
     

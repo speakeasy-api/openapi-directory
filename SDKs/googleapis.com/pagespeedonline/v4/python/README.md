@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -20,24 +19,25 @@ s = sdk.SDK()
 req = operations.PagespeedonlinePagespeedapiRunpagespeedRequest(
     query_params=operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams(
         alt="json",
-        fields="officiis",
+        fields="dicta",
         filter_third_party_resources=True,
-        key="consectetur",
-        locale="numquam",
-        oauth_token="deleniti",
+        key="velit",
+        locale="et",
+        oauth_token="nemo",
         pretty_print=False,
-        quota_user="et",
+        quota_user="ipsam",
         rule=[
-            "totam",
-            "non",
+            "ipsam",
+            "iure",
+            "tempora",
         ],
-        screenshot=True,
-        snapshots=False,
+        screenshot=False,
+        snapshots=True,
         strategy="desktop",
-        url="assumenda",
-        user_ip="quis",
-        utm_campaign="earum",
-        utm_source="sapiente",
+        url="cum",
+        user_ip="quod",
+        utm_campaign="ullam",
+        utm_source="expedita",
     ),
 )
     

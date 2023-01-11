@@ -1,34 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Optional
+from ..shared import singlebetrequestbody as shared_singlebetrequestbody
+from ..shared import betdelayed as shared_betdelayed
+from ..shared import betplaced as shared_betplaced
+from ..shared import errors as shared_errors
 
 
-@dataclass
+@dataclasses.dataclass
 class PlaceSingleBetQueryParams:
-    exclude: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': False }})
-    fields: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
-    include: Optional[List[str]] = field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': False }})
+    exclude: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'exclude', 'style': 'form', 'explode': False }})
+    fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': False }})
+    include: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlaceSingleBetHeaders:
-    api_key: str = field(metadata={'header': { 'field_name': 'apiKey', 'style': 'simple', 'explode': False }})
-    api_secret: str = field(metadata={'header': { 'field_name': 'apiSecret', 'style': 'simple', 'explode': False }})
-    api_ticket: str = field(metadata={'header': { 'field_name': 'apiTicket', 'style': 'simple', 'explode': False }})
+    api_key: str = dataclasses.field(metadata={'header': { 'field_name': 'apiKey', 'style': 'simple', 'explode': False }})
+    api_secret: str = dataclasses.field(metadata={'header': { 'field_name': 'apiSecret', 'style': 'simple', 'explode': False }})
+    api_ticket: str = dataclasses.field(metadata={'header': { 'field_name': 'apiTicket', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlaceSingleBetRequest:
-    headers: PlaceSingleBetHeaders = field()
-    query_params: PlaceSingleBetQueryParams = field()
-    request: shared.SingleBetRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    headers: PlaceSingleBetHeaders = dataclasses.field()
+    query_params: PlaceSingleBetQueryParams = dataclasses.field()
+    request: shared_singlebetrequestbody.SingleBetRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PlaceSingleBetResponse:
-    content_type: str = field()
-    status_code: int = field()
-    bet_delayed_response: Optional[List[shared.BetDelayed]] = field(default=None)
-    bet_placed_response: Optional[List[shared.BetPlaced]] = field(default=None)
-    errors: Optional[shared.Errors] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    bet_delayed_response: Optional[list[shared_betdelayed.BetDelayed]] = dataclasses.field(default=None)
+    bet_placed_response: Optional[list[shared_betplaced.BetPlaced]] = dataclasses.field(default=None)
+    errors: Optional[shared_errors.Errors] = dataclasses.field(default=None)
     

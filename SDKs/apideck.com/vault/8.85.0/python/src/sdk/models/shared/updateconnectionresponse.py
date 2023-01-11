@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connection as shared_connection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateConnectionResponse:
-    data: Connection = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
-    status: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
-    status_code: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
+    data: shared_connection.Connection = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('data') }})
+    status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status') }})
+    status_code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('status_code') }})
     

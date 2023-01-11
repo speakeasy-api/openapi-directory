@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -19,13 +18,13 @@ s = sdk.SDK()
     
 req = operations.CreateAPIRequest(
     query_params=operations.CreateAPIQueryParams(
-        workspace="aut",
+        workspace="est",
     ),
     request=operations.CreateAPIRequestBody(
         api=operations.CreateAPIRequestBodyAPI(
-            description="aut",
-            name="magnam",
-            summary="eligendi",
+            description="et",
+            name="dolores",
+            summary="modi",
         ),
     ),
 )

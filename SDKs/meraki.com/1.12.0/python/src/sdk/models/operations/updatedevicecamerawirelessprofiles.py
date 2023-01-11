@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -7,38 +7,38 @@ from dataclasses_json import dataclass_json
 from sdk import utils
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceCameraWirelessProfilesPathParams:
-    serial: str = field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
+    serial: str = dataclasses.field(metadata={'path_param': { 'field_name': 'serial', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceCameraWirelessProfilesRequestBodyIds:
     r"""UpdateDeviceCameraWirelessProfilesRequestBodyIds
     The ids of the wireless profile to assign to the given camera
     """
     
-    backup: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backup') }})
-    primary: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
-    secondary: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secondary') }})
+    backup: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('backup') }})
+    primary: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('primary') }})
+    secondary: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('secondary') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceCameraWirelessProfilesRequestBody:
-    ids: UpdateDeviceCameraWirelessProfilesRequestBodyIds = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ids') }})
+    ids: UpdateDeviceCameraWirelessProfilesRequestBodyIds = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('ids') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceCameraWirelessProfilesRequest:
-    path_params: UpdateDeviceCameraWirelessProfilesPathParams = field()
-    request: UpdateDeviceCameraWirelessProfilesRequestBody = field(metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateDeviceCameraWirelessProfilesPathParams = dataclasses.field()
+    request: UpdateDeviceCameraWirelessProfilesRequestBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateDeviceCameraWirelessProfilesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    update_device_camera_wireless_profiles_200_application_json_object: Optional[dict[str, Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    update_device_camera_wireless_profiles_200_application_json_object: Optional[dict[str, Any]] = dataclasses.field(default=None)
     

@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,29 +25,29 @@ s.config_security(
     
 req = operations.CreateTokenRequest(
     headers=operations.CreateTokenHeaders(
-        x_amz_algorithm="voluptates",
-        x_amz_content_sha256="non",
-        x_amz_credential="nam",
-        x_amz_date="enim",
-        x_amz_security_token="enim",
-        x_amz_signature="assumenda",
-        x_amz_signed_headers="quo",
+        x_amz_algorithm="enim",
+        x_amz_content_sha256="quia",
+        x_amz_credential="voluptatem",
+        x_amz_date="suscipit",
+        x_amz_security_token="dolorem",
+        x_amz_signature="beatae",
+        x_amz_signed_headers="at",
     ),
     request=operations.CreateTokenRequestBody(
-        client_id="sint",
-        client_secret="quis",
-        code="esse",
-        device_code="voluptate",
-        grant_type="quibusdam",
-        redirect_uri="vero",
-        refresh_token="ea",
+        client_id="debitis",
+        client_secret="optio",
+        code="ut",
+        device_code="at",
+        grant_type="sed",
+        redirect_uri="ut",
+        refresh_token="cumque",
         scope=[
-            "maxime",
+            "quibusdam",
         ],
     ),
 )
     
-res = s.sdk.create_token(req)
+res = s.create_token(req)
 
 if res.create_token_response is not None:
     # handle response

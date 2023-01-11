@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import customchannel as shared_customchannel
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListLinkedCustomChannelsResponse:
     r"""ListLinkedCustomChannelsResponse
     Response definition for the custom channels linked to an adunit list rpc.
     """
     
-    custom_channels: Optional[List[CustomChannel]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customChannels') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    custom_channels: Optional[list[shared_customchannel.CustomChannel]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('customChannels') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

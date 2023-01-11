@@ -1,25 +1,24 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Any,Optional
-from sdk.models import shared
-from sdk.models import shared
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class GetBeGreetingSecurity:
-    api_secret_key: shared.SchemeAPISecretKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_secret_key: shared_security.SchemeAPISecretKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBeGreetingRequest:
-    security: GetBeGreetingSecurity = field()
+    security: GetBeGreetingSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetBeGreetingResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_be_greeting_200_application_json_any: Optional[Any] = field(default=None)
-    get_be_greeting_403_application_json_any: Optional[Any] = field(default=None)
-    get_be_greeting_429_application_json_any: Optional[Any] = field(default=None)
-    get_be_greeting_500_application_json_any: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_be_greeting_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_be_greeting_403_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_be_greeting_429_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    get_be_greeting_500_application_json_any: Optional[Any] = dataclasses.field(default=None)
     

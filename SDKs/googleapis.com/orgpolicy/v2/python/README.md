@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,41 +20,40 @@ req = operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest(
     security=operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
     path_params=operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams(
-        parent="et",
+        parent="veritatis",
     ),
     query_params=operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams(
         dollar_xgafv="1",
-        access_token="ducimus",
-        alt="media",
-        callback="officia",
-        fields="corporis",
-        key="nobis",
-        oauth_token="nam",
-        pretty_print=True,
-        quota_user="maxime",
-        upload_type="nisi",
-        upload_protocol="maiores",
+        access_token="dolor",
+        alt="json",
+        callback="mollitia",
+        fields="rerum",
+        key="rem",
+        oauth_token="recusandae",
+        pretty_print=False,
+        quota_user="reprehenderit",
+        upload_type="dolorem",
+        upload_protocol="omnis",
     ),
     request=shared.GoogleCloudOrgpolicyV2CustomConstraintInput(
-        action_type="ACTION_TYPE_UNSPECIFIED",
-        condition="temporibus",
-        description="ea",
-        display_name="excepturi",
+        action_type="DENY",
+        condition="omnis",
+        description="itaque",
+        display_name="consequuntur",
         method_types=[
+            "UPDATE",
             "CREATE",
-            "DELETE",
-            "DELETE",
+            "UPDATE",
         ],
-        name="quisquam",
+        name="ab",
         resource_types=[
-            "et",
-            "id",
+            "voluptas",
         ],
     ),
 )

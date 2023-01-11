@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
-from sdk.models import shared
+from typing import Optional
+from ..shared import absenceperiodsresponse as shared_absenceperiodsresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyTimeOffsQueryParams:
-    employees: Optional[List[int]] = field(default=None, metadata={'query_param': { 'field_name': 'employees', 'style': 'form', 'explode': True }})
-    end_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
-    limit: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
-    offset: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
-    start_date: Optional[date] = field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
-    updated_from: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'updated_from', 'style': 'form', 'explode': True }})
-    updated_to: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'updated_to', 'style': 'form', 'explode': True }})
+    employees: Optional[list[int]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'employees', 'style': 'form', 'explode': True }})
+    end_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end_date', 'style': 'form', 'explode': True }})
+    limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
+    offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    start_date: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
+    updated_from: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_from', 'style': 'form', 'explode': True }})
+    updated_to: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_to', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyTimeOffsRequest:
-    query_params: GetCompanyTimeOffsQueryParams = field()
+    query_params: GetCompanyTimeOffsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyTimeOffsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    absence_periods_response: Optional[shared.AbsencePeriodsResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    absence_periods_response: Optional[shared_absenceperiodsresponse.AbsencePeriodsResponse] = dataclasses.field(default=None)
     

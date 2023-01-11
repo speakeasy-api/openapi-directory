@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,24 +25,25 @@ s.config_security(
     
 req = operations.CreateAttachmentForTaskRequest(
     path_params=operations.CreateAttachmentForTaskPathParams(
-        task_gid="aspernatur",
+        task_gid="delectus",
     ),
     query_params=operations.CreateAttachmentForTaskQueryParams(
-        limit=4782768469875935138,
-        offset="modi",
+        limit=4628205130743140522,
+        offset="eveniet",
         opt_fields=[
-            "expedita",
+            "sit",
+            "est",
         ],
-        opt_pretty=False,
+        opt_pretty=True,
     ),
     request=shared.AttachmentRequest(
         file=shared.AttachmentRequestFile(
-            content="omnis".encode(),
-            file="aliquam",
+            content="ipsa".encode(),
+            file="assumenda",
         ),
-        name="provident",
-        resource_subtype="external",
-        url="aut",
+        name="id",
+        resource_subtype="asana_file_attachments",
+        url="ipsam",
     ),
 )
     

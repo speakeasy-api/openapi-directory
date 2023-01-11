@@ -1,19 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactByGlobalIDPathParams:
-    global_id: int = field(metadata={'path_param': { 'field_name': 'globalId', 'style': 'simple', 'explode': False }})
+    global_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'globalId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactByGlobalIDRequest:
-    path_params: GetArtifactByGlobalIDPathParams = field()
+    path_params: GetArtifactByGlobalIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetArtifactByGlobalIDResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

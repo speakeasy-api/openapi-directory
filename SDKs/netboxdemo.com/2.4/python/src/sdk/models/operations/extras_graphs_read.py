@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import graph as shared_graph
 
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasGraphsReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasGraphsReadRequest:
-    path_params: ExtrasGraphsReadPathParams = field()
+    path_params: ExtrasGraphsReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ExtrasGraphsReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    graph: Optional[shared.Graph] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    graph: Optional[shared_graph.Graph] = dataclasses.field(default=None)
     

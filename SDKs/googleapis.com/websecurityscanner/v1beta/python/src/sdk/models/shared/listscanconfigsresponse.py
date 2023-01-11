@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import scanconfig as shared_scanconfig
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListScanConfigsResponse:
     r"""ListScanConfigsResponse
     Response for the `ListScanConfigs` method.
     """
     
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
-    scan_configs: Optional[List[ScanConfig]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scanConfigs') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    scan_configs: Optional[list[shared_scanconfig.ScanConfig]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('scanConfigs') }})
     

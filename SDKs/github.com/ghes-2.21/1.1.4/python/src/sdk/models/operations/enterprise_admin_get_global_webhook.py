@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import global_hook as shared_global_hook
 
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetGlobalWebhookPathParams:
-    hook_id: int = field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
+    hook_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'hook_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetGlobalWebhookHeaders:
-    accept: str = field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
+    accept: str = dataclasses.field(metadata={'header': { 'field_name': 'accept', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetGlobalWebhookRequest:
-    headers: EnterpriseAdminGetGlobalWebhookHeaders = field()
-    path_params: EnterpriseAdminGetGlobalWebhookPathParams = field()
+    headers: EnterpriseAdminGetGlobalWebhookHeaders = dataclasses.field()
+    path_params: EnterpriseAdminGetGlobalWebhookPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EnterpriseAdminGetGlobalWebhookResponse:
-    content_type: str = field()
-    status_code: int = field()
-    global_hook: Optional[shared.GlobalHook] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    global_hook: Optional[shared_global_hook.GlobalHook] = dataclasses.field(default=None)
     

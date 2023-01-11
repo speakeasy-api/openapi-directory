@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import organization_simple as shared_organization_simple
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrgMembershipPermissions:
-    can_create_repository: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('can_create_repository') }})
+    can_create_repository: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('can_create_repository') }})
     
 class OrgMembershipRoleEnum(str, Enum):
     ADMIN = "admin"
@@ -22,41 +22,45 @@ class OrgMembershipStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrgMembershipSimpleUser:
-    avatar_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
-    events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
-    followers_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
-    following_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
-    gists_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
-    gravatar_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
-    html_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
-    id: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    login: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
-    node_id: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
-    organizations_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
-    received_events_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
-    repos_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
-    site_admin: bool = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
-    starred_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
-    subscriptions_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
-    type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    starred_at: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_at') }})
+    r"""OrgMembershipSimpleUser
+    Simple User
+    """
+    
+    avatar_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('avatar_url') }})
+    events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('events_url') }})
+    followers_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('followers_url') }})
+    following_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('following_url') }})
+    gists_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gists_url') }})
+    gravatar_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('gravatar_id') }})
+    html_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('html_url') }})
+    id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    login: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('login') }})
+    node_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('node_id') }})
+    organizations_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organizations_url') }})
+    received_events_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('received_events_url') }})
+    repos_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('repos_url') }})
+    site_admin: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('site_admin') }})
+    starred_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_url') }})
+    subscriptions_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('subscriptions_url') }})
+    type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('type') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    starred_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('starred_at') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class OrgMembership:
     r"""OrgMembership
     Org Membership
     """
     
-    organization: OrganizationSimple = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization') }})
-    organization_url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_url') }})
-    role: OrgMembershipRoleEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
-    state: OrgMembershipStateEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
-    user: OrgMembershipSimpleUser = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
-    permissions: Optional[OrgMembershipPermissions] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
+    organization: shared_organization_simple.OrganizationSimple = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization') }})
+    organization_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('organization_url') }})
+    role: OrgMembershipRoleEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('role') }})
+    state: OrgMembershipStateEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('state') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    user: OrgMembershipSimpleUser = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('user') }})
+    permissions: Optional[OrgMembershipPermissions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('permissions') }})
     

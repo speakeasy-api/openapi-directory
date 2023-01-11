@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import employeeresponse as shared_employeeresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyEmployeesEmployeeIDPathParams:
-    employee_id: int = field(metadata={'path_param': { 'field_name': 'employee_id', 'style': 'simple', 'explode': False }})
+    employee_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'employee_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyEmployeesEmployeeIDRequest:
-    path_params: GetCompanyEmployeesEmployeeIDPathParams = field()
+    path_params: GetCompanyEmployeesEmployeeIDPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GetCompanyEmployeesEmployeeIDResponse:
-    content_type: str = field()
-    status_code: int = field()
-    employee_response: Optional[shared.EmployeeResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    employee_response: Optional[shared_employeeresponse.EmployeeResponse] = dataclasses.field(default=None)
     

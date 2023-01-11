@@ -1,32 +1,34 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
-from sdk.models import shared
+import dataclasses
+from typing import Any,Optional
+from ..shared import createpayeescsvrequest as shared_createpayeescsvrequest
+from ..shared import createpayeesrequest as shared_createpayeesrequest
+from ..shared import createpayeescsvresponse as shared_createpayeescsvresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class V3CreatePayeeMultipartFormData:
-    file: Optional[List[shared.CreatePayeesCsvRequest]] = field(default=None, metadata={'multipart_form': { 'field_name': 'file', 'json': True }})
-    payor_id: Optional[str] = field(default=None, metadata={'multipart_form': { 'field_name': 'payorId' }})
+    file: Optional[list[shared_createpayeescsvrequest.CreatePayeesCsvRequest]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'file', 'json': True }})
+    payor_id: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'payorId' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class V3CreatePayeeRequestsInput:
-    create_payees_request: Optional[shared.CreatePayeesRequestInput] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    object: Optional[V3CreatePayeeMultipartFormData] = field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
+    create_payees_request: Optional[shared_createpayeesrequest.CreatePayeesRequestInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    object: Optional[V3CreatePayeeMultipartFormData] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class V3CreatePayeeRequest:
-    request: Optional[V3CreatePayeeRequestsInput] = field(default=None)
+    request: Optional[V3CreatePayeeRequestsInput] = dataclasses.field(default=None)
     
 
-@dataclass
+@dataclasses.dataclass
 class V3CreatePayeeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    create_payees_csv_response: Optional[shared.CreatePayeesCsvResponse] = field(default=None)
-    inline_response_400: Optional[Any] = field(default=None)
-    inline_response_401: Optional[Any] = field(default=None)
-    inline_response_403: Optional[Any] = field(default=None)
-    inline_response_404: Optional[Any] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    create_payees_csv_response: Optional[shared_createpayeescsvresponse.CreatePayeesCsvResponse] = dataclasses.field(default=None)
+    inline_response_400: Optional[Any] = dataclasses.field(default=None)
+    inline_response_401: Optional[Any] = dataclasses.field(default=None)
+    inline_response_403: Optional[Any] = dataclasses.field(default=None)
+    inline_response_404: Optional[Any] = dataclasses.field(default=None)
     

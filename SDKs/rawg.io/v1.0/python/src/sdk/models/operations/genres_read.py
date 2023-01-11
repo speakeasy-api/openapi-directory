@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import genresingle as shared_genresingle
 
 
-@dataclass
+@dataclasses.dataclass
 class GenresReadPathParams:
-    id: int = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenresReadRequest:
-    path_params: GenresReadPathParams = field()
+    path_params: GenresReadPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GenresReadResponse:
-    content_type: str = field()
-    status_code: int = field()
-    genre_single: Optional[shared.GenreSingle] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    genre_single: Optional[shared_genresingle.GenreSingle] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import compliancebyconfigrule as shared_compliancebyconfigrule
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeComplianceByConfigRuleResponse:
     r"""DescribeComplianceByConfigRuleResponse
     <p/>
     """
     
-    compliance_by_config_rules: Optional[List[ComplianceByConfigRule]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComplianceByConfigRules') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    compliance_by_config_rules: Optional[list[shared_compliancebyconfigrule.ComplianceByConfigRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ComplianceByConfigRules') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

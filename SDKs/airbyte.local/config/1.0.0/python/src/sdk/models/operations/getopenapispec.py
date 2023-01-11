@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class GetOpenAPISpecResponse:
-    content_type: str = field()
-    status_code: int = field()
-    get_open_api_spec_200_text_plain_binary_string: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    get_open_api_spec_200_text_plain_binary_string: Optional[str] = dataclasses.field(default=None)
     

@@ -1,37 +1,34 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
-from sdk.models import shared
+from ..shared import username_enum as shared_username_enum
+from ..shared import basic_error as shared_basic_error
+from ..shared import hovercard as shared_hovercard
+from ..shared import validation_error as shared_validation_error
 
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetContextForUserPathParams:
-    username: str = field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
+    username: str = dataclasses.field(metadata={'path_param': { 'field_name': 'username', 'style': 'simple', 'explode': False }})
     
-class UsersGetContextForUserSubjectTypeEnum(str, Enum):
-    ORGANIZATION = "organization"
-    REPOSITORY = "repository"
-    ISSUE = "issue"
-    PULL_REQUEST = "pull_request"
 
-
-@dataclass
+@dataclasses.dataclass
 class UsersGetContextForUserQueryParams:
-    subject_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'subject_id', 'style': 'form', 'explode': True }})
-    subject_type: Optional[UsersGetContextForUserSubjectTypeEnum] = field(default=None, metadata={'query_param': { 'field_name': 'subject_type', 'style': 'form', 'explode': True }})
+    subject_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subject_id', 'style': 'form', 'explode': True }})
+    subject_type: Optional[shared_username_enum.UsernameEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subject_type', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetContextForUserRequest:
-    path_params: UsersGetContextForUserPathParams = field()
-    query_params: UsersGetContextForUserQueryParams = field()
+    path_params: UsersGetContextForUserPathParams = dataclasses.field()
+    query_params: UsersGetContextForUserQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UsersGetContextForUserResponse:
-    content_type: str = field()
-    status_code: int = field()
-    basic_error: Optional[shared.BasicError] = field(default=None)
-    hovercard: Optional[shared.Hovercard] = field(default=None)
-    validation_error: Optional[shared.ValidationError] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    basic_error: Optional[shared_basic_error.BasicError] = dataclasses.field(default=None)
+    hovercard: Optional[shared_hovercard.Hovercard] = dataclasses.field(default=None)
+    validation_error: Optional[shared_validation_error.ValidationError] = dataclasses.field(default=None)
     

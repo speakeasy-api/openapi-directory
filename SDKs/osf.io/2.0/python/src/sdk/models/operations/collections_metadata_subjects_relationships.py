@@ -1,20 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 
 
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsMetadataSubjectsRelationshipsPathParams:
-    cgm_id: str = field(metadata={'path_param': { 'field_name': 'cgm_id', 'style': 'simple', 'explode': False }})
-    collection_id: str = field(metadata={'path_param': { 'field_name': 'collection_id', 'style': 'simple', 'explode': False }})
+    cgm_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cgm_id', 'style': 'simple', 'explode': False }})
+    collection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection_id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsMetadataSubjectsRelationshipsRequest:
-    path_params: CollectionsMetadataSubjectsRelationshipsPathParams = field()
+    path_params: CollectionsMetadataSubjectsRelationshipsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CollectionsMetadataSubjectsRelationshipsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

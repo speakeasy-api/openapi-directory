@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -12,7 +12,7 @@ class TaxSettingsUpdateRequestTaxationModeEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TaxSettingsUpdateRequest:
-    taxation_mode: TaxSettingsUpdateRequestTaxationModeEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationMode') }})
+    taxation_mode: TaxSettingsUpdateRequestTaxationModeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('taxationMode') }})
     

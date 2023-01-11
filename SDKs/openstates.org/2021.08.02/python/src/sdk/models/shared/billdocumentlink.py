@@ -1,11 +1,11 @@
-from dataclasses import dataclass, field
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BillDocumentLink:
-    media_type: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('media_type') }})
-    url: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
+    media_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('media_type') }})
+    url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('url') }})
     

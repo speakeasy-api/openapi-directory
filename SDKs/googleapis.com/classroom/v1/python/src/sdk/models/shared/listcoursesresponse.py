@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import course as shared_course
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ListCoursesResponse:
     r"""ListCoursesResponse
     Response when listing courses.
     """
     
-    courses: Optional[List[Course]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('courses') }})
-    next_page_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
+    courses: Optional[list[shared_course.Course]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('courses') }})
+    next_page_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('nextPageToken') }})
     

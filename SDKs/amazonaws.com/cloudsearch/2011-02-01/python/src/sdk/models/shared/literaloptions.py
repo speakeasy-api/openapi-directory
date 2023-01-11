@@ -1,15 +1,15 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class LiteralOptions:
     r"""LiteralOptions
     Options that define a literal field in the search index.
     """
     
-    default_value: Optional[str] = field(default=None)
-    facet_enabled: Optional[bool] = field(default=None)
-    result_enabled: Optional[bool] = field(default=None)
-    search_enabled: Optional[bool] = field(default=None)
+    default_value: Optional[str] = dataclasses.field(default=None)
+    facet_enabled: Optional[bool] = dataclasses.field(default=None)
+    result_enabled: Optional[bool] = dataclasses.field(default=None)
+    search_enabled: Optional[bool] = dataclasses.field(default=None)
     

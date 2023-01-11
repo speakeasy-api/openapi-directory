@@ -1,18 +1,20 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import audioconfig as shared_audioconfig
+from ..shared import synthesisinput as shared_synthesisinput
+from ..shared import voiceselectionparams as shared_voiceselectionparams
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SynthesizeSpeechRequest:
     r"""SynthesizeSpeechRequest
     The top-level message sent by the client for the `SynthesizeSpeech` method.
     """
     
-    audio_config: Optional[AudioConfig] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audioConfig') }})
-    input: Optional[SynthesisInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('input') }})
-    voice: Optional[VoiceSelectionParams] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('voice') }})
+    audio_config: Optional[shared_audioconfig.AudioConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('audioConfig') }})
+    input: Optional[shared_synthesisinput.SynthesisInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('input') }})
+    voice: Optional[shared_voiceselectionparams.VoiceSelectionParams] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('voice') }})
     

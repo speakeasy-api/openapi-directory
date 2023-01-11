@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class Queue:
     r"""Queue
     Describes a queue.
     """
     
-    name: Optional[str] = field(default=None)
-    url: Optional[str] = field(default=None)
+    name: Optional[str] = dataclasses.field(default=None)
+    url: Optional[str] = dataclasses.field(default=None)
     

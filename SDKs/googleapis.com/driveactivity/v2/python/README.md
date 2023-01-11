@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -22,41 +21,43 @@ req = operations.DriveactivityActivityQueryRequest(
         option1=operations.DriveactivityActivityQuerySecurityOption1(
             oauth2=shared.SchemeOauth2(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
             oauth2c=shared.SchemeOauth2c(
                 authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-            )
+            ),
         ),
     ),
     query_params=operations.DriveactivityActivityQueryQueryParams(
-        dollar_xgafv="2",
-        access_token="sunt",
+        dollar_xgafv="1",
+        access_token="necessitatibus",
         alt="json",
-        callback="voluptas",
-        fields="eos",
-        key="deserunt",
-        oauth_token="aperiam",
+        callback="alias",
+        fields="rerum",
+        key="impedit",
+        oauth_token="a",
         pretty_print=True,
-        quota_user="adipisci",
-        upload_type="porro",
-        upload_protocol="enim",
+        quota_user="quo",
+        upload_type="aut",
+        upload_protocol="consectetur",
     ),
     request=shared.QueryDriveActivityRequest(
-        ancestor_name="pariatur",
+        ancestor_name="corporis",
         consolidation_strategy=shared.ConsolidationStrategy(
             legacy={
-                "veniam": "et",
+                "minus": "quaerat",
+                "possimus": "non",
+                "vel": "maiores",
             },
             none={
-                "consequatur": "sed",
-                "unde": "et",
-                "aut": "eveniet",
+                "quia": "et",
+                "ut": "sunt",
+                "ut": "rerum",
             },
         ),
-        filter="eaque",
-        item_name="qui",
-        page_size=1123870035686130435,
-        page_token="officiis",
+        filter="repudiandae",
+        item_name="et",
+        page_size=392893070412712568,
+        page_token="aut",
     ),
 )
     

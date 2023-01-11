@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,17 +23,17 @@ req = operations.TranslateRequest(
         ),
     ),
     request=shared.TranslateRequest(
-        from_="doloribus",
+        from_="facilis",
         text=[
-            "architecto",
-            "alias",
+            "aliquid",
+            "ad",
         ],
-        to="velit",
-        translation_context="sit",
+        to="labore",
+        translation_context="totam",
     ),
 )
     
-res = s.sdk.translate(req)
+res = s.language.translate(req)
 
 if res.translate_response is not None:
     # handle response
@@ -44,7 +43,7 @@ if res.translate_response is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### language
 
 * `translate` - Translates input text inot a given language.
 

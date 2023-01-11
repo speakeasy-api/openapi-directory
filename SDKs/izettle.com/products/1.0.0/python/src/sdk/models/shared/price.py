@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -192,8 +192,8 @@ class PriceCurrencyIDEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Price:
-    amount: int = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
-    currency_id: PriceCurrencyIDEnum = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyId') }})
+    amount: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('amount') }})
+    currency_id: PriceCurrencyIDEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('currencyId') }})
     

@@ -1,21 +1,21 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 
 
-@dataclass
+@dataclasses.dataclass
 class ListUserSSubscriptionGroupStatusSmsQueryParams:
-    external_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'external_id', 'style': 'form', 'explode': True }})
-    phone: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'phone', 'style': 'form', 'explode': True }})
-    subscription_group_id: Optional[str] = field(default=None, metadata={'query_param': { 'field_name': 'subscription_group_id', 'style': 'form', 'explode': True }})
+    external_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_id', 'style': 'form', 'explode': True }})
+    phone: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'phone', 'style': 'form', 'explode': True }})
+    subscription_group_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subscription_group_id', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListUserSSubscriptionGroupStatusSmsRequest:
-    query_params: ListUserSSubscriptionGroupStatusSmsQueryParams = field()
+    query_params: ListUserSSubscriptionGroupStatusSmsQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListUserSSubscriptionGroupStatusSmsResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

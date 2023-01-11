@@ -1,30 +1,33 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import googlecloudorgpolicyv2alternatepolicyspec as shared_googlecloudorgpolicyv2alternatepolicyspec
+from ..shared import googlecloudorgpolicyv2policyspec as shared_googlecloudorgpolicyv2policyspec
+from ..shared import googlecloudorgpolicyv2alternatepolicyspec as shared_googlecloudorgpolicyv2alternatepolicyspec
+from ..shared import googlecloudorgpolicyv2policyspec as shared_googlecloudorgpolicyv2policyspec
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudOrgpolicyV2Policy:
     r"""GoogleCloudOrgpolicyV2Policy
     Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of Cloud Platform resources.
     """
     
-    alternate: Optional[GoogleCloudOrgpolicyV2AlternatePolicySpec] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternate') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    spec: Optional[GoogleCloudOrgpolicyV2PolicySpec] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
+    alternate: Optional[shared_googlecloudorgpolicyv2alternatepolicyspec.GoogleCloudOrgpolicyV2AlternatePolicySpec] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternate') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    spec: Optional[shared_googlecloudorgpolicyv2policyspec.GoogleCloudOrgpolicyV2PolicySpec] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class GoogleCloudOrgpolicyV2PolicyInput:
     r"""GoogleCloudOrgpolicyV2PolicyInput
     Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of Cloud Platform resources.
     """
     
-    alternate: Optional[GoogleCloudOrgpolicyV2AlternatePolicySpecInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternate') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    spec: Optional[GoogleCloudOrgpolicyV2PolicySpecInput] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
+    alternate: Optional[shared_googlecloudorgpolicyv2alternatepolicyspec.GoogleCloudOrgpolicyV2AlternatePolicySpecInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('alternate') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    spec: Optional[shared_googlecloudorgpolicyv2policyspec.GoogleCloudOrgpolicyV2PolicySpecInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('spec') }})
     

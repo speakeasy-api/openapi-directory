@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -26,27 +25,26 @@ s.config_security(
     
 req = operations.BatchCheckLayerAvailabilityRequest(
     headers=operations.BatchCheckLayerAvailabilityHeaders(
-        x_amz_algorithm="placeat",
-        x_amz_content_sha256="ut",
-        x_amz_credential="ipsam",
-        x_amz_date="aut",
-        x_amz_security_token="cum",
-        x_amz_signature="aut",
-        x_amz_signed_headers="modi",
+        x_amz_algorithm="adipisci",
+        x_amz_content_sha256="dolorem",
+        x_amz_credential="quas",
+        x_amz_date="eum",
+        x_amz_security_token="distinctio",
+        x_amz_signature="nostrum",
+        x_amz_signed_headers="sed",
         x_amz_target="SpencerFrontendService.BatchCheckLayerAvailability",
     ),
     request=shared.BatchCheckLayerAvailabilityRequest(
         layer_digests=[
-            "quis",
-            "in",
-            "velit",
+            "totam",
+            "sit",
         ],
-        registry_id="eligendi",
-        repository_name="quis",
+        registry_id="et",
+        repository_name="et",
     ),
 )
     
-res = s.sdk.batch_check_layer_availability(req)
+res = s.batch_check_layer_availability(req)
 
 if res.batch_check_layer_availability_response is not None:
     # handle response

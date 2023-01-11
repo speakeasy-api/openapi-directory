@@ -1,13 +1,13 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import healthcheck as shared_healthcheck
 
 
-@dataclass
+@dataclasses.dataclass
 class ConfigureHealthCheckOutput:
     r"""ConfigureHealthCheckOutput
     Contains the output of ConfigureHealthCheck.
     """
     
-    health_check: Optional[HealthCheck] = field(default=None)
+    health_check: Optional[shared_healthcheck.HealthCheck] = dataclasses.field(default=None)
     

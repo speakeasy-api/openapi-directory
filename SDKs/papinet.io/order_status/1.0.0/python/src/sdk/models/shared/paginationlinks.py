@@ -1,38 +1,38 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaginationLinksFirst:
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaginationLinksLast:
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaginationLinksNext:
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaginationLinksPrev:
-    href: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
+    href: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('href') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class PaginationLinks:
-    next: PaginationLinksNext = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
-    first: Optional[PaginationLinksFirst] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first') }})
-    last: Optional[PaginationLinksLast] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last') }})
-    prev: Optional[PaginationLinksPrev] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
+    next: PaginationLinksNext = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('next') }})
+    first: Optional[PaginationLinksFirst] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('first') }})
+    last: Optional[PaginationLinksLast] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last') }})
+    prev: Optional[PaginationLinksPrev] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('prev') }})
     

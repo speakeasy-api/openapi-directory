@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -42,22 +42,22 @@ class EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class EnhancedCleaning:
     r"""EnhancedCleaning
     Enhanced cleaning measures implemented by the hotel during COVID-19.
     """
     
-    commercial_grade_disinfectant_cleaning: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commercialGradeDisinfectantCleaning') }})
-    commercial_grade_disinfectant_cleaning_exception: Optional[EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commercialGradeDisinfectantCleaningException') }})
-    common_areas_enhanced_cleaning: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonAreasEnhancedCleaning') }})
-    common_areas_enhanced_cleaning_exception: Optional[EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonAreasEnhancedCleaningException') }})
-    employees_trained_cleaning_procedures: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedCleaningProcedures') }})
-    employees_trained_cleaning_procedures_exception: Optional[EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedCleaningProceduresException') }})
-    employees_trained_thorough_hand_washing: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedThoroughHandWashing') }})
-    employees_trained_thorough_hand_washing_exception: Optional[EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedThoroughHandWashingException') }})
-    employees_wear_protective_equipment: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesWearProtectiveEquipment') }})
-    employees_wear_protective_equipment_exception: Optional[EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesWearProtectiveEquipmentException') }})
-    guest_rooms_enhanced_cleaning: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestRoomsEnhancedCleaning') }})
-    guest_rooms_enhanced_cleaning_exception: Optional[EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestRoomsEnhancedCleaningException') }})
+    commercial_grade_disinfectant_cleaning: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commercialGradeDisinfectantCleaning') }})
+    commercial_grade_disinfectant_cleaning_exception: Optional[EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commercialGradeDisinfectantCleaningException') }})
+    common_areas_enhanced_cleaning: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonAreasEnhancedCleaning') }})
+    common_areas_enhanced_cleaning_exception: Optional[EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('commonAreasEnhancedCleaningException') }})
+    employees_trained_cleaning_procedures: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedCleaningProcedures') }})
+    employees_trained_cleaning_procedures_exception: Optional[EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedCleaningProceduresException') }})
+    employees_trained_thorough_hand_washing: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedThoroughHandWashing') }})
+    employees_trained_thorough_hand_washing_exception: Optional[EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesTrainedThoroughHandWashingException') }})
+    employees_wear_protective_equipment: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesWearProtectiveEquipment') }})
+    employees_wear_protective_equipment_exception: Optional[EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('employeesWearProtectiveEquipmentException') }})
+    guest_rooms_enhanced_cleaning: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestRoomsEnhancedCleaning') }})
+    guest_rooms_enhanced_cleaning_exception: Optional[EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('guestRoomsEnhancedCleaningException') }})
     

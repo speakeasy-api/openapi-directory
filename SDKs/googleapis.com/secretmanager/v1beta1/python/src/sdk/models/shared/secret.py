@@ -1,30 +1,30 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import replication as shared_replication
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class SecretInput:
     r"""SecretInput
     A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of zero or more SecretVersions that represent the secret data.
     """
     
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    replication: Optional[Replication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replication') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    replication: Optional[shared_replication.Replication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replication') }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Secret:
     r"""Secret
     A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of zero or more SecretVersions that represent the secret data.
     """
     
-    create_time: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
-    labels: Optional[dict[str, str]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    replication: Optional[Replication] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replication') }})
+    create_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('createTime') }})
+    labels: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('labels') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    replication: Optional[shared_replication.Replication] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('replication') }})
     

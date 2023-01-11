@@ -1,32 +1,35 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import security as shared_security
+from ..shared import updatelicenseeschema as shared_updatelicenseeschema
+from ..shared import licenseeresponseschema as shared_licenseeresponseschema
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseePathParams:
-    key: str = field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
+    key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
-    user_token: shared.SchemeUserToken = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
+    user_token: shared_security.SchemeUserToken = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeRequest:
-    path_params: UpdateLicenseePathParams = field()
-    request: shared.UpdateLicenseeSchema = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: UpdateLicenseeSecurity = field()
+    path_params: UpdateLicenseePathParams = dataclasses.field()
+    request: shared_updatelicenseeschema.UpdateLicenseeSchema = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: UpdateLicenseeSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateLicenseeResponse:
-    content_type: str = field()
-    status_code: int = field()
-    licensee_response_schema: Optional[shared.LicenseeResponseSchema] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    licensee_response_schema: Optional[shared_licenseeresponseschema.LicenseeResponseSchema] = dataclasses.field(default=None)
     

@@ -1,17 +1,17 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import phraseset as shared_phraseset
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class CreatePhraseSetRequest:
     r"""CreatePhraseSetRequest
     Message sent by the client for the `CreatePhraseSet` method.
     """
     
-    phrase_set: Optional[PhraseSet] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSet') }})
-    phrase_set_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSetId') }})
+    phrase_set: Optional[shared_phraseset.PhraseSet] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSet') }})
+    phrase_set_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('phraseSetId') }})
     

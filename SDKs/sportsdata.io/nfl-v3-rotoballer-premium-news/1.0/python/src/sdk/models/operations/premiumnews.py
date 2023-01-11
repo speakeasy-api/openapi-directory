@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
-from typing import Any,List,Optional
+import dataclasses
+from typing import Any,Optional
 from enum import Enum
 
 class PremiumNewsFormatEnum(str, Enum):
@@ -7,19 +7,19 @@ class PremiumNewsFormatEnum(str, Enum):
     JSON = "json"
 
 
-@dataclass
+@dataclasses.dataclass
 class PremiumNewsPathParams:
-    format: PremiumNewsFormatEnum = field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
+    format: PremiumNewsFormatEnum = dataclasses.field(metadata={'path_param': { 'field_name': 'format', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PremiumNewsRequest:
-    path_params: PremiumNewsPathParams = field()
+    path_params: PremiumNewsPathParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PremiumNewsResponse:
-    content_type: str = field()
-    status_code: int = field()
-    news: Optional[List[Any]] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    news: Optional[list[Any]] = dataclasses.field(default=None)
     

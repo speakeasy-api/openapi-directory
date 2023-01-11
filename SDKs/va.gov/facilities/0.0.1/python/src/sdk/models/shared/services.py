@@ -1,8 +1,8 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
-from typing import List,Optional
+from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
 from sdk import utils
@@ -52,10 +52,10 @@ class ServicesOtherEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Services:
-    benefits: Optional[List[ServicesBenefitsEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('benefits') }})
-    health: Optional[List[ServicesHealthEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('health') }})
-    last_updated: Optional[date] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_updated'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
-    other: Optional[List[ServicesOtherEnum]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('other') }})
+    benefits: Optional[list[ServicesBenefitsEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('benefits') }})
+    health: Optional[list[ServicesHealthEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('health') }})
+    last_updated: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('last_updated'), 'encoder': utils.dateisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
+    other: Optional[list[ServicesOtherEnum]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('other') }})
     

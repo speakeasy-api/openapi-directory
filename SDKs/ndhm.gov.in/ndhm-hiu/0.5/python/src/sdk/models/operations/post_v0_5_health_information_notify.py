@@ -1,30 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import healthinformationnotification as shared_healthinformationnotification
+from ..shared import errorresponse as shared_errorresponse
 
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationNotifyHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
-    x_cm_id: str = field(metadata={'header': { 'field_name': 'X-CM-ID', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    x_cm_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-CM-ID', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationNotifyRequests:
-    application_xml: bytes = field(metadata={'request': { 'media_type': 'application/xml' }})
-    health_information_notification: Optional[shared.HealthInformationNotification] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    application_xml: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/xml' }})
+    health_information_notification: Optional[shared_healthinformationnotification.HealthInformationNotification] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationNotifyRequest:
-    headers: PostV05HealthInformationNotifyHeaders = field()
-    request: PostV05HealthInformationNotifyRequests = field()
+    headers: PostV05HealthInformationNotifyHeaders = dataclasses.field()
+    request: PostV05HealthInformationNotifyRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostV05HealthInformationNotifyResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
-    error_response: Optional[shared.ErrorResponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
+    error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     

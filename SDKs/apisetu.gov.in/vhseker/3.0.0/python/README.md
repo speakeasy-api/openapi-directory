@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -21,26 +20,26 @@ req = operations.VochseRequest(
     security=operations.VochseSecurity(
         api_key=shared.SchemeAPIKey(
             api_key="YOUR_API_KEY_HERE",
-        )
+        ),
         client_id=shared.SchemeClientID(
             api_key="YOUR_API_KEY_HERE",
         ),
     ),
     request=operations.VochseRequestBody(
         certificate_parameters=operations.VochseRequestBodyCertificateParameters(
-            dob="quasi",
-            full_name="odit",
-            regno="sit",
-            year="voluptas",
-            type="sint",
+            dob="corporis",
+            full_name="voluptates",
+            regno="quaerat",
+            year="aperiam",
+            type="et",
         ),
-        consent_artifact="voluptate",
+        consent_artifact="nisi",
         format="pdf",
-        txn_id="aut",
+        txn_id="quo",
     ),
 )
     
-res = s.sdk.vochse(req)
+res = s.ap_is.vochse(req)
 
 if res.status_code == 200:
     # handle response
@@ -50,7 +49,7 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `vochse` - Vocational Higher Secondary
 

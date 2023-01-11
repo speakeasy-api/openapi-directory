@@ -1,27 +1,27 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import paymentdeltaresponsev1 as shared_paymentdeltaresponsev1
 
 
-@dataclass
+@dataclasses.dataclass
 class ListPaymentChangesQueryParams:
-    payor_id: str = field(metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
-    updated_since: datetime = field(metadata={'query_param': { 'field_name': 'updatedSince', 'style': 'form', 'explode': True }})
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    page_size: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
+    payor_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'payorId', 'style': 'form', 'explode': True }})
+    updated_since: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'updatedSince', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pageSize', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ListPaymentChangesRequest:
-    query_params: ListPaymentChangesQueryParams = field()
+    query_params: ListPaymentChangesQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ListPaymentChangesResponse:
-    content_type: str = field()
-    status_code: int = field()
-    payment_delta_response_v1: Optional[shared.PaymentDeltaResponseV1] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    payment_delta_response_v1: Optional[shared_paymentdeltaresponsev1.PaymentDeltaResponseV1] = dataclasses.field(default=None)
     

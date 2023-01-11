@@ -1,12 +1,11 @@
-from dataclasses import dataclass, field
-from typing import List
+import dataclasses
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import stoprequest as shared_stoprequest
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class StopWorkspacesRequest:
-    stop_workspace_requests: List[StopRequest] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('StopWorkspaceRequests') }})
+    stop_workspace_requests: list[shared_stoprequest.StopRequest] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('StopWorkspaceRequests') }})
     

@@ -1,31 +1,31 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import check_suite as shared_check_suite
 
 
-@dataclass
+@dataclasses.dataclass
 class ChecksCreateSuitePathParams:
-    owner: str = field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
-    repo: str = field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
+    owner: str = dataclasses.field(metadata={'path_param': { 'field_name': 'owner', 'style': 'simple', 'explode': False }})
+    repo: str = dataclasses.field(metadata={'path_param': { 'field_name': 'repo', 'style': 'simple', 'explode': False }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ChecksCreateSuiteRequestBody:
-    head_sha: str = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_sha') }})
+    head_sha: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('head_sha') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChecksCreateSuiteRequest:
-    path_params: ChecksCreateSuitePathParams = field()
-    request: Optional[ChecksCreateSuiteRequestBody] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: ChecksCreateSuitePathParams = dataclasses.field()
+    request: Optional[ChecksCreateSuiteRequestBody] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ChecksCreateSuiteResponse:
-    content_type: str = field()
-    status_code: int = field()
-    check_suite: Optional[shared.CheckSuite] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    check_suite: Optional[shared_check_suite.CheckSuite] = dataclasses.field(default=None)
     

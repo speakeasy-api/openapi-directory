@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import importread as shared_importread
 
 
-@dataclass
+@dataclasses.dataclass
 class ImportArchiveRequest:
-    request: bytes = field(metadata={'request': { 'media_type': 'application/x-gzip' }})
+    request: bytes = dataclasses.field(metadata={'request': { 'media_type': 'application/x-gzip' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ImportArchiveResponse:
-    content_type: str = field()
-    status_code: int = field()
-    import_read: Optional[shared.ImportRead] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    import_read: Optional[shared_importread.ImportRead] = dataclasses.field(default=None)
     

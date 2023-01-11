@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
@@ -14,12 +14,12 @@ class ValidateAttestationOccurrenceResponseResultEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ValidateAttestationOccurrenceResponse:
     r"""ValidateAttestationOccurrenceResponse
     Response message for ValidationHelperV1.ValidateAttestationOccurrence.
     """
     
-    denial_reason: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('denialReason') }})
-    result: Optional[ValidateAttestationOccurrenceResponseResultEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
+    denial_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('denialReason') }})
+    result: Optional[ValidateAttestationOccurrenceResponseResultEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('result') }})
     

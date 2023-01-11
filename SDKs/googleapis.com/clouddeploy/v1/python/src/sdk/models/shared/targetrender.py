@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -17,14 +17,10 @@ class TargetRenderRenderingStateEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class TargetRender:
-    r"""TargetRender
-    Details of rendering for a single target.
-    """
-    
-    failure_cause: Optional[TargetRenderFailureCauseEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failureCause') }})
-    failure_message: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failureMessage') }})
-    rendering_build: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderingBuild') }})
-    rendering_state: Optional[TargetRenderRenderingStateEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderingState') }})
+    failure_cause: Optional[TargetRenderFailureCauseEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failureCause') }})
+    failure_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('failureMessage') }})
+    rendering_build: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderingBuild') }})
+    rendering_state: Optional[TargetRenderRenderingStateEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('renderingState') }})
     

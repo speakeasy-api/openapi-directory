@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -20,16 +20,16 @@ class ClickwrapEntityUseWithUsersEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ClickwrapEntity:
     r"""ClickwrapEntity
     Create Clickwrap
     """
     
-    body: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
-    id: Optional[int] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
-    name: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
-    use_with_bundles: Optional[ClickwrapEntityUseWithBundlesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_bundles') }})
-    use_with_inboxes: Optional[ClickwrapEntityUseWithInboxesEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_inboxes') }})
-    use_with_users: Optional[ClickwrapEntityUseWithUsersEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_users') }})
+    body: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('body') }})
+    id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('id') }})
+    name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('name') }})
+    use_with_bundles: Optional[ClickwrapEntityUseWithBundlesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_bundles') }})
+    use_with_inboxes: Optional[ClickwrapEntityUseWithInboxesEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_inboxes') }})
+    use_with_users: Optional[ClickwrapEntityUseWithUsersEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('use_with_users') }})
     

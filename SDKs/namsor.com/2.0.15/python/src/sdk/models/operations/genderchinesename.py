@@ -1,27 +1,28 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import personalnamegenderedout as shared_personalnamegenderedout
 
 
-@dataclass
+@dataclasses.dataclass
 class GenderChineseNamePathParams:
-    chinese_name: str = field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
+    chinese_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chineseName', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderChineseNameSecurity:
-    api_key: shared.SchemeAPIKey = field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
+    api_key: shared_security.SchemeAPIKey = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderChineseNameRequest:
-    path_params: GenderChineseNamePathParams = field()
-    security: GenderChineseNameSecurity = field()
+    path_params: GenderChineseNamePathParams = dataclasses.field()
+    security: GenderChineseNameSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class GenderChineseNameResponse:
-    content_type: str = field()
-    status_code: int = field()
-    personal_name_gendered_out: Optional[shared.PersonalNameGenderedOut] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    personal_name_gendered_out: Optional[shared_personalnamegenderedout.PersonalNameGenderedOut] = dataclasses.field(default=None)
     

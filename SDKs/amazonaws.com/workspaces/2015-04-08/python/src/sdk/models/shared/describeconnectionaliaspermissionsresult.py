@@ -1,14 +1,14 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import connectionaliaspermission as shared_connectionaliaspermission
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class DescribeConnectionAliasPermissionsResult:
-    alias_id: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AliasId') }})
-    connection_alias_permissions: Optional[List[ConnectionAliasPermission]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConnectionAliasPermissions') }})
-    next_token: Optional[str] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
+    alias_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('AliasId') }})
+    connection_alias_permissions: Optional[list[shared_connectionaliaspermission.ConnectionAliasPermission]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('ConnectionAliasPermissions') }})
+    next_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('NextToken') }})
     

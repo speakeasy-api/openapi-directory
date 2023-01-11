@@ -8,9 +8,8 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
@@ -24,19 +23,19 @@ req = operations.DetectDeviceDetectPostRequest(
         ),
     ),
     request=shared.DeviceFeatures(
-        ftp_banner="itaque",
-        hostname="voluptas",
+        ftp_banner="ad",
+        hostname="autem",
         http_response="adipisci",
-        https_response="vel",
-        nic_mac="mollitia",
-        snmp_sysdescr="est",
-        snmp_sysoid="omnis",
-        telnet_banner="assumenda",
-        upnp_response="temporibus",
+        https_response="cumque",
+        nic_mac="sunt",
+        snmp_sysdescr="deleniti",
+        snmp_sysoid="qui",
+        telnet_banner="et",
+        upnp_response="quia",
     ),
 )
     
-res = s.sdk.detect_device_detect_post(req)
+res = s.device.detect_device_detect_post(req)
 
 if res.device_info is not None:
     # handle response
@@ -46,9 +45,12 @@ if res.device_info is not None:
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### device
 
 * `detect_device_detect_post` - Detect iot device by service banners and mac address
+
+### firmware
+
 * `firmware_accounts_firmware_firmware_hash_accounts_get` - Get default accounts and password hashes of a firmware
 * `firmware_config_issues_firmware_firmware_hash_config_issues_get` - Get default OS configuration issues of a device firmware
 * `firmware_expired_certs_firmware_firmware_hash_expired_certs_get` - Get expired digital certificates embedded in a device firmware

@@ -1,40 +1,42 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import security as shared_security
+from ..shared import errorresponseobject as shared_errorresponseobject
+from ..shared import tracksobject as shared_tracksobject
 
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksPathParams:
-    id: str = field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksQueryParams:
-    market: str = field(metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
+    market: str = dataclasses.field(metadata={'query_param': { 'field_name': 'market', 'style': 'form', 'explode': True }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksHeaders:
-    authorization: str = field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
+    authorization: str = dataclasses.field(metadata={'header': { 'field_name': 'Authorization', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksSecurity:
-    spotify_auth: shared.SchemeSpotifyAuth = field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
+    spotify_auth: shared_security.SchemeSpotifyAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'oauth2' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksRequest:
-    headers: EndpointGetAnArtistsTopTracksHeaders = field()
-    path_params: EndpointGetAnArtistsTopTracksPathParams = field()
-    query_params: EndpointGetAnArtistsTopTracksQueryParams = field()
-    security: EndpointGetAnArtistsTopTracksSecurity = field()
+    headers: EndpointGetAnArtistsTopTracksHeaders = dataclasses.field()
+    path_params: EndpointGetAnArtistsTopTracksPathParams = dataclasses.field()
+    query_params: EndpointGetAnArtistsTopTracksQueryParams = dataclasses.field()
+    security: EndpointGetAnArtistsTopTracksSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class EndpointGetAnArtistsTopTracksResponse:
-    content_type: str = field()
-    status_code: int = field()
-    error_response_object: Optional[shared.ErrorResponseObject] = field(default=None)
-    tracks_object: Optional[shared.TracksObject] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    error_response_object: Optional[shared_errorresponseobject.ErrorResponseObject] = dataclasses.field(default=None)
+    tracks_object: Optional[shared_tracksobject.TracksObject] = dataclasses.field(default=None)
     

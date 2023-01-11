@@ -1,25 +1,25 @@
-from dataclasses import dataclass, field
+import dataclasses
 from datetime import date, datetime
 from marshmallow import fields
 import dateutil.parser
 from typing import Optional
-from sdk.models import shared
+from ..shared import groupconfiguration as shared_groupconfiguration
 
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnergyCostPathParams:
-    group_id: str = field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
+    group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'groupId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnergyCostRequest:
-    path_params: UpdateEnergyCostPathParams = field()
-    request: Optional[shared.GroupConfiguration] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    path_params: UpdateEnergyCostPathParams = dataclasses.field()
+    request: Optional[shared_groupconfiguration.GroupConfiguration] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class UpdateEnergyCostResponse:
-    content_type: str = field()
-    status_code: int = field()
-    body: Optional[bytes] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    body: Optional[bytes] = dataclasses.field(default=None)
     

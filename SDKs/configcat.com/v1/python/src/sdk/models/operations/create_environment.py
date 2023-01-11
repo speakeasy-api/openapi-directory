@@ -1,30 +1,32 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import createenvironmentmodel as shared_createenvironmentmodel
+from ..shared import environmentmodel as shared_environmentmodel
+from ..shared import environmentmodel_haljson as shared_environmentmodel_haljson
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateEnvironmentPathParams:
-    product_id: str = field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
+    product_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'productId', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateEnvironmentRequests:
-    create_environment_model: Optional[shared.CreateEnvironmentModel] = field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
-    create_environment_model1: Optional[shared.CreateEnvironmentModel] = field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    create_environment_model2: Optional[shared.CreateEnvironmentModel] = field(default=None, metadata={'request': { 'media_type': 'text/json' }})
+    create_environment_model: Optional[shared_createenvironmentmodel.CreateEnvironmentModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/*+json' }})
+    create_environment_model1: Optional[shared_createenvironmentmodel.CreateEnvironmentModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    create_environment_model2: Optional[shared_createenvironmentmodel.CreateEnvironmentModel] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'text/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateEnvironmentRequest:
-    path_params: CreateEnvironmentPathParams = field()
-    request: CreateEnvironmentRequests = field()
+    path_params: CreateEnvironmentPathParams = dataclasses.field()
+    request: CreateEnvironmentRequests = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class CreateEnvironmentResponse:
-    content_type: str = field()
-    status_code: int = field()
-    environment_model: Optional[shared.EnvironmentModel] = field(default=None)
-    environment_model_haljson: Optional[shared.EnvironmentModelHaljson] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    environment_model: Optional[shared_environmentmodel.EnvironmentModel] = dataclasses.field(default=None)
+    environment_model_haljson: Optional[shared_environmentmodel_haljson.EnvironmentModelHaljson] = dataclasses.field(default=None)
     

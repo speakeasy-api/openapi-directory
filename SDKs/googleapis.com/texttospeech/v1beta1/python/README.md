@@ -8,78 +8,80 @@ pip install openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```python
 import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
     
-req = operations.TexttospeechTextSynthesizeRequest(
-    security=operations.TexttospeechTextSynthesizeSecurity(
+req = operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest(
+    security=operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioSecurity(
         oauth2=shared.SchemeOauth2(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
-        )
+        ),
         oauth2c=shared.SchemeOauth2c(
             authorization="Bearer YOUR_ACCESS_TOKEN_HERE",
         ),
     ),
-    query_params=operations.TexttospeechTextSynthesizeQueryParams(
-        dollar_xgafv="2",
-        access_token="delectus",
-        alt="media",
-        callback="libero",
-        fields="dignissimos",
-        key="qui",
-        oauth_token="eos",
-        pretty_print=True,
-        quota_user="vel",
-        upload_type="similique",
-        upload_protocol="quidem",
+    path_params=operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams(
+        parent="earum",
     ),
-    request=shared.SynthesizeSpeechRequest(
+    query_params=operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams(
+        dollar_xgafv="2",
+        access_token="dolores",
+        alt="media",
+        callback="ut",
+        fields="porro",
+        key="quo",
+        oauth_token="sed",
+        pretty_print=True,
+        quota_user="quos",
+        upload_type="atque",
+        upload_protocol="hic",
+    ),
+    request=shared.SynthesizeLongAudioRequest(
         audio_config=shared.AudioConfig(
-            audio_encoding="LINEAR16",
+            audio_encoding="MULAW",
             effects_profile_id=[
-                "aperiam",
-                "rerum",
-                "iure",
+                "tenetur",
             ],
-            pitch=24.200001,
-            sample_rate_hertz=3491191600617226402,
-            speaking_rate=29.100000,
-            volume_gain_db=8.200000,
+            pitch=56.099998,
+            sample_rate_hertz=7501805396362690206,
+            speaking_rate=17.200001,
+            volume_gain_db=96.199997,
         ),
-        enable_time_pointing=[
-            "TIMEPOINT_TYPE_UNSPECIFIED",
-        ],
         input=shared.SynthesisInput(
-            ssml="vero",
-            text="sit",
+            ssml="error",
+            text="quaerat",
         ),
+        output_gcs_uri="et",
         voice=shared.VoiceSelectionParams(
             custom_voice=shared.CustomVoiceParams(
                 model="aut",
                 reported_usage="OFFLINE",
             ),
-            language_code="sit",
-            name="eaque",
-            ssml_gender="SSML_VOICE_GENDER_UNSPECIFIED",
+            language_code="pariatur",
+            name="magni",
+            ssml_gender="NEUTRAL",
         ),
     ),
 )
     
-res = s.text.texttospeech_text_synthesize(req)
+res = s.projects.texttospeech_projects_locations_voices_synthesize_long_audio(req)
 
-if res.synthesize_speech_response is not None:
+if res.operation is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
+### projects
+
+* `texttospeech_projects_locations_voices_synthesize_long_audio` - Synthesizes long form text asynchronously.
 
 ### text
 

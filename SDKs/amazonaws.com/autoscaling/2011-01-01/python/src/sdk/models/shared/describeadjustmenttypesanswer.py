@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
-from . import *
+import dataclasses
+from typing import Optional
+from ..shared import adjustmenttype as shared_adjustmenttype
 
 
-@dataclass
+@dataclasses.dataclass
 class DescribeAdjustmentTypesAnswer:
-    adjustment_types: Optional[List[AdjustmentType]] = field(default=None)
+    adjustment_types: Optional[list[shared_adjustmenttype.AdjustmentType]] = dataclasses.field(default=None)
     

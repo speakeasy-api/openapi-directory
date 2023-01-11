@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from . import *
+from ..shared import dbsecuritygroup as shared_dbsecuritygroup
 
 
-@dataclass
+@dataclasses.dataclass
 class CreateDbSecurityGroupResult:
-    db_security_group: Optional[DbSecurityGroup] = field(default=None)
+    db_security_group: Optional[shared_dbsecuritygroup.DbSecurityGroup] = dataclasses.field(default=None)
     

@@ -1,16 +1,16 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from . import *
+from ..shared import publisherconnection as shared_publisherconnection
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class BatchRejectPublisherConnectionsResponse:
     r"""BatchRejectPublisherConnectionsResponse
     A response for the request to reject a batch of publisher connections.
     """
     
-    publisher_connections: Optional[List[PublisherConnection]] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherConnections') }})
+    publisher_connections: Optional[list[shared_publisherconnection.PublisherConnection]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('publisherConnections') }})
     

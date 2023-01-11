@@ -1,21 +1,20 @@
-from dataclasses import dataclass, field
-from typing import List
-from sdk.models import shared
+import dataclasses
+from ..shared import security as shared_security
 
 
-@dataclass
+@dataclasses.dataclass
 class PostBlockedNumbersSecurity:
-    basic_auth: shared.SchemeBasicAuth = field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
+    basic_auth: shared_security.SchemeBasicAuth = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'basic' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBlockedNumbersRequest:
-    request: List[str] = field(metadata={'request': { 'media_type': 'application/json' }})
-    security: PostBlockedNumbersSecurity = field()
+    request: list[str] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    security: PostBlockedNumbersSecurity = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class PostBlockedNumbersResponse:
-    content_type: str = field()
-    status_code: int = field()
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     

@@ -1,37 +1,37 @@
-from dataclasses import dataclass, field
-from typing import List,Optional
+import dataclasses
+from typing import Optional
 from dataclasses_json import dataclass_json
 from sdk import utils
-from sdk.models import shared
+from ..shared import runner_groups_org as shared_runner_groups_org
 
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListSelfHostedRunnerGroupsForOrgPathParams:
-    org: str = field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
+    org: str = dataclasses.field(metadata={'path_param': { 'field_name': 'org', 'style': 'simple', 'explode': False }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListSelfHostedRunnerGroupsForOrgQueryParams:
-    page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
-    per_page: Optional[int] = field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
+    page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
+    per_page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'per_page', 'style': 'form', 'explode': True }})
     
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON:
-    runner_groups: List[shared.RunnerGroupsOrg] = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runner_groups') }})
-    total_count: float = field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
+    runner_groups: list[shared_runner_groups_org.RunnerGroupsOrg] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('runner_groups') }})
+    total_count: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.field_name('total_count') }})
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListSelfHostedRunnerGroupsForOrgRequest:
-    path_params: ActionsListSelfHostedRunnerGroupsForOrgPathParams = field()
-    query_params: ActionsListSelfHostedRunnerGroupsForOrgQueryParams = field()
+    path_params: ActionsListSelfHostedRunnerGroupsForOrgPathParams = dataclasses.field()
+    query_params: ActionsListSelfHostedRunnerGroupsForOrgQueryParams = dataclasses.field()
     
 
-@dataclass
+@dataclasses.dataclass
 class ActionsListSelfHostedRunnerGroupsForOrgResponse:
-    content_type: str = field()
-    status_code: int = field()
-    actions_list_self_hosted_runner_groups_for_org_200_application_json_object: Optional[ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    actions_list_self_hosted_runner_groups_for_org_200_application_json_object: Optional[ActionsListSelfHostedRunnerGroupsForOrg200ApplicationJSON] = dataclasses.field(default=None)
     

@@ -1,4 +1,4 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
 from enum import Enum
 from dataclasses_json import dataclass_json
@@ -48,24 +48,24 @@ class ParkingValetParkingAvailableExceptionEnum(str, Enum):
 
 
 @dataclass_json
-@dataclass
+@dataclasses.dataclass
 class Parking:
     r"""Parking
     Parking options at the property.
     """
     
-    electric_car_charging_stations: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('electricCarChargingStations') }})
-    electric_car_charging_stations_exception: Optional[ParkingElectricCarChargingStationsExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('electricCarChargingStationsException') }})
-    free_parking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeParking') }})
-    free_parking_exception: Optional[ParkingFreeParkingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeParkingException') }})
-    free_self_parking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeSelfParking') }})
-    free_self_parking_exception: Optional[ParkingFreeSelfParkingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeSelfParkingException') }})
-    free_valet_parking: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeValetParking') }})
-    free_valet_parking_exception: Optional[ParkingFreeValetParkingExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeValetParkingException') }})
-    parking_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parkingAvailable') }})
-    parking_available_exception: Optional[ParkingParkingAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parkingAvailableException') }})
-    self_parking_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfParkingAvailable') }})
-    self_parking_available_exception: Optional[ParkingSelfParkingAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfParkingAvailableException') }})
-    valet_parking_available: Optional[bool] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('valetParkingAvailable') }})
-    valet_parking_available_exception: Optional[ParkingValetParkingAvailableExceptionEnum] = field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('valetParkingAvailableException') }})
+    electric_car_charging_stations: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('electricCarChargingStations') }})
+    electric_car_charging_stations_exception: Optional[ParkingElectricCarChargingStationsExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('electricCarChargingStationsException') }})
+    free_parking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeParking') }})
+    free_parking_exception: Optional[ParkingFreeParkingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeParkingException') }})
+    free_self_parking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeSelfParking') }})
+    free_self_parking_exception: Optional[ParkingFreeSelfParkingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeSelfParkingException') }})
+    free_valet_parking: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeValetParking') }})
+    free_valet_parking_exception: Optional[ParkingFreeValetParkingExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('freeValetParkingException') }})
+    parking_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parkingAvailable') }})
+    parking_available_exception: Optional[ParkingParkingAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('parkingAvailableException') }})
+    self_parking_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfParkingAvailable') }})
+    self_parking_available_exception: Optional[ParkingSelfParkingAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('selfParkingAvailableException') }})
+    valet_parking_available: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('valetParkingAvailable') }})
+    valet_parking_available_exception: Optional[ParkingValetParkingAvailableExceptionEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.field_name('valetParkingAvailableException') }})
     

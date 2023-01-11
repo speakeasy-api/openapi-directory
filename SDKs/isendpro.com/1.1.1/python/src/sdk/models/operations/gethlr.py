@@ -1,17 +1,19 @@
-from dataclasses import dataclass, field
+import dataclasses
 from typing import Optional
-from sdk.models import shared
+from ..shared import hlrrequest as shared_hlrrequest
+from ..shared import erreur as shared_erreur
+from ..shared import hlrreponse as shared_hlrreponse
 
 
-@dataclass
+@dataclasses.dataclass
 class GetHlrRequest:
-    request: shared.HlRrequest = field(metadata={'request': { 'media_type': 'application/json' }})
+    request: shared_hlrrequest.HlRrequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
-@dataclass
+@dataclasses.dataclass
 class GetHlrResponse:
-    content_type: str = field()
-    status_code: int = field()
-    erreur: Optional[shared.Erreur] = field(default=None)
-    hlr_reponse: Optional[shared.HlrReponse] = field(default=None)
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    erreur: Optional[shared_erreur.Erreur] = dataclasses.field(default=None)
+    hlr_reponse: Optional[shared_hlrreponse.HlrReponse] = dataclasses.field(default=None)
     
